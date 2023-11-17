@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var url = location.href;
             var new_url = url.replace(window.location.hostname + '/' + current_ver, window.location.hostname + path); 
             if (url == new_url) {
-                var current_ver = /\/[^\/]+\/[^\/]+/.exec(location.pathname)
+                var current_ver = /\/[^\/]+/.exec(location.pathname)
                 new_url = url.replace(window.location.hostname + current_ver, window.location.hostname + path);
             }
             console.log(new_url);
