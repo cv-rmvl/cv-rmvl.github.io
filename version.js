@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var versions = [['1.1.0-dev', '/master'],
+    var versions = [['1.2.0-dev', '/master'],
+                    ['1.1.0', '/1.1.0'],
                     ['1.0.0', '/1.0.0']];
     var h = '<select>';
     var current_ver = $("#projectnumber")[0].innerText || versions[0][0];

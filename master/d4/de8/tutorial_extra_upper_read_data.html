@@ -35,7 +35,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RMVL
-   &#160;<span id="projectnumber">1.1.0-dev</span>
+   &#160;<span id="projectnumber">1.2.0-dev</span>
    </div>
    <div id="projectbrief">RoboMaster Vision Library</div>
   </td>
@@ -106,7 +106,7 @@ $(function() {
 </ul>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_read_data"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_read_data"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d1/d67/tutorial_extra_upper_init.html">硬件设备与软件模块的初始化</a> ↑<br  />
@@ -270,7 +270,7 @@ $(function() {
 3.2 外部中断、回调函数</h3>
 <p>还有一种做法是利用外部中断或者回调函数（软件中断）的方式完成功能的切换，以 Termios 串口通信的结构体为例，在设置 <code>c_iflag</code> 的时候，可以打开 <code>BRKINT</code> 功能，即接收到 <code>BREAK</code> 信号时产生中断信号。</p>
 <div class="fragment"><div class="line">xxx.c_iflag |= BRKINT;</div>
-</div><!-- fragment --><p>然而，RMVL 提供的串口通信库不支持此操作，因此该方法可以适用于<span style="color: red">其他通信方式</span>或者其他不同于 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的自定义协议的串口通信。</p>
+</div><!-- fragment --><p>然而，RMVL 提供的串口通信库不支持此操作，因此该方法可以适用于<span style="color: red">其他通信方式</span>或者其他不同于 rm::SerialPort 的自定义协议的串口通信。</p>
 <p>这里的其他通信方式有其他类型，比如当客户端发起某个请求时，服务器会进入某个回调函数，因此可以在回调函数中完成功能模块的初始化设置或者切换。例如</p>
 <ul>
 <li>ROS / ROS2 中可注册回调函数，在 <code>ros::spin()</code> 或 <code>rclcpp::spin()</code> 调用后可阻塞当前线程，在有消息到达订阅节点时，会自动触发回调函数的执行。</li>
@@ -313,7 +313,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 17日 星期五 21:06:30 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 18日 星期六 14:50:26 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
