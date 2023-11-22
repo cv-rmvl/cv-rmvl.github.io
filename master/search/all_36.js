@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['最小二乘法_977',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]]
+  ['机器人装甲板_973',['机器人装甲板',['../db/d22/group__combo__armor.html',1,'']]],
+  ['机器学习与深度学习支持库_974',['机器学习与深度学习支持库',['../dd/ded/group__ml.html',1,'']]]
 ];

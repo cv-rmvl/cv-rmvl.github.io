@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['e_217',['e',['../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5',1,'rm']]],
-  ['e_218',['E',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a3a3ea00cfc35332cedf6e5e9a32e94da',1,'rm']]],
+  ['e_217',['E',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a3a3ea00cfc35332cedf6e5e9a32e94da',1,'rm']]],
+  ['e_218',['e',['../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5',1,'rm']]],
   ['emplace_219',['emplace',['../db/d45/classrm_1_1RaHeap.html#a6cdc3844a2cb0ba43323e4254b4a51b8',1,'rm::RaHeap']]],
   ['empty_220',['empty',['../d6/dd2/classrm_1_1tracker.html#acf128ce58cb3bba710da7bec7bff5138',1,'rm::tracker::empty()'],['../db/d45/classrm_1_1RaHeap.html#a14454f127677c167093e86140755c953',1,'rm::RaHeap::empty()'],['../de/dee/classrm_1_1combo.html#aee50158d2e5bf793b1400c73d01d4f26',1,'rm::combo::empty()'],['../d6/d6c/classrm_1_1group.html#a3f5d4f7b2969c989d1e85c5c6a3c2071',1,'rm::group::empty()']]],
   ['en_5fus_221',['en_US',['../d3/da8/group__opcua.html#ga1a381b0c7ca74f07fa067c979002f026',1,'rm::helper']]],
@@ -11,14 +11,14 @@ var searchData=
   ['err_225',['err',['../d9/db4/classrm_1_1Exception.html#a6f17cf2c26debcfa8753b8e32eee002a',1,'rm::Exception']]],
   ['error_226',['error',['../d5/d20/namespacerm.html#a1fb1d836079d79280f92cf8a1ee18402',1,'rm']]],
   ['error_5f_227',['ERROR_',['../d0/de1/group__core.html#gad96a591fde57998614993ee7a3b5d6dd',1,'util.hpp']]],
-  ['error_5fangle_5fscale_5fratio_228',['ERROR_ANGLE_SCALE_RATIO',['../db/db1/classrm_1_1para_1_1ArmorParam.html#a8dd014d9817bae5923aa14e885381bcf',1,'rm::para::ArmorParam']]],
-  ['error_5flength_5fscale_5fratio_229',['ERROR_LENGTH_SCALE_RATIO',['../db/db1/classrm_1_1para_1_1ArmorParam.html#a19f9091854020f122acefbf68a04a431',1,'rm::para::ArmorParam']]],
-  ['error_5ftilt_5fangle_5fratio_230',['ERROR_TILT_ANGLE_RATIO',['../db/db1/classrm_1_1para_1_1ArmorParam.html#aa5c7ee4e86b642e67eca500da87a4bb0',1,'rm::para::ArmorParam']]],
-  ['error_5fwidth_5fscale_5fratio_231',['ERROR_WIDTH_SCALE_RATIO',['../db/db1/classrm_1_1para_1_1ArmorParam.html#ae12541d9c8c1f30262ca2e227a3c7607',1,'rm::para::ArmorParam']]],
+  ['error_5fangle_5fscale_5fratio_228',['ERROR_ANGLE_SCALE_RATIO',['../d8/df0/structrm_1_1para_1_1ArmorParam.html#a8dd014d9817bae5923aa14e885381bcf',1,'rm::para::ArmorParam']]],
+  ['error_5flength_5fscale_5fratio_229',['ERROR_LENGTH_SCALE_RATIO',['../d8/df0/structrm_1_1para_1_1ArmorParam.html#a19f9091854020f122acefbf68a04a431',1,'rm::para::ArmorParam']]],
+  ['error_5ftilt_5fangle_5fratio_230',['ERROR_TILT_ANGLE_RATIO',['../d8/df0/structrm_1_1para_1_1ArmorParam.html#aa5c7ee4e86b642e67eca500da87a4bb0',1,'rm::para::ArmorParam']]],
+  ['error_5fwidth_5fscale_5fratio_231',['ERROR_WIDTH_SCALE_RATIO',['../d8/df0/structrm_1_1para_1_1ArmorParam.html#ae12541d9c8c1f30262ca2e227a3c7607',1,'rm::para::ArmorParam']]],
   ['euler2mat_232',['euler2Mat',['../d9/d31/group__rmath.html#ga8a10541815ca87ddab3ceadb0eae20f7',1,'rm']]],
-  ['euler_5f0_233',['EULER_0',['../d4/dc5/classrm_1_1para_1_1CameraParam.html#a5e5dd7ec45e306303a1c22f64c69ea98',1,'rm::para::CameraParam']]],
-  ['euler_5f1_234',['EULER_1',['../d4/dc5/classrm_1_1para_1_1CameraParam.html#afe4d020557cc5b1c79d0d9aca3f604dc',1,'rm::para::CameraParam']]],
-  ['euler_5f2_235',['EULER_2',['../d4/dc5/classrm_1_1para_1_1CameraParam.html#a3c46c25c2370379da432f825d4dd8e3d',1,'rm::para::CameraParam']]],
+  ['euler_5f0_233',['EULER_0',['../d5/d4e/structrm_1_1para_1_1CameraParam.html#a5e5dd7ec45e306303a1c22f64c69ea98',1,'rm::para::CameraParam']]],
+  ['euler_5f1_234',['EULER_1',['../d5/d4e/structrm_1_1para_1_1CameraParam.html#afe4d020557cc5b1c79d0d9aca3f604dc',1,'rm::para::CameraParam']]],
+  ['euler_5f2_235',['EULER_2',['../d5/d4e/structrm_1_1para_1_1CameraParam.html#a3c46c25c2370379da432f825d4dd8e3d',1,'rm::para::CameraParam']]],
   ['euleraxis_236',['EulerAxis',['../d9/d31/group__rmath.html#ga9efb6b0afed03a8afe74adea283e4e20',1,'rm']]],
   ['event_237',['Event',['../da/d88/classrm_1_1Event.html#a94238ecca8f9ec6ba5ae50b35ed927c2',1,'rm::Event::Event(Event &amp;&amp;val)'],['../da/d88/classrm_1_1Event.html#a38cc061a1260bff8107021ffe409c50b',1,'rm::Event::Event()=default'],['../da/d88/classrm_1_1Event.html#a91d5cf6e96fa065686d69c06e01ab811',1,'rm::Event::Event(EventType &amp;etype)'],['../da/d88/classrm_1_1Event.html#af6e4c2ffe590ce0f264009468d341113',1,'rm::Event::Event(const Event &amp;val)'],['../da/d88/classrm_1_1Event.html',1,'rm::Event']]],
   ['event_2ehpp_238',['event.hpp',['../dc/d94/event_8hpp.html',1,'']]],
@@ -31,5 +31,5 @@ var searchData=
   ['exp_5fcenter2d_245',['exp_center2d',['../d9/da7/structrm_1_1DecideInfo.html#a199e394a99df6b11f307f5bda2eb63e5',1,'rm::DecideInfo']]],
   ['exp_5fcenter3d_246',['exp_center3d',['../d9/da7/structrm_1_1DecideInfo.html#a1b11db65fe4c71a754a3738adf920e74',1,'rm::DecideInfo']]],
   ['exportdata_247',['exportData',['../db/d0c/classrm_1_1UnionFind.html#a0d5bd1daed1f2d1c0434b1ddf85f9ad6',1,'rm::UnionFind']]],
-  ['exposure_248',['exposure',['../de/d4f/classrm_1_1para_1_1HikCameraParam.html#aba31c4f4e4e4d579d61de93ade5c0da5',1,'rm::para::HikCameraParam::exposure()'],['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a29377870ce8518a8de11e6ddb02c8621',1,'rm::para::MvCameraParam::exposure()']]]
+  ['exposure_248',['exposure',['../d8/d79/structrm_1_1para_1_1HikCameraParam.html#aba31c4f4e4e4d579d61de93ade5c0da5',1,'rm::para::HikCameraParam::exposure()'],['../d8/d8e/structrm_1_1para_1_1MvCameraParam.html#a29377870ce8518a8de11e6ddb02c8621',1,'rm::para::MvCameraParam::exposure()']]]
 ];

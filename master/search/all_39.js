@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['检测与识别模块（功能模块）_981',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
+  ['海康机器人（hikrobot）工业相机库_977',['海康机器人（HikRobot）工业相机库',['../db/d27/group__hik__camera.html',1,'']]]
 ];

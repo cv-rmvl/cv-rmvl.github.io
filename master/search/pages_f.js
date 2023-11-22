@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['导出数据、发出操控指令_2078',['导出数据、发出操控指令',['../db/d4f/tutorial_extra_upper_write_data.html',1,'tutorial_table_of_content_extra']]]
+  ['并查集_2067',['并查集',['../d4/d74/tutorial_modules_union_find.html',1,'tutorial_table_of_content_modules']]]
 ];

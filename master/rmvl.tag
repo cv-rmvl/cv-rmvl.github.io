@@ -156,11 +156,6 @@
     <filename>d9/d63/serial_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>singleton.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
-    <filename>d4/de0/singleton_8md.html</filename>
-  </compound>
-  <compound kind="file">
     <name>camera.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
     <filename>d4/dbc/camera_8md.html</filename>
@@ -224,8 +219,7 @@
     <name>armor.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
     <filename>da/ded/ara_2combo_2armor_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::ArmorParam</class>
+    <class kind="struct">rm::para::ArmorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -262,8 +256,7 @@
     <name>rune.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
     <filename>d9/da6/ara_2combo_2rune_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneParam</class>
+    <class kind="struct">rm::para::RuneParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -306,8 +299,7 @@
     <name>gravity_compensator.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
     <filename>da/d0c/ara_2compensator_2gravity__compensator_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GravityCompensatorParam</class>
+    <class kind="struct">rm::para::GravityCompensatorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -330,8 +322,7 @@
     <name>gyro_compensator.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
     <filename>dc/d74/ara_2compensator_2gyro__compensator_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroCompensatorParam</class>
+    <class kind="struct">rm::para::GyroCompensatorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -377,8 +368,7 @@
     <name>gyro_decider.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d3/d6e/ara_2decider_2gyro__decider_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroDeciderParam</class>
+    <class kind="struct">rm::para::GyroDeciderParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -401,8 +391,7 @@
     <name>rune_decider.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d4/df0/ara_2decider_2rune__decider_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneDeciderParam</class>
+    <class kind="struct">rm::para::RuneDeciderParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -425,8 +414,7 @@
     <name>translation_decider.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d0/de3/ara_2decider_2translation__decider_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::TranslationDeciderParam</class>
+    <class kind="struct">rm::para::TranslationDeciderParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -462,8 +450,7 @@
     <name>armor_detector.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>de/d1c/ara_2detector_2armor__detector_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::ArmorDetectorParam</class>
+    <class kind="struct">rm::para::ArmorDetectorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -498,8 +485,7 @@
     <name>gyro_detector.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d2/df6/ara_2detector_2gyro__detector_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroDetectorParam</class>
+    <class kind="struct">rm::para::GyroDetectorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -523,8 +509,7 @@
     <name>rune_detector.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d7/d26/ara_2detector_2rune__detector_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneDetectorParam</class>
+    <class kind="struct">rm::para::RuneDetectorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -561,8 +546,7 @@
     <name>tag_detector.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d1/d3b/ara_2detector_2tag__detector_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::TagDetectorParam</class>
+    <class kind="struct">rm::para::TagDetectorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -605,8 +589,7 @@
     <name>light_blob.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>d0/def/ara_2feature_2light__blob_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::LightBlobParam</class>
+    <class kind="struct">rm::para::LightBlobParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -629,8 +612,7 @@
     <name>pilot.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>df/dd9/ara_2feature_2pilot_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::PilotParam</class>
+    <class kind="struct">rm::para::PilotParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -653,8 +635,7 @@
     <name>rune_center.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>d6/def/ara_2feature_2rune__center_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneCenterParam</class>
+    <class kind="struct">rm::para::RuneCenterParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -677,8 +658,7 @@
     <name>rune_target.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>df/d9c/ara_2feature_2rune__target_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneTargetParam</class>
+    <class kind="struct">rm::para::RuneTargetParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -748,8 +728,7 @@
     <name>gyro_group.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
     <filename>db/d38/ara_2group_2gyro__group_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroGroupParam</class>
+    <class kind="struct">rm::para::GyroGroupParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -772,8 +751,7 @@
     <name>rune_group.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
     <filename>d0/d04/ara_2group_2rune__group_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneGroupParam</class>
+    <class kind="struct">rm::para::RuneGroupParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -807,8 +785,7 @@
     <name>armor_predictor.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d9/d0c/ara_2predictor_2armor__predictor_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::ArmorPredictorParam</class>
+    <class kind="struct">rm::para::ArmorPredictorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -831,8 +808,7 @@
     <name>gyro_predictor.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d5/dda/ara_2predictor_2gyro__predictor_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroPredictorParam</class>
+    <class kind="struct">rm::para::GyroPredictorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -918,8 +894,7 @@
     <name>rune_predictor.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>db/d0c/ara_2predictor_2rune__predictor_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RunePredictorParam</class>
+    <class kind="struct">rm::para::RunePredictorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -942,8 +917,7 @@
     <name>spi_rune_predictor.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d6/d5f/ara_2predictor_2spi__rune__predictor_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::SpiRunePredictorParam</class>
+    <class kind="struct">rm::para::SpiRunePredictorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -979,8 +953,7 @@
     <name>gyro_tracker.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>db/db3/ara_2tracker_2gyro__tracker_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::GyroTrackerParam</class>
+    <class kind="struct">rm::para::GyroTrackerParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -1005,8 +978,7 @@
     <name>planar_tracker.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>d5/d67/ara_2tracker_2planar__tracker_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::PlanarTrackerParam</class>
+    <class kind="struct">rm::para::PlanarTrackerParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -1031,8 +1003,7 @@
     <name>rune_tracker.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>db/d6a/ara_2tracker_2rune__tracker_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::RuneTrackerParam</class>
+    <class kind="struct">rm::para::RuneTrackerParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -1403,8 +1374,7 @@
     <name>hik_camera.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d3/d41/ara_2camera_2hik__camera_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::HikCameraParam</class>
+    <class kind="struct">rm::para::HikCameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -1427,8 +1397,7 @@
     <name>mv_camera.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d2/d9c/ara_2camera_2mv__camera_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="struct">rm::para::MvCameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -1443,8 +1412,7 @@
     <name>camera.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d7/df6/camera_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::CameraParam</class>
+    <class kind="struct">rm::para::CameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -2236,8 +2204,7 @@
     <name>ort.h</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/ml/include/rmvlpara/ml/</path>
     <filename>d3/d29/ara_2ml_2ort_8h.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::OrtParam</class>
+    <class kind="struct">rm::para::OrtParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -2259,8 +2226,7 @@
     <name>opcua.hpp</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvlpara/</path>
     <filename>d0/dda/rmvlpara_2opcua_8hpp.html</filename>
-    <includes id="d2/d8f/loader_8hpp" name="loader.hpp" local="yes" imported="no">rmvlpara/loader.hpp</includes>
-    <class kind="class">rm::para::OpcuaParam</class>
+    <class kind="struct">rm::para::OpcuaParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
     <member kind="variable">
@@ -2366,6 +2332,13 @@
     <class kind="struct">rm::UserConfig</class>
     <namespace>rm</namespace>
     <namespace>rm::helper</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>OPCUA_VERSION</name>
+      <anchorfile>dc/d5f/utilities_8hpp.html</anchorfile>
+      <anchor>a4f23f9bdf101287cabbd88a30b07f705</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>UA_UInt32</type>
       <name>UA_TypeFlag</name>
@@ -2463,28 +2436,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>loader.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/para/include/rmvlpara/</path>
-    <filename>d2/d8f/loader_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
-    <namespace>rm</namespace>
-    <namespace>rm::para</namespace>
-    <member kind="function">
-      <type>void</type>
-      <name>load</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga6de61a70587232e1a07295c45ab2c7fa</anchor>
-      <arglist>(Tp &amp;para_obj, const std::string &amp;file_path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readExcludeNone</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga4d70b6903799a7fd34047bd86edbaf85</anchor>
-      <arglist>(const _FileNode &amp;n, Tp &amp;t)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>rmath.hpp</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/</path>
     <filename>d5/d6c/rmath_8hpp.html</filename>
@@ -2562,13 +2513,6 @@
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>relativeAngle2EulerAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafd983b66d83a1041aedac1c52660b84d</anchor>
-      <arglist>(float yaw, float pitch)</arglist>
     </member>
     <member kind="function">
       <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
@@ -2693,122 +2637,122 @@
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gacd95d3a66578731549301e7e5fed0932</anchor>
+      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafb9686a5036653f977c1945db4bc262a</anchor>
+      <anchor>ga2f9eedb68bb5ae56673c6b2ea1dbbb87</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaab48d17bee4ad33e84961a0af9434f7d</anchor>
+      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gad7e0ddce9ef33cf84aa998eb69f8366f</anchor>
+      <anchor>ga392746cfd2ba5dc008cf2fd714899cbf</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>deg2rad</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga09bb8c83690c424eb9a24e9506059b9f</anchor>
+      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
       <arglist>(Tp deg)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>rad2deg</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0f2e28ff9927a5b79d868dfa539135d0</anchor>
+      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
       <arglist>(Tp rad)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
       <name>point2matx</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa12c90960f257ff9a19547ec9ee3b9cb</anchor>
+      <anchor>ga1136f3b18cb42622f61e2c59dcdc7974</anchor>
       <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point3_&lt; Tp &gt;</type>
+      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
       <name>matx2point</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5cd6b271a71425a1d3d3d69199cd1169</anchor>
+      <anchor>ga1861223d0b42e982c7d51f0232753070</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Vec&lt; Tp, 3 &gt;</type>
+      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
       <name>matx2vec</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gac60f26814042d8b62f5a9855f75971bc</anchor>
+      <anchor>ga8b0f860b941990cdc4497eca855e236e</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaca56dab3bdc3286e33964bdaaf6effc1</anchor>
+      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga729028fd34b69cfe0211eae1885a96ac</anchor>
+      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaee5f2c06e3d4cda48fcd9e089a85fd8d</anchor>
+      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
       <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaed758bdeafb0c85a5f201472a0c561a8</anchor>
+      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga789dc87e911e0b5aa59871e2f339940c</anchor>
+      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getHAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafc6857df29263e2fea37c2b388eb1b4f</anchor>
+      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getVAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga4f51140d768ddd5596642e6bb88bc491</anchor>
+      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>getDeltaAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga17e29dcd20fa2263c1ea1e4c9900a55d</anchor>
+      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
       <arglist>(Tp angle_1, Tp angle_2)</arglist>
     </member>
     <member kind="function">
@@ -2840,24 +2784,24 @@
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>sigmoid</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaac66e6ba7fca3a967df3999a23a8cf31</anchor>
+      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
       <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0054c55709350950f73ffa38bd0e8f6b</anchor>
+      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
       <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga07a21a9805af780500ab066a176d5559</anchor>
+      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
       <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
@@ -2866,13 +2810,6 @@
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>getMid</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga45cf635844555bd4ad5fdb65c12a9b5e</anchor>
-      <arglist>(Tp a, Tp b, Tp c)</arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
@@ -3197,222 +3134,208 @@
       <arglist>(const std::string &amp;model)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::ArmorDetectorParam</name>
-    <filename>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
-      <anchor>a42c541b67f16cf6979d5250c59e9c933</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>ArmorDetectorParam</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
       <anchor>aec3e46bfb27d9495fa1f7673eecc124d</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>a0d8df0d92b4bdb3fb3f56a1076d8a739</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_RED</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
       <anchor>a1835fe417dff1fd2993efc97204e5fb7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_BLUE</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
       <anchor>abdd0201e82fbd08be21441d1c763636d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MIN_CONTOUR_AREA</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
       <anchor>a2e7446e43c7a459c3fbe37ee31858aea</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_TRACKER_DELTA_DIS</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchorfile>d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
       <anchor>a654d188b8169195ce1b6b11302bad6c0</anchor>
       <arglist></arglist>
     </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
-    </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::ArmorParam</name>
-    <filename>db/db1/classrm_1_1para_1_1ArmorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
-      <anchor>aad8fcbbe076e91f5ba47e909d4e3c3fd</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d8/df0/structrm_1_1para_1_1ArmorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>ArmorParam</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>ab88917c58e4112522091afbb244de2ad</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchor>a96d5f6014fcd3e565d2c02b71f2c8c9a</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_CORNER_ANGLE</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a2b7fa2955622f73073e6e50bb49324f8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_DELTA_ANGLE</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a60b06834557ad5bdff731162c723f05b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_LENGTH_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a4626740f28c8ad4b4aa4033ad2113646</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_WIDTH_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a6373abad7e6424dd4e11c5556528e0dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_COMBO_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a1bbf6c8006387d54c20a16c8f71359b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_COMBO_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a1aea6a76e3b43b752acf7a6a48c015cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_SMALL_COMBO_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>aa5cbe3a9e57891a900b7f1410ae0afc5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_BIG_COMBO_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a7c671790cf0b4fc5e68e548203966b91</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_SMALL_CORNER_ANGLE</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>ac0a0e5be0ff18668253261e3fa672a31</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_BIG_CORNER_ANGLE</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>af2fe42f9c0dcf98c81578c2087047720</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>BIG_SMALL_WIDTH_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a151b7639fd912d130df34fc6073d4c0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ERROR_LENGTH_SCALE_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a19f9091854020f122acefbf68a04a431</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ERROR_WIDTH_SCALE_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>ae12541d9c8c1f30262ca2e227a3c7607</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ERROR_ANGLE_SCALE_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a8dd014d9817bae5923aa14e885381bcf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ERROR_TILT_ANGLE_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>aa5c7ee4e86b642e67eca500da87a4bb0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ROI_WIDTH_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>a3d2eb578c6daed417e28e9f633db6ae0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ROI_HEIGHT_RATIO</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>af00f92a7df5d1e7514272241ca2646b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ROI_SIZE</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>aaf77e45f7f5312c5712729a7c5f00ede</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; cv::Point3f &gt;</type>
       <name>SMALL_ARMOR</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>adefafd92bb6ce3588e9ce5b580c71175</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; cv::Point3f &gt;</type>
       <name>BIG_ARMOR</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
+      <anchorfile>d8/df0/structrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>ab2d2ac7d303e790e278dfce1ae850a8c</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3434,57 +3357,50 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::ArmorPredictorParam</name>
-    <filename>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
-      <anchor>a555f3a6507b0ff8b365abf9a53fa89c6</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>ArmorPredictorParam</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>aef15a72438a761670b749e9bea8676dc</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchor>ab2de5bdbdcb1843d3df6188c7d0cba92</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>YAW_B</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>a7a536df70fbead556fd5445ca410d34d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>PITCH_B</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>ae826613a113a3ee13932cda19e063915</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>YAW_K</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>afbd82b3a19097a6736f9efdd9c0a7d3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>PITCH_K</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
+      <anchorfile>dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>ada3c0e77ce2f4b30a7bc7e7cf9d4a26e</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3524,31 +3440,31 @@
     <filename>da/dbf/classrm_1_1CameraExtrinsics.html</filename>
     <templarg></templarg>
     <member kind="function">
-      <type>cv::Vec&lt; Tp, 3 &gt;</type>
+      <type>const cv::Vec&lt; Tp, 3 &gt; &amp;</type>
       <name>tvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>abc9a427f38c812ba098f28a510c6ec3d</anchor>
+      <anchor>a4c41927903da99285c583a2356c1fc29</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>cv::Vec&lt; Tp, 3 &gt;</type>
+      <type>const cv::Vec&lt; Tp, 3 &gt; &amp;</type>
       <name>rvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a6c20f3e8381f791b2d27a494e418826d</anchor>
+      <anchor>aaa0c50938dc26dae11627c207091412c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
+      <type>const cv::Matx&lt; Tp, 3, 3 &gt; &amp;</type>
       <name>R</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>ae8302dbe0115f234715313fafc180f71</anchor>
+      <anchor>aeb015c40a866b81a15d938634f836dcd</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 4, 4 &gt;</type>
+      <type>const cv::Matx&lt; Tp, 4, 4 &gt; &amp;</type>
       <name>T</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aeed6326fcf2192032e4571e3d97e5402</anchor>
+      <anchor>a06c1022a46b307f47ead1512c772c734</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3612,10 +3528,10 @@
     <name>CameraExtrinsics&lt; float &gt;</name>
     <filename>da/dbf/classrm_1_1CameraExtrinsics.html</filename>
     <member kind="function">
-      <type>cv::Vec&lt; float, 3 &gt;</type>
+      <type>const cv::Vec&lt; float, 3 &gt; &amp;</type>
       <name>tvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>abc9a427f38c812ba098f28a510c6ec3d</anchor>
+      <anchor>a4c41927903da99285c583a2356c1fc29</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3626,10 +3542,10 @@
       <arglist>(const cv::Vec&lt; float, 3 &gt; &amp;tvec)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Vec&lt; float, 3 &gt;</type>
+      <type>const cv::Vec&lt; float, 3 &gt; &amp;</type>
       <name>rvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a6c20f3e8381f791b2d27a494e418826d</anchor>
+      <anchor>aaa0c50938dc26dae11627c207091412c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3640,10 +3556,10 @@
       <arglist>(const cv::Vec&lt; float, 3 &gt; &amp;rvec)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; float, 3, 3 &gt;</type>
+      <type>const cv::Matx&lt; float, 3, 3 &gt; &amp;</type>
       <name>R</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>ae8302dbe0115f234715313fafc180f71</anchor>
+      <anchor>aeb015c40a866b81a15d938634f836dcd</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3654,10 +3570,10 @@
       <arglist>(const cv::Matx&lt; float, 3, 3 &gt; &amp;R)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; float, 4, 4 &gt;</type>
+      <type>const cv::Matx&lt; float, 4, 4 &gt; &amp;</type>
       <name>T</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aeed6326fcf2192032e4571e3d97e5402</anchor>
+      <anchor>a06c1022a46b307f47ead1512c772c734</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3696,64 +3612,57 @@
       <arglist>(const float &amp;distance)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::CameraParam</name>
-    <filename>d4/dc5/classrm_1_1para_1_1CameraParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
-      <anchor>a9f2082a0db1b687a2e7d98f12868c51f</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d5/d4e/structrm_1_1para_1_1CameraParam.html</filename>
     <member kind="function">
       <type></type>
       <name>CameraParam</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>aa7466fb4bed21a9dc27ff51abe702ba1</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchor>af3574d93a375a15e7995b3c3545e17a0</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>EULER_0</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>a5e5dd7ec45e306303a1c22f64c69ea98</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>EULER_1</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>afe4d020557cc5b1c79d0d9aca3f604dc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>EULER_2</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>a3c46c25c2370379da432f825d4dd8e3d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx33f</type>
       <name>cameraMatrix</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>ab01a964e6ab476e275fbfa87817b287b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx&lt; float, 5, 1 &gt;</type>
       <name>distCoeffs</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
+      <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>a97f5e8bf5dcbdd4a6715a47ecbaea54d</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3847,8 +3756,8 @@
       <type>bool</type>
       <name>subscribe</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a82ba41385b04ff9eb2d71668e0a18afc</anchor>
-      <arglist>(UA_NodeId node_id, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
+      <anchor>a7d780d481ea8ba317333ffd49496d541</anchor>
+      <arglist>(UA_NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3949,7 +3858,14 @@
       <type>feature::ptr</type>
       <name>at</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a1cd79a53911b13e02db166a8078db98d</anchor>
+      <anchor>aab6dec09cf512845525fae4e34c92066</anchor>
+      <arglist>(size_t idx)</arglist>
+    </member>
+    <member kind="function">
+      <type>const feature::const_ptr</type>
+      <name>at</name>
+      <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
+      <anchor>a6bc6454a191dff5237f68ab0e3bdb057</anchor>
       <arglist>(size_t idx) const</arglist>
     </member>
     <member kind="function">
@@ -4961,50 +4877,43 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GravityCompensatorParam</name>
-    <filename>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
-      <anchor>a02280cf1bd7311831ca2ce8abf888977</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GravityCompensatorParam</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
+      <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>aefcf39ece1a4dd54d8ce2121cf6ad21f</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
+      <anchor>ac82c5c769a2e4d866e20223b99018699</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>YAW_COMPENSATE</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
+      <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>a554a45e267fb4e918f6a8cb7f0c3427d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PITCH_COMPENSATE</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
+      <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>a68c0560eeeac7fb1d18a7e92a8f707fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MINIMUM_COM</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
+      <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>ad7ea38b2f9e9a6fca9e67eb2e65da520</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5163,50 +5072,43 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroCompensatorParam</name>
-    <filename>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
-      <anchor>a303c6cc19980da5e90ebee0e7713c8ec</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroCompensatorParam</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
+      <anchorfile>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
       <anchor>ab2855afbf7b39d3cf48b4346c0c8e6da</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
+      <anchor>a383e2d831886a3a141d05977aeb22905</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>YAW_COMPENSATE</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
+      <anchorfile>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
       <anchor>a01914440ae9beeed0b7b08d919fa8f15</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PITCH_COMPENSATE</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
+      <anchorfile>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
       <anchor>af8697721b2eb63b0b0a9f5f0cd167a70</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MINIMUM_COM</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
+      <anchorfile>d1/dea/structrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
       <anchor>a8ab720d0a1fc6563eebf941fe9736790</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -5269,64 +5171,57 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroDeciderParam</name>
-    <filename>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
-      <anchor>a8d9851024bfef6ee68688002ee16811d</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroDeciderParam</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>a8e0222b77c901997a7c0aa24adb00529</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchor>ab159abf3d272f3afbfb79efd26b6e21e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>NORMAL_RADIUS_RATIO</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>aecabf3739b3a710233c3ff4b7ff6b9c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>TYPE_PRIORITY</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>a8600eb9cb316fa65526aafae92f4e18e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PITCH_RESPONSE_DELAY</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>ac2dec924b8eca1bb92643507166f67c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PITCH_RESPONSE_AMP</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>a0a46dc13c1f2414e6ab6f1e4968bb4ef</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PRE_AIM_ANGLE</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
+      <anchorfile>d8/d22/structrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>ac5b178031d6e96ac7d76d2edcfd5d2fb</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5376,113 +5271,106 @@
       <arglist>(const std::string &amp;model, int armor_num=0)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroDetectorParam</name>
-    <filename>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
-      <anchor>abe2875309adcb7060a60cfb67a01247d</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroDetectorParam</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a81421f62d332aad104727143edbfb94c</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a6b34105a4405864f9a22af39d15e7d89</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_RED</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>aea144beea82651a9a882077f9c252bf0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_BLUE</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>add78d984107a223cb2d9c148a209e9f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MIN_CONTOUR_AREA</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>ae19bff1b4b3c4dc18f4c68f03ab99a75</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_GROUP_DELTA_DIS</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>adc4ffe4d0313fab910aab0842ab94ae1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_MULTIPLE_ANGLE</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a67746a148226e62986fa24abab54cbba</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_MULTIPLE_ANGLE</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a1c7a00fc991c371e3783aeb40b66113b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_HEIGHT_RATIO</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>afa9ba835c28f597f7ae8ec4f16ab0ba9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_WIDTH_RATIO</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a042ce385272c856ea0a4ec82eabe6cbf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_X_DISTANCE_RATIO</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>ae318333533296a565329f25d2c1236a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_X_DISTANCE_RATIO</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a6627bf394fd776f19a43e2a03b428040</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_Y_DISTANCE_RATIO</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a7b12033f4de4d50f83b9c1e0d9d449a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_CENTER_DIS</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchorfile>d5/d77/structrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>abb6cc5b101589f3ed2cdfa71f4962b73</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5623,78 +5511,71 @@
       <arglist>(const std::vector&lt; combo::ptr &gt; &amp;ref_combos)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroGroupParam</name>
-    <filename>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>a3d87b82b2f4c6f08e4ebb4d94fe7cc24</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroGroupParam</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>a579b6ad7f973bb2a4795e410738f067c</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchor>a5a7fe9882e283711ec93af9b6e9ae4e6</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>TRACK_FRAMES</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>ae73c024b40f4eb5c97bf2d9ab56c2e4a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>INIT_RADIUS</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>ac7c009fd040d30230be192377133fd84</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>ROTSPEED_SIZE</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>ab594ecb5c396f29af4af4a36641bc776</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_HIGH_ROT_SPEED</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>aaa3301df6ac1ce25885e1655d66264dc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_LOW_ROT_SPEED</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>a1a54cad37aed347457a84196bf10c858</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx66f</type>
       <name>CENTER3D_Q</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>af599660b263fc358e84aa32ea5573ac6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx66f</type>
       <name>CENTER3D_R</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
+      <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
       <anchor>a7a5071c30eef7fcbd74ebc97b691967b</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5716,50 +5597,43 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroPredictorParam</name>
-    <filename>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
-      <anchor>a9486496fbf39e03f85c4d2b0a5a44651</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroPredictorParam</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
+      <anchorfile>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
       <anchor>a2f31821247f55f47217877d4e090045f</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
+      <anchor>a8f6d997548e6f580ef80d76ef45af77f</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>K</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
+      <anchorfile>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
       <anchor>aafa63aa17ef2cd84a531f4574d623494</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>B</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
+      <anchorfile>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
       <anchor>a1e44cb9c8b7230f1ef2875c795b1f014</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SHOOT_B</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
+      <anchorfile>d1/d61/structrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
       <anchor>ae47e094640a91c930d78abbb4196a019</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5882,92 +5756,85 @@
       <arglist>(tracker::const_ptr p_tracker)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::GyroTrackerParam</name>
-    <filename>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a78d0b91988ff9f531e3d20827560eea8</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</filename>
     <member kind="function">
       <type></type>
       <name>GyroTrackerParam</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>abb70f466e8f1953163094ef86dd383d6</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchor>a5680cc27d054c4ba727f55f6db00801f</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLE_INTERVAL</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>a962238120ddb2e8c221fb8afa2e0e506</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_ROTSPEED</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>ae26870cdf3e4b218e86a3e355c228175</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_ROTSPEED</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>a83cf0a662b1851bbb9e217178ce0352c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>MOTION_Q</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>ae70ea529e7736725b482774d06a36cd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>MOTION_R</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>ac631b02aef638bba4f5b9a93045ee133</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx66f</type>
       <name>POSITION_Q</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>a5131f36916b658034375a259fa1190d3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx66f</type>
       <name>POSITION_R</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>ad3d33407594f3ec28ce8852a6fa43103</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>POSE_Q</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>a08c460623907d0e8f171fbaac7ffec9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>POSE_R</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
+      <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
       <anchor>a95c9504e87353b8e4c1899363f007547</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -6129,134 +5996,127 @@
       <arglist>(GrabMode grab_mode, RetrieveMode retrieve_mode, std::string_view serial=&quot;&quot;)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::HikCameraParam</name>
-    <filename>de/d4f/classrm_1_1para_1_1HikCameraParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a5056a35dd308f39193a8038c43ae3628</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d8/d79/structrm_1_1para_1_1HikCameraParam.html</filename>
     <member kind="function">
       <type></type>
       <name>HikCameraParam</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>aa3e5c58cfaf6aa8bc3541831d92afc6e</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchor>a9637cda4c0126aaa83526e83d8aa3c4e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>exposure</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>aba31c4f4e4e4d579d61de93ade5c0da5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>gamma</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>abe61a9ae92294d65ddf06d3d64774568</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>contrast</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>aa5bd9fe691aacab25d74639b80349a38</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>saturation</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a9bff5dc0bec11e33961cfca267ab2cb7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>sharpness</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>ae2240d5a7fba000e735c28f810b08733</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>gain</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>aea1cbec51dc1cee7cf9adf73d0cdf0df</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>b_gain</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>afb7b2c8ce62cfe5e085ce754ab28f521</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>g_gain</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>aba88c908a6cb50e3da01e8fb87702c60</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>r_gain</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a1b6bcd2dafc5cf78b04f5f6cbbc85409</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>grab_mode</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a3a95660e1dd9885659f1e25dffe6673d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>retrieve_mode</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a6d00959bcc71f0512cf5b81478c1ed18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>auto_exposure</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>af07f5e8bf9fb4b81e00ae988847381f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>auto_wb</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>abd5362ad3109d62bf0e4889292ec42e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; int &gt;</type>
       <name>lut_vec</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a80dc0160bc37bdfdd15b432992c9aa41</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>serial_number</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a72ccea3fab9c9aa9808a95b9e0e4eb51</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -6747,92 +6607,85 @@
       <arglist>(feature::const_ptr p_feature)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::LightBlobParam</name>
-    <filename>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
-      <anchor>af6399c5104b8063c015b5be8269e1cc8</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>da/db1/structrm_1_1para_1_1LightBlobParam.html</filename>
     <member kind="function">
       <type></type>
       <name>LightBlobParam</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>ae2fb4bc04cdd5db6e1149bdd0c99374f</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchor>ac83f85debe301366354fd1b9c1507146</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_LENGTH</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>ac5d80a7acef789a1b5c8b2176da5b3ce</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>CLOSE_LENGTH</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>a8997e4e875a39dfb6e7c7376db26d5bf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_RATIO</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>a5fc2c9cb91038fa94779410bc1831e0e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>RATIO_THRESHOLD</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>afa78d40cc7c0d9881689ade18b5ddbad</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_FAR_RATIO</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>ac4fb181ac58e7eb8a980503fce3a21f4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_FAR_RATIO</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>af326052541fd28ab8ceeeadba46f6348</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_CLOSE_RATIO</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>acfea69fe1670a044052a43379ab02386</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA_RATIO</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>a58400d4824aee7783590e2d421ee0d7b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_ANGLE</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
+      <anchorfile>da/db1/structrm_1_1para_1_1LightBlobParam.html</anchorfile>
       <anchor>a0b5c6d662e293e1b7928810f99a8d9fd</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -7046,134 +6899,127 @@
       <arglist>(GrabMode grab_mode, RetrieveMode retrieve_mode, std::string_view serial=&quot;&quot;, const std::vector&lt; int &gt; &amp;decode_param=std::vector&lt; int &gt;())</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::MvCameraParam</name>
-    <filename>d1/d75/classrm_1_1para_1_1MvCameraParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
-      <anchor>abfe0c7dc08b418391b09000190d0e79f</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</filename>
     <member kind="function">
       <type></type>
       <name>MvCameraParam</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a0cae34e2bbad51edf5096852ca91c294</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchor>a0f956464100520a5de386e707bb0eb7e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>exposure</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a29377870ce8518a8de11e6ddb02c8621</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>gamma</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a8dbeb57e2896046dbc74cebf95a6c7ca</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>contrast</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a5c185cd5c0f38424ca8e23357089642b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>saturation</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a904262e734476386e414ff6ce02f9e6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>sharpness</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a7890a1351a00a22484ad763b905e4fed</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>gain</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>ad49b8d07e236933dbc295372e7587747</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>b_gain</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a4bc16cedf2b44d8eac12c15c3a517af1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>g_gain</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a8d120b0ec71584d44166677dd6bfafd4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>r_gain</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a59cc8626854f9c0ad04a926bac322fcb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>grab_mode</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>abc78c2f67219539e27b2dd33589fbb92</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>retrieve_mode</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a518af9da7db893f15752a869f8a3a050</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>auto_exposure</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>abacb0a0c7266dd7ecd575ae576dcfb5d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>auto_wb</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>ae9e6522428d42048839859b1e6caf3bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; int &gt;</type>
       <name>lut_vec</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a98ab4a9bd3d90c9bfcd1a1957375e04e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>serial_number</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
+      <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a5195afbfaf099292c5fc20e461927c72</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7405,78 +7251,71 @@
       <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::OpcuaParam</name>
-    <filename>da/d23/classrm_1_1para_1_1OpcuaParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
-      <anchor>a23150046c1d08554b350e7917afe4801</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d3/d61/structrm_1_1para_1_1OpcuaParam.html</filename>
     <member kind="function">
       <type></type>
       <name>OpcuaParam</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>a7245fa6bc5f7668ba516c762745d195d</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchor>a31ddc0a1fa089ee058ac713393a5752b</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>SPIN_TIMEOUT</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>aca947ce4fcc94bd564634025e00f2997</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLING_INTERVAL</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>a4d9fd7e767b289a4e3f002cd732375cd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>PUBLISHING_INTERVAL</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>a24f5d2f4ab53cd42f9d6144571ae9bfe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>LIFETIME_COUNT</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>a05475d623d8fbe83db552b705f41a37b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>MAX_KEEPALIVE_COUNT</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>a73dc775c898d187d57d2dbd6c3a4de2b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>MAX_NOTIFICATIONS</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>aa2a84499490212c74cd40e9cdec781dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint8_t</type>
       <name>PRIORITY</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchorfile>d3/d61/structrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>abfc071d9179010971c314c81b65faf22</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7581,57 +7420,50 @@
       <arglist>(int channel, int time)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::OrtParam</name>
-    <filename>da/dd2/classrm_1_1para_1_1OrtParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a940460121077ac949cea4927b25cc16d</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d3/dc1/structrm_1_1para_1_1OrtParam.html</filename>
     <member kind="function">
       <type></type>
       <name>OrtParam</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
       <anchor>aff93a69af113d9baab2e3c9cbd098865</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchor>a43d611a1c88733d7bcbd5f74715900f1</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>cv::Vec3d</type>
       <name>RGB_MEANS</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
       <anchor>afba20554543098f58b2c4b2f5a0c427c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Vec3d</type>
       <name>RGB_STDS</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
       <anchor>a03baa946a25146b4da7763a6ac291308</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MONO_MEANS</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
       <anchor>a4832c654862f91e5920ea348902b7b8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MONO_STDS</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
+      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
       <anchor>a796559dd3025e3dbd60480d17594dc6f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>da/dd2/classrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7723,57 +7555,50 @@
       <arglist>(feature::const_ptr p_feature)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::PilotParam</name>
-    <filename>dc/d90/classrm_1_1para_1_1PilotParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
-      <anchor>a42a3e94bbd37dd538eee18f2eed88648</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d9/db7/structrm_1_1para_1_1PilotParam.html</filename>
     <member kind="function">
       <type></type>
       <name>PilotParam</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>af82f6645d3add0849d6cc458da2ca1bf</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchor>a32e00ca0430ae25fc4a1143d2f1e6a9e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>a2d789289e661ee5ccca38fb7d4e32231</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_RATIO</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>a8525dbb47c4fe5b3e77ba6bc81fd1fcf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_RATIO</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>a46908ebe37b6b596c1cbc23324cdc0a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>VERTEX_K</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
+      <anchorfile>d9/db7/structrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>a2a6f90b97cdcf6607d441392b86768b2</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7816,57 +7641,50 @@
       <arglist>(combo::ptr p_combo)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::PlanarTrackerParam</name>
-    <filename>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>ae7ddcfcf6d60c70eb2f00684bb2a90b4</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</filename>
     <member kind="function">
       <type></type>
       <name>PlanarTrackerParam</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>ac60ef995d3a7828b31e7e9125f44a99e</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchor>aa584db4e3c2166585b9fa7c9734d140d</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>TRACK_FRAMES</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>a10c36490f73846e5c1cfa2ca4a48241f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLE_INTERVAL</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>a4421b443a4f148ec92742f79e8102cc2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>Q</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>a7fc80e47740ac5e07c55df1f31c29866</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>R</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>a149b17323afb428071bbd88992a080de</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -8343,57 +8161,50 @@
       <arglist>(feature::const_ptr p_feature)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneCenterParam</name>
-    <filename>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
-      <anchor>a692f7cf9fc7cc84bd4704a45c8783634</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneCenterParam</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
       <anchor>a7ea036df4033edd5feec2c46497bcc59</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchor>a032b6c20fe363075c7c6596840770795</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_AREA</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
       <anchor>aa0f568d02faaa33a5f9c1cb808ecb7bc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
       <anchor>abc0f01ad66337e7903f8d4d6e9291e75</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_RATIO</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
       <anchor>a7d63b93c57806925c7143e7e15ed7f6f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_RATIO</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
+      <anchorfile>d0/df8/structrm_1_1para_1_1RuneCenterParam.html</anchorfile>
       <anchor>afab3b6cac0bb12aab764624752aa7939</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8422,57 +8233,50 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneDeciderParam</name>
-    <filename>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
-      <anchor>ace1947a7b311a249332282fe6c1f4300</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneDeciderParam</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
       <anchor>a2b291195a9af6fd507ae591fc4ae3d4a</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchor>a2a4f99b12940d60ca0d7aa18232b991b</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>INIT_FREQUENCY</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
       <anchor>a3b1e495ca2972d4af2395f372c4da29e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MISS_FREQUENCY</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
       <anchor>a2f87673ea20a2629e95cc382fadf8d1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>DISTURB_RADIUS_RATIO</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
       <anchor>a1d5a2c956dec930976b7aa19c5ab9b28</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>NORMAL_RADIUS_RATIO</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
+      <anchorfile>d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
       <anchor>a2336215c243eb30e45f9c258caabd503</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8501,71 +8305,64 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneDetectorParam</name>
-    <filename>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
-      <anchor>a2efd177c05f373c6e62d12c874b0a1ae</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneDetectorParam</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a67a1ccef9b4f27f626a31ebc44fe8d7a</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchor>a0d692b41631afa1e23156085980f7772</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_RED</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>ac8b03f2e162f0f35ce322716f3fc3bb7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_BLUE</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a36e3edc8d3f58fe6c2d42fbb28f557c0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MIN_CONTOUR_AREA</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a05a9e5ab3e1d7870734b38012d1e8105</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>MAX_CONTOUR_AREA</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a98637e1cc2871f841d38c70665f11607</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>BIG_TARGET_AREA</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a9a2dbc6becfe5ebb67795fe63cfcec7b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>CONCENTRICITY_RATIO</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
+      <anchorfile>db/d68/structrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>ad9e9350a1258de20d5194eef9caa4433</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8629,124 +8426,110 @@
       <arglist>(group::const_ptr p_group)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneGroupParam</name>
-    <filename>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
-      <anchor>a05c97bd8da89363ef71c8cab8c444df1</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>de/d54/structrm_1_1para_1_1RuneGroupParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneGroupParam</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
+      <anchorfile>de/d54/structrm_1_1para_1_1RuneGroupParam.html</anchorfile>
       <anchor>abe947169f345de8777f4dac4cde05b39</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>de/d54/structrm_1_1para_1_1RuneGroupParam.html</anchorfile>
+      <anchor>a0598b5ab01a95c05d784f96d48a2cb77</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>INTERVAL_ANGLE</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
+      <anchorfile>de/d54/structrm_1_1para_1_1RuneGroupParam.html</anchorfile>
       <anchor>ad78a94a22e5d7a89ff502a94434c7692</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>size_t</type>
       <name>RAW_DATAS_SIZE</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
+      <anchorfile>de/d54/structrm_1_1para_1_1RuneGroupParam.html</anchorfile>
       <anchor>ac3a08477c47885c360c2860fa73a5fc8</anchor>
       <arglist></arglist>
     </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
-    </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneParam</name>
-    <filename>d5/d17/classrm_1_1para_1_1RuneParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
-      <anchor>a396af8ab0930fb7e6d6fc1f9388eed52</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>db/d6d/structrm_1_1para_1_1RuneParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneParam</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a34d4f8d0a9acd256f783baae607b6c02</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchor>a329a1fd765244b7ac0a2da1a1f50b95a</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>COEFF_K</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>aabc6f018f4ac9f83b8004b7b007a5823</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>ad7a3f9b51964f8cfae1a30fc7ad297b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_AREA_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a4413d292b838af48fd0181cfa94382a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_RADIUS_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a75182b66e0e1756d0225d34afe12446b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_RADIUS_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a15793aad700fa686c735552044071198</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>BEST_RADIUS_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>ac693ba2fd3e8c8c8daecc4e5d755ae90</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_MID_LINE_RATIO</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a3a377e931afbf0d10fe8cfb96e6b222b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>RUNE_DISTANCE</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
+      <anchorfile>db/d6d/structrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>aa630db61a2b4aebabdaac3defca8220d</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8775,43 +8558,36 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RunePredictorParam</name>
-    <filename>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
-      <anchor>a5af48e1c91116c9ff41b4b7a999156dc</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>db/d7d/structrm_1_1para_1_1RunePredictorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RunePredictorParam</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
+      <anchorfile>db/d7d/structrm_1_1para_1_1RunePredictorParam.html</anchorfile>
       <anchor>a5550cdcd88b908dc2031080574007689</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>db/d7d/structrm_1_1para_1_1RunePredictorParam.html</anchorfile>
+      <anchor>a479af9ea9a4979a7a4bd7fe62a80f3fe</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PREDICT_K</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
+      <anchorfile>db/d7d/structrm_1_1para_1_1RunePredictorParam.html</anchorfile>
       <anchor>a76d435d0850df4ce8f236411e8ac9c37</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>PREDICT_B</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
+      <anchorfile>db/d7d/structrm_1_1para_1_1RunePredictorParam.html</anchorfile>
       <anchor>aeced44ff2844da1f0c372202fcc24fc5</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8924,78 +8700,71 @@
       <arglist>(feature::const_ptr p_feature)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneTargetParam</name>
-    <filename>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
-      <anchor>a0e9754243c4fd6f25774f6d9f0589b18</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>da/d31/structrm_1_1para_1_1RuneTargetParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneTargetParam</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a70840af923723498d552be11b61ebf93</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchor>a8b1fd5efcfb0935c520808b2e41ea9e2</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a3644b48366b42b71c59fdc61beb2e49f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a36d5a871022ee221bb42f7fc7bad4645</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_AREA_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a3bae405d1b61c3cd24a28629fda906dc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a3ceaaaba867f69855b38d116aac1f7d5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_AREA_PERI_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>a113656e5c89b0935825d24e676b68260</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA_PERI_RATIO</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>af7cd5f5a2a7eff02252b6902c3c35416</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
+      <anchorfile>da/d31/structrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>aa9c184c16536825ded8ab709f1603604</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9073,71 +8842,64 @@
       <arglist>(tracker::const_ptr p_tracker)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::RuneTrackerParam</name>
-    <filename>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
-      <anchor>a394f28839c46eccdc86a12c68c58b75c</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</filename>
     <member kind="function">
       <type></type>
       <name>RuneTrackerParam</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>a73e1b04004e6db95d993e637fe2feb6e</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchor>ae0f98ab532a117581eabf3e44f3d2e5d</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>TRACK_FRAMES</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>ab3f34b41b597b33dda8c56dee8266230</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLE_INTERVAL</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>a43cae57661c8da13d9b2b32d1cf36e04</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx22f</type>
       <name>ROTATE_Q</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>a14be82a8cffc3307b171aa00712eea7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx22f</type>
       <name>ROTATE_R</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>a77ed79092538034067dde64e63a56261</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>MOTION_Q</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>a273511d091e42484f6f689f311d52cac</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
       <name>MOTION_R</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
+      <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
       <anchor>aa842065544ca5a22d8fd22512b8afb72</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9312,78 +9074,71 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::SpiRunePredictorParam</name>
-    <filename>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
-      <anchor>a747b7213ebff6b19c7be48722d429032</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>SpiRunePredictorParam</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>a79133026a8e4b7902a3105daa6611b44</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchor>ac4240d6bf72b469c6efe8b1ab95fe82e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>B</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>a905a8c8440cec9deb457ba1f49aaa814</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>INTERVAL_ANGLE</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>a5f708c90da781b2e324ca6f9043fd2f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>KP</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>aba905635adb70cd77da44812a5769e51</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLE_INTERVAL</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>a2bb3e8367fc7073876b31383c16905b3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>FIXED_ANGLE</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>ab019c7e0391691acab9892d0ebb2dd03</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>size_t</type>
       <name>DIFF_ORDER</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>ad9eacd61f2a466aaa38a210c13ed9626</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>size_t</type>
       <name>MAX_NF</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
+      <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>a9ce52d3e71bd712d76e3671c005b04ab</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9480,36 +9235,29 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::TagDetectorParam</name>
-    <filename>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a94e4a0c322ee2de5f863f8465eda59d5</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>d6/d73/structrm_1_1para_1_1TagDetectorParam.html</filename>
     <member kind="function">
       <type></type>
       <name>TagDetectorParam</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
+      <anchorfile>d6/d73/structrm_1_1para_1_1TagDetectorParam.html</anchorfile>
       <anchor>a22805025f99eda8a85161e884bb43cfe</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d6/d73/structrm_1_1para_1_1TagDetectorParam.html</anchorfile>
+      <anchor>ad9a2f0445b0920ec7b22a7ef892e2f5b</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_TRACKER_DELTA_DIS</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
+      <anchorfile>d6/d73/structrm_1_1para_1_1TagDetectorParam.html</anchorfile>
       <anchor>a3f66b9f1275d445d7cc00ecc8899765f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9911,36 +9659,29 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::TranslationDeciderParam</name>
-    <filename>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
-      <anchor>a26179bfdf81c7753d6dcfd61e16a819f</anchor>
-      <arglist></arglist>
-    </member>
+    <filename>dc/d03/structrm_1_1para_1_1TranslationDeciderParam.html</filename>
     <member kind="function">
       <type></type>
       <name>TranslationDeciderParam</name>
-      <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
+      <anchorfile>dc/d03/structrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
       <anchor>a15910a1614927b54e0a0d08aabc5e8b9</anchor>
       <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>dc/d03/structrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
+      <anchor>aee7e53e49f305dd7ad0ca3a50d3c316b</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
       <name>NORMAL_RADIUS_RATIO</name>
-      <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
+      <anchorfile>dc/d03/structrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
       <anchor>abcbb0a57e0e9d2cdcbca450ba92c240c</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11111,13 +10852,6 @@
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point2f</type>
-      <name>relativeAngle2EulerAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafd983b66d83a1041aedac1c52660b84d</anchor>
-      <arglist>(float yaw, float pitch)</arglist>
-    </member>
-    <member kind="function">
       <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
       <name>euler2Mat</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
@@ -11167,122 +10901,122 @@
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gacd95d3a66578731549301e7e5fed0932</anchor>
+      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafb9686a5036653f977c1945db4bc262a</anchor>
+      <anchor>ga2f9eedb68bb5ae56673c6b2ea1dbbb87</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaab48d17bee4ad33e84961a0af9434f7d</anchor>
+      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gad7e0ddce9ef33cf84aa998eb69f8366f</anchor>
+      <anchor>ga392746cfd2ba5dc008cf2fd714899cbf</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>deg2rad</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga09bb8c83690c424eb9a24e9506059b9f</anchor>
+      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
       <arglist>(Tp deg)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>rad2deg</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0f2e28ff9927a5b79d868dfa539135d0</anchor>
+      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
       <arglist>(Tp rad)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
       <name>point2matx</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa12c90960f257ff9a19547ec9ee3b9cb</anchor>
+      <anchor>ga1136f3b18cb42622f61e2c59dcdc7974</anchor>
       <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point3_&lt; Tp &gt;</type>
+      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
       <name>matx2point</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5cd6b271a71425a1d3d3d69199cd1169</anchor>
+      <anchor>ga1861223d0b42e982c7d51f0232753070</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Vec&lt; Tp, 3 &gt;</type>
+      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
       <name>matx2vec</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gac60f26814042d8b62f5a9855f75971bc</anchor>
+      <anchor>ga8b0f860b941990cdc4497eca855e236e</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaca56dab3bdc3286e33964bdaaf6effc1</anchor>
+      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga729028fd34b69cfe0211eae1885a96ac</anchor>
+      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaee5f2c06e3d4cda48fcd9e089a85fd8d</anchor>
+      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
       <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaed758bdeafb0c85a5f201472a0c561a8</anchor>
+      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga789dc87e911e0b5aa59871e2f339940c</anchor>
+      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getHAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafc6857df29263e2fea37c2b388eb1b4f</anchor>
+      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getVAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga4f51140d768ddd5596642e6bb88bc491</anchor>
+      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>getDeltaAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga17e29dcd20fa2263c1ea1e4c9900a55d</anchor>
+      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
       <arglist>(Tp angle_1, Tp angle_2)</arglist>
     </member>
     <member kind="function">
@@ -11314,24 +11048,24 @@
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>sigmoid</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaac66e6ba7fca3a967df3999a23a8cf31</anchor>
+      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
       <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0054c55709350950f73ffa38bd0e8f6b</anchor>
+      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
       <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga07a21a9805af780500ab066a176d5559</anchor>
+      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
       <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
@@ -11340,13 +11074,6 @@
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>getMid</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga45cf635844555bd4ad5fdb65c12a9b5e</anchor>
-      <arglist>(Tp a, Tp b, Tp c)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -11468,49 +11195,35 @@
   <compound kind="namespace">
     <name>rm::para</name>
     <filename>d4/d15/namespacerm_1_1para.html</filename>
-    <class kind="class">rm::para::CameraParam</class>
-    <class kind="class">rm::para::HikCameraParam</class>
-    <class kind="class">rm::para::MvCameraParam</class>
-    <class kind="class">rm::para::OrtParam</class>
-    <class kind="class">rm::para::OpcuaParam</class>
-    <class kind="class">rm::para::ArmorParam</class>
-    <class kind="class">rm::para::RuneParam</class>
-    <class kind="class">rm::para::GravityCompensatorParam</class>
-    <class kind="class">rm::para::GyroCompensatorParam</class>
-    <class kind="class">rm::para::GyroDeciderParam</class>
-    <class kind="class">rm::para::RuneDeciderParam</class>
-    <class kind="class">rm::para::TranslationDeciderParam</class>
-    <class kind="class">rm::para::ArmorDetectorParam</class>
-    <class kind="class">rm::para::GyroDetectorParam</class>
-    <class kind="class">rm::para::RuneDetectorParam</class>
-    <class kind="class">rm::para::TagDetectorParam</class>
-    <class kind="class">rm::para::LightBlobParam</class>
-    <class kind="class">rm::para::PilotParam</class>
-    <class kind="class">rm::para::RuneCenterParam</class>
-    <class kind="class">rm::para::RuneTargetParam</class>
-    <class kind="class">rm::para::GyroGroupParam</class>
-    <class kind="class">rm::para::RuneGroupParam</class>
-    <class kind="class">rm::para::ArmorPredictorParam</class>
-    <class kind="class">rm::para::GyroPredictorParam</class>
-    <class kind="class">rm::para::RunePredictorParam</class>
-    <class kind="class">rm::para::SpiRunePredictorParam</class>
-    <class kind="class">rm::para::GyroTrackerParam</class>
-    <class kind="class">rm::para::PlanarTrackerParam</class>
-    <class kind="class">rm::para::RuneTrackerParam</class>
-    <member kind="function">
-      <type>void</type>
-      <name>load</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga6de61a70587232e1a07295c45ab2c7fa</anchor>
-      <arglist>(Tp &amp;para_obj, const std::string &amp;file_path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readExcludeNone</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga4d70b6903799a7fd34047bd86edbaf85</anchor>
-      <arglist>(const _FileNode &amp;n, Tp &amp;t)</arglist>
-    </member>
+    <class kind="struct">rm::para::CameraParam</class>
+    <class kind="struct">rm::para::HikCameraParam</class>
+    <class kind="struct">rm::para::MvCameraParam</class>
+    <class kind="struct">rm::para::OrtParam</class>
+    <class kind="struct">rm::para::OpcuaParam</class>
+    <class kind="struct">rm::para::ArmorParam</class>
+    <class kind="struct">rm::para::RuneParam</class>
+    <class kind="struct">rm::para::GravityCompensatorParam</class>
+    <class kind="struct">rm::para::GyroCompensatorParam</class>
+    <class kind="struct">rm::para::GyroDeciderParam</class>
+    <class kind="struct">rm::para::RuneDeciderParam</class>
+    <class kind="struct">rm::para::TranslationDeciderParam</class>
+    <class kind="struct">rm::para::ArmorDetectorParam</class>
+    <class kind="struct">rm::para::GyroDetectorParam</class>
+    <class kind="struct">rm::para::RuneDetectorParam</class>
+    <class kind="struct">rm::para::TagDetectorParam</class>
+    <class kind="struct">rm::para::LightBlobParam</class>
+    <class kind="struct">rm::para::PilotParam</class>
+    <class kind="struct">rm::para::RuneCenterParam</class>
+    <class kind="struct">rm::para::RuneTargetParam</class>
+    <class kind="struct">rm::para::GyroGroupParam</class>
+    <class kind="struct">rm::para::RuneGroupParam</class>
+    <class kind="struct">rm::para::ArmorPredictorParam</class>
+    <class kind="struct">rm::para::GyroPredictorParam</class>
+    <class kind="struct">rm::para::RunePredictorParam</class>
+    <class kind="struct">rm::para::SpiRunePredictorParam</class>
+    <class kind="struct">rm::para::GyroTrackerParam</class>
+    <class kind="struct">rm::para::PlanarTrackerParam</class>
+    <class kind="struct">rm::para::RuneTrackerParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>camera_param</name>
@@ -12054,9 +11767,9 @@
     <name>para_camera</name>
     <title>camera 的参数模块</title>
     <filename>d2/df4/group__para__camera.html</filename>
-    <class kind="class">rm::para::CameraParam</class>
-    <class kind="class">rm::para::HikCameraParam</class>
-    <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="struct">rm::para::CameraParam</class>
+    <class kind="struct">rm::para::HikCameraParam</class>
+    <class kind="struct">rm::para::MvCameraParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>camera_param</name>
@@ -12498,6 +12211,22 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>para</name>
+    <title>参数模块</title>
+    <filename>d6/db7/group__para.html</filename>
+    <subgroup>para_camera</subgroup>
+    <subgroup>para_ml</subgroup>
+    <subgroup>para_opcua</subgroup>
+    <subgroup>para_combo</subgroup>
+    <subgroup>para_compensator</subgroup>
+    <subgroup>para_decider</subgroup>
+    <subgroup>para_detector</subgroup>
+    <subgroup>para_feature</subgroup>
+    <subgroup>para_group</subgroup>
+    <subgroup>para_predictor</subgroup>
+    <subgroup>para_tracker</subgroup>
+  </compound>
+  <compound kind="group">
     <name>imgproc</name>
     <title>图像处理</title>
     <filename>d7/dbd/group__imgproc.html</filename>
@@ -12577,7 +12306,7 @@
     <name>para_ml</name>
     <title>ml 的参数模块</title>
     <filename>d9/d95/group__para__ml.html</filename>
-    <class kind="class">rm::para::OrtParam</class>
+    <class kind="struct">rm::para::OrtParam</class>
     <member kind="variable">
       <type>OrtParam</type>
       <name>ort_param</name>
@@ -12722,40 +12451,10 @@
     </member>
   </compound>
   <compound kind="group">
-    <name>para</name>
-    <title>参数及加载模块</title>
-    <filename>d6/db7/group__para.html</filename>
-    <subgroup>para_camera</subgroup>
-    <subgroup>para_ml</subgroup>
-    <subgroup>para_opcua</subgroup>
-    <subgroup>para_combo</subgroup>
-    <subgroup>para_compensator</subgroup>
-    <subgroup>para_decider</subgroup>
-    <subgroup>para_detector</subgroup>
-    <subgroup>para_feature</subgroup>
-    <subgroup>para_group</subgroup>
-    <subgroup>para_predictor</subgroup>
-    <subgroup>para_tracker</subgroup>
-    <member kind="function">
-      <type>void</type>
-      <name>load</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga6de61a70587232e1a07295c45ab2c7fa</anchor>
-      <arglist>(Tp &amp;para_obj, const std::string &amp;file_path)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readExcludeNone</name>
-      <anchorfile>d6/db7/group__para.html</anchorfile>
-      <anchor>ga4d70b6903799a7fd34047bd86edbaf85</anchor>
-      <arglist>(const _FileNode &amp;n, Tp &amp;t)</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
     <name>para_opcua</name>
     <title>opcua 的参数模块</title>
     <filename>da/dd3/group__para__opcua.html</filename>
-    <class kind="class">rm::para::OpcuaParam</class>
+    <class kind="struct">rm::para::OpcuaParam</class>
     <member kind="variable">
       <type>OpcuaParam</type>
       <name>opcua_param</name>
@@ -12883,13 +12582,6 @@
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point2f</type>
-      <name>relativeAngle2EulerAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafd983b66d83a1041aedac1c52660b84d</anchor>
-      <arglist>(float yaw, float pitch)</arglist>
-    </member>
-    <member kind="function">
       <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
       <name>euler2Mat</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
@@ -12939,122 +12631,122 @@
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gacd95d3a66578731549301e7e5fed0932</anchor>
+      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator+</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafb9686a5036653f977c1945db4bc262a</anchor>
+      <anchor>ga2f9eedb68bb5ae56673c6b2ea1dbbb87</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaab48d17bee4ad33e84961a0af9434f7d</anchor>
+      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator-</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gad7e0ddce9ef33cf84aa998eb69f8366f</anchor>
+      <anchor>ga392746cfd2ba5dc008cf2fd714899cbf</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>deg2rad</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga09bb8c83690c424eb9a24e9506059b9f</anchor>
+      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
       <arglist>(Tp deg)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>rad2deg</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0f2e28ff9927a5b79d868dfa539135d0</anchor>
+      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
       <arglist>(Tp rad)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 1 &gt;</type>
+      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
       <name>point2matx</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa12c90960f257ff9a19547ec9ee3b9cb</anchor>
+      <anchor>ga1136f3b18cb42622f61e2c59dcdc7974</anchor>
       <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point3_&lt; Tp &gt;</type>
+      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
       <name>matx2point</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5cd6b271a71425a1d3d3d69199cd1169</anchor>
+      <anchor>ga1861223d0b42e982c7d51f0232753070</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Vec&lt; Tp, 3 &gt;</type>
+      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
       <name>matx2vec</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gac60f26814042d8b62f5a9855f75971bc</anchor>
+      <anchor>ga8b0f860b941990cdc4497eca855e236e</anchor>
       <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaca56dab3bdc3286e33964bdaaf6effc1</anchor>
+      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga729028fd34b69cfe0211eae1885a96ac</anchor>
+      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaee5f2c06e3d4cda48fcd9e089a85fd8d</anchor>
+      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
       <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaed758bdeafb0c85a5f201472a0c561a8</anchor>
+      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getDistance</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga789dc87e911e0b5aa59871e2f339940c</anchor>
+      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getHAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gafc6857df29263e2fea37c2b388eb1b4f</anchor>
+      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
+      <type>constexpr auto</type>
       <name>getVAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga4f51140d768ddd5596642e6bb88bc491</anchor>
+      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>getDeltaAngle</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga17e29dcd20fa2263c1ea1e4c9900a55d</anchor>
+      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
       <arglist>(Tp angle_1, Tp angle_2)</arglist>
     </member>
     <member kind="function">
@@ -13086,24 +12778,24 @@
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>sigmoid</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaac66e6ba7fca3a967df3999a23a8cf31</anchor>
+      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
       <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0054c55709350950f73ffa38bd0e8f6b</anchor>
+      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
       <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
+      <type>constexpr Tp</type>
       <name>cross2D</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga07a21a9805af780500ab066a176d5559</anchor>
+      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
       <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
@@ -13112,13 +12804,6 @@
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>getMid</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga45cf635844555bd4ad5fdb65c12a9b5e</anchor>
-      <arglist>(Tp a, Tp b, Tp c)</arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
@@ -13207,8 +12892,8 @@
     <name>para_combo</name>
     <title>combo 的参数模块</title>
     <filename>d4/d8a/group__para__combo.html</filename>
-    <class kind="class">rm::para::ArmorParam</class>
-    <class kind="class">rm::para::RuneParam</class>
+    <class kind="struct">rm::para::ArmorParam</class>
+    <class kind="struct">rm::para::RuneParam</class>
     <member kind="variable">
       <type>ArmorParam</type>
       <name>armor_param</name>
@@ -13249,8 +12934,8 @@
     <name>para_compensator</name>
     <title>compensator 的参数模块</title>
     <filename>da/df1/group__para__compensator.html</filename>
-    <class kind="class">rm::para::GravityCompensatorParam</class>
-    <class kind="class">rm::para::GyroCompensatorParam</class>
+    <class kind="struct">rm::para::GravityCompensatorParam</class>
+    <class kind="struct">rm::para::GyroCompensatorParam</class>
     <member kind="variable">
       <type>GravityCompensatorParam</type>
       <name>gravity_compensator_param</name>
@@ -13298,9 +12983,9 @@
     <name>para_decider</name>
     <title>decider 的参数模块</title>
     <filename>de/dac/group__para__decider.html</filename>
-    <class kind="class">rm::para::GyroDeciderParam</class>
-    <class kind="class">rm::para::RuneDeciderParam</class>
-    <class kind="class">rm::para::TranslationDeciderParam</class>
+    <class kind="struct">rm::para::GyroDeciderParam</class>
+    <class kind="struct">rm::para::RuneDeciderParam</class>
+    <class kind="struct">rm::para::TranslationDeciderParam</class>
     <member kind="variable">
       <type>GyroDeciderParam</type>
       <name>gyro_decider_param</name>
@@ -13362,10 +13047,10 @@
     <name>para_detector</name>
     <title>detector 的参数模块</title>
     <filename>d8/d46/group__para__detector.html</filename>
-    <class kind="class">rm::para::ArmorDetectorParam</class>
-    <class kind="class">rm::para::GyroDetectorParam</class>
-    <class kind="class">rm::para::RuneDetectorParam</class>
-    <class kind="class">rm::para::TagDetectorParam</class>
+    <class kind="struct">rm::para::ArmorDetectorParam</class>
+    <class kind="struct">rm::para::GyroDetectorParam</class>
+    <class kind="struct">rm::para::RuneDetectorParam</class>
+    <class kind="struct">rm::para::TagDetectorParam</class>
     <member kind="variable">
       <type>ArmorDetectorParam</type>
       <name>armor_detector_param</name>
@@ -13448,10 +13133,10 @@
     <name>para_feature</name>
     <title>feature 的参数模块</title>
     <filename>d8/d55/group__para__feature.html</filename>
-    <class kind="class">rm::para::LightBlobParam</class>
-    <class kind="class">rm::para::PilotParam</class>
-    <class kind="class">rm::para::RuneCenterParam</class>
-    <class kind="class">rm::para::RuneTargetParam</class>
+    <class kind="struct">rm::para::LightBlobParam</class>
+    <class kind="struct">rm::para::PilotParam</class>
+    <class kind="struct">rm::para::RuneCenterParam</class>
+    <class kind="struct">rm::para::RuneTargetParam</class>
     <member kind="variable">
       <type>LightBlobParam</type>
       <name>light_blob_param</name>
@@ -13506,8 +13191,8 @@
     <name>para_group</name>
     <title>group 的参数模块</title>
     <filename>d1/da1/group__para__group.html</filename>
-    <class kind="class">rm::para::GyroGroupParam</class>
-    <class kind="class">rm::para::RuneGroupParam</class>
+    <class kind="struct">rm::para::GyroGroupParam</class>
+    <class kind="struct">rm::para::RuneGroupParam</class>
     <member kind="variable">
       <type>GyroGroupParam</type>
       <name>gyro_group_param</name>
@@ -13616,10 +13301,10 @@
     <name>para_predictor</name>
     <title>predictor 的参数模块</title>
     <filename>dd/dad/group__para__predictor.html</filename>
-    <class kind="class">rm::para::ArmorPredictorParam</class>
-    <class kind="class">rm::para::GyroPredictorParam</class>
-    <class kind="class">rm::para::RunePredictorParam</class>
-    <class kind="class">rm::para::SpiRunePredictorParam</class>
+    <class kind="struct">rm::para::ArmorPredictorParam</class>
+    <class kind="struct">rm::para::GyroPredictorParam</class>
+    <class kind="struct">rm::para::RunePredictorParam</class>
+    <class kind="struct">rm::para::SpiRunePredictorParam</class>
     <member kind="variable">
       <type>ArmorPredictorParam</type>
       <name>armor_predictor_param</name>
@@ -13681,9 +13366,9 @@
     <name>para_tracker</name>
     <title>tracker 的参数模块</title>
     <filename>db/d32/group__para__tracker.html</filename>
-    <class kind="class">rm::para::GyroTrackerParam</class>
-    <class kind="class">rm::para::PlanarTrackerParam</class>
-    <class kind="class">rm::para::RuneTrackerParam</class>
+    <class kind="struct">rm::para::GyroTrackerParam</class>
+    <class kind="struct">rm::para::PlanarTrackerParam</class>
+    <class kind="struct">rm::para::RuneTrackerParam</class>
     <member kind="variable">
       <type>GyroTrackerParam</type>
       <name>gyro_tracker_param</name>
@@ -14041,12 +13726,6 @@
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="初始化">serialport_init</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="数据 I/O">serialport_io</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="链路层协议">serialport_protocol</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_singleton</name>
-    <title>单例模板</title>
-    <filename>d4/d75/tutorial_modules_singleton.html</filename>
-    <docanchor file="d4/d75/tutorial_modules_singleton.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_singleton</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_camera</name>

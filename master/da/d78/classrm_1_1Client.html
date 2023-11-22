@@ -134,9 +134,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a72eba8c488cfbb095cc334dafed919e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#a72eba8c488cfbb095cc334dafed919e9">subscribe</a> (UA_NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size)</td></tr>
 <tr class="memdesc:a72eba8c488cfbb095cc334dafed919e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建变量节点监视项，以实现订阅节点的功能  <a href="../../da/d78/classrm_1_1Client.html#a72eba8c488cfbb095cc334dafed919e9">更多...</a><br /></td></tr>
 <tr class="separator:a72eba8c488cfbb095cc334dafed919e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ba41385b04ff9eb2d71668e0a18afc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#a82ba41385b04ff9eb2d71668e0a18afc">subscribe</a> (UA_NodeId node_id, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</td></tr>
-<tr class="memdesc:a82ba41385b04ff9eb2d71668e0a18afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建事件监视项，以实现事件的订阅功能  <a href="../../da/d78/classrm_1_1Client.html#a82ba41385b04ff9eb2d71668e0a18afc">更多...</a><br /></td></tr>
-<tr class="separator:a82ba41385b04ff9eb2d71668e0a18afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d780d481ea8ba317333ffd49496d541"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#a7d780d481ea8ba317333ffd49496d541">subscribe</a> (UA_NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</td></tr>
+<tr class="memdesc:a7d780d481ea8ba317333ffd49496d541"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建事件监视项，以实现事件的订阅功能  <a href="../../da/d78/classrm_1_1Client.html#a7d780d481ea8ba317333ffd49496d541">更多...</a><br /></td></tr>
+<tr class="separator:a7d780d481ea8ba317333ffd49496d541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>OPC UA 客户端 </p>
@@ -483,8 +483,53 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
+<a id="a7d780d481ea8ba317333ffd49496d541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d780d481ea8ba317333ffd49496d541">&#9670;&nbsp;</a></span>subscribe() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">UA_NodeId&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UA_Client_EventNotificationCallback&#160;</td>
+          <td class="paramname"><em>on_event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建事件监视项，以实现事件的订阅功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待监视节点的 <code>UA_NodeId</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#aab847255a7ce17a9a96ec7816d0a1392" title="获取 int 整型的非默认属性列表">Event::getProperties()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功订阅事件？ </dd></dl>
+
+</div>
+</div>
 <a id="a72eba8c488cfbb095cc334dafed919e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72eba8c488cfbb095cc334dafed919e9">&#9670;&nbsp;</a></span>subscribe() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72eba8c488cfbb095cc334dafed919e9">&#9670;&nbsp;</a></span>subscribe() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,57 +585,6 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a82ba41385b04ff9eb2d71668e0a18afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82ba41385b04ff9eb2d71668e0a18afc">&#9670;&nbsp;</a></span>subscribe() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rm::Client::subscribe </td>
-          <td>(</td>
-          <td class="paramtype">UA_NodeId&#160;</td>
-          <td class="paramname"><em>node_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>names</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">UA_Client_EventNotificationCallback&#160;</td>
-          <td class="paramname"><em>on_event</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>创建事件监视项，以实现事件的订阅功能 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>待监视节点的 <code>UA_NodeId</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../da/d88/classrm_1_1Event.html#aab847255a7ce17a9a96ec7816d0a1392" title="获取 int 整型的非默认属性列表">rm::Event::getProperties()</a> </dd></dl>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>是否成功订阅事件？ </dd></dl>
-
-</div>
-</div>
 <a id="aed679e770478efa599d6d55e18a32f81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed679e770478efa599d6d55e18a32f81">&#9670;&nbsp;</a></span>write()</h2>
 
@@ -636,7 +630,7 @@ Public 成员函数</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 18日 星期六 14:50:26 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

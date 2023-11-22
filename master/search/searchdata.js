@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghijklmnopqrstuvwxyz~串为主光决前单卡参图在基如安定导平并序引待扩支数整旋最机构检海激特目相硬神类系聚能补装视读责迈追通重顶",
+  0: "_abcdefghijklmnopqrstuvwxyz~串为主光决前卡参图在基如安定导平并序引待扩支数整旋最机构检海激特目相硬神类系聚能补装视读责迈追通重顶",
   1: "acdefghiklmoprstuv",
   2: "cr",
   3: "abcdefghiklmoprstuv",
@@ -9,10 +9,9 @@ var indexSectionsWithContent =
   6: "acdfhkmprsuv",
   7: "_acegmprtv",
   8: "abcdefghijklmnopqrstuvwxyz",
-  9: "l",
-  10: "r",
-  11: "acdfgmopt串光决前卡参图基定平并序支数整旋机检海激特目相神类系能补装视迈追重",
-  12: "akor串为主光单卡参在基如安导并引待扩支最构相硬聚视读责通顶"
+  9: "or",
+  10: "acdfgmopt串光决前卡参图基定平并序支数整旋机检海激特目相神类系能补装视迈追重",
+  11: "akor串为主光卡参在基如安导并引待扩支最构相硬聚视读责通顶"
 };
 
 var indexSectionNames =
@@ -26,10 +25,9 @@ var indexSectionNames =
   6: "typedefs",
   7: "enums",
   8: "enumvalues",
-  9: "related",
-  10: "defines",
-  11: "groups",
-  12: "pages"
+  9: "defines",
+  10: "groups",
+  11: "pages"
 };
 
 var indexSectionLabels =
@@ -43,9 +41,8 @@ var indexSectionLabels =
   6: "类型定义",
   7: "枚举",
   8: "枚举值",
-  9: "友元",
-  10: "宏定义",
-  11: "组",
-  12: "页"
+  9: "宏定义",
+  10: "组",
+  11: "页"
 };
 

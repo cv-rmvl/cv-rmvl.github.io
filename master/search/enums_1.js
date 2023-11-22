@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['anglemode_1848',['AngleMode',['../d9/d31/group__rmath.html#gaf5bed2d75219e503cecfb0bde26b786c',1,'rm']]],
-  ['armorsizetype_1849',['ArmorSizeType',['../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7',1,'rm']]]
+  ['anglemode_1837',['AngleMode',['../d9/d31/group__rmath.html#gaf5bed2d75219e503cecfb0bde26b786c',1,'rm']]],
+  ['armorsizetype_1838',['ArmorSizeType',['../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7',1,'rm']]]
 ];

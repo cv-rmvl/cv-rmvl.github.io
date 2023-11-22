@@ -87,7 +87,6 @@ $(function() {
 <div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/d8f/loader_8hpp.html">rmvlpara/loader.hpp</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d4/d15/namespacerm_1_1para.html">para</a>;</div>
@@ -130,20 +129,20 @@ $(function() {
 <div class="line">    FileStorage fs(<span class="stringliteral">&quot;out_para.yml&quot;</span>, FileStorage::READ);</div>
 <div class="line">    <span class="keywordflow">if</span> (fs.isOpened())</div>
 <div class="line">    {</div>
-<div class="line">        <a name="a2"></a><a class="code" href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">readExcludeNone</a>(fs[<span class="stringliteral">&quot;exposure&quot;</span>], exposure);</div>
-<div class="line">        <a class="code" href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">readExcludeNone</a>(fs[<span class="stringliteral">&quot;gain&quot;</span>], gain);</div>
-<div class="line">        <a class="code" href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">readExcludeNone</a>(fs[<span class="stringliteral">&quot;r_gain&quot;</span>], r_gain);</div>
-<div class="line">        <a class="code" href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">readExcludeNone</a>(fs[<span class="stringliteral">&quot;g_gain&quot;</span>], g_gain);</div>
-<div class="line">        <a class="code" href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">readExcludeNone</a>(fs[<span class="stringliteral">&quot;b_gain&quot;</span>], b_gain);</div>
+<div class="line">        fs[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; exposure);</div>
+<div class="line">        fs[<span class="stringliteral">&quot;gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;gain&quot;</span>] &gt;&gt; gain);</div>
+<div class="line">        fs[<span class="stringliteral">&quot;r_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;r_gain&quot;</span>] &gt;&gt; r_gain);</div>
+<div class="line">        fs[<span class="stringliteral">&quot;g_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;g_gain&quot;</span>] &gt;&gt; g_gain);</div>
+<div class="line">        fs[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    capture.set(<a name="a3"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">CAMERA_MANUAL_EXPOSURE</a>);</div>
-<div class="line">    capture.set(<a name="a4"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">CAMERA_EXPOSURE</a>, exposure);</div>
-<div class="line">    capture.set(<a name="a5"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">CAMERA_GAIN</a>, gain);</div>
-<div class="line">    capture.set(<a name="a6"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">CAMERA_MANUAL_WB</a>);</div>
-<div class="line">    capture.set(<a name="a7"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">CAMERA_WB_RGAIN</a>, r_gain);</div>
-<div class="line">    capture.set(<a name="a8"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">CAMERA_WB_GGAIN</a>, g_gain);</div>
-<div class="line">    capture.set(<a name="a9"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line">    capture.set(<a name="a2"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">CAMERA_MANUAL_EXPOSURE</a>);</div>
+<div class="line">    capture.set(<a name="a3"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture.set(<a name="a4"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture.set(<a name="a5"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">CAMERA_MANUAL_WB</a>);</div>
+<div class="line">    capture.set(<a name="a6"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture.set(<a name="a7"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture.set(<a name="a8"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">CAMERA_WB_BGAIN</a>, b_gain);</div>
 <div class="line"> </div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;frame&quot;</span>, WINDOW_NORMAL);</div>
 <div class="line"> </div>
@@ -172,16 +171,14 @@ $(function() {
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益 Analog gain</div><div class="ttdef"><b>Definition:</b> camutils.hpp:61</div></div>
 <div class="ttc" id="agroup__camera_html_gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a></div><div class="ttdeci">@ RETRIEVE_CV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理 Retrieve using cvtColor function in OpenCV</div><div class="ttdef"><b>Definition:</b> camutils.hpp:41</div></div>
 <div class="ttc" id="agroup__camera_html_ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e"><div class="ttname"><a href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a></div><div class="ttdeci">@ GRAB_CONTINUOUS</div><div class="ttdoc">连续采样 Continuous grabbing</div><div class="ttdef"><b>Definition:</b> camutils.hpp:31</div></div>
-<div class="ttc" id="agroup__para_html_ga4d70b6903799a7fd34047bd86edbaf85"><div class="ttname"><a href="../../d6/db7/group__para.html#ga4d70b6903799a7fd34047bd86edbaf85">rm::para::readExcludeNone</a></div><div class="ttdeci">void readExcludeNone(const _FileNode &amp;n, Tp &amp;t)</div><div class="ttdoc">参数读取，忽略为空的节点</div><div class="ttdef"><b>Definition:</b> loader.hpp:41</div></div>
-<div class="ttc" id="aloader_8hpp_html"><div class="ttname"><a href="../../d2/d8f/loader_8hpp.html">loader.hpp</a></div></div>
 <div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="../../d2/d75/namespacecv.html">cv</a></div><div class="ttdef"><b>Definition:</b> uty_math.hpp:65</div></div>
-<div class="ttc" id="anamespacerm_1_1para_html"><div class="ttname"><a href="../../d4/d15/namespacerm_1_1para.html">rm::para</a></div><div class="ttdef"><b>Definition:</b> camera.h:20</div></div>
+<div class="ttc" id="anamespacerm_1_1para_html"><div class="ttname"><a href="../../d4/d15/namespacerm_1_1para.html">rm::para</a></div><div class="ttdef"><b>Definition:</b> camera.h:17</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>Definition:</b> camutils.hpp:23</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 18日 星期六 14:50:26 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
