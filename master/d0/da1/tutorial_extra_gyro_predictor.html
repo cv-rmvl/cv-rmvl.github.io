@@ -85,8 +85,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md39">预测量分类</a></li>
-<li class="level2"><a href="#autotoc_md40">调参策略</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md37">预测量分类</a></li>
+<li class="level2"><a href="#autotoc_md38">调参策略</a></li>
 </ul>
 </ul>
 </div>
@@ -98,14 +98,14 @@ $(function() {
 </p>
 <hr  />
 <p>相关类 <a class="el" href="../../d4/d7b/classrm_1_1GyroPredictor.html" title="整车状态预测模块">rm::GyroPredictor</a></p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 预测量分类</h2>
 <ul>
 <li>静态响应预测量：包含旋转、平移两种，由于通信延迟的存在需要提前瞄准的预测量，调节参数为 <code>B</code>，为时间量（单位/秒）</li>
 <li>动态响应预测量：包含旋转、平移两种，对击中目标起到决定性作用的预测量，与子弹飞行时间呈正相关，调节参数为 <code>K</code>，为无量纲量</li>
 <li>射击延迟预测量：一般在跟随目标的情况下， <code>Kt + B</code> 的预测量会让云台响应到 <code>Kt</code> 预测量的位置，这正是参数 <code>B</code> 的作用，此时目标与发射机构之间都只差近似 <code>Kt</code> 的角度。而通过判断云台是否进入 <code>Kt</code> 的预测圈内（在决策中由 <code>canShoot</code> 判断）来进行发弹控制，因此即使存在发弹延迟，也能够保证在紧跟目标的情况下击打中目标。然而，在不跟随目标的情况下，由于发弹延迟存在，单靠 <code>Kt</code> 预测圈的发弹控制绝对不可能击打到目标，因此需要引入第三个预测量： <b>射击延迟预测量</b> 。射击延迟预测量目前仅包含旋转一种，因为只有旋转分量需要让云台保持静止（瞄准中心点）或者切换，该预测量用于抵消射击延迟带来的发射滞后，调节参数为 <code>SHOOT_B</code>，为时间量（单位/秒）</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 调参策略</h2>
 <ul>
 <li>对于参数 <code>K</code> 和参数 <code>B</code> 而言，调参方式与单纯的平移目标完全一致，即先设 <code>K</code> 为 <code>0</code> 并调节参数 <code>B</code> 直至目标不再滞后，即目标中心稳定进入预测圈内。之后再调节参数 <code>K</code> 以击中单纯的平移目标。此时发弹控制由 <code>Kt</code> 决定。</li>
@@ -116,7 +116,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

@@ -85,11 +85,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md169">1. 概念</a></li>
-<li class="level2"><a href="#autotoc_md170">2. 超定线性方程组</a></li>
-<li class="level2"><a href="#autotoc_md171">3. 示例</a></li>
-<li class="level2"><a href="#autotoc_md173">4. 法方程求解最小二乘法</a></li>
-<li class="level2"><a href="#autotoc_md174">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md176">参考书籍</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md167">1. 概念</a></li>
+<li class="level2"><a href="#autotoc_md168">2. 超定线性方程组</a></li>
+<li class="level2"><a href="#autotoc_md169">3. 示例</a></li>
+<li class="level2"><a href="#autotoc_md171">4. 法方程求解最小二乘法</a></li>
+<li class="level2"><a href="#autotoc_md172">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md174">参考书籍</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +104,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d4/d74/tutorial_modules_union_find.html">并查集</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md169"></a>
+<h2><a class="anchor" id="autotoc_md167"></a>
 1. 概念</h2>
 <p>最小二乘法诞生于统计学，其最初的目标是使用一条直线拟合一系列离散的点，那么我们该如何寻找这一直线？最小二乘法的原理是使得拟合直线的误差的平方和最小。这里的误差定义成每一个离散的点 \(x_i\)与拟合直线的 <b>距离</b> 。在这一最初的用法中，点到直线的距离能够很直观的描述成点到直线的 <b>垂线</b> 的长度。</p>
 <center> <img src="../../ls-line-vertical.png" alt="" class="inline" title="ls-line-vertical"/></center><center>图 1-1 </center><p>如图 1-1 所示，令直线外一点为 \(P\)，直线为 \(l\)，垂线为 \(l_0\)，垂足为点 \(O\)。最小二乘法就是构建一条直线，使得这些点 \(P_i\)到这条直线的距离平方和最小，此时 \(O_i\)点被称为 <b>最小二乘解</b> 。</p>
@@ -142,7 +142,7 @@ $(function() {
 \[ \pmb a^T(\pmb y-\pmb b)=0\tag{1-5} \]
 </p>
 <p>为此我们得到了最小二乘解 \(\pmb y\) 的表达式，这也为后文超定线性方程组的最小二乘解提供了理论基础。</p>
-<h2><a class="anchor" id="autotoc_md170"></a>
+<h2><a class="anchor" id="autotoc_md168"></a>
 2. 超定线性方程组</h2>
 <p>有时候我们会遇到这一类形如 \(A\pmb x=\pmb b\) 的方程组</p>
 <p class="formulaDsp">
@@ -190,7 +190,7 @@ $(function() {
 \[ \boxed{\hat{\pmb x}=\left(A^TA\right)^{-1}A^T\pmb b}\tag{2-7} \]
 </p>
 <p>这就是最小二乘解所满足的代数方程。</p>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md169"></a>
 3. 示例</h2>
 <p>下面给出 3 个示例，不直接使用公式 \(\text{(2-7)}\)，通过几何或者其他手段来表示最小二乘解。</p>
 <p><span style="color: green"><b>示例 1</b></span></p>
@@ -288,7 +288,7 @@ $(function() {
 </p>
 <hr  />
 <p>后文将给出另外一种描述最小二乘法的做法，这种做法有别于上面构造向量与子空间垂直的方式，通过对误差平方和直接求其最小值来得到最小二乘解（两种方式结果均能推导出公式 \(\text{(2-7)}\)，但出发点不同）。此外，要介绍的这个解法也同样适用于整个线性空间（包括欧式空间、多项式空间等线性空间）。</p>
-<h2><a class="anchor" id="autotoc_md173"></a>
+<h2><a class="anchor" id="autotoc_md171"></a>
 4. 法方程求解最小二乘法</h2>
 <p>后文会以多项式空间为例，从 \(\delta^2\) 的极值（最小值）入手，通过对该误差平方和求导数的方式获得该最优解，这也是数值分析教材中普遍采用的做法。在本小节后，会使用这一方法求解<span style="color: green"><b>示例 3</b></span>的问题。</p>
 <p>回顾公式 \(\text{(2-3b)}\)： \(\sum\limits_{j=1}^na_{ij}x_j\) 的部分，这是对应于欧式空间 \(\mathbb R^n\) 的误差平方和的写法，这表示生成的位于<span style="color: red">列空间</span>中的向量在基下的第 \(i\) 个分量（坐标）。对于多项式空间 \(\mathbb R{[t]}_n\)，这部分的写法为 \(a_0+a_1t+\cdots+a_{n-1}t^{n-1}=\sum\limits_{j=0}^{n-1}a_jt^j\)。那么对于包含 \(s\) 个已知点的集合（每个点包含 \(t_i\) 和 \(f(t_i)\) 两部分），使用 \(\mathbb R{[t]}_n\) 即 \(\sum\limits_{j=0}^{n-1}a_jt^j=\sum\limits_{j=0}^{n-1}a_j\phi_j(t_i)\) 的多项式来拟合这些点集，其最小二乘解设为 \(f^*(t)\)，此时的误差平方和的最小值可以表示成</p>
@@ -353,7 +353,7 @@ $(function() {
 \[\begin{bmatrix}4&amp;10\\10&amp;30\end{bmatrix}\hat{\pmb a}= \begin{bmatrix}6\\19\end{bmatrix}\tag{4-13}\]
 </p>
 <p>解得： \(\left\{\begin{align}a_0&amp;=-0.5\\a_1&amp;=0.8\end{align}\right.\)，即拟合曲线为 \(y=-0.5+0.8t\)，使用数学绘图软件验证，结果正确。</p>
-<center> <img src="../../ls-eg3.png" alt="" class="inline" title="ls-eg3"/></center><center>图 4-1 </center><h2><a class="anchor" id="autotoc_md174"></a>
+<center> <img src="../../ls-eg3.png" alt="" class="inline" title="ls-eg3"/></center><center>图 4-1 </center><h2><a class="anchor" id="autotoc_md172"></a>
 5. 部署使用</h2>
 <p>OpenCV 中提供了最小二乘法求解的函数 <code>cv::solve()</code>，并设置有 2 个相关的成员函数，其函数原型如下。此外可参考 <a href="https://docs.opencv.org/4.x/d2/de8/group__core__array.html#ga12b43690dbd31fed96f213eefead2373">cv::solve</a> 的 OpenCV 手册。</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> cv::solve(</div>
@@ -364,7 +364,7 @@ $(function() {
 <div class="line">);</div>
 </div><!-- fragment --><hr  />
 <p>有关递推最小二乘法的介绍可参考 <a class="el" href="../../d3/ded/tutorial_extra_spi_rune_predictor.html">k 步前向预估神符预测</a> 。</p>
-<h3><a class="anchor" id="autotoc_md176"></a>
+<h3><a class="anchor" id="autotoc_md174"></a>
 参考书籍</h3>
 <p><a class="el" href="../../d0/de3/citelist.html#CITEREF_tongji_linear_algebra">[6]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_luo2013matrix">[7]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_numerical_analysis">[8]</a> </p>
 </div></div><!-- contents -->
@@ -372,7 +372,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

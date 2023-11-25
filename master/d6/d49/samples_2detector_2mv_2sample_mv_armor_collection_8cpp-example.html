@@ -205,7 +205,7 @@ $(function() {
 <div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, src, color, GyroData(), Timer::now());</div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;combos = info.combos;</div>
 <div class="line">        <span class="keywordflow">if</span> (combos.size() &gt; 1)</div>
-<div class="line">            <a name="a14"></a><a class="code" href="../../d0/de1/group__core.html#ga04fcc7e13551081bcaf1b60ebe5f4ae2">WARNING_</a>(<span class="stringliteral">&quot;当前识别到多于 1 个装甲板：识别到 %zu 个&quot;</span>, combos.size());</div>
+<div class="line">            <a name="a14"></a><a class="code" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;当前识别到多于 1 个装甲板：识别到 %zu 个&quot;</span>, combos.size());</div>
 <div class="line">        <span class="comment">// ROI截取图像</span></div>
 <div class="line">        Mat roi_img;</div>
 <div class="line">        <span class="keywordflow">if</span> (!combos.empty())</div>
@@ -218,9 +218,9 @@ $(function() {
 <div class="line">        <span class="keywordflow">if</span> (!roi_img.empty())</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordtype">string</span> file_name = path + <span class="stringliteral">&quot;/&quot;</span> + to_string(index + first_idx) + <span class="stringliteral">&quot;.png&quot;</span>;</div>
-<div class="line">            <a name="a15"></a><a class="code" href="../../d0/de1/group__core.html#gad0a7c06405d3b9430b1dd42640cad528">INFO_</a>(<span class="stringliteral">&quot;保存图像至 %s&quot;</span>, file_name.c_str());</div>
+<div class="line">            <a name="a15"></a><a class="code" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;保存图像至 %s&quot;</span>, file_name.c_str());</div>
 <div class="line">            <span class="keywordflow">if</span> (!imwrite(file_name, roi_img))</div>
-<div class="line">                <a name="a16"></a><a class="code" href="../../d0/de1/group__core.html#gad96a591fde57998614993ee7a3b5d6dd">ERROR_</a>(<span class="stringliteral">&quot;保存图像失败&quot;</span>);</div>
+<div class="line">                <a name="a16"></a><a class="code" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;保存图像失败&quot;</span>);</div>
 <div class="line">            imshow(<span class="stringliteral">&quot;ROI 图像&quot;</span>, roi_img);</div>
 <div class="line">            index++;</div>
 <div class="line">        }</div>
@@ -231,7 +231,7 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    putText(src, <span class="stringliteral">&quot;Collection Over!&quot;</span>, Point(100, 200), FONT_HERSHEY_COMPLEX, 2, Scalar(0, 255, 0), 2);</div>
 <div class="line">    imshow(<span class="stringliteral">&quot;装甲板收集&quot;</span>, src);</div>
-<div class="line">    <a name="a17"></a><a class="code" href="../../d0/de1/group__core.html#ga0dba77ed849c5c61f0095bd08ddbe9d6">PASS_</a>(<span class="stringliteral">&quot;收集完毕，按任意键以退出程序&quot;</span>);</div>
+<div class="line">    <a name="a17"></a><a class="code" href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a>(<span class="stringliteral">&quot;收集完毕，按任意键以退出程序&quot;</span>);</div>
 <div class="line">    waitKey(0);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -246,10 +246,10 @@ $(function() {
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益 Analog gain</div><div class="ttdef"><b>Definition:</b> camutils.hpp:61</div></div>
 <div class="ttc" id="agroup__camera_html_gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a></div><div class="ttdeci">@ RETRIEVE_CV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理 Retrieve using cvtColor function in OpenCV</div><div class="ttdef"><b>Definition:</b> camutils.hpp:41</div></div>
 <div class="ttc" id="agroup__camera_html_ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e"><div class="ttname"><a href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a></div><div class="ttdeci">@ GRAB_CONTINUOUS</div><div class="ttdoc">连续采样 Continuous grabbing</div><div class="ttdef"><b>Definition:</b> camutils.hpp:31</div></div>
-<div class="ttc" id="agroup__core_html_ga04fcc7e13551081bcaf1b60ebe5f4ae2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga04fcc7e13551081bcaf1b60ebe5f4ae2">WARNING_</a></div><div class="ttdeci">#define WARNING_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:36</div></div>
-<div class="ttc" id="agroup__core_html_ga0dba77ed849c5c61f0095bd08ddbe9d6"><div class="ttname"><a href="../../d0/de1/group__core.html#ga0dba77ed849c5c61f0095bd08ddbe9d6">PASS_</a></div><div class="ttdeci">#define PASS_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:43</div></div>
-<div class="ttc" id="agroup__core_html_gad0a7c06405d3b9430b1dd42640cad528"><div class="ttname"><a href="../../d0/de1/group__core.html#gad0a7c06405d3b9430b1dd42640cad528">INFO_</a></div><div class="ttdeci">#define INFO_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:57</div></div>
-<div class="ttc" id="agroup__core_html_gad96a591fde57998614993ee7a3b5d6dd"><div class="ttname"><a href="../../d0/de1/group__core.html#gad96a591fde57998614993ee7a3b5d6dd">ERROR_</a></div><div class="ttdeci">#define ERROR_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
+<div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:57</div></div>
+<div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:36</div></div>
+<div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
+<div class="ttc" id="agroup__core_html_gae88c2a47405718d1f01ab5da116c0c6c"><div class="ttname"><a href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a></div><div class="ttdeci">#define PASS_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:43</div></div>
 <div class="ttc" id="agroup__core_html_gaf280cef1ac39cc635210419c6aa9e8dd"><div class="ttname"><a href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a></div><div class="ttdeci">#define RMVL_Error(code, msg)</div><div class="ttdoc">调用错误处理程序</div><div class="ttdef"><b>Definition:</b> util.hpp:202</div></div>
 <div class="ttc" id="agroup__core_html_gga08a5f1ffe569688f3a6f5f32e7e855baac4915210559ba2da2e35daf2fabedf24"><div class="ttname"><a href="../../d0/de1/group__core.html#gga08a5f1ffe569688f3a6f5f32e7e855baac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a></div><div class="ttdeci">@ RMVL_StsError</div><div class="ttdoc">未指定（未知）错误 Unspecified (Unknown) error</div><div class="ttdef"><b>Definition:</b> util.hpp:85</div></div>
 <div class="ttc" id="agroup__imgproc_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../d7/dbd/group__imgproc.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>Definition:</b> pretreat.h:27</div></div>
@@ -263,7 +263,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

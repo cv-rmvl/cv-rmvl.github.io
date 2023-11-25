@@ -85,14 +85,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><li class="level1"><a href="#autotoc_md26">1. 如何使用</a><ul><li class="level2"><a href="#autotoc_md27">1.1 有关构造与创建</a></li>
-<li class="level2"><a href="#autotoc_md28">1.2 信息获取</a><ul><li class="level3"><a href="#autotoc_md29">1.2.1 通用属性</a></li>
-<li class="level3"><a href="#autotoc_md30">1.2.2 派生类属性</a></li>
+<ul><li class="level1"><a href="#autotoc_md24">1. 如何使用</a><ul><li class="level2"><a href="#autotoc_md25">1.1 有关构造与创建</a></li>
+<li class="level2"><a href="#autotoc_md26">1.2 信息获取</a><ul><li class="level3"><a href="#autotoc_md27">1.2.1 通用属性</a></li>
+<li class="level3"><a href="#autotoc_md28">1.2.2 派生类属性</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="level1"><a href="#autotoc_md31">2. 如何开发</a><ul><li class="level2"><a href="#autotoc_md32">2.1 基本准则</a></li>
+<li class="level1"><a href="#autotoc_md29">2. 如何开发</a><ul><li class="level2"><a href="#autotoc_md30">2.1 基本准则</a></li>
 </ul>
 </li>
 </ul>
@@ -105,9 +105,9 @@ $(function() {
 </p>
 <hr  />
 <p>基类 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a></p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 1. 如何使用</h1>
-<h2><a class="anchor" id="autotoc_md27"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 1.1 有关构造与创建</h2>
 <p>对于对象的创建，应该使用 <code>make_feature</code> 静态工厂函数，尽量避免直接使用构造函数。<code>make_feature</code> 方法内部首先会进行能否构造的判断，而不是直接构造，如果条件满足则会创建对应的类对象，并返回其共享指针，如果条件不满足则直接返回 <code>nullptr</code>。</p>
 <p>例如，要构造一个装甲板灯条对象，可以使用以下语句。</p>
@@ -124,9 +124,9 @@ $(function() {
 <p>例如，在 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">rm::LightBlob</a> 类中，定义了如下语句</p>
 <div class="fragment"><div class="line">LightBlob(LightBlob &amp;&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line">LightBlob(<span class="keyword">const</span> LightBlob &amp;) = <span class="keyword">delete</span>;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 1.2 信息获取</h2>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md27"></a>
 1.2.1 通用属性</h3>
 <p><a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 由于是扩展模块中最底层的数据组件，因此不存在数据结构类型的信息，仅有包含特征对应属性的信息，这一类信息都采用 <code>getXXX</code> 的形式来获取。特征类中包含了众多属性，有高度、宽度、角度、中心点、角点列表、面积、状态类型、相机外参，均可用形如 <code>getXXX</code> 的方法进行获取，以下是 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 对于这些方法的定义。</p>
 <div class="fragment"><div class="line"><span class="comment">// 获取特征面积</span></div>
@@ -142,7 +142,7 @@ $(function() {
 <div class="line"><span class="comment">// 获取特征角点</span></div>
 <div class="line"><span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;cv::Point2f&gt; &amp;getCorners()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _corners; }</div>
 </div><!-- fragment --><p>在使用上也和正常的函数完全一致。</p>
-<h3><a class="anchor" id="autotoc_md30"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 1.2.2 派生类属性</h3>
 <p>对于一些派生的特征特有的属性，比如装甲板灯条 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">rm::LightBlob</a> 的上顶点，使用上需要额外注意类型转换的内容。一般我们在一些功能模块中，例如 <a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> 中直接操纵的都是抽象类的共享指针 <code><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a></code>，如果需要转换成派生类对象，可利用共享指针 <code>std::shared_ptr</code> 中对于动态类型转换的函数：<code>std::dynamic_pointer_cast</code>，比如想得到 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">rm::LightBlob</a> 的共享指针，可以使用以下命令。</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> p_light_blob = std::dynamic_pointer_cast&lt;rm::LightBlob&gt;(p_feature);</div>
@@ -152,9 +152,9 @@ $(function() {
 </div><!-- fragment --><p>有了动态类型转换的接口就可以继续获取派生类属性，下面的代码展示了如何获取装甲板灯条的上顶点。</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> p_light_blob = <a class="code" href="../../d0/df8/classrm_1_1LightBlob.html#addf5539fd9832b5b4000d8476b2dc2d0">rm::LightBlob::cast</a>(p_feature);</div>
 <div class="line"><span class="keyword">auto</span> top_point = p_light_blob-&gt;getTopPoint();</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
 2. 如何开发</h1>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md30"></a>
 2.1 基本准则</h2>
 <p>开发与使用是一脉相承的，设计一个新的 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 派生类对象也要满足使用上的条件，一个新的派生类对象（假设定义为<code>MyFeature</code>）需要满足以下准则。</p>
 <ol type="1">
@@ -170,7 +170,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

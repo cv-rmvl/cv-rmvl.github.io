@@ -85,11 +85,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md74">1. 何为责任链模式</a><ul><li class="level3"><a href="#process_common">1.1 常规用法</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md72">1. 何为责任链模式</a><ul><li class="level3"><a href="#process_common">1.1 常规用法</a></li>
 <li class="level3"><a href="#process_in_rmvl">1.2 RMVL 修改后的用法</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md75">2. 具体使用方法</a></li>
+<li class="level2"><a href="#autotoc_md73">2. 具体使用方法</a></li>
 </ul>
 </ul>
 </div>
@@ -100,7 +100,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../db/d4f/tutorial_extra_upper_write_data.html">导出数据、发出操控指令</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md72"></a>
 1. 何为责任链模式</h2>
 <h3><a class="anchor" id="process_common"></a>
 1.1 常规用法</h3>
@@ -196,7 +196,7 @@ $(function() {
 <p>因此，常规用法中的<span style="color: red">请求</span>在 RMVL 功能模块中表示为<span style="color: red">数据组件</span>，各功能模块的返回值 <code>XxxInfo</code> 则可以作为下一个功能模块的入参。可以继续参考此流程图</p>
 <p><img src="../../upper_base.png" alt="" class="inline" title="upper-base"/></p>
 <p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <code><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a></code>、<code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>、<code><a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a></code>。</p>
-<h2><a class="anchor" id="autotoc_md75"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 2. 具体使用方法</h2>
 <p>下面给出一个简单的例子</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> run()</div>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (!capture_map[camera_flag]-&gt;read(src))</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// 不能正常打开相机</span></div>
-<div class="line">        <a class="code" href="../../d0/de1/group__core.html#ga04fcc7e13551081bcaf1b60ebe5f4ae2">WARNING_</a>(<span class="stringliteral">&quot;相机打开异常&quot;</span>);</div>
+<div class="line">        <a class="code" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;相机打开异常&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -227,7 +227,7 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a> &amp;<a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>)</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="../../d0/de1/group__core.html#gad96a591fde57998614993ee7a3b5d6dd">ERROR_</a>(<span class="stringliteral">&quot;Occurred an exception! %s&quot;</span>, <a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>.err.c_str());</div>
+<div class="line">        <a class="code" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;Occurred an exception! %s&quot;</span>, <a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>.err.c_str());</div>
 <div class="line">        groups.clear();</div>
 <div class="line">        <span class="comment">/* 发送默认数据 */</span></div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -245,8 +245,8 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Exception_html"><div class="ttname"><a href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a></div><div class="ttdoc">该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的</div><div class="ttdef"><b>Definition:</b> util.hpp:136</div></div>
-<div class="ttc" id="agroup__core_html_ga04fcc7e13551081bcaf1b60ebe5f4ae2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga04fcc7e13551081bcaf1b60ebe5f4ae2">WARNING_</a></div><div class="ttdeci">#define WARNING_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:36</div></div>
-<div class="ttc" id="agroup__core_html_gad96a591fde57998614993ee7a3b5d6dd"><div class="ttname"><a href="../../d0/de1/group__core.html#gad96a591fde57998614993ee7a3b5d6dd">ERROR_</a></div><div class="ttdeci">#define ERROR_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
+<div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:36</div></div>
+<div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
 <div class="ttc" id="agroup__rmath_html_ga8f0640abdfeaeac18c46eac605f7f0a5"><div class="ttname"><a href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">rm::e</a></div><div class="ttdeci">constexpr double e</div><div class="ttdoc">自然对数底数:</div><div class="ttdef"><b>Definition:</b> uty_math.hpp:44</div></div>
 </div><!-- fragment --><p><b>注意</b></p>
 <ul>
@@ -266,7 +266,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

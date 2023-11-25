@@ -90,10 +90,13 @@ $(function() {
 <li class="level3"><a href="#function_modules">功能模块</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#api_concepts">API 概念</a><ul><li class="level3"><a href="#autotoc_md5">统一的接口</a></li>
-<li class="level3"><a href="#autotoc_md6">低耦合逻辑</a></li>
-<li class="level3"><a href="#autotoc_md7">参数管理</a></li>
-<li class="level3"><a href="#autotoc_md8">异常处理</a></li>
+<li class="level2"><a href="#intro_design_principle">设计理念</a><ul><li class="level3"><a href="#intro_uniform_interface">统一接口</a></li>
+<li class="level3"><a href="#intro_low_coupled_logic">低耦合逻辑</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#api_concepts">API 概念</a><ul><li class="level3"><a href="#intro_namespace_rm">命名空间 rm</a></li>
+<li class="level3"><a href="#intro_parameters_manager">参数管理</a></li>
+<li class="level3"><a href="#intro_error_handle">异常处理</a></li>
 </ul>
 </li>
 </ul>
@@ -148,12 +151,13 @@ $(function() {
 <li><a class="el" href="../../db/d29/group__predictor.html">目标预测模块（功能模块）</a> (<b>predictor</b>) —— 对于需要考虑目标追踪的机器人而言，必须要引入目标预测环节，使得伺服机构能够恒定追踪、捕获目标，<span style="color: green">在 RM 赛事中一般用于保证弹丸能够准确击中敌方目标</span>。一般而言，每一个预测模块会针对特定的数据组件（派生的 <code>group</code> 对象）进行 <code>Kt</code>、<code>B</code>、<code>Bs</code> 3 种预测量类型的计算，每种预测量类型都包含 9 种预测对象，每个预测对象之间对于 3 种预测量来说都是线性关系，例如在 <a class="el" href="../../db/d1b/group__gyro__predictor.html">整车状态预测模块</a> 中对于 <code>ANG_Y</code> 预测对象的 3 种预测量都是单独计算的，这也便于后续的 <b>决策模块</b> 能够自由组合这些预测量。同样，计算得到的各类预测量均被保存至预测模块信息 <code><a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a></code> 中。</li>
 <li><a class="el" href="../../d9/dbe/group__decider.html">决策模块（功能模块）</a> (<b>decider</b>) —— 在经过识别、补偿和预测 3 个步骤后，需要使用特定的策略来获得当前时刻的最优目标，结合前三个步骤的信息（包含识别模块信息 <code>DetectInfo</code> 、补偿模块信息 <code>CompensateInfo</code> 、预测模块信息 <code>PredictInfo</code> ）导出到决策模块信息 <code><a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html" title="决策模块信息">rm::DecideInfo</a></code> 中。</li>
 </ul>
-<p>该文档的后续章节描述了每个模块的功能。但首先，请确保彻底了解库中使用的常用 API 概念。</p>
-<h2><a class="anchor" id="api_concepts"></a>
-API 概念</h2>
-<h3><a class="anchor" id="autotoc_md5"></a>
-统一的接口</h3>
-<p>RMVL中的每个功能模块都设计有一个抽象类和一系列派生类，以严格限制暴露的接口并实现接口的统一性。这种方法有助于顶层项目统一管理功能模块中特定的方法，顶层项目开发人员可以专注于模块之间的逻辑关系处理。例如，您可以使用同一接口实现不同的功能。</p>
+<p>该文档的后续章节描述了每个模块的功能。但首先，请确保了解 RMVL 的设计理念以及 API 概念。</p>
+<hr  />
+<h2><a class="anchor" id="intro_design_principle"></a>
+设计理念</h2>
+<h3><a class="anchor" id="intro_uniform_interface"></a>
+统一接口</h3>
+<p>RMVL 中 <b>extra</b> 模块的每个功能都设计有一个抽象类和一系列派生类，以严格限制暴露的接口并实现接口的统一性。这种方法有助于顶层项目统一管理功能模块中特定的方法，顶层项目开发人员可以专注于模块之间的逻辑关系处理。例如，您可以使用同一接口实现不同的功能。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d9f/rmvl_2detector_8hpp.html">rmvl/detector.hpp</a>&gt;</span></div>
 <div class="line"><span class="comment">/* ... */</span></div>
 <div class="line">std::vector&lt;rm::detector::ptr&gt; detectors;</div>
@@ -173,9 +177,9 @@ API 概念</h2>
 <div class="ttc" id="aclassrm_1_1RuneDetector_html_afd1c8225a67425641ee568a2f7956d7c"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#afd1c8225a67425641ee568a2f7956d7c">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; RuneDetector &gt; make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>Definition:</b> rune_detector.h:43</div></div>
 <div class="ttc" id="aclassrm_1_1TagDetector_html_ad46221b4c7149e9a9f5d663446375455"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#ad46221b4c7149e9a9f5d663446375455">rm::TagDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; TagDetector &gt; make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>Definition:</b> tag_detector.h:53</div></div>
 <div class="ttc" id="armvl_2detector_8hpp_html"><div class="ttname"><a href="../../dd/d9f/rmvl_2detector_8hpp.html">detector.hpp</a></div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md6"></a>
+</div><!-- fragment --><h3><a class="anchor" id="intro_low_coupled_logic"></a>
 低耦合逻辑</h3>
-<p>RMVL 扩展模块中的各个功能模块之间的耦合度非常低，它们不会相互影响或依赖。例如，基于装甲的自动瞄准模块可以通过以下代码实现，它们之间共享的数据组件是对象是一个序列组列表：<code>groups</code>。</p>
+<p>RMVL 的 <b>extra</b> 模块中的各个功能模块之间的耦合度非常低，它们不会相互影响或依赖。例如，自动瞄准的功能可以通过以下代码实现，它们之间共享的数据组件是对象是一个序列组列表：<code>groups</code>。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d9f/rmvl_2detector_8hpp.html">rmvl/detector.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d6/ddf/rmvl_2compensator_8hpp.html">rmvl/compensator.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/d54/rmvl_2predictor_8hpp.html">rmvl/predictor.hpp</a>&gt;</span></div>
@@ -205,8 +209,29 @@ API 概念</h2>
 <div class="ttc" id="armvl_2decider_8hpp_html"><div class="ttname"><a href="../../de/d18/rmvl_2decider_8hpp.html">decider.hpp</a></div></div>
 <div class="ttc" id="armvl_2predictor_8hpp_html"><div class="ttname"><a href="../../df/d54/rmvl_2predictor_8hpp.html">predictor.hpp</a></div></div>
 <div class="ttc" id="astructrm_1_1GyroData_html"><div class="ttname"><a href="../../dc/d5f/structrm_1_1GyroData.html">rm::GyroData</a></div><div class="ttdoc">陀螺仪数据</div><div class="ttdef"><b>Definition:</b> dataio.hpp:29</div></div>
-</div><!-- fragment --><p>例如，对一个数据组件进行识别的结果并不影响预测的逻辑。换句话说，在对象识别过程中，异常和不合格的对象不应该被交给预测、补偿和决策模块进行后续处理，而应由识别检测模块本身解决。</p>
-<h3><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><p>例如，对一个数据组件进行识别的结果并不影响预测的逻辑。换句话说，如果要开发一个 RMVL 视觉功能，在对象识别过程中，异常和不合格的对象不应该被交给预测、补偿和决策模块进行后续处理，而应由识别检测模块本身解决。</p>
+<hr  />
+<h2><a class="anchor" id="api_concepts"></a>
+API 概念</h2>
+<h3><a class="anchor" id="intro_namespace_rm"></a>
+命名空间 rm</h3>
+<p>在 RMVL 中所有的类和函数都放置在 <code>rm</code> 命名空间中。因此，在您的代码中访问这些功能时，请使用 <code>rm::</code> 限定符或 <code>using namespace rm;</code> 的指令</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4b/rmvl_2camera_8hpp.html">rmvl/camera.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> mv(<a class="code" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a>, <a class="code" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a>);</div>
+<div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库 MindVision camera library</div><div class="ttdef"><b>Definition:</b> mv_camera.h:34</div></div>
+<div class="ttc" id="agroup__camera_html_gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a></div><div class="ttdeci">@ RETRIEVE_CV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理 Retrieve using cvtColor function in OpenCV</div><div class="ttdef"><b>Definition:</b> camutils.hpp:41</div></div>
+<div class="ttc" id="agroup__camera_html_ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e"><div class="ttname"><a href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a></div><div class="ttdeci">@ GRAB_CONTINUOUS</div><div class="ttdoc">连续采样 Continuous grabbing</div><div class="ttdef"><b>Definition:</b> camutils.hpp:31</div></div>
+<div class="ttc" id="armvl_2camera_8hpp_html"><div class="ttname"><a href="../../da/d4b/rmvl_2camera_8hpp.html">camera.hpp</a></div><div class="ttdoc">相机调用</div></div>
+</div><!-- fragment --><p>或使用</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4b/rmvl_2camera_8hpp.html">rmvl/camera.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line">MvCamera mv(<a class="code" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">GRAB_CONTINUOUS</a>, <a class="code" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">RETRIEVE_CV</a>);</div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>Definition:</b> camutils.hpp:23</div></div>
+</div><!-- fragment --><p>第二种方式引入了整个命名空间，容易造成访问冲突，在不影响可读性的情况下建议使用第一种方案。RMVL 中的嵌套命名空间较少，并且一般很少直接使用，不会对可读性造成很大的影响。</p>
+<h3><a class="anchor" id="intro_parameters_manager"></a>
 参数管理</h3>
 <p>不同的机器人具有不同的属性，它们对功能需求、运动响应和通信延迟都有不同的影响。RMVL 为所有这些参数提供了默认值，以确保正确的运行。但在实际部署时，但这些参数通常不是最有效的、最正确的，因此像机器人这样的顶层项目需要手动加载这些参数以最大化性能。</p>
 <p><b>定义</b></p>
@@ -229,11 +254,11 @@ API 概念</h2>
 <div class="ttc" id="agroup__para__camera_html_ga920ea1f18537e54423f9f6c0ff586b55"><div class="ttname"><a href="../../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55">rm::para::camera_param</a></div><div class="ttdeci">CameraParam camera_param</div><div class="ttdoc">CameraParam 参数模块</div><div class="ttdef"><b>Definition:</b> camera.h:49</div></div>
 <div class="ttc" id="agroup__para__combo_html_ga82ec73a503c266c1d909e8b133490785"><div class="ttname"><a href="../../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785">rm::para::armor_param</a></div><div class="ttdeci">ArmorParam armor_param</div><div class="ttdoc">ArmorParam 参数模块</div><div class="ttdef"><b>Definition:</b> armor.h:79</div></div>
 </div><!-- fragment --><p>这段代码中，<code>armor</code> 和 <code>camera</code> 参数类的头文件被包含，并使用成员方法 <code>load()</code> 来加载参数。</p>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="intro_error_handle"></a>
 异常处理</h3>
 <p>RMVL 使用异常 (exception) 来触发错误，当输入数据出现格式错误、范围错误、内存错误等异常情况，它会返回一个特殊的错误代码。</p>
 <p>异常可以是 <a class="el" href="../../d9/db4/classrm_1_1Exception.html" title="该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的">rm::Exception</a> 的实例化对象，或者其派生对象。此外 <a class="el" href="../../d9/db4/classrm_1_1Exception.html" title="该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的">rm::Exception</a> 是 <code>std::exception</code> 的派生类，因此可以优雅的使用标准 C++ 库的各类组件来处理 RMVL 抛出的异常。</p>
-<p>RMVL 中的异常通常是使用 <code><a class="el" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd" title="调用错误处理程序">RMVL_Error(code, msg)</a></code> 宏或类似 <code>printf</code> 的 <code><a class="el" href="../../d0/de1/group__core.html#gacf40f7e9871d28914df21a305c7bb403" title="调用错误处理程序">RMVL_Error_(code, fmt, args...)</a></code> 变体进行触发的，或者可以使用 <code><a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c" title="在运行时检查条件，如果失败则抛出异常">RMVL_Assert(cond)</a></code> 宏检查条件并在不满足条件时触发异常。对于性能要求高的代码，有一个 <code><a class="el" href="../../d0/de1/group__core.html#gaaa1505e84ee5a1d4ce66ca3a959786a7" title="在 Debug 条件下或启用静态分析工具的情况下，在运行时检查条件，如果失败则抛出异常">RMVL_DbgAssert(cond)</a></code> ，它只保留在 Debug 配置中。由于自动内存管理，所有中间缓冲区自动释放的情况下突然出现错误，您只需添加 <code>try</code> 语句来捕获异常。</p>
+<p>RMVL 中的异常通常是使用 <code><a class="el" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd" title="调用错误处理程序">RMVL_Error(code, msg)</a></code> 宏或类似 <code>printf</code> 的 <code><a class="el" href="../../d0/de1/group__core.html#ga6ceb64e0c1708b39fed13fc311c3cdfc" title="调用错误处理程序">RMVL_Error_(code, fmt, args...)</a></code> 变体进行触发的，或者可以使用 <code><a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c" title="在运行时检查条件，如果失败则抛出异常">RMVL_Assert(cond)</a></code> 宏检查条件并在不满足条件时触发异常。对于性能要求高的代码，有一个 <code><a class="el" href="../../d0/de1/group__core.html#gaaa1505e84ee5a1d4ce66ca3a959786a7" title="在 Debug 条件下或启用静态分析工具的情况下，在运行时检查条件，如果失败则抛出异常">RMVL_DbgAssert(cond)</a></code> ，它只保留在 Debug 配置中。由于自动内存管理，所有中间缓冲区自动释放的情况下突然出现错误，您只需添加 <code>try</code> 语句来捕获异常。</p>
 <div class="fragment"><div class="line"><span class="keywordflow">try</span></div>
 <div class="line">{</div>
 <div class="line">  ... <span class="comment">// 调用 RMVL 函数</span></div>
@@ -250,7 +275,7 @@ API 概念</h2>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

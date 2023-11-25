@@ -85,10 +85,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md122">详细步骤</a><ul><li class="level3"><a href="#autotoc_md123">1. 创建项目</a></li>
-<li class="level3"><a href="#autotoc_md124">2. 编写测试文件</a></li>
-<li class="level3"><a href="#autotoc_md125">3. 构建项目</a></li>
-<li class="level3"><a href="#autotoc_md126">4. 运行</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md120">详细步骤</a><ul><li class="level3"><a href="#autotoc_md121">1. 创建项目</a></li>
+<li class="level3"><a href="#autotoc_md122">2. 编写测试文件</a></li>
+<li class="level3"><a href="#autotoc_md123">3. 构建项目</a></li>
+<li class="level3"><a href="#autotoc_md124">4. 运行</a></li>
 </ul>
 </li>
 </ul>
@@ -102,15 +102,15 @@ $(function() {
 <hr  />
 <p><b>注意</b></p>
 <p><span style="color: red">必须确保您已经成功安装了 RMVL</span>。如果你不熟悉 CMake，请移步到 CMake <a href="https://cmake.org/cmake/help/latest">教程</a></p>
-<h2><a class="anchor" id="autotoc_md122"></a>
+<h2><a class="anchor" id="autotoc_md120"></a>
 详细步骤</h2>
-<h3><a class="anchor" id="autotoc_md123"></a>
+<h3><a class="anchor" id="autotoc_md121"></a>
 1. 创建项目</h3>
 <p>创建新的文件夹：<code>rmvl_deploy_test</code>，将其链接至 RMVL</p>
 <div class="fragment"><div class="line">mkdir rmvl_deploy_test build</div>
 <div class="line">cd rmvl_deploy_test</div>
 <div class="line">touch main.cpp CMakeLists.txt</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md124"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md122"></a>
 2. 编写测试文件</h3>
 <p><b>编写 main.cpp</b></p>
 <p>将以下内容写至 <code>main.cpp</code> 中</p>
@@ -132,7 +132,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> info = detector-&gt;detect(groups, src, <a class="code" href="../../d7/dbd/group__imgproc.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a>, <a class="code" href="../../dc/d5f/structrm_1_1GyroData.html">rm::GyroData</a>{}, cv::getTickCount());</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d0/de1/group__core.html#gad0a7c06405d3b9430b1dd42640cad528">INFO_</a>(<span class="stringliteral">&quot;size of armors = %ld&quot;</span>, info.combos.size());</div>
+<div class="line">    <a class="code" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;size of armors = %ld&quot;</span>, info.combos.size());</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_combo : info.combos)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;corners = p_combo-&gt;getCorners();</div>
@@ -144,7 +144,7 @@ $(function() {
 <div class="line">    cv::resizeWindow(<span class="stringliteral">&quot;rmvl_deploy_test: src&quot;</span>, cv::Size(640, 512));</div>
 <div class="line">    cv::imshow(<span class="stringliteral">&quot;rmvl_deploy_test: src&quot;</span>, src);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="../../d0/de1/group__core.html#ga899d14d4a0d8e5a777d6f5d0ed46b103">HIGHLIGHT_</a>(<span class="stringliteral">&quot;RMVL build Successfully!\n\n\t\t-------- &quot;</span></div>
+<div class="line">    <a class="code" href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a>(<span class="stringliteral">&quot;RMVL build Successfully!\n\n\t\t-------- &quot;</span></div>
 <div class="line">               <span class="stringliteral">&quot;press any key to exit this program. --------\n&quot;</span>);</div>
 <div class="line">    cv::waitKey(0);</div>
 <div class="line"> </div>
@@ -152,8 +152,8 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1ArmorDetector_html_aea6042da2939515fb54dc2ab32da35cd"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#aea6042da2939515fb54dc2ab32da35cd">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; ArmorDetector &gt; make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>Definition:</b> armor_detector.h:66</div></div>
 <div class="ttc" id="aclassrm_1_1detector_html_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; detector &gt; ptr</div><div class="ttdef"><b>Definition:</b> detector.h:51</div></div>
-<div class="ttc" id="agroup__core_html_ga899d14d4a0d8e5a777d6f5d0ed46b103"><div class="ttname"><a href="../../d0/de1/group__core.html#ga899d14d4a0d8e5a777d6f5d0ed46b103">HIGHLIGHT_</a></div><div class="ttdeci">#define HIGHLIGHT_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:29</div></div>
-<div class="ttc" id="agroup__core_html_gad0a7c06405d3b9430b1dd42640cad528"><div class="ttname"><a href="../../d0/de1/group__core.html#gad0a7c06405d3b9430b1dd42640cad528">INFO_</a></div><div class="ttdeci">#define INFO_(msg...)</div><div class="ttdef"><b>Definition:</b> util.hpp:57</div></div>
+<div class="ttc" id="agroup__core_html_ga06c5efbe33a3db508cbb8c54abb9bd9d"><div class="ttname"><a href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a></div><div class="ttdeci">#define HIGHLIGHT_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:29</div></div>
+<div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:57</div></div>
 <div class="ttc" id="agroup__imgproc_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../d7/dbd/group__imgproc.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>Definition:</b> pretreat.h:27</div></div>
 <div class="ttc" id="armvl_2detector_8hpp_html"><div class="ttname"><a href="../../dd/d9f/rmvl_2detector_8hpp.html">detector.hpp</a></div></div>
 <div class="ttc" id="astructrm_1_1GyroData_html"><div class="ttname"><a href="../../dc/d5f/structrm_1_1GyroData.html">rm::GyroData</a></div><div class="ttdoc">陀螺仪数据</div><div class="ttdef"><b>Definition:</b> dataio.hpp:29</div></div>
@@ -170,13 +170,13 @@ $(function() {
 <div class="line">    demo</div>
 <div class="line">    PRIVATE ${RMVL_LIBS}</div>
 <div class="line">)</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md125"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md123"></a>
 3. 构建项目</h3>
 <p>在 <code>rmvl_deploy_test</code> 的顶层文件夹中打开终端，输入以下命令</p>
 <div class="fragment"><div class="line">cd build</div>
 <div class="line">cmake ..</div>
 <div class="line">make</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md126"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md124"></a>
 4. 运行</h3>
 <p>继续输入以下命令</p>
 <div class="fragment"><div class="line">./demo</div>
@@ -185,7 +185,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 23日 星期四 04:32:03 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
