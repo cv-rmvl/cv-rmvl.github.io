@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['序列组_2f相关追踪器的空间集合（数据组件）_967',['序列组/相关追踪器的空间集合（数据组件）',['../dd/d46/group__group.html',1,'']]]
+  ['并查集_985',['并查集',['../d4/d74/tutorial_modules_union_find.html',1,'tutorial_table_of_content_modules'],['../dc/d38/group__union__find.html',1,'(全局命名空间)']]]
 ];

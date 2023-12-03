@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['责任链模式下的程序处理_1013',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
+  ['读取（默认）数据以控制逻辑分支_1031',['读取（默认）数据以控制逻辑分支',['../d4/de8/tutorial_extra_upper_read_data.html',1,'tutorial_table_of_content_extra']]]
 ];

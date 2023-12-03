@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['迈德威视（mindvision）相机库_1014',['迈德威视（MindVision）相机库',['../dd/df4/group__mv__camera.html',1,'']]]
+  ['责任链模式下的程序处理_1032',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
 ];

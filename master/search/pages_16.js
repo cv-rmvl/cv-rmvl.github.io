@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['构建视觉库_2103',['构建视觉库',['../d1/d9a/tutorial_build.html',1,'tutorial_table_of_content_config']]]
+  ['最小二乘法_2140',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]]
 ];

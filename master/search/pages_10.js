@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['弃用列表_2097',['弃用列表',['../da/d58/deprecated.html',1,'']]]
+  ['并查集_2134',['并查集',['../d4/d74/tutorial_modules_union_find.html',1,'tutorial_table_of_content_modules']]]
 ];

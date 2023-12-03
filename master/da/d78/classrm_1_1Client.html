@@ -95,7 +95,7 @@ $(function() {
 <div class="dynheader">
 rm::Client 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d88/classrm_1_1Client__coll__graph.svg" width="120" height="294"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d88/classrm_1_1Client__coll__graph.svg" width="118" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -131,6 +131,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a198aa377d4f92c22cc56b51cc8212f2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#a198aa377d4f92c22cc56b51cc8212f2d">call</a> (const std::string &amp;name, const std::vector&lt; <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &gt; &amp;inputs, std::vector&lt; <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &gt; &amp;outputs)</td></tr>
 <tr class="memdesc:a198aa377d4f92c22cc56b51cc8212f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">在客户端调用 ObjectsFolder 中的方法  <a href="../../da/d78/classrm_1_1Client.html#a198aa377d4f92c22cc56b51cc8212f2d">更多...</a><br /></td></tr>
 <tr class="separator:a198aa377d4f92c22cc56b51cc8212f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb40dcf0cf0e59b5863471d96d61cd8b"><td class="memItemLeft" align="right" valign="top">UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#acb40dcf0cf0e59b5863471d96d61cd8b">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view)</td></tr>
+<tr class="memdesc:acb40dcf0cf0e59b5863471d96d61cd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加视图节点 ViewNode 至 <code>ViewsFolder</code> 中  <a href="../../da/d78/classrm_1_1Client.html#acb40dcf0cf0e59b5863471d96d61cd8b">更多...</a><br /></td></tr>
+<tr class="separator:acb40dcf0cf0e59b5863471d96d61cd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbdba49244a1b3bbac65ebfc784de06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d78/classrm_1_1Client.html#a2fbdba49244a1b3bbac65ebfc784de06">monitor</a> (UA_NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size)</td></tr>
 <tr class="memdesc:a2fbdba49244a1b3bbac65ebfc784de06"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建变量节点监视项，以实现订阅节点的功能  <a href="../../da/d78/classrm_1_1Client.html#a2fbdba49244a1b3bbac65ebfc784de06">更多...</a><br /></td></tr>
 <tr class="separator:a2fbdba49244a1b3bbac65ebfc784de06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +257,33 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="acb40dcf0cf0e59b5863471d96d61cd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb40dcf0cf0e59b5863471d96d61cd8b">&#9670;&nbsp;</a></span>addViewNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UA_NodeId rm::Client::addViewNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加视图节点 ViewNode 至 <code>ViewsFolder</code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td><code><a class="el" href="../../d2/de9/classrm_1_1View.html" title="OPC UA 视图">rm::View</a></code> 表示的视图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应视图节点的唯一标识 <code>UA_NodeId</code> </dd></dl>
+
+</div>
+</div>
 <a id="a198aa377d4f92c22cc56b51cc8212f2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a198aa377d4f92c22cc56b51cc8212f2d">&#9670;&nbsp;</a></span>call() <span class="overload">[1/2]</span></h2>
 
@@ -443,7 +473,7 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待监视节点的 <code>UA_NodeId</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#aab847255a7ce17a9a96ec7816d0a1392" title="获取 int 整型的非默认属性列表">Event::getProperties()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#accf9322ba330dffd83b70aa70baa60c3" title="获取 int 整型的非默认属性列表">Event::data()</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
   </table>
   </dd>
@@ -625,7 +655,7 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待监视节点的 <code>UA_NodeId</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#aab847255a7ce17a9a96ec7816d0a1392" title="获取 int 整型的非默认属性列表">Event::getProperties()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#accf9322ba330dffd83b70aa70baa60c3" title="获取 int 整型的非默认属性列表">Event::data()</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
   </table>
   </dd>
@@ -745,7 +775,7 @@ Public 成员函数</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 3日 星期日 21:34:35 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

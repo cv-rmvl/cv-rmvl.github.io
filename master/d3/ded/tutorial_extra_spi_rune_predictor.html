@@ -100,12 +100,12 @@ $(function() {
 </ul>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_spi_rune_predictor"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_spi_rune_predictor"></a></p>
 <dl class="section author"><dt>作者</dt><dd>黄昊睿 </dd>
 <dd>
 赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/07/16 </dd></dl>
-<dl class="section version"><dt>版本</dt><dd>2.0</dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.1</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d0/da1/tutorial_extra_gyro_predictor.html">在整车状态估计中涉及到的预测量</a> ↑<br  />
  <b>下一篇教程：</b><a class="el" href="../../d6/d94/tutorial_extra_how_to_use_decider.html">如何使用/开发 decider 模块</a> ↓<br  />
 </p>
@@ -175,9 +175,21 @@ $(function() {
 <p class="formulaDsp">
 \[ \begin{align} \hat{x}_m&amp;=P_mQ_m\\ &amp;=P_m(Q_{m-1}+\pmb{a_m}^Tb_m)\\ &amp;=P_m(P_{m-1}^{-1}\hat{x}_{m-1}+\pmb{a_m}^Tb_m)\\ &amp;=P_m(P_m^{-1}\hat{x}_{m-1}-\pmb{a_m}^T\pmb{a_m}\hat{x}_{m-1}+\pmb{a_m}^Tb_m)\\ &amp;=\hat{x}_{m-1}+P_m\pmb{a_m}^T(b_m-\pmb{a_m}\hat{x}_{m-1}) \end{align}\tag{2-5} \]
 </p>
-<p>上式即为递推最小二乘法的公式，但在其中， \(P_m=\left(P_{m-1}^{-1}+\pmb{a_m}^T\pmb{a_m}\right)^{-1}\)，求解 \(P_m\)的递推形式需要进行两次求逆操作，会显著增加时间复杂度，需要对这一部分进行修改，在矩阵求逆过程中，有以下变换公式</p>
+<p>上式即为递推最小二乘法的公式，但在其中， \(P_m=\left(P_{m-1}^{-1}+\pmb{a_m}^T\pmb{a_m}\right)^{-1}\)，求解 \(P_m\)的递推形式需要进行两次求逆操作，会显著增加时间复杂度，需要对这一部分进行修改，对于形如 \(\left(A^{-1}+BC\right)^{-1}\)的式子，不妨令</p>
 <p class="formulaDsp">
-\[ \left(A+BC\right)^{-1}=A^{-1}-A^{-1}B\left(I+CA^{-1}B\right)^{-1}CA^{-1}\tag{2-6} \]
+\[\left(A^{-1}+BC\right)^{-1}=A+X\tag{2-6a}\]
+</p>
+<p>因此满足</p>
+<p class="formulaDsp">
+\[\left(A^{-1}+BC\right)(A+X)=I\tag{2-6b}\]
+</p>
+<p>这是个求解 \(X\)的过程，详细步骤如下</p>
+<p class="formulaDsp">
+\[\begin{align}\left(A^{-1}+BC\right)(A+X)&amp;=I\\ BCA+A^{-1}X+BCX&amp;=\pmb 0\\\left(A^{-1}+BC\right)X&amp;=-BCA\\ X&amp;=-\left(A^{-1}+BC\right)^{-1}BCA\\ &amp;=-\left(BB^{-1}A^{-1}+BC\right)^{-1}BCA\\ &amp;=-\left[B\left(B^{-1}A^{-1}+C\right)\right]^{-1}BCA\\ &amp;=-\left(B^{-1}A^{-1}+C\right)^{-1}CA\\ &amp;=-\left(B^{-1}A^{-1}+CABB^{-1}A^{-1}\right)^{-1}CA\\ &amp;=-\left[\left(I+CAB\right)B^{-1}A^{-1}\right]^{-1}CA\\ &amp;=-AB\left(I+CAB\right)^{-1}CA \end{align}\]
+</p>
+<p>因此，最终得到了矩阵求逆过程中有以下的变换公式</p>
+<p class="formulaDsp">
+\[\boxed{\left(A^{-1}+BC\right)^{-1}=A-AB\left(I+CAB\right)^{-1}CA}\tag{2-6c}\]
 </p>
 <p>因此， \(P_m\)可以表示为</p>
 <p class="formulaDsp">
@@ -204,7 +216,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十一月 25日 星期六 14:59:51 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 3日 星期日 21:34:35 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

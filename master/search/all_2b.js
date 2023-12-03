@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['平移目标决策模块_964',['平移目标决策模块',['../dd/dd3/group__translation__decider.html',1,'']]],
-  ['平面目标时间序列_965',['平面目标时间序列',['../d0/d75/group__planar__tracker.html',1,'']]]
+  ['工业自动化通信协议_20opc_20ua_982',['工业自动化通信协议 OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'tutorial_table_of_content_modules']]]
 ];

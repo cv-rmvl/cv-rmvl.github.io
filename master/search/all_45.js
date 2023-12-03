@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['补偿模块（功能模块）_1004',['补偿模块（功能模块）',['../d7/d4f/group__compensator.html',1,'']]]
+  ['能量机关神符_1022',['能量机关神符',['../d8/d7f/group__combo__rune.html',1,'']]]
 ];
