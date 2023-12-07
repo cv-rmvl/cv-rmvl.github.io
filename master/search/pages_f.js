@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['工业自动化通信协议_20opc_20ua_2133',['工业自动化通信协议 OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'tutorial_table_of_content_modules']]]
+  ['工业自动化通信协议_20opc_20ua_2178',['工业自动化通信协议 OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'tutorial_table_of_content_modules']]]
 ];

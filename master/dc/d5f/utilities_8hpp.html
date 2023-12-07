@@ -85,6 +85,7 @@ $(function() {
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#define-members">宏定义</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
   <div class="headertitle">
@@ -130,7 +131,7 @@ utilities.hpp 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:gaa132c8e85692e0a1c346d227034bc90d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaa132c8e85692e0a1c346d227034bc90d">rm::UA_TypeFlag</a> = UA_UInt32</td></tr>
-<tr class="memdesc:gaa132c8e85692e0a1c346d227034bc90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">类型标志位，可通过 <code>typeflag[xxx]</code> 进行获取  <a href="../../d3/da8/group__opcua.html#gaa132c8e85692e0a1c346d227034bc90d">更多...</a><br /></td></tr>
+<tr class="memdesc:gaa132c8e85692e0a1c346d227034bc90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">类型标志位，可通过 <code>typeflag.at(xxx)</code> 进行获取  <a href="../../d3/da8/group__opcua.html#gaa132c8e85692e0a1c346d227034bc90d">更多...</a><br /></td></tr>
 <tr class="separator:gaa132c8e85692e0a1c346d227034bc90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9ed79ffc7202a7e91d8242b5a9765799"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">rm::FindNodeInServer</a> = ::std::tuple&lt; UA_Server *, ::std::string &gt;</td></tr>
 <tr class="memdesc:ga9ed79ffc7202a7e91d8242b5a9765799"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名）  <a href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">更多...</a><br /></td></tr>
@@ -138,6 +139,15 @@ utilities.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:ga0fcf7235f702cf328179828694540a22"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">rm::FindNodeInClient</a> = ::std::tuple&lt; UA_Client *, ::std::string &gt;</td></tr>
 <tr class="memdesc:ga0fcf7235f702cf328179828694540a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名）  <a href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">更多...</a><br /></td></tr>
 <tr class="separator:ga0fcf7235f702cf328179828694540a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">rm::TransportID</a> : uint8_t { <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">rm::UDP_UADP</a> = 1U
+, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">rm::MQTT_UADP</a> = 2U
+, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">rm::MQTT_JSON</a> = 3U
+ }</td></tr>
+<tr class="memdesc:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输协议  <a href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">更多...</a><br /></td></tr>
+<tr class="separator:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
@@ -159,9 +169,48 @@ utilities.hpp 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:ga9bd0a2cce2c3d930db0ac127e1cce571"><td class="memItemLeft" align="right" valign="top">inline ::std::unordered_map&lt;::std::type_index, UA_TypeFlag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga9bd0a2cce2c3d930db0ac127e1cce571">rm::typeflag</a></td></tr>
-<tr class="memdesc:ga9bd0a2cce2c3d930db0ac127e1cce571"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取形如 <code>UA_TYPES_&lt;xxx&gt;</code> 的类型标志位  <a href="../../d3/da8/group__opcua.html#ga9bd0a2cce2c3d930db0ac127e1cce571">更多...</a><br /></td></tr>
-<tr class="separator:ga9bd0a2cce2c3d930db0ac127e1cce571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga916a054df32c638be8c03307a689487a"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::type_index, UA_TypeFlag &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga916a054df32c638be8c03307a689487a">rm::typeflag</a></td></tr>
+<tr class="memdesc:ga916a054df32c638be8c03307a689487a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取形如 <code>UA_TYPES_&lt;xxx&gt;</code> 的类型标志位  <a href="../../d3/da8/group__opcua.html#ga916a054df32c638be8c03307a689487a">更多...</a><br /></td></tr>
+<tr class="separator:ga916a054df32c638be8c03307a689487a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad80028600e790f33bbad196381981818"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad80028600e790f33bbad196381981818">rm::nodeBoolean</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_BOOLEAN}</td></tr>
+<tr class="memdesc:gad80028600e790f33bbad196381981818"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Boolean</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gad80028600e790f33bbad196381981818">更多...</a><br /></td></tr>
+<tr class="separator:gad80028600e790f33bbad196381981818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga321227e84bd3ee3e04775e3e0542a39c"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga321227e84bd3ee3e04775e3e0542a39c">rm::nodeSbyte</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_SBYTE}</td></tr>
+<tr class="memdesc:ga321227e84bd3ee3e04775e3e0542a39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Sbyte</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga321227e84bd3ee3e04775e3e0542a39c">更多...</a><br /></td></tr>
+<tr class="separator:ga321227e84bd3ee3e04775e3e0542a39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92d23730bd10278e85849ac19eefec99"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga92d23730bd10278e85849ac19eefec99">rm::nodeByte</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_BYTE}</td></tr>
+<tr class="memdesc:ga92d23730bd10278e85849ac19eefec99"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Byte</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga92d23730bd10278e85849ac19eefec99">更多...</a><br /></td></tr>
+<tr class="separator:ga92d23730bd10278e85849ac19eefec99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f172482e739d7651b9c0d9f21a317ab"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga9f172482e739d7651b9c0d9f21a317ab">rm::nodeInt16</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_INT16}</td></tr>
+<tr class="memdesc:ga9f172482e739d7651b9c0d9f21a317ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int16</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga9f172482e739d7651b9c0d9f21a317ab">更多...</a><br /></td></tr>
+<tr class="separator:ga9f172482e739d7651b9c0d9f21a317ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b41bc81c9d81081b0b05411e30a6fae"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga3b41bc81c9d81081b0b05411e30a6fae">rm::nodeUint16</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_UINT16}</td></tr>
+<tr class="memdesc:ga3b41bc81c9d81081b0b05411e30a6fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint16</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga3b41bc81c9d81081b0b05411e30a6fae">更多...</a><br /></td></tr>
+<tr class="separator:ga3b41bc81c9d81081b0b05411e30a6fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1167c31781fed61eda24505b7bdef386"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga1167c31781fed61eda24505b7bdef386">rm::nodeInt32</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_INT32}</td></tr>
+<tr class="memdesc:ga1167c31781fed61eda24505b7bdef386"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int32</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga1167c31781fed61eda24505b7bdef386">更多...</a><br /></td></tr>
+<tr class="separator:ga1167c31781fed61eda24505b7bdef386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada7cb501cda9cb09a7fe8b383566f7ef"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gada7cb501cda9cb09a7fe8b383566f7ef">rm::nodeUint32</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_UINT32}</td></tr>
+<tr class="memdesc:gada7cb501cda9cb09a7fe8b383566f7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint32</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gada7cb501cda9cb09a7fe8b383566f7ef">更多...</a><br /></td></tr>
+<tr class="separator:gada7cb501cda9cb09a7fe8b383566f7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fe2b70007e273d3b93af9a15472481a"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga5fe2b70007e273d3b93af9a15472481a">rm::nodeInt64</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_INT64}</td></tr>
+<tr class="memdesc:ga5fe2b70007e273d3b93af9a15472481a"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int64</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga5fe2b70007e273d3b93af9a15472481a">更多...</a><br /></td></tr>
+<tr class="separator:ga5fe2b70007e273d3b93af9a15472481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c6622cbb2404dcbb817e6c57f170455"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga2c6622cbb2404dcbb817e6c57f170455">rm::nodeUint64</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_UINT64}</td></tr>
+<tr class="memdesc:ga2c6622cbb2404dcbb817e6c57f170455"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint64</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga2c6622cbb2404dcbb817e6c57f170455">更多...</a><br /></td></tr>
+<tr class="separator:ga2c6622cbb2404dcbb817e6c57f170455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac29cc63446bc6f2f1ad9f5f9b2a6bdf6"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac29cc63446bc6f2f1ad9f5f9b2a6bdf6">rm::nodeFloat</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_FLOAT}</td></tr>
+<tr class="memdesc:gac29cc63446bc6f2f1ad9f5f9b2a6bdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Float</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gac29cc63446bc6f2f1ad9f5f9b2a6bdf6">更多...</a><br /></td></tr>
+<tr class="separator:gac29cc63446bc6f2f1ad9f5f9b2a6bdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab580b3648b5381eb2c8dd9f693fcbf1e"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab580b3648b5381eb2c8dd9f693fcbf1e">rm::nodeDouble</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_DOUBLE}</td></tr>
+<tr class="memdesc:gab580b3648b5381eb2c8dd9f693fcbf1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Double</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gab580b3648b5381eb2c8dd9f693fcbf1e">更多...</a><br /></td></tr>
+<tr class="separator:gab580b3648b5381eb2c8dd9f693fcbf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b2c1a36ea0b5f8a428b94eda736c02c"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga7b2c1a36ea0b5f8a428b94eda736c02c">rm::nodeString</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_STRING}</td></tr>
+<tr class="memdesc:ga7b2c1a36ea0b5f8a428b94eda736c02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>String</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga7b2c1a36ea0b5f8a428b94eda736c02c">更多...</a><br /></td></tr>
+<tr class="separator:ga7b2c1a36ea0b5f8a428b94eda736c02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82ad705e866412a9d4555490f70f955d"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga82ad705e866412a9d4555490f70f955d">rm::nodeDatetime</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_DATETIME}</td></tr>
+<tr class="memdesc:ga82ad705e866412a9d4555490f70f955d"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Datetime</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#ga82ad705e866412a9d4555490f70f955d">更多...</a><br /></td></tr>
+<tr class="separator:ga82ad705e866412a9d4555490f70f955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad0c2975e904f60ccac7676c527a96229"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_OBJECTSFOLDER}</td></tr>
 <tr class="memdesc:gad0c2975e904f60ccac7676c527a96229"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>ObjectsFolder</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">更多...</a><br /></td></tr>
 <tr class="separator:gad0c2975e904f60ccac7676c527a96229"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,6 +262,9 @@ utilities.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:gab432b363a9f649f7f46f858908a03ff9"><td class="memItemLeft" align="right" valign="top">constexpr UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab432b363a9f649f7f46f858908a03ff9">rm::nodeHasModellingRule</a> {0, UA_NODEIDTYPE_NUMERIC, UA_NS0ID_HASMODELLINGRULE}</td></tr>
 <tr class="memdesc:gab432b363a9f649f7f46f858908a03ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasModellingRule</code> 节点 ID  <a href="../../d3/da8/group__opcua.html#gab432b363a9f649f7f46f858908a03ff9">更多...</a><br /></td></tr>
 <tr class="separator:gab432b363a9f649f7f46f858908a03ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga874e392295465b26035dc015e4d55827"><td class="memItemLeft" align="right" valign="top">constexpr UA_Byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga874e392295465b26035dc015e4d55827">rm::typeflag_ns0</a> []</td></tr>
+<tr class="memdesc:ga874e392295465b26035dc015e4d55827"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UA_TypeFlag</code> 到对应 <code>NS0</code> 下的类型名的映射  <a href="../../d3/da8/group__opcua.html#ga874e392295465b26035dc015e4d55827">更多...</a><br /></td></tr>
+<tr class="separator:ga874e392295465b26035dc015e4d55827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><dl class="section author"><dt>作者</dt><dd>zhaoxi (<a href="#" onclick="location.href='mai'+'lto:'+'535'+'39'+'414'+'0@'+'qq.'+'co'+'m'; return false;">53539<span style="display: none;">.nosp@m.</span>4140<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
@@ -241,7 +293,7 @@ utilities.hpp 的引用(Include)关系图:</div>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 3日 星期日 21:34:35 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

@@ -112,10 +112,10 @@ $(function() {
 </ul>
 </div>
 <div class="textblock"><p>OPC UA 和 open62541 库简介</p>
-<p><a class="anchor" id="md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_opcua"></a></p>
+<p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_opcua"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/11/24 </dd></dl>
-<dl class="section version"><dt>版本</dt><dd>1.0</dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.0</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> ↑<br  />
  <b>下一篇教程：</b><a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波模块</a> ↓<br  />
 </p>
@@ -252,7 +252,7 @@ OPC UA 是什么</h3>
 <div class="ttc" id="aclassrm_1_1Variable_html_ab1463cebb6f4ae2d756ace4e61e4dd61"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab1463cebb6f4ae2d756ace4e61e4dd61">rm::Variable::empty</a></div><div class="ttdeci">constexpr bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>Definition:</b> variable.hpp:216</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
-<div class="ttc" id="agroup__opcua_html_gad0c2975e904f60ccac7676c527a96229"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr UA_NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>Definition:</b> utilities.hpp:68</div></div>
+<div class="ttc" id="agroup__opcua_html_gad0c2975e904f60ccac7676c527a96229"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr UA_NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>Definition:</b> utilities.hpp:91</div></div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md181"></a>
 方法</h3>
 <p>在服务器中添加两数之和的方法节点，供客户端调用。</p>
@@ -524,8 +524,76 @@ OPC UA 是什么</h3>
 <p>有关 API 使用的更多详细信息，请查看 <a href="https://www.open62541.org/doc/master/pubsub.html">PubSub 教程</a>。</p>
 <h3><a class="anchor" id="autotoc_md185"></a>
 无代理 Pub/Sub</h3>
-<h3><a class="anchor" id="autotoc_md186"></a>
+<p>RMVL 提供了基于 <code>UDP</code> 传输协议的 Broker-less 即无代理的发布订阅机制，目前支持 <code>UADP</code> 的消息映射方式，对应的枚举类型是 <code>TransportID::UDP_UADP</code>。</p>
+<p>需要留意的是，OPC UA 的发布订阅模型仍然是建立在 <a class="el" href="../../db/dba/tutorial_modules_opcua.html#opcua_server_client">服务器/客户端</a> 模型之上的，此外 <a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a> 的 PubSub 在实现上是继承于 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 的，因此，RMVL 的发布订阅模型在使用时具备服务器的所有功能，初始化、释放资源等操作与服务器完全一致。</p>
+<p><b>创建发布者</b></p>
+<div class="fragment"><div class="line"><span class="comment">// publisher.cpp</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d24/publisher_8hpp.html">rmvl/opcua/publisher.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 创建 OPC UA 发布者，端口为 4840</span></div>
+<div class="line">    <a class="code" href="../../d7/dfc/classrm_1_1Publisher.html">rm::Publisher&lt;rm::TransportID::UDP_UADP&gt;</a> pub(<span class="stringliteral">&quot;DemoNumberPub&quot;</span>, <span class="stringliteral">&quot;opc.udp://224.0.0.22:4840&quot;</span>);</div>
+<div class="line">    <span class="comment">// 添加变量节点至发布者自身的服务器中</span></div>
+<div class="line">    <a class="code" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> num = 3.14;</div>
+<div class="line">    num.<a class="code" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;number&quot;</span>;</div>
+<div class="line">    num.<a class="code" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Number&quot;</span>;</div>
+<div class="line">    num.<a class="code" href="../../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899">description</a> = <span class="stringliteral">&quot;数字&quot;</span>;</div>
+<div class="line">    <span class="keyword">auto</span> num_node = pub.addVariableNode(num);</div>
+<div class="line">    <span class="comment">// 发布者的服务器运行</span></div>
+<div class="line">    pub.start();</div>
+<div class="line">    <span class="comment">// 准备待发布的数据</span></div>
+<div class="line">    std::vector&lt;PublishedDataSet&gt; pds_list;</div>
+<div class="line">    pds_list.emplace_back(<span class="stringliteral">&quot;Number 1&quot;</span>, num_node);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 发布数据</span></div>
+<div class="line">    pub.publish(pds_list, 100);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* other code */</span></div>
+<div class="line">    <span class="comment">/* 例如 num_node 所对应的值可以直接在这里修改 */</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 线程阻塞，直到调用了 pub.stop()，线程才会继续执行。</span></div>
+<div class="line">    pub.join();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Publisher_html"><div class="ttname"><a href="../../d7/dfc/classrm_1_1Publisher.html">rm::Publisher</a></div><div class="ttdoc">OPC UA 发布者</div><div class="ttdef"><b>Definition:</b> publisher.hpp:45</div></div>
+<div class="ttc" id="apublisher_8hpp_html"><div class="ttname"><a href="../../da/d24/publisher_8hpp.html">publisher.hpp</a></div><div class="ttdoc">OPC UA 发布者</div></div>
+</div><!-- fragment --><p><b>创建订阅者</b></p>
+<div class="fragment"><div class="line"><span class="comment">// subscriber.cpp</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d8/df0/subscriber_8hpp.html">rmvl/opcua/subscriber.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 创建 OPC UA 订阅者</span></div>
+<div class="line">    <a class="code" href="../../d4/dea/classrm_1_1Subscriber.html">rm::Subscriber&lt;rm::TransportID::UDP_UADP&gt;</a> sub(<span class="stringliteral">&quot;DemoNumberSub&quot;</span>, <span class="stringliteral">&quot;opc.udp://224.0.0.22:4840&quot;</span>, 4841);</div>
+<div class="line">    <span class="comment">// 发布者的服务器运行</span></div>
+<div class="line">    sub.start();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 准备需要订阅的数据</span></div>
+<div class="line">    <span class="comment">// 这里只订阅 1 个，如果订阅多个请使用 std::vector</span></div>
+<div class="line">    <a class="code" href="../../d4/d81/structrm_1_1FieldMetaData.html">rm::FieldMetaData</a> meta_data{<span class="stringliteral">&quot;Number 1&quot;</span>, UA_TYPES_DOUBLE, -1};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 也可以通过创建变量对 meta_data 进行初始化，例如以下代码</span></div>
+<div class="line"><span class="comment">    rm::Variable num = 1.0; // 这个 1.0 只是代表是个 Double 类型的数据 </span></div>
+<div class="line"><span class="comment">    num.browse_name = &quot;Number 1&quot;;</span></div>
+<div class="line"><span class="comment">    rm::FieldMetaData meta_data = num;</span></div>
+<div class="line"><span class="comment">    */</span></div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// 订阅数据，meta_data 项的参数传入的是 std::vector，单个数据请使用初始化列表</span></div>
+<div class="line">    <span class="keyword">auto</span> nodes = sub.subscribe(<span class="stringliteral">&quot;DemoNumberPub&quot;</span>, {meta_data});</div>
+<div class="line">    <span class="comment">// 订阅接收的数据均存放在订阅者自身的服务器中，请使用服务器端变量的写操作进行访问</span></div>
+<div class="line">    <span class="comment">// 订阅返回值是一个 UA_NodeId 列表，存放订阅接收的数据的 NodeId</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* other code */</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 线程阻塞，直到调用了 sub.stop()，线程才会继续执行。</span></div>
+<div class="line">    sub.join();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Subscriber_html"><div class="ttname"><a href="../../d4/dea/classrm_1_1Subscriber.html">rm::Subscriber</a></div><div class="ttdoc">OPC UA 订阅者</div><div class="ttdef"><b>Definition:</b> subscriber.hpp:66</div></div>
+<div class="ttc" id="astructrm_1_1FieldMetaData_html"><div class="ttname"><a href="../../d4/d81/structrm_1_1FieldMetaData.html">rm::FieldMetaData</a></div><div class="ttdoc">数据集字段元数据</div><div class="ttdef"><b>Definition:</b> subscriber.hpp:26</div></div>
+<div class="ttc" id="asubscriber_8hpp_html"><div class="ttname"><a href="../../d8/df0/subscriber_8hpp.html">subscriber.hpp</a></div><div class="ttdoc">OPC UA 订阅者</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md186"></a>
 有代理 Pub/Sub</h3>
+<p>RMVL 目前暂不支持有代理的发布订阅机制。</p>
 <h2><a class="anchor" id="opcua_parameters"></a>
 参数加载</h2>
 <p><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a> 中提供了以下几个运行时可调节参数</p>
@@ -597,7 +665,7 @@ OPC UA 是什么</h3>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 3日 星期日 21:34:35 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
