@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['硬件设备与软件模块的初始化_2188',['硬件设备与软件模块的初始化',['../d1/d67/tutorial_extra_upper_init.html',1,'tutorial_table_of_content_extra']]]
+  ['聚合类反射及其相关_20api_2184',['聚合类反射及其相关 API',['../d7/de5/tutorial_modules_aggregate_reflect.html',1,'tutorial_table_of_content_modules']]]
 ];

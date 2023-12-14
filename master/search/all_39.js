@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['构建视觉库_1025',['构建视觉库',['../d1/d9a/tutorial_build.html',1,'tutorial_table_of_content_config']]]
+  ['检测与识别模块（功能模块）_1023',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
 ];

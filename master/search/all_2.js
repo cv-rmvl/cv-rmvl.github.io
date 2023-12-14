@@ -1,7 +1,7 @@
 var searchData=
 [
   ['b_70',['B',['../d1/d61/structrm_1_1para_1_1GyroPredictorParam.html#a1e44cb9c8b7230f1ef2875c795b1f014',1,'rm::para::GyroPredictorParam::B()'],['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a9d5ed678fe57bcca610140957afab571',1,'rm::B()'],['../db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html#a905a8c8440cec9deb457ba1f49aaa814',1,'rm::para::SpiRunePredictorParam::B()']]],
-  ['b_5fgain_71',['b_gain',['../d8/d79/structrm_1_1para_1_1HikCameraParam.html#afb7b2c8ce62cfe5e085ce754ab28f521',1,'rm::para::HikCameraParam::b_gain()'],['../d8/d8e/structrm_1_1para_1_1MvCameraParam.html#a4bc16cedf2b44d8eac12c15c3a517af1',1,'rm::para::MvCameraParam::b_gain()']]],
+  ['b_5fgain_71',['b_gain',['../d8/d79/structrm_1_1para_1_1HikCameraParam.html#a1d79984e1299fc9e04bc49d64d2c8e29',1,'rm::para::HikCameraParam::b_gain()'],['../d8/d8e/structrm_1_1para_1_1MvCameraParam.html#a4bc16cedf2b44d8eac12c15c3a517af1',1,'rm::para::MvCameraParam::b_gain()']]],
   ['back_72',['back',['../d6/dd2/classrm_1_1tracker.html#a95e2205b9cb89c69bfe6cdb6374d3e92',1,'rm::tracker']]],
   ['base_73',['BASE',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef',1,'rm']]],
   ['best_5fradius_5fratio_74',['BEST_RADIUS_RATIO',['../db/d6d/structrm_1_1para_1_1RuneParam.html#ac693ba2fd3e8c8c8daecc4e5d755ae90',1,'rm::para::RuneParam']]],

@@ -2,218 +2,218 @@
 <tagfile doxygen_version="1.9.1">
   <compound kind="file">
     <name>root.markdown</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/build/</path>
     <filename>d9/d1d/root_8markdown.html</filename>
   </compound>
   <compound kind="file">
     <name>intro.markdown</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/</path>
     <filename>d0/d2e/intro_8markdown.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
     <filename>da/d31/combo_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
     <filename>d9/de1/compensator_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
     <filename>d0/d8b/decider_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
     <filename>d1/d58/detector_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
     <filename>d1/d43/feature_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
     <filename>dd/d50/group_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
     <filename>d2/db3/predictor_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>how_to_use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
     <filename>de/df8/tracker_2how__to__use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tag.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
     <filename>d2/dcf/tag_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>gyro_predictor.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
     <filename>da/d46/gyro__predictor_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>spi_rune_predictor.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
     <filename>d5/d21/spi__rune__predictor_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tutorial_extra.markdown</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
     <filename>db/d81/tutorial__extra_8markdown.html</filename>
   </compound>
   <compound kind="file">
     <name>upper_base.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
     <filename>d8/dc9/upper__base_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>upper_init.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
     <filename>d4/d38/upper__init_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>upper_process.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
     <filename>dc/d96/upper__process_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>upper_read_data.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
     <filename>d1/dff/upper__read__data_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>upper_write_data.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
     <filename>d1/d55/upper__write__data_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>configuration_options.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
     <filename>de/db0/configuration__options_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>install_overview.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
     <filename>d1/d07/install__overview_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>build.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
     <filename>d8/dfd/build_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>install.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
     <filename>de/da9/install_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>use.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
     <filename>d1/dd3/use_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>document.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
     <filename>d0/df7/document_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>arm.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
     <filename>d8/dc6/arm_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>table_of_content_introduction.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
     <filename>d7/ddf/table__of__content__introduction_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>aggregate_reflect.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
     <filename>d0/d67/aggregate__reflect_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>kalman.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
     <filename>d3/d62/kalman_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>least_square.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
     <filename>dd/d29/least__square_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>opcua.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
     <filename>dd/dea/opcua_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>serial.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
     <filename>d9/d63/serial_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>camera.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
     <filename>d4/dbc/camera_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>light.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
     <filename>d6/d3d/light_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>ort.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/ort/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/ort/</path>
     <filename>db/d95/ort_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>ew_topsis.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
     <filename>d6/d8c/ew__topsis_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>ra_heap.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
     <filename>d1/d31/ra__heap_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>union_find.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
     <filename>d2/d46/union__find_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tutorial_modules.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
     <filename>d9/d3d/tutorial__modules_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tutorials.markdown</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/doc/tutorials/</path>
     <filename>d7/d54/tutorials_8markdown.html</filename>
   </compound>
   <compound kind="file">
     <name>combo.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvl/</path>
     <filename>d1/dad/rmvl_2combo_8hpp.html</filename>
     <includes id="d8/d36/combo_8h" name="combo.h" local="yes" imported="no">combo/combo.h</includes>
   </compound>
   <compound kind="file">
     <name>combo.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/</path>
     <filename>db/da3/rmvlpara_2combo_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>armor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
     <filename>dd/d92/combo_2armor_8h.html</filename>
     <includes id="d8/d36/combo_8h" name="combo.h" local="yes" imported="no">combo.h</includes>
     <includes id="d4/d54/feature_2light__blob_8h" name="light_blob.h" local="yes" imported="no">rmvl/feature/light_blob.h</includes>
@@ -222,7 +222,7 @@
   </compound>
   <compound kind="file">
     <name>armor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
     <filename>da/ded/ara_2combo_2armor_8h.html</filename>
     <class kind="struct">rm::para::ArmorParam</class>
     <namespace>rm</namespace>
@@ -237,9 +237,10 @@
   </compound>
   <compound kind="file">
     <name>combo.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
     <filename>d8/d36/combo_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" imported="no">rmvl/camera/camutils.hpp</includes>
+    <includes id="dc/d71/uty__math_8hpp" name="uty_math.hpp" local="yes" imported="no">rmvl/rmath/uty_math.hpp</includes>
     <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" imported="no">rmvl/types.hpp</includes>
     <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" imported="no">rmvl/core/dataio.hpp</includes>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">rmvl/feature/feature.h</includes>
@@ -249,7 +250,7 @@
   </compound>
   <compound kind="file">
     <name>rune.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvl/combo/</path>
     <filename>de/de6/combo_2rune_8h.html</filename>
     <includes id="d8/d36/combo_8h" name="combo.h" local="yes" imported="no">combo.h</includes>
     <includes id="d6/d1d/feature_2rune__center_8h" name="rune_center.h" local="yes" imported="no">rmvl/feature/rune_center.h</includes>
@@ -259,7 +260,7 @@
   </compound>
   <compound kind="file">
     <name>rune.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/combo/include/rmvlpara/combo/</path>
     <filename>d9/da6/ara_2combo_2rune_8h.html</filename>
     <class kind="struct">rm::para::RuneParam</class>
     <namespace>rm</namespace>
@@ -274,18 +275,18 @@
   </compound>
   <compound kind="file">
     <name>compensator.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/</path>
     <filename>d6/ddf/rmvl_2compensator_8hpp.html</filename>
     <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" imported="no">compensator/compensator.h</includes>
   </compound>
   <compound kind="file">
     <name>compensator.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/</path>
     <filename>da/dbc/rmvlpara_2compensator_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>compensator.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
     <filename>d9/df2/compensator_8h.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">rmvl/group/group.h</includes>
     <class kind="struct">rm::CompensateInfo</class>
@@ -294,7 +295,7 @@
   </compound>
   <compound kind="file">
     <name>gravity_compensator.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
     <filename>d1/d91/compensator_2gravity__compensator_8h.html</filename>
     <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" imported="no">compensator.h</includes>
     <class kind="class">rm::GravityCompensator</class>
@@ -302,7 +303,7 @@
   </compound>
   <compound kind="file">
     <name>gravity_compensator.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
     <filename>da/d0c/ara_2compensator_2gravity__compensator_8h.html</filename>
     <class kind="struct">rm::para::GravityCompensatorParam</class>
     <namespace>rm</namespace>
@@ -317,7 +318,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_compensator.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvl/compensator/</path>
     <filename>d5/d90/compensator_2gyro__compensator_8h.html</filename>
     <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" imported="no">compensator.h</includes>
     <class kind="class">rm::GyroCompensator</class>
@@ -325,7 +326,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_compensator.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/compensator/include/rmvlpara/compensator/</path>
     <filename>dc/d74/ara_2compensator_2gyro__compensator_8h.html</filename>
     <class kind="struct">rm::para::GyroCompensatorParam</class>
     <namespace>rm</namespace>
@@ -340,18 +341,18 @@
   </compound>
   <compound kind="file">
     <name>decider.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvl/</path>
     <filename>de/d18/rmvl_2decider_8hpp.html</filename>
     <includes id="d3/d70/decider_8h" name="decider.h" local="yes" imported="no">decider/decider.h</includes>
   </compound>
   <compound kind="file">
     <name>decider.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/</path>
     <filename>d1/d33/rmvlpara_2decider_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
     <filename>d3/d70/decider_8h.html</filename>
     <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" imported="no">rmvl/compensator/compensator.h</includes>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">rmvl/detector/detector.h</includes>
@@ -362,7 +363,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
     <filename>d6/dd8/decider_2gyro__decider_8h.html</filename>
     <includes id="d3/d70/decider_8h" name="decider.h" local="yes" imported="no">decider.h</includes>
     <includes id="dc/ded/tracker_8h" name="tracker.h" local="yes" imported="no">rmvl/tracker/tracker.h</includes>
@@ -371,7 +372,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d3/d6e/ara_2decider_2gyro__decider_8h.html</filename>
     <class kind="struct">rm::para::GyroDeciderParam</class>
     <namespace>rm</namespace>
@@ -386,7 +387,7 @@
   </compound>
   <compound kind="file">
     <name>rune_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
     <filename>dd/d03/decider_2rune__decider_8h.html</filename>
     <includes id="d3/d70/decider_8h" name="decider.h" local="yes" imported="no">decider.h</includes>
     <class kind="class">rm::RuneDecider</class>
@@ -394,7 +395,7 @@
   </compound>
   <compound kind="file">
     <name>rune_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d4/df0/ara_2decider_2rune__decider_8h.html</filename>
     <class kind="struct">rm::para::RuneDeciderParam</class>
     <namespace>rm</namespace>
@@ -409,7 +410,7 @@
   </compound>
   <compound kind="file">
     <name>translation_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvl/decider/</path>
     <filename>de/d06/decider_2translation__decider_8h.html</filename>
     <includes id="d3/d70/decider_8h" name="decider.h" local="yes" imported="no">decider.h</includes>
     <class kind="class">rm::TranslationDecider</class>
@@ -417,7 +418,7 @@
   </compound>
   <compound kind="file">
     <name>translation_decider.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/decider/include/rmvlpara/decider/</path>
     <filename>d0/de3/ara_2decider_2translation__decider_8h.html</filename>
     <class kind="struct">rm::para::TranslationDeciderParam</class>
     <namespace>rm</namespace>
@@ -432,18 +433,18 @@
   </compound>
   <compound kind="file">
     <name>detector.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/</path>
     <filename>dd/d9f/rmvl_2detector_8hpp.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">detector/detector.h</includes>
   </compound>
   <compound kind="file">
     <name>detector.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/</path>
     <filename>d4/dc6/rmvlpara_2detector_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>armor_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
     <filename>da/d95/detector_2armor__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">detector.h</includes>
     <includes id="d9/d8f/ml_2ort_8h" name="ort.h" local="yes" imported="no">rmvl/ml/ort.h</includes>
@@ -453,7 +454,7 @@
   </compound>
   <compound kind="file">
     <name>armor_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>de/d1c/ara_2detector_2armor__detector_8h.html</filename>
     <class kind="struct">rm::para::ArmorDetectorParam</class>
     <namespace>rm</namespace>
@@ -468,7 +469,7 @@
   </compound>
   <compound kind="file">
     <name>detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
     <filename>d5/d9f/detector_8h.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">rmvl/group/group.h</includes>
     <includes id="df/d4b/pretreat_8h" name="pretreat.h" local="yes" imported="no">rmvl/imgproc/pretreat.h</includes>
@@ -478,7 +479,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
     <filename>d1/d6b/detector_2gyro__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">detector.h</includes>
     <includes id="d9/d8f/ml_2ort_8h" name="ort.h" local="yes" imported="no">rmvl/ml/ort.h</includes>
@@ -488,7 +489,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d2/df6/ara_2detector_2gyro__detector_8h.html</filename>
     <class kind="struct">rm::para::GyroDetectorParam</class>
     <namespace>rm</namespace>
@@ -503,7 +504,7 @@
   </compound>
   <compound kind="file">
     <name>rune_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
     <filename>db/dcc/detector_2rune__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">detector.h</includes>
     <includes id="dd/d0a/tracker_2rune__tracker_8h" name="rune_tracker.h" local="yes" imported="no">rmvl/tracker/rune_tracker.h</includes>
@@ -512,7 +513,7 @@
   </compound>
   <compound kind="file">
     <name>rune_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d7/d26/ara_2detector_2rune__detector_8h.html</filename>
     <class kind="struct">rm::para::RuneDetectorParam</class>
     <namespace>rm</namespace>
@@ -527,7 +528,7 @@
   </compound>
   <compound kind="file">
     <name>tag_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvl/detector/</path>
     <filename>d6/d58/detector_2tag__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" imported="no">detector.h</includes>
     <class kind="class">rm::TagDetector</class>
@@ -549,7 +550,7 @@
   </compound>
   <compound kind="file">
     <name>tag_detector.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/detector/include/rmvlpara/detector/</path>
     <filename>d1/d3b/ara_2detector_2tag__detector_8h.html</filename>
     <class kind="struct">rm::para::TagDetectorParam</class>
     <namespace>rm</namespace>
@@ -564,18 +565,18 @@
   </compound>
   <compound kind="file">
     <name>feature.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/</path>
     <filename>d7/d13/rmvl_2feature_8hpp.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature/feature.h</includes>
   </compound>
   <compound kind="file">
     <name>feature.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/</path>
     <filename>d7/dbc/rmvlpara_2feature_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>feature.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>d2/d74/feature_8h.html</filename>
     <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" imported="no">rmvl/types.hpp</includes>
     <class kind="class">rm::feature</class>
@@ -584,7 +585,7 @@
   </compound>
   <compound kind="file">
     <name>light_blob.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>d4/d54/feature_2light__blob_8h.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature.h</includes>
     <class kind="class">rm::LightBlob</class>
@@ -592,7 +593,7 @@
   </compound>
   <compound kind="file">
     <name>light_blob.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>d0/def/ara_2feature_2light__blob_8h.html</filename>
     <class kind="struct">rm::para::LightBlobParam</class>
     <namespace>rm</namespace>
@@ -607,7 +608,7 @@
   </compound>
   <compound kind="file">
     <name>pilot.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>df/d8b/feature_2pilot_8h.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature.h</includes>
     <class kind="class">rm::Pilot</class>
@@ -615,7 +616,7 @@
   </compound>
   <compound kind="file">
     <name>pilot.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>df/dd9/ara_2feature_2pilot_8h.html</filename>
     <class kind="struct">rm::para::PilotParam</class>
     <namespace>rm</namespace>
@@ -630,7 +631,7 @@
   </compound>
   <compound kind="file">
     <name>rune_center.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>d6/d1d/feature_2rune__center_8h.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature.h</includes>
     <class kind="class">rm::RuneCenter</class>
@@ -638,7 +639,7 @@
   </compound>
   <compound kind="file">
     <name>rune_center.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>d6/def/ara_2feature_2rune__center_8h.html</filename>
     <class kind="struct">rm::para::RuneCenterParam</class>
     <namespace>rm</namespace>
@@ -653,7 +654,7 @@
   </compound>
   <compound kind="file">
     <name>rune_target.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>d2/d8d/feature_2rune__target_8h.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature.h</includes>
     <class kind="class">rm::RuneTarget</class>
@@ -661,7 +662,7 @@
   </compound>
   <compound kind="file">
     <name>rune_target.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvlpara/feature/</path>
     <filename>df/d9c/ara_2feature_2rune__target_8h.html</filename>
     <class kind="struct">rm::para::RuneTargetParam</class>
     <namespace>rm</namespace>
@@ -676,7 +677,7 @@
   </compound>
   <compound kind="file">
     <name>tag.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/feature/include/rmvl/feature/</path>
     <filename>d2/dcd/tag_8h.html</filename>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" imported="no">feature.h</includes>
     <class kind="class">rm::Tag</class>
@@ -684,18 +685,18 @@
   </compound>
   <compound kind="file">
     <name>group.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvl/</path>
     <filename>db/d4f/rmvl_2group_8hpp.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">group/group.h</includes>
   </compound>
   <compound kind="file">
     <name>group.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/</path>
     <filename>d8/d4a/rmvlpara_2group_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>group.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
     <filename>d9/dd1/group_8h.html</filename>
     <includes id="dc/ded/tracker_8h" name="tracker.h" local="yes" imported="no">rmvl/tracker/tracker.h</includes>
     <class kind="class">rm::group</class>
@@ -704,7 +705,7 @@
   </compound>
   <compound kind="file">
     <name>utils.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/gyro/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/gyro/</path>
     <filename>d5/d60/utils_8h.html</filename>
     <class kind="class">rm::TrackerState</class>
     <namespace>rm</namespace>
@@ -720,7 +721,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_group.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
     <filename>d3/df0/group_2gyro__group_8h.html</filename>
     <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" imported="no">rmvl/core/kalman.hpp</includes>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">rmvl/group/group.h</includes>
@@ -731,7 +732,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_group.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
     <filename>db/d38/ara_2group_2gyro__group_8h.html</filename>
     <class kind="struct">rm::para::GyroGroupParam</class>
     <namespace>rm</namespace>
@@ -746,7 +747,7 @@
   </compound>
   <compound kind="file">
     <name>rune_group.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvl/group/</path>
     <filename>d8/df3/group_2rune__group_8h.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">rmvl/group/group.h</includes>
     <class kind="class">rm::RuneGroup</class>
@@ -754,7 +755,7 @@
   </compound>
   <compound kind="file">
     <name>rune_group.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/group/include/rmvlpara/group/</path>
     <filename>d0/d04/ara_2group_2rune__group_8h.html</filename>
     <class kind="struct">rm::para::RuneGroupParam</class>
     <namespace>rm</namespace>
@@ -769,18 +770,18 @@
   </compound>
   <compound kind="file">
     <name>predictor.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/</path>
     <filename>df/d54/rmvl_2predictor_8hpp.html</filename>
     <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" imported="no">predictor/predictor.h</includes>
   </compound>
   <compound kind="file">
     <name>predictor.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/</path>
     <filename>d1/d0c/rmvlpara_2predictor_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>armor_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
     <filename>df/d4c/predictor_2armor__predictor_8h.html</filename>
     <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" imported="no">predictor.h</includes>
     <class kind="class">rm::ArmorPredictor</class>
@@ -788,7 +789,7 @@
   </compound>
   <compound kind="file">
     <name>armor_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d9/d0c/ara_2predictor_2armor__predictor_8h.html</filename>
     <class kind="struct">rm::para::ArmorPredictorParam</class>
     <namespace>rm</namespace>
@@ -803,7 +804,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
     <filename>d9/de5/predictor_2gyro__predictor_8h.html</filename>
     <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" imported="no">predictor.h</includes>
     <class kind="class">rm::GyroPredictor</class>
@@ -811,7 +812,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d5/dda/ara_2predictor_2gyro__predictor_8h.html</filename>
     <class kind="struct">rm::para::GyroPredictorParam</class>
     <namespace>rm</namespace>
@@ -826,7 +827,7 @@
   </compound>
   <compound kind="file">
     <name>predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
     <filename>dc/d08/predictor_8h.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" imported="no">rmvl/group/group.h</includes>
     <class kind="struct">rm::PredictInfo</class>
@@ -889,7 +890,7 @@
   </compound>
   <compound kind="file">
     <name>rune_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
     <filename>d5/dec/predictor_2rune__predictor_8h.html</filename>
     <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" imported="no">predictor.h</includes>
     <class kind="class">rm::RunePredictor</class>
@@ -897,7 +898,7 @@
   </compound>
   <compound kind="file">
     <name>rune_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>db/d0c/ara_2predictor_2rune__predictor_8h.html</filename>
     <class kind="struct">rm::para::RunePredictorParam</class>
     <namespace>rm</namespace>
@@ -912,7 +913,7 @@
   </compound>
   <compound kind="file">
     <name>spi_rune_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvl/predictor/</path>
     <filename>dc/d86/predictor_2spi__rune__predictor_8h.html</filename>
     <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" imported="no">predictor.h</includes>
     <class kind="class">rm::SpiRunePredictor</class>
@@ -920,7 +921,7 @@
   </compound>
   <compound kind="file">
     <name>spi_rune_predictor.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/predictor/include/rmvlpara/predictor/</path>
     <filename>d6/d5f/ara_2predictor_2spi__rune__predictor_8h.html</filename>
     <class kind="struct">rm::para::SpiRunePredictorParam</class>
     <namespace>rm</namespace>
@@ -935,18 +936,18 @@
   </compound>
   <compound kind="file">
     <name>tracker.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/</path>
     <filename>dc/d2d/rmvl_2tracker_8hpp.html</filename>
     <includes id="dc/ded/tracker_8h" name="tracker.h" local="yes" imported="no">tracker/tracker.h</includes>
   </compound>
   <compound kind="file">
     <name>tracker.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/</path>
     <filename>d6/de5/rmvlpara_2tracker_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>gyro_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
     <filename>d7/de6/tracker_2gyro__tracker_8h.html</filename>
     <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" imported="no">rmvl/combo/armor.h</includes>
     <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" imported="no">rmvl/core/kalman.hpp</includes>
@@ -956,7 +957,7 @@
   </compound>
   <compound kind="file">
     <name>gyro_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>db/db3/ara_2tracker_2gyro__tracker_8h.html</filename>
     <class kind="struct">rm::para::GyroTrackerParam</class>
     <namespace>rm</namespace>
@@ -971,17 +972,17 @@
   </compound>
   <compound kind="file">
     <name>planar_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
     <filename>d5/dea/tracker_2planar__tracker_8h.html</filename>
-    <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" imported="no">rmvl/combo/armor.h</includes>
     <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" imported="no">rmvl/core/kalman.hpp</includes>
+    <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" imported="no">rmvl/combo/armor.h</includes>
     <includes id="dc/ded/tracker_8h" name="tracker.h" local="yes" imported="no">tracker.h</includes>
     <class kind="class">rm::PlanarTracker</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>planar_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>d5/d67/ara_2tracker_2planar__tracker_8h.html</filename>
     <class kind="struct">rm::para::PlanarTrackerParam</class>
     <namespace>rm</namespace>
@@ -996,7 +997,7 @@
   </compound>
   <compound kind="file">
     <name>rune_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
     <filename>dd/d0a/tracker_2rune__tracker_8h.html</filename>
     <includes id="de/de6/combo_2rune_8h" name="rune.h" local="yes" imported="no">rmvl/combo/rune.h</includes>
     <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" imported="no">rmvl/core/kalman.hpp</includes>
@@ -1006,7 +1007,7 @@
   </compound>
   <compound kind="file">
     <name>rune_tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvlpara/tracker/</path>
     <filename>db/d6a/ara_2tracker_2rune__tracker_8h.html</filename>
     <class kind="struct">rm::para::RuneTrackerParam</class>
     <namespace>rm</namespace>
@@ -1021,7 +1022,7 @@
   </compound>
   <compound kind="file">
     <name>tracker.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/tracker/include/rmvl/tracker/</path>
     <filename>dc/ded/tracker_8h.html</filename>
     <includes id="d8/d36/combo_8h" name="combo.h" local="yes" imported="no">rmvl/combo/combo.h</includes>
     <class kind="class">rm::tracker</class>
@@ -1030,7 +1031,7 @@
   </compound>
   <compound kind="file">
     <name>types.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/extra/types/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/extra/types/include/rmvl/</path>
     <filename>dd/de3/types_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <class kind="struct">rm::RMStatus</class>
@@ -1157,22 +1158,21 @@
   </compound>
   <compound kind="file">
     <name>camera.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvl/</path>
     <filename>da/d4b/rmvl_2camera_8hpp.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" imported="no">camera/camutils.hpp</includes>
     <includes id="d1/d67/camera_2mv__camera_8h" name="mv_camera.h" local="yes" imported="no">camera/mv_camera.h</includes>
+    <includes id="da/d35/camera_2hik__camera_8h" name="hik_camera.h" local="yes" imported="no">camera/hik_camera.h</includes>
   </compound>
   <compound kind="file">
     <name>camera.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/</path>
     <filename>da/d4e/rmvlpara_2camera_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>camutils.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
     <filename>d3/d7e/camutils_8hpp.html</filename>
-    <includes id="dc/d71/uty__math_8hpp" name="uty_math.hpp" local="yes" imported="no">rmvl/rmath/uty_math.hpp</includes>
-    <includes id="d7/df6/camera_8h" name="camera.h" local="yes" imported="no">rmvlpara/camera/camera.h</includes>
     <class kind="class">rm::CameraExtrinsics</class>
     <namespace>rm</namespace>
     <member kind="typedef">
@@ -1369,15 +1369,16 @@
   </compound>
   <compound kind="file">
     <name>hik_camera.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
     <filename>da/d35/camera_2hik__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" imported="no">camutils.hpp</includes>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::HikCamera</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>hik_camera.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d3/d41/ara_2camera_2hik__camera_8h.html</filename>
     <class kind="struct">rm::para::HikCameraParam</class>
     <namespace>rm</namespace>
@@ -1392,15 +1393,16 @@
   </compound>
   <compound kind="file">
     <name>mv_camera.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvl/camera/</path>
     <filename>d1/d67/camera_2mv__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" imported="no">camutils.hpp</includes>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::MvCamera</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>mv_camera.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d2/d9c/ara_2camera_2mv__camera_8h.html</filename>
     <class kind="struct">rm::para::MvCameraParam</class>
     <namespace>rm</namespace>
@@ -1415,7 +1417,7 @@
   </compound>
   <compound kind="file">
     <name>camera.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/camera/include/rmvlpara/camera/</path>
     <filename>d7/df6/camera_8h.html</filename>
     <class kind="struct">rm::para::CameraParam</class>
     <namespace>rm</namespace>
@@ -1430,41 +1432,40 @@
   </compound>
   <compound kind="file">
     <name>core.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/</path>
     <filename>da/d47/core_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" imported="no">core/version.hpp</includes>
     <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" imported="no">core/dataio.hpp</includes>
-    <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" imported="no">core/kalman.hpp</includes>
     <includes id="d1/dc5/serial_8hpp" name="serial.hpp" local="yes" imported="no">core/serial.hpp</includes>
     <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" imported="no">core/timer.hpp</includes>
   </compound>
   <compound kind="file">
     <name>dataio.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>d5/d60/dataio_8hpp.html</filename>
     <class kind="struct">rm::GyroData</class>
     <class kind="struct">rm::GyroData::Translation</class>
     <class kind="struct">rm::GyroData::Rotation</class>
     <namespace>rm</namespace>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>writeCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>ga187f197957dbcaf1d922e13d629992d3</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga27e77887e06c764a38075401808a7628</anchor>
+      <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>readCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>gade757b69735c5e963613b7806a1016c6</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga81cd696ddfbe64114c01bd675b4fabf5</anchor>
+      <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
   </compound>
   <compound kind="file">
     <name>kalman.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>db/d0f/kalman_8hpp.html</filename>
     <class kind="class">rm::KalmanFilter</class>
     <namespace>rm</namespace>
@@ -1541,7 +1542,7 @@
   </compound>
   <compound kind="file">
     <name>rmvldef.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>db/d41/rmvldef_8hpp.html</filename>
     <member kind="define">
       <type>#define</type>
@@ -1581,13 +1582,14 @@
   </compound>
   <compound kind="file">
     <name>serial.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>d1/dc5/serial_8hpp.html</filename>
+    <class kind="class">rm::SerialPort</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>timer.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>df/d05/timer_8hpp.html</filename>
     <class kind="class">rm::Timer</class>
     <namespace>rm</namespace>
@@ -1601,7 +1603,7 @@
   </compound>
   <compound kind="file">
     <name>util.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>d0/d3f/util_8hpp.html</filename>
     <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" imported="no">rmvldef.hpp</includes>
     <class kind="class">rm::Exception</class>
@@ -1805,13 +1807,6 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>const char *</type>
-      <name>rmvlErrorStr</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
-      <anchor>ga71c398fc050ec8122b8423d2500e6efb</anchor>
-      <arglist>(RMVLErrorCode status)</arglist>
-    </member>
-    <member kind="function">
       <type>std::string</type>
       <name>format</name>
       <anchorfile>d5/d20/namespacerm.html</anchorfile>
@@ -1948,8 +1943,8 @@
       <type>void</type>
       <name>for_each</name>
       <anchorfile>d8/dd6/namespacerm_1_1reflect.html</anchorfile>
-      <anchor>aae20b21281e22a58fac3756ee1d05597</anchor>
-      <arglist>(const Tp &amp;val, Callable &amp;&amp;f)</arglist>
+      <anchor>a9863cff22a9ace50a697915560ee8290</anchor>
+      <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -1961,7 +1956,7 @@
   </compound>
   <compound kind="file">
     <name>version.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/core/include/rmvl/core/</path>
     <filename>d7/dad/version_8hpp.html</filename>
     <namespace>rm</namespace>
     <member kind="define">
@@ -2044,19 +2039,19 @@
   </compound>
   <compound kind="file">
     <name>imgproc.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/</path>
     <filename>dd/d46/imgproc_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>paint.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/imgproc/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/imgproc/</path>
     <filename>d9/db3/paint_8hpp.html</filename>
     <class kind="class">rm::ArrayTool</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>pretreat.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/imgproc/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/imgproc/include/rmvl/imgproc/</path>
     <filename>df/d4b/pretreat_8h.html</filename>
     <namespace>rm</namespace>
     <member kind="enumeration">
@@ -2107,12 +2102,12 @@
   </compound>
   <compound kind="file">
     <name>light.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/light/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/light/include/rmvl/</path>
     <filename>de/dea/light_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>opt_light_control.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/light/include/rmvl/light/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/light/include/rmvl/light/</path>
     <filename>d4/da9/opt__light__control_8h.html</filename>
     <class kind="struct">rm::DevIpConfig</class>
     <class kind="class">rm::OPTLightController</class>
@@ -2120,24 +2115,24 @@
   </compound>
   <compound kind="file">
     <name>ml.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/ml/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/ml/include/rmvl/</path>
     <filename>de/da2/rmvl_2ml_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>ml.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/ml/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/ml/include/rmvlpara/</path>
     <filename>d7/d33/rmvlpara_2ml_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>ort.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/ml/include/rmvl/ml/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/ml/include/rmvl/ml/</path>
     <filename>d9/d8f/ml_2ort_8h.html</filename>
     <class kind="class">rm::OnnxRT</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>ort.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/ml/include/rmvlpara/ml/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/ml/include/rmvlpara/ml/</path>
     <filename>d3/d29/ara_2ml_2ort_8h.html</filename>
     <class kind="struct">rm::para::OrtParam</class>
     <namespace>rm</namespace>
@@ -2152,7 +2147,7 @@
   </compound>
   <compound kind="file">
     <name>opcua.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/</path>
     <filename>d2/da1/rmvl_2opcua_8hpp.html</filename>
     <includes id="d2/dfe/client_8hpp" name="client.hpp" local="yes" imported="no">opcua/client.hpp</includes>
     <includes id="df/d0a/server_8hpp" name="server.hpp" local="yes" imported="no">opcua/server.hpp</includes>
@@ -2161,7 +2156,7 @@
   </compound>
   <compound kind="file">
     <name>opcua.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvlpara/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvlpara/</path>
     <filename>d0/dda/rmvlpara_2opcua_8hpp.html</filename>
     <class kind="struct">rm::para::OpcuaParam</class>
     <namespace>rm</namespace>
@@ -2176,7 +2171,7 @@
   </compound>
   <compound kind="file">
     <name>client.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>d2/dfe/client_8hpp.html</filename>
     <includes id="df/de1/object_8hpp" name="object.hpp" local="yes" imported="no">object.hpp</includes>
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" imported="no">view.hpp</includes>
@@ -2185,7 +2180,7 @@
   </compound>
   <compound kind="file">
     <name>event.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>dc/d94/event_8hpp.html</filename>
     <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" imported="no">variable.hpp</includes>
     <class kind="class">rm::EventType</class>
@@ -2194,7 +2189,7 @@
   </compound>
   <compound kind="file">
     <name>method.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>d7/d9c/method_8hpp.html</filename>
     <includes id="dc/d5f/utilities_8hpp" name="utilities.hpp" local="yes" imported="no">utilities.hpp</includes>
     <class kind="struct">rm::Argument</class>
@@ -2218,7 +2213,7 @@
   </compound>
   <compound kind="file">
     <name>object.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>df/de1/object_8hpp.html</filename>
     <includes id="d7/d9c/method_8hpp" name="method.hpp" local="yes" imported="no">method.hpp</includes>
     <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" imported="no">variable.hpp</includes>
@@ -2228,7 +2223,7 @@
   </compound>
   <compound kind="file">
     <name>publisher.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>da/d24/publisher_8hpp.html</filename>
     <includes id="df/d0a/server_8hpp" name="server.hpp" local="yes" imported="no">server.hpp</includes>
     <class kind="struct">rm::PublishedDataSet</class>
@@ -2238,7 +2233,7 @@
   </compound>
   <compound kind="file">
     <name>server.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>df/d0a/server_8hpp.html</filename>
     <includes id="dc/d94/event_8hpp" name="event.hpp" local="yes" imported="no">event.hpp</includes>
     <includes id="df/de1/object_8hpp" name="object.hpp" local="yes" imported="no">object.hpp</includes>
@@ -2283,7 +2278,7 @@
   </compound>
   <compound kind="file">
     <name>subscriber.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>d8/df0/subscriber_8hpp.html</filename>
     <includes id="df/d0a/server_8hpp" name="server.hpp" local="yes" imported="no">server.hpp</includes>
     <class kind="struct">rm::FieldMetaData</class>
@@ -2293,7 +2288,7 @@
   </compound>
   <compound kind="file">
     <name>utilities.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>dc/d5f/utilities_8hpp.html</filename>
     <class kind="struct">rm::UserConfig</class>
     <namespace>rm</namespace>
@@ -2598,7 +2593,7 @@
   </compound>
   <compound kind="file">
     <name>variable.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>da/d0e/variable_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <includes id="dc/d5f/utilities_8hpp" name="utilities.hpp" local="yes" imported="no">utilities.hpp</includes>
@@ -2644,7 +2639,7 @@
   </compound>
   <compound kind="file">
     <name>view.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/opcua/include/rmvl/opcua/</path>
     <filename>d8/d11/view_8hpp.html</filename>
     <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" imported="no">variable.hpp</includes>
     <class kind="class">rm::View</class>
@@ -2652,26 +2647,26 @@
   </compound>
   <compound kind="file">
     <name>rmath.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/</path>
     <filename>d5/d6c/rmath_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>ew_topsis.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
     <filename>d4/dd5/ew__topsis_8hpp.html</filename>
     <class kind="class">rm::EwTopsis</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>ra_heap.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
     <filename>d0/de7/ra__heap_8hpp.html</filename>
     <class kind="class">rm::RaHeap</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>transform.h</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
     <filename>d2/d80/transform_8h.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <includes id="dc/d71/uty__math_8hpp" name="uty_math.hpp" local="yes" imported="no">uty_math.hpp</includes>
@@ -2739,14 +2734,14 @@
   </compound>
   <compound kind="file">
     <name>union_find.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
     <filename>d7/dcb/union__find_8hpp.html</filename>
     <class kind="class">rm::UnionFind</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>uty_math.hpp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
+    <path>/home/zhaoxi/桌面/vision/cv-rmvl/rmvl/modules/rmath/include/rmvl/rmath/</path>
     <filename>dc/d71/uty__math_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" imported="no">rmvl/core/util.hpp</includes>
     <namespace>rm</namespace>
@@ -3235,8 +3230,8 @@
       <type>void</type>
       <name>setExtrinsic</name>
       <anchorfile>df/d41/classrm_1_1Armor.html</anchorfile>
-      <anchor>a92aa2b0c55ea31e3d63e59c7a5236dab</anchor>
-      <arglist>(const CameraExtrinsics&lt; float &gt; &amp;extrinsic)</arglist>
+      <anchor>aea7fd34a13f85c6bca4c85f72ed92727</anchor>
+      <arglist>(const CameraExtrinsics &amp;extrinsic)</arglist>
     </member>
     <member kind="function">
       <type>const cv::Vec2f &amp;</type>
@@ -3653,178 +3648,89 @@
   <compound kind="class">
     <name>rm::CameraExtrinsics</name>
     <filename>da/dbf/classrm_1_1CameraExtrinsics.html</filename>
-    <templarg></templarg>
     <member kind="function">
-      <type>const cv::Vec&lt; Tp, 3 &gt; &amp;</type>
+      <type>const cv::Vec3f &amp;</type>
       <name>tvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a4c41927903da99285c583a2356c1fc29</anchor>
+      <anchor>aec8c0a679cee655e3755e1f27754b52c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const cv::Vec&lt; Tp, 3 &gt; &amp;</type>
+      <type>const cv::Vec3f &amp;</type>
       <name>rvec</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aaa0c50938dc26dae11627c207091412c</anchor>
+      <anchor>a6567e74439292567250fb3c90e29c6aa</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const cv::Matx&lt; Tp, 3, 3 &gt; &amp;</type>
+      <type>const cv::Matx33f &amp;</type>
       <name>R</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aeb015c40a866b81a15d938634f836dcd</anchor>
+      <anchor>a422377350bd890e616012ca07b30af50</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const cv::Matx&lt; Tp, 4, 4 &gt; &amp;</type>
+      <type>const cv::Matx44f &amp;</type>
       <name>T</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a06c1022a46b307f47ead1512c772c734</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>yaw</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a8cff4415613217cc4b57548f85047d0b</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>pitch</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>ac13a6df17037ac75e5e8e5406fb586b0</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>roll</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a78b11ed01454768da5ebd225ba97af98</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Tp</type>
-      <name>distance</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aee46905759348d25b1d4ecdbfa49d21f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>tvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a9addc7649e96d3ee2a3c924717dd7db2</anchor>
-      <arglist>(const cv::Vec&lt; Tp, 3 &gt; &amp;tvec)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>rvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aa9a00ddff63f912460cc065521cdeba2</anchor>
-      <arglist>(const cv::Vec&lt; Tp, 3 &gt; &amp;rvec)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>R</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a7ae32d668a6049186ad992d4cad27c41</anchor>
-      <arglist>(const cv::Matx&lt; Tp, 3, 3 &gt; &amp;R)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>distance</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aad4cdf706c7779c5ea0c769dffe8f5b3</anchor>
-      <arglist>(const Tp &amp;distance)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>CameraExtrinsics&lt; float &gt;</name>
-    <filename>da/dbf/classrm_1_1CameraExtrinsics.html</filename>
-    <member kind="function">
-      <type>const cv::Vec&lt; float, 3 &gt; &amp;</type>
-      <name>tvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a4c41927903da99285c583a2356c1fc29</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>tvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a9addc7649e96d3ee2a3c924717dd7db2</anchor>
-      <arglist>(const cv::Vec&lt; float, 3 &gt; &amp;tvec)</arglist>
-    </member>
-    <member kind="function">
-      <type>const cv::Vec&lt; float, 3 &gt; &amp;</type>
-      <name>rvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aaa0c50938dc26dae11627c207091412c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>rvec</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aa9a00ddff63f912460cc065521cdeba2</anchor>
-      <arglist>(const cv::Vec&lt; float, 3 &gt; &amp;rvec)</arglist>
-    </member>
-    <member kind="function">
-      <type>const cv::Matx&lt; float, 3, 3 &gt; &amp;</type>
-      <name>R</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aeb015c40a866b81a15d938634f836dcd</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>R</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a7ae32d668a6049186ad992d4cad27c41</anchor>
-      <arglist>(const cv::Matx&lt; float, 3, 3 &gt; &amp;R)</arglist>
-    </member>
-    <member kind="function">
-      <type>const cv::Matx&lt; float, 4, 4 &gt; &amp;</type>
-      <name>T</name>
-      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a06c1022a46b307f47ead1512c772c734</anchor>
+      <anchor>ac84235d1ab1d0fc3773e90b5dfdd117f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>yaw</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a8cff4415613217cc4b57548f85047d0b</anchor>
+      <anchor>a5dfc3bbb38c03817fe2ca777ba31d634</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>pitch</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>ac13a6df17037ac75e5e8e5406fb586b0</anchor>
+      <anchor>a455798823fc4b65af89ea6267723e513</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>roll</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>a78b11ed01454768da5ebd225ba97af98</anchor>
+      <anchor>ae24c3e3277ffb6c3cfa047290536f87e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>float</type>
       <name>distance</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aee46905759348d25b1d4ecdbfa49d21f</anchor>
+      <anchor>a8a90a94644ba8e1dab7a1e51a4e3baad</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>tvec</name>
+      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
+      <anchor>aa998bc8aca661400075e6753edc30b5e</anchor>
+      <arglist>(const cv::Vec3f &amp;tvec)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rvec</name>
+      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
+      <anchor>ab60babd40dff7eb9fc785cb5afdcce04</anchor>
+      <arglist>(const cv::Vec3f &amp;rvec)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>R</name>
+      <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
+      <anchor>a6128665112b073e73e6ff658dade5768</anchor>
+      <arglist>(const cv::Matx33f &amp;R)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>distance</name>
       <anchorfile>da/dbf/classrm_1_1CameraExtrinsics.html</anchorfile>
-      <anchor>aad4cdf706c7779c5ea0c769dffe8f5b3</anchor>
-      <arglist>(const float &amp;distance)</arglist>
+      <anchor>af0e485e13a2feb2b1ef267e392267077</anchor>
+      <arglist>(float distance)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -3981,20 +3887,6 @@
       <anchor>a3b90d1976ec5aa8e8148e20dd1be694f</anchor>
       <arglist>(UA_NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>subscribe</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a72eba8c488cfbb095cc334dafed919e9</anchor>
-      <arglist>(UA_NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>subscribe</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a7d780d481ea8ba317333ffd49496d541</anchor>
-      <arglist>(UA_NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>rm::combo</name>
@@ -4056,10 +3948,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const CameraExtrinsics&lt; float &gt; &amp;</type>
+      <type>const CameraExtrinsics &amp;</type>
       <name>getExtrinsics</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>ac4eb042c9871b2b7313a514bcf6c4f36</anchor>
+      <anchor>a250f5cffd8a2adc17c3204ba838fad57</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -4189,10 +4081,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>CameraExtrinsics&lt; float &gt;</type>
+      <type>CameraExtrinsics</type>
       <name>_extrinsic</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a75c03dbc91e07c9febdfea17725bbb5d</anchor>
+      <anchor>afd5ecdf92fb1d5c486664e377d92e582</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -5126,6 +5018,13 @@
       <type></type>
       <name>FieldMetaData</name>
       <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
+      <anchor>a81288cc716e2288cc212c6bd0cf95309</anchor>
+      <arglist>(const std::string &amp;name_, UA_TypeFlag type_, int value_rank_)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>FieldMetaData</name>
+      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
       <anchor>a37012f36fc25b0f36823f67578d5751e</anchor>
       <arglist>(const Variable &amp;val)</arglist>
     </member>
@@ -5417,18 +5316,18 @@
     <class kind="struct">rm::GyroData::Rotation</class>
     <class kind="struct">rm::GyroData::Translation</class>
     <member kind="function" static="yes">
-      <type>static bool</type>
+      <type>static void</type>
       <name>write</name>
       <anchorfile>dc/d5f/structrm_1_1GyroData.html</anchorfile>
-      <anchor>a2f695b5499f02adff6547b743bac28b2</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, const GyroData &amp;data) noexcept</arglist>
+      <anchor>a3952246b55c81e63b1bc877cfec45de3</anchor>
+      <arglist>(std::ostream &amp;out, const GyroData &amp;data) noexcept</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static bool</type>
+      <type>static void</type>
       <name>read</name>
       <anchorfile>dc/d5f/structrm_1_1GyroData.html</anchorfile>
-      <anchor>ab9ef378a53f37369ca2fa806e0c04431</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, GyroData &amp;data) noexcept</arglist>
+      <anchor>a3079ffd296574dd2e97865f49a5d6ecc</anchor>
+      <arglist>(std::istream &amp;in, GyroData &amp;data) noexcept</arglist>
     </member>
     <member kind="variable">
       <type>struct rm::GyroData::Translation</type>
@@ -6215,71 +6114,50 @@
       <type></type>
       <name>HikCamera</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a4e9ce4951e16b37defacce769ce9aa32</anchor>
-      <arglist>(HikCamera &amp;&amp;)=delete</arglist>
+      <anchor>ad95273da0f09ef8ca21f98b84bf7f58a</anchor>
+      <arglist>(HikCamera &amp;&amp;val)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>~HikCamera</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a2917854543a98b142e77aa562dead604</anchor>
-      <arglist>() override</arglist>
+      <anchor>abd2f0541b100e1c07f1401cf168f68a7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>adc98dbdfee6a57368297561fa2bf2e40</anchor>
-      <arglist>(int propId, double value=0.0) override</arglist>
+      <anchor>a8b66798aca86dd7b0222124b58803958</anchor>
+      <arglist>(int propId, double value=0.0)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a1cfdf3d25b0e1d4b4036a6690a28d5e3</anchor>
-      <arglist>(int propId) const override</arglist>
+      <anchor>a13edc2b7e0b40271430883163fce9f1f</anchor>
+      <arglist>(int propId) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a0ba0b711b689dca8b53562fd318db874</anchor>
-      <arglist>() const override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>release</name>
-      <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a186c88ab97c86f8e35a64f8db74030d0</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>retrieve</name>
-      <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>ac2efd68016e0be57d5707c6ca86ddf95</anchor>
-      <arglist>(cv::OutputArray image, RetrieveMode flag) override</arglist>
+      <anchor>a17da764db5d58689bb1ca5adc7287f1b</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>read</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a76564efbd26d464c72f5ebaaf740de8b</anchor>
-      <arglist>(cv::OutputArray image) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual HikCamera &amp;</type>
-      <name>operator&gt;&gt;</name>
-      <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a549d95fc3da0a1118aaa7013e0f8bafd</anchor>
-      <arglist>(cv::Mat &amp;image) override</arglist>
+      <anchor>a744ac7aea770336ee8fde87a69ae6278</anchor>
+      <arglist>(cv::OutputArray image)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>open</name>
+      <type>HikCamera &amp;</type>
+      <name>operator&gt;&gt;</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a240247542b4558171b2d4b8cccd8a57e</anchor>
-      <arglist>()</arglist>
+      <anchor>ac86440a6b576f99737aa35d6812e5513</anchor>
+      <arglist>(cv::Mat &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -6314,80 +6192,45 @@
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>float</type>
       <name>exposure</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>aba31c4f4e4e4d579d61de93ade5c0da5</anchor>
+      <anchor>a2b5249b96d636f11293a9931dd56f94c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
-      <name>gamma</name>
-      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>abe61a9ae92294d65ddf06d3d64774568</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>contrast</name>
-      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>aa5bd9fe691aacab25d74639b80349a38</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
+      <type>float</type>
       <name>saturation</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a9bff5dc0bec11e33961cfca267ab2cb7</anchor>
+      <anchor>a3466df8524e7f1afea36ddc9c4812283</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
-      <name>sharpness</name>
-      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>ae2240d5a7fba000e735c28f810b08733</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
+      <type>float</type>
       <name>gain</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>aea1cbec51dc1cee7cf9adf73d0cdf0df</anchor>
+      <anchor>acfe4eceb24aa92a2a99c43b4d4a5f94a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>uint32_t</type>
       <name>b_gain</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>afb7b2c8ce62cfe5e085ce754ab28f521</anchor>
+      <anchor>a1d79984e1299fc9e04bc49d64d2c8e29</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>uint32_t</type>
       <name>g_gain</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>aba88c908a6cb50e3da01e8fb87702c60</anchor>
+      <anchor>abb012c16a29c4331dd890143f1c9c405</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>uint32_t</type>
       <name>r_gain</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a1b6bcd2dafc5cf78b04f5f6cbbc85409</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>grab_mode</name>
-      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a3a95660e1dd9885659f1e25dffe6673d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>retrieve_mode</name>
-      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a6d00959bcc71f0512cf5b81478c1ed18</anchor>
+      <anchor>a6788e5ede5461a1b594023fd972ffcdd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6402,6 +6245,20 @@
       <name>auto_wb</name>
       <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>abd5362ad3109d62bf0e4889292ec42e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>grab_mode</name>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchor>a3a95660e1dd9885659f1e25dffe6673d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>retrieve_mode</name>
+      <anchorfile>d8/d79/structrm_1_1para_1_1HikCameraParam.html</anchorfile>
+      <anchor>a6d00959bcc71f0512cf5b81478c1ed18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -7086,78 +6943,50 @@
       <type></type>
       <name>MvCamera</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>aec787762da45d1c675f24916b0f68169</anchor>
-      <arglist>(MvCamera &amp;&amp;)=delete</arglist>
+      <anchor>afce938eae6e6233d5ac4808559512af9</anchor>
+      <arglist>(MvCamera &amp;&amp;val)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>~MvCamera</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>aaf49efa7d9059bf55fe721b2f40d8845</anchor>
-      <arglist>() override</arglist>
+      <anchor>a58dfd3f1b919eadf462e5f577f22d0cb</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>ae2a4709f56dbdb0355ba21ddb87089e1</anchor>
-      <arglist>(int propId, double value=0.0) override</arglist>
+      <anchor>aa5f360ee53e8528cee8310e937e9ad56</anchor>
+      <arglist>(int propId, double value=0.0)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a1a82236757dfb439aacd2f29bab88dba</anchor>
-      <arglist>(int propId) const override</arglist>
+      <anchor>a4e5e948680747bdd22f64753e0437e5e</anchor>
+      <arglist>(int propId) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a85ebece2376a19b4b87bc5cb3bb4eca9</anchor>
-      <arglist>() const override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>release</name>
-      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a02d62937f0c943dbafc74b15829a5401</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>grab</name>
-      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>ae70fb01f54cf9e59b0cb55c766e12f5a</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>retrieve</name>
-      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>aa639218c74490be3c219c9a6a0378ded</anchor>
-      <arglist>(cv::OutputArray image, RetrieveMode flag) override</arglist>
+      <anchor>afc51568a8a254ab21b469c90f864bf58</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>read</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a03bc8b180bd8b6e8a435f43bf63d085f</anchor>
-      <arglist>(cv::OutputArray image) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual MvCamera &amp;</type>
-      <name>operator&gt;&gt;</name>
-      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>aa072ad5279facaef9855334a65ecac41</anchor>
-      <arglist>(cv::Mat &amp;image) override</arglist>
+      <anchor>a0fb43c17b571f1791963a3853bb2a380</anchor>
+      <arglist>(cv::OutputArray image)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>open</name>
+      <type>MvCamera &amp;</type>
+      <name>operator&gt;&gt;</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a2729c6b878c495dba2672747ac2f479c</anchor>
-      <arglist>()</arglist>
+      <anchor>ac41ccddd5d289ced2cb4902f7f43256a</anchor>
+      <arglist>(cv::Mat &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -7192,10 +7021,10 @@
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>double</type>
       <name>exposure</name>
       <anchorfile>d8/d8e/structrm_1_1para_1_1MvCameraParam.html</anchorfile>
-      <anchor>a29377870ce8518a8de11e6ddb02c8621</anchor>
+      <anchor>a817e151b4ce99d1599ff09eb2168998f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -9220,6 +9049,59 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::SerialPort</name>
+    <filename>d4/d98/classrm_1_1SerialPort.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SerialPort</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>af3c8690ef2eb867b6a038da5905ba294</anchor>
+      <arglist>(const std::string &amp;device={}, int baud_rate=B115200)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~SerialPort</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>abee72b3518b3e8c8a3ff8f2c44c03513</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>open</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a5878ae463d12958f5fbbe9da2cd5cd8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a9a1e906641a46ad064c400e8c7722bcb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a9b67b9894f70d514c16f7d70d9c29d84</anchor>
+      <arglist>(unsigned char head_flag, unsigned char tail_flag, Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a5b285854e6ff4cee27a5019d94a73cf5</anchor>
+      <arglist>(const Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isOpened</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>aaadfdd019cb71aaf6f52bad22feb8444</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Server</name>
     <filename>d4/d06/classrm_1_1Server.html</filename>
     <member kind="function">
@@ -9524,10 +9406,10 @@
       <arglist>(const std::string &amp;sub_name, const std::string &amp;address, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>std::vector&lt; UA_NodeId &gt;</type>
       <name>subscribe</name>
       <anchorfile>de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html</anchorfile>
-      <anchor>a54fc15b94d3cdc88644f77301db7a2a2</anchor>
+      <anchor>a936debed2229503917fcedc8aff00cfd</anchor>
       <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
@@ -9826,10 +9708,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const CameraExtrinsics&lt; float &gt; &amp;</type>
+      <type>const CameraExtrinsics &amp;</type>
       <name>getExtrinsics</name>
       <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
-      <anchor>a1b3290d3239042b606540e3c3eb8c0d6</anchor>
+      <anchor>a143ceabc5e56f5f73281ce96cfc96c40</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -9903,10 +9785,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>CameraExtrinsics&lt; float &gt;</type>
+      <type>CameraExtrinsics</type>
       <name>_extrinsic</name>
       <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
-      <anchor>a1d9378955d3b3d0d19cb334dc050df66</anchor>
+      <anchor>a086bd208346a0c3ed530d54217064c77</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -10262,6 +10144,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>Tp</type>
+      <name>cast</name>
+      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
+      <anchor>a52e829435a14b7a4b02ed6bba1a57955</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>const VariableType *</type>
       <name>type</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
@@ -10565,6 +10454,7 @@
     <class kind="class">rm::MvCamera</class>
     <class kind="struct">rm::GyroData</class>
     <class kind="class">rm::KalmanFilter</class>
+    <class kind="class">rm::SerialPort</class>
     <class kind="class">rm::Timer</class>
     <class kind="class">rm::Exception</class>
     <class kind="struct">rm::hash_aggregate</class>
@@ -11228,18 +11118,18 @@
       <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>writeCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>ga187f197957dbcaf1d922e13d629992d3</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga27e77887e06c764a38075401808a7628</anchor>
+      <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>readCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>gade757b69735c5e963613b7806a1016c6</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga81cd696ddfbe64114c01bd675b4fabf5</anchor>
+      <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
@@ -12155,8 +12045,8 @@
       <type>void</type>
       <name>for_each</name>
       <anchorfile>d8/dd6/namespacerm_1_1reflect.html</anchorfile>
-      <anchor>aae20b21281e22a58fac3756ee1d05597</anchor>
-      <arglist>(const Tp &amp;val, Callable &amp;&amp;f)</arglist>
+      <anchor>a9863cff22a9ace50a697915560ee8290</anchor>
+      <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -12730,13 +12620,6 @@
       <anchor>gga08a5f1ffe569688f3a6f5f32e7e855baa59242f30afedb168324b811aed9f446c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
-      <type>const char *</type>
-      <name>rmvlErrorStr</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
-      <anchor>ga71c398fc050ec8122b8423d2500e6efb</anchor>
-      <arglist>(RMVLErrorCode status)</arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>core_dataio</name>
@@ -12744,18 +12627,18 @@
     <filename>d0/d41/group__core__dataio.html</filename>
     <class kind="struct">rm::GyroData</class>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>writeCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>ga187f197957dbcaf1d922e13d629992d3</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga27e77887e06c764a38075401808a7628</anchor>
+      <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>void</type>
       <name>readCorners</name>
       <anchorfile>d0/d41/group__core__dataio.html</anchorfile>
-      <anchor>gade757b69735c5e963613b7806a1016c6</anchor>
-      <arglist>(const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</arglist>
+      <anchor>ga81cd696ddfbe64114c01bd675b4fabf5</anchor>
+      <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -12838,6 +12721,7 @@
     <name>serial</name>
     <title>串口通信模块</title>
     <filename>dd/d89/group__serial.html</filename>
+    <class kind="class">rm::SerialPort</class>
   </compound>
   <compound kind="group">
     <name>core_timer</name>
@@ -14368,7 +14252,7 @@
     <name>intro</name>
     <title>引言与介绍</title>
     <filename>d1/dfb/intro.html</filename>
-    <docanchor file="d1/dfb/intro.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_intro</docanchor>
+    <docanchor file="d1/dfb/intro.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_intro</docanchor>
     <docanchor file="d1/dfb/intro.html" title="前世今生">YAT</docanchor>
     <docanchor file="d1/dfb/intro.html" title="主要模块">main_modules</docanchor>
     <docanchor file="d1/dfb/intro.html" title="扩展模块">extra_modules</docanchor>
@@ -14386,61 +14270,61 @@
     <name>tutorial_extra_how_to_use_combo</name>
     <title>如何使用/开发 combo 模块</title>
     <filename>d2/d3f/tutorial_extra_how_to_use_combo.html</filename>
-    <docanchor file="d2/d3f/tutorial_extra_how_to_use_combo.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_combo_how_to_use</docanchor>
+    <docanchor file="d2/d3f/tutorial_extra_how_to_use_combo.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_combo_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_compensator</name>
     <title>如何使用/开发 compensator 模块</title>
     <filename>d9/de9/tutorial_extra_how_to_use_compensator.html</filename>
-    <docanchor file="d9/de9/tutorial_extra_how_to_use_compensator.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_compensator_how_to_use</docanchor>
+    <docanchor file="d9/de9/tutorial_extra_how_to_use_compensator.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_compensator_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_decider</name>
     <title>如何使用/开发 decider 模块</title>
     <filename>d6/d94/tutorial_extra_how_to_use_decider.html</filename>
-    <docanchor file="d6/d94/tutorial_extra_how_to_use_decider.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_decider_how_to_use</docanchor>
+    <docanchor file="d6/d94/tutorial_extra_how_to_use_decider.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_decider_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_detector</name>
     <title>如何使用/开发 detector 模块</title>
     <filename>d0/d9e/tutorial_extra_how_to_use_detector.html</filename>
-    <docanchor file="d0/d9e/tutorial_extra_how_to_use_detector.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_detector_how_to_use</docanchor>
+    <docanchor file="d0/d9e/tutorial_extra_how_to_use_detector.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_detector_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_feature</name>
     <title>如何使用/开发 feature 模块</title>
     <filename>d5/dee/tutorial_extra_how_to_use_feature.html</filename>
-    <docanchor file="d5/dee/tutorial_extra_how_to_use_feature.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_feature_how_to_use</docanchor>
+    <docanchor file="d5/dee/tutorial_extra_how_to_use_feature.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_feature_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_april_tag</name>
     <title>AprilTag 视觉标签</title>
     <filename>d4/d03/tutorial_extra_april_tag.html</filename>
-    <docanchor file="d4/d03/tutorial_extra_april_tag.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_feature_tag</docanchor>
+    <docanchor file="d4/d03/tutorial_extra_april_tag.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_feature_tag</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_group</name>
     <title>如何使用/开发 group 模块</title>
     <filename>d0/d6e/tutorial_extra_how_to_use_group.html</filename>
-    <docanchor file="d0/d6e/tutorial_extra_how_to_use_group.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_group_how_to_use</docanchor>
+    <docanchor file="d0/d6e/tutorial_extra_how_to_use_group.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_group_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_gyro_predictor</name>
     <title>在整车状态估计中涉及到的预测量</title>
     <filename>d0/da1/tutorial_extra_gyro_predictor.html</filename>
-    <docanchor file="d0/da1/tutorial_extra_gyro_predictor.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_gyro_predictor</docanchor>
+    <docanchor file="d0/da1/tutorial_extra_gyro_predictor.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_gyro_predictor</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_how_to_use_predictor</name>
     <title>如何使用/开发 predictor 模块</title>
     <filename>d5/d6f/tutorial_extra_how_to_use_predictor.html</filename>
-    <docanchor file="d5/d6f/tutorial_extra_how_to_use_predictor.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_how_to_use</docanchor>
+    <docanchor file="d5/d6f/tutorial_extra_how_to_use_predictor.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_spi_rune_predictor</name>
     <title>k 步前向预估神符预测</title>
     <filename>d3/ded/tutorial_extra_spi_rune_predictor.html</filename>
-    <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_spi_rune_predictor</docanchor>
+    <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_predictor_spi_rune_predictor</docanchor>
     <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html" title="前提 1">premise_1</docanchor>
     <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html" title="前提 2">premise_2</docanchor>
     <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html" title="前提 3">premise_3</docanchor>
@@ -14450,25 +14334,25 @@
     <name>tutorial_extra_how_to_use_tracker</name>
     <title>如何使用/开发 tracker 模块</title>
     <filename>df/daa/tutorial_extra_how_to_use_tracker.html</filename>
-    <docanchor file="df/daa/tutorial_extra_how_to_use_tracker.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_tracker_how_to_use</docanchor>
+    <docanchor file="df/daa/tutorial_extra_how_to_use_tracker.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_tracker_how_to_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_extra</name>
     <title>扩展模块教程</title>
     <filename>d6/d3f/tutorial_table_of_content_extra.html</filename>
-    <docanchor file="d6/d3f/tutorial_table_of_content_extra.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_tutorial_extra</docanchor>
+    <docanchor file="d6/d3f/tutorial_table_of_content_extra.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_tutorial_extra</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_upper_base</name>
     <title>顶层模块开发基本流程</title>
     <filename>d8/d29/tutorial_extra_upper_base.html</filename>
-    <docanchor file="d8/d29/tutorial_extra_upper_base.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_base</docanchor>
+    <docanchor file="d8/d29/tutorial_extra_upper_base.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_base</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_extra_upper_init</name>
     <title>硬件设备与软件模块的初始化</title>
     <filename>d1/d67/tutorial_extra_upper_init.html</filename>
-    <docanchor file="d1/d67/tutorial_extra_upper_init.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_init</docanchor>
+    <docanchor file="d1/d67/tutorial_extra_upper_init.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_init</docanchor>
     <docanchor file="d1/d67/tutorial_extra_upper_init.html" title="软件模块">init_software</docanchor>
     <docanchor file="d1/d67/tutorial_extra_upper_init.html" title="感知设备">init_perception</docanchor>
     <docanchor file="d1/d67/tutorial_extra_upper_init.html" title="通信设备">init_communication</docanchor>
@@ -14477,7 +14361,7 @@
     <name>tutorial_extra_upper_process</name>
     <title>责任链模式下的程序处理</title>
     <filename>d2/de3/tutorial_extra_upper_process.html</filename>
-    <docanchor file="d2/de3/tutorial_extra_upper_process.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_process</docanchor>
+    <docanchor file="d2/de3/tutorial_extra_upper_process.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_process</docanchor>
     <docanchor file="d2/de3/tutorial_extra_upper_process.html" title="1.1 常规用法">process_common</docanchor>
     <docanchor file="d2/de3/tutorial_extra_upper_process.html" title="1.2 RMVL 修改后的用法">process_in_rmvl</docanchor>
   </compound>
@@ -14485,7 +14369,7 @@
     <name>tutorial_extra_upper_read_data</name>
     <title>读取（默认）数据以控制逻辑分支</title>
     <filename>d4/de8/tutorial_extra_upper_read_data.html</filename>
-    <docanchor file="d4/de8/tutorial_extra_upper_read_data.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_read_data</docanchor>
+    <docanchor file="d4/de8/tutorial_extra_upper_read_data.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_read_data</docanchor>
     <docanchor file="d4/de8/tutorial_extra_upper_read_data.html" title="要点 1">map_tip1</docanchor>
     <docanchor file="d4/de8/tutorial_extra_upper_read_data.html" title="要点 2">map_tip2</docanchor>
     <docanchor file="d4/de8/tutorial_extra_upper_read_data.html" title="要点 3">map_tip3</docanchor>
@@ -14494,43 +14378,43 @@
     <name>tutorial_extra_upper_write_data</name>
     <title>导出数据、发出操控指令</title>
     <filename>db/d4f/tutorial_extra_upper_write_data.html</filename>
-    <docanchor file="db/d4f/tutorial_extra_upper_write_data.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_write_data</docanchor>
+    <docanchor file="db/d4f/tutorial_extra_upper_write_data.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_write_data</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_configuration_options</name>
     <title>RMVL 的编译、配置选项</title>
     <filename>d1/d0a/tutorial_configuration_options.html</filename>
-    <docanchor file="d1/d0a/tutorial_configuration_options.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_configuration_options</docanchor>
+    <docanchor file="d1/d0a/tutorial_configuration_options.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_configuration_options</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_install_overview</name>
     <title>视觉库安装总览</title>
     <filename>d2/d60/tutorial_install_overview.html</filename>
-    <docanchor file="d2/d60/tutorial_install_overview.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_install_overview</docanchor>
+    <docanchor file="d2/d60/tutorial_install_overview.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_install_overview</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_build</name>
     <title>构建视觉库</title>
     <filename>d1/d9a/tutorial_build.html</filename>
-    <docanchor file="d1/d9a/tutorial_build.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_build</docanchor>
+    <docanchor file="d1/d9a/tutorial_build.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_build</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_install</name>
     <title>安装视觉库</title>
     <filename>d1/db4/tutorial_install.html</filename>
-    <docanchor file="d1/db4/tutorial_install.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_install</docanchor>
+    <docanchor file="d1/db4/tutorial_install.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_install</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_use</name>
     <title>通过 gcc 和 CMake 使用视觉库</title>
     <filename>da/d80/tutorial_use.html</filename>
-    <docanchor file="da/d80/tutorial_use.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_use</docanchor>
+    <docanchor file="da/d80/tutorial_use.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_use</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_document</name>
     <title>为 RMVL 撰写说明文档</title>
     <filename>d5/d72/tutorial_document.html</filename>
-    <docanchor file="d5/d72/tutorial_document.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_miscellaneous_document</docanchor>
+    <docanchor file="d5/d72/tutorial_document.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_miscellaneous_document</docanchor>
     <docanchor file="d5/d72/tutorial_document.html" title="Doxygen 概述">tutorial_documentation_overview</docanchor>
     <docanchor file="d5/d72/tutorial_document.html" title="介绍">tutorial_documentation_intro</docanchor>
     <docanchor file="d5/d72/tutorial_document.html" title="安装">tutorial_documentation_install</docanchor>
@@ -14544,38 +14428,38 @@
     <name>tutorial_other_arm</name>
     <title>为基于 ARM 的 Linux 系统配置交叉编译</title>
     <filename>d5/d52/tutorial_other_arm.html</filename>
-    <docanchor file="d5/d52/tutorial_other_arm.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_other_arm</docanchor>
+    <docanchor file="d5/d52/tutorial_other_arm.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_other_arm</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_config</name>
     <title>视觉库环境配置教程</title>
     <filename>d6/d88/tutorial_table_of_content_config.html</filename>
-    <docanchor file="d6/d88/tutorial_table_of_content_config.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_table_of_content_introduction</docanchor>
+    <docanchor file="d6/d88/tutorial_table_of_content_config.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_introduction_table_of_content_introduction</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_aggregate_reflect</name>
     <title>聚合类反射及其相关 API</title>
     <filename>d7/de5/tutorial_modules_aggregate_reflect.html</filename>
-    <docanchor file="d7/de5/tutorial_modules_aggregate_reflect.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_aggregate_reflect</docanchor>
+    <docanchor file="d7/de5/tutorial_modules_aggregate_reflect.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_aggregate_reflect</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_kalman</name>
-    <title>卡尔曼滤波模块</title>
+    <title>卡尔曼滤波</title>
     <filename>dd/dc3/tutorial_modules_kalman.html</filename>
-    <docanchor file="dd/dc3/tutorial_modules_kalman.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_kalman</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_kalman</docanchor>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="参考文献">ref_paper</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_least_square</name>
     <title>最小二乘法</title>
     <filename>db/da1/tutorial_modules_least_square.html</filename>
-    <docanchor file="db/da1/tutorial_modules_least_square.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_least_square</docanchor>
+    <docanchor file="db/da1/tutorial_modules_least_square.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_least_square</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_opcua</name>
     <title>工业自动化通信协议 OPC UA</title>
     <filename>db/dba/tutorial_modules_opcua.html</filename>
-    <docanchor file="db/dba/tutorial_modules_opcua.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_opcua</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_opcua</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="服务器/客户端">opcua_server_client</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="发布/订阅">opcua_pub_sub</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="参数加载">opcua_parameters</docanchor>
@@ -14585,7 +14469,7 @@
     <name>tutorial_modules_serial</name>
     <title>串口通信模块</title>
     <filename>d3/da4/tutorial_modules_serial.html</filename>
-    <docanchor file="d3/da4/tutorial_modules_serial.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_serial</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_serial</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="使用">serialport_how_to_use</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="初始化">serialport_init</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="数据 I/O">serialport_io</docanchor>
@@ -14595,49 +14479,49 @@
     <name>tutorial_modules_camera</name>
     <title>相机设备</title>
     <filename>df/d2c/tutorial_modules_camera.html</filename>
-    <docanchor file="df/d2c/tutorial_modules_camera.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_devices_camera</docanchor>
+    <docanchor file="df/d2c/tutorial_modules_camera.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_devices_camera</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_light</name>
     <title>光源控制器</title>
     <filename>dc/d10/tutorial_modules_light.html</filename>
-    <docanchor file="dc/d10/tutorial_modules_light.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_devices_light</docanchor>
+    <docanchor file="dc/d10/tutorial_modules_light.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_devices_light</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ort</name>
     <title>ONNX-Runtime 分类网络部署库</title>
     <filename>d8/d82/tutorial_modules_ort.html</filename>
-    <docanchor file="d8/d82/tutorial_modules_ort.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_ort_ort</docanchor>
+    <docanchor file="d8/d82/tutorial_modules_ort.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_ort_ort</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ew_topsis</name>
     <title>基于 TOPSIS 模型的熵权法</title>
     <filename>df/d25/tutorial_modules_ew_topsis.html</filename>
-    <docanchor file="df/d25/tutorial_modules_ew_topsis.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_ew_topsis</docanchor>
+    <docanchor file="df/d25/tutorial_modules_ew_topsis.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_ew_topsis</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ra_heap</name>
     <title>支持随机访问的堆</title>
     <filename>d5/db4/tutorial_modules_ra_heap.html</filename>
-    <docanchor file="d5/db4/tutorial_modules_ra_heap.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_ra_heap</docanchor>
+    <docanchor file="d5/db4/tutorial_modules_ra_heap.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_ra_heap</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_union_find</name>
     <title>并查集</title>
     <filename>d4/d74/tutorial_modules_union_find.html</filename>
-    <docanchor file="d4/d74/tutorial_modules_union_find.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_union_find</docanchor>
+    <docanchor file="d4/d74/tutorial_modules_union_find.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_union_find</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_modules</name>
     <title>主要模块使用教程</title>
     <filename>d6/d6e/tutorial_table_of_content_modules.html</filename>
-    <docanchor file="d6/d6e/tutorial_table_of_content_modules.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_tutorial_modules</docanchor>
+    <docanchor file="d6/d6e/tutorial_table_of_content_modules.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_tutorial_modules</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorials</name>
     <title>视觉库使用教程</title>
     <filename>dd/da0/tutorials.html</filename>
-    <docanchor file="dd/da0/tutorials.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_tutorials</docanchor>
+    <docanchor file="dd/da0/tutorials.html">md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_tutorials</docanchor>
   </compound>
   <compound kind="page">
     <name>index</name>

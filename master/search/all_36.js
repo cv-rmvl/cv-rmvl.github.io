@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['旋转装甲时间序列_1021',['旋转装甲时间序列',['../db/dc9/group__gyro__tracker.html',1,'']]]
+  ['最小二乘法_1019',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]]
 ];

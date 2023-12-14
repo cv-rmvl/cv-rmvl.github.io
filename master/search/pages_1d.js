@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['责任链模式下的程序处理_2194',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
+  ['通过_20gcc_20和_20cmake_20使用视觉库_2190',['通过 gcc 和 CMake 使用视觉库',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]]
 ];

@@ -98,37 +98,31 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ga187f197957dbcaf1d922e13d629992d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">rm::writeCorners</a> (const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:ga187f197957dbcaf1d922e13d629992d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将角点数据写入 YAML 文件中  <a href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">更多...</a><br /></td></tr>
-<tr class="separator:ga187f197957dbcaf1d922e13d629992d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade757b69735c5e963613b7806a1016c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">rm::readCorners</a> (const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:gade757b69735c5e963613b7806a1016c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定 YAML 文件中读取角点数据  <a href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">更多...</a><br /></td></tr>
-<tr class="separator:gade757b69735c5e963613b7806a1016c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e77887e06c764a38075401808a7628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">rm::writeCorners</a> (std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga27e77887e06c764a38075401808a7628"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出角点数据  <a href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">更多...</a><br /></td></tr>
+<tr class="separator:ga27e77887e06c764a38075401808a7628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">rm::readCorners</a> (std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入角点数据  <a href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">更多...</a><br /></td></tr>
+<tr class="separator:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <h2 class="groupheader">函数说明</h2>
-<a id="gade757b69735c5e963613b7806a1016c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade757b69735c5e963613b7806a1016c6">&#9670;&nbsp;</a></span>readCorners()</h2>
+<a id="ga81cd696ddfbe64114c01bd675b4fabf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81cd696ddfbe64114c01bd675b4fabf5">&#9670;&nbsp;</a></span>readCorners()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool rm::readCorners </td>
+          <td class="memname">void rm::readCorners </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>corners</em>&#160;</td>
         </tr>
         <tr>
@@ -141,68 +135,45 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="../../d5/d60/dataio_8hpp.html">rmvl/core/dataio.hpp</a>&gt;</code></p>
 
-<p>从指定 YAML 文件中读取角点数据 </p>
+<p>导入角点数据 </p>
 <ul>
 <li>访问指定下标的数据结构体 <code>corners_&lt;?&gt;</code>，<code>&lt;?&gt;</code> 表示对应的标号，即参数 <code>idx</code></li>
-<li>YAML 文件形如以下内容 <div class="fragment"><div class="line">%YAML:1.0</div>
+<li>读取的文件形如以下内容 <div class="fragment"><div class="line">1.9, 2.11,</div>
+<div class="line">3.12, 4.13, 5.14, 6.15,</div>
 <div class="line">---</div>
-<div class="line">corners_1:</div>
-<div class="line">   -</div>
-<div class="line">      -</div>
-<div class="line">         x: 1.9</div>
-<div class="line">         y: 2.11</div>
-<div class="line">   -</div>
-<div class="line">      -</div>
-<div class="line">         x: 3.12</div>
-<div class="line">         y: 4.13</div>
-<div class="line">      -</div>
-<div class="line">         x: 5.14</div>
-<div class="line">         y: 6.15</div>
-<div class="line">...</div>
+<div class="line">7.16, 8.17,</div>
 <div class="line">---</div>
-<div class="line">corners_2:</div>
-<div class="line">   -</div>
-<div class="line">      -</div>
-<div class="line">         x: 7.16</div>
-<div class="line">         y: 8.17</div>
 </div><!-- fragment --></li>
+<li>第一次调用 <code>readCorners</code> 时读取到的内容为 <code>{(1.9, 2.11)} 和 {(3.12, 4.13), (5.14, 6.15)}</code></li>
 </ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>读取的文件路径 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>结构体标号 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">corners</td><td>读取出的角点数据，读取失败则不对 <code>data</code> 做任何操作 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>输入流对象 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">corners</td><td>读取出的角点数据 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
 <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../dd/d85/samples_2tutorial_code_2dataio_2sample_read_corners_8cpp-example.html#a0">samples/tutorial_code/dataio/sample_read_corners.cpp</a>.</dd>
 </dl>
 
 </div>
 </div>
-<a id="ga187f197957dbcaf1d922e13d629992d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga187f197957dbcaf1d922e13d629992d3">&#9670;&nbsp;</a></span>writeCorners()</h2>
+<a id="ga27e77887e06c764a38075401808a7628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27e77887e06c764a38075401808a7628">&#9670;&nbsp;</a></span>writeCorners()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool rm::writeCorners </td>
+          <td class="memname">void rm::writeCorners </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>corners</em>&#160;</td>
         </tr>
         <tr>
@@ -215,17 +186,18 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="../../d5/d60/dataio_8hpp.html">rmvl/core/dataio.hpp</a>&gt;</code></p>
 
-<p>将角点数据写入 YAML 文件中 </p>
-<p>默认以 <code>APPEND</code> 模式进行写入到结构体 <code>corners_&lt;?&gt;</code> 中，<code>&lt;?&gt;</code> 表示写入的标号，即参数 <code>idx</code> </p><dl class="section note"><dt>注解</dt><dd>YAML 文件参见 <a class="el" href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">readCorners</a></dd></dl>
+<p>导出角点数据 </p>
+<ul>
+<li>以 <code>corners</code> 的整体写入到输出流对象的末尾</li>
+<li>文件内容可参见 <a class="el" href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">readCorners</a></li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>写入的文件路径 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>写入的标号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>输出流对象 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">corners</td><td>待写入的角点数据 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
 <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/d26/samples_2tutorial_code_2dataio_2sample_write_corners_8cpp-example.html#a1">samples/tutorial_code/dataio/sample_write_corners.cpp</a>.</dd>
 </dl>
 
@@ -235,7 +207,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 14日 星期四 14:23:22 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

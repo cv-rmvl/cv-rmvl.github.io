@@ -94,14 +94,14 @@ $(function() {
 </ul>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_serial"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_vision_cv_rmvl_rmvl_doc_tutorials_modules_core_serial"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/06/22</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d7/de5/tutorial_modules_aggregate_reflect.html">聚合类反射及其相关 API</a> ↑<br  />
  <b>下一篇教程：</b><a class="el" href="../../db/dba/tutorial_modules_opcua.html">工业自动化通信协议 OPC UA</a> ↓<br  />
 </p>
 <hr  />
-<p>相关类 rm::SerialPort</p>
+<p>相关类 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a></p>
 <h2><a class="anchor" id="autotoc_md193"></a>
 简介</h2>
 <p>串口通信是一种通过串行数据传输进行通信的方式。它使用串行接口将数据以逐位的方式进行传输，常用于连接计算机与外部设备、嵌入式系统之间的数据传输。</p>
@@ -133,7 +133,7 @@ $(function() {
 使用</h2>
 <h3><a class="anchor" id="serialport_init"></a>
 初始化</h3>
-<p>rm::SerialPort 的构造函数原型如下</p>
+<p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的构造函数原型如下</p>
 <div class="fragment"><div class="line"><span class="keyword">explicit</span> SerialPort(<span class="keyword">const</span> std::string &amp;device = {}, <span class="keywordtype">int</span> baud_rate = B115200);</div>
 </div><!-- fragment --><table class="markdownTable">
 <tr class="markdownTableHead">
@@ -145,7 +145,7 @@ $(function() {
 </table>
 <h3><a class="anchor" id="serialport_io"></a>
 数据 I/O</h3>
-<p>rm::SerialPort 提供了极其方便的串口读取、写入的接口。</p>
+<p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 提供了极其方便的串口读取、写入的接口。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">功能   </th><th class="markdownTableHeadCenter">函数   </th><th class="markdownTableHeadCenter">功能    </th></tr>
@@ -164,13 +164,13 @@ $(function() {
 </ul>
 <h3><a class="anchor" id="serialport_protocol"></a>
 链路层协议</h3>
-<p>SerialPort 的通信协议一般就是指数据链路层的协议，采用封装成帧的方式，由于终端设备输出缓冲区可在写入数据前被清空，因此 rm::SerialPort 不设置任何帧头帧尾，而输入缓冲区则会持续收到来自下位机的数据，因此 rm::SerialPort 的 <code>read</code> 方法提供了帧头帧尾的传入参数。 </p>
+<p>SerialPort 的通信协议一般就是指数据链路层的协议，采用封装成帧的方式，由于终端设备输出缓冲区可在写入数据前被清空，因此 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 不设置任何帧头帧尾，而输入缓冲区则会持续收到来自下位机的数据，因此 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的 <code>read</code> 方法提供了帧头帧尾的传入参数。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 14日 星期四 14:23:22 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

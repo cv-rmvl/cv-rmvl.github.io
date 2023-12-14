@@ -91,11 +91,13 @@ $(function() {
 
 <p>陀螺仪数据  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &lt;opencv2/core/types.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;iosfwd&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 dataio.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d53/dataio_8hpp__incl.svg" width="188" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d53/dataio_8hpp__incl.svg" width="243" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -124,12 +126,12 @@ dataio.hpp 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ga187f197957dbcaf1d922e13d629992d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">rm::writeCorners</a> (const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:ga187f197957dbcaf1d922e13d629992d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将角点数据写入 YAML 文件中  <a href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">更多...</a><br /></td></tr>
-<tr class="separator:ga187f197957dbcaf1d922e13d629992d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade757b69735c5e963613b7806a1016c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">rm::readCorners</a> (const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:gade757b69735c5e963613b7806a1016c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定 YAML 文件中读取角点数据  <a href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">更多...</a><br /></td></tr>
-<tr class="separator:gade757b69735c5e963613b7806a1016c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e77887e06c764a38075401808a7628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">rm::writeCorners</a> (std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga27e77887e06c764a38075401808a7628"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出角点数据  <a href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">更多...</a><br /></td></tr>
+<tr class="separator:ga27e77887e06c764a38075401808a7628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">rm::readCorners</a> (std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入角点数据  <a href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">更多...</a><br /></td></tr>
+<tr class="separator:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>陀螺仪数据 </p>
@@ -141,7 +143,7 @@ dataio.hpp 的引用(Include)关系图:</div>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 14日 星期四 14:23:22 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

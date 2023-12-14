@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['支持随机访问的堆_1012',['支持随机访问的堆',['../d5/db4/tutorial_modules_ra_heap.html',1,'tutorial_table_of_content_modules']]],
-  ['支持随机访问的堆结构_1013',['支持随机访问的堆结构',['../d0/d47/group__ra__heap.html',1,'']]]
+  ['数据结构与算法及实用数学库_1011',['数据结构与算法及实用数学库',['../d9/d31/group__rmath.html',1,'']]],
+  ['数据读写（i_2fo）_1012',['数据读写（I/O）',['../d0/d41/group__core__dataio.html',1,'']]]
 ];

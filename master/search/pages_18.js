@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['相机设备_2187',['相机设备',['../df/d2c/tutorial_modules_camera.html',1,'tutorial_table_of_content_modules']]]
+  ['硬件设备与软件模块的初始化_2183',['硬件设备与软件模块的初始化',['../d1/d67/tutorial_extra_upper_init.html',1,'tutorial_table_of_content_extra']]]
 ];

@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghijklmnopqrstuvwxyz~串为主光决前卡参图在基如安定导工平并序弃引待扩支数整旋最机构检海激特目相硬神类系聚能补装视读责迈追通重顶",
+  0: "_abcdefghijklmnopqrstuvwxyz~串为主光决前卡参图在基如安定导工平并序引待扩支数整旋最机构检海激特目相硬神类系聚能补装视读责迈追通重顶",
   1: "acdefghiklmoprstuv",
   2: "cr",
   3: "abcdefghiklmoprstuv",
@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   8: "abcdefghijklmnopqrstuvwxyz",
   9: "or",
   10: "acdfgmopt串光决前卡参图基定平并序支数整旋机检海激特目相神类系能补装视迈追重",
-  11: "akor串为主光卡参在基如安导工并弃引待扩支最构相硬聚视读责通顶"
+  11: "akor串为主光卡参在基如安导工并引待扩支最构相硬聚视读责通顶"
 };
 
 var indexSectionNames =

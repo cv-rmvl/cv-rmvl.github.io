@@ -112,12 +112,12 @@ rm::GyroData 的协作图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a2f695b5499f02adff6547b743bac28b2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5f/structrm_1_1GyroData.html#a2f695b5499f02adff6547b743bac28b2">write</a> (const std::string &amp;path, uint32_t idx, const <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;data) noexcept</td></tr>
-<tr class="memdesc:a2f695b5499f02adff6547b743bac28b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">将陀螺仪数据写入 YAML 文件中  <a href="../../dc/d5f/structrm_1_1GyroData.html#a2f695b5499f02adff6547b743bac28b2">更多...</a><br /></td></tr>
-<tr class="separator:a2f695b5499f02adff6547b743bac28b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ef378a53f37369ca2fa806e0c04431"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5f/structrm_1_1GyroData.html#ab9ef378a53f37369ca2fa806e0c04431">read</a> (const std::string &amp;path, uint32_t idx, <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;data) noexcept</td></tr>
-<tr class="memdesc:ab9ef378a53f37369ca2fa806e0c04431"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定 YAML 文件中读取陀螺仪数据  <a href="../../dc/d5f/structrm_1_1GyroData.html#ab9ef378a53f37369ca2fa806e0c04431">更多...</a><br /></td></tr>
-<tr class="separator:ab9ef378a53f37369ca2fa806e0c04431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3952246b55c81e63b1bc877cfec45de3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5f/structrm_1_1GyroData.html#a3952246b55c81e63b1bc877cfec45de3">write</a> (std::ostream &amp;out, const <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;data) noexcept</td></tr>
+<tr class="memdesc:a3952246b55c81e63b1bc877cfec45de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出陀螺仪数据，可以是输出到控制台，也可以是输出到文件  <a href="../../dc/d5f/structrm_1_1GyroData.html#a3952246b55c81e63b1bc877cfec45de3">更多...</a><br /></td></tr>
+<tr class="separator:a3952246b55c81e63b1bc877cfec45de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3079ffd296574dd2e97865f49a5d6ecc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5f/structrm_1_1GyroData.html#a3079ffd296574dd2e97865f49a5d6ecc">read</a> (std::istream &amp;in, <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;data) noexcept</td></tr>
+<tr class="memdesc:a3079ffd296574dd2e97865f49a5d6ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入陀螺仪数据，可以是从控制台读取，也可以是从文件读取  <a href="../../dc/d5f/structrm_1_1GyroData.html#a3079ffd296574dd2e97865f49a5d6ecc">更多...</a><br /></td></tr>
+<tr class="separator:a3079ffd296574dd2e97865f49a5d6ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -131,8 +131,8 @@ Public 属性</h2></td></tr>
 <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a16">samples/detector/hik/sample_hik_armor_collection.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a id="ab9ef378a53f37369ca2fa806e0c04431"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9ef378a53f37369ca2fa806e0c04431">&#9670;&nbsp;</a></span>read()</h2>
+<a id="a3079ffd296574dd2e97865f49a5d6ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3079ffd296574dd2e97865f49a5d6ecc">&#9670;&nbsp;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,16 +141,10 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool rm::GyroData::read </td>
+          <td class="memname">static void rm::GyroData::read </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -171,22 +165,25 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>从指定 YAML 文件中读取陀螺仪数据 </p>
-<dl class="section note"><dt>注解</dt><dd>访问指定下标的数据结构体 <code>gyro_data_&lt;?&gt;</code>，<code>&lt;?&gt;</code> 表示结构体标号，即参数 <code>idx</code></dd></dl>
+<p>导入陀螺仪数据，可以是从控制台读取，也可以是从文件读取 </p>
+<ul>
+<li>读取的文件形如以下内容 <div class="fragment"><div class="line">1.9, 2.11, 3.12, 4.13, 5.14, 6.15, 7.16, 8.17, 9.18, 10.19, 11.20, 12.21,</div>
+<div class="line">13.22, 14.23, 15.24, 16.25, 17.26, 18.27, 19.28, 20.29, 21.30, 22.31, 23.32, 24.33,</div>
+</div><!-- fragment --></li>
+<li>例如，第一次调用 <code>read</code> 方法时，陀螺仪平移的数据为 <code>(1.9, 2.11, 3.12, 4.13, 5.14, 6.15)</code> 旋转的数据为 <code>(7.16, 8.17, 9.18, 10.19, 11.20, 12.21)</code></li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>读取的文件路径 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>结构体标号 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取出的陀螺仪数据，读取失败则不对 <code>data</code> 做任何操作 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>输入流对象 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取出的陀螺仪数据 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
 
 </div>
 </div>
-<a id="a2f695b5499f02adff6547b743bac28b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f695b5499f02adff6547b743bac28b2">&#9670;&nbsp;</a></span>write()</h2>
+<a id="a3952246b55c81e63b1bc877cfec45de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3952246b55c81e63b1bc877cfec45de3">&#9670;&nbsp;</a></span>write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,16 +192,10 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool rm::GyroData::write </td>
+          <td class="memname">static void rm::GyroData::write </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -225,17 +216,17 @@ Public 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>将陀螺仪数据写入 YAML 文件中 </p>
-<dl class="section note"><dt>注解</dt><dd>默认以 <code>APPEND</code> 模式进行写入到结构体 <code>gyro_data_&lt;?&gt;</code> 中，<code>&lt;?&gt;</code> 表示写入的结构体标号，即参数 <code>idx</code></dd></dl>
+<p>导出陀螺仪数据，可以是输出到控制台，也可以是输出到文件 </p>
+<ul>
+<li>以 <code>gyro_data</code> 的整体写入到输出流对象的末尾</li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>写入的文件路径 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idx</td><td>写入的结构体标号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>输出流对象 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的陀螺仪数据 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
 
 </div>
 </div>
@@ -275,7 +266,7 @@ Public 属性</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 14日 星期四 14:23:22 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

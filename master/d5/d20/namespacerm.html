@@ -114,6 +114,9 @@ $(function() {
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">轻量级 <code>cv::Matx</code> 的卡尔曼滤波模块  <a href="../../d9/d1a/classrm_1_1KalmanFilter.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">SerialPort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串行接口通信库  <a href="../../d4/d98/classrm_1_1SerialPort.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器  <a href="../../d0/da3/classrm_1_1Timer.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -599,12 +602,12 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ga187f197957dbcaf1d922e13d629992d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">writeCorners</a> (const std::string &amp;path, uint32_t idx, const std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:ga187f197957dbcaf1d922e13d629992d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将角点数据写入 YAML 文件中  <a href="../../d0/d41/group__core__dataio.html#ga187f197957dbcaf1d922e13d629992d3">更多...</a><br /></td></tr>
-<tr class="separator:ga187f197957dbcaf1d922e13d629992d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade757b69735c5e963613b7806a1016c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">readCorners</a> (const std::string &amp;path, uint32_t idx, std::vector&lt; std::vector&lt; cv::Point2f &gt;&gt; &amp;corners)</td></tr>
-<tr class="memdesc:gade757b69735c5e963613b7806a1016c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定 YAML 文件中读取角点数据  <a href="../../d0/d41/group__core__dataio.html#gade757b69735c5e963613b7806a1016c6">更多...</a><br /></td></tr>
-<tr class="separator:gade757b69735c5e963613b7806a1016c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27e77887e06c764a38075401808a7628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">writeCorners</a> (std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga27e77887e06c764a38075401808a7628"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出角点数据  <a href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">更多...</a><br /></td></tr>
+<tr class="separator:ga27e77887e06c764a38075401808a7628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">readCorners</a> (std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入角点数据  <a href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5">更多...</a><br /></td></tr>
+<tr class="separator:ga81cd696ddfbe64114c01bd675b4fabf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d783cbcd4b7f38b293c4a666c2f89fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html#a9d783cbcd4b7f38b293c4a666c2f89fc">format</a> (const char *fmt,...)</td></tr>
 <tr class="memdesc:a9d783cbcd4b7f38b293c4a666c2f89fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回使用类 <code>printf</code> 表达式格式化的文本字符串。  <a href="../../d5/d20/namespacerm.html#a9d783cbcd4b7f38b293c4a666c2f89fc">更多...</a><br /></td></tr>
 <tr class="separator:a9d783cbcd4b7f38b293c4a666c2f89fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -886,7 +889,9 @@ $(function() {
 <tr class="memdesc:gaa54a451f471159d5a7802c01239a658d"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力加速度: \(g\)  <a href="../../d9/d31/group__rmath.html#gaa54a451f471159d5a7802c01239a658d">更多...</a><br /></td></tr>
 <tr class="separator:gaa54a451f471159d5a7802c01239a658d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">枚举类型说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section warning"><dt>警告</dt><dd>此处若仅包含 &lt;opencv2/core/mat.hpp&gt; 会链接错误，原因暂时不清楚 </dd></dl>
+</div><h2 class="groupheader">枚举类型说明</h2>
 <a id="ac20f060cfa58609d88a9f385a18fe461"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac20f060cfa58609d88a9f385a18fe461">&#9670;&nbsp;</a></span>RotStatus</h2>
 
@@ -1231,7 +1236,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2023年 十二月 7日 星期四 21:03:18 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2023年 十二月 14日 星期四 14:23:22 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
