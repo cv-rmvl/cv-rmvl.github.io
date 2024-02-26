@@ -25,7 +25,7 @@ sudo apt install cmake cmake-qt-gui cmake-curses-gui
 
 ```bash
 git clone https://github.com/cv-rmvl/rmvl.git
-git checkout 1.1.1
+git checkout 1.2.0
 ```
 
 在 RMVL 项目根目录打开终端，构建并安装 RMVL
