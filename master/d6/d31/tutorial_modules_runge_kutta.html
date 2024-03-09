@@ -120,7 +120,7 @@ $(function() {
 </p>
 <p>可写成一阶方程组的形式，令 \(x_1=x,\quad x_2=\dot x\)，有</p>
 <p class="formulaDsp">
-\[\left\{\begin{align} \dot x_1&amp;=x_2\\ \dot x_2&amp;=-\frac kmx_1-\frac cmx_2+\frac1mp(t) \end{align}\right.\tag{1-2}\]
+\[\def\mat#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}} \left\{\begin{align}\dot x_1&amp;=x_2\\ \dot x_2&amp;=-\frac kmx_1-\frac cmx_2+\frac1mp(t) \end{align}\right.\tag{1-2}\]
 </p>
 <p>记 \(\dot{\pmb x}=\begin{bmatrix}\dot x_1\\\dot x_2\end{bmatrix},\quad A=\begin{bmatrix}0&amp;1\\-\frac km&amp;-\frac cm\end{bmatrix},\quad \pmb b(t)=\begin{bmatrix}0\\\frac1mp(t)\end{bmatrix},\quad \pmb x^{(0)}=\begin{bmatrix}x_1(t_0)\\x_2(t_0)\end{bmatrix}\)，有</p>
 <p class="formulaDsp">
@@ -240,7 +240,7 @@ $(function() {
 <p class="formulaDsp">
 \[\left\{\begin{align}x_{n+1}&amp;=x_n+h(\lambda_1k_1+\lambda_2k_2)\\k_1&amp;=f(t_n+p_1h,x_n+h(a_{11} k_1+a_{12}k_2))\\k_2&amp;=f(t_n+p_2h,x_n+h(a_{21}k_1+a_{22}k_2))\end{align}\right.\tag{3-8}\]
 </p>
-<p>令 \(\pmb p=(p_1,p_2)T,\quad\pmb\lambda=(\lambda_1,\lambda_2),\quad R=\begin{bmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{bmatrix}\)，则</p>
+<p>令 \(\pmb p=\mat{p_1}{p_2},\quad\pmb\lambda=(\lambda_1,\lambda_2),\quad R=\begin{bmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{bmatrix}\)，则</p>
 <p class="formulaDsp">
 \[\begin{array}{c|c}\pmb p&amp;R\\\hline&amp;\pmb\lambda\end{array}=\begin{array}{c|cc}p_1&amp; a_{11}&amp;a_{12}\\p_2&amp;a_{21}&amp;a_{22}\\\hline&amp;\lambda_1&amp;\lambda_2\end{array}\tag{3-9}\]
 </p>
@@ -274,14 +274,14 @@ $(function() {
 \[\left\{\begin{align} \pmb x_{n+1}&amp;=\pmb x_n+h(\lambda_1\pmb k_1+\lambda_2\pmb k_2+\cdots+\lambda_n\pmb k_n)\\ \pmb k_1&amp;=\pmb F(t_n+p_1h,\pmb x_n+h(a_{11}\pmb k_1+a_{12}\pmb k_2+\cdots+a_{1n}\pmb k_n))\\ \pmb k_2&amp;=\pmb F(t_n+p_2h,\pmb x_n+h(a_{21}\pmb k_1+a_{22}\pmb k_2+\cdots+a_{2n}\pmb k_n))\\&amp;\vdots\\ \pmb k_n&amp;=\pmb F(t_n+p_nh,\pmb x_n+h(a_{n1}\pmb k_1+a_{n2}\pmb k_2+\cdots+a_{nn}\pmb k_n))\\ \end{align}\right.\tag{3-14}\]
 </p>
 <p>公式 \(\text{(3-14)}\)与 \(\text{(3-11)}\)基本一致，因此同样可以使用 Butcher 表来描述常微分方程组的 Runge-Kutta 公式。</p>
-<p>RMVL 的相关类请参考 <a class="el" href="../../d5/d26/classrm_1_1RungeKutta.html" title="常微分方程（组）数值求解器">rm::RungeKutta</a></p>
+<p>RMVL 的相关类请参考 <a class="el" href="../../d5/d26/classrm_1_1RungeKutta.html" title="Butcher 表形式的常微分方程（组）数值求解器">rm::RungeKutta</a></p>
 <p><span style="color: green"><b>示例</b></span></p>
 <p>使用 2 阶中点公式求解 \([0,1]\)上常微分方程的初值问题，并在 \(t=1\)处与实际值进行比较</p>
 <p class="formulaDsp">
 \[\left\{\begin{align}\dot x_1&amp;=2x_2+t\\\dot x_2&amp;=-x_1-3x_2\end{align}\right.\\ 且满足x_1(0)=1,\quad x_2(0)=-1\]
 </p>
 <p><b>解答</b></p>
-<p>① 数值解</p>
+<p><span style="color: orange"><b>① 数值解</b></span></p>
 <p>使用中点公式：</p>
 <p class="formulaDsp">
 \[\begin{align}\pmb x_{n+1}&amp;=\pmb x_n+h\pmb k_2\\\pmb k_1&amp;=\pmb F(t_n,\pmb x_n)\\ \pmb k_2&amp;=\pmb F(t_n+\frac h2,\pmb x_n+\frac h2\pmb k_1)\end{align}\]
@@ -392,10 +392,10 @@ $(function() {
 <div class="line">t = 0.990000,   x = 0.581732, -0.220149</div>
 <div class="line">t = 1.000000,   x = 0.587286, -0.219401</div>
 </div><!-- fragment --> </div><p>因此，在 \(t=1\)时， \(x\approx(0.587286,-0.219401)^T\)</p>
-<p>② 精确解</p>
+<p><span style="color: orange"><b>② 精确解</b></span></p>
 <p>对待求的初值问题写成矩阵形式</p>
 <p class="formulaDsp">
-\[\dot X=\begin{bmatrix}0&amp;2\\-1&amp;-3\end{bmatrix}X+\begin{bmatrix}1\\0 \end{bmatrix}t,\quad X(0)=\begin{bmatrix}1\\-1\end{bmatrix}\]
+\[\dot X=\begin{bmatrix}0&amp;2\\-1&amp;-3\end{bmatrix}X+\mat10t,\quad X(0)=\mat1{-1}\]
 </p>
 <p>由矩阵分析的知识，可以知道，对于形如 </p><p class="formulaDsp">
 \[\dot X=AX+B(t)\tag{a}\]
@@ -425,7 +425,7 @@ $(function() {
 </p>
 <p>可以算出</p>
 <p class="formulaDsp">
-\[\def\mat#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}} e^{At}X(0)=\mat00e^{-t}+\mat1{-1}e^{-2t}=\mat1{-1}e^{-2t}\tag{f}\]
+\[e^{At}X(0)=\mat00e^{-t}+\mat1{-1}e^{-2t}=\mat1{-1}e^{-2t}\tag{f}\]
 </p>
 <p>同理有</p>
 <p class="formulaDsp">
@@ -456,15 +456,15 @@ $(function() {
 <div class="line"><span class="comment">    x* = (0.587260, -0.219381)</span></div>
 <div class="line"><span class="comment">    x  = (0.587286, -0.219401)</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="ttc" id="aclassrm_1_1RungeKutta_html"><div class="ttname"><a href="../../d5/d26/classrm_1_1RungeKutta.html">rm::RungeKutta</a></div><div class="ttdoc">常微分方程（组）数值求解器</div><div class="ttdef"><b>Definition:</b> numcal.hpp:217</div></div>
-<div class="ttc" id="agroup__core__numcal_html_gaa8c244af1eabbc11952ff50b616600d9"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gaa8c244af1eabbc11952ff50b616600d9">rm::Odes</a></div><div class="ttdeci">std::vector&lt; Ode &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>Definition:</b> numcal.hpp:204</div></div>
-<div class="ttc" id="agroup__core__numcal_html_gae30d446b799079a31af932e7afc4bd47"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gae30d446b799079a31af932e7afc4bd47">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>Definition:</b> numcal.hpp:202</div></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta_html"><div class="ttname"><a href="../../d5/d26/classrm_1_1RungeKutta.html">rm::RungeKutta</a></div><div class="ttdoc">Butcher 表形式的常微分方程（组）数值求解器</div><div class="ttdef"><b>Definition:</b> numcal.hpp:205</div></div>
+<div class="ttc" id="agroup__core__numcal_html_gaa8c244af1eabbc11952ff50b616600d9"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gaa8c244af1eabbc11952ff50b616600d9">rm::Odes</a></div><div class="ttdeci">std::vector&lt; Ode &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>Definition:</b> numcal.hpp:195</div></div>
+<div class="ttc" id="agroup__core__numcal_html_gae30d446b799079a31af932e7afc4bd47"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gae30d446b799079a31af932e7afc4bd47">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>Definition:</b> numcal.hpp:193</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 二月 5日 星期一 23:00:24 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

@@ -192,6 +192,8 @@ Protected 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>OPC UA 服务器 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a0">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="aa426e423786351f907bbc819658135dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa426e423786351f907bbc819658135dc">&#9670;&nbsp;</a></span>Server() <span class="overload">[1/4]</span></h2>
@@ -419,7 +421,7 @@ Protected 属性</h2></td></tr>
 </ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量，仅取 <code>browse_name</code>、<code>description</code>、<code>display_name</code>、<code>access_level</code> 字段，以及对应的变量类型节点 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_read</td><td>重定向的读取回调函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_write</td><td>重定向的写入回调函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code>UA_NodeId</code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
@@ -595,6 +597,8 @@ Protected 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量节点的唯一标识 <code>UA_NodeId</code> </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a4">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -792,8 +796,10 @@ Protected 属性</h2></td></tr>
 
 <p>阻塞 </p>
 <ul>
-<li>调用方线程阻塞，直到服务器停止后才继续运行 </li>
+<li>调用方线程阻塞，直到服务器执行 <code><a class="el" href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4" title="停止服务器">stop()</a></code> 或以外停止后才继续运行 </li>
 </ul>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a7">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -877,6 +883,8 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>运行服务器，调用方线程不阻塞 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a5">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -904,6 +912,8 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>停止服务器 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a6">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -1064,7 +1074,7 @@ Protected 属性</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 二月 5日 星期一 23:00:24 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
