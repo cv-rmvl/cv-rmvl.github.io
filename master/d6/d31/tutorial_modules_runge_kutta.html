@@ -85,16 +85,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md197">1. 常微分方程（组）</a></li>
-<li class="level2"><a href="#autotoc_md198">2. 求解常微分方程的 Euler 方法</a><ul><li class="level3"><a href="#autotoc_md199">2.1 显式 Euler 单步法</a></li>
-<li class="level3"><a href="#autotoc_md200">2.2 其余常见的 Euler 单步法</a></li>
-<li class="level3"><a href="#autotoc_md201">2.3 局部阶段误差</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md186">1. 常微分方程（组）</a></li>
+<li class="level2"><a href="#autotoc_md187">2. 求解常微分方程的 Euler 方法</a><ul><li class="level3"><a href="#autotoc_md188">2.1 显式 Euler 单步法</a></li>
+<li class="level3"><a href="#autotoc_md189">2.2 其余常见的 Euler 单步法</a></li>
+<li class="level3"><a href="#autotoc_md190">2.3 局部阶段误差</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md202">3. Runge-Kutta 方法</a><ul><li class="level3"><a href="#autotoc_md203">3.1 二阶 Runge-Kutta 公式</a></li>
-<li class="level3"><a href="#autotoc_md204">3.2 Butcher 表</a></li>
-<li class="level3"><a href="#autotoc_md205">3.3 三阶 / 四阶 Runge-Kutta 公式</a></li>
-<li class="level3"><a href="#autotoc_md206">3.4 方程组的 Runge-Kutta 公式</a></li>
+<li class="level2"><a href="#autotoc_md191">3. Runge-Kutta 方法</a><ul><li class="level3"><a href="#autotoc_md192">3.1 二阶 Runge-Kutta 公式</a></li>
+<li class="level3"><a href="#autotoc_md193">3.2 Butcher 表</a></li>
+<li class="level3"><a href="#autotoc_md194">3.3 三阶 / 四阶 Runge-Kutta 公式</a></li>
+<li class="level3"><a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a></li>
 </ul>
 </li>
 </ul>
@@ -109,7 +109,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md197"></a>
+<h2><a class="anchor" id="autotoc_md186"></a>
 1. 常微分方程（组）</h2>
 <p>一个质量-弹簧-阻尼系统的运动微分方程可以表示为</p>
 <p class="formulaDsp">
@@ -140,9 +140,9 @@ $(function() {
 <p class="formulaDsp">
 \[\begin{align} &amp;t_0&lt;t_1&lt;\cdots&lt;t_n&lt;t_{n+1}&lt;\cdots\\&amp;h=t_{n+1}-t_n\quad或\quad t_{n+1}=t_n+h\quad(h=0,1,\cdots) \end{align}\]
 </p>
-<h2><a class="anchor" id="autotoc_md198"></a>
+<h2><a class="anchor" id="autotoc_md187"></a>
 2. 求解常微分方程的 Euler 方法</h2>
-<h3><a class="anchor" id="autotoc_md199"></a>
+<h3><a class="anchor" id="autotoc_md188"></a>
 2.1 显式 Euler 单步法</h3>
 <p>先考虑一阶常微分方程 \(\text{(1-4b)}\)的形式，在取定的 \(t_n\)处 Taylor 展开，有</p>
 <p class="formulaDsp">
@@ -153,7 +153,7 @@ $(function() {
 \[x_{n+1}=x_n+hf(t_n,x_n)\tag{2-2}\]
 </p>
 <p>这便是求解常微分方程的基本方法，公式 \(\text{(2-2)}\)被称为 Explicit Euler 显式欧拉公式。</p>
-<h3><a class="anchor" id="autotoc_md200"></a>
+<h3><a class="anchor" id="autotoc_md189"></a>
 2.2 其余常见的 Euler 单步法</h3>
 <p>① Implicit Euler 隐式欧拉公式</p>
 <p class="formulaDsp">
@@ -182,7 +182,7 @@ $(function() {
 <p class="formulaDsp">
 \[\def\hf#1#2{y_{#1}+h(x_{#1}^3+y_{#1}^3+1)=#2} y(0.1)\approx y_1=\hf0{0.100000}\\ y(0.2)\approx y_2=\hf1{0.200200}\\ y(0.3)\approx y_3=\hf2{0.301802}\\ y(0.4)\approx y_4=\hf3{0.407249}\\ y(0.5)\approx y_5=\hf4{0.520403}\\ y(0.6)\approx y_6=\hf5{0.646995}\\ y(0.7)\approx y_7=\hf6{0.795680}\\ y(0.8)\approx y_8=\hf7{0.980355}\]
 </p>
-<h3><a class="anchor" id="autotoc_md201"></a>
+<h3><a class="anchor" id="autotoc_md190"></a>
 2.3 局部阶段误差</h3>
 <p>上文的 4 种 Euler 单步法公式，使用哪种精度更高？这里要引入局部阶段误差的概念，因为每一次求解 \(x_i\)都会引入误差，并且误差会进行累积，局部截断误差不考虑迭代求解 \(x_n\)及之前的累积误差，仅考虑从 \(x_n\)到 \(x_{n+1}\)产生的误差，即认为 \(x_n=x(t_n)\)。对于显式 Euler 单步法，可以计算出其局部截断误差 \(T_{n+1}\)。</p>
 <p class="formulaDsp">
@@ -194,14 +194,14 @@ $(function() {
 \[\begin{align} T_{n+1}&amp;=x(t_{n+1})-x(t_n)-\frac12hf(t_n,x(t_n))-\frac12hf(t_{n+1},x(t_{n+1}))\\ &amp;=x(t_{n+1})-x(t_n)-\frac12hx&#39;(t_n)-\frac12hx&#39;(t_{n+1})\\ &amp;=\left[x(t_n)+hx&#39;(t_n)+\frac{h^2}2x&#39;&#39;(t_n)+\frac{h^3}6x&#39;&#39;&#39;(t_n)+o(h^4)\right]-x(t_n)-\\ &amp;\qquad\frac12hx&#39;(t_n)-\frac12h\left[x&#39;(t_n)+hx&#39;&#39;(t_n)+\frac{h^2}2x&#39;&#39;&#39;(t_n)+o(h^3)\right]\\ &amp;=-\frac1{12}x&#39;&#39;&#39;(t_n)h^3+o(h^4) \end{align}\tag{2-6}\]
 </p>
 <p><b>局部截断误差的主项</b>为 \(-\frac1{12}x&#39;&#39;&#39;(t_n)h^3\)，我们称梯形公式具有 2 阶精度。</p>
-<h2><a class="anchor" id="autotoc_md202"></a>
+<h2><a class="anchor" id="autotoc_md191"></a>
 3. Runge-Kutta 方法</h2>
 <p>对于 \(\text{(2-3c)}\)的改进 Euler 公式，可以改写成</p>
 <p class="formulaDsp">
 \[\left\{\begin{align} x_{n+1}&amp;=x_n+h\left(\frac12k_1+\frac12k_2\right)\\ k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+h,x_n+hk_1) \end{align}\right.\tag{3-1}\]
 </p>
 <p>模仿这一写法，我们继续构造新的 2 阶公式</p>
-<h3><a class="anchor" id="autotoc_md203"></a>
+<h3><a class="anchor" id="autotoc_md192"></a>
 3.1 二阶 Runge-Kutta 公式</h3>
 <dl class="section note"><dt>注解</dt><dd>此小节为 2 阶 Runge-Kutta 公式族的推导，涉及到多元函数 \(f(x,y)\)的全导数 <p class="formulaDsp">
 \[\begin{align}\frac{\mathrm df}{\mathrm dx}&amp;=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}·\frac{\mathrm dy}{\mathrm dx}\\ f&#39;&amp;=f_x+f_yy&#39;\end{align}\tag{i}\]
@@ -234,7 +234,7 @@ $(function() {
 <p class="formulaDsp">
 \[\begin{align}x_{n+1}&amp;=x_n+hk_2\\k_1&amp;=f(t_n,x_n)\\ k_2&amp;=f\left(t_n+\frac h2,x_n+\frac h2k_1\right)\end{align}\tag{3-7}\]
 </p>
-<h3><a class="anchor" id="autotoc_md204"></a>
+<h3><a class="anchor" id="autotoc_md193"></a>
 3.2 Butcher 表</h3>
 <p>为了便于记录上文的 Runge-Kutta 中点公式，我们将公式 \(\text{(3-2)}\)改写为</p>
 <p class="formulaDsp">
@@ -256,7 +256,7 @@ $(function() {
 <p class="formulaDsp">
 \[\begin{array}{c|cccc} p_1&amp;a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\ p_2&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\ \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\ p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\ \hline&amp;\lambda_1&amp;\lambda_2&amp;\cdots&amp;\lambda_n\end{array}\tag{3-12}\]
 </p>
-<h3><a class="anchor" id="autotoc_md205"></a>
+<h3><a class="anchor" id="autotoc_md194"></a>
 3.3 三阶 / 四阶 Runge-Kutta 公式</h3>
 <p>这里直接给出对应的 Butcher 表。</p>
 <p>一种 3 级 3 阶 Runge-Kutta 方法的具体形式对应的 Butcher 表</p>
@@ -267,7 +267,7 @@ $(function() {
 <p class="formulaDsp">
 \[\begin{array}{c|cccc}0&amp;0&amp;0&amp;0&amp;0\\\frac12&amp;\frac12&amp;0&amp;0&amp;0\\\frac12&amp;0&amp;\frac12&amp;0&amp; 0\\1&amp;0&amp;0&amp;1&amp;0\\\hline&amp;\frac16&amp;\frac13&amp;\frac13&amp;\frac16\end{array}\tag{3-13b}\]
 </p>
-<h3><a class="anchor" id="autotoc_md206"></a>
+<h3><a class="anchor" id="equations_runge_kutta"></a>
 3.4 方程组的 Runge-Kutta 公式</h3>
 <p>对于一阶方程组 \(\pmb x&#39;=\pmb F(t,\pmb x),\ \pmb x(t_0)=\pmb x^{(0)}\)，公式 \(\text{(3-11)}\)可以改写为</p>
 <p class="formulaDsp">
@@ -456,15 +456,15 @@ $(function() {
 <div class="line"><span class="comment">    x* = (0.587260, -0.219381)</span></div>
 <div class="line"><span class="comment">    x  = (0.587286, -0.219401)</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="ttc" id="aclassrm_1_1RungeKutta_html"><div class="ttname"><a href="../../d5/d26/classrm_1_1RungeKutta.html">rm::RungeKutta</a></div><div class="ttdoc">Butcher 表形式的常微分方程（组）数值求解器</div><div class="ttdef"><b>Definition:</b> numcal.hpp:205</div></div>
-<div class="ttc" id="agroup__core__numcal_html_gaa8c244af1eabbc11952ff50b616600d9"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gaa8c244af1eabbc11952ff50b616600d9">rm::Odes</a></div><div class="ttdeci">std::vector&lt; Ode &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>Definition:</b> numcal.hpp:195</div></div>
-<div class="ttc" id="agroup__core__numcal_html_gae30d446b799079a31af932e7afc4bd47"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gae30d446b799079a31af932e7afc4bd47">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>Definition:</b> numcal.hpp:193</div></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta_html"><div class="ttname"><a href="../../d5/d26/classrm_1_1RungeKutta.html">rm::RungeKutta</a></div><div class="ttdoc">Butcher 表形式的常微分方程（组）数值求解器</div><div class="ttdef"><b>Definition:</b> numcal.hpp:206</div></div>
+<div class="ttc" id="agroup__core__numcal_html_gaa8c244af1eabbc11952ff50b616600d9"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gaa8c244af1eabbc11952ff50b616600d9">rm::Odes</a></div><div class="ttdeci">std::vector&lt; Ode &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>Definition:</b> numcal.hpp:196</div></div>
+<div class="ttc" id="agroup__core__numcal_html_gae30d446b799079a31af932e7afc4bd47"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#gae30d446b799079a31af932e7afc4bd47">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>Definition:</b> numcal.hpp:194</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['安装总览_2253',['安装总览',['../d2/d60/tutorial_install_overview.html',1,'tutorial_table_of_content_config']]]
+  ['安装总览_2287',['安装总览',['../d2/d60/tutorial_install_overview.html',1,'tutorial_table_of_content_config']]]
 ];

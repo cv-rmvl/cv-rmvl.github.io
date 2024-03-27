@@ -85,29 +85,29 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md180">简介</a><ul><li class="level3"><a href="#autotoc_md181">OPC UA 是什么</a></li>
-<li class="level3"><a href="#autotoc_md182">地址空间</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md169">简介</a><ul><li class="level3"><a href="#autotoc_md170">OPC UA 是什么</a></li>
+<li class="level3"><a href="#autotoc_md171">地址空间</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#opcua_server_client">服务器/客户端</a><ul><li class="level3"><a href="#autotoc_md183">初始化</a></li>
-<li class="level3"><a href="#autotoc_md184">变量</a></li>
-<li class="level3"><a href="#autotoc_md185">方法</a></li>
-<li class="level3"><a href="#autotoc_md186">对象</a></li>
-<li class="level3"><a href="#autotoc_md187">视图</a></li>
-<li class="level3"><a href="#autotoc_md188">监视</a></li>
+<li class="level2"><a href="#opcua_server_client">服务器/客户端</a><ul><li class="level3"><a href="#autotoc_md172">初始化</a></li>
+<li class="level3"><a href="#autotoc_md173">变量</a></li>
+<li class="level3"><a href="#autotoc_md174">方法</a></li>
+<li class="level3"><a href="#autotoc_md175">对象</a></li>
+<li class="level3"><a href="#autotoc_md176">视图</a></li>
+<li class="level3"><a href="#autotoc_md177">监视</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#opcua_pub_sub">发布/订阅</a><ul><li class="level3"><a href="#autotoc_md189">无代理 Pub/Sub</a></li>
-<li class="level3"><a href="#autotoc_md190">有代理 Pub/Sub</a></li>
+<li class="level2"><a href="#opcua_pub_sub">发布/订阅</a><ul><li class="level3"><a href="#autotoc_md178">无代理 Pub/Sub</a></li>
+<li class="level3"><a href="#autotoc_md179">有代理 Pub/Sub</a></li>
 </ul>
 </li>
 <li class="level2"><a href="#opcua_parameters">参数加载</a></li>
-<li class="level2"><a href="#opcua_nodeset_compiler">从 XML 配置 OPC UA</a><ul><li class="level3"><a href="#autotoc_md191">安装 UaModeler</a></li>
-<li class="level3"><a href="#autotoc_md192">可视化配置 OPC UA 信息模型</a></li>
-<li class="level3"><a href="#autotoc_md193">生成 *.c/*.h 文件</a></li>
+<li class="level2"><a href="#opcua_nodeset_compiler">从 XML 配置 OPC UA</a><ul><li class="level3"><a href="#autotoc_md180">安装 UaModeler</a></li>
+<li class="level3"><a href="#autotoc_md181">可视化配置 OPC UA 信息模型</a></li>
+<li class="level3"><a href="#autotoc_md182">生成 *.c/*.h 文件</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md195">引用</a></li>
+<li class="level2"><a href="#autotoc_md184">引用</a></li>
 </ul>
 </ul>
 </div>
@@ -121,9 +121,9 @@ $(function() {
 </p>
 <hr  />
 <p>相关模块： <a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></p>
-<h2><a class="anchor" id="autotoc_md180"></a>
+<h2><a class="anchor" id="autotoc_md169"></a>
 简介</h2>
-<h3><a class="anchor" id="autotoc_md181"></a>
+<h3><a class="anchor" id="autotoc_md170"></a>
 OPC UA 是什么</h3>
 <p><a href="https://opcfoundation.org/about/opc-technologies/opc-ua/">OPC UA</a>（全称为 Open Platform Communications Unified Architecture）是一种用于工业和物联网（IoT）应用的开放通信协议和架构。它提供了一种统一的框架，用于在不同设备和系统之间实现数据传输、通信和集成。</p>
 <p>OPC UA 的设计目标是建立一种通用的、独立于厂商和平台的通信标准，以实现互操作性和集成性。它提供了一套标准的服务和功能，使不同类型的设备和系统能够相互通信和交换数据，其特点包括：</p>
@@ -141,7 +141,7 @@ OPC UA 是什么</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">可靠性   </td><td class="markdownTableBodyCenter">OPC UA 提供了可靠的通信机制，包括消息确认、重试和错误处理，以确保数据的可靠传输   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md182"></a>
+<h3><a class="anchor" id="autotoc_md171"></a>
 地址空间</h3>
 <center> <img src="../../opcua.svg" alt="" style="pointer-events: none;" class="inline" title="opcua"/></center><center>图 1-1 OPC UA 地址空间模型 </center><ol type="1">
 <li>对象类型节点 <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html" title="OPC UA 对象类型">rm::ObjectType</a> ：提供对象的定义，即对象的抽象，与类相当，且子类可以继承父类的特征，方便模型的扩充。该节点包括对象的各种数据类型，数据的语义，以及控制方式。OPC UA 命名空间 <code>0</code> 中规定了多个基础的对象类型节点。如使用最广的 BaseObjectType（在 RMVL 中表示为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga314722033c099005260d18a28da410fc" title="对象类型节点：BaseObjectType 节点 ID">rm::nodeBaseObjectType</a></code>），所有对象类型节点都需要继承该节点再进行扩充。在对具体设备建模的过程中，应该将设备组成的各部分分解为不同的对象分别建模，再用引用节点将各部分按照实际设备中的关系相关联，从而得到完整设备的对象类型节点。</li>
@@ -167,7 +167,7 @@ OPC UA 是什么</h3>
 <h2><a class="anchor" id="opcua_server_client"></a>
 服务器/客户端</h2>
 <p>基于服务器/客户端的方式是 OPC UA 最基本的一种通信方式，上文的地址空间在服务器/客户端通信的过程中完全展现出来。下面列举一些 opcua 模块中常用的服务器与客户端的成员方法。</p>
-<h3><a class="anchor" id="autotoc_md183"></a>
+<h3><a class="anchor" id="autotoc_md172"></a>
 初始化</h3>
 <p><b>服务器</b></p>
 <div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -199,7 +199,7 @@ OPC UA 是什么</h3>
 <div class="line">    <span class="comment">/* other code */</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Client_html"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html">rm::Client</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>Definition:</b> client.hpp:29</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md184"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md173"></a>
 变量</h3>
 <p>在上文介绍了变量的 3 种访问方式，这里使用最简单的直接读写的方式。首先在服务器中添加变量节点。</p>
 <div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -253,7 +253,7 @@ OPC UA 是什么</h3>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
 <div class="ttc" id="agroup__opcua_html_gad0c2975e904f60ccac7676c527a96229"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr UA_NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>Definition:</b> utilities.hpp:91</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md185"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md174"></a>
 方法</h3>
 <p>在服务器中添加两数之和的方法节点，供客户端调用。</p>
 <div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -321,7 +321,7 @@ OPC UA 是什么</h3>
 <div class="line">    <span class="comment">// 输出结果</span></div>
 <div class="line">    printf(<span class="stringliteral">&quot;retval = %d\n&quot;</span>, rm::Variable::cast&lt;int&gt;(output.front()));</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md186"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md175"></a>
 对象</h3>
 <p>在服务器中添加对象节点：</p>
 <ul>
@@ -400,7 +400,7 @@ OPC UA 是什么</h3>
 <div class="line">    clt.read(node_c3, c3);</div>
 <div class="line">    std::cout &lt;&lt; rm::Variable::cast&lt;const char *&gt;(c3) &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md187"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md176"></a>
 视图</h3>
 <p>在 <code>nodeObjectsFolder</code> 中先添加 <code>A/num1</code>、<code>num2</code> 2 个变量节点，并将 <code>num1</code> 和 <code>num2</code> 加入视图，下面的示例演示在 <b>服务器</b> 中创建并添加视图节点。若要在客户端中进行此操作，创建并添加视图节点的步骤基本一致，这里不做展示。需要注意的是，在客户端中创建并添加视图节点，需要提前在服务器中加入对应的（变量、方法、对象……）节点</p>
 <div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -433,7 +433,7 @@ OPC UA 是什么</h3>
 <div class="ttc" id="aclassrm_1_1View_html"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html">rm::View</a></div><div class="ttdoc">OPC UA 视图</div><div class="ttdef"><b>Definition:</b> view.hpp:24</div></div>
 <div class="ttc" id="aclassrm_1_1View_html_ad1a1140c7ea253fc8bf49ba379b12043"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html#ad1a1140c7ea253fc8bf49ba379b12043">rm::View::add</a></div><div class="ttdeci">void add(UA_NodeId_ &amp;&amp;...node_id)</div><div class="ttdoc">添加节点 ID</div><div class="ttdef"><b>Definition:</b> view.hpp:76</div></div>
 <div class="ttc" id="agroup__opcua_html_ga2c945fd1e774a90c267570b1cc3016c6"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga2c945fd1e774a90c267570b1cc3016c6">uaCreateVariable</a></div><div class="ttdeci">#define uaCreateVariable(val,...)</div><div class="ttdoc">创建变量，BrowseName、DisplayName、Description 均为变量类型的名称</div><div class="ttdef"><b>Definition:</b> variable.hpp:293</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md188"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md177"></a>
 监视</h3>
 <p>在服务器中添加待监视的变量节点</p>
 <div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -522,7 +522,7 @@ OPC UA 是什么</h3>
 </ul>
 </blockquote>
 <p>有关 API 使用的更多详细信息，请查看 <a href="https://www.open62541.org/doc/master/pubsub.html">PubSub 教程</a>。</p>
-<h3><a class="anchor" id="autotoc_md189"></a>
+<h3><a class="anchor" id="autotoc_md178"></a>
 无代理 Pub/Sub</h3>
 <p>RMVL 提供了基于 <code>UDP</code> 传输协议的 Broker-less 即无代理的发布订阅机制，目前支持 <code>UADP</code> 的消息映射方式，对应的枚举类型是 <code>TransportID::UDP_UADP</code>。</p>
 <p>需要留意的是，OPC UA 的发布订阅模型仍然是建立在 <a class="el" href="../../db/dba/tutorial_modules_opcua.html#opcua_server_client">服务器/客户端</a> 模型之上的，此外 <a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a> 的 PubSub 在实现上是继承于 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 的，因此，RMVL 的发布订阅模型在使用时具备服务器的所有功能，初始化、释放资源等操作与服务器完全一致。</p>
@@ -593,7 +593,7 @@ OPC UA 是什么</h3>
 <div class="ttc" id="aclassrm_1_1Subscriber_html"><div class="ttname"><a href="../../d4/dea/classrm_1_1Subscriber.html">rm::Subscriber</a></div><div class="ttdoc">OPC UA 订阅者</div><div class="ttdef"><b>Definition:</b> subscriber.hpp:75</div></div>
 <div class="ttc" id="astructrm_1_1FieldMetaData_html"><div class="ttname"><a href="../../d4/d81/structrm_1_1FieldMetaData.html">rm::FieldMetaData</a></div><div class="ttdoc">数据集字段元数据</div><div class="ttdef"><b>Definition:</b> subscriber.hpp:26</div></div>
 <div class="ttc" id="asubscriber_8hpp_html"><div class="ttname"><a href="../../d8/df0/subscriber_8hpp.html">subscriber.hpp</a></div><div class="ttdoc">OPC UA 订阅者</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md190"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md179"></a>
 有代理 Pub/Sub</h3>
 <p>RMVL 目前暂不支持有代理的发布订阅机制。</p>
 <h2><a class="anchor" id="opcua_parameters"></a>
@@ -603,15 +603,15 @@ OPC UA 是什么</h3>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">类型   </th><th class="markdownTableHeadCenter">参数名   </th><th class="markdownTableHeadCenter">默认值   </th><th class="markdownTableHeadCenter">注释    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">SPIN_TIMEOUT   </td><td class="markdownTableBodyCenter">500   </td><td class="markdownTableBodyCenter">服务器超时响应的时间，单位 (ms)    </td></tr>
+<td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">SPIN_TIMEOUT   </td><td class="markdownTableBodyCenter">10   </td><td class="markdownTableBodyCenter">服务器超时响应的时间，单位 (ms)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>double</code>   </td><td class="markdownTableBodyCenter">SAMPLING_INTERVAL   </td><td class="markdownTableBodyCenter">50   </td><td class="markdownTableBodyCenter">服务器监视变量的采样速度，单位 (ms)    </td></tr>
+<td class="markdownTableBodyCenter"><code>double</code>   </td><td class="markdownTableBodyCenter">SAMPLING_INTERVAL   </td><td class="markdownTableBodyCenter">2   </td><td class="markdownTableBodyCenter">服务器监视变量的采样速度，单位 (ms)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>double</code>   </td><td class="markdownTableBodyCenter">PUBLISHING_INTERVAL   </td><td class="markdownTableBodyCenter">100   </td><td class="markdownTableBodyCenter">服务器尝试发布数据变更的期望时间间隔，若数据未变更则不会发布，单位 (ms)    </td></tr>
+<td class="markdownTableBodyCenter"><code>double</code>   </td><td class="markdownTableBodyCenter">PUBLISHING_INTERVAL   </td><td class="markdownTableBodyCenter">2   </td><td class="markdownTableBodyCenter">服务器尝试发布数据变更的期望时间间隔，若数据未变更则不会发布，单位 (ms)    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">LIFETIME_COUNT   </td><td class="markdownTableBodyCenter">100   </td><td class="markdownTableBodyCenter">在没有发布任何消息的情况下，订阅请求所期望的能够保持活动状态的最大发布周期数    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">MAX_KEEPALIVE_COUNT   </td><td class="markdownTableBodyCenter">10   </td><td class="markdownTableBodyCenter">在没有任何通知的情况下，订阅请求所期望的服务器应该发送的最大 “保活” 消息数    </td></tr>
+<td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">MAX_KEEPALIVE_COUNT   </td><td class="markdownTableBodyCenter">50   </td><td class="markdownTableBodyCenter">在没有任何通知的情况下，订阅请求所期望的服务器应该发送的最大 “保活” 消息数    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter"><code>uint32_t</code>   </td><td class="markdownTableBodyCenter">MAX_NOTIFICATIONS   </td><td class="markdownTableBodyCenter">100   </td><td class="markdownTableBodyCenter">服务器应该发送的期望的最大通知数（通知是服务器向客户端报告订阅的变化的方式）    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -620,7 +620,7 @@ OPC UA 是什么</h3>
 <p>具体调节方式可参考引言中的 <a class="el" href="../../d1/dfb/intro.html#intro_parameters_manager">参数管理</a> 部分。</p>
 <h2><a class="anchor" id="opcua_nodeset_compiler"></a>
 从 XML 配置 OPC UA</h2>
-<h3><a class="anchor" id="autotoc_md191"></a>
+<h3><a class="anchor" id="autotoc_md180"></a>
 安装 UaModeler</h3>
 <p>可使用 UaModeler 等软件进行可视化信息模型的建立，构建后可以导出为一个 <code>*.xml</code> 文件，首先先安装 UaModeler。</p>
 <p><b>Windows EXE</b></p>
@@ -636,7 +636,7 @@ OPC UA 是什么</h3>
 </div><!-- fragment --></li>
 </ul>
 <p>具体安装细节可参考 <a href="https://github.com/FreeOpcUa/opcua-modeler">opcua-modeler on Github</a> 的 README。</p>
-<h3><a class="anchor" id="autotoc_md192"></a>
+<h3><a class="anchor" id="autotoc_md181"></a>
 可视化配置 OPC UA 信息模型</h3>
 <p>对于项目创建或导出等内容，此处不做过多介绍，可参考<a href="https://wanghao1314.blog.csdn.net/article/details/104092781">此博客</a>了解上述内容。</p>
 <dl class="section note"><dt>注解</dt><dd><ul>
@@ -644,7 +644,7 @@ OPC UA 是什么</h3>
 <li><code>NamespaceArray</code> 的 <code>[1]</code> 的字符串需要更改为 <code>urn:open62541.server.application</code></li>
 </ul>
 </dd></dl>
-<h3><a class="anchor" id="autotoc_md193"></a>
+<h3><a class="anchor" id="autotoc_md182"></a>
 生成 *.c/*.h 文件</h3>
 <dl class="section note"><dt>注解</dt><dd>以下生成 C/C++ 文件的介绍来自 <a href="https://www.open62541.org/doc/master/nodeset_compiler.html#getting-started">open62541 nodeset-compiler</a>。</dd></dl>
 <p>进入 <code>&lt;path-to-open62541&gt;/tools/nodeset_compiler</code> 文件夹，执行以下命令行</p>
@@ -659,7 +659,7 @@ OPC UA 是什么</h3>
 <div class="line">  --xml xxx.xml \</div>
 <div class="line">  myNodeSet # myNodeSet 是要生成的文件名，包含 myNodeSet.h 和 myNodeSet.c，请自行设置</div>
 </div><!-- fragment --><hr  />
-<h2><a class="anchor" id="autotoc_md195"></a>
+<h2><a class="anchor" id="autotoc_md184"></a>
 引用</h2>
 <p><a class="el" href="../../d0/de3/citelist.html#CITEREF_ua-modeler">[3]</a> UaModeler · FreeOpcUa/opcua-modeler · Github </p>
 </div></div><!-- contents -->
@@ -667,7 +667,7 @@ OPC UA 是什么</h3>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

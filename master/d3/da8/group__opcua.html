@@ -177,12 +177,12 @@ $(function() {
 <tr class="memitem:gaa132c8e85692e0a1c346d227034bc90d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaa132c8e85692e0a1c346d227034bc90d">rm::UA_TypeFlag</a> = UA_UInt32</td></tr>
 <tr class="memdesc:gaa132c8e85692e0a1c346d227034bc90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">类型标志位，可通过 <code>typeflag.at(xxx)</code> 进行获取  <a href="../../d3/da8/group__opcua.html#gaa132c8e85692e0a1c346d227034bc90d">更多...</a><br /></td></tr>
 <tr class="separator:gaa132c8e85692e0a1c346d227034bc90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ed79ffc7202a7e91d8242b5a9765799"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">rm::FindNodeInServer</a> = ::std::tuple&lt; UA_Server *, ::std::string &gt;</td></tr>
-<tr class="memdesc:ga9ed79ffc7202a7e91d8242b5a9765799"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名）  <a href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">更多...</a><br /></td></tr>
-<tr class="separator:ga9ed79ffc7202a7e91d8242b5a9765799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0fcf7235f702cf328179828694540a22"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">rm::FindNodeInClient</a> = ::std::tuple&lt; UA_Client *, ::std::string &gt;</td></tr>
-<tr class="memdesc:ga0fcf7235f702cf328179828694540a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名）  <a href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">更多...</a><br /></td></tr>
-<tr class="separator:ga0fcf7235f702cf328179828694540a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c38a4a10300b3dc79b20ff60c4f7858"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858">rm::FindNodeInServer</a> = ::std::tuple&lt; UA_Server *, ::std::string, uint16_t &gt;</td></tr>
+<tr class="memdesc:ga3c38a4a10300b3dc79b20ff60c4f7858"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <a href="../../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858">更多...</a><br /></td></tr>
+<tr class="separator:ga3c38a4a10300b3dc79b20ff60c4f7858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34386feb4131b5156227eb0655a90de5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5">rm::FindNodeInClient</a> = ::std::tuple&lt; UA_Client *, ::std::string, uint16_t &gt;</td></tr>
+<tr class="memdesc:ga34386feb4131b5156227eb0655a90de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <a href="../../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5">更多...</a><br /></td></tr>
+<tr class="separator:ga34386feb4131b5156227eb0655a90de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 枚举</h2></td></tr>
@@ -195,10 +195,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:gae08783582e72c7365923471f01f13756"><td class="memItemLeft" align="right" valign="top">UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae08783582e72c7365923471f01f13756">operator|</a> (UA_NodeId origin, <a class="el" href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
+<tr class="memitem:gae08783582e72c7365923471f01f13756"><td class="memItemLeft" align="right" valign="top">UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae08783582e72c7365923471f01f13756">operator|</a> (UA_NodeId origin, <a class="el" href="../../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
 <tr class="memdesc:gae08783582e72c7365923471f01f13756"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务端路径搜索  <a href="../../d3/da8/group__opcua.html#gae08783582e72c7365923471f01f13756">更多...</a><br /></td></tr>
 <tr class="separator:gae08783582e72c7365923471f01f13756"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae59ec8f4914d52845616318a24ac36dd"><td class="memItemLeft" align="right" valign="top">UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae59ec8f4914d52845616318a24ac36dd">operator|</a> (UA_NodeId origin, <a class="el" href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
+<tr class="memitem:gae59ec8f4914d52845616318a24ac36dd"><td class="memItemLeft" align="right" valign="top">UA_NodeId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae59ec8f4914d52845616318a24ac36dd">operator|</a> (UA_NodeId origin, <a class="el" href="../../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
 <tr class="memdesc:gae59ec8f4914d52845616318a24ac36dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端路径搜索  <a href="../../d3/da8/group__opcua.html#gae59ec8f4914d52845616318a24ac36dd">更多...</a><br /></td></tr>
 <tr class="separator:gae59ec8f4914d52845616318a24ac36dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -429,39 +429,39 @@ $(function() {
 
 </div>
 </div>
-<a id="ga0fcf7235f702cf328179828694540a22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0fcf7235f702cf328179828694540a22">&#9670;&nbsp;</a></span>FindNodeInClient</h2>
+<a id="ga34386feb4131b5156227eb0655a90de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34386feb4131b5156227eb0655a90de5">&#9670;&nbsp;</a></span>FindNodeInClient</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">rm::FindNodeInClient</a> = typedef ::std::tuple&lt;UA_Client *, ::std::string&gt;</td>
+          <td class="memname">using <a class="el" href="../../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5">rm::FindNodeInClient</a> = typedef ::std::tuple&lt;UA_Client *, ::std::string, uint16_t&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;<a class="el" href="../../dc/d5f/utilities_8hpp.html">rmvl/opcua/utilities.hpp</a>&gt;</code></p>
 
-<p>目标节点信息（客户端指针、浏览名） </p>
+<p>目标节点信息（客户端指针、浏览名、命名空间索引） </p>
 
 </div>
 </div>
-<a id="ga9ed79ffc7202a7e91d8242b5a9765799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ed79ffc7202a7e91d8242b5a9765799">&#9670;&nbsp;</a></span>FindNodeInServer</h2>
+<a id="ga3c38a4a10300b3dc79b20ff60c4f7858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c38a4a10300b3dc79b20ff60c4f7858">&#9670;&nbsp;</a></span>FindNodeInServer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">rm::FindNodeInServer</a> = typedef ::std::tuple&lt;UA_Server *, ::std::string&gt;</td>
+          <td class="memname">using <a class="el" href="../../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858">rm::FindNodeInServer</a> = typedef ::std::tuple&lt;UA_Server *, ::std::string, uint16_t&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;<a class="el" href="../../dc/d5f/utilities_8hpp.html">rmvl/opcua/utilities.hpp</a>&gt;</code></p>
 
-<p>目标节点信息（服务端指针、浏览名） </p>
+<p>目标节点信息（服务端指针、浏览名、命名空间索引） </p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22">rm::FindNodeInClient</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5">rm::FindNodeInClient</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>fnic</em>&#160;</td>
         </tr>
         <tr>
@@ -628,7 +628,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799">rm::FindNodeInServer</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858">rm::FindNodeInServer</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>fnis</em>&#160;</td>
         </tr>
         <tr>
@@ -1512,7 +1512,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

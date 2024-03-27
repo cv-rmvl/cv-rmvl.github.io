@@ -96,7 +96,8 @@ $(function() {
 <div class="dynheader">
 rm::para::GyroTrackerParam 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/df3/structrm_1_1para_1_1GyroTrackerParam__coll__graph.svg" width="570" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/df3/structrm_1_1para_1_1GyroTrackerParam__coll__graph.svg" width="100%" height="482"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -108,7 +109,7 @@ Public 成员函数</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:a962238120ddb2e8c221fb8afa2e0e506"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a962238120ddb2e8c221fb8afa2e0e506">SAMPLE_INTERVAL</a> = 15</td></tr>
-<tr class="memdesc:a962238120ddb2e8c221fb8afa2e0e506"><td class="mdescLeft">&#160;</td><td class="mdescRight">采样时间  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a962238120ddb2e8c221fb8afa2e0e506">更多...</a><br /></td></tr>
+<tr class="memdesc:a962238120ddb2e8c221fb8afa2e0e506"><td class="mdescLeft">&#160;</td><td class="mdescRight">采样时间（单位:ms）  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a962238120ddb2e8c221fb8afa2e0e506">更多...</a><br /></td></tr>
 <tr class="separator:a962238120ddb2e8c221fb8afa2e0e506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae26870cdf3e4b218e86a3e355c228175"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ae26870cdf3e4b218e86a3e355c228175">MAX_ROTSPEED</a> = 20</td></tr>
 <tr class="memdesc:ae26870cdf3e4b218e86a3e355c228175"><td class="mdescLeft">&#160;</td><td class="mdescRight">模型旋转速度上限（单位:rad/s）  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ae26870cdf3e4b218e86a3e355c228175">更多...</a><br /></td></tr>
@@ -119,21 +120,21 @@ Public 属性</h2></td></tr>
 <tr class="memitem:ae70ea529e7736725b482774d06a36cd1"><td class="memItemLeft" align="right" valign="top">cv::Matx44f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ae70ea529e7736725b482774d06a36cd1">MOTION_Q</a> = cv::Matx44f::eye()</td></tr>
 <tr class="memdesc:ae70ea529e7736725b482774d06a36cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标转角过程噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ae70ea529e7736725b482774d06a36cd1">更多...</a><br /></td></tr>
 <tr class="separator:ae70ea529e7736725b482774d06a36cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac631b02aef638bba4f5b9a93045ee133"><td class="memItemLeft" align="right" valign="top">cv::Matx44f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ac631b02aef638bba4f5b9a93045ee133">MOTION_R</a> = cv::Matx44f::diag({0.5, 0.5, 5, 5})</td></tr>
-<tr class="memdesc:ac631b02aef638bba4f5b9a93045ee133"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标转角测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ac631b02aef638bba4f5b9a93045ee133">更多...</a><br /></td></tr>
-<tr class="separator:ac631b02aef638bba4f5b9a93045ee133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa0a92b608f7a1971968954bcb722e5"><td class="memItemLeft" align="right" valign="top">cv::Matx22f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#afaa0a92b608f7a1971968954bcb722e5">MOTION_R</a> = cv::Matx22f::diag({0.1, 0.1})</td></tr>
+<tr class="memdesc:afaa0a92b608f7a1971968954bcb722e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标转角测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#afaa0a92b608f7a1971968954bcb722e5">更多...</a><br /></td></tr>
+<tr class="separator:afaa0a92b608f7a1971968954bcb722e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5131f36916b658034375a259fa1190d3"><td class="memItemLeft" align="right" valign="top">cv::Matx66f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a5131f36916b658034375a259fa1190d3">POSITION_Q</a> = cv::Matx66f::eye()</td></tr>
 <tr class="memdesc:a5131f36916b658034375a259fa1190d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置过程噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a5131f36916b658034375a259fa1190d3">更多...</a><br /></td></tr>
 <tr class="separator:a5131f36916b658034375a259fa1190d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3d33407594f3ec28ce8852a6fa43103"><td class="memItemLeft" align="right" valign="top">cv::Matx66f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ad3d33407594f3ec28ce8852a6fa43103">POSITION_R</a> = cv::Matx66f::diag({2, 2, 2, 8, 8, 8})</td></tr>
-<tr class="memdesc:ad3d33407594f3ec28ce8852a6fa43103"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#ad3d33407594f3ec28ce8852a6fa43103">更多...</a><br /></td></tr>
-<tr class="separator:ad3d33407594f3ec28ce8852a6fa43103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ee4f69192da3fe998167c9a4b3cb37"><td class="memItemLeft" align="right" valign="top">cv::Matx33f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a43ee4f69192da3fe998167c9a4b3cb37">POSITION_R</a> = cv::Matx33f::diag({2, 2, 2})</td></tr>
+<tr class="memdesc:a43ee4f69192da3fe998167c9a4b3cb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a43ee4f69192da3fe998167c9a4b3cb37">更多...</a><br /></td></tr>
+<tr class="separator:a43ee4f69192da3fe998167c9a4b3cb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08c460623907d0e8f171fbaac7ffec9e"><td class="memItemLeft" align="right" valign="top">cv::Matx44f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a08c460623907d0e8f171fbaac7ffec9e">POSE_Q</a> = cv::Matx44f::eye()</td></tr>
 <tr class="memdesc:a08c460623907d0e8f171fbaac7ffec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">姿态过程噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a08c460623907d0e8f171fbaac7ffec9e">更多...</a><br /></td></tr>
 <tr class="separator:a08c460623907d0e8f171fbaac7ffec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c9504e87353b8e4c1899363f007547"><td class="memItemLeft" align="right" valign="top">cv::Matx44f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a95c9504e87353b8e4c1899363f007547">POSE_R</a> = cv::Matx44f::diag({5, 5, 20, 20})</td></tr>
-<tr class="memdesc:a95c9504e87353b8e4c1899363f007547"><td class="mdescLeft">&#160;</td><td class="mdescRight">姿态测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a95c9504e87353b8e4c1899363f007547">更多...</a><br /></td></tr>
-<tr class="separator:a95c9504e87353b8e4c1899363f007547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547805767d10762dd0814f963ac1bcd9"><td class="memItemLeft" align="right" valign="top">cv::Matx22f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a547805767d10762dd0814f963ac1bcd9">POSE_R</a> = cv::Matx22f::diag({5, 520})</td></tr>
+<tr class="memdesc:a547805767d10762dd0814f963ac1bcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">姿态测量噪声协方差矩阵  <a href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html#a547805767d10762dd0814f963ac1bcd9">更多...</a><br /></td></tr>
+<tr class="separator:a547805767d10762dd0814f963ac1bcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p><a class="el" href="../../d3/d01/structrm_1_1para_1_1GyroTrackerParam.html" title="GyroTrackerParam 参数模块">GyroTrackerParam</a> 参数模块 </p>
@@ -215,14 +216,14 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac631b02aef638bba4f5b9a93045ee133"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac631b02aef638bba4f5b9a93045ee133">&#9670;&nbsp;</a></span>MOTION_R</h2>
+<a id="afaa0a92b608f7a1971968954bcb722e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa0a92b608f7a1971968954bcb722e5">&#9670;&nbsp;</a></span>MOTION_R</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Matx44f rm::para::GyroTrackerParam::MOTION_R = cv::Matx44f::diag({0.5, 0.5, 5, 5})</td>
+          <td class="memname">cv::Matx22f rm::para::GyroTrackerParam::MOTION_R = cv::Matx22f::diag({0.1, 0.1})</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -247,14 +248,14 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a95c9504e87353b8e4c1899363f007547"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95c9504e87353b8e4c1899363f007547">&#9670;&nbsp;</a></span>POSE_R</h2>
+<a id="a547805767d10762dd0814f963ac1bcd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547805767d10762dd0814f963ac1bcd9">&#9670;&nbsp;</a></span>POSE_R</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Matx44f rm::para::GyroTrackerParam::POSE_R = cv::Matx44f::diag({5, 5, 20, 20})</td>
+          <td class="memname">cv::Matx22f rm::para::GyroTrackerParam::POSE_R = cv::Matx22f::diag({5, 520})</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -279,14 +280,14 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ad3d33407594f3ec28ce8852a6fa43103"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3d33407594f3ec28ce8852a6fa43103">&#9670;&nbsp;</a></span>POSITION_R</h2>
+<a id="a43ee4f69192da3fe998167c9a4b3cb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ee4f69192da3fe998167c9a4b3cb37">&#9670;&nbsp;</a></span>POSITION_R</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Matx66f rm::para::GyroTrackerParam::POSITION_R = cv::Matx66f::diag({2, 2, 2, 8, 8, 8})</td>
+          <td class="memname">cv::Matx33f rm::para::GyroTrackerParam::POSITION_R = cv::Matx33f::diag({2, 2, 2})</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -307,7 +308,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>采样时间 </p>
+<p>采样时间（单位:ms） </p>
 
 </div>
 </div>
@@ -318,7 +319,7 @@ Public 属性</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:12 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

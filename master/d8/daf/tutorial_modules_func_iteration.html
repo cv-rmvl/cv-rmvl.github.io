@@ -85,9 +85,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md145">1. 不动点迭代</a></li>
-<li class="level2"><a href="#autotoc_md146">2. Newton 迭代</a></li>
-<li class="level2"><a href="#autotoc_md147">3. Newton 迭代的简化</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md144">1. 不动点迭代</a></li>
+<li class="level2"><a href="#autotoc_md145">2. Newton 迭代</a></li>
+<li class="level2"><a href="#autotoc_md146">3. Newton 迭代的简化</a></li>
 </ul>
 </ul>
 </div>
@@ -100,7 +100,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md145"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 1. 不动点迭代</h2>
 <p>对于一个函数 \(y=f(x)\)，希望求其零点，即 \(f(x)=0\)，可以将其改写成等价的</p>
 <p class="formulaDsp">
@@ -127,7 +127,7 @@ $(function() {
 <p class="formulaDsp">
 \[x_{k+1}=\frac12\sqrt{10-x_k^3}\]
 </p>
-<h2><a class="anchor" id="autotoc_md146"></a>
+<h2><a class="anchor" id="autotoc_md145"></a>
 2. Newton 迭代</h2>
 <p>对于方程 \(f(x)=0\)，其精确解为 \(x^*\)，对于某一次迭代结果 \(x_k\)，将 \(f(x^*)\)在 \(x_k\)处展开，有</p>
 <p class="formulaDsp">
@@ -146,7 +146,7 @@ $(function() {
 \[f(x_{k+1})=x_k-m\frac{f(x_k)}{f&#39;(x_k)}\tag{2-3}\]
 </p>
 <p>方可实现 2 阶收敛。</p>
-<h2><a class="anchor" id="autotoc_md147"></a>
+<h2><a class="anchor" id="autotoc_md146"></a>
 3. Newton 迭代的简化</h2>
 <p>对于计算机算法而言，普通的 Newton 迭代需要求导 \(f&#39;(x_k)\)的操作，这一步可使用向后差商来代替</p>
 <p class="formulaDsp">
@@ -161,7 +161,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

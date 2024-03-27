@@ -81,29 +81,31 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <p>OPC UA 服务器例程</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><a name="_a0"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> *p_server{<span class="keyword">nullptr</span>};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { p_server-&gt;<a name="a1"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">stop</a>(); }</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a name="_a0"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> server(4840U);</div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> var = 42;</div>
-<div class="line">    var.<a name="a2"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;VarDemo&quot;</span>;</div>
-<div class="line">    var.<a name="a3"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;var_demo&quot;</span>;</div>
-<div class="line">    server.<a name="a4"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html#adba678b7d4e3bc80aa64f47848494b23">addVariableNode</a>(var);</div>
-<div class="line">    server.<a name="a5"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html#a231923cb0990195a0b5ff522691d5d84">start</a>();</div>
+<div class="line">    signal(SIGINT, onHandle);</div>
 <div class="line"> </div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[32mServer started for 20 seconds ...\033[0m\n&quot;</span>);</div>
-<div class="line">    std::this_thread::sleep_for(std::chrono::seconds(20));</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[32mServer stopped ...\033[0m\n&quot;</span>);</div>
-<div class="line">    server.<a name="a6"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">stop</a>();</div>
-<div class="line">    server.<a name="a7"></a><a class="code" href="../../d4/d06/classrm_1_1Server.html#a8ee77445da5eeb190d5fdf67bed2897e">join</a>();</div>
+<div class="line">    <a class="code" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> server(4840);</div>
+<div class="line">    p_server = &amp;server;</div>
+<div class="line"> </div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> position = 5500;</div>
+<div class="line">    position.<a name="a3"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Position&quot;</span>;</div>
+<div class="line">    position.<a name="a4"></a><a class="code" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;position&quot;</span>;</div>
+<div class="line">    server.addVariableNode(position);</div>
+<div class="line">    server.start();</div>
+<div class="line">    server.join();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>Definition:</b> server.hpp:48</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_a231923cb0990195a0b5ff522691d5d84"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a231923cb0990195a0b5ff522691d5d84">rm::Server::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">运行服务器，调用方线程不阻塞</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_a8ee77445da5eeb190d5fdf67bed2897e"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a8ee77445da5eeb190d5fdf67bed2897e">rm::Server::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">阻塞</div><div class="ttdef"><b>Definition:</b> server.hpp:91</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_adba678b7d4e3bc80aa64f47848494b23"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#adba678b7d4e3bc80aa64f47848494b23">rm::Server::addVariableNode</a></div><div class="ttdeci">UA_NodeId addVariableNode(const Variable &amp;val, const UA_NodeId &amp;parent_id=nodeObjectsFolder)</div><div class="ttdoc">添加变量节点 VariableNode 至指定父节点中，并指定引用类型</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_af835200abfa46f85a183f6eed54edfa4"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">rm::Server::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>Definition:</b> server.hpp:84</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html_af835200abfa46f85a183f6eed54edfa4"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">rm::Server::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>Definition:</b> server.hpp:86</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>Definition:</b> variable.hpp:121</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>Definition:</b> variable.hpp:130</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>Definition:</b> variable.hpp:139</div></div>
@@ -112,7 +114,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

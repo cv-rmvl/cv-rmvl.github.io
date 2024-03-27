@@ -86,13 +86,13 @@ $(function() {
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <a name="_a0"></a><a class="code" href="../../da/d78/classrm_1_1Client.html">rm::Client</a> client(<span class="stringliteral">&quot;opc.tcp://localhost:4840&quot;</span>);</div>
-<div class="line">    <span class="keyword">auto</span> var_id = <a name="a1"></a><a class="code" href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a> | client.<a name="a2"></a><a class="code" href="../../da/d78/classrm_1_1Client.html#a0c29608f055c2d95948a0daa652f0229">find</a>(<span class="stringliteral">&quot;var_demo&quot;</span>);</div>
-<div class="line">    <span class="keyword">auto</span> var = client.<a name="a3"></a><a class="code" href="../../da/d78/classrm_1_1Client.html#ae4ef218e1aaa20f0a1be3549b2105a7a">read</a>(var_id);</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[32mValue: %d\033[0m\n&quot;</span>, var.cast&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">    <span class="keyword">auto</span> position_id = <a name="a1"></a><a class="code" href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a> | client.<a name="a2"></a><a class="code" href="../../da/d78/classrm_1_1Client.html#a4b7d2b164975563b10150d462d42e045">find</a>(<span class="stringliteral">&quot;position&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> position = client.<a name="a3"></a><a class="code" href="../../da/d78/classrm_1_1Client.html#ae4ef218e1aaa20f0a1be3549b2105a7a">read</a>(position_id);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\033[32mValue: %d\033[0m\n&quot;</span>, position.cast&lt;<span class="keywordtype">int</span>&gt;());</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Client_html"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html">rm::Client</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>Definition:</b> client.hpp:29</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_a0c29608f055c2d95948a0daa652f0229"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#a0c29608f055c2d95948a0daa652f0229">rm::Client::find</a></div><div class="ttdeci">FindNodeInClient find(const std::string &amp;browse_name)</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>Definition:</b> client.hpp:61</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_a4b7d2b164975563b10150d462d42e045"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#a4b7d2b164975563b10150d462d42e045">rm::Client::find</a></div><div class="ttdeci">FindNodeInClient find(const std::string &amp;browse_name, uint16_t ns=1U)</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>Definition:</b> client.hpp:62</div></div>
 <div class="ttc" id="aclassrm_1_1Client_html_ae4ef218e1aaa20f0a1be3549b2105a7a"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ae4ef218e1aaa20f0a1be3549b2105a7a">rm::Client::read</a></div><div class="ttdeci">Variable read(const UA_NodeId &amp;node)</div><div class="ttdoc">从指定的变量节点读数据</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__opcua_html_gad0c2975e904f60ccac7676c527a96229"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gad0c2975e904f60ccac7676c527a96229">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr UA_NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>Definition:</b> utilities.hpp:91</div></div>
@@ -100,7 +100,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

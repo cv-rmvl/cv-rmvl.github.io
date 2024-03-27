@@ -1535,6 +1535,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 2U, 1U &gt;</type>
+      <name>KF21f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga426646eae28eb2ead5fb30e52236b596</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 2U, 1U &gt;</type>
+      <name>KF21d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga9a3d612f2c29b0b2b7d846915d74e797</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 3U, 3U &gt;</type>
       <name>KF33f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -1546,6 +1560,34 @@
       <name>KF33d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>ga242c68ebe3c161c977f8de0132c34e15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 1U &gt;</type>
+      <name>KF31f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5fdfb78938e1e0916d10a498423dd976</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 1U &gt;</type>
+      <name>KF31d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga21757f8ed17a8d04bed804e31677ab3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 2U &gt;</type>
+      <name>KF32f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad2dc9194776c04a81d907e201de0b3b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 2U &gt;</type>
+      <name>KF32d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga48e9977a0582e650ba0c236880bab89f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -1563,6 +1605,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 4U, 2U &gt;</type>
+      <name>KF42f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5bae92e5e4d77b6f044074dd650764fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 4U, 2U &gt;</type>
+      <name>KF42d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga28cbf4cc24101fce8ea02f92a2441f45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 6U, 6U &gt;</type>
       <name>KF66f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -1574,6 +1630,34 @@
       <name>KF66d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>gafaeab61c60ca53efd1b1b4271ee022ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 3U &gt;</type>
+      <name>KF63f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gaa20d4abc297cee57016e51b0bb975771</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 3U &gt;</type>
+      <name>KF63d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad814de03bc3220512f1acc4851dcdd65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 4U &gt;</type>
+      <name>KF64f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad8b1bf063876f180c64a8e58ddd69ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 4U &gt;</type>
+      <name>KF64d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga79b954880b2fa90aac6aec4ce5429d9f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2258,17 +2342,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Server *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Server *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9ed79ffc7202a7e91d8242b5a9765799</anchor>
+      <anchor>ga3c38a4a10300b3dc79b20ff60c4f7858</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Client *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Client *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0fcf7235f702cf328179828694540a22</anchor>
+      <anchor>ga34386feb4131b5156227eb0655a90de5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -2701,6 +2785,34 @@
       <name>Matx15f</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>gaa7eccde66ceaff8fb6f579a2343fd9b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 1 &gt;</type>
+      <name>Matx51d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga20dbe0b603e87f245c2cac55c510084c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 1, 5 &gt;</type>
+      <name>Matx15d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga9c8e9ab47eb9b1e4a0e13eadea7ebac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 5, 5 &gt;</type>
+      <name>Matx55f</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gaf425b8d23b7c8e7da3329cbab298e9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 5 &gt;</type>
+      <name>Matx55d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gad850502463ba3479686bf6e39f362c66</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -3775,8 +3887,8 @@
       <type>FindNodeInClient</type>
       <name>find</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a0c29608f055c2d95948a0daa652f0229</anchor>
-      <arglist>(const std::string &amp;browse_name)</arglist>
+      <anchor>a4b7d2b164975563b10150d462d42e045</anchor>
+      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -4411,8 +4523,15 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a5b08c494067e2c24435d831a6232f42c</anchor>
-      <arglist>(combo::ptr p_combo, double tick, const GyroData &amp;gyro_data) override</arglist>
+      <anchor>a2f450e0e0ac528dddd517c07b447a4bf</anchor>
+      <arglist>(combo::ptr p_combo) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
+      <anchor>a3c4969322309e298662ac8d05b177a7a</anchor>
+      <arglist>(double, const GyroData &amp;) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static DefaultTracker::ptr</type>
@@ -5791,10 +5910,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx66f</type>
+      <type>cv::Matx33f</type>
       <name>CENTER3D_R</name>
       <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>a7a5071c30eef7fcbd74ebc97b691967b</anchor>
+      <anchor>a88212fdb124f0eb089f17c6bb952eecf</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5916,8 +6035,15 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>d4/d88/classrm_1_1GyroTracker.html</anchorfile>
-      <anchor>a4f5b59ac1338cd0f4614278874e55807</anchor>
-      <arglist>(combo::ptr p_armor, double tick, const GyroData &amp;gyro_data) override</arglist>
+      <anchor>ab8b102bc5604a357ae2450e936646d1a</anchor>
+      <arglist>(double, const GyroData &amp;) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>d4/d88/classrm_1_1GyroTracker.html</anchorfile>
+      <anchor>a84d26f0a40e1a667d8837660928ae9e7</anchor>
+      <arglist>(combo::ptr p_combo) override</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6008,10 +6134,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx44f</type>
+      <type>cv::Matx22f</type>
       <name>MOTION_R</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>ac631b02aef638bba4f5b9a93045ee133</anchor>
+      <anchor>afaa0a92b608f7a1971968954bcb722e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6022,10 +6148,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx66f</type>
+      <type>cv::Matx33f</type>
       <name>POSITION_R</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>ad3d33407594f3ec28ce8852a6fa43103</anchor>
+      <anchor>a43ee4f69192da3fe998167c9a4b3cb37</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6036,10 +6162,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx44f</type>
+      <type>cv::Matx22f</type>
       <name>POSE_R</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a95c9504e87353b8e4c1899363f007547</anchor>
+      <anchor>a547805767d10762dd0814f963ac1bcd9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6400,12 +6526,12 @@
       <type>auto</type>
       <name>correct</name>
       <anchorfile>d9/d1a/classrm_1_1KalmanFilter.html</anchorfile>
-      <anchor>a7586d4c4b293aab8a1b4579dcf68998e</anchor>
-      <arglist>(const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;measurement)</arglist>
+      <anchor>acc0e2fa7862e02a6300a5a0348f9b56a</anchor>
+      <arglist>(const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;zk)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>KalmanFilter&lt; float, 2U, 2U &gt;</name>
+    <name>KalmanFilter&lt; float, 2U, 1U &gt;</name>
     <filename>d9/d1a/classrm_1_1KalmanFilter.html</filename>
     <member kind="function">
       <type></type>
@@ -6488,12 +6614,12 @@
       <type>auto</type>
       <name>correct</name>
       <anchorfile>d9/d1a/classrm_1_1KalmanFilter.html</anchorfile>
-      <anchor>a7586d4c4b293aab8a1b4579dcf68998e</anchor>
-      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;measurement)</arglist>
+      <anchor>acc0e2fa7862e02a6300a5a0348f9b56a</anchor>
+      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;zk)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>KalmanFilter&lt; float, 4U, 4U &gt;</name>
+    <name>KalmanFilter&lt; float, 4U, 2U &gt;</name>
     <filename>d9/d1a/classrm_1_1KalmanFilter.html</filename>
     <member kind="function">
       <type></type>
@@ -6576,12 +6702,12 @@
       <type>auto</type>
       <name>correct</name>
       <anchorfile>d9/d1a/classrm_1_1KalmanFilter.html</anchorfile>
-      <anchor>a7586d4c4b293aab8a1b4579dcf68998e</anchor>
-      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;measurement)</arglist>
+      <anchor>acc0e2fa7862e02a6300a5a0348f9b56a</anchor>
+      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;zk)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>KalmanFilter&lt; float, 6U, 6U &gt;</name>
+    <name>KalmanFilter&lt; float, 6U, 3U &gt;</name>
     <filename>d9/d1a/classrm_1_1KalmanFilter.html</filename>
     <member kind="function">
       <type></type>
@@ -6664,8 +6790,8 @@
       <type>auto</type>
       <name>correct</name>
       <anchorfile>d9/d1a/classrm_1_1KalmanFilter.html</anchorfile>
-      <anchor>a7586d4c4b293aab8a1b4579dcf68998e</anchor>
-      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;measurement)</arglist>
+      <anchor>acc0e2fa7862e02a6300a5a0348f9b56a</anchor>
+      <arglist>(const cv::Matx&lt; float, MeasureDim, 1 &gt; &amp;zk)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7897,8 +8023,15 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>d1/dc8/classrm_1_1PlanarTracker.html</anchorfile>
-      <anchor>a7038dd3b7c8b958706b4da4ea460dcac</anchor>
-      <arglist>(combo::ptr p_combo, double tick, const GyroData &amp;gyro_data) override</arglist>
+      <anchor>a4526b697cc9c386871553a3d504f2ace</anchor>
+      <arglist>(double tick, const GyroData &amp;gyro_data) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>d1/dc8/classrm_1_1PlanarTracker.html</anchorfile>
+      <anchor>a96aa1b5b2945dce3d622ef1d0b895dfa</anchor>
+      <arglist>(combo::ptr p_combo) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static PlanarTracker::ptr</type>
@@ -7933,17 +8066,31 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx44f</type>
-      <name>Q</name>
+      <type>cv::Matx22f</type>
+      <name>DIS_Q</name>
       <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a7fc80e47740ac5e07c55df1f31c29866</anchor>
+      <anchor>a17a10a61f1d0f94fea2c526161443b99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>DIS_R</name>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchor>a793de15bfe7b374b97c1151fdd1d24b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx44f</type>
-      <name>R</name>
+      <name>MOTION_Q</name>
       <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a149b17323afb428071bbd88992a080de</anchor>
+      <anchor>a574418b4cc7bb8db91a1672292f50463</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Matx22f</type>
+      <name>MOTION_R</name>
+      <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
+      <anchor>a4fbb6aa8a111f7a39d270b72bc5f53f6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -8435,8 +8582,8 @@
       <type></type>
       <name>RuneCenter</name>
       <anchorfile>da/d40/classrm_1_1RuneCenter.html</anchorfile>
-      <anchor>a77fd6a5c2999c69bf421493987c95cb2</anchor>
-      <arglist>(std::vector&lt; cv::Point &gt; &amp;contour, cv::RotatedRect &amp;rotated_rect)</arglist>
+      <anchor>a078a7e6a947e38ebd3a31dde813010db</anchor>
+      <arglist>(const std::vector&lt; cv::Point &gt; &amp;, cv::RotatedRect &amp;)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8470,8 +8617,8 @@
       <type>static std::shared_ptr&lt; RuneCenter &gt;</type>
       <name>make_feature</name>
       <anchorfile>da/d40/classrm_1_1RuneCenter.html</anchorfile>
-      <anchor>afc3c4a614e9744d4665b168ce97d465f</anchor>
-      <arglist>(std::vector&lt; cv::Point &gt; &amp;contour)</arglist>
+      <anchor>ab9c82cfa14dfb42b0e295d163d87c1b7</anchor>
+      <arglist>(const std::vector&lt; cv::Point &gt; &amp;contour)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static RuneCenter::ptr</type>
@@ -8918,15 +9065,15 @@
       <type></type>
       <name>RuneTarget</name>
       <anchorfile>db/d77/classrm_1_1RuneTarget.html</anchorfile>
-      <anchor>a2ee7715668392dcd62e6c7281aecfa0a</anchor>
-      <arglist>(std::vector&lt; cv::Point &gt; &amp;, cv::RotatedRect &amp;, bool is_active)</arglist>
+      <anchor>a1ab58a79c315bdc4f9799d5394c6a631</anchor>
+      <arglist>(const std::vector&lt; cv::Point &gt; &amp;, const cv::RotatedRect &amp;, bool is_active)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>RuneTarget</name>
       <anchorfile>db/d77/classrm_1_1RuneTarget.html</anchorfile>
-      <anchor>a15d13f1c876513a7d86a61f7f85b2c83</anchor>
-      <arglist>(cv::Point center, bool is_active)</arglist>
+      <anchor>abaf396730bd052b41a8dd93694c94327</anchor>
+      <arglist>(const cv::Point &amp;center, bool is_active)</arglist>
     </member>
     <member kind="function">
       <type>float</type>
@@ -8960,15 +9107,15 @@
       <type>static std::shared_ptr&lt; RuneTarget &gt;</type>
       <name>make_feature</name>
       <anchorfile>db/d77/classrm_1_1RuneTarget.html</anchorfile>
-      <anchor>a6d3ab922357689b784aefc1891dd52bc</anchor>
-      <arglist>(std::vector&lt; cv::Point &gt; &amp;contour, bool is_active)</arglist>
+      <anchor>a4d0cf89bcb8ad378807097d2367d01e3</anchor>
+      <arglist>(const std::vector&lt; cv::Point &gt; &amp;contour, bool is_active)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::shared_ptr&lt; RuneTarget &gt;</type>
       <name>make_feature</name>
       <anchorfile>db/d77/classrm_1_1RuneTarget.html</anchorfile>
-      <anchor>aba3ef9d07583f1c70081610501ddfe0f</anchor>
-      <arglist>(cv::Point center, bool is_active)</arglist>
+      <anchor>aa7ae1f15a271806d9ca2b7a812d404e1</anchor>
+      <arglist>(const cv::Point &amp;center, bool is_active)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static RuneTarget::ptr</type>
@@ -9081,8 +9228,15 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>df/da0/classrm_1_1RuneTracker.html</anchorfile>
-      <anchor>a0c594ac8f8b92ef2fd0ffc826609672c</anchor>
-      <arglist>(combo::ptr p_rune, double tick, const GyroData &amp;gyro_data) override</arglist>
+      <anchor>ac1f2239a02a5c42d7be812dac9507ef0</anchor>
+      <arglist>(combo::ptr p_rune) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>df/da0/classrm_1_1RuneTracker.html</anchorfile>
+      <anchor>a59d7f94584ed9dfa3b98be8ba07f4f67</anchor>
+      <arglist>(double tick, const GyroData &amp;gyro_data) override</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -9152,10 +9306,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx22f</type>
+      <type>float</type>
       <name>ROTATE_R</name>
       <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
-      <anchor>a77ed79092538034067dde64e63a56261</anchor>
+      <anchor>af20efcaaf1cf891c49e35b9e730014c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -9350,15 +9504,15 @@
       <type></type>
       <name>Server</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>aa426e423786351f907bbc819658135dc</anchor>
-      <arglist>(uint16_t port, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+      <anchor>ac68cb0753c1691848fd601aa49526096</anchor>
+      <arglist>(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Server</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a3c34a7da9868dcb160255cfde05fb7fe</anchor>
-      <arglist>(ServerUserConfig on_config, uint16_t port, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+      <anchor>a6d93b0b25b10110a36fbd2b5e93b9dac</anchor>
+      <arglist>(ServerUserConfig on_config, uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -9406,8 +9560,8 @@
       <type>FindNodeInServer</type>
       <name>find</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a1fd04ec43d5b10e8f8bd7d4fa3df6bce</anchor>
-      <arglist>(const std::string &amp;browse_name)</arglist>
+      <anchor>a0c4f45066b372cbf8b9e086ef0fc3820</anchor>
+      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U)</arglist>
     </member>
     <member kind="function">
       <type>UA_NodeId</type>
@@ -9834,8 +9988,15 @@
       <type>virtual void</type>
       <name>update</name>
       <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
-      <anchor>ad45085392572742613e1e3a653528d5c</anchor>
-      <arglist>(combo::ptr p_combo, double tick, const GyroData &amp;gyro_data)=0</arglist>
+      <anchor>a310170ae8ed124af33d8cc4e7b1a560e</anchor>
+      <arglist>(combo::ptr p_combo)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>update</name>
+      <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
+      <anchor>a9b37b083fa9917383e354e575f2ed84c</anchor>
+      <arglist>(double tick, const GyroData &amp;gyro_data)=0</arglist>
     </member>
     <member kind="function">
       <type>combo::ptr</type>
@@ -10663,6 +10824,34 @@
       <anchor>gaa7eccde66ceaff8fb6f579a2343fd9b8</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 1 &gt;</type>
+      <name>Matx51d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga20dbe0b603e87f245c2cac55c510084c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 1, 5 &gt;</type>
+      <name>Matx15d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga9c8e9ab47eb9b1e4a0e13eadea7ebac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 5, 5 &gt;</type>
+      <name>Matx55f</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gaf425b8d23b7c8e7da3329cbab298e9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 5 &gt;</type>
+      <name>Matx55d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gad850502463ba3479686bf6e39f362c66</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>rm</name>
@@ -10790,6 +10979,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 2U, 1U &gt;</type>
+      <name>KF21f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga426646eae28eb2ead5fb30e52236b596</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 2U, 1U &gt;</type>
+      <name>KF21d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga9a3d612f2c29b0b2b7d846915d74e797</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 3U, 3U &gt;</type>
       <name>KF33f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -10801,6 +11004,34 @@
       <name>KF33d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>ga242c68ebe3c161c977f8de0132c34e15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 1U &gt;</type>
+      <name>KF31f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5fdfb78938e1e0916d10a498423dd976</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 1U &gt;</type>
+      <name>KF31d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga21757f8ed17a8d04bed804e31677ab3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 2U &gt;</type>
+      <name>KF32f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad2dc9194776c04a81d907e201de0b3b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 2U &gt;</type>
+      <name>KF32d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga48e9977a0582e650ba0c236880bab89f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -10818,6 +11049,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 4U, 2U &gt;</type>
+      <name>KF42f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5bae92e5e4d77b6f044074dd650764fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 4U, 2U &gt;</type>
+      <name>KF42d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga28cbf4cc24101fce8ea02f92a2441f45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 6U, 6U &gt;</type>
       <name>KF66f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -10829,6 +11074,34 @@
       <name>KF66d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>gafaeab61c60ca53efd1b1b4271ee022ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 3U &gt;</type>
+      <name>KF63f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gaa20d4abc297cee57016e51b0bb975771</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 3U &gt;</type>
+      <name>KF63d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad814de03bc3220512f1acc4851dcdd65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 4U &gt;</type>
+      <name>KF64f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad8b1bf063876f180c64a8e58ddd69ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 4U &gt;</type>
+      <name>KF64d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga79b954880b2fa90aac6aec4ce5429d9f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -10888,17 +11161,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Server *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Server *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9ed79ffc7202a7e91d8242b5a9765799</anchor>
+      <anchor>ga3c38a4a10300b3dc79b20ff60c4f7858</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Client *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Client *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0fcf7235f702cf328179828694540a22</anchor>
+      <anchor>ga34386feb4131b5156227eb0655a90de5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -12867,6 +13140,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 2U, 1U &gt;</type>
+      <name>KF21f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga426646eae28eb2ead5fb30e52236b596</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 2U, 1U &gt;</type>
+      <name>KF21d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga9a3d612f2c29b0b2b7d846915d74e797</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 3U, 3U &gt;</type>
       <name>KF33f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -12878,6 +13165,34 @@
       <name>KF33d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>ga242c68ebe3c161c977f8de0132c34e15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 1U &gt;</type>
+      <name>KF31f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5fdfb78938e1e0916d10a498423dd976</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 1U &gt;</type>
+      <name>KF31d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga21757f8ed17a8d04bed804e31677ab3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 3U, 2U &gt;</type>
+      <name>KF32f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad2dc9194776c04a81d907e201de0b3b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 3U, 2U &gt;</type>
+      <name>KF32d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga48e9977a0582e650ba0c236880bab89f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -12895,6 +13210,20 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>KalmanFilter&lt; float, 4U, 2U &gt;</type>
+      <name>KF42f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga5bae92e5e4d77b6f044074dd650764fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 4U, 2U &gt;</type>
+      <name>KF42d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga28cbf4cc24101fce8ea02f92a2441f45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>KalmanFilter&lt; float, 6U, 6U &gt;</type>
       <name>KF66f</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
@@ -12906,6 +13235,34 @@
       <name>KF66d</name>
       <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
       <anchor>gafaeab61c60ca53efd1b1b4271ee022ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 3U &gt;</type>
+      <name>KF63f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gaa20d4abc297cee57016e51b0bb975771</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 3U &gt;</type>
+      <name>KF63d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad814de03bc3220512f1acc4851dcdd65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; float, 6U, 4U &gt;</type>
+      <name>KF64f</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>gad8b1bf063876f180c64a8e58ddd69ef5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>KalmanFilter&lt; double, 6U, 4U &gt;</type>
+      <name>KF64d</name>
+      <anchorfile>d7/dff/group__core__kalman.html</anchorfile>
+      <anchor>ga79b954880b2fa90aac6aec4ce5429d9f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13126,17 +13483,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Server *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Server *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9ed79ffc7202a7e91d8242b5a9765799</anchor>
+      <anchor>ga3c38a4a10300b3dc79b20ff60c4f7858</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>::std::tuple&lt; UA_Client *, ::std::string &gt;</type>
+      <type>::std::tuple&lt; UA_Client *, ::std::string, uint16_t &gt;</type>
       <name>FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0fcf7235f702cf328179828694540a22</anchor>
+      <anchor>ga34386feb4131b5156227eb0655a90de5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -13421,6 +13778,34 @@
       <name>Matx15f</name>
       <anchorfile>d9/d31/group__rmath.html</anchorfile>
       <anchor>gaa7eccde66ceaff8fb6f579a2343fd9b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 1 &gt;</type>
+      <name>Matx51d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga20dbe0b603e87f245c2cac55c510084c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 1, 5 &gt;</type>
+      <name>Matx15d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>ga9c8e9ab47eb9b1e4a0e13eadea7ebac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 5, 5 &gt;</type>
+      <name>Matx55f</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gaf425b8d23b7c8e7da3329cbab298e9e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 5 &gt;</type>
+      <name>Matx55d</name>
+      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchor>gad850502463ba3479686bf6e39f362c66</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -14311,7 +14696,7 @@
   </compound>
   <compound kind="group">
     <name>types</name>
-    <title>类型系统</title>
+    <title>视觉功能相关的类型系统</title>
     <filename>d6/d59/group__types.html</filename>
     <class kind="struct">rm::RMStatus</class>
     <member kind="enumeration">
@@ -14609,6 +14994,8 @@
     <title>构建并安装 RMVL</title>
     <filename>d1/db4/tutorial_install.html</filename>
     <docanchor file="d1/db4/tutorial_install.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_install</docanchor>
+    <docanchor file="d1/db4/tutorial_install.html" title="1.3 硬件设备 SDK">install_hardware_sdk</docanchor>
+    <docanchor file="d1/db4/tutorial_install.html" title="1.4 onnxruntime">install_onnxruntime</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_use</name>
@@ -14665,6 +15052,12 @@
     <title>卡尔曼滤波</title>
     <filename>dd/dc3/tutorial_modules_kalman.html</filename>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_kalman</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.2 初尝递归算法">kalman_recursive</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.3 数据融合">kalman_data_fusion</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.4 协方差矩阵">kalman_covariance_matrix</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.5 卡尔曼增益推导">kalman_gain_derivate</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.6 误差协方差矩阵">kalman_error_covairance_matrix</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.7 汇总">kalman_filter_fomulars</docanchor>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="参考文献">ref_paper</docanchor>
   </compound>
   <compound kind="page">
@@ -14688,6 +15081,7 @@
     <title>常微分方程（组）数值解与 Runge-Kutta 算法</title>
     <filename>d6/d31/tutorial_modules_runge_kutta.html</filename>
     <docanchor file="d6/d31/tutorial_modules_runge_kutta.html">md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_runge_kutta</docanchor>
+    <docanchor file="d6/d31/tutorial_modules_runge_kutta.html" title="3.4 方程组的 Runge-Kutta 公式">equations_runge_kutta</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_serial</name>

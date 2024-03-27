@@ -91,15 +91,15 @@ $(function() {
 </ul>
 </li>
 <li class="level1"><a href="#tutorial_documentation_quick_start">快速开始</a><ul><li class="level2"><a href="#tutorial_documentation_layout">文档布局</a></li>
-<li class="level2"><a href="#tutorial_documentation_content">详细内容</a><ul><li class="level3"><a href="#autotoc_md122">1. 基本命令</a></li>
-<li class="level3"><a href="#autotoc_md123">2. 页面相关</a><ul><li class="level4"><a href="#autotoc_md124">2.1 Markdown 支持</a></li>
-<li class="level4"><a href="#autotoc_md125">2.2 标题 ID</a></li>
-<li class="level4"><a href="#autotoc_md126">2.3 子页面与跳转</a></li>
+<li class="level2"><a href="#tutorial_documentation_content">详细内容</a><ul><li class="level3"><a href="#autotoc_md120">1. 基本命令</a></li>
+<li class="level3"><a href="#autotoc_md121">2. 页面相关</a><ul><li class="level4"><a href="#autotoc_md122">2.1 Markdown 支持</a></li>
+<li class="level4"><a href="#autotoc_md123">2.2 标题 ID</a></li>
+<li class="level4"><a href="#autotoc_md124">2.3 子页面与跳转</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md127">3. 代码块</a></li>
-<li class="level3"><a href="#autotoc_md128">4. 按钮</a></li>
-<li class="level3"><a href="#autotoc_md129">按钮示例</a></li>
+<li class="level3"><a href="#autotoc_md125">3. 代码块</a></li>
+<li class="level3"><a href="#autotoc_md126">4. 按钮</a></li>
+<li class="level3"><a href="#autotoc_md127">按钮示例</a></li>
 </ul>
 </li>
 </ul>
@@ -172,7 +172,7 @@ Doxygen 概述</h1>
  * @return 相对角度，目标在图像右方，point.x 为正，目标在图像下方，point.y 为正
  */
 cv::Point2f calculateRelativeAngle(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center);
-</pre><h3><a class="anchor" id="autotoc_md122"></a>
+</pre><h3><a class="anchor" id="autotoc_md120"></a>
 1. 基本命令</h3>
 <ul>
 <li><b>brief</b> - 表示一段函数、类、枚举、结构的简要信息</li>
@@ -209,22 +209,22 @@ cv::Point2f calculateRelativeAngle(const cv::Matx33f &amp;cameraMatrix, cv::Poin
 </li>
 <li><b>defgroup</b> 与 <b>addtogroup</b> -</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md123"></a>
+<h3><a class="anchor" id="autotoc_md121"></a>
 2. 页面相关</h3>
-<h4><a class="anchor" id="autotoc_md124"></a>
+<h4><a class="anchor" id="autotoc_md122"></a>
 2.1 Markdown 支持</h4>
 <p>Doxygen 支持部分 Markdown 语法与扩展，本篇教程页面同样使用了很多的 Markdown 语法。</p>
-<h4><a class="anchor" id="autotoc_md125"></a>
+<h4><a class="anchor" id="autotoc_md123"></a>
 2.2 标题 ID</h4>
 <p>每个文档页面都应该为自己设置一个 ID，比如本篇教程的标题和 ID 如下</p>
 <pre class="fragment">为 RMVL 撰写说明文档 {#tutorial_document}
-</pre><h4><a class="anchor" id="autotoc_md126"></a>
+</pre><h4><a class="anchor" id="autotoc_md124"></a>
 2.3 子页面与跳转</h4>
 <p>使用以下命令进行子页面的跳转</p>
 <pre class="fragment">@subpage xxx
 </pre><p>使用以下命令进行页面内或其他地方的引用</p>
 <pre class="fragment">@ref xxx
-</pre><h3><a class="anchor" id="autotoc_md127"></a>
+</pre><h3><a class="anchor" id="autotoc_md125"></a>
 3. 代码块</h3>
 <p>使用以下命令创建代码块</p>
 <pre class="fragment">@code{.cpp}
@@ -232,7 +232,7 @@ std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
 @endcode
 </pre><p>渲染结果如下</p>
 <div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md128"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md126"></a>
 4. 按钮</h3>
 <p>使用以下命令创建按钮</p>
 <pre class="fragment">### 按钮示例
@@ -256,7 +256,7 @@ std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
     @endcode
 
 @end_toggle</pre><p>渲染结果如下</p>
-<h3><a class="anchor" id="autotoc_md129"></a>
+<h3><a class="anchor" id="autotoc_md127"></a>
 按钮示例</h3>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>This is C++. </p><div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><p>This is Python. </p><div class="fragment"><div class="line">print(<span class="stringliteral">&quot;Hello World&quot;</span>)</div>
@@ -273,7 +273,7 @@ std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

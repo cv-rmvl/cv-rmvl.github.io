@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixchannel_2015',['PixChannel',['../d7/dbd/group__imgproc.html#ga0c0d16290797cbf7399f9bedf3784e34',1,'rm']]]
+  ['pixchannel_2049',['PixChannel',['../d7/dbd/group__imgproc.html#ga0c0d16290797cbf7399f9bedf3784e34',1,'rm']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['findnodeinclient_1976',['FindNodeInClient',['../d3/da8/group__opcua.html#ga0fcf7235f702cf328179828694540a22',1,'rm']]],
-  ['findnodeinserver_1977',['FindNodeInServer',['../d3/da8/group__opcua.html#ga9ed79ffc7202a7e91d8242b5a9765799',1,'rm']]]
+  ['findnodeinclient_1994',['FindNodeInClient',['../d3/da8/group__opcua.html#ga34386feb4131b5156227eb0655a90de5',1,'rm']]],
+  ['findnodeinserver_1995',['FindNodeInServer',['../d3/da8/group__opcua.html#ga3c38a4a10300b3dc79b20ff60c4f7858',1,'rm']]]
 ];

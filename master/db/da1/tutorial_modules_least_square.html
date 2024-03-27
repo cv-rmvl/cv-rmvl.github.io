@@ -85,11 +85,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md171">1. 概念</a></li>
-<li class="level2"><a href="#autotoc_md172">2. 超定线性方程组</a></li>
-<li class="level2"><a href="#autotoc_md173">3. 示例</a></li>
-<li class="level2"><a href="#autotoc_md175">4. 法方程求解最小二乘法</a></li>
-<li class="level2"><a href="#autotoc_md176">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md178">参考书籍</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md160">1. 概念</a></li>
+<li class="level2"><a href="#autotoc_md161">2. 超定线性方程组</a></li>
+<li class="level2"><a href="#autotoc_md162">3. 示例</a></li>
+<li class="level2"><a href="#autotoc_md164">4. 法方程求解最小二乘法</a></li>
+<li class="level2"><a href="#autotoc_md165">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md167">参考书籍</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +104,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md160"></a>
 1. 概念</h2>
 <p>最小二乘法诞生于统计学，其最初的目标是使用一条直线拟合一系列离散的点，那么我们该如何寻找这一直线？最小二乘法的原理是使得拟合直线的误差的平方和最小。这里的误差定义成每一个离散的点 \(x_i\)与拟合直线的 <b>距离</b> 。在这一最初的用法中，点到直线的距离能够很直观的描述成点到直线的 <b>垂线</b> 的长度。</p>
 <center> <img src="../../ls-line-vertical.png" alt="" class="inline" title="ls-line-vertical"/></center><center>图 1-1 </center><p>如图 1-1 所示，令直线外一点为 \(P\)，直线为 \(l\)，垂线为 \(l_0\)，垂足为点 \(O\)。最小二乘法就是构建一条直线，使得这些点 \(P_i\)到这条直线的距离平方和最小，此时 \(O_i\)点被称为 <b>最小二乘解</b> 。</p>
@@ -142,7 +142,7 @@ $(function() {
 \[\pmb a^T(\pmb y-\pmb b)=0\tag{1-5}\]
 </p>
 <p>为此我们得到了最小二乘解 \(\pmb y\) 的表达式，这也为后文超定线性方程组的最小二乘解提供了理论基础。</p>
-<h2><a class="anchor" id="autotoc_md172"></a>
+<h2><a class="anchor" id="autotoc_md161"></a>
 2. 超定线性方程组</h2>
 <p>有时候我们会遇到这一类形如 \(A\pmb x=\pmb b\) 的方程组</p>
 <p class="formulaDsp">
@@ -190,7 +190,7 @@ $(function() {
 \[ \boxed{\hat{\pmb x}=\left(A^TA\right)^{-1}A^T\pmb b}\tag{2-7} \]
 </p>
 <p>这就是最小二乘解所满足的代数方程。</p>
-<h2><a class="anchor" id="autotoc_md173"></a>
+<h2><a class="anchor" id="autotoc_md162"></a>
 3. 示例</h2>
 <p>下面给出 3 个示例，不直接使用公式 \(\text{(2-7)}\)，通过几何或者其他手段来表示最小二乘解。</p>
 <p><span style="color: green"><b>示例 1</b></span></p>
@@ -288,7 +288,7 @@ $(function() {
 </p>
 <hr  />
 <p>后文将给出另外一种描述最小二乘法的做法，这种做法有别于上面构造向量与子空间垂直的方式，通过对误差平方和直接求其最小值来得到最小二乘解（两种方式结果均能推导出公式 \(\text{(2-7)}\)，但出发点不同）。此外，要介绍的这个解法也同样适用于整个线性空间（包括欧式空间、多项式空间等线性空间）。</p>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md164"></a>
 4. 法方程求解最小二乘法</h2>
 <p>相关类 <a class="el" href="../../d0/d80/classrm_1_1CurveFitter.html" title="曲线拟合器">rm::CurveFitter</a></p>
 <p>后文会以多项式空间为例，从 \(\delta^2\) 的极值（最小值）入手，通过对该误差平方和求导数的方式获得该最优解，这也是数值分析教材中普遍采用的做法。在本小节后，会使用这一方法求解<span style="color: green"><b>示例 3</b></span>的问题。</p>
@@ -310,21 +310,25 @@ $(function() {
 </p>
 <p>不同的 2 个数字向量的内积定义为 \((\pmb\alpha,\pmb\beta)=\sum\limits_{i=0}^sa_ib_i\)，同样的，多项式不同的 2 个分量（例如 \(\phi_1(t)=t\) 和 \(\phi_2(t)=t^2\) 就是不同的分量）之间的内积可以定义为 \((\phi_p(t),\phi_q(t))=\sum\limits_{i=0}^{s-1}\phi_p(t_i)\phi_q(t_i)\)，简记为 \((\phi_p,\phi_q)\)。则有</p>
 <p class="formulaDsp">
-\[\left\{\begin{align} (\phi_k,\phi_j)&amp;=\sum_{i=0}^{s-1}\phi_k(t_i)\phi_j(t_i)\\ (\phi_k,f)&amp;=\sum_{i=0}^{s-1}\phi_k(t_i)f(t_i)\equiv d_k\\ \end{align}\right.\tag{4-4}\]
+\[\left\{\begin{align} \sum_{i=0}^{s-1}\phi_k(t_i)\phi_j(t_i)&amp;=(\phi_k,\phi_j)\\ \sum_{i=0}^{s-1}\phi_k(t_i)f(t_i)&amp;=(\phi_k,f)\equiv d_k\\ \end{align}\right.\tag{4-4}\]
 </p>
 <p>于是公式 \(\text{(4-3)}\) 可以写成</p>
 <p class="formulaDsp">
-\[\sum_{j=0}^{n-1}(\phi_k,\phi_j)=d_k\qquad(k=0,1,\cdots,n-1)\tag{4-5a}\]
+\[\sum_{j=0}^{n-1}(\phi_k,\phi_j)a_j=d_k\qquad(k=0,1,\cdots,n-1)\tag{4-5a}\]
 </p>
 <p>或者展开写为</p>
 <p class="formulaDsp">
-\[\left\{\begin{matrix} (\phi_0,\phi_0)a_0&amp;+&amp;(\phi_0,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_0,\phi_{n-1})a_{n-1}&amp;=&amp;d_0\\ (\phi_1,\phi_0)a_0&amp;+&amp;(\phi_1,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_1,\phi_{n-1})a_{n-1}&amp;=&amp;d_1\\ \vdots&amp;&amp;\vdots&amp;&amp;&amp;&amp;\vdots&amp;=&amp;\vdots\\ (\phi_{n-1},\phi_0)a_0&amp;+&amp;(\phi_{n-1},\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_{n-1},\phi_{n-1})a_{n-1}&amp;=&amp;d_{n-1}\\ \end{matrix}\right.\tag{4-5b}\]
+\[(\phi_k,\phi_0)a_0+(\phi_k,\phi_1)a_1+\cdots+(\phi_k,\phi_{n-1})a_{n-1}=d_k\qquad(k=0,1,\cdots,n-1)\tag{4-5b}\]
+</p>
+<p>对每一个 \(k\) 值，可以一并写成如下形式</p>
+<p class="formulaDsp">
+\[\left\{\begin{matrix} (\phi_0,\phi_0)a_0&amp;+&amp;(\phi_0,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_0,\phi_{n-1})a_{n-1}&amp;=&amp;d_0\\ (\phi_1,\phi_0)a_0&amp;+&amp;(\phi_1,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_1,\phi_{n-1})a_{n-1}&amp;=&amp;d_1\\ \vdots&amp;&amp;\vdots&amp;&amp;&amp;&amp;\vdots&amp;=&amp;\vdots\\ (\phi_{n-1},\phi_0)a_0&amp;+&amp;(\phi_{n-1},\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_{n-1},\phi_{n-1})a_{n-1}&amp;=&amp;d_{n-1}\\ \end{matrix}\right.\tag{4-5c}\]
 </p>
 <p>上式称为 \(a_0,a_1,\cdots,a_{n-1}\) 的<span style="color: red">法方程（组）</span>，是 \(n\) 阶线性方程组，其系数矩阵是</p>
 <p class="formulaDsp">
 \[G=\begin{bmatrix} (\phi_0,\phi_0)&amp;(\phi_0,\phi_1)&amp;\cdots&amp;(\phi_0,\phi_{n-1})\\ (\phi_1,\phi_0)&amp;(\phi_1,\phi_1)&amp;\cdots&amp;(\phi_1,\phi_{n-1})\\ \vdots&amp;\vdots&amp;&amp;\vdots\\ (\phi_{n-1},\phi_0)&amp;(\phi_{n-1},\phi_1)&amp;\cdots&amp;(\phi_{n-1},\phi_{n-1})\\ \end{bmatrix}\tag{4-6}\]
 </p>
-<p>对于 \((\phi_p,\phi_q)\)，可以写成矩阵的表示方式，即</p>
+<p>对于 \((\phi_p,\phi_q)\)，依照公式 \(\text{(4-4)}\)，可以写成矩阵的表示方式，即</p>
 <p class="formulaDsp">
 \[\begin{align}(\phi_p,\phi_q)&amp;=\sum_{i=0}^{s-1}\phi_p(t_i)\phi_q(t_i)\\&amp;=[\phi_p(t_0),\phi_p(t_1),\cdots,\phi_p(t_{s-1})] \begin{bmatrix}\phi_i(t_0)\\\phi_i(t_1)\\\vdots\\\phi_q(t_{s-1})\end{bmatrix}\end{align}\tag{4-7}\]
 </p>
@@ -345,6 +349,7 @@ $(function() {
 \[\boxed{\hat{\pmb a}=\left(A^TA\right)^{-1}A^T\pmb f}\tag{4-11}\]
 </p>
 <p>这与公式 \(\text{(2-7)}\) 完全一致。</p>
+<p>此外，对于形如 \(G\pmb a=\pmb d\ (G=A^TA)\) 的方程组，我们在求解的时候可以使用平方根法，即 Cholesky 方法进行求解，OpenCV 中对应的枚举类型为 <code>cv::DECOMP_CHOLESKY</code>。</p>
 <p>对于<span style="color: green"><b>示例 3</b></span>，可以依次计算出</p>
 <p class="formulaDsp">
 \[\begin{align} (\phi_0,\phi_0)&amp;=\sum_{i=0}^3\phi_0(t_i)\phi_0(t_i)=\sum_{i=0}^31\times1=4\\ (\phi_1,\phi_0)=(\phi_0,\phi_1)&amp;=\sum_{i=0}^3\phi_0(t_i)\phi_1(t_i)=\sum_{i=0}^31\times t_i=1+2+3+4=10\\ (\phi_1,\phi_1)&amp;=\sum_{i=0}^3\phi_1(t_i)\phi_1(t_i)=\sum_{i=0}^3t_i\times t_i=1+4+9+16=30\\ d_0=(\phi_0,f)&amp;=\sum_{i=0}^3\phi_0(t_i)f(t_i)=\sum_{i=0}^31\times f(t_i)=0+2+1+3=6\\ d_1=(\phi_1,f)&amp;=\sum_{i=0}^3\phi_1(t_i)f(t_i)=\sum_{i=0}^3t_i\times f(t_i)=0+2\times2+3\times1+4\times3=19\\ \end{align}\tag{4-12}\]
@@ -354,7 +359,7 @@ $(function() {
 \[\begin{bmatrix}4&amp;10\\10&amp;30\end{bmatrix}\hat{\pmb a}= \begin{bmatrix}6\\19\end{bmatrix}\tag{4-13}\]
 </p>
 <p>解得： \(\left\{\begin{align}a_0&amp;=-0.5\\a_1&amp;=0.8\end{align}\right.\)，即拟合曲线为 \(y=-0.5+0.8t\)，使用数学绘图软件验证，结果正确。</p>
-<center> <img src="../../ls-eg3.png" alt="" class="inline" title="ls-eg3"/></center><center>图 4-1 </center><h2><a class="anchor" id="autotoc_md176"></a>
+<center> <img src="../../ls-eg3.png" alt="" class="inline" title="ls-eg3"/></center><center>图 4-1 </center><h2><a class="anchor" id="autotoc_md165"></a>
 5. 部署使用</h2>
 <p>OpenCV 中提供了最小二乘法求解的函数 <code>cv::solve()</code>，并设置有 2 个相关的成员函数，其函数原型如下。此外可参考 <a href="https://docs.opencv.org/4.x/d2/de8/group__core__array.html#ga12b43690dbd31fed96f213eefead2373">cv::solve</a> 的 OpenCV 手册。</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> cv::solve(</div>
@@ -365,7 +370,7 @@ $(function() {
 <div class="line">);</div>
 </div><!-- fragment --><hr  />
 <p>有关递推最小二乘法的介绍可参考 <a class="el" href="../../d3/ded/tutorial_extra_spi_rune_predictor.html">k 步前向预估神符预测</a> 。</p>
-<h3><a class="anchor" id="autotoc_md178"></a>
+<h3><a class="anchor" id="autotoc_md167"></a>
 参考书籍</h3>
 <p><a class="el" href="../../d0/de3/citelist.html#CITEREF_tongji_linear_algebra">[8]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_luo2013matrix">[9]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_numerical_analysis">[10]</a> </p>
 </div></div><!-- contents -->
@@ -373,7 +378,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

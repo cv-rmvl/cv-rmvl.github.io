@@ -85,8 +85,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md131">交叉编译应具备的先决条件</a></li>
-<li class="level2"><a href="#autotoc_md132">构建 RMVL</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md129">交叉编译应具备的先决条件</a></li>
+<li class="level2"><a href="#autotoc_md130">使用提供的工具链构建 RMVL</a></li>
+<li class="level2"><a href="#autotoc_md131">自定义工具链构建 RMVL</a></li>
 </ul>
 </ul>
 </div>
@@ -95,31 +96,52 @@ $(function() {
 <b>下一篇教程：</b><a class="el" href="../../d5/d72/tutorial_document.html">为 RMVL 撰写说明文档</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md131"></a>
+<h2><a class="anchor" id="autotoc_md129"></a>
 交叉编译应具备的先决条件</h2>
 <ul>
 <li>Linux 主机</li>
 <li><img src="https://img.shields.io/badge/CMake-3.16+-green" alt="img" class="inline"/></li>
 <li><img src="https://img.shields.io/badge/OpenCV_for_ARM-4.2.0+-red" alt="img" class="inline"/> <a href="https://github.com/opencv/opencv/releases/latest">点击此处下载最新发行版</a></li>
-<li>ARM 的交叉编译工具：gcc，libstdc++.so 等内容，根据目标平台的不同，您需要选择 <code>gneabi</code> 或 <code>gneabihf</code> 工具。<code>gneabi</code> 安装命令如下 <div class="fragment"><div class="line">sudo apt install gcc-arm-linux-gneabi</div>
-</div><!-- fragment --> <code>gneabihf</code> 安装命令如下 <div class="fragment"><div class="line">sudo apt install gcc-arm-linux-gneabihf</div>
-</div><!-- fragment --></li>
+<li>ARM 的交叉编译工具：gcc，libstdc++.so 等内容，根据目标平台的不同，您需要选择 <code>gneabi</code> 或 <code>gneabihf</code> 工具。</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md132"></a>
-构建 RMVL</h2>
-<ol type="1">
-<li>在 RMVL 目录下创建 <code>build</code> 文件夹，运行以下命令 <div class="fragment"><div class="line">cd build</div>
-<div class="line">cmake [&lt;some optional parameters&gt;] -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/arm-gnueabi.toolchain.cmake ..</div>
-</div><!-- fragment --></li>
-<li>运行构建 <code>make</code> <div class="fragment"><div class="line">make -j4</div>
-</div><!-- fragment --> </li>
-</ol>
+<p><code>gneabi</code> 安装命令如下</p>
+<div class="fragment"><div class="line">sudo apt install gcc-arm-linux-gneabi</div>
+</div><!-- fragment --><p><code>gneabihf</code> 安装命令如下</p>
+<div class="fragment"><div class="line">sudo apt install gcc-arm-linux-gneabihf</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md130"></a>
+使用提供的工具链构建 RMVL</h2>
+<p>在 RMVL 目录下创建 <code>build</code> 文件夹，运行以下命令</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line">cmake -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/arm-gnueabi.toolchain.cmake ..</div>
+</div><!-- fragment --><p>上文代码中的 CMake 配置也可使用 <code>cmake-gui</code> 或者 <code>ccmake</code> 工具，例如使用 <code>ccmake</code> 则需要改写为</p>
+<div class="fragment"><div class="line">ccmake -DCMAKE_TOOLCHAIN_FILE=../platforms/linux/arm-gnueabi.toolchain.cmake ..</div>
+</div><!-- fragment --><p>运行构建 <code>make</code></p>
+<div class="fragment"><div class="line">make -j4</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md131"></a>
+自定义工具链构建 RMVL</h2>
+<p>如果交叉编译器是通过编译内核源码获取到的，在使用这类指定的交叉编译器进行编译时，自定义工具链是个有效的方法。</p>
+<p>工具链文件的一般写法如下</p>
+<div class="fragment"><div class="line"># toolchain.cmake</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_SYSTEM_NAME Linux)</div>
+<div class="line">set(CMAKE_SYSTEM_PROCESSOR aarch64)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_C_COMPILER &quot;/path/to/xxx-gcc&quot;)</div>
+<div class="line">set(CMAKE_CXX_COMPILER &quot;/path/to/xxx-g++&quot;)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_FIND_ROOT_PATH &quot;/path/to/&quot;)</div>
+<div class="line">set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)</div>
+<div class="line">set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)</div>
+<div class="line">set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)</div>
+</div><!-- fragment --><p>然后进入 RMVL 项目根目录，在终端中输入</p>
+<div class="fragment"><div class="line">cmake -DCMAKE_TOOLCHAIN_FILE=/path/to/toolchain.cmake ..</div>
+</div><!-- fragment --><p>同样，CMake 配置也可使用 <code>cmake-gui</code> 或者 <code>ccmake</code> 工具。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>

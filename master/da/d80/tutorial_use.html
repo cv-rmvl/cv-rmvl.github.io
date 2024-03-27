@@ -85,10 +85,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md116">详细步骤</a><ul><li class="level3"><a href="#autotoc_md117">1. 创建项目</a></li>
-<li class="level3"><a href="#autotoc_md118">2. 编写测试文件</a></li>
-<li class="level3"><a href="#autotoc_md119">3. 构建项目</a></li>
-<li class="level3"><a href="#autotoc_md120">4. 运行</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md114">详细步骤</a><ul><li class="level3"><a href="#autotoc_md115">1. 创建项目</a></li>
+<li class="level3"><a href="#autotoc_md116">2. 编写测试文件</a></li>
+<li class="level3"><a href="#autotoc_md117">3. 构建项目</a></li>
+<li class="level3"><a href="#autotoc_md118">4. 运行</a></li>
 </ul>
 </li>
 </ul>
@@ -101,16 +101,19 @@ $(function() {
 </p>
 <hr  />
 <p><b>注意</b></p>
-<p><span style="color: red">必须确保您已经成功安装了 RMVL</span>。如果你不熟悉 CMake，请移步到 CMake <a href="https://cmake.org/cmake/help/latest">教程</a></p>
-<h2><a class="anchor" id="autotoc_md116"></a>
+<ul>
+<li><span style="color: red">必须确保您已经成功安装了 RMVL</span>。如果你不熟悉 CMake，请移步到 CMake <a href="https://cmake.org/cmake/help/latest">教程</a></li>
+<li>本示例使用到了 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html" title="装甲板识别模块">rm::ArmorDetector</a> 模块，需要提前安装 onnxruntime 的 C++ 开发包，可参考 <a class="el" href="../../d1/db4/tutorial_install.html#install_onnxruntime">1.4 onnxruntime</a> 的内容，若未安装，请安装后再重新编译 RMVL。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md114"></a>
 详细步骤</h2>
-<h3><a class="anchor" id="autotoc_md117"></a>
+<h3><a class="anchor" id="autotoc_md115"></a>
 1. 创建项目</h3>
 <p>创建新的文件夹：<code>rmvl_deploy_test</code>，将其链接至 RMVL</p>
 <div class="fragment"><div class="line">mkdir rmvl_deploy_test build</div>
 <div class="line">cd rmvl_deploy_test</div>
 <div class="line">touch main.cpp CMakeLists.txt</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md118"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md116"></a>
 2. 编写测试文件</h3>
 <p><b>编写 main.cpp</b></p>
 <p>将以下内容写至 <code>main.cpp</code> 中</p>
@@ -170,13 +173,13 @@ $(function() {
 <div class="line">    demo</div>
 <div class="line">    PRIVATE ${RMVL_LIBS}</div>
 <div class="line">)</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md119"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md117"></a>
 3. 构建项目</h3>
 <p>在 <code>rmvl_deploy_test</code> 的顶层文件夹中打开终端，输入以下命令</p>
 <div class="fragment"><div class="line">cd build</div>
 <div class="line">cmake ..</div>
 <div class="line">make</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md120"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md118"></a>
 4. 运行</h3>
 <p>继续输入以下命令</p>
 <div class="fragment"><div class="line">./demo</div>
@@ -185,7 +188,7 @@ $(function() {
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-生成于 2024年 三月 9日 星期六 23:31:11 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+生成于 2024年 三月 27日 星期三 23:23:36 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.png" alt="doxygen"/>
 </a> 1.9.1
 </small></address>
