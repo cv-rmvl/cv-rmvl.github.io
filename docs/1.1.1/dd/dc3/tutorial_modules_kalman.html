@@ -1,0 +1,311 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 卡尔曼滤波模块</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">卡尔曼滤波模块 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md149">1. 卡尔曼滤波理论</a><ul><li class="level2"><a href="#autotoc_md150">1.1 卡尔曼滤波器是做什么的？</a></li>
+<li class="level2"><a href="#autotoc_md151">1.2 重要变量的推导</a><ul><li class="level3"><a href="#autotoc_md152">1.2.1 方差和协方差</a></li>
+<li class="level3"><a href="#autotoc_md153">1.2.2 递归</a></li>
+<li class="level3"><a href="#autotoc_md154">1.2.3 数据融合</a></li>
+<li class="level3"><a href="#autotoc_md155">1.2.4 状态空间方程</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md156">1.3 卡尔曼滤波的公式</a><ul><li class="level3"><a href="#autotoc_md157">1.3.1 预测</a></li>
+<li class="level3"><a href="#autotoc_md158">1.3.2 更新</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md159">2. 卡尔曼滤波模块的用法</a><ul><li class="level2"><a href="#autotoc_md160">2.1 如何配置</a></li>
+<li class="level2"><a href="#autotoc_md161">2.2 如何使用</a><ul><li class="level3"><a href="#autotoc_md162">2.2.1 包含头文件</a></li>
+<li class="level3"><a href="#autotoc_md163">2.2.2 创建并初始化卡尔曼滤波器对象</a></li>
+<li class="level3"><a href="#autotoc_md164">2.2.3 运行</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#ref_paper">参考文献</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><p>从一维进行 <b>KalmanFilter</b> 理论的介绍和公式推导，并在高维度进行类比和推广</p>
+<p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_core_kalman"></a></p>
+<dl class="section author"><dt>作者</dt><dd>张华铨 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022/10/11 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">待办事项:</a></b></dt><dd><b>2.0</b> 从状态空间方程的角度以及最优化控制的角度推导</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../db/dba/tutorial_modules_opcua.html">OPC UA</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法</a> ↓<br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html" title="轻量级 cv::Matx 的卡尔曼滤波模块">rm::KalmanFilter</a></p>
+<h1><a class="anchor" id="autotoc_md149"></a>
+1. 卡尔曼滤波理论</h1>
+<h2><a class="anchor" id="autotoc_md150"></a>
+1.1 卡尔曼滤波器是做什么的？</h2>
+<p>估计目标的当前位置，并以最高置信度获得当前位置。</p>
+<p>如果有一辆车以恒定速度行驶，现在我得到两个数据：汽车的当前位置和汽车的当前距离传感器数据，根据匀速公式计算</p>
+<p><img src="https://s1.ax1x.com/2022/10/11/xNlnw6.png" alt="" width="680" height="380" class="inline"/></p>
+<p>由于自身的原因，它的位置不是由匀速运动公式得到的精确位置，它的距离传感器数据也不完全准确。两者都有一定的误差。那么我们现在如何估计汽车的实际位置呢？</p>
+<p>对于两者的置信度，不难想象，环境越复杂，公式得到的位置置信度越低。传感器越先进，置信度就越高。如果我们现在有了两条信息的置信度，我们就可以根据卡尔曼滤波对这两条数据进行处理，得到具有最高数学置信度的实际位置。</p>
+<h2><a class="anchor" id="autotoc_md151"></a>
+1.2 重要变量的推导</h2>
+<h3><a class="anchor" id="autotoc_md152"></a>
+1.2.1 方差和协方差</h3>
+<p>方差</p>
+<p class="formulaDsp">
+\[ Var(x)=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})^2}{n}\tag1 \]
+</p>
+<p>协方差</p>
+<p class="formulaDsp">
+\[ Cov(x,y)=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{n}\tag2 \]
+</p>
+<h3><a class="anchor" id="autotoc_md153"></a>
+1.2.2 递归</h3>
+<p>如果使用同一个传感器多次测量一个数据（每次都会产生一个随机误差），就可以得到</p>
+<p class="formulaDsp">
+\[ z_1,\ z_2,\ z_3\ \dots\ z_n \]
+</p>
+<p>计算平均</p>
+<p class="formulaDsp">
+\[ \begin{array}{lll} \hat x_n&amp;=&amp;\frac1n\sum\limits_{i=1}^nz_i\\ &amp;=&amp;\frac1n\sum\limits_{i=1}^{n-1}z_i+\frac1nz_n\\ &amp;=&amp;\frac{n-1}n\frac1{n-1}\sum\limits_{i=1}^{n-1}+\frac{1}{n}z_n\\ &amp;=&amp;\frac{n-1}{n}\hat{x}_{n-1}+\frac{1}{n}z_n\\ &amp;=&amp;\hat{x}_{n-1}+\frac{1}{n}(z_n-\hat{x}_{n-1})\\ &amp;=&amp;\hat{x}_{n-1}+K_n(z_n-\hat{x}_{n-1})\\ \end{array}\tag3 \]
+</p>
+<p>\(K_n\): 卡尔曼增益</p>
+<p>卡尔曼滤波的特点：只需要最后一帧的数据， <b>不需要</b> 保留更多的数据。</p>
+<p><b>若：</b></p>
+<ul>
+<li>Error of estimation: \(e_{EST}\)</li>
+<li>Error of meaturement: \(e_{MEA}\)</li>
+</ul>
+<p><b>则：</b></p>
+<p class="formulaDsp">
+\[ K_n=\frac{e_{EST_{n-1}}}{e_{EST_{n-1}}+e_{MEA_n}}\tag4 \]
+</p>
+<ul>
+<li>根据公式 \((3)\)，可以得出以下结论</li>
+</ul>
+<ol type="1">
+<li><p class="startli">\(e_{EST_{n-1}}\gg e_{MEA_n}\)</p>
+<p class="formulaDsp">
+\[ K_n\rightarrow1\\ e\hat{x}_{n-1}=\hat{x}_{n-1}+z_n-\hat{x}_{n-1}=z_n\tag5 \]
+</p>
+</li>
+<li><p class="startli">\(e_{EST_{n-1}}\ll e_{MEA_n}\)</p>
+<p class="formulaDsp">
+\[ K_n\rightarrow0\\ \hat{x}_n=\hat{x}_{n-1}\tag6 \]
+</p>
+</li>
+</ol>
+<ul>
+<li><p class="startli">Update:</p>
+<p class="formulaDsp">
+\[ e_{EST_n}=(1-K_n)e_{EST_{n-1}}\tag7 \]
+</p>
+</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>\(K_n\) 的导出过程与下面的 Kalman 公式的导出过程类似，这里不需要展开说明</dd></dl>
+<h3><a class="anchor" id="autotoc_md154"></a>
+1.2.3 数据融合</h3>
+<p>如果用两种不同的仪器同时测量一个数据（测量误差方差不同但已知），并且得到两个测量值: \(z_1，\ z_2\)，我们如何选择最优估计值？</p>
+<p>例如，如果 \(z_1，\ z_2\)的误差满足正态分布：</p>
+<p class="formulaDsp">
+\[ z_1=30,\ S_1=2\\ z_2=32,\ S_2=4 \]
+</p>
+<p class="formulaDsp">
+\[ \begin{array}{lll} \hat{z}&amp;=&amp;z_1+K(z_2-z_1)\qquad K\text{ is the parameter to be solved}\\ S_z^2&amp;=&amp;\text{Var}(z_1+K(z_2-z_1))\\ &amp;=&amp;\text{Var}((1-K)z_1+Kz_2)\\ &amp;=&amp;(1-K)^2\text{Var}(z_1)+K^2\text{Var}(z_2)\\ &amp;=&amp;(1-K)^2S_1^2+K^2S_2^2 \end{array}\tag8 \]
+</p>
+<p>令</p>
+<p class="formulaDsp">
+\[ \frac{\text{d}}{\text{d}x}((1-K)^2S_1^2+K^2S_2^2)=0\tag9 \]
+</p>
+<p>求解公式 \((9)\)，我们可以得到</p>
+<p class="formulaDsp">
+\[ K=\frac{S_1^2}{S_1^2+S_2^2}\tag{10} \]
+</p>
+<p>将 \(K\)代入下列公式</p>
+<p class="formulaDsp">
+\[ \hat{z}=z_1+K(z_2-z_1) \]
+</p>
+<p>则</p>
+<p class="formulaDsp">
+\[ S_z^2=(1-K)^2S_1^2+K^2S_2^2\tag{11} \]
+</p>
+<p>最终我们可以计算：</p>
+<p class="formulaDsp">
+\[ K=0.2,\ z=30.4,\ S_z=1.79 \]
+</p>
+<h3><a class="anchor" id="autotoc_md155"></a>
+1.2.4 状态空间方程</h3>
+<p class="formulaDsp">
+\[ \begin{array}{rrll} x_k&amp;=&amp;Ax_{k-1}+Bu_{k-1}+w_{k-1}&amp;w\sim N(0,Q)\\ z_k&amp;=&amp;Hx_k+v_k&amp;v\sim N(0, R) \end{array}\tag{12} \]
+</p>
+<p>例如</p>
+<p class="formulaDsp">
+\[ \begin{array}{rrl} p_k&amp;=&amp;p_{k-1}+v_{k-1}t+\frac12at^2\\v_k&amp;=&amp;v_{k-1}+at \end{array}\tag{13} \]
+</p>
+<p>将公式 \((13)\)转换为矩阵表示</p>
+<p class="formulaDsp">
+\[ \begin{bmatrix}p_k\\v_k\end{bmatrix} =\begin{bmatrix}1&amp;t\\0&amp;1\end{bmatrix} \begin{bmatrix}p_{k-1}\\v_{k-1}\end{bmatrix}+ \begin{bmatrix}\frac12t^2\\t\end{bmatrix} a+\begin{bmatrix}w_{p_k}\\w_{v_k}\end{bmatrix}\tag{14-1} \]
+</p>
+<p class="formulaDsp">
+\[ \begin{bmatrix}z_{p_k}\\z_{v_k}\end{bmatrix}= \begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix} \begin{bmatrix}p_k\\v_k\end{bmatrix}+ \begin{bmatrix}v_{p_k}\\v_{v_k}\end{bmatrix}\tag{14-2} \]
+</p>
+<h2><a class="anchor" id="autotoc_md156"></a>
+1.3 卡尔曼滤波的公式</h2>
+<h3><a class="anchor" id="autotoc_md157"></a>
+1.3.1 预测</h3>
+<p class="formulaDsp">
+\[ \begin{array}{rml} \hat x^-&amp;=&amp;A\hat x\\ P^-&amp;=&amp;APA^T+Q \end{array}\tag{15} \]
+</p>
+<h3><a class="anchor" id="autotoc_md158"></a>
+1.3.2 更新</h3>
+<p class="formulaDsp">
+\[ \begin{array}{rml} K&amp;=&amp;P^-H^T(HP^-H^T+R)^{-1}\\ \hat x&amp;=&amp;\hat x^-+K(z-H\hat x^-)\\ P&amp;=&amp;(I-KH)P^-\end{array}\tag{16} \]
+</p>
+<h1><a class="anchor" id="autotoc_md159"></a>
+2. 卡尔曼滤波模块的用法</h1>
+<h2><a class="anchor" id="autotoc_md160"></a>
+2.1 如何配置</h2>
+<p>首先必须要寻找 RMVL 包，即 <code>find_package(RMVL [OPTIONS])</code>，之后可直接在中使用在 CMakeLists.txt 中链接库</p>
+<div class="fragment"><div class="line">target_link_libraries(</div>
+<div class="line">    xxx</div>
+<div class="line">    rmvl_core</div>
+<div class="line">)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md161"></a>
+2.2 如何使用</h2>
+<h3><a class="anchor" id="autotoc_md162"></a>
+2.2.1 包含头文件</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d0f/kalman_8hpp.html">rmvl/core/kalman.hpp</a>&gt;</span></div>
+<div class="ttc" id="akalman_8hpp_html"><div class="ttname"><a href="../../db/d0f/kalman_8hpp.html">kalman.hpp</a></div><div class="ttdoc">包含轻量级 cv::Matx 的卡尔曼滤波模块</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md163"></a>
+2.2.2 创建并初始化卡尔曼滤波器对象</h3>
+<p>取</p><ul>
+<li>数据类型 <code>Tp</code> = <code>double</code></li>
+<li>状态量阶数 <code>StateDim</code> = <code>4</code></li>
+<li>观测量阶数 <code>MeatureDim</code> = <code>4</code></li>
+<li>控制量阶数 <code>ControlDim</code> = <code>1</code></li>
+</ul>
+<p>可以得到以下代码</p>
+<div class="fragment"><div class="line"><a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter&lt;double, 4, 4, 1&gt;</a> filter; <span class="comment">// 简写可以写成 rm::KF44d filter</span></div>
+<div class="line"> </div>
+<div class="line">filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#ac9bb6ce358dd2e81cda7dee60c9ae093">setR</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line">filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a97d5c8607435c14dcfccbb1bc35a2773">setQ</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line">cv::Vec&lt;float, state&gt; init_vec = {<span class="comment">/* ... */</span>};</div>
+<div class="line">filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a1b9b5e4f22846b7c7ed0cf21611f7ea1">init</a>(init_vec, pred_err);</div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a></div><div class="ttdoc">轻量级 cv::Matx 的卡尔曼滤波模块</div><div class="ttdef"><b>Definition:</b> kalman.hpp:41</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a1b9b5e4f22846b7c7ed0cf21611f7ea1"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a1b9b5e4f22846b7c7ed0cf21611f7ea1">rm::KalmanFilter::init</a></div><div class="ttdeci">void init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;state, Tp error)</div><div class="ttdoc">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）</div><div class="ttdef"><b>Definition:</b> kalman.hpp:75</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a97d5c8607435c14dcfccbb1bc35a2773"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a97d5c8607435c14dcfccbb1bc35a2773">rm::KalmanFilter::setQ</a></div><div class="ttdeci">void setQ(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;process_err)</div><div class="ttdoc">设置过程噪声协方差矩阵 Q</div><div class="ttdef"><b>Definition:</b> kalman.hpp:148</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_ac9bb6ce358dd2e81cda7dee60c9ae093"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#ac9bb6ce358dd2e81cda7dee60c9ae093">rm::KalmanFilter::setR</a></div><div class="ttdeci">void setR(const cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt; &amp;measure_err)</div><div class="ttdoc">设置测量噪声协方差矩阵 R</div><div class="ttdef"><b>Definition:</b> kalman.hpp:141</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md164"></a>
+2.2.3 运行</h3>
+<div class="fragment"><div class="line">filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a9de6d1e70cf4ecd1b0a957bce555e088">setA</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line"><span class="comment">// Prediction</span></div>
+<div class="line">filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#af8d1a9bcc606ce6bc003073f3c58df65">predict</a>();</div>
+<div class="line"><span class="comment">// Correction</span></div>
+<div class="line"><span class="keyword">auto</span> corr = filter.<a class="code" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a7586d4c4b293aab8a1b4579dcf68998e">correct</a>(<span class="comment">/* ... */</span>);</div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a7586d4c4b293aab8a1b4579dcf68998e"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a7586d4c4b293aab8a1b4579dcf68998e">rm::KalmanFilter::correct</a></div><div class="ttdeci">auto correct(const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;measurement)</div><div class="ttdoc">卡尔曼滤波器的校正部分，包括卡尔曼增益 K 的计算、状态向量的后验估计和误差协方差的校正</div><div class="ttdef"><b>Definition:</b> kalman.hpp:200</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a9de6d1e70cf4ecd1b0a957bce555e088"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a9de6d1e70cf4ecd1b0a957bce555e088">rm::KalmanFilter::setA</a></div><div class="ttdeci">void setA(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;state_tf)</div><div class="ttdoc">设置状态转移矩阵 A</div><div class="ttdef"><b>Definition:</b> kalman.hpp:113</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_af8d1a9bcc606ce6bc003073f3c58df65"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#af8d1a9bcc606ce6bc003073f3c58df65">rm::KalmanFilter::predict</a></div><div class="ttdeci">auto predict(const cv::Matx&lt; Tp, ControlDim, 1 &gt; &amp;control_vec)</div><div class="ttdoc">含控制量的卡尔曼滤波的预测部分，包括状态向量的先验估计和误差协方差的先验估计</div><div class="ttdef"><b>Definition:</b> kalman.hpp:165</div></div>
+</div><!-- fragment --><hr  />
+<h2><a class="anchor" id="ref_paper"></a>
+参考文献</h2>
+<ul>
+<li>卡尔曼滤波 <a class="el" href="../../d0/de3/citelist.html#CITEREF_kalman">[3]</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:32:07 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

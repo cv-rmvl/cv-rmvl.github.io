@@ -1,0 +1,185 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: RMVL 的编译、配置选项</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../df/d65/tutorial_table_of_content_introduction.html">视觉库介绍</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">RMVL 的编译、配置选项 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md131">1. 介绍</a></li>
+<li class="level1"><a href="#autotoc_md132">2. 通用选项</a><ul><li class="level2"><a href="#autotoc_md133">2.1 调试构建</a></li>
+<li class="level2"><a href="#autotoc_md134">2.2 静态构建与动态构建</a></li>
+<li class="level2"><a href="#autotoc_md135">2.3 构建测试</a></li>
+<li class="level2"><a href="#autotoc_md136">2.4 构建有限的模块集</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md137">3. 功能特性</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_tutorial_configuration_options"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d2/d60/tutorial_install_overview.html">视觉库安装总览</a> ↑<br  />
+<b>下一篇教程：</b><a class="el" href="../../d1/d9a/tutorial_build.html">视觉库的配置与构建</a> ↓<br  />
+</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md131"></a>
+1. 介绍</h1>
+<p>配置选项可以通过几种不同的方式设置：</p>
+<ul>
+<li>命令行：<code>cmake -Doption=value ...</code></li>
+<li>初始化缓存文件：<code>cmake -C my_options.txt ...</code></li>
+<li>通过GUI进行交互：<code>cmake-gui ..</code></li>
+</ul>
+<p>大多数选项可以在 RMVL 的 cmake 脚本中找到：<code>rmvl/CMakeLists.txt</code>。</p>
+<p>可以使用 CMake 工具打印所有可用选项：</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line"># 初始化配置</div>
+<div class="line">cmake ..</div>
+<div class="line"># 打印所有选项</div>
+<div class="line">cmake -L ..</div>
+<div class="line"># 打印所有选项并显示帮助信息</div>
+<div class="line">cmake -LH ..</div>
+<div class="line"># 打印包含高级变量的所有选项</div>
+<div class="line">cmake -LA ..</div>
+</div><!-- fragment --><p>最常见以及最有用的选项一般均以 <code>BUILD_</code>、<code>WITH_</code>、<code>RMVL_</code>、<code>ENABLE_</code> 开头。</p>
+<h1><a class="anchor" id="autotoc_md132"></a>
+2. 通用选项</h1>
+<h2><a class="anchor" id="autotoc_md133"></a>
+2.1 调试构建</h2>
+<p><code>CMAKE_BUILD_TYPE</code> 选项可用于启用调试构建。生成的二进制文件将包含调试符号，并且大多数编译器优化将被关闭。</p>
+<p>在某些平台上（例如 Linux），必须在配置阶段设置构建类型：</p>
+<div class="fragment"><div class="line">cmake -DCMAKE_BUILD_TYPE=Debug ..</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><p>在其他平台上，不同类型的构建可以在同一个构建目录下生成（例如Visual Studio，XCode）：</p>
+<div class="fragment"><div class="line">cmake &lt;options&gt; ..</div>
+<div class="line">cmake --build . --config Debug</div>
+</div><!-- fragment --><dl class="section see"><dt>参见</dt><dd><ul>
+<li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html">Build type in CMake documents</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_macros.html">Build type in C++ manual</a></li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="autotoc_md134"></a>
+2.2 静态构建与动态构建</h2>
+<p><code>BUILD_SHARED_LIBS</code> 选项控制是否生成动态（<code>*.dll</code>，<code>*.so</code>，<code>*.dylib</code>）或静态（<code>*.a</code>，<code>*.lib</code>）库。默认值取决于目标平台，在大多数情况下它是 <code>OFF</code>。</p>
+<p>示例:</p>
+<div class="fragment"><div class="line">cmake -DBUILD_SHARED_LIBS=ON ..</div>
+</div><!-- fragment --><dl class="section see"><dt>参见</dt><dd><ul>
+<li><a href="https://en.wikipedia.org/wiki/Static_library">Static library in Wiki</a></li>
+</ul>
+</dd></dl>
+<p><code>ENABLE_PIC</code> 启用或禁用 <b>位置无关代码</b> 的生成，在构建动态库或打算链接到动态库的静态库时，必须启用此选项，该选项默认值为<code>ON</code>。</p>
+<dl class="section see"><dt>参见</dt><dd><ul>
+<li><a href="https://en.wikipedia.org/wiki/Position-independent_code">PIC in Wiki</a></li>
+</ul>
+</dd></dl>
+<h2><a class="anchor" id="autotoc_md135"></a>
+2.3 构建测试</h2>
+<p>有两种测试：准确性（<code>rmvl_*_test</code>）和性能（<code>rmvl_*_perf</code>），默认情况下禁用测试。</p>
+<p>对应的 CMake 选项:</p>
+<div class="fragment"><div class="line">cmake \</div>
+<div class="line">  -DBUILD_TESTS=ON \</div>
+<div class="line">  -DBUILD_PERF_TESTS=ON \</div>
+<div class="line">  ..</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md136"></a>
+2.4 构建有限的模块集</h2>
+<p>每个模块都是 modules 目录的一个子目录。可以禁用一个模块：</p>
+<div class="fragment"><div class="line">cmake -DBUILD_rmvl_armor_detector=OFF ..</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md137"></a>
+3. 功能特性</h1>
+<p>有许多可选的依赖关系和特性可以打开或关闭，CMake 有一个特殊的选项，允许打印所有可用的配置参数：</p>
+<div class="fragment"><div class="line">cmake -LH ..</div>
+</div><!-- fragment --><p>此外，CMake 在运行后也会通过一系列的 <code>message()</code> 命令输出到终端或 GUI 界面，可在此界面查看部分配置情况。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:17:46 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

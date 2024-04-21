@@ -1,0 +1,642 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: samples/camera/mv/sample_mv_auto_calib.cpp</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">samples/camera/mv/sample_mv_auto_calib.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>迈德威视相机自动标定例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/calib3d.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/core.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/imgcodecs.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/videoio.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d2/d75/namespacecv.html">cv</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *usage =</div>
+<div class="line">    <span class="stringliteral">&quot; 示例命令行，用于从实时提要进行校准。\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; $ \033[33mcalibration -w=4 -h=5 -s=0.025 -o=camera.yml\033[0m\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *liveCaptureHelp =</div>
+<div class="line">    <span class="stringliteral">&quot;当使用摄像头的实时视频作为输入时，可以使用以下热键:\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;  &lt;ESC&gt;, &#39;q&#39; - 退出程序\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;  &#39;g&#39; - 开始捕捉图像\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;  &#39;u&#39; - 打开/关闭不失真开关\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> help()</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;相机标定例程 (Copy from OpenCV):\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;用法: calibration\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     -help                    \033[32m# 显示帮助信息\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     -w=&lt;board_width&gt;         \033[32m# 每一个板尺寸内角的数目 (格子数 - 1)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     -h=&lt;board_height&gt;        \033[32m# 每一个板尺寸内角的数目 (格子数 - 1)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-pt=&lt;pattern&gt;]          \033[32m# 图案类型: 棋盘 (chessboard) 或圆形网格 (circles, acircles)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-n=&lt;number_of_frames&gt;]  \033[32m# 用于校准的帧数\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# (如果没有指定，它将被设置为实际可用的板视图数)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-d=&lt;delay&gt;]             \033[32m# 在捕捉下一个视图的后续尝试之间的最小延迟数 (单位：毫秒)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# (仅用于视频捕捉)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-s=&lt;squareSize&gt;]        \033[32m# 用户定义的单位正方形大小 (默认为1)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-o=&lt;out_camera_params&gt;] \033[32m# 内参数的输出文件名\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-zt]                    \033[32m# 假设切向失真为零\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-a=&lt;aspectRatio&gt;]       \033[32m# 固定长宽比(fx/fy)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-p]                     \033[32m# 把主点固定在中心\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-v]                     \033[32m# 围绕水平轴翻转捕获的图像\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-V]                     \033[32m# 使用视频文件，而不是图像列表，使用 [input_data]\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# 字符串作为视频文件名\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-su]                    \033[32m# 显示校正后未失真的图像\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-ws=&lt;number_of_pixel&gt;]  \033[32m# cornerSubPix 搜索窗口的一半 (默认为 11)\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [-dt=&lt;distance&gt;]         \033[32m# 校准网格的左上角和右上角之间的实际距离。如果指定此参数，\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# 将使用更精确的校准方法，该方法可能更好地用于不准确的，粗\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# 略的平面目标。\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;     [input_data]             \033[32m# 输入数据，为下列之一:\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m#  - 文本文件，包含板子的图像列表，文本文件可以用\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m#    imagelist_creator 生成\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m#  - 包含单板视频的视频文件名称\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;                              \033[32m# 如果未指定 input_data, 则使用来自摄像机的实时视图\033[0m\n&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\n%s&quot;</span>, usage);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\n%s&quot;</span>, liveCaptureHelp);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum</span></div>
+<div class="line">{</div>
+<div class="line">    DETECTION = 0,</div>
+<div class="line">    CAPTURING = 1,</div>
+<div class="line">    CALIBRATED = 2</div>
+<div class="line">};</div>
+<div class="line"><span class="keyword">enum</span> Pattern</div>
+<div class="line">{</div>
+<div class="line">    CHESSBOARD,</div>
+<div class="line">    CIRCLES_GRID,</div>
+<div class="line">    ASYMMETRIC_CIRCLES_GRID</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">double</span> computeReprojectionErrors(</div>
+<div class="line">    <span class="keyword">const</span> vector&lt;vector&lt;Point3f&gt;&gt; &amp;objectPoints,</div>
+<div class="line">    <span class="keyword">const</span> vector&lt;vector&lt;Point2f&gt;&gt; &amp;imagePoints,</div>
+<div class="line">    <span class="keyword">const</span> vector&lt;Mat&gt; &amp;rvecs, <span class="keyword">const</span> vector&lt;Mat&gt; &amp;tvecs,</div>
+<div class="line">    <span class="keyword">const</span> Mat &amp;cameraMatrix, <span class="keyword">const</span> Mat &amp;distCoeffs,</div>
+<div class="line">    vector&lt;float&gt; &amp;perViewErrors)</div>
+<div class="line">{</div>
+<div class="line">    vector&lt;Point2f&gt; imagePoints2;</div>
+<div class="line">    <span class="keywordtype">int</span> i, totalPoints = 0;</div>
+<div class="line">    <span class="keywordtype">double</span> totalErr = 0, err;</div>
+<div class="line">    perViewErrors.resize(objectPoints.size());</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (i = 0; i &lt; (int)objectPoints.size(); i++)</div>
+<div class="line">    {</div>
+<div class="line">        projectPoints(Mat(objectPoints[i]), rvecs[i], tvecs[i],</div>
+<div class="line">                      cameraMatrix, distCoeffs, imagePoints2);</div>
+<div class="line">        err = norm(Mat(imagePoints[i]), Mat(imagePoints2), NORM_L2);</div>
+<div class="line">        <span class="keywordtype">int</span> n = (int)objectPoints[i].<a name="a0"></a><a class="code" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>();</div>
+<div class="line">        perViewErrors[i] = (float)std::sqrt(err * err / n);</div>
+<div class="line">        totalErr += err * err;</div>
+<div class="line">        totalPoints += n;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> std::sqrt(totalErr / totalPoints);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> calcChessboardCorners(Size boardSize, <span class="keywordtype">float</span> squareSize, vector&lt;Point3f&gt; &amp;corners, Pattern patternType = CHESSBOARD)</div>
+<div class="line">{</div>
+<div class="line">    corners.resize(0);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">switch</span> (patternType)</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">case</span> CHESSBOARD:</div>
+<div class="line">    <span class="keywordflow">case</span> CIRCLES_GRID:</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boardSize.height; i++)</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; boardSize.width; j++)</div>
+<div class="line">                corners.push_back(Point3f(<span class="keywordtype">float</span>(j * squareSize),</div>
+<div class="line">                                          <span class="keywordtype">float</span>(i * squareSize), 0));</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">case</span> ASYMMETRIC_CIRCLES_GRID:</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boardSize.height; i++)</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; boardSize.width; j++)</div>
+<div class="line">                corners.push_back(Point3f(<span class="keywordtype">float</span>((2 * j + i % 2) * squareSize),</div>
+<div class="line">                                          <span class="keywordtype">float</span>(i * squareSize), 0));</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">        CV_Error(Error::StsBadArg, <span class="stringliteral">&quot;未知模式类型\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> runCalibration(vector&lt;vector&lt;Point2f&gt;&gt; imagePoints,</div>
+<div class="line">                           Size imageSize, Size boardSize, Pattern patternType,</div>
+<div class="line">                           <span class="keywordtype">float</span> squareSize, <span class="keywordtype">float</span> aspectRatio,</div>
+<div class="line">                           <span class="keywordtype">float</span> grid_width, <span class="keywordtype">bool</span> release_object,</div>
+<div class="line">                           <span class="keywordtype">int</span> flags, Mat &amp;cameraMatrix, Mat &amp;distCoeffs,</div>
+<div class="line">                           vector&lt;Mat&gt; &amp;rvecs, vector&lt;Mat&gt; &amp;tvecs,</div>
+<div class="line">                           vector&lt;float&gt; &amp;reprojErrs,</div>
+<div class="line">                           vector&lt;Point3f&gt; &amp;newObjPoints,</div>
+<div class="line">                           <span class="keywordtype">double</span> &amp;totalAvgErr)</div>
+<div class="line">{</div>
+<div class="line">    cameraMatrix = Mat::eye(3, 3, CV_64F);</div>
+<div class="line">    <span class="keywordflow">if</span> (flags &amp; CALIB_FIX_ASPECT_RATIO)</div>
+<div class="line">        cameraMatrix.at&lt;<span class="keywordtype">double</span>&gt;(0, 0) = aspectRatio;</div>
+<div class="line"> </div>
+<div class="line">    distCoeffs = Mat::zeros(8, 1, CV_64F);</div>
+<div class="line"> </div>
+<div class="line">    vector&lt;vector&lt;Point3f&gt;&gt; objectPoints(1);</div>
+<div class="line">    calcChessboardCorners(boardSize, squareSize, objectPoints[0], patternType);</div>
+<div class="line">    objectPoints[0][boardSize.width - 1].x = objectPoints[0][0].x + grid_width;</div>
+<div class="line">    newObjPoints = objectPoints[0];</div>
+<div class="line"> </div>
+<div class="line">    objectPoints.resize(imagePoints.size(), objectPoints[0]);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">double</span> rms;</div>
+<div class="line">    <span class="keywordtype">int</span> iFixedPoint = -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (release_object)</div>
+<div class="line">        iFixedPoint = boardSize.width - 1;</div>
+<div class="line">    rms = calibrateCameraRO(objectPoints, imagePoints, imageSize, iFixedPoint,</div>
+<div class="line">                            cameraMatrix, distCoeffs, rvecs, tvecs, newObjPoints,</div>
+<div class="line">                            flags | CALIB_FIX_K3 | CALIB_USE_LU);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;RMS error reported by calibrateCamera: %g\n&quot;</span>, rms);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> ok = checkRange(cameraMatrix) &amp;&amp; checkRange(distCoeffs);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (release_object)</div>
+<div class="line">    {</div>
+<div class="line">        cout &lt;&lt; <span class="stringliteral">&quot;New board corners: &quot;</span> &lt;&lt; endl;</div>
+<div class="line">        cout &lt;&lt; newObjPoints[0] &lt;&lt; endl;</div>
+<div class="line">        cout &lt;&lt; newObjPoints[boardSize.width - 1] &lt;&lt; endl;</div>
+<div class="line">        cout &lt;&lt; newObjPoints[boardSize.width * (boardSize.height - 1)] &lt;&lt; endl;</div>
+<div class="line">        cout &lt;&lt; newObjPoints.back() &lt;&lt; endl;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    objectPoints.clear();</div>
+<div class="line">    objectPoints.resize(imagePoints.size(), newObjPoints);</div>
+<div class="line">    totalAvgErr = computeReprojectionErrors(objectPoints, imagePoints,</div>
+<div class="line">                                            rvecs, tvecs, cameraMatrix, distCoeffs, reprojErrs);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> ok;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> saveCameraParams(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;filename, <span class="keyword">const</span> Mat &amp;cameraMatrix,</div>
+<div class="line">                             <span class="keyword">const</span> Mat &amp;distCoeffs, <span class="keywordtype">double</span> totalAvgErr)</div>
+<div class="line">{</div>
+<div class="line">    FileStorage fs(filename, FileStorage::WRITE);</div>
+<div class="line"> </div>
+<div class="line">    fs &lt;&lt; <span class="stringliteral">&quot;cameraMatrix&quot;</span> &lt;&lt; cameraMatrix;</div>
+<div class="line">    fs &lt;&lt; <span class="stringliteral">&quot;distCoeffs&quot;</span> &lt;&lt; distCoeffs;</div>
+<div class="line">    fs &lt;&lt; <span class="stringliteral">&quot;avg_reprojection_error&quot;</span> &lt;&lt; totalAvgErr;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> readStringList(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;filename, vector&lt;string&gt; &amp;l)</div>
+<div class="line">{</div>
+<div class="line">    l.resize(0);</div>
+<div class="line">    FileStorage fs(filename, FileStorage::READ);</div>
+<div class="line">    <span class="keywordflow">if</span> (!fs.isOpened())</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordtype">size_t</span> dir_pos = filename.rfind(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (dir_pos == string::npos)</div>
+<div class="line">        dir_pos = filename.rfind(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line">    FileNode n = fs.getFirstTopLevelNode();</div>
+<div class="line">    <span class="keywordflow">if</span> (n.type() != FileNode::SEQ)</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    FileNodeIterator it = n.begin(), it_end = n.end();</div>
+<div class="line">    <span class="keywordflow">for</span> (; it != it_end; ++it)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">string</span> fname = (string)*it;</div>
+<div class="line">        <span class="keywordflow">if</span> (dir_pos != string::npos)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordtype">string</span> fpath = samples::findFile(filename.substr(0, dir_pos + 1) + fname, <span class="keyword">false</span>);</div>
+<div class="line">            <span class="keywordflow">if</span> (fpath.empty())</div>
+<div class="line">            {</div>
+<div class="line">                fpath = samples::findFile(fname);</div>
+<div class="line">            }</div>
+<div class="line">            fname = fpath;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            fname = samples::findFile(fname);</div>
+<div class="line">        }</div>
+<div class="line">        l.push_back(fname);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> runAndSave(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;outputFilename, <span class="keyword">const</span> vector&lt;vector&lt;Point2f&gt;&gt; &amp;imagePoints,</div>
+<div class="line">                       Size imageSize, Size boardSize, Pattern patternType, <span class="keywordtype">float</span> squareSize,</div>
+<div class="line">                       <span class="keywordtype">float</span> grid_width, <span class="keywordtype">bool</span> release_object, <span class="keywordtype">float</span> aspectRatio, <span class="keywordtype">int</span> flags,</div>
+<div class="line">                       Mat &amp;cameraMatrix, Mat &amp;distCoeffs)</div>
+<div class="line">{</div>
+<div class="line">    vector&lt;Mat&gt; rvecs, tvecs;</div>
+<div class="line">    vector&lt;float&gt; reprojErrs;</div>
+<div class="line">    <span class="keywordtype">double</span> totalAvgErr = 0;</div>
+<div class="line">    vector&lt;Point3f&gt; newObjPoints;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> ok = runCalibration(imagePoints, imageSize, boardSize, patternType, squareSize,</div>
+<div class="line">                             aspectRatio, grid_width, release_object, flags, cameraMatrix, distCoeffs,</div>
+<div class="line">                             rvecs, tvecs, reprojErrs, newObjPoints, totalAvgErr);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s. avg reprojection error = %.7f\n&quot;</span>,</div>
+<div class="line">           ok ? <span class="stringliteral">&quot;Calibration succeeded&quot;</span> : <span class="stringliteral">&quot;Calibration failed&quot;</span>,</div>
+<div class="line">           totalAvgErr);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (ok)</div>
+<div class="line">        saveCameraParams(outputFilename, cameraMatrix, distCoeffs, totalAvgErr);</div>
+<div class="line">    <span class="keywordflow">return</span> ok;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *keys = <span class="stringliteral">&quot;{ help          |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ w             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ h             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ pt            | chessboard            | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ n             | 40                    | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ d             | 5000                  | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ s             | 1                     | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ o             | out_calibration.yml   | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ zt            |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ a             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ p             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ v             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ V             |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ su            |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ ws            |11                     | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ dt            |                       | }&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;{ @input_data   |0                      | }&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv)</div>
+<div class="line">{</div>
+<div class="line">    CommandLineParser parser(argc, argv, keys);</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;help&quot;</span>))</div>
+<div class="line">    {</div>
+<div class="line">        help();</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    Size imageSize;</div>
+<div class="line">    <span class="keywordtype">float</span> aspectRatio = 1;</div>
+<div class="line">    Mat cameraMatrix, distCoeffs;</div>
+<div class="line">    <span class="keywordtype">string</span> outputFilename;</div>
+<div class="line">    <span class="keywordtype">string</span> inputFilename = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> undistortImage = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordtype">int</span> flags = 0;</div>
+<div class="line">    MvCamera capture(<a name="a1"></a><a class="code" href="../../df/dfa/structrm_1_1CameraConfig.html#ac6da1325d928d2ab34e4a74415d9e6ca">rm::CameraConfig::create</a>(<a name="a2"></a><a class="code" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a name="a3"></a><a class="code" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">RetrieveMode::OpenCV</a>));</div>
+<div class="line"> </div>
+<div class="line">    FileStorage fs(<span class="stringliteral">&quot;out_para.yml&quot;</span>, FileStorage::READ);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> exposure = 10000;</div>
+<div class="line">    <span class="keywordtype">int</span> gain = 128;</div>
+<div class="line">    <span class="keywordtype">int</span> r_gain = 100;</div>
+<div class="line">    <span class="keywordtype">int</span> g_gain = 100;</div>
+<div class="line">    <span class="keywordtype">int</span> b_gain = 100;</div>
+<div class="line"> </div>
+<div class="line">    fs[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; exposure);</div>
+<div class="line">    fs[<span class="stringliteral">&quot;gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;gain&quot;</span>] &gt;&gt; gain);</div>
+<div class="line">    fs[<span class="stringliteral">&quot;r_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;r_gain&quot;</span>] &gt;&gt; r_gain);</div>
+<div class="line">    fs[<span class="stringliteral">&quot;g_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;g_gain&quot;</span>] &gt;&gt; g_gain);</div>
+<div class="line">    fs[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? void(0) : (fs[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
+<div class="line"> </div>
+<div class="line">    capture.set(<a name="a4"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">CAMERA_MANUAL_EXPOSURE</a>);</div>
+<div class="line">    capture.set(<a name="a5"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture.set(<a name="a6"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture.set(<a name="a7"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">CAMERA_MANUAL_WB</a>);</div>
+<div class="line">    capture.set(<a name="a8"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture.set(<a name="a9"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture.set(<a name="a10"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> flipVertical;</div>
+<div class="line">    <span class="keywordtype">bool</span> showUndistorted;</div>
+<div class="line">    <span class="keywordtype">bool</span> videofile;</div>
+<div class="line">    clock_t prevTimestamp = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> mode = DETECTION;</div>
+<div class="line">    <span class="keywordtype">int</span> cameraId = 0;</div>
+<div class="line">    vector&lt;vector&lt;Point2f&gt;&gt; imagePoints;</div>
+<div class="line">    vector&lt;string&gt; imageList;</div>
+<div class="line">    Pattern pattern = CHESSBOARD;</div>
+<div class="line"> </div>
+<div class="line">    Size boardSize;</div>
+<div class="line">    boardSize.width = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line">    boardSize.height = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;h&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;pt&quot;</span>))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">string</span> val = parser.get&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;pt&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> (val == <span class="stringliteral">&quot;circles&quot;</span>)</div>
+<div class="line">            pattern = CIRCLES_GRID;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (val == <span class="stringliteral">&quot;acircles&quot;</span>)</div>
+<div class="line">            pattern = ASYMMETRIC_CIRCLES_GRID;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (val == <span class="stringliteral">&quot;chessboard&quot;</span>)</div>
+<div class="line">            pattern = CHESSBOARD;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;无效的图案类型: 必须是棋盘或圆形\n&quot;</span>), -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">float</span> squareSize = parser.get&lt;<span class="keywordtype">float</span>&gt;(<span class="stringliteral">&quot;s&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> nframes = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;n&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> delay = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;d&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;a&quot;</span>))</div>
+<div class="line">    {</div>
+<div class="line">        flags |= CALIB_FIX_ASPECT_RATIO;</div>
+<div class="line">        aspectRatio = parser.get&lt;<span class="keywordtype">float</span>&gt;(<span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;zt&quot;</span>))</div>
+<div class="line">        flags |= CALIB_ZERO_TANGENT_DIST;</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;p&quot;</span>))</div>
+<div class="line">        flags |= CALIB_FIX_PRINCIPAL_POINT;</div>
+<div class="line">    flipVertical = parser.has(<span class="stringliteral">&quot;v&quot;</span>);</div>
+<div class="line">    videofile = parser.has(<span class="stringliteral">&quot;V&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;o&quot;</span>))</div>
+<div class="line">        outputFilename = parser.get&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;o&quot;</span>);</div>
+<div class="line">    showUndistorted = parser.has(<span class="stringliteral">&quot;su&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (isdigit(parser.get&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;@input_data&quot;</span>)[0]))</div>
+<div class="line">        cameraId = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;@input_data&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        inputFilename = parser.get&lt;<span class="keywordtype">string</span>&gt;(<span class="stringliteral">&quot;@input_data&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> winSize = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;ws&quot;</span>);</div>
+<div class="line">    <span class="keywordtype">float</span> grid_width = squareSize * (boardSize.width - 1);</div>
+<div class="line">    <span class="keywordtype">bool</span> release_object = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;dt&quot;</span>))</div>
+<div class="line">    {</div>
+<div class="line">        grid_width = parser.get&lt;<span class="keywordtype">float</span>&gt;(<span class="stringliteral">&quot;dt&quot;</span>);</div>
+<div class="line">        release_object = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (!parser.check())</div>
+<div class="line">    {</div>
+<div class="line">        help();</div>
+<div class="line">        parser.printErrors();</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (squareSize &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;无效的标定板方宽度\n&quot;</span>), -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (nframes &lt;= 3)</div>
+<div class="line">        <span class="keywordflow">return</span> printf(<span class="stringliteral">&quot;无效的图像数量\n&quot;</span>), -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (aspectRatio &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">return</span> printf(<span class="stringliteral">&quot;无效的纵横比\n&quot;</span>), -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (delay &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">return</span> printf(<span class="stringliteral">&quot;无效的延迟\n&quot;</span>), -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (boardSize.width &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;无效的标定板宽\n&quot;</span>), -1;</div>
+<div class="line">    <span class="keywordflow">if</span> (boardSize.height &lt;= 0)</div>
+<div class="line">        <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;无效的标定板高\n&quot;</span>), -1;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!inputFilename.empty())</div>
+<div class="line">        <span class="keywordflow">if</span> (!videofile &amp;&amp; readStringList(samples::findFile(inputFilename), imageList))</div>
+<div class="line">            mode = CAPTURING;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!capture.isOpened() &amp;&amp; imageList.empty())</div>
+<div class="line">        <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;Could not initialize video (%d) capture\n&quot;</span>, cameraId), -2;</div>
+<div class="line">    <span class="keywordflow">if</span> (!imageList.empty())</div>
+<div class="line">        nframes = (int)imageList.size();</div>
+<div class="line">    <span class="keywordflow">if</span> (capture.isOpened())</div>
+<div class="line">        printf(<span class="stringliteral">&quot;%s&quot;</span>, liveCaptureHelp);</div>
+<div class="line"> </div>
+<div class="line">    namedWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, WINDOW_NORMAL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0;; i++)</div>
+<div class="line">    {</div>
+<div class="line">        Mat view, viewGray;</div>
+<div class="line">        <span class="keywordtype">bool</span> blink = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (capture.isOpened())</div>
+<div class="line">        {</div>
+<div class="line">            Mat view0;</div>
+<div class="line">            capture.read(view0);</div>
+<div class="line">            view0.copyTo(view);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt; (<span class="keywordtype">int</span>)imageList.size())</div>
+<div class="line">            view = imread(imageList[i], 1);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (view.empty())</div>
+<div class="line">        {</div>
+<div class="line">            cout &lt;&lt; <span class="stringliteral">&quot;dshfaldf&quot;</span> &lt;&lt; endl;</div>
+<div class="line">            <span class="keywordflow">if</span> (imagePoints.size() &gt; 0)</div>
+<div class="line">                runAndSave(outputFilename, imagePoints, imageSize,</div>
+<div class="line">                           boardSize, pattern, squareSize, grid_width, release_object, aspectRatio,</div>
+<div class="line">                           flags, cameraMatrix, distCoeffs);</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        imageSize = view.size();</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (flipVertical)</div>
+<div class="line">            flip(view, view, 0);</div>
+<div class="line"> </div>
+<div class="line">        vector&lt;Point2f&gt; pointbuf;</div>
+<div class="line">        cvtColor(view, viewGray, COLOR_BGR2GRAY);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">bool</span> found;</div>
+<div class="line">        <span class="keywordflow">switch</span> (pattern)</div>
+<div class="line">        {</div>
+<div class="line">        <span class="keywordflow">case</span> CHESSBOARD:</div>
+<div class="line">            found = findChessboardCorners(view, boardSize, pointbuf,</div>
+<div class="line">                                          CALIB_CB_ADAPTIVE_THRESH | CALIB_CB_FAST_CHECK | CALIB_CB_NORMALIZE_IMAGE);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> CIRCLES_GRID:</div>
+<div class="line">            found = findCirclesGrid(view, boardSize, pointbuf);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> ASYMMETRIC_CIRCLES_GRID:</div>
+<div class="line">            found = findCirclesGrid(view, boardSize, pointbuf, CALIB_CB_ASYMMETRIC_GRID);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;Unknown pattern type\n&quot;</span>), -1;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// improve the found corners&#39; coordinate accuracy</span></div>
+<div class="line">        <span class="keywordflow">if</span> (pattern == CHESSBOARD &amp;&amp; found)</div>
+<div class="line">            cornerSubPix(viewGray, pointbuf, Size(winSize, winSize),</div>
+<div class="line">                         Size(-1, -1), TermCriteria(TermCriteria::EPS + TermCriteria::COUNT, 30, 0.0001));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (mode == CAPTURING &amp;&amp; found &amp;&amp;</div>
+<div class="line">            (!capture.isOpened() || clock() - prevTimestamp &gt; delay * 1<a name="a11"></a><a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3 * CLOCKS_PER_SEC))</div>
+<div class="line">        {</div>
+<div class="line">            imagePoints.push_back(pointbuf);</div>
+<div class="line">            prevTimestamp = clock();</div>
+<div class="line">            blink = capture.isOpened();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (found)</div>
+<div class="line">            drawChessboardCorners(view, boardSize, Mat(pointbuf), found);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">string</span> msg = mode == CAPTURING ? <span class="stringliteral">&quot;100/100&quot;</span> : mode == CALIBRATED ? <span class="stringliteral">&quot;Calibrated&quot;</span></div>
+<div class="line">                                                                        : <span class="stringliteral">&quot;Press &#39;g&#39; to start&quot;</span>;</div>
+<div class="line">        <span class="keywordtype">int</span> baseLine = 0;</div>
+<div class="line">        Size textSize = getTextSize(msg, 1, 1, 1, &amp;baseLine);</div>
+<div class="line">        Point textOrigin(view.cols - 2 * textSize.width - 10, view.rows - 2 * baseLine - 10);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (mode == CAPTURING)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (undistortImage)</div>
+<div class="line">                msg = <a name="a12"></a><a class="code" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">cv::format</a>(<span class="stringliteral">&quot;%d/%d Undist&quot;</span>, (<span class="keywordtype">int</span>)imagePoints.size(), nframes);</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">                msg = <a class="code" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">cv::format</a>(<span class="stringliteral">&quot;%d/%d&quot;</span>, (<span class="keywordtype">int</span>)imagePoints.size(), nframes);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        putText(view, msg, textOrigin, 1, 1,</div>
+<div class="line">                mode != CALIBRATED ? Scalar(0, 0, 255) : Scalar(0, 255, 0));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (blink)</div>
+<div class="line">            bitwise_not(view, view);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (mode == CALIBRATED &amp;&amp; undistortImage)</div>
+<div class="line">        {</div>
+<div class="line">            Mat temp = view.clone();</div>
+<div class="line">            undistort(temp, view, cameraMatrix, distCoeffs);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        imshow(<span class="stringliteral">&quot;图像画面&quot;</span>, view);</div>
+<div class="line">        <span class="keywordtype">char</span> key = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(waitKey(capture.isOpened() ? 1 : 30));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (key == 27)</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (key == <span class="charliteral">&#39;u&#39;</span> &amp;&amp; mode == CALIBRATED)</div>
+<div class="line">            undistortImage = !undistortImage;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (capture.isOpened() &amp;&amp; key == <span class="charliteral">&#39;g&#39;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            mode = CAPTURING;</div>
+<div class="line">            imagePoints.clear();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (mode == CAPTURING &amp;&amp; imagePoints.size() &gt;= (unsigned)nframes)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (runAndSave(outputFilename, imagePoints, imageSize, boardSize, pattern, squareSize,</div>
+<div class="line">                           grid_width, release_object, aspectRatio, flags, cameraMatrix, distCoeffs))</div>
+<div class="line">                mode = CALIBRATED;</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">                mode = DETECTION;</div>
+<div class="line">            <span class="keywordflow">if</span> (!capture.isOpened())</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!capture.isOpened() &amp;&amp; showUndistorted)</div>
+<div class="line">    {</div>
+<div class="line">        Mat view, rview, map1, map2;</div>
+<div class="line">        initUndistortRectifyMap(cameraMatrix, distCoeffs, Mat(),</div>
+<div class="line">                                getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imageSize, 1, imageSize, 0),</div>
+<div class="line">                                imageSize, CV_16SC2, map1, map2);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; imageList.size(); i++)</div>
+<div class="line">        {</div>
+<div class="line">            view = imread(imageList[i], 1);</div>
+<div class="line">            <span class="keywordflow">if</span> (view.empty())</div>
+<div class="line">                <span class="keywordflow">continue</span>;</div>
+<div class="line">            <span class="comment">// undistort( view, rview, cameraMatrix, distCoeffs, cameraMatrix );</span></div>
+<div class="line">            remap(view, rview, map1, map2, INTER_LINEAR);</div>
+<div class="line">            imshow(<span class="stringliteral">&quot;图像画面&quot;</span>, rview);</div>
+<div class="line">            <span class="keywordtype">char</span> c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(waitKey());</div>
+<div class="line">            <span class="keywordflow">if</span> (c == 27 || c == <span class="charliteral">&#39;q&#39;</span> || c == <span class="charliteral">&#39;Q&#39;</span>)</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="acamera_2mv__camera_8h_html"><div class="ttname"><a href="../../d1/d67/camera_2mv__camera_8h.html">mv_camera.h</a></div><div class="ttdoc">迈德威视相机库</div></div>
+<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>Definition:</b> camutils.hpp:105</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>Definition:</b> camutils.hpp:104</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_MANUAL_EXPOSURE</div><div class="ttdoc">手动曝光</div><div class="ttdef"><b>Definition:</b> camutils.hpp:98</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_EXPOSURE</div><div class="ttdoc">曝光值</div><div class="ttdef"><b>Definition:</b> camutils.hpp:100</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a></div><div class="ttdeci">@ CAMERA_MANUAL_WB</div><div class="ttdoc">手动白平衡</div><div class="ttdef"><b>Definition:</b> camutils.hpp:99</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a></div><div class="ttdeci">@ CAMERA_WB_RGAIN</div><div class="ttdoc">白平衡红色分量</div><div class="ttdef"><b>Definition:</b> camutils.hpp:103</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>Definition:</b> camutils.hpp:101</div></div>
+<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div></div>
+<div class="ttc" id="agroup__core_html_ga9d783cbcd4b7f38b293c4a666c2f89fc"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">rm::format</a></div><div class="ttdeci">std::string format(const char *fmt,...)</div><div class="ttdoc">返回使用类 printf 表达式格式化的文本字符串。</div></div>
+<div class="ttc" id="agroup__core_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>Definition:</b> util.hpp:315</div></div>
+<div class="ttc" id="agroup__rmath_html_ga8f0640abdfeaeac18c46eac605f7f0a5"><div class="ttname"><a href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">rm::e</a></div><div class="ttdeci">constexpr double e</div><div class="ttdoc">自然对数底数:</div><div class="ttdef"><b>Definition:</b> uty_math.hpp:40</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="../../d2/d75/namespacecv.html">cv</a></div><div class="ttdef"><b>Definition:</b> uty_math.hpp:65</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>Definition:</b> camutils.hpp:17</div></div>
+<div class="ttc" id="astructrm_1_1CameraConfig_html_ac6da1325d928d2ab34e4a74415d9e6ca"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#ac6da1325d928d2ab34e4a74415d9e6ca">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args... modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>Definition:</b> camutils.hpp:70</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:34:23 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

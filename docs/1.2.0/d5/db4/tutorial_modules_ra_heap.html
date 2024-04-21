@@ -1,0 +1,192 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 支持随机访问的堆</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">支持随机访问的堆 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md233">1. 基本用法</a></li>
+<li class="level1"><a href="#autotoc_md234">2. 扩展用法</a></li>
+<li class="level1"><a href="#autotoc_md235">3. 例题</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_modules_rmath_ra_heap"></a></p>
+<dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/01/11</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d4/d74/tutorial_modules_union_find.html">并查集</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> ↓<br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../db/d45/classrm_1_1RaHeap.html" title="支持随机访问的堆">rm::RaHeap</a></p>
+<h1><a class="anchor" id="autotoc_md233"></a>
+1. 基本用法</h1>
+<p><a class="el" href="../../db/d45/classrm_1_1RaHeap.html" title="支持随机访问的堆">rm::RaHeap</a> 的基本用法与标准库中 <code>std::priority_queue</code> 的用法基本一致，都具有以下操作：</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">成员方法   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a14454f127677c167093e86140755c953" title="堆是否为空">rm::RaHeap::empty()</a>   </td><td class="markdownTableBodyCenter">判断堆是否为空    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ae9520e8a8504c97856108e028a96d25b" title="堆的大小">rm::RaHeap::size()</a>   </td><td class="markdownTableBodyCenter">获取堆的大小    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a87d6e6c40151cbae077b2cf5e075cb05" title="获取堆顶元素">rm::RaHeap::top()</a>   </td><td class="markdownTableBodyCenter">获取堆顶元素    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#aadc476f3073f72e2adcdaefc38e81cd1" title="弹出堆顶">rm::RaHeap::pop()</a>   </td><td class="markdownTableBodyCenter">弹出堆顶元素    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a9bc79dc34eed79638efff34c46f09f3c" title="在堆顶添加元素">rm::RaHeap::push()</a>   </td><td class="markdownTableBodyCenter">压入堆顶元素   </td></tr>
+</table>
+<p>可参考以下文档：</p>
+<ul>
+<li><a href="https://zh.cppreference.com/w/cpp/container/priority_queue" target="_blank">C++ 标准库——优先队列 </a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md234"></a>
+2. 扩展用法</h1>
+<p>除此之外，RaHeap 还提供了以下扩展用法：</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">成员方法   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ac8741a561dcc37cb69e1e930857bb77e" title="更新元素">rm::RaHeap::update()</a>   </td><td class="markdownTableBodyCenter">更新某个元素为新值（不存在则直接返回）    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a4614a140f57c2debc79bcc85659c718e" title="删除指定元素">rm::RaHeap::erase()</a>   </td><td class="markdownTableBodyCenter">删除某个指定元素（不存在则直接返回）    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a6d2b78ce4b88d6da8decb6331a37389d" title="导出容器">rm::RaHeap::c()</a>   </td><td class="markdownTableBodyCenter">返回堆的底层容器   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md235"></a>
+3. 例题</h1>
+<p><b>Dijkstra + 堆优化</b></p>
+<p>使用 RaHeap：</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> Pair = pair&lt;Node *, int&gt;;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>Comp</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> Pair &amp;p1, <span class="keyword">const</span> Pair &amp;p2)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> p1.second &gt; p2.second;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">unordered_map&lt;Node *, int&gt; dijkstra(Node *head)</div>
+<div class="line">{</div>
+<div class="line">    RaHeap&lt;Pair, vector&lt;Pair&gt;, Comp&gt; node_heap;</div>
+<div class="line">    node_heap.push({head, 0});</div>
+<div class="line">    unordered_map&lt;Node *, int&gt; distanceMap;</div>
+<div class="line">    distanceMap[head] = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (!node_heap.empty())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> &amp;[node, distance] = node_heap.top();</div>
+<div class="line">        node_heap.pop();</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> edg : node-&gt;edges)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (distanceMap.find(edg-&gt;to) == distanceMap.end())</div>
+<div class="line">            {</div>
+<div class="line">                node_heap.push({edg-&gt;to, edg.weight + distance});</div>
+<div class="line">                distanceMap[edg-&gt;to] = edg.weight + distance;</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (edg.weight + distance &lt; distanceMap[edg-&gt;to])</div>
+<div class="line">            {</div>
+<div class="line">                node_heap.update({edg-&gt;to, distanceMap[edg-&gt;to]},</div>
+<div class="line">                                 {edg-&gt;to, edg.weight + distance});</div>
+<div class="line">                distanceMap[edg-&gt;to] = edg.weight + distance;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> distanceMap;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:34:23 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
