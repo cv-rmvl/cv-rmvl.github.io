@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as n}from"./app-Bg9_QZ9R.js";const a={};function o(c,r){return t(),n("div")}const i=e(a,[["render",o],["__file","index.html.vue"]]),_=JSON.parse('{"path":"/joinus/","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"joinus/README.md"}');export{i as comp,_ as data};
