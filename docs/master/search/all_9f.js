@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['聚合类反射及其相关_20api_0',['聚合类反射及其相关 API',['../d7/de5/tutorial_modules_aggregate_reflect.html',1,'tutorial_table_of_content_modules']]],
-  ['聚合类对象作为散列表的键_20key_1',['4. 聚合类对象作为散列表的键 (Key)',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md140',1,'']]],
-  ['聚合类_2',['1. 聚合类',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md135',1,'']]]
+  ['编写测试文件_0',['2. 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md118',1,'']]],
+  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md112',1,'']]]
 ];

@@ -106,25 +106,25 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md135">1. 聚合类</a></li>
-<li class="level2"><a href="#autotoc_md136">2. 获取聚合体元素个数</a></li>
-<li class="level2"><a href="#autotoc_md137">3. 其余聚合体反射工具</a><ul><li class="level3"><a href="#autotoc_md138">3.1 成员遍历</a></li>
-<li class="level3"><a href="#autotoc_md139">3.2 相等函数</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md190">1. 聚合类</a></li>
+<li class="level2"><a href="#autotoc_md191">2. 获取聚合体元素个数</a></li>
+<li class="level2"><a href="#autotoc_md192">3. 其余聚合体反射工具</a><ul><li class="level3"><a href="#autotoc_md193">3.1 成员遍历</a></li>
+<li class="level3"><a href="#autotoc_md194">3.2 相等函数</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md140">4. 聚合类对象作为散列表的键 (Key)</a></li>
+<li class="level2"><a href="#autotoc_md195">4. 聚合类对象作为散列表的键 (Key)</a></li>
 </ul>
 </ul>
 </div>
 <div class="textblock"><p>聚合体的编译期反射，包含 C++17 和 C++20 两个版本的实现原理</p>
-<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2aggregate__reflect"></a></p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2aggregate__reflect"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/09/19 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
 <p><b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md135"></a>
+<h2><a class="anchor" id="autotoc_md190"></a>
 1. 聚合类</h2>
 <p>有关<a href="https://zh.cppreference.com/w/cpp/language/aggregate_initialization">聚合体</a>的概念可直接参考 cppreference 手册，这里对聚合体的其中一个用法做介绍。</p>
 <p>数组类型同样属于聚合体，这里仅探究符合聚合体定义的类类型，我们称其为聚合类，聚合类允许聚合初始化，即从初始化列表初始化聚合类，例如</p>
@@ -164,7 +164,7 @@ $(function(){ initResizable(false); });
 <li>遍历聚合体的所有元素</li>
 </ul>
 <p>的编译期反射机制。</p>
-<h2><a class="anchor" id="autotoc_md136"></a>
+<h2><a class="anchor" id="autotoc_md191"></a>
 2. 获取聚合体元素个数</h2>
 <p>下文给出 C++17 和 C++20 两个版本的实现方法，点击对应按钮可查看详细内容</p>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d0/d3f/util_8hpp.html">core/util.hpp</a></dd></dl>
@@ -268,9 +268,9 @@ $(function(){ initResizable(false); });
 <li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{init{}, init{}, init{}}; }</code>，不符合语法（<code>X</code> 只有两个成员），<code>requires</code> 表达式返回 <code>false</code>，经 <code>!</code> 修饰后，则会进入 <code>true</code> 分支；</li>
 <li>此时形参包长度为 \(3\)，返回 <code>形参包长度 - 1</code>，即返回 \(2\)。</li>
 </ol>
- </div> <h2><a class="anchor" id="autotoc_md137"></a>
+ </div> <h2><a class="anchor" id="autotoc_md192"></a>
 3. 其余聚合体反射工具</h2>
-<h3><a class="anchor" id="autotoc_md138"></a>
+<h3><a class="anchor" id="autotoc_md193"></a>
 3.1 成员遍历</h3>
 <p>函数原型如下</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp, <span class="keyword">typename</span> Callable&gt;</div>
@@ -296,10 +296,10 @@ $(function(){ initResizable(false); });
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;val = &quot;</span> &lt;&lt; val &lt;&lt; std::endl;</div>
 <div class="line">    };</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d9/d31/group__rmath.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
 <div class="line">    rm::for_each(x, f);</div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__rmath_html_gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905"><div class="ttname"><a href="../../d9/d31/group__rmath.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">rm::X</a></div><div class="ttdeci">@ X</div><div class="ttdoc">X 轴</div><div class="ttdef"><b>定义</b> transform.h:28</div></div>
+<div class="ttc" id="agroup__core_html_gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905"><div class="ttname"><a href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">rm::X</a></div><div class="ttdeci">@ X</div><div class="ttdoc">X 轴</div><div class="ttdef"><b>定义</b> transform.hpp:28</div></div>
 </div><!-- fragment --><p>编译后运行结果为</p>
 <div class="fragment"><div class="line">val = 1</div>
 <div class="line">val = 3.1</div>
@@ -307,7 +307,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --><p>实现方法简单粗暴，通过结构化绑定与编译期的 <code>constexpr-if</code> 语句，分别调用可调用对象 <code>f</code> 即可，例如，一个 <code>size = 3</code> 的聚合体，可以使用以下语句完成成员的遍历</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[m0, m1, m2] = val;</div>
 <div class="line">f(m0), f(m1), f(m2);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md139"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md194"></a>
 3.2 相等函数</h3>
 <dl class="section note"><dt>注解</dt><dd><ul>
 <li>此操作主要用于 C++20 前，自定义类的自定义 hash 函数</li>
@@ -333,9 +333,9 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d9/d31/group__rmath.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x1{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d9/d31/group__rmath.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x2{2, 4.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d9/d31/group__rmath.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x3{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x1{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x2{2, 4.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x3{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x2: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x2) &lt;&lt; std::endl;</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x3: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x3) &lt;&lt; std::endl;</div>
 <div class="line">};</div>
@@ -347,7 +347,7 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[l0, l1, l2] = lhs;</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[r0, r1, r2] = rhs;</div>
 <div class="line"><span class="keywordflow">return</span> l0 == r0 &amp;&amp; l1 == r1 &amp;&amp; l2 == r2;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md140"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md195"></a>
 4. 聚合类对象作为散列表的键 (Key)</h2>
 <p>cppreference 中给出了有关自定义散列函数的例子</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>S</div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['通过_20gcc_20和_20cmake_20使用_20rmvl_0',['通过 gcc 和 CMake 使用 RMVL',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]]
+  ['读取（默认）数据以控制逻辑分支_0',['读取（默认）数据以控制逻辑分支',['../d4/de8/tutorial_extra_upper_read_data.html',1,'tutorial_table_of_content_extra']]]
 ];

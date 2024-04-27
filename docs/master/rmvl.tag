@@ -131,79 +131,89 @@
     <filename>d8/dc6/arm_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>aggregate_reflect.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
-    <filename>d0/d67/aggregate__reflect_8md.html</filename>
+    <name>dft.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>d2/d3a/dft_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>ekf.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>d5/dc3/ekf_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>ew_topsis.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>d6/d8c/ew__topsis_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>fft.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>dc/d3a/fft_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>func_iteration.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>df/d37/func__iteration_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>interpolation.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>d2/d9a/interpolation_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>kalman.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>d3/d62/kalman_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>least_square.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>dd/d29/least__square_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>opcua.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
-    <filename>dd/dea/opcua_8md.html</filename>
+    <name>ort.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>db/d95/ort_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>ra_heap.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>d1/d31/ra__heap_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>runge_kutta.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>d5/dc5/runge__kutta_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>serial.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/</path>
-    <filename>d9/d63/serial_8md.html</filename>
+    <name>union_find.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>d2/d46/union__find_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>aggregate_reflect.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d0/d67/aggregate__reflect_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>camera.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
     <filename>d4/dbc/camera_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>light.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/</path>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
     <filename>d6/d3d/light_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>ort.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/ort/</path>
-    <filename>db/d95/ort_8md.html</filename>
+    <name>opcua.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>dd/dea/opcua_8md.html</filename>
   </compound>
   <compound kind="file">
-    <name>ew_topsis.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
-    <filename>d6/d8c/ew__topsis_8md.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>ra_heap.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
-    <filename>d1/d31/ra__heap_8md.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>union_find.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/</path>
-    <filename>d2/d46/union__find_8md.html</filename>
+    <name>serial.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d9/d63/serial_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tutorial_modules.md</name>
@@ -225,7 +235,7 @@
     <path>rmvl/combo/</path>
     <filename>d8/d36/combo_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">rmvl/camera/camutils.hpp</includes>
-    <includes id="dc/d71/uty__math_8hpp" name="uty_math.hpp" local="yes" import="no" module="no" objc="no">rmvl/rmath/uty_math.hpp</includes>
+    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/math.hpp</includes>
     <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">rmvl/types.hpp</includes>
     <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/dataio.hpp</includes>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">rmvl/feature/feature.h</includes>
@@ -916,6 +926,21 @@
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
+    <name>datastruct.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d4/d90/datastruct_8hpp.html</filename>
+    <class kind="class">rm::RaHeap</class>
+    <class kind="class">rm::UnionFind</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ew_topsis.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d4/dd5/ew__topsis_8hpp.html</filename>
+    <class kind="class">rm::EwTopsis</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
     <name>kalman.hpp</name>
     <path>rmvl/core/</path>
     <filename>db/d0f/kalman_8hpp.html</filename>
@@ -923,6 +948,15 @@
     <class kind="class">rm::KalmanFilter</class>
     <class kind="class">rm::ExtendedKalmanFilter</class>
     <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>math.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d4/d78/math_8hpp.html</filename>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">util.hpp</includes>
+    <namespace>rm</namespace>
+    <namespace>rm::numeric_literals</namespace>
+    <namespace>cv</namespace>
   </compound>
   <compound kind="file">
     <name>numcal.hpp</name>
@@ -990,6 +1024,14 @@
     <path>rmvl/core/</path>
     <filename>df/d05/timer_8hpp.html</filename>
     <class kind="class">rm::Timer</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>transform.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d6/deb/transform_8hpp.html</filename>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">util.hpp</includes>
+    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">math.hpp</includes>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1259,11 +1301,15 @@
     <filename>de/d78/rmvl_2core_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" import="no" module="no" objc="no">core/version.hpp</includes>
-    <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" import="no" module="no" objc="no">core/dataio.hpp</includes>
-    <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" import="no" module="no" objc="no">core/kalman.hpp</includes>
-    <includes id="da/d3b/numcal_8hpp" name="numcal.hpp" local="yes" import="no" module="no" objc="no">core/numcal.hpp</includes>
     <includes id="d1/dc5/serial_8hpp" name="serial.hpp" local="yes" import="no" module="no" objc="no">core/serial.hpp</includes>
     <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
+    <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" import="no" module="no" objc="no">core/dataio.hpp</includes>
+    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">core/math.hpp</includes>
+    <includes id="d6/deb/transform_8hpp" name="transform.hpp" local="yes" import="no" module="no" objc="no">core/transform.hpp</includes>
+    <includes id="da/d3b/numcal_8hpp" name="numcal.hpp" local="yes" import="no" module="no" objc="no">core/numcal.hpp</includes>
+    <includes id="d4/dd5/ew__topsis_8hpp" name="ew_topsis.hpp" local="yes" import="no" module="no" objc="no">core/ew_topsis.hpp</includes>
+    <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" import="no" module="no" objc="no">core/kalman.hpp</includes>
+    <includes id="d4/d90/datastruct_8hpp" name="datastruct.hpp" local="yes" import="no" module="no" objc="no">core/datastruct.hpp</includes>
   </compound>
   <compound kind="file">
     <name>core.hpp</name>
@@ -1475,57 +1521,6 @@
     <path>rmvlpara/</path>
     <filename>d0/dda/rmvlpara_2opcua_8hpp.html</filename>
     <class kind="struct">rm::para::OpcuaParam</class>
-    <namespace>rm</namespace>
-    <namespace>rm::para</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ew_topsis.hpp</name>
-    <path>rmvl/rmath/</path>
-    <filename>d4/dd5/ew__topsis_8hpp.html</filename>
-    <class kind="class">rm::EwTopsis</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ra_heap.hpp</name>
-    <path>rmvl/rmath/</path>
-    <filename>d0/de7/ra__heap_8hpp.html</filename>
-    <class kind="class">rm::RaHeap</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>transform.h</name>
-    <path>rmvl/rmath/</path>
-    <filename>d2/d80/transform_8h.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
-    <includes id="dc/d71/uty__math_8hpp" name="uty_math.hpp" local="yes" import="no" module="no" objc="no">uty_math.hpp</includes>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>union_find.hpp</name>
-    <path>rmvl/rmath/</path>
-    <filename>d7/dcb/union__find_8hpp.html</filename>
-    <class kind="class">rm::UnionFind</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>uty_math.hpp</name>
-    <path>rmvl/rmath/</path>
-    <filename>dc/d71/uty__math_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
-    <namespace>rm</namespace>
-    <namespace>rm::numeric_literals</namespace>
-    <namespace>cv</namespace>
-  </compound>
-  <compound kind="file">
-    <name>rmath.hpp</name>
-    <path>rmvl/</path>
-    <filename>db/def/rmvl_2rmath_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>rmath.hpp</name>
-    <path>rmvlpara/</path>
-    <filename>d8/d7e/rmvlpara_2rmath_8hpp.html</filename>
-    <class kind="class">rm::para::RmathParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
   </compound>
@@ -3277,13 +3272,6 @@
       <name>value_type</name>
       <anchorfile>d4/d84/classrm_1_1EwTopsis.html</anchorfile>
       <anchor>abd723afe631edf48f13bf2c051b2cb58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Tp *</type>
-      <name>pointer</name>
-      <anchorfile>d4/d84/classrm_1_1EwTopsis.html</anchorfile>
-      <anchor>ac14658b0774a2a2059258bed041ce297</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -6628,31 +6616,31 @@
     <templarg>typename Sequence</templarg>
     <templarg>typename Compare</templarg>
     <member kind="typedef">
-      <type>Sequence::value_type</type>
+      <type>Tp</type>
       <name>value_type</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>afe2d8456bc85b1092552ed48cf21260b</anchor>
+      <anchor>ae67f945804eb097184b698d8b8196ba8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Sequence::reference</type>
+      <type>Tp &amp;</type>
       <name>reference</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a34c3a6ceda64861e58e3ffca16a3acca</anchor>
+      <anchor>a304cd850a8c1ac9bce9db90a20a05df3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Sequence::const_reference</type>
+      <type>const Tp &amp;</type>
       <name>const_reference</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a997e5acd0e023617eb057eebea8d34ac</anchor>
+      <anchor>aeaa53c377dc82020bc2dc93868e09b16</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Sequence::size_type</type>
+      <type>std::size_t</type>
       <name>size_type</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a20dfe42cb5437214486968237d1788e8</anchor>
+      <anchor>a11bb4b31b15aa105df3655a2b73ee1a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -6680,15 +6668,15 @@
       <type>void</type>
       <name>push</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a9bc79dc34eed79638efff34c46f09f3c</anchor>
-      <arglist>(const_reference x)</arglist>
+      <anchor>ae15c5b60ca561b3a16c88e4cc948717b</anchor>
+      <arglist>(const Tp &amp;x)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>push</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>ab445a0e854c93f59a6b78540070e925c</anchor>
-      <arglist>(value_type &amp;&amp;x)</arglist>
+      <anchor>ab7a859cc7c7af30ac73740cfd9ebc440</anchor>
+      <arglist>(Tp &amp;&amp;x)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6701,15 +6689,15 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>ac8741a561dcc37cb69e1e930857bb77e</anchor>
-      <arglist>(const_reference prev, const_reference value)</arglist>
+      <anchor>a0b9b82fb4fcb1a1b671855def1fc7dc2</anchor>
+      <arglist>(const Tp &amp;prev, const Tp &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>erase</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a4614a140f57c2debc79bcc85659c718e</anchor>
-      <arglist>(const_reference value)</arglist>
+      <anchor>ae985322beceadf0dba5d796191cab532</anchor>
+      <arglist>(const Tp &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6726,71 +6714,25 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>size_type</type>
+      <type>std::size_t</type>
       <name>size</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>ae9520e8a8504c97856108e028a96d25b</anchor>
+      <anchor>a745d6ff4a12059a0827742f880b4f1e0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>const_reference</type>
+      <type>const Tp &amp;</type>
       <name>top</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a87d6e6c40151cbae077b2cf5e075cb05</anchor>
+      <anchor>aaa000499295c26ee6b5af3a530320338</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const container_type &amp;</type>
+      <type>const Sequence &amp;</type>
       <name>c</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a7687c1f805cda13b9ddf350397eeecb9</anchor>
+      <anchor>afb137a1efa840af10fe2ca666b11704c</anchor>
       <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::para::RmathParam</name>
-    <filename>da/d6f/classrm_1_1para_1_1RmathParam.html</filename>
-    <member kind="typedef">
-      <type>void</type>
-      <name>paraId</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a9d64fddc281b95090d03867aafaae66b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>RmathParam</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a34e31e3390fcd5922154587df9ca6894</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>EULER_0</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a99d2cfc2c34a00c691b47e4f4e69f650</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>EULER_1</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a4fe0899602f0dbba25ab2decb88ddf87</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>EULER_2</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a163aabfb3607e93d558eef68df8fe57c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="friend" protection="private">
-      <type>friend void</type>
-      <name>load</name>
-      <anchorfile>da/d6f/classrm_1_1para_1_1RmathParam.html</anchorfile>
-      <anchor>a5ee67c8c61500a1605906f928ba4595f</anchor>
-      <arglist>(_Tp &amp;, const std::string &amp;)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -8785,24 +8727,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Tp *</type>
-      <name>pointer</name>
-      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a57cf7584276df25029055802960a4174</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>Tp &amp;</type>
       <name>reference</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
       <anchor>aaec41cd1694f32bc2223e6ef08620074</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>const Tp *</type>
-      <name>const_pointer</name>
-      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a63f4b08d6408dbe45a7ffeabc860bc12</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -8823,42 +8751,28 @@
       <type></type>
       <name>UnionFind</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>ab0392e25a4218ae44b05acf34a8b8689</anchor>
-      <arglist>(const UnionFind &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>UnionFind</name>
-      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a6725e3d1f073149dfc3ae0a7f527ae99</anchor>
-      <arglist>(UnionFind &amp;&amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>UnionFind</name>
-      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>ad5127e79d7b9a282ac6c3aede59fa7fc</anchor>
-      <arglist>(_InputIterator first, _InputIterator last)</arglist>
+      <anchor>a158a44b72f67c3d32f20b616d7f237ef</anchor>
+      <arglist>(InputIterator first, InputIterator last)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isSameSet</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>abaf86d890988574a0e4b88402991e65e</anchor>
-      <arglist>(const_reference val_a, const_reference val_b)</arglist>
+      <anchor>afea4d8df3b3e5c401e25b6e5799cc73d</anchor>
+      <arglist>(const Tp &amp;val_a, const Tp &amp;val_b)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>unionSet</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a87848e745bd6df7116121249b001f0c1</anchor>
-      <arglist>(const_reference val_a, const_reference val_b)</arglist>
+      <anchor>afc0474dff57201d165f733b30bbd61b6</anchor>
+      <arglist>(const Tp &amp;val_a, const Tp &amp;val_b)</arglist>
     </member>
     <member kind="function">
-      <type>std::unordered_map&lt; value_type, std::vector&lt; value_type &gt; &gt;</type>
+      <type>std::unordered_map&lt; Tp, std::vector&lt; Tp &gt; &gt;</type>
       <name>exportData</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a997d5d9f11cb139378068e62239237fd</anchor>
+      <anchor>af5ef0b4f9b17db896aa48815bf4193d4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -9248,56 +9162,56 @@
     <member kind="typedef">
       <type>Matx&lt; float, 1, 1 &gt;</type>
       <name>Matx11f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga776f3b69cfa1e8c4e77919d8a0231a68</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 1 &gt;</type>
       <name>Matx11d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gab9d84a5a35b7177cbb2d1471680af33c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 1 &gt;</type>
       <name>Matx51f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga541c9f30e5a0608a481c908deaa6a4ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 1, 5 &gt;</type>
       <name>Matx15f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga0a51e6b389329cf2925e764635bb2ba7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 1 &gt;</type>
       <name>Matx51d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga544b37a37f56482fe9f9fb486abf1b57</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 5 &gt;</type>
       <name>Matx15d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga9a814ad228e3f2fa506286fbdb80c93d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 5 &gt;</type>
       <name>Matx55f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gad1e50ace9e3d660f0b5ab600d51ade14</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 5 &gt;</type>
       <name>Matx55d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga629446df8c807dcc235b61c81d953934</anchor>
       <arglist></arglist>
     </member>
@@ -9914,6 +9828,61 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>AngleMode</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RAD</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DEG</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>CalPlane</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
+      <arglist></arglist>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>EulerAxis</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>X</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Y</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Z</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20aaeef63b125e5fd0545db7e6f7a602efa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>PixChannel</name>
       <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
       <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
@@ -9952,61 +9921,6 @@
       <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">UDP_UADP</enumvalue>
       <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">MQTT_UADP</enumvalue>
       <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">MQTT_JSON</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>EulerAxis</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>X</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Y</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Z</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20aaeef63b125e5fd0545db7e6f7a602efa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>AngleMode</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RAD</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>DEG</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>CalPlane</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
-      <arglist></arglist>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -10198,6 +10112,216 @@
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
+      <type>constexpr Tp</type>
+      <name>operator+</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
+      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <name>operator+</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
+      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>operator-</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
+      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <name>operator-</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
+      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>deg2rad</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
+      <arglist>(Tp deg)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rad2deg</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
+      <arglist>(Tp rad)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
+      <name>point2matx</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga647e91a5f36b1cfc98eb4dc502a2f477</anchor>
+      <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
+      <name>matx2point</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaed1bdd51afafe8a6e9308097e1b8aa54</anchor>
+      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
+      <name>matx2vec</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1040920b6b805cc9a1302585203be1d6</anchor>
+      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
+      <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getHAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>getVAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>getDeltaAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
+      <arglist>(Tp angle_1, Tp angle_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>sec</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>csc</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>cot</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>sgn</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>sigmoid</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
+      <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>cross2D</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
+      <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>cross2D</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
+      <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>ForwardIterator::value_type</type>
+      <name>calculateModeNum</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
+      <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>calculateRelativeAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>calculateRelativeCenter</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Vec2f</type>
+      <name>cameraConvertToPixel</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>cameraConvertToPixel</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
+      <name>euler2Mat</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
+      <arglist>(Tp val, EulerAxis axis)</arglist>
+    </member>
+    <member kind="function">
       <type>std::string</type>
       <name>format</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
@@ -10275,221 +10399,46 @@
       <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Point2f</type>
-      <name>calculateRelativeAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>calculateRelativeCenter</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Vec2f</type>
-      <name>cameraConvertToPixel</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>cameraConvertToPixel</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
-      <name>euler2Mat</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
-      <arglist>(Tp val, EulerAxis axis)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>operator+</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
-      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
-      <name>operator+</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
-      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>operator-</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
-      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
-      <name>operator-</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
-      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>deg2rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
-      <arglist>(Tp deg)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rad2deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
-      <arglist>(Tp rad)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
-      <name>point2matx</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga647e91a5f36b1cfc98eb4dc502a2f477</anchor>
-      <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
-      <name>matx2point</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaed1bdd51afafe8a6e9308097e1b8aa54</anchor>
-      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
-      <name>matx2vec</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1040920b6b805cc9a1302585203be1d6</anchor>
-      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
-      <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getHAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>getVAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>getDeltaAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
-      <arglist>(Tp angle_1, Tp angle_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>sec</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>csc</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>cot</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>sgn</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>sigmoid</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
-      <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>cross2D</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
-      <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>cross2D</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
-      <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>ForwardIterator::value_type</type>
-      <name>calculateModeNum</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
-      <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>d6/d59/group__types.html</anchorfile>
       <anchor>gaeef53a138c45d57e49dcc1745333156c</anchor>
       <arglist>(const RMStatus &amp;lhs, const RMStatus &amp;rhs)</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>PI</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>e</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>SQRT_2</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>PI_2</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga755488a1b5092db9c2d4f6fefad886b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>PI_4</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>Timer</type>
@@ -10722,41 +10671,6 @@
       <anchor>ga874e392295465b26035dc015e4d55827</anchor>
       <arglist>[]</arglist>
     </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>e</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>SQRT_2</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>PI_2</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga755488a1b5092db9c2d4f6fefad886b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>PI_4</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::helper</name>
@@ -10796,42 +10710,42 @@
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gaae346087df690ca4296911daaadfbbda</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gab4884bbee674cac21e3ee00e16b315d3</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga13b00e1ca5a58a911ac9a53862d4a090</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga3805561febf4b3cfe827c985219fc816</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga3452f8c1e466c8c4aa422c4e1ed6486d</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gaab580e56d4f4b3e264d90bed9403204d</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
@@ -10859,7 +10773,6 @@
     <class kind="struct">rm::para::OrtParam</class>
     <class kind="struct">rm::para::PilotParam</class>
     <class kind="struct">rm::para::PlanarTrackerParam</class>
-    <class kind="class">rm::para::RmathParam</class>
     <class kind="struct">rm::para::RuneCenterParam</class>
     <class kind="struct">rm::para::RuneDeciderParam</class>
     <class kind="struct">rm::para::RuneDetectorParam</class>
@@ -10918,13 +10831,6 @@
       <name>opcua_param</name>
       <anchorfile>da/dd3/group__para__opcua.html</anchorfile>
       <anchor>ga30fb7f92943951e254d5e247d129cde6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>RmathParam</type>
-      <name>rmath_param</name>
-      <anchorfile>de/d23/group__para__rmath.html</anchorfile>
-      <anchor>ga6dbe18c6bbaebf66c2e5ce30ed29cae9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -11374,10 +11280,13 @@
     <title>RMVL 核心模块</title>
     <filename>d0/de1/group__core.html</filename>
     <subgroup>core_dataio</subgroup>
+    <subgroup>core_datastruct</subgroup>
     <subgroup>core_kalman</subgroup>
     <subgroup>core_numcal</subgroup>
     <subgroup>serial</subgroup>
     <subgroup>core_timer</subgroup>
+    <namespace>rm::numeric_literals</namespace>
+    <class kind="class">rm::EwTopsis</class>
     <class kind="class">rm::Exception</class>
     <class kind="struct">rm::hash_aggregate</class>
     <class kind="struct">rm::hash_traits</class>
@@ -11523,6 +11432,117 @@
       <anchor>gaaa1505e84ee5a1d4ce66ca3a959786a7</anchor>
       <arglist>(expr)</arglist>
     </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 1, 1 &gt;</type>
+      <name>cv::Matx11f</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga776f3b69cfa1e8c4e77919d8a0231a68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 1, 1 &gt;</type>
+      <name>cv::Matx11d</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gab9d84a5a35b7177cbb2d1471680af33c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 5, 1 &gt;</type>
+      <name>cv::Matx51f</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga541c9f30e5a0608a481c908deaa6a4ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 1, 5 &gt;</type>
+      <name>cv::Matx15f</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga0a51e6b389329cf2925e764635bb2ba7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 1 &gt;</type>
+      <name>cv::Matx51d</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga544b37a37f56482fe9f9fb486abf1b57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 1, 5 &gt;</type>
+      <name>cv::Matx15d</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga9a814ad228e3f2fa506286fbdb80c93d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; float, 5, 5 &gt;</type>
+      <name>cv::Matx55f</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gad1e50ace9e3d660f0b5ab600d51ade14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Matx&lt; double, 5, 5 &gt;</type>
+      <name>cv::Matx55d</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga629446df8c807dcc235b61c81d953934</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::AngleMode</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::RAD</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::DEG</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::CalPlane</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
+      <arglist></arglist>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
+      <enumvalue file="d0/de1/group__core.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::EulerAxis</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::X</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::Y</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::Z</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gga9efb6b0afed03a8afe74adea283e4e20aaeef63b125e5fd0545db7e6f7a602efa</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>RMVLErrorCode</name>
@@ -11609,6 +11629,258 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaae346087df690ca4296911daaadfbbda</anchor>
+      <arglist>(long double num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gab4884bbee674cac21e3ee00e16b315d3</anchor>
+      <arglist>(long long unsigned num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga13b00e1ca5a58a911ac9a53862d4a090</anchor>
+      <arglist>(long double num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga3805561febf4b3cfe827c985219fc816</anchor>
+      <arglist>(long long unsigned num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga3452f8c1e466c8c4aa422c4e1ed6486d</anchor>
+      <arglist>(long double num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr double</type>
+      <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaab580e56d4f4b3e264d90bed9403204d</anchor>
+      <arglist>(long long unsigned num)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::operator+</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
+      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <name>rm::operator+</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
+      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::operator-</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
+      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
+      <name>rm::operator-</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
+      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::deg2rad</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
+      <arglist>(Tp deg)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::rad2deg</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
+      <arglist>(Tp rad)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
+      <name>rm::point2matx</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga647e91a5f36b1cfc98eb4dc502a2f477</anchor>
+      <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
+      <name>rm::matx2point</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaed1bdd51afafe8a6e9308097e1b8aa54</anchor>
+      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
+      <name>rm::matx2vec</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1040920b6b805cc9a1302585203be1d6</anchor>
+      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
+      <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getDistance</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
+      <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getHAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr auto</type>
+      <name>rm::getVAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
+      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::getDeltaAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
+      <arglist>(Tp angle_1, Tp angle_2)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::sec</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::csc</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::cot</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::sgn</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
+      <arglist>(Tp x)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::sigmoid</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
+      <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::cross2D</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
+      <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Tp</type>
+      <name>rm::cross2D</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
+      <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>ForwardIterator::value_type</type>
+      <name>rm::calculateModeNum</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
+      <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>rm::calculateRelativeAngle</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>rm::calculateRelativeCenter</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Vec2f</type>
+      <name>rm::cameraConvertToPixel</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point2f</type>
+      <name>rm::cameraConvertToPixel</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
+      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
+      <name>rm::euler2Mat</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
+      <arglist>(Tp val, EulerAxis axis)</arglist>
+    </member>
+    <member kind="function">
       <type>std::string</type>
       <name>rm::format</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
@@ -11664,6 +11936,41 @@
       <anchor>gaca3e9de5d5043a1c038a42c9f4f0a22c</anchor>
       <arglist>(const Tp &amp;lhs, const Tp &amp;rhs)</arglist>
     </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>rm::PI</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>rm::e</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>rm::SQRT_2</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>rm::PI_2</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga755488a1b5092db9c2d4f6fefad886b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr double</type>
+      <name>rm::PI_4</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>para</name>
@@ -11671,7 +11978,6 @@
     <filename>d6/db7/group__para.html</filename>
     <subgroup>para_camera</subgroup>
     <subgroup>para_ml</subgroup>
-    <subgroup>para_rmath</subgroup>
     <subgroup>para_combo</subgroup>
     <subgroup>para_compensator</subgroup>
     <subgroup>para_decider</subgroup>
@@ -11702,6 +12008,13 @@
       <anchor>ga9aa99cd3878794115ac58d55320e7238</anchor>
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
+  </compound>
+  <compound kind="group">
+    <name>core_datastruct</name>
+    <title>数据结构</title>
+    <filename>d7/d10/group__core__datastruct.html</filename>
+    <class kind="class">rm::RaHeap</class>
+    <class kind="class">rm::UnionFind</class>
   </compound>
   <compound kind="group">
     <name>core_kalman</name>
@@ -12451,438 +12764,6 @@
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga874e392295465b26035dc015e4d55827</anchor>
       <arglist>[]</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>rmath</name>
-    <title>数据结构与算法及实用数学库</title>
-    <filename>d9/d31/group__rmath.html</filename>
-    <subgroup>union_find</subgroup>
-    <subgroup>ra_heap</subgroup>
-    <namespace>rm::numeric_literals</namespace>
-    <class kind="class">rm::EwTopsis</class>
-    <member kind="typedef">
-      <type>Matx&lt; float, 1, 1 &gt;</type>
-      <name>cv::Matx11f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga776f3b69cfa1e8c4e77919d8a0231a68</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; double, 1, 1 &gt;</type>
-      <name>cv::Matx11d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gab9d84a5a35b7177cbb2d1471680af33c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; float, 5, 1 &gt;</type>
-      <name>cv::Matx51f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga541c9f30e5a0608a481c908deaa6a4ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; float, 1, 5 &gt;</type>
-      <name>cv::Matx15f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0a51e6b389329cf2925e764635bb2ba7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; double, 5, 1 &gt;</type>
-      <name>cv::Matx51d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga544b37a37f56482fe9f9fb486abf1b57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; double, 1, 5 &gt;</type>
-      <name>cv::Matx15d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga9a814ad228e3f2fa506286fbdb80c93d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; float, 5, 5 &gt;</type>
-      <name>cv::Matx55f</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gad1e50ace9e3d660f0b5ab600d51ade14</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Matx&lt; double, 5, 5 &gt;</type>
-      <name>cv::Matx55d</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga629446df8c807dcc235b61c81d953934</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::EulerAxis</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::X</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Y</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Z</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gga9efb6b0afed03a8afe74adea283e4e20aaeef63b125e5fd0545db7e6f7a602efa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::AngleMode</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::RAD</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::DEG</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::CalPlane</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
-      <arglist></arglist>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
-      <enumvalue file="d9/d31/group__rmath.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>rm::calculateRelativeAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>rm::calculateRelativeCenter</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Vec2f</type>
-      <name>rm::cameraConvertToPixel</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Point2f</type>
-      <name>rm::cameraConvertToPixel</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
-      <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
-      <name>rm::euler2Mat</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
-      <arglist>(Tp val, EulerAxis axis)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaae346087df690ca4296911daaadfbbda</anchor>
-      <arglist>(long double num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gab4884bbee674cac21e3ee00e16b315d3</anchor>
-      <arglist>(long long unsigned num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga13b00e1ca5a58a911ac9a53862d4a090</anchor>
-      <arglist>(long double num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga3805561febf4b3cfe827c985219fc816</anchor>
-      <arglist>(long long unsigned num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga3452f8c1e466c8c4aa422c4e1ed6486d</anchor>
-      <arglist>(long double num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr double</type>
-      <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaab580e56d4f4b3e264d90bed9403204d</anchor>
-      <arglist>(long long unsigned num)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::operator+</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
-      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
-      <name>rm::operator+</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
-      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::operator-</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
-      <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
-      <name>rm::operator-</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
-      <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::deg2rad</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
-      <arglist>(Tp deg)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::rad2deg</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
-      <arglist>(Tp rad)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Matx&lt; Tp, 3, 1 &gt;</type>
-      <name>rm::point2matx</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga647e91a5f36b1cfc98eb4dc502a2f477</anchor>
-      <arglist>(cv::Point3_&lt; Tp &gt; point)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Point3_&lt; Tp &gt;</type>
-      <name>rm::matx2point</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaed1bdd51afafe8a6e9308097e1b8aa54</anchor>
-      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr cv::Vec&lt; Tp, 3 &gt;</type>
-      <name>rm::matx2vec</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1040920b6b805cc9a1302585203be1d6</anchor>
-      <arglist>(cv::Matx&lt; Tp, 3, 1 &gt; matx)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
-      <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getDistance</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
-      <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getHAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr auto</type>
-      <name>rm::getVAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
-      <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::getDeltaAngle</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
-      <arglist>(Tp angle_1, Tp angle_2)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::sec</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::csc</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::cot</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::sgn</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
-      <arglist>(Tp x)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::sigmoid</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
-      <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::cross2D</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
-      <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Tp</type>
-      <name>rm::cross2D</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
-      <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>ForwardIterator::value_type</type>
-      <name>rm::calculateModeNum</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga8041626cf548fb4b8048c70888b2283d</anchor>
-      <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>rm::PI</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>rm::e</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>rm::SQRT_2</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>rm::PI_2</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga755488a1b5092db9c2d4f6fefad886b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr double</type>
-      <name>rm::PI_4</name>
-      <anchorfile>d9/d31/group__rmath.html</anchorfile>
-      <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>union_find</name>
-    <title>并查集</title>
-    <filename>dc/d38/group__union__find.html</filename>
-    <class kind="class">rm::UnionFind</class>
-  </compound>
-  <compound kind="group">
-    <name>ra_heap</name>
-    <title>支持随机访问的堆结构</title>
-    <filename>d0/d47/group__ra__heap.html</filename>
-    <class kind="class">rm::RaHeap</class>
-  </compound>
-  <compound kind="group">
-    <name>para_rmath</name>
-    <title>rmath 的参数模块</title>
-    <filename>de/d23/group__para__rmath.html</filename>
-    <class kind="class">rm::para::RmathParam</class>
-    <member kind="variable">
-      <type>RmathParam</type>
-      <name>rm::para::rmath_param</name>
-      <anchorfile>de/d23/group__para__rmath.html</anchorfile>
-      <anchor>ga6dbe18c6bbaebf66c2e5ce30ed29cae9</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -13774,36 +13655,48 @@
     <docanchor file="d5/d52/tutorial_other_arm.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/arm.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2other_2arm</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_modules_aggregate_reflect</name>
-    <title>聚合类反射及其相关 API</title>
-    <filename>d7/de5/tutorial_modules_aggregate_reflect.html</filename>
-    <docanchor file="d7/de5/tutorial_modules_aggregate_reflect.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/aggregate_reflect.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2aggregate__reflect</docanchor>
+    <name>tutorial_modules_dft</name>
+    <title>离散傅里叶变换</title>
+    <filename>d5/d1c/tutorial_modules_dft.html</filename>
+    <docanchor file="d5/d1c/tutorial_modules_dft.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/dft.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2dft</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ekf</name>
     <title>扩展卡尔曼滤波</title>
     <filename>db/d71/tutorial_modules_ekf.html</filename>
-    <docanchor file="db/d71/tutorial_modules_ekf.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/ekf.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2ekf</docanchor>
+    <docanchor file="db/d71/tutorial_modules_ekf.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/ekf.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2ekf</docanchor>
     <docanchor file="db/d71/tutorial_modules_ekf.html" title="1.1 状态方程线性化">ekf_state_function_linearization</docanchor>
     <docanchor file="db/d71/tutorial_modules_ekf.html" title="1.2 观测方程线性化">ekf_observation_function_linearization</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_ew_topsis</name>
+    <title>基于 TOPSIS 模型的熵权法</title>
+    <filename>df/d25/tutorial_modules_ew_topsis.html</filename>
+    <docanchor file="df/d25/tutorial_modules_ew_topsis.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/ew_topsis.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2ew__topsis</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_fft</name>
+    <title>快速傅里叶变换</title>
+    <filename>d0/d9d/tutorial_modules_fft.html</filename>
+    <docanchor file="d0/d9d/tutorial_modules_fft.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/fft.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2fft</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_func_iteration</name>
     <title>非线性方程（组）数值解与迭代法</title>
     <filename>d8/daf/tutorial_modules_func_iteration.html</filename>
-    <docanchor file="d8/daf/tutorial_modules_func_iteration.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/func_iteration.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2func__iteration</docanchor>
+    <docanchor file="d8/daf/tutorial_modules_func_iteration.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/func_iteration.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2func__iteration</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_interpolation</name>
     <title>函数插值方法</title>
     <filename>d8/d57/tutorial_modules_interpolation.html</filename>
-    <docanchor file="d8/d57/tutorial_modules_interpolation.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/interpolation.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2interpolation</docanchor>
+    <docanchor file="d8/d57/tutorial_modules_interpolation.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/interpolation.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2interpolation</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_kalman</name>
     <title>卡尔曼滤波</title>
     <filename>dd/dc3/tutorial_modules_kalman.html</filename>
-    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/kalman.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2kalman</docanchor>
+    <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/kalman.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2kalman</docanchor>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.2 初尝递归算法">kalman_recursive</docanchor>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.3 数据融合">kalman_data_fusion</docanchor>
     <docanchor file="dd/dc3/tutorial_modules_kalman.html" title="1.4 协方差矩阵">kalman_covariance_matrix</docanchor>
@@ -13816,70 +13709,70 @@
     <name>tutorial_modules_least_square</name>
     <title>最小二乘法——超定方程组与函数拟合</title>
     <filename>db/da1/tutorial_modules_least_square.html</filename>
-    <docanchor file="db/da1/tutorial_modules_least_square.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/least_square.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2least__square</docanchor>
+    <docanchor file="db/da1/tutorial_modules_least_square.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/least_square.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2least__square</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_ort</name>
+    <title>ONNX-Runtime 分类网络部署库</title>
+    <filename>d8/d82/tutorial_modules_ort.html</filename>
+    <docanchor file="d8/d82/tutorial_modules_ort.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/ort.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2ort</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_ra_heap</name>
+    <title>支持随机访问的堆</title>
+    <filename>d5/db4/tutorial_modules_ra_heap.html</filename>
+    <docanchor file="d5/db4/tutorial_modules_ra_heap.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/ra_heap.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2ra__heap</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_runge_kutta</name>
+    <title>常微分方程（组）数值解与 Runge-Kutta 算法</title>
+    <filename>d6/d31/tutorial_modules_runge_kutta.html</filename>
+    <docanchor file="d6/d31/tutorial_modules_runge_kutta.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/runge_kutta.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2runge__kutta</docanchor>
+    <docanchor file="d6/d31/tutorial_modules_runge_kutta.html" title="3.4 方程组的 Runge-Kutta 公式">equations_runge_kutta</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_union_find</name>
+    <title>并查集</title>
+    <filename>d4/d74/tutorial_modules_union_find.html</filename>
+    <docanchor file="d4/d74/tutorial_modules_union_find.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/union_find.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2union__find</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_aggregate_reflect</name>
+    <title>聚合类反射及其相关 API</title>
+    <filename>d7/de5/tutorial_modules_aggregate_reflect.html</filename>
+    <docanchor file="d7/de5/tutorial_modules_aggregate_reflect.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/aggregate_reflect.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2aggregate__reflect</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_camera</name>
+    <title>相机设备</title>
+    <filename>df/d2c/tutorial_modules_camera.html</filename>
+    <docanchor file="df/d2c/tutorial_modules_camera.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/camera.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2camera</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_light</name>
+    <title>光源控制器</title>
+    <filename>dc/d10/tutorial_modules_light.html</filename>
+    <docanchor file="dc/d10/tutorial_modules_light.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/light.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2light</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_opcua</name>
     <title>工业自动化通信协议 OPC UA</title>
     <filename>db/dba/tutorial_modules_opcua.html</filename>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2opcua</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="服务器/客户端">opcua_server_client</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="发布/订阅">opcua_pub_sub</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="参数加载">opcua_parameters</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="从 XML 配置 OPC UA">opcua_nodeset_compiler</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_modules_runge_kutta</name>
-    <title>常微分方程（组）数值解与 Runge-Kutta 算法</title>
-    <filename>d6/d31/tutorial_modules_runge_kutta.html</filename>
-    <docanchor file="d6/d31/tutorial_modules_runge_kutta.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/runge_kutta.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2runge__kutta</docanchor>
-    <docanchor file="d6/d31/tutorial_modules_runge_kutta.html" title="3.4 方程组的 Runge-Kutta 公式">equations_runge_kutta</docanchor>
-  </compound>
-  <compound kind="page">
     <name>tutorial_modules_serial</name>
     <title>串口通信模块</title>
     <filename>d3/da4/tutorial_modules_serial.html</filename>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/core/serial.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2serial</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/serial.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2serial</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="使用">serialport_how_to_use</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="初始化">serialport_init</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="数据 I/O">serialport_io</docanchor>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="链路层协议">serialport_protocol</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_camera</name>
-    <title>相机设备</title>
-    <filename>df/d2c/tutorial_modules_camera.html</filename>
-    <docanchor file="df/d2c/tutorial_modules_camera.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/camera.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2devices_2camera</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_light</name>
-    <title>光源控制器</title>
-    <filename>dc/d10/tutorial_modules_light.html</filename>
-    <docanchor file="dc/d10/tutorial_modules_light.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/devices/light.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2devices_2light</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_ort</name>
-    <title>ONNX-Runtime 分类网络部署库</title>
-    <filename>d8/d82/tutorial_modules_ort.html</filename>
-    <docanchor file="d8/d82/tutorial_modules_ort.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/ort/ort.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2ort_2ort</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_ew_topsis</name>
-    <title>基于 TOPSIS 模型的熵权法</title>
-    <filename>df/d25/tutorial_modules_ew_topsis.html</filename>
-    <docanchor file="df/d25/tutorial_modules_ew_topsis.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/ew_topsis.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2rmath_2ew__topsis</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_ra_heap</name>
-    <title>支持随机访问的堆</title>
-    <filename>d5/db4/tutorial_modules_ra_heap.html</filename>
-    <docanchor file="d5/db4/tutorial_modules_ra_heap.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/ra_heap.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2rmath_2ra__heap</docanchor>
-  </compound>
-  <compound kind="page">
-    <name>tutorial_modules_union_find</name>
-    <title>并查集</title>
-    <filename>d4/d74/tutorial_modules_union_find.html</filename>
-    <docanchor file="d4/d74/tutorial_modules_union_find.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/rmath/union_find.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2rmath_2union__find</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_modules</name>
@@ -13888,18 +13781,20 @@
     <subpage>d7/de5/tutorial_modules_aggregate_reflect.html</subpage>
     <subpage>d3/da4/tutorial_modules_serial.html</subpage>
     <subpage>db/dba/tutorial_modules_opcua.html</subpage>
+    <subpage>df/d2c/tutorial_modules_camera.html</subpage>
+    <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>
     <subpage>db/da1/tutorial_modules_least_square.html</subpage>
     <subpage>d8/daf/tutorial_modules_func_iteration.html</subpage>
     <subpage>d6/d31/tutorial_modules_runge_kutta.html</subpage>
+    <subpage>df/d25/tutorial_modules_ew_topsis.html</subpage>
     <subpage>dd/dc3/tutorial_modules_kalman.html</subpage>
     <subpage>db/d71/tutorial_modules_ekf.html</subpage>
+    <subpage>d5/d1c/tutorial_modules_dft.html</subpage>
+    <subpage>d0/d9d/tutorial_modules_fft.html</subpage>
     <subpage>d4/d74/tutorial_modules_union_find.html</subpage>
     <subpage>d5/db4/tutorial_modules_ra_heap.html</subpage>
-    <subpage>df/d25/tutorial_modules_ew_topsis.html</subpage>
     <subpage>d8/d82/tutorial_modules_ort.html</subpage>
-    <subpage>df/d2c/tutorial_modules_camera.html</subpage>
-    <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <docanchor file="d6/d6e/tutorial_table_of_content_modules.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tutorial_modules.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tutorial__modules</docanchor>
   </compound>
   <compound kind="page">

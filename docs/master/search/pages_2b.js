@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['算法_0',['常微分方程（组）数值解与 Runge-Kutta 算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'tutorial_table_of_content_modules']]]
+  ['硬件设备与软件模块的初始化_0',['硬件设备与软件模块的初始化',['../d1/d67/tutorial_extra_upper_init.html',1,'tutorial_table_of_content_extra']]]
 ];

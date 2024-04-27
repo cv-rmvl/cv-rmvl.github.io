@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['系统参数辨识神符预测模块_0',['系统参数辨识神符预测模块',['../df/d99/group__spi__rune__predictor.html',1,'']]]
+  ['补偿模块（功能模块）_0',['补偿模块（功能模块）',['../d7/d4f/group__compensator.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['海康机器人（hikrobot）工业相机库_0',['海康机器人（HikRobot）工业相机库',['../db/d27/group__hik__camera.html',1,'']]]
+  ['特征组合体（数据组件）_0',['特征组合体（数据组件）',['../dd/dd2/group__combo.html',1,'']]],
+  ['特征组合的时间序列（数据组件）_1',['追踪器/特征组合的时间序列（数据组件）',['../de/dca/group__tracker.html',1,'']]]
 ];

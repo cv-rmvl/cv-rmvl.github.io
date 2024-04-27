@@ -7,7 +7,7 @@ var searchData=
   ['defaultfeature_4',['DefaultFeature',['../de/de0/classrm_1_1DefaultFeature.html#a61c74ad2dc9ef03298a258ac0d43fecb',1,'rm::DefaultFeature']]],
   ['defaultgroup_5',['DefaultGroup',['../d0/df4/classrm_1_1DefaultGroup.html#a0f5e75c4400bfec923ef086d7045050f',1,'rm::DefaultGroup']]],
   ['defaulttracker_6',['DefaultTracker',['../d3/d25/classrm_1_1DefaultTracker.html#a666a2a2588729117877dad1058f71728',1,'rm::DefaultTracker']]],
-  ['deg2rad_7',['deg2rad',['../d9/d31/group__rmath.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
+  ['deg2rad_7',['deg2rad',['../d0/de1/group__core.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
   ['deleteserver_8',['deleteServer',['../d4/d06/classrm_1_1Server.html#a2b2de27a23d2391b5b0b4b655f7c9aaa',1,'rm::Server']]],
   ['delta_5fy_9',['delta_y',['../d5/d08/classrm_1_1TrackerState.html#a42b1a610feeff38cd3fdf48475038d5b',1,'rm::TrackerState::delta_y() const'],['../d5/d08/classrm_1_1TrackerState.html#ae3ed9e52f861d23dbdfe1fc785362c92',1,'rm::TrackerState::delta_y(float dy)']]],
   ['detect_10',['detect',['../db/d6e/classrm_1_1ArmorDetector.html#a1f3d3f5dc60a82c1a666e68b2a0811c0',1,'rm::ArmorDetector::detect()'],['../d3/d77/classrm_1_1detector.html#a5c8b6fe0e1628f9f756d146569564bff',1,'rm::detector::detect()'],['../dc/d93/classrm_1_1GyroDetector.html#a664dd3235895c60a5eec6e18c73d47d8',1,'rm::GyroDetector::detect()'],['../d6/deb/classrm_1_1RuneDetector.html#a1594fe1e43faade632f9fb9337f308f3',1,'rm::RuneDetector::detect()'],['../d8/d35/classrm_1_1TagDetector.html#ace6080b183f9d358fae33bf9e9b0c7e9',1,'rm::TagDetector::detect()']]],

@@ -13,7 +13,7 @@ var searchData=
   ['infantry_5f3_10',['INFANTRY_3',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450',1,'rm']]],
   ['infantry_5f4_11',['INFANTRY_4',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07',1,'rm']]],
   ['infantry_5f5_12',['INFANTRY_5',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3',1,'rm']]],
-  ['inference_13',['inference',['../d7/d1f/classrm_1_1OnnxRT.html#afd0d94a4ec4e4158ac411f951dc04c21',1,'rm::OnnxRT::inference()'],['../d4/d84/classrm_1_1EwTopsis.html#a7c59bb50364bd32e1ab5d9f45a6b8f38',1,'rm::EwTopsis::inference()']]],
+  ['inference_13',['inference',['../d4/d84/classrm_1_1EwTopsis.html#a7c59bb50364bd32e1ab5d9f45a6b8f38',1,'rm::EwTopsis::inference()'],['../d7/d1f/classrm_1_1OnnxRT.html#afd0d94a4ec4e4158ac411f951dc04c21',1,'rm::OnnxRT::inference()']]],
   ['info_5f_14',['INFO_',['../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174',1,'util.hpp']]],
   ['init_15',['init',['../dc/db0/structrm_1_1reflect_1_1helper_1_1init.html',1,'rm::reflect::helper::init'],['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a',1,'rm::KalmanFilterStaticDatas::init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, Tp error)'],['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#ae425c3a2e7955359368bb54ee82e2519',1,'rm::KalmanFilterStaticDatas::init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;error)'],['../d5/d26/classrm_1_1RungeKutta.html#a30bb8cfe97d628d0fd69bc3505feac4d',1,'rm::RungeKutta::init(double t0, const std::vector&lt; double &gt; &amp;x0)'],['../d5/d26/classrm_1_1RungeKutta.html#a8698d72c9272ec992a78843997f3053b',1,'rm::RungeKutta::init(double t0, std::vector&lt; double &gt; &amp;&amp;x0)']]],
   ['init_5ffrequency_16',['INIT_FREQUENCY',['../d0/d4a/structrm_1_1para_1_1RuneDeciderParam.html#a3b1e495ca2972d4af2395f372c4da29e',1,'rm::para::RuneDeciderParam']]],
@@ -30,5 +30,5 @@ var searchData=
   ['isactive_27',['isActive',['../d1/dfe/classrm_1_1Rune.html#a64af58971748ce9dc909c6a16c6dc692',1,'rm::Rune::isActive()'],['../db/d77/classrm_1_1RuneTarget.html#a474788c10deee38c0c14f5c7ac277b02',1,'rm::RuneTarget::isActive()']]],
   ['iscontainblob_28',['isContainBlob',['../df/d41/classrm_1_1Armor.html#a5afe2c2cfe6fe816e5afdebe36965824',1,'rm::Armor']]],
   ['isopened_29',['isOpened',['../db/d9f/classrm_1_1HikCamera.html#a17da764db5d58689bb1ca5adc7287f1b',1,'rm::HikCamera::isOpened()'],['../de/de8/classrm_1_1MvCamera.html#afc51568a8a254ab21b469c90f864bf58',1,'rm::MvCamera::isOpened()'],['../d1/d9c/classrm_1_1OptCamera.html#a508cf0639d7ba77360b922a9df1c46fc',1,'rm::OptCamera::isOpened()'],['../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444',1,'rm::SerialPort::isOpened()']]],
-  ['issameset_30',['isSameSet',['../db/d0c/classrm_1_1UnionFind.html#abaf86d890988574a0e4b88402991e65e',1,'rm::UnionFind']]]
+  ['issameset_30',['isSameSet',['../db/d0c/classrm_1_1UnionFind.html#afea4d8df3b3e5c401e25b6e5799cc73d',1,'rm::UnionFind']]]
 ];

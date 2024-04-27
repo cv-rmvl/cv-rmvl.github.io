@@ -1,7 +1,7 @@
 var searchData=
 [
   ['r_0',['R',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ae1e1d3d40573127e9ee0480caf1283d6',1,'rm']]],
-  ['rad_1',['RAD',['../d9/d31/group__rmath.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
+  ['rad_1',['RAD',['../d0/de1/group__core.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
   ['red_2',['RED',['../d7/dbd/group__imgproc.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469',1,'rm']]],
   ['right_3',['RIGHT',['../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
   ['rmvl_5fbaddynamictype_4',['RMVL_BadDynamicType',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba59242f30afedb168324b811aed9f446c',1,'util.hpp']]],

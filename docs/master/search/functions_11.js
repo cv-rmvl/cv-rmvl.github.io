@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sec_0',['sec',['../d9/d31/group__rmath.html#ga2376ca67d6e7b3f7f560cdcb92517cee',1,'rm']]],
+  ['sec_0',['sec',['../d0/de1/group__core.html#ga2376ca67d6e7b3f7f560cdcb92517cee',1,'rm']]],
   ['serialport_1',['SerialPort',['../d4/d98/classrm_1_1SerialPort.html#af3c8690ef2eb867b6a038da5905ba294',1,'rm::SerialPort']]],
   ['server_2',['Server',['../d4/d06/classrm_1_1Server.html#ac68cb0753c1691848fd601aa49526096',1,'rm::Server::Server(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a6d93b0b25b10110a36fbd2b5e93b9dac',1,'rm::Server::Server(ServerUserConfig on_config, uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a97f6b85baa8f7b01918bfcbdc55d2a82',1,'rm::Server::Server(const Server &amp;)=delete'],['../d4/d06/classrm_1_1Server.html#a502a9541d4bd87f867b9bcdb97e92f56',1,'rm::Server::Server(Server &amp;&amp;)=delete']]],
   ['set_3',['set',['../df/dfa/structrm_1_1CameraConfig.html#addc5f7178773c180bee1ab28bf4e5de7',1,'rm::CameraConfig::set()'],['../db/d9f/classrm_1_1HikCamera.html#a8b66798aca86dd7b0222124b58803958',1,'rm::HikCamera::set()'],['../de/de8/classrm_1_1MvCamera.html#aa5f360ee53e8528cee8310e937e9ad56',1,'rm::MvCamera::set()'],['../d1/d9c/classrm_1_1OptCamera.html#a23ccd190a49c93dadecbe9fbe41496f2',1,'rm::OptCamera::set()']]],
@@ -20,9 +20,9 @@ var searchData=
   ['settype_17',['setType',['../da/d88/classrm_1_1Event.html#a855874ba7f3e17ef0efae038e3d6bac4',1,'rm::Event::setType()'],['../df/d41/classrm_1_1Armor.html#a74064d4d9afc36caddcf09155b652aa7',1,'rm::Armor::setType()']]],
   ['setv_18',['setV',['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#aede86b2e859a9ead8f191dda12e20119',1,'rm::ExtendedKalmanFilter']]],
   ['setw_19',['setW',['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1deb4463dc51d0f731883d14d66673ce',1,'rm::ExtendedKalmanFilter']]],
-  ['sgn_20',['sgn',['../d9/d31/group__rmath.html#gaa63dd59871f7ac738e9d66ec4af1701e',1,'rm']]],
-  ['sigmoid_21',['sigmoid',['../d9/d31/group__rmath.html#ga1125e569bf93394a8544bffc795f5274',1,'rm']]],
-  ['size_22',['size',['../d9/de2/classrm_1_1VariableType.html#a6e44ad95c087ee6e723543ec7ef00346',1,'rm::VariableType::size()'],['../df/db8/classrm_1_1Variable.html#a70524d2a980c7163f7b1ad6aab17db49',1,'rm::Variable::size()'],['../db/d45/classrm_1_1RaHeap.html#ae9520e8a8504c97856108e028a96d25b',1,'rm::RaHeap::size()'],['../de/dee/classrm_1_1combo.html#a88fd3024f203176dd2d6e5eb384a44c0',1,'rm::combo::size()'],['../d6/d6c/classrm_1_1group.html#ac8a015e66d39cc8d544ec8cd0552ff51',1,'rm::group::size()'],['../d6/dd2/classrm_1_1tracker.html#af972bfc25bffad86b27c7c00be291162',1,'rm::tracker::size()'],['../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9',1,'rm::reflect::size()']]],
+  ['sgn_20',['sgn',['../d0/de1/group__core.html#gaa63dd59871f7ac738e9d66ec4af1701e',1,'rm']]],
+  ['sigmoid_21',['sigmoid',['../d0/de1/group__core.html#ga1125e569bf93394a8544bffc795f5274',1,'rm']]],
+  ['size_22',['size',['../db/d45/classrm_1_1RaHeap.html#a745d6ff4a12059a0827742f880b4f1e0',1,'rm::RaHeap::size()'],['../d9/de2/classrm_1_1VariableType.html#a6e44ad95c087ee6e723543ec7ef00346',1,'rm::VariableType::size()'],['../df/db8/classrm_1_1Variable.html#a70524d2a980c7163f7b1ad6aab17db49',1,'rm::Variable::size()'],['../de/dee/classrm_1_1combo.html#a88fd3024f203176dd2d6e5eb384a44c0',1,'rm::combo::size()'],['../d6/d6c/classrm_1_1group.html#ac8a015e66d39cc8d544ec8cd0552ff51',1,'rm::group::size()'],['../d6/dd2/classrm_1_1tracker.html#af972bfc25bffad86b27c7c00be291162',1,'rm::tracker::size()'],['../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9',1,'rm::reflect::size()']]],
   ['solve_23',['solve',['../d5/d26/classrm_1_1RungeKutta.html#a1b2f43ad444860b164c3b7e578d9a0e7',1,'rm::RungeKutta']]],
   ['spin_24',['spin',['../da/d78/classrm_1_1Client.html#a22eb488c687c3f9934f788bcfd98ea77',1,'rm::Client']]],
   ['spinonce_25',['spinOnce',['../da/d78/classrm_1_1Client.html#a59fb9b7b44f6c041343ba31469d0d9c1',1,'rm::Client']]],
