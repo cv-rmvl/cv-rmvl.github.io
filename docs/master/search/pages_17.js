@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['基于_20topsis_20模型的熵权法_0',['基于 TOPSIS 模型的熵权法',['../df/d25/tutorial_modules_ew_topsis.html',1,'tutorial_table_of_content_modules']]],
-  ['基本介绍_1',['基本介绍',['../d6/d88/tutorial_table_of_content_config.html',1,'tutorials']]]
+  ['在整车状态估计中涉及到的预测量_0',['在整车状态估计中涉及到的预测量',['../d0/da1/tutorial_extra_gyro_predictor.html',1,'tutorial_table_of_content_extra']]]
 ];

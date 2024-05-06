@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var versions = [['1.3.0-dev', '/docs/master'],
+    var versions = [['1.4.0-dev', '/docs/master'],
+                    ['1.3.0', '/docs/1.3.0'],
                     ['1.2.1', '/docs/1.2.1'],
                     ['1.2.0', '/docs/1.2.0'],
                     ['1.1.1', '/docs/1.1.1'],

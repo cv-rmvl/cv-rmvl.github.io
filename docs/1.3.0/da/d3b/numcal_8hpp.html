@@ -1,0 +1,234 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rmvl/core/numcal.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.3.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_8ce2230b18c62fc4f1b2d4c11ea01049.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_021e08c4c598f89101b0aa1de0100d4c.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">numcal.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Numerical Calculation Module 数值计算模块  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+numcal.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d03/numcal_8hpp__incl.svg" width="440" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dff/numcal_8hpp__dep__incl.svg" width="175" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d3e/classrm_1_1Polynomial.html">rm::Polynomial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">N 次多项式  <a href="../../db/d3e/classrm_1_1Polynomial.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d80/classrm_1_1Interpolator.html">rm::Interpolator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数插值器  <a href="../../dc/d80/classrm_1_1Interpolator.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d80/classrm_1_1CurveFitter.html">rm::CurveFitter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">曲线拟合器  <a href="../../d0/d80/classrm_1_1CurveFitter.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm::NonlinearSolver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非线性方程求解器  <a href="../../d0/d14/classrm_1_1NonlinearSolver.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d26/classrm_1_1RungeKutta.html">rm::RungeKutta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Butcher 表形式的常微分方程（组）数值求解器  <a href="../../d5/d26/classrm_1_1RungeKutta.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 阶 2 级 Runge-Kutta 求解器  <a href="../../da/d12/classrm_1_1RungeKutta2.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0a/classrm_1_1RungeKutta3.html">rm::RungeKutta3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 阶 3 级 Runge-Kutta 求解器  <a href="../../d8/d0a/classrm_1_1RungeKutta3.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcd/classrm_1_1RungeKutta4.html">rm::RungeKutta4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 阶 4 级 Runge-Kutta 求解器  <a href="../../d0/dcd/classrm_1_1RungeKutta4.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">优化选项  <a href="../../d3/dd3/structrm_1_1OptimalOptions.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga5b9b2f75e249221d36421f6ad113c067" id="r_ga5b9b2f75e249221d36421f6ad113c067"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d06/group__core__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a> = std::function&lt;double(double, const std::vector&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ga5b9b2f75e249221d36421f6ad113c067"><td class="mdescLeft">&#160;</td><td class="mdescRight">常微分方程  <br /></td></tr>
+<tr class="separator:ga5b9b2f75e249221d36421f6ad113c067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15f2c5d0a048c76b5a00e8608d375a0b" id="r_ga15f2c5d0a048c76b5a00e8608d375a0b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">rm::Odes</a> = std::vector&lt;<a class="el" href="../../de/d06/group__core__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">Ode</a>&gt;</td></tr>
+<tr class="memdesc:ga15f2c5d0a048c76b5a00e8608d375a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">常微分方程组  <br /></td></tr>
+<tr class="separator:ga15f2c5d0a048c76b5a00e8608d375a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3a8138ec0b4be5f94c9c73605cccff3" id="r_gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3">rm::Func1d</a> = std::function&lt;double(double)&gt;</td></tr>
+<tr class="memdesc:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维函数  <br /></td></tr>
+<tr class="separator:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8786881a1bd10bd3cfdd22f9209f88a" id="r_gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> = std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">多维函数  <br /></td></tr>
+<tr class="separator:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga329a52f13003e4dd7914217ed7f3f5ed" id="r_ga329a52f13003e4dd7914217ed7f3f5ed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#ga329a52f13003e4dd7914217ed7f3f5ed">rm::DiffMode</a> : uint8_t { <a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5edaf4ab811d770c7516870336b29eef59a8">rm::Diff_Central</a>
+, <a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda17b0cdd259b025cc0964f03f241c743f">rm::Diff_Ridders</a>
+ }</td></tr>
+<tr class="memdesc:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">梯度/导数计算模式  <a href="../../d8/db4/group__core__optimal.html#ga329a52f13003e4dd7914217ed7f3f5ed">更多...</a><br /></td></tr>
+<tr class="separator:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab708417b91a7e4c422e0e01f95e3f516" id="r_gab708417b91a7e4c422e0e01f95e3f516"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gab708417b91a7e4c422e0e01f95e3f516">rm::OptimizeMode</a> : uint8_t { <a class="el" href="../../d8/db4/group__core__optimal.html#ggab708417b91a7e4c422e0e01f95e3f516a3b557b4ce2b5aee4ca4eab0a9be00c5c">rm::Optm_ConjGrad</a>
+, <a class="el" href="../../d8/db4/group__core__optimal.html#ggab708417b91a7e4c422e0e01f95e3f516ac7eb58bebd579aafacb98f6007cf47b8">rm::Optm_Simplex</a>
+ }</td></tr>
+<tr class="memdesc:gab708417b91a7e4c422e0e01f95e3f516"><td class="mdescLeft">&#160;</td><td class="mdescRight">多维函数最优化模式  <a href="../../d8/db4/group__core__optimal.html#gab708417b91a7e4c422e0e01f95e3f516">更多...</a><br /></td></tr>
+<tr class="separator:gab708417b91a7e4c422e0e01f95e3f516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga98a95e9ef256b85e5e4bb9a659531afd" id="r_ga98a95e9ef256b85e5e4bb9a659531afd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#ga98a95e9ef256b85e5e4bb9a659531afd">rm::derivative</a> (<a class="el" href="../../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x, <a class="el" href="../../d8/db4/group__core__optimal.html#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5edaf4ab811d770c7516870336b29eef59a8">Diff_Central</a>, double dx=1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:ga98a95e9ef256b85e5e4bb9a659531afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一元函数的导数  <br /></td></tr>
+<tr class="separator:ga98a95e9ef256b85e5e4bb9a659531afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92b22285518c9420636690d2bc47a0e0" id="r_ga92b22285518c9420636690d2bc47a0e0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#ga92b22285518c9420636690d2bc47a0e0">rm::grad</a> (<a class="el" href="../../d8/db4/group__core__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x, <a class="el" href="../../d8/db4/group__core__optimal.html#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5edaf4ab811d770c7516870336b29eef59a8">Diff_Central</a>, double dx=1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:ga92b22285518c9420636690d2bc47a0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算多元函数的梯度  <br /></td></tr>
+<tr class="separator:ga92b22285518c9420636690d2bc47a0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab485911ef8cdc37e5ef92b839ec107c" id="r_gaab485911ef8cdc37e5ef92b839ec107c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a> (<a class="el" href="../../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x0, double delta=1)</td></tr>
+<tr class="memdesc:gaab485911ef8cdc37e5ef92b839ec107c"><td class="mdescLeft">&#160;</td><td class="mdescRight">采用进退法确定搜索区间  <br /></td></tr>
+<tr class="separator:gaab485911ef8cdc37e5ef92b839ec107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8c5462fcdf30d76ea709bbc2e08d3ee" id="r_gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a> (<a class="el" href="../../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x1, double x2, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维函数最小值搜索  <br /></td></tr>
+<tr class="separator:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3a27f53f42ecf71dc3b2a187f674e12" id="r_gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a> (<a class="el" href="../../d8/db4/group__core__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束多维函数最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ConjGrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_NelderMead">[8]</a>  <br /></td></tr>
+<tr class="separator:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Numerical Calculation Module 数值计算模块 </p>
+<dl class="section author"><dt>作者</dt><dd>zhaoxi (<a href="#" onclick="location.href='mai'+'lto:'+'535'+'39'+'414'+'0@'+'qq.'+'co'+'m'; return false;">53539<span class="obfuscator">.nosp@m.</span>4140<span class="obfuscator">.nosp@m.</span>@qq.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024-01-06</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2024 (c), zhaoxi </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

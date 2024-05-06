@@ -1,0 +1,437 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rm::View类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.3.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d6/d63/classrm_1_1View-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::View类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>OPC UA 视图  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/opcua/view.hpp&gt;</code></p>
+<div class="dynheader">
+rm::View 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/dde/classrm_1_1View__coll__graph.svg" width="230" height="483"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac31b479a1ec0f908b7cb52a8b6f3da66" id="r_ac31b479a1ec0f908b7cb52a8b6f3da66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31b479a1ec0f908b7cb52a8b6f3da66">View</a> ()=default</td></tr>
+<tr class="separator:ac31b479a1ec0f908b7cb52a8b6f3da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf283bf61af6f497dfbefa504243e83" id="r_a3cf283bf61af6f497dfbefa504243e83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cf283bf61af6f497dfbefa504243e83">View</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view)</td></tr>
+<tr class="separator:a3cf283bf61af6f497dfbefa504243e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e2694aab2a43a694d54b21a4f49e6f" id="r_a86e2694aab2a43a694d54b21a4f49e6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86e2694aab2a43a694d54b21a4f49e6f">View</a> (<a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&amp;view)</td></tr>
+<tr class="separator:a86e2694aab2a43a694d54b21a4f49e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee31d1786ac2abb94761236fc59e783f" id="r_aee31d1786ac2abb94761236fc59e783f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee31d1786ac2abb94761236fc59e783f">operator=</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view)</td></tr>
+<tr class="separator:aee31d1786ac2abb94761236fc59e783f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ce0487ba2ee21ddbc238d1a8199bde" id="r_ac7ce0487ba2ee21ddbc238d1a8199bde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7ce0487ba2ee21ddbc238d1a8199bde">operator=</a> (<a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&amp;view)</td></tr>
+<tr class="separator:ac7ce0487ba2ee21ddbc238d1a8199bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a1140c7ea253fc8bf49ba379b12043" id="r_ad1a1140c7ea253fc8bf49ba379b12043"><td class="memTemplParams" colspan="2">template&lt;typename... UA_NodeId_&gt; </td></tr>
+<tr class="memitem:ad1a1140c7ea253fc8bf49ba379b12043"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad1a1140c7ea253fc8bf49ba379b12043">add</a> (UA_NodeId_ &amp;&amp;...node_id)</td></tr>
+<tr class="memdesc:ad1a1140c7ea253fc8bf49ba379b12043"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加节点 ID  <br /></td></tr>
+<tr class="separator:ad1a1140c7ea253fc8bf49ba379b12043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3aa9fbee4f2173d0c9a489966de4c5" id="r_ada3aa9fbee4f2173d0c9a489966de4c5"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada3aa9fbee4f2173d0c9a489966de4c5">data</a> () const</td></tr>
+<tr class="memdesc:ada3aa9fbee4f2173d0c9a489966de4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取节点 ID 列表  <br /></td></tr>
+<tr class="separator:ada3aa9fbee4f2173d0c9a489966de4c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a7fe9f4ba1c9ae866b36910aba2568f7a" id="r_a7fe9f4ba1c9ae866b36910aba2568f7a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fe9f4ba1c9ae866b36910aba2568f7a">ns</a> {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td></tr>
+<tr class="memdesc:a7fe9f4ba1c9ae866b36910aba2568f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名空间索引，默认为 <code>1</code>  <br /></td></tr>
+<tr class="separator:a7fe9f4ba1c9ae866b36910aba2568f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9862d42229f1aa3012e38dd5123bbfa7" id="r_a9862d42229f1aa3012e38dd5123bbfa7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9862d42229f1aa3012e38dd5123bbfa7">browse_name</a> {}</td></tr>
+<tr class="memdesc:a9862d42229f1aa3012e38dd5123bbfa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">浏览名称 BrowseName  <br /></td></tr>
+<tr class="separator:a9862d42229f1aa3012e38dd5123bbfa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd7b506132e74762d9b7f30e12a87bb" id="r_a1bd7b506132e74762d9b7f30e12a87bb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd7b506132e74762d9b7f30e12a87bb">display_name</a> {}</td></tr>
+<tr class="memdesc:a1bd7b506132e74762d9b7f30e12a87bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">展示名称 DisplayName  <br /></td></tr>
+<tr class="separator:a1bd7b506132e74762d9b7f30e12a87bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc6a4eef690e304f864b3485e502cb9" id="r_a4dc6a4eef690e304f864b3485e502cb9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dc6a4eef690e304f864b3485e502cb9">description</a> {}</td></tr>
+<tr class="memdesc:a4dc6a4eef690e304f864b3485e502cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">视图的描述 - <code>zh-CN</code>  <br /></td></tr>
+<tr class="separator:a4dc6a4eef690e304f864b3485e502cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPC UA 视图 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac31b479a1ec0f908b7cb52a8b6f3da66" name="ac31b479a1ec0f908b7cb52a8b6f3da66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31b479a1ec0f908b7cb52a8b6f3da66">&#9670;&#160;</a></span>View() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::View::View </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cf283bf61af6f497dfbefa504243e83" name="a3cf283bf61af6f497dfbefa504243e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cf283bf61af6f497dfbefa504243e83">&#9670;&#160;</a></span>View() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::View::View </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86e2694aab2a43a694d54b21a4f49e6f" name="a86e2694aab2a43a694d54b21a4f49e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e2694aab2a43a694d54b21a4f49e6f">&#9670;&#160;</a></span>View() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::View::View </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad1a1140c7ea253fc8bf49ba379b12043" name="ad1a1140c7ea253fc8bf49ba379b12043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a1140c7ea253fc8bf49ba379b12043">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... UA_NodeId_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::View::add </td>
+          <td>(</td>
+          <td class="paramtype">UA_NodeId_ &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>node_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加节点 ID </p>
+<ul>
+<li>使用逗号分隔，可添加多个节点 ID，可参考以下示例 <div class="fragment"><div class="line"><a class="code hl_class" href="../../d2/de9/classrm_1_1View.html">View</a> view;</div>
+<div class="line">view.<a class="code hl_function" href="#ad1a1140c7ea253fc8bf49ba379b12043">add</a>(node_1, node_2, node_3);</div>
+<div class="ttc" id="aclassrm_1_1View_html"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html">rm::View</a></div><div class="ttdoc">OPC UA 视图</div><div class="ttdef"><b>定义</b> view.hpp:24</div></div>
+<div class="ttc" id="aclassrm_1_1View_html_ad1a1140c7ea253fc8bf49ba379b12043"><div class="ttname"><a href="#ad1a1140c7ea253fc8bf49ba379b12043">rm::View::add</a></div><div class="ttdeci">void add(UA_NodeId_ &amp;&amp;...node_id)</div><div class="ttdoc">添加节点 ID</div><div class="ttdef"><b>定义</b> view.hpp:79</div></div>
+</div><!-- fragment --></li>
+</ul>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">UA_NodeId_</td><td>节点 ID 类型，指代 <code>UA_NodeId</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>既存的待添加的节点 ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada3aa9fbee4f2173d0c9a489966de4c5" name="ada3aa9fbee4f2173d0c9a489966de4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3aa9fbee4f2173d0c9a489966de4c5">&#9670;&#160;</a></span>data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto &amp; rm::View::data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取节点 ID 列表 </p>
+
+</div>
+</div>
+<a id="aee31d1786ac2abb94761236fc59e783f" name="aee31d1786ac2abb94761236fc59e783f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee31d1786ac2abb94761236fc59e783f">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp; rm::View::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7ce0487ba2ee21ddbc238d1a8199bde" name="ac7ce0487ba2ee21ddbc238d1a8199bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ce0487ba2ee21ddbc238d1a8199bde">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp; rm::View::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a9862d42229f1aa3012e38dd5123bbfa7" name="a9862d42229f1aa3012e38dd5123bbfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9862d42229f1aa3012e38dd5123bbfa7">&#9670;&#160;</a></span>browse_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::View::browse_name {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>浏览名称 BrowseName </p>
+<ul>
+<li>属于非服务器层面的 ID 号，可用于完成路径搜索</li>
+<li>作为视图类型节点、视图节点之间链接的依据</li>
+<li>同一个命名空间 <code>ns</code> 下该名称不能重复 </li>
+</ul>
+
+</div>
+</div>
+<a id="a4dc6a4eef690e304f864b3485e502cb9" name="a4dc6a4eef690e304f864b3485e502cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc6a4eef690e304f864b3485e502cb9">&#9670;&#160;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::View::description {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>视图的描述 - <code>zh-CN</code> </p>
+
+</div>
+</div>
+<a id="a1bd7b506132e74762d9b7f30e12a87bb" name="a1bd7b506132e74762d9b7f30e12a87bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd7b506132e74762d9b7f30e12a87bb">&#9670;&#160;</a></span>display_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::View::display_name {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>展示名称 DisplayName </p>
+<ul>
+<li>在服务器上对外展示的名字 - <code>en-US</code></li>
+<li>同一个命名空间 <code>ns</code> 下该名称可以相同 </li>
+</ul>
+
+</div>
+</div>
+<a id="a7fe9f4ba1c9ae866b36910aba2568f7a" name="a7fe9f4ba1c9ae866b36910aba2568f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe9f4ba1c9ae866b36910aba2568f7a">&#9670;&#160;</a></span>ns</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::View::ns {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>命名空间索引，默认为 <code>1</code> </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/opcua/<a class="el" href="../../d8/d11/view_8hpp.html">view.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

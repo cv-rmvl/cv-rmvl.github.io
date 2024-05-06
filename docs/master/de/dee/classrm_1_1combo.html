@@ -38,7 +38,7 @@ MathJax.Hub.Config({
   <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RMVL
-   &#160;<span id="projectnumber">1.3.0-dev</span>
+   &#160;<span id="projectnumber">1.4.0-dev</span>
    </div>
    <div id="projectbrief">Robotic Manipulation and Vision Library</div>
   </td>
@@ -135,8 +135,9 @@ Public 类型</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ga73f837de92848045133b965c544cac90" id="r_ga73f837de92848045133b965c544cac90"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd2/group__combo.html#ga73f837de92848045133b965c544cac90">~combo</a> ()=0</td></tr>
-<tr class="separator:ga73f837de92848045133b965c544cac90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a574ae395776d322e4afc0644119222d0" id="r_a574ae395776d322e4afc0644119222d0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="#ae108afd463d341245250b4f527961eb9">ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a574ae395776d322e4afc0644119222d0">clone</a> (double tick)=0</td></tr>
+<tr class="memdesc:a574ae395776d322e4afc0644119222d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从另一个组合体进行构造  <br /></td></tr>
+<tr class="separator:a574ae395776d322e4afc0644119222d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0260d468bd5f3dc0da3222f8db32f1a1" id="r_a0260d468bd5f3dc0da3222f8db32f1a1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0260d468bd5f3dc0da3222f8db32f1a1">getHeight</a> () const</td></tr>
 <tr class="memdesc:a0260d468bd5f3dc0da3222f8db32f1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取组合体高度  <br /></td></tr>
 <tr class="separator:a0260d468bd5f3dc0da3222f8db32f1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,6 +317,42 @@ Protected 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>指定特征 </dd></dl>
+
+</div>
+</div>
+<a id="a574ae395776d322e4afc0644119222d0" name="a574ae395776d322e4afc0644119222d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a574ae395776d322e4afc0644119222d0">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#ae108afd463d341245250b4f527961eb9">ptr</a> rm::combo::clone </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从另一个组合体进行构造 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点，可用 <code><a class="el" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85" title="返回从构造初期到现在经过的时间（单位：s）">rm::Timer::now()</a></code> 获取 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向新组合体的共享指针 </dd></dl>
+
+<p>在 <a class="el" href="../../df/d41/classrm_1_1Armor.html#af1b1d22e40e3bc9683a7c55c34b67917">rm::Armor</a>, <a class="el" href="../../d1/daf/classrm_1_1DefaultCombo.html#ae9bf5b1abfd8bd566bfdfdad6121336b">rm::DefaultCombo</a> , 以及 <a class="el" href="../../d1/dfe/classrm_1_1Rune.html#a4a0a7bc315e12314f8f7064c16cae39b">rm::Rune</a> 内被实现.</p>
 
 </div>
 </div>

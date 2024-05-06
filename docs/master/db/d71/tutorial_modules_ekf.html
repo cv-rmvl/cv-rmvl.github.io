@@ -38,7 +38,7 @@ MathJax.Hub.Config({
   <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RMVL
-   &#160;<span id="projectnumber">1.3.0-dev</span>
+   &#160;<span id="projectnumber">1.4.0-dev</span>
    </div>
    <div id="projectbrief">Robotic Manipulation and Vision Library</div>
   </td>
@@ -106,12 +106,12 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md136">1. 非线性函数的线性化</a><ul><li class="level3"><a href="#ekf_state_function_linearization">1.1 状态方程线性化</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md144">1. 非线性函数的线性化</a><ul><li class="level3"><a href="#ekf_state_function_linearization">1.1 状态方程线性化</a></li>
 <li class="level3"><a href="#ekf_observation_function_linearization">1.2 观测方程线性化</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md137">2. 扩展卡尔曼滤波</a><ul><li class="level3"><a href="#autotoc_md138">2.1 公式汇总</a></li>
-<li class="level3"><a href="#autotoc_md139">2.2 EKF 模块的使用</a></li>
+<li class="level2"><a href="#autotoc_md145">2. 扩展卡尔曼滤波</a><ul><li class="level3"><a href="#autotoc_md146">2.1 公式汇总</a></li>
+<li class="level3"><a href="#autotoc_md147">2.2 EKF 模块的使用</a></li>
 </ul>
 </li>
 </ul>
@@ -143,7 +143,7 @@ $(function(){ initResizable(false); });
 \]
 </p>
 <p>在阅读本教程前，请确保已经熟悉标准的 <a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波</a> ，因为核心公式不变，只是在原来的基础上增加了非线性函数线性化的部分。</p>
-<h2><a class="anchor" id="autotoc_md136"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 1. 非线性函数的线性化</h2>
 <p>对于一个线性系统，可以用状态空间方程描述其运动过程</p>
 <p class="formulaDsp">
@@ -200,9 +200,9 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 <p class="formulaDsp">
 \[J_H=\left.\ptl{f_H}{\pmb x}\right|_{\tilde{\pmb x}_k},\qquad V=\left.\ptl{f_H}{\pmb v}\right|_{\tilde{\pmb x}_k}\]
 </p>
-<h2><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md145"></a>
 2. 扩展卡尔曼滤波</h2>
-<h3><a class="anchor" id="autotoc_md138"></a>
+<h3><a class="anchor" id="autotoc_md146"></a>
 2.1 公式汇总</h3>
 <p>根据卡尔曼滤波的 <a class="el" href="../../dd/dc3/tutorial_modules_kalman.html#kalman_filter_formulas">1.7 汇总</a> 可以相应的改写非线性系统下的卡尔曼滤波公式，从而得到如下的扩展卡尔曼滤波公式。</p>
 <p><b>① 预测</b></p>
@@ -231,7 +231,7 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 </p>
 </li>
 </ol>
-<h3><a class="anchor" id="autotoc_md139"></a>
+<h3><a class="anchor" id="autotoc_md147"></a>
 2.2 EKF 模块的使用</h3>
 <p>下面拿扩展卡尔曼模块单元测试的内容举例子</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
