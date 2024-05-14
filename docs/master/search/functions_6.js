@@ -29,7 +29,7 @@ var searchData=
   ['getintensity_26',['getIntensity',['../db/d24/classrm_1_1OPTLightController.html#aff969350f589da52aecfa7273e944a14',1,'rm::OPTLightController']]],
   ['getleftpoint_27',['getLeftPoint',['../de/d9a/classrm_1_1Pilot.html#a06a93413c568d6fc2bda910050491abe',1,'rm::Pilot']]],
   ['getlengthratio_28',['getLengthRatio',['../df/d41/classrm_1_1Armor.html#a64bbe0d6073bd83ddde1a6fc76bae13b',1,'rm::Armor']]],
-  ['getmethods_29',['getMethods',['../d4/d40/classrm_1_1ObjectType.html#a22acafed3dcdb6784629d777b89c7730',1,'rm::ObjectType']]],
+  ['getmethods_29',['getMethods',['../d4/d40/classrm_1_1ObjectType.html#a22acafed3dcdb6784629d777b89c7730',1,'rm::ObjectType::getMethods()'],['../d8/d9b/classrm_1_1Object.html#ab080711baf651b7ddddb08a08ee5ace0',1,'rm::Object::getMethods()']]],
   ['getnumberroi_30',['getNumberROI',['../df/d41/classrm_1_1Armor.html#a57af2840f0a444a32a35277f1e048301',1,'rm::Armor']]],
   ['getpose_31',['getPose',['../df/d41/classrm_1_1Armor.html#a8b54d9b43a97b6f5a40f539baa1cfe15',1,'rm::Armor::getPose()'],['../d4/d88/classrm_1_1GyroTracker.html#a78501a173b75f32e209f07a3d7022e65',1,'rm::GyroTracker::getPose()']]],
   ['getradius_32',['getRadius',['../db/d77/classrm_1_1RuneTarget.html#a879ba0395c283bee11ab8639a9d0880a',1,'rm::RuneTarget']]],

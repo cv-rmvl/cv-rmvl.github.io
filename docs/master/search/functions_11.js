@@ -2,7 +2,7 @@ var searchData=
 [
   ['sec_0',['sec',['../d0/de1/group__core.html#ga2376ca67d6e7b3f7f560cdcb92517cee',1,'rm']]],
   ['serialport_1',['SerialPort',['../d4/d98/classrm_1_1SerialPort.html#af3c8690ef2eb867b6a038da5905ba294',1,'rm::SerialPort']]],
-  ['server_2',['Server',['../d4/d06/classrm_1_1Server.html#ac68cb0753c1691848fd601aa49526096',1,'rm::Server::Server(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a6d93b0b25b10110a36fbd2b5e93b9dac',1,'rm::Server::Server(ServerUserConfig on_config, uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a97f6b85baa8f7b01918bfcbdc55d2a82',1,'rm::Server::Server(const Server &amp;)=delete'],['../d4/d06/classrm_1_1Server.html#a502a9541d4bd87f867b9bcdb97e92f56',1,'rm::Server::Server(Server &amp;&amp;)=delete']]],
+  ['server_2',['Server',['../d4/d06/classrm_1_1Server.html#ac68cb0753c1691848fd601aa49526096',1,'rm::Server::Server(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a6d93b0b25b10110a36fbd2b5e93b9dac',1,'rm::Server::Server(ServerUserConfig on_config, uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})'],['../d4/d06/classrm_1_1Server.html#a97f6b85baa8f7b01918bfcbdc55d2a82',1,'rm::Server::Server(const Server &amp;)=delete'],['../d4/d06/classrm_1_1Server.html#a04d80d23469e4c3194a381387a38d43e',1,'rm::Server::Server(Server &amp;&amp;svr)=default']]],
   ['set_3',['set',['../df/dfa/structrm_1_1CameraConfig.html#addc5f7178773c180bee1ab28bf4e5de7',1,'rm::CameraConfig::set()'],['../db/d9f/classrm_1_1HikCamera.html#a8b66798aca86dd7b0222124b58803958',1,'rm::HikCamera::set()'],['../de/de8/classrm_1_1MvCamera.html#aa5f360ee53e8528cee8310e937e9ad56',1,'rm::MvCamera::set()'],['../d1/d9c/classrm_1_1OptCamera.html#a23ccd190a49c93dadecbe9fbe41496f2',1,'rm::OptCamera::set()']]],
   ['seta_4',['setA',['../d9/d1a/classrm_1_1KalmanFilter.html#af582f4adaeeb639abf4e62c53817d7f6',1,'rm::KalmanFilter']]],
   ['setbase_5',['setBase',['../d4/d40/classrm_1_1ObjectType.html#a61c9446b49381dddb2ec7277a3f11495',1,'rm::ObjectType']]],
@@ -13,7 +13,7 @@ var searchData=
   ['setintensity_10',['setIntensity',['../db/d24/classrm_1_1OPTLightController.html#aa8bbbd3813fc79438c9706d6ea7fe701',1,'rm::OPTLightController']]],
   ['setja_11',['setJa',['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#afea963d643b819569c129dbd6a25725c',1,'rm::ExtendedKalmanFilter']]],
   ['setjh_12',['setJh',['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a021455a6d388179f0aa3b19c6f70caeb',1,'rm::ExtendedKalmanFilter']]],
-  ['setmethodnodecallback_13',['setMethodNodeCallBack',['../d4/d06/classrm_1_1Server.html#a16c1a7319baf6eaae1737f070480d8a3',1,'rm::Server']]],
+  ['setmethodnodecallback_13',['setMethodNodeCallBack',['../d4/d06/classrm_1_1Server.html#a22c5b5f26ced4b5d71207afc5c23d25f',1,'rm::Server']]],
   ['setp_14',['setP',['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a0c274368fa49c45b5cd72b70087fb454',1,'rm::KalmanFilterStaticDatas']]],
   ['setq_15',['setQ',['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130',1,'rm::KalmanFilterStaticDatas']]],
   ['setr_16',['setR',['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312',1,'rm::KalmanFilterStaticDatas']]],
@@ -29,7 +29,7 @@ var searchData=
   ['spirunepredictor_26',['SpiRunePredictor',['../d0/d05/classrm_1_1SpiRunePredictor.html#ab5e255ffbd7d44775edc7a3ebf93984b',1,'rm::SpiRunePredictor']]],
   ['start_27',['start',['../d4/d06/classrm_1_1Server.html#a231923cb0990195a0b5ff522691d5d84',1,'rm::Server']]],
   ['stop_28',['stop',['../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4',1,'rm::Server']]],
-  ['subscribe_29',['subscribe',['../de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html#a42b480885ec26df6b9a4e2bfc586edde',1,'rm::Subscriber&lt; TransportID::UDP_UADP &gt;']]],
+  ['subscribe_29',['subscribe',['../de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html#ac04a8619b334ad17d63655171b214fb0',1,'rm::Subscriber&lt; TransportID::UDP_UADP &gt;']]],
   ['subscriber_30',['Subscriber',['../de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html#a5e8278d70a8843ddb8cf65e1926c92d0',1,'rm::Subscriber&lt; TransportID::UDP_UADP &gt;']]],
   ['sync_31',['sync',['../d6/d6c/classrm_1_1group.html#afd873a73e74a7a0e510855b25bb01ee4',1,'rm::group::sync()'],['../d0/df4/classrm_1_1DefaultGroup.html#a8c5028b682b1c8ec3dcad4a796daa687',1,'rm::DefaultGroup::sync()'],['../da/df9/classrm_1_1GyroGroup.html#a288adb8ccf07d8a494e60ef65f395f40',1,'rm::GyroGroup::sync()'],['../d2/df2/classrm_1_1RuneGroup.html#a3c81e55c690dc94f3be2566cf00ca97b',1,'rm::RuneGroup::sync()']]]
 ];

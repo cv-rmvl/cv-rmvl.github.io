@@ -1471,6 +1471,7 @@
     <name>utilities.hpp</name>
     <path>rmvl/opcua/</path>
     <filename>dc/d5f/utilities_8hpp.html</filename>
+    <class kind="struct">rm::NodeId</class>
     <class kind="struct">rm::UserConfig</class>
     <namespace>rm</namespace>
     <namespace>rm::helper</namespace>
@@ -1480,20 +1481,6 @@
       <anchorfile>dc/d5f/utilities_8hpp.html</anchorfile>
       <anchor>a4f23f9bdf101287cabbd88a30b07f705</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>UA_NodeId</type>
-      <name>operator|</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae08783582e72c7365923471f01f13756</anchor>
-      <arglist>(UA_NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
-    </member>
-    <member kind="function">
-      <type>UA_NodeId</type>
-      <name>operator|</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae59ec8f4914d52845616318a24ac36dd</anchor>
-      <arglist>(UA_NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -1557,34 +1544,6 @@
       <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
       <anchor>a7dda13ba57d393fc6ad208f07a91b7c2</anchor>
       <arglist>(std::string_view n, UA_TypeFlag dt, uint32_t dm=1)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Argument</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a075233ae06bd232253b0bf27229b714b</anchor>
-      <arglist>(const Argument &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Argument</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>aaf02cef8103b12c0d7540f8f59cff560</anchor>
-      <arglist>(Argument &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Argument &amp;</type>
-      <name>operator=</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a8d645e36a5d3dde1b3da4c2ca3cab5d3</anchor>
-      <arglist>(const Argument &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Argument &amp;</type>
-      <name>operator=</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>af26184040d31477e94ed527e253dd80d</anchor>
-      <arglist>(Argument &amp;&amp;val)</arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
@@ -2316,8 +2275,8 @@
       <type></type>
       <name>Client</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a27795ced3c7c69e9f9492b514909fee6</anchor>
-      <arglist>(Client &amp;&amp;)=delete</arglist>
+      <anchor>a24dde3b3dd63e66ade17b1171193ff4b</anchor>
+      <arglist>(Client &amp;&amp;)=default</arglist>
     </member>
     <member kind="function">
       <type>FindNodeInClient</type>
@@ -2351,22 +2310,22 @@
       <type>Variable</type>
       <name>read</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ae4ef218e1aaa20f0a1be3549b2105a7a</anchor>
-      <arglist>(const UA_NodeId &amp;node)</arglist>
+      <anchor>acadba91557b0beb8d7436ec88535949a</anchor>
+      <arglist>(const NodeId &amp;node)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>aed679e770478efa599d6d55e18a32f81</anchor>
-      <arglist>(const UA_NodeId &amp;node, const Variable &amp;val)</arglist>
+      <anchor>af14256eb99e335ad1488dcd81c308dc9</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>call</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a5e21fc264bdbf9cefbeae7543b6dc79a</anchor>
-      <arglist>(const UA_NodeId &amp;obj_node, const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs)</arglist>
+      <anchor>a16ef5960338c35d2c56bcbb5de46a7de</anchor>
+      <arglist>(const NodeId &amp;obj_node, const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -2376,25 +2335,25 @@
       <arglist>(const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addViewNode</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>acb40dcf0cf0e59b5863471d96d61cd8b</anchor>
+      <anchor>af736e01272c3dd3ab66a40d6bc98ad4b</anchor>
       <arglist>(const View &amp;view)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>monitor</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a10995e2118e00f57add313fd5ef776b8</anchor>
-      <arglist>(UA_NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size=10)</arglist>
+      <anchor>af7527007cacc5574ae308785947ce69e</anchor>
+      <arglist>(NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size=10)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>monitor</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a3b90d1976ec5aa8e8148e20dd1be694f</anchor>
-      <arglist>(UA_NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
+      <anchor>a2e43054d548c6f9433d13f375d604bf9</anchor>
+      <arglist>(NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3129,34 +3088,6 @@
       <arglist>(EventType &amp;etype)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Event</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>af6e4c2ffe590ce0f264009468d341113</anchor>
-      <arglist>(const Event &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Event</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a94238ecca8f9ec6ba5ae50b35ed927c2</anchor>
-      <arglist>(Event &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Event &amp;</type>
-      <name>operator=</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a6796ff6cfb8a24af4669520ea8653a99</anchor>
-      <arglist>(const Event &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Event &amp;</type>
-      <name>operator=</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>abb0ba4a704a3ad08be81fe22b0b969e0</anchor>
-      <arglist>(Event &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>add</name>
       <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
@@ -3229,34 +3160,6 @@
       <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
       <anchor>adf9f0a8f9d43104311e23215284ab843</anchor>
       <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>EventType</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a827584777335850150e3fa807d7cd488</anchor>
-      <arglist>(const EventType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>EventType</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>adbd6207d046d6b453599c092e5d664a0</anchor>
-      <arglist>(EventType &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>EventType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>aa37837a91f4acbf78b8d0b51c939e9c3</anchor>
-      <arglist>(const EventType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>EventType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>aea4d79bfed67dfcc3e9cbdaf906618cc</anchor>
-      <arglist>(EventType &amp;&amp;val)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -5354,34 +5257,6 @@
       <anchor>aa4121a198a353edfdf92f959365b011d</anchor>
       <arglist>(UA_MethodCallback f)</arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>Method</name>
-      <anchorfile>d2/d23/structrm_1_1Method.html</anchorfile>
-      <anchor>a49688b0e6cbfb9de80d35d0ef820e9fe</anchor>
-      <arglist>(const Method &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Method</name>
-      <anchorfile>d2/d23/structrm_1_1Method.html</anchorfile>
-      <anchor>a5ade8cb5ea1134ddca1ec1420052e54a</anchor>
-      <arglist>(Method &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Method &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d2/d23/structrm_1_1Method.html</anchorfile>
-      <anchor>a5fc3f04e55fc253627848a8184292481</anchor>
-      <arglist>(const Method &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Method &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d2/d23/structrm_1_1Method.html</anchorfile>
-      <anchor>ac891923960cd0a2cc89077d633471d25</anchor>
-      <arglist>(Method &amp;&amp;val)</arglist>
-    </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
@@ -5643,6 +5518,115 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::NodeId</name>
+    <filename>dd/dfe/structrm_1_1NodeId.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>adcc38dc62e845d97c6de1bc0c300ac5e</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a4ccf11748e66d18701c0024712f94003</anchor>
+      <arglist>(UA_UInt16 ns, UA_UInt32 numeric)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a6dc816b9c69981d7ea53db519123437e</anchor>
+      <arglist>(const UA_NodeId &amp;node_id)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a866c2717f12a333e6249f97b16ffe604</anchor>
+      <arglist>(const NodeId &amp;node_id)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>ab71fa70fe568e022d3192d726b3f9ccd</anchor>
+      <arglist>(NodeId &amp;&amp;node_id) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a99782ad384dccc48d84271b690176202</anchor>
+      <arglist>(const NodeId &amp;node_id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>operator=</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a5f7b7c863e6ae9f22cecae42cb88d681</anchor>
+      <arglist>(NodeId &amp;&amp;node_id) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a188c6af0c019bc18a3602c0a19bee37e</anchor>
+      <arglist>(const NodeId &amp;node_id) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>af83e05f76397b6d9826034725d94222e</anchor>
+      <arglist>(const NodeId &amp;node_id) const</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_NodeId *</type>
+      <name>operator&amp;</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a791f0866b95a53187e2b7595aef32cf2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const UA_NodeId *</type>
+      <name>operator&amp;</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a98830851701d15245d0e7fabe6812ae7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>operator UA_NodeId</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a1b6979b1d49d66d681df4814e517944e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>abb7c5b9139614d2cf7a79aa76c806ecf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>ad2a7a2ab4dd831b36f2c86583990f070</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>UA_NodeId</type>
+      <name>nid</name>
+      <anchorfile>dd/dfe/structrm_1_1NodeId.html</anchorfile>
+      <anchor>a6a77712008696a1abbc0bad6a5d85a95</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::NonlinearSolver</name>
     <filename>d0/d14/classrm_1_1NonlinearSolver.html</filename>
@@ -5693,20 +5677,6 @@
       <arglist>(ObjectType &amp;otype)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Object</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>ac9a845d0660f020e88c8ec80e9340070</anchor>
-      <arglist>(const Object &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Object</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a989e42da822b1361b93f69baf0ec9f90</anchor>
-      <arglist>(Object &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
       <type>const ObjectType *</type>
       <name>type</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
@@ -5721,6 +5691,13 @@
       <arglist>(const Variable &amp;variable)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>add</name>
+      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
+      <anchor>a8fc819c2becd5ce492157e2b09d36f77</anchor>
+      <arglist>(const Method &amp;method)</arglist>
+    </member>
+    <member kind="function">
       <type>Variable &amp;</type>
       <name>operator[]</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
@@ -5732,6 +5709,13 @@
       <name>getVariables</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
       <anchor>a49cfc4f9faded63172fab7175f1b14ff</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const auto &amp;</type>
+      <name>getMethods</name>
+      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
+      <anchor>ab080711baf651b7ddddb08a08ee5ace0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable">
@@ -5772,34 +5756,6 @@
       <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
       <anchor>ad7cfb6d5afafc6c8b50c917a6401185d</anchor>
       <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ObjectType</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>aa1eb95fb14d785d5dbbdce73f6b93662</anchor>
-      <arglist>(const ObjectType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ObjectType</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>af6a174a6404be23ad86a858d23c3705c</anchor>
-      <arglist>(ObjectType &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>ObjectType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a092c8593ba8383e058ab1d77f2d67345</anchor>
-      <arglist>(const ObjectType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>ObjectType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a1d67744deedcb9bb36fd868e6b29456b</anchor>
-      <arglist>(ObjectType &amp;&amp;val)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6655,10 +6611,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>node_id</name>
       <anchorfile>d6/d4a/structrm_1_1PublishedDataSet.html</anchorfile>
-      <anchor>a8762e2654d65525e21fc0775d3e1e8c7</anchor>
+      <anchor>ad58c956b9694d028edadec45201a6e62</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7958,8 +7914,8 @@
       <type></type>
       <name>Server</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a502a9541d4bd87f867b9bcdb97e92f56</anchor>
-      <arglist>(Server &amp;&amp;)=delete</arglist>
+      <anchor>a04d80d23469e4c3194a381387a38d43e</anchor>
+      <arglist>(Server &amp;&amp;svr)=default</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -7997,95 +7953,95 @@
       <arglist>(const std::string &amp;browse_name, uint16_t ns=1U)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addVariableTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>aa04d55eee3bd65fabfed3fe7a1708fb0</anchor>
+      <anchor>a6f0a847ff6a5a96eb207ac58834e2349</anchor>
       <arglist>(const VariableType &amp;vtype)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addVariableNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>adba678b7d4e3bc80aa64f47848494b23</anchor>
-      <arglist>(const Variable &amp;val, const UA_NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a391ccb4661603ffb24cdd41e4d59454e</anchor>
+      <arglist>(const Variable &amp;val, const NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>addVariableNodeValueCallBack</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a71f0dfc6d20084feb57bcaf2b0cd6186</anchor>
-      <arglist>(UA_NodeId id, ValueCallBackBeforeRead before_read, ValueCallBackAfterWrite after_write)</arglist>
+      <anchor>ac53e1e41f3c9eb61f27d3c4ead429487</anchor>
+      <arglist>(NodeId id, ValueCallBackBeforeRead before_read, ValueCallBackAfterWrite after_write)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addDataSourceVariableNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a1fcebe041e74a9da57814ea2d6af402a</anchor>
-      <arglist>(const Variable &amp;val, DataSourceRead on_read, DataSourceWrite on_write, UA_NodeId parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a72e526f514fc4e7b63ca47e20f96a8cd</anchor>
+      <arglist>(const Variable &amp;val, DataSourceRead on_read, DataSourceWrite on_write, NodeId parent_id=nodeObjectsFolder)</arglist>
     </member>
     <member kind="function">
       <type>Variable</type>
       <name>read</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ab2cf0436215d9e0bc4667df2252dd651</anchor>
-      <arglist>(const UA_NodeId &amp;node)</arglist>
+      <anchor>af17256d85ee65a6afd038780832c4af1</anchor>
+      <arglist>(const NodeId &amp;node)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a3413a962dbd9b48d335a321c0cbdc312</anchor>
-      <arglist>(const UA_NodeId &amp;node, const Variable &amp;val)</arglist>
+      <anchor>a55c7c980b7c0cf19d4a1dd94961f2345</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addMethodNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a5f71494fbf5c29f02462ddf65a78aa9b</anchor>
-      <arglist>(const Method &amp;method, const UA_NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a83f715cd2d5eba16d77dbf1cd6a321f7</anchor>
+      <arglist>(const Method &amp;method, const NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setMethodNodeCallBack</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a16c1a7319baf6eaae1737f070480d8a3</anchor>
-      <arglist>(const UA_NodeId &amp;id, UA_MethodCallback on_method)</arglist>
+      <anchor>a22c5b5f26ced4b5d71207afc5c23d25f</anchor>
+      <arglist>(const NodeId &amp;id, UA_MethodCallback on_method)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addObjectTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a5f4a0d24dc1fd5cff6cb999cf0cf5a6e</anchor>
+      <anchor>a2a28d28178452af00e4da475164cfc12</anchor>
       <arglist>(const ObjectType &amp;otype)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addObjectNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>abcf1a0e3e3cfd088d97a01219d8f2f30</anchor>
-      <arglist>(const Object &amp;obj, UA_NodeId parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a3bcab5f8fb68eefa31d5799041b15393</anchor>
+      <arglist>(const Object &amp;obj, NodeId parent_id=nodeObjectsFolder)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addViewNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a1b1e3c7b2b7c2120fe7e53bd44319c46</anchor>
+      <anchor>a9c950392ce0b9e1c9d3bdc7c1d64bc93</anchor>
       <arglist>(const View &amp;view)</arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
+      <type>NodeId</type>
       <name>addEventTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a170fde3f5a6fe65800281ef9e099bdcb</anchor>
+      <anchor>a8edb5901115e3ce9ce96517bfad0b86b</anchor>
       <arglist>(const EventType &amp;etype)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>triggerEvent</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a73f675cc2a68d586de8759fba9be8885</anchor>
-      <arglist>(const UA_NodeId &amp;node_id, const Event &amp;event)</arglist>
+      <anchor>a03744b83d828f4c235f085166225e3c7</anchor>
+      <arglist>(const NodeId &amp;node_id, const Event &amp;event)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -8228,10 +8184,10 @@
       <arglist>(const std::string &amp;sub_name, const std::string &amp;address, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; UA_NodeId &gt;</type>
+      <type>std::vector&lt; NodeId &gt;</type>
       <name>subscribe</name>
       <anchorfile>de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html</anchorfile>
-      <anchor>a42b480885ec26df6b9a4e2bfc586edde</anchor>
+      <anchor>ac04a8619b334ad17d63655171b214fb0</anchor>
       <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
@@ -8896,34 +8852,6 @@
       <arglist>(VariableType &amp;vtype)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a824a074396d5e38e122e44e4f8253257</anchor>
-      <arglist>(const Variable &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>aa7df7cef1a27bd7f814111eda7cc616c</anchor>
-      <arglist>(Variable &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable &amp;</type>
-      <name>operator=</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a87eb459a579d3a81e68d386573f8f595</anchor>
-      <arglist>(const Variable &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable &amp;</type>
-      <name>operator=</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a50df727840e4a833d22bca2868e528f6</anchor>
-      <arglist>(Variable &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
@@ -9047,34 +8975,6 @@
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ac7cd12857c392785b580326fd749ae85</anchor>
-      <arglist>(const VariableType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ad37b8cb9421e6c0419a28304860d1a83</anchor>
-      <arglist>(VariableType &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>VariableType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a290b4f8fcd09f1c440492b71c7ebd4c9</anchor>
-      <arglist>(const VariableType &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>VariableType &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a77c641b07225531e3ee8f33bd8f72352</anchor>
-      <arglist>(VariableType &amp;&amp;val)</arglist>
-    </member>
-    <member kind="function">
       <type>const auto &amp;</type>
       <name>data</name>
       <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
@@ -9142,39 +9042,11 @@
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>View</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a3cf283bf61af6f497dfbefa504243e83</anchor>
-      <arglist>(const View &amp;view)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>View</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a86e2694aab2a43a694d54b21a4f49e6f</anchor>
-      <arglist>(View &amp;&amp;view)</arglist>
-    </member>
-    <member kind="function">
-      <type>View &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>aee31d1786ac2abb94761236fc59e783f</anchor>
-      <arglist>(const View &amp;view)</arglist>
-    </member>
-    <member kind="function">
-      <type>View &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>ac7ce0487ba2ee21ddbc238d1a8199bde</anchor>
-      <arglist>(View &amp;&amp;view)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>add</name>
       <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>ad1a1140c7ea253fc8bf49ba379b12043</anchor>
-      <arglist>(UA_NodeId_ &amp;&amp;...node_id)</arglist>
+      <anchor>aa81dee0ce2146d0d1b9ef555b11f6726</anchor>
+      <arglist>(NodeId_ &amp;&amp;...node_id)</arglist>
     </member>
     <member kind="function">
       <type>const auto &amp;</type>
@@ -9327,6 +9199,7 @@
     <class kind="struct">rm::LightIpConfig</class>
     <class kind="struct">rm::Method</class>
     <class kind="class">rm::MvCamera</class>
+    <class kind="struct">rm::NodeId</class>
     <class kind="class">rm::NonlinearSolver</class>
     <class kind="class">rm::Object</class>
     <class kind="class">rm::ObjectType</class>
@@ -10033,6 +9906,25 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>AccessLevel</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2aed8fbfc8bf41bec5e62c139b3ce7c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VARIABLE_READ</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VARIABLE_WRITE</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>RotStatus</name>
       <anchorfile>d5/d20/namespacerm.html</anchorfile>
       <anchor>ac20f060cfa58609d88a9f385a18fe461</anchor>
@@ -10481,6 +10373,13 @@
       <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
+      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <name>fmincon</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>gaaccda21c87db611469abcda22bbffdd8</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNd c, FuncNd ceq, const OptimalOptions &amp;options={})</arglist>
+    </member>
+    <member kind="function">
       <type>cv::Point2f</type>
       <name>calculateRelativeAngle</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
@@ -10593,6 +10492,230 @@
       <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
     <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeBoolean</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga3d9c528cacd9b22f26e184aa5adc84b1</anchor>
+      <arglist>(0, UA_NS0ID_BOOLEAN)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga45d85c6efbd59697a26a4a1e1cf1ec0e</anchor>
+      <arglist>(0, UA_NS0ID_SBYTE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2dc21dee59fe66c7549621d92e807c40</anchor>
+      <arglist>(0, UA_NS0ID_BYTE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0bde51aa3b95d72198b5189a44d0d481</anchor>
+      <arglist>(0, UA_NS0ID_INT16)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeUint16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga3043a18f4889f72a50c48add84a9d1f7</anchor>
+      <arglist>(0, UA_NS0ID_UINT16)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga8adcb63a19062ecf573460fb63e9ac75</anchor>
+      <arglist>(0, UA_NS0ID_INT32)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeUint32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab6898b98ebfd2fb3885d2c5b0c4615e5</anchor>
+      <arglist>(0, UA_NS0ID_UINT32)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga6eee0763839b4100255c1aaa3a2c86d2</anchor>
+      <arglist>(0, UA_NS0ID_INT64)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeUint64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabedb1edaef0424fcda948d057b798592</anchor>
+      <arglist>(0, UA_NS0ID_UINT64)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae67cb23017a47516537feef9ea0c9392</anchor>
+      <arglist>(0, UA_NS0ID_FLOAT)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga7fa5b66c57dc862b2efe894d4f415af1</anchor>
+      <arglist>(0, UA_NS0ID_DOUBLE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab3b251f85c709a8d41bf66661003cc49</anchor>
+      <arglist>(0, UA_NS0ID_STRING)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeDatetime</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2e1f5d6bdadd80d498f39fd5018d5fa5</anchor>
+      <arglist>(0, UA_NS0ID_DATETIME)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga041532456b96e8dac325a89f51b089e6</anchor>
+      <arglist>(0, UA_NS0ID_OBJECTSFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga15f071574c76e2f0414c90863bff3f0d</anchor>
+      <arglist>(0, UA_NS0ID_TYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeViewsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab20fa2fb5ad7d497374809d0fbf09759</anchor>
+      <arglist>(0, UA_NS0ID_VIEWSFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5ba48627cc2e45dc39a0e9303e5d790b</anchor>
+      <arglist>(0, UA_NS0ID_OBJECTTYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeVariableTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga21226d4b81a75f626523d967ea444aa3</anchor>
+      <arglist>(0, UA_NS0ID_VARIABLETYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeb3871a433ab0edaec345fee9e6c38b2</anchor>
+      <arglist>(0, UA_NS0ID_SERVER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeFolderType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad437047f35915ca9624ad1c2f17942f4</anchor>
+      <arglist>(0, UA_NS0ID_FOLDERTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseObjectType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga939cde15e0534f0e800805640f2d5e5a</anchor>
+      <arglist>(0, UA_NS0ID_BASEOBJECTTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseEventType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2f9df7dd00a9018e44356660d0272809</anchor>
+      <arglist>(0, UA_NS0ID_BASEEVENTTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseDataVariableType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab20915b7cf5d31549a6c5541d94c2159</anchor>
+      <arglist>(0, UA_NS0ID_BASEDATAVARIABLETYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodePropertyType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae2ccc8adc3cb4027c3595ca5fb1729a3</anchor>
+      <arglist>(0, UA_NS0ID_PROPERTYTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeOrganizes</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae1a98aea0a35c74f3088d96b746d19fd</anchor>
+      <arglist>(0, UA_NS0ID_ORGANIZES)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeHasTypeDefinition</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae20fd2e26487e56b43960879380938ce</anchor>
+      <arglist>(0, UA_NS0ID_HASTYPEDEFINITION)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeHasComponent</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga69883befa7f0b1d8b4aae928d58cdb34</anchor>
+      <arglist>(0, UA_NS0ID_HASCOMPONENT)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeHasProperty</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga13d561ce57b92cc7c11de2ed77c5e925</anchor>
+      <arglist>(0, UA_NS0ID_HASPROPERTY)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeHasSubtype</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga13d3c1e20b19e73b226f5ed58936de32</anchor>
+      <arglist>(0, UA_NS0ID_HASSUBTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>nodeHasModellingRule</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga971860c2a664220e83791fec6722f75c</anchor>
+      <arglist>(0, UA_NS0ID_HASMODELLINGRULE)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad4a5bb978e87fa6230034d85ff23b907</anchor>
+      <arglist>(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac9cd15abdd9c0687cee73ce332008c8d</anchor>
+      <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>d6/d59/group__types.html</anchorfile>
@@ -10649,216 +10772,6 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad80028600e790f33bbad196381981818</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga321227e84bd3ee3e04775e3e0542a39c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga92d23730bd10278e85849ac19eefec99</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9f172482e739d7651b9c0d9f21a317ab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeUint16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3b41bc81c9d81081b0b05411e30a6fae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1167c31781fed61eda24505b7bdef386</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeUint32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gada7cb501cda9cb09a7fe8b383566f7ef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5fe2b70007e273d3b93af9a15472481a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeUint64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2c6622cbb2404dcbb817e6c57f170455</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac29cc63446bc6f2f1ad9f5f9b2a6bdf6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab580b3648b5381eb2c8dd9f693fcbf1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7b2c1a36ea0b5f8a428b94eda736c02c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeDatetime</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga82ad705e866412a9d4555490f70f955d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeObjectsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad0c2975e904f60ccac7676c527a96229</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9b16f067906e5b4a3e201af72893d680</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeViewsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga595c0092424682afb14d2fb0978ed227</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeObjectTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae457fdc98993cb14f9263c2bbf970fe7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeVariableTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga253501249f04dd1abf4edb360abcb780</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga84338a7e9faa55857e2641b1f9909fa5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeFolderType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga61f5e2106b6c42fbc793d0d03f0b4990</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeBaseObjectType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga314722033c099005260d18a28da410fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeBaseEventType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga947f692ee41421e638c606bf05976987</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeBaseDataVariableType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga63d7163a002385825f95ed9df59ded3e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodePropertyType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga760e0843d311c55a586b248d1655c8f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeOrganizes</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae49bbbdb68072d8d4c4c1fbe24484fe1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeHasTypeDefinition</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38a64cf2e67e325ae1a9ad8be6cb746b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeHasComponent</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf28c6de59b241899c22227d989c2bd1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeHasProperty</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38ab0692f39c3f23b0848079534993ef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeHasSubtype</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6e40944a3a77c0b3a72f8d31bd96c4c6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>nodeHasModellingRule</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab432b363a9f649f7f46f858908a03ff9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
       <type>constexpr UA_Byte</type>
       <name>typeflag_ns0</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -10894,8 +10807,8 @@
       <type>char *</type>
       <name>to_char</name>
       <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>a68c27b40136ad5b0d7baf7639a395785</anchor>
-      <arglist>(const std::string &amp;str)</arglist>
+      <anchor>ad99b14de423561318fb1871889bbb977</anchor>
+      <arglist>(std::string_view str)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -12674,6 +12587,13 @@
       <anchor>gad3a27f53f42ecf71dc3b2a187f674e12</anchor>
       <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
+    <member kind="function">
+      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <name>rm::fmincon</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>gaaccda21c87db611469abcda22bbffdd8</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNd c, FuncNd ceq, const OptimalOptions &amp;options={})</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>serial</name>
@@ -12801,6 +12721,7 @@
     <class kind="struct">rm::FieldMetaData</class>
     <class kind="class">rm::Subscriber</class>
     <class kind="class">rm::Subscriber&lt; TransportID::UDP_UADP &gt;</class>
+    <class kind="struct">rm::NodeId</class>
     <class kind="struct">rm::UserConfig</class>
     <class kind="class">rm::VariableType</class>
     <class kind="class">rm::Variable</class>
@@ -12885,235 +12806,254 @@
       <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">MQTT_UADP</enumvalue>
       <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">MQTT_JSON</enumvalue>
     </member>
-    <member kind="function">
-      <type>UA_NodeId</type>
-      <name>operator|</name>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::AccessLevel</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae08783582e72c7365923471f01f13756</anchor>
-      <arglist>(UA_NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
+      <anchor>ga2aed8fbfc8bf41bec5e62c139b3ce7c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::VARIABLE_READ</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::VARIABLE_WRITE</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0</anchor>
+      <arglist></arglist>
     </member>
     <member kind="function">
-      <type>UA_NodeId</type>
-      <name>operator|</name>
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBoolean</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae59ec8f4914d52845616318a24ac36dd</anchor>
-      <arglist>(UA_NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
+      <anchor>ga3d9c528cacd9b22f26e184aa5adc84b1</anchor>
+      <arglist>(0, UA_NS0ID_BOOLEAN)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga45d85c6efbd59697a26a4a1e1cf1ec0e</anchor>
+      <arglist>(0, UA_NS0ID_SBYTE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2dc21dee59fe66c7549621d92e807c40</anchor>
+      <arglist>(0, UA_NS0ID_BYTE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0bde51aa3b95d72198b5189a44d0d481</anchor>
+      <arglist>(0, UA_NS0ID_INT16)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga3043a18f4889f72a50c48add84a9d1f7</anchor>
+      <arglist>(0, UA_NS0ID_UINT16)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga8adcb63a19062ecf573460fb63e9ac75</anchor>
+      <arglist>(0, UA_NS0ID_INT32)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab6898b98ebfd2fb3885d2c5b0c4615e5</anchor>
+      <arglist>(0, UA_NS0ID_UINT32)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga6eee0763839b4100255c1aaa3a2c86d2</anchor>
+      <arglist>(0, UA_NS0ID_INT64)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabedb1edaef0424fcda948d057b798592</anchor>
+      <arglist>(0, UA_NS0ID_UINT64)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae67cb23017a47516537feef9ea0c9392</anchor>
+      <arglist>(0, UA_NS0ID_FLOAT)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga7fa5b66c57dc862b2efe894d4f415af1</anchor>
+      <arglist>(0, UA_NS0ID_DOUBLE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab3b251f85c709a8d41bf66661003cc49</anchor>
+      <arglist>(0, UA_NS0ID_STRING)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeDatetime</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2e1f5d6bdadd80d498f39fd5018d5fa5</anchor>
+      <arglist>(0, UA_NS0ID_DATETIME)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeObjectsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga041532456b96e8dac325a89f51b089e6</anchor>
+      <arglist>(0, UA_NS0ID_OBJECTSFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga15f071574c76e2f0414c90863bff3f0d</anchor>
+      <arglist>(0, UA_NS0ID_TYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeViewsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab20fa2fb5ad7d497374809d0fbf09759</anchor>
+      <arglist>(0, UA_NS0ID_VIEWSFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeObjectTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5ba48627cc2e45dc39a0e9303e5d790b</anchor>
+      <arglist>(0, UA_NS0ID_OBJECTTYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeVariableTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga21226d4b81a75f626523d967ea444aa3</anchor>
+      <arglist>(0, UA_NS0ID_VARIABLETYPESFOLDER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeb3871a433ab0edaec345fee9e6c38b2</anchor>
+      <arglist>(0, UA_NS0ID_SERVER)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeFolderType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad437047f35915ca9624ad1c2f17942f4</anchor>
+      <arglist>(0, UA_NS0ID_FOLDERTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseObjectType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga939cde15e0534f0e800805640f2d5e5a</anchor>
+      <arglist>(0, UA_NS0ID_BASEOBJECTTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseEventType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2f9df7dd00a9018e44356660d0272809</anchor>
+      <arglist>(0, UA_NS0ID_BASEEVENTTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseDataVariableType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab20915b7cf5d31549a6c5541d94c2159</anchor>
+      <arglist>(0, UA_NS0ID_BASEDATAVARIABLETYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodePropertyType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae2ccc8adc3cb4027c3595ca5fb1729a3</anchor>
+      <arglist>(0, UA_NS0ID_PROPERTYTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeOrganizes</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae1a98aea0a35c74f3088d96b746d19fd</anchor>
+      <arglist>(0, UA_NS0ID_ORGANIZES)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasTypeDefinition</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae20fd2e26487e56b43960879380938ce</anchor>
+      <arglist>(0, UA_NS0ID_HASTYPEDEFINITION)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasComponent</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga69883befa7f0b1d8b4aae928d58cdb34</anchor>
+      <arglist>(0, UA_NS0ID_HASCOMPONENT)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasProperty</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga13d561ce57b92cc7c11de2ed77c5e925</anchor>
+      <arglist>(0, UA_NS0ID_HASPROPERTY)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasSubtype</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga13d3c1e20b19e73b226f5ed58936de32</anchor>
+      <arglist>(0, UA_NS0ID_HASSUBTYPE)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasModellingRule</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga971860c2a664220e83791fec6722f75c</anchor>
+      <arglist>(0, UA_NS0ID_HASMODELLINGRULE)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>rm::operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad4a5bb978e87fa6230034d85ff23b907</anchor>
+      <arglist>(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>rm::operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac9cd15abdd9c0687cee73ce332008c8d</anchor>
+      <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
     </member>
     <member kind="variable">
       <type>const std::unordered_map&lt; std::type_index, UA_TypeFlag &gt;</type>
       <name>rm::typeflag</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga916a054df32c638be8c03307a689487a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad80028600e790f33bbad196381981818</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga321227e84bd3ee3e04775e3e0542a39c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga92d23730bd10278e85849ac19eefec99</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9f172482e739d7651b9c0d9f21a317ab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeUint16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3b41bc81c9d81081b0b05411e30a6fae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1167c31781fed61eda24505b7bdef386</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeUint32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gada7cb501cda9cb09a7fe8b383566f7ef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5fe2b70007e273d3b93af9a15472481a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeUint64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2c6622cbb2404dcbb817e6c57f170455</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac29cc63446bc6f2f1ad9f5f9b2a6bdf6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab580b3648b5381eb2c8dd9f693fcbf1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7b2c1a36ea0b5f8a428b94eda736c02c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeDatetime</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga82ad705e866412a9d4555490f70f955d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeObjectsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad0c2975e904f60ccac7676c527a96229</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9b16f067906e5b4a3e201af72893d680</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeViewsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga595c0092424682afb14d2fb0978ed227</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeObjectTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae457fdc98993cb14f9263c2bbf970fe7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeVariableTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga253501249f04dd1abf4edb360abcb780</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga84338a7e9faa55857e2641b1f9909fa5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeFolderType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga61f5e2106b6c42fbc793d0d03f0b4990</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeBaseObjectType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga314722033c099005260d18a28da410fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeBaseEventType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga947f692ee41421e638c606bf05976987</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeBaseDataVariableType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga63d7163a002385825f95ed9df59ded3e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodePropertyType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga760e0843d311c55a586b248d1655c8f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeOrganizes</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae49bbbdb68072d8d4c4c1fbe24484fe1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeHasTypeDefinition</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38a64cf2e67e325ae1a9ad8be6cb746b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeHasComponent</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf28c6de59b241899c22227d989c2bd1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeHasProperty</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38ab0692f39c3f23b0848079534993ef</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeHasSubtype</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6e40944a3a77c0b3a72f8d31bd96c4c6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr UA_NodeId</type>
-      <name>rm::nodeHasModellingRule</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab432b363a9f649f7f46f858908a03ff9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">

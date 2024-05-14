@@ -192,7 +192,7 @@ $(function(){ initResizable(false); });
 <img src="../../ls-equations.png" alt=""/>
 <div class="caption">
 图 1-3</div></div>
-    </center><center></center><p>一般的，对于一个系数矩阵 \(A=(a_{ij})_{s\times{n}}\)， \(\pmb b=(b_1,b_2,\cdots,b_s)^T\)， \(\pmb x=(x_1,x_2,\cdots,x_s)^T\)，若满足 \(\text{rank}(A)\leq s\) 时，线性方程组没有数值解，但我们希望找到一组 <b>最优解</b> ，衡量此最优解的方法仍然可以采用最小二乘法。设法找出一组解 \(\hat{\pmb x}=(x_1^0,\ x_2^0,\ x_3^0,\ \cdots,\ x_n^0)\) 使得每一项的误差 \(\delta_i\) 平方和最小，如何定量这个误差？能否继续采用最小二乘法的点到直线的最短距离作为出发点？答案是肯定的，这里先给出误差平方和的表达式。</p>
+    </center><center></center><p>一般的，对于一个系数矩阵 \(A=(a_{ij})_{s\times{n}}\)， \(\pmb b=(b_1,b_2,\cdots,b_s)^T\)， \(\pmb x=(x_1,x_2,\cdots,x_s)^T\)，若满足 \(\text{rank}(A)\leq s\) 时，线性方程组没有数值解，但我们希望找到一组 <b>最优解</b> ，衡量此最优解的方法仍然可以采用最小二乘法。设法找出一组解 \(\hat{\pmb x}=(x_1^0,\ x_2^0,\ x_3^0,\ \cdots,\ x_n^0)\) 使得每一项的误差 \(\delta_i\) 平方和最小，如何定量这个误差？能否继续采用上文最小二乘法的点到直线的最短距离的思想作为出发点？答案是肯定的，这里先给出误差平方和的表达式。</p>
 <p class="formulaDsp">
 \[\delta^2=\sum_{i=0}^{s-1}(a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n-b_i)^2\tag{2-2}\]
 </p>
@@ -209,12 +209,24 @@ $(function(){ initResizable(false); });
 <p>到这里，我们需要进一步强化线性方程组及其生成空间的这些概念。</p>
 <p><b>基本概念介绍</b></p>
 <ol type="1">
-<li>对于一般的线性方程组（方程数 \(\leq\)未知数个数 \(n\)）， \(A\pmb x=\pmb0\) 的解（也叫通解）生成的空间 \(\pmb x\) 称为<span style="color: red">解空间</span>，其极大线性无关组被称为 <b>基础解系</b> ，即解空间的任意一个向量都可由基础解系所线性表出，即 \(\pmb x=k_1\pmb\xi_1+k_2\pmb\xi_2+\cdots+k_t\pmb\xi_t\)，其中满足 <p class="formulaDsp">
+<li>对于任意的线性方程组（可以是超定的） \(A\) 是 \(s\times n\)系数矩阵， \(A\) 的列向量组合生成的空间，即 \(x_1\pmb\alpha_1+x_2\pmb\alpha_2+\cdots+x_n\pmb\alpha_n\) 的空间，即代表 \(A\pmb x\) 所生成的空间。同样的，可以写为 \(L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)\)，对于 \(A\pmb x\) 生成的空间，后文简称为<span style="color: red">列空间</span>。使用线性变换的角度进行分析，设 \(T\) 是线性空间 \(V\) 的线性变换，则 <p class="formulaDsp">
+\[T(V)=\{T\pmb\alpha|\pmb\alpha\in V\}\]
+</p>
+是 \(V\) 的子空间，因此方程组的系数矩阵 \(A\) 就可以当做是某个线性变换 \(T(V)\) 对应的矩阵，表示为 <p class="formulaDsp">
+\[(T\pmb\alpha_1,T\pmb\alpha_2,\cdots,T\pmb\alpha_n)=(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)A\]
+</p>
+ \(T(V)\) 的维数叫线性变换 \(T\) 的秩，也可以记为 \(\text{rank}(A)\)。因此列空间也可以被称为<span style="color: red">象子空间</span>；</li>
+<li>对于一般的线性方程组（方程数 \(\leq\)未知数个数 \(n\)）， \(A\pmb x=\pmb0\) 的解（也叫通解）生成的空间 \(\pmb x\) 称为<span style="color: red">解空间</span>。使用线性变换的角度进行分析，设 \(T\) 是线性空间 \(V\) 的线性变换，则集合 <p class="formulaDsp">
+\[K=\{\pmb\alpha\in V|T\pmb\alpha=\pmb0\}\]
+</p>
+是 \(V\) 的子空间，称为线性变换 \(T\) 的核，记作 \(T^{-1}(\pmb0)\)，因此解空间也被称为<span style="color: red">核空间</span>。另外，在方程组中，解空间的极大线性无关组被称为 <b>基础解系</b> ，即解空间的任意一个向量都可由基础解系所线性表出，即 \(\pmb x=k_1\pmb\xi_1+k_2\pmb\xi_2+\cdots+k_t\pmb\xi_t\)，不难得出结论， \(T^{-1}(\pmb0)\) 的维度就是 \(t\)。并且可以证明出如下的 <b>子空间维数定理</b> ：设 \(T\) 是 \(n\) 维线性空间 \(V\) 的线性变换，则一定满足维数关系 <p class="formulaDsp">
+\[\text{dim}T(V)+\text{dim}T^{-1}(\pmb0)=n\]
+</p>
+也可以记为 <p class="formulaDsp">
 \[\text{rank}(A)+t=n\tag{2-4}\]
 </p>
 </li>
-<li>对于任意的线性方程组（可以是超定的） \(A\) 是 \(s\times n\)系数矩阵， \(A\) 的列向量组合生成的空间，即 \(x_1\pmb\alpha_1+x_2\pmb\alpha_2+\cdots+x_n\pmb\alpha_n\) 的空间，即代表 \(A\pmb x\) 所生成的空间。同样的，可以写为 \(L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s)\)，对于 \(A\pmb x\) 生成的空间，后文简称为<span style="color: red">列空间</span></li>
-<li>\(\pmb b\) 是方程组右端项，表示列空间之外的一个向量，即在超定线性方程组中， \(\pmb b\notin L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s)\)，因此才具备向量 \(\pmb b\) 到 \(A\pmb x\) 的距离的概念</li>
+<li>\(\pmb b\) 是方程组右端项，表示列空间之外的一个向量，即在超定线性方程组中， \(\pmb b\notin L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)\)，因此才具备向量 \(\pmb b\) 到 \(A\pmb x\) 的距离的概念</li>
 </ol>
 <p>让我们继续回到最小二乘解的求解过程中，根据 \(\text{(1-2b)}\) 和 \(\text{(1-4)}\)，类似的，我们可以构建出</p>
 <p class="formulaDsp">
@@ -222,14 +234,14 @@ $(function(){ initResizable(false); });
 (\pmb\alpha_1,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_1^T(\pmb y-\pmb b)&amp;=&amp;0\\
 (\pmb\alpha_2,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_2^T(\pmb y-\pmb b)&amp;=&amp;0\\
 \vdots&amp;=&amp;\vdots&amp;=&amp;\vdots\\
-(\pmb\alpha_s,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_s^T(\pmb y-\pmb b)&amp;=&amp;0\\
+(\pmb\alpha_n,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_n^T(\pmb y-\pmb b)&amp;=&amp;0\\
 \end{matrix}\tag{2-5}\]
 </p>
-<p>这表示当 \(\pmb y-\pmb b\) 与列空间正交时， \(\pmb y\) 与 \(\pmb b\) 距离最短，与列空间正交就必须要与生成列空间的每一个向量即 \(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s\) 正交。整合后可以得到</p>
+<p>这表示当 \(\pmb y-\pmb b\) 与列空间正交时， \(\pmb y\) 与 \(\pmb b\) 距离最短，与列空间正交就必须要与生成列空间的每一个向量即 \(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n\) 正交。整合后可以得到</p>
 <p class="formulaDsp">
-\[(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s)^T(\pmb y-\pmb b)=\pmb0\tag{2-6}\]
+\[(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)^T(\pmb y-\pmb b)=\pmb0\tag{2-6}\]
 </p>
-<p>\(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s\) 刚好是系数矩阵按列分块的形式，又有 \(\pmb y=A\hat{\pmb x}\) 我们可以得到如下公式。</p>
+<p>\(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n\) 刚好是系数矩阵按列分块的形式，又有 \(\pmb y=A\hat{\pmb x}\) 我们可以得到如下公式。</p>
 <p class="formulaDsp">
 \[
 \begin{align}

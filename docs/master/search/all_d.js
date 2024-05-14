@@ -17,13 +17,14 @@ var searchData=
   ['fixed_5fangle_14',['FIXED_ANGLE',['../db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html#ab019c7e0391691acab9892d0ebb2dd03',1,'rm::para::SpiRunePredictorParam']]],
   ['fminbnd_15',['fminbnd',['../d8/db4/group__core__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee',1,'rm']]],
   ['fminbnd_2emd_16',['fminbnd.md',['../d9/d42/fminbnd_8md.html',1,'']]],
-  ['fminunc_17',['fminunc',['../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12',1,'rm']]],
-  ['fminunc_2emd_18',['fminunc.md',['../da/d7a/fminunc_8md.html',1,'']]],
-  ['for_5feach_19',['for_each',['../d0/de1/group__core.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
-  ['format_20',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
-  ['front_21',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]],
-  ['func_22',['func',['../d9/db4/classrm_1_1Exception.html#a3e832407ab3f8c104cb2527bfe38757b',1,'rm::Exception::func'],['../d2/d23/structrm_1_1Method.html#a78aabc42b1a99e9738bc1ecc35c094a2',1,'rm::Method::func']]],
-  ['func1d_23',['Func1d',['../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
-  ['func_5fiteration_2emd_24',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
-  ['funcnd_25',['FuncNd',['../d8/db4/group__core__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a',1,'rm']]]
+  ['fmincon_17',['fmincon',['../d8/db4/group__core__optimal.html#gaaccda21c87db611469abcda22bbffdd8',1,'rm']]],
+  ['fminunc_18',['fminunc',['../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12',1,'rm']]],
+  ['fminunc_2emd_19',['fminunc.md',['../da/d7a/fminunc_8md.html',1,'']]],
+  ['for_5feach_20',['for_each',['../d0/de1/group__core.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
+  ['format_21',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
+  ['front_22',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]],
+  ['func_23',['func',['../d9/db4/classrm_1_1Exception.html#a3e832407ab3f8c104cb2527bfe38757b',1,'rm::Exception::func'],['../d2/d23/structrm_1_1Method.html#a78aabc42b1a99e9738bc1ecc35c094a2',1,'rm::Method::func']]],
+  ['func1d_24',['Func1d',['../d8/db4/group__core__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
+  ['func_5fiteration_2emd_25',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
+  ['funcnd_26',['FuncNd',['../d8/db4/group__core__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a',1,'rm']]]
 ];
