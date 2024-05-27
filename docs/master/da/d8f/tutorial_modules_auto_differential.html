@@ -227,7 +227,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <p>即 \(T(n,k)\)具备 \(2k+2\)阶的精度。</p>
 <h2><a class="anchor" id="autotoc_md139"></a>
 3. 如何使用</h2>
-<p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d8/db4/group__core__optimal.html#ga98a95e9ef256b85e5e4bb9a659531afd" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d8/db4/group__core__optimal.html#ga92b22285518c9420636690d2bc47a0e0" title="计算多元函数的梯度">rm::grad</a> 。</p>
+<p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d8/db4/group__core__optimal.html#ga0d960fda587557e7abb07dfe96d824e4" title="计算多元函数的梯度">rm::grad</a> 。</p>
 <p>以下展示了使用自动求导、数值微分的例子。</p>
 <h3><a class="anchor" id="autotoc_md140"></a>
 3.1 创建项目</h3>
@@ -240,10 +240,10 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordtype">double</span> dydx = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#ga98a95e9ef256b85e5e4bb9a659531afd">rm::derivative</a>(quadratic, 1);</div>
+<div class="line">    <span class="keywordtype">double</span> dydx = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a>(quadratic, 1);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;f&#39;(1) = %f\n&quot;</span>, dydx);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core__optimal_html_ga98a95e9ef256b85e5e4bb9a659531afd"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#ga98a95e9ef256b85e5e4bb9a659531afd">rm::derivative</a></div><div class="ttdeci">double derivative(Func1d func, double x, DiffMode mode=Diff_Central, double dx=1e-3)</div><div class="ttdoc">计算一元函数的导数</div></div>
+<div class="ttc" id="agroup__core__optimal_html_gad269c00a143e239e4c56922766bb2a2e"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a></div><div class="ttdeci">double derivative(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</div><div class="ttdoc">计算一元函数的导数</div></div>
 <div class="ttc" id="anumcal_8hpp_html"><div class="ttname"><a href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></div><div class="ttdoc">Numerical Calculation Module 数值计算模块</div></div>
 </div><!-- fragment --></li>
 <li>添加 <code>CMakeLists.txt</code> <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>

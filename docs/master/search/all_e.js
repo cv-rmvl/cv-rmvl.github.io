@@ -62,7 +62,7 @@ var searchData=
   ['getwidthratio_59',['getWidthRatio',['../df/d41/classrm_1_1Armor.html#ab08c9fa51247de4b63d64356eca1cd85',1,'rm::Armor']]],
   ['grab_5fmode_60',['grab_mode',['../df/dfa/structrm_1_1CameraConfig.html#a73f27421a172091e782613a48965ca5b',1,'rm::CameraConfig::grab_mode'],['../d8/d79/structrm_1_1para_1_1HikCameraParam.html#a3a95660e1dd9885659f1e25dffe6673d',1,'rm::para::HikCameraParam::grab_mode'],['../d8/d8e/structrm_1_1para_1_1MvCameraParam.html#abc78c2f67219539e27b2dd33589fbb92',1,'rm::para::MvCameraParam::grab_mode']]],
   ['grabmode_61',['GrabMode',['../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d',1,'rm']]],
-  ['grad_62',['grad',['../d8/db4/group__core__optimal.html#ga92b22285518c9420636690d2bc47a0e0',1,'rm']]],
+  ['grad_62',['grad',['../d8/db4/group__core__optimal.html#ga0d960fda587557e7abb07dfe96d824e4',1,'rm']]],
   ['gravity_5fcompensator_2eh_63',['gravity_compensator.h',['../d1/d91/compensator_2gravity__compensator_8h.html',1,'(全局命名空间)'],['../da/d0c/ara_2compensator_2gravity__compensator_8h.html',1,'(全局命名空间)']]],
   ['gravity_5fcompensator_5fparam_64',['gravity_compensator_param',['../da/df1/group__para__compensator.html#gac2bd12e4390c057e8738dd589de15b1e',1,'rm::para']]],
   ['gravitycompensator_65',['GravityCompensator',['../d3/d7a/classrm_1_1GravityCompensator.html',1,'rm::GravityCompensator'],['../d3/d7a/classrm_1_1GravityCompensator.html#aa8506cdd02d166ba2b0b8c1e349ba061',1,'rm::GravityCompensator::GravityCompensator()']]],

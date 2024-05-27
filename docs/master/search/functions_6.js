@@ -54,7 +54,7 @@ var searchData=
   ['getversionstring_51',['getVersionString',['../d5/d20/namespacerm.html#a5f0f440f659f9444aed50f8dad67abf0',1,'rm']]],
   ['getwidth_52',['getWidth',['../de/dee/classrm_1_1combo.html#aba8cfcdda112551e58fcd959f789b074',1,'rm::combo::getWidth()'],['../df/db7/classrm_1_1feature.html#a18732db7a20e15dcc132896af0adf7a9',1,'rm::feature::getWidth()'],['../d6/dd2/classrm_1_1tracker.html#a565fc39f6b10cfe380beeacb1acee0f9',1,'rm::tracker::getWidth()']]],
   ['getwidthratio_53',['getWidthRatio',['../df/d41/classrm_1_1Armor.html#ab08c9fa51247de4b63d64356eca1cd85',1,'rm::Armor']]],
-  ['grad_54',['grad',['../d8/db4/group__core__optimal.html#ga92b22285518c9420636690d2bc47a0e0',1,'rm']]],
+  ['grad_54',['grad',['../d8/db4/group__core__optimal.html#ga0d960fda587557e7abb07dfe96d824e4',1,'rm']]],
   ['gravitycompensator_55',['GravityCompensator',['../d3/d7a/classrm_1_1GravityCompensator.html#aa8506cdd02d166ba2b0b8c1e349ba061',1,'rm::GravityCompensator']]],
   ['gyrocompensator_56',['GyroCompensator',['../d9/d2d/classrm_1_1GyroCompensator.html#a4d706d12a985fb91a215ffe227351b30',1,'rm::GyroCompensator']]],
   ['gyroconverttocamera_57',['gyroConvertToCamera',['../df/d41/classrm_1_1Armor.html#ad169a88a78525783228a44b9897313f6',1,'rm::Armor']]],

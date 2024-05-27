@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
-<title>RMVL: 最小二乘法——超定方程组与函数拟合</title>
+<title>RMVL: 最小二乘法</title>
 <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -102,16 +102,15 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">最小二乘法——超定方程组与函数拟合</div></div>
+  <div class="headertitle"><div class="title">最小二乘法</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md178">1. 概念</a></li>
-<li class="level2"><a href="#autotoc_md179">2. 超定线性方程组</a><ul><li class="level3"><a href="#autotoc_md180">示例</a></li>
-</ul>
-</li>
-<li class="level2"><a href="#autotoc_md182">3. 法方程求解最小二乘法</a></li>
-<li class="level2"><a href="#autotoc_md183">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md185">参考书籍</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md181">1. 概念</a></li>
+<li class="level2"><a href="#autotoc_md182">2. 超定线性方程组</a></li>
+<li class="level2"><a href="#autotoc_md183">3. 示例</a></li>
+<li class="level2"><a href="#autotoc_md185">4. 法方程求解最小二乘法</a></li>
+<li class="level2"><a href="#autotoc_md186">5. 部署使用</a><ul><li class="level3"><a href="#autotoc_md188">参考书籍</a></li>
 </ul>
 </li>
 </ul>
@@ -124,16 +123,16 @@ $(function(){ initResizable(false); });
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d8/d57/tutorial_modules_interpolation.html">函数插值方法</a> ↑<br  />
 </p>
-<p><b>下一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> ↓<br  />
+<p><b>下一篇教程：</b><a class="el" href="../../d8/dd7/tutorial_modules_lsqnonlin.html">非线性最小二乘</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md178"></a>
+<h2><a class="anchor" id="autotoc_md181"></a>
 1. 概念</h2>
 <p>最小二乘法诞生于统计学，其最初的目标是使用一条直线拟合一系列离散的点，那么我们该如何寻找这一直线？最小二乘法的原理是使得拟合直线的误差的平方和最小。这里的误差定义成每一个离散的点 \(x_i\)与拟合直线的 <b>距离</b> 。在这一最初的用法中，点到直线的距离能够很直观的描述成点到直线的 <b>垂线</b> 的长度。</p>
 <center></center><center><div class="image">
-<img src="../../ls-line-vertical.png" alt=""/>
+<img src="../../line-vertical.png" alt=""/>
 <div class="caption">
-图 1-1</div></div>
+图 1-1 直线的垂线的长度</div></div>
     </center><center></center><p>如图 1-1 所示，令直线外一点为 \(P\)，直线为 \(l\)，垂线为 \(l_0\)，垂足为点 \(O\)。最小二乘法就是构建一条直线，使得这些点 \(P_i\)到这条直线的距离平方和最小，此时 \(O_i\)点被称为 <b>最小二乘解</b> 。</p>
 <p>让我们拓宽最小二乘这一概念。对于一个向量 \(\pmb\alpha\)所表示的直线，在该直线上是否存在一点 \(Y\)使得 \(Y\)到直线外一点 \(P\)的距离最小？答案是肯定的，并且原理与图 1 完全一致，即构造 \(P\)到直线的垂线，在线性代数中我们引入过 <b>内积</b> 运算，并且得知两个向量 <b>正交</b> （垂直）的时候，二者内积为 \(0\)。</p>
 <dl class="section note"><dt>注解</dt><dd>设 \(V\) 是实数域 \(\mathbb{R}\) 上的线性空间。如果对 \(V\) 中任意两个向量 \(\pmb\alpha\)， \(\pmb\beta\) 都有一个实数（记为 \((\pmb\alpha,\pmb\beta)\)）与它们相对应，并且满足下列各个条件，则实数 \((\pmb\alpha,\pmb\beta)\) 称为向量 \(\pmb\alpha\)， \(\pmb\beta\) 的内积，而线性空间 \(V\) 则称为 <b>实内积空间</b> ，简称 <b>内积空间</b> ：<ul>
@@ -164,9 +163,9 @@ $(function(){ initResizable(false); });
 </p>
 <p>我们先用一个最简单的例子。</p>
 <center></center><center><div class="image">
-<img src="../../ls-vector-vertical.png" alt=""/>
+<img src="../../vector-vertical.png" alt=""/>
 <div class="caption">
-图 1-2</div></div>
+图 1-2 最小二乘解表示为向量 OP</div></div>
     </center><center></center><p>对于图 1-2 中使用向量表示的方式，最小二乘解可以表示为向量 \(OP\)的坐标，在这种情况下， \(BP\)与 \(OA\)垂直，即：</p>
 <p class="formulaDsp">
 \[\left(OA,BP\right)=0\tag{1-3}\]
@@ -180,7 +179,7 @@ $(function(){ initResizable(false); });
 \[\pmb a^T(\pmb y-\pmb b)=0\tag{1-5}\]
 </p>
 <p>为此我们得到了最小二乘解 \(\pmb y\) 的表达式，这也为后文超定线性方程组的最小二乘解提供了理论基础。</p>
-<h2><a class="anchor" id="autotoc_md179"></a>
+<h2><a class="anchor" id="autotoc_md182"></a>
 2. 超定线性方程组</h2>
 <p>有时候我们会遇到这一类形如 \(A\pmb x=\pmb b\) 的方程组</p>
 <p class="formulaDsp">
@@ -189,9 +188,9 @@ $(function(){ initResizable(false); });
 </p>
 <p>这里 \(A=\begin{bmatrix}2&amp;1\\1&amp;-1\\1&amp;1\end{bmatrix}\)， \(\pmb b=(1,0,2)^T\)，在图 1-3 中表示如下。</p>
 <center></center><center><div class="image">
-<img src="../../ls-equations.png" alt=""/>
+<img src="../../equations.png" alt=""/>
 <div class="caption">
-图 1-3</div></div>
+图 1-3 超定线性方程组</div></div>
     </center><center></center><p>一般的，对于一个系数矩阵 \(A=(a_{ij})_{s\times{n}}\)， \(\pmb b=(b_1,b_2,\cdots,b_s)^T\)， \(\pmb x=(x_1,x_2,\cdots,x_s)^T\)，若满足 \(\text{rank}(A)\leq s\) 时，线性方程组没有数值解，但我们希望找到一组 <b>最优解</b> ，衡量此最优解的方法仍然可以采用最小二乘法。设法找出一组解 \(\hat{\pmb x}=(x_1^0,\ x_2^0,\ x_3^0,\ \cdots,\ x_n^0)\) 使得每一项的误差 \(\delta_i\) 平方和最小，如何定量这个误差？能否继续采用上文最小二乘法的点到直线的最短距离的思想作为出发点？答案是肯定的，这里先给出误差平方和的表达式。</p>
 <p class="formulaDsp">
 \[\delta^2=\sum_{i=0}^{s-1}(a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n-b_i)^2\tag{2-2}\]
@@ -257,8 +256,8 @@ A^TA\hat{\pmb x}&amp;=A^T\pmb b
 \]
 </p>
 <p>这就是最小二乘解所满足的代数方程。</p>
-<h3><a class="anchor" id="autotoc_md180"></a>
-示例</h3>
+<h2><a class="anchor" id="autotoc_md183"></a>
+3. 示例</h2>
 <p>下面给出 3 个示例，不直接使用公式 \(\text{(2-7)}\)，通过几何或者其他手段来表示最小二乘解。</p>
 <p><span style="color: green"><b>示例 1</b></span></p>
 <p>问：求数 \(1,\ 2\) 的最小二乘解</p>
@@ -279,12 +278,12 @@ y&amp;=x_1
 </p>
 <p>这是一个参数方程，消去 \(x_1\) 可以得到 \(y=x\)，这就是系数矩阵 \(A=(1,\ 1)^T\) 所生成的列空间。</p>
 <center></center><center><div class="image">
-<img src="../../ls-eg1.png" alt=""/>
+<img src="../../eg1.png" alt=""/>
 <div class="caption">
-图 2-1</div></div>
-    </center><center></center><p>相当于现在需要在 \(y=x\) 上找到一个点，使得其到 \(\pmb b\) 的距离最短，这是初等几何的内容，做垂线即可，最终得到交点的坐标</p>
+图 2-1 二维列空间的最小二乘解几何解释</div></div>
+    </center><center></center><p>相当于现在需要在 \(y=x\) 上找到一个点，使得其到 \(\pmb b\) 点的距离最短，这是初等几何的内容，做垂线即可，最终得到交点的坐标</p>
 <p class="formulaDsp">
-\[(x,y)=(\frac32,\frac32)\tag{3-3}\]
+\[\hat y=(\frac32,\frac32)\tag{3-3}\]
 </p>
 <p>代入参数方程 \(\text{(3-2)}\)，可以得到</p>
 <p class="formulaDsp">
@@ -295,9 +294,9 @@ y&amp;=x_1
 <p>系数矩阵： \(A=\begin{bmatrix}2&amp;1\\1&amp;-1\\1&amp;1\end{bmatrix}\)，其生成的列空间为图 2-2 中<span style="color: orange">橙色的平面</span>，记作平面 \(\alpha\)，并对 \(A\) 作列分块得到 \(A=(\pmb\alpha_1,\pmb\alpha_2)\)</p>
 <p>列空间外向量（右端项）： \(\pmb b=(1,0,2)^T\)</p>
 <center></center><center><div class="image">
-<img src="../../ls-eg2.png" alt=""/>
+<img src="../../eg2.png" alt=""/>
 <div class="caption">
-图 2-2</div></div>
+图 2-2 三维列空间的最小二乘解几何解释</div></div>
     </center><center></center><p>需要满足 \((\pmb y-\pmb b)\perp\alpha\)，则需要分别满足 \((\pmb y-\pmb b)\perp\pmb\alpha_1\) 和 \((\pmb y-\pmb b)\perp\pmb\alpha_2\)，下面使用几何法对最小二乘法的原理进行验证。</p>
 <p>① 求平面 \(\alpha\) 的法向量 \(\pmb n\)</p>
 <p class="formulaDsp">
@@ -333,15 +332,10 @@ y&amp;=x_1
 </p>
 <p><span style="color: green"><b>示例 3</b></span></p>
 <p>题目：使用形如 \(f(t)=a_0+a_1t\) 的曲线在已知点集上完成拟合（线性拟合）</p>
-<center> 表 3-1 已知点集 <table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">下标 \(i\)   </th><th class="markdownTableHeadCenter">0   </th><th class="markdownTableHeadCenter">1   </th><th class="markdownTableHeadCenter">2   </th><th class="markdownTableHeadCenter">3    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">\(t_i\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(2\)   </td><td class="markdownTableBodyCenter">\(3\)   </td><td class="markdownTableBodyCenter">\(4\)    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">\(f(t_i)\)   </td><td class="markdownTableBodyCenter">\(0\)   </td><td class="markdownTableBodyCenter">\(2\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(3\)   </td></tr>
-</table>
-</center><p>上文研究的 <b>线性空间</b> 都是定义在数域 \(\mathbb P^n\) 上的欧式空间，实际上，对于系数属于 \(\mathbb P\)，而未定元为 \(t\) 的所有次数小于 \(n\) 的多项式集合也构成一个 <b>线性空间</b> ，记作</p>
+<center> 表 3-1 已知点集 </center><p class="formulaDsp">
+\[\begin{array}{c|cccc}\text{下标}i&amp;0&amp;1&amp;2&amp;3\\\hline t_i&amp;1&amp;2&amp;3&amp;4\\f(t_i)&amp;0&amp;2&amp;1&amp;3\end{array}\]
+</p>
+<p>上文研究的 <b>线性空间</b> 都是定义在数域 \(\mathbb P^n\) 上的欧式空间，实际上，对于系数属于 \(\mathbb P\)，而未定元为 \(t\) 的所有次数小于 \(n\) 的多项式集合也构成一个 <b>线性空间</b> ，记作</p>
 <p class="formulaDsp">
 \[\mathbb P{[t]}_n=a_0+a_1t+a_2t^2+\cdots+a_{n-1}t^{n-1}=\sum_{i=0}^{n-1}a_it^i\tag{3-8}\]
 </p>
@@ -387,8 +381,8 @@ f(t_0)\\f(t_1)\\\vdots\\f(t_{s-1})\end{bmatrix}\tag{3-11}\]
 </p>
 <hr  />
 <p>后文将给出另外一种描述最小二乘法的做法，这种做法有别于上面构造向量与子空间垂直的方式，通过对误差平方和直接求其最小值来得到最小二乘解（两种方式结果均能推导出公式 \(\text{(2-7)}\)，但出发点不同）。此外，要介绍的这个解法也同样适用于整个线性空间（包括欧式空间、多项式空间等线性空间）。</p>
-<h2><a class="anchor" id="autotoc_md182"></a>
-3. 法方程求解最小二乘法</h2>
+<h2><a class="anchor" id="autotoc_md185"></a>
+4. 法方程求解最小二乘法</h2>
 <p>相关类 <a class="el" href="../../d0/d80/classrm_1_1CurveFitter.html" title="曲线拟合器">rm::CurveFitter</a></p>
 <p>后文会以多项式空间为例，从 \(\delta^2\) 的极值（最小值）入手，通过对该误差平方和求导数的方式获得该最优解，这也是数值分析教材中普遍采用的做法。在本小节后，会使用这一方法求解<span style="color: green"><b>示例 3</b></span>的问题。</p>
 <p>回顾公式 \(\text{(2-3b)}\)： \(\sum\limits_{j=1}^na_{ij}x_j\) 的部分，这是对应于欧式空间 \(\mathbb R^n\) 的误差平方和的写法，这表示生成的位于<span style="color: red">列空间</span>中的向量在基下的第 \(i\) 个分量（坐标）。对于多项式空间 \(\mathbb R{[t]}_n\)，这部分的写法为 \(a_0+a_1t+\cdots+a_{n-1}t^{n-1}=\sum\limits_{j=0}^{n-1}a_jt^j\)。那么对于包含 \(s\) 个已知点的集合（每个点包含 \(t_i\) 和 \(f(t_i)\) 两部分），使用 \(\mathbb R{[t]}_n\) 即 \(\sum\limits_{j=0}^{n-1}a_jt^j=\sum\limits_{j=0}^{n-1}a_j\phi_j(t_i)\) 的多项式来拟合这些点集，其最小二乘解设为 \(f^*(t)\)，此时的误差平方和的最小值可以表示成</p>
@@ -495,12 +489,12 @@ d_1=(\phi_1,f)&amp;=\sum_{i=0}^3\phi_1(t_i)f(t_i)=\sum_{i=0}^3t_i\times f(t_i)\\
 \[\begin{bmatrix}4&amp;10\\10&amp;30\end{bmatrix}\hat{\pmb a}=
 \begin{bmatrix}6\\19\end{bmatrix}\tag{4-13}\]
 </p>
-<p>解得： \(\left\{\begin{align}a_0&amp;=-0.5\\a_1&amp;=0.8\end{align}\right.\)，即拟合曲线为 \(y=-0.5+0.8t\)，使用数学绘图软件验证，结果正确。</p>
+<p>解得： \(\left\{\begin{align}a_0&amp;=-0.5\\a_1&amp;=0.8\end{align}\right.\)，即拟合曲线为 \(y=-0.5+0.8t\)，在图像中展示，如下。</p>
 <center></center><center><div class="image">
-<img src="../../ls-eg3.png" alt=""/>
+<img src="../../eg3.png" alt=""/>
 <div class="caption">
-图 4-1</div></div>
-    </center><center></center><h2><a class="anchor" id="autotoc_md183"></a>
+图 4-1 拟合曲线</div></div>
+    </center><center></center><h2><a class="anchor" id="autotoc_md186"></a>
 5. 部署使用</h2>
 <p>OpenCV 中提供了最小二乘法求解的函数 <code>cv::solve()</code>，并设置有 2 个相关的成员函数，其函数原型如下。此外可参考 <a href="https://docs.opencv.org/4.x/d2/de8/group__core__array.html#ga12b43690dbd31fed96f213eefead2373">cv::solve</a> 的 OpenCV 手册。</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> cv::solve(</div>
@@ -511,7 +505,7 @@ d_1=(\phi_1,f)&amp;=\sum_{i=0}^3\phi_1(t_i)f(t_i)=\sum_{i=0}^3t_i\times f(t_i)\\
 <div class="line">);</div>
 </div><!-- fragment --><hr  />
 <p>有关递推最小二乘法的介绍可参考 <a class="el" href="../../d3/ded/tutorial_extra_spi_rune_predictor.html">k 步前向预估神符预测</a> 。</p>
-<h3><a class="anchor" id="autotoc_md185"></a>
+<h3><a class="anchor" id="autotoc_md188"></a>
 参考书籍</h3>
 <p><a class="el" href="../../d0/de3/citelist.html#CITEREF_tongji_linear_algebra">[10]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_luo2013matrix">[11]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_numerical_analysis">[12]</a> </p>
 </div></div><!-- contents -->

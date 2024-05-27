@@ -9,7 +9,7 @@ var searchData=
   ['deg2rad_6',['deg2rad',['../d0/de1/group__core.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
   ['deleteserver_7',['deleteServer',['../d4/d06/classrm_1_1Server.html#a2b2de27a23d2391b5b0b4b655f7c9aaa',1,'rm::Server']]],
   ['delta_5fy_8',['delta_y',['../d5/d08/classrm_1_1TrackerState.html#a42b1a610feeff38cd3fdf48475038d5b',1,'rm::TrackerState::delta_y() const'],['../d5/d08/classrm_1_1TrackerState.html#ae3ed9e52f861d23dbdfe1fc785362c92',1,'rm::TrackerState::delta_y(float dy)']]],
-  ['derivative_9',['derivative',['../d8/db4/group__core__optimal.html#ga98a95e9ef256b85e5e4bb9a659531afd',1,'rm']]],
+  ['derivative_9',['derivative',['../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e',1,'rm']]],
   ['detect_10',['detect',['../db/d6e/classrm_1_1ArmorDetector.html#a1f3d3f5dc60a82c1a666e68b2a0811c0',1,'rm::ArmorDetector::detect()'],['../d3/d77/classrm_1_1detector.html#a5c8b6fe0e1628f9f756d146569564bff',1,'rm::detector::detect()'],['../dc/d93/classrm_1_1GyroDetector.html#a664dd3235895c60a5eec6e18c73d47d8',1,'rm::GyroDetector::detect()'],['../d6/deb/classrm_1_1RuneDetector.html#a1594fe1e43faade632f9fb9337f308f3',1,'rm::RuneDetector::detect()'],['../d8/d35/classrm_1_1TagDetector.html#ace6080b183f9d358fae33bf9e9b0c7e9',1,'rm::TagDetector::detect()']]],
   ['detector_11',['detector',['../d3/d77/classrm_1_1detector.html#aba1aaea7bc893858ea8029ac5e487474',1,'rm::detector']]],
   ['disconnect_12',['disconnect',['../db/d24/classrm_1_1OPTLightController.html#a22f77b0e8110eac583ae93abc3cbbc80',1,'rm::OPTLightController']]],

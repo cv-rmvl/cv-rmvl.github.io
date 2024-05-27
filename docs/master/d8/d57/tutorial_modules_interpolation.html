@@ -106,8 +106,8 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md166">1. Lagrange 插值多项式</a></li>
-<li class="level2"><a href="#autotoc_md167">2. Newton 插值多项式</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md169">1. Lagrange 插值多项式</a></li>
+<li class="level2"><a href="#autotoc_md170">2. Newton 插值多项式</a></li>
 </ul>
 </ul>
 </div>
@@ -118,10 +118,10 @@ $(function(){ initResizable(false); });
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../dc/d10/tutorial_modules_light.html">光源控制器</a> ↑<br  />
 </p>
-<p><b>下一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法——超定方程组与函数拟合</a> ↓<br  />
+<p><b>下一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md166"></a>
+<h2><a class="anchor" id="autotoc_md169"></a>
 1. Lagrange 插值多项式</h2>
 <p>一般对于一个未知函数，若能从已知的一系列点<span style="color: red">近似</span>地使用多项式函数 \(p(x)\)代替原函数 \(f(x)\)，并且满足</p>
 <p class="formulaDsp">
@@ -166,12 +166,9 @@ p(x_n)&amp;=a_0+a_1x_n+a_2x_n^2+\cdots+a_{n-1}x_n^{n-1}=f(x_n)=y_n
 <p>这就是 Lagrange 插值基函数， \(\text{(1-4)}\)被称为 Lagrange 插值多项式。</p>
 <p><span style="color: green"><b>示例</b></span></p>
 <p>使用以下节点进行二次插值</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(1\)   </th><th class="markdownTableHeadCenter">\(2\)   </th><th class="markdownTableHeadCenter">\(3\)    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">\(f(x)\)   </td><td class="markdownTableBodyCenter">\(2\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(2\)   </td></tr>
-</table>
+<p class="formulaDsp">
+\[\begin{array}{c|ccc}x&amp;1&amp;2&amp;3\\\hline f(x)&amp;2&amp;1&amp;2\end{array}\]
+</p>
 <p><b>解答</b></p>
 <p class="formulaDsp">
 \[\begin{align}
@@ -185,7 +182,7 @@ l_2(x)&amp;=\prod\limits_{j=0,j\neq2}^2\frac{x-x_j}{x_i-x_j}=\frac{(x-1)(x-2)}{(
 \[\begin{align}p(x)&amp;=y_1l_0(x)+y_2l_1(x)+y_3l_2(x)\\&amp;=(x-2)(x-3)-(x-1)(x-3)+(x-1)(x-2)\\&amp;=x^2-4x+5\end{align}\]
 </p>
 <dl class="section note"><dt>注解</dt><dd>一般的， \(n\)点 \(n\)次插值得到的插值多项式是<span style="color: red"><b>唯一</b></span>的，读者可以自行使用待定系数法验证</dd></dl>
-<h2><a class="anchor" id="autotoc_md167"></a>
+<h2><a class="anchor" id="autotoc_md170"></a>
 2. Newton 插值多项式</h2>
 <p>相关类 <a class="el" href="../../dc/d80/classrm_1_1Interpolator.html" title="函数插值器">rm::Interpolator</a></p>
 <hr  />
@@ -206,12 +203,9 @@ a_2&amp;=f\left[x_0,x_1,x_2\right]=\frac{f\left[x_0,x_1\right]-f\left[x_1,x_2\ri
 </p>
 <p><span style="color: green"><b>示例</b></span></p>
 <p>使用以下节点进行 3 次插值</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(0\)   </th><th class="markdownTableHeadCenter">\(1\)   </th><th class="markdownTableHeadCenter">\(2\)   </th><th class="markdownTableHeadCenter">\(3\)    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">\(f(x)\)   </td><td class="markdownTableBodyCenter">\(0\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(3\)   </td><td class="markdownTableBodyCenter">\(2\)   </td></tr>
-</table>
+<p class="formulaDsp">
+\[\begin{array}{c|cccc}x&amp;0&amp;1&amp;2&amp;3\\\hline f(x)&amp;0&amp;1&amp;3&amp;2\end{array}\]
+</p>
 <p><b>解答</b></p>
 <p>列差商表</p>
 <p class="formulaDsp">

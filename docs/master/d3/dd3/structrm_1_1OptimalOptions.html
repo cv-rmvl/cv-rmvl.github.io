@@ -109,27 +109,33 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>优化选项  
+<p>无约束多维函数优化选项  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;rmvl/core/numcal.hpp&gt;</code></p>
 <div class="dynheader">
 rm::OptimalOptions 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dd9/structrm_1_1OptimalOptions__coll__graph.svg" width="422" height="219"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/dd9/structrm_1_1OptimalOptions__coll__graph.svg" width="438" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:af6bcf3446e95eb61cc89e35cc10f6dcf" id="r_af6bcf3446e95eb61cc89e35cc10f6dcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db4/group__core__optimal.html#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bcf3446e95eb61cc89e35cc10f6dcf">diff_mode</a> {}</td></tr>
-<tr class="memdesc:af6bcf3446e95eb61cc89e35cc10f6dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">梯度计算模式，默认为中心差商 <code>Central</code>  <br /></td></tr>
+<tr class="memdesc:af6bcf3446e95eb61cc89e35cc10f6dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">梯度计算模式，默认为中心差商 <code><a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code>  <br /></td></tr>
 <tr class="separator:af6bcf3446e95eb61cc89e35cc10f6dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac873bcddeda0fae3edf903eec7486e3" id="r_aac873bcddeda0fae3edf903eec7486e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db4/group__core__optimal.html#gab708417b91a7e4c422e0e01f95e3f516">OptimizeMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac873bcddeda0fae3edf903eec7486e3">optm_mode</a> {}</td></tr>
-<tr class="memdesc:aac873bcddeda0fae3edf903eec7486e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">优化模式，默认为共轭梯度法 <code>ConjGrad</code>  <br /></td></tr>
-<tr class="separator:aac873bcddeda0fae3edf903eec7486e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609336b69f157e51edcdc9755eb67251" id="r_a609336b69f157e51edcdc9755eb67251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db4/group__core__optimal.html#gaf5b1502951081346a5bc6f03694fe73c">FminMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a609336b69f157e51edcdc9755eb67251">fmin_mode</a> {}</td></tr>
+<tr class="memdesc:a609336b69f157e51edcdc9755eb67251"><td class="mdescLeft">&#160;</td><td class="mdescRight">多维函数最优化模式，默认为共轭梯度法 <code><a class="el" href="../../d8/db4/group__core__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce" title="共轭梯度法">FminMode::ConjGrad</a></code>  <br /></td></tr>
+<tr class="separator:a609336b69f157e51edcdc9755eb67251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2212cc3e39cc6355cb36acca9de5534c" id="r_a2212cc3e39cc6355cb36acca9de5534c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2212cc3e39cc6355cb36acca9de5534c">max_iter</a> {1000}</td></tr>
 <tr class="memdesc:a2212cc3e39cc6355cb36acca9de5534c"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大迭代次数  <br /></td></tr>
 <tr class="separator:a2212cc3e39cc6355cb36acca9de5534c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8459133a6c063242baa47fb5fbf3ff65" id="r_a8459133a6c063242baa47fb5fbf3ff65"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8459133a6c063242baa47fb5fbf3ff65">exterior</a> {1e3}</td></tr>
+<tr class="memdesc:a8459133a6c063242baa47fb5fbf3ff65"><td class="mdescLeft">&#160;</td><td class="mdescRight">外罚函数系数  <br /></td></tr>
+<tr class="separator:a8459133a6c063242baa47fb5fbf3ff65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a776bc1e810337bd9abb109a90b7d6e6a" id="r_a776bc1e810337bd9abb109a90b7d6e6a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a776bc1e810337bd9abb109a90b7d6e6a">tau</a> {1}</td></tr>
+<tr class="memdesc:a776bc1e810337bd9abb109a90b7d6e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始信赖域半径  <br /></td></tr>
+<tr class="separator:a776bc1e810337bd9abb109a90b7d6e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dfdc7ebce85a1aaa6ee3e29ad77126b" id="r_a4dfdc7ebce85a1aaa6ee3e29ad77126b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dfdc7ebce85a1aaa6ee3e29ad77126b">dx</a> {1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-2}</td></tr>
 <tr class="memdesc:a4dfdc7ebce85a1aaa6ee3e29ad77126b"><td class="mdescLeft">&#160;</td><td class="mdescRight">求解步长  <br /></td></tr>
 <tr class="separator:a4dfdc7ebce85a1aaa6ee3e29ad77126b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +144,7 @@ Public 属性</h2></td></tr>
 <tr class="separator:a63d056c22bd74468ce2b1fcb0602a4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>优化选项 </p>
+<div class="textblock"><p>无约束多维函数优化选项 </p>
 </div><h2 class="groupheader">类成员变量说明</h2>
 <a id="af6bcf3446e95eb61cc89e35cc10f6dcf" name="af6bcf3446e95eb61cc89e35cc10f6dcf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af6bcf3446e95eb61cc89e35cc10f6dcf">&#9670;&#160;</a></span>diff_mode</h2>
@@ -152,7 +158,7 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>梯度计算模式，默认为中心差商 <code>Central</code> </p>
+<p>梯度计算模式，默认为中心差商 <code><a class="el" href="../../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code> </p>
 
 </div>
 </div>
@@ -172,6 +178,38 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a8459133a6c063242baa47fb5fbf3ff65" name="a8459133a6c063242baa47fb5fbf3ff65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8459133a6c063242baa47fb5fbf3ff65">&#9670;&#160;</a></span>exterior</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::OptimalOptions::exterior {1e3}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>外罚函数系数 </p>
+
+</div>
+</div>
+<a id="a609336b69f157e51edcdc9755eb67251" name="a609336b69f157e51edcdc9755eb67251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609336b69f157e51edcdc9755eb67251">&#9670;&#160;</a></span>fmin_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/db4/group__core__optimal.html#gaf5b1502951081346a5bc6f03694fe73c">FminMode</a> rm::OptimalOptions::fmin_mode {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>多维函数最优化模式，默认为共轭梯度法 <code><a class="el" href="../../d8/db4/group__core__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce" title="共轭梯度法">FminMode::ConjGrad</a></code> </p>
+
+</div>
+</div>
 <a id="a2212cc3e39cc6355cb36acca9de5534c" name="a2212cc3e39cc6355cb36acca9de5534c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2212cc3e39cc6355cb36acca9de5534c">&#9670;&#160;</a></span>max_iter</h2>
 
@@ -188,19 +226,19 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="aac873bcddeda0fae3edf903eec7486e3" name="aac873bcddeda0fae3edf903eec7486e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac873bcddeda0fae3edf903eec7486e3">&#9670;&#160;</a></span>optm_mode</h2>
+<a id="a776bc1e810337bd9abb109a90b7d6e6a" name="a776bc1e810337bd9abb109a90b7d6e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776bc1e810337bd9abb109a90b7d6e6a">&#9670;&#160;</a></span>tau</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d8/db4/group__core__optimal.html#gab708417b91a7e4c422e0e01f95e3f516">OptimizeMode</a> rm::OptimalOptions::optm_mode {}</td>
+          <td class="memname">double rm::OptimalOptions::tau {1}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>优化模式，默认为共轭梯度法 <code>ConjGrad</code> </p>
+<p>初始信赖域半径 </p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['合理使用默认数据_0',['4. 合理使用默认数据',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md84',1,'']]]
+  ['可视化配置_20opc_20ua_20信息模型_0',['可视化配置 OPC UA 信息模型',['../db/dba/tutorial_modules_opcua.html#autotoc_md248',1,'']]]
 ];

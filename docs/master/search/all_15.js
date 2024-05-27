@@ -2,9 +2,9 @@ var searchData=
 [
   ['n_0',['N',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a8d9c307cb7f3c4a32822a51922d1ceaa',1,'rm']]],
   ['name_1',['name',['../df/d48/structrm_1_1Argument.html#a08c5da7a5fe72695a7c46003e42bec9e',1,'rm::Argument::name'],['../d6/d4a/structrm_1_1PublishedDataSet.html#a1391031ecb970e141ef6b11ea3e399e4',1,'rm::PublishedDataSet::name'],['../d4/d81/structrm_1_1FieldMetaData.html#a531f0c59b23a82a0df01f838b77efaa5',1,'rm::FieldMetaData::name']]],
-  ['newton_20插值多项式_2',['2. Newton 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md167',1,'']]],
-  ['newton_20迭代的简化_3',['3. Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md164',1,'']]],
-  ['newton_20迭代_4',['2. Newton 迭代',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md163',1,'']]],
+  ['newton_20插值多项式_2',['2. Newton 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md170',1,'']]],
+  ['newton_20迭代的简化_3',['3. Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md167',1,'']]],
+  ['newton_20迭代_4',['2. Newton 迭代',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md166',1,'']]],
   ['nid_5',['nid',['../dd/dfe/structrm_1_1NodeId.html#a6a77712008696a1abbc0bad6a5d85a95',1,'rm::NodeId']]],
   ['node_5fid_6',['node_id',['../d6/d4a/structrm_1_1PublishedDataSet.html#ad58c956b9694d028edadec45201a6e62',1,'rm::PublishedDataSet']]],
   ['nodebasedatavariabletype_7',['nodeBaseDataVariableType',['../d3/da8/group__opcua.html#gab20915b7cf5d31549a6c5541d94c2159',1,'rm']]],

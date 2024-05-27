@@ -186,6 +186,11 @@
     <filename>dd/d29/least__square_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>lsqnonlin.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>d8/def/lsqnonlin_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>ort.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>db/d95/ort_8md.html</filename>
@@ -6100,10 +6105,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>OptimizeMode</type>
-      <name>optm_mode</name>
+      <type>FminMode</type>
+      <name>fmin_mode</name>
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
-      <anchor>aac873bcddeda0fae3edf903eec7486e3</anchor>
+      <anchor>a609336b69f157e51edcdc9755eb67251</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6111,6 +6116,20 @@
       <name>max_iter</name>
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
       <anchor>a2212cc3e39cc6355cb36acca9de5534c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>exterior</name>
+      <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
+      <anchor>a8459133a6c063242baa47fb5fbf3ff65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>tau</name>
+      <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
+      <anchor>a776bc1e810337bd9abb109a90b7d6e6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -9533,10 +9552,24 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>std::vector&lt; Func1d &gt;</type>
+      <name>Func1ds</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>ga79bbea2155e710efcecf6dfe70cd1ebb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt;</type>
       <name>FuncNd</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
       <anchor>gaa8786881a1bd10bd3cfdd22f9209f88a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; FuncNd &gt;</type>
+      <name>FuncNds</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>gaa5cf9abf91c10f3b6cab450e9551533c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -9806,37 +9839,17 @@
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
       <anchor>ga329a52f13003e4dd7914217ed7f3f5ed</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Diff_Central</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gga329a52f13003e4dd7914217ed7f3f5edaf4ab811d770c7516870336b29eef59a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Diff_Ridders</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gga329a52f13003e4dd7914217ed7f3f5eda17b0cdd259b025cc0964f03f241c743f</anchor>
-      <arglist></arglist>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">Central</enumvalue>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">Ridders</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>OptimizeMode</name>
+      <name>FminMode</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gab708417b91a7e4c422e0e01f95e3f516</anchor>
+      <anchor>gaf5b1502951081346a5bc6f03694fe73c</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Optm_ConjGrad</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ggab708417b91a7e4c422e0e01f95e3f516a3b557b4ce2b5aee4ca4eab0a9be00c5c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Optm_Simplex</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ggab708417b91a7e4c422e0e01f95e3f516ac7eb58bebd579aafacb98f6007cf47b8</anchor>
-      <arglist></arglist>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">ConjGrad</enumvalue>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">Simplex</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -10341,15 +10354,15 @@
       <type>double</type>
       <name>derivative</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ga98a95e9ef256b85e5e4bb9a659531afd</anchor>
-      <arglist>(Func1d func, double x, DiffMode mode=Diff_Central, double dx=1e-3)</arglist>
+      <anchor>gad269c00a143e239e4c56922766bb2a2e</anchor>
+      <arglist>(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; double &gt;</type>
       <name>grad</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ga92b22285518c9420636690d2bc47a0e0</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=Diff_Central, double dx=1e-3)</arglist>
+      <anchor>ga0d960fda587557e7abb07dfe96d824e4</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; double, double &gt;</type>
@@ -10376,8 +10389,15 @@
       <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
       <name>fmincon</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gaaccda21c87db611469abcda22bbffdd8</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNd c, FuncNd ceq, const OptimalOptions &amp;options={})</arglist>
+      <anchor>gac94784289aa222ec972035f3ad930153</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const FuncNds &amp;c, const FuncNds &amp;ceq, const OptimalOptions &amp;options={})</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt;</type>
+      <name>lsqnonlin</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>ga2c5c6ca12730fb4365a8034b7c0a0ead</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
@@ -12508,10 +12528,24 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>std::vector&lt; Func1d &gt;</type>
+      <name>rm::Func1ds</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>ga79bbea2155e710efcecf6dfe70cd1ebb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt;</type>
       <name>rm::FuncNd</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
       <anchor>gaa8786881a1bd10bd3cfdd22f9209f88a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; FuncNd &gt;</type>
+      <name>rm::FuncNds</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>gaa5cf9abf91c10f3b6cab450e9551533c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -12520,51 +12554,31 @@
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
       <anchor>ga329a52f13003e4dd7914217ed7f3f5ed</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Diff_Central</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gga329a52f13003e4dd7914217ed7f3f5edaf4ab811d770c7516870336b29eef59a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Diff_Ridders</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gga329a52f13003e4dd7914217ed7f3f5eda17b0cdd259b025cc0964f03f241c743f</anchor>
-      <arglist></arglist>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">Central</enumvalue>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">Ridders</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>rm::OptimizeMode</name>
+      <name>rm::FminMode</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gab708417b91a7e4c422e0e01f95e3f516</anchor>
+      <anchor>gaf5b1502951081346a5bc6f03694fe73c</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Optm_ConjGrad</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ggab708417b91a7e4c422e0e01f95e3f516a3b557b4ce2b5aee4ca4eab0a9be00c5c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::Optm_Simplex</name>
-      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ggab708417b91a7e4c422e0e01f95e3f516ac7eb58bebd579aafacb98f6007cf47b8</anchor>
-      <arglist></arglist>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">ConjGrad</enumvalue>
+      <enumvalue file="d8/db4/group__core__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">Simplex</enumvalue>
     </member>
     <member kind="function">
       <type>double</type>
       <name>rm::derivative</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ga98a95e9ef256b85e5e4bb9a659531afd</anchor>
-      <arglist>(Func1d func, double x, DiffMode mode=Diff_Central, double dx=1e-3)</arglist>
+      <anchor>gad269c00a143e239e4c56922766bb2a2e</anchor>
+      <arglist>(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; double &gt;</type>
       <name>rm::grad</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>ga92b22285518c9420636690d2bc47a0e0</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=Diff_Central, double dx=1e-3)</arglist>
+      <anchor>ga0d960fda587557e7abb07dfe96d824e4</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; double, double &gt;</type>
@@ -12591,8 +12605,15 @@
       <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
       <name>rm::fmincon</name>
       <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
-      <anchor>gaaccda21c87db611469abcda22bbffdd8</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNd c, FuncNd ceq, const OptimalOptions &amp;options={})</arglist>
+      <anchor>gac94784289aa222ec972035f3ad930153</anchor>
+      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const FuncNds &amp;c, const FuncNds &amp;ceq, const OptimalOptions &amp;options={})</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; double &gt;</type>
+      <name>rm::lsqnonlin</name>
+      <anchorfile>d8/db4/group__core__optimal.html</anchorfile>
+      <anchor>ga2c5c6ca12730fb4365a8034b7c0a0ead</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -13989,9 +14010,15 @@
   </compound>
   <compound kind="page">
     <name>tutorial_modules_least_square</name>
-    <title>最小二乘法——超定方程组与函数拟合</title>
+    <title>最小二乘法</title>
     <filename>db/da1/tutorial_modules_least_square.html</filename>
     <docanchor file="db/da1/tutorial_modules_least_square.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/least_square.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2least__square</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_lsqnonlin</name>
+    <title>非线性最小二乘</title>
+    <filename>d8/dd7/tutorial_modules_lsqnonlin.html</filename>
+    <docanchor file="d8/dd7/tutorial_modules_lsqnonlin.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/lsqnonlin.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2lsqnonlin</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ort</name>
@@ -14067,6 +14094,7 @@
     <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>
     <subpage>db/da1/tutorial_modules_least_square.html</subpage>
+    <subpage>d8/dd7/tutorial_modules_lsqnonlin.html</subpage>
     <subpage>d8/daf/tutorial_modules_func_iteration.html</subpage>
     <subpage>d6/d31/tutorial_modules_runge_kutta.html</subpage>
     <subpage>da/d8f/tutorial_modules_auto_differential.html</subpage>

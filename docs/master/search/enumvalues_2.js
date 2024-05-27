@@ -22,9 +22,11 @@ var searchData=
   ['camera_5fwb_5fbgain_19',['CAMERA_WB_BGAIN',['../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e',1,'rm']]],
   ['camera_5fwb_5fggain_20',['CAMERA_WB_GGAIN',['../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58',1,'rm']]],
   ['camera_5fwb_5frgain_21',['CAMERA_WB_RGAIN',['../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801',1,'rm']]],
-  ['chn0_22',['Chn0',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa4c8f067bdd364e561fd1a5b766fb30da',1,'rm']]],
-  ['chn1_23',['Chn1',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa965c0cc3993772fa0890e4f26c953467',1,'rm']]],
-  ['chn2_24',['Chn2',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aac1d24a7c11cfbd7898dd36f172f996b6',1,'rm']]],
-  ['chn3_25',['Chn3',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aabbb9ea5d9d7ad6cf024bb0a8c9210aa6',1,'rm']]],
-  ['continuous_26',['Continuous',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7',1,'rm']]]
+  ['central_22',['Central',['../d8/db4/group__core__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2',1,'rm']]],
+  ['chn0_23',['Chn0',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa4c8f067bdd364e561fd1a5b766fb30da',1,'rm']]],
+  ['chn1_24',['Chn1',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa965c0cc3993772fa0890e4f26c953467',1,'rm']]],
+  ['chn2_25',['Chn2',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aac1d24a7c11cfbd7898dd36f172f996b6',1,'rm']]],
+  ['chn3_26',['Chn3',['../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aabbb9ea5d9d7ad6cf024bb0a8c9210aa6',1,'rm']]],
+  ['conjgrad_27',['ConjGrad',['../d8/db4/group__core__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce',1,'rm']]],
+  ['continuous_28',['Continuous',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7',1,'rm']]]
 ];

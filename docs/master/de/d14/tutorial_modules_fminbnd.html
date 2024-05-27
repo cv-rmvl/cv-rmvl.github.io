@@ -149,20 +149,16 @@ $(function(){ initResizable(false); });
 </ul>
 <p>两步，其步骤如下</p>
 <center></center><center><div class="image">
-<img src="../../fminbnd_forward.png" alt=""/>
+<img src="../../forward.png" alt=""/>
 <div class="caption">
-图 1-1 向前一步</div></div>
-    </center><center><div class="image">
-<img src="../../fminbnd_forward_2.png" alt=""/>
-<div class="caption">
-图 1-2 向前两步</div></div>
+图 1 进退法</div></div>
     </center><center></center><ol type="1">
 <li>选择一个初始点 \(\alpha_1\)和一个初始步长 \(h\)。</li>
-<li>如图 1-1 所示，计算点 \(\alpha_1\)和点 \(\alpha_1+h\)对应的函数值 \(f(\alpha_1)\)和 \(f(\alpha_1+h)\)，令 <p class="formulaDsp">
+<li>如图 1(a) 所示，计算点 \(\alpha_1\)和点 \(\alpha_1+h\)对应的函数值 \(f(\alpha_1)\)和 \(f(\alpha_1+h)\)，令 <p class="formulaDsp">
 \[f_1=f(\alpha_1),\quad f_2=f(\alpha_1+h)\]
 </p>
 </li>
-<li>比较 \(f_1\)和 \(f_2\)，若 \(f_1&gt;f_2\)，则执行前进运算，将步长加大 \(k\)倍（如加大 2 倍），取新点 \(\alpha_1+3h\)，如图 1-2 所示，计算其函数值，并令 <p class="formulaDsp">
+<li>比较 \(f_1\)和 \(f_2\)，若 \(f_1&gt;f_2\)，则执行前进运算，将步长加大 \(k\)倍（如加大 2 倍），取新点 \(\alpha_1+3h\)，如图 1(b) 所示，计算其函数值，并令 <p class="formulaDsp">
 \[f_1=f(\alpha_1+h),\quad f_2=f(\alpha_1+3h)\]
 </p>
 若 \(f_1&lt; f_2\)，则初始搜索区间端点为 <p class="formulaDsp">
@@ -202,7 +198,7 @@ $(function(){ initResizable(false); });
 <h3><a class="anchor" id="autotoc_md155"></a>
 2.1 区间消去</h3>
 <p>黄金分割法是利用区间消去法的原理，通过不断缩小单峰区间长度，即每次迭代都消去一部分不含极小值点的区间，使搜索区间不断缩小，从而逐渐逼近目标函数极小值点的一种优化方法。黄金分割法是直接寻优法，通过直接比较区间上点的函数值的大小来判断区间的取舍。这种方法具有计算简单、收敛速度快等优点。</p>
-<p>如图1-2所示，在已确定的单峰区间[a,b]内任取 \(\alpha_1\)， \(\alpha_2\)两点，计算并比较两点处的函数值 \(f(\alpha_1)\)和 \(f(\alpha_2)\),可能出现3种情况：</p>
+<p>如图 1(b) 所示，在已确定的单峰区间[a,b]内任取 \(\alpha_1\)， \(\alpha_2\)两点，计算并比较两点处的函数值 \(f(\alpha_1)\)和 \(f(\alpha_2)\),可能出现3种情况：</p>
 <ol type="1">
 <li>\(f(\alpha_1)&lt; f(\alpha_2)\)，因为函数是单峰的，所以极小值点必定位于点 \(\alpha_2\)的左侧，即 \(\alpha^*\in[a,\alpha_2]\)，搜索区间可以缩小为 \([a,\alpha_2]\)，如图 2-1(a) 所示；</li>
 <li>\(f(\alpha_1)&gt;f(\alpha_2)\)，极小值点必定位于点 \(\alpha_1\)的右侧，即 \(\alpha^*\in[\alpha_1,b]\)，搜索区间可以缩小为 \([\alpha_1,b]\)，如图 2-1(b) 所示；</li>
@@ -238,7 +234,7 @@ $(function(){ initResizable(false); });
 <p>该方法保证每次迭代都以同一比率缩小区间，缩短率为 \(0.618\)，故黄金分割法又称为 \(0.618\)法。保留的区间长度为整个区间长度的 \(0.618\)倍，消去的区间长度为整个区间长度的 \(0.382\)倍。</p>
 <p>黄金分割法的计算步骤如下：</p>
 <center></center><center><div class="image">
-<img src="../../fminbnd_principle.png" alt=""/>
+<img src="../../principle.png" alt=""/>
 <div class="caption">
 图 2-2 黄金分割法原理</div></div>
     </center><center></center><ol type="1">
@@ -277,9 +273,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agroup__core__optimal_html_gaab485911ef8cdc37e5ef92b839ec107c"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a></div><div class="ttdeci">std::pair&lt; double, double &gt; region(Func1d func, double x0, double delta=1)</div><div class="ttdoc">采用进退法确定搜索区间</div></div>
 <div class="ttc" id="agroup__core__optimal_html_gae8c5462fcdf30d76ea709bbc2e08d3ee"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a></div><div class="ttdeci">std::pair&lt; double, double &gt; fminbnd(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</div><div class="ttdoc">一维函数最小值搜索</div></div>
 <div class="ttc" id="anumcal_8hpp_html"><div class="ttname"><a href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></div><div class="ttdoc">Numerical Calculation Module 数值计算模块</div></div>
-<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:336</div></div>
-<div class="ttc" id="astructrm_1_1OptimalOptions_html_a2212cc3e39cc6355cb36acca9de5534c"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">rm::OptimalOptions::max_iter</a></div><div class="ttdeci">int max_iter</div><div class="ttdoc">最大迭代次数</div><div class="ttdef"><b>定义</b> numcal.hpp:339</div></div>
-<div class="ttc" id="astructrm_1_1OptimalOptions_html_a63d056c22bd74468ce2b1fcb0602a4f7"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a63d056c22bd74468ce2b1fcb0602a4f7">rm::OptimalOptions::tol</a></div><div class="ttdeci">double tol</div><div class="ttdoc">误差容限</div><div class="ttdef"><b>定义</b> numcal.hpp:341</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">无约束多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:338</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a2212cc3e39cc6355cb36acca9de5534c"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">rm::OptimalOptions::max_iter</a></div><div class="ttdeci">int max_iter</div><div class="ttdoc">最大迭代次数</div><div class="ttdef"><b>定义</b> numcal.hpp:341</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a63d056c22bd74468ce2b1fcb0602a4f7"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a63d056c22bd74468ce2b1fcb0602a4f7">rm::OptimalOptions::tol</a></div><div class="ttdeci">double tol</div><div class="ttdoc">误差容限</div><div class="ttdef"><b>定义</b> numcal.hpp:345</div></div>
 </div><!-- fragment --></li>
 <li>添加 <code>CMakeLists.txt</code> <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
 <div class="line">project(FminbndDemo)</div>

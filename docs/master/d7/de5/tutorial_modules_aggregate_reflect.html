@@ -106,13 +106,13 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md207">1. 聚合类</a></li>
-<li class="level2"><a href="#autotoc_md208">2. 获取聚合体元素个数</a></li>
-<li class="level2"><a href="#autotoc_md209">3. 其余聚合体反射工具</a><ul><li class="level3"><a href="#autotoc_md210">3.1 成员遍历</a></li>
-<li class="level3"><a href="#autotoc_md211">3.2 相等函数</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md211">1. 聚合类</a></li>
+<li class="level2"><a href="#autotoc_md212">2. 获取聚合体元素个数</a></li>
+<li class="level2"><a href="#autotoc_md213">3. 其余聚合体反射工具</a><ul><li class="level3"><a href="#autotoc_md214">3.1 成员遍历</a></li>
+<li class="level3"><a href="#autotoc_md215">3.2 相等函数</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md212">4. 聚合类对象作为散列表的键 (Key)</a></li>
+<li class="level2"><a href="#autotoc_md216">4. 聚合类对象作为散列表的键 (Key)</a></li>
 </ul>
 </ul>
 </div>
@@ -124,7 +124,7 @@ $(function(){ initResizable(false); });
 <p><b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md207"></a>
+<h2><a class="anchor" id="autotoc_md211"></a>
 1. 聚合类</h2>
 <p>有关<a href="https://zh.cppreference.com/w/cpp/language/aggregate_initialization">聚合体</a>的概念可直接参考 cppreference 手册，这里对聚合体的其中一个用法做介绍。</p>
 <p>数组类型同样属于聚合体，这里仅探究符合聚合体定义的类类型，我们称其为聚合类，聚合类允许聚合初始化，即从初始化列表初始化聚合类，例如</p>
@@ -164,7 +164,7 @@ $(function(){ initResizable(false); });
 <li>遍历聚合体的所有元素</li>
 </ul>
 <p>的编译期反射机制。</p>
-<h2><a class="anchor" id="autotoc_md208"></a>
+<h2><a class="anchor" id="autotoc_md212"></a>
 2. 获取聚合体元素个数</h2>
 <p>下文给出 C++17 和 C++20 两个版本的实现方法，点击对应按钮可查看详细内容</p>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d0/d3f/util_8hpp.html">core/util.hpp</a></dd></dl>
@@ -268,9 +268,9 @@ $(function(){ initResizable(false); });
 <li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{init{}, init{}, init{}}; }</code>，不符合语法（<code>X</code> 只有两个成员），<code>requires</code> 表达式返回 <code>false</code>，经 <code>!</code> 修饰后，则会进入 <code>true</code> 分支；</li>
 <li>此时形参包长度为 \(3\)，返回 <code>形参包长度 - 1</code>，即返回 \(2\)。</li>
 </ol>
- </div> <h2><a class="anchor" id="autotoc_md209"></a>
+ </div> <h2><a class="anchor" id="autotoc_md213"></a>
 3. 其余聚合体反射工具</h2>
-<h3><a class="anchor" id="autotoc_md210"></a>
+<h3><a class="anchor" id="autotoc_md214"></a>
 3.1 成员遍历</h3>
 <p>函数原型如下</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp, <span class="keyword">typename</span> Callable&gt;</div>
@@ -307,7 +307,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --><p>实现方法简单粗暴，通过结构化绑定与编译期的 <code>constexpr-if</code> 语句，分别调用可调用对象 <code>f</code> 即可，例如，一个 <code>size = 3</code> 的聚合体，可以使用以下语句完成成员的遍历</p>
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[m0, m1, m2] = val;</div>
 <div class="line">f(m0), f(m1), f(m2);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md211"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md215"></a>
 3.2 相等函数</h3>
 <dl class="section note"><dt>注解</dt><dd><ul>
 <li>此操作主要用于 C++20 前，自定义类的自定义 hash 函数</li>
@@ -347,7 +347,7 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[l0, l1, l2] = lhs;</div>
 <div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[r0, r1, r2] = rhs;</div>
 <div class="line"><span class="keywordflow">return</span> l0 == r0 &amp;&amp; l1 == r1 &amp;&amp; l2 == r2;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md212"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md216"></a>
 4. 聚合类对象作为散列表的键 (Key)</h2>
 <p>cppreference 中给出了有关自定义散列函数的例子</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>S</div>
