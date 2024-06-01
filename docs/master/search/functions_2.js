@@ -28,6 +28,5 @@ var searchData=
   ['create_25',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig']]],
   ['cross2d_26',['cross2D',['../d0/de1/group__core.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d0/de1/group__core.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
   ['csc_27',['csc',['../d0/de1/group__core.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],
-  ['curvefitter_28',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter']]],
-  ['cvtargument_29',['cvtArgument',['../de/d53/namespacerm_1_1helper.html#a6b7a8663bc51194c6888ec631ad1aca9',1,'rm::helper']]]
+  ['curvefitter_28',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter']]]
 ];

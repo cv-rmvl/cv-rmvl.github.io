@@ -106,30 +106,27 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/rmvl.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span>std;</div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d2/d75/namespacecv.html">cv</a>;</div>
-<div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">for</span> (uint32_t n = 0; n &lt; 5; ++n)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">// data prepare</span></div>
-<div class="line">        vector&lt;vector&lt;Point2f&gt;&gt; corners;</div>
+<div class="line">        std::vector&lt;std::vector&lt;cv::Point2f&gt;&gt; corners;</div>
 <div class="line">        corners.resize(3);</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; ++i)</div>
+<div class="line">        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; 3; ++i)</div>
 <div class="line">        {</div>
 <div class="line">            corners[i].resize(n + 1);</div>
-<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; n + 1; ++j)</div>
-<div class="line">                corners[i][j] = Point2f(i + j, n + j);</div>
+<div class="line">            <span class="keywordflow">for</span> (std::size_t j = 0; j &lt; n + 1; ++j)</div>
+<div class="line">                corners[i][j] = {i + j, n + j};</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// write data</span></div>
-<div class="line">        <a id="a0" name="a0"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c">RMVL_Assert</a>(writeCorners(<span class="stringliteral">&quot;ts.yml&quot;</span>, n, corners));</div>
+<div class="line">        <a id="a0" name="a0"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c">RMVL_Assert</a>(<a id="a1" name="a1"></a><a class="code hl_function" href="../../d0/d41/group__core__dataio.html#ga232b63e9e1364254d512e66377be7af4">rm::writeCorners</a>(<span class="stringliteral">&quot;ts.yml&quot;</span>, n, corners));</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup__core__dataio_html_ga232b63e9e1364254d512e66377be7af4"><div class="ttname"><a href="../../d0/d41/group__core__dataio.html#ga232b63e9e1364254d512e66377be7af4">rm::writeCorners</a></div><div class="ttdeci">void writeCorners(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</div><div class="ttdoc">导出角点数据</div></div>
 <div class="ttc" id="agroup__core_html_gac56d8385bc039215b7c14f05210dab1c"><div class="ttname"><a href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c">RMVL_Assert</a></div><div class="ttdeci">#define RMVL_Assert(expr)</div><div class="ttdoc">在运行时检查条件，如果失败则抛出异常</div><div class="ttdef"><b>定义</b> util.hpp:230</div></div>
-<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="../../d2/d75/namespacecv.html">cv</a></div><div class="ttdef"><b>定义</b> math.hpp:70</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

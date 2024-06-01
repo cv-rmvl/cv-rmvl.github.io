@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['系统参数辨识神符预测模块_0',['系统参数辨识神符预测模块',['../df/d99/group__spi__rune__predictor.html',1,'']]],
-  ['系统配置交叉编译_1',['为基于 ARM 的 Linux 系统配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]]
+  ['算法原理_0',['算法原理',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md194',1,'1.1 算法原理'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md199',1,'2.1 算法原理']]],
+  ['算法类_1',['2. 算法类',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md270',1,'']]],
+  ['算法_2',['算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'常微分方程（组）数值解与 Runge-Kutta 算法'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md198',1,'2. Levenberg–Marquardt 算法']]]
 ];

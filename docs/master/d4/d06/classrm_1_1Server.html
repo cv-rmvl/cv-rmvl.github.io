@@ -150,7 +150,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a24c4b9937aef50cd2f6b773c909278aa" id="r_a24c4b9937aef50cd2f6b773c909278aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24c4b9937aef50cd2f6b773c909278aa">~Server</a> ()</td></tr>
 <tr class="memdesc:a24c4b9937aef50cd2f6b773c909278aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放服务器资源  <br /></td></tr>
 <tr class="separator:a24c4b9937aef50cd2f6b773c909278aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4f45066b372cbf8b9e086ef0fc3820" id="r_a0c4f45066b372cbf8b9e086ef0fc3820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gaf112814f9e6bec713c05e668b7ce78a3">FindNodeInServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f45066b372cbf8b9e086ef0fc3820">find</a> (const std::string &amp;browse_name, uint16_t ns=1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>)</td></tr>
+<tr class="memitem:a0c4f45066b372cbf8b9e086ef0fc3820" id="r_a0c4f45066b372cbf8b9e086ef0fc3820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gaf112814f9e6bec713c05e668b7ce78a3">FindNodeInServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f45066b372cbf8b9e086ef0fc3820">find</a> (const std::string &amp;browse_name, uint16_t ns=1U)</td></tr>
 <tr class="memdesc:a0c4f45066b372cbf8b9e086ef0fc3820"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
 <tr class="separator:a0c4f45066b372cbf8b9e086ef0fc3820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0a847ff6a5a96eb207ac58834e2349" id="r_a6f0a847ff6a5a96eb207ac58834e2349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f0a847ff6a5a96eb207ac58834e2349">addVariableTypeNode</a> (const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;vtype)</td></tr>
@@ -423,11 +423,11 @@ Protected 属性</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量，仅取 <code>browse_name</code>、<code>description</code>、<code>display_name</code>、<code>access_level</code> 以及 <code>ns</code> 字段，以及对应的变量类型节点 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_read</td><td>重定向的读取回调函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_write</td><td>重定向的写入回调函数 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应数据源变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应数据源变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ Protected 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应事件类型的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应事件类型的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -480,11 +480,11 @@ Protected 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td><code><a class="el" href="../../d2/d23/structrm_1_1Method.html" title="OPC UA 方法">rm::Method</a></code> 表示的方法 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应方法节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应方法节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -511,11 +511,11 @@ Protected 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td><code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 表示的对象 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定的父节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定的父节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -541,7 +541,7 @@ Protected 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -568,11 +568,11 @@ Protected 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -604,7 +604,7 @@ Protected 属性</h2></td></tr>
 <p>值回调表示在对 <b>服务器中的</b> 变量节点进行读写的时候，会在读之前执行 <code>beforeRead</code>，在写之后执行 <code>afterWrite</code></p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，因变量节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，因变量节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">before_read</td><td>可隐式转换为 <code>ValueCallBackBeforeRead</code> 函数指针类型的可调用对象 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">after_write</td><td>可隐式转换为 <code>ValueCallBackAfterWrite</code> 函数指针类型的可调用对象 </td></tr>
   </table>
@@ -636,7 +636,7 @@ Protected 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -662,7 +662,7 @@ Protected 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应视图节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应视图节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
 
 </div>
 </div>
@@ -710,7 +710,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a></span>&#160;)</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1U</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -787,7 +787,7 @@ Protected 属性</h2></td></tr>
 <p>从指定的变量节点读数据 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -817,7 +817,7 @@ Protected 属性</h2></td></tr>
 <p>为既有的方法节点 MethodNode 设置方法的回调函数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的方法节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code>，因方法节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的方法节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，因方法节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_method</td><td>可隐式转换为 <code>UA_MethodCallback</code> 函数指针类型的可调用对象 </td></tr>
   </table>
   </dd>
@@ -868,8 +868,6 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>停止服务器 </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a1">samples/opcua/opcua_server.cpp</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -895,7 +893,7 @@ Protected 属性</h2></td></tr>
 <p>创建并触发事件 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>触发事件的节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>触发事件的节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td><code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 表示的事件 </td></tr>
   </table>
   </dd>
@@ -927,7 +925,7 @@ Protected 属性</h2></td></tr>
 <p>给指定的变量节点写数据 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>待写入的数据 </td></tr>
   </table>
   </dd>

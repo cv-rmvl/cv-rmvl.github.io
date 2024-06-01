@@ -157,6 +157,7 @@ $(function(){ initResizable(false); });
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用 <code>UDP</code> 协议以及 <code>UADP</code> 序列化方式的订阅者特化  <a href="../../de/d25/classrm_1_1Subscriber_3_01TransportID_1_1UDP__UADP_01_4.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">rm::NodeId</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPC UA 节点 ID  <a href="../../dd/dfe/structrm_1_1NodeId.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">rm::UserConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户信息  <a href="../../d4/d09/structrm_1_1UserConfig.html#details">更多...</a><br /></td></tr>
@@ -1209,7 +1210,7 @@ $(function(){ initResizable(false); });
 <p><code>#include &lt;<a class="el" href="../../dc/d5f/utilities_8hpp.html">rmvl/opcua/utilities.hpp</a>&gt;</code></p>
 
 <p>对象节点：<code>ObjectsFolder</code> 节点 ID </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a1">samples/opcua/opcua_client.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a2">samples/opcua/opcua_client.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1634,12 +1635,12 @@ $(function(){ initResizable(false); });
 <p>客户端路径搜索 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">origin</td><td>起始 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">origin</td><td>起始 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fnic</td><td>目标节点信息（客户端指针、命名空间、浏览名） </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>目标 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>目标 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a> </dd></dl>
 
 </div>
 </div>
@@ -1667,12 +1668,12 @@ $(function(){ initResizable(false); });
 <p>服务端路径搜索 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">origin</td><td>起始 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">origin</td><td>起始 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fnis</td><td>目标节点信息（服务端指针、命名空间、浏览名） </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>返回</dt><dd>目标 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>目标 <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a> </dd></dl>
 
 </div>
 </div>
@@ -1699,18 +1700,18 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="../../dc/d5f/utilities_8hpp.html">rmvl/opcua/utilities.hpp</a>&gt;</code></p>
 <b>初始值:</b><div class="fragment"><div class="line">=</div>
-<div class="line">    {{::std::type_index(<span class="keyword">typeid</span>(<span class="keywordtype">bool</span>)), UA_TYPES_BOOLEAN},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(int8_t)), UA_TYPES_SBYTE},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(uint8_t)), UA_TYPES_BYTE},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_Int16)), UA_TYPES_INT16},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_UInt16)), UA_TYPES_UINT16},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_Int32)), UA_TYPES_INT32},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_UInt32)), UA_TYPES_UINT32},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_Int64)), UA_TYPES_INT64},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_UInt64)), UA_TYPES_UINT64},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_Float)), UA_TYPES_FLOAT},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(UA_Double)), UA_TYPES_DOUBLE},</div>
-<div class="line">     {::std::type_index(<span class="keyword">typeid</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> *)), UA_TYPES_STRING}}</div>
+<div class="line">    {{std::type_index(<span class="keyword">typeid</span>(<span class="keywordtype">bool</span>)), UA_TYPES_BOOLEAN},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(int8_t)), UA_TYPES_SBYTE},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(uint8_t)), UA_TYPES_BYTE},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_Int16)), UA_TYPES_INT16},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_UInt16)), UA_TYPES_UINT16},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_Int32)), UA_TYPES_INT32},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_UInt32)), UA_TYPES_UINT32},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_Int64)), UA_TYPES_INT64},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_UInt64)), UA_TYPES_UINT64},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_Float)), UA_TYPES_FLOAT},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(UA_Double)), UA_TYPES_DOUBLE},</div>
+<div class="line">     {std::type_index(<span class="keyword">typeid</span>(<span class="keyword">const</span> <span class="keywordtype">char</span> *)), UA_TYPES_STRING}}</div>
 </div><!-- fragment -->
 <p>获取形如 <code>UA_TYPES_&lt;xxx&gt;</code> 的类型标志位 </p>
 

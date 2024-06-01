@@ -1,7 +1,7 @@
 var searchData=
 [
   ['o）_0',['数据读写（I/O）',['../d0/d41/group__core__dataio.html',1,'']]],
-  ['o_1',['O',['../d3/da4/tutorial_modules_serial.html#serialport_io',1,'数据 I/O'],['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6af186217753c37b9b9f958d906208506e',1,'rm::O']]],
+  ['o_1',['数据 I/O',['../d3/da4/tutorial_modules_serial.html#serialport_io',1,'']]],
   ['oargs_2',['oargs',['../d2/d23/structrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583',1,'rm::Method']]],
   ['object_3',['Object',['../d8/d9b/classrm_1_1Object.html',1,'rm::Object'],['../d8/d9b/classrm_1_1Object.html#a5d5c00786f8c0746f0484feb227f3eb7',1,'rm::Object::Object()'],['../d8/d9b/classrm_1_1Object.html#a7275fbf65ce423ba4f8c20ca456aebd0',1,'rm::Object::Object(ObjectType &amp;otype)']]],
   ['object_2ehpp_4',['object.hpp',['../df/de1/object_8hpp.html',1,'']]],
@@ -14,8 +14,8 @@ var searchData=
   ['onnxruntime_11',['1.4 onnxruntime',['../d1/db4/tutorial_install.html#install_onnxruntime',1,'']]],
   ['opc_20ua_12',['OPC UA',['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'从 XML 配置 OPC UA'],['../db/dba/tutorial_modules_opcua.html',1,'工业自动化通信协议 OPC UA']]],
   ['opc_20ua_20二次开发库_13',['基于 open62541 的 OPC UA 二次开发库',['../d3/da8/group__opcua.html',1,'']]],
-  ['opc_20ua_20信息模型_14',['可视化配置 OPC UA 信息模型',['../db/dba/tutorial_modules_opcua.html#autotoc_md248',1,'']]],
-  ['opc_20ua_20是什么_15',['OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#autotoc_md237',1,'']]],
+  ['opc_20ua_20信息模型_14',['可视化配置 OPC UA 信息模型',['../db/dba/tutorial_modules_opcua.html#autotoc_md259',1,'']]],
+  ['opc_20ua_20是什么_15',['OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#autotoc_md248',1,'']]],
   ['opcua_20的参数模块_16',['opcua 的参数模块',['../da/dd3/group__para__opcua.html',1,'']]],
   ['opcua_2ehpp_17',['opcua.hpp',['../d2/da1/rmvl_2opcua_8hpp.html',1,'(全局命名空间)'],['../d0/dda/rmvlpara_2opcua_8hpp.html',1,'(全局命名空间)']]],
   ['opcua_2emd_18',['opcua.md',['../dd/dea/opcua_8md.html',1,'']]],

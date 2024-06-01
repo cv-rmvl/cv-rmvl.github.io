@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['p_0',['P',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a44c29edb103a2872f519ad0c9a0fdaaa',1,'rm']]],
-  ['pitch_1',['PITCH',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffaf3f3b5497eb80da2d676c0836327373d',1,'rm']]],
-  ['pos_5fx_2',['POS_X',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffa70102e19f9e41c79442d4e6cd70ae139',1,'rm']]],
-  ['pos_5fy_3',['POS_Y',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffa02d5bfc7d75353cd65c573442ba5f2eb',1,'rm']]],
-  ['pos_5fz_4',['POS_Z',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffa7b462cfa221e1ea1dc40c95b42853da2',1,'rm']]]
+  ['sdk_0',['SDK',['../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffaf20e3c5e54c0ab3d375d660b3f896f6a',1,'rm']]],
+  ['sentry_1',['SENTRY',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea',1,'rm']]],
+  ['simplex_2',['Simplex',['../d8/db4/group__core__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789',1,'rm']]],
+  ['small_3',['SMALL',['../d6/d59/group__types.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7',1,'rm']]],
+  ['software_4',['Software',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede',1,'rm']]]
 ];

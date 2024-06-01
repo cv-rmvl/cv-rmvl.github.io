@@ -107,27 +107,23 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> *p_server{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> server(4840);</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { p_server-&gt;<a id="a1" name="a1"></a><a class="code hl_function" href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">stop</a>(); }</div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { server.stop(); }</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    signal(SIGINT, onHandle);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> server(4840);</div>
-<div class="line">    p_server = &amp;server;</div>
-<div class="line"> </div>
-<div class="line">    <a id="_a2" name="_a2"></a><a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> position = 5500;</div>
-<div class="line">    position.<a id="a3" name="a3"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Position&quot;</span>;</div>
-<div class="line">    position.<a id="a4" name="a4"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;position&quot;</span>;</div>
+<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> position = 5500;</div>
+<div class="line">    position.<a id="a2" name="a2"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Position&quot;</span>;</div>
+<div class="line">    position.<a id="a3" name="a3"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;position&quot;</span>;</div>
 <div class="line">    server.addVariableNode(position);</div>
 <div class="line">    server.start();</div>
 <div class="line">    server.join();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:48</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_af835200abfa46f85a183f6eed54edfa4"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#af835200abfa46f85a183f6eed54edfa4">rm::Server::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>定义</b> server.hpp:86</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:119</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:131</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:140</div></div>

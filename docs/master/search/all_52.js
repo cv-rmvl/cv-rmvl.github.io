@@ -7,5 +7,5 @@ var searchData=
   ['基本准则_4',['2.1 基本准则',['../d5/dee/tutorial_extra_how_to_use_feature.html#autotoc_md30',1,'']]],
   ['基本命令_5',['1. 基本命令',['../d5/d72/tutorial_document.html#autotoc_md122',1,'']]],
   ['基本流程_6',['基本流程',['../d8/d29/tutorial_extra_upper_base.html#autotoc_md66',1,'']]],
-  ['基本用法_7',['1. 基本用法',['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md193',1,'']]]
+  ['基本用法_7',['1. 基本用法',['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md204',1,'']]]
 ];

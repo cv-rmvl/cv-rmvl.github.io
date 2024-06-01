@@ -1423,7 +1423,6 @@
     <class kind="struct">rm::Argument</class>
     <class kind="struct">rm::Method</class>
     <namespace>rm</namespace>
-    <namespace>rm::helper</namespace>
     <member kind="typedef">
       <type>UA_StatusCode(*)( UA_Server *, const UA_NodeId *, void *, const UA_NodeId *, void *, const UA_NodeId *, void *, size_t, const UA_Variant *, size_t, UA_Variant *)</type>
       <name>UA_MethodCallback</name>
@@ -8818,17 +8817,17 @@
     <name>rm::UserConfig</name>
     <filename>d4/d09/structrm_1_1UserConfig.html</filename>
     <member kind="variable">
-      <type>::std::string</type>
+      <type>std::string</type>
       <name>id</name>
       <anchorfile>d4/d09/structrm_1_1UserConfig.html</anchorfile>
-      <anchor>a9920a3aa88dd69aac9f287337f402c1d</anchor>
+      <anchor>a5774f898dc76a675cbe3c735b0c0ba41</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>::std::string</type>
+      <type>std::string</type>
       <name>passwd</name>
       <anchorfile>d4/d09/structrm_1_1UserConfig.html</anchorfile>
-      <anchor>a8a5dcd73679005fd3641372f698f3303</anchor>
+      <anchor>a02d615417c5e961f20eff4b3e75f14d7</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10036,32 +10035,32 @@
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">NUM_7</enumvalue>
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">NUM_8</enumvalue>
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">NUM_9</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a9d5ed678fe57bcca610140957afab571">B</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a0d61f8370cad1d412f80b84d143e1257">C</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af623e75af30e62bbd73d6df5b50bb7b5">D</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a3a3ea00cfc35332cedf6e5e9a32e94da">E</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a800618943025315f869e4e1f09471012">F</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfcf28d0734569a6a693bc8194de62bf">G</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ac1d9f50f86825a1a2302ec2449c17196">H</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6add7536794b63bf90eccfd37f9b147d7f">I</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aff44570aca8241914870afbc310cdb85">J</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aa5f3c6a11b03839d46af9fb43c97c188">K</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad20caec3b48a1eef164cb4ca81ba2587">L</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a69691c7bdcc3ce6d5d8a1361f22d04ac">M</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d9c307cb7f3c4a32822a51922d1ceaa">N</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af186217753c37b9b9f958d906208506e">O</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a44c29edb103a2872f519ad0c9a0fdaaa">P</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af09564c9ca56850d4cd6b3319e541aee">Q</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ae1e1d3d40573127e9ee0480caf1283d6">R</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5dbc98dcc983a70728bd082d1a47546e">S</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab9ece18c950afbfa6b0fdbfa4ff731d3">T</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5206560a306a2e085a437fd258eb57ce">V</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a61e9c06ea9a85a5088a499df6458d276">W</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">CHAR_A</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">CHAR_B</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">CHAR_C</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">CHAR_D</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">CHAR_E</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">CHAR_F</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">CHAR_G</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">CHAR_H</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">CHAR_I</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">CHAR_J</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">CHAR_K</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">CHAR_L</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">CHAR_M</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">CHAR_N</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">CHAR_O</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">CHAR_P</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">CHAR_Q</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">CHAR_R</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">CHAR_S</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">CHAR_T</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">CHAR_U</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">CHAR_V</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">CHAR_W</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">CHAR_X</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">CHAR_Y</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">CHAR_Z</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -10802,13 +10801,6 @@
   <compound kind="namespace">
     <name>rm::helper</name>
     <filename>de/d53/namespacerm_1_1helper.html</filename>
-    <member kind="function">
-      <type>UA_Argument</type>
-      <name>cvtArgument</name>
-      <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>a6b7a8663bc51194c6888ec631ad1aca9</anchor>
-      <arglist>(const Argument &amp;arg)</arglist>
-    </member>
     <member kind="function">
       <type>constexpr char *</type>
       <name>zh_CN</name>
@@ -13644,32 +13636,32 @@
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">NUM_7</enumvalue>
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">NUM_8</enumvalue>
       <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">NUM_9</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a9d5ed678fe57bcca610140957afab571">B</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a0d61f8370cad1d412f80b84d143e1257">C</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af623e75af30e62bbd73d6df5b50bb7b5">D</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a3a3ea00cfc35332cedf6e5e9a32e94da">E</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a800618943025315f869e4e1f09471012">F</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfcf28d0734569a6a693bc8194de62bf">G</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ac1d9f50f86825a1a2302ec2449c17196">H</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6add7536794b63bf90eccfd37f9b147d7f">I</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aff44570aca8241914870afbc310cdb85">J</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aa5f3c6a11b03839d46af9fb43c97c188">K</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad20caec3b48a1eef164cb4ca81ba2587">L</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a69691c7bdcc3ce6d5d8a1361f22d04ac">M</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d9c307cb7f3c4a32822a51922d1ceaa">N</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af186217753c37b9b9f958d906208506e">O</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a44c29edb103a2872f519ad0c9a0fdaaa">P</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af09564c9ca56850d4cd6b3319e541aee">Q</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ae1e1d3d40573127e9ee0480caf1283d6">R</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5dbc98dcc983a70728bd082d1a47546e">S</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab9ece18c950afbfa6b0fdbfa4ff731d3">T</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5206560a306a2e085a437fd258eb57ce">V</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a61e9c06ea9a85a5088a499df6458d276">W</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">CHAR_A</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">CHAR_B</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">CHAR_C</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">CHAR_D</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">CHAR_E</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">CHAR_F</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">CHAR_G</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">CHAR_H</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">CHAR_I</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">CHAR_J</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">CHAR_K</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">CHAR_L</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">CHAR_M</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">CHAR_N</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">CHAR_O</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">CHAR_P</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">CHAR_Q</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">CHAR_R</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">CHAR_S</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">CHAR_T</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">CHAR_U</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">CHAR_V</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">CHAR_W</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">CHAR_X</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">CHAR_Y</enumvalue>
+      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">CHAR_Z</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>

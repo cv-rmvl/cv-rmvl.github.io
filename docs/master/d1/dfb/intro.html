@@ -151,7 +151,9 @@ $(function(){ initResizable(false); });
 主要模块</h2>
 <ul>
 <li><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> (<b>core</b>) —— 包含主要的工具库、数据读写、宏定义、版本管理等内容，以及 <a class="el" href="../../d9/db4/classrm_1_1Exception.html" title="该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的">rm::Exception</a> 异常管理模块就在此处定义。</li>
-<li><p class="startli"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> (<b>camera</b>) —— 目前包含 3 种相机厂商 SDK 的二次开发工具库，具体可参考下表。 </p><table class="markdownTable">
+<li><p class="startli"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> (<b>camera</b>) —— 目前包含 3 种相机厂商 SDK 的二次开发工具库，具体可参考下表。</p>
+<center></center><center> 表 1: 相机厂商 SDK 二次开发工具库<br  />
+ <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">厂商   </th><th class="markdownTableHeadCenter">简称    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -161,7 +163,7 @@ $(function(){ initResizable(false); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">迈德威视 <em>Mindvision</em>   </td><td class="markdownTableBodyCenter">Mv   </td></tr>
 </table>
-<p class="startli">点击<a class="el" href="../../d1/db4/tutorial_install.html">此处</a>可以安装以上相机的 SDK</p>
+</center><center> </center><p class="startli">点击<a class="el" href="../../d1/db4/tutorial_install.html">此处</a>可以安装以上相机的 SDK</p>
 </li>
 <li><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a> (<b>ml</b>)， <a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a> (<b>opcua</b>)</li>
 <li>... 以及其他包含在 <code>modules</code> 文件夹中的模块。</li>
@@ -179,7 +181,10 @@ $(function(){ initResizable(false); });
 <h3><a class="anchor" id="function_modules"></a>
 功能模块</h3>
 <ul>
-<li><a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> (<b>detector</b>) —— 识别、检测器是功能模块中最重要的部分，也是视觉图像处理的第一步。它负责对输入图像进行识别并加以处理，提取出目标轮廓、特征点等信息，并结合已知的部分数据组件，按顺序依次构建各种新的数据组件。 <center> <img src="https://s1.ax1x.com/2022/11/05/xOgdat.md.png" alt="xOgdat.png" border="0" class="inline"/> </center> 识别得到的各种图像以及提取到的特征和组合体均保存至识别模块信息 <code><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a></code> 中。</li>
+<li><p class="startli"><a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> (<b>detector</b>) —— 识别、检测器是功能模块中最重要的部分，也是视觉图像处理的第一步。它负责对输入图像进行识别并加以处理，提取出目标轮廓、特征点等信息，并结合已知的部分数据组件，按顺序依次构建各种新的数据组件。</p>
+<p class="startli"><img src="https://s1.ax1x.com/2022/11/05/xOgdat.md.png" alt="xOgdat.png" border="0" class="inline"/></p>
+<p class="startli">识别得到的各种图像以及提取到的特征和组合体均保存至识别模块信息 <code><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a></code> 中。</p>
+</li>
 <li><a class="el" href="../../d7/d4f/group__compensator.html">补偿模块（功能模块）</a> (<b>compensator</b>) —— 补偿器通常是功能模块中的第一个用于修正数据组件的算法模块，<span style="color: green">主要在 RoboMaster 赛事中使用</span>。补偿器主要负责修正弹道下坠的影响。计算得到的子弹飞行时间 <code>tof</code> 以及补偿增量 <code>compensation</code> 均保存至补偿模块信息 <code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code> 中。</li>
 <li><a class="el" href="../../db/d29/group__predictor.html">目标预测模块（功能模块）</a> (<b>predictor</b>) —— 对于需要考虑目标追踪或存在较长通讯延迟的机器人而言，必须要引入目标预测环节，使得伺服机构能够恒定追踪、捕获目标，<span style="color: green">在 RoboMaster 赛事中一般用于保证弹丸能够准确击中敌方目标</span>。一般而言，每一个预测模块会针对特定的数据组件（派生的 <code>group</code> 对象）进行 2~3 种预测量类型的计算，包括动态响应预测量 <code>Kt</code>、静态响应预测量 <code>B</code>、射击延迟预测量 <code>Bs</code>，每种预测量类型都包含 9 种预测对象，每个预测对象之间对于 3 种预测量类型来说都是线性关系，例如在 <a class="el" href="../../db/d1b/group__gyro__predictor.html">整车状态预测模块</a> 中对于 <code>ANG_Y</code> 预测对象的 3 种预测量都是单独计算的，这也便于后续的 <b>决策模块</b> 能够自由组合这些预测量。同样，计算得到的各类预测量均被保存至预测模块信息 <code><a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a></code> 中。</li>
 <li><a class="el" href="../../d9/dbe/group__decider.html">决策模块（功能模块）</a> (<b>decider</b>) —— 在经过识别、补偿和预测 3 个步骤后，需要使用特定的策略来获得当前时刻的最优目标，结合前三个步骤的信息（包含识别模块信息 <code>DetectInfo</code> 、补偿模块信息 <code>CompensateInfo</code> 、预测模块信息 <code>PredictInfo</code> ）导出到决策模块信息 <code><a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html" title="决策模块信息">rm::DecideInfo</a></code> 中。</li>

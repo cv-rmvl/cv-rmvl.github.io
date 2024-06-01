@@ -106,26 +106,23 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/rmvl.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span>std;</div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d2/d75/namespacecv.html">cv</a>;</div>
-<div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">for</span> (uint32_t n = 0; n &lt; 5; ++n)</div>
 <div class="line">    {</div>
-<div class="line">        vector&lt;vector&lt;Point2f&gt;&gt; corners;</div>
+<div class="line">        std::vector&lt;std::vector&lt;cv::Point2f&gt;&gt; corners;</div>
 <div class="line">        <span class="comment">// read data</span></div>
-<div class="line">        <span class="keywordflow">if</span> (!readCorners(<span class="stringliteral">&quot;ts.yml&quot;</span>, n, corners))</div>
+<div class="line">        <span class="keywordflow">if</span> (!<a id="a0" name="a0"></a><a class="code hl_function" href="../../d0/d41/group__core__dataio.html#ga9aa99cd3878794115ac58d55320e7238">rm::readCorners</a>(<span class="stringliteral">&quot;ts.yml&quot;</span>, n, corners))</div>
 <div class="line">            <span class="keywordflow">continue</span>;</div>
 <div class="line">        <span class="comment">// print the data</span></div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; corners.size(); ++i)</div>
-<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; corners[i].size(); ++i)</div>
-<div class="line">                cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; corners[i][j] &lt;&lt; endl;</div>
+<div class="line">        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; corners.size(); ++i)</div>
+<div class="line">            <span class="keywordflow">for</span> (std::size_t j = 0; j &lt; corners[i].size(); ++i)</div>
+<div class="line">                std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; corners[i][j] &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="../../d2/d75/namespacecv.html">cv</a></div><div class="ttdef"><b>定义</b> math.hpp:70</div></div>
+<div class="ttc" id="agroup__core__dataio_html_ga9aa99cd3878794115ac58d55320e7238"><div class="ttname"><a href="../../d0/d41/group__core__dataio.html#ga9aa99cd3878794115ac58d55320e7238">rm::readCorners</a></div><div class="ttdeci">void readCorners(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</div><div class="ttdoc">导入角点数据</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

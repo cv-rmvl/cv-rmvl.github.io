@@ -138,20 +138,20 @@ $(function(){ initResizable(false); });
 <p><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a> 与 <a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a> 在信息获取上基本一致，但 <a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a> 内部维护了图像特征相关的信息，这一类数据在获取上与 STL 容器的操作基本一致。</p>
 <h3><a class="anchor" id="autotoc_md11"></a>
 1.2.1 数据信息</h3>
-<p><code>combo</code> 记录了空间上彼此关联的一组 <code>feature</code>，内部使用 <code>vector&lt;feature::ptr&gt;</code> 表示。<code>combo</code> 提供了与序列式容器类似的访问操作，包括</p>
-<table class="markdownTable">
+<p><code>combo</code> 记录了空间上彼此关联的一组 <code>feature</code>，内部使用 <code>std::vector&lt;feature::ptr&gt;</code> 表示。<code>combo</code> 提供了与序列式容器类似的访问操作，包括</p>
+<center></center><center>表 1: combo 信息获取接口</center><center><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">信息获取接口   </th><th class="markdownTableHeadCenter">实现功能    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter"><code>at(idx)</code>   </td><td class="markdownTableBodyCenter">获取指定的下表<code>idx</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>data()</code>   </td><td class="markdownTableBodyCenter">获取<code>vector&lt;feature::ptr&gt;</code>（特征列表）的数据    </td></tr>
+<td class="markdownTableBodyCenter"><code>data()</code>   </td><td class="markdownTableBodyCenter">获取<code>std::vector&lt;feature::ptr&gt;</code>（特征列表）的数据    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter"><code>size()</code>   </td><td class="markdownTableBodyCenter">获取特征列表的大小    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter"><code>empty()</code>   </td><td class="markdownTableBodyCenter">判断特征列表是否为空   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md12"></a>
+</center><center></center><h3><a class="anchor" id="autotoc_md12"></a>
 1.2.2 通用属性与派生类属性</h3>
 <p>包含高度、宽度、角度、中心点、角点列表、类型信息、相机外参等内容，访问方式与 <code>feature</code> 完全一致，这里不再赘述。</p>
 <h1><a class="anchor" id="autotoc_md13"></a>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['y_0',['y',['../dd/db7/structrm_1_1GyroData_1_1Translation.html#a1e0f2b094f4999f0464c56e0b9edc712',1,'rm::GyroData::Translation']]],
-  ['y_1',['Y',['../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb',1,'rm::Y'],['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a57cec4137b614c87cb4e24a3d003a3e0',1,'rm::Y']]],
+  ['y_1',['Y',['../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb',1,'rm']]],
   ['yaw_2',['yaw',['../d5/df9/structrm_1_1GyroData_1_1Rotation.html#a05bea580f9ca776faf1ca7c799aa2d48',1,'rm::GyroData::Rotation::yaw'],['../da/dbf/classrm_1_1CameraExtrinsics.html#a5dfc3bbb38c03817fe2ca777ba31d634',1,'rm::CameraExtrinsics::yaw()']]],
   ['yaw_3',['YAW',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffad75124f786dafe1024988bc6b03c8060',1,'rm']]],
   ['yaw_5fb_4',['YAW_B',['../dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html#a7a536df70fbead556fd5445ca410d34d',1,'rm::para::ArmorPredictorParam']]],

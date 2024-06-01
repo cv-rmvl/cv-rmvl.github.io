@@ -125,23 +125,16 @@ $(function(){ initResizable(false); });
 <h2><a class="anchor" id="autotoc_md66"></a>
 基本流程</h2>
 <p>以下为 RMVL 顶层模块大致要具备的功能，以流程图形式展现</p>
-<div class="image">
+<center></center><center><div class="image">
 <img src="../../upper_base.png" alt=""/>
 <div class="caption">
-upper-base</div></div>
-    <p><b>注意：</b></p>
+图 1 顶层模块流程图</div></div>
+    </center><center></center><p><b>注意：</b></p>
 <ul>
 <li>这里下位机一般指控制端，平台不固定，可以是嵌入式设备，例如 STM32 系列单片机，也可以是基于 ROS 的 ros-control 控制层</li>
-<li>程序处理部分 <table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">符号   </th><th class="markdownTableHeadCenter">含义    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>i</code>   </td><td class="markdownTableBodyCenter">传入参数    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>io</code>   </td><td class="markdownTableBodyCenter">传入兼传出参数    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>ret</code>   </td><td class="markdownTableBodyCenter">函数返回值   </td></tr>
-</table>
+<li>程序处理部分 <p class="formulaDsp">
+\[\begin{array}{c|c}符号&amp;含义\\\hline \text{i}&amp;传入参数\\\text{io}&amp;传入兼传出参数\\\text{ret}&amp;函数返回值\end{array}\]
+</p>
 </li>
 <li>流程图中给出了 4 个程序处理的基本顺序，实际上可以根据具体的逻辑需求选择使用其中的一种或多种程序处理模块，这些程序处理模块则刚好对应于 4 个 <b>功能模块</b> 。</li>
 </ul>

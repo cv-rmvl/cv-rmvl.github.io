@@ -126,7 +126,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a9b60646a74babdf3b8a9799644e1aee2" id="r_a9b60646a74babdf3b8a9799644e1aee2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b60646a74babdf3b8a9799644e1aee2">Variable</a> ()=default</td></tr>
 <tr class="separator:a9b60646a74babdf3b8a9799644e1aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbab2de16839b2ae68133882182281b3" id="r_acbab2de16839b2ae68133882182281b3"><td class="memTemplParams" colspan="2">template&lt;unsigned int N&gt; </td></tr>
-<tr class="memitem:acbab2de16839b2ae68133882182281b3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbab2de16839b2ae68133882182281b3">Variable</a> (const char(&amp;str)[<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a8d9c307cb7f3c4a32822a51922d1ceaa">N</a>])</td></tr>
+<tr class="memitem:acbab2de16839b2ae68133882182281b3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbab2de16839b2ae68133882182281b3">Variable</a> (const char(&amp;str)[N])</td></tr>
 <tr class="memdesc:acbab2de16839b2ae68133882182281b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">字面量字符串构造，设置默认值  <br /></td></tr>
 <tr class="separator:acbab2de16839b2ae68133882182281b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87923ba580e81442889d5f8c102fbb6d" id="r_a87923ba580e81442889d5f8c102fbb6d"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; || std::is_same_v&lt;Tp, const char *&gt;&gt;&gt; </td></tr>
@@ -175,7 +175,7 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:a21d9b58c3d9f82fbc855cfcc9dbbee73" id="r_a21d9b58c3d9f82fbc855cfcc9dbbee73"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21d9b58c3d9f82fbc855cfcc9dbbee73">ns</a> {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td></tr>
+<tr class="memitem:a21d9b58c3d9f82fbc855cfcc9dbbee73" id="r_a21d9b58c3d9f82fbc855cfcc9dbbee73"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21d9b58c3d9f82fbc855cfcc9dbbee73">ns</a> {1U}</td></tr>
 <tr class="memdesc:a21d9b58c3d9f82fbc855cfcc9dbbee73"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名空间索引，默认为 <code>1</code>  <br /></td></tr>
 <tr class="separator:a21d9b58c3d9f82fbc855cfcc9dbbee73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d20725d0f1a56474ff7bf90f57e7c8d" id="r_a3d20725d0f1a56474ff7bf90f57e7c8d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> {}</td></tr>
@@ -193,7 +193,7 @@ Public 属性</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>OPC UA 变量 </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a2">samples/opcua/opcua_server.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a1">samples/opcua/opcua_server.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a9b60646a74babdf3b8a9799644e1aee2" name="a9b60646a74babdf3b8a9799644e1aee2"></a>
@@ -693,7 +693,7 @@ template&lt;typename Tp &gt; </div>
 <li>属于非服务器层面的 ID 号，可用于完成路径搜索</li>
 <li>同一个命名空间 <code>ns</code> 下该名称不能重复 </li>
 </ul>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a4">samples/opcua/opcua_server.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a3">samples/opcua/opcua_server.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -731,7 +731,7 @@ template&lt;typename Tp &gt; </div>
 <li>在服务器上对外展示的名字 - <code>en-US</code></li>
 <li>同一个命名空间 <code>ns</code> 下该名称可以相同 </li>
 </ul>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a3">samples/opcua/opcua_server.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a2">samples/opcua/opcua_server.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -743,7 +743,7 @@ template&lt;typename Tp &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t rm::Variable::ns {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td>
+          <td class="memname">uint16_t rm::Variable::ns {1U}</td>
         </tr>
       </table>
 </div><div class="memdoc">

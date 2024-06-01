@@ -108,12 +108,15 @@ $(function(){ initResizable(false); });
 <div class="toc"><h3>目录</h3>
 <ul><ul><li class="level2"><a href="#autotoc_md161">1. 最速下降法</a></li>
 <li class="level2"><a href="#autotoc_md162">2. 共轭梯度法</a><ul><li class="level3"><a href="#autotoc_md163">2.1 共轭方向</a></li>
+<li class="level3"><a href="#autotoc_md164">2.2 共轭梯度方向的构造</a></li>
+<li class="level3"><a href="#autotoc_md165">2.3 迭代步骤</a></li>
+<li class="level3"><a href="#autotoc_md166">2.4 如何使用</a></li>
 </ul>
 </li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><p>包含最速下降、共轭梯度、Nelder-Mead 单纯形法的介绍</p>
+<div class="textblock"><p>包含最速下降、共轭梯度的介绍</p>
 <p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2fminunc"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2024/05/06 </dd></dl>
@@ -182,7 +185,71 @@ $(function(){ initResizable(false); });
 <img src="../../fig2-2.png" alt=""/>
 <div class="caption">
 图 2-2 共轭与正交对比</div></div>
-    </center><center></center> </div></div><!-- contents -->
+    </center><center></center><h3><a class="anchor" id="autotoc_md164"></a>
+2.2 共轭梯度方向的构造</h3>
+<p>在极值点 \(x^*\) 附近，目标函数可以近似为二次型函数，即 </p><p class="formulaDsp">
+\[f(\pmb x)\approx c+\pmb b^T\pmb x+\frac12\pmb x^T\pmb A\pmb x\tag{2-2}\]
+</p>
+<ol type="1">
+<li>从 \(\pmb x_k\) 点出发，沿负梯度 \(\pmb s_k=-\nabla f(\pmb x_k)\) 方向寻优，得到新优化点 \(\pmb x_{k+1}\)。再按下式构造与 \(\pmb s_k\) 共轭的方向 \(\pmb s_{k+1}\)： <p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\tag{2-3}\]
+</p>
+ 在公式 \(\fml{2-3}\) 中， \(\beta_k\) 按下式计算时，可满足共轭条件 \(\pmb s_{k+1}^T\pmb A\pmb s_k=0\)： <p class="formulaDsp">
+\[\beta_k=\frac{\|\nabla f(\pmb x_{k+1})\|^2}{\|\nabla f(\pmb x_k)\|^2}\tag{2-4}\]
+</p>
+</li>
+<li>沿着 \(\pmb s_{k+1}\) 方向寻优，直至求出极值 \(\pmb x^*\)。</li>
+</ol>
+<p>上面只是对目标函数为二次型函数的情况求得了构成共轭方向的系数 \(\beta_k\)，对于一般的目标函数，有 </p><p class="formulaDsp">
+\[\beta_k=\frac{\|\nabla f(\pmb x_{k+1})\|^2-[\nabla f(\pmb x_{k+1})]^T\nabla f(\pmb x_k)}{\|\nabla f(\pmb x_k)\|^2}\tag{2-5}\]
+</p>
+<p>从而类似式 \(\fml{2-3}\) 有 </p><p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\]
+</p>
+<h3><a class="anchor" id="autotoc_md165"></a>
+2.3 迭代步骤</h3>
+<ol type="1">
+<li>选取初始点 \(\pmb x_0\)，设置判断收敛的正数 \(\epsilon\)；</li>
+<li>令 \(k=0\)， \(\pmb s_0=-\nabla f(\pmb x_0)\)；</li>
+<li>进行一维搜索，求解 \(\alpha_k\)，使 \(f(\pmb x_k+\alpha_k\pmb s_k)=\min_{\alpha&gt;0}f(\pmb x_k+\alpha\pmb s_k)\)</li>
+<li>计算 \(\nabla f(\pmb x_{k+1})\)，并令 \(\pmb x_{k+1}=\pmb x_k+\alpha_k\pmb s_k\)；</li>
+<li>若 \(\|\nabla f(\pmb x_{k+1})\|&lt;\epsilon\)，则停止迭代， \(\pmb x_{k+1}\) 为最优解，否则按 \(\fml{2-5}\) 计算 \(\beta_k\)，令 <p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\]
+</p>
+</li>
+<li>令 \(k=k+1\)，返回第 3 步。</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md166"></a>
+2.4 如何使用</h3>
+<p>首先定义一个目标函数，例如：</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keyword">const</span> std::vector&lt;double&gt; &amp;x)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
+<div class="line">    <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>然后调用 <code><a class="el" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12" title="无约束多维函数的最小值搜索 ConjGrad NelderMead ，可参考 多维无约束最优化方法">rm::fminunc</a></code> 函数：</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a>(quadratic, {0, 0});</div>
+<div class="ttc" id="agroup__core__optimal_html_gad3a27f53f42ecf71dc3b2a187f674e12"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索 ConjGrad NelderMead ，可参考 多维无约束最优化方法</div></div>
+</div><!-- fragment --><p>汇总起来，共轭梯度法的使用实例如下：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/numcal.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 定义二次函数</span></div>
+<div class="line">    <span class="keyword">auto</span> quadratic = [](<span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
+<div class="line">        <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 求解无约束多维最优化问题，默认使用共轭梯度法</span></div>
+<div class="line">    <span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a>(quadratic, {0, 0});</div>
+<div class="line">    printf(<span class="stringliteral">&quot;min[f(x,y)] = f(%f, %f) = %f\n&quot;</span>, x[0], x[1], fval);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>运行结果如下：</p>
+<div class="fragment"><div class="line">min[f(x,y)] = f(8.0000, 6.0000) = 8.0000</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

@@ -164,10 +164,10 @@ $(function(){ initResizable(false); });
 <tr class="memdesc:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维函数最小值搜索  <br /></td></tr>
 <tr class="separator:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad3a27f53f42ecf71dc3b2a187f674e12" id="r_gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束的多维函数最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ConjGrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_NelderMead">[8]</a>  <br /></td></tr>
+<tr class="memdesc:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束多维函数的最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ConjGrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_NelderMead">[8]</a> ，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br /></td></tr>
 <tr class="separator:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac94784289aa222ec972035f3ad930153" id="r_gac94784289aa222ec972035f3ad930153"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac94784289aa222ec972035f3ad930153">rm::fmincon</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;c, const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gac94784289aa222ec972035f3ad930153"><td class="mdescLeft">&#160;</td><td class="mdescRight">有约束的多维函数最小值搜索  <br /></td></tr>
+<tr class="memdesc:gac94784289aa222ec972035f3ad930153"><td class="mdescLeft">&#160;</td><td class="mdescRight">有约束多维函数的最小值搜索  <br /></td></tr>
 <tr class="separator:gac94784289aa222ec972035f3ad930153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2c5c6ca12730fb4365a8034b7c0a0ead" id="r_ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a> (const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束非线性最小二乘求解  <br /></td></tr>
@@ -348,7 +348,7 @@ $(function(){ initResizable(false); });
 <p>计算一元函数的导数 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多元函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一元函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>导数计算模式，默认为中心差商 <code>Diff_Central</code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
@@ -440,7 +440,7 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
 
-<p>有约束的多维函数最小值搜索 </p>
+<p>有约束多维函数的最小值搜索 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维函数 </td></tr>
@@ -481,7 +481,7 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
 
-<p>无约束的多维函数最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ConjGrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_NelderMead">[8]</a> </p>
+<p>无约束多维函数的最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ConjGrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_NelderMead">[8]</a> ，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a> </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维约束函数 </td></tr>

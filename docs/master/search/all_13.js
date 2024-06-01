@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['l_0',['L',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ad20caec3b48a1eef164cb4ca81ba2587',1,'rm']]],
-  ['lagrange_20插值多项式_1',['1. Lagrange 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md169',1,'']]],
-  ['least_5fsquare_2emd_2',['least_square.md',['../dd/d29/least__square_8md.html',1,'']]],
-  ['left_3',['LEFT',['../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758',1,'rm']]],
+  ['lagrange_20插值多项式_0',['1. Lagrange 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md172',1,'']]],
+  ['least_5fsquare_2emd_1',['least_square.md',['../dd/d29/least__square_8md.html',1,'']]],
+  ['left_2',['LEFT',['../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758',1,'rm']]],
+  ['levenberg–marquardt_20算法_3',['2. Levenberg–Marquardt 算法',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md198',1,'']]],
   ['lifetime_5fcount_4',['LIFETIME_COUNT',['../d3/d61/structrm_1_1para_1_1OpcuaParam.html#a05475d623d8fbe83db552b705f41a37b',1,'rm::para::OpcuaParam']]],
   ['light_2ehpp_5',['light.hpp',['../de/dea/light_8hpp.html',1,'']]],
   ['light_2emd_6',['light.md',['../d6/d3d/light_8md.html',1,'']]],

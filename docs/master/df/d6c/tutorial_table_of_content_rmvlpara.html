@@ -106,13 +106,13 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md265">1. 参数模块简介</a></li>
-<li class="level2"><a href="#autotoc_md266">2. 参数规范文件</a></li>
-<li class="level2"><a href="#autotoc_md267">3. C++ 代码生成</a><ul><li class="level3"><a href="#autotoc_md268">3.1 rmvl_generate_para</a></li>
-<li class="level3"><a href="#autotoc_md269">3.2 rmvl_generate_module_para</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md276">1. 参数模块简介</a></li>
+<li class="level2"><a href="#autotoc_md277">2. 参数规范文件</a></li>
+<li class="level2"><a href="#autotoc_md278">3. C++ 代码生成</a><ul><li class="level3"><a href="#autotoc_md279">3.1 rmvl_generate_para</a></li>
+<li class="level3"><a href="#autotoc_md280">3.2 rmvl_generate_module_para</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md270">4. 运行时加载</a></li>
+<li class="level2"><a href="#autotoc_md281">4. 运行时加载</a></li>
 </ul>
 </ul>
 </div>
@@ -122,7 +122,7 @@ $(function(){ initResizable(false); });
 <p><b>下一篇教程：</b><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md265"></a>
+<h2><a class="anchor" id="autotoc_md276"></a>
 1. 参数模块简介</h2>
 <p>RMVL 中，一部分模块（涉及主要模块和扩展模块）的功能在不同运行环境或者不同需求的情况下需要有不同的参数配置，为此 RVML 将这些运行时可变的参数提炼出来，并且使用统一的管理方式，完成了参数类型、参数默认值、参数名、参数运行时加载的定义。</p>
 <p>原先若有计划使用运行时参数，在</p>
@@ -131,7 +131,7 @@ $(function(){ initResizable(false); });
 <li>新增某一参数类（结构体）</li>
 </ul>
 <p>的时候，需要在头文件以及对应源文件的位置写上大量重复的代码，管理极其不方便。为此 RMVL 参数模块定义了新的参数规范文件，这类文件以 <code>*.para</code> 为后缀，以及提供了 CMake 配置期间将 <code>*.para</code> 转换为对应 <code>*.h(hpp)</code> 以及 <code>*.cpp</code> 的 CMake 函数 <code>rmvl_generate_para</code>，该函数定义在 <code>&lt;project&gt;/cmake/RMVLGenPara.cmake</code> 文件中。</p>
-<h2><a class="anchor" id="autotoc_md266"></a>
+<h2><a class="anchor" id="autotoc_md277"></a>
 2. 参数规范文件</h2>
 <p>这里举一个 <code>*.para</code> 文件的示例，写法与 ROS Message 的 <code>*.msg</code> 文件类似，不过参数的类型均使用 C/C++ 中的类型，并且添加了注释功能。</p>
 <div class="fragment"><div class="line">#################### 光学参数 ####################</div>
@@ -174,14 +174,14 @@ $(function(){ initResizable(false); });
 <li><code>#</code> 和注释信息之间<u><b>不必</b></u>使用空格分隔，例如 <code>#相机曝光</code></li>
 </ul>
 </dd></dl>
-<h2><a class="anchor" id="autotoc_md267"></a>
+<h2><a class="anchor" id="autotoc_md278"></a>
 3. C++ 代码生成</h2>
 <p>从 <code>*.para</code> 到对应的 C++ 代码生成的过程依赖 RMVL 提供的两条 CMake 函数，分别是</p>
 <ul>
 <li><code>rmvl_generate_para</code></li>
 <li><code>rmvl_generate_module_para</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md268"></a>
+<h3><a class="anchor" id="autotoc_md279"></a>
 3.1 rmvl_generate_para</h3>
 <p>根据指定的目标名在 param 文件夹下对应的 *.para 参数规范文件和可选的模块名生成对应的 C++ 代码。</p>
 <p><b>用法</b></p>
@@ -208,7 +208,7 @@ $(function(){ initResizable(false); });
 <li><code>include/rmvlpara/mytarget.hpp</code></li>
 <li><code>src/para/mytarget.cpp</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md269"></a>
+<h3><a class="anchor" id="autotoc_md280"></a>
 3.2 rmvl_generate_module_para</h3>
 <p>根据给定模块下所有的 para 目标，生成对应的 C++ 代码</p>
 <p><b>用法</b></p>
@@ -226,7 +226,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &quot;m/a2.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;m/a3.h&quot;</span></div>
 </div><!-- fragment --><p>以上内容均是在 CMake 配置期间自动完成，只需定义好参数规范文件 <code>*.para</code> 以及相应的 CMake 函数即可。</p>
-<h2><a class="anchor" id="autotoc_md270"></a>
+<h2><a class="anchor" id="autotoc_md281"></a>
 4. 运行时加载</h2>
 <p>例如，对于以下的 <code>test.para</code> 文件</p>
 <div class="fragment"><div class="line">int abc = 10 # 测试数</div>

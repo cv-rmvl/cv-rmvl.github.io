@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['源码安装_0',['源码安装',['../d2/d60/tutorial_install_overview.html#autotoc_md104',1,'']]]
+  ['海康机器人（hikrobot）工业相机库_0',['海康机器人（HikRobot）工业相机库',['../db/d27/group__hik__camera.html',1,'']]]
 ];
