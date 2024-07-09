@@ -106,13 +106,16 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md276">1. 参数模块简介</a></li>
-<li class="level2"><a href="#autotoc_md277">2. 参数规范文件</a></li>
-<li class="level2"><a href="#autotoc_md278">3. C++ 代码生成</a><ul><li class="level3"><a href="#autotoc_md279">3.1 rmvl_generate_para</a></li>
-<li class="level3"><a href="#autotoc_md280">3.2 rmvl_generate_module_para</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md278">1. 参数模块简介</a></li>
+<li class="level2"><a href="#autotoc_md279">2. 参数规范文件</a></li>
+<li class="level2"><a href="#autotoc_md280">3. C++ 代码生成</a><ul><li class="level3"><a href="#autotoc_md281">3.1 rmvl_generate_para</a></li>
+<li class="level3"><a href="#autotoc_md282">3.2 rmvl_generate_module_para</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md281">4. 运行时加载</a></li>
+<li class="level2"><a href="#autotoc_md283">4. 运行时加载</a><ul><li class="level3"><a href="#autotoc_md284">4.1 加载方式</a></li>
+<li class="level3"><a href="#autotoc_md285">4.2 YAML 文件格式</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </div>
@@ -122,7 +125,7 @@ $(function(){ initResizable(false); });
 <p><b>下一篇教程：</b><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md276"></a>
+<h2><a class="anchor" id="autotoc_md278"></a>
 1. 参数模块简介</h2>
 <p>RMVL 中，一部分模块（涉及主要模块和扩展模块）的功能在不同运行环境或者不同需求的情况下需要有不同的参数配置，为此 RVML 将这些运行时可变的参数提炼出来，并且使用统一的管理方式，完成了参数类型、参数默认值、参数名、参数运行时加载的定义。</p>
 <p>原先若有计划使用运行时参数，在</p>
@@ -131,7 +134,7 @@ $(function(){ initResizable(false); });
 <li>新增某一参数类（结构体）</li>
 </ul>
 <p>的时候，需要在头文件以及对应源文件的位置写上大量重复的代码，管理极其不方便。为此 RMVL 参数模块定义了新的参数规范文件，这类文件以 <code>*.para</code> 为后缀，以及提供了 CMake 配置期间将 <code>*.para</code> 转换为对应 <code>*.h(hpp)</code> 以及 <code>*.cpp</code> 的 CMake 函数 <code>rmvl_generate_para</code>，该函数定义在 <code>&lt;project&gt;/cmake/RMVLGenPara.cmake</code> 文件中。</p>
-<h2><a class="anchor" id="autotoc_md277"></a>
+<h2><a class="anchor" id="autotoc_md279"></a>
 2. 参数规范文件</h2>
 <p>这里举一个 <code>*.para</code> 文件的示例，写法与 ROS Message 的 <code>*.msg</code> 文件类似，不过参数的类型均使用 C/C++ 中的类型，并且添加了注释功能。</p>
 <div class="fragment"><div class="line">#################### 光学参数 ####################</div>
@@ -151,18 +154,22 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --><p>这里列出参数规范文件的参数类型表</p>
 <center>表1：参数类型表</center><center><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">数据类型   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<th class="markdownTableHeadCenter">数据类型   </th><th class="markdownTableHeadLeft">含义    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">基本类型   </td><td class="markdownTableBodyCenter">包括 <code>int</code>、<code>uint8_t</code>、<code>double</code>、<code>float</code>、<code>string</code> 等<br  />
-对标 C++ 的基础类型和 <code>std::string</code>    </td></tr>
+<td class="markdownTableBodyCenter">基本类型   </td><td class="markdownTableBodyLeft">1. 包括 <code>int</code>、<code>uint8_t</code>、<code>double</code>、<code>float</code>、<code>string</code> 等<br  />
+2. 对标 C++ 的基础类型和 <code>std::string</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">矩阵类型   </td><td class="markdownTableBodyCenter">包括形如 <code>Matx??</code>、<code>Vec?</code> 的类型，例如 <code>Matx22f</code><br  />
-对标 OpenCV 的 <code>cv::Matx</code> 和 <code>cv::Vec</code><br  />
-可使用列表初始化和相关静态函数初始化，例如 <code>Matx22f::eye()</code>    </td></tr>
+<td class="markdownTableBodyCenter">矩阵类型   </td><td class="markdownTableBodyLeft">1. 包括形如 <code>Matx??</code>、<code>Vec?</code> 的类型，例如 <code>Matx22f</code><br  />
+2. 对标 OpenCV 的 <code>cv::Matx</code> 和 <code>cv::Vec</code><br  />
+3. 可使用列表初始化和相关静态函数初始化，例如 <code>Matx22f::eye()</code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">复合类型   </td><td class="markdownTableBodyCenter">包括 <code>vector</code> 和形如 <code>Point?</code> 的类型<br  />
-对标 C++ 的 <code>std::vector</code> 以及 OpenCV 的<code>cv::Point2?</code> 和 <code>cv::Point3?</code><br  />
-只能使用列表初始化，例如 <code>{1, 2, 3}</code>   </td></tr>
+<td class="markdownTableBodyCenter">复合类型   </td><td class="markdownTableBodyLeft">1. 包括 <code>vector</code> 和形如 <code>Point?</code> 的类型<br  />
+2. 对标 C++ 的 <code>std::vector</code> 以及 OpenCV 的<code>cv::Point2?</code> 和 <code>cv::Point3?</code><br  />
+3. 只能使用列表初始化，例如 <code>{1, 2, 3}</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">枚举类型   </td><td class="markdownTableBodyLeft">1. 需要用户自定以 <code>enum</code> 开头和 <code>endenum</code> 结尾的数据类型声明<br  />
+2. 对标 C++ 的有作用域枚举类型 <code>enum class</code><br  />
+3. 变量的定义上与有作用域枚举类型一致，例如 <code>Color COLOR_MODE = Color::RED</code>   </td></tr>
 </table>
 </center><center></center><p>如果要给某一条参数设置默认值，需要使用 <code>=</code> 完成，不需要默认参数（仅由运行时加载设置）则不需要使用 <code>=</code> 进行赋值，例如</p>
 <div class="fragment"><div class="line">int grab_mode = 1</div>
@@ -174,14 +181,23 @@ $(function(){ initResizable(false); });
 <li><code>#</code> 和注释信息之间<u><b>不必</b></u>使用空格分隔，例如 <code>#相机曝光</code></li>
 </ul>
 </dd></dl>
-<h2><a class="anchor" id="autotoc_md278"></a>
+<p>枚举类型可在每个枚举项后加上具体的值，也能使用 <code>#</code> 为枚举项添加注释，例如</p>
+<div class="fragment"><div class="line">enum ColorMode # 颜色类型</div>
+<div class="line">  RED          # 红色</div>
+<div class="line">  GREEN        # 绿色</div>
+<div class="line">  BLUE = 4     # 蓝色</div>
+<div class="line">  GRAY = 5</div>
+<div class="line">endenum</div>
+<div class="line"> </div>
+<div class="line">ColorMode COLOR = ColorMode::RED # 颜色信息</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md280"></a>
 3. C++ 代码生成</h2>
 <p>从 <code>*.para</code> 到对应的 C++ 代码生成的过程依赖 RMVL 提供的两条 CMake 函数，分别是</p>
 <ul>
 <li><code>rmvl_generate_para</code></li>
 <li><code>rmvl_generate_module_para</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md279"></a>
+<h3><a class="anchor" id="autotoc_md281"></a>
 3.1 rmvl_generate_para</h3>
 <p>根据指定的目标名在 param 文件夹下对应的 *.para 参数规范文件和可选的模块名生成对应的 C++ 代码。</p>
 <p><b>用法</b></p>
@@ -208,7 +224,7 @@ $(function(){ initResizable(false); });
 <li><code>include/rmvlpara/mytarget.hpp</code></li>
 <li><code>src/para/mytarget.cpp</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md280"></a>
+<h3><a class="anchor" id="autotoc_md282"></a>
 3.2 rmvl_generate_module_para</h3>
 <p>根据给定模块下所有的 para 目标，生成对应的 C++ 代码</p>
 <p><b>用法</b></p>
@@ -226,8 +242,10 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &quot;m/a2.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;m/a3.h&quot;</span></div>
 </div><!-- fragment --><p>以上内容均是在 CMake 配置期间自动完成，只需定义好参数规范文件 <code>*.para</code> 以及相应的 CMake 函数即可。</p>
-<h2><a class="anchor" id="autotoc_md281"></a>
+<h2><a class="anchor" id="autotoc_md283"></a>
 4. 运行时加载</h2>
+<h3><a class="anchor" id="autotoc_md284"></a>
+4.1 加载方式</h3>
 <p>例如，对于以下的 <code>test.para</code> 文件</p>
 <div class="fragment"><div class="line">int abc = 10 # 测试数</div>
 </div><!-- fragment --><p>在使用 <code>rmvl_generate_para(test)</code> 之后，生成的头文件代码中，类相关的代码如下</p>
@@ -254,9 +272,11 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><span class="comment">/* code */</span></div>
 <div class="line"><a class="code hl_variable" href="../../d1/d36/group__para__core.html#ga00171e6e6abe8be834e30e7247b7747d">rm::para::core_param</a>.<a class="code hl_function" href="../../da/dbc/structrm_1_1para_1_1CoreParam.html#a58c6929954c48b7d9582e90d7333ca90">load</a>(prefix_path + <span class="stringliteral">&quot;core.yml&quot;</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
-<div class="ttc" id="agroup__para__core_html_ga00171e6e6abe8be834e30e7247b7747d"><div class="ttname"><a href="../../d1/d36/group__para__core.html#ga00171e6e6abe8be834e30e7247b7747d">rm::para::core_param</a></div><div class="ttdeci">CoreParam core_param</div><div class="ttdoc">CoreParam 参数模块</div><div class="ttdef"><b>定义</b> core.hpp:52</div></div>
+<div class="ttc" id="agroup__para__core_html_ga00171e6e6abe8be834e30e7247b7747d"><div class="ttname"><a href="../../d1/d36/group__para__core.html#ga00171e6e6abe8be834e30e7247b7747d">rm::para::core_param</a></div><div class="ttdeci">CoreParam core_param</div><div class="ttdoc">CoreParam 参数模块</div><div class="ttdef"><b>定义</b> core.hpp:57</div></div>
 <div class="ttc" id="astructrm_1_1para_1_1CoreParam_html_a58c6929954c48b7d9582e90d7333ca90"><div class="ttname"><a href="../../da/dbc/structrm_1_1para_1_1CoreParam.html#a58c6929954c48b7d9582e90d7333ca90">rm::para::CoreParam::load</a></div><div class="ttdeci">bool load(const std::string &amp;path)</div><div class="ttdoc">从指定 YAML 文件中加载 CoreParam</div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md285"></a>
+4.2 YAML 文件格式</h3>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

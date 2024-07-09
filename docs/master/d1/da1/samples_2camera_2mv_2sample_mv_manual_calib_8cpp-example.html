@@ -102,8 +102,8 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <p>迈德威视相机手动标定例程</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/calib3d.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
@@ -111,6 +111,8 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d78/math_8hpp.html">rmvl/core/math.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// 内参矩阵</span></div>
 <div class="line"><span class="keyword">static</span> cv::Matx33d cameraMatrix = {1250, 0, 640,</div>
@@ -203,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(4)));</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(4, 0) * 5000 + 500);</div>
 <div class="line"> </div>
-<div class="line">    sleep(1);</div>
+<div class="line">    std::this_thread::sleep_for(1s);</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>
 <div class="line"> </div>

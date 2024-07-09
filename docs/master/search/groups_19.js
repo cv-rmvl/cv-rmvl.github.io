@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['数值计算模块_0',['数值计算模块',['../de/d06/group__core__numcal.html',1,'']]],
-  ['数据结构_1',['数据结构',['../d7/d10/group__core__datastruct.html',1,'']]],
-  ['数据读写（i_20o）_2',['数据读写（I/O）',['../d0/d41/group__core__dataio.html',1,'']]]
+  ['整车状态估计补偿模块_0',['整车状态估计补偿模块',['../d3/d06/group__gyro__compensator.html',1,'']]],
+  ['整车状态决策模块_1',['整车状态决策模块',['../d3/dae/group__gyro__decider.html',1,'']]],
+  ['整车状态序列组_2',['整车状态序列组',['../d8/dbf/group__gyro__group.html',1,'']]],
+  ['整车状态识别模块_3',['整车状态识别模块',['../de/dee/group__gyro__detector.html',1,'']]],
+  ['整车状态预测模块_4',['整车状态预测模块',['../db/d1b/group__gyro__predictor.html',1,'']]]
 ];

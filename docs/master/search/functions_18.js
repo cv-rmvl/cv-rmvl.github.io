@@ -10,11 +10,10 @@ var searchData=
   ['_7egyrodetector_7',['~GyroDetector',['../dc/d93/classrm_1_1GyroDetector.html#a31969c6e01c63dd897d2703e103fe6d5',1,'rm::GyroDetector']]],
   ['_7ehikcamera_8',['~HikCamera',['../db/d9f/classrm_1_1HikCamera.html#abd2f0541b100e1c07f1401cf168f68a7',1,'rm::HikCamera']]],
   ['_7emvcamera_9',['~MvCamera',['../de/de8/classrm_1_1MvCamera.html#a58dfd3f1b919eadf462e5f577f22d0cb',1,'rm::MvCamera']]],
-  ['_7eonnxrt_10',['~OnnxRT',['../d7/d1f/classrm_1_1OnnxRT.html#ae6c56c091ad007cef01021c0f07c6d04',1,'rm::OnnxRT']]],
-  ['_7eoptcamera_11',['~OptCamera',['../d1/d9c/classrm_1_1OptCamera.html#ae9376a35d3bffe827e2ef81eec7ee70a',1,'rm::OptCamera']]],
-  ['_7eoptlightcontroller_12',['~OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a277c1adf9b1ad6a790ee506d093c27e8',1,'rm::OPTLightController']]],
-  ['_7epredictor_13',['~predictor',['../dc/d74/classrm_1_1predictor.html#a93f50465708fea95e13cc36c393ed56c',1,'rm::predictor']]],
-  ['_7eserialport_14',['~SerialPort',['../d4/d98/classrm_1_1SerialPort.html#abee72b3518b3e8c8a3ff8f2c44c03513',1,'rm::SerialPort']]],
-  ['_7eserver_15',['~Server',['../d4/d06/classrm_1_1Server.html#a24c4b9937aef50cd2f6b773c909278aa',1,'rm::Server']]],
-  ['_7etagdetector_16',['~TagDetector',['../d8/d35/classrm_1_1TagDetector.html#ad0f1cea8829630afe81153c38376d71c',1,'rm::TagDetector']]]
+  ['_7eoptcamera_10',['~OptCamera',['../d1/d9c/classrm_1_1OptCamera.html#ae9376a35d3bffe827e2ef81eec7ee70a',1,'rm::OptCamera']]],
+  ['_7eoptlightcontroller_11',['~OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a277c1adf9b1ad6a790ee506d093c27e8',1,'rm::OPTLightController']]],
+  ['_7epredictor_12',['~predictor',['../dc/d74/classrm_1_1predictor.html#a93f50465708fea95e13cc36c393ed56c',1,'rm::predictor']]],
+  ['_7eserialport_13',['~SerialPort',['../d4/d98/classrm_1_1SerialPort.html#abee72b3518b3e8c8a3ff8f2c44c03513',1,'rm::SerialPort']]],
+  ['_7eserver_14',['~Server',['../d4/d06/classrm_1_1Server.html#a24c4b9937aef50cd2f6b773c909278aa',1,'rm::Server']]],
+  ['_7etagdetector_15',['~TagDetector',['../d8/d35/classrm_1_1TagDetector.html#ad0f1cea8829630afe81153c38376d71c',1,'rm::TagDetector']]]
 ];

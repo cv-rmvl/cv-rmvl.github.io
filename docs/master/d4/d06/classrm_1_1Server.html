@@ -104,7 +104,6 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pro-methods">Protected 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
 <a href="../../d3/da9/classrm_1_1Server-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">rm::Server类 参考<div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></div></div></div>
@@ -118,12 +117,12 @@ $(function(){ initResizable(false); });
 <div class="dynheader">
 类 rm::Server 继承关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d50/classrm_1_1Server__inherit__graph.svg" width="392" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d50/classrm_1_1Server__inherit__graph.svg" width="392" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 rm::Server 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dd4/classrm_1_1Server__coll__graph.svg" width="298" height="424"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dd4/classrm_1_1Server__coll__graph.svg" width="298" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -136,8 +135,10 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a6d93b0b25b10110a36fbd2b5e93b9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97f6b85baa8f7b01918bfcbdc55d2a82" id="r_a97f6b85baa8f7b01918bfcbdc55d2a82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f6b85baa8f7b01918bfcbdc55d2a82">Server</a> (const <a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;)=delete</td></tr>
 <tr class="separator:a97f6b85baa8f7b01918bfcbdc55d2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d80d23469e4c3194a381387a38d43e" id="r_a04d80d23469e4c3194a381387a38d43e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d80d23469e4c3194a381387a38d43e">Server</a> (<a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;&amp;svr)=default</td></tr>
-<tr class="separator:a04d80d23469e4c3194a381387a38d43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc2aa9e6ca8573151275fcc803a3ccd" id="r_aacc2aa9e6ca8573151275fcc803a3ccd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacc2aa9e6ca8573151275fcc803a3ccd">Server</a> (<a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;&amp;svr)=delete</td></tr>
+<tr class="separator:aacc2aa9e6ca8573151275fcc803a3ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac794ed25658bd3d3061e723db54d9408" id="r_ac794ed25658bd3d3061e723db54d9408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac794ed25658bd3d3061e723db54d9408">operator ServerView</a> () const</td></tr>
+<tr class="separator:ac794ed25658bd3d3061e723db54d9408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231923cb0990195a0b5ff522691d5d84" id="r_a231923cb0990195a0b5ff522691d5d84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a231923cb0990195a0b5ff522691d5d84">start</a> ()</td></tr>
 <tr class="memdesc:a231923cb0990195a0b5ff522691d5d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行服务器，调用方线程不阻塞  <br /></td></tr>
 <tr class="separator:a231923cb0990195a0b5ff522691d5d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,56 +149,49 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a8ee77445da5eeb190d5fdf67bed2897e"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞  <br /></td></tr>
 <tr class="separator:a8ee77445da5eeb190d5fdf67bed2897e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c4b9937aef50cd2f6b773c909278aa" id="r_a24c4b9937aef50cd2f6b773c909278aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24c4b9937aef50cd2f6b773c909278aa">~Server</a> ()</td></tr>
-<tr class="memdesc:a24c4b9937aef50cd2f6b773c909278aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放服务器资源  <br /></td></tr>
 <tr class="separator:a24c4b9937aef50cd2f6b773c909278aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4f45066b372cbf8b9e086ef0fc3820" id="r_a0c4f45066b372cbf8b9e086ef0fc3820"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gaf112814f9e6bec713c05e668b7ce78a3">FindNodeInServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4f45066b372cbf8b9e086ef0fc3820">find</a> (const std::string &amp;browse_name, uint16_t ns=1U)</td></tr>
-<tr class="memdesc:a0c4f45066b372cbf8b9e086ef0fc3820"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
-<tr class="separator:a0c4f45066b372cbf8b9e086ef0fc3820"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0a847ff6a5a96eb207ac58834e2349" id="r_a6f0a847ff6a5a96eb207ac58834e2349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f0a847ff6a5a96eb207ac58834e2349">addVariableTypeNode</a> (const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;vtype)</td></tr>
-<tr class="memdesc:a6f0a847ff6a5a96eb207ac58834e2349"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量类型节点 VariableTypeNode 至 <code>BaseDataVariableType</code> 中  <br /></td></tr>
-<tr class="separator:a6f0a847ff6a5a96eb207ac58834e2349"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a391ccb4661603ffb24cdd41e4d59454e" id="r_a391ccb4661603ffb24cdd41e4d59454e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391ccb4661603ffb24cdd41e4d59454e">addVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>)</td></tr>
-<tr class="memdesc:a391ccb4661603ffb24cdd41e4d59454e"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量节点 VariableNode 至指定父节点中，并指定引用类型  <br /></td></tr>
-<tr class="separator:a391ccb4661603ffb24cdd41e4d59454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac53e1e41f3c9eb61f27d3c4ead429487" id="r_ac53e1e41f3c9eb61f27d3c4ead429487"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac53e1e41f3c9eb61f27d3c4ead429487">addVariableNodeValueCallBack</a> (<a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> id, <a class="el" href="../../d3/da8/group__opcua.html#ga6c38443812cd7887cbbeb52eeabfd3c2">ValueCallBackBeforeRead</a> before_read, <a class="el" href="../../d3/da8/group__opcua.html#ga1b85050034b96eea355a8e5804b7866d">ValueCallBackAfterWrite</a> after_write)</td></tr>
-<tr class="memdesc:ac53e1e41f3c9eb61f27d3c4ead429487"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的变量节点 VariableNode 添加值回调  <br /></td></tr>
-<tr class="separator:ac53e1e41f3c9eb61f27d3c4ead429487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e526f514fc4e7b63ca47e20f96a8cd" id="r_a72e526f514fc4e7b63ca47e20f96a8cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72e526f514fc4e7b63ca47e20f96a8cd">addDataSourceVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, <a class="el" href="../../d3/da8/group__opcua.html#ga85ac51bd8734f979943013a534409799">DataSourceRead</a> on_read, <a class="el" href="../../d3/da8/group__opcua.html#ga6b4baeba66fd3d33adb3acac613d0574">DataSourceWrite</a> on_write, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>)</td></tr>
-<tr class="memdesc:a72e526f514fc4e7b63ca47e20f96a8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加数据源变量节点 VariableNode 至指定父节点中  <br /></td></tr>
-<tr class="separator:a72e526f514fc4e7b63ca47e20f96a8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af17256d85ee65a6afd038780832c4af1" id="r_af17256d85ee65a6afd038780832c4af1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af17256d85ee65a6afd038780832c4af1">read</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node)</td></tr>
-<tr class="memdesc:af17256d85ee65a6afd038780832c4af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的变量节点读数据  <br /></td></tr>
-<tr class="separator:af17256d85ee65a6afd038780832c4af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c7c980b7c0cf19d4a1dd94961f2345" id="r_a55c7c980b7c0cf19d4a1dd94961f2345"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c7c980b7c0cf19d4a1dd94961f2345">write</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val)</td></tr>
-<tr class="memdesc:a55c7c980b7c0cf19d4a1dd94961f2345"><td class="mdescLeft">&#160;</td><td class="mdescRight">给指定的变量节点写数据  <br /></td></tr>
-<tr class="separator:a55c7c980b7c0cf19d4a1dd94961f2345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83f715cd2d5eba16d77dbf1cd6a321f7" id="r_a83f715cd2d5eba16d77dbf1cd6a321f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83f715cd2d5eba16d77dbf1cd6a321f7">addMethodNode</a> (const <a class="el" href="../../d2/d23/structrm_1_1Method.html">Method</a> &amp;method, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>)</td></tr>
-<tr class="memdesc:a83f715cd2d5eba16d77dbf1cd6a321f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加方法节点 MethodNode 至指定父节点中  <br /></td></tr>
-<tr class="separator:a83f715cd2d5eba16d77dbf1cd6a321f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c5b5f26ced4b5d71207afc5c23d25f" id="r_a22c5b5f26ced4b5d71207afc5c23d25f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c5b5f26ced4b5d71207afc5c23d25f">setMethodNodeCallBack</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;id, <a class="el" href="../../d7/d9c/method_8hpp.html#a80679951b33bbd4799a8b4dc0a3f0789">UA_MethodCallback</a> on_method)</td></tr>
-<tr class="memdesc:a22c5b5f26ced4b5d71207afc5c23d25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的方法节点 MethodNode 设置方法的回调函数  <br /></td></tr>
-<tr class="separator:a22c5b5f26ced4b5d71207afc5c23d25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a28d28178452af00e4da475164cfc12" id="r_a2a28d28178452af00e4da475164cfc12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a28d28178452af00e4da475164cfc12">addObjectTypeNode</a> (const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;otype)</td></tr>
-<tr class="memdesc:a2a28d28178452af00e4da475164cfc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象类型节点 ObjectTypeNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#ga939cde15e0534f0e800805640f2d5e5a" title="对象类型节点：BaseObjectType 节点 ID">rm::nodeBaseObjectType</a></code> 中  <br /></td></tr>
-<tr class="separator:a2a28d28178452af00e4da475164cfc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bcab5f8fb68eefa31d5799041b15393" id="r_a3bcab5f8fb68eefa31d5799041b15393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcab5f8fb68eefa31d5799041b15393">addObjectNode</a> (const <a class="el" href="../../d8/d9b/classrm_1_1Object.html">Object</a> &amp;obj, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>)</td></tr>
-<tr class="memdesc:a3bcab5f8fb68eefa31d5799041b15393"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象节点 ObjectNode 至指定的父节点中  <br /></td></tr>
-<tr class="separator:a3bcab5f8fb68eefa31d5799041b15393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c950392ce0b9e1c9d3bdc7c1d64bc93" id="r_a9c950392ce0b9e1c9d3bdc7c1d64bc93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c950392ce0b9e1c9d3bdc7c1d64bc93">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view)</td></tr>
-<tr class="memdesc:a9c950392ce0b9e1c9d3bdc7c1d64bc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加视图节点 ViewNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#gab20fa2fb5ad7d497374809d0fbf09759" title="对象节点：ViewsFolder 节点 ID">rm::nodeViewsFolder</a></code> 中  <br /></td></tr>
-<tr class="separator:a9c950392ce0b9e1c9d3bdc7c1d64bc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8edb5901115e3ce9ce96517bfad0b86b" id="r_a8edb5901115e3ce9ce96517bfad0b86b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8edb5901115e3ce9ce96517bfad0b86b">addEventTypeNode</a> (const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype)</td></tr>
-<tr class="memdesc:a8edb5901115e3ce9ce96517bfad0b86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加事件类型至 <code>BaseEventType</code> 中  <br /></td></tr>
-<tr class="separator:a8edb5901115e3ce9ce96517bfad0b86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03744b83d828f4c235f085166225e3c7" id="r_a03744b83d828f4c235f085166225e3c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03744b83d828f4c235f085166225e3c7">triggerEvent</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node_id, const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;event)</td></tr>
-<tr class="memdesc:a03744b83d828f4c235f085166225e3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并触发事件  <br /></td></tr>
-<tr class="separator:a03744b83d828f4c235f085166225e3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected 成员函数</h2></td></tr>
-<tr class="memitem:a2b2de27a23d2391b5b0b4b655f7c9aaa" id="r_a2b2de27a23d2391b5b0b4b655f7c9aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b2de27a23d2391b5b0b4b655f7c9aaa">deleteServer</a> ()</td></tr>
-<tr class="memdesc:a2b2de27a23d2391b5b0b4b655f7c9aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放服务器资源  <br /></td></tr>
-<tr class="separator:a2b2de27a23d2391b5b0b4b655f7c9aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d221dba400c0fc5588253f64fc46b97" id="r_a1d221dba400c0fc5588253f64fc46b97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gaf112814f9e6bec713c05e668b7ce78a3">FindNodeInServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d221dba400c0fc5588253f64fc46b97">find</a> (const std::string &amp;browse_name, uint16_t ns=1U) const</td></tr>
+<tr class="memdesc:a1d221dba400c0fc5588253f64fc46b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
+<tr class="separator:a1d221dba400c0fc5588253f64fc46b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4ea75af4533400395c215c7512c7fe" id="r_a5f4ea75af4533400395c215c7512c7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4ea75af4533400395c215c7512c7fe">addVariableTypeNode</a> (const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;vtype) const</td></tr>
+<tr class="memdesc:a5f4ea75af4533400395c215c7512c7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量类型节点 VariableTypeNode 至 <code>BaseDataVariableType</code> 中  <br /></td></tr>
+<tr class="separator:a5f4ea75af4533400395c215c7512c7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e7c0f624185b9c68f9afda7cc29481" id="r_a53e7c0f624185b9c68f9afda7cc29481"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53e7c0f624185b9c68f9afda7cc29481">addVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a53e7c0f624185b9c68f9afda7cc29481"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量节点 VariableNode 至指定父节点中，并指定引用类型  <br /></td></tr>
+<tr class="separator:a53e7c0f624185b9c68f9afda7cc29481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a994986ca053e6649549500aa89329" id="r_a12a994986ca053e6649549500aa89329"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12a994986ca053e6649549500aa89329">addVariableNodeValueCallBack</a> (<a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> id, <a class="el" href="../../d3/da8/group__opcua.html#ga6c38443812cd7887cbbeb52eeabfd3c2">ValueCallBackBeforeRead</a> before_read, <a class="el" href="../../d3/da8/group__opcua.html#ga1b85050034b96eea355a8e5804b7866d">ValueCallBackAfterWrite</a> after_write) const</td></tr>
+<tr class="memdesc:a12a994986ca053e6649549500aa89329"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的变量节点 VariableNode 添加值回调  <br /></td></tr>
+<tr class="separator:a12a994986ca053e6649549500aa89329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbc16ca5d6af937a35c024b67839f1d" id="r_a3fbc16ca5d6af937a35c024b67839f1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fbc16ca5d6af937a35c024b67839f1d">addDataSourceVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, <a class="el" href="../../d3/da8/group__opcua.html#ga85ac51bd8734f979943013a534409799">DataSourceRead</a> on_read, <a class="el" href="../../d3/da8/group__opcua.html#ga6b4baeba66fd3d33adb3acac613d0574">DataSourceWrite</a> on_write, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a3fbc16ca5d6af937a35c024b67839f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加数据源变量节点 VariableNode 至指定父节点中  <br /></td></tr>
+<tr class="separator:a3fbc16ca5d6af937a35c024b67839f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f3646256369f650c31500ea9916777" id="r_aa1f3646256369f650c31500ea9916777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1f3646256369f650c31500ea9916777">read</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node) const</td></tr>
+<tr class="memdesc:aa1f3646256369f650c31500ea9916777"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的变量节点读数据  <br /></td></tr>
+<tr class="separator:aa1f3646256369f650c31500ea9916777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc776ec685646b0192e559667ef8e40a" id="r_abc776ec685646b0192e559667ef8e40a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc776ec685646b0192e559667ef8e40a">write</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
+<tr class="memdesc:abc776ec685646b0192e559667ef8e40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">给指定的变量节点写数据  <br /></td></tr>
+<tr class="separator:abc776ec685646b0192e559667ef8e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75522850dd1af7009a1c5eb4d09eb045" id="r_a75522850dd1af7009a1c5eb4d09eb045"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75522850dd1af7009a1c5eb4d09eb045">addMethodNode</a> (const <a class="el" href="../../d2/d23/structrm_1_1Method.html">Method</a> &amp;method, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a75522850dd1af7009a1c5eb4d09eb045"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加方法节点 MethodNode 至指定父节点中  <br /></td></tr>
+<tr class="separator:a75522850dd1af7009a1c5eb4d09eb045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f00986c9c62e2ec0f632a7b6d806f6" id="r_a87f00986c9c62e2ec0f632a7b6d806f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87f00986c9c62e2ec0f632a7b6d806f6">setMethodNodeCallBack</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;id, <a class="el" href="../../d7/d9c/method_8hpp.html#a80679951b33bbd4799a8b4dc0a3f0789">UA_MethodCallback</a> on_method) const</td></tr>
+<tr class="memdesc:a87f00986c9c62e2ec0f632a7b6d806f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的方法节点 MethodNode 设置方法的回调函数  <br /></td></tr>
+<tr class="separator:a87f00986c9c62e2ec0f632a7b6d806f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e548379e60cc985cab36eaa4a4a1321" id="r_a7e548379e60cc985cab36eaa4a4a1321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e548379e60cc985cab36eaa4a4a1321">addObjectTypeNode</a> (const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;otype) const</td></tr>
+<tr class="memdesc:a7e548379e60cc985cab36eaa4a4a1321"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象类型节点 ObjectTypeNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#ga939cde15e0534f0e800805640f2d5e5a" title="对象类型节点：BaseObjectType 节点 ID">rm::nodeBaseObjectType</a></code> 中  <br /></td></tr>
+<tr class="separator:a7e548379e60cc985cab36eaa4a4a1321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ea60f118faa3ec6a38bb1b00b77baf" id="r_a48ea60f118faa3ec6a38bb1b00b77baf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48ea60f118faa3ec6a38bb1b00b77baf">addObjectNode</a> (const <a class="el" href="../../d8/d9b/classrm_1_1Object.html">Object</a> &amp;obj, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a48ea60f118faa3ec6a38bb1b00b77baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象节点 ObjectNode 至指定的父节点中  <br /></td></tr>
+<tr class="separator:a48ea60f118faa3ec6a38bb1b00b77baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b335d3c4ecd56a1a2aab3d049733a31" id="r_a1b335d3c4ecd56a1a2aab3d049733a31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b335d3c4ecd56a1a2aab3d049733a31">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view) const</td></tr>
+<tr class="memdesc:a1b335d3c4ecd56a1a2aab3d049733a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加视图节点 ViewNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#gab20fa2fb5ad7d497374809d0fbf09759" title="对象节点：ViewsFolder 节点 ID">rm::nodeViewsFolder</a></code> 中  <br /></td></tr>
+<tr class="separator:a1b335d3c4ecd56a1a2aab3d049733a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2361e10e9e5246352d4f2264de0071" id="r_a2a2361e10e9e5246352d4f2264de0071"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a2361e10e9e5246352d4f2264de0071">addEventTypeNode</a> (const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype) const</td></tr>
+<tr class="memdesc:a2a2361e10e9e5246352d4f2264de0071"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加事件类型至 <code>BaseEventType</code> 中  <br /></td></tr>
+<tr class="separator:a2a2361e10e9e5246352d4f2264de0071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d538d0447707289598f5b2e9e0bcca" id="r_a76d538d0447707289598f5b2e9e0bcca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76d538d0447707289598f5b2e9e0bcca">triggerEvent</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node_id, const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;event) const</td></tr>
+<tr class="memdesc:a76d538d0447707289598f5b2e9e0bcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并触发事件  <br /></td></tr>
+<tr class="separator:a76d538d0447707289598f5b2e9e0bcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -285,7 +279,7 @@ Protected 属性</h2></td></tr>
 <p>从服务器配置函数指针创建 OPC UA 服务器 </p>
 <ul>
 <li>服务器配置函数指针需提供 <code>*.xml</code> 文件，并由 <code>nodeset_compiler</code> 生成</li>
-<li>关于 <code>*.xml</code> 文件的编写，参考 <a class="el" href="../../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler">从 XML 配置 OPC UA</a></li>
+<li>关于 <code>*.xml</code> 文件的编写，参考 <a class="el" href="../../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler">4.2 从 XML 配置 OPC UA</a></li>
 </ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
@@ -325,8 +319,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a04d80d23469e4c3194a381387a38d43e" name="a04d80d23469e4c3194a381387a38d43e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04d80d23469e4c3194a381387a38d43e">&#9670;&#160;</a></span>Server() <span class="overload">[4/4]</span></h2>
+<a id="aacc2aa9e6ca8573151275fcc803a3ccd" name="aacc2aa9e6ca8573151275fcc803a3ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc2aa9e6ca8573151275fcc803a3ccd">&#9670;&#160;</a></span>Server() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +337,7 @@ Protected 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -355,9 +349,6 @@ Protected 属性</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">rm::Server::~Server </td>
@@ -366,25 +357,13 @@ Protected 属性</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>释放服务器资源 </p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d06/classrm_1_1Server_a24c4b9937aef50cd2f6b773c909278aa_cgraph.svg" width="391" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a72e526f514fc4e7b63ca47e20f96a8cd" name="a72e526f514fc4e7b63ca47e20f96a8cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72e526f514fc4e7b63ca47e20f96a8cd">&#9670;&#160;</a></span>addDataSourceVariableNode()</h2>
+<a id="a3fbc16ca5d6af937a35c024b67839f1d" name="a3fbc16ca5d6af937a35c024b67839f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbc16ca5d6af937a35c024b67839f1d">&#9670;&#160;</a></span>addDataSourceVariableNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +386,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -431,8 +410,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a8edb5901115e3ce9ce96517bfad0b86b" name="a8edb5901115e3ce9ce96517bfad0b86b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8edb5901115e3ce9ce96517bfad0b86b">&#9670;&#160;</a></span>addEventTypeNode()</h2>
+<a id="a2a2361e10e9e5246352d4f2264de0071" name="a2a2361e10e9e5246352d4f2264de0071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2361e10e9e5246352d4f2264de0071">&#9670;&#160;</a></span>addEventTypeNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +420,7 @@ Protected 属性</h2></td></tr>
           <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addEventTypeNode </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>etype</em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -457,8 +436,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a83f715cd2d5eba16d77dbf1cd6a321f7" name="a83f715cd2d5eba16d77dbf1cd6a321f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83f715cd2d5eba16d77dbf1cd6a321f7">&#9670;&#160;</a></span>addMethodNode()</h2>
+<a id="a75522850dd1af7009a1c5eb4d09eb045" name="a75522850dd1af7009a1c5eb4d09eb045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75522850dd1af7009a1c5eb4d09eb045">&#9670;&#160;</a></span>addMethodNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,7 +450,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -488,8 +467,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a3bcab5f8fb68eefa31d5799041b15393" name="a3bcab5f8fb68eefa31d5799041b15393"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bcab5f8fb68eefa31d5799041b15393">&#9670;&#160;</a></span>addObjectNode()</h2>
+<a id="a48ea60f118faa3ec6a38bb1b00b77baf" name="a48ea60f118faa3ec6a38bb1b00b77baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ea60f118faa3ec6a38bb1b00b77baf">&#9670;&#160;</a></span>addObjectNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +481,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -519,8 +498,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a28d28178452af00e4da475164cfc12" name="a2a28d28178452af00e4da475164cfc12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a28d28178452af00e4da475164cfc12">&#9670;&#160;</a></span>addObjectTypeNode()</h2>
+<a id="a7e548379e60cc985cab36eaa4a4a1321" name="a7e548379e60cc985cab36eaa4a4a1321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e548379e60cc985cab36eaa4a4a1321">&#9670;&#160;</a></span>addObjectTypeNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -529,7 +508,7 @@ Protected 属性</h2></td></tr>
           <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addObjectTypeNode </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otype</em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -545,8 +524,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a391ccb4661603ffb24cdd41e4d59454e" name="a391ccb4661603ffb24cdd41e4d59454e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a391ccb4661603ffb24cdd41e4d59454e">&#9670;&#160;</a></span>addVariableNode()</h2>
+<a id="a53e7c0f624185b9c68f9afda7cc29481" name="a53e7c0f624185b9c68f9afda7cc29481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e7c0f624185b9c68f9afda7cc29481">&#9670;&#160;</a></span>addVariableNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,7 +538,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -576,8 +555,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ac53e1e41f3c9eb61f27d3c4ead429487" name="ac53e1e41f3c9eb61f27d3c4ead429487"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac53e1e41f3c9eb61f27d3c4ead429487">&#9670;&#160;</a></span>addVariableNodeValueCallBack()</h2>
+<a id="a12a994986ca053e6649549500aa89329" name="a12a994986ca053e6649549500aa89329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a994986ca053e6649549500aa89329">&#9670;&#160;</a></span>addVariableNodeValueCallBack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -595,7 +574,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga1b85050034b96eea355a8e5804b7866d">ValueCallBackAfterWrite</a></td>          <td class="paramname"><span class="paramname"><em>after_write</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga1b85050034b96eea355a8e5804b7866d">ValueCallBackAfterWrite</a></td>          <td class="paramname"><span class="paramname"><em>after_write</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -614,8 +593,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f0a847ff6a5a96eb207ac58834e2349" name="a6f0a847ff6a5a96eb207ac58834e2349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f0a847ff6a5a96eb207ac58834e2349">&#9670;&#160;</a></span>addVariableTypeNode()</h2>
+<a id="a5f4ea75af4533400395c215c7512c7fe" name="a5f4ea75af4533400395c215c7512c7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4ea75af4533400395c215c7512c7fe">&#9670;&#160;</a></span>addVariableTypeNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -624,7 +603,7 @@ Protected 属性</h2></td></tr>
           <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addVariableTypeNode </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vtype</em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -640,8 +619,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a9c950392ce0b9e1c9d3bdc7c1d64bc93" name="a9c950392ce0b9e1c9d3bdc7c1d64bc93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c950392ce0b9e1c9d3bdc7c1d64bc93">&#9670;&#160;</a></span>addViewNode()</h2>
+<a id="a1b335d3c4ecd56a1a2aab3d049733a31" name="a1b335d3c4ecd56a1a2aab3d049733a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b335d3c4ecd56a1a2aab3d049733a31">&#9670;&#160;</a></span>addViewNode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,7 +629,7 @@ Protected 属性</h2></td></tr>
           <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addViewNode </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -666,35 +645,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b2de27a23d2391b5b0b4b655f7c9aaa" name="a2b2de27a23d2391b5b0b4b655f7c9aaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b2de27a23d2391b5b0b4b655f7c9aaa">&#9670;&#160;</a></span>deleteServer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rm::Server::deleteServer </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>释放服务器资源 </p>
-
-</div>
-</div>
-<a id="a0c4f45066b372cbf8b9e086ef0fc3820" name="a0c4f45066b372cbf8b9e086ef0fc3820"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c4f45066b372cbf8b9e086ef0fc3820">&#9670;&#160;</a></span>find()</h2>
+<a id="a1d221dba400c0fc5588253f64fc46b97" name="a1d221dba400c0fc5588253f64fc46b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d221dba400c0fc5588253f64fc46b97">&#9670;&#160;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -710,7 +662,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1U</span>&#160;)</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1U</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -769,8 +721,33 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="af17256d85ee65a6afd038780832c4af1" name="af17256d85ee65a6afd038780832c4af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af17256d85ee65a6afd038780832c4af1">&#9670;&#160;</a></span>read()</h2>
+<a id="ac794ed25658bd3d3061e723db54d9408" name="ac794ed25658bd3d3061e723db54d9408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac794ed25658bd3d3061e723db54d9408">&#9670;&#160;</a></span>operator ServerView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::operator <a class="el" href="../../d0/d24/classrm_1_1ServerView.html">ServerView</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1f3646256369f650c31500ea9916777" name="aa1f3646256369f650c31500ea9916777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f3646256369f650c31500ea9916777">&#9670;&#160;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -779,7 +756,7 @@ Protected 属性</h2></td></tr>
           <td class="memname"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> rm::Server::read </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -795,8 +772,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a22c5b5f26ced4b5d71207afc5c23d25f" name="a22c5b5f26ced4b5d71207afc5c23d25f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22c5b5f26ced4b5d71207afc5c23d25f">&#9670;&#160;</a></span>setMethodNodeCallBack()</h2>
+<a id="a87f00986c9c62e2ec0f632a7b6d806f6" name="a87f00986c9c62e2ec0f632a7b6d806f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f00986c9c62e2ec0f632a7b6d806f6">&#9670;&#160;</a></span>setMethodNodeCallBack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,7 +786,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d7/d9c/method_8hpp.html#a80679951b33bbd4799a8b4dc0a3f0789">UA_MethodCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_method</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d7/d9c/method_8hpp.html#a80679951b33bbd4799a8b4dc0a3f0789">UA_MethodCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_method</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -871,8 +848,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a03744b83d828f4c235f085166225e3c7" name="a03744b83d828f4c235f085166225e3c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03744b83d828f4c235f085166225e3c7">&#9670;&#160;</a></span>triggerEvent()</h2>
+<a id="a76d538d0447707289598f5b2e9e0bcca" name="a76d538d0447707289598f5b2e9e0bcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d538d0447707289598f5b2e9e0bcca">&#9670;&#160;</a></span>triggerEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -885,7 +862,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -903,8 +880,8 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a55c7c980b7c0cf19d4a1dd94961f2345" name="a55c7c980b7c0cf19d4a1dd94961f2345"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55c7c980b7c0cf19d4a1dd94961f2345">&#9670;&#160;</a></span>write()</h2>
+<a id="abc776ec685646b0192e559667ef8e40a" name="abc776ec685646b0192e559667ef8e40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc776ec685646b0192e559667ef8e40a">&#9670;&#160;</a></span>write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -917,7 +894,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">

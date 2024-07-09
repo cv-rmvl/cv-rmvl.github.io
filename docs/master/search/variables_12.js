@@ -17,5 +17,6 @@ var searchData=
   ['sqrt_5f2_14',['SQRT_2',['../d0/de1/group__core.html#ga1979f70b9a07db4c1ee2a96808c90b1b',1,'rm']]],
   ['src_15',['src',['../df/dae/structrm_1_1DetectInfo.html#a08ad5987f2457977fb586fc00d3d8297',1,'rm::DetectInfo']]],
   ['static_5fprediction_16',['static_prediction',['../d7/d51/structrm_1_1PredictInfo.html#a7371ffc8ac220a200a7397d108a71dab',1,'rm::PredictInfo']]],
-  ['subnet_5fmask_17',['subnet_mask',['../d0/dde/structrm_1_1LightIpConfig.html#a7d77dc044d21e8938eeca7e52a44b7bf',1,'rm::LightIpConfig']]]
+  ['stds_17',['stds',['../d2/d84/structrm_1_1PreprocessOptions.html#a3f998cae02faae087e0ac0d20cec63c4',1,'rm::PreprocessOptions']]],
+  ['subnet_5fmask_18',['subnet_mask',['../d0/dde/structrm_1_1LightIpConfig.html#a7d77dc044d21e8938eeca7e52a44b7bf',1,'rm::LightIpConfig']]]
 ];

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.11.0" doxygen_gitid="d204875cb747605ca7086930e57db45d5920a808*">
+<tagfile doxygen_version="1.11.0" doxygen_gitid="9b424b03c9833626cd435af22a444888fbbb192d">
   <compound kind="file">
     <name>root.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
@@ -437,7 +437,7 @@
     <path>rmvl/detector/</path>
     <filename>d5/d9f/detector_8h.html</filename>
     <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
-    <includes id="df/d4b/pretreat_8h" name="pretreat.h" local="yes" import="no" module="no" objc="no">rmvl/imgproc/pretreat.h</includes>
+    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/pretreat.hpp</includes>
     <class kind="struct">rm::DetectInfo</class>
     <class kind="class">rm::detector</class>
     <namespace>rm</namespace>
@@ -458,7 +458,7 @@
     <path>rmvl/detector/</path>
     <filename>da/d95/detector_2armor__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">detector.h</includes>
-    <includes id="d9/d8f/ml_2ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
+    <includes id="d5/d47/ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
     <includes id="d5/dea/tracker_2planar__tracker_8h" name="planar_tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/planar_tracker.h</includes>
     <class kind="class">rm::ArmorDetector</class>
     <namespace>rm</namespace>
@@ -476,7 +476,7 @@
     <path>rmvl/detector/</path>
     <filename>d1/d6b/detector_2gyro__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">detector.h</includes>
-    <includes id="d9/d8f/ml_2ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
+    <includes id="d5/d47/ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
     <includes id="d7/de6/tracker_2gyro__tracker_8h" name="gyro_tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/gyro_tracker.h</includes>
     <class kind="class">rm::GyroDetector</class>
     <namespace>rm</namespace>
@@ -995,6 +995,12 @@
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
+    <name>pretreat.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d2/d4c/pretreat_8hpp.html</filename>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
     <name>rmvldef.hpp</name>
     <path>rmvl/core/</path>
     <filename>db/d41/rmvldef_8hpp.html</filename>
@@ -1342,24 +1348,6 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
-    <name>imgproc.hpp</name>
-    <path>rmvl/</path>
-    <filename>dd/d46/imgproc_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>paint.hpp</name>
-    <path>rmvl/imgproc/</path>
-    <filename>d9/db3/paint_8hpp.html</filename>
-    <class kind="class">rm::ArrayTool</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>pretreat.h</name>
-    <path>rmvl/imgproc/</path>
-    <filename>df/d4b/pretreat_8h.html</filename>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>light.hpp</name>
     <path>rmvl/</path>
     <filename>de/dea/light_8hpp.html</filename>
@@ -1375,27 +1363,18 @@
   <compound kind="file">
     <name>ml.hpp</name>
     <path>rmvl/</path>
-    <filename>de/da2/rmvl_2ml_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>ml.hpp</name>
-    <path>rmvlpara/</path>
-    <filename>d7/d33/rmvlpara_2ml_8hpp.html</filename>
+    <filename>d3/d29/ml_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>ort.h</name>
     <path>rmvl/ml/</path>
-    <filename>d9/d8f/ml_2ort_8h.html</filename>
-    <class kind="class">rm::OnnxRT</class>
+    <filename>d5/d47/ort_8h.html</filename>
+    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/pretreat.hpp</includes>
+    <class kind="struct">rm::PreprocessOptions</class>
+    <class kind="struct">rm::PostprocessOptions</class>
+    <class kind="class">rm::OnnxNet</class>
+    <class kind="class">rm::ClassificationNet</class>
     <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ort.h</name>
-    <path>rmvlpara/ml/</path>
-    <filename>d3/d29/ara_2ml_2ort_8h.html</filename>
-    <class kind="struct">rm::para::OrtParam</class>
-    <namespace>rm</namespace>
-    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>client.hpp</name>
@@ -1458,6 +1437,7 @@
     <includes id="dc/d94/event_8hpp" name="event.hpp" local="yes" import="no" module="no" objc="no">event.hpp</includes>
     <includes id="df/de1/object_8hpp" name="object.hpp" local="yes" import="no" module="no" objc="no">object.hpp</includes>
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" import="no" module="no" objc="no">view.hpp</includes>
+    <class kind="class">rm::ServerView</class>
     <class kind="class">rm::Server</class>
     <namespace>rm</namespace>
   </compound>
@@ -1535,20 +1515,6 @@
   <compound kind="struct">
     <name>rm::Argument</name>
     <filename>df/d48/structrm_1_1Argument.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Argument</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a48abbd0822b14321402e2178085b3885</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Argument</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a7dda13ba57d393fc6ad208f07a91b7c2</anchor>
-      <arglist>(std::string_view n, UA_TypeFlag dt, uint32_t dm=1)</arglist>
-    </member>
     <member kind="variable">
       <type>std::string</type>
       <name>name</name>
@@ -1568,6 +1534,13 @@
       <name>dims</name>
       <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
       <anchor>abef1f97d81b25e806f344b3070ddca69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>description</name>
+      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
+      <anchor>add099a48515506b1cb38e5b82a924503</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2039,38 +2012,6 @@
       <arglist></arglist>
     </member>
   </compound>
-  <compound kind="class">
-    <name>rm::ArrayTool</name>
-    <filename>d1/d2c/classrm_1_1ArrayTool.html</filename>
-    <member kind="function" static="yes">
-      <type>static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt;</type>
-      <name>linear2D</name>
-      <anchorfile>d1/d2c/classrm_1_1ArrayTool.html</anchorfile>
-      <anchor>ab3de1a169d5c8f9a17abf300c0060828</anchor>
-      <arglist>(const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point_&lt; Tp &gt; &amp;spacing, std::size_t times)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt;</type>
-      <name>circular2D</name>
-      <anchorfile>d1/d2c/classrm_1_1ArrayTool.html</anchorfile>
-      <anchor>a7ff6497bd27edca47987bb3803e10d0b</anchor>
-      <arglist>(const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point_&lt; Tp &gt; &amp;center, double spacing, std::size_t times)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt;</type>
-      <name>linear3D</name>
-      <anchorfile>d1/d2c/classrm_1_1ArrayTool.html</anchorfile>
-      <anchor>ac940251932dabfda335f17d121f5a05a</anchor>
-      <arglist>(const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point3_&lt; Tp &gt; &amp;spacing, std::size_t times)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt;</type>
-      <name>circular3D</name>
-      <anchorfile>d1/d2c/classrm_1_1ArrayTool.html</anchorfile>
-      <anchor>ab9abfe168058d279827dafa7d4318a88</anchor>
-      <arglist>(const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point3_&lt; Tp &gt; &amp;center, const cv::Vec3d &amp;axis, double spacing, std::size_t times)</arglist>
-    </member>
-  </compound>
   <compound kind="struct">
     <name>rm::CameraConfig</name>
     <filename>df/dfa/structrm_1_1CameraConfig.html</filename>
@@ -2237,18 +2178,51 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx33f</type>
+      <type>cv::Matx&lt; float, 3, 3 &gt;</type>
       <name>cameraMatrix</name>
       <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
-      <anchor>ab01a964e6ab476e275fbfa87817b287b</anchor>
+      <anchor>ae0a0d04be6bab74823058767e3c42082</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>cv::Matx&lt; float, 5, 1 &gt;</type>
       <name>distCoeffs</name>
       <anchorfile>d5/d4e/structrm_1_1para_1_1CameraParam.html</anchorfile>
-      <anchor>a97f5e8bf5dcbdd4a6715a47ecbaea54d</anchor>
+      <anchor>a743d97b84b0203eeaa451bff66400089</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ClassificationNet</name>
+    <filename>d4/de6/classrm_1_1ClassificationNet.html</filename>
+    <base>rm::OnnxNet</base>
+    <member kind="function">
+      <type></type>
+      <name>ClassificationNet</name>
+      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
+      <anchor>a6b4d277a98b3403bb1278378b6c09005</anchor>
+      <arglist>(std::string_view model_path, OrtProvider prov=OrtProvider::CPU)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::pair&lt; int, float &gt;</type>
+      <name>cast</name>
+      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
+      <anchor>adbad1162f87690b65574acf49278166a</anchor>
+      <arglist>(const std::any &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>std::vector&lt; Ort::Value &gt;</type>
+      <name>preProcess</name>
+      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
+      <anchor>a15ff35f5e291bdb84a61d22371a20f30</anchor>
+      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;options) override</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>std::any</type>
+      <name>postProcess</name>
+      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
+      <anchor>a66d83371ae162712b202f11ae10da3fe</anchor>
+      <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2286,8 +2260,8 @@
       <type>FindNodeInClient</type>
       <name>find</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a4b7d2b164975563b10150d462d42e045</anchor>
-      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U)</arglist>
+      <anchor>a1adf64babe47e2911a17ca97c0e78762</anchor>
+      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -2300,64 +2274,64 @@
       <type>void</type>
       <name>spin</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a22eb488c687c3f9934f788bcfd98ea77</anchor>
-      <arglist>()</arglist>
+      <anchor>ad0e102e552d72573266114d6956f2aee</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>spinOnce</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a59fb9b7b44f6c041343ba31469d0d9c1</anchor>
-      <arglist>()</arglist>
+      <anchor>a74b40046bd18231fab4c3815c0e5b2b4</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Variable</type>
       <name>read</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>acadba91557b0beb8d7436ec88535949a</anchor>
-      <arglist>(const NodeId &amp;node)</arglist>
+      <anchor>ad2243cf4ad77dbd90ef0c2d23351ed47</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>af14256eb99e335ad1488dcd81c308dc9</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
+      <anchor>ad469a24e53925cb24aefa06aba4f46ba</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>call</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a16ef5960338c35d2c56bcbb5de46a7de</anchor>
-      <arglist>(const NodeId &amp;obj_node, const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs)</arglist>
+      <anchor>a2a13a68fa857f85869491f5c85f0d435</anchor>
+      <arglist>(const NodeId &amp;obj_node, const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>call</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a198aa377d4f92c22cc56b51cc8212f2d</anchor>
-      <arglist>(const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs)</arglist>
+      <anchor>a31561cda7b1183750a777a31fe384e47</anchor>
+      <arglist>(const std::string &amp;name, const std::vector&lt; Variable &gt; &amp;inputs, std::vector&lt; Variable &gt; &amp;outputs) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addViewNode</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>af736e01272c3dd3ab66a40d6bc98ad4b</anchor>
-      <arglist>(const View &amp;view)</arglist>
+      <anchor>a162d041ce6ac27acd458b5cea1912f16</anchor>
+      <arglist>(const View &amp;view) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>monitor</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>af7527007cacc5574ae308785947ce69e</anchor>
-      <arglist>(NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size=10)</arglist>
+      <anchor>a5809b7c63b5f0da8617776869e03b709</anchor>
+      <arglist>(NodeId node, UA_Client_DataChangeNotificationCallback on_change, uint32_t queue_size=10) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>monitor</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a2e43054d548c6f9433d13f375d604bf9</anchor>
-      <arglist>(NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event)</arglist>
+      <anchor>a7974a94571290ab89495bc421c89110b</anchor>
+      <arglist>(NodeId node, const std::vector&lt; std::string &gt; &amp;names, UA_Client_EventNotificationCallback on_event) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2615,20 +2589,6 @@
       <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
       <anchor>a22465cc4deedab79ebc3f0c13b4bd9ff</anchor>
       <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag)=0</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>float</type>
-      <name>_yaw_static_com</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>a99c095412108bb13d552d4dc02a7e36d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>float</type>
-      <name>_pitch_static_com</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>ad60945774e6f9225e8f18a07fb006c4e</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -3697,10 +3657,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>size_t</type>
+      <type>std::size_t</type>
       <name>MAX_COM</name>
       <anchorfile>dd/de3/structrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
-      <anchor>a864c6c3032b483e0c84d454fccbc3dfd</anchor>
+      <anchor>a09003f094770093c11151ff6baad9d6a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4345,17 +4305,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx66f</type>
+      <type>cv::Matx&lt; float, 6, 6 &gt;</type>
       <name>CENTER3D_Q</name>
       <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>af599660b263fc358e84aa32ea5573ac6</anchor>
+      <anchor>a6628b6b0495cc157e2ed70d810193ae7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx33f</type>
+      <type>cv::Matx&lt; float, 3, 3 &gt;</type>
       <name>CENTER3D_R</name>
       <anchorfile>d3/df2/structrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>a88212fdb124f0eb089f17c6bb952eecf</anchor>
+      <anchor>ab1a35a4977c6ac45f509d344f9d7c6d6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4576,31 +4536,31 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx66f</type>
+      <type>cv::Matx&lt; float, 6, 6 &gt;</type>
       <name>POSITION_Q</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a5131f36916b658034375a259fa1190d3</anchor>
+      <anchor>a633a2259eb4d696ac8ee11a42648efde</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx33f</type>
+      <type>cv::Matx&lt; float, 3, 3 &gt;</type>
       <name>POSITION_R</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a43ee4f69192da3fe998167c9a4b3cb37</anchor>
+      <anchor>a618a0c3055a6672706875dd6ac50a32a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx44f</type>
+      <type>cv::Matx&lt; float, 4, 4 &gt;</type>
       <name>POSE_Q</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a08c460623907d0e8f171fbaac7ffec9e</anchor>
+      <anchor>a0d1323f90ee3e844e9e69ce99dd6147f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx22f</type>
+      <type>cv::Matx&lt; float, 2, 2 &gt;</type>
       <name>POSE_R</name>
       <anchorfile>d3/d01/structrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a547805767d10762dd0814f963ac1bcd9</anchor>
+      <anchor>a87f16835c99a2d2b5cfdf07191b5f302</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5840,35 +5800,91 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::OnnxRT</name>
-    <filename>d7/d1f/classrm_1_1OnnxRT.html</filename>
+    <name>rm::OnnxNet</name>
+    <filename>dc/d1c/classrm_1_1OnnxNet.html</filename>
     <member kind="function">
       <type></type>
-      <name>OnnxRT</name>
-      <anchorfile>d7/d1f/classrm_1_1OnnxRT.html</anchorfile>
-      <anchor>aa189e1829fd3799321321db0f7de3b65</anchor>
-      <arglist>(std::string_view model_path)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OnnxRT</name>
-      <anchorfile>d7/d1f/classrm_1_1OnnxRT.html</anchorfile>
-      <anchor>ae6c56c091ad007cef01021c0f07c6d04</anchor>
-      <arglist>()</arglist>
+      <name>OnnxNet</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a6dbd13d7a6b4a26a4296da92809dea81</anchor>
+      <arglist>(std::string_view model_path, OrtProvider prov)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>printModelInfo</name>
-      <anchorfile>d7/d1f/classrm_1_1OnnxRT.html</anchorfile>
-      <anchor>a87a6828e3aaf430edda8dbbcf9e160d0</anchor>
-      <arglist>()</arglist>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a8cf157759b92a6eed2a8675aec1aa1bd</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; size_t &gt;</type>
+      <type>std::any</type>
       <name>inference</name>
-      <anchorfile>d7/d1f/classrm_1_1OnnxRT.html</anchorfile>
-      <anchor>afd0d94a4ec4e4158ac411f951dc04c21</anchor>
-      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const std::vector&lt; float &gt; &amp;means, const std::vector&lt; float &gt; &amp;stds)</arglist>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>ab70aafd8b3d2bac3170fbb92cb8ba092</anchor>
+      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;preop, const PostprocessOptions &amp;postop)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>printEnvInfo</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a599174e651ad53759b0547916f45d010</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Ort::MemoryInfo</type>
+      <name>_memory_info</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a5f8f9ec9a9c554698909b8ddd3492363</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Ort::Env</type>
+      <name>_env</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>ab2b4c1c093bbb4457be83831b6687928</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Ort::SessionOptions</type>
+      <name>_session_options</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a1b817f86dd6f03e3c25e14344cef0169</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unique_ptr&lt; Ort::Session &gt;</type>
+      <name>_session</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a55c23f4154f72120688582944bc609f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; const char * &gt;</type>
+      <name>_inames</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a444b0d5f8648ec289690695e3f1894f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; const char * &gt;</type>
+      <name>_onames</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a458b3588fb2c6efc844723c5140b6938</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="pure">
+      <type>virtual std::vector&lt; Ort::Value &gt;</type>
+      <name>preProcess</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a500b119ee4b6e9dd39a4ca07d4b18f7b</anchor>
+      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;preop)=0</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="pure">
+      <type>virtual std::any</type>
+      <name>postProcess</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a64486bd4efa94ebfc5e3494435993739</anchor>
+      <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop)=0</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -6167,8 +6183,8 @@
       <type></type>
       <name>OPTLightController</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a8ca4b081e3fc6c5730732c3fd68c54b1</anchor>
-      <arglist>(OPTLightController &amp;&amp;obj)</arglist>
+      <anchor>a6c11bdd5ff2b48ce55b8170eecde8dc3</anchor>
+      <arglist>(OPTLightController &amp;&amp;obj)=default</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -6230,8 +6246,8 @@
       <type>int</type>
       <name>getIntensity</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>aff969350f589da52aecfa7273e944a14</anchor>
-      <arglist>(int channel)</arglist>
+      <anchor>a249ed9a1612bc0d98d78c54f315a9ee8</anchor>
+      <arglist>(int channel) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -6244,54 +6260,8 @@
       <type>bool</type>
       <name>trigger</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a5be1d03c06bea28e5216aee8627e0122</anchor>
-      <arglist>(int channel, int time)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::para::OrtParam</name>
-    <filename>d3/dc1/structrm_1_1para_1_1OrtParam.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OrtParam</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>aff93a69af113d9baab2e3c9cbd098865</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a43d611a1c88733d7bcbd5f74715900f1</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Vec3d</type>
-      <name>RGB_MEANS</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>afba20554543098f58b2c4b2f5a0c427c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Vec3d</type>
-      <name>RGB_STDS</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a03baa946a25146b4da7763a6ac291308</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>MONO_MEANS</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a4832c654862f91e5920ea348902b7b8d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>MONO_STDS</name>
-      <anchorfile>d3/dc1/structrm_1_1para_1_1OrtParam.html</anchorfile>
-      <anchor>a796559dd3025e3dbd60480d17594dc6f</anchor>
-      <arglist></arglist>
+      <anchor>ae26c66fd921a04c3888294ecc1016868</anchor>
+      <arglist>(int channel, int time) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6508,10 +6478,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx22f</type>
+      <type>cv::Matx&lt; float, 2, 2 &gt;</type>
       <name>DIS_Q</name>
       <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a17a10a61f1d0f94fea2c526161443b99</anchor>
+      <anchor>a163a2f13db34d927177e96dadd876f03</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6522,17 +6492,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx44f</type>
+      <type>cv::Matx&lt; float, 4, 4 &gt;</type>
       <name>MOTION_Q</name>
       <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a574418b4cc7bb8db91a1672292f50463</anchor>
+      <anchor>a3e4dae39117202f29b731ccc28b73fe7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx22f</type>
+      <type>cv::Matx&lt; float, 2, 2 &gt;</type>
       <name>MOTION_R</name>
       <anchorfile>d7/dd5/structrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>a4fbb6aa8a111f7a39d270b72bc5f53f6</anchor>
+      <anchor>ac07e02b909592c3739939df36c60fd6e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6559,6 +6529,24 @@
       <anchorfile>db/d3e/classrm_1_1Polynomial.html</anchorfile>
       <anchor>a6109b138714dcfea67ec4f25bbabb1a9</anchor>
       <arglist>(double x) const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::PostprocessOptions</name>
+    <filename>d5/da4/structrm_1_1PostprocessOptions.html</filename>
+    <member kind="variable">
+      <type>PixChannel</type>
+      <name>color</name>
+      <anchorfile>d5/da4/structrm_1_1PostprocessOptions.html</anchorfile>
+      <anchor>a77d744379ec5d9e41edad45abe1b872a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; float &gt;</type>
+      <name>thresh</name>
+      <anchorfile>d5/da4/structrm_1_1PostprocessOptions.html</anchorfile>
+      <anchor>a2899ebb4fdcfaada431e66faf16e1a6e</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -6616,6 +6604,24 @@
       <anchorfile>dc/d74/classrm_1_1predictor.html</anchorfile>
       <anchor>a8300d0054e59cbf215cc7d1a6ac0a246</anchor>
       <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::PreprocessOptions</name>
+    <filename>d2/d84/structrm_1_1PreprocessOptions.html</filename>
+    <member kind="variable">
+      <type>std::vector&lt; float &gt;</type>
+      <name>means</name>
+      <anchorfile>d2/d84/structrm_1_1PreprocessOptions.html</anchorfile>
+      <anchor>af570c58ee1b4850e6afbb549a7eb14fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; float &gt;</type>
+      <name>stds</name>
+      <anchorfile>d2/d84/structrm_1_1PreprocessOptions.html</anchorfile>
+      <anchor>a3f998cae02faae087e0ac0d20cec63c4</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -7318,10 +7324,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>size_t</type>
+      <type>std::size_t</type>
       <name>RAW_DATAS_SIZE</name>
       <anchorfile>de/d54/structrm_1_1para_1_1RuneGroupParam.html</anchorfile>
-      <anchor>ac3a08477c47885c360c2860fa73a5fc8</anchor>
+      <anchor>a4c95d8549d5c952ea82bba3cfbd72bcc</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7720,10 +7726,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>cv::Matx22f</type>
+      <type>cv::Matx&lt; float, 2, 2 &gt;</type>
       <name>ROTATE_Q</name>
       <anchorfile>df/d08/structrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
-      <anchor>a14be82a8cffc3307b171aa00712eea7d</anchor>
+      <anchor>a0637721bcc73ceccc3d35506632ba9a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -7932,8 +7938,15 @@
       <type></type>
       <name>Server</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a04d80d23469e4c3194a381387a38d43e</anchor>
-      <arglist>(Server &amp;&amp;svr)=default</arglist>
+      <anchor>aacc2aa9e6ca8573151275fcc803a3ccd</anchor>
+      <arglist>(Server &amp;&amp;svr)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator ServerView</name>
+      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
+      <anchor>ac794ed25658bd3d3061e723db54d9408</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -7967,106 +7980,99 @@
       <type>FindNodeInServer</type>
       <name>find</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a0c4f45066b372cbf8b9e086ef0fc3820</anchor>
-      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U)</arglist>
+      <anchor>a1d221dba400c0fc5588253f64fc46b97</anchor>
+      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addVariableTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a6f0a847ff6a5a96eb207ac58834e2349</anchor>
-      <arglist>(const VariableType &amp;vtype)</arglist>
+      <anchor>a5f4ea75af4533400395c215c7512c7fe</anchor>
+      <arglist>(const VariableType &amp;vtype) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addVariableNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a391ccb4661603ffb24cdd41e4d59454e</anchor>
-      <arglist>(const Variable &amp;val, const NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a53e7c0f624185b9c68f9afda7cc29481</anchor>
+      <arglist>(const Variable &amp;val, const NodeId &amp;parent_id=nodeObjectsFolder) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>addVariableNodeValueCallBack</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ac53e1e41f3c9eb61f27d3c4ead429487</anchor>
-      <arglist>(NodeId id, ValueCallBackBeforeRead before_read, ValueCallBackAfterWrite after_write)</arglist>
+      <anchor>a12a994986ca053e6649549500aa89329</anchor>
+      <arglist>(NodeId id, ValueCallBackBeforeRead before_read, ValueCallBackAfterWrite after_write) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addDataSourceVariableNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a72e526f514fc4e7b63ca47e20f96a8cd</anchor>
-      <arglist>(const Variable &amp;val, DataSourceRead on_read, DataSourceWrite on_write, NodeId parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a3fbc16ca5d6af937a35c024b67839f1d</anchor>
+      <arglist>(const Variable &amp;val, DataSourceRead on_read, DataSourceWrite on_write, NodeId parent_id=nodeObjectsFolder) const</arglist>
     </member>
     <member kind="function">
       <type>Variable</type>
       <name>read</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>af17256d85ee65a6afd038780832c4af1</anchor>
-      <arglist>(const NodeId &amp;node)</arglist>
+      <anchor>aa1f3646256369f650c31500ea9916777</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a55c7c980b7c0cf19d4a1dd94961f2345</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
+      <anchor>abc776ec685646b0192e559667ef8e40a</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addMethodNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a83f715cd2d5eba16d77dbf1cd6a321f7</anchor>
-      <arglist>(const Method &amp;method, const NodeId &amp;parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a75522850dd1af7009a1c5eb4d09eb045</anchor>
+      <arglist>(const Method &amp;method, const NodeId &amp;parent_id=nodeObjectsFolder) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setMethodNodeCallBack</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a22c5b5f26ced4b5d71207afc5c23d25f</anchor>
-      <arglist>(const NodeId &amp;id, UA_MethodCallback on_method)</arglist>
+      <anchor>a87f00986c9c62e2ec0f632a7b6d806f6</anchor>
+      <arglist>(const NodeId &amp;id, UA_MethodCallback on_method) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addObjectTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a2a28d28178452af00e4da475164cfc12</anchor>
-      <arglist>(const ObjectType &amp;otype)</arglist>
+      <anchor>a7e548379e60cc985cab36eaa4a4a1321</anchor>
+      <arglist>(const ObjectType &amp;otype) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addObjectNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a3bcab5f8fb68eefa31d5799041b15393</anchor>
-      <arglist>(const Object &amp;obj, NodeId parent_id=nodeObjectsFolder)</arglist>
+      <anchor>a48ea60f118faa3ec6a38bb1b00b77baf</anchor>
+      <arglist>(const Object &amp;obj, NodeId parent_id=nodeObjectsFolder) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addViewNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a9c950392ce0b9e1c9d3bdc7c1d64bc93</anchor>
-      <arglist>(const View &amp;view)</arglist>
+      <anchor>a1b335d3c4ecd56a1a2aab3d049733a31</anchor>
+      <arglist>(const View &amp;view) const</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
       <name>addEventTypeNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a8edb5901115e3ce9ce96517bfad0b86b</anchor>
-      <arglist>(const EventType &amp;etype)</arglist>
+      <anchor>a2a2361e10e9e5246352d4f2264de0071</anchor>
+      <arglist>(const EventType &amp;etype) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>triggerEvent</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a03744b83d828f4c235f085166225e3c7</anchor>
-      <arglist>(const NodeId &amp;node_id, const Event &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>deleteServer</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a2b2de27a23d2391b5b0b4b655f7c9aaa</anchor>
-      <arglist>()</arglist>
+      <anchor>a76d538d0447707289598f5b2e9e0bcca</anchor>
+      <arglist>(const NodeId &amp;node_id, const Event &amp;event) const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>UA_Server *</type>
@@ -8088,6 +8094,52 @@
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
       <anchor>a75b730c040a5c0335a292837c261e481</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ServerView</name>
+    <filename>d0/d24/classrm_1_1ServerView.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ServerView</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>a4350ccda29b0f2a382edf7a0e043ff3c</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerView</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>af490d17271b42ecede9c761a894eb0de</anchor>
+      <arglist>(UA_Server *server)</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerView &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>a7b910acbdb615e57ce54c8f49278ffe5</anchor>
+      <arglist>(UA_Server *const server)</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInServer</type>
+      <name>find</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>a2a0f468b6026f7f9ad82ab51d7f728be</anchor>
+      <arglist>(const std::string &amp;browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>af6f0c53c179713de3ab4342714daf58a</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>a259c4b69e74d86fe4bf50e21558d68b5</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -8171,17 +8223,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>size_t</type>
+      <type>std::size_t</type>
       <name>DIFF_ORDER</name>
       <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
-      <anchor>ad9eacd61f2a466aaa38a210c13ed9626</anchor>
+      <anchor>a1762d9c1ca6f103a41056062135b9335</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>size_t</type>
+      <type>std::size_t</type>
       <name>MAX_NF</name>
       <anchorfile>db/dc1/structrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
-      <anchor>a9ce52d3e71bd712d76e3671c005b04ab</anchor>
+      <anchor>a5c3e0b50571802a841cd8b0550ff97be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9173,9 +9225,9 @@
     <class kind="class">rm::Armor</class>
     <class kind="class">rm::ArmorDetector</class>
     <class kind="class">rm::ArmorPredictor</class>
-    <class kind="class">rm::ArrayTool</class>
     <class kind="struct">rm::CameraConfig</class>
     <class kind="class">rm::CameraExtrinsics</class>
+    <class kind="class">rm::ClassificationNet</class>
     <class kind="class">rm::Client</class>
     <class kind="class">rm::combo</class>
     <class kind="struct">rm::CompensateInfo</class>
@@ -9221,15 +9273,17 @@
     <class kind="class">rm::NonlinearSolver</class>
     <class kind="class">rm::Object</class>
     <class kind="class">rm::ObjectType</class>
-    <class kind="class">rm::OnnxRT</class>
+    <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::OptCamera</class>
     <class kind="struct">rm::OptimalOptions</class>
     <class kind="class">rm::OPTLightController</class>
     <class kind="class">rm::Pilot</class>
     <class kind="class">rm::PlanarTracker</class>
     <class kind="class">rm::Polynomial</class>
+    <class kind="struct">rm::PostprocessOptions</class>
     <class kind="struct">rm::PredictInfo</class>
     <class kind="class">rm::predictor</class>
+    <class kind="struct">rm::PreprocessOptions</class>
     <class kind="struct">rm::PublishedDataSet</class>
     <class kind="class">rm::Publisher</class>
     <class kind="class">rm::Publisher&lt; TransportID::UDP_UADP &gt;</class>
@@ -9249,6 +9303,7 @@
     <class kind="class">rm::RungeKutta4</class>
     <class kind="class">rm::SerialPort</class>
     <class kind="class">rm::Server</class>
+    <class kind="class">rm::ServerView</class>
     <class kind="class">rm::SpiRunePredictor</class>
     <class kind="class">rm::Subscriber</class>
     <class kind="class">rm::Subscriber&lt; TransportID::UDP_UADP &gt;</class>
@@ -9852,6 +9907,37 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>PixChannel</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>BLUE</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GREEN</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>RED</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>AUTO</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34afc52563a563d24547071c966a6daa783</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>EulerAxis</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
@@ -9877,34 +9963,14 @@
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>PixChannel</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
+      <name>OrtProvider</name>
+      <anchorfile>dc/d73/group__ml__ort.html</anchorfile>
+      <anchor>gaa3efd1984486e48014bbcfc54e432e84</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>BLUE</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>GREEN</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>RED</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>AUTO</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34afc52563a563d24547071c966a6daa783</anchor>
-      <arglist></arglist>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">CPU</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">CUDA</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">TensorRT</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">OpenVINO</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -10399,6 +10465,20 @@
       <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
+      <type>cv::Mat</type>
+      <name>binary</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gaf89d952725426f7b75c2f6e96fca0749</anchor>
+      <arglist>(cv::Mat src, PixChannel ch1, PixChannel ch2, uint8_t threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>binary</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
+      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
+    </member>
+    <member kind="function">
       <type>cv::Point2f</type>
       <name>calculateRelativeAngle</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
@@ -10495,20 +10575,6 @@
       <anchorfile>d5/d20/namespacerm.html</anchorfile>
       <anchor>a1a56b8df7b0349a803e849e1a2e1e7c0</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>binary</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gaf89d952725426f7b75c2f6e96fca0749</anchor>
-      <arglist>(cv::Mat src, PixChannel ch1, PixChannel ch2, uint8_t threshold)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>binary</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
-      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
     <member kind="function">
       <type>constexpr NodeId</type>
@@ -10889,7 +10955,6 @@
     <class kind="struct">rm::para::MvCameraParam</class>
     <class kind="struct">rm::para::OpcuaParam</class>
     <class kind="struct">rm::para::OptCameraParam</class>
-    <class kind="struct">rm::para::OrtParam</class>
     <class kind="struct">rm::para::PilotParam</class>
     <class kind="struct">rm::para::PlanarTrackerParam</class>
     <class kind="struct">rm::para::RuneCenterParam</class>
@@ -10936,13 +11001,6 @@
       <name>core_param</name>
       <anchorfile>d1/d36/group__para__core.html</anchorfile>
       <anchor>ga00171e6e6abe8be834e30e7247b7747d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>OrtParam</type>
-      <name>ort_param</name>
-      <anchorfile>d9/d95/group__para__ml.html</anchorfile>
-      <anchor>ga4cfe3a84398c7b14f9b2d447ee7ecbf7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -11403,6 +11461,7 @@
     <subgroup>core_kalman</subgroup>
     <subgroup>core_numcal</subgroup>
     <subgroup>core_optimal</subgroup>
+    <subgroup>core_pretreat</subgroup>
     <subgroup>serial</subgroup>
     <subgroup>core_timer</subgroup>
     <namespace>rm::numeric_literals</namespace>
@@ -12167,7 +12226,6 @@
     <title>参数模块</title>
     <filename>d6/db7/group__para.html</filename>
     <subgroup>para_camera</subgroup>
-    <subgroup>para_ml</subgroup>
     <subgroup>para_combo</subgroup>
     <subgroup>para_compensator</subgroup>
     <subgroup>para_decider</subgroup>
@@ -12609,6 +12667,56 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>core_pretreat</name>
+    <title>图像预处理模块</title>
+    <filename>d4/df0/group__core__pretreat.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::PixChannel</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::BLUE</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::GREEN</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::RED</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::AUTO</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34afc52563a563d24547071c966a6daa783</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>rm::binary</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gaf89d952725426f7b75c2f6e96fca0749</anchor>
+      <arglist>(cv::Mat src, PixChannel ch1, PixChannel ch2, uint8_t threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>rm::binary</name>
+      <anchorfile>d4/df0/group__core__pretreat.html</anchorfile>
+      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
+      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>serial</name>
     <title>串口通信模块</title>
     <filename>dd/d89/group__serial.html</filename>
@@ -12625,57 +12733,6 @@
       <anchorfile>db/d06/group__core__timer.html</anchorfile>
       <anchor>gacd0c14d50bf92999c788291f5843e4a9</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>imgproc</name>
-    <title>图像处理</title>
-    <filename>d7/dbd/group__imgproc.html</filename>
-    <class kind="class">rm::ArrayTool</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::PixChannel</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::BLUE</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::GREEN</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::RED</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::AUTO</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34afc52563a563d24547071c966a6daa783</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>rm::binary</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gaf89d952725426f7b75c2f6e96fca0749</anchor>
-      <arglist>(cv::Mat src, PixChannel ch1, PixChannel ch2, uint8_t threshold)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>rm::binary</name>
-      <anchorfile>d7/dbd/group__imgproc.html</anchorfile>
-      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
-      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -12699,21 +12756,22 @@
   </compound>
   <compound kind="group">
     <name>ml_ort</name>
-    <title>ONNX-Runtime 分类网络部署库</title>
+    <title>onnxruntime 多态部署库</title>
     <filename>dc/d73/group__ml__ort.html</filename>
-    <class kind="class">rm::OnnxRT</class>
-  </compound>
-  <compound kind="group">
-    <name>para_ml</name>
-    <title>ml 的参数模块</title>
-    <filename>d9/d95/group__para__ml.html</filename>
-    <class kind="struct">rm::para::OrtParam</class>
-    <member kind="variable">
-      <type>OrtParam</type>
-      <name>rm::para::ort_param</name>
-      <anchorfile>d9/d95/group__para__ml.html</anchorfile>
-      <anchor>ga4cfe3a84398c7b14f9b2d447ee7ecbf7</anchor>
+    <class kind="struct">rm::PreprocessOptions</class>
+    <class kind="struct">rm::PostprocessOptions</class>
+    <class kind="class">rm::OnnxNet</class>
+    <class kind="class">rm::ClassificationNet</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::OrtProvider</name>
+      <anchorfile>dc/d73/group__ml__ort.html</anchorfile>
+      <anchor>gaa3efd1984486e48014bbcfc54e432e84</anchor>
       <arglist></arglist>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">CPU</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">CUDA</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">TensorRT</enumvalue>
+      <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">OpenVINO</enumvalue>
     </member>
   </compound>
   <compound kind="group">
@@ -12730,6 +12788,7 @@
     <class kind="struct">rm::PublishedDataSet</class>
     <class kind="class">rm::Publisher</class>
     <class kind="class">rm::Publisher&lt; TransportID::UDP_UADP &gt;</class>
+    <class kind="class">rm::ServerView</class>
     <class kind="class">rm::Server</class>
     <class kind="struct">rm::FieldMetaData</class>
     <class kind="class">rm::Subscriber</class>
@@ -14060,10 +14119,10 @@
     <title>工业自动化通信协议 OPC UA</title>
     <filename>db/dba/tutorial_modules_opcua.html</filename>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="服务器/客户端">opcua_server_client</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="发布/订阅">opcua_pub_sub</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="参数加载">opcua_parameters</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="从 XML 配置 OPC UA">opcua_nodeset_compiler</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="2. 服务器/客户端">opcua_server_client</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="3. 发布/订阅">opcua_pub_sub</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="4.1 参数加载">opcua_parameters</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="4.2 从 XML 配置 OPC UA">opcua_nodeset_compiler</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_serial</name>

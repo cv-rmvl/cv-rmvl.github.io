@@ -253,7 +253,7 @@ $(function(){ initResizable(false); });
 <div class="line">capture.set(CAMERA_TRIGGER_SOFT); <span class="comment">// 执行一次软触发，仅在软触发模式下有效</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md237"></a>
 2. para 参数加载</h1>
-<p>RMVL 提供了全局的相机参数对象: <a class="el" href="../../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55" title="CameraParam 参数模块">para::camera_param</a> ，详情可参考类 para::CameraParam</p>
+<p>RMVL 提供了全局的相机参数对象: para::camera_param ，详情可参考类 para::CameraParam</p>
 <h1><a class="anchor" id="autotoc_md238"></a>
 3. 示例程序</h1>
 <p>在构建 RMVL 时，需开启 <code>BUILD_EXAMPLES</code> 选项（默认开启）</p>
@@ -308,7 +308,9 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>软触发：</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">auto</span> camera_config = <a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede">rm::GrabMode::Software</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>)</div>
 <div class="line">    <a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(camera_config);</div>
@@ -317,7 +319,7 @@ $(function(){ initResizable(false); });
 <div class="line">    std::thread th([&amp;run]() {</div>
 <div class="line">        <span class="keywordflow">while</span> (run)</div>
 <div class="line">        {</div>
-<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(10));</div>
+<div class="line">            std::this_thread::sleep_for(10ms);</div>
 <div class="line">            capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313">rm::CAMERA_TRIGGER_SOFT</a>); <span class="comment">// 触发</span></div>
 <div class="line">        }</div>
 <div class="line">    });</div>

@@ -6,6 +6,5 @@ var searchData=
   ['armordetectorparam_3',['ArmorDetectorParam',['../d8/d77/structrm_1_1para_1_1ArmorDetectorParam.html',1,'rm::para']]],
   ['armorparam_4',['ArmorParam',['../d8/df0/structrm_1_1para_1_1ArmorParam.html',1,'rm::para']]],
   ['armorpredictor_5',['ArmorPredictor',['../d6/df1/classrm_1_1ArmorPredictor.html',1,'rm']]],
-  ['armorpredictorparam_6',['ArmorPredictorParam',['../dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html',1,'rm::para']]],
-  ['arraytool_7',['ArrayTool',['../d1/d2c/classrm_1_1ArrayTool.html',1,'rm']]]
+  ['armorpredictorparam_6',['ArmorPredictorParam',['../dc/d36/structrm_1_1para_1_1ArmorPredictorParam.html',1,'rm::para']]]
 ];

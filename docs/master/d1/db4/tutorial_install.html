@@ -193,17 +193,15 @@ $(function(){ initResizable(false); });
 <dl class="section note"><dt>注解</dt><dd>以上与相机相关的 SDK 在进行二次封装得到的库都需要链接到 OpenCV。</dd></dl>
 <h3><a class="anchor" id="install_onnxruntime"></a>
 1.4 onnxruntime</h3>
-<p>onnxruntime 库是目前数字识别所依赖的第三方库，如果有需要开启此功能，则需要安装 onnxruntime</p>
 <ul>
-<li>获取压缩包 <div class="fragment"><div class="line">curl -SL https://github.com/microsoft/onnxruntime/releases/download/v1.12.0/onnxruntime-linux-x64-1.12.0.tgz -o onnxruntime-linux-x64-1.12.0.tgz</div>
+<li>获取压缩包，可选择对应的发行版，也可以是 gpu、cuda12 或 cpu 版本，下面以 1.12.0 的 cpu 版本为例 <div class="fragment"><div class="line">curl -SL https://github.com/microsoft/onnxruntime/releases/download/v1.12.0/onnxruntime-linux-x64-1.12.0.tgz -o onnxruntime-linux-x64-1.12.0.tgz</div>
 </div><!-- fragment --></li>
 <li>解压 <div class="fragment"><div class="line">tar -xf onnxruntime-linux-x64-1.12.0.tgz</div>
 </div><!-- fragment --></li>
 <li>安装（复制头文件与库文件） <div class="fragment"><div class="line">sudo mkdir /usr/local/include/onnxruntime</div>
-<div class="line">sudo cp onnxruntime-linux-x64-1.12.0/include/* /usr/local/include/onnxruntime</div>
-<div class="line">sudo cp -r onnxruntime-linux-x64-1.12.0/lib /usr/local</div>
-</div><!-- fragment --></li>
-<li>移除中间文件 <div class="fragment"><div class="line">rm -r onnxruntime-linux-x64-1.12.0 &amp;&amp; rm onnxruntime-linux-x64-1.12.0.tgz</div>
+<div class="line">cd onnxruntime-linux-x64-1.12.0</div>
+<div class="line">sudo cp -r include/* /usr/local/include/onnxruntime</div>
+<div class="line">sudo cp -r lib /usr/local</div>
 </div><!-- fragment --></li>
 </ul>
 <p>至此 onnxruntime 安装完成。</p>

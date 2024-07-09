@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
-<title>RMVL: ONNX-Runtime 分类网络部署库</title>
+<title>RMVL: onnxruntime 多态部署库</title>
 <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -99,23 +99,80 @@ $(function(){ initResizable(false); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">类</a>  </div>
-  <div class="headertitle"><div class="title">ONNX-Runtime 分类网络部署库<div class="ingroups"><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a></div></div></div>
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">onnxruntime 多态部署库<div class="ingroups"><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-ONNX-Runtime 分类网络部署库 的协作图:</div>
+onnxruntime 多态部署库 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d73/group__ml__ort.svg" width="452" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d73/group__ml__ort.svg" width="412" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1f/classrm_1_1OnnxRT.html">rm::OnnxRT</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ONNX-Runtime (Ort) 部署库 <a class="el" href="../../d0/de3/citelist.html#CITEREF_onnx-rt">[7]</a>  <a href="../../d7/d1f/classrm_1_1OnnxRT.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">rm::PreprocessOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">预处理选项  <a href="../../d2/d84/structrm_1_1PreprocessOptions.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">rm::PostprocessOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">后处理选项  <a href="../../d5/da4/structrm_1_1PostprocessOptions.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html">rm::OnnxNet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ONNX-Runtime (Ort) 部署库基类 <a class="el" href="../../d0/de3/citelist.html#CITEREF_onnx-rt">[7]</a>  <a href="../../dc/d1c/classrm_1_1OnnxNet.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de6/classrm_1_1ClassificationNet.html">rm::ClassificationNet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">分类网络推理类  <a href="../../d4/de6/classrm_1_1ClassificationNet.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaa3efd1984486e48014bbcfc54e432e84" id="r_gaa3efd1984486e48014bbcfc54e432e84"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa3efd1984486e48014bbcfc54e432e84">rm::OrtProvider</a> : uint8_t { <a class="el" href="#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">rm::OrtProvider::CPU</a>
+, <a class="el" href="#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">rm::OrtProvider::CUDA</a>
+, <a class="el" href="#ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">rm::OrtProvider::TensorRT</a>
+, <a class="el" href="#ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">rm::OrtProvider::OpenVINO</a>
+ }</td></tr>
+<tr class="memdesc:gaa3efd1984486e48014bbcfc54e432e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ort 提供者  <a href="#gaa3efd1984486e48014bbcfc54e432e84">更多...</a><br /></td></tr>
+<tr class="separator:gaa3efd1984486e48014bbcfc54e432e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="gaa3efd1984486e48014bbcfc54e432e84" name="gaa3efd1984486e48014bbcfc54e432e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3efd1984486e48014bbcfc54e432e84">&#9670;&#160;</a></span>OrtProvider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaa3efd1984486e48014bbcfc54e432e84">rm::OrtProvider</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d5/d47/ort_8h.html">rmvl/ml/ort.h</a>&gt;</code></p>
+
+<p>Ort 提供者 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d" name="ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d"></a>CPU&#160;</td><td class="fielddoc"><p>由 <code>CPU</code> 执行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d" name="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d"></a>CUDA&#160;</td><td class="fielddoc"><p>由 <code>CUDA</code> 执行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5" name="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5"></a>TensorRT&#160;</td><td class="fielddoc"><p>由 <code>TensorRT</code> 执行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f" name="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f"></a>OpenVINO&#160;</td><td class="fielddoc"><p>由 <code>OpenVINO</code> 执行 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

@@ -203,9 +203,9 @@ $(function(){ initResizable(false); });
 \[\|\pmb\varphi(\pmb x_k)\|&lt;\epsilon&#39;\tag{1-8a}\]
 </p>
  或 <p class="formulaDsp">
-\[\|\nabla f(\pmb x_k)\|&lt;\epsilon&quot;\tag{1-8b}\]
+\[\|\nabla f(\pmb x_k)\|&lt;\epsilon&#39;&#39;\tag{1-8b}\]
 </p>
- 为止。 \(\epsilon&#39;\) 和 \(\epsilon&quot;\) 是预先给定的精度。</li>
+ 为止。 \(\epsilon&#39;\) 和 \(\epsilon&#39;&#39;\) 是预先给定的精度。</li>
 </ol>
 <h3><a class="anchor" id="autotoc_md196"></a>
 1.3 改进</h3>
@@ -223,7 +223,7 @@ $(function(){ initResizable(false); });
 <p>以 \(\pmb x_{k+1}\) 代替 \(\pmb x_k\) 重复上述计算过程，直到 \(\|\pmb\varphi(\pmb x_k)\|&lt;\epsilon&#39;\) 或 \(\|\nabla f(\pmb x_k)\|&lt;\epsilon&quot;\) 为止。</p>
 <h3><a class="anchor" id="autotoc_md197"></a>
 1.4 如何使用</h3>
-<p>可参考 <code><a class="el" href="../../d8/db4/group__core__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="无约束非线性最小二乘求解">rm::lsqnonlin</a></code> 函数，例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
+<p>RMVL 提供了改进的 Gauss-Newton 迭代算法，可参考 <code><a class="el" href="../../d8/db4/group__core__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="无约束非线性最小二乘求解">rm::lsqnonlin</a></code> 函数。例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
 \[y=A\sin(\omega t+\varphi_0)+b\]
 </p>
 <p>其中， \(A,\omega,\varphi_0,b\) 是待拟合的参数，不妨统一写为 \(\pmb x=(A,\omega,\varphi_0,b)\)，也就是说我们需要拟合的函数是 </p><p class="formulaDsp">
