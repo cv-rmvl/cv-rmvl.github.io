@@ -1,0 +1,560 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: 最小二乘法</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.0.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">最小二乘法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md189">1. 概念</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md190">2. 超定线性方程组</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md191">3. 示例</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md193">4. 法方程求解最小二乘法</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md194">5. 部署使用</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md196">参考书籍</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>从 <b>向量到子空间距离</b> ，和 <b>构建法方程</b> 两种方式推导了最小二乘法的矩阵表示</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2least__square"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/11/10 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d8/d57/tutorial_modules_interpolation.html">函数插值方法</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d8/dd7/tutorial_modules_lsqnonlin.html">非线性最小二乘</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md189"></a>
+1. 概念</h2>
+<p>最小二乘法诞生于统计学，其最初的目标是使用一条直线拟合一系列离散的点，那么我们该如何寻找这一直线？最小二乘法的原理是使得拟合直线的误差的平方和最小。这里的误差定义成每一个离散的点 \(x_i\)与拟合直线的 <b>距离</b> 。在这一最初的用法中，点到直线的距离能够很直观的描述成点到直线的 <b>垂线</b> 的长度。</p>
+<center></center><center><div class="image">
+<img src="../../line-vertical.png" alt=""/>
+<div class="caption">
+图 1-1 直线的垂线的长度</div></div>
+    </center><center></center><p>如图 1-1 所示，令直线外一点为 \(P\)，直线为 \(l\)，垂线为 \(l_0\)，垂足为点 \(O\)。最小二乘法就是构建一条直线，使得这些点 \(P_i\)到这条直线的距离平方和最小，此时 \(O_i\)点被称为 <b>最小二乘解</b> 。</p>
+<p>让我们拓宽最小二乘这一概念。对于一个向量 \(\pmb\alpha\)所表示的直线，在该直线上是否存在一点 \(Y\)使得 \(Y\)到直线外一点 \(P\)的距离最小？答案是肯定的，并且原理与图 1 完全一致，即构造 \(P\)到直线的垂线，在线性代数中我们引入过 <b>内积</b> 运算，并且得知两个向量 <b>正交</b> （垂直）的时候，二者内积为 \(0\)。</p>
+<dl class="section note"><dt>注解</dt><dd>设 \(V\) 是实数域 \(\mathbb{R}\) 上的线性空间。如果对 \(V\) 中任意两个向量 \(\pmb\alpha\)， \(\pmb\beta\) 都有一个实数（记为 \((\pmb\alpha,\pmb\beta)\)）与它们相对应，并且满足下列各个条件，则实数 \((\pmb\alpha,\pmb\beta)\) 称为向量 \(\pmb\alpha\)， \(\pmb\beta\) 的内积，而线性空间 \(V\) 则称为 <b>实内积空间</b> ，简称 <b>内积空间</b> ：<ul>
+<li>\((\pmb\alpha, \pmb\beta)=(\pmb\beta,\pmb\alpha)\)</li>
+<li>\((k\pmb\alpha,\pmb\beta)=k(\pmb\alpha,\pmb\beta)\)</li>
+<li>\((\pmb\alpha+\pmb\beta,\pmb\gamma)=(\pmb\alpha+\pmb\gamma,\pmb\beta+\pmb\gamma)\)</li>
+<li>\((\pmb\alpha,\pmb\alpha)\geq0，当且仅当\pmb\alpha=\pmb0，等号成立\)</li>
+</ul>
+</dd></dl>
+<p>在初等几何中，点到直线（或平面）上所有点的距离以垂线最短。同样的，对于一个 <b>欧式空间</b> \(V=\mathbb{R}^n\)，一个指定向量 \(\pmb\beta\in V\) 和子空间 \(W\subseteq V\) 的各个向量距离也以 <b>垂线</b> 最短。换句话说，该向量 \(\pmb\beta\) 与子空间 \(W\) 正交，记作 \(\pmb\beta\perp W\)。其中子空间可以表示成</p>
+<p class="formulaDsp">
+\[W=L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_s)\tag{1-1}\]
+</p>
+<p>其中 \(\pmb\alpha_1,\ \pmb\alpha_2,\ \cdots,\ \pmb\alpha_s\) 是一 \(W\) 的一组基。从上式可以推导出，若 \(\exists\pmb\beta\in V\)，使得 \(\pmb\beta\perp W\)，则对于 \(\forall\pmb\alpha\in W\)，均有 \(\pmb\beta\perp\pmb\alpha\)。因此可以写为</p>
+<p class="formulaDsp">
+\[\begin{matrix}
+(\pmb\alpha_1,\pmb\beta)&amp;=&amp;\pmb\alpha_1^T\pmb\beta&amp;=&amp;0\\
+(\pmb\alpha_2,\pmb\beta)&amp;=&amp;\pmb\alpha_2^T\pmb\beta&amp;=&amp;0\\
+\vdots&amp;=&amp;\vdots&amp;=&amp;\vdots\\
+(\pmb\alpha_s,\pmb\beta)&amp;=&amp;\pmb\alpha_s^T\pmb\beta&amp;=&amp;0
+\end{matrix}\tag{1-2a}\]
+</p>
+<p>观察中间一列 \(\pmb\alpha_i^T\pmb\beta\)，可以写成</p>
+<p class="formulaDsp">
+\[
+(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_i)^T\pmb\beta=\pmb 0\tag{1-2b}
+\]
+</p>
+<p>我们先用一个最简单的例子。</p>
+<center></center><center><div class="image">
+<img src="../../vector-vertical.png" alt=""/>
+<div class="caption">
+图 1-2 最小二乘解表示为向量 OP</div></div>
+    </center><center></center><p>对于图 1-2 中使用向量表示的方式，最小二乘解可以表示为向量 \(OP\)的坐标，在这种情况下， \(BP\)与 \(OA\)垂直，即：</p>
+<p class="formulaDsp">
+\[\left(OA,BP\right)=0\tag{1-3}\]
+</p>
+<p>我们令 \(OA=\pmb a\)， \(OB=\pmb b\)，待求向量 \(OP=\pmb y\)，（ \(\pmb a, \pmb b, \pmb y\) 均为列向量）代入公式 \(\text{(1-3)}\) 可以得到</p>
+<p class="formulaDsp">
+\[(\pmb a,\ \pmb y-\pmb b)=0\tag{1-4}\]
+</p>
+<p>其中 \(\pmb y-\pmb b\) 就是公式 \(\text{(1-2a)}\) 中的 \(\pmb\beta\)，写成矩阵形式</p>
+<p class="formulaDsp">
+\[\pmb a^T(\pmb y-\pmb b)=0\tag{1-5}\]
+</p>
+<p>为此我们得到了最小二乘解 \(\pmb y\) 的表达式，这也为后文超定线性方程组的最小二乘解提供了理论基础。</p>
+<h2><a class="anchor" id="autotoc_md190"></a>
+2. 超定线性方程组</h2>
+<p>有时候我们会遇到这一类形如 \(A\pmb x=\pmb b\) 的方程组</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}2x_1+x_2&amp;=1\\x_1-x_2&amp;=0\\x_1+x_2&amp;=2\end{align}\right.\qquad\Leftrightarrow\qquad
+\begin{bmatrix}2&amp;1\\1&amp;-1\\1&amp;1\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}=\begin{bmatrix}1\\0\\2\end{bmatrix}\tag{2-1}\]
+</p>
+<p>这里 \(A=\begin{bmatrix}2&amp;1\\1&amp;-1\\1&amp;1\end{bmatrix}\)， \(\pmb b=(1,0,2)^T\)，在图 1-3 中表示如下。</p>
+<center></center><center><div class="image">
+<img src="../../equations.png" alt=""/>
+<div class="caption">
+图 1-3 超定线性方程组</div></div>
+    </center><center></center><p>一般的，对于一个系数矩阵 \(A=(a_{ij})_{s\times{n}}\)， \(\pmb b=(b_1,b_2,\cdots,b_s)^T\)， \(\pmb x=(x_1,x_2,\cdots,x_s)^T\)，若满足 \(\text{rank}(A)\leq s\) 时，线性方程组没有数值解，但我们希望找到一组 <b>最优解</b> ，衡量此最优解的方法仍然可以采用最小二乘法。设法找出一组解 \(\hat{\pmb x}=(x_1^0,\ x_2^0,\ x_3^0,\ \cdots,\ x_n^0)\) 使得每一项的误差 \(\delta_i\) 平方和最小，如何定量这个误差？能否继续采用上文最小二乘法的点到直线的最短距离的思想作为出发点？答案是肯定的，这里先给出误差平方和的表达式。</p>
+<p class="formulaDsp">
+\[\delta^2=\sum_{i=0}^{s-1}(a_{i1}x_1+a_{i2}x_2+\cdots+a_{in}x_n-b_i)^2\tag{2-2}\]
+</p>
+<p>上式也可以写成</p>
+<p class="formulaDsp">
+\[\delta^2=\sum_{i=0}^{s-1}\left[\left(\sum_{j=1}^na_{ij}x_j\right)-b_i\right]^2\tag{2-3a}\]
+</p>
+<p>或</p>
+<p class="formulaDsp">
+\[\delta^2=\left\|\left(\sum_{j=1}^na_{ij}x_j\right)-b_i\right\|_2^2\tag{2-3b}\]
+</p>
+<dl class="section note"><dt>注解</dt><dd>公式 \(\text{(2-3b)}\) 中出现的形如 \(\left\|A\right\|_2\) 的部分也叫做向量的2-范数。</dd></dl>
+<p>上式的基本想法是，将线性方程组的<span style="color: red">每一个方程</span>在带入 \(\hat{\pmb x}\) 后与右端项 \(b_i\) 作差，即可得到每一项的误差 \(\delta_i\)，我们令 \(\pmb y=A\pmb x\)，则 \(\pmb y\) 当然是个 \(s\) 维列向量，上述平方偏差 \(\delta^2\) 也就是 \(|\pmb y-\pmb b|^2\)，而最小二乘法就是要找一组 \(\hat{\pmb x}\) 使得 \(|\pmb y-\pmb b|^2\) 最小，换句话说，就是要使 \(\pmb y\) 与 \(\pmb b\) 的距离最小。</p>
+<p>到这里，我们需要进一步强化线性方程组及其生成空间的这些概念。</p>
+<p><b>基本概念介绍</b></p>
+<ol type="1">
+<li>对于任意的线性方程组（可以是超定的） \(A\) 是 \(s\times n\)系数矩阵， \(A\) 的列向量组合生成的空间，即 \(x_1\pmb\alpha_1+x_2\pmb\alpha_2+\cdots+x_n\pmb\alpha_n\) 的空间，即代表 \(A\pmb x\) 所生成的空间。同样的，可以写为 \(L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)\)，对于 \(A\pmb x\) 生成的空间，后文简称为<span style="color: red">列空间</span>。使用线性变换的角度进行分析，设 \(T\) 是线性空间 \(V\) 的线性变换，则 <p class="formulaDsp">
+\[T(V)=\{T\pmb\alpha|\pmb\alpha\in V\}\]
+</p>
+是 \(V\) 的子空间，因此方程组的系数矩阵 \(A\) 就可以当做是某个线性变换 \(T(V)\) 对应的矩阵，表示为 <p class="formulaDsp">
+\[(T\pmb\alpha_1,T\pmb\alpha_2,\cdots,T\pmb\alpha_n)=(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)A\]
+</p>
+ \(T(V)\) 的维数叫线性变换 \(T\) 的秩，也可以记为 \(\text{rank}(A)\)。因此列空间也可以被称为<span style="color: red">象子空间</span>；</li>
+<li>对于一般的线性方程组（方程数 \(\leq\)未知数个数 \(n\)）， \(A\pmb x=\pmb0\) 的解（也叫通解）生成的空间 \(\pmb x\) 称为<span style="color: red">解空间</span>。使用线性变换的角度进行分析，设 \(T\) 是线性空间 \(V\) 的线性变换，则集合 <p class="formulaDsp">
+\[K=\{\pmb\alpha\in V|T\pmb\alpha=\pmb0\}\]
+</p>
+是 \(V\) 的子空间，称为线性变换 \(T\) 的核，记作 \(T^{-1}(\pmb0)\)，因此解空间也被称为<span style="color: red">核空间</span>。另外，在方程组中，解空间的极大线性无关组被称为 <b>基础解系</b> ，即解空间的任意一个向量都可由基础解系所线性表出，即 \(\pmb x=k_1\pmb\xi_1+k_2\pmb\xi_2+\cdots+k_t\pmb\xi_t\)，不难得出结论， \(T^{-1}(\pmb0)\) 的维度就是 \(t\)。并且可以证明出如下的 <b>子空间维数定理</b> ：设 \(T\) 是 \(n\) 维线性空间 \(V\) 的线性变换，则一定满足维数关系 <p class="formulaDsp">
+\[\text{dim}T(V)+\text{dim}T^{-1}(\pmb0)=n\]
+</p>
+也可以记为 <p class="formulaDsp">
+\[\text{rank}(A)+t=n\tag{2-4}\]
+</p>
+</li>
+<li>\(\pmb b\) 是方程组右端项，表示列空间之外的一个向量，即在超定线性方程组中， \(\pmb b\notin L(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)\)，因此才具备向量 \(\pmb b\) 到 \(A\pmb x\) 的距离的概念</li>
+</ol>
+<p>让我们继续回到最小二乘解的求解过程中，根据 \(\text{(1-2b)}\) 和 \(\text{(1-4)}\)，类似的，我们可以构建出</p>
+<p class="formulaDsp">
+\[\begin{matrix}
+(\pmb\alpha_1,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_1^T(\pmb y-\pmb b)&amp;=&amp;0\\
+(\pmb\alpha_2,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_2^T(\pmb y-\pmb b)&amp;=&amp;0\\
+\vdots&amp;=&amp;\vdots&amp;=&amp;\vdots\\
+(\pmb\alpha_n,\pmb y-\pmb b)&amp;=&amp;\pmb\alpha_n^T(\pmb y-\pmb b)&amp;=&amp;0\\
+\end{matrix}\tag{2-5}\]
+</p>
+<p>这表示当 \(\pmb y-\pmb b\) 与列空间正交时， \(\pmb y\) 与 \(\pmb b\) 距离最短，与列空间正交就必须要与生成列空间的每一个向量即 \(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n\) 正交。整合后可以得到</p>
+<p class="formulaDsp">
+\[(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n)^T(\pmb y-\pmb b)=\pmb0\tag{2-6}\]
+</p>
+<p>\(\pmb\alpha_1,\pmb\alpha_2,\cdots,\pmb\alpha_n\) 刚好是系数矩阵按列分块的形式，又有 \(\pmb y=A\hat{\pmb x}\) 我们可以得到如下公式。</p>
+<p class="formulaDsp">
+\[
+\begin{align}
+A^T(A\hat{\pmb x}-\pmb b)&amp;=0\\
+A^TA\hat{\pmb x}&amp;=A^T\pmb b
+\end{align}
+\]
+</p>
+<p>经过化简我们最终可以得到</p>
+<p class="formulaDsp">
+\[
+\boxed{\hat{\pmb x}=\left(A^TA\right)^{-1}A^T\pmb b}\tag{2-7}
+\]
+</p>
+<p>这就是最小二乘解所满足的代数方程。</p>
+<h2><a class="anchor" id="autotoc_md191"></a>
+3. 示例</h2>
+<p>下面给出 3 个示例，不直接使用公式 \(\text{(2-7)}\)，通过几何或者其他手段来表示最小二乘解。</p>
+<p><span style="color: green"><b>示例 1</b></span></p>
+<p>问：求数 \(1,\ 2\) 的最小二乘解</p>
+<p>显而易见，求算术平均数即可得到最小二乘解为 \(\frac32\)。但为何呢？</p>
+<p>我们将其转化为一个线性方程组</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+x_1&amp;=1\\
+x_1&amp;=2
+\end{align}\right.\tag{3-1}\]
+</p>
+<p>因此，系数矩阵 \(A=(1,\ 1)^T\)，列空间 \(\pmb y=A\pmb x=(x_1,\ x_1)\)，右端项为 \(\pmb b=(1,\ 2)^T\)。可以画出一个平面笛卡尔坐标系，以表示这一列空间和指定向量 \(\pmb b\)，如图 2-1，满足</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+x&amp;=x_1\\
+y&amp;=x_1
+\end{align}\right.\tag{3-2}\]
+</p>
+<p>这是一个参数方程，消去 \(x_1\) 可以得到 \(y=x\)，这就是系数矩阵 \(A=(1,\ 1)^T\) 所生成的列空间。</p>
+<center></center><center><div class="image">
+<img src="../../eg1.png" alt=""/>
+<div class="caption">
+图 2-1 二维列空间的最小二乘解几何解释</div></div>
+    </center><center></center><p>相当于现在需要在 \(y=x\) 上找到一个点，使得其到 \(\pmb b\) 点的距离最短，这是初等几何的内容，做垂线即可，最终得到交点的坐标</p>
+<p class="formulaDsp">
+\[\hat y=(\frac32,\frac32)\tag{3-3}\]
+</p>
+<p>代入参数方程 \(\text{(3-2)}\)，可以得到</p>
+<p class="formulaDsp">
+\[x_1=\frac32\]
+</p>
+<p><span style="color: green"><b>示例 2</b></span></p>
+<p>题目：求公式 \(\text{(2-1)}\) 的最小二乘解</p>
+<p>系数矩阵： \(A=\begin{bmatrix}2&amp;1\\1&amp;-1\\1&amp;1\end{bmatrix}\)，其生成的列空间为图 2-2 中<span style="color: orange">橙色的平面</span>，记作平面 \(\alpha\)，并对 \(A\) 作列分块得到 \(A=(\pmb\alpha_1,\pmb\alpha_2)\)</p>
+<p>列空间外向量（右端项）： \(\pmb b=(1,0,2)^T\)</p>
+<center></center><center><div class="image">
+<img src="../../eg2.png" alt=""/>
+<div class="caption">
+图 2-2 三维列空间的最小二乘解几何解释</div></div>
+    </center><center></center><p>需要满足 \((\pmb y-\pmb b)\perp\alpha\)，则需要分别满足 \((\pmb y-\pmb b)\perp\pmb\alpha_1\) 和 \((\pmb y-\pmb b)\perp\pmb\alpha_2\)，下面使用几何法对最小二乘法的原理进行验证。</p>
+<p>① 求平面 \(\alpha\) 的法向量 \(\pmb n\)</p>
+<p class="formulaDsp">
+\[
+\pmb n=\left|\begin{matrix}\pmb i&amp;\pmb j&amp;\pmb k\\1&amp;-1&amp;1\\2&amp;1&amp;1\end{matrix}\right|
+=-2\pmb i+\pmb j+3\pmb k=\begin{bmatrix}-2\\1\\3\end{bmatrix}\tag{3-4}
+\]
+</p>
+<p>② 根据约束条件列方程</p>
+<p>满足 2 个 <span style="color: red"><b>约束条件</b></span> ，即</p>
+<ul>
+<li>\(\pmb y-\pmb b=k\pmb n\)，表示 \(\pmb y-\pmb b\) 是平面 \(\alpha\) 的一个法向量</li>
+<li>\(\pmb y=x_1\pmb\alpha_1+x_2\pmb\alpha_2\)，表示 \(\pmb y\in L(\pmb\alpha_1,\pmb\alpha_2)\)，即 \(\pmb y\) 是列空间中的一个向量</li>
+</ul>
+<p>联立得到</p>
+<p class="formulaDsp">
+\[k\pmb n+\pmb b=x_1\pmb\alpha_1+x_2\pmb\alpha_2\tag{3-5a}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+-2k+1&amp;=2x_1+x_2\\k&amp;=x_1-x_2\\3k+2&amp;=x_1+x_2
+\end{align}\right.\tag{3-5b}\]
+</p>
+<p>③ 求解 \(\hat{\pmb x}\)</p>
+<p>这是一个关于 \(k,x_1,x_2\) 的线性方程组，解得</p>
+<p class="formulaDsp">
+\[X=(-\frac27,\frac37,\frac57)^T\tag{3-6}\]
+</p>
+<p>因此我们得到了满足以上 <span style="color: red"><b>约束条件</b></span> 的解</p>
+<p class="formulaDsp">
+\[\hat{\pmb x}=\left(\frac37,\frac57\right)^T\tag{3-7}\]
+</p>
+<p><span style="color: green"><b>示例 3</b></span></p>
+<p>题目：使用形如 \(f(t)=a_0+a_1t\) 的曲线在已知点集上完成拟合（线性拟合）</p>
+<center> 表 3-1 已知点集 </center><p class="formulaDsp">
+\[\begin{array}{c|cccc}\text{下标}i&amp;0&amp;1&amp;2&amp;3\\\hline t_i&amp;1&amp;2&amp;3&amp;4\\f(t_i)&amp;0&amp;2&amp;1&amp;3\end{array}\]
+</p>
+<p>上文研究的 <b>线性空间</b> 都是定义在数域 \(\mathbb P^n\) 上的欧式空间，实际上，对于系数属于 \(\mathbb P\)，而未定元为 \(t\) 的所有次数小于 \(n\) 的多项式集合也构成一个 <b>线性空间</b> ，记作</p>
+<p class="formulaDsp">
+\[\mathbb P{[t]}_n=a_0+a_1t+a_2t^2+\cdots+a_{n-1}t^{n-1}=\sum_{i=0}^{n-1}a_it^i\tag{3-8}\]
+</p>
+<p>可以很容易的找到一组基</p>
+<p class="formulaDsp">
+\[\left\{\begin{matrix}
+\phi_0(t)&amp;=&amp;1\\\phi_1(t)&amp;=&amp;t\\\phi_2(t)&amp;=&amp;t^2\\\vdots&amp;=&amp;\vdots\\\phi_{n-1}(t)&amp;=&amp;t^{n-1}\\
+\end{matrix}\right.\tag{3-9}\]
+</p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>若不加说明，后文对 \(\phi_i(t)\) 简记为 \(\phi_i\)</li>
+<li>要证明 \(\phi_0,\phi_1,\cdots,\phi_{n-1}\) 是一组基，则要证明他们线性无关。</li>
+<li>此处的线性无关表示任意的 \(\phi_i\) 都不能被其余所有 \(\phi_j\) 所表示，其中 \(i\neq j\)。比如说 \(t\) 不能被 \(1\) 和 \(t^2,\ t^3,\ \cdots\) 所表示。</li>
+<li>从定义上证明线性无关，需要证明 <p class="formulaDsp">
+\[a_0+a_1t+a_2t^2+\cdots+a_{n-1}t^{n-1}=\sum_{i=0}^{n-1}a_it^i=0\]
+</p>
+ <b>只有零解</b> ，即 \(a_0=a_1=a_2=\cdots=a_{n-1}=0\)，这是显然的。</li>
+<li>没有定义内积运算，因此这组基 <b>没有正交的概念</b> 。</li>
+</ul>
+</dd></dl>
+<p><span style="color: teal">上面都是一些概念性的介绍，跟后文求解最小二乘解无关</span>。回到<span style="color: green">示例 3</span>的这一问题本身，我们可以根据表 3-1 的信息，得到</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\phi_0(t_0)a_0+\phi_1(t_0)a_1&amp;=f(t_0)\\
+\phi_0(t_1)a_0+\phi_1(t_1)a_1&amp;=f(t_1)\\
+\phi_0(t_2)a_0+\phi_1(t_2)a_1&amp;=f(t_2)\\
+\phi_0(t_3)a_0+\phi_1(t_3)a_1&amp;=f(t_3)
+\end{align}\right.\tag{3-10a}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}a_0+a_1&amp;=0\\a_0+2a_1&amp;=2\\a_0+3a_1&amp;=1\\a_0+4a_1&amp;=3\end{align}\right.\tag{3-10b}\]
+</p>
+<p>这就转化为了一个超定线性方程组 \(A\pmb a=\pmb f\)，求解可直接使用公式 \(\text{(2-7)}\)，一般的，其系数矩阵可以表示为</p>
+<p class="formulaDsp">
+\[A=\begin{bmatrix}
+\phi_0(t_0)&amp;\phi_1(t_0)&amp;\cdots&amp;\phi_{n-1}(t_0)\\
+\phi_0(t_1)&amp;\phi_1(t_1)&amp;\cdots&amp;\phi_{n-1}(t_1)\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+\phi_0(t_{s-1})&amp;\phi_1(t_{s-1})&amp;\cdots&amp;\phi_{n-1}(t_{s-1})
+\end{bmatrix}\qquad\pmb f=\begin{bmatrix}
+f(t_0)\\f(t_1)\\\vdots\\f(t_{s-1})\end{bmatrix}\tag{3-11}\]
+</p>
+<hr  />
+<p>后文将给出另外一种描述最小二乘法的做法，这种做法有别于上面构造向量与子空间垂直的方式，通过对误差平方和直接求其最小值来得到最小二乘解（两种方式结果均能推导出公式 \(\text{(2-7)}\)，但出发点不同）。此外，要介绍的这个解法也同样适用于整个线性空间（包括欧式空间、多项式空间等线性空间）。</p>
+<h2><a class="anchor" id="autotoc_md193"></a>
+4. 法方程求解最小二乘法</h2>
+<p>相关类 <a class="el" href="../../d0/d80/classrm_1_1CurveFitter.html" title="曲线拟合器">rm::CurveFitter</a></p>
+<p>后文会以多项式空间为例，从 \(\delta^2\) 的极值（最小值）入手，通过对该误差平方和求导数的方式获得该最优解，这也是数值分析教材中普遍采用的做法。在本小节后，会使用这一方法求解<span style="color: green"><b>示例 3</b></span>的问题。</p>
+<p>回顾公式 \(\text{(2-3b)}\)： \(\sum\limits_{j=1}^na_{ij}x_j\) 的部分，这是对应于欧式空间 \(\mathbb R^n\) 的误差平方和的写法，这表示生成的位于<span style="color: red">列空间</span>中的向量在基下的第 \(i\) 个分量（坐标）。对于多项式空间 \(\mathbb R{[t]}_n\)，这部分的写法为 \(a_0+a_1t+\cdots+a_{n-1}t^{n-1}=\sum\limits_{j=0}^{n-1}a_jt^j\)。那么对于包含 \(s\) 个已知点的集合（每个点包含 \(t_i\) 和 \(f(t_i)\) 两部分），使用 \(\mathbb R{[t]}_n\) 即 \(\sum\limits_{j=0}^{n-1}a_jt^j=\sum\limits_{j=0}^{n-1}a_j\phi_j(t_i)\) 的多项式来拟合这些点集，其最小二乘解设为 \(f^*(t)\)，此时的误差平方和的最小值可以表示成</p>
+<p class="formulaDsp">
+\[\delta_\min^2=\sum_{i=0}^{s-1}\left[f(t_i)-f^*(t_i)\right]^2=\min\sum_{i=0}^{s-1}\left[f(t_i)-\sum\limits_{j=0}^{n-1}a_j\phi_j(t_i)\right]^2\tag{4-1}\]
+</p>
+<p>要求解 \(a_0,a_1,\cdots,a_{n-1}\)，这相当于求多元函数</p>
+<p class="formulaDsp">
+\[F(a_0,a_1,\cdots,a_{n-1})=\sum_{i=0}^{s-1}\left[f(t_i)-\sum_{j=0}^{n-1}a_j\phi_j(t_i)\right]^2\tag{4-2}\]
+</p>
+<p>的极小值点。按照求极值的必要条件，可以对上述多元函数求偏导，令其为 \(0\) 有</p>
+<p class="formulaDsp">
+\[\frac{\partial F}{\partial a_k}=2\sum_{i=0}^{s-1}\left[f(t_i)-\sum_{j=0}^{n-1}a_j\phi_j(t_i)\right][-\phi_k(t_i)]=0\qquad(k=0,1,\cdots,n-1),\]
+</p>
+<p>整理为</p>
+<p class="formulaDsp">
+\[\sum_{j=0}^{n-1}\left[\sum_{i=0}^{s-1}\phi_k(t_i)\phi_j(t_i)\right]a_j=\sum_{i=0}^{s-1}\phi_k(t_i)f(t_i)\qquad(k=0,1,\cdots,n-1)\tag{4-3}\]
+</p>
+<p>不同的 2 个数字向量的内积定义为 \((\pmb\alpha,\pmb\beta)=\sum\limits_{i=0}^sa_ib_i\)，同样的，多项式不同的 2 个分量（例如 \(\phi_1(t)=t\) 和 \(\phi_2(t)=t^2\) 就是不同的分量）之间的内积可以定义为 \((\phi_p(t),\phi_q(t))=\sum\limits_{i=0}^{s-1}\phi_p(t_i)\phi_q(t_i)\)，简记为 \((\phi_p,\phi_q)\)。则有</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\sum_{i=0}^{s-1}\phi_k(t_i)\phi_j(t_i)&amp;=(\phi_k,\phi_j)\\
+\sum_{i=0}^{s-1}\phi_k(t_i)f(t_i)&amp;=(\phi_k,f)\equiv d_k\\
+\end{align}\right.\tag{4-4}\]
+</p>
+<p>于是公式 \(\text{(4-3)}\) 可以写成</p>
+<p class="formulaDsp">
+\[\sum_{j=0}^{n-1}(\phi_k,\phi_j)a_j=d_k\qquad(k=0,1,\cdots,n-1)\tag{4-5a}\]
+</p>
+<p>或者展开写为</p>
+<p class="formulaDsp">
+\[(\phi_k,\phi_0)a_0+(\phi_k,\phi_1)a_1+\cdots+(\phi_k,\phi_{n-1})a_{n-1}=d_k\qquad(k=0,1,\cdots,n-1)\tag{4-5b}\]
+</p>
+<p>对每一个 \(k\) 值，可以一并写成如下形式</p>
+<p class="formulaDsp">
+\[\left\{\begin{matrix}
+(\phi_0,\phi_0)a_0&amp;+&amp;(\phi_0,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_0,\phi_{n-1})a_{n-1}&amp;=&amp;d_0\\
+(\phi_1,\phi_0)a_0&amp;+&amp;(\phi_1,\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_1,\phi_{n-1})a_{n-1}&amp;=&amp;d_1\\
+\vdots&amp;&amp;\vdots&amp;&amp;&amp;&amp;\vdots&amp;=&amp;\vdots\\
+(\phi_{n-1},\phi_0)a_0&amp;+&amp;(\phi_{n-1},\phi_1)a_1&amp;+&amp;\cdots&amp;+&amp;(\phi_{n-1},\phi_{n-1})a_{n-1}&amp;=&amp;d_{n-1}\\
+\end{matrix}\right.\tag{4-5c}\]
+</p>
+<p>上式称为 \(a_0,a_1,\cdots,a_{n-1}\) 的<span style="color: red">法方程（组）</span>，是 \(n\) 阶线性方程组，其系数矩阵是</p>
+<p class="formulaDsp">
+\[G=\begin{bmatrix}
+(\phi_0,\phi_0)&amp;(\phi_0,\phi_1)&amp;\cdots&amp;(\phi_0,\phi_{n-1})\\
+(\phi_1,\phi_0)&amp;(\phi_1,\phi_1)&amp;\cdots&amp;(\phi_1,\phi_{n-1})\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+(\phi_{n-1},\phi_0)&amp;(\phi_{n-1},\phi_1)&amp;\cdots&amp;(\phi_{n-1},\phi_{n-1})\\
+\end{bmatrix}\tag{4-6}\]
+</p>
+<p>对于 \((\phi_p,\phi_q)\)，依照公式 \(\text{(4-4)}\)，可以写成矩阵的表示方式，即</p>
+<p class="formulaDsp">
+\[\begin{align}(\phi_p,\phi_q)&amp;=\sum_{i=0}^{s-1}\phi_p(t_i)\phi_q(t_i)\\&amp;=[\phi_p(t_0),\phi_p(t_1),\cdots,\phi_p(t_{s-1})]
+\begin{bmatrix}\phi_q(t_0)\\\phi_q(t_1)\\\vdots\\\phi_q(t_{s-1})\end{bmatrix}\end{align}\tag{4-7}\]
+</p>
+<p>因此对法方程系数矩阵 \(G\) 的第 \(k\ (k=0,1,\cdots,n-1)\) 行，有</p>
+<p class="formulaDsp">
+\[[(\phi_k,\phi_0),(\phi_k,\phi_1),\cdots,(\phi_k,\phi_{n-1})]\\=[\phi_k(t_0),\phi_k(t_1),\cdots,\phi_k(t_{s-1})]
+\begin{bmatrix}\phi_0(t_0)&amp;\phi_1(t_0)&amp;\cdots&amp;\phi_{n-1}(t_0)\\\phi_0(t_1)&amp;\phi_1(t_1)&amp;\cdots&amp;\phi_{n-1}(t_1)\\\vdots&amp;\vdots
+&amp;&amp;\vdots\\\phi_0(t_{s-1})&amp;\phi_1(t_{s-1})&amp;\cdots&amp;\phi_{n-1}(t_{s-1})\end{bmatrix}\tag{4-8}\]
+</p>
+<p>将 \(k=0,1,\cdots,n-1\) 的行向量拼起来，得到</p>
+<p class="formulaDsp">
+\[\begin{align}G&amp;=\begin{bmatrix}
+(\phi_0,\phi_0)&amp;(\phi_0,\phi_1)&amp;\cdots&amp;(\phi_0,\phi_{n-1})\\
+(\phi_1,\phi_0)&amp;(\phi_1,\phi_1)&amp;\cdots&amp;(\phi_1,\phi_{n-1})\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+(\phi_{n-1},\phi_0)&amp;(\phi_{n-1},\phi_1)&amp;\cdots&amp;(\phi_{n-1},\phi_{n-1})\\
+\end{bmatrix}\\&amp;=\begin{bmatrix}
+\phi_0(t_0)&amp;\phi_0(t_1)&amp;\cdots&amp;\phi_0(t_{s-1})\\
+\phi_1(t_0)&amp;\phi_1(t_1)&amp;\cdots&amp;\phi_1(t_{s-1})\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+\phi_{n-1}(t_0)&amp;\phi_{n-1}(t_1)&amp;\cdots&amp;\phi_{n-1}(t_{s-1})\\
+\end{bmatrix}\begin{bmatrix}
+\phi_0(t_0)&amp;\phi_1(t_0)&amp;\cdots&amp;\phi_{n-1}(t_0)\\
+\phi_0(t_1)&amp;\phi_1(t_1)&amp;\cdots&amp;\phi_{n-1}(t_1)\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+\phi_0(t_{s-1})&amp;\phi_1(t_{s-1})&amp;\cdots&amp;\phi_{n-1}(t_{s-1})
+\end{bmatrix}\end{align}\tag{4-9}\]
+</p>
+<p>将公式 \(\text{(3-11)}\) 中 \(A\) 的矩阵表示方式代入 \(\text{(4-9)}\) 可以得到 \(G=A^TA\)，并且右端项 \(\pmb d=A^T\pmb f\)，代入公式 \(\text{(4-5)}\) 可以得到</p>
+<p class="formulaDsp">
+\[A^TA\pmb a=A^T\pmb f\tag{4-10}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[\boxed{\hat{\pmb a}=\left(A^TA\right)^{-1}A^T\pmb f}\tag{4-11}\]
+</p>
+<p>这与公式 \(\text{(2-7)}\) 完全一致。</p>
+<p>此外，对于形如 \(G\pmb a=\pmb d\ (G=A^TA)\) 的方程组，我们在求解的时候可以使用平方根法，即 Cholesky 方法进行求解，OpenCV 中对应的枚举类型为 <code>cv::DECOMP_CHOLESKY</code>。</p>
+<p>对于<span style="color: green"><b>示例 3</b></span>，可以依次计算出</p>
+<p class="formulaDsp">
+\[\begin{align}
+(\phi_0,\phi_0)&amp;=\sum_{i=0}^3\phi_0(t_i)\phi_0(t_i)=\sum_{i=0}^31\times1=4\\
+(\phi_1,\phi_0)=(\phi_0,\phi_1)&amp;=\sum_{i=0}^3\phi_0(t_i)\phi_1(t_i)=\sum_{i=0}^31\times t_i=1+2+3+4=10\\
+(\phi_1,\phi_1)&amp;=\sum_{i=0}^3\phi_1(t_i)\phi_1(t_i)=\sum_{i=0}^3t_i\times t_i=1+4+9+16=30\\
+d_0=(\phi_0,f)&amp;=\sum_{i=0}^3\phi_0(t_i)f(t_i)=\sum_{i=0}^31\times f(t_i)=0+2+1+3=6\\
+d_1=(\phi_1,f)&amp;=\sum_{i=0}^3\phi_1(t_i)f(t_i)=\sum_{i=0}^3t_i\times f(t_i)\\&amp;=0+2\times2+3\times1+4\times3=19\\
+\end{align}\tag{4-12}\]
+</p>
+<p>得到</p>
+<p class="formulaDsp">
+\[\begin{bmatrix}4&amp;10\\10&amp;30\end{bmatrix}\hat{\pmb a}=
+\begin{bmatrix}6\\19\end{bmatrix}\tag{4-13}\]
+</p>
+<p>解得： \(\left\{\begin{align}a_0&amp;=-0.5\\a_1&amp;=0.8\end{align}\right.\)，即拟合曲线为 \(y=-0.5+0.8t\)，在图像中展示，如下。</p>
+<center></center><center><div class="image">
+<img src="../../eg3.png" alt=""/>
+<div class="caption">
+图 4-1 拟合曲线</div></div>
+    </center><center></center><h2><a class="anchor" id="autotoc_md194"></a>
+5. 部署使用</h2>
+<p>OpenCV 中提供了最小二乘法求解的函数 <code>cv::solve()</code>，并设置有 2 个相关的成员函数，其函数原型如下。此外可参考 <a href="https://docs.opencv.org/4.x/d2/de8/group__core__array.html#ga12b43690dbd31fed96f213eefead2373">cv::solve</a> 的 OpenCV 手册。</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> cv::solve(</div>
+<div class="line">    InputArray src1,</div>
+<div class="line">    InputArray src2,</div>
+<div class="line">    OutputArray dst,</div>
+<div class="line">    <span class="keywordtype">int</span> flags = DECOMP_LU </div>
+<div class="line">);</div>
+</div><!-- fragment --><hr  />
+<p>有关递推最小二乘法的介绍可参考 <a class="el" href="../../d3/ded/tutorial_extra_spi_rune_predictor.html">k 步前向预估神符预测</a> 。</p>
+<h3><a class="anchor" id="autotoc_md196"></a>
+参考书籍</h3>
+<p><a class="el" href="../../d0/de3/citelist.html#CITEREF_tongji_linear_algebra">[10]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_luo2013matrix">[11]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_numerical_analysis">[12]</a> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

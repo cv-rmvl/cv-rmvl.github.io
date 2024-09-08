@@ -1,0 +1,517 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: rm::RungeKutta类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.4.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d5/d26/classrm_1_1RungeKutta.html">RungeKutta</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="../../d3/d00/classrm_1_1RungeKutta-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::RungeKutta类 参考<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> &raquo; <a class="el" href="../../de/d06/group__core__numcal.html">数值计算模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Butcher 表形式的常微分方程（组）数值求解器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/numcal.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::RungeKutta 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d08/classrm_1_1RungeKutta__inherit__graph.svg" width="427" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::RungeKutta 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/d79/classrm_1_1RungeKutta__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aff32dd7957d117fc7aa76631a22e8e5c" id="r_aff32dd7957d117fc7aa76631a22e8e5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff32dd7957d117fc7aa76631a22e8e5c">RungeKutta</a> (const <a class="el" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">Odes</a> &amp;fs, const std::vector&lt; double &gt; &amp;p, const std::vector&lt; double &gt; &amp;lambda, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;r)</td></tr>
+<tr class="memdesc:aff32dd7957d117fc7aa76631a22e8e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一阶常微分方程（组）数值求解器对象，设置初值请参考 <a class="el" href="#a30bb8cfe97d628d0fd69bc3505feac4d">init</a> 方法  <br /></td></tr>
+<tr class="separator:aff32dd7957d117fc7aa76631a22e8e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bb8cfe97d628d0fd69bc3505feac4d" id="r_a30bb8cfe97d628d0fd69bc3505feac4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30bb8cfe97d628d0fd69bc3505feac4d">init</a> (double t0, const std::vector&lt; double &gt; &amp;x0)</td></tr>
+<tr class="memdesc:a30bb8cfe97d628d0fd69bc3505feac4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置常微分方程（组）的初值  <br /></td></tr>
+<tr class="separator:a30bb8cfe97d628d0fd69bc3505feac4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8698d72c9272ec992a78843997f3053b" id="r_a8698d72c9272ec992a78843997f3053b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8698d72c9272ec992a78843997f3053b">init</a> (double t0, std::vector&lt; double &gt; &amp;&amp;x0)</td></tr>
+<tr class="memdesc:a8698d72c9272ec992a78843997f3053b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置常微分方程（组）的初值  <br /></td></tr>
+<tr class="separator:a8698d72c9272ec992a78843997f3053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2f43ad444860b164c3b7e578d9a0e7" id="r_a1b2f43ad444860b164c3b7e578d9a0e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b2f43ad444860b164c3b7e578d9a0e7">solve</a> (double h, std::size_t n)</td></tr>
+<tr class="memdesc:a1b2f43ad444860b164c3b7e578d9a0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算常微分方程（组）的数值解  <br /></td></tr>
+<tr class="separator:a1b2f43ad444860b164c3b7e578d9a0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25e82c6ef58299d52a708cad463d636" id="r_af25e82c6ef58299d52a708cad463d636"><td class="memItemLeft" align="right" valign="top">std::generator&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af25e82c6ef58299d52a708cad463d636">generate</a> (double h, std::size_t n)</td></tr>
+<tr class="memdesc:af25e82c6ef58299d52a708cad463d636"><td class="mdescLeft">&#160;</td><td class="mdescRight">常微分方程（组）数值解生成器  <br /></td></tr>
+<tr class="separator:af25e82c6ef58299d52a708cad463d636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a371f3809c0b58e0260cb6a0790c5ae94" id="r_a371f3809c0b58e0260cb6a0790c5ae94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">Odes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a371f3809c0b58e0260cb6a0790c5ae94">_fs</a></td></tr>
+<tr class="memdesc:a371f3809c0b58e0260cb6a0790c5ae94"><td class="mdescLeft">&#160;</td><td class="mdescRight">一阶常微分方程组的函数对象 \(\dot{\pmb x}=\pmb F(t, \pmb x)\)  <br /></td></tr>
+<tr class="separator:a371f3809c0b58e0260cb6a0790c5ae94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce2389694fb866ecf4892161c466579" id="r_afce2389694fb866ecf4892161c466579"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afce2389694fb866ecf4892161c466579">_t0</a></td></tr>
+<tr class="memdesc:afce2389694fb866ecf4892161c466579"><td class="mdescLeft">&#160;</td><td class="mdescRight">初值的自变量 \(t\)  <br /></td></tr>
+<tr class="separator:afce2389694fb866ecf4892161c466579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa51e3a065a6bca6e362d38ef784bd0" id="r_affa51e3a065a6bca6e362d38ef784bd0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affa51e3a065a6bca6e362d38ef784bd0">_x0</a></td></tr>
+<tr class="memdesc:affa51e3a065a6bca6e362d38ef784bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">初值的因变量 \(\pmb x(t)\)  <br /></td></tr>
+<tr class="separator:affa51e3a065a6bca6e362d38ef784bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63884fdc0452a1674cc2869fd8315570" id="r_a63884fdc0452a1674cc2869fd8315570"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63884fdc0452a1674cc2869fd8315570">_p</a></td></tr>
+<tr class="memdesc:a63884fdc0452a1674cc2869fd8315570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Butcher 表 \(\pmb p\) 向量  <br /></td></tr>
+<tr class="separator:a63884fdc0452a1674cc2869fd8315570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9add1c1e4ef7a0911b6122ee29c0c8c4" id="r_a9add1c1e4ef7a0911b6122ee29c0c8c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9add1c1e4ef7a0911b6122ee29c0c8c4">_lambda</a></td></tr>
+<tr class="memdesc:a9add1c1e4ef7a0911b6122ee29c0c8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Butcher 表 \(\pmb\lambda\) 向量  <br /></td></tr>
+<tr class="separator:a9add1c1e4ef7a0911b6122ee29c0c8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8038d989cffbf895531de3427d76adc4" id="r_a8038d989cffbf895531de3427d76adc4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8038d989cffbf895531de3427d76adc4">_r</a></td></tr>
+<tr class="memdesc:a8038d989cffbf895531de3427d76adc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Butcher 表 \(R\) 矩阵  <br /></td></tr>
+<tr class="separator:a8038d989cffbf895531de3427d76adc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Butcher 表形式的常微分方程（组）数值求解器 </p>
+<ul>
+<li>使用 Runge-Kutta 法求解常微分方程（组），算法介绍见 <a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a></li>
+<li>该 Runge-Kutta 数值求解器为通用求解器，提供了一般的 Runge-Kutta 法求解常微分方程（组）的接口 </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aff32dd7957d117fc7aa76631a22e8e5c" name="aff32dd7957d117fc7aa76631a22e8e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff32dd7957d117fc7aa76631a22e8e5c">&#9670;&#160;</a></span>RungeKutta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::RungeKutta::RungeKutta </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">Odes</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lambda</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>r</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建一阶常微分方程（组）数值求解器对象，设置初值请参考 <a class="el" href="#a30bb8cfe97d628d0fd69bc3505feac4d">init</a> 方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td>常微分方程（组） \(\pmb x&#39;=\pmb F(t,\pmb x)\) 的函数对象 \(\pmb F(t,\pmb x)\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Butcher 表 \(\pmb p\) 向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lambda</td><td>Butcher 表 \(\pmb\lambda\) 向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Butcher 表 \(R\) 矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af25e82c6ef58299d52a708cad463d636" name="af25e82c6ef58299d52a708cad463d636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25e82c6ef58299d52a708cad463d636">&#9670;&#160;</a></span>generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::generator&lt; std::vector&lt; double &gt; &gt; rm::RungeKutta::generate </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>常微分方程（组）数值解生成器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>步长 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>迭代次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>从初始位置开始迭代计算的生成器，初值不会被 <code>co_yield</code>，共生成 \(n\) 个数值解 </dd></dl>
+
+</div>
+</div>
+<a id="a30bb8cfe97d628d0fd69bc3505feac4d" name="a30bb8cfe97d628d0fd69bc3505feac4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30bb8cfe97d628d0fd69bc3505feac4d">&#9670;&#160;</a></span>init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::RungeKutta::init </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置常微分方程（组）的初值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t0</td><td>初始位置的自变量 \(t_0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始位置的因变量 \(\pmb x(t_0)\) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8698d72c9272ec992a78843997f3053b" name="a8698d72c9272ec992a78843997f3053b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8698d72c9272ec992a78843997f3053b">&#9670;&#160;</a></span>init() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::RungeKutta::init </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置常微分方程（组）的初值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t0</td><td>初始位置的自变量 \(t_0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始位置的因变量 \(\pmb x(t_0)\) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b2f43ad444860b164c3b7e578d9a0e7" name="a1b2f43ad444860b164c3b7e578d9a0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2f43ad444860b164c3b7e578d9a0e7">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; double &gt; &gt; rm::RungeKutta::solve </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算常微分方程（组）的数值解 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>步长 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>迭代次数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>从初始位置开始迭代 \(n\) 次后共 \(n+1\) 个数值解，自变量可通过 \(t_0+ih\) 计算得到 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a371f3809c0b58e0260cb6a0790c5ae94" name="a371f3809c0b58e0260cb6a0790c5ae94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371f3809c0b58e0260cb6a0790c5ae94">&#9670;&#160;</a></span>_fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">Odes</a> rm::RungeKutta::_fs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一阶常微分方程组的函数对象 \(\dot{\pmb x}=\pmb F(t, \pmb x)\) </p>
+
+</div>
+</div>
+<a id="a9add1c1e4ef7a0911b6122ee29c0c8c4" name="a9add1c1e4ef7a0911b6122ee29c0c8c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9add1c1e4ef7a0911b6122ee29c0c8c4">&#9670;&#160;</a></span>_lambda</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; rm::RungeKutta::_lambda</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Butcher 表 \(\pmb\lambda\) 向量 </p>
+
+</div>
+</div>
+<a id="a63884fdc0452a1674cc2869fd8315570" name="a63884fdc0452a1674cc2869fd8315570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63884fdc0452a1674cc2869fd8315570">&#9670;&#160;</a></span>_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; rm::RungeKutta::_p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Butcher 表 \(\pmb p\) 向量 </p>
+
+</div>
+</div>
+<a id="a8038d989cffbf895531de3427d76adc4" name="a8038d989cffbf895531de3427d76adc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8038d989cffbf895531de3427d76adc4">&#9670;&#160;</a></span>_r</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;double&gt; &gt; rm::RungeKutta::_r</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Butcher 表 \(R\) 矩阵 </p>
+
+</div>
+</div>
+<a id="afce2389694fb866ecf4892161c466579" name="afce2389694fb866ecf4892161c466579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce2389694fb866ecf4892161c466579">&#9670;&#160;</a></span>_t0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::RungeKutta::_t0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初值的自变量 \(t\) </p>
+
+</div>
+</div>
+<a id="affa51e3a065a6bca6e362d38ef784bd0" name="affa51e3a065a6bca6e362d38ef784bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa51e3a065a6bca6e362d38ef784bd0">&#9670;&#160;</a></span>_x0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; rm::RungeKutta::_x0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初值的因变量 \(\pmb x(t)\) </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/core/<a class="el" href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
