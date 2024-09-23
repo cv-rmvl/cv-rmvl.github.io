@@ -9,5 +9,6 @@ var searchData=
   ['combo_6',['combo',['../de/dee/classrm_1_1combo.html',1,'rm']]],
   ['compensateinfo_7',['CompensateInfo',['../d5/da4/structrm_1_1CompensateInfo.html',1,'rm']]],
   ['compensator_8',['compensator',['../df/d72/classrm_1_1compensator.html',1,'rm']]],
-  ['curvefitter_9',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm']]]
+  ['coreparam_9',['CoreParam',['../da/dbc/structrm_1_1para_1_1CoreParam.html',1,'rm::para']]],
+  ['curvefitter_10',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm']]]
 ];

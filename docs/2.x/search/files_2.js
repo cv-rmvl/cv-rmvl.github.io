@@ -10,5 +10,5 @@ var searchData=
   ['compensator_2eh_7',['compensator.h',['../d9/df2/compensator_8h.html',1,'']]],
   ['compensator_2ehpp_8',['compensator.hpp',['../d6/ddf/rmvl_2compensator_8hpp.html',1,'(全局命名空间)'],['../da/dbc/rmvlpara_2compensator_8hpp.html',1,'(全局命名空间)']]],
   ['configuration_5foptions_2emd_9',['configuration_options.md',['../de/db0/configuration__options_8md.html',1,'']]],
-  ['core_2ehpp_10',['core.hpp',['../da/d47/core_8hpp.html',1,'']]]
+  ['core_2ehpp_10',['core.hpp',['../de/d78/rmvl_2core_8hpp.html',1,'(全局命名空间)'],['../d0/d61/rmvlpara_2core_8hpp.html',1,'(全局命名空间)']]]
 ];

@@ -153,6 +153,9 @@ $(function(){ initResizable(false); });
           <li class="level3">
             <a href="#autotoc_md205">2.2 迭代步骤</a>
           </li>
+          <li class="level3">
+            <a href="#autotoc_md206">2.3 如何使用</a>
+          </li>
         </ul>
       </li>
     </ul>
@@ -294,7 +297,7 @@ $(function(){ initResizable(false); });
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
-<div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09});</div>
+<div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}); <span class="comment">// 默认采用 Gauss-Newton 算法</span></div>
 <div class="ttc" id="agroup__algorithm__optimal_html_ga2c5c6ca12730fb4365a8034b7c0a0ead"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a></div><div class="ttdeci">std::vector&lt; double &gt; lsqnonlin(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束非线性最小二乘求解</div></div>
 <div class="ttc" id="agroup__algorithm__optimal_html_ga84f32e047b6f0baf13255ba257a45fb5"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga84f32e047b6f0baf13255ba257a45fb5">rm::FuncNds</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt; &gt; FuncNds</div><div class="ttdoc">多元函数组</div><div class="ttdef"><b>定义</b> numcal.hpp:307</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">lsq_sine = []</div>
@@ -305,7 +308,7 @@ $(function(){ initResizable(false); });
 <div class="line">    )</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
-<div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09])</div>
+<div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09]) <span class="comment"># 默认采用 Gauss-Newton 算法</span></div>
 </div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md203"></a>
 2. Levenberg–Marquardt 算法</h2>
 <h3><a class="anchor" id="autotoc_md204"></a>
@@ -344,11 +347,30 @@ $(function(){ initResizable(false); });
 并且和上面 \(\rho_k\le0.25\) 的情况一样，减小 \(\lambda_k\)，反之，在 \(\rho_k&gt;0\) 的情况下，更新 \(\pmb x_k\)，即 <p class="formulaDsp">
 \[\pmb x_{k+1}=\pmb x_k\]
 </p>
- </li>
+</li>
 </ul>
 </li>
 </ol>
-</div></div><!-- contents -->
+<h3><a class="anchor" id="autotoc_md206"></a>
+2.3 如何使用</h3>
+<p>还是上面的例子，我们可以使用下面的代码来拟合正弦函数。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a> options;</div>
+<div class="line">options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a9c5d1a2d5d7168902691e3a1f92b40bf">lsq_mode</a> = <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a>; <span class="comment">// 使用 LM 算法</span></div>
+<div class="line">options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">max_iter</a> = 2000;            <span class="comment">// 最大迭代次数可以设置高一点，以保证收敛</span></div>
+<div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}, options);</div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a></div><div class="ttdeci">@ LM</div><div class="ttdoc">Levenberg-Marquardt 法</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">无约束多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:332</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a2212cc3e39cc6355cb36acca9de5534c"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">rm::OptimalOptions::max_iter</a></div><div class="ttdeci">int max_iter</div><div class="ttdoc">最大迭代次数</div><div class="ttdef"><b>定义</b> numcal.hpp:336</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a9c5d1a2d5d7168902691e3a1f92b40bf"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a9c5d1a2d5d7168902691e3a1f92b40bf">rm::OptimalOptions::lsq_mode</a></div><div class="ttdeci">LsqMode lsq_mode</div><div class="ttdoc">最小二乘求解模式，默认为改进的 Gauss-Newton 法 LsqMode::GN</div><div class="ttdef"><b>定义</b> numcal.hpp:335</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line"> </div>
+<div class="line">options = <a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm.OptimalOptions</a>()</div>
+<div class="line">options.lsq_mode = rm.LsqMode.LM <span class="comment"># 使用 LM 算法</span></div>
+<div class="line">options.max_iter = 2000          <span class="comment"># 最大迭代次数可以设置高一点，以保证收敛</span></div>
+<div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09], options)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

@@ -1,8 +1,8 @@
 var searchData=
 [
   ['c_0',['c',['../db/d45/classrm_1_1RaHeap.html#afb137a1efa840af10fe2ca666b11704c',1,'rm::RaHeap']]],
-  ['c_20代码生成_1',['3. C++ 代码生成',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md288',1,'']]],
-  ['c_20h_20文件_2',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md269',1,'']]],
+  ['c_20代码生成_1',['3. C++ 代码生成',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md289',1,'']]],
+  ['c_20h_20文件_2',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md270',1,'']]],
   ['calcarmornum_3',['calcArmorNum',['../da/df9/classrm_1_1GyroGroup.html#aca439948c823f3c64aa03b9e6d928bb0',1,'rm::GyroGroup']]],
   ['calcgroupfrom3dmessage_4',['calcGroupFrom3DMessage',['../da/df9/classrm_1_1GyroGroup.html#acab4a61749d9a702ac578fcd378a5f81',1,'rm::GyroGroup']]],
   ['calculatemodenum_5',['calculateModeNum',['../d5/d6c/group__algorithm.html#ga8041626cf548fb4b8048c70888b2283d',1,'rm']]],
@@ -127,14 +127,17 @@ var searchData=
   ['continuous_124',['Continuous',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7',1,'rm']]],
   ['contrast_125',['contrast',['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a5c185cd5c0f38424ca8e23357089642b',1,'rm::para::MvCameraParam::contrast'],['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#a7196cf8996bfa0cc632df10a06a5aacd',1,'rm::para::OptCameraParam::contrast']]],
   ['core_20模块_126',['适用于 Python 的 core 模块',['../d7/d9d/tutorial_py_core.html',1,'tutorial_py_table_of_contents_modules']]],
-  ['core_2ehpp_127',['core.hpp',['../da/d47/core_8hpp.html',1,'']]],
-  ['correct_128',['correct',['../d9/d1a/classrm_1_1KalmanFilter.html#a1bcf9b2c342ccf827e2fe8e6d04aa645',1,'rm::KalmanFilter::correct()'],['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a671624a583f4776f337f4a69228f1495',1,'rm::ExtendedKalmanFilter::correct()']]],
-  ['cot_129',['cot',['../d5/d6c/group__algorithm.html#ga34f2f328f9b5eec56ee7d278703926bc',1,'rm']]],
-  ['cpu_130',['CPU',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d',1,'rm']]],
-  ['create_131',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../d4/d81/structrm_1_1FieldMetaData.html#a423346088876dcef839bad7f96716a22',1,'rm::FieldMetaData::create()']]],
-  ['cross2d_132',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
-  ['csc_133',['csc',['../d5/d6c/group__algorithm.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],
-  ['cuda_134',['CUDA',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d',1,'rm']]],
-  ['curvefitter_135',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm::CurveFitter'],['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter::CurveFitter()']]],
-  ['cv_136',['cv',['../d2/d75/namespacecv.html',1,'']]]
+  ['core_20的参数模块_127',['core 的参数模块',['../d1/d36/group__para__core.html',1,'']]],
+  ['core_2ehpp_128',['core.hpp',['../de/d78/rmvl_2core_8hpp.html',1,'(全局命名空间)'],['../d0/d61/rmvlpara_2core_8hpp.html',1,'(全局命名空间)']]],
+  ['core_5fparam_129',['core_param',['../d1/d36/group__para__core.html#ga00171e6e6abe8be834e30e7247b7747d',1,'rm::para']]],
+  ['coreparam_130',['CoreParam',['../da/dbc/structrm_1_1para_1_1CoreParam.html',1,'rm::para']]],
+  ['correct_131',['correct',['../d9/d1a/classrm_1_1KalmanFilter.html#a1bcf9b2c342ccf827e2fe8e6d04aa645',1,'rm::KalmanFilter::correct()'],['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a671624a583f4776f337f4a69228f1495',1,'rm::ExtendedKalmanFilter::correct()']]],
+  ['cot_132',['cot',['../d5/d6c/group__algorithm.html#ga34f2f328f9b5eec56ee7d278703926bc',1,'rm']]],
+  ['cpu_133',['CPU',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d',1,'rm']]],
+  ['create_134',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../d4/d81/structrm_1_1FieldMetaData.html#a423346088876dcef839bad7f96716a22',1,'rm::FieldMetaData::create()']]],
+  ['cross2d_135',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
+  ['csc_136',['csc',['../d5/d6c/group__algorithm.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],
+  ['cuda_137',['CUDA',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d',1,'rm']]],
+  ['curvefitter_138',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm::CurveFitter'],['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter::CurveFitter()']]],
+  ['cv_139',['cv',['../d2/d75/namespacecv.html',1,'']]]
 ];

@@ -1074,12 +1074,20 @@
   <compound kind="file">
     <name>core.hpp</name>
     <path>rmvl/</path>
-    <filename>da/d47/core_8hpp.html</filename>
+    <filename>de/d78/rmvl_2core_8hpp.html</filename>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" import="no" module="no" objc="no">core/version.hpp</includes>
     <includes id="d1/dc5/serial_8hpp" name="serial.hpp" local="yes" import="no" module="no" objc="no">core/serial.hpp</includes>
     <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
     <includes id="d5/d60/dataio_8hpp" name="dataio.hpp" local="yes" import="no" module="no" objc="no">core/dataio.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>core.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d0/d61/rmvlpara_2core_8hpp.html</filename>
+    <class kind="struct">rm::para::CoreParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>dataio.hpp</name>
@@ -2882,6 +2890,38 @@
       <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
       <anchor>a22465cc4deedab79ebc3f0c13b4bd9ff</anchor>
       <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::para::CoreParam</name>
+    <filename>da/dbc/structrm_1_1para_1_1CoreParam.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a7ecb7d384abea8fdd59f3c0eda5ce21f</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>acf911b898642ae90c35790a065500189</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a58c6929954c48b7d9582e90d7333ca90</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>SECANT_STEP</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a3167265724509795ea89bfda655e14af</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6620,6 +6660,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>LsqMode</type>
+      <name>lsq_mode</name>
+      <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
+      <anchor>a9c5d1a2d5d7168902691e3a1f92b40bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>int</type>
       <name>max_iter</name>
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
@@ -8743,10 +8790,10 @@
       <arglist>(const Method &amp;method, const NodeId &amp;parent_id=nodeObjectsFolder) const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>bool</type>
       <name>setMethodNodeCallBack</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a1c64908077ba14d7d1b357ea5cbab9d8</anchor>
+      <anchor>a4d8a95cdd1afb1eb13131beef57a5e05</anchor>
       <arglist>(const NodeId &amp;id, MethodCallback on_method) const</arglist>
     </member>
     <member kind="function">
@@ -10554,6 +10601,15 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>LsqMode</name>
+      <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
+      <anchor>gae144aacda45d4d8ed719eb1f5a37605b</anchor>
+      <arglist></arglist>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f">GN</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">LM</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>PixChannel</name>
       <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
       <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
@@ -11413,300 +11469,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gacf59a33cb0267da485cbda4bc49f94b7</anchor>
-      <arglist>(UA_TYPES_BOOLEAN)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga52d4a4bc6250c36fbad1feaecfe95aa7</anchor>
-      <arglist>(UA_TYPES_SBYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3e5c9d09670ab92d444494dbe1a9d25e</anchor>
-      <arglist>(UA_TYPES_BYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac16cc94ec2361dd984d71594af07ea1c</anchor>
-      <arglist>(UA_TYPES_INT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpUInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7a9fd2eb20faca3108006c2db5fb9f3e</anchor>
-      <arglist>(UA_TYPES_UINT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae8b0635a66a29a83d48e03582fad294e</anchor>
-      <arglist>(UA_TYPES_INT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpUInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga90fe81c058e21c75bbde2bb777d18ac6</anchor>
-      <arglist>(UA_TYPES_UINT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0b48aeba4f04856fa1124cead398ec97</anchor>
-      <arglist>(UA_TYPES_INT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpUInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6459c0895d6385eec1780179371aba7a</anchor>
-      <arglist>(UA_TYPES_UINT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga66dba00c89fc844d8ab8d685478b6ced</anchor>
-      <arglist>(UA_TYPES_FLOAT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5d573548474ca805783f006829c064a0</anchor>
-      <arglist>(UA_TYPES_DOUBLE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>tpString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga4d05f1fa893bd70bf21bdcae4c554fcd</anchor>
-      <arglist>(UA_TYPES_STRING)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3d9c528cacd9b22f26e184aa5adc84b1</anchor>
-      <arglist>(0, UA_NS0ID_BOOLEAN)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga45d85c6efbd59697a26a4a1e1cf1ec0e</anchor>
-      <arglist>(0, UA_NS0ID_SBYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2dc21dee59fe66c7549621d92e807c40</anchor>
-      <arglist>(0, UA_NS0ID_BYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0bde51aa3b95d72198b5189a44d0d481</anchor>
-      <arglist>(0, UA_NS0ID_INT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeUint16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3043a18f4889f72a50c48add84a9d1f7</anchor>
-      <arglist>(0, UA_NS0ID_UINT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga8adcb63a19062ecf573460fb63e9ac75</anchor>
-      <arglist>(0, UA_NS0ID_INT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeUint32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab6898b98ebfd2fb3885d2c5b0c4615e5</anchor>
-      <arglist>(0, UA_NS0ID_UINT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6eee0763839b4100255c1aaa3a2c86d2</anchor>
-      <arglist>(0, UA_NS0ID_INT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeUint64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gabedb1edaef0424fcda948d057b798592</anchor>
-      <arglist>(0, UA_NS0ID_UINT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae67cb23017a47516537feef9ea0c9392</anchor>
-      <arglist>(0, UA_NS0ID_FLOAT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7fa5b66c57dc862b2efe894d4f415af1</anchor>
-      <arglist>(0, UA_NS0ID_DOUBLE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab3b251f85c709a8d41bf66661003cc49</anchor>
-      <arglist>(0, UA_NS0ID_STRING)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeDatetime</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2e1f5d6bdadd80d498f39fd5018d5fa5</anchor>
-      <arglist>(0, UA_NS0ID_DATETIME)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeObjectsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga041532456b96e8dac325a89f51b089e6</anchor>
-      <arglist>(0, UA_NS0ID_OBJECTSFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga15f071574c76e2f0414c90863bff3f0d</anchor>
-      <arglist>(0, UA_NS0ID_TYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeViewsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab20fa2fb5ad7d497374809d0fbf09759</anchor>
-      <arglist>(0, UA_NS0ID_VIEWSFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeObjectTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5ba48627cc2e45dc39a0e9303e5d790b</anchor>
-      <arglist>(0, UA_NS0ID_OBJECTTYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeVariableTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga21226d4b81a75f626523d967ea444aa3</anchor>
-      <arglist>(0, UA_NS0ID_VARIABLETYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaeb3871a433ab0edaec345fee9e6c38b2</anchor>
-      <arglist>(0, UA_NS0ID_SERVER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeFolderType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad437047f35915ca9624ad1c2f17942f4</anchor>
-      <arglist>(0, UA_NS0ID_FOLDERTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseObjectType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga939cde15e0534f0e800805640f2d5e5a</anchor>
-      <arglist>(0, UA_NS0ID_BASEOBJECTTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseEventType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2f9df7dd00a9018e44356660d0272809</anchor>
-      <arglist>(0, UA_NS0ID_BASEEVENTTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseDataVariableType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab20915b7cf5d31549a6c5541d94c2159</anchor>
-      <arglist>(0, UA_NS0ID_BASEDATAVARIABLETYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodePropertyType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae2ccc8adc3cb4027c3595ca5fb1729a3</anchor>
-      <arglist>(0, UA_NS0ID_PROPERTYTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeOrganizes</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae1a98aea0a35c74f3088d96b746d19fd</anchor>
-      <arglist>(0, UA_NS0ID_ORGANIZES)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeHasTypeDefinition</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae20fd2e26487e56b43960879380938ce</anchor>
-      <arglist>(0, UA_NS0ID_HASTYPEDEFINITION)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeHasComponent</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga69883befa7f0b1d8b4aae928d58cdb34</anchor>
-      <arglist>(0, UA_NS0ID_HASCOMPONENT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeHasProperty</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga13d561ce57b92cc7c11de2ed77c5e925</anchor>
-      <arglist>(0, UA_NS0ID_HASPROPERTY)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeHasSubtype</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga13d3c1e20b19e73b226f5ed58936de32</anchor>
-      <arglist>(0, UA_NS0ID_HASSUBTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>nodeHasModellingRule</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga971860c2a664220e83791fec6722f75c</anchor>
-      <arglist>(0, UA_NS0ID_HASMODELLINGRULE)</arglist>
-    </member>
-    <member kind="function">
       <type>NodeId</type>
       <name>operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -11770,11 +11532,298 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>constexpr UA_Byte</type>
-      <name>typeflag_ns0</name>
+      <type>constexpr DataType</type>
+      <name>tpBoolean</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga874e392295465b26035dc015e4d55827</anchor>
-      <arglist>[]</arglist>
+      <anchor>ga0aa3dc79e21e5864e6c0c4920f2d3ac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac4928e57bfaad7c6e61e1bd9a50c1661</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaed35362315250c872d3b20b5be2324e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf0682fe61922c30f2cd2467c1cbac5fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga69ecf8f69563a21ae4304487b9860fd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga70f36ce12e26a1f938b1ab6cc5622b25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0dcede428b3142d6d0ec6e6c7241c683</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga173164fdb1f30d4181b53fa5eef00967</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1711e5e2d36c8484a2f31ef9df48f4f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga312f00fffb497fd081c6f6b5559b4dee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga38791e6ffebfaf02420a994ac63d5e0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga687e8a0cd6863fc9dc21c1476a4e2b04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBoolean</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga74ff362aa8f265eb565478c8e6fce449</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaee6f5415f005c8056780dbeab9dcc685</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1ce7f455abb437218c891ae65e2c8545</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad26b685b2a4ccb93e230f29ec42bef84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUint16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabbd88e2b64b9a8694f102515c6acfd43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga508ff6f83ad7bdcf59e82c19c2bf9d83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUint32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeb5cccd33435ed8bf680a818838bdd89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga9d88cd00e97465c906f59ee223fd4e3d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUint64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae9069c773262ed422f6f6d1345c9dff2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0a1845e212b5afd2b38e710f3f99a80c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga8ce89955d085b496b9ce5449b3d6cce3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0f0b5963f6852d7735ab681cf635a851</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeDatetime</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga34ee624e09f9381b3f2a75064f53b504</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga59abb0e45d2cc659ab5bc9ead635542f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga79addd3e3b2cd021f7b2078f43422979</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeViewsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2bd8906836ab98507a01f5f3de6399c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac56e6f9a7f82eb16240fdad927cd9e00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeVariableTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga87897a4849e1c6769275f1b5b0cd8108</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaaa270e93ec9a2b5ec25b3ab74a98d917</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeFolderType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga35770258139b971658a1ed6eb8fb9949</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseObjectType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf4eb55ff544f5cabdb0c14e9da1497c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseEventType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad2da849b97b00920b6b0ec4124a44280</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseDataVariableType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0230dc0fe786dc983979d2eec0dad230</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodePropertyType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1e0d101df3b941ff0b124c704ab061be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeOrganizes</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga07d1fee271f3e82a686d86a72e431beb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasTypeDefinition</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga16859c73748bb7c4f5324aac1ff17e2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasComponent</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad8fdc5679562a74e79aaf2d7df973592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasProperty</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0bd0dffff460875f090da59b6ed5e2ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasSubtype</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gada4d0d89390905f45dd27347443cfcae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasModellingRule</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeeb7345902aae7d64f97a6dfdafc0387</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -11856,6 +11905,7 @@
     <class kind="class">rm::para::ArmorParam</class>
     <class kind="class">rm::para::ArmorPredictorParam</class>
     <class kind="class">rm::para::CameraParam</class>
+    <class kind="struct">rm::para::CoreParam</class>
     <class kind="class">rm::para::GravityCompensatorParam</class>
     <class kind="class">rm::para::GyroCompensatorParam</class>
     <class kind="class">rm::para::GyroDeciderParam</class>
@@ -11927,6 +11977,13 @@
       <name>opt_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>CoreParam</type>
+      <name>core_param</name>
+      <anchorfile>d1/d36/group__para__core.html</anchorfile>
+      <anchor>ga00171e6e6abe8be834e30e7247b7747d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -13013,6 +13070,15 @@
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">ConjGrad</enumvalue>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">Simplex</enumvalue>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::LsqMode</name>
+      <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
+      <anchor>gae144aacda45d4d8ed719eb1f5a37605b</anchor>
+      <arglist></arglist>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f">GN</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">LM</enumvalue>
+    </member>
     <member kind="function">
       <type>double</type>
       <name>rm::derivative</name>
@@ -13127,6 +13193,7 @@
     <subgroup>para_predictor</subgroup>
     <subgroup>para_tracker</subgroup>
     <subgroup>para_algorithm</subgroup>
+    <subgroup>para_core</subgroup>
     <subgroup>para_opcua</subgroup>
   </compound>
   <compound kind="group">
@@ -13868,300 +13935,6 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gacf59a33cb0267da485cbda4bc49f94b7</anchor>
-      <arglist>(UA_TYPES_BOOLEAN)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga52d4a4bc6250c36fbad1feaecfe95aa7</anchor>
-      <arglist>(UA_TYPES_SBYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3e5c9d09670ab92d444494dbe1a9d25e</anchor>
-      <arglist>(UA_TYPES_BYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac16cc94ec2361dd984d71594af07ea1c</anchor>
-      <arglist>(UA_TYPES_INT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpUInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7a9fd2eb20faca3108006c2db5fb9f3e</anchor>
-      <arglist>(UA_TYPES_UINT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae8b0635a66a29a83d48e03582fad294e</anchor>
-      <arglist>(UA_TYPES_INT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpUInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga90fe81c058e21c75bbde2bb777d18ac6</anchor>
-      <arglist>(UA_TYPES_UINT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0b48aeba4f04856fa1124cead398ec97</anchor>
-      <arglist>(UA_TYPES_INT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpUInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6459c0895d6385eec1780179371aba7a</anchor>
-      <arglist>(UA_TYPES_UINT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga66dba00c89fc844d8ab8d685478b6ced</anchor>
-      <arglist>(UA_TYPES_FLOAT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5d573548474ca805783f006829c064a0</anchor>
-      <arglist>(UA_TYPES_DOUBLE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr DataType</type>
-      <name>rm::tpString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga4d05f1fa893bd70bf21bdcae4c554fcd</anchor>
-      <arglist>(UA_TYPES_STRING)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3d9c528cacd9b22f26e184aa5adc84b1</anchor>
-      <arglist>(0, UA_NS0ID_BOOLEAN)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga45d85c6efbd59697a26a4a1e1cf1ec0e</anchor>
-      <arglist>(0, UA_NS0ID_SBYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2dc21dee59fe66c7549621d92e807c40</anchor>
-      <arglist>(0, UA_NS0ID_BYTE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0bde51aa3b95d72198b5189a44d0d481</anchor>
-      <arglist>(0, UA_NS0ID_INT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeUint16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga3043a18f4889f72a50c48add84a9d1f7</anchor>
-      <arglist>(0, UA_NS0ID_UINT16)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga8adcb63a19062ecf573460fb63e9ac75</anchor>
-      <arglist>(0, UA_NS0ID_INT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeUint32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab6898b98ebfd2fb3885d2c5b0c4615e5</anchor>
-      <arglist>(0, UA_NS0ID_UINT32)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6eee0763839b4100255c1aaa3a2c86d2</anchor>
-      <arglist>(0, UA_NS0ID_INT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeUint64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gabedb1edaef0424fcda948d057b798592</anchor>
-      <arglist>(0, UA_NS0ID_UINT64)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae67cb23017a47516537feef9ea0c9392</anchor>
-      <arglist>(0, UA_NS0ID_FLOAT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga7fa5b66c57dc862b2efe894d4f415af1</anchor>
-      <arglist>(0, UA_NS0ID_DOUBLE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab3b251f85c709a8d41bf66661003cc49</anchor>
-      <arglist>(0, UA_NS0ID_STRING)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeDatetime</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2e1f5d6bdadd80d498f39fd5018d5fa5</anchor>
-      <arglist>(0, UA_NS0ID_DATETIME)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeObjectsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga041532456b96e8dac325a89f51b089e6</anchor>
-      <arglist>(0, UA_NS0ID_OBJECTSFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga15f071574c76e2f0414c90863bff3f0d</anchor>
-      <arglist>(0, UA_NS0ID_TYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeViewsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab20fa2fb5ad7d497374809d0fbf09759</anchor>
-      <arglist>(0, UA_NS0ID_VIEWSFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeObjectTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5ba48627cc2e45dc39a0e9303e5d790b</anchor>
-      <arglist>(0, UA_NS0ID_OBJECTTYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeVariableTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga21226d4b81a75f626523d967ea444aa3</anchor>
-      <arglist>(0, UA_NS0ID_VARIABLETYPESFOLDER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaeb3871a433ab0edaec345fee9e6c38b2</anchor>
-      <arglist>(0, UA_NS0ID_SERVER)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeFolderType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad437047f35915ca9624ad1c2f17942f4</anchor>
-      <arglist>(0, UA_NS0ID_FOLDERTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeBaseObjectType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga939cde15e0534f0e800805640f2d5e5a</anchor>
-      <arglist>(0, UA_NS0ID_BASEOBJECTTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeBaseEventType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2f9df7dd00a9018e44356660d0272809</anchor>
-      <arglist>(0, UA_NS0ID_BASEEVENTTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeBaseDataVariableType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab20915b7cf5d31549a6c5541d94c2159</anchor>
-      <arglist>(0, UA_NS0ID_BASEDATAVARIABLETYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodePropertyType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae2ccc8adc3cb4027c3595ca5fb1729a3</anchor>
-      <arglist>(0, UA_NS0ID_PROPERTYTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeOrganizes</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae1a98aea0a35c74f3088d96b746d19fd</anchor>
-      <arglist>(0, UA_NS0ID_ORGANIZES)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeHasTypeDefinition</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae20fd2e26487e56b43960879380938ce</anchor>
-      <arglist>(0, UA_NS0ID_HASTYPEDEFINITION)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeHasComponent</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga69883befa7f0b1d8b4aae928d58cdb34</anchor>
-      <arglist>(0, UA_NS0ID_HASCOMPONENT)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeHasProperty</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga13d561ce57b92cc7c11de2ed77c5e925</anchor>
-      <arglist>(0, UA_NS0ID_HASPROPERTY)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeHasSubtype</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga13d3c1e20b19e73b226f5ed58936de32</anchor>
-      <arglist>(0, UA_NS0ID_HASSUBTYPE)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr NodeId</type>
-      <name>rm::nodeHasModellingRule</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga971860c2a664220e83791fec6722f75c</anchor>
-      <arglist>(0, UA_NS0ID_HASMODELLINGRULE)</arglist>
-    </member>
-    <member kind="function">
       <type>NodeId</type>
       <name>rm::operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -14176,11 +13949,298 @@
       <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
     </member>
     <member kind="variable">
-      <type>constexpr UA_Byte</type>
-      <name>rm::typeflag_ns0</name>
+      <type>constexpr DataType</type>
+      <name>rm::tpBoolean</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga874e392295465b26035dc015e4d55827</anchor>
-      <arglist>[]</arglist>
+      <anchor>ga0aa3dc79e21e5864e6c0c4920f2d3ac8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac4928e57bfaad7c6e61e1bd9a50c1661</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaed35362315250c872d3b20b5be2324e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf0682fe61922c30f2cd2467c1cbac5fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpUInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga69ecf8f69563a21ae4304487b9860fd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga70f36ce12e26a1f938b1ab6cc5622b25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpUInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0dcede428b3142d6d0ec6e6c7241c683</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga173164fdb1f30d4181b53fa5eef00967</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpUInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1711e5e2d36c8484a2f31ef9df48f4f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga312f00fffb497fd081c6f6b5559b4dee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga38791e6ffebfaf02420a994ac63d5e0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::tpString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga687e8a0cd6863fc9dc21c1476a4e2b04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBoolean</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga74ff362aa8f265eb565478c8e6fce449</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaee6f5415f005c8056780dbeab9dcc685</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1ce7f455abb437218c891ae65e2c8545</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad26b685b2a4ccb93e230f29ec42bef84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabbd88e2b64b9a8694f102515c6acfd43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga508ff6f83ad7bdcf59e82c19c2bf9d83</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeb5cccd33435ed8bf680a818838bdd89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga9d88cd00e97465c906f59ee223fd4e3d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeUint64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae9069c773262ed422f6f6d1345c9dff2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0a1845e212b5afd2b38e710f3f99a80c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga8ce89955d085b496b9ce5449b3d6cce3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0f0b5963f6852d7735ab681cf635a851</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeDatetime</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga34ee624e09f9381b3f2a75064f53b504</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeObjectsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga59abb0e45d2cc659ab5bc9ead635542f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga79addd3e3b2cd021f7b2078f43422979</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeViewsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2bd8906836ab98507a01f5f3de6399c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeObjectTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gac56e6f9a7f82eb16240fdad927cd9e00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeVariableTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga87897a4849e1c6769275f1b5b0cd8108</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaaa270e93ec9a2b5ec25b3ab74a98d917</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeFolderType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga35770258139b971658a1ed6eb8fb9949</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseObjectType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf4eb55ff544f5cabdb0c14e9da1497c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseEventType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad2da849b97b00920b6b0ec4124a44280</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeBaseDataVariableType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0230dc0fe786dc983979d2eec0dad230</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodePropertyType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1e0d101df3b941ff0b124c704ab061be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeOrganizes</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga07d1fee271f3e82a686d86a72e431beb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasTypeDefinition</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga16859c73748bb7c4f5324aac1ff17e2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasComponent</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad8fdc5679562a74e79aaf2d7df973592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasProperty</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0bd0dffff460875f090da59b6ed5e2ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasSubtype</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gada4d0d89390905f45dd27347443cfcae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>rm::nodeHasModellingRule</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeeb7345902aae7d64f97a6dfdafc0387</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -14815,6 +14875,19 @@
       <name>rm::para::algorithm_param</name>
       <anchorfile>d9/d6f/group__para__algorithm.html</anchorfile>
       <anchor>ga53c0a2fe632cf1f3bb67aff47b8873b6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>para_core</name>
+    <title>core 的参数模块</title>
+    <filename>d1/d36/group__para__core.html</filename>
+    <class kind="struct">rm::para::CoreParam</class>
+    <member kind="variable">
+      <type>CoreParam</type>
+      <name>rm::para::core_param</name>
+      <anchorfile>d1/d36/group__para__core.html</anchorfile>
+      <anchor>ga00171e6e6abe8be834e30e7247b7747d</anchor>
       <arglist></arglist>
     </member>
   </compound>
