@@ -261,9 +261,9 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
 <div class="line">    <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>然后调用 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12" title="无约束多维函数的最小值搜索 conjgrad neldermead ，可参考 多维无约束最优化方法">rm::fminunc</a></code> 函数：</p>
+</div><!-- fragment --><p>然后调用 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12" title="无约束多维函数的最小值搜索，可参考 多维无约束最优化方法">rm::fminunc</a></code> 函数：</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a>(quadratic, {0, 0});</div>
-<div class="ttc" id="agroup__algorithm__optimal_html_gad3a27f53f42ecf71dc3b2a187f674e12"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索 conjgrad neldermead ，可参考 多维无约束最优化方法</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gad3a27f53f42ecf71dc3b2a187f674e12"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索，可参考 多维无约束最优化方法</div></div>
 </div><!-- fragment --><p>汇总起来，共轭梯度法的使用实例如下：</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"> </div>

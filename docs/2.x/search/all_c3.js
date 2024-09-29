@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['追踪器_0',['1.3 追踪器',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md62',1,'']]],
-  ['追踪器_20特征组合的时间序列（数据组件）_1',['追踪器/特征组合的时间序列（数据组件）',['../de/dca/group__tracker.html',1,'']]]
+  ['连续采样_0',['4.1 连续采样',['../df/d2c/tutorial_modules_camera.html#autotoc_md255',1,'']]]
 ];

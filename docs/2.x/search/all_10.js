@@ -25,10 +25,12 @@ var searchData=
   ['interpolator_22',['Interpolator',['../dc/d80/classrm_1_1Interpolator.html',1,'rm::Interpolator'],['../dc/d80/classrm_1_1Interpolator.html#a21427fc4da436c487435c1e93793bb20',1,'rm::Interpolator::Interpolator()=default'],['../dc/d80/classrm_1_1Interpolator.html#ae1ea2f1d83c153116246c57cb3477666',1,'rm::Interpolator::Interpolator(const std::vector&lt; double &gt; &amp;xs, const std::vector&lt; double &gt; &amp;ys)']]],
   ['interval_5fangle_23',['INTERVAL_ANGLE',['../d3/dde/classrm_1_1para_1_1RuneGroupParam.html#ad78a94a22e5d7a89ff502a94434c7692',1,'rm::para::RuneGroupParam::INTERVAL_ANGLE'],['../d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html#a5f708c90da781b2e324ca6f9043fd2f6',1,'rm::para::SpiRunePredictorParam::INTERVAL_ANGLE']]],
   ['intro_2emarkdown_24',['intro.markdown',['../d0/d2e/intro_8markdown.html',1,'']]],
-  ['ip_25',['IP',['../dc/d90/group__camera.html#gga0a7fc1f9340aca49db5826b726c100a3aa12a3079e14ced46e69ba52b8a90b21a',1,'rm']]],
-  ['ip_26',['ip',['../d0/dde/structrm_1_1LightIpConfig.html#af667a201e55cb6e0527d65fd8b4d465b',1,'rm::LightIpConfig']]],
-  ['isactive_27',['isActive',['../d1/dfe/classrm_1_1Rune.html#a64af58971748ce9dc909c6a16c6dc692',1,'rm::Rune::isActive()'],['../db/d77/classrm_1_1RuneTarget.html#a474788c10deee38c0c14f5c7ac277b02',1,'rm::RuneTarget::isActive()']]],
-  ['iscontainblob_28',['isContainBlob',['../df/d41/classrm_1_1Armor.html#a5afe2c2cfe6fe816e5afdebe36965824',1,'rm::Armor']]],
-  ['isopened_29',['isOpened',['../db/d9f/classrm_1_1HikCamera.html#a17da764db5d58689bb1ca5adc7287f1b',1,'rm::HikCamera::isOpened()'],['../de/de8/classrm_1_1MvCamera.html#afc51568a8a254ab21b469c90f864bf58',1,'rm::MvCamera::isOpened()'],['../d1/d9c/classrm_1_1OptCamera.html#a508cf0639d7ba77360b922a9df1c46fc',1,'rm::OptCamera::isOpened()'],['../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444',1,'rm::SerialPort::isOpened()']]],
-  ['issameset_30',['isSameSet',['../db/d0c/classrm_1_1UnionFind.html#afea4d8df3b3e5c401e25b6e5799cc73d',1,'rm::UnionFind']]]
+  ['io_20与通信_25',['数据 IO 与通信',['../d5/d5f/group__core__io.html',1,'']]],
+  ['io_2ehpp_26',['io.hpp',['../d2/dc6/io_8hpp.html',1,'']]],
+  ['ip_27',['IP',['../dc/d90/group__camera.html#gga0a7fc1f9340aca49db5826b726c100a3aa12a3079e14ced46e69ba52b8a90b21a',1,'rm']]],
+  ['ip_28',['ip',['../d0/dde/structrm_1_1LightIpConfig.html#af667a201e55cb6e0527d65fd8b4d465b',1,'rm::LightIpConfig']]],
+  ['isactive_29',['isActive',['../d1/dfe/classrm_1_1Rune.html#a64af58971748ce9dc909c6a16c6dc692',1,'rm::Rune::isActive()'],['../db/d77/classrm_1_1RuneTarget.html#a474788c10deee38c0c14f5c7ac277b02',1,'rm::RuneTarget::isActive()']]],
+  ['iscontainblob_30',['isContainBlob',['../df/d41/classrm_1_1Armor.html#a5afe2c2cfe6fe816e5afdebe36965824',1,'rm::Armor']]],
+  ['isopened_31',['isOpened',['../db/d9f/classrm_1_1HikCamera.html#a17da764db5d58689bb1ca5adc7287f1b',1,'rm::HikCamera::isOpened()'],['../de/de8/classrm_1_1MvCamera.html#afc51568a8a254ab21b469c90f864bf58',1,'rm::MvCamera::isOpened()'],['../d1/d9c/classrm_1_1OptCamera.html#a508cf0639d7ba77360b922a9df1c46fc',1,'rm::OptCamera::isOpened()'],['../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444',1,'rm::SerialPort::isOpened()']]],
+  ['issameset_32',['isSameSet',['../db/d0c/classrm_1_1UnionFind.html#afea4d8df3b3e5c401e25b6e5799cc73d',1,'rm::UnionFind']]]
 ];

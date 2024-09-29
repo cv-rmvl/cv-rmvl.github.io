@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['引用_0',['5. 引用',['../db/dba/tutorial_modules_opcua.html#autotoc_md273',1,'']]],
-  ['引言与介绍_1',['引言与介绍',['../d1/dfb/intro.html',1,'']]]
+  ['弃用列表_0',['弃用列表',['../da/d58/deprecated.html',1,'']]]
 ];

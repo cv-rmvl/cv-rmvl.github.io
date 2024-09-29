@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['连续采样_0',['4.1 连续采样',['../df/d2c/tutorial_modules_camera.html#autotoc_md250',1,'']]]
+  ['迈德威视（mindvision）相机库_0',['迈德威视（MindVision）相机库',['../dd/df4/group__mv__camera.html',1,'']]]
 ];

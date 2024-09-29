@@ -128,39 +128,39 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md214">1. 常微分方程（组）</a>
+        <a href="#autotoc_md219">1. 常微分方程（组）</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md215">2. 求解常微分方程的 Euler 方法</a>
+        <a href="#autotoc_md220">2. 求解常微分方程的 Euler 方法</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md216">2.1 显式 Euler 单步法</a>
+            <a href="#autotoc_md221">2.1 显式 Euler 单步法</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md217">2.2 其余常见的 Euler 单步法</a>
+            <a href="#autotoc_md222">2.2 其余常见的 Euler 单步法</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md218">2.3 局部阶段误差</a>
+            <a href="#autotoc_md223">2.3 局部阶段误差</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md219">3. Runge-Kutta 方法</a>
+        <a href="#autotoc_md224">3. Runge-Kutta 方法</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md220">3.1 二阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md225">3.1 二阶 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md221">3.2 Butcher 表</a>
+            <a href="#autotoc_md226">3.2 Butcher 表</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md222">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md227">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
             <a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md223">3.5 示例代码</a>
+            <a href="#autotoc_md228">3.5 示例代码</a>
           </li>
         </ul>
       </li>
@@ -182,7 +182,7 @@ $(function(){ initResizable(false); });
 \def\transparent#1{\color{transparent}{#1}}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md214"></a>
+<h2><a class="anchor" id="autotoc_md219"></a>
 1. 常微分方程（组）</h2>
 <p>一个质量-弹簧-阻尼系统的运动微分方程可以表示为</p>
 <p class="formulaDsp">
@@ -218,9 +218,9 @@ $(function(){ initResizable(false); });
 &amp;t_0&lt;t_1&lt;\cdots&lt;t_n&lt;t_{n+1}&lt;\cdots\\&amp;h=t_{n+1}-t_n\quad或\quad t_{n+1}=t_n+h\quad(h=0,1,\cdots)
 \end{align}\]
 </p>
-<h2><a class="anchor" id="autotoc_md215"></a>
+<h2><a class="anchor" id="autotoc_md220"></a>
 2. 求解常微分方程的 Euler 方法</h2>
-<h3><a class="anchor" id="autotoc_md216"></a>
+<h3><a class="anchor" id="autotoc_md221"></a>
 2.1 显式 Euler 单步法</h3>
 <p>先考虑一阶常微分方程 \(\text{(1-4b)}\)的形式，在取定的 \(t_n\)处 Taylor 展开，有</p>
 <p class="formulaDsp">
@@ -234,7 +234,7 @@ x_{n+1}\approx x(t_{n+1})&amp;=x(t_n)+x&#39;(t_n)h+x&#39;&#39;(t_n)\frac{h^2}2+\
 \[x_{n+1}=x_n+hf(t_n,x_n)\tag{2-2}\]
 </p>
 <p>这便是求解常微分方程的基本方法，公式 \(\text{(2-2)}\)被称为 Explicit Euler 显式欧拉公式。</p>
-<h3><a class="anchor" id="autotoc_md217"></a>
+<h3><a class="anchor" id="autotoc_md222"></a>
 2.2 其余常见的 Euler 单步法</h3>
 <p>① Implicit Euler 隐式欧拉公式</p>
 <p class="formulaDsp">
@@ -273,7 +273,7 @@ y(0.6)\approx y_6=\hf5{0.646995}\\
 y(0.7)\approx y_7=\hf6{0.795680}\\
 y(0.8)\approx y_8=\hf7{0.980355}\]
 </p>
-<h3><a class="anchor" id="autotoc_md218"></a>
+<h3><a class="anchor" id="autotoc_md223"></a>
 2.3 局部阶段误差</h3>
 <p>上文的 4 种 Euler 单步法公式，使用哪种精度更高？这里要引入局部阶段误差的概念，因为每一次求解 \(x_i\)都会引入误差，并且误差会进行累积，局部截断误差不考虑迭代求解 \(x_n\)及之前的累积误差，仅考虑从 \(x_n\)到 \(x_{n+1}\)产生的误差，即认为 \(x_n=x(t_n)\)。对于显式 Euler 单步法，可以计算出其局部截断误差 \(T_{n+1}\)。</p>
 <p class="formulaDsp">
@@ -297,7 +297,7 @@ T_{n+1}&amp;=x(t_{n+1})-x(t_n)-\frac12hf(t_n,x(t_n))-\frac12hf(t_{n+1},x(t_{n+1}
 \end{align}\tag{2-6}\]
 </p>
 <p><b>局部截断误差的主项</b>为 \(-\frac1{12}x&#39;&#39;&#39;(t_n)h^3\)，我们称梯形公式具有 2 阶精度。</p>
-<h2><a class="anchor" id="autotoc_md219"></a>
+<h2><a class="anchor" id="autotoc_md224"></a>
 3. Runge-Kutta 方法</h2>
 <p>对于 \(\text{(2-3c)}\)的改进 Euler 公式，可以改写成</p>
 <p class="formulaDsp">
@@ -307,7 +307,7 @@ k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+h,x_n+hk_1)
 \end{align}\right.\tag{3-1}\]
 </p>
 <p>模仿这一写法，我们继续构造新的 2 阶公式</p>
-<h3><a class="anchor" id="autotoc_md220"></a>
+<h3><a class="anchor" id="autotoc_md225"></a>
 3.1 二阶 Runge-Kutta 公式</h3>
 <dl class="section note"><dt>注解</dt><dd>此小节为 2 阶 Runge-Kutta 公式族的推导，涉及到多元函数 \(f(x,y)\)的全导数  <p class="formulaDsp">
 \[\begin{align}\frac{\mathrm df}{\mathrm dx}&amp;=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}·\frac{\mathrm dy}{\mathrm dx}\\
@@ -367,7 +367,7 @@ T_{n+1}&amp;=x(t_{n+1})-x_{n+1}\\
 \[\begin{align}x_{n+1}&amp;=x_n+hk_2\\k_1&amp;=f(t_n,x_n)\\
 k_2&amp;=f\left(t_n+\frac h2,x_n+\frac h2k_1\right)\end{align}\tag{3-7}\]
 </p>
-<h3><a class="anchor" id="autotoc_md221"></a>
+<h3><a class="anchor" id="autotoc_md226"></a>
 3.2 Butcher 表</h3>
 <p>为了便于记录上文的 Runge-Kutta 中点公式，我们将公式 \(\text{(3-2)}\)改写为</p>
 <p class="formulaDsp">
@@ -402,7 +402,7 @@ p_2&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
 p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
 \hline&amp;\lambda_1&amp;\lambda_2&amp;\cdots&amp;\lambda_n\end{array}\tag{3-12}\]
 </p>
-<h3><a class="anchor" id="autotoc_md222"></a>
+<h3><a class="anchor" id="autotoc_md227"></a>
 3.3 三阶 / 四阶 Runge-Kutta 公式</h3>
 <p>这里直接给出对应的 Butcher 表。</p>
 <p>一种 3 级 3 阶 Runge-Kutta 方法的具体形式对应的 Butcher 表</p>
@@ -598,7 +598,7 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 &amp;=\mat{0.75}{-0.75}e^{-2t}+\mat2{-1}e^{-t}+\mat{1.5}{-0.5}t+\mat{-1.75}{0.75}\end{align}\tag{h}\]
 </p>
 <p>把 \(t=1\) 代入上式，可得 \(X=\mat{0.75e^{-2}+2e^{-1}-0.25}{-0.75e^{-2}-e^{-1}+0.25}\approx\mat{0.587260}{-0.219381}\)，数值解 \(X=\mat{0.587286}{-0.219401}\)与之相符。</p>
-<h3><a class="anchor" id="autotoc_md223"></a>
+<h3><a class="anchor" id="autotoc_md228"></a>
 3.5 示例代码</h3>
 <p>现给出上文使用 2 阶 2 级中点公式求解常微分方程组的示例代码</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/algorithms.hpp&gt;</span></div>

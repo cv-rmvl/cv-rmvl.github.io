@@ -57,12 +57,13 @@ var searchData=
   ['trigger_5fchannel_54',['trigger_channel',['../df/dfa/structrm_1_1CameraConfig.html#a2793b9bee50e7b71206d105e7accb6ca',1,'rm::CameraConfig']]],
   ['triggerchannel_55',['TriggerChannel',['../dc/d90/group__camera.html#gafd1e51b9b1633d344461f1cb73a26b7a',1,'rm']]],
   ['triggerevent_56',['triggerEvent',['../d4/d06/classrm_1_1Server.html#a76d538d0447707289598f5b2e9e0bcca',1,'rm::Server']]],
-  ['tutorial_5fextra_2emarkdown_57',['tutorial_extra.markdown',['../db/d81/tutorial__extra_8markdown.html',1,'']]],
-  ['tutorial_5fmodules_2emd_58',['tutorial_modules.md',['../d9/d3d/tutorial__modules_8md.html',1,'']]],
-  ['tutorial_5frmvlpara_2emd_59',['tutorial_rmvlpara.md',['../d1/d5e/tutorial__rmvlpara_8md.html',1,'']]],
-  ['tutorials_2emarkdown_60',['tutorials.markdown',['../d7/d54/tutorials_8markdown.html',1,'']]],
-  ['tvec_61',['tvec',['../da/dbf/classrm_1_1CameraExtrinsics.html#adaae13c248b8ba4aa1638c2ca4a27b2e',1,'rm::CameraExtrinsics::tvec() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#aa998bc8aca661400075e6753edc30b5e',1,'rm::CameraExtrinsics::tvec(const cv::Vec3f &amp;tvec)']]],
-  ['type_62',['type',['../d4/d81/structrm_1_1FieldMetaData.html#a6111b0a257b7404363f4959d6ab22ee4',1,'rm::FieldMetaData::type'],['../da/d88/classrm_1_1Event.html#a74efea123f3ed9d0dd1ffef134aa6c49',1,'rm::Event::type()'],['../d8/d9b/classrm_1_1Object.html#a4f46232dbd905f2e7f4722131199d168',1,'rm::Object::type()'],['../df/db8/classrm_1_1Variable.html#aaaa594272dc559b6336f4ea1658a3e40',1,'rm::Variable::type()']]],
-  ['type_5fpriority_63',['TYPE_PRIORITY',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#a8600eb9cb316fa65526aafae92f4e18e',1,'rm::para::GyroDeciderParam']]],
-  ['types_2ehpp_64',['types.hpp',['../dd/de3/types_8hpp.html',1,'']]]
+  ['tukey_57',['Tukey',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15ae64282abbecb575a17b762eb0138273b',1,'rm']]],
+  ['tutorial_5fextra_2emarkdown_58',['tutorial_extra.markdown',['../db/d81/tutorial__extra_8markdown.html',1,'']]],
+  ['tutorial_5fmodules_2emd_59',['tutorial_modules.md',['../d9/d3d/tutorial__modules_8md.html',1,'']]],
+  ['tutorial_5frmvlpara_2emd_60',['tutorial_rmvlpara.md',['../d1/d5e/tutorial__rmvlpara_8md.html',1,'']]],
+  ['tutorials_2emarkdown_61',['tutorials.markdown',['../d7/d54/tutorials_8markdown.html',1,'']]],
+  ['tvec_62',['tvec',['../da/dbf/classrm_1_1CameraExtrinsics.html#adaae13c248b8ba4aa1638c2ca4a27b2e',1,'rm::CameraExtrinsics::tvec() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#aa998bc8aca661400075e6753edc30b5e',1,'rm::CameraExtrinsics::tvec(const cv::Vec3f &amp;tvec)']]],
+  ['type_63',['type',['../d4/d81/structrm_1_1FieldMetaData.html#a6111b0a257b7404363f4959d6ab22ee4',1,'rm::FieldMetaData::type'],['../da/d88/classrm_1_1Event.html#a74efea123f3ed9d0dd1ffef134aa6c49',1,'rm::Event::type()'],['../d8/d9b/classrm_1_1Object.html#a4f46232dbd905f2e7f4722131199d168',1,'rm::Object::type()'],['../df/db8/classrm_1_1Variable.html#aaaa594272dc559b6336f4ea1658a3e40',1,'rm::Variable::type()']]],
+  ['type_5fpriority_64',['TYPE_PRIORITY',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#a8600eb9cb316fa65526aafae92f4e18e',1,'rm::para::GyroDeciderParam']]],
+  ['types_2ehpp_65',['types.hpp',['../dd/de3/types_8hpp.html',1,'']]]
 ];

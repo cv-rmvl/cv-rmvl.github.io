@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['生成文档_0',['生成文档',['../d5/d72/tutorial_document.html#tutorial_documentation_generate',1,'']]],
-  ['生成_20c_20h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md270',1,'']]]
+  ['特征组合体（数据组件）_0',['特征组合体（数据组件）',['../dd/dd2/group__combo.html',1,'']]],
+  ['特征组合的时间序列（数据组件）_1',['追踪器/特征组合的时间序列（数据组件）',['../de/dca/group__tracker.html',1,'']]],
+  ['特征_2',['1.1 特征',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md60',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['详细内容_0',['详细内容',['../d5/d72/tutorial_document.html#tutorial_documentation_content',1,'']]],
-  ['详细步骤_1',['详细步骤',['../da/d80/tutorial_use.html#autotoc_md122',1,'']]]
+  ['设计理念_0',['设计理念',['../d1/dfb/intro.html#intro_design_principle',1,'']]]
 ];

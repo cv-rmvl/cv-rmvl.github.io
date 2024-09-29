@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['决策模块（功能模块）_0',['决策模块（功能模块）',['../d9/dbe/group__decider.html',1,'']]]
+  ['光源控制器_0',['光源控制器',['../df/dfb/group__light.html',1,'']]]
 ];

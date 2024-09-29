@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['其他平台_0',['其他平台',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md99',1,'']]],
-  ['其余光学参数设置_1',['1.2.3 其余光学参数设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md241',1,'']]],
-  ['其余常见的_20euler_20单步法_2',['2.2 其余常见的 Euler 单步法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md217',1,'']]],
-  ['其余聚合体反射工具_3',['3. 其余聚合体反射工具',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md231',1,'']]]
+  ['共轭方向_0',['2.1 共轭方向',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md167',1,'']]],
+  ['共轭梯度方向的构造_1',['2.2 共轭梯度方向的构造',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md168',1,'']]],
+  ['共轭梯度法_2',['2. 共轭梯度法',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md166',1,'']]]
 ];

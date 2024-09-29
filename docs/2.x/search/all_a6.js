@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['编写测试文件_0',['2. 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md124',1,'']]],
-  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md118',1,'']]]
+  ['绑定功能_0',['绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md304',1,'启用 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md302',1,'如何在配置 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html',1,'RMVL-Python 绑定功能']]],
+  ['绑定是如何生成的_1',['RMVL-Python 绑定是如何生成的',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md301',1,'']]]
 ];

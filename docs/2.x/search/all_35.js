@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['光学属性设置_0',['1.2 光学属性设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md238',1,'']]],
-  ['光源控制器_1',['光源控制器',['../df/dfb/group__light.html',1,'光源控制器'],['../dc/d10/tutorial_modules_light.html',1,'光源控制器']]]
+  ['修改后的用法_0',['1.2 RMVL 修改后的用法',['../d2/de3/tutorial_extra_upper_process.html#process_in_rmvl',1,'']]]
 ];

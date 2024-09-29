@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['介绍_0',['介绍',['../d5/d72/tutorial_document.html#tutorial_documentation_intro',1,'介绍'],['../d1/d0a/tutorial_configuration_options.html#autotoc_md102',1,'1. 介绍']]]
+  ['什么是并查集_0',['1. 什么是并查集',['../d4/d74/tutorial_modules_union_find.html#autotoc_md230',1,'']]]
 ];

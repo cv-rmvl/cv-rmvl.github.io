@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['源码安装_0',['源码安装',['../d2/d60/tutorial_install_overview.html#autotoc_md110',1,'']]]
+  ['派生类属性_0',['1.2.2 派生类属性',['../d5/dee/tutorial_extra_how_to_use_feature.html#autotoc_md29',1,'']]]
 ];

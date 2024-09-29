@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['海康机器人（hikrobot）工业相机库_0',['海康机器人（HikRobot）工业相机库',['../db/d27/group__hik__camera.html',1,'']]]
+  ['注意事项_0',['2.2 注意事项',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md85',1,'']]]
 ];
