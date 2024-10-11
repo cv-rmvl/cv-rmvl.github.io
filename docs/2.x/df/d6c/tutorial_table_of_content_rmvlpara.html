@@ -309,9 +309,9 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --><p>其中包含了运行时参数导入和导出的接口 <code>read</code> 和 <code>write</code>，以 <a class="el" href="../../d9/d6f/group__para__algorithm.html">algorithm 的参数模块</a> 为例，<code><a class="el" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c" title="从指定 YAML 文件中加载，并读取至 AlgorithmParam 中">rm::para::AlgorithmParam::read</a></code> 用于运行时读取 YAML 文件并配置 algorithm 模块的参数，<code><a class="el" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a07a26d44154b5864fea3eec801fd647d" title="将 AlgorithmParam 的数据写入指定的 YAML 文件中">rm::para::AlgorithmParam::write</a></code> 用于将当前 algorithm 模块的参数写入到 YAML 文件中。</p>
 <p>用户可以通过使用类似以下的代码完成运行时加载</p>
 <div class="fragment"><div class="line"><span class="comment">/* code */</span></div>
-<div class="line"><a class="code hl_variable" href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a>.<a class="code hl_function" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a231381c4bb01e1f3d4d091bb86994091">load</a>(prefix_path + <span class="stringliteral">&quot;algorithm.yml&quot;</span>);</div>
+<div class="line"><a class="code hl_variable" href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a>.<a class="code hl_function" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c">read</a>(prefix_path + <span class="stringliteral">&quot;algorithm.yml&quot;</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
-<div class="ttc" id="aclassrm_1_1para_1_1AlgorithmParam_html_a231381c4bb01e1f3d4d091bb86994091"><div class="ttname"><a href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a231381c4bb01e1f3d4d091bb86994091">rm::para::AlgorithmParam::load</a></div><div class="ttdeci">bool load(const std::string &amp;path)</div><div class="ttdoc">从指定 YAML 文件中加载 AlgorithmParam</div><div class="ttdef"><b>定义</b> algorithm.hpp:74</div></div>
+<div class="ttc" id="aclassrm_1_1para_1_1AlgorithmParam_html_a5fa44d751710dbf5731635a5c9657c1c"><div class="ttname"><a href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c">rm::para::AlgorithmParam::read</a></div><div class="ttdeci">bool read(const std::string &amp;path)</div><div class="ttdoc">从指定 YAML 文件中加载，并读取至 AlgorithmParam 中</div></div>
 <div class="ttc" id="agroup__para__algorithm_html_ga53c0a2fe632cf1f3bb67aff47b8873b6"><div class="ttname"><a href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a></div><div class="ttdeci">AlgorithmParam algorithm_param</div><div class="ttdoc">AlgorithmParam 参数模块</div><div class="ttdef"><b>定义</b> algorithm.hpp:78</div></div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md299"></a>
 4.2 YAML 文件格式</h3>
@@ -327,7 +327,7 @@ $(function(){ initResizable(false); });
 <div class="line">num: 20</div>
 <div class="line">name: &quot;Hello, RMVL&quot;</div>
 </div><!-- fragment --><p>在程序调用</p>
-<div class="fragment"><div class="line">rm::para::test_param.load(prefix_path + <span class="stringliteral">&quot;test.yml&quot;</span>);</div>
+<div class="fragment"><div class="line">rm::para::test_param.read(prefix_path + <span class="stringliteral">&quot;test.yml&quot;</span>);</div>
 </div><!-- fragment --><p>时，会实时加载该 YAML 文件，此时</p>
 <ul>
 <li><code>num</code> 的值会被设置为 <code>20</code></li>

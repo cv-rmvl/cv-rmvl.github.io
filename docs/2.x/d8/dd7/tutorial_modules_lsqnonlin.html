@@ -282,7 +282,7 @@ $(function(){ initResizable(false); });
 <p>以 \(\pmb x_{k+1}\) 代替 \(\pmb x_k\) 重复上述计算过程，直到 \(\|\pmb\varphi(\pmb x_k)\|&lt;\epsilon&#39;\) 或 \(\|\nabla f(\pmb x_k)\|&lt;\epsilon&quot;\) 为止。</p>
 <h3><a class="anchor" id="autotoc_md202"></a>
 1.4 如何使用</h3>
-<p>RMVL 提供了改进的 Gauss-Newton 迭代算法，可参考 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="无约束非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> 函数。例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
+<p>RMVL 提供了改进的 Gauss-Newton 迭代算法，可参考 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> 函数。例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
 \[y=A\sin(\omega t+\varphi_0)+b\]
 </p>
 <p>其中， \(A,\omega,\varphi_0,b\) 是待拟合的参数，不妨统一写为 \(\pmb x=(A,\omega,\varphi_0,b)\)，也就是说我们需要拟合的函数是 </p><p class="formulaDsp">
@@ -315,7 +315,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="comment">// 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
 <div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}); <span class="comment">// 默认采用 Gauss-Newton 算法</span></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_ga2c5c6ca12730fb4365a8034b7c0a0ead"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a></div><div class="ttdeci">std::vector&lt; double &gt; lsqnonlin(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束非线性最小二乘求解，实现与 agarwal23 类似的算法</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga2c5c6ca12730fb4365a8034b7c0a0ead"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a></div><div class="ttdeci">std::vector&lt; double &gt; lsqnonlin(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">非线性最小二乘求解，实现与 agarwal23 类似的算法</div></div>
 <div class="ttc" id="agroup__algorithm__optimal_html_ga84f32e047b6f0baf13255ba257a45fb5"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga84f32e047b6f0baf13255ba257a45fb5">rm::FuncNds</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt; &gt; FuncNds</div><div class="ttdoc">多元函数组</div><div class="ttdef"><b>定义</b> numcal.hpp:307</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">lsq_sine = []</div>
 <div class="line"> </div>
@@ -521,9 +521,10 @@ $(function(){ initResizable(false); });
 </ul>
 <h3><a class="anchor" id="autotoc_md211"></a>
 3.4 如何使用</h3>
-<p>RMVL 提供了带有 Robust 核函数的最小二乘法，可参考 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3" title="带 Robust 核函数的无约束非线性最小二乘求解">rm::lsqnonlinRKF</a> ，对于上面示例中的正弦函数拟合，可以使用下面的代码。</p>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3">rm::lsqnonlinRKF</a>(lsq_sine, {1, 0.02, 0, 1.09}, RobustMode::Huber);</div>
-<div class="ttc" id="agroup__algorithm__optimal_html_ga49d9c1571206d945576ebedb116feec3"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3">rm::lsqnonlinRKF</a></div><div class="ttdeci">std::vector&lt; double &gt; lsqnonlinRKF(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</div><div class="ttdoc">带 Robust 核函数的无约束非线性最小二乘求解</div></div>
+<p>RMVL 提供了带有 Robust 核函数的最小二乘法，可参考 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3" title="带 Robust 核函数的非线性最小二乘求解">rm::lsqnonlinRKF</a> ，对于上面示例中的正弦函数拟合，可以使用下面的代码。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3">rm::lsqnonlinRKF</a>(lsq_sine, {1, 0.02, 0, 1.09}, <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a>);</div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga49d9c1571206d945576ebedb116feec3"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3">rm::lsqnonlinRKF</a></div><div class="ttdeci">std::vector&lt; double &gt; lsqnonlinRKF(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</div><div class="ttdoc">带 Robust 核函数的非线性最小二乘求解</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdoc">Huber 核函数 huber64</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga49d9c1571206d945576ebedb116feec3">rm.lsqnonlinRKF</a>(lsq_sine, [1, 0.02, 0, 1.09], rm.RobustMode.Huber)</div>
 </div><!-- fragment --> </div>  </div></div><!-- contents -->
 </div><!-- PageDoc -->

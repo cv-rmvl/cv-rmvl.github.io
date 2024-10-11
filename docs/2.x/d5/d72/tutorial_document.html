@@ -232,7 +232,7 @@ Doxygen 概述</h1>
 <li><b>页面</b> 是放置与任何源代码实体不直接连接的图像和代码示例的大块文本的区域，页面应该位于单独的文件中，并包含在几个预定义的位置，比如说本教程就是这样一个页面的例子。</li>
 <li><b>图像</b> 可以用来说明所描述的事物，这些文件通常位于与页面相同的位置，可以插入到文档的任何位置。</li>
 <li><b>示例代码</b> 展示了如何在实际应用程序中使用该库，每个示例都是代表一个简单应用程序的自包含文件。这些文件的部分内容可以包含在文档和教程中，以演示函数调用和对象协作。</li>
-<li><b>参考书目</b> 用于创建一个公共的书目，所有作为 RMVL 功能基础的科学书籍、文章和论文集都应列入此参考书目。</li>
+<li><a class="el" href="../../d0/de3/citelist.html">参考文献</a> 用于创建一个公共的书目，所有作为 RMVL 功能基础的科学书籍、文章和论文集都应列入此 <a class="el" href="../../d0/de3/citelist.html">参考文献</a> 。</li>
 </ul>
 <h2><a class="anchor" id="tutorial_documentation_content"></a>
 详细内容</h2>
@@ -252,37 +252,25 @@ cv::Point2f calculateRelativeAngle(const cv::Matx33f &amp;cameraMatrix, cv::Poin
 1. 基本命令</h3>
 <ul>
 <li><b>brief</b> - 表示一段函数、类、枚举、结构的简要信息</li>
-<li><b>param</b> - 通常表示函数的参数，包含传入、传出、传入兼传出参数 3 种，可分别用 <code>[in]</code>、<code>[out]</code> 和 <code>[in out]</code> 做区分，例如 <pre class="fragment">  @param[in] cameraMatrix 相机内参矩阵</pre><ul>
-<li>结果如下 <dl class="params"><dt>参数</dt><dd>
+<li><b>param</b> - 通常表示函数的参数，包含传入、传出、传入兼传出参数 3 种，可分别用 <code>[in]</code>、<code>[out]</code> 和 <code>[in out]</code> 做区分，例如 <pre class="fragment">  @param[in] cameraMatrix 相机内参矩阵</pre> <span style="color: red"><b>结果如下</b></span> <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵</td></tr>
   </table>
   </dd>
 </dl>
 </li>
-</ul>
+<li><p class="startli"><b>note</b> - 注解，可包含对类、函数的详细介绍或者使用注意事项，也可包含一些公式信息，具体的公式写法在后续的 <b>f</b> 会进行介绍，note 的使用如下 </p><pre class="fragment">  @note 公式推导参考函数 @ref rm::calculateRelativeCenter</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="../../d5/d6c/group__algorithm.html#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a></dd></dl>
 </li>
-<li><b>note</b> - 注解，可包含对类、函数的详细介绍或者使用注意事项，也可包含一些公式信息，具体的公式写法在后续的 <b>f</b> 会进行介绍，note 的使用如下 <pre class="fragment">  @note 公式推导参考函数 @ref rm::calculateRelativeCenter</pre><ul>
-<li>结果如下 <dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="../../d5/d6c/group__algorithm.html#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a></dd></dl>
+<li><p class="startli"><b>return</b> - 表示返回值 </p><pre class="fragment">  @return 相对角度</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section return"><dt>返回</dt><dd>相对角度</dd></dl>
 </li>
-</ul>
-</li>
-<li><b>return</b> - 表示返回值 <pre class="fragment">  @return 相对角度</pre><ul>
-<li>结果如下 <dl class="section return"><dt>返回</dt><dd>相对角度</dd></dl>
-</li>
-</ul>
-</li>
-<li><b>f</b> - 公式 内联公式使用 <code>f$</code> 命令开始 <pre class="fragment">  \f$ ... \f$</pre> 块公式使用 <code>f[</code> 和 <code>f]</code> 命令 <pre class="fragment">  \f[ ... \f]</pre> 示例 <pre class="fragment">  若状态向量包含以下内容：\f$[p, v, a]\f$ ，然而观测向量仅包含 \f$[p, v]\f$，
+<li><p class="startli"><b>f</b> - 公式 内联公式使用 <code>f$</code> 命令开始 </p><pre class="fragment">  \f$ ... \f$</pre><p> 块公式使用 <code>f[</code> 和 <code>f]</code> 命令 </p><pre class="fragment">  \f[ ... \f]</pre><p> 示例 </p><pre class="fragment">  若状态向量包含以下内容：\f$[p, v, a]\f$ ，然而观测向量仅包含 \f$[p, v]\f$，
   在这种情况下，需要使用一个观测转换矩阵 \f$H_{2\times3}\f$。在上述例子中可表示为
   \f[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
-  \begin{bmatrix}p\\v\\a\end{bmatrix}\f]</pre><ul>
-<li><p class="startli">结果如下</p>
+  \begin{bmatrix}p\\v\\a\end{bmatrix}\f]</pre><p class="startli"><span style="color: red"><b>结果如下</b></span></p>
 <p class="startli">若状态向量包含以下内容： \([p, v, a]\) ，然而观测向量仅包含 \([p, v]\)， 在这种情况下，需要使用一个观测转换矩阵 \(H_{2\times3}\)。在上述例子中可表示为  </p><p class="formulaDsp">
 \[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
-    \begin{bmatrix}p\\v\\a\end{bmatrix}\]
+  \begin{bmatrix}p\\v\\a\end{bmatrix}\]
 </p>
-</li>
-</ul>
 </li>
 <li><b>defgroup</b> 与 <b>addtogroup</b> -</li>
 </ul>

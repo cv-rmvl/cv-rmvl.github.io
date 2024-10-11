@@ -1075,10 +1075,10 @@
     <name>core.hpp</name>
     <path>rmvl/</path>
     <filename>da/d47/core_8hpp.html</filename>
+    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">core/io.hpp</includes>
+    <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" import="no" module="no" objc="no">core/version.hpp</includes>
-    <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
-    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">core/io.hpp</includes>
   </compound>
   <compound kind="file">
     <name>io.hpp</name>

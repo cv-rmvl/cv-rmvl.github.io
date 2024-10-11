@@ -242,8 +242,11 @@ $(function(){ initResizable(false); });
 <li>根据匀速公式计算得到的汽车当前位置（算出来的，记作 \(\teal{x_1}\)）</li>
 <li>汽车的当前距离传感器数据（测出来的，记作 \(\red{x_2}\)）</li>
 </ul>
-<p><img src="https://s1.ax1x.com/2022/10/11/xNlnw6.png" alt="" width="680" height="380" class="inline"/></p>
-<p>由于自身的原因，它的位置并不是由匀速运动公式得到的精确位置，它的距离传感器数据也不完全准确。两者都有一定的误差。那么我们现在如何估计汽车的实际位置呢？</p>
+<center></center><center><div class="image">
+<img src="../../car_predict.jpg" alt=""/>
+<div class="caption">
+图1-1 汽车运动估计</div></div>
+    </center><center></center><p>由于自身的原因，它的位置并不是由匀速运动公式得到的精确位置，它的距离传感器数据也不完全准确。两者都有一定的误差。那么我们现在如何估计汽车的实际位置呢？</p>
 <p>我们使用公式 \(\fml{1-2b}\) 的思想，得到估计值</p>
 <p class="formulaDsp">
 \[\hat x=\teal{x_1}+\green{K_k}(\red{x_2}-\teal{x_1})\tag{1-4}\]
@@ -274,7 +277,7 @@ K_k&amp;=\frac{2^2}{2^2+4^2}=0.2\\
 </p>
 <h3><a class="anchor" id="kalman_covariance_matrix"></a>
 1.4 协方差矩阵</h3>
-<center></center><center><table class="markdownTable">
+<div class="full_width_table"></div><div class="full_width_table"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">数据   </th><th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(y\)   </th><th class="markdownTableHeadCenter">\(z\)    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -286,7 +289,7 @@ K_k&amp;=\frac{2^2}{2^2+4^2}=0.2\\
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">平均值   </td><td class="markdownTableBodyCenter">\(\bar x\)   </td><td class="markdownTableBodyCenter">\(\bar y\)   </td><td class="markdownTableBodyCenter">\(\bar z\)   </td></tr>
 </table>
-</center><center></center><p><b>方差</b></p>
+</div><div class="full_width_table"></div><p><b>方差</b></p>
 <p>表明单个变量的波动程度</p>
 <p class="formulaDsp">
 \[\begin{align}
@@ -633,7 +636,7 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 <h3><a class="anchor" id="ref_paper"></a>
 参考文献</h3>
 <ul>
-<li>卡尔曼滤波 <a class="el" href="../../d0/de3/citelist.html#CITEREF_kalman60">[7]</a> </li>
+<li>卡尔曼滤波 <a class="el" href="../../d0/de3/citelist.html#CITEREF_kalman60">[9]</a> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
