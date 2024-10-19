@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['多态部署库_0',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]]
+  ['奥普特机器视觉相机库_0',['奥普特机器视觉相机库',['../d4/d5d/group__opt__camera.html',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['软件模块_0',['软件模块',['../d1/d67/tutorial_extra_upper_init.html#init_software',1,'']]],
-  ['软触发_1',['软触发',['../df/d2c/tutorial_modules_camera.html#autotoc_md256',1,'4.2 软触发'],['../dd/da0/todo.html#_todo000002',1,'4.2 软触发']]]
+  ['迈德威视（mindvision）相机库_0',['迈德威视（MindVision）相机库',['../dd/df4/group__mv__camera.html',1,'']]]
 ];

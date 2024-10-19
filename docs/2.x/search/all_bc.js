@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['调参策略_0',['调参策略',['../d0/da1/tutorial_extra_gyro_predictor.html#autotoc_md39',1,'']]],
-  ['调试构建_1',['2.1 调试构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md104',1,'']]]
+  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
 ];

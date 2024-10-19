@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['检测与识别模块（功能模块）_0',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
+  ['模块_0',['OPC UA 模块',['../d3/da8/group__opcua.html',1,'']]]
 ];

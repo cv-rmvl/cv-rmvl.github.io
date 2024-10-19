@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['图像轮廓特征（数据组件）_0',['图像轮廓特征（数据组件）',['../db/d72/group__feature.html',1,'']]],
-  ['图像预处理模块_1',['图像预处理模块',['../de/d3d/group__algorithm__pretreat.html',1,'']]]
+  ['多态部署库_0',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]]
 ];

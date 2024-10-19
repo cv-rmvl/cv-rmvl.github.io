@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['交叉编译应具备的先决条件_0',['交叉编译应具备的先决条件',['../d5/d52/tutorial_other_arm.html#autotoc_md137',1,'']]]
+  ['什么是并查集_0',['1. 什么是并查集',['../d4/d74/tutorial_modules_union_find.html#autotoc_md230',1,'']]]
 ];

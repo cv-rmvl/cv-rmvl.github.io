@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['能量机关特征组合_0',['能量机关特征组合',['../d8/d7f/group__combo__rune.html',1,'']]]
+  ['自动求导、数值微分_0',['自动求导、数值微分',['../da/d8f/tutorial_modules_auto_differential.html',1,'tutorial_table_of_content_modules']]],
+  ['自定义工具链构建_20rmvl_1',['自定义工具链构建 RMVL',['../d5/d52/tutorial_other_arm.html#autotoc_md139',1,'']]]
 ];

@@ -122,6 +122,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pub-attribs">Public 属性</a> &#124;
 <a href="../../d3/dda/classrm_1_1Event-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">rm::Event类 参考<div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a></div></div></div>
@@ -135,7 +136,7 @@ $(function(){ initResizable(false); });
 <div class="dynheader">
 rm::Event 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d0a/classrm_1_1Event__coll__graph.svg" width="227" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d0a/classrm_1_1Event__coll__graph.svg" width="227" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -143,9 +144,6 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a38cc061a1260bff8107021ffe409c50b" id="r_a38cc061a1260bff8107021ffe409c50b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38cc061a1260bff8107021ffe409c50b">Event</a> ()=default</td></tr>
 <tr class="memdesc:a38cc061a1260bff8107021ffe409c50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 <code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 对象类型  <br /></td></tr>
 <tr class="separator:a38cc061a1260bff8107021ffe409c50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d5cf6e96fa065686d69c06e01ab811" id="r_a91d5cf6e96fa065686d69c06e01ab811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d5cf6e96fa065686d69c06e01ab811">Event</a> (<a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype)</td></tr>
-<tr class="memdesc:a91d5cf6e96fa065686d69c06e01ab811"><td class="mdescLeft">&#160;</td><td class="mdescRight">从事件类型构造新的事件  <br /></td></tr>
-<tr class="separator:a91d5cf6e96fa065686d69c06e01ab811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d385f0b3aa66134913aa957e3a61a93" id="r_a7d385f0b3aa66134913aa957e3a61a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d385f0b3aa66134913aa957e3a61a93">add</a> (const std::string &amp;browse_name, int prop)</td></tr>
 <tr class="memdesc:a7d385f0b3aa66134913aa957e3a61a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加非默认属性至事件类型中  <br /></td></tr>
 <tr class="separator:a7d385f0b3aa66134913aa957e3a61a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,12 +153,15 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad1de823172bb0b86ba205e78a43cbb5d" id="r_ad1de823172bb0b86ba205e78a43cbb5d"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1de823172bb0b86ba205e78a43cbb5d">data</a> () const</td></tr>
 <tr class="memdesc:ad1de823172bb0b86ba205e78a43cbb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 <code>int</code> 整型的非默认属性列表  <br /></td></tr>
 <tr class="separator:ad1de823172bb0b86ba205e78a43cbb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a855874ba7f3e17ef0efae038e3d6bac4" id="r_a855874ba7f3e17ef0efae038e3d6bac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855874ba7f3e17ef0efae038e3d6bac4">setType</a> (<a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;<a class="el" href="#a74efea123f3ed9d0dd1ffef134aa6c49">type</a>)</td></tr>
-<tr class="memdesc:a855874ba7f3e17ef0efae038e3d6bac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置事件类型  <br /></td></tr>
-<tr class="separator:a855874ba7f3e17ef0efae038e3d6bac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74efea123f3ed9d0dd1ffef134aa6c49" id="r_a74efea123f3ed9d0dd1ffef134aa6c49"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74efea123f3ed9d0dd1ffef134aa6c49">type</a> () const</td></tr>
-<tr class="memdesc:a74efea123f3ed9d0dd1ffef134aa6c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取事件类型  <br /></td></tr>
-<tr class="separator:a74efea123f3ed9d0dd1ffef134aa6c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b5b919975e18435e1c873de9cafa4f" id="r_a99b5b919975e18435e1c873de9cafa4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99b5b919975e18435e1c873de9cafa4f">type</a> () const</td></tr>
+<tr class="memdesc:a99b5b919975e18435e1c873de9cafa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取事件类型  <br /></td></tr>
+<tr class="separator:a99b5b919975e18435e1c873de9cafa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a012b068ff96b1aa370693ab075d00fbd" id="r_a012b068ff96b1aa370693ab075d00fbd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a012b068ff96b1aa370693ab075d00fbd">from</a> (const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype)</td></tr>
+<tr class="memdesc:a012b068ff96b1aa370693ab075d00fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">从事件类型创建新的事件  <br /></td></tr>
+<tr class="separator:a012b068ff96b1aa370693ab075d00fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -181,7 +182,7 @@ Public 属性</h2></td></tr>
 <div class="textblock"><p>OPC UA 事件 </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a38cc061a1260bff8107021ffe409c50b" name="a38cc061a1260bff8107021ffe409c50b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38cc061a1260bff8107021ffe409c50b">&#9670;&#160;</a></span>Event() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cc061a1260bff8107021ffe409c50b">&#9670;&#160;</a></span>Event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,39 +205,6 @@ Public 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>构造 <code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 对象类型 </p>
-
-</div>
-</div>
-<a id="a91d5cf6e96fa065686d69c06e01ab811" name="a91d5cf6e96fa065686d69c06e01ab811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d5cf6e96fa065686d69c06e01ab811">&#9670;&#160;</a></span>Event() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">rm::Event::Event </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>etype</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>从事件类型构造新的事件 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">etype</td><td>既存的待作为事件类型信息的使用 <code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的变量类型 </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -317,6 +285,45 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a012b068ff96b1aa370693ab075d00fbd" name="a012b068ff96b1aa370693ab075d00fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012b068ff96b1aa370693ab075d00fbd">&#9670;&#160;</a></span>from()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> rm::Event::from </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>etype</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从事件类型创建新的事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">etype</td><td>既存的待作为事件类型信息的使用 <code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新的事件 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d88/classrm_1_1Event_a012b068ff96b1aa370693ab075d00fbd_cgraph.svg" width="314" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a7c2d1cf8d52769eb2bfb7532bacfb472" name="a7c2d1cf8d52769eb2bfb7532bacfb472"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c2d1cf8d52769eb2bfb7532bacfb472">&#9670;&#160;</a></span>operator[]()</h2>
 
@@ -351,8 +358,8 @@ Public 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a855874ba7f3e17ef0efae038e3d6bac4" name="a855874ba7f3e17ef0efae038e3d6bac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a855874ba7f3e17ef0efae038e3d6bac4">&#9670;&#160;</a></span>setType()</h2>
+<a id="a99b5b919975e18435e1c873de9cafa4f" name="a99b5b919975e18435e1c873de9cafa4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b5b919975e18435e1c873de9cafa4f">&#9670;&#160;</a></span>type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,45 +368,7 @@ Public 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void rm::Event::setType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>设置事件类型 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>既存的待作为事件类型信息的使用 <code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的变量类型 </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d88/classrm_1_1Event_a855874ba7f3e17ef0efae038e3d6bac4_cgraph.svg" width="324" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a74efea123f3ed9d0dd1ffef134aa6c49" name="a74efea123f3ed9d0dd1ffef134aa6c49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74efea123f3ed9d0dd1ffef134aa6c49">&#9670;&#160;</a></span>type()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> * rm::Event::type </td>
+          <td class="memname"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> rm::Event::type </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

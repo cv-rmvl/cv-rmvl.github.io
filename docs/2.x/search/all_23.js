@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['一元函数导数示例代码_0',['3.1 一元函数导数示例代码',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md146',1,'']]],
-  ['一维最优化方法_1',['一维最优化方法',['../de/d14/tutorial_modules_fminbnd.html',1,'tutorial_table_of_content_modules']]]
+  ['三阶_20四阶_20runge_20kutta_20公式_0',['3.3 三阶 / 四阶 Runge-Kutta 公式',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md227',1,'']]]
 ];

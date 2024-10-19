@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['合理使用默认数据_0',['4. 合理使用默认数据',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md90',1,'']]]
+  ['启用_20rmvl_20python_20绑定功能_0',['启用 RMVL-Python 绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md305',1,'']]]
 ];

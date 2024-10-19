@@ -1456,20 +1456,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>light.hpp</name>
-    <path>rmvl/</path>
-    <filename>de/dea/light_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>opt_light_control.h</name>
-    <path>rmvl/light/</path>
-    <filename>d4/da9/opt__light__control_8h.html</filename>
-    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="struct">rm::LightIpConfig</class>
-    <class kind="class">rm::OPTLightController</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>ml.hpp</name>
     <path>rmvl/</path>
     <filename>d3/d29/ml_8hpp.html</filename>
@@ -1507,6 +1493,7 @@
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" import="no" module="no" objc="no">view.hpp</includes>
     <class kind="class">rm::ClientView</class>
     <class kind="class">rm::Client</class>
+    <class kind="class">rm::ClientTimer</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1556,6 +1543,7 @@
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" import="no" module="no" objc="no">view.hpp</includes>
     <class kind="class">rm::ServerView</class>
     <class kind="class">rm::Server</class>
+    <class kind="class">rm::ServerTimer</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -2506,13 +2494,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>FindNodeInClient</type>
-      <name>find</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a67639e0053a4d857963d64338ae7ab02</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>ok</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
@@ -2532,6 +2513,20 @@
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
       <anchor>a74b40046bd18231fab4c3815c0e5b2b4</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>shutdown</name>
+      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
+      <anchor>a1f5a7897028994c94f0f89b0cad5f521</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInClient</type>
+      <name>find</name>
+      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
+      <anchor>a67639e0053a4d857963d64338ae7ab02</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
     </member>
     <member kind="function">
       <type>Variable</type>
@@ -2591,6 +2586,66 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::ClientTimer</name>
+    <filename>d8/d29/classrm_1_1ClientTimer.html</filename>
+    <member kind="typedef">
+      <type>std::function&lt; void(ClientView)&gt;</type>
+      <name>Callback</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>ae69dfad59bb96d6cf77fb8de1ee24497</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientTimer</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>a0ecfcdccdf419df48f074d12467b5826</anchor>
+      <arglist>(ClientView cv, double period, Callback callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientTimer</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>a6262d54ee28dfc67cec2183dfc72a612</anchor>
+      <arglist>(const ClientTimer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientTimer</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>af16f21ab073abfaa6980e94ee28bba60</anchor>
+      <arglist>(ClientTimer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>ClientTimer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>a1c40bf95e0f3d81c1716d6bd6117e6d9</anchor>
+      <arglist>(const ClientTimer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ClientTimer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>a2f67a1151286f4d47e6a35aa276d5a22</anchor>
+      <arglist>(ClientTimer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ClientTimer</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>aa191ca2e697bd8d2d73bc1353b827aee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
+      <anchor>a550e0df43d48ce962fe47b15aed70d4d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::ClientView</name>
     <filename>df/d48/classrm_1_1ClientView.html</filename>
     <member kind="function">
@@ -2613,6 +2668,13 @@
       <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
       <anchor>af38da16798d10461cef77c6c17d79063</anchor>
       <arglist>(UA_Client *const client)</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_Client *</type>
+      <name>get</name>
+      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
+      <anchor>a2bad08fbc1c00ac33802dc2375dfff60</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>FindNodeInClient</type>
@@ -3361,13 +3423,6 @@
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Event</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a91d5cf6e96fa065686d69c06e01ab811</anchor>
-      <arglist>(EventType &amp;etype)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>add</name>
       <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
@@ -3389,18 +3444,18 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>setType</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a855874ba7f3e17ef0efae038e3d6bac4</anchor>
-      <arglist>(EventType &amp;type)</arglist>
-    </member>
-    <member kind="function">
-      <type>const EventType *</type>
+      <type>EventType</type>
       <name>type</name>
       <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a74efea123f3ed9d0dd1ffef134aa6c49</anchor>
+      <anchor>a99b5b919975e18435e1c873de9cafa4f</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Event</type>
+      <name>from</name>
+      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
+      <anchor>a012b068ff96b1aa370693ab075d00fbd</anchor>
+      <arglist>(const EventType &amp;etype)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
@@ -5586,31 +5641,6 @@
       <arglist></arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>rm::LightIpConfig</name>
-    <filename>d0/dde/structrm_1_1LightIpConfig.html</filename>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>ip</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>af667a201e55cb6e0527d65fd8b4d465b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>subnet_mask</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>a7d77dc044d21e8938eeca7e52a44b7bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>default_gateway</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>a9464201331fe2e44e747b43989b1137e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>rm::Method</name>
     <filename>d4/d91/classrm_1_1Method.html</filename>
@@ -6055,21 +6085,14 @@
       <type></type>
       <name>Object</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a5d5c00786f8c0746f0484feb227f3eb7</anchor>
-      <arglist>()</arglist>
+      <anchor>aa230f549c885a9f7a4f9d2786c370fd6</anchor>
+      <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Object</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a7275fbf65ce423ba4f8c20ca456aebd0</anchor>
-      <arglist>(ObjectType &amp;otype)</arglist>
-    </member>
-    <member kind="function">
-      <type>const ObjectType *</type>
+      <type>ObjectType</type>
       <name>type</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a4f46232dbd905f2e7f4722131199d168</anchor>
+      <anchor>a7af282453c720d90d00b9d365f38c135</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -6106,6 +6129,13 @@
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
       <anchor>ab080711baf651b7ddddb08a08ee5ace0</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Object</type>
+      <name>from</name>
+      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
+      <anchor>a3cd59a3c8732c3b58251ec81e18a2493</anchor>
+      <arglist>(const ObjectType &amp;otype)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
@@ -6168,6 +6198,13 @@
       <arglist>(const Method &amp;method)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
+      <anchor>a4ed4ff3e2410f4d772c664a7cb244404</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>setBase</name>
       <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
@@ -6176,9 +6213,9 @@
     </member>
     <member kind="function">
       <type>const ObjectType *</type>
-      <name>getBase</name>
+      <name>base</name>
       <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>ac2f95054e3ec0652915b2e35c230a09a</anchor>
+      <anchor>a50e4f570d7ba65917e9fdb8c4b0fce1b</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -6344,6 +6381,13 @@
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
+      <type>bool</type>
+      <name>SERVER_WAIT</name>
+      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
+      <anchor>af88bbdef1066e0a21e52b5c714d55ae9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>uint32_t</type>
       <name>CONNECT_TIMEOUT</name>
       <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
@@ -6366,9 +6410,9 @@
     </member>
     <member kind="variable">
       <type>uint32_t</type>
-      <name>SPIN_TIMEOUT</name>
+      <name>CLIENT_WAIT_TIMEOUT</name>
       <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
-      <anchor>aca947ce4fcc94bd564634025e00f2997</anchor>
+      <anchor>a5e0f06f6495a3a310bbf84087cc4cda3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6627,108 +6671,6 @@
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
       <anchor>a63d056c22bd74468ce2b1fcb0602a4f7</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OPTLightController</name>
-    <filename>db/d24/classrm_1_1OPTLightController.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a4805938df6b63f30357a58e19a91a9e1</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a3aa623bbcf715e2259802881d97e31a5</anchor>
-      <arglist>(const OPTLightController &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a6c11bdd5ff2b48ce55b8170eecde8dc3</anchor>
-      <arglist>(OPTLightController &amp;&amp;obj)=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a277c1adf9b1ad6a790ee506d093c27e8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>connect</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a37ba77e0b799d1c874b22e8512678fed</anchor>
-      <arglist>(const LightIpConfig &amp;ip_config)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>connect</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a17a6b751a0d09855c1661d265ba7a34b</anchor>
-      <arglist>(std::string_view SN)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>disconnect</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a22f77b0e8110eac583ae93abc3cbbc80</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>openChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a92a0717dabe3489287621505325ded3d</anchor>
-      <arglist>(const std::vector&lt; int &gt; &amp;channels)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>openAllChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a1cdf8566f8def40aa7e6beb75cc172b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>closeChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a4539097f560c27838058cf92ee772001</anchor>
-      <arglist>(const std::vector&lt; int &gt; &amp;channels)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>closeAllChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>ad3aa109fd0a3e9ac5b71d3987c706dbf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>getIntensity</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a249ed9a1612bc0d98d78c54f315a9ee8</anchor>
-      <arglist>(int channel) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>setIntensity</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>aa8bbbd3813fc79438c9706d6ea7fe701</anchor>
-      <arglist>(int channel, int intensity)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>trigger</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>ae26c66fd921a04c3888294ecc1016868</anchor>
-      <arglist>(int channel, int time) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8782,23 +8724,23 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>start</name>
+      <name>spin</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a231923cb0990195a0b5ff522691d5d84</anchor>
+      <anchor>a411149e392f634f8bc7699e4f68693d3</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>stop</name>
+      <name>spinOnce</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>af835200abfa46f85a183f6eed54edfa4</anchor>
+      <anchor>a2581c87e97cec2a4b1ff68ff84aef4c0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>join</name>
+      <name>shutdown</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a8ee77445da5eeb190d5fdf67bed2897e</anchor>
+      <anchor>a40c696a0e6a592c4a0cbd97cc184617b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -8914,18 +8856,71 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>bool</type>
+      <type>std::atomic_bool</type>
       <name>_running</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ab61e3665a621196a50774a96fafbe6d3</anchor>
+      <anchor>a1eec62d0e2a3096d4f99e57e541d96db</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable" protection="protected">
-      <type>std::thread</type>
-      <name>_run</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a75b730c040a5c0335a292837c261e481</anchor>
+  </compound>
+  <compound kind="class">
+    <name>rm::ServerTimer</name>
+    <filename>d9/d40/classrm_1_1ServerTimer.html</filename>
+    <member kind="typedef">
+      <type>std::function&lt; void(ServerView)&gt;</type>
+      <name>Callback</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a98631b80cc6115fcff718ea6a4e37919</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerTimer</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>aa7a03ae44c57d95e9a3c86fec21de187</anchor>
+      <arglist>(ServerView sv, double period, Callback callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerTimer</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a86b96c2918ece4ae6bd5e3a309b5f892</anchor>
+      <arglist>(const ServerTimer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerTimer</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a13b65bed18f66439497547a22224c599</anchor>
+      <arglist>(ServerTimer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerTimer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a5dd7a831dee5be445fa85c6501d831c3</anchor>
+      <arglist>(const ServerTimer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerTimer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a9b7da3f827a5b9239d6fa1445a3c1d22</anchor>
+      <arglist>(ServerTimer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ServerTimer</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>a774d12fa2bbca43f7fb5cbb561c0546d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
+      <anchor>add2dae5a7a4f100b39e0930794153502</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8953,6 +8948,13 @@
       <arglist>(UA_Server *const server)</arglist>
     </member>
     <member kind="function">
+      <type>UA_Server *</type>
+      <name>get</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>aaec1d61f9699e09087c1750cf15c3ea0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>FindNodeInServer</type>
       <name>find</name>
       <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
@@ -8972,6 +8974,13 @@
       <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
       <anchor>a259c4b69e74d86fe4bf50e21558d68b5</anchor>
       <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>triggerEvent</name>
+      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
+      <anchor>a5bd5d1d79b397711e3c216be1d3cda9b</anchor>
+      <arglist>(const NodeId &amp;node_id, const Event &amp;event) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9794,13 +9803,6 @@
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>af71f41c64028795a747164fae4630a75</anchor>
-      <arglist>(VariableType &amp;vtype)</arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
@@ -9843,10 +9845,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const VariableType *</type>
+      <type>const VariableType</type>
       <name>type</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>aaaa594272dc559b6336f4ea1658a3e40</anchor>
+      <anchor>a71844415e26655a2105444dd4edde5c8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -9869,6 +9871,13 @@
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
       <anchor>a70524d2a980c7163f7b1ad6aab17db49</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Variable</type>
+      <name>from</name>
+      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
+      <anchor>a5f88eca8092afc279d498bf2a5e6c811</anchor>
+      <arglist>(const VariableType &amp;vtype)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Tp</type>
@@ -9920,6 +9929,13 @@
       <type></type>
       <name>VariableType</name>
       <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
+      <anchor>a6f2685c83cc79db18577ee22dd5d2b41</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>VariableType</name>
+      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
       <anchor>a0b67afadfcb27542b445d890d54e59d3</anchor>
       <arglist>(Tp val)</arglist>
     </member>
@@ -9942,6 +9958,13 @@
       <name>getDataType</name>
       <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
       <anchor>a4e05626e9612fe964631a99b3a2121e9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>empty</name>
+      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
+      <anchor>ad0321ce87a6fbf18b000e4112e3153a6</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -10115,6 +10138,7 @@
     <class kind="class">rm::CameraExtrinsics</class>
     <class kind="class">rm::ClassificationNet</class>
     <class kind="class">rm::Client</class>
+    <class kind="class">rm::ClientTimer</class>
     <class kind="class">rm::ClientView</class>
     <class kind="class">rm::combo</class>
     <class kind="struct">rm::CompensateInfo</class>
@@ -10154,7 +10178,6 @@
     <class kind="class">rm::KalmanFilter</class>
     <class kind="class">rm::KalmanFilterStaticDatas</class>
     <class kind="class">rm::LightBlob</class>
-    <class kind="struct">rm::LightIpConfig</class>
     <class kind="class">rm::Method</class>
     <class kind="class">rm::Munkres</class>
     <class kind="class">rm::MvCamera</class>
@@ -10165,7 +10188,6 @@
     <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::OptCamera</class>
     <class kind="struct">rm::OptimalOptions</class>
-    <class kind="class">rm::OPTLightController</class>
     <class kind="class">rm::Pilot</class>
     <class kind="class">rm::PipeClient</class>
     <class kind="class">rm::PipeServer</class>
@@ -10195,6 +10217,7 @@
     <class kind="class">rm::RungeKutta4</class>
     <class kind="class">rm::SerialPort</class>
     <class kind="class">rm::Server</class>
+    <class kind="class">rm::ServerTimer</class>
     <class kind="class">rm::ServerView</class>
     <class kind="class">rm::SpiRunePredictor</class>
     <class kind="class">rm::Subscriber</class>
@@ -11586,6 +11609,20 @@
       <arglist>(const RMStatus &amp;lhs, const RMStatus &amp;rhs)</arglist>
     </member>
     <member kind="variable">
+      <type>constexpr float</type>
+      <name>FLOAT_MAX</name>
+      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchor>ga4a13736bb50157ad2bf1c980e4a9cc06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr float</type>
+      <name>FLOAT_MIN</name>
+      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchor>gae447539d828046ab559762ff2f7773ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>constexpr double</type>
       <name>PI</name>
       <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
@@ -11618,13 +11655,6 @@
       <name>PI_4</name>
       <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
       <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>Timer</type>
-      <name>timer</name>
-      <anchorfile>db/d06/group__core__timer.html</anchorfile>
-      <anchor>gacd0c14d50bf92999c788291f5843e4a9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -12704,6 +12734,20 @@
       <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
       <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
       <arglist>(Tp val, EulerAxis axis)</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr float</type>
+      <name>rm::FLOAT_MAX</name>
+      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchor>ga4a13736bb50157ad2bf1c980e4a9cc06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr float</type>
+      <name>rm::FLOAT_MIN</name>
+      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchor>gae447539d828046ab559762ff2f7773ac</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
@@ -13836,26 +13880,6 @@
     <title>定时、计时模块</title>
     <filename>db/d06/group__core__timer.html</filename>
     <class kind="class">rm::Timer</class>
-    <member kind="variable">
-      <type>Timer</type>
-      <name>rm::timer</name>
-      <anchorfile>db/d06/group__core__timer.html</anchorfile>
-      <anchor>gacd0c14d50bf92999c788291f5843e4a9</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>light</name>
-    <title>光源控制器</title>
-    <filename>df/dfb/group__light.html</filename>
-    <subgroup>opt_light_control</subgroup>
-  </compound>
-  <compound kind="group">
-    <name>opt_light_control</name>
-    <title>OPT 奥普特光源控制器</title>
-    <filename>d0/d28/group__opt__light__control.html</filename>
-    <class kind="struct">rm::LightIpConfig</class>
-    <class kind="class">rm::OPTLightController</class>
   </compound>
   <compound kind="group">
     <name>ml</name>
@@ -13889,6 +13913,7 @@
     <filename>d3/da8/group__opcua.html</filename>
     <class kind="class">rm::ClientView</class>
     <class kind="class">rm::Client</class>
+    <class kind="class">rm::ClientTimer</class>
     <class kind="class">rm::EventType</class>
     <class kind="class">rm::Event</class>
     <class kind="struct">rm::Argument</class>
@@ -13900,6 +13925,7 @@
     <class kind="class">rm::Publisher&lt; TransportID::UDP_UADP &gt;</class>
     <class kind="class">rm::ServerView</class>
     <class kind="class">rm::Server</class>
+    <class kind="class">rm::ServerTimer</class>
     <class kind="struct">rm::FieldMetaData</class>
     <class kind="class">rm::Subscriber</class>
     <class kind="class">rm::Subscriber&lt; TransportID::UDP_UADP &gt;</class>

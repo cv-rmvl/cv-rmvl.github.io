@@ -154,9 +154,6 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a0c89d20dc623f86eeaf5406063d7ae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a775e277bc3b904731bf15c635f1fdc80" id="r_a775e277bc3b904731bf15c635f1fdc80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a775e277bc3b904731bf15c635f1fdc80">operator ClientView</a> () const</td></tr>
 <tr class="separator:a775e277bc3b904731bf15c635f1fdc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67639e0053a4d857963d64338ae7ab02" id="r_a67639e0053a4d857963d64338ae7ab02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#ga09801e53791739037ee37c7eaf5a7e5c">FindNodeInClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67639e0053a4d857963d64338ae7ab02">find</a> (std::string_view browse_name, uint16_t ns=1U) const</td></tr>
-<tr class="memdesc:a67639e0053a4d857963d64338ae7ab02"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
-<tr class="separator:a67639e0053a4d857963d64338ae7ab02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6230e9e503e8214976c73a523a14cf6" id="r_ad6230e9e503e8214976c73a523a14cf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6230e9e503e8214976c73a523a14cf6">ok</a> () const</td></tr>
 <tr class="memdesc:ad6230e9e503e8214976c73a523a14cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否成功创建客户端并成功连接到服务器  <br /></td></tr>
 <tr class="separator:ad6230e9e503e8214976c73a523a14cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +163,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a74b40046bd18231fab4c3815c0e5b2b4" id="r_a74b40046bd18231fab4c3815c0e5b2b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b40046bd18231fab4c3815c0e5b2b4">spinOnce</a> () const</td></tr>
 <tr class="memdesc:a74b40046bd18231fab4c3815c0e5b2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理  <br /></td></tr>
 <tr class="separator:a74b40046bd18231fab4c3815c0e5b2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5a7897028994c94f0f89b0cad5f521" id="r_a1f5a7897028994c94f0f89b0cad5f521"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f5a7897028994c94f0f89b0cad5f521">shutdown</a> ()</td></tr>
+<tr class="memdesc:a1f5a7897028994c94f0f89b0cad5f521"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开与服务器的连接  <br /></td></tr>
+<tr class="separator:a1f5a7897028994c94f0f89b0cad5f521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67639e0053a4d857963d64338ae7ab02" id="r_a67639e0053a4d857963d64338ae7ab02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#ga09801e53791739037ee37c7eaf5a7e5c">FindNodeInClient</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67639e0053a4d857963d64338ae7ab02">find</a> (std::string_view browse_name, uint16_t ns=1U) const</td></tr>
+<tr class="memdesc:a67639e0053a4d857963d64338ae7ab02"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
+<tr class="separator:a67639e0053a4d857963d64338ae7ab02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2243cf4ad77dbd90ef0c2d23351ed47" id="r_ad2243cf4ad77dbd90ef0c2d23351ed47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;node) const</td></tr>
 <tr class="memdesc:ad2243cf4ad77dbd90ef0c2d23351ed47"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的变量节点读数据  <br /></td></tr>
 <tr class="separator:ad2243cf4ad77dbd90ef0c2d23351ed47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -694,6 +697,25 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>是否成功移除监视项 </dd></dl>
+
+</div>
+</div>
+<a id="a1f5a7897028994c94f0f89b0cad5f521" name="a1f5a7897028994c94f0f89b0cad5f521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5a7897028994c94f0f89b0cad5f521">&#9670;&#160;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>断开与服务器的连接 </p>
 
 </div>
 </div>

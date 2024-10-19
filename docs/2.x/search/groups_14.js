@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['定时、计时模块_0',['定时、计时模块',['../db/d06/group__core__timer.html',1,'']]]
+  ['平移目标决策模块_0',['平移目标决策模块',['../dd/dd3/group__translation__decider.html',1,'']]],
+  ['平面目标时间序列_1',['平面目标时间序列',['../d0/d75/group__planar__tracker.html',1,'']]]
 ];

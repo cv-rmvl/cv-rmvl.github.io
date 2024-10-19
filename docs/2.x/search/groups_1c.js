@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['核心模块_0',['RMVL 核心模块',['../d0/de1/group__core.html',1,'']]]
+  ['检测与识别模块（功能模块）_0',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
 ];

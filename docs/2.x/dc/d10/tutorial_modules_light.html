@@ -144,20 +144,20 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../d8/d57/tutorial_modules_interpolation.html">函数插值方法</a> ↓<br  />
 </p>
 <hr  />
-<p>相关类 <a class="el" href="../../db/d24/classrm_1_1OPTLightController.html" title="OPT 奥普特光源控制器">rm::OPTLightController</a> .</p>
+<p>相关类 rm::OPTLightController .</p>
 <h2><a class="anchor" id="autotoc_md258"></a>
 如何使用</h2>
 <p>使用前需安装光源控制器驱动，详情参考：<a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a></p>
 <h2><a class="anchor" id="autotoc_md259"></a>
 示例代码</h2>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da9/opt__light__control_8h.html">rmvl/light/opt_light_control.h</a>&gt;</span></div>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/light/opt_light_control.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// 创建光源控制器对象</span></div>
-<div class="line">    <span class="keyword">auto</span> light_controller = <a class="code hl_class" href="../../db/d24/classrm_1_1OPTLightController.html">rm::OPTLightController</a>();</div>
+<div class="line">    <span class="keyword">auto</span> light_controller = rm::OPTLightController();</div>
 <div class="line">    <span class="comment">// 连接光源控制器</span></div>
-<div class="line">    <span class="keyword">auto</span> lipc = <a class="code hl_struct" href="../../d0/dde/structrm_1_1LightIpConfig.html">rm::LightIpConfig</a>{<span class="stringliteral">&quot;192.168.1.100&quot;</span>, <span class="stringliteral">&quot;192.168.1.1&quot;</span>, <span class="stringliteral">&quot;255.255.255.0&quot;</span>};</div>
+<div class="line">    <span class="keyword">auto</span> lipc = rm::LightIpConfig{<span class="stringliteral">&quot;192.168.1.100&quot;</span>, <span class="stringliteral">&quot;192.168.1.1&quot;</span>, <span class="stringliteral">&quot;255.255.255.0&quot;</span>};</div>
 <div class="line">    light_controller.connect(lipc);</div>
 <div class="line">    <span class="comment">// 打开指定的通道</span></div>
 <div class="line">    light_controller.openChannels({1});</div>
@@ -166,15 +166,12 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 触发光源 50×10ms = 500ms</span></div>
 <div class="line">    light_controller.trigger(1, 50);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1OPTLightController_html"><div class="ttname"><a href="../../db/d24/classrm_1_1OPTLightController.html">rm::OPTLightController</a></div><div class="ttdoc">OPT 奥普特光源控制器</div><div class="ttdef"><b>定义</b> opt_light_control.h:35</div></div>
-<div class="ttc" id="aopt__light__control_8h_html"><div class="ttname"><a href="../../d4/da9/opt__light__control_8h.html">opt_light_control.h</a></div></div>
-<div class="ttc" id="astructrm_1_1LightIpConfig_html"><div class="ttname"><a href="../../d0/dde/structrm_1_1LightIpConfig.html">rm::LightIpConfig</a></div><div class="ttdoc">OPT 光源控制器 IP 配置信息</div><div class="ttdef"><b>定义</b> opt_light_control.h:27</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 创建光源控制器对象</span></div>
-<div class="line">light_controller = <a class="code hl_class" href="../../db/d24/classrm_1_1OPTLightController.html">rm.OPTLightController</a>()</div>
+<div class="line">light_controller = rm.OPTLightController()</div>
 <div class="line"><span class="comment"># 连接光源控制器</span></div>
-<div class="line">cfg = <a class="code hl_struct" href="../../d0/dde/structrm_1_1LightIpConfig.html">rm.LightIpConfig</a>()</div>
+<div class="line">cfg = rm.LightIpConfig()</div>
 <div class="line">cfg.ip = <span class="stringliteral">&quot;192.168.1.100&quot;</span></div>
 <div class="line">cfg.gateway = <span class="stringliteral">&quot;192.168.1.1&quot;</span></div>
 <div class="line">cfg.netmask = <span class="stringliteral">&quot;255.255.255.0&quot;</span></div>
