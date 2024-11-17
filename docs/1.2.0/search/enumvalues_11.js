@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['r_2126',['R',['../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ae1e1d3d40573127e9ee0480caf1283d6',1,'rm']]],
+  ['rad_2127',['RAD',['../d9/d31/group__rmath.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
+  ['red_2128',['RED',['../d7/dbd/group__imgproc.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469',1,'rm']]],
+  ['right_2129',['RIGHT',['../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
+  ['rk2_2130',['RK2',['../de/d06/group__core__numcal.html#ggaea358ba85db7497b8fd56729dbb51eefa993199f8fe9c7a359c71015d682dcccf',1,'rm']]],
+  ['rk3_2131',['RK3',['../de/d06/group__core__numcal.html#ggaea358ba85db7497b8fd56729dbb51eefa4b3b80437ea802b287a73a18023af4d3',1,'rm']]],
+  ['rk4_2132',['RK4',['../de/d06/group__core__numcal.html#ggaea358ba85db7497b8fd56729dbb51eefaf81fe250c66aad887e2086f79364f2a8',1,'rm']]],
+  ['rmvl_5fbaddynamictype_2133',['RMVL_BadDynamicType',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba59242f30afedb168324b811aed9f446c',1,'util.hpp']]],
+  ['rmvl_5fstsassert_2134',['RMVL_StsAssert',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaeb1914b1d3bd797296feba9b74cf6c2',1,'util.hpp']]],
+  ['rmvl_5fstsbacktrace_2135',['RMVL_StsBackTrace',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4badbb04baae7a4aab87d74dfbddf48a828',1,'util.hpp']]],
+  ['rmvl_5fstsbadarg_2136',['RMVL_StsBadArg',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bae9adacf618624ed9e1236bab70c227a4',1,'util.hpp']]],
+  ['rmvl_5fstsbadsize_2137',['RMVL_StsBadSize',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7',1,'util.hpp']]],
+  ['rmvl_5fstsdivbyzero_2138',['RMVL_StsDivByZero',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba1caf46b424ef4a4a00f584ff8e7d17e4',1,'util.hpp']]],
+  ['rmvl_5fstserror_2139',['RMVL_StsError',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24',1,'util.hpp']]],
+  ['rmvl_5fstsinvfmt_2140',['RMVL_StsInvFmt',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba57a8acaa184c6b31afc5901b1d6d4c00',1,'util.hpp']]],
+  ['rmvl_5fstsnomem_2141',['RMVL_StsNoMem',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba071c5577bf7946d53d6c8d010fe925e1',1,'util.hpp']]],
+  ['rmvl_5fstsnotanumber_2142',['RMVL_StsNotaNumber',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaed4ac1e4599dc43bc84084672d6bacb',1,'util.hpp']]],
+  ['rmvl_5fstsnullptr_2143',['RMVL_StsNullPtr',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba3f8d82d5412e115672d7eb10f51dca17',1,'util.hpp']]],
+  ['rmvl_5fstsok_2144',['RMVL_StsOk',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba856586874a2d744a818342ad634869d1',1,'util.hpp']]],
+  ['rmvl_5fstsoutofrange_2145',['RMVL_StsOutOfRange',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bae1c6cc94e9a0882777a400aa11d2d441',1,'util.hpp']]],
+  ['roll_2146',['ROLL',['../db/d29/group__predictor.html#ggaa3314485e4d8f91f54d9f0927b784bffa940fc54478cc7b30a59936ea2ad613bb',1,'rm']]],
+  ['rotaryenc_2147',['RotaryEnc',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49dad367701db149cd84bb54e1203aa9961e',1,'rm']]]
+];

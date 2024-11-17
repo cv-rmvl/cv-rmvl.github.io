@@ -1,0 +1,212 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: 如何使用/开发 tracker 模块</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0-dev</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">如何使用/开发 tracker 模块</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md51">1. 如何使用</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md52">1.1 有关构造与创建</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md53">1.2 信息获取</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md54">1.2.1 数据信息</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md55">1.2.2 通用属性与派生类属性</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md56">2. 如何开发</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md57">2.1 基本准则</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2tracker_2how__to__use"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/07/07</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../df/daa/tutorial_extra_how_to_use_tracker.html">如何使用/开发 tracker 模块</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d0/d6e/tutorial_extra_how_to_use_group.html">如何使用/开发 group 模块</a> ↓<br  />
+</p>
+<hr  />
+<p>基类 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a></p>
+<h1><a class="anchor" id="autotoc_md51"></a>
+1. 如何使用</h1>
+<h2><a class="anchor" id="autotoc_md52"></a>
+1.1 有关构造与创建</h2>
+<p>追踪器 <code>tracker</code> 对象创建方法与特征组合 <code>combo</code> 以及图像特征 <code>feature</code> 基本一致，均使用静态工厂函数，这里是使用 <code>make_tracker</code> 完成构建。</p>
+<p>构造一个平面目标追踪器的代码如下</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_tracker = <a class="code hl_function" href="../../d1/dc8/classrm_1_1PlanarTracker.html#aa9aa4e4c4ecccb5236a7d6223bad9670">rm::PlanarTracker::make_tracker</a>(p_combo); <span class="comment">// p_combo 是已经存在的追踪器，并且不能为 nullptr</span></div>
+<div class="ttc" id="aclassrm_1_1PlanarTracker_html_aa9aa4e4c4ecccb5236a7d6223bad9670"><div class="ttname"><a href="../../d1/dc8/classrm_1_1PlanarTracker.html#aa9aa4e4c4ecccb5236a7d6223bad9670">rm::PlanarTracker::make_tracker</a></div><div class="ttdeci">static ptr make_tracker(combo::ptr p_combo)</div><div class="ttdoc">构建 PlanarTracker</div><div class="ttdef"><b>定义</b> planar_tracker.h:41</div></div>
+</div><!-- fragment --><p><a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a> 提供了 <code>clone</code> 纯虚拟函数，用于完全复制一份数据。</p>
+<h2><a class="anchor" id="autotoc_md53"></a>
+1.2 信息获取</h2>
+<p>和低层数据组件类似， <a class="el" href="../../de/dca/group__tracker.html">追踪器/特征组合的时间序列（数据组件）</a> 内部维护了各时间下特征组合的相关信息，即特征组合的时间序列。</p>
+<h3><a class="anchor" id="autotoc_md54"></a>
+1.2.1 数据信息</h3>
+<p><code>tracker</code> 记录了时间上彼此关联的一组 <code>combo</code>，内部使用 <code>std::deque&lt;combo::ptr&gt;</code> 表示。<code>tracker</code> 提供了与 <code>std::deque</code> 容器类似的访问操作，包括</p>
+<center></center><center>表 1: tracker 信息获取接口</center><center><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">信息获取接口   </th><th class="markdownTableHeadCenter">实现功能    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>at(idx)</code>   </td><td class="markdownTableBodyCenter">获取指定的下标<code>idx</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>front()</code>   </td><td class="markdownTableBodyCenter">获取特征组合时间序列最新的元素    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>back()</code>   </td><td class="markdownTableBodyCenter">获取特征组合时间序列最旧的元素    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>data()</code>   </td><td class="markdownTableBodyCenter">获取<code>std::deque&lt;combo::ptr&gt;</code>（特征组合时间序列）的数据    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>size()</code>   </td><td class="markdownTableBodyCenter">获取特征组合时间序列的大小    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>empty()</code>   </td><td class="markdownTableBodyCenter">判断特征组合时间序列是否为空   </td></tr>
+</table>
+</center><center></center><h3><a class="anchor" id="autotoc_md55"></a>
+1.2.2 通用属性与派生类属性</h3>
+<p>和低层数据组件类似一样，包含高度、宽度、角度、中心点、角点列表、类型信息、相机外参等内容，但主要表示经过修正后的数据，例如 <code>height</code> 成员方法表示追踪器在通过对时间序列中所有特征组合进行处理，得到的修正后的高度信息（譬如加权平均）。访问方式与 <code>combo</code>、<code>feature</code> 完全一致，这里不再赘述。</p>
+<h1><a class="anchor" id="autotoc_md56"></a>
+2. 如何开发</h1>
+<h2><a class="anchor" id="autotoc_md57"></a>
+2.1 基本准则</h2>
+<p>开发与使用是一脉相承的，设计一个新的 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a> 派生类对象也要满足使用上的条件，一个新的派生类对象（假设定义为 <code>MyTracker</code>）需要满足以下准则。</p>
+<ol type="1">
+<li>必须定义在 <code>namespace rm</code> 中；</li>
+<li>必须 public 继承于 <code><a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a></code> 基类；</li>
+<li>必须定义 <code>MyTracker::ptr</code> 和 <code>MyTracker::const_ptr</code> 作为 <code>std::shared_ptr&lt;MyTracker&gt;</code> 和 <code>std::shared_ptr&lt;const MyTracker&gt;</code> 的别名；</li>
+<li>必须实现以 <code>MyTracker::ptr</code> 为返回值的 <code>MyTracker::make_feature</code> 静态工厂函数；</li>
+<li>不得定义公开数据成员，避免对数据成员的直接操作，设置、获取操作应该使用形如 <code>setXXX</code> 或 <code>getXXX</code> 的成员方法；</li>
+<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <code>cast</code> 静态函数，方便起见，可以使用 <code>RMVL_TRACKER_CAST</code> 宏，例如</p>
+<div class="fragment"><div class="line"><a class="code hl_define" href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a>(MyTracker);</div>
+<div class="ttc" id="agroup__tracker_html_ga9e3030832380159c0148548f67ffa0b5"><div class="ttname"><a href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a></div><div class="ttdeci">#define RMVL_TRACKER_CAST(name)</div><div class="ttdef"><b>定义</b> tracker.h:105</div></div>
+</div><!-- fragment --> </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

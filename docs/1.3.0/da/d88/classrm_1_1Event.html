@@ -1,0 +1,575 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rm::Event类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.3.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d3/dda/classrm_1_1Event-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Event类 参考<div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>OPC UA 事件  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/opcua/event.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Event 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d0a/classrm_1_1Event__coll__graph.svg" width="230" height="548"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a38cc061a1260bff8107021ffe409c50b" id="r_a38cc061a1260bff8107021ffe409c50b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38cc061a1260bff8107021ffe409c50b">Event</a> ()=default</td></tr>
+<tr class="memdesc:a38cc061a1260bff8107021ffe409c50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 <code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 对象类型  <br /></td></tr>
+<tr class="separator:a38cc061a1260bff8107021ffe409c50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d5cf6e96fa065686d69c06e01ab811" id="r_a91d5cf6e96fa065686d69c06e01ab811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91d5cf6e96fa065686d69c06e01ab811">Event</a> (<a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype)</td></tr>
+<tr class="memdesc:a91d5cf6e96fa065686d69c06e01ab811"><td class="mdescLeft">&#160;</td><td class="mdescRight">从事件类型构造新的事件  <br /></td></tr>
+<tr class="separator:a91d5cf6e96fa065686d69c06e01ab811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e4c2ffe590ce0f264009468d341113" id="r_af6e4c2ffe590ce0f264009468d341113"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e4c2ffe590ce0f264009468d341113">Event</a> (const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;val)</td></tr>
+<tr class="separator:af6e4c2ffe590ce0f264009468d341113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94238ecca8f9ec6ba5ae50b35ed927c2" id="r_a94238ecca8f9ec6ba5ae50b35ed927c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94238ecca8f9ec6ba5ae50b35ed927c2">Event</a> (<a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&amp;val)</td></tr>
+<tr class="separator:a94238ecca8f9ec6ba5ae50b35ed927c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6796ff6cfb8a24af4669520ea8653a99" id="r_a6796ff6cfb8a24af4669520ea8653a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6796ff6cfb8a24af4669520ea8653a99">operator=</a> (const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;val)</td></tr>
+<tr class="separator:a6796ff6cfb8a24af4669520ea8653a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0ba4a704a3ad08be81fe22b0b969e0" id="r_abb0ba4a704a3ad08be81fe22b0b969e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb0ba4a704a3ad08be81fe22b0b969e0">operator=</a> (<a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&amp;val)</td></tr>
+<tr class="separator:abb0ba4a704a3ad08be81fe22b0b969e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d385f0b3aa66134913aa957e3a61a93" id="r_a7d385f0b3aa66134913aa957e3a61a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d385f0b3aa66134913aa957e3a61a93">add</a> (const std::string &amp;browse_name, int prop)</td></tr>
+<tr class="memdesc:a7d385f0b3aa66134913aa957e3a61a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加非默认属性至事件类型中  <br /></td></tr>
+<tr class="separator:a7d385f0b3aa66134913aa957e3a61a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2d1cf8d52769eb2bfb7532bacfb472" id="r_a7c2d1cf8d52769eb2bfb7532bacfb472"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c2d1cf8d52769eb2bfb7532bacfb472">operator[]</a> (const std::string &amp;browse_name)</td></tr>
+<tr class="memdesc:a7c2d1cf8d52769eb2bfb7532bacfb472"><td class="mdescLeft">&#160;</td><td class="mdescRight">访问指定的非默认属性  <br /></td></tr>
+<tr class="separator:a7c2d1cf8d52769eb2bfb7532bacfb472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1de823172bb0b86ba205e78a43cbb5d" id="r_ad1de823172bb0b86ba205e78a43cbb5d"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1de823172bb0b86ba205e78a43cbb5d">data</a> () const</td></tr>
+<tr class="memdesc:ad1de823172bb0b86ba205e78a43cbb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 <code>int</code> 整型的非默认属性列表  <br /></td></tr>
+<tr class="separator:ad1de823172bb0b86ba205e78a43cbb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855874ba7f3e17ef0efae038e3d6bac4" id="r_a855874ba7f3e17ef0efae038e3d6bac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855874ba7f3e17ef0efae038e3d6bac4">setType</a> (<a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;<a class="el" href="#a74efea123f3ed9d0dd1ffef134aa6c49">type</a>)</td></tr>
+<tr class="memdesc:a855874ba7f3e17ef0efae038e3d6bac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置事件类型  <br /></td></tr>
+<tr class="separator:a855874ba7f3e17ef0efae038e3d6bac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74efea123f3ed9d0dd1ffef134aa6c49" id="r_a74efea123f3ed9d0dd1ffef134aa6c49"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74efea123f3ed9d0dd1ffef134aa6c49">type</a> () const</td></tr>
+<tr class="memdesc:a74efea123f3ed9d0dd1ffef134aa6c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取事件类型  <br /></td></tr>
+<tr class="separator:a74efea123f3ed9d0dd1ffef134aa6c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a1f51b2065d8596efc8d184b594c4eae7" id="r_a1f51b2065d8596efc8d184b594c4eae7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f51b2065d8596efc8d184b594c4eae7">ns</a> {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td></tr>
+<tr class="memdesc:a1f51b2065d8596efc8d184b594c4eae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名空间索引，默认为 <code>1</code>  <br /></td></tr>
+<tr class="separator:a1f51b2065d8596efc8d184b594c4eae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe7aa4c0e741c3153e5381f8435c408" id="r_abfe7aa4c0e741c3153e5381f8435c408"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe7aa4c0e741c3153e5381f8435c408">source_name</a></td></tr>
+<tr class="memdesc:abfe7aa4c0e741c3153e5381f8435c408"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认属性：事件源名称  <br /></td></tr>
+<tr class="separator:abfe7aa4c0e741c3153e5381f8435c408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5314db12c69e9b73053f857d7ebb7c31" id="r_a5314db12c69e9b73053f857d7ebb7c31"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5314db12c69e9b73053f857d7ebb7c31">message</a></td></tr>
+<tr class="memdesc:a5314db12c69e9b73053f857d7ebb7c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认属性：事件消息，包含关于事件的描述  <br /></td></tr>
+<tr class="separator:a5314db12c69e9b73053f857d7ebb7c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5ddf9ef071cef4d6512383ae0ebf37" id="r_abc5ddf9ef071cef4d6512383ae0ebf37"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5ddf9ef071cef4d6512383ae0ebf37">severity</a> {}</td></tr>
+<tr class="memdesc:abc5ddf9ef071cef4d6512383ae0ebf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认属性：事件严重程度  <br /></td></tr>
+<tr class="separator:abc5ddf9ef071cef4d6512383ae0ebf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPC UA 事件 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a38cc061a1260bff8107021ffe409c50b" name="a38cc061a1260bff8107021ffe409c50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cc061a1260bff8107021ffe409c50b">&#9670;&#160;</a></span>Event() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Event::Event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造 <code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 对象类型 </p>
+
+</div>
+</div>
+<a id="a91d5cf6e96fa065686d69c06e01ab811" name="a91d5cf6e96fa065686d69c06e01ab811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d5cf6e96fa065686d69c06e01ab811">&#9670;&#160;</a></span>Event() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Event::Event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>etype</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从事件类型构造新的事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">etype</td><td>既存的待作为事件类型信息的使用 <code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6e4c2ffe590ce0f264009468d341113" name="af6e4c2ffe590ce0f264009468d341113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e4c2ffe590ce0f264009468d341113">&#9670;&#160;</a></span>Event() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Event::Event </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94238ecca8f9ec6ba5ae50b35ed927c2" name="a94238ecca8f9ec6ba5ae50b35ed927c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94238ecca8f9ec6ba5ae50b35ed927c2">&#9670;&#160;</a></span>Event() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Event::Event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7d385f0b3aa66134913aa957e3a61a93" name="a7d385f0b3aa66134913aa957e3a61a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d385f0b3aa66134913aa957e3a61a93">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Event::add </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>browse_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prop</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加非默认属性至事件类型中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">browse_name</td><td>非默认属性的浏览名 BrowseName </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop</td><td><code>int</code> 整型属性值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1de823172bb0b86ba205e78a43cbb5d" name="ad1de823172bb0b86ba205e78a43cbb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1de823172bb0b86ba205e78a43cbb5d">&#9670;&#160;</a></span>data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto &amp; rm::Event::data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 <code>int</code> 整型的非默认属性列表 </p>
+<p>rmvl/opcua 模块支持修改的 <b>默认属性</b> 包括： </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">BrowseName   </th><th class="markdownTableHeadCenter">类型   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>SourceName</code>   </td><td class="markdownTableBodyCenter"><code>String</code>   </td><td class="markdownTableBodyCenter">事件源名称    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>Message</code>   </td><td class="markdownTableBodyCenter"><code>String</code>   </td><td class="markdownTableBodyCenter">事件消息，包含关于事件的描述    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>Severity</code>   </td><td class="markdownTableBodyCenter"><code>UInt16</code>   </td><td class="markdownTableBodyCenter">事件严重程度   </td></tr>
+</table>
+<dl class="section return"><dt>返回</dt><dd>非默认属性列表 </dd></dl>
+
+</div>
+</div>
+<a id="a6796ff6cfb8a24af4669520ea8653a99" name="a6796ff6cfb8a24af4669520ea8653a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6796ff6cfb8a24af4669520ea8653a99">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp; rm::Event::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb0ba4a704a3ad08be81fe22b0b969e0" name="abb0ba4a704a3ad08be81fe22b0b969e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0ba4a704a3ad08be81fe22b0b969e0">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp; rm::Event::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c2d1cf8d52769eb2bfb7532bacfb472" name="a7c2d1cf8d52769eb2bfb7532bacfb472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2d1cf8d52769eb2bfb7532bacfb472">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int &amp; rm::Event::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>browse_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>访问指定的非默认属性 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">browse_name</td><td>非默认属性的浏览名 BrowseName </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>int</code> 整型非默认属性的左值引用 </dd></dl>
+
+</div>
+</div>
+<a id="a855874ba7f3e17ef0efae038e3d6bac4" name="a855874ba7f3e17ef0efae038e3d6bac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855874ba7f3e17ef0efae038e3d6bac4">&#9670;&#160;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Event::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置事件类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>既存的待作为事件类型信息的使用 <code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d88/classrm_1_1Event_a855874ba7f3e17ef0efae038e3d6bac4_cgraph.svg" width="324" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a74efea123f3ed9d0dd1ffef134aa6c49" name="a74efea123f3ed9d0dd1ffef134aa6c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74efea123f3ed9d0dd1ffef134aa6c49">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> * rm::Event::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取事件类型 </p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a5314db12c69e9b73053f857d7ebb7c31" name="a5314db12c69e9b73053f857d7ebb7c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5314db12c69e9b73053f857d7ebb7c31">&#9670;&#160;</a></span>message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Event::message</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认属性：事件消息，包含关于事件的描述 </p>
+
+</div>
+</div>
+<a id="a1f51b2065d8596efc8d184b594c4eae7" name="a1f51b2065d8596efc8d184b594c4eae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f51b2065d8596efc8d184b594c4eae7">&#9670;&#160;</a></span>ns</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::Event::ns {1<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a4c614360da93c0a041b22e537de151eb">U</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>命名空间索引，默认为 <code>1</code> </p>
+
+</div>
+</div>
+<a id="abc5ddf9ef071cef4d6512383ae0ebf37" name="abc5ddf9ef071cef4d6512383ae0ebf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5ddf9ef071cef4d6512383ae0ebf37">&#9670;&#160;</a></span>severity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::Event::severity {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认属性：事件严重程度 </p>
+
+</div>
+</div>
+<a id="abfe7aa4c0e741c3153e5381f8435c408" name="abfe7aa4c0e741c3153e5381f8435c408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe7aa4c0e741c3153e5381f8435c408">&#9670;&#160;</a></span>source_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Event::source_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认属性：事件源名称 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/opcua/<a class="el" href="../../dc/d94/event_8hpp.html">event.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

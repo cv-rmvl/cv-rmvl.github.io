@@ -1,0 +1,300 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: 自动求导、数值微分</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0-dev</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">自动求导、数值微分</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md141">1. 基于 Taylor 公式的数值微分</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md142">2. Richardson 外推原理</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md143">2.1 公式推导</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md144">2.2 外推算法总结</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md145">3. 如何使用</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md146">3.1 创建项目</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md147">3.2 构建、运行</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>包含中心差商以及 Richardson 外推原理的介绍</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2auto__differential"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/05/06 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../de/d14/tutorial_modules_fminbnd.html">一维最优化方法</a> ↓<br  />
+</p>
+<hr  />
+<p class="formulaDsp">
+\[
+\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\fml#1{\text{(#1)}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md141"></a>
+1. 基于 Taylor 公式的数值微分</h2>
+<p>利用以下两个 2 阶 Taylor 公式：</p>
+<p class="formulaDsp">
+\[\begin{align}f(x+h)&amp;=f(x)+f&#39;(x)h+\frac{f&#39;&#39;(x)}2h^2+\frac{f&#39;&#39;&#39;(x)}{3!}h^3\tag{1-1a}\\
+f(x-h)&amp;=f(x)-f&#39;(x)h+\frac{f&#39;&#39;(x)}2h^2-\frac{f&#39;&#39;&#39;(x)}{3!}h^3\tag{1-1b}\end{align}\]
+</p>
+<p>可以得到两个数值微分公式及其对应的截断误差（余项） \(R\)：</p>
+<p class="formulaDsp">
+\[\begin{align}f&#39;(x)&amp;\approx\frac{f(x+h)-f(x)}h,\qquad R=-\frac{f&#39;&#39;(\xi)}2h+o(h^2)\tag{1-2a}\\
+f&#39;(x)&amp;\approx\frac{f(x)-f(x-h)}h,\qquad R=\frac{f&#39;&#39;(\eta)}2h+o(h^2)\tag{1-2b}\end{align}\]
+</p>
+<p>其中 \(\fml{1-2a}\)称为<span style="color: red">前向差商</span>， \(\fml{1-2b}\)称为<span style="color: red">后向差商</span>。由于截断误差的存在，差商法的精度不高，因此我们可以考虑使用更高阶的差商法。我们将 \(\fml{1-1a}\)和 \(\fml{1-1b}\)相减，得到：</p>
+<p class="formulaDsp">
+\[f(x+h)-f(x-h)=2f&#39;(x)h+\frac2{3!}f&#39;&#39;&#39;(\xi)h^3+o(h^3)\tag{1-3a}\]
+</p>
+<p>整理得到</p>
+<p class="formulaDsp">
+\[f&#39;(x)=\frac{f(x+h)-f(x-h)}{2h},\qquad R=-\frac{f&#39;&#39;&#39;(\xi)}{3!}h^2+o(h^2)\tag{1-3b}\]
+</p>
+<p>如果导数 \(f&#39;(x)\)用 \(\fml{1-3b}\)计算，那么截断误差为 \(o(h^2)\)，比 \(\fml{1-2a}\)和 \(\fml{1-2b}\)的截断误差 \(O(h)\)更小。这种方法称为<span style="color: red">中心差商</span>。</p>
+<h2><a class="anchor" id="autotoc_md142"></a>
+2. Richardson 外推原理</h2>
+<h3><a class="anchor" id="autotoc_md143"></a>
+2.1 公式推导</h3>
+<p>将公式 \(\fml{1-3b}\)扩展，可以得到更完全的写法：</p>
+<p class="formulaDsp">
+\[f&#39;(x)=\green{\frac{f(x+h)-f(x-h)}{2h}}-\left[\frac1{3!}f^{(3)}(x)h^2+\frac1{5!}f^{(5)}(x)h^4+\frac1{7!}f^{(7)}(x)h^6+\cdots\right]\tag{2-1}\]
+</p>
+<p>一般的，可以记作</p>
+<p class="formulaDsp">
+\[L=\green{\varphi(h)}+\left[a_2h^2+a_4h^4+a_6h^6+\cdots\right]\tag{2-2}\]
+</p>
+<p>正如上一节所说，如果 \(L\)用 \(\varphi(h)\)来近似表示，则截断误差是按 \(h^2\)展开的幂级数，误差阶为 \(o\left(h^2\right)\)。</p>
+<p>事实上，对于公式 \(\fml{2-2}\)，求解 \(L\)的过程还可以继续向前推进（外推），不妨以 \(\frac h2\)替换 \(\fml{2-2}\)中的 \(h\)，可得</p>
+<p class="formulaDsp">
+\[L=\varphi\left(\frac h2\right)+\left[a_2\frac{h^2}4+a_4\frac{h^4}{16}+a_6\frac{h^6}{64}+\cdots\right]\tag{2-3}\]
+</p>
+<p>由 \(4\times\fml{2-3}-\fml{2-2}\)可以得到</p>
+<p class="formulaDsp">
+\[L=\left[\frac43\varphi\left(\frac h2\right)-\frac13\varphi(h)\right]-\left[a_4\frac{h^4}4+5a_6\frac{h^6}{16}+\cdots\right]\tag{2-4}\]
+</p>
+<p>上式表达了外推过程的第 1 步，说明 \(\varphi(h)\)和 \(\varphi\left(\frac h2\right)\)的一个线性组合提供了导数即 \(L\)的新的计算公式，其<span style="color: red">精度提高</span>至了 \(o\left(h^4\right)\)</p>
+<p>继续进行第 2 步，令</p>
+<p class="formulaDsp">
+\[\psi(h)=\frac43\varphi\left(\frac h2\right)-\frac13\varphi(h)=\frac1{4^1-1}\left[4^1\varphi\left(\frac h2\right)-\varphi(h)\right]\tag{2-5}\]
+</p>
+<p>那么 \(\fml{2-4}\)可以改写成</p>
+<p class="formulaDsp">
+\[L=\psi(h)+\left[b_4h^4+b_6h^6+\cdots\right]\tag{2-6}\]
+</p>
+<p>与第 1 步的外推过程类似，以 \(\frac h2\)替换 \(\fml{2-6}\)中的 \(h\)，可得</p>
+<p class="formulaDsp">
+\[L=\psi\left(\frac h2\right)+\left[b_4\frac{h^4}{16}+b_6\frac{h^6}{64}+\cdots\right]\tag{2-7}\]
+</p>
+<p>由 \(4^2\times\fml{2-7}-\fml{2-6}\)可以得到</p>
+<p class="formulaDsp">
+\[L=\left[\frac{16}{15}\psi\left(\frac h2\right)-\frac1{15}\psi(h)\right]-\left[b_6\frac{h^6}{20}+\cdots\right]\tag{2-8}\]
+</p>
+<p>此式表达了外推过程的第 2 步，说明 \(\psi(h)\)和 \(\psi\left(\frac h2\right)\)的一个线性组合提供了导数即 \(L\)的新的计算公式，其<span style="color: red">精度提高</span>至了 \(o\left(h^6\right)\)</p>
+<p>如果我们令</p>
+<p class="formulaDsp">
+\[\theta(h)=\frac{16}{15}\psi\left(\frac h2\right)-\frac1{15}\psi(h)\tag{2-9}\]
+</p>
+<p>不难猜出，新的导数计算公式为</p>
+<p class="formulaDsp">
+\[L\approx\frac{64}{63}\theta\left(\frac h2\right)-\frac1{63}\theta(h)\tag{2-10}\]
+</p>
+<p>读者可以自行验证，按照这个思路可以进一步外推，可执行任意多步得到精度不断提高的新公式，这就是 <span style="color: red">Richardson 外推原理</span>。</p>
+<h3><a class="anchor" id="autotoc_md144"></a>
+2.2 外推算法总结</h3>
+<p>令 \(\varphi(h)=\frac{f(x+h)-f(x-h)}{2h}\)，外推 \(M\)步，则外推算法的步骤如下</p>
+<p>① 选取一个适当的 \(h\)值，计算 \(M+1\)个数，记为 \(T(*,*)\)</p>
+<p class="formulaDsp">
+\[T(n,0)=\varphi\left(\frac h{2^n}\right),\qquad n=0,1,2,\cdots,M\tag{2-11}\]
+</p>
+<p>② 按公式计算</p>
+<p class="formulaDsp">
+\[T(n,k)=\frac1{4^k-1}\left[4^kT(n,k-1)-T(n-1,k-1)\right],\qquad\left\{\begin{align}
+k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
+\end{align}\right.\tag{2-12}\]
+</p>
+<p>按照以上步骤计算得到的 \(T(n,k)\)，满足等式</p>
+<p class="formulaDsp">
+\[L=T(n,k)+o(h^{2k+2})\qquad(h\to0)\tag{2-13}\]
+</p>
+<p>即 \(T(n,k)\)具备 \(2k+2\)阶的精度。</p>
+<h2><a class="anchor" id="autotoc_md145"></a>
+3. 如何使用</h2>
+<p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d8/db4/group__core__optimal.html#ga0d960fda587557e7abb07dfe96d824e4" title="计算多元函数的梯度">rm::grad</a> 。</p>
+<p>以下展示了使用自动求导、数值微分的例子。</p>
+<h3><a class="anchor" id="autotoc_md146"></a>
+3.1 创建项目</h3>
+<ol type="1">
+<li>添加源文件 <code>main.cpp</code> <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 自定义函数 f(x)=x²+4x-3</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> x * x + 4 * x - 3; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">double</span> dydx = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a>(quadratic, 1);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;f&#39;(1) = %f\n&quot;</span>, dydx);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core__optimal_html_gad269c00a143e239e4c56922766bb2a2e"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a></div><div class="ttdeci">double derivative(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</div><div class="ttdoc">计算一元函数的导数</div></div>
+<div class="ttc" id="anumcal_8hpp_html"><div class="ttname"><a href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></div><div class="ttdoc">Numerical Calculation Module 数值计算模块</div></div>
+</div><!-- fragment --></li>
+<li>添加 <code>CMakeLists.txt</code> <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
+<div class="line">project(DerivativeDemo)</div>
+<div class="line">find_package(RMVL COMPONENTS core REQUIRED)</div>
+<div class="line">add_executable(demo main.cpp)</div>
+<div class="line">target_link_libraries(demo PRIVATE rmvl_core)</div>
+</div><!-- fragment --></li>
+</ol>
+<h3><a class="anchor" id="autotoc_md147"></a>
+3.2 构建、运行</h3>
+<p>在项目根目录打开终端，输入</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">cmake --build .</div>
+<div class="line">./demo</div>
+</div><!-- fragment --><p>可以看到运行结果</p>
+<div class="fragment"><div class="line">f&#39;(1) = 6</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
