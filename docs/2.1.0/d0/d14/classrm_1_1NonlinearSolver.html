@@ -1,0 +1,281 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::NonlinearSolver类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d0/d14/classrm_1_1NonlinearSolver.html">NonlinearSolver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-attribs">Public 属性</a> |
+<a href="../../d2/d52/classrm_1_1NonlinearSolver-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::NonlinearSolver类 参考<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> » <a class="el" href="../../dd/dcf/group__algorithm__numcal.html">数值计算模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>非线性方程求解器  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/algorithm/numcal.hpp&gt;</code></p>
+<div class="dynheader">
+rm::NonlinearSolver 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="244" scrolling="no" src="../../dc/d6d/classrm_1_1NonlinearSolver__coll__graph.svg" width="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8330e8c73b45e6d1102a89c66c0f6674" id="r_a8330e8c73b45e6d1102a89c66c0f6674"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8330e8c73b45e6d1102a89c66c0f6674">NonlinearSolver</a> ()=default</td></tr>
+<tr class="separator:a8330e8c73b45e6d1102a89c66c0f6674"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4147a92c35687a6db533c3887867dccf" id="r_a4147a92c35687a6db533c3887867dccf"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4147a92c35687a6db533c3887867dccf">NonlinearSolver</a> (const std::function&lt; double(double)&gt; &amp;f)</td></tr>
+<tr class="memdesc:a4147a92c35687a6db533c3887867dccf"><td class="mdescLeft"> </td><td class="mdescRight">创建非线性方程求解器对象  <br/></td></tr>
+<tr class="separator:a4147a92c35687a6db533c3887867dccf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3f86197361775fa1ac992db2037ff1a4" id="r_a3f86197361775fa1ac992db2037ff1a4"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f86197361775fa1ac992db2037ff1a4">operator()</a> (double x0, double eps=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-5, std::size_t max_iter=50) const</td></tr>
+<tr class="memdesc:a3f86197361775fa1ac992db2037ff1a4"><td class="mdescLeft"> </td><td class="mdescRight">使用离散 Newton 迭代法求解非线性方程 \(f(x)=0\)  <br/></td></tr>
+<tr class="separator:a3f86197361775fa1ac992db2037ff1a4"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:af0e37799e84010770a522bb6f97cb788" id="r_af0e37799e84010770a522bb6f97cb788"><td align="right" class="memItemLeft" valign="top">std::function&lt; double(double)&gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e37799e84010770a522bb6f97cb788">func</a></td></tr>
+<tr class="memdesc:af0e37799e84010770a522bb6f97cb788"><td class="mdescLeft"> </td><td class="mdescRight">非线性方程函数对象  <br/></td></tr>
+<tr class="separator:af0e37799e84010770a522bb6f97cb788"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>非线性方程求解器 </p>
+<ul>
+<li>使用离散 Newton 迭代法求解非线性方程，详见 <a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8330e8c73b45e6d1102a89c66c0f6674" name="a8330e8c73b45e6d1102a89c66c0f6674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8330e8c73b45e6d1102a89c66c0f6674">◆ </a></span>NonlinearSolver() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::NonlinearSolver::NonlinearSolver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.NonlinearSolver(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;NonlinearSolver object&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.NonlinearSolver(</td><td class="paramname">f</td><td>) -&gt; </td><td>&lt;NonlinearSolver object&gt;</td></tr></table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a4147a92c35687a6db533c3887867dccf" name="a4147a92c35687a6db533c3887867dccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4147a92c35687a6db533c3887867dccf">◆ </a></span>NonlinearSolver() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::NonlinearSolver::NonlinearSolver </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; double(double)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.NonlinearSolver(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;NonlinearSolver object&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.NonlinearSolver(</td><td class="paramname">f</td><td>) -&gt; </td><td>&lt;NonlinearSolver object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建非线性方程求解器对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>非线性方程 \(f(x)=0\) 的函数对象 \(f(x)\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>可以是 <code>double (*)(double)</code> 函数指针，和其他可隐式转换为该函数指针的可调用对象等 </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3f86197361775fa1ac992db2037ff1a4" name="a3f86197361775fa1ac992db2037ff1a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f86197361775fa1ac992db2037ff1a4">◆ </a></span>operator()()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::NonlinearSolver::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>eps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>max_iter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">50</span> ) const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.NonlinearSolver.__call__(</td><td class="paramname">x0[, eps[, max_iter]]</td><td>) -&gt; </td><td>fval</td></tr></table>
+</div><div class="memdoc">
+<p>使用离散 Newton 迭代法求解非线性方程 \(f(x)=0\) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>迭代初始值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eps</td><td>精度要求 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_iter</td><td>最大迭代次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>迭代结果 </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="af0e37799e84010770a522bb6f97cb788" name="af0e37799e84010770a522bb6f97cb788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e37799e84010770a522bb6f97cb788">◆ </a></span>func</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;double(double)&gt; rm::NonlinearSolver::func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>非线性方程函数对象 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/algorithm/<a class="el" href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

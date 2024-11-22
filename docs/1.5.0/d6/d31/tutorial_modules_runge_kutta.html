@@ -1,0 +1,618 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: 常微分方程（组）数值解与 Runge-Kutta 算法</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">常微分方程（组）数值解与 Runge-Kutta 算法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md214">1. 常微分方程（组）</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md215">2. 求解常微分方程的 Euler 方法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md216">2.1 显式 Euler 单步法</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md217">2.2 其余常见的 Euler 单步法</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md218">2.3 局部阶段误差</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md219">3. Runge-Kutta 方法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md220">3.1 二阶 Runge-Kutta 公式</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md221">3.2 Butcher 表</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md222">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
+          </li>
+          <li class="level3">
+            <a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>涉及常用的 <b>Euler 公式</b> 与 <b>Runge-Kutta</b> 算法</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2runge__kutta"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/01/12 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> ↓<br  />
+</p>
+<hr  />
+<p class="formulaDsp">
+\[
+\def\transparent#1{\color{transparent}{#1}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md214"></a>
+1. 常微分方程（组）</h2>
+<p>一个质量-弹簧-阻尼系统的运动微分方程可以表示为</p>
+<p class="formulaDsp">
+\[m\frac{\mathrm d^2x}{\mathrm dt^2}+c\frac{\mathrm dx}{\mathrm dt}+kx=p(t)\tag{1-1a}\]
+</p>
+<p>即 </p><p class="formulaDsp">
+\[m\ddot x+c\dot x+kx=p(t)\tag{1-1b}\]
+</p>
+<p>可写成一阶方程组的形式，令 \(x_1=x,\quad x_2=\dot x\)，有</p>
+<p class="formulaDsp">
+\[\def\mat#1#2{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\left\{\begin{align}\dot x_1&amp;=x_2\\
+\dot x_2&amp;=-\frac kmx_1-\frac cmx_2+\frac1mp(t)
+\end{align}\right.\tag{1-2}\]
+</p>
+<p>记 \(\dot{\pmb x}=\begin{bmatrix}\dot x_1\\\dot x_2\end{bmatrix},\quad A=\begin{bmatrix}0&amp;1\\-\frac km&amp;-\frac cm\end{bmatrix},\quad \pmb b(t)=\begin{bmatrix}0\\\frac1mp(t)\end{bmatrix},\quad \pmb x^{(0)}=\begin{bmatrix}x_1(t_0)\\x_2(t_0)\end{bmatrix}\)，有</p>
+<p class="formulaDsp">
+\[\dot{\pmb x}=A\pmb x+\pmb b(t),\quad\pmb x(t_0)=\pmb x^{(0)}\tag{1-3}\]
+</p>
+<p>\(\text{(1-3)}\)在控制系统中能够经常遇见，这种表示一个在时刻 \(t_0\)带有初始条件的 2 阶线性系统，对于一般的（非线性）方程组，我们可以表示为</p>
+<p class="formulaDsp">
+\[\def\rkf#1{\dot x_{#1}=f_{#1}(t,x_1,x_2,\cdots,x_k),\quad x_{#1}(t_0)=x_{#1}^{(0)}}\rkf1\\\rkf2\\\vdots\\\rkf k\]
+</p>
+<p>即 </p><p class="formulaDsp">
+\[\dot{\pmb x}=\pmb F(t,\pmb x),\quad\pmb x(t_0)=\pmb x^{(0)}\tag{1-4a}\]
+</p>
+<p>仅有 1 条的常微分方程则表示为 </p><p class="formulaDsp">
+\[\dot x=f(t,x),\quad x(t_0)=x^{(0)}\tag{1-4b}\]
+</p>
+<p>这就是常微分方程的<b>初值问题</b>，即给定一个一阶常微分方程和对应的初始条件，求解出指定点或者指定范围的函数值。对于 \(\text{(1-4b)}\)形式的初值问题，我们通常截取等步长，如取</p>
+<p class="formulaDsp">
+\[\begin{align}
+&amp;t_0&lt;t_1&lt;\cdots&lt;t_n&lt;t_{n+1}&lt;\cdots\\&amp;h=t_{n+1}-t_n\quad或\quad t_{n+1}=t_n+h\quad(h=0,1,\cdots)
+\end{align}\]
+</p>
+<h2><a class="anchor" id="autotoc_md215"></a>
+2. 求解常微分方程的 Euler 方法</h2>
+<h3><a class="anchor" id="autotoc_md216"></a>
+2.1 显式 Euler 单步法</h3>
+<p>先考虑一阶常微分方程 \(\text{(1-4b)}\)的形式，在取定的 \(t_n\)处 Taylor 展开，有</p>
+<p class="formulaDsp">
+\[\begin{align}
+x_{n+1}\approx x(t_{n+1})&amp;=x(t_n)+x&#39;(t_n)h+x&#39;&#39;(t_n)\frac{h^2}2+\cdots\\&amp;=x_n+h\dot x_n+\frac{h^2}2\ddot x_n+\cdots\\
+忽略h^2以上的高阶项，有\quad&amp;\approx x_n+hf(t_n,x_n)
+\end{align}\tag{2-1}\]
+</p>
+<p>可以得到</p>
+<p class="formulaDsp">
+\[x_{n+1}=x_n+hf(t_n,x_n)\tag{2-2}\]
+</p>
+<p>这便是求解常微分方程的基本方法，公式 \(\text{(2-2)}\)被称为 Explicit Euler 显式欧拉公式。</p>
+<h3><a class="anchor" id="autotoc_md217"></a>
+2.2 其余常见的 Euler 单步法</h3>
+<p>① Implicit Euler 隐式欧拉公式</p>
+<p class="formulaDsp">
+\[x_{n+1}=x_n+hf(t_{n+1},x_{n+1})\tag{2-3a}\]
+</p>
+<p>② 梯形公式</p>
+<p class="formulaDsp">
+\[x_{n+1}=x_n+\frac h2\left[f(t_n,x_n)+f(t_{n+1},x_{n+1})\right]\tag{2-3b}\]
+</p>
+<p>③ 改进 Euler 公式</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}&amp;\tilde x_{n+1}=x_n+hf(t_n,x_n)\\
+&amp;x_{n+1}=x_n+\frac h2\left[f(t_n,x_n)+f(t_{n+1},\tilde x_{n+1})\right]
+\end{align}\right.\tag{2-3c}\]
+</p>
+<p>同样的，对于一阶方程组，公式 \(\text{(2-2)}\)可以改写成</p>
+<p class="formulaDsp">
+\[\pmb x_{n+1}=\pmb x_n+h\pmb F(t_n,\pmb x_n)\tag{2-4}\]
+</p>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>用 Euler 方法和步长 \(h=0.1\)求解常微分方程的初值问题</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}y&#39;&amp;=x^3+y^3+1\quad(0\leq x\leq0.8)\\y(0)&amp;=0\end{align}\right.\]
+</p>
+<p>计算结果保留小数点后 6 位</p>
+<p><b>解答</b></p>
+<p>这里， \(f(x,y)=x^3+y^3+1,\ x_n=nh+x_0=0.1n+0=0.1n\quad(n=0,1,\cdots,8),\ y_0=0\)。由 Euler 公式计算可得</p>
+<p class="formulaDsp">
+\[\def\hf#1#2{y_{#1}+h(x_{#1}^3+y_{#1}^3+1)=#2}
+y(0.1)\approx y_1=\hf0{0.100000}\\
+y(0.2)\approx y_2=\hf1{0.200200}\\
+y(0.3)\approx y_3=\hf2{0.301802}\\
+y(0.4)\approx y_4=\hf3{0.407249}\\
+y(0.5)\approx y_5=\hf4{0.520403}\\
+y(0.6)\approx y_6=\hf5{0.646995}\\
+y(0.7)\approx y_7=\hf6{0.795680}\\
+y(0.8)\approx y_8=\hf7{0.980355}\]
+</p>
+<h3><a class="anchor" id="autotoc_md218"></a>
+2.3 局部阶段误差</h3>
+<p>上文的 4 种 Euler 单步法公式，使用哪种精度更高？这里要引入局部阶段误差的概念，因为每一次求解 \(x_i\)都会引入误差，并且误差会进行累积，局部截断误差不考虑迭代求解 \(x_n\)及之前的累积误差，仅考虑从 \(x_n\)到 \(x_{n+1}\)产生的误差，即认为 \(x_n=x(t_n)\)。对于显式 Euler 单步法，可以计算出其局部截断误差 \(T_{n+1}\)。</p>
+<p class="formulaDsp">
+\[\begin{align}
+T_{n+1}&amp;=x(t_{n+1})-x_{n+1}\\
+&amp;=x(t_{n+1})-x_n-hf(t_n,x_n)\\
+&amp;=x(t_{n+1})-x(t_n)-hx&#39;(t_n)\\
+x(t_{n+1})在t_n处\text{ Taylor }展开，有\quad&amp;=x(t_n)+hx&#39;(t_n)+\frac{h^2}2x&#39;&#39;(t_n)+o(h^3)-x(t_n)-hx&#39;(t_n)\\
+&amp;=\frac12x&#39;&#39;(t_n)h^2+o(h^3)
+\end{align}\tag{2-5}\]
+</p>
+<p>可以看出<b>局部截断误差的主项</b>为 \(0.5x&#39;&#39;(t_n)h^2\)，我们称显式 Euler 单步法具有 1 阶精度。</p>
+<p>再来考虑梯形公式 \(\text{(2-3b)}\)的局部截断误差 \(T_{n+1}\)。</p>
+<p class="formulaDsp">
+\[\begin{align}
+T_{n+1}&amp;=x(t_{n+1})-x(t_n)-\frac12hf(t_n,x(t_n))-\frac12hf(t_{n+1},x(t_{n+1}))\\
+&amp;=x(t_{n+1})-x(t_n)-\frac12hx&#39;(t_n)-\frac12hx&#39;(t_{n+1})\\
+&amp;=\left[x(t_n)+hx&#39;(t_n)+\frac{h^2}2x&#39;&#39;(t_n)+\frac{h^3}6x&#39;&#39;&#39;(t_n)+o(h^4)\right]-x(t_n)-\\
+&amp;\qquad\frac12hx&#39;(t_n)-\frac12h\left[x&#39;(t_n)+hx&#39;&#39;(t_n)+\frac{h^2}2x&#39;&#39;&#39;(t_n)+o(h^3)\right]\\
+&amp;=-\frac1{12}x&#39;&#39;&#39;(t_n)h^3+o(h^4)
+\end{align}\tag{2-6}\]
+</p>
+<p><b>局部截断误差的主项</b>为 \(-\frac1{12}x&#39;&#39;&#39;(t_n)h^3\)，我们称梯形公式具有 2 阶精度。</p>
+<h2><a class="anchor" id="autotoc_md219"></a>
+3. Runge-Kutta 方法</h2>
+<p>对于 \(\text{(2-3c)}\)的改进 Euler 公式，可以改写成</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+x_{n+1}&amp;=x_n+h\left(\frac12k_1+\frac12k_2\right)\\
+k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+h,x_n+hk_1)
+\end{align}\right.\tag{3-1}\]
+</p>
+<p>模仿这一写法，我们继续构造新的 2 阶公式</p>
+<h3><a class="anchor" id="autotoc_md220"></a>
+3.1 二阶 Runge-Kutta 公式</h3>
+<dl class="section note"><dt>注解</dt><dd>此小节为 2 阶 Runge-Kutta 公式族的推导，涉及到多元函数 \(f(x,y)\)的全导数  <p class="formulaDsp">
+\[\begin{align}\frac{\mathrm df}{\mathrm dx}&amp;=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}·\frac{\mathrm dy}{\mathrm dx}\\
+f&#39;&amp;=f_x+f_yy&#39;\end{align}\tag{i}\]
+</p>
+ 以及多元函数 \(f(x,y)\)的 Taylor 展开，令 \(\pmb x=(x-x_0,\ y-y_0)^T\)，则多元函数 Taylor 展开如下  <p class="formulaDsp">
+\[\begin{align}f(x,y)&amp;=f(x_0,y_0)+\begin{bmatrix}f_x(x_0,y_0)&amp;f_y(x_0,y_0)\end{bmatrix}\pmb x+\\
+&amp;\transparent=\frac1{2!}\pmb x^T\begin{bmatrix}f_{xx}(x_0,y_0)&amp;f_{xy}(x_0,y_0)\\f_{yx}(x_0,y_0)&amp;f_{yy}(x_0,y_0)\end{bmatrix}\pmb x+o^n\end{align}\tag{ii}\]
+</p>
+ <span style="color: red">若仅想了解最终结果，请跳过此小节</span></dd></dl>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+x_{n+1}&amp;=x_n+h(\lambda_1k_1+\lambda_2k_2)\\
+k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+ph,x_n+phk_1)
+\end{align}\right.\tag{3-2}\]
+</p>
+<p>其中 \(\lambda_1,\lambda_2,p\)为待定参数，先分别将 \(x(t_{n+1})\)和 \(x_{n+1}\)在 \(t_n\)处 Taylor 展开。</p>
+<p>对 \(x(t_{n+1})\)，有</p>
+<p class="formulaDsp">
+\[\begin{align}
+x(t_{n+1})&amp;=x(t_n)+hx&#39;(t_n)+\frac{h^2}2x&#39;&#39;(t_n)+o(h^3)\\
+&amp;=x(t_n)+hf(t_n,x(t_n))+\frac{h^2}2\frac{\mathrm d}{\mathrm dt}f(t_n,x(t_n))+o(h^3)\\
+&amp;=x(t_n)+hf(t_n,x(t_n))+\\
+&amp;\transparent=\frac{h^2}2\left[\frac{\partial f(t_n,x(t_n))}{\partial t}+\frac{\partial f(t_n,x(t_n))}{\partial x}·\frac{\mathrm dx}{\mathrm dt}\right]+o(h^3)\\
+令f(t_n,x(t_n))=(f)_{(n)}\quad&amp;=x(t_n)+h(f)_{(n)}+\frac{h^2}2\left[\frac{\partial (f)_{(n)}}{\partial t}+\frac{\partial (f)_{(n)}}{\partial x}\frac{\mathrm dx}{\mathrm dt}\right]+o(h^3)\\
+由f(t_n,x(t_n))=\frac{\mathrm dx}{\mathrm dt}\quad&amp;=x(t_n)+h(f)_{(n)}+\frac{h^2}2\left[\frac{\partial (f)_{(n)}}{\partial t}+\frac{\partial (f)_{(n)}}{\partial x}(f)_{(n)}\right]+o(h^3)\\
+&amp;=x(t_n)+h(f)_{(n)}+\frac{h^2}2(f_t+f_xf)_{(n)}+o(h^3)\tag{3-3}
+\end{align}\]
+</p>
+<p>对 \(x_{n+1}\)，有</p>
+<p class="formulaDsp">
+\[\begin{align}x_{n+1}&amp;=x_n+h\left[\lambda_1f(t_n,x_n)+\lambda_2f(t_n+ph,x_n+phf(t_n,x_n))\right]\\
+&amp;=x_n+h\lambda_1f(t_n,x_n)+h\lambda_2\left[f(t_n,x_n)+ph\frac{\partial f(t_n,x_n)}{\partial t}+\right.\\
+&amp;\transparent=\left.phf(t_n,x_n)\frac{\partial f(t_n,x_n)}{\partial x}+o(h^2)\right]\\
+令f(t_n,x_n)=(f)_n\quad&amp;=x_n+h\lambda_1(f)_n+\\
+&amp;\transparent=h\lambda_2\left[(f)_n+ph\frac{\partial(f)_n}{\partial t}+ph(f)_n\frac{\partial(f)_n}{\partial x}+o(h^2)\right]\\
+&amp;=x_n+h\lambda_1(f)_n+h\lambda_2\left[(f)_n+ph(f_t)_n+ph(f)_n(f_x)_n+o(h^2)\right]\\
+&amp;=x_n+h(\lambda_1+\lambda_2)(f)_n+ph^2\lambda_2(f_t+f_xf)_n+o(h^3)
+\end{align}\tag{3-4}\]
+</p>
+<p>为求局部截断误差，则满足 \(x(t_n)=x_n,\ (f)_{(n)}=(f)_n,\ (f_t+f_xf)_{(n)}=(f_t+f_xf)_n\)，因此 \(T_{n+1}=\text{(3-3)}-\text{(3-4)}\)，即</p>
+<p class="formulaDsp">
+\[\begin{align}
+T_{n+1}&amp;=x(t_{n+1})-x_{n+1}\\
+&amp;=(1-\lambda_1-\lambda_2)(f)_n+\left(\frac12-p\lambda_2\right)h^2(f_t+f_xf)_n+o(h^3)
+\end{align}\tag{3-5}\]
+</p>
+<p>我们希望这个公式具有 2 阶精度，即局部截断误差的主项为 0，因此有</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+&amp;\lambda_1+\lambda_2=1\\
+&amp;p\lambda_2=\frac12
+\end{align}\right.\tag{3-6}\]
+</p>
+<p>\(\text{(3-2)}\)和 \(\text{(3-6)}\)联立构成 2 阶精度的单步显式公式族，由于使用到了 2 个斜率值 \(k_1\)和 \(k_2\)，因此称为 2 级 2 阶 Runge-Kutta 公式族，最常用的是当 \(\lambda_1=0\)即 \(\lambda_2=1,\quad p=\frac12\)，这时得到所谓 2 级 2 阶<span style="color: red">中点公式</span>。</p>
+<p class="formulaDsp">
+\[\begin{align}x_{n+1}&amp;=x_n+hk_2\\k_1&amp;=f(t_n,x_n)\\
+k_2&amp;=f\left(t_n+\frac h2,x_n+\frac h2k_1\right)\end{align}\tag{3-7}\]
+</p>
+<h3><a class="anchor" id="autotoc_md221"></a>
+3.2 Butcher 表</h3>
+<p>为了便于记录上文的 Runge-Kutta 中点公式，我们将公式 \(\text{(3-2)}\)改写为</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}x_{n+1}&amp;=x_n+h(\lambda_1k_1+\lambda_2k_2)\\k_1&amp;=f(t_n+p_1h,x_n+h(a_{11}
+k_1+a_{12}k_2))\\k_2&amp;=f(t_n+p_2h,x_n+h(a_{21}k_1+a_{22}k_2))\end{align}\right.\tag{3-8}\]
+</p>
+<p>令  \(\pmb p=\mat{p_1}{p_2},\quad\pmb\lambda=(\lambda_1,\lambda_2),\quad
+R=\begin{bmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{bmatrix}\)，则</p>
+<p class="formulaDsp">
+\[\begin{array}{c|c}\pmb p&amp;R\\\hline&amp;\pmb\lambda\end{array}\Rightarrow\begin{array}{c|cc}p_1&amp;
+a_{11}&amp;a_{12}\\p_2&amp;a_{21}&amp;a_{22}\\\hline&amp;\lambda_1&amp;\lambda_2\end{array}\tag{3-9}\]
+</p>
+<p>被称为 Butcher 表，例如，上文的中点公式可以表示为</p>
+<p class="formulaDsp">
+\[\begin{array}{c|cc}0&amp;0&amp;0\\1&amp;1&amp;0\\\hline&amp;\frac12&amp;\frac12\end{array}\tag{3-10}\]
+</p>
+<p>一般的，对于一阶方程 \(x&#39;=f(t,x),\ x(t_0)=x^{(0)}\)，有以下 \(n\)阶公式</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+x_{n+1}&amp;=x_n+h(\lambda_1k_1+\lambda_2k_2+\cdots+\lambda_nk_n)\\
+k_1&amp;=f(t_n+p_1h,x_n+h(a_{11}k_1+a_{12}k_2+\cdots+a_{1n}k_n))\\
+k_2&amp;=f(t_n+p_2h,x_n+h(a_{21}k_1+a_{22}k_2+\cdots+a_{2n}k_n))\\&amp;\vdots\\
+k_n&amp;=f(t_n+p_nh,x_n+h(a_{n1}k_1+a_{n2}k_2+\cdots+a_{nn}k_n))\\
+\end{align}\right.\tag{3-11}\]
+</p>
+<p>同样可以用 Butcher 表来表示：</p>
+<p class="formulaDsp">
+\[\begin{array}{c|cccc}
+p_1&amp;a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+p_2&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
+\hline&amp;\lambda_1&amp;\lambda_2&amp;\cdots&amp;\lambda_n\end{array}\tag{3-12}\]
+</p>
+<h3><a class="anchor" id="autotoc_md222"></a>
+3.3 三阶 / 四阶 Runge-Kutta 公式</h3>
+<p>这里直接给出对应的 Butcher 表。</p>
+<p>一种 3 级 3 阶 Runge-Kutta 方法的具体形式对应的 Butcher 表</p>
+<p class="formulaDsp">
+\[\begin{array}{c|ccc}0&amp;0&amp;0&amp;0\\\frac12&amp;\frac12&amp;0&amp;0\\1&amp;-1&amp;2&amp;0\\
+\hline&amp;\frac16&amp;\frac23&amp;\frac16\end{array}\tag{3-13a}\]
+</p>
+<p>经典 4 级 4 阶 Runge-Kutta 方法对应的 Butcher 表</p>
+<p class="formulaDsp">
+\[\begin{array}{c|cccc}0&amp;0&amp;0&amp;0&amp;0\\\frac12&amp;\frac12&amp;0&amp;0&amp;0\\\frac12&amp;0&amp;\frac12&amp;0&amp;
+0\\1&amp;0&amp;0&amp;1&amp;0\\\hline&amp;\frac16&amp;\frac13&amp;\frac13&amp;\frac16\end{array}\tag{3-13b}\]
+</p>
+<h3><a class="anchor" id="equations_runge_kutta"></a>
+3.4 方程组的 Runge-Kutta 公式</h3>
+<p>对于一阶方程组 \(\pmb x&#39;=\pmb F(t,\pmb x),\ \pmb x(t_0)=\pmb x^{(0)}\)，公式 \(\text{(3-11)}\)可以改写为</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\pmb x_{n+1}&amp;=\pmb x_n+h(\lambda_1\pmb k_1+\lambda_2\pmb k_2+\cdots+\lambda_n\pmb k_n)\\
+\pmb k_1&amp;=\pmb F(t_n+p_1h,\pmb x_n+h(a_{11}\pmb k_1+a_{12}\pmb k_2+\cdots+a_{1n}\pmb k_n))\\
+\pmb k_2&amp;=\pmb F(t_n+p_2h,\pmb x_n+h(a_{21}\pmb k_1+a_{22}\pmb k_2+\cdots+a_{2n}\pmb k_n))\\&amp;\vdots\\
+\pmb k_n&amp;=\pmb F(t_n+p_nh,\pmb x_n+h(a_{n1}\pmb k_1+a_{n2}\pmb k_2+\cdots+a_{nn}\pmb k_n))\\
+\end{align}\right.\tag{3-14}\]
+</p>
+<p>公式 \(\text{(3-14)}\)与 \(\text{(3-11)}\)基本一致，因此同样可以使用 Butcher 表来描述常微分方程组的 Runge-Kutta 公式。</p>
+<p>RMVL 的相关类请参考 <a class="el" href="../../d5/d26/classrm_1_1RungeKutta.html" title="Butcher 表形式的常微分方程（组）数值求解器">rm::RungeKutta</a></p>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>使用 2 阶中点公式求解 \([0,1]\)上常微分方程的初值问题，并在 \(t=1\)处与实际值进行比较</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}\dot x_1&amp;=2x_2+t\\\dot x_2&amp;=-x_1-3x_2\end{align}\right.\\
+且满足x_1(0)=1,\quad x_2(0)=-1\]
+</p>
+<p><b>解答</b></p>
+<p><span style="color: orange"><b>① 数值解</b></span></p>
+<p>使用中点公式：</p>
+<p class="formulaDsp">
+\[\begin{align}\pmb x_{n+1}&amp;=\pmb x_n+h\pmb k_2\\\pmb k_1&amp;=\pmb F(t_n,\pmb x_n)\\
+\pmb k_2&amp;=\pmb F(t_n+\frac h2,\pmb x_n+\frac h2\pmb k_1)\end{align}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[\begin{align}x_{1_{n+1}}&amp;=x_{1_n}+hk_2\\x_{2_{n+1}}&amp;=x_{2_n}+hl_2\\
+k_1&amp;=f_1(t_n,x_{1_n},x_{2_n})\\l_1&amp;=f_2(t_n,x_{1_n},x_{2_n})\\
+k_2&amp;=f_1(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\\
+l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
+</p>
+<p>迭代运行结果如下：</p>
+<div style="height: 250px; overflow: auto;"> <div class="fragment"><div class="line">t = 0.010000,   x = 0.980250, -0.980200</div>
+<div class="line">t = 0.020000,   x = 0.960992, -0.960793</div>
+<div class="line">t = 0.030000,   x = 0.942218, -0.941772</div>
+<div class="line">t = 0.040000,   x = 0.923921, -0.923131</div>
+<div class="line">t = 0.050000,   x = 0.906093, -0.904863</div>
+<div class="line">t = 0.060000,   x = 0.888727, -0.886961</div>
+<div class="line">t = 0.070000,   x = 0.871815, -0.869420</div>
+<div class="line">t = 0.080000,   x = 0.855350, -0.852232</div>
+<div class="line">t = 0.090000,   x = 0.839325, -0.835393</div>
+<div class="line">t = 0.100000,   x = 0.823734, -0.818895</div>
+<div class="line">t = 0.110000,   x = 0.808570, -0.802734</div>
+<div class="line">t = 0.120000,   x = 0.793825, -0.786903</div>
+<div class="line">t = 0.130000,   x = 0.779494, -0.771396</div>
+<div class="line">t = 0.140000,   x = 0.765569, -0.756209</div>
+<div class="line">t = 0.150000,   x = 0.752045, -0.741335</div>
+<div class="line">t = 0.160000,   x = 0.738916, -0.726770</div>
+<div class="line">t = 0.170000,   x = 0.726174, -0.712507</div>
+<div class="line">t = 0.180000,   x = 0.713815, -0.698543</div>
+<div class="line">t = 0.190000,   x = 0.701833, -0.684871</div>
+<div class="line">t = 0.200000,   x = 0.690221, -0.671487</div>
+<div class="line">t = 0.210000,   x = 0.678973, -0.658386</div>
+<div class="line">t = 0.220000,   x = 0.668085, -0.645563</div>
+<div class="line">t = 0.230000,   x = 0.657551, -0.633014</div>
+<div class="line">t = 0.240000,   x = 0.647365, -0.620734</div>
+<div class="line">t = 0.250000,   x = 0.637521, -0.608717</div>
+<div class="line">t = 0.260000,   x = 0.628016, -0.596961</div>
+<div class="line">t = 0.270000,   x = 0.618843, -0.585460</div>
+<div class="line">t = 0.280000,   x = 0.609998, -0.574210</div>
+<div class="line">t = 0.290000,   x = 0.601475, -0.563207</div>
+<div class="line">t = 0.300000,   x = 0.593269, -0.552447</div>
+<div class="line">t = 0.310000,   x = 0.585377, -0.541926</div>
+<div class="line">t = 0.320000,   x = 0.577792, -0.531639</div>
+<div class="line">t = 0.330000,   x = 0.570511, -0.521584</div>
+<div class="line">t = 0.340000,   x = 0.563529, -0.511755</div>
+<div class="line">t = 0.350000,   x = 0.556841, -0.502149</div>
+<div class="line">t = 0.360000,   x = 0.550443, -0.492763</div>
+<div class="line">t = 0.370000,   x = 0.544331, -0.483592</div>
+<div class="line">t = 0.380000,   x = 0.538499, -0.474634</div>
+<div class="line">t = 0.390000,   x = 0.532945, -0.465884</div>
+<div class="line">t = 0.400000,   x = 0.527664, -0.457340</div>
+<div class="line">t = 0.410000,   x = 0.522652, -0.448997</div>
+<div class="line">t = 0.420000,   x = 0.517904, -0.440853</div>
+<div class="line">t = 0.430000,   x = 0.513418, -0.432904</div>
+<div class="line">t = 0.440000,   x = 0.509188, -0.425147</div>
+<div class="line">t = 0.450000,   x = 0.505212, -0.417579</div>
+<div class="line">t = 0.460000,   x = 0.501485, -0.410196</div>
+<div class="line">t = 0.470000,   x = 0.498004, -0.402997</div>
+<div class="line">t = 0.480000,   x = 0.494765, -0.395977</div>
+<div class="line">t = 0.490000,   x = 0.491765, -0.389133</div>
+<div class="line">t = 0.500000,   x = 0.489000, -0.382464</div>
+<div class="line">t = 0.510000,   x = 0.486466, -0.375966</div>
+<div class="line">t = 0.520000,   x = 0.484161, -0.369635</div>
+<div class="line">t = 0.530000,   x = 0.482081, -0.363471</div>
+<div class="line">t = 0.540000,   x = 0.480222, -0.357469</div>
+<div class="line">t = 0.550000,   x = 0.478582, -0.351627</div>
+<div class="line">t = 0.560000,   x = 0.477157, -0.345943</div>
+<div class="line">t = 0.570000,   x = 0.475944, -0.340414</div>
+<div class="line">t = 0.580000,   x = 0.474941, -0.335037</div>
+<div class="line">t = 0.590000,   x = 0.474143, -0.329810</div>
+<div class="line">t = 0.600000,   x = 0.473548, -0.324731</div>
+<div class="line">t = 0.610000,   x = 0.473154, -0.319797</div>
+<div class="line">t = 0.620000,   x = 0.472956, -0.315006</div>
+<div class="line">t = 0.630000,   x = 0.472954, -0.310356</div>
+<div class="line">t = 0.640000,   x = 0.473142, -0.305844</div>
+<div class="line">t = 0.650000,   x = 0.473520, -0.301468</div>
+<div class="line">t = 0.660000,   x = 0.474084, -0.297226</div>
+<div class="line">t = 0.670000,   x = 0.474831, -0.293116</div>
+<div class="line">t = 0.680000,   x = 0.475759, -0.289136</div>
+<div class="line">t = 0.690000,   x = 0.476865, -0.285283</div>
+<div class="line">t = 0.700000,   x = 0.478148, -0.281556</div>
+<div class="line">t = 0.710000,   x = 0.479603, -0.277953</div>
+<div class="line">t = 0.720000,   x = 0.481229, -0.274471</div>
+<div class="line">t = 0.730000,   x = 0.483024, -0.271109</div>
+<div class="line">t = 0.740000,   x = 0.484985, -0.267865</div>
+<div class="line">t = 0.750000,   x = 0.487110, -0.264737</div>
+<div class="line">t = 0.760000,   x = 0.489396, -0.261723</div>
+<div class="line">t = 0.770000,   x = 0.491841, -0.258822</div>
+<div class="line">t = 0.780000,   x = 0.494443, -0.256031</div>
+<div class="line">t = 0.790000,   x = 0.497199, -0.253349</div>
+<div class="line">t = 0.800000,   x = 0.500109, -0.250774</div>
+<div class="line">t = 0.810000,   x = 0.503169, -0.248304</div>
+<div class="line">t = 0.820000,   x = 0.506377, -0.245939</div>
+<div class="line">t = 0.830000,   x = 0.509731, -0.243676</div>
+<div class="line">t = 0.840000,   x = 0.513230, -0.241513</div>
+<div class="line">t = 0.850000,   x = 0.516870, -0.239449</div>
+<div class="line">t = 0.860000,   x = 0.520652, -0.237483</div>
+<div class="line">t = 0.870000,   x = 0.524571, -0.235613</div>
+<div class="line">t = 0.880000,   x = 0.528627, -0.233838</div>
+<div class="line">t = 0.890000,   x = 0.532818, -0.232156</div>
+<div class="line">t = 0.900000,   x = 0.537141, -0.230565</div>
+<div class="line">t = 0.910000,   x = 0.541595, -0.229065</div>
+<div class="line">t = 0.920000,   x = 0.546178, -0.227653</div>
+<div class="line">t = 0.930000,   x = 0.550889, -0.226329</div>
+<div class="line">t = 0.940000,   x = 0.555725, -0.225091</div>
+<div class="line">t = 0.950000,   x = 0.560685, -0.223938</div>
+<div class="line">t = 0.960000,   x = 0.565768, -0.222869</div>
+<div class="line">t = 0.970000,   x = 0.570971, -0.221881</div>
+<div class="line">t = 0.980000,   x = 0.576292, -0.220975</div>
+<div class="line">t = 0.990000,   x = 0.581732, -0.220149</div>
+<div class="line">t = 1.000000,   x = 0.587286, -0.219401</div>
+</div><!-- fragment --> </div><p>因此，在 \(t=1\)时， \(x\approx(0.587286,-0.219401)^T\)</p>
+<p><span style="color: orange"><b>② 精确解</b></span></p>
+<p>对待求的初值问题写成矩阵形式</p>
+<p class="formulaDsp">
+\[\dot X=\begin{bmatrix}0&amp;2\\-1&amp;-3\end{bmatrix}X+\mat10t,\quad X(0)=\mat1{-1}\]
+</p>
+<p>由矩阵分析的知识，可以知道，对于形如 </p><p class="formulaDsp">
+\[\dot X=AX+B(t)\tag{a}\]
+</p>
+<p>的矩阵微分方程，其解为</p>
+<p class="formulaDsp">
+\[X=e^{At}X(0)+\int_0^te^{A(t-\tau)}B(\tau)\mathrm d\tau\tag{b}\]
+</p>
+<p>其中 \(e^{At}\)为矩阵函数，可使用</p>
+<ul>
+<li>矩阵的 Jordan 标准型</li>
+<li>最小多项式的 Hamilton-Cayley 定理</li>
+<li>Laplace 变换</li>
+</ul>
+<p>的方式进行求解，这里使用最小多项式的 Hamilton-Cayley 定理进行求解。</p>
+<p>\(A\) 的特征多项式为 \(\varphi(\lambda)=\lambda^2+3\lambda+2=(\lambda+1)(\lambda+2)\)，无重根，因此 \(A\) 的最小多项式为 \(\mu(\lambda)=(\lambda+1)(\lambda+2)\)，由 Hamilton-Cayley 定理可知 \(A^2+3A+2I=0\)，对 \(e^{At}\)进行 Taylor 展开，并使用带余除法，一定可以得到</p>
+<p class="formulaDsp">
+\[e^{At}=a_0I+a_1A\tag{c}\]
+</p>
+<p>将 \(\lambda=-1,-2\)代入 \(e^{At}\)，可得</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}a_0+a_1(-1)&amp;=e^{-t}\\a_0+a_1(-2)&amp;=e^{-2t}\end{align}\right.\tag{d}\]
+</p>
+<p>解得 \(\left\{\begin{align}a_0&amp;=2e^{-t}-e^{-2t}\\a_1&amp;=e^{-t}-e^{-2t}\end{align}\right.\)，因此</p>
+<p class="formulaDsp">
+\[\begin{align}e^{At}&amp;=(2e^{-t}-e^{-2t})I+(e^{-t}-e^{-2t})A\\
+&amp;=\begin{bmatrix}2&amp;2\\1&amp;1\end{bmatrix}e^{-t}+\begin{bmatrix}-1&amp;-2\\1&amp;2\end{bmatrix}e^{-2t}
+\end{align}\tag{e}\]
+</p>
+<p>可以算出</p>
+<p class="formulaDsp">
+\[e^{At}X(0)=\mat00e^{-t}+\mat1{-1}e^{-2t}=\mat1{-1}e^{-2t}\tag{f}\]
+</p>
+<p>同理有</p>
+<p class="formulaDsp">
+\[\int_0^te^{A(t-\tau)}B(\tau)\mathrm d\tau=\mat2{-1}\left(e^{-t}+t-1\right)+
+\mat{-1}1\left(\frac14e^{-2t}+\frac12t-\frac14\right)\tag{g}\]
+</p>
+<p>整理得</p>
+<p class="formulaDsp">
+\[\begin{align}X&amp;=e^{At}X(0)+\int_0^te^{A(t-\tau)}B(\tau)\mathrm d\tau\\
+&amp;=\mat{0.75}{-0.75}e^{-2t}+\mat2{-1}e^{-t}+\mat{1.5}{-0.5}t+\mat{-1.75}{0.75}\end{align}\tag{h}\]
+</p>
+<p>把 \(t=1\) 代入上式，可得 \(X=\mat{0.75e^{-2}+2e^{-1}-0.25}{-0.75e^{-2}-e^{-1}+0.25}\approx\mat{0.587260}{-0.219381}\)，数值解 \(X=\mat{0.587286}{-0.219401}\)与之相符。</p>
+<p><b>代码</b></p>
+<div class="fragment"><div class="line"><a class="code hl_typedef" href="../../de/d06/group__core__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a> dot_x1 = [](<span class="keywordtype">double</span> t, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> 2 * x[1] + t; };</div>
+<div class="line"><a class="code hl_typedef" href="../../de/d06/group__core__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a> dot_x2 = [](double, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> -x[0] - 3 * x[1]; };</div>
+<div class="line"><a class="code hl_typedef" href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">rm::Odes</a> fs = {dot_x1, dot_x2};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 计算精确解</span></div>
+<div class="line"><span class="keywordtype">double</span> real_x1 = 0.75 * std::exp(-2) + 2 * std::exp(-1) - 0.25;</div>
+<div class="line"><span class="keywordtype">double</span> real_x2 = -0.75 * std::exp(-2) - std::exp(-1) + 0.25;</div>
+<div class="line"><span class="comment">// 2 阶 2 级中点公式</span></div>
+<div class="line"><a class="code hl_class" href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a> rk2(fs);</div>
+<div class="line"><span class="comment">// 计算数值解</span></div>
+<div class="line"><span class="keyword">auto</span> res2 = rk2.solve(0, {1, -1}, 0.01, 100);</div>
+<div class="line"> </div>
+<div class="line">printf(<span class="stringliteral">&quot;x* = (%f, %f)\n&quot;</span>, real_x1, real_x2);</div>
+<div class="line">printf(<span class="stringliteral">&quot;x  = (%f, %f)\n&quot;</span>, res2[0], res2[1]);</div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment">    输出结果为</span></div>
+<div class="line"><span class="comment">    x* = (0.587260, -0.219381)</span></div>
+<div class="line"><span class="comment">    x  = (0.587286, -0.219401)</span></div>
+<div class="line"><span class="comment">*/</span></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:274</div></div>
+<div class="ttc" id="agroup__core__numcal_html_ga15f2c5d0a048c76b5a00e8608d375a0b"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#ga15f2c5d0a048c76b5a00e8608d375a0b">rm::Odes</a></div><div class="ttdeci">std::vector&lt; Ode &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:198</div></div>
+<div class="ttc" id="agroup__core__numcal_html_ga5b9b2f75e249221d36421f6ad113c067"><div class="ttname"><a href="../../de/d06/group__core__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:196</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

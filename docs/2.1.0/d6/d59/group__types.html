@@ -1,0 +1,471 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: 视觉功能相关的类型系统</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> |
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">视觉功能相关的类型系统</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">rm::RMStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">状态类型  <a href="../../d0/d01/structrm_1_1RMStatus.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga4c8a071e633e74da2404d335e8e62bb7" id="r_ga4c8a071e633e74da2404d335e8e62bb7"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> : uint8_t { <a class="el" href="#gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">rm::ArmorSizeType::UNKNOWN</a>
+, <a class="el" href="#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a>
+, <a class="el" href="#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a>
+ }</td></tr>
+<tr class="memdesc:ga4c8a071e633e74da2404d335e8e62bb7"><td class="mdescLeft"> </td><td class="mdescRight">装甲板大小类型  <a href="#ga4c8a071e633e74da2404d335e8e62bb7">更多...</a><br/></td></tr>
+<tr class="separator:ga4c8a071e633e74da2404d335e8e62bb7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga083deed637a993d54f06a047224c9b79" id="r_ga083deed637a993d54f06a047224c9b79"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga083deed637a993d54f06a047224c9b79">rm::RuneType</a> : uint8_t { <a class="el" href="#gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3">rm::RuneType::UNKNOWN</a>
+, <a class="el" href="#gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2">rm::RuneType::INACTIVE</a>
+, <a class="el" href="#gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115">rm::RuneType::ACTIVE</a>
+ }</td></tr>
+<tr class="memdesc:ga083deed637a993d54f06a047224c9b79"><td class="mdescLeft"> </td><td class="mdescRight">能量机关激活类型  <a href="#ga083deed637a993d54f06a047224c9b79">更多...</a><br/></td></tr>
+<tr class="separator:ga083deed637a993d54f06a047224c9b79"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga53b2ed651ce89a5884af7310fb1a24d6" id="r_ga53b2ed651ce89a5884af7310fb1a24d6"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga53b2ed651ce89a5884af7310fb1a24d6">rm::TagType</a> : uint8_t { <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3">rm::TagType::UNKNOWN</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1">rm::TagType::NUM_0</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4">rm::TagType::NUM_1</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6">rm::TagType::NUM_2</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851">rm::TagType::NUM_3</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c">rm::TagType::NUM_4</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501">rm::TagType::NUM_5</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba">rm::TagType::NUM_6</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">rm::TagType::NUM_7</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">rm::TagType::NUM_8</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">rm::TagType::NUM_9</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">rm::TagType::CHAR_A</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">rm::TagType::CHAR_B</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">rm::TagType::CHAR_C</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">rm::TagType::CHAR_D</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">rm::TagType::CHAR_E</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">rm::TagType::CHAR_F</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">rm::TagType::CHAR_G</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">rm::TagType::CHAR_H</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">rm::TagType::CHAR_I</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">rm::TagType::CHAR_J</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">rm::TagType::CHAR_K</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">rm::TagType::CHAR_L</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">rm::TagType::CHAR_M</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">rm::TagType::CHAR_N</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">rm::TagType::CHAR_O</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">rm::TagType::CHAR_P</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">rm::TagType::CHAR_Q</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">rm::TagType::CHAR_R</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">rm::TagType::CHAR_S</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">rm::TagType::CHAR_T</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">rm::TagType::CHAR_U</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">rm::TagType::CHAR_V</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">rm::TagType::CHAR_W</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">rm::TagType::CHAR_X</a>
+, <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">rm::TagType::CHAR_Y</a>
+, <br/>
+  <a class="el" href="#gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">rm::TagType::CHAR_Z</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga53b2ed651ce89a5884af7310fb1a24d6"><td class="mdescLeft"> </td><td class="mdescRight">AprilTag 视觉标签类型  <a href="#ga53b2ed651ce89a5884af7310fb1a24d6">更多...</a><br/></td></tr>
+<tr class="separator:ga53b2ed651ce89a5884af7310fb1a24d6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gacd7f1723e9b020d34b5bbc041faaea89" id="r_gacd7f1723e9b020d34b5bbc041faaea89"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gacd7f1723e9b020d34b5bbc041faaea89">rm::RobotType</a> : uint8_t { <br/>
+  <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">rm::RobotType::UNKNOWN</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">rm::RobotType::HERO</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">rm::RobotType::ENGINEER</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">rm::RobotType::INFANTRY_3</a>
+, <br/>
+  <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">rm::RobotType::INFANTRY_4</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">rm::RobotType::INFANTRY_5</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">rm::RobotType::OUTPOST</a>
+, <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">rm::RobotType::BASE</a>
+, <br/>
+  <a class="el" href="#ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">rm::RobotType::SENTRY</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gacd7f1723e9b020d34b5bbc041faaea89"><td class="mdescLeft"> </td><td class="mdescRight">机器人类型  <a href="#gacd7f1723e9b020d34b5bbc041faaea89">更多...</a><br/></td></tr>
+<tr class="separator:gacd7f1723e9b020d34b5bbc041faaea89"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga6eb0c54354d1de382a6d3735da2c005c" id="r_ga6eb0c54354d1de382a6d3735da2c005c"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6eb0c54354d1de382a6d3735da2c005c">rm::CompensateType</a> : uint8_t { <br/>
+  <a class="el" href="#gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">rm::CompensateType::UNKNOWN</a>
+, <a class="el" href="#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">rm::CompensateType::UP</a>
+, <a class="el" href="#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">rm::CompensateType::DOWN</a>
+, <a class="el" href="#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">rm::CompensateType::LEFT</a>
+, <br/>
+  <a class="el" href="#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">rm::CompensateType::RIGHT</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:ga6eb0c54354d1de382a6d3735da2c005c"><td class="mdescLeft"> </td><td class="mdescRight">强制补偿类型  <a href="#ga6eb0c54354d1de382a6d3735da2c005c">更多...</a><br/></td></tr>
+<tr class="separator:ga6eb0c54354d1de382a6d3735da2c005c"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga4c8a071e633e74da2404d335e8e62bb7" name="ga4c8a071e633e74da2404d335e8e62bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c8a071e633e74da2404d335e8e62bb7">◆ </a></span>ArmorSizeType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../dd/de3/types_8hpp.html">rmvl/types.hpp</a>&gt;</code></p>
+<p>装甲板大小类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3" name="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN <div class="python_language"><b>Python: </b>rm.ArmorSizeType.UNKNOWN</div></td><td class="fielddoc"><p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7" name="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7"></a>SMALL <div class="python_language"><b>Python: </b>rm.ArmorSizeType.SMALL</div></td><td class="fielddoc"><p>小装甲板 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139" name="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139"></a>BIG <div class="python_language"><b>Python: </b>rm.ArmorSizeType.BIG</div></td><td class="fielddoc"><p>大装甲板 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga6eb0c54354d1de382a6d3735da2c005c" name="ga6eb0c54354d1de382a6d3735da2c005c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6eb0c54354d1de382a6d3735da2c005c">◆ </a></span>CompensateType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga6eb0c54354d1de382a6d3735da2c005c">rm::CompensateType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../dd/de3/types_8hpp.html">rmvl/types.hpp</a>&gt;</code></p>
+<p>强制补偿类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3" name="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN <div class="python_language"><b>Python: </b>rm.CompensateType.UNKNOWN</div></td><td class="fielddoc"><p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1" name="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1"></a>UP <div class="python_language"><b>Python: </b>rm.CompensateType.UP</div></td><td class="fielddoc"><p>向上强制补偿 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f" name="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f"></a>DOWN <div class="python_language"><b>Python: </b>rm.CompensateType.DOWN</div></td><td class="fielddoc"><p>向下强制补偿 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758" name="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758"></a>LEFT <div class="python_language"><b>Python: </b>rm.CompensateType.LEFT</div></td><td class="fielddoc"><p>向左强制补偿 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403" name="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403"></a>RIGHT <div class="python_language"><b>Python: </b>rm.CompensateType.RIGHT</div></td><td class="fielddoc"><p>向右强制补偿 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="gacd7f1723e9b020d34b5bbc041faaea89" name="gacd7f1723e9b020d34b5bbc041faaea89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd7f1723e9b020d34b5bbc041faaea89">◆ </a></span>RobotType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gacd7f1723e9b020d34b5bbc041faaea89">rm::RobotType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../dd/de3/types_8hpp.html">rmvl/types.hpp</a>&gt;</code></p>
+<p>机器人类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3" name="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN <div class="python_language"><b>Python: </b>rm.RobotType.UNKNOWN</div></td><td class="fielddoc"><p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36" name="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36"></a>HERO <div class="python_language"><b>Python: </b>rm.RobotType.HERO</div></td><td class="fielddoc"><p>英雄机器人 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e" name="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e"></a>ENGINEER <div class="python_language"><b>Python: </b>rm.RobotType.ENGINEER</div></td><td class="fielddoc"><p>工程机器人 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450" name="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450"></a>INFANTRY_3 <div class="python_language"><b>Python: </b>rm.RobotType.INFANTRY_3</div></td><td class="fielddoc"><p>3 号步兵机器人 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07" name="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07"></a>INFANTRY_4 <div class="python_language"><b>Python: </b>rm.RobotType.INFANTRY_4</div></td><td class="fielddoc"><p>4 号步兵机器人 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3" name="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3"></a>INFANTRY_5 <div class="python_language"><b>Python: </b>rm.RobotType.INFANTRY_5</div></td><td class="fielddoc"><p>5 号步兵机器人 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331" name="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331"></a>OUTPOST <div class="python_language"><b>Python: </b>rm.RobotType.OUTPOST</div></td><td class="fielddoc"><p>前哨站 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef" name="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef"></a>BASE <div class="python_language"><b>Python: </b>rm.RobotType.BASE</div></td><td class="fielddoc"><p>基地 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea" name="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea"></a>SENTRY <div class="python_language"><b>Python: </b>rm.RobotType.SENTRY</div></td><td class="fielddoc"><p>哨兵机器人 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga083deed637a993d54f06a047224c9b79" name="ga083deed637a993d54f06a047224c9b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga083deed637a993d54f06a047224c9b79">◆ </a></span>RuneType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga083deed637a993d54f06a047224c9b79">rm::RuneType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../dd/de3/types_8hpp.html">rmvl/types.hpp</a>&gt;</code></p>
+<p>能量机关激活类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3" name="gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN <div class="python_language"><b>Python: </b>rm.RuneType.UNKNOWN</div></td><td class="fielddoc"><p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2" name="gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2"></a>INACTIVE <div class="python_language"><b>Python: </b>rm.RuneType.INACTIVE</div></td><td class="fielddoc"><p>未激活的能量机关 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115" name="gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE <div class="python_language"><b>Python: </b>rm.RuneType.ACTIVE</div></td><td class="fielddoc"><p>已激活的能量机关 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga53b2ed651ce89a5884af7310fb1a24d6" name="ga53b2ed651ce89a5884af7310fb1a24d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53b2ed651ce89a5884af7310fb1a24d6">◆ </a></span>TagType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga53b2ed651ce89a5884af7310fb1a24d6">rm::TagType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../dd/de3/types_8hpp.html">rmvl/types.hpp</a>&gt;</code></p>
+<p>AprilTag 视觉标签类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3" name="gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN <div class="python_language"><b>Python: </b>rm.TagType.UNKNOWN</div></td><td class="fielddoc"><p>未知 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1" name="gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1"></a>NUM_0 <div class="python_language"><b>Python: </b>rm.TagType.NUM_0</div></td><td class="fielddoc"><p>数字 <code>0</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4" name="gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4"></a>NUM_1 <div class="python_language"><b>Python: </b>rm.TagType.NUM_1</div></td><td class="fielddoc"><p>数字 <code>1</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6" name="gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6"></a>NUM_2 <div class="python_language"><b>Python: </b>rm.TagType.NUM_2</div></td><td class="fielddoc"><p>数字 <code>2</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851" name="gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851"></a>NUM_3 <div class="python_language"><b>Python: </b>rm.TagType.NUM_3</div></td><td class="fielddoc"><p>数字 <code>3</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c" name="gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c"></a>NUM_4 <div class="python_language"><b>Python: </b>rm.TagType.NUM_4</div></td><td class="fielddoc"><p>数字 <code>4</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501" name="gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501"></a>NUM_5 <div class="python_language"><b>Python: </b>rm.TagType.NUM_5</div></td><td class="fielddoc"><p>数字 <code>5</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba" name="gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba"></a>NUM_6 <div class="python_language"><b>Python: </b>rm.TagType.NUM_6</div></td><td class="fielddoc"><p>数字 <code>6</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb" name="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb"></a>NUM_7 <div class="python_language"><b>Python: </b>rm.TagType.NUM_7</div></td><td class="fielddoc"><p>数字 <code>7</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4" name="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4"></a>NUM_8 <div class="python_language"><b>Python: </b>rm.TagType.NUM_8</div></td><td class="fielddoc"><p>数字 <code>8</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d" name="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d"></a>NUM_9 <div class="python_language"><b>Python: </b>rm.TagType.NUM_9</div></td><td class="fielddoc"><p>数字 <code>9</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1" name="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1"></a>CHAR_A <div class="python_language"><b>Python: </b>rm.TagType.CHAR_A</div></td><td class="fielddoc"><p>字母 <code>A</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa" name="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa"></a>CHAR_B <div class="python_language"><b>Python: </b>rm.TagType.CHAR_B</div></td><td class="fielddoc"><p>字母 <code>B</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426" name="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426"></a>CHAR_C <div class="python_language"><b>Python: </b>rm.TagType.CHAR_C</div></td><td class="fielddoc"><p>字母 <code>C</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc" name="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc"></a>CHAR_D <div class="python_language"><b>Python: </b>rm.TagType.CHAR_D</div></td><td class="fielddoc"><p>字母 <code>D</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37" name="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37"></a>CHAR_E <div class="python_language"><b>Python: </b>rm.TagType.CHAR_E</div></td><td class="fielddoc"><p>字母 <code>E</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe" name="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe"></a>CHAR_F <div class="python_language"><b>Python: </b>rm.TagType.CHAR_F</div></td><td class="fielddoc"><p>字母 <code>F</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c" name="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c"></a>CHAR_G <div class="python_language"><b>Python: </b>rm.TagType.CHAR_G</div></td><td class="fielddoc"><p>字母 <code>G</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e" name="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e"></a>CHAR_H <div class="python_language"><b>Python: </b>rm.TagType.CHAR_H</div></td><td class="fielddoc"><p>字母 <code>H</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0" name="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0"></a>CHAR_I <div class="python_language"><b>Python: </b>rm.TagType.CHAR_I</div></td><td class="fielddoc"><p>字母 <code>I</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f" name="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f"></a>CHAR_J <div class="python_language"><b>Python: </b>rm.TagType.CHAR_J</div></td><td class="fielddoc"><p>字母 <code>J</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4" name="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4"></a>CHAR_K <div class="python_language"><b>Python: </b>rm.TagType.CHAR_K</div></td><td class="fielddoc"><p>字母 <code>K</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee" name="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee"></a>CHAR_L <div class="python_language"><b>Python: </b>rm.TagType.CHAR_L</div></td><td class="fielddoc"><p>字母 <code>L</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5" name="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5"></a>CHAR_M <div class="python_language"><b>Python: </b>rm.TagType.CHAR_M</div></td><td class="fielddoc"><p>字母 <code>M</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5" name="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5"></a>CHAR_N <div class="python_language"><b>Python: </b>rm.TagType.CHAR_N</div></td><td class="fielddoc"><p>字母 <code>N</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7" name="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7"></a>CHAR_O <div class="python_language"><b>Python: </b>rm.TagType.CHAR_O</div></td><td class="fielddoc"><p>字母 <code>O</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd" name="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd"></a>CHAR_P <div class="python_language"><b>Python: </b>rm.TagType.CHAR_P</div></td><td class="fielddoc"><p>字母 <code>P</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d" name="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d"></a>CHAR_Q <div class="python_language"><b>Python: </b>rm.TagType.CHAR_Q</div></td><td class="fielddoc"><p>字母 <code>Q</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc" name="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc"></a>CHAR_R <div class="python_language"><b>Python: </b>rm.TagType.CHAR_R</div></td><td class="fielddoc"><p>字母 <code>R</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881" name="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881"></a>CHAR_S <div class="python_language"><b>Python: </b>rm.TagType.CHAR_S</div></td><td class="fielddoc"><p>字母 <code>S</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be" name="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be"></a>CHAR_T <div class="python_language"><b>Python: </b>rm.TagType.CHAR_T</div></td><td class="fielddoc"><p>字母 <code>T</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670" name="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670"></a>CHAR_U <div class="python_language"><b>Python: </b>rm.TagType.CHAR_U</div></td><td class="fielddoc"><p>字母 <code>U</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f" name="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f"></a>CHAR_V <div class="python_language"><b>Python: </b>rm.TagType.CHAR_V</div></td><td class="fielddoc"><p>字母 <code>V</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7" name="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7"></a>CHAR_W <div class="python_language"><b>Python: </b>rm.TagType.CHAR_W</div></td><td class="fielddoc"><p>字母 <code>W</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d" name="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d"></a>CHAR_X <div class="python_language"><b>Python: </b>rm.TagType.CHAR_X</div></td><td class="fielddoc"><p>字母 <code>X</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b" name="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b"></a>CHAR_Y <div class="python_language"><b>Python: </b>rm.TagType.CHAR_Y</div></td><td class="fielddoc"><p>字母 <code>Y</code> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea" name="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea"></a>CHAR_Z <div class="python_language"><b>Python: </b>rm.TagType.CHAR_Z</div></td><td class="fielddoc"><p>字母 <code>Z</code> </p>
+</td></tr>
+</table>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

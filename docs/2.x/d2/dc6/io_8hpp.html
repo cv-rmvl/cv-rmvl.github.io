@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.1.0-dev</span>
+                &#160;<span id="projectnumber">2.2.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -123,6 +123,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">io.hpp 文件参考</div></div>
 </div><!--header-->
@@ -131,6 +132,7 @@ $(function(){ initResizable(false); });
 <p>数据 IO 与通信模块  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iosfwd&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -139,7 +141,7 @@ $(function(){ initResizable(false); });
 </div><div class="textblock"><div class="dynheader">
 io.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d51/io_8hpp__incl.svg" width="551" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/d51/io_8hpp__incl.svg" width="642" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件被哪些文件直接或间接地引用了:</div>
@@ -158,6 +160,9 @@ io.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IMU 数据  <a href="../../db/def/structrm_1_1ImuData.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc5/structrm_1_1SerialPortMode.html">rm::SerialPortMode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口通信模式  <a href="../../d0/dc5/structrm_1_1SerialPortMode.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串行接口通信库  <a href="../../d4/d98/classrm_1_1SerialPort.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +177,25 @@ io.hpp 的引用(Include)关系图:</div>
 命名空间</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga8847230e42c9ea2972d24a8e6baf7371" id="r_ga8847230e42c9ea2972d24a8e6baf7371"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/group__core__io.html#ga8847230e42c9ea2972d24a8e6baf7371">rm::BaudRate</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">rm::BaudRate::BR_1200</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">rm::BaudRate::BR_4800</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">rm::BaudRate::BR_9600</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">rm::BaudRate::BR_19200</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">rm::BaudRate::BR_57600</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">rm::BaudRate::BR_115200</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga8847230e42c9ea2972d24a8e6baf7371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5342af0a7d136dfa35569caea049b113" id="r_ga5342af0a7d136dfa35569caea049b113"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/group__core__io.html#ga5342af0a7d136dfa35569caea049b113">rm::SPReadMode</a> : uint8_t { <a class="el" href="../../d5/d5f/group__core__io.html#gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">rm::SPReadMode::BLOCK</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">rm::SPReadMode::NONBLOCK</a>
+ }</td></tr>
+<tr class="memdesc:ga5342af0a7d136dfa35569caea049b113"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口数据读取模式  <a href="../../d5/d5f/group__core__io.html#ga5342af0a7d136dfa35569caea049b113">更多...</a><br /></td></tr>
+<tr class="separator:ga5342af0a7d136dfa35569caea049b113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>

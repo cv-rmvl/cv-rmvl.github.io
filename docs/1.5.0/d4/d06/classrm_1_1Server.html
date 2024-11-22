@@ -1,0 +1,1065 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: rm::Server类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="../../d3/da9/classrm_1_1Server-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Server类 参考<div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>OPC UA 服务器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/opcua/server.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::Server 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d50/classrm_1_1Server__inherit__graph.svg" width="392" height="464"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::Server 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dd4/classrm_1_1Server__coll__graph.svg" width="298" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a84dff3cdc1993c1771794d28a5d205db" id="r_a84dff3cdc1993c1771794d28a5d205db"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84dff3cdc1993c1771794d28a5d205db">ValueCallbackWrapper</a> = std::pair&lt;<a class="el" href="../../d3/da8/group__opcua.html#ga6fd19152ee69f8eb87ec85795db24c02">ValueCallbackBeforeRead</a>, <a class="el" href="../../d3/da8/group__opcua.html#ga421679c078aaa2f380ff6a56dccefe5b">ValueCallbackAfterWrite</a>&gt;</td></tr>
+<tr class="separator:a84dff3cdc1993c1771794d28a5d205db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a3bc8faffeb21b5690f318791a05ed" id="r_ad5a3bc8faffeb21b5690f318791a05ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5a3bc8faffeb21b5690f318791a05ed">DataSourceCallbackWrapper</a> = std::pair&lt;<a class="el" href="../../d3/da8/group__opcua.html#ga1db14ce525bc677ed1dc366c56ff61bd">DataSourceRead</a>, <a class="el" href="../../d3/da8/group__opcua.html#ga9414da9e067ed57a193c6484efcffc44">DataSourceWrite</a>&gt;</td></tr>
+<tr class="separator:ad5a3bc8faffeb21b5690f318791a05ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac68cb0753c1691848fd601aa49526096" id="r_ac68cb0753c1691848fd601aa49526096"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac68cb0753c1691848fd601aa49526096">Server</a> (uint16_t port, std::string_view name={}, const std::vector&lt; <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &gt; &amp;users={})</td></tr>
+<tr class="memdesc:ac68cb0753c1691848fd601aa49526096"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 OPC UA 服务器  <br /></td></tr>
+<tr class="separator:ac68cb0753c1691848fd601aa49526096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d93b0b25b10110a36fbd2b5e93b9dac" id="r_a6d93b0b25b10110a36fbd2b5e93b9dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d93b0b25b10110a36fbd2b5e93b9dac">Server</a> (<a class="el" href="../../d3/da8/group__opcua.html#gaa58e5b5a2af1794649d080b8a729a1c1">ServerUserConfig</a> on_config, uint16_t port, std::string_view name={}, const std::vector&lt; <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &gt; &amp;users={})</td></tr>
+<tr class="memdesc:a6d93b0b25b10110a36fbd2b5e93b9dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">从服务器配置函数指针创建 OPC UA 服务器  <br /></td></tr>
+<tr class="separator:a6d93b0b25b10110a36fbd2b5e93b9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f6b85baa8f7b01918bfcbdc55d2a82" id="r_a97f6b85baa8f7b01918bfcbdc55d2a82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f6b85baa8f7b01918bfcbdc55d2a82">Server</a> (const <a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;)=delete</td></tr>
+<tr class="separator:a97f6b85baa8f7b01918bfcbdc55d2a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1346c8703cfe40eccf8509ee236991ed" id="r_a1346c8703cfe40eccf8509ee236991ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1346c8703cfe40eccf8509ee236991ed">Server</a> (<a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;&amp;srv)=delete</td></tr>
+<tr class="separator:a1346c8703cfe40eccf8509ee236991ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac794ed25658bd3d3061e723db54d9408" id="r_ac794ed25658bd3d3061e723db54d9408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac794ed25658bd3d3061e723db54d9408">operator ServerView</a> () const</td></tr>
+<tr class="separator:ac794ed25658bd3d3061e723db54d9408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231923cb0990195a0b5ff522691d5d84" id="r_a231923cb0990195a0b5ff522691d5d84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a231923cb0990195a0b5ff522691d5d84">start</a> ()</td></tr>
+<tr class="memdesc:a231923cb0990195a0b5ff522691d5d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行服务器，调用方线程不阻塞  <br /></td></tr>
+<tr class="separator:a231923cb0990195a0b5ff522691d5d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af835200abfa46f85a183f6eed54edfa4" id="r_af835200abfa46f85a183f6eed54edfa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af835200abfa46f85a183f6eed54edfa4">stop</a> ()</td></tr>
+<tr class="memdesc:af835200abfa46f85a183f6eed54edfa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止服务器  <br /></td></tr>
+<tr class="separator:af835200abfa46f85a183f6eed54edfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee77445da5eeb190d5fdf67bed2897e" id="r_a8ee77445da5eeb190d5fdf67bed2897e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ee77445da5eeb190d5fdf67bed2897e">join</a> ()</td></tr>
+<tr class="memdesc:a8ee77445da5eeb190d5fdf67bed2897e"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞  <br /></td></tr>
+<tr class="separator:a8ee77445da5eeb190d5fdf67bed2897e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c4b9937aef50cd2f6b773c909278aa" id="r_a24c4b9937aef50cd2f6b773c909278aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24c4b9937aef50cd2f6b773c909278aa">~Server</a> ()</td></tr>
+<tr class="separator:a24c4b9937aef50cd2f6b773c909278aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4969e0fb9964d6c9b081a3aac156f100" id="r_a4969e0fb9964d6c9b081a3aac156f100"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gad705a86cb2bc6e9bc0ebfca8914ce0e3">FindNodeInServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4969e0fb9964d6c9b081a3aac156f100">find</a> (std::string_view browse_name, uint16_t ns=1U) const</td></tr>
+<tr class="memdesc:a4969e0fb9964d6c9b081a3aac156f100"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径搜索必要信息  <br /></td></tr>
+<tr class="separator:a4969e0fb9964d6c9b081a3aac156f100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4ea75af4533400395c215c7512c7fe" id="r_a5f4ea75af4533400395c215c7512c7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4ea75af4533400395c215c7512c7fe">addVariableTypeNode</a> (const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;vtype) const</td></tr>
+<tr class="memdesc:a5f4ea75af4533400395c215c7512c7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量类型节点 VariableTypeNode 至 <code>BaseDataVariableType</code> 中  <br /></td></tr>
+<tr class="separator:a5f4ea75af4533400395c215c7512c7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3944ec034392cf7b6b92338366e60479" id="r_a3944ec034392cf7b6b92338366e60479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3944ec034392cf7b6b92338366e60479">addVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const noexcept</td></tr>
+<tr class="memdesc:a3944ec034392cf7b6b92338366e60479"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变量节点 VariableNode 至指定父节点中，并指定引用类型  <br /></td></tr>
+<tr class="separator:a3944ec034392cf7b6b92338366e60479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af912feb9f269f493f4dca2e32716adf4" id="r_af912feb9f269f493f4dca2e32716adf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af912feb9f269f493f4dca2e32716adf4">addVariableNodeValueCallback</a> (<a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> id, <a class="el" href="../../d3/da8/group__opcua.html#ga6fd19152ee69f8eb87ec85795db24c02">ValueCallbackBeforeRead</a> before_read, <a class="el" href="../../d3/da8/group__opcua.html#ga421679c078aaa2f380ff6a56dccefe5b">ValueCallbackAfterWrite</a> after_write) const noexcept</td></tr>
+<tr class="memdesc:af912feb9f269f493f4dca2e32716adf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的变量节点 VariableNode 添加值回调  <br /></td></tr>
+<tr class="separator:af912feb9f269f493f4dca2e32716adf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b09e9d1204683dcc509b7ebcae33e3" id="r_a96b09e9d1204683dcc509b7ebcae33e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96b09e9d1204683dcc509b7ebcae33e3">addDataSourceVariableNode</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val, <a class="el" href="../../d3/da8/group__opcua.html#ga1db14ce525bc677ed1dc366c56ff61bd">DataSourceRead</a> on_read, <a class="el" href="../../d3/da8/group__opcua.html#ga9414da9e067ed57a193c6484efcffc44">DataSourceWrite</a> on_write, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const noexcept</td></tr>
+<tr class="memdesc:a96b09e9d1204683dcc509b7ebcae33e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加数据源变量节点 VariableNode 至指定父节点中  <br /></td></tr>
+<tr class="separator:a96b09e9d1204683dcc509b7ebcae33e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f3646256369f650c31500ea9916777" id="r_aa1f3646256369f650c31500ea9916777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1f3646256369f650c31500ea9916777">read</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node) const</td></tr>
+<tr class="memdesc:aa1f3646256369f650c31500ea9916777"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的变量节点读数据  <br /></td></tr>
+<tr class="separator:aa1f3646256369f650c31500ea9916777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc776ec685646b0192e559667ef8e40a" id="r_abc776ec685646b0192e559667ef8e40a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc776ec685646b0192e559667ef8e40a">write</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
+<tr class="memdesc:abc776ec685646b0192e559667ef8e40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">给指定的变量节点写数据  <br /></td></tr>
+<tr class="separator:abc776ec685646b0192e559667ef8e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75522850dd1af7009a1c5eb4d09eb045" id="r_a75522850dd1af7009a1c5eb4d09eb045"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75522850dd1af7009a1c5eb4d09eb045">addMethodNode</a> (const <a class="el" href="../../d4/d91/classrm_1_1Method.html">Method</a> &amp;method, const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a75522850dd1af7009a1c5eb4d09eb045"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加方法节点 MethodNode 至指定父节点中  <br /></td></tr>
+<tr class="separator:a75522850dd1af7009a1c5eb4d09eb045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c64908077ba14d7d1b357ea5cbab9d8" id="r_a1c64908077ba14d7d1b357ea5cbab9d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c64908077ba14d7d1b357ea5cbab9d8">setMethodNodeCallBack</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;id, <a class="el" href="../../d3/da8/group__opcua.html#ga73f991c82dbe33e44e32bad596c540ed">MethodCallback</a> on_method) const</td></tr>
+<tr class="memdesc:a1c64908077ba14d7d1b357ea5cbab9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的方法节点 MethodNode 设置方法的回调函数  <br /></td></tr>
+<tr class="separator:a1c64908077ba14d7d1b357ea5cbab9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e548379e60cc985cab36eaa4a4a1321" id="r_a7e548379e60cc985cab36eaa4a4a1321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e548379e60cc985cab36eaa4a4a1321">addObjectTypeNode</a> (const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;otype) const</td></tr>
+<tr class="memdesc:a7e548379e60cc985cab36eaa4a4a1321"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象类型节点 ObjectTypeNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#ga939cde15e0534f0e800805640f2d5e5a" title="对象类型节点：BaseObjectType 节点 ID">rm::nodeBaseObjectType</a></code> 中  <br /></td></tr>
+<tr class="separator:a7e548379e60cc985cab36eaa4a4a1321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ea60f118faa3ec6a38bb1b00b77baf" id="r_a48ea60f118faa3ec6a38bb1b00b77baf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48ea60f118faa3ec6a38bb1b00b77baf">addObjectNode</a> (const <a class="el" href="../../d8/d9b/classrm_1_1Object.html">Object</a> &amp;obj, <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> parent_id=<a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a>) const</td></tr>
+<tr class="memdesc:a48ea60f118faa3ec6a38bb1b00b77baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加对象节点 ObjectNode 至指定的父节点中  <br /></td></tr>
+<tr class="separator:a48ea60f118faa3ec6a38bb1b00b77baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b335d3c4ecd56a1a2aab3d049733a31" id="r_a1b335d3c4ecd56a1a2aab3d049733a31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b335d3c4ecd56a1a2aab3d049733a31">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view) const</td></tr>
+<tr class="memdesc:a1b335d3c4ecd56a1a2aab3d049733a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加视图节点 ViewNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#gab20fa2fb5ad7d497374809d0fbf09759" title="对象节点：ViewsFolder 节点 ID">rm::nodeViewsFolder</a></code> 中  <br /></td></tr>
+<tr class="separator:a1b335d3c4ecd56a1a2aab3d049733a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2361e10e9e5246352d4f2264de0071" id="r_a2a2361e10e9e5246352d4f2264de0071"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a2361e10e9e5246352d4f2264de0071">addEventTypeNode</a> (const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;etype) const</td></tr>
+<tr class="memdesc:a2a2361e10e9e5246352d4f2264de0071"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加事件类型至 <code>BaseEventType</code> 中  <br /></td></tr>
+<tr class="separator:a2a2361e10e9e5246352d4f2264de0071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d538d0447707289598f5b2e9e0bcca" id="r_a76d538d0447707289598f5b2e9e0bcca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76d538d0447707289598f5b2e9e0bcca">triggerEvent</a> (const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;node_id, const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;event) const</td></tr>
+<tr class="memdesc:a76d538d0447707289598f5b2e9e0bcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建并触发事件  <br /></td></tr>
+<tr class="separator:a76d538d0447707289598f5b2e9e0bcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ad6302edea1f2de764321375a34c9d62f" id="r_ad6302edea1f2de764321375a34c9d62f"><td class="memItemLeft" align="right" valign="top">UA_Server *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6302edea1f2de764321375a34c9d62f">_server</a></td></tr>
+<tr class="memdesc:ad6302edea1f2de764321375a34c9d62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPC UA 服务器指针  <br /></td></tr>
+<tr class="separator:ad6302edea1f2de764321375a34c9d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61e3665a621196a50774a96fafbe6d3" id="r_ab61e3665a621196a50774a96fafbe6d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab61e3665a621196a50774a96fafbe6d3">_running</a> {}</td></tr>
+<tr class="memdesc:ab61e3665a621196a50774a96fafbe6d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器运行状态  <br /></td></tr>
+<tr class="separator:ab61e3665a621196a50774a96fafbe6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b730c040a5c0335a292837c261e481" id="r_a75b730c040a5c0335a292837c261e481"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75b730c040a5c0335a292837c261e481">_run</a></td></tr>
+<tr class="memdesc:a75b730c040a5c0335a292837c261e481"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器运行线程  <br /></td></tr>
+<tr class="separator:a75b730c040a5c0335a292837c261e481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPC UA 服务器 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a0">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="ad5a3bc8faffeb21b5690f318791a05ed" name="ad5a3bc8faffeb21b5690f318791a05ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a3bc8faffeb21b5690f318791a05ed">&#9670;&#160;</a></span>DataSourceCallbackWrapper</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ad5a3bc8faffeb21b5690f318791a05ed">rm::Server::DataSourceCallbackWrapper</a> = std::pair&lt;<a class="el" href="../../d3/da8/group__opcua.html#ga1db14ce525bc677ed1dc366c56ff61bd">DataSourceRead</a>, <a class="el" href="../../d3/da8/group__opcua.html#ga9414da9e067ed57a193c6484efcffc44">DataSourceWrite</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84dff3cdc1993c1771794d28a5d205db" name="a84dff3cdc1993c1771794d28a5d205db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84dff3cdc1993c1771794d28a5d205db">&#9670;&#160;</a></span>ValueCallbackWrapper</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a84dff3cdc1993c1771794d28a5d205db">rm::Server::ValueCallbackWrapper</a> = std::pair&lt;<a class="el" href="../../d3/da8/group__opcua.html#ga6fd19152ee69f8eb87ec85795db24c02">ValueCallbackBeforeRead</a>, <a class="el" href="../../d3/da8/group__opcua.html#ga421679c078aaa2f380ff6a56dccefe5b">ValueCallbackAfterWrite</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac68cb0753c1691848fd601aa49526096" name="ac68cb0753c1691848fd601aa49526096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68cb0753c1691848fd601aa49526096">&#9670;&#160;</a></span>Server() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>users</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建 OPC UA 服务器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>OPC UA 服务器端口号，一般设置为 <code>4840U</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>OPC UA 服务器名称，为空则采用默认值 <code>open62541-based OPC UA Application</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">users</td><td>用户列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d4/d09/structrm_1_1UserConfig.html" title="用户信息">UserConfig</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6d93b0b25b10110a36fbd2b5e93b9dac" name="a6d93b0b25b10110a36fbd2b5e93b9dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d93b0b25b10110a36fbd2b5e93b9dac">&#9670;&#160;</a></span>Server() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::Server </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#gaa58e5b5a2af1794649d080b8a729a1c1">ServerUserConfig</a></td>          <td class="paramname"><span class="paramname"><em>on_config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>users</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从服务器配置函数指针创建 OPC UA 服务器 </p>
+<ul>
+<li>服务器配置函数指针需提供 <code>*.xml</code> 文件，并由 <code>nodeset_compiler</code> 生成</li>
+<li>关于 <code>*.xml</code> 文件的编写，参考 <a class="el" href="../../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler">4.2 从 XML 配置 OPC UA</a></li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_config</td><td>服务器配置函数指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>OPC UA 服务器端口号，一般设置为 <code>4840U</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>OPC UA 服务器名称，为空则采用默认值 <code>open62541-based OPC UA Application</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">users</td><td>用户列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d4/d09/structrm_1_1UserConfig.html" title="用户信息">UserConfig</a> </dd></dl>
+
+</div>
+</div>
+<a id="a97f6b85baa8f7b01918bfcbdc55d2a82" name="a97f6b85baa8f7b01918bfcbdc55d2a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f6b85baa8f7b01918bfcbdc55d2a82">&#9670;&#160;</a></span>Server() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1346c8703cfe40eccf8509ee236991ed" name="a1346c8703cfe40eccf8509ee236991ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1346c8703cfe40eccf8509ee236991ed">&#9670;&#160;</a></span>Server() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::Server </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d06/classrm_1_1Server.html">Server</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>srv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24c4b9937aef50cd2f6b773c909278aa" name="a24c4b9937aef50cd2f6b773c909278aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c4b9937aef50cd2f6b773c909278aa">&#9670;&#160;</a></span>~Server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::~Server </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a96b09e9d1204683dcc509b7ebcae33e3" name="a96b09e9d1204683dcc509b7ebcae33e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b09e9d1204683dcc509b7ebcae33e3">&#9670;&#160;</a></span>addDataSourceVariableNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addDataSourceVariableNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga1db14ce525bc677ed1dc366c56ff61bd">DataSourceRead</a></td>          <td class="paramname"><span class="paramname"><em>on_read</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga9414da9e067ed57a193c6484efcffc44">DataSourceWrite</a></td>          <td class="paramname"><span class="paramname"><em>on_write</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加数据源变量节点 VariableNode 至指定父节点中 </p>
+<p>数据源变量节点不同于变量节点的值回调</p>
+<ul>
+<li>值回调是在现有变量节点之上添加读取 <b>前</b> 和写入 <b>后</b> 的回调函数，本质上仍然是从服务器中获取数据</li>
+<li>数据源变量节点会把每次 IO 都绑定到各自的回调函数中，即可以重定向到一个实际的物理过程中，从而跟服务器本身的数据读写脱离关系</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量，仅取 <code>browse_name</code>、<code>description</code>、<code>display_name</code>、<code>access_level</code> 以及 <code>ns</code> 字段，以及对应的变量类型节点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_read</td><td>重定向的读取回调函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_write</td><td>重定向的写入回调函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应数据源变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a2a2361e10e9e5246352d4f2264de0071" name="a2a2361e10e9e5246352d4f2264de0071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2361e10e9e5246352d4f2264de0071">&#9670;&#160;</a></span>addEventTypeNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addEventTypeNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d8b/classrm_1_1EventType.html">EventType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>etype</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加事件类型至 <code>BaseEventType</code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">etype</td><td><code><a class="el" href="../../d4/d8b/classrm_1_1EventType.html" title="OPC UA 事件类型">rm::EventType</a></code> 表示的事件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应事件类型的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a75522850dd1af7009a1c5eb4d09eb045" name="a75522850dd1af7009a1c5eb4d09eb045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75522850dd1af7009a1c5eb4d09eb045">&#9670;&#160;</a></span>addMethodNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addMethodNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d91/classrm_1_1Method.html">Method</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>method</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加方法节点 MethodNode 至指定父节点中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td><code><a class="el" href="../../d4/d91/classrm_1_1Method.html" title="OPC UA 方法">rm::Method</a></code> 表示的方法 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应方法节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a48ea60f118faa3ec6a38bb1b00b77baf" name="a48ea60f118faa3ec6a38bb1b00b77baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ea60f118faa3ec6a38bb1b00b77baf">&#9670;&#160;</a></span>addObjectNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addObjectNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d9b/classrm_1_1Object.html">Object</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加对象节点 ObjectNode 至指定的父节点中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj</td><td><code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 表示的对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定的父节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a7e548379e60cc985cab36eaa4a4a1321" name="a7e548379e60cc985cab36eaa4a4a1321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e548379e60cc985cab36eaa4a4a1321">&#9670;&#160;</a></span>addObjectTypeNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addObjectTypeNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>otype</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加对象类型节点 ObjectTypeNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#ga939cde15e0534f0e800805640f2d5e5a" title="对象类型节点：BaseObjectType 节点 ID">rm::nodeBaseObjectType</a></code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">otype</td><td><code><a class="el" href="../../d4/d40/classrm_1_1ObjectType.html" title="OPC UA 对象类型">rm::ObjectType</a></code> 表示的对象类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应对象类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a3944ec034392cf7b6b92338366e60479" name="a3944ec034392cf7b6b92338366e60479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3944ec034392cf7b6b92338366e60479">&#9670;&#160;</a></span>addVariableNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addVariableNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">nodeObjectsFolder</a></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加变量节点 VariableNode 至指定父节点中，并指定引用类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td><code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_id</td><td>指定父节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="af912feb9f269f493f4dca2e32716adf4" name="af912feb9f269f493f4dca2e32716adf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af912feb9f269f493f4dca2e32716adf4">&#9670;&#160;</a></span>addVariableNodeValueCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Server::addVariableNodeValueCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga6fd19152ee69f8eb87ec85795db24c02">ValueCallbackBeforeRead</a></td>          <td class="paramname"><span class="paramname"><em>before_read</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga421679c078aaa2f380ff6a56dccefe5b">ValueCallbackAfterWrite</a></td>          <td class="paramname"><span class="paramname"><em>after_write</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>为既有的变量节点 VariableNode 添加值回调 </p>
+<p>值回调表示在对 <b>服务器中的</b> 变量节点进行读写的时候，会在读之前执行 <code>beforeRead</code>，在写之后执行 <code>afterWrite</code></p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，因变量节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">before_read</td><td>可隐式转换为 <code>ValueCallBackBeforeRead</code> 函数指针类型的可调用对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">after_write</td><td>可隐式转换为 <code>ValueCallBackAfterWrite</code> 函数指针类型的可调用对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否添加成功 </dd></dl>
+
+</div>
+</div>
+<a id="a5f4ea75af4533400395c215c7512c7fe" name="a5f4ea75af4533400395c215c7512c7fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4ea75af4533400395c215c7512c7fe">&#9670;&#160;</a></span>addVariableTypeNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addVariableTypeNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vtype</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加变量类型节点 VariableTypeNode 至 <code>BaseDataVariableType</code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vtype</td><td><code><a class="el" href="../../d9/de2/classrm_1_1VariableType.html" title="OPC UA 变量类型">rm::VariableType</a></code> 表示的变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应变量类型节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a1b335d3c4ecd56a1a2aab3d049733a31" name="a1b335d3c4ecd56a1a2aab3d049733a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b335d3c4ecd56a1a2aab3d049733a31">&#9670;&#160;</a></span>addViewNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> rm::Server::addViewNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加视图节点 ViewNode 至 <code><a class="el" href="../../d3/da8/group__opcua.html#gab20fa2fb5ad7d497374809d0fbf09759" title="对象节点：ViewsFolder 节点 ID">rm::nodeViewsFolder</a></code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td><code><a class="el" href="../../d2/de9/classrm_1_1View.html" title="OPC UA 视图">rm::View</a></code> 表示的视图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应视图节点的唯一标识 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+
+</div>
+</div>
+<a id="a4969e0fb9964d6c9b081a3aac156f100" name="a4969e0fb9964d6c9b081a3aac156f100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4969e0fb9964d6c9b081a3aac156f100">&#9670;&#160;</a></span>find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/da8/group__opcua.html#gad705a86cb2bc6e9bc0ebfca8914ce0e3">FindNodeInServer</a> rm::Server::find </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>browse_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1U</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取路径搜索必要信息 </p>
+<p>需要配合管道运算符 <code>|</code> 完成路径搜索 </p><div class="fragment"><div class="line"><span class="keyword">auto</span> dst_mode = src_node | srv.find(<span class="stringliteral">&quot;person&quot;</span>) | srv.find(<span class="stringliteral">&quot;name&quot;</span>);</div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">browse_name</td><td>浏览名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ns</td><td>命名空间索引，默认为 <code>1</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>目标节点信息 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">fnis</td><td><code>[_client, browse_name]</code> 元组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ee77445da5eeb190d5fdf67bed2897e" name="a8ee77445da5eeb190d5fdf67bed2897e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee77445da5eeb190d5fdf67bed2897e">&#9670;&#160;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Server::join </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>阻塞 </p>
+<ul>
+<li>调用方线程阻塞，直到服务器执行 <code><a class="el" href="#af835200abfa46f85a183f6eed54edfa4" title="停止服务器">stop()</a></code> 或意外停止后才继续运行 </li>
+</ul>
+
+</div>
+</div>
+<a id="ac794ed25658bd3d3061e723db54d9408" name="ac794ed25658bd3d3061e723db54d9408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac794ed25658bd3d3061e723db54d9408">&#9670;&#160;</a></span>operator ServerView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Server::operator <a class="el" href="../../d0/d24/classrm_1_1ServerView.html">ServerView</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1f3646256369f650c31500ea9916777" name="aa1f3646256369f650c31500ea9916777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f3646256369f650c31500ea9916777">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> rm::Server::read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从指定的变量节点读数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>读出的用 <code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的数据，未成功读取则返回空 </dd></dl>
+
+</div>
+</div>
+<a id="a1c64908077ba14d7d1b357ea5cbab9d8" name="a1c64908077ba14d7d1b357ea5cbab9d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c64908077ba14d7d1b357ea5cbab9d8">&#9670;&#160;</a></span>setMethodNodeCallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Server::setMethodNodeCallBack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga73f991c82dbe33e44e32bad596c540ed">MethodCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_method</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为既有的方法节点 MethodNode 设置方法的回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>既有的方法节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，因方法节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_method</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a231923cb0990195a0b5ff522691d5d84" name="a231923cb0990195a0b5ff522691d5d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231923cb0990195a0b5ff522691d5d84">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Server::start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>运行服务器，调用方线程不阻塞 </p>
+
+</div>
+</div>
+<a id="af835200abfa46f85a183f6eed54edfa4" name="af835200abfa46f85a183f6eed54edfa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af835200abfa46f85a183f6eed54edfa4">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Server::stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止服务器 </p>
+
+</div>
+</div>
+<a id="a76d538d0447707289598f5b2e9e0bcca" name="a76d538d0447707289598f5b2e9e0bcca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d538d0447707289598f5b2e9e0bcca">&#9670;&#160;</a></span>triggerEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Server::triggerEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建并触发事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>触发事件的节点 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td><code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 表示的事件 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd><code><a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">Server</a></code> 的 <code>node_id</code> 是 <code><a class="el" href="../../d3/da8/group__opcua.html#gaeb3871a433ab0edaec345fee9e6c38b2" title="对象节点：Server 节点 ID">rm::nodeServer</a></code> </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>是否创建并触发成功？ </dd></dl>
+
+</div>
+</div>
+<a id="abc776ec685646b0192e559667ef8e40a" name="abc776ec685646b0192e559667ef8e40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc776ec685646b0192e559667ef8e40a">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Server::write </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>给指定的变量节点写数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a75b730c040a5c0335a292837c261e481" name="a75b730c040a5c0335a292837c261e481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b730c040a5c0335a292837c261e481">&#9670;&#160;</a></span>_run</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread rm::Server::_run</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器运行线程 </p>
+
+</div>
+</div>
+<a id="ab61e3665a621196a50774a96fafbe6d3" name="ab61e3665a621196a50774a96fafbe6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61e3665a621196a50774a96fafbe6d3">&#9670;&#160;</a></span>_running</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Server::_running {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器运行状态 </p>
+
+</div>
+</div>
+<a id="ad6302edea1f2de764321375a34c9d62f" name="ad6302edea1f2de764321375a34c9d62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6302edea1f2de764321375a34c9d62f">&#9670;&#160;</a></span>_server</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UA_Server* rm::Server::_server</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OPC UA 服务器指针 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/opcua/<a class="el" href="../../df/d0a/server_8hpp.html">server.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

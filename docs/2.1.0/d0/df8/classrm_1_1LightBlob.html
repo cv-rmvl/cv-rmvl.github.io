@@ -1,0 +1,461 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::LightBlob类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../dd/d52/classrm_1_1LightBlob-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::LightBlob类 参考<div class="ingroups"><a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a> » <a class="el" href="../../d5/d68/group__light__blob.html">装甲模块灯条</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>装甲板灯条  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/feature/light_blob.h&gt;</code></p>
+<div class="dynheader">
+类 rm::LightBlob 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="550" scrolling="no" src="../../d0/dbd/classrm_1_1LightBlob__inherit__graph.svg" width="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::LightBlob 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" scrolling="no" src="../../d7/dae/classrm_1_1LightBlob__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ac0cf095a5503da7133975beb1a35061b" id="r_ac0cf095a5503da7133975beb1a35061b"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a>&gt;</td></tr>
+<tr class="separator:ac0cf095a5503da7133975beb1a35061b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa67324c1f1300a0359da0e02c73a1cf2" id="r_aa67324c1f1300a0359da0e02c73a1cf2"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa67324c1f1300a0359da0e02c73a1cf2">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a>&gt;</td></tr>
+<tr class="separator:aa67324c1f1300a0359da0e02c73a1cf2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_types_classrm_1_1feature"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1feature')"><img alt="-" src="../../closed.png"/> Public 类型 继承自 <a class="el" href="../../df/db7/classrm_1_1feature.html">rm::feature</a></td></tr>
+<tr class="memitem:aefb5a3f900441fd3a7bda03031e16b04 inherit pub_types_classrm_1_1feature" id="r_aefb5a3f900441fd3a7bda03031e16b04"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../df/db7/classrm_1_1feature.html">feature</a>&gt;</td></tr>
+<tr class="separator:aefb5a3f900441fd3a7bda03031e16b04 inherit pub_types_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8f1b9bf143d7baa3360f1e2d0ad2f1be inherit pub_types_classrm_1_1feature" id="r_a8f1b9bf143d7baa3360f1e2d0ad2f1be"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a8f1b9bf143d7baa3360f1e2d0ad2f1be">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../df/db7/classrm_1_1feature.html">feature</a>&gt;</td></tr>
+<tr class="separator:a8f1b9bf143d7baa3360f1e2d0ad2f1be inherit pub_types_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8e0428ba94abfdb0ce9a3b683e67c327" id="r_a8e0428ba94abfdb0ce9a3b683e67c327"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e0428ba94abfdb0ce9a3b683e67c327">getTopPoint</a> () const</td></tr>
+<tr class="memdesc:a8e0428ba94abfdb0ce9a3b683e67c327"><td class="mdescLeft"> </td><td class="mdescRight">获取灯条顶端点  <br/></td></tr>
+<tr class="separator:a8e0428ba94abfdb0ce9a3b683e67c327"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad99183786fb200cc1af5805389833f4d" id="r_ad99183786fb200cc1af5805389833f4d"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad99183786fb200cc1af5805389833f4d">getBottomPoint</a> () const</td></tr>
+<tr class="memdesc:ad99183786fb200cc1af5805389833f4d"><td class="mdescLeft"> </td><td class="mdescRight">获取灯条底端点  <br/></td></tr>
+<tr class="separator:ad99183786fb200cc1af5805389833f4d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7a90e0912362dde6249527c43c98f00c" id="r_a7a90e0912362dde6249527c43c98f00c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a90e0912362dde6249527c43c98f00c">clone</a> () override</td></tr>
+<tr class="memdesc:a7a90e0912362dde6249527c43c98f00c"><td class="mdescLeft"> </td><td class="mdescRight">从另一个特征进行构造  <br/></td></tr>
+<tr class="separator:a7a90e0912362dde6249527c43c98f00c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1feature"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1feature')"><img alt="-" src="../../closed.png"/> Public 成员函数 继承自 <a class="el" href="../../df/db7/classrm_1_1feature.html">rm::feature</a></td></tr>
+<tr class="memitem:acf5bd7624b1298ecd5e325cdcd509c20 inherit pub_methods_classrm_1_1feature" id="r_acf5bd7624b1298ecd5e325cdcd509c20"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#acf5bd7624b1298ecd5e325cdcd509c20">area</a> () const</td></tr>
+<tr class="memdesc:acf5bd7624b1298ecd5e325cdcd509c20 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征面积  <br/></td></tr>
+<tr class="separator:acf5bd7624b1298ecd5e325cdcd509c20 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa267e9a57506b7cec61e3571ff5a59d1 inherit pub_methods_classrm_1_1feature" id="r_aa267e9a57506b7cec61e3571ff5a59d1"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#aa267e9a57506b7cec61e3571ff5a59d1">center</a> () const</td></tr>
+<tr class="memdesc:aa267e9a57506b7cec61e3571ff5a59d1 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征中心点  <br/></td></tr>
+<tr class="separator:aa267e9a57506b7cec61e3571ff5a59d1 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac2bf772b18e72675fd5e486613100203 inherit pub_methods_classrm_1_1feature" id="r_ac2bf772b18e72675fd5e486613100203"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#ac2bf772b18e72675fd5e486613100203">width</a> () const</td></tr>
+<tr class="memdesc:ac2bf772b18e72675fd5e486613100203 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征宽度  <br/></td></tr>
+<tr class="separator:ac2bf772b18e72675fd5e486613100203 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a88b35cae4d451f5ffc6398ed3fb17ad4 inherit pub_methods_classrm_1_1feature" id="r_a88b35cae4d451f5ffc6398ed3fb17ad4"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a88b35cae4d451f5ffc6398ed3fb17ad4">height</a> () const</td></tr>
+<tr class="memdesc:a88b35cae4d451f5ffc6398ed3fb17ad4 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征高度  <br/></td></tr>
+<tr class="separator:a88b35cae4d451f5ffc6398ed3fb17ad4 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aed976cae3ace2a70ac87d5b065a301c1 inherit pub_methods_classrm_1_1feature" id="r_aed976cae3ace2a70ac87d5b065a301c1"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#aed976cae3ace2a70ac87d5b065a301c1">angle</a> () const</td></tr>
+<tr class="memdesc:aed976cae3ace2a70ac87d5b065a301c1 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征角度  <br/></td></tr>
+<tr class="separator:aed976cae3ace2a70ac87d5b065a301c1 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a765fe91a41304a1ad249b922b89168a3 inherit pub_methods_classrm_1_1feature" id="r_a765fe91a41304a1ad249b922b89168a3"><td align="right" class="memItemLeft" valign="top">const std::vector&lt; cv::Point2f &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a765fe91a41304a1ad249b922b89168a3">corners</a> () const</td></tr>
+<tr class="memdesc:a765fe91a41304a1ad249b922b89168a3 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取特征角点  <br/></td></tr>
+<tr class="separator:a765fe91a41304a1ad249b922b89168a3 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afa40aa598ec8f50fde24f90b9270c271 inherit pub_methods_classrm_1_1feature" id="r_afa40aa598ec8f50fde24f90b9270c271"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#afa40aa598ec8f50fde24f90b9270c271">type</a> () const</td></tr>
+<tr class="memdesc:afa40aa598ec8f50fde24f90b9270c271 inherit pub_methods_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">获取状态信息  <br/></td></tr>
+<tr class="separator:afa40aa598ec8f50fde24f90b9270c271 inherit pub_methods_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0ce1a244e257259b6db060cbc014f929" id="r_a0ce1a244e257259b6db060cbc014f929"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce1a244e257259b6db060cbc014f929">make_feature</a> (const std::vector&lt; cv::Point &gt; &amp;contour)</td></tr>
+<tr class="memdesc:a0ce1a244e257259b6db060cbc014f929"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 构造接口  <br/></td></tr>
+<tr class="separator:a0ce1a244e257259b6db060cbc014f929"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9d34e8f9209d4b165ad773f02fce65b6" id="r_a9d34e8f9209d4b165ad773f02fce65b6"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d34e8f9209d4b165ad773f02fce65b6">make_feature</a> (const cv::Point2f &amp;top, const cv::Point2f &amp;bottom, float <a class="el" href="../../df/db7/classrm_1_1feature.html#ac2bf772b18e72675fd5e486613100203">width</a>)</td></tr>
+<tr class="memdesc:a9d34e8f9209d4b165ad773f02fce65b6"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 构造接口，使用若干参数  <br/></td></tr>
+<tr class="separator:a9d34e8f9209d4b165ad773f02fce65b6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3cdaf88fcede228a19fe41fcb722a1b4" id="r_a3cdaf88fcede228a19fe41fcb722a1b4"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cdaf88fcede228a19fe41fcb722a1b4">cast</a> (<a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> p_feature)</td></tr>
+<tr class="separator:a3cdaf88fcede228a19fe41fcb722a1b4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af48de697db19ab555b978d6f0184a848" id="r_af48de697db19ab555b978d6f0184a848"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#aa67324c1f1300a0359da0e02c73a1cf2">const_ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#af48de697db19ab555b978d6f0184a848">cast</a> (<a class="el" href="../../df/db7/classrm_1_1feature.html#a8f1b9bf143d7baa3360f1e2d0ad2f1be">feature::const_ptr</a> p_feature)</td></tr>
+<tr class="separator:af48de697db19ab555b978d6f0184a848"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1feature"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1feature')"><img alt="-" src="../../closed.png"/> Protected 属性 继承自 <a class="el" href="../../df/db7/classrm_1_1feature.html">rm::feature</a></td></tr>
+<tr class="memitem:ac3bdf354b5471707cb634debcf337377 inherit pro_attribs_classrm_1_1feature" id="r_ac3bdf354b5471707cb634debcf337377"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#ac3bdf354b5471707cb634debcf337377">_width</a> {}</td></tr>
+<tr class="memdesc:ac3bdf354b5471707cb634debcf337377 inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">特征宽度  <br/></td></tr>
+<tr class="separator:ac3bdf354b5471707cb634debcf337377 inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a16092e0b080f877753c50988ab2387d7 inherit pro_attribs_classrm_1_1feature" id="r_a16092e0b080f877753c50988ab2387d7"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a16092e0b080f877753c50988ab2387d7">_height</a> {}</td></tr>
+<tr class="memdesc:a16092e0b080f877753c50988ab2387d7 inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">特征高度  <br/></td></tr>
+<tr class="separator:a16092e0b080f877753c50988ab2387d7 inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae2960f1e662e31d3e8df6ac1a3e966e1 inherit pro_attribs_classrm_1_1feature" id="r_ae2960f1e662e31d3e8df6ac1a3e966e1"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#ae2960f1e662e31d3e8df6ac1a3e966e1">_angle</a> {}</td></tr>
+<tr class="memdesc:ae2960f1e662e31d3e8df6ac1a3e966e1 inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">特征角度  <br/></td></tr>
+<tr class="separator:ae2960f1e662e31d3e8df6ac1a3e966e1 inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a06cc99f90ad6a6bfdab613a1da3bdbe1 inherit pro_attribs_classrm_1_1feature" id="r_a06cc99f90ad6a6bfdab613a1da3bdbe1"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a06cc99f90ad6a6bfdab613a1da3bdbe1">_center</a></td></tr>
+<tr class="memdesc:a06cc99f90ad6a6bfdab613a1da3bdbe1 inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">特征中心点  <br/></td></tr>
+<tr class="separator:a06cc99f90ad6a6bfdab613a1da3bdbe1 inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5488b072c8555dcea953e258f3d18fa3 inherit pro_attribs_classrm_1_1feature" id="r_a5488b072c8555dcea953e258f3d18fa3"><td align="right" class="memItemLeft" valign="top">std::vector&lt; cv::Point2f &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#a5488b072c8555dcea953e258f3d18fa3">_corners</a></td></tr>
+<tr class="memdesc:a5488b072c8555dcea953e258f3d18fa3 inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">特征角点  <br/></td></tr>
+<tr class="separator:a5488b072c8555dcea953e258f3d18fa3 inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa62f8ba64d1d97f02b06f3489b69ee6d inherit pro_attribs_classrm_1_1feature" id="r_aa62f8ba64d1d97f02b06f3489b69ee6d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">rm::RMStatus</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/db7/classrm_1_1feature.html#aa62f8ba64d1d97f02b06f3489b69ee6d">_type</a></td></tr>
+<tr class="memdesc:aa62f8ba64d1d97f02b06f3489b69ee6d inherit pro_attribs_classrm_1_1feature"><td class="mdescLeft"> </td><td class="mdescRight">状态类型信息  <br/></td></tr>
+<tr class="separator:aa62f8ba64d1d97f02b06f3489b69ee6d inherit pro_attribs_classrm_1_1feature"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>装甲板灯条 </p>
+<dl class="section note"><dt>注解</dt><dd>"/" 状态角度为正 </dd></dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aa67324c1f1300a0359da0e02c73a1cf2" name="aa67324c1f1300a0359da0e02c73a1cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67324c1f1300a0359da0e02c73a1cf2">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aa67324c1f1300a0359da0e02c73a1cf2">rm::LightBlob::const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="ac0cf095a5503da7133975beb1a35061b" name="ac0cf095a5503da7133975beb1a35061b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cf095a5503da7133975beb1a35061b">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">rm::LightBlob::ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af48de697db19ab555b978d6f0184a848" name="af48de697db19ab555b978d6f0184a848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48de697db19ab555b978d6f0184a848">◆ </a></span>cast() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#aa67324c1f1300a0359da0e02c73a1cf2">const_ptr</a> rm::LightBlob::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/db7/classrm_1_1feature.html#a8f1b9bf143d7baa3360f1e2d0ad2f1be">feature::const_ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_feature</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a3cdaf88fcede228a19fe41fcb722a1b4" name="a3cdaf88fcede228a19fe41fcb722a1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cdaf88fcede228a19fe41fcb722a1b4">◆ </a></span>cast() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> rm::LightBlob::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_feature</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a7a90e0912362dde6249527c43c98f00c" name="a7a90e0912362dde6249527c43c98f00c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a90e0912362dde6249527c43c98f00c">◆ </a></span>clone()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> rm::LightBlob::clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.clone(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;rm.LightBlob object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>从另一个特征进行构造 </p>
+<dl class="section return"><dt>返回</dt><dd>指向新特征的共享指针 </dd></dl>
+<p>实现了 <a class="el" href="../../df/db7/classrm_1_1feature.html#af4e49659b6965935350fc9b0deec3b5e">rm::feature</a>.</p>
+</div>
+</div>
+<a id="ad99183786fb200cc1af5805389833f4d" name="ad99183786fb200cc1af5805389833f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99183786fb200cc1af5805389833f4d">◆ </a></span>getBottomPoint()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const cv::Point2f &amp; rm::LightBlob::getBottomPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.getBottomPoint(</td><td class="paramname"></td><td>) -&gt; </td><td>x, y</td></tr></table>
+</div><div class="memdoc">
+<p>获取灯条底端点 </p>
+</div>
+</div>
+<a id="a8e0428ba94abfdb0ce9a3b683e67c327" name="a8e0428ba94abfdb0ce9a3b683e67c327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0428ba94abfdb0ce9a3b683e67c327">◆ </a></span>getTopPoint()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const cv::Point2f &amp; rm::LightBlob::getTopPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.getTopPoint(</td><td class="paramname"></td><td>) -&gt; </td><td>x, y</td></tr></table>
+</div><div class="memdoc">
+<p>获取灯条顶端点 </p>
+</div>
+</div>
+<a id="a9d34e8f9209d4b165ad773f02fce65b6" name="a9d34e8f9209d4b165ad773f02fce65b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d34e8f9209d4b165ad773f02fce65b6">◆ </a></span>make_feature() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> rm::LightBlob::make_feature </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point2f &amp;</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point2f &amp;</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>width</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.make_feature(</td><td class="paramname">contour</td><td>) -&gt; </td><td>&lt;rm.LightBlob object&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.make_feature(</td><td class="paramname">top, bottom, w</td><td>) -&gt; </td><td>&lt;rm.LightBlob object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 构造接口，使用若干参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>上顶点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>下顶点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>灯条宽度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>若构造成功则返回 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 的共享指针，否则返回 nullptr </dd></dl>
+</div>
+</div>
+<a id="a0ce1a244e257259b6db060cbc014f929" name="a0ce1a244e257259b6db060cbc014f929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce1a244e257259b6db060cbc014f929">◆ </a></span>make_feature() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#ac0cf095a5503da7133975beb1a35061b">ptr</a> rm::LightBlob::make_feature </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>contour</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.make_feature(</td><td class="paramname">contour</td><td>) -&gt; </td><td>&lt;rm.LightBlob object&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.LightBlob.make_feature(</td><td class="paramname">top, bottom, w</td><td>) -&gt; </td><td>&lt;rm.LightBlob object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 构造接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">contour</td><td>特征轮廓 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>若构造成功则返回 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">LightBlob</a> 的共享指针，否则返回 nullptr </dd></dl>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/feature/<a class="el" href="../../d4/d54/feature_2light__blob_8h.html">light_blob.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

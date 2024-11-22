@@ -1,0 +1,182 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: rmvl/core/transform.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_8ce2230b18c62fc4f1b2d4c11ea01049.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_021e08c4c598f89101b0aa1de0100d4c.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">transform.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>坐标变换  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;opencv2/core/types.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d0/d3f/util_8hpp.html">util.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d4/d78/math_8hpp.html">math.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+transform.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d0/d72/transform_8hpp__incl.svg" width="100%" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dfb/transform_8hpp__dep__incl.svg" width="191" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga9efb6b0afed03a8afe74adea283e4e20" id="r_ga9efb6b0afed03a8afe74adea283e4e20"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga9efb6b0afed03a8afe74adea283e4e20">rm::EulerAxis</a> : int { <a class="el" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">rm::X</a> = 0
+, <a class="el" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a1f37273de55277b5008fa190affdd3eb">rm::Y</a> = 1
+, <a class="el" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20aaeef63b125e5fd0545db7e6f7a602efa">rm::Z</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga9efb6b0afed03a8afe74adea283e4e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">欧拉角转轴枚举  <a href="../../d0/de1/group__core.html#ga9efb6b0afed03a8afe74adea283e4e20">更多...</a><br /></td></tr>
+<tr class="separator:ga9efb6b0afed03a8afe74adea283e4e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga90237f8e5effcb48062f24f167c4d726" id="r_ga90237f8e5effcb48062f24f167c4d726"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga90237f8e5effcb48062f24f167c4d726">rm::calculateRelativeAngle</a> (const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</td></tr>
+<tr class="memdesc:ga90237f8e5effcb48062f24f167c4d726"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算相机中心与目标中心之间的相对角度  <br /></td></tr>
+<tr class="separator:ga90237f8e5effcb48062f24f167c4d726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad38b53a7d703ef75889860795c41b94" id="r_gaad38b53a7d703ef75889860795c41b94"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a> (const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</td></tr>
+<tr class="memdesc:gaad38b53a7d703ef75889860795c41b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算目标中心在像素坐标系下的坐标  <br /></td></tr>
+<tr class="separator:gaad38b53a7d703ef75889860795c41b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga017b4a4f0e4bd876c014103e15568c05" id="r_ga017b4a4f0e4bd876c014103e15568c05"><td class="memItemLeft" align="right" valign="top">cv::Vec2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga017b4a4f0e4bd876c014103e15568c05">rm::cameraConvertToPixel</a> (const cv::Matx33f &amp;cameraMatrix, const <a class="el" href="../../d0/de1/group__core.html#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;distCoeffs, const cv::Vec3f &amp;center3d)</td></tr>
+<tr class="memdesc:ga017b4a4f0e4bd876c014103e15568c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算 3D 目标点在像素坐标系下的坐标  <br /></td></tr>
+<tr class="separator:ga017b4a4f0e4bd876c014103e15568c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99243f33c29a3b278e6a9246e63277f2" id="r_ga99243f33c29a3b278e6a9246e63277f2"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga99243f33c29a3b278e6a9246e63277f2">rm::cameraConvertToPixel</a> (const cv::Matx33f &amp;cameraMatrix, const <a class="el" href="../../d0/de1/group__core.html#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;distCoeffs, const cv::Point3f &amp;center3d)</td></tr>
+<tr class="memdesc:ga99243f33c29a3b278e6a9246e63277f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算 3D 目标点在像素坐标系下的坐标  <br /></td></tr>
+<tr class="separator:ga99243f33c29a3b278e6a9246e63277f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaff301294fb35cd202fdc1f2ce6e44f" id="r_gabaff301294fb35cd202fdc1f2ce6e44f"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:gabaff301294fb35cd202fdc1f2ce6e44f"><td class="memTemplItemLeft" align="right" valign="top">cv::Matx&lt; Tp, 3, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gabaff301294fb35cd202fdc1f2ce6e44f">rm::euler2Mat</a> (Tp val, <a class="el" href="../../d0/de1/group__core.html#ga9efb6b0afed03a8afe74adea283e4e20">EulerAxis</a> axis)</td></tr>
+<tr class="memdesc:gabaff301294fb35cd202fdc1f2ce6e44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">欧拉角转换为旋转矩阵  <br /></td></tr>
+<tr class="separator:gabaff301294fb35cd202fdc1f2ce6e44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>坐标变换 </p>
+<dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-01-12</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2023 (c), RoboMaster Vision Community </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::MvCamera类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../d1/d41/classrm_1_1MvCamera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::MvCamera类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> » <a class="el" href="../../dd/df4/group__mv__camera.html">迈德威视 USB3.0 相机库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>迈德威视相机库  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/camera/mv_camera.h&gt;</code></p>
+<div class="dynheader">
+rm::MvCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="236" scrolling="no" src="../../d0/d9e/classrm_1_1MvCamera__coll__graph.svg" width="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aab8325d9ed8dd3264e7866dcc5a12f50" id="r_aab8325d9ed8dd3264e7866dcc5a12f50"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#aab8325d9ed8dd3264e7866dcc5a12f50">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a>&gt;</td></tr>
+<tr class="separator:aab8325d9ed8dd3264e7866dcc5a12f50"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aea51dc25607fbec0a667dac1d46a361b" id="r_aea51dc25607fbec0a667dac1d46a361b"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#aea51dc25607fbec0a667dac1d46a361b">const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a>&gt;</td></tr>
+<tr class="separator:aea51dc25607fbec0a667dac1d46a361b"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a00f5a5778c3237663916a8173806da40" id="r_a00f5a5778c3237663916a8173806da40"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a00f5a5778c3237663916a8173806da40">MvCamera</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view serial="")</td></tr>
+<tr class="memdesc:a00f5a5778c3237663916a8173806da40"><td class="mdescLeft"> </td><td class="mdescRight">构造 <a class="el" href="../../de/de8/classrm_1_1MvCamera.html" title="迈德威视相机库">MvCamera</a> 对象  <br/></td></tr>
+<tr class="separator:a00f5a5778c3237663916a8173806da40"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa5f360ee53e8528cee8310e937e9ad56" id="r_aa5f360ee53e8528cee8310e937e9ad56"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5f360ee53e8528cee8310e937e9ad56">set</a> (int propId, double value=0.0)</td></tr>
+<tr class="memdesc:aa5f360ee53e8528cee8310e937e9ad56"><td class="mdescLeft"> </td><td class="mdescRight">设置相机参数/事件  <br/></td></tr>
+<tr class="separator:aa5f360ee53e8528cee8310e937e9ad56"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4e5e948680747bdd22f64753e0437e5e" id="r_a4e5e948680747bdd22f64753e0437e5e"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e5e948680747bdd22f64753e0437e5e">get</a> (int propId) const</td></tr>
+<tr class="memdesc:a4e5e948680747bdd22f64753e0437e5e"><td class="mdescLeft"> </td><td class="mdescRight">获取相机参数  <br/></td></tr>
+<tr class="separator:a4e5e948680747bdd22f64753e0437e5e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afc51568a8a254ab21b469c90f864bf58" id="r_afc51568a8a254ab21b469c90f864bf58"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#afc51568a8a254ab21b469c90f864bf58">isOpened</a> () const</td></tr>
+<tr class="memdesc:afc51568a8a254ab21b469c90f864bf58"><td class="mdescLeft"> </td><td class="mdescRight">相机是否打开  <br/></td></tr>
+<tr class="separator:afc51568a8a254ab21b469c90f864bf58"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0fb43c17b571f1791963a3853bb2a380" id="r_a0fb43c17b571f1791963a3853bb2a380"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fb43c17b571f1791963a3853bb2a380">read</a> (cv::OutputArray image)</td></tr>
+<tr class="memdesc:a0fb43c17b571f1791963a3853bb2a380"><td class="mdescLeft"> </td><td class="mdescRight">从相机设备中读取图像  <br/></td></tr>
+<tr class="separator:a0fb43c17b571f1791963a3853bb2a380"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad1d5b8f40d6e26da45b867e995d9de15" id="r_ad1d5b8f40d6e26da45b867e995d9de15"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1d5b8f40d6e26da45b867e995d9de15">operator&gt;&gt;</a> (cv::Mat &amp;image)</td></tr>
+<tr class="memdesc:ad1d5b8f40d6e26da45b867e995d9de15"><td class="mdescLeft"> </td><td class="mdescRight">从相机设备中读取图像  <br/></td></tr>
+<tr class="separator:ad1d5b8f40d6e26da45b867e995d9de15"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af3133b6497afb511fa4501c49c8a60c0" id="r_af3133b6497afb511fa4501c49c8a60c0"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#af3133b6497afb511fa4501c49c8a60c0">reconnect</a> ()</td></tr>
+<tr class="memdesc:af3133b6497afb511fa4501c49c8a60c0"><td class="mdescLeft"> </td><td class="mdescRight">相机重连  <br/></td></tr>
+<tr class="separator:af3133b6497afb511fa4501c49c8a60c0"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a765c3dff9c8c26501250c5b23b2ee829" id="r_a765c3dff9c8c26501250c5b23b2ee829"><td align="right" class="memItemLeft" valign="top">static std::unique_ptr&lt; <a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a765c3dff9c8c26501250c5b23b2ee829">make_capture</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view serial="")</td></tr>
+<tr class="memdesc:a765c3dff9c8c26501250c5b23b2ee829"><td class="mdescLeft"> </td><td class="mdescRight">构建 <a class="el" href="../../de/de8/classrm_1_1MvCamera.html" title="迈德威视相机库">MvCamera</a> 对象  <br/></td></tr>
+<tr class="separator:a765c3dff9c8c26501250c5b23b2ee829"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf874177488c01f0eff6bde019c47b48" id="r_abf874177488c01f0eff6bde019c47b48"><td align="right" class="memItemLeft" valign="top">static std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#abf874177488c01f0eff6bde019c47b48">version</a> ()</td></tr>
+<tr class="memdesc:abf874177488c01f0eff6bde019c47b48"><td class="mdescLeft"> </td><td class="mdescRight">获取相机库版本  <br/></td></tr>
+<tr class="separator:abf874177488c01f0eff6bde019c47b48"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>迈德威视相机库 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../de/de0/samples_2camera_2mv_2sample_mv_auto_calib_8cpp-example.html#_a2">samples/camera/mv/sample_mv_auto_calib.cpp</a>, <a class="el" href="../../d1/da1/samples_2camera_2mv_2sample_mv_manual_calib_8cpp-example.html#_a0">samples/camera/mv/sample_mv_manual_calib.cpp</a>, <a class="el" href="../../d0/da8/samples_2camera_2mv_2sample_mv_mono_8cpp-example.html#_a0">samples/camera/mv/sample_mv_mono.cpp</a>, <a class="el" href="../../da/dd9/samples_2camera_2mv_2sample_mv_multi_8cpp-example.html#_a0">samples/camera/mv/sample_mv_multi.cpp</a>, <a class="el" href="../../df/d77/samples_2camera_2mv_2sample_mv_writer_8cpp-example.html#_a0">samples/camera/mv/sample_mv_writer.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a1">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aea51dc25607fbec0a667dac1d46a361b" name="aea51dc25607fbec0a667dac1d46a361b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea51dc25607fbec0a667dac1d46a361b">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aea51dc25607fbec0a667dac1d46a361b">rm::MvCamera::const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="aab8325d9ed8dd3264e7866dcc5a12f50" name="aab8325d9ed8dd3264e7866dcc5a12f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab8325d9ed8dd3264e7866dcc5a12f50">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#aab8325d9ed8dd3264e7866dcc5a12f50">rm::MvCamera::ptr</a> = std::unique_ptr&lt;<a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a00f5a5778c3237663916a8173806da40" name="a00f5a5778c3237663916a8173806da40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f5a5778c3237663916a8173806da40">◆ </a></span>MvCamera()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::MvCamera::MvCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>serial</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera(</td><td class="paramname">init_mode[, serial]</td><td>) -&gt; </td><td>&lt;MvCamera object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>构造 <a class="el" href="../../de/de8/classrm_1_1MvCamera.html" title="迈德威视相机库">MvCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 和 <a class="el" href="../../dc/d90/group__camera.html#ga034d81b381d7c04ba4549cf3533750ff" title="相机数据处理模式">rm::RetrieveMode</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serial</td><td>相机唯一序列号 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4e5e948680747bdd22f64753e0437e5e" name="a4e5e948680747bdd22f64753e0437e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5e948680747bdd22f64753e0437e5e">◆ </a></span>get()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::MvCamera::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>propId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera.get(</td><td class="paramname">propId</td><td>) -&gt; </td><td>value</td></tr></table>
+</div><div class="memdoc">
+<p>获取相机参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propId</td><td>参数编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>参数值 </dd></dl>
+</div>
+</div>
+<a id="afc51568a8a254ab21b469c90f864bf58" name="afc51568a8a254ab21b469c90f864bf58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc51568a8a254ab21b469c90f864bf58">◆ </a></span>isOpened()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::MvCamera::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera.isOpened(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;opened ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机是否打开 </p>
+</div>
+</div>
+<a id="a765c3dff9c8c26501250c5b23b2ee829" name="a765c3dff9c8c26501250c5b23b2ee829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765c3dff9c8c26501250c5b23b2ee829">◆ </a></span>make_capture()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a> &gt; rm::MvCamera::make_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>serial</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构建 <a class="el" href="../../de/de8/classrm_1_1MvCamera.html" title="迈德威视相机库">MvCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 和 <a class="el" href="../../dc/d90/group__camera.html#ga034d81b381d7c04ba4549cf3533750ff" title="相机数据处理模式">rm::RetrieveMode</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serial</td><td>相机唯一序列号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#a9">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="ad1d5b8f40d6e26da45b867e995d9de15" name="ad1d5b8f40d6e26da45b867e995d9de15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d5b8f40d6e26da45b867e995d9de15">◆ </a></span>operator&gt;&gt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/de8/classrm_1_1MvCamera.html">MvCamera</a> &amp; rm::MvCamera::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a0fb43c17b571f1791963a3853bb2a380" name="a0fb43c17b571f1791963a3853bb2a380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb43c17b571f1791963a3853bb2a380">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::MvCamera::read </td>
+          <td>(</td>
+          <td class="paramtype">cv::OutputArray</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera.read(</td><td class="paramname"></td><td>) -&gt; </td><td>res, img</td></tr></table>
+</div><div class="memdoc">
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/dd9/samples_2camera_2mv_2sample_mv_multi_8cpp-example.html#a12">samples/camera/mv/sample_mv_multi.cpp</a> , 以及 <a class="el" href="../../df/d77/samples_2camera_2mv_2sample_mv_writer_8cpp-example.html#a4">samples/camera/mv/sample_mv_writer.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="af3133b6497afb511fa4501c49c8a60c0" name="af3133b6497afb511fa4501c49c8a60c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3133b6497afb511fa4501c49c8a60c0">◆ </a></span>reconnect()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::MvCamera::reconnect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera.reconnect(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机重连 </p>
+<dl class="section return"><dt>返回</dt><dd>是否成功重连 </dd></dl>
+</div>
+</div>
+<a id="aa5f360ee53e8528cee8310e937e9ad56" name="aa5f360ee53e8528cee8310e937e9ad56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f360ee53e8528cee8310e937e9ad56">◆ </a></span>set()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::MvCamera::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>propId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MvCamera.set(</td><td class="paramname">propId[, value]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>设置相机参数/事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propId</td><td>参数/事件编号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>参数/事件值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否设置成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/dd9/samples_2camera_2mv_2sample_mv_multi_8cpp-example.html#a4">samples/camera/mv/sample_mv_multi.cpp</a> , 以及 <a class="el" href="../../df/d77/samples_2camera_2mv_2sample_mv_writer_8cpp-example.html#a6">samples/camera/mv/sample_mv_writer.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="abf874177488c01f0eff6bde019c47b48" name="abf874177488c01f0eff6bde019c47b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf874177488c01f0eff6bde019c47b48">◆ </a></span>version()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string rm::MvCamera::version </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取相机库版本 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/camera/<a class="el" href="../../d1/d67/camera_2mv__camera_8h.html">mv_camera.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

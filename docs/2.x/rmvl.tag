@@ -1092,11 +1092,19 @@
   <compound kind="file">
     <name>opt_camera.h</name>
     <path>rmvl/camera/</path>
-    <filename>dc/d68/opt__camera_8h.html</filename>
+    <filename>dd/d54/camera_2opt__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::OptCamera</class>
     <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>opt_camera.h</name>
+    <path>rmvlpara/camera/</path>
+    <filename>d1/d3e/ara_2camera_2opt__camera_8h.html</filename>
+    <class kind="struct">rm::para::OptCameraParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>camera.h</name>
@@ -1124,6 +1132,7 @@
     <class kind="struct">rm::Translation</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="struct">rm::ImuData</class>
+    <class kind="struct">rm::SerialPortMode</class>
     <class kind="class">rm::SerialPort</class>
     <class kind="class">rm::PipeServer</class>
     <class kind="class">rm::PipeClient</class>
@@ -5144,8 +5153,8 @@
       <type></type>
       <name>HikCamera</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>acc3ea9a280d047545373bb450eab5bee</anchor>
-      <arglist>(CameraConfig init_mode, std::string_view serial=&quot;&quot;)</arglist>
+      <anchor>a1682bbec5e19319c8c8bfd3be9b1de35</anchor>
+      <arglist>(CameraConfig cfg, std::string_view info=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -5193,8 +5202,8 @@
       <type>static std::unique_ptr&lt; HikCamera &gt;</type>
       <name>make_capture</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a0a584a0b2de4f4812333091467c627fd</anchor>
-      <arglist>(CameraConfig init_mode, std::string_view serial=&quot;&quot;)</arglist>
+      <anchor>a1d95e550e3958c39a1094fffb565b11b</anchor>
+      <arglist>(CameraConfig cfg, std::string_view info=&quot;&quot;)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::string</type>
@@ -6633,6 +6642,87 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>rm::para::OptCameraParam</name>
+    <filename>d4/d85/structrm_1_1para_1_1OptCameraParam.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a07c371edf4541a58571a8d92a63948a0</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>afb2b6246d8e9d4988aa4f2e25043488d</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>abc83928da813f9ead4bf687da1546c7d</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>exposure</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a059c84c7cc055c80a3edb189f03b565f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gamma</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>aad696a032703a9d0b8c2de12267f9c6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>contrast</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a7196cf8996bfa0cc632df10a06a5aacd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gain</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a60ef192aae0d1941b66c96b15a0173bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>b_gain</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a0bf1126d92810a95ce8797d81a857221</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>g_gain</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a620ebdd4854643bfea2ca5709da9299f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>r_gain</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>ac53e377508ed84f7a2b1e3a682f434f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>handle_info</name>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a663f61bced526f6cc85673c6e5bfd2e7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
     <name>rm::OptimalOptions</name>
     <filename>d3/dd3/structrm_1_1OptimalOptions.html</filename>
     <member kind="variable">
@@ -6947,10 +7037,10 @@
       <arglist>(std::string &amp;data)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>PipeClient &amp;</type>
       <name>operator&gt;&gt;</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>a81b55c7838b8f194e2cca06f124431b7</anchor>
+      <anchor>ad9807e3533a77796bccfe929268d3c18</anchor>
       <arglist>(std::string &amp;data)</arglist>
     </member>
     <member kind="function">
@@ -6961,10 +7051,10 @@
       <arglist>(std::string_view data)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>PipeClient &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>a1e2dd8c2c6d0cdbd00406683d845c53b</anchor>
+      <anchor>a8b3a4781234808df09dcfefa942e602b</anchor>
       <arglist>(std::string_view data)</arglist>
     </member>
   </compound>
@@ -7014,10 +7104,10 @@
       <arglist>(std::string &amp;data)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>PipeServer &amp;</type>
       <name>operator&gt;&gt;</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>a9cef36859b90bff56949d9558b89116a</anchor>
+      <anchor>a25a8f43f72cc97f85448716590bf7c7b</anchor>
       <arglist>(std::string &amp;data)</arglist>
     </member>
     <member kind="function">
@@ -7028,10 +7118,10 @@
       <arglist>(std::string_view data)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>PipeServer &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>ab96bcbbd3349dbcd23b5cf5f83bc1f6f</anchor>
+      <anchor>adf4069a5cd9c49df5fe871c7d8c4bb1a</anchor>
       <arglist>(std::string_view data)</arglist>
     </member>
   </compound>
@@ -8593,8 +8683,8 @@
       <type></type>
       <name>SerialPort</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
-      <anchor>a33ebdfb3bca20e9e7d94ebbbcd46e146</anchor>
-      <arglist>(const std::string &amp;device, int baud_rate=0010002)</arglist>
+      <anchor>af123f2151d6759162b2d5f24e788c88e</anchor>
+      <arglist>(std::string_view device, SerialPortMode mode={})</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8628,14 +8718,35 @@
       <type>bool</type>
       <name>read</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
-      <anchor>a9b67b9894f70d514c16f7d70d9c29d84</anchor>
+      <anchor>abc34b3638ace7de15fa517f926988d85</anchor>
       <arglist>(unsigned char head_flag, unsigned char tail_flag, Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>aa7552a6365a14fa9d9c4f5c9a90d0e12</anchor>
+      <arglist>(Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialPort &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a82efa7857c9b5f7c87b4ef85ef2e46f2</anchor>
+      <arglist>(Tp &amp;data)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
-      <anchor>a5b285854e6ff4cee27a5019d94a73cf5</anchor>
+      <anchor>acee3d27bd99cc3835fe0c4c1d5f520df</anchor>
+      <arglist>(const Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialPort &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a6ea46070225797fc3a68ab3ece6ddd5b</anchor>
       <arglist>(const Tp &amp;data)</arglist>
     </member>
     <member kind="function">
@@ -8644,6 +8755,24 @@
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
       <anchor>aaadfdd019cb71aaf6f52bad22feb8444</anchor>
       <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::SerialPortMode</name>
+    <filename>d0/dc5/structrm_1_1SerialPortMode.html</filename>
+    <member kind="variable">
+      <type>BaudRate</type>
+      <name>baud_rate</name>
+      <anchorfile>d0/dc5/structrm_1_1SerialPortMode.html</anchorfile>
+      <anchor>a16f63fa6dbcd6bd4c729ab5ca60fee71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>SPReadMode</type>
+      <name>read_mode</name>
+      <anchorfile>d0/dc5/structrm_1_1SerialPortMode.html</anchorfile>
+      <anchor>aee5ebc86d3a8a269ac0048ad24e338f4</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10161,6 +10290,7 @@
     <class kind="class">rm::RungeKutta3</class>
     <class kind="class">rm::RungeKutta4</class>
     <class kind="class">rm::SerialPort</class>
+    <class kind="struct">rm::SerialPortMode</class>
     <class kind="class">rm::Server</class>
     <class kind="class">rm::ServerTimer</class>
     <class kind="class">rm::ServerView</class>
@@ -10866,6 +10996,28 @@
       <anchorfile>dc/d90/group__camera.html</anchorfile>
       <anchor>gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>BaudRate</name>
+      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
+      <arglist></arglist>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SPReadMode</name>
+      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchor>ga5342af0a7d136dfa35569caea049b113</anchor>
+      <arglist></arglist>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -11959,6 +12111,7 @@
     <class kind="class">rm::para::LightBlobParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OpcuaParam</class>
+    <class kind="struct">rm::para::OptCameraParam</class>
     <class kind="class">rm::para::PilotParam</class>
     <class kind="class">rm::para::PlanarTrackerParam</class>
     <class kind="class">rm::para::RuneCenterParam</class>
@@ -12018,6 +12171,13 @@
       <name>mv_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>gae34c710391d67b7cf31e2e1906a6da51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>OptCameraParam</type>
+      <name>opt_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -13442,19 +13602,19 @@
   </compound>
   <compound kind="group">
     <name>hik_camera</name>
-    <title>海康机器人（HikRobot）USB3.0 系列工业相机库</title>
+    <title>海康机器人 USB3.0/GigE 系列工业相机库</title>
     <filename>db/d27/group__hik__camera.html</filename>
     <class kind="class">rm::HikCamera</class>
   </compound>
   <compound kind="group">
     <name>mv_camera</name>
-    <title>迈德威视（MindVision）相机库</title>
+    <title>迈德威视 USB3.0 相机库</title>
     <filename>dd/df4/group__mv__camera.html</filename>
     <class kind="class">rm::MvCamera</class>
   </compound>
   <compound kind="group">
     <name>opt_camera</name>
-    <title>奥普特机器视觉 USB3.0/GigE(PoE) 系列工业相机库</title>
+    <title>奥普特机器视觉 USB3.0/GigE 系列工业相机库</title>
     <filename>d4/d5d/group__opt__camera.html</filename>
     <class kind="class">rm::OptCamera</class>
   </compound>
@@ -13466,6 +13626,7 @@
     <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="struct">rm::para::OptCameraParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>rm::para::camera_param</name>
@@ -13492,6 +13653,13 @@
       <name>rm::para::mv_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>gae34c710391d67b7cf31e2e1906a6da51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>OptCameraParam</type>
+      <name>rm::para::opt_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13766,9 +13934,32 @@
     <class kind="struct">rm::Translation</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="struct">rm::ImuData</class>
+    <class kind="struct">rm::SerialPortMode</class>
     <class kind="class">rm::SerialPort</class>
     <class kind="class">rm::PipeServer</class>
     <class kind="class">rm::PipeClient</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::BaudRate</name>
+      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
+      <arglist></arglist>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::SPReadMode</name>
+      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchor>ga5342af0a7d136dfa35569caea049b113</anchor>
+      <arglist></arglist>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>rm::writeCorners</name>
@@ -13795,13 +13986,19 @@
     <title>光源控制器</title>
     <filename>df/dfb/group__light.html</filename>
     <subgroup>opt_light_control</subgroup>
+    <subgroup>hik_light_control</subgroup>
   </compound>
   <compound kind="group">
     <name>opt_light_control</name>
-    <title>OPT 奥普特光源控制器</title>
+    <title>OPT 奥普特 GigE 光源控制库</title>
     <filename>d0/d28/group__opt__light__control.html</filename>
     <class kind="struct">rm::LightIpConfig</class>
     <class kind="class">rm::OPTLightController</class>
+  </compound>
+  <compound kind="group">
+    <name>hik_light_control</name>
+    <title>海康机器人 RS-232 光源控制库</title>
+    <filename>dd/d10/group__hik__light__control.html</filename>
   </compound>
   <compound kind="group">
     <name>ml</name>

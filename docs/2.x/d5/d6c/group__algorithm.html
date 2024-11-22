@@ -57,7 +57,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                 <span id="projectnumber">2.1.0-dev</span>
+                 <span id="projectnumber">2.2.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -625,7 +625,7 @@ template&lt;typename ForwardIterator &gt; </div>
           <td></td>
           <td class="paramtype">cv::Point2f</td>          <td class="paramname"><span class="paramname"><em>center</em></span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeAngle(</td><td class="paramname">cameraMatrix, center</td><td>) -&gt; </td><td>angle</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeAngle(</td><td class="paramname">m, p</td><td>) -&gt; </td><td>angle</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
 <p>计算相机中心与目标中心之间的相对角度 </p>
@@ -659,7 +659,7 @@ template&lt;typename ForwardIterator &gt; </div>
           <td></td>
           <td class="paramtype">cv::Point2f</td>          <td class="paramname"><span class="paramname"><em>angle</em></span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeCenter(</td><td class="paramname">cameraMatrix, angle</td><td>) -&gt; </td><td>center</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeCenter(</td><td class="paramname">m, angle</td><td>) -&gt; </td><td>center</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
 <p>计算目标中心在像素坐标系下的坐标 </p>
@@ -715,7 +715,7 @@ template&lt;typename ForwardIterator &gt; </div>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
-</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">cameraMatrix, distCoeffs, center3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">m, coeffs, p3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
 <p>计算 3D 目标点在像素坐标系下的坐标 </p>
@@ -755,7 +755,7 @@ template&lt;typename ForwardIterator &gt; </div>
           <td></td>
           <td class="paramtype">const cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>center3d</em></span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">cameraMatrix, distCoeffs, center3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">m, coeffs, p3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
 <p>计算 3D 目标点在像素坐标系下的坐标 </p>
