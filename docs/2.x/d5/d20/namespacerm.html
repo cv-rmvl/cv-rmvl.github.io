@@ -268,6 +268,9 @@ $(function(){ initResizable(false); });
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">海康机器人相机库  <a href="../../db/d9f/classrm_1_1HikCamera.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1f/classrm_1_1HikLightController.html">HikLightController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">海康机器人光源控制器  <a href="../../df/d1f/classrm_1_1HikLightController.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">IMU 数据  <a href="../../db/def/structrm_1_1ImuData.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
@@ -283,8 +286,8 @@ $(function(){ initResizable(false); });
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html">LightBlob</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">装甲板灯条  <a href="../../d0/df8/classrm_1_1LightBlob.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dde/structrm_1_1LightIpConfig.html">LightIpConfig</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">OPT 光源控制器 IP 配置信息  <a href="../../d0/dde/structrm_1_1LightIpConfig.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d2d/structrm_1_1LightConfig.html">LightConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">光源控制器初始化配置模式  <a href="../../d4/d2d/structrm_1_1LightConfig.html#details">更多...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d91/classrm_1_1Method.html">Method</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">OPC UA 方法  <a href="../../d4/d91/classrm_1_1Method.html#details">更多...</a><br/></td></tr>
@@ -746,20 +749,32 @@ $(function(){ initResizable(false); });
 <tr class="separator:ga3dabb1d304a05608ec415f8f6c289423"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ga8847230e42c9ea2972d24a8e6baf7371" id="r_ga8847230e42c9ea2972d24a8e6baf7371"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/group__core__io.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a> : uint8_t { <br/>
   <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BaudRate::BR_1200</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BaudRate::BR_2400</a>
 , <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BaudRate::BR_4800</a>
 , <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BaudRate::BR_9600</a>
-, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BaudRate::BR_19200</a>
 , <br/>
-  <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BaudRate::BR_57600</a>
+  <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BaudRate::BR_19200</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BaudRate::BR_38400</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BaudRate::BR_57600</a>
 , <a class="el" href="../../d5/d5f/group__core__io.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BaudRate::BR_115200</a>
 <br/>
  }</td></tr>
 <tr class="separator:ga8847230e42c9ea2972d24a8e6baf7371"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga5342af0a7d136dfa35569caea049b113" id="r_ga5342af0a7d136dfa35569caea049b113"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/group__core__io.html#ga5342af0a7d136dfa35569caea049b113">SPReadMode</a> : uint8_t { <a class="el" href="../../d5/d5f/group__core__io.html#gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">SPReadMode::BLOCK</a>
-, <a class="el" href="../../d5/d5f/group__core__io.html#gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">SPReadMode::NONBLOCK</a>
+<tr class="memitem:ga5ca0d5494f76b1f02b93b4514e32dd5a" id="r_ga5ca0d5494f76b1f02b93b4514e32dd5a"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d5f/group__core__io.html#ga5ca0d5494f76b1f02b93b4514e32dd5a">SerialReadMode</a> : uint8_t { <a class="el" href="../../d5/d5f/group__core__io.html#gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">SerialReadMode::BLOCK</a>
+, <a class="el" href="../../d5/d5f/group__core__io.html#gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">SerialReadMode::NONBLOCK</a>
  }</td></tr>
-<tr class="memdesc:ga5342af0a7d136dfa35569caea049b113"><td class="mdescLeft"> </td><td class="mdescRight">串口数据读取模式  <a href="../../d5/d5f/group__core__io.html#ga5342af0a7d136dfa35569caea049b113">更多...</a><br/></td></tr>
-<tr class="separator:ga5342af0a7d136dfa35569caea049b113"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memdesc:ga5ca0d5494f76b1f02b93b4514e32dd5a"><td class="mdescLeft"> </td><td class="mdescRight">串口数据读取模式  <a href="../../d5/d5f/group__core__io.html#ga5ca0d5494f76b1f02b93b4514e32dd5a">更多...</a><br/></td></tr>
+<tr class="separator:ga5ca0d5494f76b1f02b93b4514e32dd5a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga41a67d50aad6fcfd1b713e73b4be9c0b" id="r_ga41a67d50aad6fcfd1b713e73b4be9c0b"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/group__hik__light__control.html#ga41a67d50aad6fcfd1b713e73b4be9c0b">HikProductID</a> { <a class="el" href="../../dd/d10/group__hik__light__control.html#gga41a67d50aad6fcfd1b713e73b4be9c0badaa3b1e8f6a0603a00b4de70420b2844">HikProductID::LEAD</a>
+ }</td></tr>
+<tr class="memdesc:ga41a67d50aad6fcfd1b713e73b4be9c0b"><td class="mdescLeft"> </td><td class="mdescRight">海康机器人光源控制器产品 ID  <a href="../../dd/d10/group__hik__light__control.html#ga41a67d50aad6fcfd1b713e73b4be9c0b">更多...</a><br/></td></tr>
+<tr class="separator:ga41a67d50aad6fcfd1b713e73b4be9c0b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abff8db767f7699d9019525304fd568d7" id="r_abff8db767f7699d9019525304fd568d7"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#abff8db767f7699d9019525304fd568d7">LightHandleMode</a> { <a class="el" href="#abff8db767f7699d9019525304fd568d7aa12a3079e14ced46e69ba52b8a90b21a">IP</a>
+, <a class="el" href="#abff8db767f7699d9019525304fd568d7a897356954c2cd3d41b221e3f24f99bba">Key</a>
+, <a class="el" href="#abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493">Serial</a>
+ }</td></tr>
+<tr class="memdesc:abff8db767f7699d9019525304fd568d7"><td class="mdescLeft"> </td><td class="mdescRight">光源控制器通信模式  <a href="#abff8db767f7699d9019525304fd568d7">更多...</a><br/></td></tr>
+<tr class="separator:abff8db767f7699d9019525304fd568d7"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:gaa3efd1984486e48014bbcfc54e432e84" id="r_gaa3efd1984486e48014bbcfc54e432e84"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> : uint8_t { <a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">OrtProvider::CPU</a>
 , <a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">OrtProvider::CUDA</a>
 , <a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">OrtProvider::TensorRT</a>
@@ -1266,6 +1281,35 @@ $(function(){ initResizable(false); });
 <tr class="separator:gaeeb7345902aae7d64f97a6dfdafc0387"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <h2 class="groupheader">枚举类型说明</h2>
+<a id="abff8db767f7699d9019525304fd568d7" name="abff8db767f7699d9019525304fd568d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff8db767f7699d9019525304fd568d7">◆ </a></span>LightHandleMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#abff8db767f7699d9019525304fd568d7">rm::LightHandleMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>光源控制器通信模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="abff8db767f7699d9019525304fd568d7aa12a3079e14ced46e69ba52b8a90b21a" name="abff8db767f7699d9019525304fd568d7aa12a3079e14ced46e69ba52b8a90b21a"></a>IP <div class="python_language"><b>Python: </b>rm.LightHandleMode.IP</div></td><td class="fielddoc"><p>IP 地址 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abff8db767f7699d9019525304fd568d7a897356954c2cd3d41b221e3f24f99bba" name="abff8db767f7699d9019525304fd568d7a897356954c2cd3d41b221e3f24f99bba"></a>Key <div class="python_language"><b>Python: </b>rm.LightHandleMode.Key</div></td><td class="fielddoc"><p>设备序列号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493" name="abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493"></a>Serial <div class="python_language"><b>Python: </b>rm.LightHandleMode.Serial</div></td><td class="fielddoc"><p>串口通信 </p>
+</td></tr>
+</table>
+</div>
+</div>
 <a id="ac20f060cfa58609d88a9f385a18fe461" name="ac20f060cfa58609d88a9f385a18fe461"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac20f060cfa58609d88a9f385a18fe461">◆ </a></span>RotStatus</h2>
 <div class="memitem">

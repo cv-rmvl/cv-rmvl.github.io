@@ -11,7 +11,6 @@ var searchData=
   ['detect_8',['detect',['../db/d6e/classrm_1_1ArmorDetector.html#a51343ca62795031ad91d572d04753cd6',1,'rm::ArmorDetector::detect()'],['../d3/d77/classrm_1_1detector.html#a4ff537c0ba51075fc229c1f171827565',1,'rm::detector::detect()'],['../dc/d93/classrm_1_1GyroDetector.html#a38815d805b50d6c850e7877114baef0b',1,'rm::GyroDetector::detect()'],['../d6/deb/classrm_1_1RuneDetector.html#a96746f8bbce7b9b055fc87fdcc99803e',1,'rm::RuneDetector::detect()'],['../d8/d35/classrm_1_1TagDetector.html#a0911d9680227b5334efd2e2e4107eb4f',1,'rm::TagDetector::detect()']]],
   ['detector_9',['detector',['../d3/d77/classrm_1_1detector.html#aba1aaea7bc893858ea8029ac5e487474',1,'rm::detector']]],
   ['dft_10',['dft',['../db/d2e/group__algorithm__dsp.html#ga75e44cc69b9a614a1436679d8db60624',1,'rm']]],
-  ['disconnect_11',['disconnect',['../db/d24/classrm_1_1OPTLightController.html#a22f77b0e8110eac583ae93abc3cbbc80',1,'rm::OPTLightController']]],
-  ['distance_12',['distance',['../da/dbf/classrm_1_1CameraExtrinsics.html#a8a90a94644ba8e1dab7a1e51a4e3baad',1,'rm::CameraExtrinsics::distance() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#af0e485e13a2feb2b1ef267e392267077',1,'rm::CameraExtrinsics::distance(float distance)']]],
-  ['draw_13',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]]
+  ['distance_11',['distance',['../da/dbf/classrm_1_1CameraExtrinsics.html#a8a90a94644ba8e1dab7a1e51a4e3baad',1,'rm::CameraExtrinsics::distance() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#af0e485e13a2feb2b1ef267e392267077',1,'rm::CameraExtrinsics::distance(float distance)']]],
+  ['draw_12',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]]
 ];

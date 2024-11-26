@@ -3,7 +3,7 @@ var searchData=
   ['h_0',['h',['../df/d85/classrm_1_1para_1_1GravityCompensatorParam.html#ac4fab9601bca9c515b716091cedb4118',1,'rm::para::GravityCompensatorParam']]],
   ['h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md273',1,'']]],
   ['handle_5finfo_2',['handle_info',['../d4/d85/structrm_1_1para_1_1OptCameraParam.html#a663f61bced526f6cc85673c6e5bfd2e7',1,'rm::para::OptCameraParam']]],
-  ['handle_5fmode_3',['handle_mode',['../df/dfa/structrm_1_1CameraConfig.html#a78e722b0ca45ab8416cabfe6453a1327',1,'rm::CameraConfig']]],
+  ['handle_5fmode_3',['handle_mode',['../df/dfa/structrm_1_1CameraConfig.html#a78e722b0ca45ab8416cabfe6453a1327',1,'rm::CameraConfig::handle_mode'],['../d4/d2d/structrm_1_1LightConfig.html#a969a11a083f3c8f1ffe10900952a4b6c',1,'rm::LightConfig::handle_mode']]],
   ['handlemode_4',['HandleMode',['../dc/d90/group__camera.html#ga0a7fc1f9340aca49db5826b726c100a3',1,'rm']]],
   ['hardware_5',['Hardware',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da3c02a379965ab0dfcd77b1c484450433',1,'rm']]],
   ['hash_5faggregate_6',['hash_aggregate',['../d9/d23/structrm_1_1hash__aggregate.html',1,'rm']]],
@@ -17,8 +17,13 @@ var searchData=
   ['highlight_5f_14',['HIGHLIGHT_',['../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d',1,'util.hpp']]],
   ['hik_5fcamera_2eh_15',['hik_camera.h',['../da/d35/camera_2hik__camera_8h.html',1,'(全局命名空间)'],['../d3/d41/ara_2camera_2hik__camera_8h.html',1,'(全局命名空间)']]],
   ['hik_5fcamera_5fparam_16',['hik_camera_param',['../d2/df4/group__para__camera.html#gaa6d31482be9d95ac38a7cd99d6112df4',1,'rm::para']]],
-  ['hikcamera_17',['HikCamera',['../db/d9f/classrm_1_1HikCamera.html',1,'rm::HikCamera'],['../db/d9f/classrm_1_1HikCamera.html#a1682bbec5e19319c8c8bfd3be9b1de35',1,'rm::HikCamera::HikCamera()']]],
-  ['hikcameraparam_18',['HikCameraParam',['../de/d4f/classrm_1_1para_1_1HikCameraParam.html',1,'rm::para::HikCameraParam'],['../de/d4f/classrm_1_1para_1_1HikCameraParam.html#aa3e5c58cfaf6aa8bc3541831d92afc6e',1,'rm::para::HikCameraParam::HikCameraParam()']]],
-  ['how_5fto_5fuse_2emd_19',['how_to_use.md',['../da/d31/combo_2how__to__use_8md.html',1,'(全局命名空间)'],['../d9/de1/compensator_2how__to__use_8md.html',1,'(全局命名空间)'],['../d0/d8b/decider_2how__to__use_8md.html',1,'(全局命名空间)'],['../d1/d58/detector_2how__to__use_8md.html',1,'(全局命名空间)'],['../d1/d43/feature_2how__to__use_8md.html',1,'(全局命名空间)'],['../dd/d50/group_2how__to__use_8md.html',1,'(全局命名空间)'],['../d2/db3/predictor_2how__to__use_8md.html',1,'(全局命名空间)'],['../de/df8/tracker_2how__to__use_8md.html',1,'(全局命名空间)']]],
-  ['huber_20',['Huber',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18',1,'rm']]]
+  ['hik_5flight_5fcontrol_2eh_17',['hik_light_control.h',['../d9/db9/light_2hik__light__control_8h.html',1,'(全局命名空间)'],['../d0/df1/ara_2light_2hik__light__control_8h.html',1,'(全局命名空间)']]],
+  ['hik_5flight_5fcontrol_5fparam_18',['hik_light_control_param',['../d5/de1/group__para__light.html#ga9b7f4212c3e6e651b8fd58e305baf0bb',1,'rm::para']]],
+  ['hikcamera_19',['HikCamera',['../db/d9f/classrm_1_1HikCamera.html',1,'rm::HikCamera'],['../db/d9f/classrm_1_1HikCamera.html#a1682bbec5e19319c8c8bfd3be9b1de35',1,'rm::HikCamera::HikCamera()']]],
+  ['hikcameraparam_20',['HikCameraParam',['../de/d4f/classrm_1_1para_1_1HikCameraParam.html',1,'rm::para::HikCameraParam'],['../de/d4f/classrm_1_1para_1_1HikCameraParam.html#aa3e5c58cfaf6aa8bc3541831d92afc6e',1,'rm::para::HikCameraParam::HikCameraParam()']]],
+  ['hiklightcontroller_21',['HikLightController',['../df/d1f/classrm_1_1HikLightController.html',1,'rm::HikLightController'],['../df/d1f/classrm_1_1HikLightController.html#a5f8d9c28ba910302063ba504cba938aa',1,'rm::HikLightController::HikLightController()']]],
+  ['hiklightcontrolparam_22',['HikLightControlParam',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html',1,'rm::para::HikLightControlParam'],['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html#ad6a6aed8eb42ed9c34ebd596a885ea2e',1,'rm::para::HikLightControlParam::HikLightControlParam()']]],
+  ['hikproductid_23',['HikProductID',['../dd/d10/group__hik__light__control.html#ga41a67d50aad6fcfd1b713e73b4be9c0b',1,'rm']]],
+  ['how_5fto_5fuse_2emd_24',['how_to_use.md',['../da/d31/combo_2how__to__use_8md.html',1,'(全局命名空间)'],['../d9/de1/compensator_2how__to__use_8md.html',1,'(全局命名空间)'],['../d0/d8b/decider_2how__to__use_8md.html',1,'(全局命名空间)'],['../d1/d58/detector_2how__to__use_8md.html',1,'(全局命名空间)'],['../d1/d43/feature_2how__to__use_8md.html',1,'(全局命名空间)'],['../dd/d50/group_2how__to__use_8md.html',1,'(全局命名空间)'],['../d2/db3/predictor_2how__to__use_8md.html',1,'(全局命名空间)'],['../de/df8/tracker_2how__to__use_8md.html',1,'(全局命名空间)']]],
+  ['huber_25',['Huber',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18',1,'rm']]]
 ];

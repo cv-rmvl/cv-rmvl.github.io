@@ -53,7 +53,7 @@ var searchData=
   ['translationdecider_50',['TranslationDecider',['../de/dfc/classrm_1_1TranslationDecider.html',1,'rm::TranslationDecider'],['../de/dfc/classrm_1_1TranslationDecider.html#a687d2dcf2fbd1e1fb1dde9ae27c96d48',1,'rm::TranslationDecider::TranslationDecider()']]],
   ['translationdeciderparam_51',['TranslationDeciderParam',['../d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html',1,'rm::para::TranslationDeciderParam'],['../d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html#a15910a1614927b54e0a0d08aabc5e8b9',1,'rm::para::TranslationDeciderParam::TranslationDeciderParam()']]],
   ['transportid_52',['TransportID',['../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad',1,'rm']]],
-  ['trigger_53',['trigger',['../db/d24/classrm_1_1OPTLightController.html#ae26c66fd921a04c3888294ecc1016868',1,'rm::OPTLightController']]],
+  ['trigger_53',['trigger',['../db/d24/classrm_1_1OPTLightController.html#ace49b596f62d176595798273bc1fa7f9',1,'rm::OPTLightController']]],
   ['trigger_5fchannel_54',['trigger_channel',['../df/dfa/structrm_1_1CameraConfig.html#a2793b9bee50e7b71206d105e7accb6ca',1,'rm::CameraConfig']]],
   ['triggerchannel_55',['TriggerChannel',['../dc/d90/group__camera.html#gafd1e51b9b1633d344461f1cb73a26b7a',1,'rm']]],
   ['triggerevent_56',['triggerEvent',['../d0/d24/classrm_1_1ServerView.html#a4856f56da46ab05d41c1666a401b90ea',1,'rm::ServerView::triggerEvent()'],['../d4/d06/classrm_1_1Server.html#a564e12af749ffa621448766cf8debba6',1,'rm::Server::triggerEvent()']]],

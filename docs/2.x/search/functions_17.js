@@ -8,8 +8,7 @@ var searchData=
   ['_7eexception_5',['~Exception',['../d9/db4/classrm_1_1Exception.html#ae98743c8a0c8f049875f3e4fe3e46f7c',1,'rm::Exception']]],
   ['_7egravitycompensator_6',['~GravityCompensator',['../d3/d7a/classrm_1_1GravityCompensator.html#ad1c7e9f127a133dd3cabab3887f11462',1,'rm::GravityCompensator']]],
   ['_7eonnxnet_7',['~OnnxNet',['../dc/d1c/classrm_1_1OnnxNet.html#adfe46ea2dfbc55b99369613a5cf9b754',1,'rm::OnnxNet']]],
-  ['_7eoptlightcontroller_8',['~OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a277c1adf9b1ad6a790ee506d093c27e8',1,'rm::OPTLightController']]],
-  ['_7epredictor_9',['~predictor',['../dc/d74/classrm_1_1predictor.html#a93f50465708fea95e13cc36c393ed56c',1,'rm::predictor']]],
-  ['_7eserver_10',['~Server',['../d4/d06/classrm_1_1Server.html#a24c4b9937aef50cd2f6b773c909278aa',1,'rm::Server']]],
-  ['_7eservertimer_11',['~ServerTimer',['../d9/d40/classrm_1_1ServerTimer.html#a774d12fa2bbca43f7fb5cbb561c0546d',1,'rm::ServerTimer']]]
+  ['_7epredictor_8',['~predictor',['../dc/d74/classrm_1_1predictor.html#a93f50465708fea95e13cc36c393ed56c',1,'rm::predictor']]],
+  ['_7eserver_9',['~Server',['../d4/d06/classrm_1_1Server.html#a24c4b9937aef50cd2f6b773c909278aa',1,'rm::Server']]],
+  ['_7eservertimer_10',['~ServerTimer',['../d9/d40/classrm_1_1ServerTimer.html#a774d12fa2bbca43f7fb5cbb561c0546d',1,'rm::ServerTimer']]]
 ];

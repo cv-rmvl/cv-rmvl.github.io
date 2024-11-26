@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "abcdefghloprst",
   8: "abcdeghiklmnoprstuvxyz",
   9: "_or",
-  10: "02acdfgioprtu与光决前卡参图多大奥定平序数整旋最机核检模海激特的目相神系能补装视识迈追重",
+  10: "02acdfgiloprtu与光决前卡参图多大奥定平序数整旋最机核检模海激特的目相神系能补装视识迈追重",
   11: "acdfgkloprtu一串为主使光函分卡参各和在基多如安导工常并开弃引待快扩撰支最构模步的相硬离算系绑聚自视说读责适通非顶"
 };
 

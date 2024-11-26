@@ -1538,14 +1538,43 @@
   <compound kind="file">
     <name>light.hpp</name>
     <path>rmvl/</path>
-    <filename>de/dea/light_8hpp.html</filename>
+    <filename>df/df0/rmvl_2light_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>light.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d8/dd7/rmvlpara_2light_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>hik_light_control.h</name>
+    <path>rmvl/light/</path>
+    <filename>d9/db9/light_2hik__light__control_8h.html</filename>
+    <includes id="d6/d29/lightutils_8hpp" name="lightutils.hpp" local="yes" import="no" module="no" objc="no">lightutils.hpp</includes>
+    <class kind="class">rm::HikLightController</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>hik_light_control.h</name>
+    <path>rmvlpara/light/</path>
+    <filename>d0/df1/ara_2light_2hik__light__control_8h.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::para::HikLightControlParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
+  </compound>
+  <compound kind="file">
+    <name>lightutils.hpp</name>
+    <path>rmvl/light/</path>
+    <filename>d6/d29/lightutils_8hpp.html</filename>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <class kind="struct">rm::LightConfig</class>
+    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>opt_light_control.h</name>
     <path>rmvl/light/</path>
     <filename>d4/da9/opt__light__control_8h.html</filename>
-    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="struct">rm::LightIpConfig</class>
+    <includes id="d6/d29/lightutils_8hpp" name="lightutils.hpp" local="yes" import="no" module="no" objc="no">lightutils.hpp</includes>
     <class kind="class">rm::OPTLightController</class>
     <namespace>rm</namespace>
   </compound>
@@ -5322,6 +5351,91 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::HikLightController</name>
+    <filename>df/d1f/classrm_1_1HikLightController.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>HikLightController</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>a5f8d9c28ba910302063ba504cba938aa</anchor>
+      <arglist>(const LightConfig &amp;cfg, HikProductID pid, std::string_view id)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isOpened</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>a2848d4889abeaadb6ca412c564decf25</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>open</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>a68b8e79b93ced48ff316add364be7477</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>close</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>af2afebefbc5fa993e5020846db3c0c51</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>a895a3f8577b1c72e3470fdd8e2c2a108</anchor>
+      <arglist>(int chn) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>set</name>
+      <anchorfile>df/d1f/classrm_1_1HikLightController.html</anchorfile>
+      <anchor>a6c2e91c119985220bf9cb6dc0c4660e4</anchor>
+      <arglist>(int chn, int val)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::para::HikLightControlParam</name>
+    <filename>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>HikLightControlParam</name>
+      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
+      <anchor>ad6a6aed8eb42ed9c34ebd596a885ea2e</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
+      <anchor>af3901e67f2dbed02e774bab94e5dfa2e</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
+      <anchor>abf4664055f9ad336da99da6846eb4202</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
+      <anchor>a6dd7eac5abc2e047d616dcd1e81b0f2d</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>DELAY_AFTER_WRITE</name>
+      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
+      <anchor>a5542009e89023f011d6c62b471ca47a3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::ImuData</name>
     <filename>db/def/structrm_1_1ImuData.html</filename>
@@ -5719,27 +5833,13 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::LightIpConfig</name>
-    <filename>d0/dde/structrm_1_1LightIpConfig.html</filename>
+    <name>rm::LightConfig</name>
+    <filename>d4/d2d/structrm_1_1LightConfig.html</filename>
     <member kind="variable">
-      <type>std::string</type>
-      <name>ip</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>af667a201e55cb6e0527d65fd8b4d465b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>subnet_mask</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>a7d77dc044d21e8938eeca7e52a44b7bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>default_gateway</name>
-      <anchorfile>d0/dde/structrm_1_1LightIpConfig.html</anchorfile>
-      <anchor>a9464201331fe2e44e747b43989b1137e</anchor>
+      <type>LightHandleMode</type>
+      <name>handle_mode</name>
+      <anchorfile>d4/d2d/structrm_1_1LightConfig.html</anchorfile>
+      <anchor>a969a11a083f3c8f1ffe10900952a4b6c</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6782,99 +6882,64 @@
       <type></type>
       <name>OPTLightController</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a4805938df6b63f30357a58e19a91a9e1</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a3aa623bbcf715e2259802881d97e31a5</anchor>
-      <arglist>(const OPTLightController &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a6c11bdd5ff2b48ce55b8170eecde8dc3</anchor>
-      <arglist>(OPTLightController &amp;&amp;obj)=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OPTLightController</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a277c1adf9b1ad6a790ee506d093c27e8</anchor>
-      <arglist>()</arglist>
+      <anchor>a0f4df8b14f7464fa662b1ec79ca6cf40</anchor>
+      <arglist>(const LightConfig &amp;cfg, std::string_view id)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>connect</name>
+      <name>isOpened</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a37ba77e0b799d1c874b22e8512678fed</anchor>
-      <arglist>(const LightIpConfig &amp;ip_config)</arglist>
+      <anchor>aef70f058f8067e7ca4083235b5a743d6</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>connect</name>
+      <name>open</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a17a6b751a0d09855c1661d265ba7a34b</anchor>
-      <arglist>(std::string_view SN)</arglist>
+      <anchor>a8d83b62e33ce8f5a79499c950b9bc25c</anchor>
+      <arglist>(const std::vector&lt; int &gt; &amp;channels) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>disconnect</name>
+      <name>open</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a22f77b0e8110eac583ae93abc3cbbc80</anchor>
-      <arglist>()</arglist>
+      <anchor>ad04a4c75b1cc0a45802d5096788bbf48</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>openChannels</name>
+      <name>close</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a92a0717dabe3489287621505325ded3d</anchor>
-      <arglist>(const std::vector&lt; int &gt; &amp;channels)</arglist>
+      <anchor>aebc3042ef47d494cf8120d6637d9b721</anchor>
+      <arglist>(const std::vector&lt; int &gt; &amp;channels) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>openAllChannels</name>
+      <name>close</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a1cdf8566f8def40aa7e6beb75cc172b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>closeChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a4539097f560c27838058cf92ee772001</anchor>
-      <arglist>(const std::vector&lt; int &gt; &amp;channels)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>closeAllChannels</name>
-      <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>ad3aa109fd0a3e9ac5b71d3987c706dbf</anchor>
-      <arglist>()</arglist>
+      <anchor>a07cf17a7696ff350b922f2d03348b676</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>getIntensity</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>a249ed9a1612bc0d98d78c54f315a9ee8</anchor>
-      <arglist>(int channel) const</arglist>
+      <anchor>afb7f61dd02bcae3f39f8df3dd1d54b3c</anchor>
+      <arglist>(int channel) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>setIntensity</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>aa8bbbd3813fc79438c9706d6ea7fe701</anchor>
-      <arglist>(int channel, int intensity)</arglist>
+      <anchor>acd428b553c3674b46c277386f5e2dc2c</anchor>
+      <arglist>(int channel, int intensity) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>trigger</name>
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
-      <anchor>ae26c66fd921a04c3888294ecc1016868</anchor>
-      <arglist>(int channel, int time) const</arglist>
+      <anchor>ace49b596f62d176595798273bc1fa7f9</anchor>
+      <arglist>(int channel, int time) const noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8729,6 +8794,13 @@
       <arglist>(Tp &amp;data)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a474ed9040d83a6f17b5ba84ca9d989a4</anchor>
+      <arglist>(std::string &amp;data)</arglist>
+    </member>
+    <member kind="function">
       <type>SerialPort &amp;</type>
       <name>operator&gt;&gt;</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
@@ -8741,6 +8813,13 @@
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
       <anchor>acee3d27bd99cc3835fe0c4c1d5f520df</anchor>
       <arglist>(const Tp &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a877a2754512534717e518c4291154236</anchor>
+      <arglist>(std::string_view data)</arglist>
     </member>
     <member kind="function">
       <type>SerialPort &amp;</type>
@@ -8768,10 +8847,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>SPReadMode</type>
+      <type>SerialReadMode</type>
       <name>read_mode</name>
       <anchorfile>d0/dc5/structrm_1_1SerialPortMode.html</anchorfile>
-      <anchor>aee5ebc86d3a8a269ac0048ad24e338f4</anchor>
+      <anchor>a81db67d894e456f49cb7a5afc01385c2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10246,12 +10325,13 @@
     <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
     <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
     <class kind="class">rm::HikCamera</class>
+    <class kind="class">rm::HikLightController</class>
     <class kind="struct">rm::ImuData</class>
     <class kind="class">rm::Interpolator</class>
     <class kind="class">rm::KalmanFilter</class>
     <class kind="class">rm::KalmanFilterStaticDatas</class>
     <class kind="class">rm::LightBlob</class>
-    <class kind="struct">rm::LightIpConfig</class>
+    <class kind="struct">rm::LightConfig</class>
     <class kind="class">rm::Method</class>
     <class kind="class">rm::Munkres</class>
     <class kind="class">rm::MvCamera</class>
@@ -11004,20 +11084,40 @@
       <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
       <arglist></arglist>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>SPReadMode</name>
+      <name>SerialReadMode</name>
       <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga5342af0a7d136dfa35569caea049b113</anchor>
+      <anchor>ga5ca0d5494f76b1f02b93b4514e32dd5a</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>HikProductID</name>
+      <anchorfile>dd/d10/group__hik__light__control.html</anchorfile>
+      <anchor>ga41a67d50aad6fcfd1b713e73b4be9c0b</anchor>
+      <arglist></arglist>
+      <enumvalue file="dd/d10/group__hik__light__control.html" anchor="gga41a67d50aad6fcfd1b713e73b4be9c0badaa3b1e8f6a0603a00b4de70420b2844">LEAD</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LightHandleMode</name>
+      <anchorfile>d5/d20/namespacerm.html</anchorfile>
+      <anchor>abff8db767f7699d9019525304fd568d7</anchor>
+      <arglist></arglist>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7aa12a3079e14ced46e69ba52b8a90b21a">IP</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7a897356954c2cd3d41b221e3f24f99bba">Key</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493">Serial</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -12108,6 +12208,7 @@
     <class kind="class">rm::para::GyroPredictorParam</class>
     <class kind="class">rm::para::GyroTrackerParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
+    <class kind="class">rm::para::HikLightControlParam</class>
     <class kind="class">rm::para::LightBlobParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OpcuaParam</class>
@@ -12178,6 +12279,13 @@
       <name>opt_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>HikLightControlParam</type>
+      <name>hik_light_control_param</name>
+      <anchorfile>d5/de1/group__para__light.html</anchorfile>
+      <anchor>ga9b7f4212c3e6e651b8fd58e305baf0bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -13397,6 +13505,7 @@
     <title>参数模块</title>
     <filename>d6/db7/group__para.html</filename>
     <subgroup>para_camera</subgroup>
+    <subgroup>para_light</subgroup>
     <subgroup>para_feature</subgroup>
     <subgroup>para_combo</subgroup>
     <subgroup>para_tracker</subgroup>
@@ -13945,20 +14054,22 @@
       <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
       <arglist></arglist>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
       <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>rm::SPReadMode</name>
+      <name>rm::SerialReadMode</name>
       <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga5342af0a7d136dfa35569caea049b113</anchor>
+      <anchor>ga5ca0d5494f76b1f02b93b4514e32dd5a</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113a4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5342af0a7d136dfa35569caea049b113aafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
     </member>
     <member kind="function">
       <type>void</type>
@@ -13992,13 +14103,34 @@
     <name>opt_light_control</name>
     <title>OPT 奥普特 GigE 光源控制库</title>
     <filename>d0/d28/group__opt__light__control.html</filename>
-    <class kind="struct">rm::LightIpConfig</class>
     <class kind="class">rm::OPTLightController</class>
   </compound>
   <compound kind="group">
     <name>hik_light_control</name>
     <title>海康机器人 RS-232 光源控制库</title>
     <filename>dd/d10/group__hik__light__control.html</filename>
+    <class kind="class">rm::HikLightController</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::HikProductID</name>
+      <anchorfile>dd/d10/group__hik__light__control.html</anchorfile>
+      <anchor>ga41a67d50aad6fcfd1b713e73b4be9c0b</anchor>
+      <arglist></arglist>
+      <enumvalue file="dd/d10/group__hik__light__control.html" anchor="gga41a67d50aad6fcfd1b713e73b4be9c0badaa3b1e8f6a0603a00b4de70420b2844">LEAD</enumvalue>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>para_light</name>
+    <title>light 的参数模块</title>
+    <filename>d5/de1/group__para__light.html</filename>
+    <class kind="class">rm::para::HikLightControlParam</class>
+    <member kind="variable">
+      <type>HikLightControlParam</type>
+      <name>rm::para::hik_light_control_param</name>
+      <anchorfile>d5/de1/group__para__light.html</anchorfile>
+      <anchor>ga9b7f4212c3e6e651b8fd58e305baf0bb</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>ml</name>

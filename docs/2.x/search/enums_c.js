@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spreadmode_0',['SPReadMode',['../d5/d5f/group__core__io.html#ga5342af0a7d136dfa35569caea049b113',1,'rm']]]
+  ['serialreadmode_0',['SerialReadMode',['../d5/d5f/group__core__io.html#ga5ca0d5494f76b1f02b93b4514e32dd5a',1,'rm']]]
 ];
