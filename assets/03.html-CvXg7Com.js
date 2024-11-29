@@ -1,4 +1,4 @@
-import{_ as a,c as n,a as e,o as i}from"./app-BaOOogID.js";const l={};function p(d,s){return i(),n("div",null,s[0]||(s[0]=[e(`<p>可以使用 <code>rmvl_generate_para</code> CMake 宏生成参数模块的 C/C++ 文件，例如原先的文件架构为</p><div class="language- line-numbers-mode has-collapsed collapsed" data-ext="" data-title="" style="--vp-collapsed-lines:15;"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>.</span></span>
+import{_ as a,c as n,a as e,o as i}from"./app-9UO6qz2w.js";const l={};function p(d,s){return i(),n("div",null,s[0]||(s[0]=[e(`<p>可以使用 <code>rmvl_generate_para</code> CMake 宏生成参数模块的 C/C++ 文件，例如原先的文件架构为</p><div class="language- line-numbers-mode has-collapsed collapsed" data-ext="" data-title="" style="--vp-collapsed-lines:15;"><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>.</span></span>
 <span class="line"><span>├── CMakeLists.txt</span></span>
 <span class="line"><span>├── include</span></span>
 <span class="line"><span>│   └── rmvl</span></span>
