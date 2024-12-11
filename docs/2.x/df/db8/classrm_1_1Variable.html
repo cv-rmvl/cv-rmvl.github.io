@@ -141,10 +141,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:af4dfb3b9f12c5126df2395b6bee8131b"><td align="right" class="memTemplItemLeft" valign="top"> </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af4dfb3b9f12c5126df2395b6bee8131b">Variable</a> (Tp val)</td></tr>
 <tr class="memdesc:af4dfb3b9f12c5126df2395b6bee8131b"><td class="mdescLeft"> </td><td class="mdescRight">单值构造  <br/></td></tr>
 <tr class="separator:af4dfb3b9f12c5126df2395b6bee8131b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abe802ca47671a14fb4f9afebf60687cb" id="r_abe802ca47671a14fb4f9afebf60687cb"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;Tp, std::string&gt;&gt;&gt; </td></tr>
-<tr class="memitem:abe802ca47671a14fb4f9afebf60687cb"><td align="right" class="memTemplItemLeft" valign="top"> </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe802ca47671a14fb4f9afebf60687cb">Variable</a> (Tp &amp;&amp;str)</td></tr>
-<tr class="memdesc:abe802ca47671a14fb4f9afebf60687cb"><td class="mdescLeft"> </td><td class="mdescRight">字符串构造  <br/></td></tr>
-<tr class="separator:abe802ca47671a14fb4f9afebf60687cb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac602dc140b64b4b04dc05d8995aa4f89" id="r_ac602dc140b64b4b04dc05d8995aa4f89"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac602dc140b64b4b04dc05d8995aa4f89">Variable</a> (std::string_view str)</td></tr>
+<tr class="memdesc:ac602dc140b64b4b04dc05d8995aa4f89"><td class="mdescLeft"> </td><td class="mdescRight">字符串构造  <br/></td></tr>
+<tr class="separator:ac602dc140b64b4b04dc05d8995aa4f89"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1f68758fe25bbb53701374c2d8b936bb" id="r_a1f68758fe25bbb53701374c2d8b936bb"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; &amp;&amp; !std::is_same_v&lt;bool, Tp&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a1f68758fe25bbb53701374c2d8b936bb"><td align="right" class="memTemplItemLeft" valign="top"> </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1f68758fe25bbb53701374c2d8b936bb">Variable</a> (const std::vector&lt; Tp &gt; &amp;arr)</td></tr>
 <tr class="memdesc:a1f68758fe25bbb53701374c2d8b936bb"><td class="mdescLeft"> </td><td class="mdescRight">列表构造  <br/></td></tr>
@@ -280,12 +279,10 @@ template&lt;typename Tp , typename DecayT  = typename std::decay_t&lt;Tp&gt;, ty
 </dl>
 </div>
 </div>
-<a id="abe802ca47671a14fb4f9afebf60687cb" name="abe802ca47671a14fb4f9afebf60687cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe802ca47671a14fb4f9afebf60687cb">◆ </a></span>Variable() <span class="overload">[3/4]</span></h2>
+<a id="ac602dc140b64b4b04dc05d8995aa4f89" name="ac602dc140b64b4b04dc05d8995aa4f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac602dc140b64b4b04dc05d8995aa4f89">◆ </a></span>Variable() <span class="overload">[3/4]</span></h2>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename Tp , typename  = std::enable_if_t&lt;std::is_convertible_v&lt;Tp, std::string&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -293,7 +290,7 @@ template&lt;typename Tp , typename  = std::enable_if_t&lt;std::is_convertible_v&
         <tr>
           <td class="memname">rm::Variable::Variable </td>
           <td>(</td>
-          <td class="paramtype">Tp &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -304,12 +301,6 @@ template&lt;typename Tp , typename  = std::enable_if_t&lt;std::is_convertible_v&
 </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Variable(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Variable object&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Variable(</td><td class="paramname">val</td><td>) -&gt; </td><td>&lt;Variable object&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>字符串构造 </p>
-<dl class="tparams"><dt>模板参数</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Tp</td><td>字符串变量的存储数据类型，必须是 <code>std::string</code>、<code>std::string_view</code>、C 风格字符串指针或者字符串字面量 </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>字符串 </td></tr>

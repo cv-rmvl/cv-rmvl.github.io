@@ -127,8 +127,8 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
@@ -205,23 +205,23 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 设置滑动条</span></div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;内参 (0, 0)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, cameraMatrixCallBack, &amp;(matrix_pose.at(0)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 0)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(0, 0));</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 0)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cameraMatrix(0, 0)));</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;内参 (1, 1)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, cameraMatrixCallBack, &amp;(matrix_pose.at(0)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 1)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(1, 1));</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 1)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cameraMatrix(1, 1)));</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;内参 (0, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 3000, cameraMatrixCallBack, &amp;(matrix_pose.at(2)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(0, 2));</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cameraMatrix(0, 2)));</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;内参 (1, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 3000, cameraMatrixCallBack, &amp;(matrix_pose.at(5)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(1, 2));</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cameraMatrix(1, 2)));</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 0&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, distCoeffCallBack, &amp;(dist_pose.at(0)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 0&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(0, 0) * 5000 + 5000);</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 0&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(0, 0)) * 5000 + 5000);</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 1&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, distCoeffCallBack, &amp;(dist_pose.at(1)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 1&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(1, 0) * 5000 + 5000);</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 1&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(1, 0)) * 5000 + 5000);</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 2&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(2)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 2&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(2, 0) * 5000 + 500);</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 2&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(2, 0)) * 5000 + 500);</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 3&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(3)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 3&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(3, 0) * 5000 + 500);</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 3&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(3, 0)) * 5000 + 500);</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(4)));</div>
-<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(4, 0) * 5000 + 500);</div>
+<div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(4, 0)) * 5000 + 500);</div>
 <div class="line"> </div>
 <div class="line">    std::this_thread::sleep_for(1s);</div>
 <div class="line"> </div>
@@ -230,7 +230,8 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::Mat frame;</div>
 <div class="line">    <span class="keywordflow">if</span> (!capture.read(frame))</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    resizeWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, cv::Size(frame.cols * 0.8, frame.rows * 0.8));</div>
+<div class="line">    resizeWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, cv::Size(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.cols * 0.8),</div>
+<div class="line">                                      <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.rows * 0.8)));</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line">    {</div>

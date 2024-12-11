@@ -1,0 +1,451 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::OPTLightController类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.1</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../db/d24/classrm_1_1OPTLightController.html">OPTLightController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="../../da/d5e/classrm_1_1OPTLightController-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::OPTLightController类 参考<div class="ingroups"><a class="el" href="../../df/dfb/group__light.html">光源控制器</a> » <a class="el" href="../../d0/d28/group__opt__light__control.html">OPT 奥普特 GigE 光源控制库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPT 奥普特光源控制器  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/light/opt_light_control.h&gt;</code></p>
+<div class="dynheader">
+rm::OPTLightController 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="236" scrolling="no" src="../../dd/d0d/classrm_1_1OPTLightController__coll__graph.svg" width="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0f4df8b14f7464fa662b1ec79ca6cf40" id="r_a0f4df8b14f7464fa662b1ec79ca6cf40"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f4df8b14f7464fa662b1ec79ca6cf40">OPTLightController</a> (const <a class="el" href="../../d4/d2d/structrm_1_1LightConfig.html">LightConfig</a> &amp;cfg, std::string_view id)</td></tr>
+<tr class="memdesc:a0f4df8b14f7464fa662b1ec79ca6cf40"><td class="mdescLeft"> </td><td class="mdescRight">构造奥普特光源控制器对象，并使用建立连接  <br/></td></tr>
+<tr class="separator:a0f4df8b14f7464fa662b1ec79ca6cf40"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aef70f058f8067e7ca4083235b5a743d6" id="r_aef70f058f8067e7ca4083235b5a743d6"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aef70f058f8067e7ca4083235b5a743d6">isOpened</a> () const noexcept</td></tr>
+<tr class="memdesc:aef70f058f8067e7ca4083235b5a743d6"><td class="mdescLeft"> </td><td class="mdescRight">光源控制器是否打开  <br/></td></tr>
+<tr class="separator:aef70f058f8067e7ca4083235b5a743d6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8d83b62e33ce8f5a79499c950b9bc25c" id="r_a8d83b62e33ce8f5a79499c950b9bc25c"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d83b62e33ce8f5a79499c950b9bc25c">open</a> (const std::vector&lt; int &gt; &amp;channels) noexcept</td></tr>
+<tr class="memdesc:a8d83b62e33ce8f5a79499c950b9bc25c"><td class="mdescLeft"> </td><td class="mdescRight">打开指定通道  <br/></td></tr>
+<tr class="separator:a8d83b62e33ce8f5a79499c950b9bc25c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad04a4c75b1cc0a45802d5096788bbf48" id="r_ad04a4c75b1cc0a45802d5096788bbf48"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad04a4c75b1cc0a45802d5096788bbf48">open</a> () noexcept</td></tr>
+<tr class="memdesc:ad04a4c75b1cc0a45802d5096788bbf48"><td class="mdescLeft"> </td><td class="mdescRight">打开全部通道  <br/></td></tr>
+<tr class="separator:ad04a4c75b1cc0a45802d5096788bbf48"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aebc3042ef47d494cf8120d6637d9b721" id="r_aebc3042ef47d494cf8120d6637d9b721"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc3042ef47d494cf8120d6637d9b721">close</a> (const std::vector&lt; int &gt; &amp;channels) noexcept</td></tr>
+<tr class="memdesc:aebc3042ef47d494cf8120d6637d9b721"><td class="mdescLeft"> </td><td class="mdescRight">关闭指定通道  <br/></td></tr>
+<tr class="separator:aebc3042ef47d494cf8120d6637d9b721"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a07cf17a7696ff350b922f2d03348b676" id="r_a07cf17a7696ff350b922f2d03348b676"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a07cf17a7696ff350b922f2d03348b676">close</a> () noexcept</td></tr>
+<tr class="memdesc:a07cf17a7696ff350b922f2d03348b676"><td class="mdescLeft"> </td><td class="mdescRight">关闭全部通道  <br/></td></tr>
+<tr class="separator:a07cf17a7696ff350b922f2d03348b676"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afb7f61dd02bcae3f39f8df3dd1d54b3c" id="r_afb7f61dd02bcae3f39f8df3dd1d54b3c"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="#afb7f61dd02bcae3f39f8df3dd1d54b3c">getIntensity</a> (int channel) const noexcept</td></tr>
+<tr class="memdesc:afb7f61dd02bcae3f39f8df3dd1d54b3c"><td class="mdescLeft"> </td><td class="mdescRight">获取指定通道的光源亮度  <br/></td></tr>
+<tr class="separator:afb7f61dd02bcae3f39f8df3dd1d54b3c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acd428b553c3674b46c277386f5e2dc2c" id="r_acd428b553c3674b46c277386f5e2dc2c"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#acd428b553c3674b46c277386f5e2dc2c">setIntensity</a> (int channel, int intensity) noexcept</td></tr>
+<tr class="memdesc:acd428b553c3674b46c277386f5e2dc2c"><td class="mdescLeft"> </td><td class="mdescRight">设置指定通道的光源亮度  <br/></td></tr>
+<tr class="separator:acd428b553c3674b46c277386f5e2dc2c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ace49b596f62d176595798273bc1fa7f9" id="r_ace49b596f62d176595798273bc1fa7f9"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ace49b596f62d176595798273bc1fa7f9">trigger</a> (int channel, int time) const noexcept</td></tr>
+<tr class="memdesc:ace49b596f62d176595798273bc1fa7f9"><td class="mdescLeft"> </td><td class="mdescRight">光源控制器软触发指定通道  <br/></td></tr>
+<tr class="separator:ace49b596f62d176595798273bc1fa7f9"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPT 奥普特光源控制器 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0f4df8b14f7464fa662b1ec79ca6cf40" name="a0f4df8b14f7464fa662b1ec79ca6cf40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4df8b14f7464fa662b1ec79ca6cf40">◆ </a></span>OPTLightController()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::OPTLightController::OPTLightController </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d2d/structrm_1_1LightConfig.html">LightConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cfg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController(</td><td class="paramname">cfg, id</td><td>) -&gt; </td><td>&lt;OPTLightController object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>构造奥普特光源控制器对象，并使用建立连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cfg</td><td>光源控制器配置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>光源控制器唯一标识，可以是 IP 地址或者唯一序列号 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a07cf17a7696ff350b922f2d03348b676" name="a07cf17a7696ff350b922f2d03348b676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07cf17a7696ff350b922f2d03348b676">◆ </a></span>close() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.close(</td><td class="paramname">chns</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.close(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>关闭全部通道 </p>
+<dl class="section return"><dt>返回</dt><dd>指定通道是否关闭成功？ </dd></dl>
+</div>
+</div>
+<a id="aebc3042ef47d494cf8120d6637d9b721" name="aebc3042ef47d494cf8120d6637d9b721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc3042ef47d494cf8120d6637d9b721">◆ </a></span>close() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::close </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>channels</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.close(</td><td class="paramname">chns</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.close(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>关闭指定通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channels</td><td>要关闭的通道的索引组成的 <code>std::vector</code> ，范围: [1 ~ 32]（十进制格式） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指定通道是否关闭成功？ </dd></dl>
+</div>
+</div>
+<a id="afb7f61dd02bcae3f39f8df3dd1d54b3c" name="afb7f61dd02bcae3f39f8df3dd1d54b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7f61dd02bcae3f39f8df3dd1d54b3c">◆ </a></span>getIntensity()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rm::OPTLightController::getIntensity </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.getIntensity(</td><td class="paramname">chn</td><td>) -&gt; </td><td>intensity</td></tr></table>
+</div><div class="memdoc">
+<p>获取指定通道的光源亮度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>指定通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>若读取成功，返回 \([0, 255]\) 的值，否则返回 \(-1\) </dd></dl>
+</div>
+</div>
+<a id="aef70f058f8067e7ca4083235b5a743d6" name="aef70f058f8067e7ca4083235b5a743d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef70f058f8067e7ca4083235b5a743d6">◆ </a></span>isOpened()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.isOpened(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;opened ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>光源控制器是否打开 </p>
+</div>
+</div>
+<a id="ad04a4c75b1cc0a45802d5096788bbf48" name="ad04a4c75b1cc0a45802d5096788bbf48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04a4c75b1cc0a45802d5096788bbf48">◆ </a></span>open() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::open </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.open(</td><td class="paramname">chns</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.open(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>打开全部通道 </p>
+<dl class="section return"><dt>返回</dt><dd>指定通道是否打开成功？ </dd></dl>
+</div>
+</div>
+<a id="a8d83b62e33ce8f5a79499c950b9bc25c" name="a8d83b62e33ce8f5a79499c950b9bc25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d83b62e33ce8f5a79499c950b9bc25c">◆ </a></span>open() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::open </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>channels</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.open(</td><td class="paramname">chns</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.open(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>打开指定通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channels</td><td>要打开的通道的索引组成的 <code>std::vector</code> ，范围: [1 ~ 32]（十进制格式） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指定通道是否打开成功？ </dd></dl>
+</div>
+</div>
+<a id="acd428b553c3674b46c277386f5e2dc2c" name="acd428b553c3674b46c277386f5e2dc2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd428b553c3674b46c277386f5e2dc2c">◆ </a></span>setIntensity()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::setIntensity </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>intensity</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.setIntensity(</td><td class="paramname">chn, val</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>设置指定通道的光源亮度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>指定通道 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intensity</td><td>指定通道的光源亮度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否设置成功？ </dd></dl>
+</div>
+</div>
+<a id="ace49b596f62d176595798273bc1fa7f9" name="ace49b596f62d176595798273bc1fa7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace49b596f62d176595798273bc1fa7f9">◆ </a></span>trigger()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OPTLightController::trigger </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>time</em></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OPTLightController.trigger(</td><td class="paramname">chn, time</td><td>) -&gt; </td><td>&lt;Success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>光源控制器软触发指定通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>指定通道，范围: [1 ~ 8]（十进制格式） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>触发时间，单位: 10ms </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功触发？ </dd></dl>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/light/<a class="el" href="../../d4/da9/opt__light__control_8h.html">opt_light_control.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

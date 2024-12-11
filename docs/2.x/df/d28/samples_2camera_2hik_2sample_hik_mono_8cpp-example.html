@@ -129,7 +129,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> exposure = 1000;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> exposure = 5000;</div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> gain = 0;</div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> r_gain = 1200;</div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> g_gain = 1200;</div>
@@ -169,9 +169,9 @@ $(function(){ initResizable(false); });
 <div class="line">    namedWindow(<span class="stringliteral">&quot;控制面板&quot;</span>, cv::WINDOW_AUTOSIZE);</div>
 <div class="line">    cv::Mat track_bar_img(cv::Size(750, 1), CV_8UC1, cv::Scalar(60, 60, 60));</div>
 <div class="line"> </div>
-<div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;曝光值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, exposureCallBack, <span class="keyword">nullptr</span>);</div>
+<div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;曝光值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 70000, exposureCallBack, <span class="keyword">nullptr</span>);</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;曝光值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, exposure);</div>
-<div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;增益值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 16, gainCallBack, <span class="keyword">nullptr</span>);</div>
+<div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;增益值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 30, gainCallBack, <span class="keyword">nullptr</span>);</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;增益值&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, gain);</div>
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;红通道&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 3000, rGainCallBack, <span class="keyword">nullptr</span>);</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;红通道&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, r_gain);</div>
@@ -181,8 +181,6 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;蓝通道&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, b_gain);</div>
 <div class="line"> </div>
 <div class="line">    std::this_thread::sleep_for(1s);</div>
-<div class="line"> </div>
-<div class="line">    [[maybe_unused]] <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name = <span class="stringliteral">&quot;out_para.yml&quot;</span>;</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>

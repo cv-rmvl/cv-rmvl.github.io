@@ -132,7 +132,7 @@ $(function(){ initResizable(false); });
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">int</span> ret = MV_OK;</div>
 <div class="line">    MV_CC_DEVICE_INFO_LIST camera_list;</div>
-<div class="line">    ret = MV_CC_EnumDevices(MV_USB_DEVICE, &amp;camera_list);</div>
+<div class="line">    ret = MV_CC_EnumDevices(MV_GIGE_DEVICE | MV_USB_DEVICE, &amp;camera_list);</div>
 <div class="line">    <span class="keywordflow">if</span> (ret != MV_OK)</div>
 <div class="line">        <a id="a0" name="a0"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;failed to enum camera devices&quot;</span>);</div>
 <div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nums = camera_list.nDeviceNum;</div>

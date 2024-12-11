@@ -126,11 +126,15 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// _WIN32</span></div>
+<div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;CameraApi.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    INT camera_counts = 8;</div>
+<div class="line">    <span class="keywordtype">int</span> camera_counts = 8;</div>
 <div class="line">    std::vector&lt;tSdkCameraDevInfo&gt; camera_list(camera_counts);</div>
 <div class="line">    <span class="keyword">auto</span> status = CameraEnumerateDevice(camera_list.data(), &amp;camera_counts);</div>
 <div class="line">    <span class="keywordflow">if</span> (status != CAMERA_STATUS_SUCCESS)</div>
@@ -184,7 +188,8 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::Mat frame;</div>
 <div class="line">    <span class="keywordflow">if</span> (!capture.<a id="a12" name="a12"></a><a class="code hl_function" href="../../de/de8/classrm_1_1MvCamera.html#a0fb43c17b571f1791963a3853bb2a380">read</a>(frame))</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    resizeWindow(<span class="stringliteral">&quot;frame&quot;</span>, cv::Size(frame.cols * 0.8, frame.rows * 0.8));</div>
+<div class="line">    resizeWindow(<span class="stringliteral">&quot;frame&quot;</span>, cv::Size(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.cols * 0.8),</div>
+<div class="line">                                   <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.rows * 0.8)));</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (capture.<a class="code hl_function" href="../../de/de8/classrm_1_1MvCamera.html#a0fb43c17b571f1791963a3853bb2a380">read</a>(frame))</div>
 <div class="line">    {</div>
