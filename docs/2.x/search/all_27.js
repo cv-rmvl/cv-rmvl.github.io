@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['串口通信模块_0',['串口通信模块',['../d3/da4/tutorial_modules_serial.html',1,'tutorial_table_of_content_modules']]]
+  ['与通信_0',['数据 IO 与通信',['../d5/d5f/group__core__io.html',1,'']]]
 ];

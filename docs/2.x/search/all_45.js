@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['协方差矩阵_0',['1.4 协方差矩阵',['../dd/dc3/tutorial_modules_kalman.html#kalman_covariance_matrix',1,'']]]
+  ['加权与核函数_0',['3.1 加权与核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md208',1,'']]],
+  ['加载方式_1',['4.1 加载方式',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md295',1,'']]]
 ];

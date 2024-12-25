@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['改进_0',['1.3 改进',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md201',1,'']]]
+  ['撰写说明文档_0',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]]
 ];

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['方法_0',['方法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md220',1,'2. 求解常微分方程的 Euler 方法'],['../db/dba/tutorial_modules_opcua.html#autotoc_md263',1,'2.3 方法'],['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md224',1,'3. Runge-Kutta 方法']]],
-  ['方程组的_20runge_20kutta_20公式_1',['3.4 方程组的 Runge-Kutta 公式',['../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta',1,'']]]
+  ['整车状态估计补偿模块_0',['整车状态估计补偿模块',['../d3/d06/group__gyro__compensator.html',1,'']]],
+  ['整车状态决策模块_1',['整车状态决策模块',['../d3/dae/group__gyro__decider.html',1,'']]],
+  ['整车状态序列组_2',['整车状态序列组',['../d8/dbf/group__gyro__group.html',1,'']]],
+  ['整车状态识别模块_3',['整车状态识别模块',['../de/dee/group__gyro__detector.html',1,'']]],
+  ['整车状态预测模块_4',['整车状态预测模块',['../db/d1b/group__gyro__predictor.html',1,'']]]
 ];

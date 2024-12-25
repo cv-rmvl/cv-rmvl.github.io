@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['杂项_0',['杂项',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md100',1,'']]]
+  ['服务器_20客户端_0',['2. 服务器/客户端',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_server_client',1,'']]]
 ];

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]],
-  ['最小二乘法_1',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]],
-  ['最小二乘递推算法_2',['最小二乘递推算法',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md46',1,'']]],
-  ['最小二乘_3',['1. 最小二乘',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md47',1,'']]],
-  ['最速下降法_4',['1. 最速下降法',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md165',1,'']]]
+  ['显式_20euler_20单步法_0',['2.1 显式 Euler 单步法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md221',1,'']]],
+  ['显示图像、打印调试信息_1',['1. 显示图像、打印调试信息',['../db/d4f/tutorial_extra_upper_write_data.html#autotoc_md93',1,'']]]
 ];

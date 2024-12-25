@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['各模块的用法_0',['RMVL-Python 各模块的用法',['../d3/dbb/tutorial_py_table_of_contents_modules.html',1,'tutorials_python']]]
+  ['变量_0',['2.2 变量',['../db/dba/tutorial_modules_opcua.html#autotoc_md262',1,'']]]
 ];

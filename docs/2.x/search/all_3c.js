@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['决策模块（功能模块）_0',['决策模块（功能模块）',['../d9/dbe/group__decider.html',1,'']]],
-  ['决策模块_1',['2.4 决策模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md68',1,'']]]
+  ['具体使用方法_0',['2. 具体使用方法',['../d2/de3/tutorial_extra_upper_process.html#autotoc_md79',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['支持随机访问的堆_0',['支持随机访问的堆',['../d5/db4/tutorial_modules_ra_heap.html',1,'tutorial_table_of_content_modules']]],
-  ['支持_1',['2.1 Markdown 支持',['../d5/d72/tutorial_document.html#autotoc_md130',1,'']]]
+  ['插值多项式_0',['插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md177',1,'1. Lagrange 插值多项式'],['../d8/d57/tutorial_modules_interpolation.html#autotoc_md178',1,'2. Newton 插值多项式']]]
 ];

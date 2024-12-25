@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['能量机关特征组合_0',['能量机关特征组合',['../d8/d7f/group__combo__rune.html',1,'']]]
+  ['编写测试文件_0',['2. 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md124',1,'']]],
+  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md118',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['启用_20rmvl_20python_20绑定功能_0',['启用 RMVL-Python 绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md301',1,'']]]
+  ['各模块的用法_0',['RMVL-Python 各模块的用法',['../d3/dbb/tutorial_py_table_of_contents_modules.html',1,'tutorials_python']]]
 ];

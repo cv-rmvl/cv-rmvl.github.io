@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['分类网络部署库_0',['ONNX-Runtime 分类网络部署库',['../d8/d82/tutorial_modules_ort.html',1,'tutorial_table_of_content_modules']]]
+  ['决策模块（功能模块）_0',['决策模块（功能模块）',['../d9/dbe/group__decider.html',1,'']]],
+  ['决策模块_1',['2.4 决策模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md68',1,'']]]
 ];

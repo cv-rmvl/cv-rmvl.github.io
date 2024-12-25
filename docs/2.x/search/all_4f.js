@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['命名空间_20rm_0',['命名空间 rm',['../d1/dfb/intro.html#intro_namespace_rm',1,'']]]
+  ['合理使用默认数据_0',['4. 合理使用默认数据',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md90',1,'']]]
 ];

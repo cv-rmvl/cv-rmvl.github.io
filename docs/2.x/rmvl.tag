@@ -1263,6 +1263,13 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>str.hpp</name>
+    <path>rmvl/core/</path>
+    <filename>d7/de9/str_8hpp.html</filename>
+    <namespace>rm</namespace>
+    <namespace>rm::str</namespace>
+  </compound>
+  <compound kind="file">
     <name>timer.hpp</name>
     <path>rmvl/core/</path>
     <filename>df/d05/timer_8hpp.html</filename>
@@ -1703,6 +1710,7 @@
     <includes id="dc/d5f/utilities_8hpp" name="utilities.hpp" local="yes" import="no" module="no" objc="no">utilities.hpp</includes>
     <class kind="class">rm::VariableType</class>
     <class kind="class">rm::Variable</class>
+    <class kind="struct">rm::DataSourceVariable</class>
     <namespace>rm</namespace>
     <member kind="define">
       <type>#define</type>
@@ -2626,8 +2634,8 @@
       <type>bool</type>
       <name>monitor</name>
       <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a670dd7a4bbccbdfa0a443dbe23e03354</anchor>
-      <arglist>(NodeId nd, const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
+      <anchor>a83a2e99021699e6d673653a527478af0</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -2789,10 +2797,10 @@
       <arglist>(int idx) const</arglist>
     </member>
     <member kind="function">
-      <type>const CameraExtrinsics</type>
+      <type>const CameraExtrinsics &amp;</type>
       <name>extrinsic</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a8fc49becdb598a9a2c636edd66c4dee6</anchor>
+      <anchor>a0ac0ad15a2d3a6bc1dfa9cc0c337597d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -3002,6 +3010,59 @@
       <anchorfile>d0/d80/classrm_1_1CurveFitter.html</anchorfile>
       <anchor>a5e89e3cb01d882c47730b73dc9b279b0</anchor>
       <arglist>(double x) const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::DataSourceVariable</name>
+    <filename>db/df0/structrm_1_1DataSourceVariable.html</filename>
+    <member kind="variable">
+      <type>uint16_t</type>
+      <name>ns</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>aefdc3db2c51e922d4036482ab18f5464</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>browse_name</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a510e4c14093ad1b0d00f9741a2aade73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>display_name</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>abde072a7732e7819eedc111d3247d9ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>description</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a55351ac8f817f4491044cd235903575e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>access_level</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a2f7331c4fc40d61c1c68a46c849b5759</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>DataSourceRead</type>
+      <name>on_read</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>ae383dacc7235c683d9ee0170b0d68f70</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>DataSourceWrite</type>
+      <name>on_write</name>
+      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a775e12c26cbca768b8f7a8875625dabe</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6160,8 +6221,8 @@
       <type>constexpr</type>
       <name>NodeId</name>
       <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>ab39f12daac3b4cba2d560505cfe2bb26</anchor>
-      <arglist>(uint16_t ns, uint32_t id)</arglist>
+      <anchor>a87b23935d31d55f3c7d490463ef0d4f4</anchor>
+      <arglist>(uint16_t ns_, uint32_t id_)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -6239,6 +6300,20 @@
       <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
       <anchor>ad2a7a2ab4dd831b36f2c86583990f070</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>uint16_t</type>
+      <name>ns</name>
+      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
+      <anchor>a861ce30ab433d50f5830663485ea45a8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>id</name>
+      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
+      <anchor>a6cdf20128d82582ac90a941da1545dfa</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8959,8 +9034,8 @@
       <type>NodeId</type>
       <name>addDataSourceVariableNode</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a407607fa5860d0751fb042e7df3b8f52</anchor>
-      <arglist>(const Variable &amp;val, DataSourceRead on_read, DataSourceWrite on_write, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
+      <anchor>a2f66b6a3bdc065ac3ef40dbe663f518c</anchor>
+      <arglist>(const DataSourceVariable &amp;val, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
     </member>
     <member kind="function">
       <type>Variable</type>
@@ -9022,8 +9097,8 @@
       <type>bool</type>
       <name>triggerEvent</name>
       <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a564e12af749ffa621448766cf8debba6</anchor>
-      <arglist>(const NodeId &amp;nd, const Event &amp;event) const</arglist>
+      <anchor>ac4e89de3d08bca91fc5f1d16b6619e13</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>UA_Server *</type>
@@ -9128,8 +9203,8 @@
       <type>bool</type>
       <name>triggerEvent</name>
       <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a4856f56da46ab05d41c1666a401b90ea</anchor>
-      <arglist>(const NodeId &amp;nd, const Event &amp;event) const</arglist>
+      <anchor>a862bfb1bb617d554abc0806b12f930a2</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10281,6 +10356,7 @@
     <namespace>rm::numeric_literals</namespace>
     <namespace>rm::para</namespace>
     <namespace>rm::reflect</namespace>
+    <namespace>rm::str</namespace>
     <class kind="struct">rm::Argument</class>
     <class kind="class">rm::Armor</class>
     <class kind="class">rm::ArmorDetector</class>
@@ -10295,6 +10371,7 @@
     <class kind="struct">rm::CompensateInfo</class>
     <class kind="class">rm::compensator</class>
     <class kind="class">rm::CurveFitter</class>
+    <class kind="struct">rm::DataSourceVariable</class>
     <class kind="class">rm::DataType</class>
     <class kind="struct">rm::DecideInfo</class>
     <class kind="class">rm::decider</class>
@@ -10746,20 +10823,6 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; Variable(ServerView, const NodeId &amp;)&gt;</type>
-      <name>DataSourceRead</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1db14ce525bc677ed1dc366c56ff61bd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>DataSourceWrite</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9414da9e067ed57a193c6484efcffc44</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -10778,6 +10841,20 @@
       <name>Variables</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga76910ab7d5d3a5e2f75d0593a97bf61d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; Variable(const NodeId &amp;)&gt;</type>
+      <name>DataSourceRead</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga54e4a1eb9a1457b075f3b03b60e4e8f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>DataSourceWrite</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -12129,13 +12206,6 @@
       <anchor>ad99b14de423561318fb1871889bbb977</anchor>
       <arglist>(std::string_view str)</arglist>
     </member>
-    <member kind="function">
-      <type>std::vector&lt; std::string &gt;</type>
-      <name>split</name>
-      <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>a3cdb2e0427e78935d2ee7f691d27dace</anchor>
-      <arglist>(std::string_view str, char delim)</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::numeric_literals</name>
@@ -12463,21 +12533,21 @@
     <member kind="function">
       <type>consteval std::size_t</type>
       <name>size</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>gadc3b4f53ef6981ca8c58abd401a506b9</anchor>
       <arglist>(auto &amp;&amp;...args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>for_each</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>ga9863cff22a9ace50a697915560ee8290</anchor>
       <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>equal</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>gaca3e9de5d5043a1c038a42c9f4f0a22c</anchor>
       <arglist>(const Tp &amp;lhs, const Tp &amp;rhs)</arglist>
     </member>
@@ -12485,6 +12555,24 @@
   <compound kind="namespace">
     <name>rm::reflect::helper</name>
     <filename>d5/d09/namespacerm_1_1reflect_1_1helper.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::str</name>
+    <filename>d4/dfc/namespacerm_1_1str.html</filename>
+    <member kind="function">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>split</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gadf0b167884deb47575179962b66c4341</anchor>
+      <arglist>(std::string_view str, std::string_view delim)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>join</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>ga6dbfb3a75e7aa6352b02002438c5918c</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>algorithm</name>
@@ -13768,13 +13856,12 @@
     <name>core</name>
     <title>RMVL 核心模块</title>
     <filename>d0/de1/group__core.html</filename>
+    <subgroup>core_reflect</subgroup>
+    <subgroup>core_meta</subgroup>
+    <subgroup>core_str</subgroup>
     <subgroup>core_io</subgroup>
     <subgroup>core_timer</subgroup>
     <class kind="class">rm::Exception</class>
-    <class kind="struct">rm::hash_aggregate</class>
-    <class kind="struct">rm::hash_traits</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
     <member kind="define">
       <type>#define</type>
       <name>HIGHLIGHT_</name>
@@ -14006,26 +14093,59 @@
       <anchor>gaf02e400b3f459cb836ee81ee05e71ed8</anchor>
       <arglist>()</arglist>
     </member>
+  </compound>
+  <compound kind="group">
+    <name>core_reflect</name>
+    <title>聚合体编译期反射</title>
+    <filename>d5/d3e/group__core__reflect.html</filename>
     <member kind="function">
       <type>consteval std::size_t</type>
       <name>rm::reflect::size</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>gadc3b4f53ef6981ca8c58abd401a506b9</anchor>
       <arglist>(auto &amp;&amp;...args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>rm::reflect::for_each</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>ga9863cff22a9ace50a697915560ee8290</anchor>
       <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>rm::reflect::equal</name>
-      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
       <anchor>gaca3e9de5d5043a1c038a42c9f4f0a22c</anchor>
       <arglist>(const Tp &amp;lhs, const Tp &amp;rhs)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>core_meta</name>
+    <title>元编程</title>
+    <filename>de/df6/group__core__meta.html</filename>
+    <class kind="struct">rm::hash_aggregate</class>
+    <class kind="struct">rm::hash_traits</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+  </compound>
+  <compound kind="group">
+    <name>core_str</name>
+    <title>Python 风格的字符串处理</title>
+    <filename>d0/d17/group__core__str.html</filename>
+    <member kind="function">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>rm::str::split</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gadf0b167884deb47575179962b66c4341</anchor>
+      <arglist>(std::string_view str, std::string_view delim)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>rm::str::join</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>ga6dbfb3a75e7aa6352b02002438c5918c</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -14167,6 +14287,7 @@
     <class kind="struct">rm::UserConfig</class>
     <class kind="class">rm::VariableType</class>
     <class kind="class">rm::Variable</class>
+    <class kind="struct">rm::DataSourceVariable</class>
     <class kind="class">rm::View</class>
     <member kind="define">
       <type>#define</type>
@@ -14218,20 +14339,6 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; Variable(ServerView, const NodeId &amp;)&gt;</type>
-      <name>rm::DataSourceRead</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1db14ce525bc677ed1dc366c56ff61bd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>rm::DataSourceWrite</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9414da9e067ed57a193c6484efcffc44</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>rm::FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -14250,6 +14357,20 @@
       <name>rm::Variables</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga76910ab7d5d3a5e2f75d0593a97bf61d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; Variable(const NodeId &amp;)&gt;</type>
+      <name>rm::DataSourceRead</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga54e4a1eb9a1457b075f3b03b60e4e8f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>rm::DataSourceWrite</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">

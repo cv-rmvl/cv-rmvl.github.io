@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['地址空间_0',['1.2 地址空间',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_address_space',1,'']]]
+  ['图像轮廓特征（数据组件）_0',['图像轮廓特征（数据组件）',['../db/d72/group__feature.html',1,'']]],
+  ['图像预处理模块_1',['图像预处理模块',['../de/d3d/group__algorithm__pretreat.html',1,'']]]
 ];

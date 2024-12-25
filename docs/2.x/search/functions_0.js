@@ -1,7 +1,7 @@
 var searchData=
 [
   ['add_0',['add',['../dc/d80/classrm_1_1Interpolator.html#a09fa31e65a292c9391245b266d4bad15',1,'rm::Interpolator::add()'],['../d4/d8b/classrm_1_1EventType.html#a8c53b5aea80b7223011b9bbd365235b0',1,'rm::EventType::add()'],['../da/d88/classrm_1_1Event.html#a7d385f0b3aa66134913aa957e3a61a93',1,'rm::Event::add()'],['../d4/d40/classrm_1_1ObjectType.html#ab6c69d67111b7671940395d27acb383b',1,'rm::ObjectType::add(const Variable &amp;variable)'],['../d4/d40/classrm_1_1ObjectType.html#af536a18a7f1814d0eced7b30d2b01f25',1,'rm::ObjectType::add(const Method &amp;method)'],['../d8/d9b/classrm_1_1Object.html#aa61e1bab707b656b224827f4746e259b',1,'rm::Object::add(const Variable &amp;variable)'],['../d8/d9b/classrm_1_1Object.html#a8fc819c2becd5ce492157e2b09d36f77',1,'rm::Object::add(const Method &amp;method)'],['../d2/de9/classrm_1_1View.html#a10be1bf90dbbb8747ee8dd8fe60bc66c',1,'rm::View::add()'],['../d6/d6c/classrm_1_1group.html#ae1bed244f44c03b0d77c63522ae2d8cc',1,'rm::group::add()']]],
-  ['adddatasourcevariablenode_1',['addDataSourceVariableNode',['../d4/d06/classrm_1_1Server.html#a407607fa5860d0751fb042e7df3b8f52',1,'rm::Server']]],
+  ['adddatasourcevariablenode_1',['addDataSourceVariableNode',['../d4/d06/classrm_1_1Server.html#a2f66b6a3bdc065ac3ef40dbe663f518c',1,'rm::Server']]],
   ['addeventtypenode_2',['addEventTypeNode',['../d4/d06/classrm_1_1Server.html#a8edb5901115e3ce9ce96517bfad0b86b',1,'rm::Server']]],
   ['addmethodnode_3',['addMethodNode',['../d4/d06/classrm_1_1Server.html#afb7923ae9437706294c9bc3dc3f101b1',1,'rm::Server']]],
   ['addobjectnode_4',['addObjectNode',['../d4/d06/classrm_1_1Server.html#a91ea8b7e8b229cff3b5777700167d607',1,'rm::Server']]],

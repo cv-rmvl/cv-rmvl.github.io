@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['概念_0',['概念',['../db/da1/tutorial_modules_least_square.html#autotoc_md189',1,'1. 概念'],['../d1/dfb/intro.html#api_concepts',1,'API 概念']]],
-  ['概述_1',['概述',['../d1/d67/tutorial_extra_upper_init.html#autotoc_md75',1,'概述'],['../d5/d72/tutorial_document.html#tutorial_documentation_overview',1,'Doxygen 概述']]]
+  ['核函数_0',['核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md207',1,'3. Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md210',1,'3.3 常用的 Robust 核函数']]],
+  ['核心模块_1',['RMVL 核心模块',['../d0/de1/group__core.html',1,'']]]
 ];

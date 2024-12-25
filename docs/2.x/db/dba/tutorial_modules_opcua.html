@@ -297,8 +297,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 服务器运行</span></div>
 <div class="line">    srv.spin();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:147</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_a40c696a0e6a592c4a0cbd97cc184617b"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a40c696a0e6a592c4a0cbd97cc184617b">rm::Server::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>定义</b> server.hpp:205</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:128</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html_a40c696a0e6a592c4a0cbd97cc184617b"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a40c696a0e6a592c4a0cbd97cc184617b">rm::Server::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>定义</b> server.hpp:186</div></div>
 <div class="ttc" id="aserver_8hpp_html"><div class="ttname"><a href="../../df/d0a/server_8hpp.html">server.hpp</a></div><div class="ttdoc">OPC UA 服务器</div></div>
 </div><!-- fragment --><p><b>方案二</b></p>
 <p>使用多线程，主线程负责关闭服务器。</p>
@@ -415,10 +415,10 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// srv.shutdown(); 可省略，后文不再赘述</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:133</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:256</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:265</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ae2192d1434ef12e7db2be77b8d616899"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899">rm::Variable::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">变量的描述</div><div class="ttdef"><b>定义</b> variable.hpp:267</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:134</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:257</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:266</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ae2192d1434ef12e7db2be77b8d616899"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899">rm::Variable::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">变量的描述</div><div class="ttdef"><b>定义</b> variable.hpp:268</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
 <div class="line"><span class="keyword">import</span> rm</div>
@@ -480,11 +480,11 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 或者直接使用 target 的成员函数进行转化</span></div>
 <div class="line">    <span class="comment">// printf(&quot;%f\n&quot;, target.cast&lt;double&gt;());</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ab040aacf58e371cc4ed827a1512b75c1"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab040aacf58e371cc4ed827a1512b75c1">rm::Variable::cast</a></div><div class="ttdeci">Tp cast() const</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:211</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ab1463cebb6f4ae2d756ace4e61e4dd61"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab1463cebb6f4ae2d756ace4e61e4dd61">rm::Variable::empty</a></div><div class="ttdeci">constexpr bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>定义</b> variable.hpp:191</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ab040aacf58e371cc4ed827a1512b75c1"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab040aacf58e371cc4ed827a1512b75c1">rm::Variable::cast</a></div><div class="ttdeci">Tp cast() const</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:212</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ab1463cebb6f4ae2d756ace4e61e4dd61"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab1463cebb6f4ae2d756ace4e61e4dd61">rm::Variable::empty</a></div><div class="ttdeci">constexpr bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>定义</b> variable.hpp:192</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:50</div></div>
-<div class="ttc" id="agroup__opcua_html_ga59abb0e45d2cc659ab5bc9ead635542f"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:173</div></div>
+<div class="ttc" id="agroup__opcua_html_ga59abb0e45d2cc659ab5bc9ead635542f"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:174</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># client.py</span></div>
 <div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
@@ -548,16 +548,16 @@ $(function(){ initResizable(false); });
 <div class="line">        std::this_thread::sleep_for(10ms); <span class="comment">// 这里的延时是为了减少 CPU 占用，当然不加延时也完全可以，后文同理</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:51</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:84</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a3b6e001428888146e110283033414226"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a3b6e001428888146e110283033414226">rm::Method::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">方法的描述</div><div class="ttdef"><b>定义</b> method.hpp:81</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:69</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:78</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:87</div></div>
-<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:40</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:49</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:82</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a3b6e001428888146e110283033414226"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a3b6e001428888146e110283033414226">rm::Method::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">方法的描述</div><div class="ttdef"><b>定义</b> method.hpp:79</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:67</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:76</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:85</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:42</div></div>
 <div class="ttc" id="aclassrm_1_1ServerView_html"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a></div><div class="ttdoc">OPC UA 服务器视图</div><div class="ttdef"><b>定义</b> server.hpp:31</div></div>
-<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:147</div></div>
-<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表</div><div class="ttdef"><b>定义</b> variable.hpp:303</div></div>
+<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:148</div></div>
+<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表别名</div><div class="ttdef"><b>定义</b> variable.hpp:304</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
 <div class="line"><span class="keyword">import</span> rm</div>
@@ -608,7 +608,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
 <div class="line">    svr.spinOnce()</div>
-<div class="ttc" id="astructrm_1_1Argument_html"><div class="ttname"><a href="../../df/d48/structrm_1_1Argument.html">rm::Argument</a></div><div class="ttdoc">OPC UA 方法参数信息</div><div class="ttdef"><b>定义</b> method.hpp:31</div></div>
+<div class="ttc" id="astructrm_1_1Argument_html"><div class="ttname"><a href="../../df/d48/structrm_1_1Argument.html">rm::Argument</a></div><div class="ttdoc">OPC UA 方法参数信息</div><div class="ttdef"><b>定义</b> method.hpp:29</div></div>
 </div><!-- fragment --> </div> <p>在客户端调用指定方法。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// client.cpp</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dfe/client_8hpp.html">rmvl/opcua/client.hpp</a>&gt;</span></div>
@@ -769,7 +769,7 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> c3 = cli.read(node_c3);</div>
 <div class="line">    std::cout &lt;&lt; c3.<a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;std::string&gt;() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:201</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:202</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># client.py</span></div>
 <div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
@@ -827,7 +827,7 @@ $(function(){ initResizable(false); });
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1View_html"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html">rm::View</a></div><div class="ttdoc">OPC UA 视图</div><div class="ttdef"><b>定义</b> view.hpp:24</div></div>
 <div class="ttc" id="aclassrm_1_1View_html_a10be1bf90dbbb8747ee8dd8fe60bc66c"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html#a10be1bf90dbbb8747ee8dd8fe60bc66c">rm::View::add</a></div><div class="ttdeci">void add(NodeId_ &amp;&amp;...nds)</div><div class="ttdoc">添加节点 ID</div><div class="ttdef"><b>定义</b> view.hpp:42</div></div>
-<div class="ttc" id="agroup__opcua_html_ga2c945fd1e774a90c267570b1cc3016c6"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga2c945fd1e774a90c267570b1cc3016c6">uaCreateVariable</a></div><div class="ttdeci">#define uaCreateVariable(val,...)</div><div class="ttdoc">创建变量，BrowseName、DisplayName、Description 均为变量类型的名称</div><div class="ttdef"><b>定义</b> variable.hpp:298</div></div>
+<div class="ttc" id="agroup__opcua_html_ga2c945fd1e774a90c267570b1cc3016c6"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga2c945fd1e774a90c267570b1cc3016c6">uaCreateVariable</a></div><div class="ttdeci">#define uaCreateVariable(val,...)</div><div class="ttdoc">创建变量，BrowseName、DisplayName、Description 均为变量类型的名称</div><div class="ttdef"><b>定义</b> variable.hpp:299</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
@@ -1021,7 +1021,7 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keywordflow">while</span> (!stop)</div>
 <div class="line">        srv.spinOnce();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1ServerTimer_html"><div class="ttname"><a href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a></div><div class="ttdoc">OPC UA 服务器定时器</div><div class="ttdef"><b>定义</b> server.hpp:376</div></div>
+<div class="ttc" id="aclassrm_1_1ServerTimer_html"><div class="ttname"><a href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a></div><div class="ttdoc">OPC UA 服务器定时器</div><div class="ttdef"><b>定义</b> server.hpp:349</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
@@ -1193,7 +1193,7 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Subscriber_html"><div class="ttname"><a href="../../d4/dea/classrm_1_1Subscriber.html">rm::Subscriber</a></div><div class="ttdoc">OPC UA 订阅者</div><div class="ttdef"><b>定义</b> subscriber.hpp:60</div></div>
-<div class="ttc" id="agroup__opcua_html_ga38791e6ffebfaf02420a994ac63d5e0d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga38791e6ffebfaf02420a994ac63d5e0d">rm::tpDouble</a></div><div class="ttdeci">constexpr DataType tpDouble</div><div class="ttdoc">数据类型：Double</div><div class="ttdef"><b>定义</b> utilities.hpp:152</div></div>
+<div class="ttc" id="agroup__opcua_html_ga38791e6ffebfaf02420a994ac63d5e0d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga38791e6ffebfaf02420a994ac63d5e0d">rm::tpDouble</a></div><div class="ttdeci">constexpr DataType tpDouble</div><div class="ttdoc">数据类型：Double</div><div class="ttdef"><b>定义</b> utilities.hpp:153</div></div>
 <div class="ttc" id="astructrm_1_1FieldMetaData_html"><div class="ttname"><a href="../../d4/d81/structrm_1_1FieldMetaData.html">rm::FieldMetaData</a></div><div class="ttdoc">数据集字段元数据</div><div class="ttdef"><b>定义</b> subscriber.hpp:26</div></div>
 <div class="ttc" id="asubscriber_8hpp_html"><div class="ttname"><a href="../../d8/df0/subscriber_8hpp.html">subscriber.hpp</a></div><div class="ttdoc">OPC UA 订阅者</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># subscriber.py</span></div>

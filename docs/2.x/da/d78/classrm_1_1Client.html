@@ -177,16 +177,16 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a66a57a298f87814dbb35dc868f25f7df" id="r_a66a57a298f87814dbb35dc868f25f7df"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a57a298f87814dbb35dc868f25f7df">monitor</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd, <a class="el" href="../../d3/da8/group__opcua.html#ga9821644743e68d3e9f666d6407613bf3">DataChangeNotificationCallback</a> on_change, uint32_t q_size=10)</td></tr>
 <tr class="memdesc:a66a57a298f87814dbb35dc868f25f7df"><td class="mdescLeft"> </td><td class="mdescRight">创建变量节点监视项，以实现订阅节点的功能  <br/></td></tr>
 <tr class="separator:a66a57a298f87814dbb35dc868f25f7df"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a670dd7a4bbccbdfa0a443dbe23e03354" id="r_a670dd7a4bbccbdfa0a443dbe23e03354"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a670dd7a4bbccbdfa0a443dbe23e03354">monitor</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd, const std::vector&lt; std::string &gt; &amp;names, <a class="el" href="../../d3/da8/group__opcua.html#gae79d27f50272b431ff0bf0ab0ecbd858">EventNotificationCallback</a> on_event)</td></tr>
-<tr class="memdesc:a670dd7a4bbccbdfa0a443dbe23e03354"><td class="mdescLeft"> </td><td class="mdescRight">创建事件监视项，以实现事件的订阅功能  <br/></td></tr>
-<tr class="separator:a670dd7a4bbccbdfa0a443dbe23e03354"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a83a2e99021699e6d673653a527478af0" id="r_a83a2e99021699e6d673653a527478af0"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a83a2e99021699e6d673653a527478af0">monitor</a> (const std::vector&lt; std::string &gt; &amp;names, <a class="el" href="../../d3/da8/group__opcua.html#gae79d27f50272b431ff0bf0ab0ecbd858">EventNotificationCallback</a> on_event)</td></tr>
+<tr class="memdesc:a83a2e99021699e6d673653a527478af0"><td class="mdescLeft"> </td><td class="mdescRight">创建事件监视项，以实现事件的订阅功能  <br/></td></tr>
+<tr class="separator:a83a2e99021699e6d673653a527478af0"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af0715f8ac620461fe22d3bb3ebb9bfd1" id="r_af0715f8ac620461fe22d3bb3ebb9bfd1"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#af0715f8ac620461fe22d3bb3ebb9bfd1">remove</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd)</td></tr>
 <tr class="memdesc:af0715f8ac620461fe22d3bb3ebb9bfd1"><td class="mdescLeft"> </td><td class="mdescRight">移除监视项  <br/></td></tr>
 <tr class="separator:af0715f8ac620461fe22d3bb3ebb9bfd1"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>OPC UA 客户端 </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#_a5">samples/opcua/opcua_client.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#_a1">samples/opcua/opcua_client.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a5cf51f6b4eb52e25f1cd5f88f3d0ddbc" name="a5cf51f6b4eb52e25f1cd5f88f3d0ddbc"></a>
@@ -382,22 +382,18 @@ Public 成员函数</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a8001ee15cbe169a72bade6b6e4c59125">node</a> = cli.find(<span class="stringliteral">"person/name"</span>, src_nd);</div>
 <div class="line"><span class="comment">// 等效于 auto node = src_nd | cli.node("person") | cli.node("name");</span></div>
 <div class="ttc" id="aclassrm_1_1Client_html_a8001ee15cbe169a72bade6b6e4c59125"><div class="ttname"><a href="#a8001ee15cbe169a72bade6b6e4c59125">rm::Client::node</a></div><div class="ttdeci">FindNodeInClient node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> client.hpp:177</div></div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a2">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
 </div>
 </div>
-<a id="a670dd7a4bbccbdfa0a443dbe23e03354" name="a670dd7a4bbccbdfa0a443dbe23e03354"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a670dd7a4bbccbdfa0a443dbe23e03354">◆ </a></span>monitor() <span class="overload">[1/2]</span></h2>
+<a id="a83a2e99021699e6d673653a527478af0" name="a83a2e99021699e6d673653a527478af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a2e99021699e6d673653a527478af0">◆ </a></span>monitor() <span class="overload">[1/2]</span></h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool rm::Client::monitor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>nd</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>names</em></span>, </td>
         </tr>
         <tr>
@@ -405,12 +401,11 @@ Public 成员函数</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#gae79d27f50272b431ff0bf0ab0ecbd858">EventNotificationCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_event</em></span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>创建事件监视项，以实现事件的订阅功能 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nd</td><td>待监视节点的 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#aef8d53c69b0e55cf3d4fac52a7d3baf5" title="获取 int 整型的非默认属性列表">Event::data()</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
   </table>
@@ -439,7 +434,7 @@ Public 成员函数</h2></td></tr>
           <td></td>
           <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>q_size</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>创建变量节点监视项，以实现订阅节点的功能 </p>
 <ul>
@@ -522,6 +517,8 @@ Public 成员函数</h2></td></tr>
 </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.ok(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Is Connected ?&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>是否成功创建客户端并成功连接到服务器 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a3">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="a775e277bc3b904731bf15c635f1fdc80" name="a775e277bc3b904731bf15c635f1fdc80"></a>
@@ -568,6 +565,8 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>读出的用 <code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的数据，未成功读取则返回空 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a4">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="af0715f8ac620461fe22d3bb3ebb9bfd1" name="af0715f8ac620461fe22d3bb3ebb9bfd1"></a>
@@ -673,6 +672,8 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a5">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>

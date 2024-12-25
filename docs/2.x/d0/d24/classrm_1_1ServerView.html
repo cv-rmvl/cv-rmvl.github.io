@@ -155,13 +155,13 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a57e9110a945f94b77905bb98ecda85e7" id="r_a57e9110a945f94b77905bb98ecda85e7"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e9110a945f94b77905bb98ecda85e7">write</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;nd, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
 <tr class="memdesc:a57e9110a945f94b77905bb98ecda85e7"><td class="mdescLeft"> </td><td class="mdescRight">给指定的变量节点写数据  <br/></td></tr>
 <tr class="separator:a57e9110a945f94b77905bb98ecda85e7"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4856f56da46ab05d41c1666a401b90ea" id="r_a4856f56da46ab05d41c1666a401b90ea"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4856f56da46ab05d41c1666a401b90ea">triggerEvent</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;nd, const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;event) const</td></tr>
-<tr class="memdesc:a4856f56da46ab05d41c1666a401b90ea"><td class="mdescLeft"> </td><td class="mdescRight">创建并触发事件  <br/></td></tr>
-<tr class="separator:a4856f56da46ab05d41c1666a401b90ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a862bfb1bb617d554abc0806b12f930a2" id="r_a862bfb1bb617d554abc0806b12f930a2"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a862bfb1bb617d554abc0806b12f930a2">triggerEvent</a> (const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;event) const</td></tr>
+<tr class="memdesc:a862bfb1bb617d554abc0806b12f930a2"><td class="mdescLeft"> </td><td class="mdescRight">创建并触发事件  <br/></td></tr>
+<tr class="separator:a862bfb1bb617d554abc0806b12f930a2"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>OPC UA 服务器视图 </p>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a5">samples/opcua/opcua_server.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a8">samples/opcua/opcua_server.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a4350ccda29b0f2a382edf7a0e043ff3c" name="a4350ccda29b0f2a382edf7a0e043ff3c"></a>
@@ -255,7 +255,8 @@ Public 成员函数</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a0eb25168ae9e1983449c640cccca3617">node</a> = srv.find(<span class="stringliteral">"person/name"</span>, src_nd);</div>
 <div class="line"><span class="comment">// 等效于 auto node = src_nd | srv.node("person") | srv.node("name");</span></div>
 <div class="ttc" id="aclassrm_1_1ServerView_html_a0eb25168ae9e1983449c640cccca3617"><div class="ttname"><a href="#a0eb25168ae9e1983449c640cccca3617">rm::ServerView::node</a></div><div class="ttdeci">FindNodeInServer node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> server.hpp:63</div></div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a15">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="aaec1d61f9699e09087c1750cf15c3ea0" name="aaec1d61f9699e09087c1750cf15c3ea0"></a>
@@ -369,29 +370,26 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>读出的用 <code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的数据，未成功读取则返回空 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a14">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
 </div>
 </div>
-<a id="a4856f56da46ab05d41c1666a401b90ea" name="a4856f56da46ab05d41c1666a401b90ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4856f56da46ab05d41c1666a401b90ea">◆ </a></span>triggerEvent()</h2>
+<a id="a862bfb1bb617d554abc0806b12f930a2" name="a862bfb1bb617d554abc0806b12f930a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862bfb1bb617d554abc0806b12f930a2">◆ </a></span>triggerEvent()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool rm::ServerView::triggerEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>nd</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../da/d88/classrm_1_1Event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span> ) const</td>
-        </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.ServerView.triggerEvent(</td><td class="paramname">nd, event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.ServerView.triggerEvent(</td><td class="paramname">event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>创建并触发事件 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nd</td><td>触发事件的节点 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td><code><a class="el" href="../../da/d88/classrm_1_1Event.html" title="OPC UA 事件">rm::Event</a></code> 表示的事件 </td></tr>
   </table>
   </dd>

@@ -237,21 +237,21 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
 <div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> size(size_tag&lt;3&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}, init{}, init{}}, 0u) { <span class="keywordflow">return</span> 3u; }</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;2&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}, init{}}, 0u) { <span class="keywordflow">return</span> 2u; }</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;2&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}, init{}}, 0u) { <span class="keywordflow">return</span> 2u; }</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;1&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}}, 0u) { <span class="keywordflow">return</span> 1u; }</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;1&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}}, 0u) { <span class="keywordflow">return</span> 1u; }</div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;0&gt;) -&gt; <span class="keyword">decltype</span>(Tp{}, 0u) { <span class="keywordflow">return</span> 0u; }</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;0&gt;) -&gt; <span class="keyword">decltype</span>(Tp{}, 0u) { <span class="keywordflow">return</span> 0u; }</div>
 <div class="line"> </div>
 <div class="line">} <span class="comment">// namespace helper</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">constexpr</span> std::size_t <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>()</div>
+<div class="line"><span class="keyword">constexpr</span> std::size_t <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">static_assert</span>(std::is_aggregate_v&lt;Tp&gt;);</div>
 <div class="line">    <span class="keywordflow">return</span> helper::size&lt;Tp&gt;(helper::size_tag&lt;3&gt;{});</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:320</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:320</div></div>
 </div><!-- fragment --><p>其中涉及到了一个 <code>size_tag</code> 类，该类有一个 <code>&lt;0&gt;</code> 的全特化，<code>&lt;N&gt;</code> 继承于 <code>&lt;N - 1&gt;</code>，是为了在 <code>helper::size</code> 重载中，能够按 <code>N</code> 从大到小的顺序进行重载决议。下面给出一个简单的使用示例。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d3f/util_8hpp.html">rmvl/core/util.hpp</a>&gt;</span></div>
 <div class="line"> </div>
@@ -371,10 +371,10 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_enumvalue" href="../../d5/d6c/group__algorithm.html#gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</a> x1{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
 <div class="line">    <a class="code hl_enumvalue" href="../../d5/d6c/group__algorithm.html#gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</a> x2{2, 4.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
 <div class="line">    <a class="code hl_enumvalue" href="../../d5/d6c/group__algorithm.html#gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</a> x3{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x2: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x2) &lt;&lt; std::endl;</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x3: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x3) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x2: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x2) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x3: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x3) &lt;&lt; std::endl;</div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__core_html_gaca3e9de5d5043a1c038a42c9f4f0a22c"><div class="ttname"><a href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a></div><div class="ttdeci">bool equal(const Tp &amp;lhs, const Tp &amp;rhs)</div><div class="ttdoc">判断两个聚合类数据是否相同</div><div class="ttdef"><b>定义</b> util.hpp:414</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gaca3e9de5d5043a1c038a42c9f4f0a22c"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a></div><div class="ttdeci">bool equal(const Tp &amp;lhs, const Tp &amp;rhs)</div><div class="ttdoc">判断两个聚合类数据是否相同</div><div class="ttdef"><b>定义</b> util.hpp:414</div></div>
 </div><!-- fragment --><p>编译后运行结果为</p>
 <div class="fragment"><div class="line">x1 = x2: false</div>
 <div class="line">x1 = x3: true</div>
@@ -416,7 +416,7 @@ $(function(){ initResizable(false); });
 <div class="line">    std::string str{};</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#if __cplusplus &lt; 202002L</span></div>
-<div class="line">    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> X &amp;s)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(*<span class="keyword">this</span>, s); }</div>
+<div class="line">    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> X &amp;s)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(*<span class="keyword">this</span>, s); }</div>
 <div class="line"><span class="preprocessor">#else</span></div>
 <div class="line">    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> X &amp;) <span class="keyword">const</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><span class="preprocessor">#endif</span></div>

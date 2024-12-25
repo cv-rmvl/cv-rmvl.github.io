@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['派生类属性_0',['1.2.2 派生类属性',['../d5/dee/tutorial_extra_how_to_use_feature.html#autotoc_md29',1,'']]]
+  ['法方程求解最小二乘法_0',['4. 法方程求解最小二乘法',['../db/da1/tutorial_modules_least_square.html#autotoc_md193',1,'']]]
 ];

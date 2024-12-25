@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['曝光设置_0',['1.2.1 曝光设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md244',1,'']]]
+  ['是什么_0',['1.1 OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_what',1,'']]]
 ];

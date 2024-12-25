@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['轮询判断_0',['3.1 轮询判断',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md88',1,'']]]
+  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
 ];

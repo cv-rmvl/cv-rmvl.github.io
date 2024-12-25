@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['序列组_0',['1.4 序列组',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md63',1,'']]],
-  ['序列组_20相关追踪器的空间集合（数据组件）_1',['序列组/相关追踪器的空间集合（数据组件）',['../dd/d46/group__group.html',1,'']]]
+  ['平台_0',['Linux 平台',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md98',1,'']]],
+  ['平移目标决策模块_1',['平移目标决策模块',['../dd/dd3/group__translation__decider.html',1,'']]],
+  ['平面目标时间序列_2',['平面目标时间序列',['../d0/d75/group__planar__tracker.html',1,'']]]
 ];

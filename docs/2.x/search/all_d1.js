@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['页面相关_0',['2. 页面相关',['../d5/d72/tutorial_document.html#autotoc_md129',1,'']]]
+  ['静态构建与动态构建_0',['2.2 静态构建与动态构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md105',1,'']]]
 ];

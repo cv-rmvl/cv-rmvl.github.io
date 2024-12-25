@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['可视化配置_20opc_20ua_0',['4.2.2 可视化配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#autotoc_md272',1,'']]]
+  ['发出操控指令至下位机_0',['3. 发出操控指令至下位机',['../db/d4f/tutorial_extra_upper_write_data.html#autotoc_md95',1,'']]],
+  ['发布_20订阅_1',['3. 发布/订阅',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_pub_sub',1,'']]]
 ];
