@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 工业自动化通信协议 OPC UA</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -140,25 +140,25 @@ $(function(){ initResizable(false); });
     <a href="#tutorial_opcua_server_client">2. 服务器/客户端</a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md261">2.1 初始化</a>
+        <a href="#autotoc_md263">2.1 初始化</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md262">2.2 变量</a>
+        <a href="#autotoc_md264">2.2 变量</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md263">2.3 方法</a>
+        <a href="#autotoc_md265">2.3 方法</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md264">2.4 对象</a>
+        <a href="#autotoc_md266">2.4 对象</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md265">2.5 视图</a>
+        <a href="#autotoc_md267">2.5 视图</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md266">2.6 监视</a>
+        <a href="#autotoc_md268">2.6 监视</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md267">2.7 定时</a>
+        <a href="#autotoc_md269">2.7 定时</a>
       </li>
     </ul>
   </li>
@@ -166,15 +166,15 @@ $(function(){ initResizable(false); });
     <a href="#tutorial_opcua_pub_sub">3. 发布/订阅</a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md268">3.1 无代理 Pub/Sub</a>
+        <a href="#autotoc_md270">3.1 无代理 Pub/Sub</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md269">3.2 有代理 Pub/Sub</a>
+        <a href="#autotoc_md271">3.2 有代理 Pub/Sub</a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md270">4. 使用技巧</a>
+    <a href="#autotoc_md272">4. 使用技巧</a>
     <ul>
       <li class="level2">
         <a href="#opcua_parameters">4.1 参数加载</a>
@@ -183,23 +183,23 @@ $(function(){ initResizable(false); });
         <a href="#opcua_nodeset_compiler">4.2 从 XML 配置 OPC UA</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md271">4.2.1 安装 UaModeler</a>
+            <a href="#autotoc_md273">4.2.1 安装 UaModeler</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md272">4.2.2 可视化配置 OPC UA</a>
+            <a href="#autotoc_md274">4.2.2 可视化配置 OPC UA</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md273">4.2.3 生成 *.c/*.h 文件</a>
+            <a href="#autotoc_md275">4.2.3 生成 *.c/*.h 文件</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md274">4.3 不占有所有权的 C/S 视图</a>
+        <a href="#autotoc_md276">4.3 不占有所有权的 C/S 视图</a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md275">5. 参考内容</a>
+    <a href="#autotoc_md277">5. 参考内容</a>
   </li>
 </ul>
 </div>
@@ -269,7 +269,7 @@ $(function(){ initResizable(false); });
 <h1><a class="anchor" id="tutorial_opcua_server_client"></a>
 2. 服务器/客户端</h1>
 <p>基于服务器/客户端的方式是 OPC UA 最基本的一种通信方式，上文的地址空间在服务器/客户端通信的过程中完全展现出来。下面列举一些 opcua 模块中常用的服务器与客户端通信的内容。</p>
-<h2><a class="anchor" id="autotoc_md261"></a>
+<h2><a class="anchor" id="autotoc_md263"></a>
 2.1 初始化</h2>
 <p><b>服务器</b></p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p><b>方案一</b></p>
@@ -378,7 +378,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="comment"># 创建 OPC UA 客户端，连接到</span></div>
 <div class="line">cli = <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">rm.Client</a>(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>)</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md262"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md264"></a>
 2.2 变量</h2>
 <p>在上文 <a class="el" href="#tutorial_opcua_intro_address_space">1.2 地址空间</a> 中介绍了变量的 3 种访问方式，这里使用最简单的直接读写的方式。首先在服务器中添加变量节点，后文均采用 <code>while + spinOnce</code> 的方式处理异步事件。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -476,11 +476,11 @@ $(function(){ initResizable(false); });
 <div class="line">        <span class="keywordflow">return</span> 0;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// 使用静态成员函数将 target 转化为目标格式，并打印</span></div>
-<div class="line">    printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#ab040aacf58e371cc4ed827a1512b75c1">rm::Variable::cast&lt;double&gt;</a>(target));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast&lt;double&gt;</a>(target));</div>
 <div class="line">    <span class="comment">// 或者直接使用 target 的成员函数进行转化</span></div>
 <div class="line">    <span class="comment">// printf(&quot;%f\n&quot;, target.cast&lt;double&gt;());</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ab040aacf58e371cc4ed827a1512b75c1"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab040aacf58e371cc4ed827a1512b75c1">rm::Variable::cast</a></div><div class="ttdeci">Tp cast() const</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:212</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:202</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_ab1463cebb6f4ae2d756ace4e61e4dd61"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ab1463cebb6f4ae2d756ace4e61e4dd61">rm::Variable::empty</a></div><div class="ttdeci">constexpr bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>定义</b> variable.hpp:192</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:50</div></div>
@@ -499,7 +499,7 @@ $(function(){ initResizable(false); });
 <div class="line">    exit(0)</div>
 <div class="line"><span class="comment"># 使用静态成员函数将 target 转化为目标格式，并打印</span></div>
 <div class="line">print(target.double())</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md263"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md265"></a>
 2.3 方法</h2>
 <p>在服务器中添加两数之和的方法节点，供客户端调用。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -548,12 +548,12 @@ $(function(){ initResizable(false); });
 <div class="line">        std::this_thread::sleep_for(10ms); <span class="comment">// 这里的延时是为了减少 CPU 占用，当然不加延时也完全可以，后文同理</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:49</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:82</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a3b6e001428888146e110283033414226"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a3b6e001428888146e110283033414226">rm::Method::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">方法的描述</div><div class="ttdef"><b>定义</b> method.hpp:79</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:67</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:76</div></div>
-<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:85</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:48</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:81</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a3b6e001428888146e110283033414226"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a3b6e001428888146e110283033414226">rm::Method::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">方法的描述</div><div class="ttdef"><b>定义</b> method.hpp:78</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:66</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:75</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:84</div></div>
 <div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:42</div></div>
 <div class="ttc" id="aclassrm_1_1ServerView_html"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a></div><div class="ttdoc">OPC UA 服务器视图</div><div class="ttdef"><b>定义</b> server.hpp:31</div></div>
 <div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:148</div></div>
@@ -643,7 +643,7 @@ $(function(){ initResizable(false); });
 <div class="line">    exit(0)</div>
 <div class="line"><span class="comment"># 输出结果</span></div>
 <div class="line">print(f<span class="stringliteral">&quot;retval = {oargs[0].int()}&quot;</span>)</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md264"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md266"></a>
 2.4 对象</h2>
 <p>在服务器中添加对象节点：</p>
 <div class="fragment"><div class="line">A</div>
@@ -700,11 +700,11 @@ $(function(){ initResizable(false); });
 <div class="line">        std::this_thread::sleep_for(10ms);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Object_html"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html">rm::Object</a></div><div class="ttdoc">OPC UA 对象</div><div class="ttdef"><b>定义</b> object.hpp:139</div></div>
-<div class="ttc" id="aclassrm_1_1Object_html_a38ff99ec5033cc00b4ea87570cefe493"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#a38ff99ec5033cc00b4ea87570cefe493">rm::Object::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">对象的描述 - zh-CN</div><div class="ttdef"><b>定义</b> object.hpp:219</div></div>
-<div class="ttc" id="aclassrm_1_1Object_html_a82d108ca995445032d4cae85906b4771"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#a82d108ca995445032d4cae85906b4771">rm::Object::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> object.hpp:217</div></div>
-<div class="ttc" id="aclassrm_1_1Object_html_aa3acefd9587e6669ab311f8d11f8c94b"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#aa3acefd9587e6669ab311f8d11f8c94b">rm::Object::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> object.hpp:208</div></div>
-<div class="ttc" id="aclassrm_1_1Object_html_aa61e1bab707b656b224827f4746e259b"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#aa61e1bab707b656b224827f4746e259b">rm::Object::add</a></div><div class="ttdeci">void add(const Variable &amp;variable)</div><div class="ttdoc">添加（额外的）变量节点至 rm::Object 对象中</div><div class="ttdef"><b>定义</b> object.hpp:159</div></div>
+<div class="ttc" id="aclassrm_1_1Object_html"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html">rm::Object</a></div><div class="ttdoc">OPC UA 对象</div><div class="ttdef"><b>定义</b> object.hpp:158</div></div>
+<div class="ttc" id="aclassrm_1_1Object_html_a38ff99ec5033cc00b4ea87570cefe493"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#a38ff99ec5033cc00b4ea87570cefe493">rm::Object::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">对象的描述 - zh-CN</div><div class="ttdef"><b>定义</b> object.hpp:243</div></div>
+<div class="ttc" id="aclassrm_1_1Object_html_a82d108ca995445032d4cae85906b4771"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#a82d108ca995445032d4cae85906b4771">rm::Object::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> object.hpp:241</div></div>
+<div class="ttc" id="aclassrm_1_1Object_html_aa3acefd9587e6669ab311f8d11f8c94b"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#aa3acefd9587e6669ab311f8d11f8c94b">rm::Object::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> object.hpp:232</div></div>
+<div class="ttc" id="aclassrm_1_1Object_html_aa61e1bab707b656b224827f4746e259b"><div class="ttname"><a href="../../d8/d9b/classrm_1_1Object.html#aa61e1bab707b656b224827f4746e259b">rm::Object::add</a></div><div class="ttdeci">void add(const Variable &amp;variable)</div><div class="ttdoc">添加（额外的）变量节点至 rm::Object 对象中</div><div class="ttdef"><b>定义</b> object.hpp:178</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
@@ -769,7 +769,6 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> c3 = cli.read(node_c3);</div>
 <div class="line">    std::cout &lt;&lt; c3.<a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;std::string&gt;() &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:202</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># client.py</span></div>
 <div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
@@ -783,7 +782,7 @@ $(function(){ initResizable(false); });
 <div class="line">node_c3 = cli.find(<span class="stringliteral">&quot;A/B2/C3&quot;</span>)</div>
 <div class="line">c3 = cli.read(node_c3)</div>
 <div class="line">print(c3.str())</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md265"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md267"></a>
 2.5 视图</h2>
 <p>在 <code>nodeObjectsFolder</code> 中先添加 <code>A/num1</code>、<code>num2</code> 2 个变量节点，并将 <code>num1</code> 和 <code>num2</code> 加入视图，下面的示例演示在 <b>服务器</b> 中创建并添加视图节点。若要在客户端中进行此操作，创建并添加视图节点的步骤基本一致，这里不做展示。需要注意的是，在客户端中创建并添加视图节点，需要提前在服务器中加入对应的（变量、方法、对象……）节点</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -865,7 +864,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
 <div class="line">    svr.spinOnce()</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md266"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md268"></a>
 2.6 监视</h2>
 <p>OPC UA 支持变量节点和事件的监视，下面以监视变量节点为例。首先在服务器中添加待监视的变量节点</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -995,7 +994,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
 <div class="line">    cli.spinOnce()</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md267"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md269"></a>
 2.7 定时</h2>
 <p><a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 为服务器和客户端均提供了循环定时器，用于周期性执行任务。下面的示例演示在 <b>服务器</b> 中创建并添加定时器。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
@@ -1070,7 +1069,7 @@ $(function(){ initResizable(false); });
 </ul>
 </blockquote>
 <p>有关 API 使用的更多详细信息，请查看 <a href="https://www.open62541.org/doc/master/pubsub.html">PubSub 教程</a>。</p>
-<h2><a class="anchor" id="autotoc_md268"></a>
+<h2><a class="anchor" id="autotoc_md270"></a>
 3.1 无代理 Pub/Sub</h2>
 <p>RMVL 提供了基于 <code>UDP</code> 传输协议的 Broker-less 即无代理的发布订阅机制，目前支持 <code>UADP</code> 的消息映射方式，对应的枚举类型是 <code>TransportID::UDP_UADP</code>。</p>
 <p>需要留意的是，OPC UA 的发布订阅模型仍然是建立在 <a class="el" href="#tutorial_opcua_server_client">2. 服务器/客户端</a> 模型之上的，此外 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 的 PubSub 在实现上是继承于 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 的，因此，RMVL 的发布订阅模型在使用时具备服务器的所有功能，初始化、释放资源等操作与服务器完全一致。</p>
@@ -1233,10 +1232,10 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment"># other code</span></div>
 <div class="line">    </div>
 <div class="line">    sub.spinOnce()</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md269"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md271"></a>
 3.2 有代理 Pub/Sub</h2>
 <dl class="section warning"><dt>警告</dt><dd>RMVL 目前暂不支持有代理的发布订阅机制。</dd></dl>
-<h1><a class="anchor" id="autotoc_md270"></a>
+<h1><a class="anchor" id="autotoc_md272"></a>
 4. 使用技巧</h1>
 <p>以下是 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 的使用技巧。</p>
 <h2><a class="anchor" id="opcua_parameters"></a>
@@ -1267,7 +1266,7 @@ $(function(){ initResizable(false); });
 <p>具体调节方式可参考引言中的 <a class="el" href="../../d1/dfb/intro.html#intro_parameters_manager">参数管理</a> 部分。</p>
 <h2><a class="anchor" id="opcua_nodeset_compiler"></a>
 4.2 从 XML 配置 OPC UA</h2>
-<h3><a class="anchor" id="autotoc_md271"></a>
+<h3><a class="anchor" id="autotoc_md273"></a>
 4.2.1 安装 UaModeler</h3>
 <p>可使用 UaModeler 等软件进行可视化信息模型的建立，构建后可以导出为一个 <code>*.xml</code> 文件，首先先安装 UaModeler。</p>
 <p><b>Windows EXE</b></p>
@@ -1283,7 +1282,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></li>
 </ul>
 <p>具体安装细节可参考 <a href="https://github.com/FreeOpcUa/opcua-modeler">opcua-modeler on Github</a> 的 README。</p>
-<h3><a class="anchor" id="autotoc_md272"></a>
+<h3><a class="anchor" id="autotoc_md274"></a>
 4.2.2 可视化配置 OPC UA</h3>
 <p>对于项目创建或导出等内容，此处不做过多介绍，可参考<a href="https://wanghao1314.blog.csdn.net/article/details/104092781">此博客</a>了解上述内容。</p>
 <dl class="section note"><dt>注解</dt><dd><ul>
@@ -1291,7 +1290,7 @@ $(function(){ initResizable(false); });
 <li><code>NamespaceArray</code> 的 <code>[1]</code> 的字符串需要更改为 <code>urn:open62541.server.application</code></li>
 </ul>
 </dd></dl>
-<h3><a class="anchor" id="autotoc_md273"></a>
+<h3><a class="anchor" id="autotoc_md275"></a>
 4.2.3 生成 *.c/*.h 文件</h3>
 <dl class="section note"><dt>注解</dt><dd>以下生成 C/C++ 文件的介绍来自 <a href="https://www.open62541.org/doc/master/nodeset_compiler.html#getting-started">open62541 nodeset-compiler</a>。</dd></dl>
 <p>进入 <code>&lt;path-to-open62541&gt;/tools/nodeset_compiler</code> 文件夹，执行以下命令行</p>
@@ -1305,7 +1304,7 @@ $(function(){ initResizable(false); });
 <div class="line">  --existing Opc.Ua.NodeSet2.xml \</div>
 <div class="line">  --xml xxx.xml \</div>
 <div class="line">  myNodeSet # myNodeSet 是要生成的文件名，包含 myNodeSet.h 和 myNodeSet.c，请自行设置</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md274"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md276"></a>
 4.3 不占有所有权的 C/S 视图</h2>
 <p><code><a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a></code> 使用 RAII 进行设计，一个对象占有了服务器的所有权和生命周期，当对象析构时，会自动停止并结束服务器。使用 <code><a class="el" href="../../d0/d24/classrm_1_1ServerView.html" title="OPC UA 服务器视图">rm::ServerView</a></code> 来获取不占有所有权的服务器视图，并进行变量读写、路径搜索的操作，下面用服务器视图的单元测试作为示例。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><a class="code hl_class" href="../../d4/d91/classrm_1_1Method.html">rm::Method</a> method = [](<a class="code hl_class" href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a> sv, <span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;, <span class="keyword">const</span> Variables &amp;iargs) {</div>
@@ -1341,7 +1340,7 @@ $(function(){ initResizable(false); });
 <div class="line">method.iargs = [iarg]</div>
 <div class="line">srv.addMethodNode(method)</div>
 </div><!-- fragment --> </div> <p>同样的，客户端也可以使用 <code><a class="el" href="../../df/d48/classrm_1_1ClientView.html" title="OPC UA 客户端视图">rm::ClientView</a></code> 来获取不占有所有权的客户端视图，进行变量读写、路径搜索的操作，此处不再赘述。</p>
-<h1><a class="anchor" id="autotoc_md275"></a>
+<h1><a class="anchor" id="autotoc_md277"></a>
 5. 参考内容</h1>
 <p><a class="el" href="../../d0/de3/citelist.html#CITEREF_freeopcua22">[6]</a> UaModeler · FreeOpcUa/opcua-modeler · Github </p>
 </div></div><!-- contents -->
@@ -1350,8 +1349,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

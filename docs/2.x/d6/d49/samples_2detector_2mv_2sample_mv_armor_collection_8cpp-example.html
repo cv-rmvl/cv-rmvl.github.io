@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: samples/detector/mv/sample_mv_armor_collection.cpp</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -131,7 +131,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../da/d95/detector_2armor__detector_8h.html">rmvl/detector/armor_detector.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>fs = std::filesystem;</div>
-<div class="line"> </div>
+<div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> draw(cv::Mat src, <a class="code hl_typedef" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">rm::combo::ptr</a> p_combo)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// 角点</span></div>
@@ -170,7 +170,7 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keyword">auto</span> path = parser.get&lt;std::string&gt;(<span class="stringliteral">&quot;prefix&quot;</span>);</div>
 <div class="line">    <span class="keyword">auto</span> first_idx = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;index&quot;</span>);</div>
 <div class="line">    <span class="keyword">auto</span> num = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;num&quot;</span>);</div>
-<div class="line">    <span class="keyword">auto</span> color = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;color&quot;</span>) == 0 ? <a id="a0" name="a0"></a><a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::PixChannel::BLUE</a> : <a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>::<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a>::<a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">RED</a>;</div>
+<div class="line">    <span class="keyword">auto</span> color = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;color&quot;</span>) == 0 ? <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::PixChannel::BLUE</a> : <a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>::<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a>::<a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">RED</a>;</div>
 <div class="line">    <span class="keyword">auto</span> waitkey = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;waitkey&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (!fs::exists(path))</div>
@@ -187,7 +187,7 @@ $(function(){ initResizable(false); });
 <div class="line">        printf(<span class="stringliteral">&quot;已发现 \033[33m\&quot;%s\&quot;\033[0m 文件夹\n&quot;</span>, path.c_str());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 相机初始化</span></div>
-<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a id="a2" name="a2"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="a3" name="a3"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="a4" name="a4"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
+<div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
 <div class="line">    <span class="keywordflow">if</span> (!capture.isOpened())</div>
 <div class="line">    {</div>
 <div class="line">        printf(<span class="stringliteral">&quot;相机打开失败\n&quot;</span>);</div>
@@ -212,15 +212,15 @@ $(function(){ initResizable(false); });
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    capture.set(<a id="a5" name="a5"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>);</div>
-<div class="line">    capture.set(<a id="a6" name="a6"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
-<div class="line">    capture.set(<a id="a7" name="a7"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
-<div class="line">    capture.set(<a id="a8" name="a8"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>);</div>
-<div class="line">    capture.set(<a id="a9" name="a9"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
-<div class="line">    capture.set(<a id="a10" name="a10"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
-<div class="line">    capture.set(<a id="a11" name="a11"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> p_detector = <a id="a12" name="a12"></a><a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
+<div class="line">    <span class="keyword">auto</span> p_detector = <a id="a1" name="a1"></a><a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
 <div class="line">    std::vector&lt;rm::group::ptr&gt; groups;</div>
 <div class="line"> </div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;装甲板收集&quot;</span>, cv::WINDOW_NORMAL);</div>
@@ -233,17 +233,17 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keywordflow">while</span> (index &lt; num)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (!capture.read(src))</div>
-<div class="line">            <a id="a13" name="a13"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a id="a14" name="a14"></a><a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a>, <span class="stringliteral">&quot;Fail to read the image.&quot;</span>);</div>
+<div class="line">            <a id="a2" name="a2"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a>, <span class="stringliteral">&quot;Fail to read the image.&quot;</span>);</div>
 <div class="line">        <span class="comment">// 识别</span></div>
-<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, src, color, <a id="_a15" name="_a15"></a><a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a id="a16" name="a16"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
+<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, src, color, <a id="_a3" name="_a3"></a><a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;combos = info.combos;</div>
 <div class="line">        <span class="keywordflow">if</span> (combos.size() &gt; 1)</div>
-<div class="line">            <a id="a17" name="a17"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;当前识别到多于 1 个装甲板：识别到 %zu 个&quot;</span>, combos.size());</div>
+<div class="line">            <a id="a4" name="a4"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;当前识别到多于 1 个装甲板：识别到 %zu 个&quot;</span>, combos.size());</div>
 <div class="line">        <span class="comment">// ROI截取图像</span></div>
 <div class="line">        cv::Mat roi_img;</div>
 <div class="line">        <span class="keywordflow">if</span> (!combos.empty())</div>
 <div class="line">        {</div>
-<div class="line">            roi_img = <a id="a18" name="a18"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a57af2840f0a444a32a35277f1e048301">rm::Armor::getNumberROI</a>(src, <a id="a19" name="a19"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front()));</div>
+<div class="line">            roi_img = <a id="a5" name="a5"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a57af2840f0a444a32a35277f1e048301">rm::Armor::getNumberROI</a>(src, <a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front()));</div>
 <div class="line">            <span class="comment">// 显示效果</span></div>
 <div class="line">            <a class="code hl_function" href="../../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5">draw</a>(src, combos.front());</div>
 <div class="line">        }</div>
@@ -251,9 +251,9 @@ $(function(){ initResizable(false); });
 <div class="line">        <span class="keywordflow">if</span> (!roi_img.empty())</div>
 <div class="line">        {</div>
 <div class="line">            std::string file_name = path + <span class="stringliteral">&quot;/&quot;</span> + std::to_string(index + first_idx) + <span class="stringliteral">&quot;.png&quot;</span>;</div>
-<div class="line">            <a id="a20" name="a20"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;保存图像至 %s&quot;</span>, file_name.c_str());</div>
+<div class="line">            <a id="a6" name="a6"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;保存图像至 %s&quot;</span>, file_name.c_str());</div>
 <div class="line">            <span class="keywordflow">if</span> (!imwrite(file_name, roi_img))</div>
-<div class="line">                <a id="a21" name="a21"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;保存图像失败&quot;</span>);</div>
+<div class="line">                <a id="a7" name="a7"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;保存图像失败&quot;</span>);</div>
 <div class="line">            imshow(<span class="stringliteral">&quot;ROI 图像&quot;</span>, roi_img);</div>
 <div class="line">            index++;</div>
 <div class="line">        }</div>
@@ -264,7 +264,7 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">    putText(src, <span class="stringliteral">&quot;Collection Over!&quot;</span>, cv::Point(100, 200), cv::FONT_HERSHEY_COMPLEX, 2, cv::Scalar(0, 255, 0), 2);</div>
 <div class="line">    imshow(<span class="stringliteral">&quot;装甲板收集&quot;</span>, src);</div>
-<div class="line">    <a id="a22" name="a22"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a>(<span class="stringliteral">&quot;收集完毕，按任意键以退出程序&quot;</span>);</div>
+<div class="line">    <a id="a8" name="a8"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a>(<span class="stringliteral">&quot;收集完毕，按任意键以退出程序&quot;</span>);</div>
 <div class="line">    cv::waitKey(0);</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -280,7 +280,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agroup__algorithm__pretreat_html_ga0c0d16290797cbf7399f9bedf3784e34"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">rm::PixChannel</a></div><div class="ttdeci">PixChannel</div><div class="ttdoc">像素通道枚举</div><div class="ttdef"><b>定义</b> pretreat.hpp:36</div></div>
 <div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:39</div></div>
 <div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::BLUE</a></div><div class="ttdeci">@ BLUE</div><div class="ttdoc">蓝色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:37</div></div>
-<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理</div></div>
+<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:54</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:108</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:107</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_MANUAL_EXPOSURE</div><div class="ttdoc">手动曝光</div><div class="ttdef"><b>定义</b> camutils.hpp:99</div></div>
@@ -288,7 +288,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a></div><div class="ttdeci">@ CAMERA_MANUAL_WB</div><div class="ttdoc">手动白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:102</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a></div><div class="ttdeci">@ CAMERA_WB_RGAIN</div><div class="ttdoc">白平衡红色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:106</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>定义</b> camutils.hpp:104</div></div>
-<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div></div>
+<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:36</div></div>
 <div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>定义</b> util.hpp:57</div></div>
 <div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>定义</b> util.hpp:36</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:50</div></div>
@@ -305,8 +305,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

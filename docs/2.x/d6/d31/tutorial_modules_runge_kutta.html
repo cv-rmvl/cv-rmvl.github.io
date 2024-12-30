@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 常微分方程（组）数值解与 Runge-Kutta 算法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -178,8 +178,7 @@ $(function(){ initResizable(false); });
 </p>
 <hr  />
 <p class="formulaDsp">
-\[
-\def\transparent#1{\color{transparent}{#1}}
+\[\def\transparent#1{\color{transparent}{#1}}
 \]
 </p>
 <h2><a class="anchor" id="autotoc_md219"></a>
@@ -607,9 +606,9 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a> dot_x1 = [](<span class="keywordtype">double</span> t, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> 2 * x[1] + t; };</div>
-<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a> dot_x2 = [](double, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> -x[0] - 3 * x[1]; };</div>
-<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga8c54afffb36db9aee298ea57ec04923a">rm::Odes</a> fs = {dot_x1, dot_x2};</div>
+<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a> dot_x1 = [](<span class="keywordtype">double</span> t, <span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> 2 * x[1] + t; };</div>
+<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a> dot_x2 = [](double, <span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> -x[0] - 3 * x[1]; };</div>
+<div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a> fs = {dot_x1, dot_x2};</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 计算精确解</span></div>
 <div class="line">    <span class="keywordtype">double</span> real_x1 = 0.75 * std::exp(-2) + 2 * std::exp(-1) - 0.25;</div>
@@ -627,9 +626,9 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <div class="line">    <span class="comment">// x* = (0.587260, -0.219381)</span></div>
 <div class="line">    <span class="comment">// x  = (0.587286, -0.219401)</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:263</div></div>
-<div class="ttc" id="agroup__algorithm__numcal_html_ga5b9b2f75e249221d36421f6ad113c067"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga5b9b2f75e249221d36421f6ad113c067">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:185</div></div>
-<div class="ttc" id="agroup__algorithm__numcal_html_ga8c54afffb36db9aee298ea57ec04923a"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga8c54afffb36db9aee298ea57ec04923a">rm::Odes</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:187</div></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:264</div></div>
+<div class="ttc" id="agroup__algorithm__numcal_html_ga180667e5e9552a394469cfec8b6ee2b9"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:186</div></div>
+<div class="ttc" id="agroup__algorithm__numcal_html_ga65913019ec4b25a96aa4ec94b83f07ed"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:188</div></div>
 <div class="ttc" id="armvl_2algorithm_8hpp_html"><div class="ttname"><a href="../../d1/d11/rmvl_2algorithm_8hpp.html">algorithm.hpp</a></div><div class="ttdoc">数学、算法模块头文件</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
@@ -659,8 +658,8 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

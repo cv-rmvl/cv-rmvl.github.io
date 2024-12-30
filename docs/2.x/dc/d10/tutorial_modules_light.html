@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 光源控制器</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -128,10 +128,18 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md258">如何使用</a>
+        <a href="#autotoc_md258">1. 如何使用</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md259">示例代码</a>
+        <a href="#autotoc_md259">2. 调试与开发</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md260">HikRobot 光源控制器可执行程序</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md261">OPT 光源控制器示例代码</a>
+          </li>
+        </ul>
       </li>
     </ul>
   </li>
@@ -144,12 +152,28 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../d8/d57/tutorial_modules_interpolation.html">函数插值方法</a> ↓<br  />
 </p>
 <hr  />
-<p>相关类 <a class="el" href="../../db/d24/classrm_1_1OPTLightController.html" title="OPT 奥普特光源控制器">rm::OPTLightController</a> .</p>
+<p>相关类</p>
+<ul>
+<li>奥普特 GigE 光源控制器 <a class="el" href="../../db/d24/classrm_1_1OPTLightController.html" title="OPT 奥普特光源控制器">rm::OPTLightController</a></li>
+<li>海康机器人 RS-232 光源控制器 <a class="el" href="../../df/d1f/classrm_1_1HikLightController.html" title="海康机器人光源控制器">rm::HikLightController</a></li>
+</ul>
 <h2><a class="anchor" id="autotoc_md258"></a>
-如何使用</h2>
-<p>使用前需安装光源控制器驱动，详情参考：<a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a></p>
+1. 如何使用</h2>
+<p>海康机器人光源控制器使用 RS-232 串口进行数据传输，RMVL 在 Windows 和 Linux 平台上分别做了设计，可以很方便的开发，并且随附了 <code>rmvl_hik_lightctl</code> 命令行可执行程序。</p>
+<p>奥普特 GigE 光源控制器在使用前需安装驱动，详情参考：<a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a></p>
 <h2><a class="anchor" id="autotoc_md259"></a>
-示例代码</h2>
+2. 调试与开发</h2>
+<h3><a class="anchor" id="autotoc_md260"></a>
+HikRobot 光源控制器可执行程序</h3>
+<p><code>rmvl_hik_lightctl</code> 是一个命令行程序，用于控制海康机器人 RS-232 光源控制器，使用以下命令可以使用串口与光源控制器进行通信，其中 Windows 平台下的串口号为 <code>COM&lt;?&gt;</code>，Linux 平台下的串口号为 <code>/dev/ttyUSB&lt;?&gt;</code>，<code>&lt;?&gt;</code> 为具体的串口号，例如 <code>COM1</code> 或 <code>/dev/ttyUSB0</code>。</p>
+<p>例如 Windows 平台可以使用以下命令：</p>
+<div class="fragment"><div class="line">rmvl_hik_lightctl COM1</div>
+</div><!-- fragment --><p>而 Linux 平台可以使用以下命令：</p>
+<div class="fragment"><div class="line">rmvl_hik_lightctl /dev/ttyUSB0</div>
+</div><!-- fragment --><p>在建立连接之后，可以输入 <code>help</code>、<code>h</code>、<code>usage</code> 或 <code>?</code> 来查看帮助信息，可以输入 <code>exit</code>、<code>quit</code> 或 <code>q</code> 来退出程序，具体的帮助信息如下：</p>
+<div class="fragment"> <div class="line"><span style="color: #569CD6">Common functions usage:</span></div> <div class="line">&#160;&#160;h, help, ?, usage <span style="color: #6A9955"># show this help message</span></div> <div class="line">&#160;&#160;exit, quit, q&#160;&#160;&#160;&#160;&#160;<span style="color: #6A9955"># exit the program</span></div> <div class="line"> </div> <div class="line"><span style="color: #569CD6">Parameters control usage:</span></div> <div class="line">&#160;&#160;ctl get delay&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #6A9955"># get the delay time after writing</span></div> <div class="line">&#160;&#160;ctl set delay &lt;val&gt; <span style="color: #6A9955"># set the delay time after writing</span></div> <div class="line"> </div> <div class="line"><span style="color: #569CD6">Commands usage:</span></div> <div class="line">&#160;&#160;open&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #6A9955"># open all the channels</span></div> <div class="line">&#160;&#160;close&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #6A9955"># close all the channels</span></div> <div class="line">&#160;&#160;get &lt;chn&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #6A9955"># get the brightness of the specified channel</span></div> <div class="line">&#160;&#160;set &lt;chn&gt; &lt;val&gt; <span style="color: #6A9955"># set the brightness of the specified channel</span></div> </div><h3><a class="anchor" id="autotoc_md261"></a>
+OPT 光源控制器示例代码</h3>
+<p>不同的光源控制器有不同的使用方法，由于奥普特 GigE 光源控制器使用较复杂，这里以奥普特 GigE 光源控制器为例。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d4/da9/opt__light__control_8h.html">rmvl/light/opt_light_control.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
@@ -190,8 +214,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

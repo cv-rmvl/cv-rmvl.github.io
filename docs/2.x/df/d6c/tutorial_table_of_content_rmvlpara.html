@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 参数模块使用教程</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -128,30 +128,30 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md289">1. 参数模块简介</a>
+        <a href="#autotoc_md291">1. 参数模块简介</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md290">2. 参数规范文件</a>
+        <a href="#autotoc_md292">2. 参数规范文件</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md291">3. C++ 代码生成</a>
+        <a href="#autotoc_md293">3. C++ 代码生成</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md292">3.1 rmvl_generate_para</a>
+            <a href="#autotoc_md294">3.1 rmvl_generate_para</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md293">3.2 rmvl_generate_module_para</a>
+            <a href="#autotoc_md295">3.2 rmvl_generate_module_para</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md294">4. 运行时加载</a>
+        <a href="#autotoc_md296">4. 运行时加载</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md295">4.1 加载方式</a>
+            <a href="#autotoc_md297">4.1 加载方式</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md296">4.2 YAML 文件格式</a>
+            <a href="#autotoc_md298">4.2 YAML 文件格式</a>
           </li>
         </ul>
       </li>
@@ -164,7 +164,7 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a> ↓<br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md289"></a>
+<h2><a class="anchor" id="autotoc_md291"></a>
 1. 参数模块简介</h2>
 <p>RMVL 中，一部分模块（涉及主要模块和扩展模块）的功能在不同运行环境或者不同需求的情况下需要有不同的参数配置，为此 RVML 将这些运行时可变的参数提炼出来，并且使用统一的管理方式，完成了参数类型、参数默认值、参数名、参数运行时加载的定义。</p>
 <p>原先若有计划使用运行时参数，在</p>
@@ -173,7 +173,7 @@ $(function(){ initResizable(false); });
 <li>新增某一参数类（结构体）</li>
 </ul>
 <p>的时候，需要在头文件以及对应源文件的位置写上大量重复的代码，管理极其不方便。为此 RMVL 参数模块定义了新的参数规范文件，这类文件以 <code>*.para</code> 为后缀，以及提供了 CMake 配置期间将 <code>*.para</code> 转换为对应 <code>*.h(hpp)</code> 以及 <code>*.cpp</code> 的 CMake 函数 <code>rmvl_generate_para</code>，该函数定义在 <code>&lt;project&gt;/cmake/RMVLGenPara.cmake</code> 文件中。</p>
-<h2><a class="anchor" id="autotoc_md290"></a>
+<h2><a class="anchor" id="autotoc_md292"></a>
 2. 参数规范文件</h2>
 <p>这里举一个 <code>*.para</code> 文件的示例，写法与 ROS Message 的 <code>*.msg</code> 文件类似，不过参数的类型均使用 C/C++ 中的类型，并且添加了注释功能。</p>
 <div class="fragment"><div class="line">#################### 光学参数 ####################</div>
@@ -229,14 +229,14 @@ $(function(){ initResizable(false); });
 <div class="line">endenum</div>
 <div class="line"> </div>
 <div class="line">ColorMode COLOR = ColorMode::RED # 颜色信息</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md291"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md293"></a>
 3. C++ 代码生成</h2>
 <p>从 <code>*.para</code> 到对应的 C++ 代码生成的过程依赖 RMVL 提供的两条 CMake 函数，分别是</p>
 <ul>
 <li><code>rmvl_generate_para</code></li>
 <li><code>rmvl_generate_module_para</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md292"></a>
+<h3><a class="anchor" id="autotoc_md294"></a>
 3.1 rmvl_generate_para</h3>
 <p>根据指定的目标名在 param 文件夹下对应的 *.para 参数规范文件和可选的模块名生成对应的 C++ 代码。</p>
 <p><b>用法</b></p>
@@ -263,7 +263,7 @@ $(function(){ initResizable(false); });
 <li><code>include/rmvlpara/mytarget.hpp</code></li>
 <li><code>src/para/mytarget.cpp</code></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md293"></a>
+<h3><a class="anchor" id="autotoc_md295"></a>
 3.2 rmvl_generate_module_para</h3>
 <p>根据给定模块下所有的 para 目标，生成对应的 C++ 代码</p>
 <p><b>用法</b></p>
@@ -281,9 +281,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &quot;m/a2.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;m/a3.h&quot;</span></div>
 </div><!-- fragment --><p>以上内容均是在 CMake 配置期间自动完成，只需定义好参数规范文件 <code>*.para</code> 以及相应的 CMake 函数即可。</p>
-<h2><a class="anchor" id="autotoc_md294"></a>
+<h2><a class="anchor" id="autotoc_md296"></a>
 4. 运行时加载</h2>
-<h3><a class="anchor" id="autotoc_md295"></a>
+<h3><a class="anchor" id="autotoc_md297"></a>
 4.1 加载方式</h3>
 <p>例如，对于以下的 <code>test.para</code> 文件</p>
 <div class="fragment"><div class="line">int abc = 10 # 测试数</div>
@@ -309,11 +309,10 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --><p>其中包含了运行时参数导入和导出的接口 <code>read</code> 和 <code>write</code>，以 <a class="el" href="../../d9/d6f/group__para__algorithm.html">algorithm 的参数模块</a> 为例，<code><a class="el" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c" title="从指定 YAML 文件中加载，并读取至 AlgorithmParam 中">rm::para::AlgorithmParam::read</a></code> 用于运行时读取 YAML 文件并配置 algorithm 模块的参数，<code><a class="el" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a07a26d44154b5864fea3eec801fd647d" title="将 AlgorithmParam 的数据写入指定的 YAML 文件中">rm::para::AlgorithmParam::write</a></code> 用于将当前 algorithm 模块的参数写入到 YAML 文件中。</p>
 <p>用户可以通过使用类似以下的代码完成运行时加载</p>
 <div class="fragment"><div class="line"><span class="comment">/* code */</span></div>
-<div class="line"><a class="code hl_variable" href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a>.<a class="code hl_function" href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c">read</a>(prefix_path + <span class="stringliteral">&quot;algorithm.yml&quot;</span>);</div>
+<div class="line"><a class="code hl_variable" href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a>.read(prefix_path + <span class="stringliteral">&quot;algorithm.yml&quot;</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
-<div class="ttc" id="aclassrm_1_1para_1_1AlgorithmParam_html_a5fa44d751710dbf5731635a5c9657c1c"><div class="ttname"><a href="../../d4/da1/classrm_1_1para_1_1AlgorithmParam.html#a5fa44d751710dbf5731635a5c9657c1c">rm::para::AlgorithmParam::read</a></div><div class="ttdeci">bool read(const std::string &amp;path)</div><div class="ttdoc">从指定 YAML 文件中加载，并读取至 AlgorithmParam 中</div></div>
 <div class="ttc" id="agroup__para__algorithm_html_ga53c0a2fe632cf1f3bb67aff47b8873b6"><div class="ttname"><a href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a></div><div class="ttdeci">AlgorithmParam algorithm_param</div><div class="ttdoc">AlgorithmParam 参数模块</div><div class="ttdef"><b>定义</b> algorithm.hpp:79</div></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md296"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md298"></a>
 4.2 YAML 文件格式</h3>
 <p>对于某个 <code>*.para</code> 文件中的参数，可以通过 YAML 文件进行运行时配置，例如</p>
 <div class="fragment"><div class="line">int num = 10      # Test number</div>
@@ -340,8 +339,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

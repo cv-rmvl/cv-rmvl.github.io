@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['realsignal_0',['RealSignal',['../db/d2e/group__algorithm__dsp.html#ga7b043ced017cfa10d75cfc0fac91553e',1,'rm']]],
-  ['reference_1',['reference',['../db/d45/classrm_1_1RaHeap.html#a7eaea687283dab5e17e4480dcee40c9d',1,'rm::RaHeap::reference'],['../db/d0c/classrm_1_1UnionFind.html#a34fbda41fb46a30fee08e6a78eb14107',1,'rm::UnionFind::reference']]]
+  ['size_5ftype_0',['size_type',['../db/d45/classrm_1_1RaHeap.html#a11bb4b31b15aa105df3655a2b73ee1a1',1,'rm::RaHeap::size_type'],['../db/d0c/classrm_1_1UnionFind.html#aab31869da6a9521e11f13656dd2c98e2',1,'rm::UnionFind::size_type']]]
 ];

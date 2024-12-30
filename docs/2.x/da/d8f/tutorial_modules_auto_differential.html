@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 自动求导、数值微分</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -166,8 +166,7 @@ $(function(){ initResizable(false); });
 </p>
 <hr  />
 <p class="formulaDsp">
-\[
-\def\red#1{\color{red}{#1}}
+\[\def\red#1{\color{red}{#1}}
 \def\teal#1{\color{teal}{#1}}
 \def\green#1{\color{green}{#1}}
 \def\transparent#1{\color{transparent}{#1}}
@@ -264,7 +263,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <p>即 \(T(n,k)\)具备 \(2k+2\)阶的精度。</p>
 <h2><a class="anchor" id="autotoc_md145"></a>
 3. 如何使用</h2>
-<p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga0d960fda587557e7abb07dfe96d824e4" title="计算多元函数的梯度">rm::grad</a> 。</p>
+<p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df" title="计算多元函数的梯度">rm::grad</a> 。</p>
 <p>以下展示了使用自动求导、数值微分的例子。</p>
 <h3><a class="anchor" id="autotoc_md146"></a>
 3.1 一元函数导数示例代码</h3>
@@ -282,7 +281,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <div class="line">    <span class="comment">//  f&#39;(1) = 6</span></div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__algorithm__optimal_html_gad269c00a143e239e4c56922766bb2a2e"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a></div><div class="ttdeci">double derivative(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</div><div class="ttdoc">计算一元函数的导数</div></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">rm::DiffMode::Ridders</a></div><div class="ttdeci">@ Ridders</div><div class="ttdoc">Richardson 外推 ridders82</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">rm::DiffMode::Ridders</a></div><div class="ttdeci">@ Ridders</div><div class="ttdoc">Richardson 外推 ridders82</div><div class="ttdef"><b>定义</b> numcal.hpp:316</div></div>
 <div class="ttc" id="anumcal_8hpp_html"><div class="ttname"><a href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></div><div class="ttdoc">数值计算与最优化模块</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
@@ -302,20 +301,20 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// 自定义函数 f(x,y) = x²+y²+4x-3y</span></div>
-<div class="line">    <a class="code hl_typedef" href="../../d2/d62/group__algorithm__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> func([](<span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> x[0] * x[0] + x[1] * x[1] + 4 * x[0] - 3 * x[1]; });</div>
+<div class="line">    <a class="code hl_typedef" href="../../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> func([](<span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> x[0] * x[0] + x[1] * x[1] + 4 * x[0] - 3 * x[1]; });</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 计算 f&#39;(1, 2)</span></div>
-<div class="line">    <span class="keyword">auto</span> dydx = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga0d960fda587557e7abb07dfe96d824e4">rm::grad</a>(func, {1, 2});</div>
+<div class="line">    <span class="keyword">auto</span> dydx = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df">rm::grad</a>(func, {1, 2});</div>
 <div class="line">    printf(<span class="stringliteral">&quot;f&#39;(1, 2) = (%f, %f)\n&quot;</span>, dydx[0], dydx[1]);</div>
 <div class="line">    <span class="comment">// f&#39;(1, 2) = (6, 1)</span></div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__algorithm__optimal_html_ga0d960fda587557e7abb07dfe96d824e4"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga0d960fda587557e7abb07dfe96d824e4">rm::grad</a></div><div class="ttdeci">std::vector&lt; double &gt; grad(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</div><div class="ttdoc">计算多元函数的梯度</div></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_gaa8786881a1bd10bd3cfdd22f9209f88a"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a></div><div class="ttdeci">std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt; FuncNd</div><div class="ttdoc">多元函数</div><div class="ttdef"><b>定义</b> numcal.hpp:307</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga4d22cf26297b02fb82b6abf116d49934"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a></div><div class="ttdeci">std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt; FuncNd</div><div class="ttdoc">多元函数</div><div class="ttdef"><b>定义</b> numcal.hpp:308</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gaa93c2a0dd4c42255cd83a086ced9e9df"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df">rm::grad</a></div><div class="ttdeci">std::valarray&lt; double &gt; grad(FuncNd func, const std::valarray&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</div><div class="ttdoc">计算多元函数的梯度</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 自定义函数 f(x,y) = x²+y²+4x-3y</span></div>
 <div class="line">func = <span class="keyword">lambda</span> x: x[0] ** 2 + x[1] ** 2 + 4 * x[0] - 3 * x[1]</div>
-<div class="line">dydx = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga0d960fda587557e7abb07dfe96d824e4">rm.grad</a>(func, [1, 2])</div>
+<div class="line">dydx = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df">rm.grad</a>(func, [1, 2])</div>
 <div class="line">print(<span class="stringliteral">&quot;f&#39;(1, 2) = ({:.2f}, {:.2f})&quot;</span>.format(dydx[0], dydx[1]))</div>
 <div class="line"><span class="comment"># f&#39;(1, 2) = (6.00, 1.00)</span></div>
 </div><!-- fragment --> </div>  </div></div><!-- contents -->
@@ -324,8 +323,8 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

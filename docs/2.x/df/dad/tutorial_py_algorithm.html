@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 适用于 Python 的 algorithm 模块</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -126,7 +126,7 @@ $(function(){ initResizable(false); });
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md303">数值计算与最优化使用示例</a>
+    <a href="#autotoc_md305">数值计算与最优化使用示例</a>
   </li>
 </ul>
 </div>
@@ -139,7 +139,7 @@ $(function(){ initResizable(false); });
 <b>下一篇教程：</b><a class="el" href="../../d4/de5/tutorial_py_opcua.html">适用于 Python 的 OPC UA 模块</a> ↓<br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md303"></a>
+<h1><a class="anchor" id="autotoc_md305"></a>
 数值计算与最优化使用示例</h1>
 <div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
@@ -171,18 +171,18 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="comment"># 多维无约束寻优</span></div>
 <div class="line">quadratic = <span class="keyword">lambda</span> x: 60 - 10 * x[0] - 4 * x[1] + x[0] * x[0] + x[1] * x[1] - x[0] * x[1]</div>
-<div class="line">x, fval = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm.fminunc</a>(quadratic, [1, 1])</div>
+<div class="line">x, fval = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm.fminunc</a>(quadratic, [1, 1])</div>
 <div class="line">print(<span class="stringliteral">&quot;x = ({:.2f}, {:.2f}), f(x) = {:.2f}&quot;</span>.format(x[0], x[1], fval))</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 多维有约束寻优</span></div>
 <div class="line">ceq = <span class="keyword">lambda</span> x: x[0] + x[1] - 10</div>
-<div class="line">x, fval = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gaa78a83eb19394100a5f01c35b86863db">rm.fmincon</a>(quadratic, [0, 0], [], [ceq])</div>
+<div class="line">x, fval = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga59ea1658679b6b7067111f3aee854f59">rm.fmincon</a>(quadratic, [0, 0], [], [ceq])</div>
 <div class="line">print(<span class="stringliteral">&quot;x = ({:.2f}, {:.2f}), f(x) = {:.2f}&quot;</span>.format(x[0], x[1], fval))</div>
-<div class="ttc" id="aclassrm_1_1Interpolator_html"><div class="ttname"><a href="../../dc/d80/classrm_1_1Interpolator.html">rm::Interpolator</a></div><div class="ttdoc">函数插值器</div><div class="ttdef"><b>定义</b> numcal.hpp:76</div></div>
-<div class="ttc" id="aclassrm_1_1NonlinearSolver_html"><div class="ttname"><a href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm::NonlinearSolver</a></div><div class="ttdoc">非线性方程求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:156</div></div>
-<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:263</div></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_gaa78a83eb19394100a5f01c35b86863db"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gaa78a83eb19394100a5f01c35b86863db">rm::fmincon</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fmincon(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</div><div class="ttdoc">有约束多维函数的最小值搜索</div></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_gad3a27f53f42ecf71dc3b2a187f674e12"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索，可参考 多维无约束最优化方法</div></div>
+<div class="ttc" id="aclassrm_1_1Interpolator_html"><div class="ttname"><a href="../../dc/d80/classrm_1_1Interpolator.html">rm::Interpolator</a></div><div class="ttdoc">函数插值器</div><div class="ttdef"><b>定义</b> numcal.hpp:77</div></div>
+<div class="ttc" id="aclassrm_1_1NonlinearSolver_html"><div class="ttname"><a href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm::NonlinearSolver</a></div><div class="ttdoc">非线性方程求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:157</div></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:264</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga4a7d105f2c4e5236f0ab9963d7e0cfef"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::valarray&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索，可参考 多维无约束最优化方法</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga59ea1658679b6b7067111f3aee854f59"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga59ea1658679b6b7067111f3aee854f59">rm::fmincon</a></div><div class="ttdeci">std::pair&lt; std::valarray&lt; double &gt;, double &gt; fmincon(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</div><div class="ttdoc">有约束多维函数的最小值搜索</div></div>
 <div class="ttc" id="agroup__algorithm__optimal_html_gae8c5462fcdf30d76ea709bbc2e08d3ee"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a></div><div class="ttdeci">std::pair&lt; double, double &gt; fminbnd(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</div><div class="ttdoc">一维函数最小值搜索</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -190,8 +190,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

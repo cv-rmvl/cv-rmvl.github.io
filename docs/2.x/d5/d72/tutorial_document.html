@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 为 RMVL 撰写说明文档</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -252,21 +252,27 @@ cv::Point2f calculateRelativeAngle(const cv::Matx33f &amp;cameraMatrix, cv::Poin
 1. 基本命令</h3>
 <ul>
 <li><b>brief</b> - 表示一段函数、类、枚举、结构的简要信息</li>
-<li><b>param</b> - 通常表示函数的参数，包含传入、传出、传入兼传出参数 3 种，可分别用 <code>[in]</code>、<code>[out]</code> 和 <code>[in out]</code> 做区分，例如 <pre class="fragment">  @param[in] cameraMatrix 相机内参矩阵</pre> <span style="color: red"><b>结果如下</b></span> <dl class="params"><dt>参数</dt><dd>
+<li><b>param</b> - 通常表示函数的参数，包含传入、传出、传入兼传出参数 3 种，可分别用 <code>[in]</code>、<code>[out]</code> 和 <code>[in out]</code> 做区分，例如 <pre class="fragment">  @param[in] cameraMatrix 相机内参矩阵
+</pre> <span style="color: red"><b>结果如下</b></span> <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵</td></tr>
   </table>
   </dd>
 </dl>
 </li>
-<li><p class="startli"><b>note</b> - 注解，可包含对类、函数的详细介绍或者使用注意事项，也可包含一些公式信息，具体的公式写法在后续的 <b>f</b> 会进行介绍，note 的使用如下 </p><pre class="fragment">  @note 公式推导参考函数 @ref rm::calculateRelativeCenter</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="../../d5/d6c/group__algorithm.html#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a></dd></dl>
+<li><p class="startli"><b>note</b> - 注解，可包含对类、函数的详细介绍或者使用注意事项，也可包含一些公式信息，具体的公式写法在后续的 <b>f</b> 会进行介绍，note 的使用如下 </p><pre class="fragment">  @note 公式推导参考函数 @ref rm::calculateRelativeCenter
+</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="../../d5/d6c/group__algorithm.html#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a></dd></dl>
 </li>
-<li><p class="startli"><b>return</b> - 表示返回值 </p><pre class="fragment">  @return 相对角度</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section return"><dt>返回</dt><dd>相对角度</dd></dl>
+<li><p class="startli"><b>return</b> - 表示返回值 </p><pre class="fragment">  @return 相对角度
+</pre><p class="startli"><span style="color: red"><b>结果如下</b></span> </p><dl class="section return"><dt>返回</dt><dd>相对角度</dd></dl>
 </li>
-<li><p class="startli"><b>f</b> - 公式 内联公式使用 <code>f$</code> 命令开始 </p><pre class="fragment">  \f$ ... \f$</pre><p> 块公式使用 <code>f[</code> 和 <code>f]</code> 命令 </p><pre class="fragment">  \f[ ... \f]</pre><p> 示例 </p><pre class="fragment">  若状态向量包含以下内容：\f$[p, v, a]\f$ ，然而观测向量仅包含 \f$[p, v]\f$，
+<li><p class="startli"><b>f</b> - 公式 内联公式使用 <code>f$</code> 命令开始 </p><pre class="fragment">  \f$ ... \f$
+</pre><p> 块公式使用 <code>f[</code> 和 <code>f]</code> 命令 </p><pre class="fragment">  \f[ ... \f]
+</pre><p> 示例 </p><pre class="fragment">  若状态向量包含以下内容：\f$[p, v, a]\f$ ，然而观测向量仅包含 \f$[p, v]\f$，
   在这种情况下，需要使用一个观测转换矩阵 \f$H_{2\times3}\f$。在上述例子中可表示为
   \f[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
-  \begin{bmatrix}p\\v\\a\end{bmatrix}\f]</pre><p class="startli"><span style="color: red"><b>结果如下</b></span></p>
+  \begin{bmatrix}p\\v\\a\end{bmatrix}\f]
+</pre><p class="startli"><span style="color: red"><b>结果如下</b></span></p>
 <p class="startli">若状态向量包含以下内容： \([p, v, a]\) ，然而观测向量仅包含 \([p, v]\)， 在这种情况下，需要使用一个观测转换矩阵 \(H_{2\times3}\)。在上述例子中可表示为  </p><p class="formulaDsp">
 \[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
   \begin{bmatrix}p\\v\\a\end{bmatrix}\]
@@ -320,7 +326,8 @@ std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
     print("Hello World")
     @endcode
 
-@end_toggle</pre><p>渲染结果如下</p>
+@end_toggle
+</pre><p>渲染结果如下</p>
 <h3><a class="anchor" id="autotoc_md135"></a>
 按钮示例</h3>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>This is C++. </p><div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
@@ -339,8 +346,8 @@ std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

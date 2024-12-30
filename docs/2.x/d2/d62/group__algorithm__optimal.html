@@ -6,7 +6,7 @@
 <head>
   <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
   <meta content="IE=9" http-equiv="X-UA-Compatible"/>
-  <meta content="Doxygen 1.12.0" name="generator"/>
+  <meta content="Doxygen 1.13.0" name="generator"/>
   <title>RMVL: 最优化算法库</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -66,7 +66,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -142,12 +142,12 @@ $(function(){ initResizable(false); });
 <tr class="memitem:ga99790ebfd178fe9c6833af8946d68ac3" id="r_ga99790ebfd178fe9c6833af8946d68ac3"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99790ebfd178fe9c6833af8946d68ac3">rm::Func1ds</a> = std::vector&lt;std::function&lt;double(double)&gt;&gt;</td></tr>
 <tr class="memdesc:ga99790ebfd178fe9c6833af8946d68ac3"><td class="mdescLeft"> </td><td class="mdescRight">一元函数组  <br/></td></tr>
 <tr class="separator:ga99790ebfd178fe9c6833af8946d68ac3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:gaa8786881a1bd10bd3cfdd22f9209f88a" id="r_gaa8786881a1bd10bd3cfdd22f9209f88a"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> = std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;</td></tr>
-<tr class="memdesc:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="mdescLeft"> </td><td class="mdescRight">多元函数  <br/></td></tr>
-<tr class="separator:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga84f32e047b6f0baf13255ba257a45fb5" id="r_ga84f32e047b6f0baf13255ba257a45fb5"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;&gt;</td></tr>
-<tr class="memdesc:ga84f32e047b6f0baf13255ba257a45fb5"><td class="mdescLeft"> </td><td class="mdescRight">多元函数组  <br/></td></tr>
-<tr class="separator:ga84f32e047b6f0baf13255ba257a45fb5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga4d22cf26297b02fb82b6abf116d49934" id="r_ga4d22cf26297b02fb82b6abf116d49934"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> = std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ga4d22cf26297b02fb82b6abf116d49934"><td class="mdescLeft"> </td><td class="mdescRight">多元函数  <br/></td></tr>
+<tr class="separator:ga4d22cf26297b02fb82b6abf116d49934"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga9cb547f55dfff0fc8a448f00fe443f42" id="r_ga9cb547f55dfff0fc8a448f00fe443f42"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;&gt;</td></tr>
+<tr class="memdesc:ga9cb547f55dfff0fc8a448f00fe443f42"><td class="mdescLeft"> </td><td class="mdescRight">多元函数组  <br/></td></tr>
+<tr class="separator:ga9cb547f55dfff0fc8a448f00fe443f42"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -184,27 +184,27 @@ $(function(){ initResizable(false); });
 <tr class="memitem:gad269c00a143e239e4c56922766bb2a2e" id="r_gad269c00a143e239e4c56922766bb2a2e"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
 <tr class="memdesc:gad269c00a143e239e4c56922766bb2a2e"><td class="mdescLeft"> </td><td class="mdescRight">计算一元函数的导数  <br/></td></tr>
 <tr class="separator:gad269c00a143e239e4c56922766bb2a2e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga0d960fda587557e7abb07dfe96d824e4" id="r_ga0d960fda587557e7abb07dfe96d824e4"><td align="right" class="memItemLeft" valign="top">std::vector&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0d960fda587557e7abb07dfe96d824e4">rm::grad</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
-<tr class="memdesc:ga0d960fda587557e7abb07dfe96d824e4"><td class="mdescLeft"> </td><td class="mdescRight">计算多元函数的梯度  <br/></td></tr>
-<tr class="separator:ga0d960fda587557e7abb07dfe96d824e4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaa93c2a0dd4c42255cd83a086ced9e9df" id="r_gaa93c2a0dd4c42255cd83a086ced9e9df"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa93c2a0dd4c42255cd83a086ced9e9df">rm::grad</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:gaa93c2a0dd4c42255cd83a086ced9e9df"><td class="mdescLeft"> </td><td class="mdescRight">计算多元函数的梯度  <br/></td></tr>
+<tr class="separator:gaa93c2a0dd4c42255cd83a086ced9e9df"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:gaab485911ef8cdc37e5ef92b839ec107c" id="r_gaab485911ef8cdc37e5ef92b839ec107c"><td align="right" class="memItemLeft" valign="top">std::pair&lt; double, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x0, double delta=1)</td></tr>
 <tr class="memdesc:gaab485911ef8cdc37e5ef92b839ec107c"><td class="mdescLeft"> </td><td class="mdescRight">采用进退法确定搜索区间  <br/></td></tr>
 <tr class="separator:gaab485911ef8cdc37e5ef92b839ec107c"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:gae8c5462fcdf30d76ea709bbc2e08d3ee" id="r_gae8c5462fcdf30d76ea709bbc2e08d3ee"><td align="right" class="memItemLeft" valign="top">std::pair&lt; double, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x1, double x2, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="mdescLeft"> </td><td class="mdescRight">一维函数最小值搜索  <br/></td></tr>
 <tr class="separator:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:gad3a27f53f42ecf71dc3b2a187f674e12" id="r_gad3a27f53f42ecf71dc3b2a187f674e12"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="mdescLeft"> </td><td class="mdescRight">无约束多维函数的最小值搜索，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br/></td></tr>
-<tr class="separator:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:gaa78a83eb19394100a5f01c35b86863db" id="r_gaa78a83eb19394100a5f01c35b86863db"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa78a83eb19394100a5f01c35b86863db">rm::fmincon</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> c, <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:gaa78a83eb19394100a5f01c35b86863db"><td class="mdescLeft"> </td><td class="mdescRight">有约束多维函数的最小值搜索  <br/></td></tr>
-<tr class="separator:gaa78a83eb19394100a5f01c35b86863db"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga2c5c6ca12730fb4365a8034b7c0a0ead" id="r_ga2c5c6ca12730fb4365a8034b7c0a0ead"><td align="right" class="memItemLeft" valign="top">std::vector&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a> (const <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="mdescLeft"> </td><td class="mdescRight">非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法  <br/></td></tr>
-<tr class="separator:ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga49d9c1571206d945576ebedb116feec3" id="r_ga49d9c1571206d945576ebedb116feec3"><td align="right" class="memItemLeft" valign="top">std::vector&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga49d9c1571206d945576ebedb116feec3">rm::lsqnonlinRKF</a> (const <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> &amp;funcs, const std::vector&lt; double &gt; &amp;x0, <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a> rb, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga49d9c1571206d945576ebedb116feec3"><td class="mdescLeft"> </td><td class="mdescRight">带 Robust 核函数的非线性最小二乘求解  <br/></td></tr>
-<tr class="separator:ga49d9c1571206d945576ebedb116feec3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga4a7d105f2c4e5236f0ab9963d7e0cfef" id="r_ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="mdescLeft"> </td><td class="mdescRight">无约束多维函数的最小值搜索，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br/></td></tr>
+<tr class="separator:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga59ea1658679b6b7067111f3aee854f59" id="r_ga59ea1658679b6b7067111f3aee854f59"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga59ea1658679b6b7067111f3aee854f59">rm::fmincon</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> c, <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga59ea1658679b6b7067111f3aee854f59"><td class="mdescLeft"> </td><td class="mdescRight">有约束多维函数的最小值搜索  <br/></td></tr>
+<tr class="separator:ga59ea1658679b6b7067111f3aee854f59"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga661bd68eea06e9f5957a39c69d3f4627" id="r_ga661bd68eea06e9f5957a39c69d3f4627"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627">rm::lsqnonlin</a> (const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga661bd68eea06e9f5957a39c69d3f4627"><td class="mdescLeft"> </td><td class="mdescRight">非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法  <br/></td></tr>
+<tr class="separator:ga661bd68eea06e9f5957a39c69d3f4627"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga4e80261bbc3a2979ec29c6dee4dd73b2" id="r_ga4e80261bbc3a2979ec29c6dee4dd73b2"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4e80261bbc3a2979ec29c6dee4dd73b2">rm::lsqnonlinRKF</a> (const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a> rb, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga4e80261bbc3a2979ec29c6dee4dd73b2"><td class="mdescLeft"> </td><td class="mdescRight">带 Robust 核函数的非线性最小二乘求解  <br/></td></tr>
+<tr class="separator:ga4e80261bbc3a2979ec29c6dee4dd73b2"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
 <p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法 </p>
@@ -237,13 +237,13 @@ $(function(){ initResizable(false); });
 <p>一元函数组 </p>
 </div>
 </div>
-<a id="gaa8786881a1bd10bd3cfdd22f9209f88a" name="gaa8786881a1bd10bd3cfdd22f9209f88a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa8786881a1bd10bd3cfdd22f9209f88a">◆ </a></span>FuncNd</h2>
+<a id="ga4d22cf26297b02fb82b6abf116d49934" name="ga4d22cf26297b02fb82b6abf116d49934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d22cf26297b02fb82b6abf116d49934">◆ </a></span>FuncNd</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> = std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> = std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -251,13 +251,13 @@ $(function(){ initResizable(false); });
 <p>多元函数 </p>
 </div>
 </div>
-<a id="ga84f32e047b6f0baf13255ba257a45fb5" name="ga84f32e047b6f0baf13255ba257a45fb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga84f32e047b6f0baf13255ba257a45fb5">◆ </a></span>FuncNds</h2>
+<a id="ga9cb547f55dfff0fc8a448f00fe443f42" name="ga9cb547f55dfff0fc8a448f00fe443f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9cb547f55dfff0fc8a448f00fe443f42">◆ </a></span>FuncNds</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;&gt;</td>
+          <td class="memname">using <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -280,7 +280,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -308,7 +308,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -336,7 +336,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -366,7 +366,7 @@ $(function(){ initResizable(false); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -469,30 +469,30 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
 </div>
 </div>
-<a id="gaa78a83eb19394100a5f01c35b86863db" name="gaa78a83eb19394100a5f01c35b86863db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa78a83eb19394100a5f01c35b86863db">◆ </a></span>fmincon()</h2>
+<a id="ga59ea1658679b6b7067111f3aee854f59" name="ga59ea1658679b6b7067111f3aee854f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59ea1658679b6b7067111f3aee854f59">◆ </a></span>fmincon()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; std::vector&lt; double &gt;, double &gt; rm::fmincon </td>
+          <td class="memname">std::pair&lt; std::valarray&lt; double &gt;, double &gt; rm::fmincon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -516,20 +516,20 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
 </div>
 </div>
-<a id="gad3a27f53f42ecf71dc3b2a187f674e12" name="gad3a27f53f42ecf71dc3b2a187f674e12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad3a27f53f42ecf71dc3b2a187f674e12">◆ </a></span>fminunc()</h2>
+<a id="ga4a7d105f2c4e5236f0ab9963d7e0cfef" name="ga4a7d105f2c4e5236f0ab9963d7e0cfef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a7d105f2c4e5236f0ab9963d7e0cfef">◆ </a></span>fminunc()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; std::vector&lt; double &gt;, double &gt; rm::fminunc </td>
+          <td class="memname">std::pair&lt; std::valarray&lt; double &gt;, double &gt; rm::fminunc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -551,20 +551,20 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
 </div>
 </div>
-<a id="ga0d960fda587557e7abb07dfe96d824e4" name="ga0d960fda587557e7abb07dfe96d824e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0d960fda587557e7abb07dfe96d824e4">◆ </a></span>grad()</h2>
+<a id="gaa93c2a0dd4c42255cd83a086ced9e9df" name="gaa93c2a0dd4c42255cd83a086ced9e9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa93c2a0dd4c42255cd83a086ced9e9df">◆ </a></span>grad()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; double &gt; rm::grad </td>
+          <td class="memname">std::valarray&lt; double &gt; rm::grad </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -592,20 +592,20 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd>函数在指定点的梯度向量 </dd></dl>
 </div>
 </div>
-<a id="ga2c5c6ca12730fb4365a8034b7c0a0ead" name="ga2c5c6ca12730fb4365a8034b7c0a0ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2c5c6ca12730fb4365a8034b7c0a0ead">◆ </a></span>lsqnonlin()</h2>
+<a id="ga661bd68eea06e9f5957a39c69d3f4627" name="ga661bd68eea06e9f5957a39c69d3f4627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga661bd68eea06e9f5957a39c69d3f4627">◆ </a></span>lsqnonlin()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; double &gt; rm::lsqnonlin </td>
+          <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -631,20 +631,20 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
 </div>
 </div>
-<a id="ga49d9c1571206d945576ebedb116feec3" name="ga49d9c1571206d945576ebedb116feec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga49d9c1571206d945576ebedb116feec3">◆ </a></span>lsqnonlinRKF()</h2>
+<a id="ga4e80261bbc3a2979ec29c6dee4dd73b2" name="ga4e80261bbc3a2979ec29c6dee4dd73b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e80261bbc3a2979ec29c6dee4dd73b2">◆ </a></span>lsqnonlinRKF()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; double &gt; rm::lsqnonlinRKF </td>
+          <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlinRKF </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ga84f32e047b6f0baf13255ba257a45fb5">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -662,9 +662,9 @@ $(function(){ initResizable(false); });
 <p>带 Robust 核函数的非线性最小二乘求解 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">funcs</td><td>最小二乘目标函数，参考 <a class="el" href="#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">funcs</td><td>最小二乘目标函数，参考 <a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rb</td><td>Robust 核函数模式，参考 <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15" title="Robust 核函数">rm::RobustMode</a> ，选择 <code><a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" title="L2 核函数">rm::RobustMode::L2</a></code> 时退化为 <code><a class="el" href="#ga2c5c6ca12730fb4365a8034b7c0a0ead" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rb</td><td>Robust 核函数模式，参考 <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15" title="Robust 核函数">rm::RobustMode</a> ，选择 <code><a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" title="L2 核函数">rm::RobustMode::L2</a></code> 时退化为 <code><a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>lsq_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
   </table>
   </dd>
@@ -712,8 +712,8 @@ $(function(){ initResizable(false); });
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者  <a href="http://www.doxygen.org/index.html">
-<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
-</a> 1.12.0
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

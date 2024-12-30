@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 基于 TOPSIS 模型的熵权法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -153,8 +153,7 @@ $(function(){ initResizable(false); });
 熵权法公式</h2>
 <p>首先计算标准化指标： \(R\)</p>
 <p class="formulaDsp">
-\[
-R_{i,j}=\left\{\begin{align}
+\[R_{i,j}=\left\{\begin{align}
 \frac{R_{i,j}&#39;-\min\limits_iR_{i,j}&#39;}{\max\limits_iR_{i,j}&#39;-\min\limits_iR_{i,j}&#39;}&amp;\quad j\text{为正指标} \\
 \frac{\max\limits_iR_{i,j}&#39;-R_{i,j}&#39;}{\max\limits_iR_{i,j}&#39;-\min\limits_iR_{i,j}&#39;}&amp;\quad j\text{为负指标}
 \end{align}\right.\tag{1}
@@ -162,26 +161,22 @@ R_{i,j}=\left\{\begin{align}
 </p>
 <p>计算样本值占指标的比重： \(P\)</p>
 <p class="formulaDsp">
-\[
-P_{i,j}=\frac{R_{i,j}}{\sum\limits_{i=1}^m R_{i,j}}\tag{2}
+\[P_{i,j}=\frac{R_{i,j}}{\sum\limits_{i=1}^m R_{i,j}}\tag{2}
 \]
 </p>
 <p>计算每个指标的熵值： \(H\)</p>
 <p class="formulaDsp">
-\[
-H_j=-\frac{1}{\ln m}\sum\limits_{i=1}^m P_{i,j} \ln{P_{i,j}}\tag{3}
+\[H_j=-\frac{1}{\ln m}\sum\limits_{i=1}^m P_{i,j} \ln{P_{i,j}}\tag{3}
 \]
 </p>
 <p>计算每个指标的熵权： \(w\)</p>
 <p class="formulaDsp">
-\[
-w_j=\frac{1-H_j}{\sum\limits_{j=1}^n(1-H_j)}=\frac{1-H_j}{n-\sum\limits_{j=1}^nH_j}\tag{4}
+\[w_j=\frac{1-H_j}{\sum\limits_{j=1}^n(1-H_j)}=\frac{1-H_j}{n-\sum\limits_{j=1}^nH_j}\tag{4}
 \]
 </p>
 <p>最终获得每个样本的综合指标： \(S\)</p>
 <p class="formulaDsp">
-\[
-S_i=\sum\limits_{j=1}^nw_jR_{i,j}&#39;\tag{5}
+\[S_i=\sum\limits_{j=1}^nw_jR_{i,j}&#39;\tag{5}
 \]
 </p>
  </div></div><!-- contents -->
@@ -190,8 +185,8 @@ S_i=\sum\limits_{j=1}^nw_jR_{i,j}&#39;\tag{5}
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

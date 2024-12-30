@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.12.0" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 扩展卡尔曼滤波</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.12.0 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -164,8 +164,7 @@ $(function(){ initResizable(false); });
 <hr  />
 <p>相关类 <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html" title="扩展卡尔曼滤波器">rm::ExtendedKalmanFilter</a></p>
 <p class="formulaDsp">
-\[
-\def\red#1{\color{red}{#1}}
+\[\def\red#1{\color{red}{#1}}
 \def\teal#1{\color{teal}{#1}}
 \def\green#1{\color{green}{#1}}
 \def\transparent#1{\color{transparent}{#1}}
@@ -296,7 +295,7 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 <div class="line">    std::normal_distribution&lt;double&gt; err{0, 1};</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 创建扩展卡尔曼滤波</span></div>
-<div class="line">    <a class="code hl_class" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">rm::EKF53d</a> ekf;</div>
+<div class="line">    <a class="code hl_typedef" href="../../d7/db3/group__algorithm__kalman.html#gaaf746913f270b00a5ce8334f97e99776">rm::EKF53d</a> ekf;</div>
 <div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">init</a>({0, 0, 0, 0, 150}, 1e5);</div>
 <div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">setQ</a>(1e-1 * cv::Matx&lt;double, 5, 5&gt;::eye());</div>
 <div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">setR</a>(cv::Matx33d::diag({1e-3, 1e-3, 1e-3}));</div>
@@ -336,7 +335,6 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 <div class="line">        printf(<span class="stringliteral">&quot;x = [%.3f, %.3f, %.3f, %.3f, %.3f]\n&quot;</span>, x(0), x(1), x(2), x(3), x(4));</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">rm::ExtendedKalmanFilter</a></div><div class="ttdoc">扩展卡尔曼滤波器</div><div class="ttdef"><b>定义</b> kalman.hpp:229</div></div>
 <div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a021455a6d388179f0aa3b19c6f70caeb"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a021455a6d388179f0aa3b19c6f70caeb">rm::ExtendedKalmanFilter::setJh</a></div><div class="ttdeci">void setJh(const cv::Matx&lt; Tp, MeasureDim, StateDim &gt; &amp;observe_jac)</div><div class="ttdoc">设置观测方程雅可比矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:249</div></div>
 <div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a1e9c373d94b15d20d2eb123b396a9011"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1e9c373d94b15d20d2eb123b396a9011">rm::ExtendedKalmanFilter::setFa</a></div><div class="ttdeci">void setFa(const std::function&lt; cv::Matx&lt; Tp, StateDim, 1 &gt;(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;)&gt; &amp;state_func)</div><div class="ttdoc">设置非线性的离散状态方程</div><div class="ttdef"><b>定义</b> kalman.hpp:256</div></div>
 <div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a1f038c85a574839742e202dd17aceccf"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1f038c85a574839742e202dd17aceccf">rm::ExtendedKalmanFilter::predict</a></div><div class="ttdeci">auto predict()</div><div class="ttdoc">扩展卡尔曼滤波的预测部分，包括状态量的先验估计和误差协方差的先验估计</div><div class="ttdef"><b>定义</b> kalman.hpp:288</div></div>
@@ -346,6 +344,7 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 <div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a27e04aa239c0302d8a31aad3ebf2f130"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">rm::KalmanFilterStaticDatas::setQ</a></div><div class="ttdeci">void setQ(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;process_err)</div><div class="ttdoc">设置过程噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:90</div></div>
 <div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a47d69bda49836961e21571c1267c3312"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">rm::KalmanFilterStaticDatas::setR</a></div><div class="ttdeci">void setR(const cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt; &amp;measure_err)</div><div class="ttdoc">设置测量噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:83</div></div>
 <div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_aa32899fa6bb9fc4d52a62feae756a71a"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">rm::KalmanFilterStaticDatas::init</a></div><div class="ttdeci">void init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, Tp error)</div><div class="ttdoc">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）</div><div class="ttdef"><b>定义</b> kalman.hpp:60</div></div>
+<div class="ttc" id="agroup__algorithm__kalman_html_gaaf746913f270b00a5ce8334f97e99776"><div class="ttname"><a href="../../d7/db3/group__algorithm__kalman.html#gaaf746913f270b00a5ce8334f97e99776">rm::EKF53d</a></div><div class="ttdeci">ExtendedKalmanFilter&lt; double, 5U, 3U &gt; EKF53d</div><div class="ttdoc">5 × 3 扩展卡尔曼滤波器</div><div class="ttdef"><b>定义</b> kalman.hpp:343</div></div>
 <div class="ttc" id="akalman_8hpp_html"><div class="ttname"><a href="../../db/d0f/kalman_8hpp.html">kalman.hpp</a></div><div class="ttdoc">包含轻量级 cv::Matx 的卡尔曼滤波模块</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -353,8 +352,8 @@ W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{al
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
-</a> 1.12.0
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

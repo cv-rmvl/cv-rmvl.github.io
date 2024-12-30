@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.12.0" doxygen_gitid="c73f5d30f9e8b1df5ba15a1d064ff2067cbb8267">
+<tagfile doxygen_version="1.13.0" doxygen_gitid="3fc9e7f98b8d1156ec627cd3ee6f23984bf4e1b1">
   <compound kind="file">
     <name>root.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
@@ -9,6 +9,11 @@
     <name>intro.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
     <filename>d0/d2e/intro_8markdown.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>py_bindings.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
+    <filename>dd/daa/py__bindings_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>py_algorithm.md</name>
@@ -21,19 +26,14 @@
     <filename>dc/d68/py__core_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>py_modules.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
+    <filename>d9/d89/py__modules_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>py_opcua.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
     <filename>da/dad/py__opcua_8md.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>readme.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
-    <filename>d1/d66/py__bindings_2readme_8md.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>readme.md</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
-    <filename>de/d94/py__modules_2readme_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>py_tutorials.markdown</name>
@@ -5200,24 +5200,24 @@
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
+    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>hash_aggregate&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
+      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
       <anchor>a17ead482bdcd67b2690cb4318ad22a5b</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
+    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>std::hash&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
+      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
       <anchor>a64b5c09cc70dbdaba2bebd58ebd287be</anchor>
       <arglist></arglist>
     </member>
@@ -6376,15 +6376,15 @@
       <type>void</type>
       <name>add</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a8fc819c2becd5ce492157e2b09d36f77</anchor>
-      <arglist>(const Method &amp;method)</arglist>
+      <anchor>a7be5ccfefef3395ec77eb5a28780dd5b</anchor>
+      <arglist>(const DataSourceVariable &amp;dsv)</arglist>
     </member>
     <member kind="function">
-      <type>Variable &amp;</type>
-      <name>operator[]</name>
+      <type>void</type>
+      <name>add</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a598b130deb8615ab49da03927ea12a30</anchor>
-      <arglist>(const std::string &amp;browse_name)</arglist>
+      <anchor>a8fc819c2becd5ce492157e2b09d36f77</anchor>
+      <arglist>(const Method &amp;method)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -6398,6 +6398,13 @@
       <name>getVariables</name>
       <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
       <anchor>a86ef769988bc60032f1bf9669eaf3a05</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::unordered_map&lt; std::string, rm::DataSourceVariable &gt; &amp;</type>
+      <name>getDataSourceVariables</name>
+      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
+      <anchor>abf89c20c4e529b8681a059aa7becae52</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -6461,11 +6468,11 @@
       <arglist>(const Variable &amp;variable)</arglist>
     </member>
     <member kind="function">
-      <type>Variable &amp;</type>
-      <name>operator[]</name>
+      <type>void</type>
+      <name>add</name>
       <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a25f94deec6df2546213863160a0bc74a</anchor>
-      <arglist>(const std::string &amp;browse_name)</arglist>
+      <anchor>a1a95481360dbfe0c8d4984c97ecc957b</anchor>
+      <arglist>(const DataSourceVariable &amp;dsv)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -6500,6 +6507,13 @@
       <name>getVariables</name>
       <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
       <anchor>a764751494151c9e3207871c4f820ab3a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::unordered_map&lt; std::string, rm::DataSourceVariable &gt; &amp;</type>
+      <name>getDataSourceVariables</name>
+      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
+      <anchor>a08f7b2d5702961f1397f1dec48cf98f0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -7565,42 +7579,42 @@
       <type>Tp</type>
       <name>value_type</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>ae921bc6d01aacfe4120db175f3982374</anchor>
+      <anchor>ae67f945804eb097184b698d8b8196ba8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Tp &amp;</type>
       <name>reference</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a7eaea687283dab5e17e4480dcee40c9d</anchor>
+      <anchor>a304cd850a8c1ac9bce9db90a20a05df3</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>const Tp &amp;</type>
       <name>const_reference</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>acc79496f3c2ecde288092426cae7c0da</anchor>
+      <anchor>aeaa53c377dc82020bc2dc93868e09b16</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::size_t</type>
       <name>size_type</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a0e6067763ce30cffcd1afc1402585046</anchor>
+      <anchor>a11bb4b31b15aa105df3655a2b73ee1a1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Sequence</type>
       <name>container_type</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a6826a23d60db3e30d0dfd69a4635b561</anchor>
+      <anchor>a9d11cad01e89e0830c4944c76f016ef5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Compare</type>
       <name>value_compare</name>
       <anchorfile>db/d45/classrm_1_1RaHeap.html</anchorfile>
-      <anchor>a7fd4f45390eb7be3287992f646f9013f</anchor>
+      <anchor>a4459e23c87d8d8e4469769a032a28a4d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8706,35 +8720,35 @@
       <type></type>
       <name>RungeKutta</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a92726e2490a5ecfb789294ef21abaeb7</anchor>
-      <arglist>(const Odes &amp;fs, const std::vector&lt; double &gt; &amp;p, const std::vector&lt; double &gt; &amp;lam, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;r)</arglist>
+      <anchor>aacbb5abedcbdc09520fdcb57804bee1d</anchor>
+      <arglist>(const Odes &amp;fs, const std::valarray&lt; double &gt; &amp;p, const std::valarray&lt; double &gt; &amp;lam, const std::valarray&lt; std::valarray&lt; double &gt; &gt; &amp;r)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>init</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a30bb8cfe97d628d0fd69bc3505feac4d</anchor>
-      <arglist>(double t0, const std::vector&lt; double &gt; &amp;x0)</arglist>
+      <anchor>ab00169ac210b7ec0175dcc06ceeba2e3</anchor>
+      <arglist>(double t0, const std::valarray&lt; double &gt; &amp;x0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>init</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a8698d72c9272ec992a78843997f3053b</anchor>
-      <arglist>(double t0, std::vector&lt; double &gt; &amp;&amp;x0)</arglist>
+      <anchor>a0afb8c54bb46fb4d3d6484b7198d9827</anchor>
+      <arglist>(double t0, std::valarray&lt; double &gt; &amp;&amp;x0)</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <type>std::vector&lt; std::valarray&lt; double &gt; &gt;</type>
       <name>solve</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a1b2f43ad444860b164c3b7e578d9a0e7</anchor>
+      <anchor>a16ee71d356e9101bd91e74305bec876e</anchor>
       <arglist>(double h, std::size_t n)</arglist>
     </member>
     <member kind="function">
-      <type>std::generator&lt; std::vector&lt; double &gt; &gt;</type>
+      <type>std::generator&lt; std::valarray&lt; double &gt; &gt;</type>
       <name>generate</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>af25e82c6ef58299d52a708cad463d636</anchor>
+      <anchor>aa4be8a5cb5bff47fa580922928a4888e</anchor>
       <arglist>(double h, std::size_t n)</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -8752,31 +8766,31 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>_x0</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>affa51e3a065a6bca6e362d38ef784bd0</anchor>
+      <anchor>a5cac137dcb82c513579dd38595dae29b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>_p</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a63884fdc0452a1674cc2869fd8315570</anchor>
+      <anchor>abd8f6ef9503757da2f127ad0bee747e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>_lambda</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a9add1c1e4ef7a0911b6122ee29c0c8c4</anchor>
+      <anchor>a4f5600755e733375f26495400470ba65</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+      <type>std::valarray&lt; std::valarray&lt; double &gt; &gt;</type>
       <name>_r</name>
       <anchorfile>d5/d26/classrm_1_1RungeKutta.html</anchorfile>
-      <anchor>a8038d989cffbf895531de3427d76adc4</anchor>
+      <anchor>a01c4bdc4a0053eca75d4da4efeb0302f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9898,28 +9912,28 @@
       <type>Tp</type>
       <name>value_type</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>ad7b06462a4dbe8df2660f2e7489a1596</anchor>
+      <anchor>ae3787c850754755f24c630f8ea45fafe</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Tp &amp;</type>
       <name>reference</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a34fbda41fb46a30fee08e6a78eb14107</anchor>
+      <anchor>aaec41cd1694f32bc2223e6ef08620074</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>const Tp &amp;</type>
       <name>const_reference</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>a932677298d83f31030111a259a12c29c</anchor>
+      <anchor>a07dd102ec70495fe1c3dc7d86102d5f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::size_t</type>
       <name>size_type</name>
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
-      <anchor>ae92e87e9456c175b820aa5cbef72f964</anchor>
+      <anchor>aab31869da6a9521e11f13656dd2c98e2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -10746,17 +10760,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt;</type>
+      <type>std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>Ode</name>
       <anchorfile>dd/dcf/group__algorithm__numcal.html</anchorfile>
-      <anchor>ga5b9b2f75e249221d36421f6ad113c067</anchor>
+      <anchor>ga180667e5e9552a394469cfec8b6ee2b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
       <name>Odes</name>
       <anchorfile>dd/dcf/group__algorithm__numcal.html</anchorfile>
-      <anchor>ga8c54afffb36db9aee298ea57ec04923a</anchor>
+      <anchor>ga65913019ec4b25a96aa4ec94b83f07ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -10774,17 +10788,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt;</type>
+      <type>std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>FuncNd</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gaa8786881a1bd10bd3cfdd22f9209f88a</anchor>
+      <anchor>ga4d22cf26297b02fb82b6abf116d49934</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::vector&lt; std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
       <name>FuncNds</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga84f32e047b6f0baf13255ba257a45fb5</anchor>
+      <anchor>ga9cb547f55dfff0fc8a448f00fe443f42</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -10802,10 +10816,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(ServerView, const NodeId &amp;, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(ServerView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
       <name>MethodCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga967f81078107e42ddb725903aebcd940</anchor>
+      <anchor>ga028d3971b544e474df6c9bac7d179553</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -11332,55 +11346,55 @@
     <member kind="enumvalue">
       <name>POS_X</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa70102e19f9e41c79442d4e6cd70ae139</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa70102e19f9e41c79442d4e6cd70ae139</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>POS_Y</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>POS_Z</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa7b462cfa221e1ea1dc40c95b42853da2</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa7b462cfa221e1ea1dc40c95b42853da2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ANG_X</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaed7435c589e92e0796662db489f4d4b0</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faed7435c589e92e0796662db489f4d4b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ANG_Y</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaf416871a708c21e64c74a85796b780f5</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf416871a708c21e64c74a85796b780f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ANG_Z</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa0bec87b7046ca08f65f0dd0e48b32438</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa0bec87b7046ca08f65f0dd0e48b32438</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>YAW</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffad75124f786dafe1024988bc6b03c8060</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fad75124f786dafe1024988bc6b03c8060</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>PITCH</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaf3f3b5497eb80da2d676c0836327373d</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf3f3b5497eb80da2d676c0836327373d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ROLL</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa940fc54478cc7b30a59936ea2ad613bb</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa940fc54478cc7b30a59936ea2ad613bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -11566,76 +11580,6 @@
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3db0a1cd67066a195e5457e24a9a8a40</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga2a924aa9ad998401a9cbdbc31f2e9543</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>operator+=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>gae1ec36abe8c17df3fec47c5be725834e</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>operator-=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga93beb86d1226a4713cd3ca56af64eb9e</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3dadc0759d480865e41182b3c6f8d1dc</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator*</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga84a2ee716dd5c4bf1e35551a661940f7</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator*</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>gaef9276eb44b1ce2da7430598192dfa06</anchor>
-      <arglist>(T val, const std::vector&lt; T &gt; &amp;vec)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>operator*=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3d48970310510ba748df11675d709400</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>operator/</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga42cdf114c8f83aa66138dcd51ef35195</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>operator/=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga1971b3c1f806a3cd4042e0d1c75cd96a</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
       <type>double</type>
       <name>derivative</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
@@ -11643,11 +11587,11 @@
       <arglist>(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>grad</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga0d960fda587557e7abb07dfe96d824e4</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
+      <anchor>gaa93c2a0dd4c42255cd83a086ced9e9df</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; double, double &gt;</type>
@@ -11664,32 +11608,32 @@
       <arglist>(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <type>std::pair&lt; std::valarray&lt; double &gt;, double &gt;</type>
       <name>fminunc</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gad3a27f53f42ecf71dc3b2a187f674e12</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga4a7d105f2c4e5236f0ab9963d7e0cfef</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <type>std::pair&lt; std::valarray&lt; double &gt;, double &gt;</type>
       <name>fmincon</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gaa78a83eb19394100a5f01c35b86863db</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga59ea1658679b6b7067111f3aee854f59</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>lsqnonlin</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga2c5c6ca12730fb4365a8034b7c0a0ead</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga661bd68eea06e9f5957a39c69d3f4627</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>lsqnonlinRKF</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga49d9c1571206d945576ebedb116feec3</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga4e80261bbc3a2979ec29c6dee4dd73b2</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
       <type>cv::Mat</type>
@@ -12880,76 +12824,6 @@
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3db0a1cd67066a195e5457e24a9a8a40</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga2a924aa9ad998401a9cbdbc31f2e9543</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>rm::operator+=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>gae1ec36abe8c17df3fec47c5be725834e</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>rm::operator-=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga93beb86d1226a4713cd3ca56af64eb9e</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec1, const std::vector&lt; T &gt; &amp;vec2)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3dadc0759d480865e41182b3c6f8d1dc</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator*</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga84a2ee716dd5c4bf1e35551a661940f7</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator*</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>gaef9276eb44b1ce2da7430598192dfa06</anchor>
-      <arglist>(T val, const std::vector&lt; T &gt; &amp;vec)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>rm::operator*=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga3d48970310510ba748df11675d709400</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>rm::operator/</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga42cdf114c8f83aa66138dcd51ef35195</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt; &amp;</type>
-      <name>rm::operator/=</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
-      <anchor>ga1971b3c1f806a3cd4042e0d1c75cd96a</anchor>
-      <arglist>(std::vector&lt; T &gt; &amp;vec, T val)</arglist>
-    </member>
-    <member kind="function">
       <type>cv::Point2f</type>
       <name>rm::calculateRelativeAngle</name>
       <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
@@ -13386,17 +13260,17 @@
     <class kind="class">rm::RungeKutta3</class>
     <class kind="class">rm::RungeKutta4</class>
     <member kind="typedef">
-      <type>std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt;</type>
+      <type>std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>rm::Ode</name>
       <anchorfile>dd/dcf/group__algorithm__numcal.html</anchorfile>
-      <anchor>ga5b9b2f75e249221d36421f6ad113c067</anchor>
+      <anchor>ga180667e5e9552a394469cfec8b6ee2b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(double, const std::vector&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
       <name>rm::Odes</name>
       <anchorfile>dd/dcf/group__algorithm__numcal.html</anchorfile>
-      <anchor>ga8c54afffb36db9aee298ea57ec04923a</anchor>
+      <anchor>ga65913019ec4b25a96aa4ec94b83f07ed</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13420,17 +13294,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt;</type>
+      <type>std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>rm::FuncNd</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gaa8786881a1bd10bd3cfdd22f9209f88a</anchor>
+      <anchor>ga4d22cf26297b02fb82b6abf116d49934</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(const std::vector&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::vector&lt; std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
       <name>rm::FuncNds</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga84f32e047b6f0baf13255ba257a45fb5</anchor>
+      <anchor>ga9cb547f55dfff0fc8a448f00fe443f42</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -13481,11 +13355,11 @@
       <arglist>(Func1d func, double x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>rm::grad</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga0d960fda587557e7abb07dfe96d824e4</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
+      <anchor>gaa93c2a0dd4c42255cd83a086ced9e9df</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x, DiffMode mode=DiffMode::Central, double dx=1e-3)</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; double, double &gt;</type>
@@ -13502,32 +13376,32 @@
       <arglist>(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <type>std::pair&lt; std::valarray&lt; double &gt;, double &gt;</type>
       <name>rm::fminunc</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gad3a27f53f42ecf71dc3b2a187f674e12</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga4a7d105f2c4e5236f0ab9963d7e0cfef</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::vector&lt; double &gt;, double &gt;</type>
+      <type>std::pair&lt; std::valarray&lt; double &gt;, double &gt;</type>
       <name>rm::fmincon</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>gaa78a83eb19394100a5f01c35b86863db</anchor>
-      <arglist>(FuncNd func, const std::vector&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga59ea1658679b6b7067111f3aee854f59</anchor>
+      <arglist>(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, FuncNds c, FuncNds ceq, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>rm::lsqnonlin</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga2c5c6ca12730fb4365a8034b7c0a0ead</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga661bd68eea06e9f5957a39c69d3f4627</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
-      <type>std::vector&lt; double &gt;</type>
+      <type>std::valarray&lt; double &gt;</type>
       <name>rm::lsqnonlinRKF</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga49d9c1571206d945576ebedb116feec3</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::vector&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga4e80261bbc3a2979ec29c6dee4dd73b2</anchor>
+      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -14318,10 +14192,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(ServerView, const NodeId &amp;, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(ServerView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
       <name>rm::MethodCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga967f81078107e42ddb725903aebcd940</anchor>
+      <anchor>ga028d3971b544e474df6c9bac7d179553</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -15184,55 +15058,55 @@
     <member kind="enumvalue">
       <name>rm::POS_X</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa70102e19f9e41c79442d4e6cd70ae139</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa70102e19f9e41c79442d4e6cd70ae139</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::POS_Y</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::POS_Z</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa7b462cfa221e1ea1dc40c95b42853da2</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa7b462cfa221e1ea1dc40c95b42853da2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::ANG_X</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaed7435c589e92e0796662db489f4d4b0</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faed7435c589e92e0796662db489f4d4b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::ANG_Y</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaf416871a708c21e64c74a85796b780f5</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf416871a708c21e64c74a85796b780f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::ANG_Z</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa0bec87b7046ca08f65f0dd0e48b32438</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa0bec87b7046ca08f65f0dd0e48b32438</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::YAW</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffad75124f786dafe1024988bc6b03c8060</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fad75124f786dafe1024988bc6b03c8060</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::PITCH</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffaf3f3b5497eb80da2d676c0836327373d</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf3f3b5497eb80da2d676c0836327373d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::ROLL</name>
       <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>ggaa3314485e4d8f91f54d9f0927b784bffa940fc54478cc7b30a59936ea2ad613bb</anchor>
+      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa940fc54478cc7b30a59936ea2ad613bb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -15793,7 +15667,7 @@
     <name>tutorial_py_table_of_contents_bindings</name>
     <title>RMVL-Python 绑定功能</title>
     <filename>df/da2/tutorial_py_table_of_contents_bindings.html</filename>
-    <docanchor file="df/da2/tutorial_py_table_of_contents_bindings.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/readme.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__bindings_2readme</docanchor>
+    <docanchor file="df/da2/tutorial_py_table_of_contents_bindings.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/py_bindings.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__bindings_2py__bindings</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_py_algorithm</name>
@@ -15808,19 +15682,19 @@
     <docanchor file="d7/d9d/tutorial_py_core.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/py_core.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__modules_2py__core</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_py_opcua</name>
-    <title>适用于 Python 的 OPC UA 模块</title>
-    <filename>d4/de5/tutorial_py_opcua.html</filename>
-    <docanchor file="d4/de5/tutorial_py_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/py_opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__modules_2py__opcua</docanchor>
-  </compound>
-  <compound kind="page">
     <name>tutorial_py_table_of_contents_modules</name>
     <title>RMVL-Python 各模块的用法</title>
     <filename>d3/dbb/tutorial_py_table_of_contents_modules.html</filename>
     <subpage>d7/d9d/tutorial_py_core.html</subpage>
     <subpage>df/dad/tutorial_py_algorithm.html</subpage>
     <subpage>d4/de5/tutorial_py_opcua.html</subpage>
-    <docanchor file="d3/dbb/tutorial_py_table_of_contents_modules.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/readme.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__modules_2readme</docanchor>
+    <docanchor file="d3/dbb/tutorial_py_table_of_contents_modules.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/py_modules.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__modules_2py__modules</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_py_opcua</name>
+    <title>适用于 Python 的 OPC UA 模块</title>
+    <filename>d4/de5/tutorial_py_opcua.html</filename>
+    <docanchor file="d4/de5/tutorial_py_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/py_opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__modules_2py__opcua</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorials_python</name>

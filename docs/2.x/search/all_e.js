@@ -18,9 +18,9 @@ var searchData=
   ['fmin_5fmode_15',['fmin_mode',['../d3/dd3/structrm_1_1OptimalOptions.html#a609336b69f157e51edcdc9755eb67251',1,'rm::OptimalOptions']]],
   ['fminbnd_16',['fminbnd',['../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee',1,'rm']]],
   ['fminbnd_2emd_17',['fminbnd.md',['../d9/d42/fminbnd_8md.html',1,'']]],
-  ['fmincon_18',['fmincon',['../d2/d62/group__algorithm__optimal.html#gaa78a83eb19394100a5f01c35b86863db',1,'rm']]],
+  ['fmincon_18',['fmincon',['../d2/d62/group__algorithm__optimal.html#ga59ea1658679b6b7067111f3aee854f59',1,'rm']]],
   ['fminmode_19',['FminMode',['../d2/d62/group__algorithm__optimal.html#gaf5b1502951081346a5bc6f03694fe73c',1,'rm']]],
-  ['fminunc_20',['fminunc',['../d2/d62/group__algorithm__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12',1,'rm']]],
+  ['fminunc_20',['fminunc',['../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef',1,'rm']]],
   ['fminunc_2emd_21',['fminunc.md',['../da/d7a/fminunc_8md.html',1,'']]],
   ['for_5feach_22',['for_each',['../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
   ['format_23',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
@@ -29,6 +29,6 @@ var searchData=
   ['func1d_26',['Func1d',['../d2/d62/group__algorithm__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
   ['func1ds_27',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
   ['func_5fiteration_2emd_28',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
-  ['funcnd_29',['FuncNd',['../d2/d62/group__algorithm__optimal.html#gaa8786881a1bd10bd3cfdd22f9209f88a',1,'rm']]],
-  ['funcnds_30',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga84f32e047b6f0baf13255ba257a45fb5',1,'rm']]]
+  ['funcnd_29',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
+  ['funcnds_30',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga9cb547f55dfff0fc8a448f00fe443f42',1,'rm']]]
 ];

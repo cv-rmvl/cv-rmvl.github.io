@@ -7,7 +7,9 @@ var searchData=
   ['pretreat_2ehpp_4',['pretreat.hpp',['../d2/d4c/pretreat_8hpp.html',1,'']]],
   ['publisher_2ehpp_5',['publisher.hpp',['../da/d24/publisher_8hpp.html',1,'']]],
   ['py_5falgorithm_2emd_6',['py_algorithm.md',['../d9/dee/py__algorithm_8md.html',1,'']]],
-  ['py_5fcore_2emd_7',['py_core.md',['../dc/d68/py__core_8md.html',1,'']]],
-  ['py_5fopcua_2emd_8',['py_opcua.md',['../da/dad/py__opcua_8md.html',1,'']]],
-  ['py_5ftutorials_2emarkdown_9',['py_tutorials.markdown',['../d0/d23/py__tutorials_8markdown.html',1,'']]]
+  ['py_5fbindings_2emd_7',['py_bindings.md',['../dd/daa/py__bindings_8md.html',1,'']]],
+  ['py_5fcore_2emd_8',['py_core.md',['../dc/d68/py__core_8md.html',1,'']]],
+  ['py_5fmodules_2emd_9',['py_modules.md',['../d9/d89/py__modules_8md.html',1,'']]],
+  ['py_5fopcua_2emd_10',['py_opcua.md',['../da/dad/py__opcua_8md.html',1,'']]],
+  ['py_5ftutorials_2emarkdown_11',['py_tutorials.markdown',['../d0/d23/py__tutorials_8markdown.html',1,'']]]
 ];
