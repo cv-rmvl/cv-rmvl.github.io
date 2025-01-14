@@ -154,9 +154,9 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abbd150ec8eb71a134f2421a861176a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f80f913557ca8154610e1f1bb84c52" id="r_ad4f80f913557ca8154610e1f1bb84c52"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f80f913557ca8154610e1f1bb84c52">~decider</a> ()=default</td></tr>
 <tr class="separator:ad4f80f913557ca8154610e1f1bb84c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff2697cec8082249650c431ea37303d7" id="r_aff2697cec8082249650c431ea37303d7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html">DecideInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff2697cec8082249650c431ea37303d7">decide</a> (const std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;groups, <a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a> flag, <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> last_target, const <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a> &amp;detect_info, const <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html">CompensateInfo</a> &amp;compensate_info, const <a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html">PredictInfo</a> &amp;predict_info)=0</td></tr>
-<tr class="memdesc:aff2697cec8082249650c431ea37303d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">决策核心函数  <br /></td></tr>
-<tr class="separator:aff2697cec8082249650c431ea37303d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1f602915a0ef9c38ae1bbec9473837" id="r_abe1f602915a0ef9c38ae1bbec9473837"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html">DecideInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe1f602915a0ef9c38ae1bbec9473837">decide</a> (const std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;groups, const <a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp;flag, <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> last_target, const <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a> &amp;detect_info, const <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html">CompensateInfo</a> &amp;compensate_info, const <a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html">PredictInfo</a> &amp;predict_info)=0</td></tr>
+<tr class="memdesc:abe1f602915a0ef9c38ae1bbec9473837"><td class="mdescLeft">&#160;</td><td class="mdescRight">决策核心函数  <br /></td></tr>
+<tr class="separator:abe1f602915a0ef9c38ae1bbec9473837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>目标决策模块 </p>
@@ -227,8 +227,8 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="aff2697cec8082249650c431ea37303d7" name="aff2697cec8082249650c431ea37303d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff2697cec8082249650c431ea37303d7">&#9670;&#160;</a></span>decide()</h2>
+<a id="abe1f602915a0ef9c38ae1bbec9473837" name="abe1f602915a0ef9c38ae1bbec9473837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1f602915a0ef9c38ae1bbec9473837">&#9670;&#160;</a></span>decide()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +244,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a></td>          <td class="paramname"><span class="paramname"><em>flag</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -288,7 +288,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>决策模块信息 </dd></dl>
 
-<p>在 <a class="el" href="../../dc/d0b/classrm_1_1GyroDecider.html#a48fe3fc6d90b7882823776659ffe4dab">rm::GyroDecider</a>, <a class="el" href="../../df/de5/classrm_1_1RuneDecider.html#a1b7b022f94f9ccc4a893a67191861ee1">rm::RuneDecider</a> , 以及 <a class="el" href="../../de/dfc/classrm_1_1TranslationDecider.html#a63a99759e307615431a02c5558aa65ef">rm::TranslationDecider</a> 内被实现.</p>
+<p>在 <a class="el" href="../../dc/d0b/classrm_1_1GyroDecider.html#ad02fbd7d38677cebf18fec5029cbbe53">rm::GyroDecider</a>, <a class="el" href="../../df/de5/classrm_1_1RuneDecider.html#a70fd768995865f3d1250f04f5861a82a">rm::RuneDecider</a> , 以及 <a class="el" href="../../de/dfc/classrm_1_1TranslationDecider.html#a1a8af79f57be8c3b60a12e8f875a322b">rm::TranslationDecider</a> 内被实现.</p>
 
 </div>
 </div>

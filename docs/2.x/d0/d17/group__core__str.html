@@ -135,6 +135,15 @@ Python 风格的字符串处理 的协作图:</div>
 <tr class="memitem:ga6dbfb3a75e7aa6352b02002438c5918c" id="r_ga6dbfb3a75e7aa6352b02002438c5918c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6dbfb3a75e7aa6352b02002438c5918c">rm::str::join</a> (const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</td></tr>
 <tr class="memdesc:ga6dbfb3a75e7aa6352b02002438c5918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串连接  <br /></td></tr>
 <tr class="separator:ga6dbfb3a75e7aa6352b02002438c5918c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabecfe8c875f8bb2a439b66acbdef9ab3" id="r_gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabecfe8c875f8bb2a439b66acbdef9ab3">rm::str::strip</a> (std::string_view str)</td></tr>
+<tr class="memdesc:gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">去除字符串两端的空白字符  <br /></td></tr>
+<tr class="separator:gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae46127fdf7d9a6deca77b3aee4445166" id="r_gae46127fdf7d9a6deca77b3aee4445166"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae46127fdf7d9a6deca77b3aee4445166">rm::str::lower</a> (std::string_view str)</td></tr>
+<tr class="memdesc:gae46127fdf7d9a6deca77b3aee4445166"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为小写  <br /></td></tr>
+<tr class="separator:gae46127fdf7d9a6deca77b3aee4445166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga603f0fec4d9dc80c6be715ef36fa6a9a" id="r_ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">rm::str::upper</a> (std::string_view str)</td></tr>
+<tr class="memdesc:ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为大写  <br /></td></tr>
+<tr class="separator:ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <h2 class="groupheader">函数说明</h2>
@@ -171,6 +180,34 @@ Python 风格的字符串处理 的协作图:</div>
 
 </div>
 </div>
+<a id="gae46127fdf7d9a6deca77b3aee4445166" name="gae46127fdf7d9a6deca77b3aee4445166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae46127fdf7d9a6deca77b3aee4445166">&#9670;&#160;</a></span>lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::str::lower </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>将字符串转换为小写 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+
+</div>
+</div>
 <a id="gadf0b167884deb47575179962b66c4341" name="gadf0b167884deb47575179962b66c4341"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadf0b167884deb47575179962b66c4341">&#9670;&#160;</a></span>split()</h2>
 
@@ -201,6 +238,62 @@ Python 风格的字符串处理 的协作图:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>分割后的字符串数组 </dd></dl>
+
+</div>
+</div>
+<a id="gabecfe8c875f8bb2a439b66acbdef9ab3" name="gabecfe8c875f8bb2a439b66acbdef9ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabecfe8c875f8bb2a439b66acbdef9ab3">&#9670;&#160;</a></span>strip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view rm::str::strip </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>去除字符串两端的空白字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+
+</div>
+</div>
+<a id="ga603f0fec4d9dc80c6be715ef36fa6a9a" name="ga603f0fec4d9dc80c6be715ef36fa6a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">&#9670;&#160;</a></span>upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::str::upper </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>将字符串转换为大写 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
 
 </div>
 </div>

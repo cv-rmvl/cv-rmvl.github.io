@@ -123,18 +123,22 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#enum-members">枚举</a>  </div>
+<a href="#typedef-members">类型定义</a>  </div>
   <div class="headertitle"><div class="title">types.hpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>常用状态类型定义  
+<p>状态类型系统  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="../../d0/d3f/util_8hpp.html">rmvl/core/util.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;variant&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d41/rmvldef_8hpp.html">rmvl/core/rmvldef.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 types.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d3a/types_8hpp__incl.svg" width="572" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d3a/types_8hpp__incl.svg" width="623" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件被哪些文件直接或间接地引用了:</div>
@@ -144,8 +148,8 @@ types.hpp 的引用(Include)关系图:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">rm::RMStatus</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态类型  <a href="../../d0/d01/structrm_1_1RMStatus.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">rm::StateInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态类型系统  <a href="../../d3/da8/classrm_1_1StateInfo.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
@@ -153,105 +157,18 @@ types.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-枚举</h2></td></tr>
-<tr class="memitem:ga4c8a071e633e74da2404d335e8e62bb7" id="r_ga4c8a071e633e74da2404d335e8e62bb7"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> : uint8_t { <a class="el" href="../../d6/d59/group__types.html#gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">rm::ArmorSizeType::UNKNOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a>
- }</td></tr>
-<tr class="memdesc:ga4c8a071e633e74da2404d335e8e62bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">装甲板大小类型  <a href="../../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7">更多...</a><br /></td></tr>
-<tr class="separator:ga4c8a071e633e74da2404d335e8e62bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga083deed637a993d54f06a047224c9b79" id="r_ga083deed637a993d54f06a047224c9b79"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#ga083deed637a993d54f06a047224c9b79">rm::RuneType</a> : uint8_t { <a class="el" href="../../d6/d59/group__types.html#gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3">rm::RuneType::UNKNOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2">rm::RuneType::INACTIVE</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115">rm::RuneType::ACTIVE</a>
- }</td></tr>
-<tr class="memdesc:ga083deed637a993d54f06a047224c9b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">能量机关激活类型  <a href="../../d6/d59/group__types.html#ga083deed637a993d54f06a047224c9b79">更多...</a><br /></td></tr>
-<tr class="separator:ga083deed637a993d54f06a047224c9b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53b2ed651ce89a5884af7310fb1a24d6" id="r_ga53b2ed651ce89a5884af7310fb1a24d6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#ga53b2ed651ce89a5884af7310fb1a24d6">rm::TagType</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3">rm::TagType::UNKNOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1">rm::TagType::NUM_0</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4">rm::TagType::NUM_1</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6">rm::TagType::NUM_2</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851">rm::TagType::NUM_3</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c">rm::TagType::NUM_4</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501">rm::TagType::NUM_5</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba">rm::TagType::NUM_6</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">rm::TagType::NUM_7</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">rm::TagType::NUM_8</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">rm::TagType::NUM_9</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">rm::TagType::CHAR_A</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">rm::TagType::CHAR_B</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">rm::TagType::CHAR_C</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">rm::TagType::CHAR_D</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">rm::TagType::CHAR_E</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">rm::TagType::CHAR_F</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">rm::TagType::CHAR_G</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">rm::TagType::CHAR_H</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">rm::TagType::CHAR_I</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">rm::TagType::CHAR_J</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">rm::TagType::CHAR_K</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">rm::TagType::CHAR_L</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">rm::TagType::CHAR_M</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">rm::TagType::CHAR_N</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">rm::TagType::CHAR_O</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">rm::TagType::CHAR_P</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">rm::TagType::CHAR_Q</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">rm::TagType::CHAR_R</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">rm::TagType::CHAR_S</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">rm::TagType::CHAR_T</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">rm::TagType::CHAR_U</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">rm::TagType::CHAR_V</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">rm::TagType::CHAR_W</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">rm::TagType::CHAR_X</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">rm::TagType::CHAR_Y</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">rm::TagType::CHAR_Z</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ga53b2ed651ce89a5884af7310fb1a24d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">AprilTag 视觉标签类型  <a href="../../d6/d59/group__types.html#ga53b2ed651ce89a5884af7310fb1a24d6">更多...</a><br /></td></tr>
-<tr class="separator:ga53b2ed651ce89a5884af7310fb1a24d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacd7f1723e9b020d34b5bbc041faaea89" id="r_gacd7f1723e9b020d34b5bbc041faaea89"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">rm::RobotType</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">rm::RobotType::UNKNOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">rm::RobotType::HERO</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">rm::RobotType::ENGINEER</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">rm::RobotType::INFANTRY_3</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">rm::RobotType::INFANTRY_4</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">rm::RobotType::INFANTRY_5</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">rm::RobotType::OUTPOST</a>
-, <a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">rm::RobotType::BASE</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">rm::RobotType::SENTRY</a>
-<br />
- }</td></tr>
-<tr class="memdesc:gacd7f1723e9b020d34b5bbc041faaea89"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人类型  <a href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">更多...</a><br /></td></tr>
-<tr class="separator:gacd7f1723e9b020d34b5bbc041faaea89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6eb0c54354d1de382a6d3735da2c005c" id="r_ga6eb0c54354d1de382a6d3735da2c005c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#ga6eb0c54354d1de382a6d3735da2c005c">rm::CompensateType</a> : uint8_t { <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">rm::CompensateType::UNKNOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">rm::CompensateType::UP</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">rm::CompensateType::DOWN</a>
-, <a class="el" href="../../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">rm::CompensateType::LEFT</a>
-, <br />
-&#160;&#160;<a class="el" href="../../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">rm::CompensateType::RIGHT</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ga6eb0c54354d1de382a6d3735da2c005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制补偿类型  <a href="../../d6/d59/group__types.html#ga6eb0c54354d1de382a6d3735da2c005c">更多...</a><br /></td></tr>
-<tr class="separator:ga6eb0c54354d1de382a6d3735da2c005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaedfc12b5ad98570cda08ea99035e7d14" id="r_gaedfc12b5ad98570cda08ea99035e7d14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">rm::StateType</a> = std::variant&lt;double, std::string&gt;</td></tr>
+<tr class="memdesc:gaedfc12b5ad98570cda08ea99035e7d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态类型  <br /></td></tr>
+<tr class="separator:gaedfc12b5ad98570cda08ea99035e7d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>常用状态类型定义 </p>
-<dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
-<dl class="section version"><dt>版本</dt><dd>2.0 </dd></dl>
-<dl class="section date"><dt>日期</dt><dd>2023-05-27</dd></dl>
-<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2023 (c), RoboMaster Vision Community </dd></dl>
+<div class="textblock"><p>状态类型系统 </p>
+<dl class="section author"><dt>作者</dt><dd>zhaoxi (<a href="#" onclick="location.href='mai'+'lto:'+'535'+'39'+'414'+'0@'+'qq.'+'co'+'m'; return false;">53539<span class="obfuscator">.nosp@m.</span>4140<span class="obfuscator">.nosp@m.</span>@qq.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>3.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-01-03</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2025 (c), zhaoxi </dd></dl>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

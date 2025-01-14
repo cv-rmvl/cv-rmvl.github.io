@@ -144,7 +144,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:aa61e1bab707b656b224827f4746e259b"><td class="mdescLeft"> </td><td class="mdescRight">添加（额外的）变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中  <br/></td></tr>
 <tr class="separator:aa61e1bab707b656b224827f4746e259b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a7be5ccfefef3395ec77eb5a28780dd5b" id="r_a7be5ccfefef3395ec77eb5a28780dd5b"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be5ccfefef3395ec77eb5a28780dd5b">add</a> (const <a class="el" href="../../db/df0/structrm_1_1DataSourceVariable.html">DataSourceVariable</a> &amp;dsv)</td></tr>
-<tr class="memdesc:a7be5ccfefef3395ec77eb5a28780dd5b"><td class="mdescLeft"> </td><td class="mdescRight">添加数据源变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中  <br/></td></tr>
+<tr class="memdesc:a7be5ccfefef3395ec77eb5a28780dd5b"><td class="mdescLeft"> </td><td class="mdescRight">添加（额外的）数据源变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中  <br/></td></tr>
 <tr class="separator:a7be5ccfefef3395ec77eb5a28780dd5b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8fc819c2becd5ce492157e2b09d36f77" id="r_a8fc819c2becd5ce492157e2b09d36f77"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc819c2becd5ce492157e2b09d36f77">add</a> (const <a class="el" href="../../d4/d91/classrm_1_1Method.html">Method</a> &amp;method)</td></tr>
 <tr class="memdesc:a8fc819c2becd5ce492157e2b09d36f77"><td class="mdescLeft"> </td><td class="mdescRight">添加（额外的）方法节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中  <br/></td></tr>
@@ -231,7 +231,10 @@ Public 属性</h2></td></tr>
   </tr>
 </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">variable</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">dsv</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">method</td><td>) -&gt; </td><td>None</td></tr></table>
 </div><div class="memdoc">
-<p>添加数据源变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中 </p>
+<p>添加（额外的）数据源变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中 </p>
+<ul>
+<li>若设置了对象类型，则此方法只能添加对象类型中不存在的数据源变量节点</li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dsv</td><td>数据源变量节点 </td></tr>
@@ -262,6 +265,9 @@ Public 属性</h2></td></tr>
 </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">variable</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">dsv</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">method</td><td>) -&gt; </td><td>None</td></tr></table>
 </div><div class="memdoc">
 <p>添加（额外的）方法节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中 </p>
+<ul>
+<li>若设置了对象类型，则此方法只能添加对象类型中不存在的方法节点</li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>方法节点 </td></tr>
@@ -292,6 +298,9 @@ Public 属性</h2></td></tr>
 </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">variable</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">dsv</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.Object.add(</td><td class="paramname">method</td><td>) -&gt; </td><td>None</td></tr></table>
 </div><div class="memdoc">
 <p>添加（额外的）变量节点至 <code><a class="el" href="../../d8/d9b/classrm_1_1Object.html" title="OPC UA 对象">rm::Object</a></code> 对象中 </p>
+<ul>
+<li>若设置了对象类型，则此方法只能添加对象类型中不存在的变量节点</li>
+</ul>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">variable</td><td>变量节点 </td></tr>

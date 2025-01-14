@@ -145,9 +145,9 @@ $(function(){ initResizable(false); });
 <tr class="memitem:ga4d22cf26297b02fb82b6abf116d49934" id="r_ga4d22cf26297b02fb82b6abf116d49934"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> = std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;</td></tr>
 <tr class="memdesc:ga4d22cf26297b02fb82b6abf116d49934"><td class="mdescLeft"> </td><td class="mdescRight">多元函数  <br/></td></tr>
 <tr class="separator:ga4d22cf26297b02fb82b6abf116d49934"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga9cb547f55dfff0fc8a448f00fe443f42" id="r_ga9cb547f55dfff0fc8a448f00fe443f42"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;&gt;</td></tr>
-<tr class="memdesc:ga9cb547f55dfff0fc8a448f00fe443f42"><td class="mdescLeft"> </td><td class="mdescRight">多元函数组  <br/></td></tr>
-<tr class="separator:ga9cb547f55dfff0fc8a448f00fe443f42"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga35c0b85496608bc60a43229ab4835aee" id="r_ga35c0b85496608bc60a43229ab4835aee"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a> = std::function&lt;std::valarray&lt;double&gt;(const std::valarray&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ga35c0b85496608bc60a43229ab4835aee"><td class="mdescLeft"> </td><td class="mdescRight">多元函数组  <br/></td></tr>
+<tr class="separator:ga35c0b85496608bc60a43229ab4835aee"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -196,15 +196,15 @@ $(function(){ initResizable(false); });
 <tr class="memitem:ga4a7d105f2c4e5236f0ab9963d7e0cfef" id="r_ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="mdescLeft"> </td><td class="mdescRight">无约束多维函数的最小值搜索，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br/></td></tr>
 <tr class="separator:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga59ea1658679b6b7067111f3aee854f59" id="r_ga59ea1658679b6b7067111f3aee854f59"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga59ea1658679b6b7067111f3aee854f59">rm::fmincon</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> c, <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memitem:ga59ea1658679b6b7067111f3aee854f59" id="r_ga59ea1658679b6b7067111f3aee854f59"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga59ea1658679b6b7067111f3aee854f59">rm::fmincon</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> c, <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
 <tr class="memdesc:ga59ea1658679b6b7067111f3aee854f59"><td class="mdescLeft"> </td><td class="mdescRight">有约束多维函数的最小值搜索  <br/></td></tr>
 <tr class="separator:ga59ea1658679b6b7067111f3aee854f59"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga661bd68eea06e9f5957a39c69d3f4627" id="r_ga661bd68eea06e9f5957a39c69d3f4627"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627">rm::lsqnonlin</a> (const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga661bd68eea06e9f5957a39c69d3f4627"><td class="mdescLeft"> </td><td class="mdescRight">非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法  <br/></td></tr>
-<tr class="separator:ga661bd68eea06e9f5957a39c69d3f4627"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga4e80261bbc3a2979ec29c6dee4dd73b2" id="r_ga4e80261bbc3a2979ec29c6dee4dd73b2"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4e80261bbc3a2979ec29c6dee4dd73b2">rm::lsqnonlinRKF</a> (const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a> rb, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
-<tr class="memdesc:ga4e80261bbc3a2979ec29c6dee4dd73b2"><td class="mdescLeft"> </td><td class="mdescRight">带 Robust 核函数的非线性最小二乘求解  <br/></td></tr>
-<tr class="separator:ga4e80261bbc3a2979ec29c6dee4dd73b2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gab85704ec7a37e31de0644b99a6286173" id="r_gab85704ec7a37e31de0644b99a6286173"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a> (const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;func, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gab85704ec7a37e31de0644b99a6286173"><td class="mdescLeft"> </td><td class="mdescRight">非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法  <br/></td></tr>
+<tr class="separator:gab85704ec7a37e31de0644b99a6286173"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga5a7f8fec980372cfd29fd21d37721ef1" id="r_ga5a7f8fec980372cfd29fd21d37721ef1"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a> (const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a> rb, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga5a7f8fec980372cfd29fd21d37721ef1"><td class="mdescLeft"> </td><td class="mdescRight">带 Robust 核函数的非线性最小二乘求解  <br/></td></tr>
+<tr class="separator:ga5a7f8fec980372cfd29fd21d37721ef1"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
 <p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法 </p>
@@ -251,13 +251,13 @@ $(function(){ initResizable(false); });
 <p>多元函数 </p>
 </div>
 </div>
-<a id="ga9cb547f55dfff0fc8a448f00fe443f42" name="ga9cb547f55dfff0fc8a448f00fe443f42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9cb547f55dfff0fc8a448f00fe443f42">◆ </a></span>FuncNds</h2>
+<a id="ga35c0b85496608bc60a43229ab4835aee" name="ga35c0b85496608bc60a43229ab4835aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35c0b85496608bc60a43229ab4835aee">◆ </a></span>FuncNds</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">rm::FuncNds</a> = std::vector&lt;std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;&gt;</td>
+          <td class="memname">using <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a> = std::function&lt;std::valarray&lt;double&gt;(const std::valarray&lt;double&gt; &amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -420,7 +420,7 @@ $(function(){ initResizable(false); });
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一元函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>导数计算模式，默认为中心差商 <code>Diff_Central</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>导数计算模式，默认为中心差商 <code><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
   </table>
   </dd>
@@ -487,12 +487,12 @@ $(function(){ initResizable(false); });
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -584,7 +584,7 @@ $(function(){ initResizable(false); });
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多元函数 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>梯度计算模式，默认为中心差商 <code>Diff_Central</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>梯度计算模式，默认为中心差商 <code><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>计算偏导数时，坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
   </table>
   </dd>
@@ -592,15 +592,15 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd>函数在指定点的梯度向量 </dd></dl>
 </div>
 </div>
-<a id="ga661bd68eea06e9f5957a39c69d3f4627" name="ga661bd68eea06e9f5957a39c69d3f4627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga661bd68eea06e9f5957a39c69d3f4627">◆ </a></span>lsqnonlin()</h2>
+<a id="gab85704ec7a37e31de0644b99a6286173" name="gab85704ec7a37e31de0644b99a6286173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab85704ec7a37e31de0644b99a6286173">◆ </a></span>lsqnonlin()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlin </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -612,15 +612,15 @@ $(function(){ initResizable(false); });
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlin(</td><td class="paramname">funcs, x0[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlin(</td><td class="paramname">func, x0[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
 <p>非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">funcs</td><td>最小二乘目标函数，满足  <p class="formulaDsp">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>最小二乘目标函数，满足  <p class="formulaDsp">
 \[F(\pmb x_k)=\frac12\|\pmb f(\pmb x_k)\|_2^2=\frac12
-                 \left(\texttt{funcs}[0]^2+\texttt{funcs}[1]^2+\cdots+\texttt{funcs}[n]^2\right)\]
+                 \left(\texttt{func}[0]^2+\texttt{func}[1]^2+\cdots+\texttt{func}[n]^2\right)\]
 </p>
  </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
@@ -631,15 +631,15 @@ $(function(){ initResizable(false); });
 <dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
 </div>
 </div>
-<a id="ga4e80261bbc3a2979ec29c6dee4dd73b2" name="ga4e80261bbc3a2979ec29c6dee4dd73b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4e80261bbc3a2979ec29c6dee4dd73b2">◆ </a></span>lsqnonlinRKF()</h2>
+<a id="ga5a7f8fec980372cfd29fd21d37721ef1" name="ga5a7f8fec980372cfd29fd21d37721ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a7f8fec980372cfd29fd21d37721ef1">◆ </a></span>lsqnonlinRKF()</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlinRKF </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ga9cb547f55dfff0fc8a448f00fe443f42">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -656,15 +656,15 @@ $(function(){ initResizable(false); });
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlinRKF(</td><td class="paramname">funcs, x0, rb[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlinRKF(</td><td class="paramname">func, x0, rb[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
 </div><div class="memdoc">
 <p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
 <p>带 Robust 核函数的非线性最小二乘求解 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">funcs</td><td>最小二乘目标函数，参考 <a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>最小二乘目标函数，参考 <a class="el" href="#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rb</td><td>Robust 核函数模式，参考 <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15" title="Robust 核函数">rm::RobustMode</a> ，选择 <code><a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" title="L2 核函数">rm::RobustMode::L2</a></code> 时退化为 <code><a class="el" href="#ga661bd68eea06e9f5957a39c69d3f4627" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rb</td><td>Robust 核函数模式，参考 <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15" title="Robust 核函数">rm::RobustMode</a> ，选择 <code><a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" title="L2 核函数">rm::RobustMode::L2</a></code> 时退化为 <code><a class="el" href="#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>lsq_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
   </table>
   </dd>

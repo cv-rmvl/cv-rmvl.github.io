@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['插值多项式_0',['插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md177',1,'1. Lagrange 插值多项式'],['../d8/d57/tutorial_modules_interpolation.html#autotoc_md178',1,'2. Newton 插值多项式']]]
+  ['按钮示例_0',['按钮示例',['../d5/d72/tutorial_document.html#autotoc_md135',1,'']]],
+  ['按钮_1',['4. 按钮',['../d5/d72/tutorial_document.html#autotoc_md134',1,'']]]
 ];

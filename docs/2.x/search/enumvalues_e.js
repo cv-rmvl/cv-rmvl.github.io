@@ -3,7 +3,7 @@ var searchData=
   ['rad_0',['RAD',['../d5/d6c/group__algorithm.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
   ['red_1',['RED',['../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469',1,'rm']]],
   ['ridders_2',['Ridders',['../d2/d62/group__algorithm__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6',1,'rm']]],
-  ['right_3',['RIGHT',['../d6/d59/group__types.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
+  ['right_3',['RIGHT',['../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
   ['rmvl_5fbaddynamictype_4',['RMVL_BadDynamicType',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba59242f30afedb168324b811aed9f446c',1,'util.hpp']]],
   ['rmvl_5fstsassert_5',['RMVL_StsAssert',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaeb1914b1d3bd797296feba9b74cf6c2',1,'util.hpp']]],
   ['rmvl_5fstsbacktrace_6',['RMVL_StsBackTrace',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4badbb04baae7a4aab87d74dfbddf48a828',1,'util.hpp']]],

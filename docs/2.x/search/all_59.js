@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['多元函数梯度示例代码_0',['3.2 多元函数梯度示例代码',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md147',1,'']]],
-  ['多态部署库_1',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]],
-  ['多相机_2',['3.2 多相机',['../df/d2c/tutorial_modules_camera.html#autotoc_md251',1,'']]],
-  ['多维无约束最优化方法_3',['多维无约束最优化方法',['../d3/d5c/tutorial_modules_fminunc.html',1,'tutorial_table_of_content_modules']]]
+  ['外推原理_0',['2. Richardson 外推原理',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md142',1,'']]],
+  ['外推算法总结_1',['2.2 外推算法总结',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md144',1,'']]],
+  ['外部中断、回调函数_2',['3.2 外部中断、回调函数',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md89',1,'']]]
 ];

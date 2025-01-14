@@ -7,5 +7,6 @@ var searchData=
   ['serverview_4',['ServerView',['../d0/d24/classrm_1_1ServerView.html',1,'rm']]],
   ['spirunepredictor_5',['SpiRunePredictor',['../d0/d05/classrm_1_1SpiRunePredictor.html',1,'rm']]],
   ['spirunepredictorparam_6',['SpiRunePredictorParam',['../d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html',1,'rm::para']]],
-  ['subscriber_7',['Subscriber',['../d4/dea/classrm_1_1Subscriber.html',1,'rm']]]
+  ['stateinfo_7',['StateInfo',['../d3/da8/classrm_1_1StateInfo.html',1,'rm']]],
+  ['subscriber_8',['Subscriber',['../d4/dea/classrm_1_1Subscriber.html',1,'rm']]]
 ];

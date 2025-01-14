@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['代码块_0',['3. 代码块',['../d5/d72/tutorial_document.html#autotoc_md133',1,'']]],
-  ['代码生成_1',['3. C++ 代码生成',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md293',1,'']]]
+  ['从_20xml_20配置_20opc_20ua_0',['4.2 从 XML 配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'']]]
 ];

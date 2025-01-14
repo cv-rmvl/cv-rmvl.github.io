@@ -478,14 +478,13 @@ $(function(){ initResizable(false); });
 <div class="line">        <span class="keywordflow">switch</span> (pattern)</div>
 <div class="line">        {</div>
 <div class="line">        <span class="keywordflow">case</span> CHESSBOARD:</div>
-<div class="line">            found = findChessboardCorners(viewGray, boardSize, pointbuf,</div>
-<div class="line">                                          cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FAST_CHECK | cv::CALIB_CB_NORMALIZE_IMAGE);</div>
+<div class="line">            found = findChessboardCorners(viewGray, boardSize, pointbuf);</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> CIRCLES_GRID:</div>
-<div class="line">            found = findCirclesGrid(viewGray, boardSize, pointbuf, cv::CALIB_CB_SYMMETRIC_GRID + cv::CALIB_CB_CLUSTERING);</div>
+<div class="line">            found = findCirclesGrid(viewGray, boardSize, pointbuf);</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">case</span> ASYMMETRIC_CIRCLES_GRID:</div>
-<div class="line">            found = findCirclesGrid(viewGray, boardSize, pointbuf, cv::CALIB_CB_ASYMMETRIC_GRID + cv::CALIB_CB_CLUSTERING);</div>
+<div class="line">            found = findCirclesGrid(viewGray, boardSize, pointbuf, cv::CALIB_CB_ASYMMETRIC_GRID);</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">default</span>:</div>
 <div class="line">            <span class="keywordflow">return</span> fprintf(stderr, <span class="stringliteral">&quot;Unknown pattern type\n&quot;</span>), -1;</div>

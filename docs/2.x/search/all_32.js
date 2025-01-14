@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['何为责任链模式_0',['1. 何为责任链模式',['../d2/de3/tutorial_extra_upper_process.html#autotoc_md78',1,'']]]
+  ['低耦合逻辑_0',['低耦合逻辑',['../d1/dfb/intro.html#intro_low_coupled_logic',1,'']]]
 ];

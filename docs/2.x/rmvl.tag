@@ -315,7 +315,6 @@
     <filename>d8/d36/combo_8h.html</filename>
     <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/math.hpp</includes>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">rmvl/camera/camutils.hpp</includes>
-    <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">rmvl/types.hpp</includes>
     <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/io.hpp</includes>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">rmvl/feature/feature.h</includes>
     <class kind="class">rm::combo</class>
@@ -430,6 +429,7 @@
     <filename>d6/dd8/decider_2gyro__decider_8h.html</filename>
     <includes id="d3/d70/decider_8h" name="decider.h" local="yes" import="no" module="no" objc="no">decider.h</includes>
     <includes id="dc/ded/tracker_8h" name="tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/tracker.h</includes>
+    <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" import="no" module="no" objc="no">rmvl/combo/armor.h</includes>
     <class kind="class">rm::GyroDecider</class>
     <namespace>rm</namespace>
   </compound>
@@ -926,8 +926,8 @@
     <name>types.hpp</name>
     <path>rmvl/</path>
     <filename>dd/de3/types_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
-    <class kind="struct">rm::RMStatus</class>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::StateInfo</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1649,7 +1649,6 @@
     <path>rmvl/opcua/</path>
     <filename>df/de1/object_8hpp.html</filename>
     <includes id="d7/d9c/method_8hpp" name="method.hpp" local="yes" import="no" module="no" objc="no">method.hpp</includes>
-    <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" import="no" module="no" objc="no">variable.hpp</includes>
     <class kind="class">rm::ObjectType</class>
     <class kind="class">rm::Object</class>
     <namespace>rm</namespace>
@@ -1706,7 +1705,6 @@
     <name>variable.hpp</name>
     <path>rmvl/opcua/</path>
     <filename>da/d0e/variable_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <includes id="dc/d5f/utilities_8hpp" name="utilities.hpp" local="yes" import="no" module="no" objc="no">utilities.hpp</includes>
     <class kind="class">rm::VariableType</class>
     <class kind="class">rm::Variable</class>
@@ -2804,11 +2802,18 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>RMStatus</type>
-      <name>type</name>
+      <type>const StateInfo &amp;</type>
+      <name>state</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a9cd0073be4746d23f92c215ca454d368</anchor>
+      <anchor>a0dcbd79c52c84dbed01fdd71030a6202</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>StateInfo &amp;</type>
+      <name>state</name>
+      <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
+      <anchor>a9ed12512646ee1528c3e6a87ed1138f7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -2895,10 +2900,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>RMStatus</type>
-      <name>_type</name>
+      <type>StateInfo</type>
+      <name>_state</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>afb8d92a1f6cbe52ee288c98a20c54a04</anchor>
+      <anchor>a68a73d70328b6ddf8eea9bb139c045f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -3171,8 +3176,8 @@
       <type>virtual DecideInfo</type>
       <name>decide</name>
       <anchorfile>d9/d29/classrm_1_1decider.html</anchorfile>
-      <anchor>aff2697cec8082249650c431ea37303d7</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, RMStatus flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info)=0</arglist>
+      <anchor>abe1f602915a0ef9c38ae1bbec9473837</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3861,11 +3866,18 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const RMStatus &amp;</type>
-      <name>type</name>
+      <type>const StateInfo &amp;</type>
+      <name>state</name>
       <anchorfile>df/db7/classrm_1_1feature.html</anchorfile>
-      <anchor>afa40aa598ec8f50fde24f90b9270c271</anchor>
+      <anchor>a2e50ebd60f8a366cee2ab3203919b074</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>StateInfo &amp;</type>
+      <name>state</name>
+      <anchorfile>df/db7/classrm_1_1feature.html</anchorfile>
+      <anchor>a684183c78220a1c5939354f9eac3c4c2</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>float</type>
@@ -3903,10 +3915,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>rm::RMStatus</type>
-      <name>_type</name>
+      <type>rm::StateInfo</type>
+      <name>_state</name>
       <anchorfile>df/db7/classrm_1_1feature.html</anchorfile>
-      <anchor>aa62f8ba64d1d97f02b06f3489b69ee6d</anchor>
+      <anchor>ac0376cd0bccf0be1b248d4466cc75f37</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4362,11 +4374,18 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const RMStatus &amp;</type>
-      <name>type</name>
+      <type>const StateInfo &amp;</type>
+      <name>state</name>
       <anchorfile>d6/d6c/classrm_1_1group.html</anchorfile>
-      <anchor>ad5d29e0cc758c8c3dcb93f8493e8beeb</anchor>
+      <anchor>a72c269819ea03b4b80b89d3504e800eb</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>StateInfo &amp;</type>
+      <name>state</name>
+      <anchorfile>d6/d6c/classrm_1_1group.html</anchorfile>
+      <anchor>a68f205998e7809aa6238579ef0cccd73</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>std::vector&lt; tracker::ptr &gt;</type>
@@ -4397,10 +4416,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>RMStatus</type>
-      <name>_type</name>
+      <type>StateInfo</type>
+      <name>_state</name>
       <anchorfile>d6/d6c/classrm_1_1group.html</anchorfile>
-      <anchor>a890c929fe7c5b5b05e6f1a7829217f1c</anchor>
+      <anchor>a509ee3d75786105361995db1ec6c6b58</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4505,8 +4524,8 @@
       <type>DecideInfo</type>
       <name>decide</name>
       <anchorfile>dc/d0b/classrm_1_1GyroDecider.html</anchorfile>
-      <anchor>a48fe3fc6d90b7882823776659ffe4dab</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, RMStatus flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>ad02fbd7d38677cebf18fec5029cbbe53</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; GyroDecider &gt;</type>
@@ -7696,66 +7715,6 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::RMStatus</name>
-    <filename>d0/d01/structrm_1_1RMStatus.html</filename>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a763a2e6a3e3aa852bec44f04540c9bc6</anchor>
-      <arglist>(const RMStatus &amp;val) const</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::string</type>
-      <name>to_string</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a063a552cb0b215c8a63851c3a3e4f8c7</anchor>
-      <arglist>(RobotType type)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::string</type>
-      <name>to_string</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a2fdbbd0d92a5adfb7a88d147552d5fe5</anchor>
-      <arglist>(TagType type)</arglist>
-    </member>
-    <member kind="variable">
-      <type>ArmorSizeType</type>
-      <name>ArmorSizeTypeID</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a87ee6e0c08b3a8e3b74959fc42ce7ed0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>RuneType</type>
-      <name>RuneTypeID</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a3122d79ab5661910f0af7e0f7929a9b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>CompensateType</type>
-      <name>CompensateTypeID</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a7a9b7988448c60f9d48c9ceab08ed9a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>RobotType</type>
-      <name>RobotTypeID</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>a2a4b3c10517eede489cbb1f4458c21a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>TagType</type>
-      <name>TagTypeID</name>
-      <anchorfile>d0/d01/structrm_1_1RMStatus.html</anchorfile>
-      <anchor>ae3afdb9ba385e55462e18d67b0b92ad5</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
     <name>rm::Rotation</name>
     <filename>d1/d5f/structrm_1_1Rotation.html</filename>
     <member kind="variable">
@@ -8005,8 +7964,8 @@
       <type>DecideInfo</type>
       <name>decide</name>
       <anchorfile>df/de5/classrm_1_1RuneDecider.html</anchorfile>
-      <anchor>a1b7b022f94f9ccc4a893a67191861ee1</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, RMStatus flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>a70fd768995865f3d1250f04f5861a82a</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; RuneDecider &gt;</type>
@@ -8872,8 +8831,8 @@
       <type>bool</type>
       <name>read</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
-      <anchor>abc34b3638ace7de15fa517f926988d85</anchor>
-      <arglist>(unsigned char head_flag, unsigned char tail_flag, Tp &amp;data)</arglist>
+      <anchor>a6a84f3be4561ecd69896c6d17273e2d5</anchor>
+      <arglist>(uint8_t head_flag, uint8_t tail_flag, Tp &amp;data)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -9329,6 +9288,94 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::StateInfo</name>
+    <filename>d3/da8/classrm_1_1StateInfo.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>StateInfo</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a63409242fc794b1d93a8441e9373add1</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a7d97e04dcef9396de38d2a3811730ba1</anchor>
+      <arglist>(std::string_view key, double val)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a932caf0ad9ca7b3e149f21e9ac1cfe3e</anchor>
+      <arglist>(std::string_view key, std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>remove</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>ac328d1c5b935f6729d15875fed86b4ca</anchor>
+      <arglist>(std::string_view key)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a47a14ea7c672ae76a05c2f8d3861477b</anchor>
+      <arglist>(std::string_view key) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>ab15a0b3beb80ca4dd2cf93900b1818df</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a2f02af4968074b164073942863baf331</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const StateType &amp;</type>
+      <name>at</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a7ef38297dee180a8ed0e6512a728eb5f</anchor>
+      <arglist>(std::string_view key) const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>at_numeric</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a285447486748ccc220adbfbffe1071d1</anchor>
+      <arglist>(std::string_view key) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>at_string</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>abbb9262a5adcc1b3756a465c7f3dc587</anchor>
+      <arglist>(std::string_view key) const</arglist>
+    </member>
+    <member kind="function">
+      <type>StateType &amp;</type>
+      <name>at</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a2dea3bcd1beb046939ef35105c6614b0</anchor>
+      <arglist>(std::string_view key)</arglist>
+    </member>
+    <member kind="function">
+      <type>StateType &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
+      <anchor>a65b6dfdf9da7d246b164103e3004d51a</anchor>
+      <arglist>(std::string_view key) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Subscriber</name>
     <filename>d4/dea/classrm_1_1Subscriber.html</filename>
     <base>rm::Server</base>
@@ -9376,8 +9423,8 @@
       <type>static ptr</type>
       <name>make_feature</name>
       <anchorfile>de/d29/classrm_1_1Tag.html</anchorfile>
-      <anchor>a42d27b944d88f9a62868c9619de4ddc1</anchor>
-      <arglist>(const std::vector&lt; cv::Point2f &gt; &amp;corners, TagType type)</arglist>
+      <anchor>aa914550e0d7eb6066267791bf7eac89e</anchor>
+      <arglist>(const std::vector&lt; cv::Point2f &gt; &amp;corners, char type)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -9593,11 +9640,18 @@
       <arglist>(size_t _n) const</arglist>
     </member>
     <member kind="function">
-      <type>RMStatus</type>
-      <name>type</name>
+      <type>const StateInfo &amp;</type>
+      <name>state</name>
       <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
-      <anchor>aecdcbaaf8e05c75bbee64f0a23bd3ebb</anchor>
+      <anchor>a5d02a1d965dee5cb3918d1234f4e91d4</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>StateInfo &amp;</type>
+      <name>state</name>
+      <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
+      <anchor>abb6af5f000c7193263592066840ef4d7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>float</type>
@@ -9670,10 +9724,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>RMStatus</type>
-      <name>_type</name>
+      <type>StateInfo</type>
+      <name>_state</name>
       <anchorfile>d6/dd2/classrm_1_1tracker.html</anchorfile>
-      <anchor>a57d1593234ff60363bcf8fb91d4e524f</anchor>
+      <anchor>abe9165591bf205d7a18b0b50d2812336</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -9854,8 +9908,8 @@
       <type>DecideInfo</type>
       <name>decide</name>
       <anchorfile>de/dfc/classrm_1_1TranslationDecider.html</anchorfile>
-      <anchor>a63a99759e307615431a02c5558aa65ef</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, RMStatus flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>a1a8af79f57be8c3b60a12e8f875a322b</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; TranslationDecider &gt;</type>
@@ -10446,7 +10500,6 @@
     <class kind="struct">rm::PublishedDataSet</class>
     <class kind="class">rm::Publisher</class>
     <class kind="class">rm::RaHeap</class>
-    <class kind="struct">rm::RMStatus</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="class">rm::Rune</class>
     <class kind="class">rm::RuneCenter</class>
@@ -10466,6 +10519,7 @@
     <class kind="class">rm::ServerTimer</class>
     <class kind="class">rm::ServerView</class>
     <class kind="class">rm::SpiRunePredictor</class>
+    <class kind="class">rm::StateInfo</class>
     <class kind="class">rm::Subscriber</class>
     <class kind="class">rm::Tag</class>
     <class kind="class">rm::TagDetector</class>
@@ -10795,10 +10849,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::function&lt; std::valarray&lt; double &gt;(const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>FuncNds</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga9cb547f55dfff0fc8a448f00fe443f42</anchor>
+      <anchor>ga35c0b85496608bc60a43229ab4835aee</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -10869,6 +10923,13 @@
       <name>DataSourceWrite</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::variant&lt; double, std::string &gt;</type>
+      <name>StateType</name>
+      <anchorfile>d6/d59/group__types.html</anchorfile>
+      <anchor>gaedfc12b5ad98570cda08ea99035e7d14</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -11245,94 +11306,28 @@
     <member kind="enumeration">
       <type></type>
       <name>ArmorSizeType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
       <anchor>ga4c8a071e633e74da2404d335e8e62bb7</anchor>
       <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">SMALL</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">BIG</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>RuneType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga083deed637a993d54f06a047224c9b79</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2">INACTIVE</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115">ACTIVE</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>TagType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga53b2ed651ce89a5884af7310fb1a24d6</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1">NUM_0</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4">NUM_1</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6">NUM_2</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851">NUM_3</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c">NUM_4</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501">NUM_5</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba">NUM_6</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">NUM_7</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">NUM_8</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">NUM_9</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">CHAR_A</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">CHAR_B</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">CHAR_C</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">CHAR_D</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">CHAR_E</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">CHAR_F</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">CHAR_G</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">CHAR_H</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">CHAR_I</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">CHAR_J</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">CHAR_K</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">CHAR_L</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">CHAR_M</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">CHAR_N</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">CHAR_O</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">CHAR_P</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">CHAR_Q</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">CHAR_R</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">CHAR_S</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">CHAR_T</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">CHAR_U</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">CHAR_V</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">CHAR_W</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">CHAR_X</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">CHAR_Y</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">CHAR_Z</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">SMALL</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">BIG</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>RobotType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
       <anchor>gacd7f1723e9b020d34b5bbc041faaea89</anchor>
       <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">HERO</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">ENGINEER</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">INFANTRY_3</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">INFANTRY_4</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">INFANTRY_5</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">OUTPOST</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">BASE</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">SENTRY</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>CompensateType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">HERO</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">ENGINEER</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">INFANTRY_3</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">INFANTRY_4</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">INFANTRY_5</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">OUTPOST</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">BASE</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">SENTRY</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -11342,6 +11337,18 @@
       <arglist></arglist>
       <enumvalue file="d5/d20/namespacerm.html" anchor="ac20f060cfa58609d88a9f385a18fe461af4376ca853eba76460caad39d7b201af">LOW_ROT_SPEED</enumvalue>
       <enumvalue file="d5/d20/namespacerm.html" anchor="ac20f060cfa58609d88a9f385a18fe461a0cd3be325d6551bd163e4e12bff4cc81">HIGH_ROT_SPEED</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>CompensateType</name>
+      <anchorfile>d7/d4f/group__compensator.html</anchorfile>
+      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
+      <arglist></arglist>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
     </member>
     <member kind="enumvalue">
       <name>POS_X</name>
@@ -11625,15 +11632,15 @@
       <type>std::valarray&lt; double &gt;</type>
       <name>lsqnonlin</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga661bd68eea06e9f5957a39c69d3f4627</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>gab85704ec7a37e31de0644b99a6286173</anchor>
+      <arglist>(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
       <type>std::valarray&lt; double &gt;</type>
       <name>lsqnonlinRKF</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga4e80261bbc3a2979ec29c6dee4dd73b2</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga5a7f8fec980372cfd29fd21d37721ef1</anchor>
+      <arglist>(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
       <type>cv::Mat</type>
@@ -11781,6 +11788,34 @@
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>gac9cd15abdd9c0687cee73ce332008c8d</anchor>
       <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>gae5db6761905cadd74189be579603ce26</anchor>
+      <arglist>(ArmorSizeType armor_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArmorSizeType</type>
+      <name>to_armor_size_type</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>gaa56f2513c41171b99e2eec5b8cfcd8d2</anchor>
+      <arglist>(const StateType &amp;tp)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>ga4231bd7d77e88f22973988e853c0bd9f</anchor>
+      <arglist>(RobotType robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotType</type>
+      <name>to_robot_type</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>ga31ca338209db90739eabc534dabdcad4</anchor>
+      <arglist>(const StateType &amp;tp)</arglist>
     </member>
     <member kind="variable">
       <type>constexpr float</type>
@@ -12516,6 +12551,27 @@
       <anchorfile>d0/d17/group__core__str.html</anchorfile>
       <anchor>ga6dbfb3a75e7aa6352b02002438c5918c</anchor>
       <arglist>(const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>strip</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gabecfe8c875f8bb2a439b66acbdef9ab3</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>lower</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gae46127fdf7d9a6deca77b3aee4445166</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>upper</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>ga603f0fec4d9dc80c6be715ef36fa6a9a</anchor>
+      <arglist>(std::string_view str)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -13301,10 +13357,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::vector&lt; std::function&lt; double(const std::valarray&lt; double &gt; &amp;)&gt; &gt;</type>
+      <type>std::function&lt; std::valarray&lt; double &gt;(const std::valarray&lt; double &gt; &amp;)&gt;</type>
       <name>rm::FuncNds</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga9cb547f55dfff0fc8a448f00fe443f42</anchor>
+      <anchor>ga35c0b85496608bc60a43229ab4835aee</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -13393,15 +13449,15 @@
       <type>std::valarray&lt; double &gt;</type>
       <name>rm::lsqnonlin</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga661bd68eea06e9f5957a39c69d3f4627</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
+      <anchor>gab85704ec7a37e31de0644b99a6286173</anchor>
+      <arglist>(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</arglist>
     </member>
     <member kind="function">
       <type>std::valarray&lt; double &gt;</type>
       <name>rm::lsqnonlinRKF</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
-      <anchor>ga4e80261bbc3a2979ec29c6dee4dd73b2</anchor>
-      <arglist>(const FuncNds &amp;funcs, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
+      <anchor>ga5a7f8fec980372cfd29fd21d37721ef1</anchor>
+      <arglist>(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -14021,6 +14077,27 @@
       <anchor>ga6dbfb3a75e7aa6352b02002438c5918c</anchor>
       <arglist>(const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</arglist>
     </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>rm::str::strip</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gabecfe8c875f8bb2a439b66acbdef9ab3</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>rm::str::lower</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>gae46127fdf7d9a6deca77b3aee4445166</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>rm::str::upper</name>
+      <anchorfile>d0/d17/group__core__str.html</anchorfile>
+      <anchor>ga603f0fec4d9dc80c6be715ef36fa6a9a</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>core_io</name>
@@ -14587,100 +14664,15 @@
   </compound>
   <compound kind="group">
     <name>types</name>
-    <title>视觉功能相关的类型系统</title>
+    <title>状态类型系统</title>
     <filename>d6/d59/group__types.html</filename>
-    <class kind="struct">rm::RMStatus</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::ArmorSizeType</name>
+    <class kind="class">rm::StateInfo</class>
+    <member kind="typedef">
+      <type>std::variant&lt; double, std::string &gt;</type>
+      <name>rm::StateType</name>
       <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga4c8a071e633e74da2404d335e8e62bb7</anchor>
+      <anchor>gaedfc12b5ad98570cda08ea99035e7d14</anchor>
       <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">SMALL</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">BIG</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::RuneType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga083deed637a993d54f06a047224c9b79</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a6b273343c454f9c53dcfc9c4ccf171d2">INACTIVE</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga083deed637a993d54f06a047224c9b79a18ff74f43da410c5529f7d6fca84f115">ACTIVE</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::TagType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga53b2ed651ce89a5884af7310fb1a24d6</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a0337623d4049d913b2cc509174a59ba1">NUM_0</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a1eeacfec5e7988f11671c829698fc8b4">NUM_1</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aaa0af80237c5fd531521116e14de59c6">NUM_2</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aa4e4e51ea57e692332c72d32428b3851">NUM_3</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a990299ddc3e16ad13c9fe49337cdb53c">NUM_4</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a02addb75153754910d8344f8bfa06501">NUM_5</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a3b0a1f52347b7d7dc426c49536e3edba">NUM_6</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6af45fde1eaac63c5a55cf87e584f5e6bb">NUM_7</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ade5947451686ebff12b3b3feb15043f4">NUM_8</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aad6039189d8fe566b7dfe30ea70f8b4d">NUM_9</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad0f71a7556f684105699da34f4fa3fc1">CHAR_A</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7fa61ff7713023af30a4334d56871daa">CHAR_B</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6adfa0cec991013ea275a93447d5733426">CHAR_C</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a48e6635135aa1ce46690d788d5bb9dfc">CHAR_D</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5eafdd69dab53fffe4f2574507b01b37">CHAR_E</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2abce8311e1b8daa0a5ab103beb3bcfe">CHAR_F</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a08303312b79925efc4a3752f0dd1100c">CHAR_G</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2fe742ce08ee538caa470dc86c07630e">CHAR_H</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a343e118d44055eb1dc0a7a5a57cc49a0">CHAR_I</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a570db920ca903f98b44817e576c3d44f">CHAR_J</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a6fd40774c75cabfae885de563a70a6a4">CHAR_K</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab1a90eef3b4ac85b89daf6da2465a7ee">CHAR_L</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a494bff9388fb87fbba82f13a36134ac5">CHAR_M</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a5c52906e06a43d69e1b785b008877fb5">CHAR_N</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8291c3c6fc07dc5dabd6824b028887c7">CHAR_O</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a64c6d9ba79f44d9c411deb39e96aaabd">CHAR_P</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6abc1dbeffb36a9635154216a3e7cf4b4d">CHAR_Q</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad6469edc76b11d43c369a50467dedfcc">CHAR_R</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a7e7271634c0f4bd1c9522b353d56e881">CHAR_S</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ad5ec54d89ae843661bc7310043a9c3be">CHAR_T</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6ab6459fa9913f3575b512496e06772670">CHAR_U</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a8d81bc4671c93b680b555b671d2fe66f">CHAR_V</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6aed64411dc7778c1049346942a413a8d7">CHAR_W</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a992f9bd39c5cf6d07c49901f3ed5260d">CHAR_X</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a2786cb9725c2bae2b63034054608003b">CHAR_Y</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga53b2ed651ce89a5884af7310fb1a24d6a27d4977c39c33451a68cfaa8bb5222ea">CHAR_Z</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::RobotType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>gacd7f1723e9b020d34b5bbc041faaea89</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">HERO</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">ENGINEER</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">INFANTRY_3</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">INFANTRY_4</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">INFANTRY_5</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">OUTPOST</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">BASE</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">SENTRY</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::CompensateType</name>
-      <anchorfile>d6/d59/group__types.html</anchorfile>
-      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
-      <arglist></arglist>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
-      <enumvalue file="d6/d59/group__types.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
     </member>
   </compound>
   <compound kind="group">
@@ -14790,6 +14782,60 @@
     <title>装甲模块特征组合</title>
     <filename>db/d22/group__combo__armor.html</filename>
     <class kind="class">rm::Armor</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::ArmorSizeType</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>ga4c8a071e633e74da2404d335e8e62bb7</anchor>
+      <arglist></arglist>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">SMALL</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">BIG</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::RobotType</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>gacd7f1723e9b020d34b5bbc041faaea89</anchor>
+      <arglist></arglist>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36">HERO</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a874c43b50a3e67846cc79ef44c4d681e">ENGINEER</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89aa5f08b28c24e393251fa51a723ca7450">INFANTRY_3</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a9b83fdad61e21ef3aff6de9a19e85f07">INFANTRY_4</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a5076b77dfc3c2b5ced0b267e754b97a3">INFANTRY_5</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331">OUTPOST</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89ae7b1a5c82772e0e055096008cb9883ef">BASE</enumvalue>
+      <enumvalue file="db/d22/group__combo__armor.html" anchor="ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea">SENTRY</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::to_string</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>gae5db6761905cadd74189be579603ce26</anchor>
+      <arglist>(ArmorSizeType armor_size)</arglist>
+    </member>
+    <member kind="function">
+      <type>ArmorSizeType</type>
+      <name>rm::to_armor_size_type</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>gaa56f2513c41171b99e2eec5b8cfcd8d2</anchor>
+      <arglist>(const StateType &amp;tp)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::to_string</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>ga4231bd7d77e88f22973988e853c0bd9f</anchor>
+      <arglist>(RobotType robot)</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotType</type>
+      <name>rm::to_robot_type</name>
+      <anchorfile>db/d22/group__combo__armor.html</anchorfile>
+      <anchor>ga31ca338209db90739eabc534dabdcad4</anchor>
+      <arglist>(const StateType &amp;tp)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>combo_rune</name>
@@ -15011,6 +15057,18 @@
     <subgroup>gyro_compensator</subgroup>
     <class kind="struct">rm::CompensateInfo</class>
     <class kind="class">rm::compensator</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::CompensateType</name>
+      <anchorfile>d7/d4f/group__compensator.html</anchorfile>
+      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
+      <arglist></arglist>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
+      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
+    </member>
   </compound>
   <compound kind="group">
     <name>gravity_compensator</name>
@@ -15615,10 +15673,10 @@
     <title>串口通信模块</title>
     <filename>d3/da4/tutorial_modules_serial.html</filename>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/serial.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2serial</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="使用">serialport_how_to_use</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="初始化">serialport_init</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="数据 I/O">serialport_io</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="链路层协议">serialport_protocol</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2. 使用">serialport_how_to_use</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.1 初始化">serialport_init</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.2 数据 I/O">serialport_io</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.3 链路层协议">serialport_protocol</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_modules</name>

@@ -30,5 +30,5 @@ var searchData=
   ['func1ds_27',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
   ['func_5fiteration_2emd_28',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
   ['funcnd_29',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
-  ['funcnds_30',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga9cb547f55dfff0fc8a448f00fe443f42',1,'rm']]]
+  ['funcnds_30',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee',1,'rm']]]
 ];

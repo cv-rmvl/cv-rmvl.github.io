@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['对象_0',['2.4 对象',['../db/dba/tutorial_modules_opcua.html#autotoc_md266',1,'']]]
+  ['客户端_0',['2. 服务器/客户端',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_server_client',1,'']]]
 ];

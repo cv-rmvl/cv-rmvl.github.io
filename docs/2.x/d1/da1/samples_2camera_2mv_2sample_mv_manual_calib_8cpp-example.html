@@ -237,7 +237,8 @@ $(function(){ initResizable(false); });
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (!capture.read(frame))</div>
 <div class="line">            <span class="keywordflow">continue</span>;</div>
-<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (frame.type() == CV_8UC1)</div>
+<div class="line">            cv::cvtColor(frame, frame, cv::COLOR_GRAY2BGR);</div>
 <div class="line">        <span class="comment">// 图像矫正</span></div>
 <div class="line">        cv::Mat map1, map2;</div>
 <div class="line">        initUndistortRectifyMap(cameraMatrix, distCoeffs, cv::Mat(), cameraMatrix, frame.size(), CV_32FC1, map1, map2);</div>
@@ -273,11 +274,11 @@ $(function(){ initResizable(false); });
 <div class="line">                   cameraMatrix(0, 0), cameraMatrix(0, 1), cameraMatrix(0, 2),</div>
 <div class="line">                   cameraMatrix(1, 0), cameraMatrix(1, 1), cameraMatrix(1, 2),</div>
 <div class="line">                   cameraMatrix(2, 0), cameraMatrix(2, 1), cameraMatrix(2, 2));</div>
-<div class="line">            printf(<span class="stringliteral">&quot;               ┌ %-8.5g ┐\n&quot;</span></div>
-<div class="line">                   <span class="stringliteral">&quot;               │ %-8.5g │\n&quot;</span></div>
+<div class="line">            printf(<span class="stringliteral">&quot;                ┌ %-8.5g ┐\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;                │ %-8.5g │\n&quot;</span></div>
 <div class="line">                   <span class="stringliteral">&quot; -- distCoeffs: │ %-8.5g │\n&quot;</span></div>
-<div class="line">                   <span class="stringliteral">&quot;               │ %-8.5g │\n&quot;</span></div>
-<div class="line">                   <span class="stringliteral">&quot;               └ %-8.5g ┘\n&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;                │ %-8.5g │\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;                └ %-8.5g ┘\n&quot;</span>,</div>
 <div class="line">                   distCoeffs(0), distCoeffs(1), distCoeffs(2), distCoeffs(3), distCoeffs(4));</div>
 <div class="line">        }</div>
 <div class="line">    }</div>

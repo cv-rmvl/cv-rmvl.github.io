@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o_0',['数据 I/O',['../d3/da4/tutorial_modules_serial.html#serialport_io',1,'']]],
+  ['o_0',['2.2 数据 I/O',['../d3/da4/tutorial_modules_serial.html#serialport_io',1,'']]],
   ['oargs_1',['oargs',['../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583',1,'rm::Method']]],
   ['object_2',['Object',['../d8/d9b/classrm_1_1Object.html',1,'rm::Object'],['../d8/d9b/classrm_1_1Object.html#aa230f549c885a9f7a4f9d2786c370fd6',1,'rm::Object::Object()']]],
   ['object_2ehpp_3',['object.hpp',['../df/de1/object_8hpp.html',1,'']]],
@@ -14,7 +14,7 @@ var searchData=
   ['onnxnet_11',['OnnxNet',['../dc/d1c/classrm_1_1OnnxNet.html',1,'rm::OnnxNet'],['../dc/d1c/classrm_1_1OnnxNet.html#a6dbd13d7a6b4a26a4296da92809dea81',1,'rm::OnnxNet::OnnxNet()']]],
   ['onnxruntime_12',['1.4 onnxruntime',['../d1/db4/tutorial_install.html#install_onnxruntime',1,'']]],
   ['onnxruntime_20多态部署库_13',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]],
-  ['opc_20ua_14',['OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'工业自动化通信协议 OPC UA'],['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'4.2 从 XML 配置 OPC UA'],['../db/dba/tutorial_modules_opcua.html#autotoc_md274',1,'4.2.2 可视化配置 OPC UA']]],
+  ['opc_20ua_14',['OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'工业自动化通信协议 OPC UA'],['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'4.2 从 XML 配置 OPC UA'],['../db/dba/tutorial_modules_opcua.html#autotoc_md276',1,'4.2.2 可视化配置 OPC UA']]],
   ['opc_20ua_20是什么_15',['1.1 OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_what',1,'']]],
   ['opc_20ua_20模块_16',['OPC UA 模块',['../d4/de5/tutorial_py_opcua.html',1,'适用于 Python 的 OPC UA 模块'],['../d3/da8/group__opcua.html',1,'OPC UA 模块']]],
   ['opcua_20的参数模块_17',['opcua 的参数模块',['../da/dd3/group__para__opcua.html',1,'']]],
@@ -42,9 +42,9 @@ var searchData=
   ['operator_2d_39',['operator-',['../d5/d6c/group__algorithm.html#gab25b059e83d92ca52c5191f32cf93b6e',1,'rm::operator-(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)'],['../d5/d6c/group__algorithm.html#ga389ef0083eef431267d7c699425a7936',1,'rm::operator-(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)']]],
   ['operator_3c_3c_40',['operator&lt;&lt;',['../d4/d98/classrm_1_1SerialPort.html#a6ea46070225797fc3a68ab3ece6ddd5b',1,'rm::SerialPort::operator&lt;&lt;()'],['../da/d82/classrm_1_1PipeServer.html#adf4069a5cd9c49df5fe871c7d8c4bb1a',1,'rm::PipeServer::operator&lt;&lt;()'],['../d8/d8c/classrm_1_1PipeClient.html#a8b3a4781234808df09dcfefa942e602b',1,'rm::PipeClient::operator&lt;&lt;()']]],
   ['operator_3d_41',['operator=',['../d4/d98/classrm_1_1SerialPort.html#af0bc5a5a731859ba51739b095b3e34c2',1,'rm::SerialPort::operator=(const SerialPort &amp;)=delete'],['../d4/d98/classrm_1_1SerialPort.html#ab93f2b6ee236109d708f2305ba5ee013',1,'rm::SerialPort::operator=(SerialPort &amp;&amp;)=default'],['../da/d82/classrm_1_1PipeServer.html#abc81279dae5cf346a0d748b36f0219fe',1,'rm::PipeServer::operator=(const PipeServer &amp;)=delete'],['../da/d82/classrm_1_1PipeServer.html#aa82b5be4061a5b73329cfee8f8358d3e',1,'rm::PipeServer::operator=(PipeServer &amp;&amp;)=default'],['../d8/d8c/classrm_1_1PipeClient.html#a919bdb1af76b81c7bb0deba17bab4fb4',1,'rm::PipeClient::operator=(const PipeClient &amp;)=delete'],['../d8/d8c/classrm_1_1PipeClient.html#ad37128bce201f9aa7c3a65182ec1fb42',1,'rm::PipeClient::operator=(PipeClient &amp;&amp;)=default'],['../d0/da3/classrm_1_1Timer.html#af9c597b6f2eb19f52cd551d846e8ebbe',1,'rm::Timer::operator=()'],['../df/d48/classrm_1_1ClientView.html#af38da16798d10461cef77c6c17d79063',1,'rm::ClientView::operator=()'],['../d0/d24/classrm_1_1ServerView.html#a7b910acbdb615e57ce54c8f49278ffe5',1,'rm::ServerView::operator=()'],['../db/d81/classrm_1_1NodeId.html#ae39f95f2fbf912aea0dc36d14c058a21',1,'rm::NodeId::operator=(const NodeId &amp;nd)'],['../db/d81/classrm_1_1NodeId.html#ac05fa9cb0217f2416bc9e56bf52e2cd5',1,'rm::NodeId::operator=(NodeId &amp;&amp;nd) noexcept']]],
-  ['operator_3d_3d_42',['operator==',['../db/d81/classrm_1_1NodeId.html#a1cefd03db8d381991cfb6aa4e65d788d',1,'rm::NodeId::operator==()'],['../df/db8/classrm_1_1Variable.html#aa90cfcfc195bed939c892126c4313784',1,'rm::Variable::operator==()'],['../d0/d01/structrm_1_1RMStatus.html#a763a2e6a3e3aa852bec44f04540c9bc6',1,'rm::RMStatus::operator==()']]],
+  ['operator_3d_3d_42',['operator==',['../db/d81/classrm_1_1NodeId.html#a1cefd03db8d381991cfb6aa4e65d788d',1,'rm::NodeId::operator==()'],['../df/db8/classrm_1_1Variable.html#aa90cfcfc195bed939c892126c4313784',1,'rm::Variable::operator==()']]],
   ['operator_3e_3e_43',['operator&gt;&gt;',['../da/d1d/classrm_1_1GalaxyCamera.html#a6fe2b5006cb3accf87efd7006f3249a7',1,'rm::GalaxyCamera::operator&gt;&gt;()'],['../db/d9f/classrm_1_1HikCamera.html#a1cee142d3fcf1202662552275409411c',1,'rm::HikCamera::operator&gt;&gt;()'],['../de/de8/classrm_1_1MvCamera.html#ad1d5b8f40d6e26da45b867e995d9de15',1,'rm::MvCamera::operator&gt;&gt;()'],['../d4/d98/classrm_1_1SerialPort.html#a82efa7857c9b5f7c87b4ef85ef2e46f2',1,'rm::SerialPort::operator&gt;&gt;()'],['../da/d82/classrm_1_1PipeServer.html#a25a8f43f72cc97f85448716590bf7c7b',1,'rm::PipeServer::operator&gt;&gt;()'],['../d8/d8c/classrm_1_1PipeClient.html#ad9807e3533a77796bccfe929268d3c18',1,'rm::PipeClient::operator&gt;&gt;()']]],
-  ['operator_5b_5d_44',['operator[]',['../d4/d8b/classrm_1_1EventType.html#a384bd9277b4555a6181f6b4c7cb021fe',1,'rm::EventType::operator[]()'],['../da/d88/classrm_1_1Event.html#a7c2d1cf8d52769eb2bfb7532bacfb472',1,'rm::Event::operator[]()']]],
+  ['operator_5b_5d_44',['operator[]',['../d4/d8b/classrm_1_1EventType.html#a384bd9277b4555a6181f6b4c7cb021fe',1,'rm::EventType::operator[]()'],['../da/d88/classrm_1_1Event.html#a7c2d1cf8d52769eb2bfb7532bacfb472',1,'rm::Event::operator[]()'],['../d3/da8/classrm_1_1StateInfo.html#a65b6dfdf9da7d246b164103e3004d51a',1,'rm::StateInfo::operator[]()']]],
   ['operator_7c_45',['operator|',['../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907',1,'rm::operator|(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)'],['../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d',1,'rm::operator|(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)']]],
   ['opt_20光源控制器示例代码_46',['OPT 光源控制器示例代码',['../dc/d10/tutorial_modules_light.html#autotoc_md261',1,'']]],
   ['opt_20奥普特_20gige_20光源控制库_47',['OPT 奥普特 GigE 光源控制库',['../d0/d28/group__opt__light__control.html',1,'']]],
@@ -58,5 +58,5 @@ var searchData=
   ['ort_2eh_55',['ort.h',['../d5/d47/ort_8h.html',1,'']]],
   ['ort_2emd_56',['ort.md',['../db/d95/ort_8md.html',1,'']]],
   ['ortprovider_57',['OrtProvider',['../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84',1,'rm']]],
-  ['outpost_58',['OUTPOST',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331',1,'rm']]]
+  ['outpost_58',['OUTPOST',['../db/d22/group__combo__armor.html#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331',1,'rm']]]
 ];

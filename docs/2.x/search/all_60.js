@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['客户端_0',['2. 服务器/客户端',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_server_client',1,'']]]
+  ['定时、计时模块_0',['定时、计时模块',['../db/d06/group__core__timer.html',1,'']]],
+  ['定时模块_1',['定时模块',['../d7/d9d/tutorial_py_core.html#autotoc_md309',1,'']]],
+  ['定时_2',['2.7 定时',['../db/dba/tutorial_modules_opcua.html#autotoc_md271',1,'']]]
 ];

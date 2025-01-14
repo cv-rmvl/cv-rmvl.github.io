@@ -128,19 +128,19 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md279">简介</a>
+        <a href="#autotoc_md281">1. 简介</a>
       </li>
       <li class="level2">
-        <a href="#serialport_how_to_use">使用</a>
+        <a href="#serialport_how_to_use">2. 使用</a>
         <ul>
           <li class="level3">
-            <a href="#serialport_init">初始化</a>
+            <a href="#serialport_init">2.1 初始化</a>
           </li>
           <li class="level3">
-            <a href="#serialport_io">数据 I/O</a>
+            <a href="#serialport_io">2.2 数据 I/O</a>
           </li>
           <li class="level3">
-            <a href="#serialport_protocol">链路层协议</a>
+            <a href="#serialport_protocol">2.3 链路层协议</a>
           </li>
         </ul>
       </li>
@@ -156,68 +156,56 @@ $(function(){ initResizable(false); });
 </p>
 <hr  />
 <p>相关类 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a></p>
-<h2><a class="anchor" id="autotoc_md279"></a>
-简介</h2>
+<h2><a class="anchor" id="autotoc_md281"></a>
+1. 简介</h2>
 <p>串口通信是一种通过串行数据传输进行通信的方式。它使用串行接口将数据以逐位的方式进行传输，常用于连接计算机与外部设备、嵌入式系统之间的数据传输。</p>
 <p>串口通信一般涉及两个主要概念： <b>串口</b> 和 <b>波特率</b> 。</p>
 <ul>
-<li>串口：指的是通信中的物理接口，常见的有<code>RS-232</code>、<code>RS-485</code>、<code>UART</code>等标准。每个串口都有相应的引脚用于发送和接收数据以及控制信号。</li>
-<li>波特率：也称作数据传输速率，指的是每秒钟传输的位数。波特率决定了传输速度的快慢，通常使用常见的波特率如9600、115200等。</li>
+<li>串口：指的是通信中的物理接口，常见的有 <code>RS-232</code>、<code>RS-485</code>、<code>UART</code> 等标准。每个串口都有相应的引脚用于发送和接收数据以及控制信号。</li>
+<li>波特率：也称作数据传输速率，指的是每秒钟传输的位数。波特率决定了传输速度的快慢，通常使用常见的波特率如 9600、115200 等。</li>
 </ul>
-<p>在 <a href="https://unix.org/">Unix</a> 中，Termios 是一个用于串口通信的 API ，它提供了对串口终端设备进行配置和控制的功能。</p>
-<p>Termios 接口允许开发人员通过编程来设置串口终端的各种参数，如波特率、数据位数、校验位、流控制等。通过使用 Termios 接口，可以实现对串口通信的灵活控制，以满足各种应用需求。</p>
-<p>主要的 Termios 函数包括</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">函数   </th><th class="markdownTableHeadCenter">意义    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>tcgetattr()</code>   </td><td class="markdownTableBodyCenter">获取当前的终端属性（设置），将属性保存到 Termios 结构体中    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>tcsetattr()</code>   </td><td class="markdownTableBodyCenter">设置终端属性，通过提供 Termios 结构体中的属性值进行设置    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>cfsetispeed(), cfsetospeed()</code>   </td><td class="markdownTableBodyCenter">设置串口的输入和输出波特率    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>tcflush()</code>   </td><td class="markdownTableBodyCenter">刷新输入或输出缓冲区    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>tcdrain()</code>   </td><td class="markdownTableBodyCenter">等待所有输出数据完成发送后再返回    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>tcflow()</code>   </td><td class="markdownTableBodyCenter">控制数据流向   </td></tr>
-</table>
 <h2><a class="anchor" id="serialport_how_to_use"></a>
-使用</h2>
+2. 使用</h2>
 <h3><a class="anchor" id="serialport_init"></a>
-初始化</h3>
+2.1 初始化</h3>
 <p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的构造函数原型如下</p>
-<div class="fragment"><div class="line"><span class="keyword">explicit</span> SerialPort(<span class="keyword">const</span> std::string &amp;device = {}, <span class="keywordtype">int</span> baud_rate = B115200);</div>
+<div class="fragment"><div class="line">SerialPort(std::string_view device, SerialPortMode mode = {});</div>
 </div><!-- fragment --><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">参数   </th><th class="markdownTableHeadCenter">含义    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>device</code>   </td><td class="markdownTableBodyCenter">设备名，如果为空，则会自动搜寻名为 <code>ttyUSBx</code> 或 <code>ttyACMx</code> 的串口文件，如果不为空，则直接打开指定的设备    </td></tr>
+<td class="markdownTableBodyCenter"><code>device</code>   </td><td class="markdownTableBodyCenter">设备名，在 Windows 上一般是 <code>COMx</code>，Linux 上一般为 <code>ttyUSBx</code> 或 <code>ttyACMx</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><code>baud_rate</code>   </td><td class="markdownTableBodyCenter">波特率，默认为 <code>B115200</code>，所有可用的波特率都被标准化为 <code>B</code> 开头的宏定义   </td></tr>
+<td class="markdownTableBodyCenter"><code>mode</code>   </td><td class="markdownTableBodyCenter">串口通信模式，包含波特率 <a class="el" href="../../d5/d5f/group__core__io.html#ga8847230e42c9ea2972d24a8e6baf7371">rm::BaudRate</a> 和读取模式 <a class="el" href="../../d5/d5f/group__core__io.html#ga5ca0d5494f76b1f02b93b4514e32dd5a" title="串口数据读取模式">rm::SerialReadMode</a>   </td></tr>
 </table>
 <h3><a class="anchor" id="serialport_io"></a>
-数据 I/O</h3>
+2.2 数据 I/O</h3>
 <p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 提供了极其方便的串口读取、写入的接口。</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">功能   </th><th class="markdownTableHeadCenter">函数   </th><th class="markdownTableHeadCenter">功能    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">读取   </td><td class="markdownTableBodyCenter"><code>read</code>   </td><td class="markdownTableBodyCenter">指定头尾帧，读取缓冲区中最新的能够组成结构体的数据    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">写入   </td><td class="markdownTableBodyCenter"><code>write</code>   </td><td class="markdownTableBodyCenter">传入待写入的结构体完成数据的写入   </td></tr>
-</table>
-<ul>
-<li>读取函数原型 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">bool</span> read(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> head_flag, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> tail_flag, Tp &amp;data)</div>
-</div><!-- fragment --></li>
-<li>写入函数原型 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
-<div class="line"><span class="keyword">inline</span> <span class="keywordtype">bool</span> write(Tp &amp;data_struct);</div>
-</div><!-- fragment --></li>
-</ul>
-<h3><a class="anchor" id="serialport_protocol"></a>
-链路层协议</h3>
+<h5>读取函数原型</h5>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> read(uint8_t head, uint8_t tail, AggregateT &amp;data); <span class="comment">// (1) 指定头尾帧的读取结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> read(AggregateT &amp;data);                             <span class="comment">// (2) 读取结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keywordtype">bool</span> read(std::string &amp;data);                            <span class="comment">// (3) 读取字符串数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateOrStringT&gt;</div>
+<div class="line">SerialPort &amp;operator&gt;&gt;(AggregateOrStringT &amp;data);        <span class="comment">// (4) 串口读取操作符重载</span></div>
+</div><!-- fragment --><h5>写入函数原型</h5>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> write(<span class="keyword">const</span> AggregateT &amp;data);                      <span class="comment">// (5) 写入结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keywordtype">bool</span> write(std::string_view data);                       <span class="comment">// (6) 写入字符串数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateOrStringT&gt;</div>
+<div class="line">SerialPort &amp;operator&lt;&lt;(<span class="keyword">const</span> AggregateOrStringT &amp;data);  <span class="comment">// (7) 串口写入操作符重载</span></div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>读取、写入的数据 </td></tr>
+    <tr><td class="paramname">head</td><td>帧头 </td></tr>
+    <tr><td class="paramname">tail</td><td>帧尾</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>注解</b></p>
+<div style="margin-left: 40px;">(3) 和 (5) 带有 Python 接口</div><h3><a class="anchor" id="serialport_protocol"></a>
+2.3 链路层协议</h3>
 <p><b>写数据（视觉端 → 电控端）</b></p>
 <p>SerialPort 的通信协议一般就是指数据链路层的协议，采用封装成帧的方式，由于终端设备输出缓冲区可在写入数据前被清空，因此 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的 <code>write</code> 方法不设置任何帧头帧尾。</p>
 <p><b>读数据（电控端 → 视觉端）</b></p>
@@ -225,7 +213,7 @@ $(function(){ initResizable(false); });
 <p>需要注意的是，在读取数据前需要留意</p>
 <ul>
 <li>协议（结构体）内容</li>
-<li>内存对齐规则，关于标准的内存对齐可使用 <code>#pragma once</code> 宏或 <code>alignas</code> 关键字</li>
+<li>内存对齐规则，关于内存对齐可使用 <code>#pragma pack</code> 宏或使用 C++ 标准的 <code>alignas</code> 关键字</li>
 <li>头尾帧是否一致 </li>
 </ul>
 </div></div><!-- contents -->
