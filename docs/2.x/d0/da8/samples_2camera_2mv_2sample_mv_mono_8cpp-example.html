@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: samples/camera/mv/sample_mv_mono.cpp</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.2.0-dev</span>
+                &#160;<span id="projectnumber">2.3.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -120,11 +120,10 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <p>迈德威视单相机例程</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d05/timer_8hpp.html">rmvl/core/timer.hpp</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
@@ -201,7 +200,7 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;蓝通道&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 200, bGainCallBack, <span class="keyword">nullptr</span>);</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;蓝通道&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, b_gain);</div>
 <div class="line"> </div>
-<div class="line">    std::this_thread::sleep_for(1s);</div>
+<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(1000);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name = <span class="stringliteral">&quot;out_para.yml&quot;</span>;</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>
@@ -245,6 +244,7 @@ $(function(){ initResizable(false); });
 <div class="line">}</div>
 <div class="ttc" id="acamera_2mv__camera_8h_html"><div class="ttname"><a href="../../d1/d67/camera_2mv__camera_8h.html">mv_camera.h</a></div><div class="ttdoc">迈德威视相机库</div></div>
 <div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库</div><div class="ttdef"><b>定义</b> mv_camera.h:36</div></div>
+<div class="ttc" id="aclassrm_1_1Timer_html_ad2681cbe206911a68e6b98f07dac26a4"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a></div><div class="ttdeci">static void sleep_for(double t)</div><div class="ttdoc">当前线程休眠指定时间</div></div>
 <div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:54</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:108</div></div>
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:107</div></div>
@@ -255,13 +255,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>定义</b> camutils.hpp:104</div></div>
 <div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:36</div></div>
 <div class="ttc" id="astructrm_1_1CameraConfig_html_a1a285fd4742e8ced4907f83d520c943b"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args &amp;&amp;...modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:72</div></div>
+<div class="ttc" id="atimer_8hpp_html"><div class="ttname"><a href="../../df/d05/timer_8hpp.html">timer.hpp</a></div><div class="ttdoc">定时、计时模块</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

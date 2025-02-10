@@ -17,5 +17,5 @@ var searchData=
   ['compensation_14',['compensation',['../d5/da4/structrm_1_1CompensateInfo.html#a6c9cd39856cffa38dcb1d0dd24d484ff',1,'rm::CompensateInfo']]],
   ['concentricity_5fratio_15',['CONCENTRICITY_RATIO',['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#ad9e9350a1258de20d5194eef9caa4433',1,'rm::para::RuneDetectorParam']]],
   ['connect_5ftimeout_16',['CONNECT_TIMEOUT',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a31c4f296e56f398db93012c09b936304',1,'rm::para::OpcuaParam']]],
-  ['contrast_17',['contrast',['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a5c185cd5c0f38424ca8e23357089642b',1,'rm::para::MvCameraParam::contrast'],['../d4/d85/structrm_1_1para_1_1OptCameraParam.html#a7196cf8996bfa0cc632df10a06a5aacd',1,'rm::para::OptCameraParam::contrast']]]
+  ['contrast_17',['contrast',['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a5c185cd5c0f38424ca8e23357089642b',1,'rm::para::MvCameraParam::contrast'],['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#a7196cf8996bfa0cc632df10a06a5aacd',1,'rm::para::OptCameraParam::contrast']]]
 ];

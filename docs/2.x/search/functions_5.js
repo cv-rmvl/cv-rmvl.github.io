@@ -6,5 +6,6 @@ var searchData=
   ['fminunc_3',['fminunc',['../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef',1,'rm']]],
   ['for_5feach_4',['for_each',['../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
   ['format_5',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
-  ['front_6',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]]
+  ['from_5fstring_6',['from_string',['../d0/d1a/classrm_1_1Anchor.html#ae02ab582d1c87e50481e74fc4060f728',1,'rm::Anchor']]],
+  ['front_7',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]]
 ];

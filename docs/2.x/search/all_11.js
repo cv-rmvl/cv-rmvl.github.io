@@ -4,7 +4,7 @@ var searchData=
   ['i_20o_1',['2.2 数据 I/O',['../d3/da4/tutorial_modules_serial.html#serialport_io',1,'']]],
   ['iargs_2',['iargs',['../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57',1,'rm::Method']]],
   ['id_3',['2.2 标题 ID',['../d5/d72/tutorial_document.html#autotoc_md131',1,'']]],
-  ['id_4',['id',['../d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html#a67a505926d7b70583a51ee03f34934a5',1,'rm::para::GalaxyCameraParam::id'],['../db/d81/classrm_1_1NodeId.html#a6cdf20128d82582ac90a941da1545dfa',1,'rm::NodeId::id'],['../d4/d09/structrm_1_1UserConfig.html#a5774f898dc76a675cbe3c735b0c0ba41',1,'rm::UserConfig::id']]],
+  ['id_4',['id',['../db/d81/classrm_1_1NodeId.html#a6cdf20128d82582ac90a941da1545dfa',1,'rm::NodeId::id'],['../d4/d09/structrm_1_1UserConfig.html#a5774f898dc76a675cbe3c735b0c0ba41',1,'rm::UserConfig::id']]],
   ['idft_5',['idft',['../db/d2e/group__algorithm__dsp.html#ga12b790f817727abc51331afc12c84e4e',1,'rm']]],
   ['imu_6',['imu',['../de/dee/classrm_1_1combo.html#a192bb85b27235741e52b166d87626535',1,'rm::combo::imu()'],['../da/df9/classrm_1_1GyroGroup.html#a36ae3ebe795c8a4e413681073a22b296',1,'rm::GyroGroup::imu()']]],
   ['imuconverttocamera_7',['imuConvertToCamera',['../df/d41/classrm_1_1Armor.html#a52d395b722d528337d10213f161fb427',1,'rm::Armor']]],

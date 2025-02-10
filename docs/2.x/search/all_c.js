@@ -26,7 +26,7 @@ var searchData=
   ['defaulttracker_23',['DefaultTracker',['../d3/d25/classrm_1_1DefaultTracker.html',1,'rm']]],
   ['deg_24',['DEG',['../d5/d6c/group__algorithm.html#ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4',1,'rm']]],
   ['deg2rad_25',['deg2rad',['../d5/d6c/group__algorithm.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
-  ['delay_5fafter_5fwrite_26',['DELAY_AFTER_WRITE',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html#a5542009e89023f011d6c62b471ca47a3',1,'rm::para::HikLightControlParam']]],
+  ['delay_5fafter_5fwrite_26',['DELAY_AFTER_WRITE',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html#ac69289ebae5a4d044d582213bd622a8e',1,'rm::para::HikLightControlParam']]],
   ['delta_5fy_27',['delta_y',['../d5/d08/classrm_1_1TrackerState.html#a42b1a610feeff38cd3fdf48475038d5b',1,'rm::TrackerState::delta_y() const'],['../d5/d08/classrm_1_1TrackerState.html#ae3ed9e52f861d23dbdfe1fc785362c92',1,'rm::TrackerState::delta_y(float dy)']]],
   ['demo_28',['4. 使用 Demo',['../df/d2c/tutorial_modules_camera.html#autotoc_md254',1,'']]],
   ['derivative_29',['derivative',['../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e',1,'rm']]],

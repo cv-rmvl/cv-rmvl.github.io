@@ -24,11 +24,12 @@ var searchData=
   ['fminunc_2emd_21',['fminunc.md',['../da/d7a/fminunc_8md.html',1,'']]],
   ['for_5feach_22',['for_each',['../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
   ['format_23',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
-  ['front_24',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]],
-  ['func_25',['func',['../d0/d14/classrm_1_1NonlinearSolver.html#af0e37799e84010770a522bb6f97cb788',1,'rm::NonlinearSolver::func'],['../d9/db4/classrm_1_1Exception.html#a3e832407ab3f8c104cb2527bfe38757b',1,'rm::Exception::func'],['../d4/d91/classrm_1_1Method.html#a6e162f12f2d9702bf3a9fc1abc93a7aa',1,'rm::Method::func']]],
-  ['func1d_26',['Func1d',['../d2/d62/group__algorithm__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
-  ['func1ds_27',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
-  ['func_5fiteration_2emd_28',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
-  ['funcnd_29',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
-  ['funcnds_30',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee',1,'rm']]]
+  ['from_5fstring_24',['from_string',['../d0/d1a/classrm_1_1Anchor.html#ae02ab582d1c87e50481e74fc4060f728',1,'rm::Anchor']]],
+  ['front_25',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]],
+  ['func_26',['func',['../d0/d14/classrm_1_1NonlinearSolver.html#af0e37799e84010770a522bb6f97cb788',1,'rm::NonlinearSolver::func'],['../d9/db4/classrm_1_1Exception.html#a3e832407ab3f8c104cb2527bfe38757b',1,'rm::Exception::func'],['../d4/d91/classrm_1_1Method.html#a6e162f12f2d9702bf3a9fc1abc93a7aa',1,'rm::Method::func']]],
+  ['func1d_27',['Func1d',['../d2/d62/group__algorithm__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
+  ['func1ds_28',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
+  ['func_5fiteration_2emd_29',['func_iteration.md',['../df/d37/func__iteration_8md.html',1,'']]],
+  ['funcnd_30',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
+  ['funcnds_31',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee',1,'rm']]]
 ];

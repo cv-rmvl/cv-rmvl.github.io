@@ -6,7 +6,7 @@
 <head>
   <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
   <meta content="IE=9" http-equiv="X-UA-Compatible"/>
-  <meta content="Doxygen 1.13.0" name="generator"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
   <title>RMVL: rm::Server类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -57,7 +57,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                 <span id="projectnumber">2.2.0-dev</span>
+                 <span id="projectnumber">2.3.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -66,7 +66,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -193,7 +193,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:afb7923ae9437706294c9bc3dc3f101b1" id="r_afb7923ae9437706294c9bc3dc3f101b1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#afb7923ae9437706294c9bc3dc3f101b1">addMethodNode</a> (const <a class="el" href="../../d4/d91/classrm_1_1Method.html">Method</a> &amp;method, const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;parent_nd=<a class="el" href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">nodeObjectsFolder</a>)</td></tr>
 <tr class="memdesc:afb7923ae9437706294c9bc3dc3f101b1"><td class="mdescLeft"> </td><td class="mdescRight">添加方法节点 MethodNode 至指定父节点中  <br/></td></tr>
 <tr class="separator:afb7923ae9437706294c9bc3dc3f101b1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa9586542b43fd76db6295254dd405554" id="r_aa9586542b43fd76db6295254dd405554"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9586542b43fd76db6295254dd405554">setMethodNodeCallBack</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;nd, <a class="el" href="../../d3/da8/group__opcua.html#ga028d3971b544e474df6c9bac7d179553">MethodCallback</a> on_method)</td></tr>
+<tr class="memitem:aa9586542b43fd76db6295254dd405554" id="r_aa9586542b43fd76db6295254dd405554"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9586542b43fd76db6295254dd405554">setMethodNodeCallBack</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;nd, <a class="el" href="../../d3/da8/group__opcua.html#ga1cd26e7eae712946697a4524dd2a243a">MethodCallback</a> on_method)</td></tr>
 <tr class="memdesc:aa9586542b43fd76db6295254dd405554"><td class="mdescLeft"> </td><td class="mdescRight">为既有的方法节点 MethodNode 设置方法的回调函数  <br/></td></tr>
 <tr class="separator:aa9586542b43fd76db6295254dd405554"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2a28d28178452af00e4da475164cfc12" id="r_a2a28d28178452af00e4da475164cfc12"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a28d28178452af00e4da475164cfc12">addObjectTypeNode</a> (const <a class="el" href="../../d4/d40/classrm_1_1ObjectType.html">ObjectType</a> &amp;otype)</td></tr>
@@ -645,7 +645,7 @@ Protected 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>节点 ID</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a7a3abff380852a83a6b6ef90652d379d">node</a> = srv.find(<span class="stringliteral">"person/name"</span>, src_nd);</div>
 <div class="line"><span class="comment">// 等效于 auto node = src_nd | srv.node("person") | srv.node("name");</span></div>
-<div class="ttc" id="aclassrm_1_1Server_html_a7a3abff380852a83a6b6ef90652d379d"><div class="ttname"><a href="#a7a3abff380852a83a6b6ef90652d379d">rm::Server::node</a></div><div class="ttdeci">FindNodeInServer node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> server.hpp:205</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html_a7a3abff380852a83a6b6ef90652d379d"><div class="ttname"><a href="#a7a3abff380852a83a6b6ef90652d379d">rm::Server::node</a></div><div class="ttdeci">FindNodeInServer node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> server.hpp:204</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -756,7 +756,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga028d3971b544e474df6c9bac7d179553">MethodCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_method</em></span> )</td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga1cd26e7eae712946697a4524dd2a243a">MethodCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_method</em></span> )</td>
         </tr>
       </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Server.setMethodNodeCallBack(</td><td class="paramname">nd, on_method</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
 </div><div class="memdoc">
@@ -764,7 +764,7 @@ Protected 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">nd</td><td>既有的方法节点的 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code>，因方法节点可能位于任意一个父节点下，因此可以使用 <b>路径搜索</b> 进行查找 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">on_method</td><td><code><a class="el" href="../../d3/da8/group__opcua.html#ga028d3971b544e474df6c9bac7d179553" title="OPC UA 方法回调函数">MethodCallback</a></code> 可调用对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_method</td><td><code><a class="el" href="../../d3/da8/group__opcua.html#ga1cd26e7eae712946697a4524dd2a243a" title="OPC UA 方法回调函数">MethodCallback</a></code> 可调用对象 </td></tr>
   </table>
   </dd>
 </dl>
@@ -953,7 +953,7 @@ Protected 属性</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者  <a href="http://www.doxygen.org/index.html">
 <img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[
