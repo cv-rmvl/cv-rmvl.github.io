@@ -1,0 +1,724 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: 最优化算法库</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> |
+<a href="#typedef-members">类型定义</a> |
+<a href="#enum-members">枚举</a> |
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">最优化算法库<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+最优化算法库 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d2/d62/group__algorithm__optimal.svg" width="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">无约束多维函数优化选项  <a href="../../d3/dd3/structrm_1_1OptimalOptions.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaf3a8138ec0b4be5f94c9c73605cccff3" id="r_gaf3a8138ec0b4be5f94c9c73605cccff3"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">rm::Func1d</a> = std::function&lt;double(double)&gt;</td></tr>
+<tr class="memdesc:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="mdescLeft"> </td><td class="mdescRight">一元函数  <br/></td></tr>
+<tr class="separator:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga99790ebfd178fe9c6833af8946d68ac3" id="r_ga99790ebfd178fe9c6833af8946d68ac3"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99790ebfd178fe9c6833af8946d68ac3">rm::Func1ds</a> = std::vector&lt;std::function&lt;double(double)&gt;&gt;</td></tr>
+<tr class="memdesc:ga99790ebfd178fe9c6833af8946d68ac3"><td class="mdescLeft"> </td><td class="mdescRight">一元函数组  <br/></td></tr>
+<tr class="separator:ga99790ebfd178fe9c6833af8946d68ac3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga4d22cf26297b02fb82b6abf116d49934" id="r_ga4d22cf26297b02fb82b6abf116d49934"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> = std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ga4d22cf26297b02fb82b6abf116d49934"><td class="mdescLeft"> </td><td class="mdescRight">多元函数  <br/></td></tr>
+<tr class="separator:ga4d22cf26297b02fb82b6abf116d49934"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga35c0b85496608bc60a43229ab4835aee" id="r_ga35c0b85496608bc60a43229ab4835aee"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a> = std::function&lt;std::valarray&lt;double&gt;(const std::valarray&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ga35c0b85496608bc60a43229ab4835aee"><td class="mdescLeft"> </td><td class="mdescRight">多元函数组  <br/></td></tr>
+<tr class="separator:ga35c0b85496608bc60a43229ab4835aee"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga329a52f13003e4dd7914217ed7f3f5ed" id="r_ga329a52f13003e4dd7914217ed7f3f5ed"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">rm::DiffMode</a> : uint8_t { <a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">rm::DiffMode::Central</a>
+, <a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">rm::DiffMode::Ridders</a>
+ }</td></tr>
+<tr class="memdesc:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="mdescLeft"> </td><td class="mdescRight">梯度/导数计算模式  <a href="#ga329a52f13003e4dd7914217ed7f3f5ed">更多...</a><br/></td></tr>
+<tr class="separator:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaf5b1502951081346a5bc6f03694fe73c" id="r_gaf5b1502951081346a5bc6f03694fe73c"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf5b1502951081346a5bc6f03694fe73c">rm::FminMode</a> : uint8_t { <a class="el" href="#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">rm::FminMode::ConjGrad</a>
+, <a class="el" href="#ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">rm::FminMode::Simplex</a>
+ }</td></tr>
+<tr class="memdesc:gaf5b1502951081346a5bc6f03694fe73c"><td class="mdescLeft"> </td><td class="mdescRight">多维函数最优化模式  <a href="#gaf5b1502951081346a5bc6f03694fe73c">更多...</a><br/></td></tr>
+<tr class="separator:gaf5b1502951081346a5bc6f03694fe73c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gae144aacda45d4d8ed719eb1f5a37605b" id="r_gae144aacda45d4d8ed719eb1f5a37605b"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae144aacda45d4d8ed719eb1f5a37605b">rm::LsqMode</a> : uint8_t { <a class="el" href="#ggae144aacda45d4d8ed719eb1f5a37605ba0c06907d970859d829df948d962ffdd0">rm::LsqMode::SGN</a>
+, <a class="el" href="#ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f">rm::LsqMode::GN</a>
+, <a class="el" href="#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a>
+ }</td></tr>
+<tr class="memdesc:gae144aacda45d4d8ed719eb1f5a37605b"><td class="mdescLeft"> </td><td class="mdescRight">最小二乘求解模式  <a href="#gae144aacda45d4d8ed719eb1f5a37605b">更多...</a><br/></td></tr>
+<tr class="separator:gae144aacda45d4d8ed719eb1f5a37605b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gafda9bd41e45a035a7b6c5e1bb740de15" id="r_gafda9bd41e45a035a7b6c5e1bb740de15"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">rm::RobustMode</a> : uint8_t { <br/>
+  <a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76">rm::RobustMode::L2</a>
+, <a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a>
+, <a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15ae64282abbecb575a17b762eb0138273b">rm::RobustMode::Tukey</a>
+, <a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a2ee21c55474972b3e65b31a6b0b57dc8">rm::RobustMode::Cauchy</a>
+, <br/>
+  <a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a64f3bd1741ab8d6ba545a1ae09bb8728">rm::RobustMode::GM</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gafda9bd41e45a035a7b6c5e1bb740de15"><td class="mdescLeft"> </td><td class="mdescRight">Robust 核函数  <a href="#gafda9bd41e45a035a7b6c5e1bb740de15">更多...</a><br/></td></tr>
+<tr class="separator:gafda9bd41e45a035a7b6c5e1bb740de15"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gad269c00a143e239e4c56922766bb2a2e" id="r_gad269c00a143e239e4c56922766bb2a2e"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:gad269c00a143e239e4c56922766bb2a2e"><td class="mdescLeft"> </td><td class="mdescRight">计算一元函数的导数  <br/></td></tr>
+<tr class="separator:gad269c00a143e239e4c56922766bb2a2e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaa93c2a0dd4c42255cd83a086ced9e9df" id="r_gaa93c2a0dd4c42255cd83a086ced9e9df"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa93c2a0dd4c42255cd83a086ced9e9df">rm::grad</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:gaa93c2a0dd4c42255cd83a086ced9e9df"><td class="mdescLeft"> </td><td class="mdescRight">计算多元函数的梯度  <br/></td></tr>
+<tr class="separator:gaa93c2a0dd4c42255cd83a086ced9e9df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaab485911ef8cdc37e5ef92b839ec107c" id="r_gaab485911ef8cdc37e5ef92b839ec107c"><td align="right" class="memItemLeft" valign="top">std::pair&lt; double, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x0, double delta=1)</td></tr>
+<tr class="memdesc:gaab485911ef8cdc37e5ef92b839ec107c"><td class="mdescLeft"> </td><td class="mdescRight">采用进退法确定搜索区间  <br/></td></tr>
+<tr class="separator:gaab485911ef8cdc37e5ef92b839ec107c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gae8c5462fcdf30d76ea709bbc2e08d3ee" id="r_gae8c5462fcdf30d76ea709bbc2e08d3ee"><td align="right" class="memItemLeft" valign="top">std::pair&lt; double, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x1, double x2, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="mdescLeft"> </td><td class="mdescRight">一维函数最小值搜索  <br/></td></tr>
+<tr class="separator:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga4a7d105f2c4e5236f0ab9963d7e0cfef" id="r_ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="mdescLeft"> </td><td class="mdescRight">无约束多维函数的最小值搜索，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br/></td></tr>
+<tr class="separator:ga4a7d105f2c4e5236f0ab9963d7e0cfef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga59ea1658679b6b7067111f3aee854f59" id="r_ga59ea1658679b6b7067111f3aee854f59"><td align="right" class="memItemLeft" valign="top">std::pair&lt; std::valarray&lt; double &gt;, double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga59ea1658679b6b7067111f3aee854f59">rm::fmincon</a> (<a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a> func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> c, <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga59ea1658679b6b7067111f3aee854f59"><td class="mdescLeft"> </td><td class="mdescRight">有约束多维函数的最小值搜索  <br/></td></tr>
+<tr class="separator:ga59ea1658679b6b7067111f3aee854f59"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gab85704ec7a37e31de0644b99a6286173" id="r_gab85704ec7a37e31de0644b99a6286173"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a> (const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;func, const std::valarray&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gab85704ec7a37e31de0644b99a6286173"><td class="mdescLeft"> </td><td class="mdescRight">非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法  <br/></td></tr>
+<tr class="separator:gab85704ec7a37e31de0644b99a6286173"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga5a7f8fec980372cfd29fd21d37721ef1" id="r_ga5a7f8fec980372cfd29fd21d37721ef1"><td align="right" class="memItemLeft" valign="top">std::valarray&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a> (const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;func, const std::valarray&lt; double &gt; &amp;x0, <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a> rb, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga5a7f8fec980372cfd29fd21d37721ef1"><td class="mdescLeft"> </td><td class="mdescRight">带 Robust 核函数的非线性最小二乘求解  <br/></td></tr>
+<tr class="separator:ga5a7f8fec980372cfd29fd21d37721ef1"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法 </p>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gaf3a8138ec0b4be5f94c9c73605cccff3" name="gaf3a8138ec0b4be5f94c9c73605cccff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3a8138ec0b4be5f94c9c73605cccff3">◆ </a></span>Func1d</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">rm::Func1d</a> = std::function&lt;double(double)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>一元函数 </p>
+</div>
+</div>
+<a id="ga99790ebfd178fe9c6833af8946d68ac3" name="ga99790ebfd178fe9c6833af8946d68ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99790ebfd178fe9c6833af8946d68ac3">◆ </a></span>Func1ds</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga99790ebfd178fe9c6833af8946d68ac3">rm::Func1ds</a> = std::vector&lt;std::function&lt;double(double)&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>一元函数组 </p>
+</div>
+</div>
+<a id="ga4d22cf26297b02fb82b6abf116d49934" name="ga4d22cf26297b02fb82b6abf116d49934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d22cf26297b02fb82b6abf116d49934">◆ </a></span>FuncNd</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">rm::FuncNd</a> = std::function&lt;double(const std::valarray&lt;double&gt; &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>多元函数 </p>
+</div>
+</div>
+<a id="ga35c0b85496608bc60a43229ab4835aee" name="ga35c0b85496608bc60a43229ab4835aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35c0b85496608bc60a43229ab4835aee">◆ </a></span>FuncNds</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a> = std::function&lt;std::valarray&lt;double&gt;(const std::valarray&lt;double&gt; &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>多元函数组 </p>
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga329a52f13003e4dd7914217ed7f3f5ed" name="ga329a52f13003e4dd7914217ed7f3f5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga329a52f13003e4dd7914217ed7f3f5ed">◆ </a></span>DiffMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">rm::DiffMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>梯度/导数计算模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" name="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2"></a>Central <div class="python_language"><b>Python: </b>rm.DiffMode.Central</div></td><td class="fielddoc"><p>中心差商 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6" name="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6"></a>Ridders <div class="python_language"><b>Python: </b>rm.DiffMode.Ridders</div></td><td class="fielddoc"><p>Richardson 外推 <a class="el" href="../../d0/de3/citelist.html#CITEREF_ridders82">[16]</a> </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="gaf5b1502951081346a5bc6f03694fe73c" name="gaf5b1502951081346a5bc6f03694fe73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5b1502951081346a5bc6f03694fe73c">◆ </a></span>FminMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaf5b1502951081346a5bc6f03694fe73c">rm::FminMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>多维函数最优化模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce" name="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce"></a>ConjGrad <div class="python_language"><b>Python: </b>rm.FminMode.ConjGrad</div></td><td class="fielddoc"><p>共轭梯度法 <a class="el" href="../../d0/de3/citelist.html#CITEREF_hestenes52">[8]</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789" name="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789"></a>Simplex <div class="python_language"><b>Python: </b>rm.FminMode.Simplex</div></td><td class="fielddoc"><p>单纯形法 <a class="el" href="../../d0/de3/citelist.html#CITEREF_nelder65">[13]</a> </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="gae144aacda45d4d8ed719eb1f5a37605b" name="gae144aacda45d4d8ed719eb1f5a37605b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae144aacda45d4d8ed719eb1f5a37605b">◆ </a></span>LsqMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gae144aacda45d4d8ed719eb1f5a37605b">rm::LsqMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>最小二乘求解模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggae144aacda45d4d8ed719eb1f5a37605ba0c06907d970859d829df948d962ffdd0" name="ggae144aacda45d4d8ed719eb1f5a37605ba0c06907d970859d829df948d962ffdd0"></a>SGN <div class="python_language"><b>Python: </b>rm.LsqMode.SGN</div></td><td class="fielddoc"><p>改进的 Gauss-Newton 法，单次寻找最优步长的 Gauss-Newton 法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f" name="ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f"></a>GN <div class="python_language"><b>Python: </b>rm.LsqMode.GN</div></td><td class="fielddoc"><p>Gauss-Newton 法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4" name="ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4"></a>LM <div class="python_language"><b>Python: </b>rm.LsqMode.LM</div></td><td class="fielddoc"><p>Levenberg-Marquardt 法 <a class="el" href="../../d0/de3/citelist.html#CITEREF_eade13">[5]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_madsen04">[11]</a> </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="gafda9bd41e45a035a7b6c5e1bb740de15" name="gafda9bd41e45a035a7b6c5e1bb740de15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafda9bd41e45a035a7b6c5e1bb740de15">◆ </a></span>RobustMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">rm::RobustMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>Robust 核函数 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" name="ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76"></a>L2 <div class="python_language"><b>Python: </b>rm.RobustMode.L2</div></td><td class="fielddoc"><p><code>L2</code> 核函数 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18" name="ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18"></a>Huber <div class="python_language"><b>Python: </b>rm.RobustMode.Huber</div></td><td class="fielddoc"><p><code>Huber</code> 核函数 <a class="el" href="../../d0/de3/citelist.html#CITEREF_huber64">[9]</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafda9bd41e45a035a7b6c5e1bb740de15ae64282abbecb575a17b762eb0138273b" name="ggafda9bd41e45a035a7b6c5e1bb740de15ae64282abbecb575a17b762eb0138273b"></a>Tukey <div class="python_language"><b>Python: </b>rm.RobustMode.Tukey</div></td><td class="fielddoc"><p><code>Tukey</code> 核函数 <a class="el" href="../../d0/de3/citelist.html#CITEREF_tukey60">[17]</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafda9bd41e45a035a7b6c5e1bb740de15a2ee21c55474972b3e65b31a6b0b57dc8" name="ggafda9bd41e45a035a7b6c5e1bb740de15a2ee21c55474972b3e65b31a6b0b57dc8"></a>Cauchy <div class="python_language"><b>Python: </b>rm.RobustMode.Cauchy</div></td><td class="fielddoc"><p><code>Cauchy</code> 核函数 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggafda9bd41e45a035a7b6c5e1bb740de15a64f3bd1741ab8d6ba545a1ae09bb8728" name="ggafda9bd41e45a035a7b6c5e1bb740de15a64f3bd1741ab8d6ba545a1ae09bb8728"></a>GM <div class="python_language"><b>Python: </b>rm.RobustMode.GM</div></td><td class="fielddoc"><p><code>Geman-McClure</code> 核函数 <a class="el" href="../../d0/de3/citelist.html#CITEREF_geman87">[7]</a> </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gad269c00a143e239e4c56922766bb2a2e" name="gad269c00a143e239e4c56922766bb2a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad269c00a143e239e4c56922766bb2a2e">◆ </a></span>derivative()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::derivative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.derivative(</td><td class="paramname">func, x[, mode[, dx]]</td><td>) -&gt; </td><td>grad</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>计算一元函数的导数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一元函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>导数计算模式，默认为中心差商 <code><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数在指定点的导数 </dd></dl>
+</div>
+</div>
+<a id="gae8c5462fcdf30d76ea709bbc2e08d3ee" name="gae8c5462fcdf30d76ea709bbc2e08d3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8c5462fcdf30d76ea709bbc2e08d3ee">◆ </a></span>fminbnd()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; rm::fminbnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.fminbnd(</td><td class="paramname">func, x1, x2[, options]</td><td>) -&gt; </td><td>x, fval</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>一维函数最小值搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一维约束函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>搜索区间左端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>搜索区间右端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>max_iter</code> 和 <code>tol</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+</div>
+</div>
+<a id="ga59ea1658679b6b7067111f3aee854f59" name="ga59ea1658679b6b7067111f3aee854f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59ea1658679b6b7067111f3aee854f59">◆ </a></span>fmincon()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::valarray&lt; double &gt;, double &gt; rm::fmincon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a></td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.fmincon(</td><td class="paramname">func, x0, c, ceq[, options]</td><td>) -&gt; </td><td>x, fval</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>有约束多维函数的最小值搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>不等式约束 \(f_c(x)\le0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ceq</td><td>等式约束 \(f_{ceq}(x)=0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>options 优化选项，可供设置的有 <code>exterior</code>、<code>fmin_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+</div>
+</div>
+<a id="ga4a7d105f2c4e5236f0ab9963d7e0cfef" name="ga4a7d105f2c4e5236f0ab9963d7e0cfef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a7d105f2c4e5236f0ab9963d7e0cfef">◆ </a></span>fminunc()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::valarray&lt; double &gt;, double &gt; rm::fminunc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.fminunc(</td><td class="paramname">func, x0[, options]</td><td>) -&gt; </td><td>x, fval</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>无约束多维函数的最小值搜索，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维约束函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>fmin_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+</div>
+</div>
+<a id="gaa93c2a0dd4c42255cd83a086ced9e9df" name="gaa93c2a0dd4c42255cd83a086ced9e9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa93c2a0dd4c42255cd83a086ced9e9df">◆ </a></span>grad()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::valarray&lt; double &gt; rm::grad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga4d22cf26297b02fb82b6abf116d49934">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d5/d6c/group__algorithm.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.grad(</td><td class="paramname">func, x[, mode[, dx]]</td><td>) -&gt; </td><td>grad</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>计算多元函数的梯度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多元函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>梯度计算模式，默认为中心差商 <code><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" title="中心差商">DiffMode::Central</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>计算偏导数时，坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数在指定点的梯度向量 </dd></dl>
+</div>
+</div>
+<a id="gab85704ec7a37e31de0644b99a6286173" name="gab85704ec7a37e31de0644b99a6286173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab85704ec7a37e31de0644b99a6286173">◆ </a></span>lsqnonlin()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlin(</td><td class="paramname">func, x0[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>非线性最小二乘求解，实现与 <a class="el" href="../../d0/de3/citelist.html#CITEREF_agarwal23">[1]</a> 类似的算法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>最小二乘目标函数，满足  <p class="formulaDsp">
+\[F(\pmb x_k)=\frac12\|\pmb f(\pmb x_k)\|_2^2=\frac12
+                 \left(\texttt{func}[0]^2+\texttt{func}[1]^2+\cdots+\texttt{func}[n]^2\right)\]
+</p>
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>lsq_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
+</div>
+</div>
+<a id="ga5a7f8fec980372cfd29fd21d37721ef1" name="ga5a7f8fec980372cfd29fd21d37721ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a7f8fec980372cfd29fd21d37721ef1">◆ </a></span>lsqnonlinRKF()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::valarray&lt; double &gt; rm::lsqnonlinRKF </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ga35c0b85496608bc60a43229ab4835aee">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::valarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15">RobustMode</a></td>          <td class="paramname"><span class="paramname"><em>rb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.lsqnonlinRKF(</td><td class="paramname">func, x0, rb[, options]</td><td>) -&gt; </td><td>x</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>带 Robust 核函数的非线性最小二乘求解 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>最小二乘目标函数，参考 <a class="el" href="#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rb</td><td>Robust 核函数模式，参考 <a class="el" href="#gafda9bd41e45a035a7b6c5e1bb740de15" title="Robust 核函数">rm::RobustMode</a> ，选择 <code><a class="el" href="#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76" title="L2 核函数">rm::RobustMode::L2</a></code> 时退化为 <code><a class="el" href="#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项，可供设置的有 <code>lsq_mode</code>、<code>max_iter</code>、<code>tol</code> 和 <code>dx</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
+</div>
+</div>
+<a id="gaab485911ef8cdc37e5ef92b839ec107c" name="gaab485911ef8cdc37e5ef92b839ec107c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab485911ef8cdc37e5ef92b839ec107c">◆ </a></span>region()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; rm::region </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>delta</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.region(</td><td class="paramname">func, x0[, delta]</td><td>) -&gt; </td><td>a, b</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</code></p>
+<p>采用进退法确定搜索区间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一维函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>搜索步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>搜索区间 </dd></dl>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

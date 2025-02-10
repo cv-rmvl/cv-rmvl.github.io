@@ -1,0 +1,634 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: 最优化算法库</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">最优化算法库<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+最优化算法库 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/db4/group__core__optimal.svg" width="274" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束多维函数优化选项  <a href="../../d3/dd3/structrm_1_1OptimalOptions.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaf3a8138ec0b4be5f94c9c73605cccff3" id="r_gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">rm::Func1d</a> = std::function&lt;double(double)&gt;</td></tr>
+<tr class="memdesc:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">一元函数  <br /></td></tr>
+<tr class="separator:gaf3a8138ec0b4be5f94c9c73605cccff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79bbea2155e710efcecf6dfe70cd1ebb" id="r_ga79bbea2155e710efcecf6dfe70cd1ebb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga79bbea2155e710efcecf6dfe70cd1ebb">rm::Func1ds</a> = std::vector&lt;<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a>&gt;</td></tr>
+<tr class="memdesc:ga79bbea2155e710efcecf6dfe70cd1ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">一元函数组  <br /></td></tr>
+<tr class="separator:ga79bbea2155e710efcecf6dfe70cd1ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8786881a1bd10bd3cfdd22f9209f88a" id="r_gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> = std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">多元函数  <br /></td></tr>
+<tr class="separator:gaa8786881a1bd10bd3cfdd22f9209f88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5cf9abf91c10f3b6cab450e9551533c" id="r_gaa5cf9abf91c10f3b6cab450e9551533c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">rm::FuncNds</a> = std::vector&lt;<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a>&gt;</td></tr>
+<tr class="memdesc:gaa5cf9abf91c10f3b6cab450e9551533c"><td class="mdescLeft">&#160;</td><td class="mdescRight">多元函数组  <br /></td></tr>
+<tr class="separator:gaa5cf9abf91c10f3b6cab450e9551533c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga329a52f13003e4dd7914217ed7f3f5ed" id="r_ga329a52f13003e4dd7914217ed7f3f5ed"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">rm::DiffMode</a> : uint8_t { <a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">rm::DiffMode::Central</a>
+, <a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6">rm::DiffMode::Ridders</a>
+ }</td></tr>
+<tr class="memdesc:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">梯度/导数计算模式  <a href="#ga329a52f13003e4dd7914217ed7f3f5ed">更多...</a><br /></td></tr>
+<tr class="separator:ga329a52f13003e4dd7914217ed7f3f5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5b1502951081346a5bc6f03694fe73c" id="r_gaf5b1502951081346a5bc6f03694fe73c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf5b1502951081346a5bc6f03694fe73c">rm::FminMode</a> : uint8_t { <a class="el" href="#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">rm::FminMode::ConjGrad</a>
+, <a class="el" href="#ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">rm::FminMode::Simplex</a>
+ }</td></tr>
+<tr class="memdesc:gaf5b1502951081346a5bc6f03694fe73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">多维函数最优化模式  <a href="#gaf5b1502951081346a5bc6f03694fe73c">更多...</a><br /></td></tr>
+<tr class="separator:gaf5b1502951081346a5bc6f03694fe73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gad269c00a143e239e4c56922766bb2a2e" id="r_gad269c00a143e239e4c56922766bb2a2e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad269c00a143e239e4c56922766bb2a2e">rm::derivative</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:gad269c00a143e239e4c56922766bb2a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算一元函数的导数  <br /></td></tr>
+<tr class="separator:gad269c00a143e239e4c56922766bb2a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d960fda587557e7abb07dfe96d824e4" id="r_ga0d960fda587557e7abb07dfe96d824e4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0d960fda587557e7abb07dfe96d824e4">rm::grad</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x, <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a> mode=<a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a>, double dx=1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3)</td></tr>
+<tr class="memdesc:ga0d960fda587557e7abb07dfe96d824e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算多元函数的梯度  <br /></td></tr>
+<tr class="separator:ga0d960fda587557e7abb07dfe96d824e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab485911ef8cdc37e5ef92b839ec107c" id="r_gaab485911ef8cdc37e5ef92b839ec107c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x0, double delta=1)</td></tr>
+<tr class="memdesc:gaab485911ef8cdc37e5ef92b839ec107c"><td class="mdescLeft">&#160;</td><td class="mdescRight">采用进退法确定搜索区间  <br /></td></tr>
+<tr class="separator:gaab485911ef8cdc37e5ef92b839ec107c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8c5462fcdf30d76ea709bbc2e08d3ee" id="r_gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a> (<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a> func, double x1, double x2, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">一维函数最小值搜索  <br /></td></tr>
+<tr class="separator:gae8c5462fcdf30d76ea709bbc2e08d3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3a27f53f42ecf71dc3b2a187f674e12" id="r_gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束多维函数的最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_conjgrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_neldermead">[8]</a> ，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a>  <br /></td></tr>
+<tr class="separator:gad3a27f53f42ecf71dc3b2a187f674e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac94784289aa222ec972035f3ad930153" id="r_gac94784289aa222ec972035f3ad930153"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; double &gt;, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac94784289aa222ec972035f3ad930153">rm::fmincon</a> (<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a> func, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;c, const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;ceq, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:gac94784289aa222ec972035f3ad930153"><td class="mdescLeft">&#160;</td><td class="mdescRight">有约束多维函数的最小值搜索  <br /></td></tr>
+<tr class="separator:gac94784289aa222ec972035f3ad930153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c5c6ca12730fb4365a8034b7c0a0ead" id="r_ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2c5c6ca12730fb4365a8034b7c0a0ead">rm::lsqnonlin</a> (const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;funcs, const std::vector&lt; double &gt; &amp;x0, const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;options={})</td></tr>
+<tr class="memdesc:ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">无约束非线性最小二乘求解  <br /></td></tr>
+<tr class="separator:ga2c5c6ca12730fb4365a8034b7c0a0ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法 </p>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gaf3a8138ec0b4be5f94c9c73605cccff3" name="gaf3a8138ec0b4be5f94c9c73605cccff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3a8138ec0b4be5f94c9c73605cccff3">&#9670;&#160;</a></span>Func1d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">rm::Func1d</a> = std::function&lt;double(double)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>一元函数 </p>
+
+</div>
+</div>
+<a id="ga79bbea2155e710efcecf6dfe70cd1ebb" name="ga79bbea2155e710efcecf6dfe70cd1ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79bbea2155e710efcecf6dfe70cd1ebb">&#9670;&#160;</a></span>Func1ds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga79bbea2155e710efcecf6dfe70cd1ebb">rm::Func1ds</a> = std::vector&lt;<a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>一元函数组 </p>
+
+</div>
+</div>
+<a id="gaa8786881a1bd10bd3cfdd22f9209f88a" name="gaa8786881a1bd10bd3cfdd22f9209f88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8786881a1bd10bd3cfdd22f9209f88a">&#9670;&#160;</a></span>FuncNd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">rm::FuncNd</a> = std::function&lt;double(const std::vector&lt;double&gt; &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>多元函数 </p>
+
+</div>
+</div>
+<a id="gaa5cf9abf91c10f3b6cab450e9551533c" name="gaa5cf9abf91c10f3b6cab450e9551533c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5cf9abf91c10f3b6cab450e9551533c">&#9670;&#160;</a></span>FuncNds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">rm::FuncNds</a> = std::vector&lt;<a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>多元函数组 </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga329a52f13003e4dd7914217ed7f3f5ed" name="ga329a52f13003e4dd7914217ed7f3f5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga329a52f13003e4dd7914217ed7f3f5ed">&#9670;&#160;</a></span>DiffMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">rm::DiffMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>梯度/导数计算模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2" name="gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2"></a>Central&#160;</td><td class="fielddoc"><p>中心差商 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6" name="gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6"></a>Ridders&#160;</td><td class="fielddoc"><p>Richardson 外推 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaf5b1502951081346a5bc6f03694fe73c" name="gaf5b1502951081346a5bc6f03694fe73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5b1502951081346a5bc6f03694fe73c">&#9670;&#160;</a></span>FminMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaf5b1502951081346a5bc6f03694fe73c">rm::FminMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>多维函数最优化模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce" name="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce"></a>ConjGrad&#160;</td><td class="fielddoc"><p>共轭梯度法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789" name="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789"></a>Simplex&#160;</td><td class="fielddoc"><p>单纯形法 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gad269c00a143e239e4c56922766bb2a2e" name="gad269c00a143e239e4c56922766bb2a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad269c00a143e239e4c56922766bb2a2e">&#9670;&#160;</a></span>derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::derivative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>计算一元函数的导数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一元函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>导数计算模式，默认为中心差商 <code>Diff_Central</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数在指定点的导数 </dd></dl>
+
+</div>
+</div>
+<a id="gae8c5462fcdf30d76ea709bbc2e08d3ee" name="gae8c5462fcdf30d76ea709bbc2e08d3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8c5462fcdf30d76ea709bbc2e08d3ee">&#9670;&#160;</a></span>fminbnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; rm::fminbnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>一维函数最小值搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一维约束函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>搜索区间左端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>搜索区间右端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+
+</div>
+</div>
+<a id="gac94784289aa222ec972035f3ad930153" name="gac94784289aa222ec972035f3ad930153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac94784289aa222ec972035f3ad930153">&#9670;&#160;</a></span>fmincon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::vector&lt; double &gt;, double &gt; rm::fmincon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ceq</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>有约束多维函数的最小值搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>不等式约束 \(f_c(x)\le0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ceq</td><td>等式约束 \(f_{ceq}(x)=0\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>options 优化选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+
+</div>
+</div>
+<a id="gad3a27f53f42ecf71dc3b2a187f674e12" name="gad3a27f53f42ecf71dc3b2a187f674e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3a27f53f42ecf71dc3b2a187f674e12">&#9670;&#160;</a></span>fminunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::vector&lt; double &gt;, double &gt; rm::fminunc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>无约束多维函数的最小值搜索 <a class="el" href="../../d0/de3/citelist.html#CITEREF_conjgrad">[4]</a> <a class="el" href="../../d0/de3/citelist.html#CITEREF_neldermead">[8]</a> ，可参考 <a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多维约束函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><code>[x, fval]</code> 最小值点和最小值 </dd></dl>
+
+</div>
+</div>
+<a id="ga0d960fda587557e7abb07dfe96d824e4" name="ga0d960fda587557e7abb07dfe96d824e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d960fda587557e7abb07dfe96d824e4">&#9670;&#160;</a></span>grad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; rm::grad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaa8786881a1bd10bd3cfdd22f9209f88a">FuncNd</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga329a52f13003e4dd7914217ed7f3f5ed">DiffMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga329a52f13003e4dd7914217ed7f3f5eda4a8c79ddddd6109289084e80aa41cdf2">DiffMode::Central</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>dx</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1<a class="el" href="../../d0/de1/group__core.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>-3</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>计算多元函数的梯度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>多元函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定位置的自变量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>梯度计算模式，默认为中心差商 <code>Diff_Central</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx</td><td>计算偏导数时，坐标的微小增量，默认为 <code>1e-3</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数在指定点的梯度向量 </dd></dl>
+
+</div>
+</div>
+<a id="ga2c5c6ca12730fb4365a8034b7c0a0ead" name="ga2c5c6ca12730fb4365a8034b7c0a0ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c5c6ca12730fb4365a8034b7c0a0ead">&#9670;&#160;</a></span>lsqnonlin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; rm::lsqnonlin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#gaa5cf9abf91c10f3b6cab450e9551533c">FuncNds</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>funcs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/dd3/structrm_1_1OptimalOptions.html">OptimalOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>无约束非线性最小二乘求解 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">funcs</td><td>多维最小二乘约束函数，满足 \(F(\pmb x_k)=\frac12\|\pmb f(\pmb x_k)\|_2^2\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>优化选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
+
+</div>
+</div>
+<a id="gaab485911ef8cdc37e5ef92b839ec107c" name="gaab485911ef8cdc37e5ef92b839ec107c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab485911ef8cdc37e5ef92b839ec107c">&#9670;&#160;</a></span>region()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, double &gt; rm::region </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaf3a8138ec0b4be5f94c9c73605cccff3">Func1d</a></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>delta</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../da/d3b/numcal_8hpp.html">rmvl/core/numcal.hpp</a>&gt;</code></p>
+
+<p>采用进退法确定搜索区间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>一维函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>搜索步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>搜索区间 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

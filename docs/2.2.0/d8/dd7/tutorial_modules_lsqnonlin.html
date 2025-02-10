@@ -1,0 +1,543 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: 非线性最小二乘</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">非线性最小二乘</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md198">1. Gauss-Newton 迭代</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md199">1.1 算法原理</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md200">1.2 迭代步骤</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md201">1.3 改进</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md202">1.4 如何使用</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md203">2. Levenberg–Marquardt 算法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md204">2.1 算法原理</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md205">2.2 迭代步骤</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md206">2.3 如何使用</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md207">3. Robust 核函数</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md208">3.1 加权与核函数</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md209">3.2 权值的计算</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md210">3.3 常用的 Robust 核函数</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md211">3.4 如何使用</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>涉及 <b>Gauss-Newton 迭代</b> 与 <b>LM</b> 非线性最小二乘求解算法</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2lsqnonlin"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/05/24 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> ↓<br  />
+</p>
+<hr  />
+<p class="formulaDsp">
+\[\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\Var{\mathrm{Var}}
+\def\Cov{\mathrm{Cov}}
+\def\tr{\mathrm{tr}}
+\def\fml#1{\text{(#1)}}
+\def\ptl#1#2{\frac{\partial#1}{\partial#2}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md198"></a>
+1. Gauss-Newton 迭代</h2>
+<h3><a class="anchor" id="autotoc_md199"></a>
+1.1 算法原理</h3>
+<p>数据处理中，最常见的一种函数形式是 </p><p class="formulaDsp">
+\[f(\pmb x)=\frac12\sum_{i=1}^m\varphi_i^2(\pmb x)\tag{1-1}\]
+</p>
+<p>如果 \(f(x)\) 的极小点 \(x^*\) 满足 \(f(x^*)&lt; e\)（ \(e\) 是预先给定的精度），那么可以认为 \(x^*\) 是 方程组 </p><p class="formulaDsp">
+\[\varphi_i(x_1,x_2,\cdots,x_n)=0,\quad i=1,2,\cdots,m(m\ge n)\]
+</p>
+<p> 的解。</p>
+<p>对式 \(\fml{1-1}\)，可以用一阶导数运算来代替牛顿法中的二阶导数矩阵的求逆运算。因为</p>
+<p class="formulaDsp">
+\[\begin{align}\nabla f(\pmb x)&amp;=\begin{bmatrix}
+\sum\limits_{i=1}^m\ptl{\varphi_i(\pmb x)}{x_1}\varphi_i(\pmb x)\\
+\sum\limits_{i=1}^m\ptl{\varphi_i(\pmb x)}{x_2}\varphi_i(\pmb x)\\
+\vdots\\\sum\limits_{i=1}^m\ptl{\varphi_i(\pmb x)}{x_n}\varphi_i(\pmb x)\end{bmatrix}=\begin{bmatrix}
+\ptl{\varphi_1(\pmb x)}{x_1}&amp;\ptl{\varphi_2(\pmb x)}{x_1}&amp;\cdots&amp;\ptl{\varphi_m(\pmb x)}{x_1}\\
+\ptl{\varphi_1(\pmb x)}{x_2}&amp;\ptl{\varphi_2(\pmb x)}{x_2}&amp;\cdots&amp;\ptl{\varphi_m(\pmb x)}{x_2}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\ptl{\varphi_1(\pmb x)}{x_n}&amp;\ptl{\varphi_2(\pmb x)}{x_n}&amp;\cdots&amp;\ptl{\varphi_m(\pmb x)}{x_n}
+\end{bmatrix}\begin{bmatrix}
+\varphi_1(\pmb x)\\\varphi_2(\pmb x)\\\vdots\\\varphi_m(\pmb x)\end{bmatrix}\\
+&amp;=\pmb J^T(\pmb x)\pmb\varphi(\pmb x)\tag{1-2}\end{align}\]
+</p>
+<p>式中， \(\pmb\varphi(\pmb x)\) 为 \(m\) 维的函数向量，即 \(\pmb\varphi(\pmb x)=[\varphi_1(x),\varphi_2(x),\cdots,\varphi_m(x)]^T\)； \(\pmb J(\pmb x)\) 为函数 \(\pmb\varphi(\pmb x)\ (i=1,2,\cdots,m)\) 一阶偏导数组成的矩阵，即</p>
+<p class="formulaDsp">
+\[\pmb J(\pmb x)=\begin{bmatrix}
+\ptl{\varphi_1(\pmb x)}{x_1}&amp;\ptl{\varphi_1(\pmb x)}{x_2}&amp;\cdots&amp;\ptl{\varphi_1(\pmb x)}{x_n}\\
+\ptl{\varphi_2(\pmb x)}{x_1}&amp;\ptl{\varphi_2(\pmb x)}{x_2}&amp;\cdots&amp;\ptl{\varphi_2(\pmb x)}{x_n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\ptl{\varphi_m(\pmb x)}{x_1}&amp;\ptl{\varphi_m(\pmb x)}{x_2}&amp;\cdots&amp;\ptl{\varphi_m(\pmb x)}{x_n}
+\end{bmatrix}\tag{1-3}\]
+</p>
+<p>特别当 \(\pmb\varphi(\pmb x)\) 是 \(\pmb x\) 的线性函数时，式 \(\fml{1-2}\) 中的 \(\pmb J(\pmb x)\) 是常系数矩阵。这时式 \(\fml{1-1}\) 的海赛矩阵可以写成 </p><p class="formulaDsp">
+\[\pmb H=\pmb J^T\pmb J\tag{1-4}\]
+</p>
+<p>这样，关于 \(\pmb\varphi(\pmb x)\) 是 \(\pmb x\) 的线性函数时的最小二乘法的迭代公式可以写为 </p><p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k-\pmb H^{-1}(\pmb x_k)\pmb J^T(\pmb x_k)\pmb\varphi(\pmb x_k)\tag{1-5}\]
+</p>
+<p>当 \(\pmb\varphi(\pmb x)\) 不是 \(\pmb x\) 的线性函数时，也可以近似将式 \(\fml{1-4}\) 视为函数 \(f(\pmb x)\) 的海赛矩阵，即 </p><p class="formulaDsp">
+\[\pmb H\approx\left[\pmb J(\pmb x_k)\right]^T\pmb J(\pmb x_k)\tag{1-6}\]
+</p>
+<p>所以，关于 \(\pmb\varphi(\pmb x)\) 不是 \(\pmb x\) 的线性函数时的最小二乘法的迭代公式也可以写为 \(\fml{1-5}\) 的形式。</p>
+<h3><a class="anchor" id="autotoc_md200"></a>
+1.2 迭代步骤</h3>
+<ol type="1">
+<li>选择一初始点 \(\pmb x_0=(x_{1,0},x_{2,0},\cdots,x_{n,0})^T\)；</li>
+<li>算出 <p class="formulaDsp">
+\[\Delta\pmb x_0=-\pmb H_0^{-1}\pmb J_0^T\pmb\varphi(\pmb x_k)\tag{1-6}\]
+</p>
+</li>
+<li>令 \(\pmb x_1\) 为函数 \(f(\pmb x)\) 的极小点的第 1 次近似，则有 <p class="formulaDsp">
+\[\pmb x_1=\pmb x_0+\Delta\pmb x_0\tag{1-7}\]
+</p>
+</li>
+<li>以 \(\pmb x_1\) 代替前面的 \(\pmb x_0\)， \(\Delta\pmb x_1\) 代替 \(\Delta\pmb x_0\)，重复上述计算过程，直到 <p class="formulaDsp">
+\[\|\pmb\varphi(\pmb x_k)\|&lt;\epsilon&#39;\tag{1-8a}\]
+</p>
+ 或 <p class="formulaDsp">
+\[\|\nabla f(\pmb x_k)\|&lt;\epsilon&#39;&#39;\tag{1-8b}\]
+</p>
+ 为止。 \(\epsilon&#39;\) 和 \(\epsilon&#39;&#39;\) 是预先给定的精度。</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md201"></a>
+1.3 改进</h3>
+<p>上述高斯－牛顿最小二乘法利用了目标函数在极小值处近似为自变量各分量的平方和的特点，用 \(\pmb J^T\pmb J\) 近似代替牛顿法中 \(f(\pmb x)\) 的二阶导数矩阵，大大节省了计算量。但是它对初始点 \(\pmb x_0\) 的要求比较严格，如果初始点 \(\pmb x_0\) 与极小点 \(\pmb x^*\) 相距很远，这个算法往往失败。原因是</p>
+<ol type="1">
+<li>上述算法基于线性逼近，但在 \(\pmb x_0\) 远离极小点时，这种线性逼近无效；</li>
+<li>\(\pmb J_0^T\pmb J_0\) 的最大特征值与最小特征值的比很大，致使解 \(\Delta\pmb x_0\) 变得无意义。</li>
+</ol>
+<p>为此采取下述改进的办法。在求出 \(\pmb x_k\) 的校正量 \(\Delta\pmb x_k\) 后，不把 \(\pmb x_k+\Delta\pmb x_k\) 作为第 \(k+1\) 次近似点，而是将 \(\Delta\pmb x_k\) 作为下一步的一维方向搜索。求 \(\alpha_k\)，使 </p><p class="formulaDsp">
+\[f(\pmb x_k+\alpha_k\pmb s_k)=\min_{\alpha&gt;0}f(\pmb x_k+\alpha\pmb s_k)\]
+</p>
+<p>然后令 </p><p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k+\alpha_k\pmb s_k\]
+</p>
+<p>以 \(\pmb x_{k+1}\) 代替 \(\pmb x_k\) 重复上述计算过程，直到 \(\|\pmb\varphi(\pmb x_k)\|&lt;\epsilon&#39;\) 或 \(\|\nabla f(\pmb x_k)\|&lt;\epsilon&quot;\) 为止。</p>
+<h3><a class="anchor" id="autotoc_md202"></a>
+1.4 如何使用</h3>
+<p>RMVL 提供了改进的 Gauss-Newton 迭代算法，可参考 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></code> 函数。例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
+\[y=A\sin(\omega t+\varphi_0)+b\]
+</p>
+<p>其中， \(A,\omega,\varphi_0,b\) 是待拟合的参数，不妨统一写为 \(\pmb x=(A,\omega,\varphi_0,b)\)，也就是说我们需要拟合的函数是 </p><p class="formulaDsp">
+\[\green y=x_1\sin(x_2\green t+x_3)+x_4\]
+</p>
+<p>其中 \(t\) 和 \(y\) 是可以观测到的数据，我们需要通过观测的数据来拟合 \(\pmb x\) 的值。比方说，下面的 <code>obtain</code> 函数就可以观测每一帧的数据。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="keywordtype">double</span> obtain();</div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">def </span>obtain(): ...</div>
+</div><!-- fragment --> </div> <p>例如经过了 20 帧的数据采集，我们得到了一个长度为 <code>20</code> 的队列，即</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line">std::deque&lt;double&gt; datas;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* code */</span></div>
+<div class="line">datas.push_front(obtain());</div>
+<div class="line"><span class="keywordflow">if</span> (datas.size() == 20)</div>
+<div class="line">    datas.pop_back();</div>
+<div class="line"><span class="comment">/* code */</span></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">datas = []</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># code</span></div>
+<div class="line">datas.insert(0, obtain())</div>
+<div class="line"><span class="keywordflow">if</span> len(datas) == 20:</div>
+<div class="line">    datas.pop()</div>
+<div class="line"><span class="comment"># code</span></div>
+</div><!-- fragment --> </div> <p>准备好数据后，可以使用下面的代码来拟合正弦函数。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><a class="code hl_typedef" href="../../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a> lsq_sine(datas.size());</div>
+<div class="line"><span class="keywordflow">for</span> (std::size_t i = 0; i &lt; datas.size(); ++i)</div>
+<div class="line">    lsq_sine.push_back([=](<span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) {</div>
+<div class="line">        return x[0] * std::sin(x[1] * i + x[2]) + x[3] - datas[i];</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}); <span class="comment">// 默认采用 Gauss-Newton 算法</span></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga35c0b85496608bc60a43229ab4835aee"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee">rm::FuncNds</a></div><div class="ttdeci">std::function&lt; std::valarray&lt; double &gt;(const std::valarray&lt; double &gt; &amp;)&gt; FuncNds</div><div class="ttdoc">多元函数组</div><div class="ttdef"><b>定义</b> numcal.hpp:310</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gab85704ec7a37e31de0644b99a6286173"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a></div><div class="ttdeci">std::valarray&lt; double &gt; lsqnonlin(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">非线性最小二乘求解，实现与 agarwal23 类似的算法</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">lsq_sine = []</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> i, data <span class="keywordflow">in</span> enumerate(datas):</div>
+<div class="line">    lsq_sine.append(</div>
+<div class="line">        <span class="keyword">lambda</span> x, i=i, data=data: x[0] * np.sin(x[1] * i + x[2]) + x[3] - data</div>
+<div class="line">    )</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09]) <span class="comment"># 默认采用 Gauss-Newton 算法</span></div>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md203"></a>
+2. Levenberg–Marquardt 算法</h2>
+<h3><a class="anchor" id="autotoc_md204"></a>
+2.1 算法原理</h3>
+<p>普通的 Gauss-Newton 迭代，在初始值附近做了一阶线性化处理，而当初始值与极小值相差较远时，曲线的非线性特性会导致迭代失败。为了解决这个问题，Levenberg–Marquardt 算法在 Gauss-Newton 迭代的基础上，引入了一个参数 \(\lambda\)，使得迭代公式变为 </p><p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k-\left(\pmb J^T\pmb J+\red{\lambda\pmb I}\right)^{-1}\pmb J^T\pmb\varphi(\pmb x_k)\tag{2-1}\]
+</p>
+<p>\(I\) 是单位矩阵， \(\lambda\) 是一个非负数。如果 \(\lambda\) 取值较大时， \(\lambda I\) 占主要地位，此时的 LM 算法更接近一阶梯度下降法，说明此时距离最终解还比较远，用一阶近似更合适。反之，如果 \(\lambda\) 取值较小时， \(\pmb H=\pmb J^T\pmb J\) 占主要地位，说明此时距离最终解距离较近，用二阶近似模型比较合适，可以避免梯度下降的<u>震荡</u>，容易快速收敛到极值点。因此参数 \(\lambda\) 不仅影响到迭代的方向还影响到迭代步长的大小。</p>
+<p>令初值为 \(\pmb x_0\)，可以设置 \(\lambda\) 的初值 \(\lambda_0\) 为</p>
+<p class="formulaDsp">
+\[\begin{align}\pmb A_0&amp;=\pmb J^T(\pmb x_0)\pmb J(\pmb x_0)\\
+\lambda_0&amp;=\tau\max_i\left\{a_{ii}^{(0)}\right\}\end{align}\tag{2-2}\]
+</p>
+<p>其中， \(\tau\) 可以自己指定， \(a_{ii}\) 表示矩阵 \(\pmb A\) 对角线元素。此外， \(\lambda\) 需要在迭代过程中不断调整，以保证迭代的收敛性。一般会判断近似的模型与实际函数之间的差异，可以使用下面的公式来判断</p>
+<p class="formulaDsp">
+\[\rho_k=\frac{f(\pmb x_k+\Delta\pmb x_k)-f(\pmb x_k)}{\pmb J(\pmb x_k)\Delta\pmb x_k}\tag{2-3}\]
+</p>
+<h3><a class="anchor" id="autotoc_md205"></a>
+2.2 迭代步骤</h3>
+<ol type="1">
+<li>选择一初始点 \(\pmb x_0=(x_{1,0},x_{2,0},\cdots,x_{n,0})^T\)，按照式 \(\fml{2-2}\) 计算 \(\lambda_0\)；</li>
+<li>对于第 \(k\) 次迭代，根据式 \(\fml{2-1}\) 计算 \(\Delta\pmb x_k\)，并计算 \(\rho_k\)；</li>
+<li>如果<ul>
+<li>\(\rho_k\le0.25\)，应减小 \(\lambda_k\)，即 <p class="formulaDsp">
+\[\lambda_{k+1}=\frac{\lambda_k}2\]
+</p>
+</li>
+<li>\(0.25&lt;\rho_k\le0.75\)，保持 \(\lambda_k\) 不变；</li>
+<li>\(\rho_k&gt;0.75\)，增大 \(\lambda_k\)，即 <p class="formulaDsp">
+\[\lambda_{k+1}=2\lambda_k\]
+</p>
+</li>
+<li>如果 \(\rho_k\le0\)，这时不应该更新 \(\pmb x_k\)，即 <p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k\]
+</p>
+并且和上面 \(\rho_k\le0.25\) 的情况一样，减小 \(\lambda_k\)，反之，在 \(\rho_k&gt;0\) 的情况下，更新 \(\pmb x_k\)，即 <p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k\]
+</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md206"></a>
+2.3 如何使用</h3>
+<p>还是上面的例子，我们可以使用下面的代码来拟合正弦函数。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a> options;</div>
+<div class="line">options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a9c5d1a2d5d7168902691e3a1f92b40bf">lsq_mode</a> = <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a>; <span class="comment">// 使用 LM 算法</span></div>
+<div class="line">options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">max_iter</a> = 2000;            <span class="comment">// 最大迭代次数可以设置高一点，以保证收敛</span></div>
+<div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}, options);</div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a></div><div class="ttdeci">@ LM</div><div class="ttdoc">Levenberg-Marquardt 法 eade13 madsen04</div><div class="ttdef"><b>定义</b> numcal.hpp:331</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">无约束多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:336</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a2212cc3e39cc6355cb36acca9de5534c"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">rm::OptimalOptions::max_iter</a></div><div class="ttdeci">int max_iter</div><div class="ttdoc">最大迭代次数</div><div class="ttdef"><b>定义</b> numcal.hpp:340</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a9c5d1a2d5d7168902691e3a1f92b40bf"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a9c5d1a2d5d7168902691e3a1f92b40bf">rm::OptimalOptions::lsq_mode</a></div><div class="ttdeci">LsqMode lsq_mode</div><div class="ttdoc">最小二乘求解模式，默认为改进的 Gauss-Newton 法 LsqMode::SGN</div><div class="ttdef"><b>定义</b> numcal.hpp:339</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
+<div class="line"> </div>
+<div class="line">options = <a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm.OptimalOptions</a>()</div>
+<div class="line">options.lsq_mode = rm.LsqMode.LM <span class="comment"># 使用 LM 算法</span></div>
+<div class="line">options.max_iter = 2000          <span class="comment"># 最大迭代次数可以设置高一点，以保证收敛</span></div>
+<div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09], options)</div>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md207"></a>
+3. Robust 核函数</h2>
+<h3><a class="anchor" id="autotoc_md208"></a>
+3.1 加权与核函数</h3>
+<p>鲁棒核函数（Robust Kernel Function）是在优化问题中用来减少离群值（outliers）影响的一种技术。在 Bundle Adjustment (BA) 等计算机视觉问题中，鲁棒核函数特别有用，因为这些问题常常受到错误匹配、遮挡或其他因素导致的离群值影响</p>
+<p>标准的最小二乘优化问题可以表示为： </p><p class="formulaDsp">
+\[\min_{\pmb x}\sum_i\frac12\|e_i(\pmb x)\|^2\tag{3-1}\]
+</p>
+<p>其中 \(e_i(x)\) 是第 \(i\) 个观测的误差。引入鲁棒核函数后，优化问题变为： </p><p class="formulaDsp">
+\[\min_{\pmb x}\sum_i\rho(e_i(\pmb x))\tag{3-2}\]
+</p>
+<p>其中 \(\rho(s)\) 是鲁棒核函数。鲁棒核函数主要有</p>
+<ul>
+<li>对小误差的敏感度与标准二次函数相似；</li>
+<li>对大误差（可能是离群值）的敏感度较低，减少了它们的影响。</li>
+</ul>
+<p>的特点，常用的鲁棒核函数是 Huber 损失函数： </p><p class="formulaDsp">
+\[\rho(s)=\begin{cases}\frac12s^2&amp;\quad|s|\leq k\\k(|s|-\frac12k)&amp;\quad|s|&gt;k\end{cases}\tag{3-3}\]
+</p>
+<p>当 \(k=1\) 时，Huber 核函数的图像如下图所示。</p>
+<center></center><center><div class="image">
+<img src="../../huber.png" alt=""/>
+<div class="caption">
+图 3-1 Huber 核函数</div></div>
+    </center><center></center><p>Huber 核函数是一个连续可导的函数，它的优点是它在 \(s=0\) 附近是二次的，这使得它对小误差的敏感度与标准二次函数相似，而对大误差的敏感度较低，减少了它们的影响。对于 \(\fml{3-2}\) 式这一新的最优化目标函数，按照一般想法，求解其导数的零点，便能得到最优解。</p>
+<p class="formulaDsp">
+\[\begin{align}f(\pmb x)&amp;=\sum_{i=1}^m\rho(e_i)\\\ptl{f(\pmb x)}{\pmb x}&amp;=\sum_{i=1}^m\ptl{\rho(e_i)}{\pmb x}=\sum_{i=1}^m\rho&#39;(e_i)\ptl{e_i(\pmb x)}{\pmb x}\\&amp;=\begin{bmatrix}\sum\limits_{i=1}^m\rho&#39;(e_i)\ptl{e_i}{x_1}\\\sum\limits_{i=1}^m\rho&#39;(e_i)\ptl{e_i}{x_2}\\\vdots\\\sum\limits_{i=1}^m\rho&#39;(e_i)\ptl{e_i}{x_n}\end{bmatrix}=\pmb J^T\begin{bmatrix}\rho&#39;(e_1)\\\rho&#39;(e_2)\\\vdots\\\rho&#39;(e_m)\end{bmatrix}\stackrel{\triangle}{=}\pmb J^T\pmb\rho&#39;=0\tag{3-4}\end{align}\]
+</p>
+<p>对于加权最小二乘问题，目标函数形如 </p><p class="formulaDsp">
+\[f(\pmb x)=\frac12\sum_{i=1}^mw_ie_i^2(\pmb x)\tag{3-5}\]
+</p>
+<p>同样求解其导数的零点，能得到加权最小二乘问题的最优解。</p>
+<p class="formulaDsp">
+\[\ptl{f(\pmb x)}{\pmb x}=\sum_{i=1}^mw_ie_i(\pmb x)\ptl{e_i(\pmb x)}{\pmb x}=\pmb J^T\begin{bmatrix}w_1e_1(\pmb x)\\w_2e_2(\pmb x)\\\vdots\\w_me_m(\pmb x)\end{bmatrix}\stackrel{\triangle}{=}\pmb J^T\pmb{We}\tag{3-6}\]
+</p>
+<p>其中 \(\pmb W\) 是以 \(w_i\) 为对角元的对角矩阵。</p>
+<p>对比 \(\fml{3-4}\) 式和 \(\fml{3-6}\) 式，我们希望 Huber 核函数的最优化问题能够转换为加权最小二乘问题，即 </p><p class="formulaDsp">
+\[\begin{align}\pmb{We}&amp;=\pmb\rho&#39;\\w_ie_i(\pmb x)&amp;=\rho&#39;(e_i)\quad i=1,2,\cdots,m\end{align}\tag{3-7}\]
+</p>
+<p>因此 \(w_i\)可以定义为 </p><p class="formulaDsp">
+\[w_i=\frac{\rho&#39;(e_i)}{e_i}\tag{3-8}\]
+</p>
+<p>这样，我们就可以将 Huber 核函数的最优化问题转换为加权最小二乘问题。</p>
+<h3><a class="anchor" id="autotoc_md209"></a>
+3.2 权值的计算</h3>
+<p>对于 Huber 损失函数，我们有 </p><p class="formulaDsp">
+\[\rho&#39;(e_i)=\begin{cases}e_i&amp;|e_i|\leq k\\k\cdot\texttt{sgn}(e_i)&amp;|e_i|&gt;k\end{cases}\tag{3-9}\]
+</p>
+<p>其中， \(\texttt{sgn}\)为符号函数，可参考 <a class="el" href="../../d5/d6c/group__algorithm.html#gaa63dd59871f7ac738e9d66ec4af1701e" title="符号函数">rm::sgn</a> 。因此，权重 \(w_i\)为 </p><p class="formulaDsp">
+\[w_i=\frac{\rho&#39;(e_i)}{e_i}=\begin{cases}1&amp;|e_i|\leq k\\\frac{k}{|e_i|}&amp;|e_i|&gt;k\end{cases}\tag{3-10}\]
+</p>
+<p>这有比较明确的物理意义</p>
+<ol type="1">
+<li>减小离群点的影响<ul>
+<li>离群点的残差 \(|e_i|\)较大，通过 \(w_i=\frac{k}{|e_i|}\)将权重减小，降低其对总损失的影响；</li>
+<li>正常数据点的残差 \(|e_i|\)较小，权重 \(w_i=1\)，与普通最小二乘法一样。</li>
+</ul>
+</li>
+<li>逐步逼近真实参数<ul>
+<li>迭代加权最小二乘法（IRLS）：在每次迭代中，根据当前的残差更新权重，然后求解加权最小二乘问题；</li>
+<li>随着迭代进行，权重 \(w_i\)动态调整，使得模型对异常值的敏感性降低。</li>
+</ul>
+</li>
+</ol>
+<p>此时 \(\Delta\pmb x_k\)搜索方向的计算可以改为 </p><p class="formulaDsp">
+\[\Delta\pmb x_k=-\left(\pmb J^T\pmb W\pmb J\right)^{-1}\pmb J^T\pmb W\pmb e\tag{3-11a}\]
+</p>
+<p>Levenberg–Marquardt 算法的迭代公式也可以改为 </p><p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k-\left(\pmb J^T\pmb W\pmb J+\lambda\pmb I\right)^{-1}\pmb J^T\pmb W\pmb e\tag{3-11b}\]
+</p>
+<h3><a class="anchor" id="autotoc_md210"></a>
+3.3 常用的 Robust 核函数</h3>
+<p>在实际应用中，通常取 \(\rho(s)=\rho\left(\frac{e_1}\sigma\right)\)，而并不直接使用 \(\rho(e_i)\)，其中 \(\sigma\) 一般使用中位绝对偏差（MAD）来估计，以保证不过分受异常值的影响。可使用一下公式来计算 \(\sigma\)： </p><p class="formulaDsp">
+\[\hat\sigma=1.4826\times\text{median}\left\{|e_i-\text{median}(e_i)|\right\}\tag{3-12}\]
+</p>
+<p>常用的 Robust 核函数及其权重如下表所示。</p>
+<div class="full_width_table"> <center> 表 3-1 常用的 Robust 核函数及其权重 </center></div><div class="full_width_table"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter"></th><th class="markdownTableHeadCenter">\(\rho(s)\)   </th><th class="markdownTableHeadCenter">\(\rho&#39;(s)\)   </th><th class="markdownTableHeadCenter">\(w_i=\frac{\rho&#39;(s)}{s}\)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">L2   </td><td class="markdownTableBodyCenter">\(\frac12s^2\)   </td><td class="markdownTableBodyCenter">\(s\)   </td><td class="markdownTableBodyCenter">\(1\)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">Huber   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}\frac12s^2&amp;\vert s\vert\leq k\\k(\vert s\vert-\frac12k)&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}s&amp;\vert s\vert\leq k\\k\cdot\texttt{sgn}(s)&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}1&amp;\vert s\vert\leq k\\\frac{k}{\vert s\vert}&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Tukey   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}\frac{k^2}{6}\left[1-\left(1-\frac{s^2}{k^2}\right)^3\right]&amp;\vert s\vert\leq k\\\frac{k^2}{6}&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}s\left(1-\frac{s^2}{k^2}\right)^2&amp;\vert s\vert\leq k\\0&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\begin{cases}\left(1-\frac{s^2}{k^2}\right)^2&amp;\vert s\vert\leq k\\0&amp;\vert s\vert&gt;k\end{cases}\]
+</p>
+    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">GM   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{s^2}{2\left(1+s^2\right)}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{s}{\left(1+s^2\right)^2}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{1}{\left(1+s^2\right)^2}\]
+</p>
+    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">Cauchy   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{c^2}2\log\left[1+\left(\frac sk\right)^2\right]\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{s}{1+\left(\frac{s}{k}\right)^2}\]
+</p>
+   </td><td class="markdownTableBodyCenter"><p class="formulaDsp">
+\[\frac{1}{1+\left(\frac{s}{k}\right)^2}\]
+</p>
+   </td></tr>
+</table>
+</div><div class="full_width_table"></div><p>不难发现，L2 核函数就是原来的目标函数 \(\fml{3-1}\)。在正态分布的假设下</p>
+<ul>
+<li>Huber 核的 \(k\) 可以取为 1.345；</li>
+<li>Tukey 核的 \(k\) 可以取为 4.685；</li>
+<li>Cauchy 核的 \(k\) 可以取为 2.385。</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md211"></a>
+3.4 如何使用</h3>
+<p>RMVL 提供了带有 Robust 核函数的最小二乘法，可参考 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1" title="带 Robust 核函数的非线性最小二乘求解">rm::lsqnonlinRKF</a> ，对于上面示例中的正弦函数拟合，可以使用下面的代码。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a>(lsq_sine, {1, 0.02, 0, 1.09}, <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a>);</div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ga5a7f8fec980372cfd29fd21d37721ef1"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a></div><div class="ttdeci">std::valarray&lt; double &gt; lsqnonlinRKF(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</div><div class="ttdoc">带 Robust 核函数的非线性最小二乘求解</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdoc">Huber 核函数 huber64</div><div class="ttdef"><b>定义</b> numcal.hpp:425</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm.lsqnonlinRKF</a>(lsq_sine, [1, 0.02, 0, 1.09], rm.RobustMode.Huber)</div>
+</div><!-- fragment --> </div>  </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
