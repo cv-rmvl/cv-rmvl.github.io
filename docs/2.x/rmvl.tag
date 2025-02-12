@@ -14754,12 +14754,12 @@
     <name>feature</name>
     <title>图像轮廓特征（数据组件）</title>
     <filename>db/d72/group__feature.html</filename>
+    <subgroup>anchor</subgroup>
     <subgroup>light_blob</subgroup>
     <subgroup>pilot</subgroup>
     <subgroup>rune_center</subgroup>
     <subgroup>rune_target</subgroup>
     <subgroup>tag</subgroup>
-    <subgroup>anchor</subgroup>
     <class kind="class">rm::feature</class>
     <class kind="class">rm::DefaultFeature</class>
     <member kind="define">
@@ -14768,6 +14768,23 @@
       <anchorfile>db/d72/group__feature.html</anchorfile>
       <anchor>ga05cff275afa35e1f1a76a3b98af63967</anchor>
       <arglist>(name)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>anchor</name>
+    <title>定位点特征</title>
+    <filename>db/dc8/group__anchor.html</filename>
+    <class kind="class">rm::Anchor</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::AnchorType</name>
+      <anchorfile>db/dc8/group__anchor.html</anchorfile>
+      <anchor>ga8fef01d184cf75eca3985168901fd5b7</anchor>
+      <arglist></arglist>
+      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
+      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7a30954d90085f6eaaf5817917fc5fecb3">Circle</enumvalue>
+      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304">Square</enumvalue>
+      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7ae76b449b9fc8536af7557ffa6321d269">Cross</enumvalue>
     </member>
   </compound>
   <compound kind="group">
@@ -14799,23 +14816,6 @@
     <title>AprilTag(Tag25h9) 视觉标签</title>
     <filename>da/daa/group__tag.html</filename>
     <class kind="class">rm::Tag</class>
-  </compound>
-  <compound kind="group">
-    <name>anchor</name>
-    <title>定位点特征</title>
-    <filename>db/dc8/group__anchor.html</filename>
-    <class kind="class">rm::Anchor</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::AnchorType</name>
-      <anchorfile>db/dc8/group__anchor.html</anchorfile>
-      <anchor>ga8fef01d184cf75eca3985168901fd5b7</anchor>
-      <arglist></arglist>
-      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
-      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7a30954d90085f6eaaf5817917fc5fecb3">Circle</enumvalue>
-      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304">Square</enumvalue>
-      <enumvalue file="db/dc8/group__anchor.html" anchor="gga8fef01d184cf75eca3985168901fd5b7ae76b449b9fc8536af7557ffa6321d269">Cross</enumvalue>
-    </member>
   </compound>
   <compound kind="group">
     <name>para_feature</name>
