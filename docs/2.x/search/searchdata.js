@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "01234567_abcdefghijklmnopqrstuvwxyz~一三不与串为主事二交什介从代低何使例信修元光公共其具写决函分创初前功加区协单卡参发变可各合启命和四图在地基外多大奥如子安定客对导局工差常平并序开异弃引待快感成扩按插撰支改数整文方旋无映是显曝最有服机杂权构架标核检概模步求汇法注派海源激熵特状生白的监目相硬示神离简算系组绑统编聚能自获补表装要观视角触订设识详误说读调责超轮软迈运连迭追适递通逻部配重链静非页顶项预风黄",
+  0: "01234567_abcdefghijklmnopqrstuvwxyz~一三不与串为主事二交什介从代低何使例信修元光公共其具写决函分创初前功加区协单卡参发变可各合启命和四图在地基外多大奥如子安定客对导局工差常平并序库开异弃引待快感成扩按插撰支改数整文方旋无映是显曝最有服机杂权构架标核检概模步求汇法注派海源激熵特状生白的监目相硬示神离简算系组绑统编聚能自获补表装要观视角触订设识详误说读调责超轮软迈运连迭追适递通逻部配重链静非页顶项预风黄",
   1: "acdefghiklmnoprstuv",
   2: "cr",
   3: "abcdefghiklmnoprstuv",
   4: "abcdefghijklmnoprstuvwyz~",
   5: "_abcdefghiklmnopqrstvxyz",
-  6: "acdefhkmoprsv",
+  6: "acdefkmoprsv",
   7: "abcdefghloprst",
   8: "abcdeghiklmnoprstuvxyz",
   9: "_or",

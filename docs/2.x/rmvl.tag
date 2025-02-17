@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.13.2" doxygen_gitid="26342b775ea25e6fefb53220926b20702c56fcb3">
+<tagfile doxygen_version="1.13.0" doxygen_gitid="3fc9e7f98b8d1156ec627cd3ee6f23984bf4e1b1">
   <compound kind="file">
     <name>root.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
@@ -281,25 +281,6 @@
     <filename>d7/d54/tutorials_8markdown.html</filename>
   </compound>
   <compound kind="file">
-    <name>combo.h</name>
-    <path>rmvl/combo/</path>
-    <filename>d8/d36/combo_8h.html</filename>
-    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/math.hpp</includes>
-    <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">rmvl/camera/camutils.hpp</includes>
-    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/io.hpp</includes>
-    <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">rmvl/feature/feature.h</includes>
-    <class kind="class">rm::combo</class>
-    <class kind="class">rm::DefaultCombo</class>
-    <namespace>rm</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>RMVL_COMBO_CAST</name>
-      <anchorfile>dd/dd2/group__combo.html</anchorfile>
-      <anchor>ga24c32811ed541fdacd4d507a451b2bc8</anchor>
-      <arglist>(name)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>combo.hpp</name>
     <path>rmvl/</path>
     <filename>d1/dad/rmvl_2combo_8hpp.html</filename>
@@ -329,6 +310,25 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
+    <name>combo.h</name>
+    <path>rmvl/combo/</path>
+    <filename>d8/d36/combo_8h.html</filename>
+    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/math.hpp</includes>
+    <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">rmvl/camera/camutils.hpp</includes>
+    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/io.hpp</includes>
+    <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">rmvl/feature/feature.h</includes>
+    <class kind="class">rm::combo</class>
+    <class kind="class">rm::DefaultCombo</class>
+    <namespace>rm</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>RMVL_COMBO_CAST</name>
+      <anchorfile>dd/dd2/group__combo.html</anchorfile>
+      <anchor>ga24c32811ed541fdacd4d507a451b2bc8</anchor>
+      <arglist>(name)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>rune.h</name>
     <path>rmvl/combo/</path>
     <filename>de/de6/combo_2rune_8h.html</filename>
@@ -348,15 +348,6 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
-    <name>compensator.h</name>
-    <path>rmvl/compensator/</path>
-    <filename>d9/df2/compensator_8h.html</filename>
-    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
-    <class kind="struct">rm::CompensateInfo</class>
-    <class kind="class">rm::compensator</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>compensator.hpp</name>
     <path>rmvl/</path>
     <filename>d6/ddf/rmvl_2compensator_8hpp.html</filename>
@@ -366,6 +357,15 @@
     <name>compensator.hpp</name>
     <path>rmvlpara/</path>
     <filename>da/dbc/rmvlpara_2compensator_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>compensator.h</name>
+    <path>rmvl/compensator/</path>
+    <filename>d9/df2/compensator_8h.html</filename>
+    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
+    <class kind="struct">rm::CompensateInfo</class>
+    <class kind="class">rm::compensator</class>
+    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>gravity_compensator.h</name>
@@ -402,17 +402,6 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
-    <name>decider.h</name>
-    <path>rmvl/decider/</path>
-    <filename>d3/d70/decider_8h.html</filename>
-    <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" import="no" module="no" objc="no">rmvl/compensator/compensator.h</includes>
-    <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">rmvl/detector/detector.h</includes>
-    <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" import="no" module="no" objc="no">rmvl/predictor/predictor.h</includes>
-    <class kind="struct">rm::DecideInfo</class>
-    <class kind="class">rm::decider</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>decider.hpp</name>
     <path>rmvl/</path>
     <filename>de/d18/rmvl_2decider_8hpp.html</filename>
@@ -422,6 +411,17 @@
     <name>decider.hpp</name>
     <path>rmvlpara/</path>
     <filename>d1/d33/rmvlpara_2decider_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>decider.h</name>
+    <path>rmvl/decider/</path>
+    <filename>d3/d70/decider_8h.html</filename>
+    <includes id="d9/df2/compensator_8h" name="compensator.h" local="yes" import="no" module="no" objc="no">rmvl/compensator/compensator.h</includes>
+    <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">rmvl/detector/detector.h</includes>
+    <includes id="dc/d08/predictor_8h" name="predictor.h" local="yes" import="no" module="no" objc="no">rmvl/predictor/predictor.h</includes>
+    <class kind="struct">rm::DecideInfo</class>
+    <class kind="class">rm::decider</class>
+    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>gyro_decider.h</name>
@@ -477,16 +477,6 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
-    <name>detector.h</name>
-    <path>rmvl/detector/</path>
-    <filename>d5/d9f/detector_8h.html</filename>
-    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
-    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/pretreat.hpp</includes>
-    <class kind="struct">rm::DetectInfo</class>
-    <class kind="class">rm::detector</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>detector.hpp</name>
     <path>rmvl/</path>
     <filename>dd/d9f/rmvl_2detector_8hpp.html</filename>
@@ -515,6 +505,16 @@
     <class kind="class">rm::para::ArmorDetectorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
+  </compound>
+  <compound kind="file">
+    <name>detector.h</name>
+    <path>rmvl/detector/</path>
+    <filename>d5/d9f/detector_8h.html</filename>
+    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
+    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/pretreat.hpp</includes>
+    <class kind="struct">rm::DetectInfo</class>
+    <class kind="class">rm::detector</class>
+    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>gyro_detector.h</name>
@@ -585,30 +585,6 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
-    <name>feature.h</name>
-    <path>rmvl/feature/</path>
-    <filename>d2/d74/feature_8h.html</filename>
-    <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">rmvl/types.hpp</includes>
-    <class kind="class">rm::feature</class>
-    <class kind="class">rm::DefaultFeature</class>
-    <namespace>rm</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>RMVL_FEATURE_CAST</name>
-      <anchorfile>db/d72/group__feature.html</anchorfile>
-      <anchor>ga05cff275afa35e1f1a76a3b98af63967</anchor>
-      <arglist>(name)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>tag.h</name>
-    <path>rmvl/feature/</path>
-    <filename>d2/dcd/tag_8h.html</filename>
-    <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">feature.h</includes>
-    <class kind="class">rm::Tag</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>feature.hpp</name>
     <path>rmvl/</path>
     <filename>d7/d13/rmvl_2feature_8hpp.html</filename>
@@ -635,6 +611,22 @@
     <class kind="class">rm::para::AnchorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
+  </compound>
+  <compound kind="file">
+    <name>feature.h</name>
+    <path>rmvl/feature/</path>
+    <filename>d2/d74/feature_8h.html</filename>
+    <includes id="dd/de3/types_8hpp" name="types.hpp" local="yes" import="no" module="no" objc="no">rmvl/types.hpp</includes>
+    <class kind="class">rm::feature</class>
+    <class kind="class">rm::DefaultFeature</class>
+    <namespace>rm</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>RMVL_FEATURE_CAST</name>
+      <anchorfile>db/d72/group__feature.html</anchorfile>
+      <anchor>ga05cff275afa35e1f1a76a3b98af63967</anchor>
+      <arglist>(name)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>light_blob.h</name>
@@ -705,6 +697,25 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
+    <name>tag.h</name>
+    <path>rmvl/feature/</path>
+    <filename>d2/dcd/tag_8h.html</filename>
+    <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">feature.h</includes>
+    <class kind="class">rm::Tag</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>group.hpp</name>
+    <path>rmvl/</path>
+    <filename>db/d4f/rmvl_2group_8hpp.html</filename>
+    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">group/group.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>group.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d8/d4a/rmvlpara_2group_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
     <name>group.h</name>
     <path>rmvl/group/</path>
     <filename>d9/dd1/group_8h.html</filename>
@@ -719,17 +730,6 @@
       <anchor>ga42611eb432282548ec166543fc742a4d</anchor>
       <arglist>(name)</arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>group.hpp</name>
-    <path>rmvl/</path>
-    <filename>db/d4f/rmvl_2group_8hpp.html</filename>
-    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">group/group.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>group.hpp</name>
-    <path>rmvlpara/</path>
-    <filename>d8/d4a/rmvlpara_2group_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>gyro_group.h</name>
@@ -766,15 +766,6 @@
     <class kind="class">rm::para::RuneGroupParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
-  </compound>
-  <compound kind="file">
-    <name>predictor.h</name>
-    <path>rmvl/predictor/</path>
-    <filename>dc/d08/predictor_8h.html</filename>
-    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
-    <class kind="struct">rm::PredictInfo</class>
-    <class kind="class">rm::predictor</class>
-    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>predictor.hpp</name>
@@ -822,6 +813,15 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
+    <name>predictor.h</name>
+    <path>rmvl/predictor/</path>
+    <filename>dc/d08/predictor_8h.html</filename>
+    <includes id="d9/dd1/group_8h" name="group.h" local="yes" import="no" module="no" objc="no">rmvl/group/group.h</includes>
+    <class kind="struct">rm::PredictInfo</class>
+    <class kind="class">rm::predictor</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
     <name>rune_predictor.h</name>
     <path>rmvl/predictor/</path>
     <filename>d5/dec/predictor_2rune__predictor_8h.html</filename>
@@ -854,22 +854,6 @@
     <class kind="class">rm::para::SpiRunePredictorParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
-  </compound>
-  <compound kind="file">
-    <name>tracker.h</name>
-    <path>rmvl/tracker/</path>
-    <filename>dc/ded/tracker_8h.html</filename>
-    <includes id="d8/d36/combo_8h" name="combo.h" local="yes" import="no" module="no" objc="no">rmvl/combo/combo.h</includes>
-    <class kind="class">rm::tracker</class>
-    <class kind="class">rm::DefaultTracker</class>
-    <namespace>rm</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>RMVL_TRACKER_CAST</name>
-      <anchorfile>de/dca/group__tracker.html</anchorfile>
-      <anchor>ga9e3030832380159c0148548f67ffa0b5</anchor>
-      <arglist>(name)</arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>tracker.hpp</name>
@@ -940,12 +924,49 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
+    <name>tracker.h</name>
+    <path>rmvl/tracker/</path>
+    <filename>dc/ded/tracker_8h.html</filename>
+    <includes id="d8/d36/combo_8h" name="combo.h" local="yes" import="no" module="no" objc="no">rmvl/combo/combo.h</includes>
+    <class kind="class">rm::tracker</class>
+    <class kind="class">rm::DefaultTracker</class>
+    <namespace>rm</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>RMVL_TRACKER_CAST</name>
+      <anchorfile>de/dca/group__tracker.html</anchorfile>
+      <anchor>ga9e3030832380159c0148548f67ffa0b5</anchor>
+      <arglist>(name)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>types.hpp</name>
     <path>rmvl/</path>
     <filename>dd/de3/types_8hpp.html</filename>
     <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
     <class kind="class">rm::StateInfo</class>
     <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>algorithm.hpp</name>
+    <path>rmvl/</path>
+    <filename>d1/d11/rmvl_2algorithm_8hpp.html</filename>
+    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">algorithm/math.hpp</includes>
+    <includes id="d6/deb/transform_8hpp" name="transform.hpp" local="yes" import="no" module="no" objc="no">algorithm/transform.hpp</includes>
+    <includes id="dd/d83/dsp_8hpp" name="dsp.hpp" local="yes" import="no" module="no" objc="no">algorithm/dsp.hpp</includes>
+    <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" import="no" module="no" objc="no">algorithm/kalman.hpp</includes>
+    <includes id="da/d3b/numcal_8hpp" name="numcal.hpp" local="yes" import="no" module="no" objc="no">algorithm/numcal.hpp</includes>
+    <includes id="d4/d90/datastruct_8hpp" name="datastruct.hpp" local="yes" import="no" module="no" objc="no">algorithm/datastruct.hpp</includes>
+    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">algorithm/pretreat.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>algorithm.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>dd/d41/rmvlpara_2algorithm_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::para::AlgorithmParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>datastruct.hpp</name>
@@ -1013,25 +1034,14 @@
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
-    <name>algorithm.hpp</name>
+    <name>camera.hpp</name>
     <path>rmvl/</path>
-    <filename>d1/d11/rmvl_2algorithm_8hpp.html</filename>
-    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">algorithm/math.hpp</includes>
-    <includes id="d6/deb/transform_8hpp" name="transform.hpp" local="yes" import="no" module="no" objc="no">algorithm/transform.hpp</includes>
-    <includes id="dd/d83/dsp_8hpp" name="dsp.hpp" local="yes" import="no" module="no" objc="no">algorithm/dsp.hpp</includes>
-    <includes id="db/d0f/kalman_8hpp" name="kalman.hpp" local="yes" import="no" module="no" objc="no">algorithm/kalman.hpp</includes>
-    <includes id="da/d3b/numcal_8hpp" name="numcal.hpp" local="yes" import="no" module="no" objc="no">algorithm/numcal.hpp</includes>
-    <includes id="d4/d90/datastruct_8hpp" name="datastruct.hpp" local="yes" import="no" module="no" objc="no">algorithm/datastruct.hpp</includes>
-    <includes id="d2/d4c/pretreat_8hpp" name="pretreat.hpp" local="yes" import="no" module="no" objc="no">algorithm/pretreat.hpp</includes>
+    <filename>da/d4b/rmvl_2camera_8hpp.html</filename>
   </compound>
   <compound kind="file">
-    <name>algorithm.hpp</name>
+    <name>camera.hpp</name>
     <path>rmvlpara/</path>
-    <filename>dd/d41/rmvlpara_2algorithm_8hpp.html</filename>
-    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="class">rm::para::AlgorithmParam</class>
-    <namespace>rm</namespace>
-    <namespace>rm::para</namespace>
+    <filename>da/d4e/rmvlpara_2camera_8hpp.html</filename>
   </compound>
   <compound kind="file">
     <name>camutils.hpp</name>
@@ -1045,28 +1055,18 @@
   <compound kind="file">
     <name>galaxy_camera.h</name>
     <path>rmvl/camera/</path>
-    <filename>d5/dc2/galaxy__camera_8h.html</filename>
+    <filename>d1/da6/camera_2galaxy__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::GalaxyCamera</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
-    <name>camera.hpp</name>
-    <path>rmvl/</path>
-    <filename>da/d4b/rmvl_2camera_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>camera.hpp</name>
-    <path>rmvlpara/</path>
-    <filename>da/d4e/rmvlpara_2camera_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>camera.h</name>
+    <name>galaxy_camera.h</name>
     <path>rmvlpara/camera/</path>
-    <filename>d7/df6/camera_8h.html</filename>
+    <filename>db/d2f/ara_2camera_2galaxy__camera_8h.html</filename>
     <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="class">rm::para::CameraParam</class>
+    <class kind="class">rm::para::GalaxyCameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
   </compound>
@@ -1119,20 +1119,36 @@
     <name>opt_camera.h</name>
     <path>rmvlpara/camera/</path>
     <filename>d1/d3e/ara_2camera_2opt__camera_8h.html</filename>
+    <class kind="struct">rm::para::OptCameraParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
+  </compound>
+  <compound kind="file">
+    <name>camera.h</name>
+    <path>rmvlpara/camera/</path>
+    <filename>d7/df6/camera_8h.html</filename>
     <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="class">rm::para::OptCameraParam</class>
+    <class kind="class">rm::para::CameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>core.hpp</name>
     <path>rmvl/</path>
-    <filename>da/d47/core_8hpp.html</filename>
+    <filename>de/d78/rmvl_2core_8hpp.html</filename>
     <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">core/io.hpp</includes>
     <includes id="d7/de9/str_8hpp" name="str.hpp" local="yes" import="no" module="no" objc="no">core/str.hpp</includes>
     <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
     <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" import="no" module="no" objc="no">core/version.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>core.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d0/d61/rmvlpara_2core_8hpp.html</filename>
+    <class kind="struct">rm::para::CoreParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>io.hpp</name>
@@ -1553,22 +1569,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>lightutils.hpp</name>
-    <path>rmvl/light/</path>
-    <filename>d6/d29/lightutils_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
-    <class kind="struct">rm::LightConfig</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>opt_light_control.h</name>
-    <path>rmvl/light/</path>
-    <filename>d4/da9/opt__light__control_8h.html</filename>
-    <includes id="d6/d29/lightutils_8hpp" name="lightutils.hpp" local="yes" import="no" module="no" objc="no">lightutils.hpp</includes>
-    <class kind="class">rm::OPTLightController</class>
-    <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
     <name>light.hpp</name>
     <path>rmvl/</path>
     <filename>df/df0/rmvl_2light_8hpp.html</filename>
@@ -1596,6 +1596,22 @@
     <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
+    <name>lightutils.hpp</name>
+    <path>rmvl/light/</path>
+    <filename>d6/d29/lightutils_8hpp.html</filename>
+    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <class kind="struct">rm::LightConfig</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>opt_light_control.h</name>
+    <path>rmvl/light/</path>
+    <filename>d4/da9/opt__light__control_8h.html</filename>
+    <includes id="d6/d29/lightutils_8hpp" name="lightutils.hpp" local="yes" import="no" module="no" objc="no">lightutils.hpp</includes>
+    <class kind="class">rm::OPTLightController</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
     <name>ml.hpp</name>
     <path>rmvl/</path>
     <filename>d3/d29/ml_8hpp.html</filename>
@@ -1610,6 +1626,20 @@
     <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::ClassificationNet</class>
     <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>opcua.hpp</name>
+    <path>rmvl/</path>
+    <filename>d2/da1/rmvl_2opcua_8hpp.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>opcua.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d0/dda/rmvlpara_2opcua_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::para::OpcuaParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>client.hpp</name>
@@ -1728,20 +1758,6 @@
     <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" import="no" module="no" objc="no">variable.hpp</includes>
     <class kind="class">rm::View</class>
     <namespace>rm</namespace>
-  </compound>
-  <compound kind="file">
-    <name>opcua.hpp</name>
-    <path>rmvl/</path>
-    <filename>d2/da1/rmvl_2opcua_8hpp.html</filename>
-  </compound>
-  <compound kind="file">
-    <name>opcua.hpp</name>
-    <path>rmvlpara/</path>
-    <filename>d0/dda/rmvlpara_2opcua_8hpp.html</filename>
-    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
-    <class kind="class">rm::para::OpcuaParam</class>
-    <namespace>rm</namespace>
-    <namespace>rm::para</namespace>
   </compound>
   <compound kind="class">
     <name>rm::para::AlgorithmParam</name>
@@ -2795,8 +2811,8 @@
       <type></type>
       <name>ClientTimer</name>
       <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
-      <anchor>ae4d46e32b8ef678aa0a98cd3dfefcda0</anchor>
-      <arglist>(ClientView cv, double period, std::function&lt; void(ClientView)&gt; callback)</arglist>
+      <anchor>af0301a509272a9f463413ffe2db4f88b</anchor>
+      <arglist>(ClientView cv, double period, std::function&lt; void()&gt; callback)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -3142,6 +3158,38 @@
       <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
       <anchor>a22465cc4deedab79ebc3f0c13b4bd9ff</anchor>
       <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::para::CoreParam</name>
+    <filename>da/dbc/structrm_1_1para_1_1CoreParam.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a7ecb7d384abea8fdd59f3c0eda5ce21f</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>acf911b898642ae90c35790a065500189</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a58c6929954c48b7d9582e90d7333ca90</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>SECANT_STEP</name>
+      <anchorfile>da/dbc/structrm_1_1para_1_1CoreParam.html</anchorfile>
+      <anchor>a3167265724509795ea89bfda655e14af</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4185,6 +4233,101 @@
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
       <anchor>a236d0d1019082cfc41c395bfb863d506</anchor>
       <arglist>(CameraConfig cfg, std::string_view id=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::para::GalaxyCameraParam</name>
+    <filename>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>GalaxyCameraParam</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a89bb7c04ca1aa223a32d053e47b363e7</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a3e34e464aae18cac36452b09c8d2bcd4</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a0e92067eb641d93b06ed96a5a6d7542b</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>load</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>aac37ba1d82e42dd90b62957d241003f4</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>exposure</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a0ed1c2e8e85ef91faa4e403989e4c30e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>saturation</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>ae43e8b545037fea25878f481a3c9c1cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gain</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>ad015ea025dbafcc7d0ba6a7fef103298</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>b_gain</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a5a851010df54d56318877dbe8e43f71f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>g_gain</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a07e97049beaff5cdc6aa113eb764b56d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>r_gain</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a45cd01528153faef2d0fce94dcad3ea0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>grab_mode</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a0c8da953514c5a9fe74047ffdb167b40</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>retrieve_mode</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a6a28895d5993888bff2ecea4bd1fc672</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>id</name>
+      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
+      <anchor>a67a505926d7b70583a51ee03f34934a5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5269,24 +5412,24 @@
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
+    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>hash_aggregate&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
+      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
       <anchor>a17ead482bdcd67b2690cb4318ad22a5b</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
+    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>std::hash&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
+      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
       <anchor>a64b5c09cc70dbdaba2bebd58ebd287be</anchor>
       <arglist></arglist>
     </member>
@@ -6899,90 +7042,83 @@
       <arglist>(CameraConfig init_mode, std::string_view handle_info=&quot;&quot;)</arglist>
     </member>
   </compound>
-  <compound kind="class">
+  <compound kind="struct">
     <name>rm::para::OptCameraParam</name>
-    <filename>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OptCameraParam</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
-      <anchor>ad81e74009932116693c4bf6808ea7366</anchor>
-      <arglist>()=default</arglist>
-    </member>
+    <filename>d4/d85/structrm_1_1para_1_1OptCameraParam.html</filename>
     <member kind="function">
       <type>bool</type>
       <name>read</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a07c371edf4541a58571a8d92a63948a0</anchor>
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>afb2b6246d8e9d4988aa4f2e25043488d</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>load</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>abc83928da813f9ead4bf687da1546c7d</anchor>
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>exposure</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a059c84c7cc055c80a3edb189f03b565f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>gamma</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>aad696a032703a9d0b8c2de12267f9c6f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>contrast</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a7196cf8996bfa0cc632df10a06a5aacd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>gain</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a60ef192aae0d1941b66c96b15a0173bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>b_gain</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a0bf1126d92810a95ce8797d81a857221</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>g_gain</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a620ebdd4854643bfea2ca5709da9299f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>r_gain</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>ac53e377508ed84f7a2b1e3a682f434f7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>handle_info</name>
-      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a663f61bced526f6cc85673c6e5bfd2e7</anchor>
       <arglist></arglist>
     </member>
@@ -7143,8 +7279,8 @@
       <type>static ptr</type>
       <name>make_feature</name>
       <anchorfile>de/d9a/classrm_1_1Pilot.html</anchorfile>
-      <anchor>a2e0c3c07083af4f9f4901b63411be0dd</anchor>
-      <arglist>(float ref_width, float ref_height, const cv::Point2f &amp;ref_center, float ref_angle, const std::vector&lt; cv::Point2f &gt; &amp;ref_corners)</arglist>
+      <anchor>a43abe43eb42e42e1148f672235fa0832</anchor>
+      <arglist>(float w, float h, const cv::Point2f &amp;center, float angle, const std::vector&lt; cv::Point2f &gt; &amp;corners)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -10140,6 +10276,13 @@
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>Variable</name>
+      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
+      <anchor>af5d12d868b321cf4cfa6241ad6c190ec</anchor>
+      <arglist>(std::initializer_list&lt; Tp &gt; il)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
@@ -10303,6 +10446,13 @@
       <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
       <anchor>a770f26b567eae38c03c059867a060571</anchor>
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>VariableType</name>
+      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
+      <anchor>a7f57c4d3369e645c48e024011f20cdf2</anchor>
+      <arglist>(std::initializer_list&lt; Tp &gt; il)</arglist>
     </member>
     <member kind="function">
       <type>Tp</type>
@@ -12324,6 +12474,8 @@
     <class kind="class">rm::para::ArmorParam</class>
     <class kind="class">rm::para::ArmorPredictorParam</class>
     <class kind="class">rm::para::CameraParam</class>
+    <class kind="struct">rm::para::CoreParam</class>
+    <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::GravityCompensatorParam</class>
     <class kind="class">rm::para::GyroCompensatorParam</class>
     <class kind="class">rm::para::GyroDeciderParam</class>
@@ -12336,7 +12488,7 @@
     <class kind="class">rm::para::LightBlobParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OpcuaParam</class>
-    <class kind="class">rm::para::OptCameraParam</class>
+    <class kind="struct">rm::para::OptCameraParam</class>
     <class kind="class">rm::para::PilotParam</class>
     <class kind="class">rm::para::PlanarTrackerParam</class>
     <class kind="class">rm::para::RuneCenterParam</class>
@@ -12378,6 +12530,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>GalaxyCameraParam</type>
+      <name>galaxy_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>gaa46552e1dce5ace4c0d0196a5e3f8b6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>HikCameraParam</type>
       <name>hik_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
@@ -12396,6 +12555,13 @@
       <name>opt_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>CoreParam</type>
+      <name>core_param</name>
+      <anchorfile>d1/d36/group__para__core.html</anchorfile>
+      <anchor>ga00171e6e6abe8be834e30e7247b7747d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -13608,6 +13774,7 @@
     <subgroup>para_predictor</subgroup>
     <subgroup>para_decider</subgroup>
     <subgroup>para_algorithm</subgroup>
+    <subgroup>para_core</subgroup>
     <subgroup>para_opcua</subgroup>
   </compound>
   <compound kind="group">
@@ -13825,14 +13992,22 @@
     <title>camera 的参数模块</title>
     <filename>d2/df4/group__para__camera.html</filename>
     <class kind="class">rm::para::CameraParam</class>
+    <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
-    <class kind="class">rm::para::OptCameraParam</class>
+    <class kind="struct">rm::para::OptCameraParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>rm::para::camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga920ea1f18537e54423f9f6c0ff586b55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>GalaxyCameraParam</type>
+      <name>rm::para::galaxy_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>gaa46552e1dce5ace4c0d0196a5e3f8b6c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -15401,6 +15576,19 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>para_core</name>
+    <title>core 的参数模块</title>
+    <filename>d1/d36/group__para__core.html</filename>
+    <class kind="struct">rm::para::CoreParam</class>
+    <member kind="variable">
+      <type>CoreParam</type>
+      <name>rm::para::core_param</name>
+      <anchorfile>d1/d36/group__para__core.html</anchorfile>
+      <anchor>ga00171e6e6abe8be834e30e7247b7747d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>para_opcua</name>
     <title>opcua 的参数模块</title>
     <filename>da/dd3/group__para__opcua.html</filename>
@@ -15763,7 +15951,8 @@
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1. 简介">tutorial_opcua_intro</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.1 OPC UA 是什么">tutorial_opcua_intro_what</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.2 地址空间">tutorial_opcua_intro_address_space</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.2 open62541 库">tutorial_opcua_intro_open62541</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.3 地址空间">tutorial_opcua_intro_address_space</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="2. 服务器/客户端">tutorial_opcua_server_client</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="3. 发布/订阅">tutorial_opcua_pub_sub</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="4.1 参数加载">opcua_parameters</docanchor>

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['使用对象与基本情况_0',['使用对象与基本情况',['../d1/dfb/intro.html#autotoc_md3',1,'']]],
-  ['使用技巧_1',['4. 使用技巧',['../db/dba/tutorial_modules_opcua.html#autotoc_md274',1,'']]],
+  ['使用技巧_1',['4. 使用技巧',['../db/dba/tutorial_modules_opcua.html#autotoc_md276',1,'']]],
   ['使用提供的工具链构建_20rmvl_2',['使用提供的工具链构建 RMVL',['../d5/d52/tutorial_other_arm.html#autotoc_md138',1,'']]],
   ['使用教程_3',['使用教程',['../dd/da0/tutorials.html',1,'RMVL 使用教程'],['../d8/d88/tutorials_python.html',1,'RMVL-Python 使用教程']]],
   ['使用方法_4',['2. 使用方法',['../d4/d74/tutorial_modules_union_find.html#autotoc_md231',1,'']]],

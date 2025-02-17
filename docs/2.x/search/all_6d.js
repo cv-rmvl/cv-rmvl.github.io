@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['弃用列表_0',['弃用列表',['../da/d58/deprecated.html',1,'']]]
+  ['异常处理_0',['异常处理',['../d1/dfb/intro.html#intro_error_handle',1,'']]]
 ];

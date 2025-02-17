@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.13.0" />
   <title>RMVL: 工业自动化通信协议 OPC UA</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.13.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -132,7 +132,10 @@ $(function(){ initResizable(false); });
         <a href="#tutorial_opcua_intro_what">1.1 OPC UA 是什么</a>
       </li>
       <li class="level2">
-        <a href="#tutorial_opcua_intro_address_space">1.2 地址空间</a>
+        <a href="#tutorial_opcua_intro_open62541">1.2 open62541 库</a>
+      </li>
+      <li class="level2">
+        <a href="#tutorial_opcua_intro_address_space">1.3 地址空间</a>
       </li>
     </ul>
   </li>
@@ -167,6 +170,14 @@ $(function(){ initResizable(false); });
       </li>
       <li class="level2">
         <a href="#autotoc_md271">2.7 定时</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md272">2.7.1 服务器定时</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md273">2.7.2 客户端定时</a>
+          </li>
+        </ul>
       </li>
     </ul>
   </li>
@@ -174,15 +185,15 @@ $(function(){ initResizable(false); });
     <a href="#tutorial_opcua_pub_sub">3. 发布/订阅</a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md272">3.1 无代理 Pub/Sub</a>
+        <a href="#autotoc_md274">3.1 无代理 Pub/Sub</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md273">3.2 有代理 Pub/Sub</a>
+        <a href="#autotoc_md275">3.2 有代理 Pub/Sub</a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md274">4. 使用技巧</a>
+    <a href="#autotoc_md276">4. 使用技巧</a>
     <ul>
       <li class="level2">
         <a href="#opcua_parameters">4.1 参数加载</a>
@@ -191,31 +202,31 @@ $(function(){ initResizable(false); });
         <a href="#opcua_nodeset_compiler">4.2 从 XML 配置 OPC UA</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md275">4.2.1 安装 UaModeler</a>
+            <a href="#autotoc_md277">4.2.1 安装 UaModeler</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md276">4.2.2 可视化配置 OPC UA</a>
+            <a href="#autotoc_md278">4.2.2 可视化配置 OPC UA</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md277">4.2.3 生成 *.c/*.h 文件</a>
+            <a href="#autotoc_md279">4.2.3 生成 *.c/*.h 文件</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md278">4.3 不占有所有权的 C/S 视图</a>
+        <a href="#autotoc_md280">4.3 不占有所有权的 C/S 视图</a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md279">5. 参考内容</a>
+    <a href="#autotoc_md281">5. 参考内容</a>
   </li>
 </ul>
 </div>
 <div class="textblock"><p>OPC UA 和 open62541 库简介</p>
 <p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
-<dl class="section date"><dt>日期</dt><dd>2024/12/31 </dd></dl>
-<dl class="section version"><dt>版本</dt><dd>2.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025/02/16 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>3.0 </dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> ↑<br  />
  <b>下一篇教程：</b><a class="el" href="../../df/d2c/tutorial_modules_camera.html">相机设备</a> ↓<br  />
 </p>
@@ -241,8 +252,11 @@ $(function(){ initResizable(false); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">可靠性   </td><td class="markdownTableBodyCenter">OPC UA 提供了可靠的通信机制，包括消息确认、重试和错误处理，以确保数据的可靠传输   </td></tr>
 </table>
-</div><div class="full_width_table"></div><h2><a class="anchor" id="tutorial_opcua_intro_address_space"></a>
-1.2 地址空间</h2>
+</div><div class="full_width_table"></div><h2><a class="anchor" id="tutorial_opcua_intro_open62541"></a>
+1.2 open62541 库</h2>
+<p>open62541 <a class="el" href="../../d0/de3/citelist.html#CITEREF_open62541_library">[15]</a> 是一个基于 C 语言的开源 OPC UA 栈，实现了 OPC UA 协议的核心功能和服务。它提供了一套完整的 OPC UA 通信协议栈，包括客户端和服务器端的实现，支持 OPC UA 的各种功能和服务，如数据访问、事件通知、历史数据、安全性等，RMVL 中的 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 提供了对 open62541 库的封装，使其更便于使用。</p>
+<h2><a class="anchor" id="tutorial_opcua_intro_address_space"></a>
+1.3 地址空间</h2>
 <p>在 OPC UA 中，所有的数据都被组织成一个地址空间，地址空间中的每一个元素都被称为一个节点。每个节点都有一个唯一的节点号，在 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 中表示为 <a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">rm::NodeId</a> 。</p>
 <center></center><center><div class="image">
 <object type="image/svg+xml" data="../../opcua.svg" style="pointer-events: none;"></object>
@@ -307,7 +321,7 @@ $(function(){ initResizable(false); });
 <div class="line">    srv.spin();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:127</div></div>
-<div class="ttc" id="aclassrm_1_1Server_html_a40c696a0e6a592c4a0cbd97cc184617b"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a40c696a0e6a592c4a0cbd97cc184617b">rm::Server::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>定义</b> server.hpp:185</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html_a40c696a0e6a592c4a0cbd97cc184617b"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html#a40c696a0e6a592c4a0cbd97cc184617b">rm::Server::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">停止服务器</div><div class="ttdef"><b>定义</b> server.hpp:186</div></div>
 <div class="ttc" id="aserver_8hpp_html"><div class="ttname"><a href="../../df/d0a/server_8hpp.html">server.hpp</a></div><div class="ttdoc">OPC UA 服务器</div></div>
 </div><!-- fragment --><p><b>方案二</b></p>
 <p>使用多线程，主线程负责关闭服务器。</p>
@@ -389,7 +403,7 @@ $(function(){ initResizable(false); });
 <div class="line">cli = <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">rm.Client</a>(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>)</div>
 </div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md264"></a>
 2.2 变量</h2>
-<p>在上文 <a class="el" href="#tutorial_opcua_intro_address_space">1.2 地址空间</a> 中介绍了变量的 3 种访问方式，这里使用最简单的直接读写的方式。首先在服务器中添加变量节点，后文均采用 <code>while + spinOnce</code> 的方式处理异步事件。</p>
+<p>在上文 <a class="el" href="#tutorial_opcua_intro_address_space">1.3 地址空间</a> 中介绍了变量的 3 种访问方式，这里使用最简单的直接读写的方式。首先在服务器中添加变量节点，后文均采用 <code>while + spinOnce</code> 的方式处理异步事件。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
 <div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
@@ -421,10 +435,10 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">    <span class="comment">// srv.shutdown(); 可省略，后文不再赘述</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:141</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:273</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:282</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_ae2192d1434ef12e7db2be77b8d616899"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899">rm::Variable::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">变量的描述</div><div class="ttdef"><b>定义</b> variable.hpp:284</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:150</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:293</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:304</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ae2192d1434ef12e7db2be77b8d616899"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899">rm::Variable::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">变量的描述</div><div class="ttdef"><b>定义</b> variable.hpp:306</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
 <div class="line"><span class="keyword">import</span> rm</div>
@@ -486,8 +500,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 或者直接使用 target 的成员函数进行转化</span></div>
 <div class="line">    <span class="comment">// printf(&quot;%f\n&quot;, target.cast&lt;double&gt;());</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:218</div></div>
-<div class="ttc" id="aclassrm_1_1Variable_html_aa0889ebfd1c820ee59697647e4c64dd7"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#aa0889ebfd1c820ee59697647e4c64dd7">rm::Variable::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>定义</b> variable.hpp:208</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:236</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_aa0889ebfd1c820ee59697647e4c64dd7"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#aa0889ebfd1c820ee59697647e4c64dd7">rm::Variable::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">判断变量节点是否为空</div><div class="ttdef"><b>定义</b> variable.hpp:226</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:50</div></div>
 <div class="ttc" id="agroup__opcua_html_ga59abb0e45d2cc659ab5bc9ead635542f"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">rm::nodeObjectsFolder</a></div><div class="ttdeci">constexpr NodeId nodeObjectsFolder</div><div class="ttdoc">对象节点：ObjectsFolder 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:174</div></div>
@@ -565,7 +579,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:95</div></div>
 <div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:42</div></div>
 <div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:148</div></div>
-<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表别名</div><div class="ttdef"><b>定义</b> variable.hpp:320</div></div>
+<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表别名</div><div class="ttdef"><b>定义</b> variable.hpp:342</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
 <div class="line"><span class="keyword">import</span> rm</div>
@@ -833,7 +847,7 @@ $(function(){ initResizable(false); });
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1View_html"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html">rm::View</a></div><div class="ttdoc">OPC UA 视图</div><div class="ttdef"><b>定义</b> view.hpp:24</div></div>
 <div class="ttc" id="aclassrm_1_1View_html_a10be1bf90dbbb8747ee8dd8fe60bc66c"><div class="ttname"><a href="../../d2/de9/classrm_1_1View.html#a10be1bf90dbbb8747ee8dd8fe60bc66c">rm::View::add</a></div><div class="ttdeci">void add(NodeId_ &amp;&amp;...nds)</div><div class="ttdoc">添加节点 ID</div><div class="ttdef"><b>定义</b> view.hpp:42</div></div>
-<div class="ttc" id="agroup__opcua_html_ga2c945fd1e774a90c267570b1cc3016c6"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga2c945fd1e774a90c267570b1cc3016c6">uaCreateVariable</a></div><div class="ttdeci">#define uaCreateVariable(val,...)</div><div class="ttdoc">创建变量，BrowseName、DisplayName、Description 均为变量类型的名称</div><div class="ttdef"><b>定义</b> variable.hpp:315</div></div>
+<div class="ttc" id="agroup__opcua_html_ga2c945fd1e774a90c267570b1cc3016c6"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga2c945fd1e774a90c267570b1cc3016c6">uaCreateVariable</a></div><div class="ttdeci">#define uaCreateVariable(val,...)</div><div class="ttdoc">创建变量，BrowseName、DisplayName、Description 均为变量类型的名称</div><div class="ttdef"><b>定义</b> variable.hpp:337</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
@@ -1033,13 +1047,13 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// OPC UA 状态</span></div>
 <div class="line">    OPCUAState mode{};</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// 消息事件类型</span></div>
-<div class="line">    <a class="code hl_class" href="../../d4/d8b/classrm_1_1EventType.html">rm::EventType</a> msg_type_info;</div>
-<div class="line">    msg_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#a7008f8e44e97e971a6528f1f0a3abbc0">browse_name</a> = <span class="stringliteral">&quot;msg_type&quot;</span>;</div>
-<div class="line">    msg_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#a467f7cd2159c5c3c452e08fdd90b4a1c">display_name</a> = <span class="stringliteral">&quot;MsgType&quot;</span>;</div>
-<div class="line">    msg_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#af236d984eebbfef63fb53554967a18c6">description</a> = <span class="stringliteral">&quot;任务执行完成时触发的事件&quot;</span>;</div>
-<div class="line">    msg_type_info.<a class="code hl_function" href="../../d4/d8b/classrm_1_1EventType.html#a8c53b5aea80b7223011b9bbd365235b0">add</a>(<span class="stringliteral">&quot;Result&quot;</span>, 0);</div>
-<div class="line">    <span class="keyword">auto</span> msg_info = <a class="code hl_function" href="../../da/d88/classrm_1_1Event.html#adf51802a6cfc556a40398a85dcbf616e">rm::Event::makeFrom</a>(msg_type_info);</div>
+<div class="line">    <span class="comment">// 完成事件类型</span></div>
+<div class="line">    <a class="code hl_class" href="../../d4/d8b/classrm_1_1EventType.html">rm::EventType</a> finish_type_info;</div>
+<div class="line">    finish_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#a7008f8e44e97e971a6528f1f0a3abbc0">browse_name</a> = <span class="stringliteral">&quot;finish_type&quot;</span>;</div>
+<div class="line">    finish_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#a467f7cd2159c5c3c452e08fdd90b4a1c">display_name</a> = <span class="stringliteral">&quot;FinishType&quot;</span>;</div>
+<div class="line">    finish_type_info.<a class="code hl_variable" href="../../d4/d8b/classrm_1_1EventType.html#af236d984eebbfef63fb53554967a18c6">description</a> = <span class="stringliteral">&quot;任务执行完成时触发的事件&quot;</span>;</div>
+<div class="line">    finish_type_info.<a class="code hl_function" href="../../d4/d8b/classrm_1_1EventType.html#a8c53b5aea80b7223011b9bbd365235b0">add</a>(<span class="stringliteral">&quot;Result&quot;</span>, 0);</div>
+<div class="line">    <span class="keyword">auto</span> finish_info = <a class="code hl_function" href="../../da/d88/classrm_1_1Event.html#adf51802a6cfc556a40398a85dcbf616e">rm::Event::makeFrom</a>(finish_type_info);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 启动设备</span></div>
 <div class="line">    <a class="code hl_class" href="../../d4/d91/classrm_1_1Method.html">rm::Method</a> start_info = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a> &amp;) -&gt; std::pair&lt;bool, rm::Variables&gt; {</div>
@@ -1080,9 +1094,9 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="comment">// &#39;true&#39; 应改为状态确定发生变更的判断条件</span></div>
 <div class="line">            {</div>
-<div class="line">                msg_info.message = <span class="stringliteral">&quot;Msg_Start&quot;</span>;</div>
-<div class="line">                msg_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0;</div>
-<div class="line">                srv.triggerEvent(msg_info);</div>
+<div class="line">                finish_info.message = <span class="stringliteral">&quot;Start&quot;</span>;</div>
+<div class="line">                finish_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0;</div>
+<div class="line">                srv.triggerEvent(finish_info);</div>
 <div class="line">                mode = OPCUAState::NONE; <span class="comment">// 恢复 OPC UA 状态</span></div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -1094,9 +1108,9 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">if</span> (<span class="keyword">true</span>) <span class="comment">// &#39;true&#39; 应改为状态确定发生变更的判断条件</span></div>
 <div class="line">            {</div>
-<div class="line">                msg_info.message = <span class="stringliteral">&quot;Msg_Stop&quot;</span>;</div>
-<div class="line">                msg_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0;</div>
-<div class="line">                srv.triggerEvent(msg_info);</div>
+<div class="line">                finish_info.message = <span class="stringliteral">&quot;Stop&quot;</span>;</div>
+<div class="line">                finish_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0;</div>
+<div class="line">                srv.triggerEvent(finish_info);</div>
 <div class="line">                mode = OPCUAState::NONE; <span class="comment">// 恢复 OPC UA 状态</span></div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -1125,11 +1139,11 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="comment"># 事件类型</span></div>
 <div class="line">msg_type_info = <a class="code hl_class" href="../../d4/d8b/classrm_1_1EventType.html">rm.EventType</a>()</div>
-<div class="line">msg_type_info.browse_name = <span class="stringliteral">&quot;msg_type&quot;</span></div>
-<div class="line">msg_type_info.display_name = <span class="stringliteral">&quot;MsgType&quot;</span></div>
+<div class="line">msg_type_info.browse_name = <span class="stringliteral">&quot;finish_type&quot;</span></div>
+<div class="line">msg_type_info.display_name = <span class="stringliteral">&quot;FinishType&quot;</span></div>
 <div class="line">msg_type_info.description = <span class="stringliteral">&quot;任务执行完成时触发的事件&quot;</span></div>
 <div class="line">msg_type_info.add(<span class="stringliteral">&quot;Result&quot;</span>, 0)</div>
-<div class="line">msg_info = <a class="code hl_function" href="../../da/d88/classrm_1_1Event.html#adf51802a6cfc556a40398a85dcbf616e">rm.Event.makeFrom</a>(msg_type_info)</div>
+<div class="line">finish_info = <a class="code hl_function" href="../../da/d88/classrm_1_1Event.html#adf51802a6cfc556a40398a85dcbf616e">rm.Event.makeFrom</a>(msg_type_info)</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 启动设备</span></div>
 <div class="line"><span class="keyword">def </span>start_cb(sv, iargs):</div>
@@ -1177,9 +1191,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="stringliteral">        &quot;&quot;&quot;</span></div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> <span class="keyword">True</span>: <span class="comment"># &#39;True&#39; 应改为状态确定发生变更的判断条件</span></div>
-<div class="line">            msg_info.message = <span class="stringliteral">&quot;Msg_Start&quot;</span></div>
-<div class="line">            msg_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0</div>
-<div class="line">            svr.triggerEvent(msg_info)</div>
+<div class="line">            finish_info.message = <span class="stringliteral">&quot;Start&quot;</span></div>
+<div class="line">            finish_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0</div>
+<div class="line">            svr.triggerEvent(finish_info)</div>
 <div class="line">            mode = OPCUAState.NONE <span class="comment"># 恢复 OPC UA 状态</span></div>
 <div class="line">    <span class="keywordflow">elif</span> mode == OPCUAState.STOP:</div>
 <div class="line">        <span class="comment"># 实际发出 Stop 指令</span></div>
@@ -1188,9 +1202,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="stringliteral">        &quot;&quot;&quot;</span></div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> <span class="keyword">True</span>: <span class="comment"># &#39;True&#39; 应改为状态确定发生变更的判断条件</span></div>
-<div class="line">            msg_info.message = <span class="stringliteral">&quot;Msg_Stop&quot;</span></div>
-<div class="line">            msg_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0</div>
-<div class="line">            svr.triggerEvent(msg_info)</div>
+<div class="line">            finish_info.message = <span class="stringliteral">&quot;Stop&quot;</span></div>
+<div class="line">            finish_info[<span class="stringliteral">&quot;Result&quot;</span>] = 0</div>
+<div class="line">            svr.triggerEvent(finish_info)</div>
 <div class="line">            mode = OPCUAState.NONE <span class="comment"># 恢复 OPC UA 状态</span></div>
 </div><!-- fragment --> </div> <p>正常情况下，客户端调用方法节点会立刻返回，如以下代码</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// client_old.cpp</span></div>
@@ -1200,7 +1214,7 @@ $(function(){ initResizable(false); });
 <div class="line">{</div>
 <div class="line">    <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">rm::Client</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
 <div class="line">    <span class="keyword">auto</span> node = cli.find(<span class="stringliteral">&quot;start&quot;</span>);</div>
-<div class="line">    <span class="keyword">auto</span> [res, oargs] = cli.call(node, {});</div>
+<div class="line">    <span class="keyword">auto</span> [res, oargs] = cli.callx(node);</div>
 <div class="line">    <span class="keywordflow">if</span> (!res) <span class="comment">// res 只表示方法节点是否调用成功，而非任务执行结果</span></div>
 <div class="line">        <a class="code hl_define" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;Failed to call the method&quot;</span>);</div>
 <div class="line">}</div>
@@ -1222,9 +1236,9 @@ $(function(){ initResizable(false); });
 <div class="line">    OpcUaController(std::string_view addr) : _cli(addr) {</div>
 <div class="line">        <span class="comment">// 监视事件</span></div>
 <div class="line">        _cli.monitor({<span class="stringliteral">&quot;Message&quot;</span>, <span class="stringliteral">&quot;Result&quot;</span>}, [<span class="keyword">this</span>](<a class="code hl_class" href="../../df/d48/classrm_1_1ClientView.html">rm::ClientView</a>, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a> &amp;vals) {</div>
-<div class="line">            <span class="keywordflow">if</span> (vals[0] == <span class="stringliteral">&quot;Msg_Start&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">if</span> (vals[0] == <span class="stringliteral">&quot;Start&quot;</span>)</div>
 <div class="line">                _start_res = (vals[1] == 0);</div>
-<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vals[0] == <span class="stringliteral">&quot;Msg_Stop&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (vals[0] == <span class="stringliteral">&quot;Stop&quot;</span>)</div>
 <div class="line">                _stop_res = (vals[1] == 0);</div>
 <div class="line">        });</div>
 <div class="line">    }</div>
@@ -1232,7 +1246,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 同步阻塞的 start 函数</span></div>
 <div class="line">    <span class="keywordtype">bool</span> start()</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">auto</span> [res, oargs] = _cli.call(<span class="stringliteral">&quot;Start&quot;</span>, {});</div>
+<div class="line">        _start_res.reset();</div>
+<div class="line">        <span class="keyword">auto</span> [res, oargs] = _cli.callx(<span class="stringliteral">&quot;start&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">if</span> (!res)</div>
 <div class="line">        {</div>
 <div class="line">            printf(<span class="stringliteral">&quot;Failed to call start\n&quot;</span>);</div>
@@ -1246,7 +1261,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">// 同步阻塞的 stop 函数</span></div>
 <div class="line">    <span class="keywordtype">bool</span> stop()</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">auto</span> [res, oargs] = _cli.call(<span class="stringliteral">&quot;Stop&quot;</span>, {});</div>
+<div class="line">        _stop_res.reset();</div>
+<div class="line">        <span class="keyword">auto</span> [res, oargs] = _cli.callx(<span class="stringliteral">&quot;stop&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">if</span> (!res)</div>
 <div class="line">        {</div>
 <div class="line">            printf(<span class="stringliteral">&quot;Failed to call stop\n&quot;</span>);</div>
@@ -1289,9 +1305,9 @@ $(function(){ initResizable(false); });
 <div class="line">        self.__cli.monitor([<span class="stringliteral">&quot;Message&quot;</span>, <span class="stringliteral">&quot;Result&quot;</span>], self.on_event)</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">def </span>on_event(self, view, vals):</div>
-<div class="line">        <span class="keywordflow">if</span> vals[0] == <span class="stringliteral">&quot;Msg_Start&quot;</span>:</div>
+<div class="line">        <span class="keywordflow">if</span> vals[0] == <span class="stringliteral">&quot;Start&quot;</span>:</div>
 <div class="line">            self.__start_res = vals[1] == 0</div>
-<div class="line">        <span class="keywordflow">elif</span> vals[0] == <span class="stringliteral">&quot;Msg_Stop&quot;</span>:</div>
+<div class="line">        <span class="keywordflow">elif</span> vals[0] == <span class="stringliteral">&quot;Stop&quot;</span>:</div>
 <div class="line">            self.__stop_res = vals[1] == 0</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment"># 同步阻塞的 start 函数</span></div>
@@ -1328,7 +1344,10 @@ $(function(){ initResizable(false); });
 <div class="line">print(f<span class="stringliteral">&quot;Stop result: {val}&quot;</span>)</div>
 </div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md271"></a>
 2.7 定时</h2>
-<p><a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 为服务器和客户端均提供了循环定时器，用于周期性执行任务。下面的示例演示在 <b>服务器</b> 中创建并添加定时器。</p>
+<p><a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 为服务器和客户端均提供了循环定时器，用于周期性执行任务。</p>
+<h3><a class="anchor" id="autotoc_md272"></a>
+2.7.1 服务器定时</h3>
+<p>下面的示例在服务器中添加了一个数据源变量节点 <code>num</code>，并且创建了一个每 1s 执行一次的定时任务，每次执行时将 <code>num</code> 的值加 1。</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
 <div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&gt;</span></div>
@@ -1341,19 +1360,36 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">rm::Server</a> srv(4840);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">int</span> times{};</div>
+<div class="line">    <span class="keywordtype">int</span> num{};</div>
+<div class="line">    <a class="code hl_struct" href="../../db/df0/structrm_1_1DataSourceVariable.html">rm::DataSourceVariable</a> num_info;</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#a510e4c14093ad1b0d00f9741a2aade73">browse_name</a> = <span class="stringliteral">&quot;num&quot;</span>;</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#abde072a7732e7819eedc111d3247d9ce">display_name</a> = <span class="stringliteral">&quot;Num&quot;</span>;</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#a55351ac8f817f4491044cd235903575e">description</a> = <span class="stringliteral">&quot;数字&quot;</span>;</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#a2f7331c4fc40d61c1c68a46c849b5759">access_level</a> = <a class="code hl_enumvalue" href="../../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d">rm::VARIABLE_READ</a> | <a class="code hl_enumvalue" href="../../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0">rm::VARIABLE_WRITE</a>;</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#ae383dacc7235c683d9ee0170b0d68f70">on_read</a> = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;) -&gt; <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> { <span class="keywordflow">return</span> num; };</div>
+<div class="line">    num_info.<a class="code hl_variable" href="../../db/df0/structrm_1_1DataSourceVariable.html#a775e12c26cbca768b8f7a8875625dabe">on_write</a> = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;, <span class="keyword">const</span> <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> &amp;val) { num = val; };</div>
+<div class="line">    <span class="keyword">auto</span> num_nd = srv.addDataSourceVariableNode(num_info);</div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// 创建定时器，每 1s 执行一次</span></div>
-<div class="line">    <a class="code hl_class" href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a> timer(srv, 1000, [&amp;](<a class="code hl_class" href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a>) {</div>
-<div class="line">        <span class="comment">// 定时器回调函数</span></div>
-<div class="line">        printf(<span class="stringliteral">&quot;Timer callback, times = %d\n&quot;</span>, times);</div>
-<div class="line">        times++;</div>
+<div class="line">    <a class="code hl_class" href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a> timer(srv, 1000, [&amp;](<a class="code hl_class" href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a> sv) {</div>
+<div class="line">        sv.<a class="code hl_function" href="../../d0/d24/classrm_1_1ServerView.html#a57e9110a945f94b77905bb98ecda85e7">write</a>(num_nd, ++num);</div>
 <div class="line">    });</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (!stop)</div>
 <div class="line">        srv.spinOnce();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1ServerTimer_html"><div class="ttname"><a href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a></div><div class="ttdoc">OPC UA 服务器定时器</div><div class="ttdef"><b>定义</b> server.hpp:348</div></div>
+<div class="ttc" id="aclassrm_1_1ServerTimer_html"><div class="ttname"><a href="../../d9/d40/classrm_1_1ServerTimer.html">rm::ServerTimer</a></div><div class="ttdoc">OPC UA 服务器定时器</div><div class="ttdef"><b>定义</b> server.hpp:349</div></div>
 <div class="ttc" id="aclassrm_1_1ServerView_html"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a></div><div class="ttdoc">OPC UA 服务器视图</div><div class="ttdef"><b>定义</b> server.hpp:30</div></div>
+<div class="ttc" id="aclassrm_1_1ServerView_html_a57e9110a945f94b77905bb98ecda85e7"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html#a57e9110a945f94b77905bb98ecda85e7">rm::ServerView::write</a></div><div class="ttdeci">bool write(const NodeId &amp;nd, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
+<div class="ttc" id="agroup__opcua_html_gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0">rm::VARIABLE_WRITE</a></div><div class="ttdeci">@ VARIABLE_WRITE</div><div class="ttdoc">写权限</div><div class="ttdef"><b>定义</b> variable.hpp:30</div></div>
+<div class="ttc" id="agroup__opcua_html_gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d">rm::VARIABLE_READ</a></div><div class="ttdeci">@ VARIABLE_READ</div><div class="ttdoc">读权限</div><div class="ttdef"><b>定义</b> variable.hpp:29</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html">rm::DataSourceVariable</a></div><div class="ttdoc">OPC UA 数据源变量</div><div class="ttdef"><b>定义</b> variable.hpp:369</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_a2f7331c4fc40d61c1c68a46c849b5759"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#a2f7331c4fc40d61c1c68a46c849b5759">rm::DataSourceVariable::access_level</a></div><div class="ttdeci">uint8_t access_level</div><div class="ttdoc">访问性，默认为只读</div><div class="ttdef"><b>定义</b> variable.hpp:393</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_a510e4c14093ad1b0d00f9741a2aade73"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#a510e4c14093ad1b0d00f9741a2aade73">rm::DataSourceVariable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:380</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_a55351ac8f817f4491044cd235903575e"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#a55351ac8f817f4491044cd235903575e">rm::DataSourceVariable::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">变量的描述</div><div class="ttdef"><b>定义</b> variable.hpp:391</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_a775e12c26cbca768b8f7a8875625dabe"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#a775e12c26cbca768b8f7a8875625dabe">rm::DataSourceVariable::on_write</a></div><div class="ttdeci">DataSourceWrite on_write</div><div class="ttdoc">数据源 Write 回调函数</div><div class="ttdef"><b>定义</b> variable.hpp:409</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_abde072a7732e7819eedc111d3247d9ce"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#abde072a7732e7819eedc111d3247d9ce">rm::DataSourceVariable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:389</div></div>
+<div class="ttc" id="astructrm_1_1DataSourceVariable_html_ae383dacc7235c683d9ee0170b0d68f70"><div class="ttname"><a href="../../db/df0/structrm_1_1DataSourceVariable.html#ae383dacc7235c683d9ee0170b0d68f70">rm::DataSourceVariable::on_read</a></div><div class="ttdeci">DataSourceRead on_read</div><div class="ttdoc">数据源 Read 回调函数</div><div class="ttdef"><b>定义</b> variable.hpp:401</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
@@ -1369,22 +1405,116 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">svr = <a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">rm.Server</a>(4840)</div>
 <div class="line"> </div>
-<div class="line">times = 0</div>
-<div class="line"><span class="comment"># 创建定时器，每 1s 执行一次</span></div>
-<div class="line"><span class="keyword">def </span>timer_callback(view):</div>
-<div class="line">    <span class="keyword">global</span> times</div>
-<div class="line">    print(f<span class="stringliteral">&quot;Timer callback, times = {times}&quot;</span>)</div>
-<div class="line">    times += 1</div>
+<div class="line">num = 0</div>
+<div class="line">num_info = <a class="code hl_struct" href="../../db/df0/structrm_1_1DataSourceVariable.html">rm.DataSourceVariable</a>()</div>
+<div class="line">num_info.browse_name = <span class="stringliteral">&quot;num&quot;</span></div>
+<div class="line">num_info.display_name = <span class="stringliteral">&quot;Num&quot;</span></div>
+<div class="line">num_info.description = <span class="stringliteral">&quot;数字&quot;</span></div>
+<div class="line">num_info.access_level = rm.VARIABLE_READ | rm.VARIABLE_WRITE</div>
 <div class="line"> </div>
-<div class="line">timer = <a class="code hl_class" href="../../d9/d40/classrm_1_1ServerTimer.html">rm.ServerTimer</a>(svr, 1000, timer_callback)</div>
+<div class="line"><span class="keyword">def </span>num_on_read(nd):</div>
+<div class="line">    <span class="keyword">global</span> num</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm.Variable</a>(num)</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>num_on_write(nd, val: rm.Variable):</div>
+<div class="line">    <span class="keyword">global</span> num</div>
+<div class="line">    num = val.int()</div>
+<div class="line"> </div>
+<div class="line">num_info.on_read = num_on_read</div>
+<div class="line">num_info.on_write = num_on_write</div>
+<div class="line"> </div>
+<div class="line">num_nd = svr.addDataSourceVariableNode(num_info)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># 创建定时器，每 1s 执行一次</span></div>
+<div class="line"><span class="keyword">def </span>on_timer(sv: rm.ServerView):</div>
+<div class="line">    <span class="keyword">global</span> num</div>
+<div class="line">    num += 1</div>
+<div class="line">    sv.write(num_nd, <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">rm.Variable</a>(num))</div>
+<div class="line"> </div>
+<div class="line">timer = <a class="code hl_class" href="../../d9/d40/classrm_1_1ServerTimer.html">rm.ServerTimer</a>(svr.sv(), 1000, on_timer)</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
 <div class="line">    svr.spinOnce()</div>
-</div><!-- fragment --> </div> <h1><a class="anchor" id="tutorial_opcua_pub_sub"></a>
+</div><!-- fragment --> </div> <h3><a class="anchor" id="autotoc_md273"></a>
+2.7.2 客户端定时</h3>
+<p>客户端定时器的使用方式与服务器定时器类似，但定时器的回调函数无传入参数，因为回调函数的触发是通过运行 <a class="el" href="../../da/d78/classrm_1_1Client.html#a74b40046bd18231fab4c3815c0e5b2b4" title="在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理">rm::Client::spinOnce()</a> 来实现的，在回调函数中对客户端进行路径搜索、变量读写、方法调用等操作会造成嵌套处理异步事件的错误，例如出现以下提示</p>
+<div class="fragment"><div class="line">error/eventloop    Cannot run EventLoop from the run method itself</div>
+</div><!-- fragment --><p>因此，RMVL 的客户端定时器的回调函数不接受参数，从一定程度上避免了这种错误。</p>
+<p>下面提供了一个客户端定时器的示例，首先提供了一个 OPC UA 服务器，端口为 <code>4840</code>，在其中添加了一个变量节点 <code>num</code>，此时客户端定时器每 1s 读取一次 <code>num</code> 的值，并打印。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// client.cpp</span></div>
+<div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d2/dfe/client_8hpp.html">rmvl/opcua/client.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> stop = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    signal(SIGINT, [](<span class="keywordtype">int</span>) { stop = <span class="keyword">true</span>; });</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">rm::Client</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> num_nd = cli.find(<span class="stringliteral">&quot;num&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 创建定时器，每 1s 执行一次</span></div>
+<div class="line">    <span class="keywordtype">bool</span> can_read{};</div>
+<div class="line">    <a class="code hl_class" href="../../d8/d29/classrm_1_1ClientTimer.html">rm::ClientTimer</a> timer(cli, 1000, [&amp;] { can_read = <span class="keyword">true</span>; });</div>
+<div class="line">    <span class="keyword">auto</span> real_on_timer = [&amp;] {</div>
+<div class="line">        <span class="keyword">auto</span> num = cli.read(num_nd);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;num = %d\n&quot;</span>, num.<a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;<span class="keywordtype">int</span>&gt;());</div>
+<div class="line">        can_read = <span class="keyword">false</span>;</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (!stop)</div>
+<div class="line">    {</div>
+<div class="line">        cli.spinOnce();</div>
+<div class="line">        <span class="comment">// 保证在 spinOnce() 之后再读取 num 的值</span></div>
+<div class="line">        <span class="keywordflow">if</span> (can_read)</div>
+<div class="line">            real_on_timer();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1ClientTimer_html"><div class="ttname"><a href="../../d8/d29/classrm_1_1ClientTimer.html">rm::ClientTimer</a></div><div class="ttdoc">OPC UA 客户端定时器</div><div class="ttdef"><b>定义</b> client.hpp:310</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># client.py</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
+<div class="line"><span class="keyword">import</span> rm</div>
+<div class="line"> </div>
+<div class="line">stop = <span class="keyword">False</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>onStop(sig, frame):</div>
+<div class="line">    <span class="keyword">global</span> stop</div>
+<div class="line">    stop = <span class="keyword">True</span></div>
+<div class="line"> </div>
+<div class="line">signal(SIGINT, onStop)</div>
+<div class="line"> </div>
+<div class="line">cli = <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">rm.Client</a>(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>)</div>
+<div class="line">num_nd = cli.find(<span class="stringliteral">&quot;num&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># 创建定时器，每 1s 执行一次</span></div>
+<div class="line">can_read = <span class="keyword">False</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>on_timer():</div>
+<div class="line">    <span class="keyword">global</span> can_read</div>
+<div class="line">    can_read = <span class="keyword">True</span></div>
+<div class="line"> </div>
+<div class="line">timer = <a class="code hl_class" href="../../d8/d29/classrm_1_1ClientTimer.html">rm.ClientTimer</a>(cli.cv(), 1000, on_timer)</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">def </span>real_on_timer():</div>
+<div class="line">    <span class="keyword">global</span> can_read</div>
+<div class="line">    <span class="keywordflow">if</span> can_read:</div>
+<div class="line">        num = cli.read(num_nd)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;num = {num.int()}&quot;</span>)</div>
+<div class="line">        can_read = <span class="keyword">False</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
+<div class="line">    cli.spinOnce()</div>
+<div class="line">    <span class="keywordflow">if</span> can_read:</div>
+<div class="line">        real_on_timer()</div>
+</div><!-- fragment --> </div> <p>可以根据自己的需求对服务器的 <code>num</code> 变量节点进行其余操作，例如可以同时运行带有定时器的服务器和客户端，服务器每 1s 将 <code>num</code> 的值加 1，客户端每 1s 读取 <code>num</code> 的值并打印，有兴趣的读者可以自行尝试。</p>
+<h1><a class="anchor" id="tutorial_opcua_pub_sub"></a>
 3. 发布/订阅</h1>
 <p>这是一段来自 <a href="https://www.open62541.org">open62541 手册</a>中有关 PubSub 的介绍。</p>
 <blockquote class="doxtable">
-<p>在 PubSub 中，参与的 OPC UA 应用程序扮演发布者和订阅者的角色。发布者是数据的来源，而订阅者则使用该数据。PubSub 中的通信是基于消息的。发布者将消息发送到面向消息的中间件，而不知道可能有哪些订阅者（如果有）。同样，订阅者表达对特定类型数据的兴趣，并处理包含此数据的消息，而不知道有哪些发布者。</p>
+<p>&zwj;在 PubSub 中，参与的 OPC UA 应用程序扮演发布者和订阅者的角色。发布者是数据的来源，而订阅者则使用该数据。PubSub 中的通信是基于消息的。发布者将消息发送到面向消息的中间件，而不知道可能有哪些订阅者（如果有）。同样，订阅者表达对特定类型数据的兴趣，并处理包含此数据的消息，而不知道有哪些发布者。</p>
 <p>面向消息的中间件是支持在分布式系统之间发送和接收消息的软件或硬件基础设施。OPC UA PubSub 支持两种不同的面向消息的中间件变体，即 <b>无代理形式</b> 和 <b>基于代理的形式</b> 。在无代理形式中，面向消息的中间件是能够路由基于数据报的消息的网络基础设施。订阅者和发布者使用 UDP 等数据报协议。在基于代理的形式中，消息中间件的核心组件是消息代理。订阅者和发布者使用 AMQP 或 MQTT 等标准消息传递协议与代理进行通信。</p>
 <p>这使得 PubSub 适合需要位置独立性和（或）可扩展性的应用程序。</p>
 <p>OPC UA 的发布/订阅（PubSub）扩展可实现快速高效的通信。PubSub 扩展与协议无关，可与基于代理的协议（如 MQTT 和 AMQP）或无代理实现（如 UDP 多播）一起使用。</p>
@@ -1402,7 +1532,7 @@ $(function(){ initResizable(false); });
 </ul>
 </blockquote>
 <p>有关 API 使用的更多详细信息，请查看 <a href="https://www.open62541.org/doc/master/pubsub.html">PubSub 教程</a>。</p>
-<h2><a class="anchor" id="autotoc_md272"></a>
+<h2><a class="anchor" id="autotoc_md274"></a>
 3.1 无代理 Pub/Sub</h2>
 <p>RMVL 提供了基于 <code>UDP</code> 传输协议的 Broker-less 即无代理的发布订阅机制，目前支持 <code>UADP</code> 的消息映射方式，对应的枚举类型是 <code>TransportID::UDP_UADP</code>。</p>
 <p>需要留意的是，OPC UA 的发布订阅模型仍然是建立在 <a class="el" href="#tutorial_opcua_server_client">2. 服务器/客户端</a> 模型之上的，此外 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 的 PubSub 在实现上是继承于 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 的，因此，RMVL 的发布订阅模型在使用时具备服务器的所有功能，初始化、释放资源等操作与服务器完全一致。</p>
@@ -1561,10 +1691,10 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment"># other code</span></div>
 <div class="line">    </div>
 <div class="line">    sub.spinOnce()</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md273"></a>
+</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md275"></a>
 3.2 有代理 Pub/Sub</h2>
 <dl class="section warning"><dt>警告</dt><dd>RMVL 目前暂不支持有代理的发布订阅机制。</dd></dl>
-<h1><a class="anchor" id="autotoc_md274"></a>
+<h1><a class="anchor" id="autotoc_md276"></a>
 4. 使用技巧</h1>
 <p>以下是 <a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a> 的使用技巧。</p>
 <h2><a class="anchor" id="opcua_parameters"></a>
@@ -1595,7 +1725,7 @@ $(function(){ initResizable(false); });
 <p>具体调节方式可参考引言中的 <a class="el" href="../../d1/dfb/intro.html#intro_parameters_manager">参数管理</a> 部分。</p>
 <h2><a class="anchor" id="opcua_nodeset_compiler"></a>
 4.2 从 XML 配置 OPC UA</h2>
-<h3><a class="anchor" id="autotoc_md275"></a>
+<h3><a class="anchor" id="autotoc_md277"></a>
 4.2.1 安装 UaModeler</h3>
 <p>可使用 UaModeler 等软件进行可视化信息模型的建立，构建后可以导出为一个 <code>*.xml</code> 文件，首先先安装 UaModeler。</p>
 <p><b>Windows EXE</b></p>
@@ -1611,7 +1741,7 @@ $(function(){ initResizable(false); });
 </div><!-- fragment --></li>
 </ul>
 <p>具体安装细节可参考 <a href="https://github.com/FreeOpcUa/opcua-modeler">opcua-modeler on Github</a> 的 README。</p>
-<h3><a class="anchor" id="autotoc_md276"></a>
+<h3><a class="anchor" id="autotoc_md278"></a>
 4.2.2 可视化配置 OPC UA</h3>
 <p>对于项目创建或导出等内容，此处不做过多介绍，可参考<a href="https://wanghao1314.blog.csdn.net/article/details/104092781">此博客</a>了解上述内容。</p>
 <dl class="section note"><dt>注解</dt><dd><ul>
@@ -1619,7 +1749,7 @@ $(function(){ initResizable(false); });
 <li><code>NamespaceArray</code> 的 <code>[1]</code> 的字符串需要更改为 <code>urn:open62541.server.application</code></li>
 </ul>
 </dd></dl>
-<h3><a class="anchor" id="autotoc_md277"></a>
+<h3><a class="anchor" id="autotoc_md279"></a>
 4.2.3 生成 *.c/*.h 文件</h3>
 <dl class="section note"><dt>注解</dt><dd>以下生成 C/C++ 文件的介绍来自 <a href="https://www.open62541.org/doc/master/nodeset_compiler.html#getting-started">open62541 nodeset-compiler</a>。</dd></dl>
 <p>进入 <code>&lt;path-to-open62541&gt;/tools/nodeset_compiler</code> 文件夹，执行以下命令行</p>
@@ -1633,10 +1763,11 @@ $(function(){ initResizable(false); });
 <div class="line">  --existing Opc.Ua.NodeSet2.xml \</div>
 <div class="line">  --xml xxx.xml \</div>
 <div class="line">  myNodeSet # myNodeSet 是要生成的文件名，包含 myNodeSet.h 和 myNodeSet.c，请自行设置</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md278"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md280"></a>
 4.3 不占有所有权的 C/S 视图</h2>
 <p><code><a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a></code> 使用 RAII 进行设计，一个对象占有了服务器的所有权和生命周期，当对象析构时，会自动停止并结束服务器。使用 <code><a class="el" href="../../d0/d24/classrm_1_1ServerView.html" title="OPC UA 服务器视图">rm::ServerView</a></code> 来获取不占有所有权的服务器视图，并进行变量读写、路径搜索的操作。</p>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>RMVL 提供了从 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 到 <a class="el" href="../../d0/d24/classrm_1_1ServerView.html" title="OPC UA 服务器视图">rm::ServerView</a> 的用户定义转换函数，可在不添加额外代码的情况下直接使用。</p>
+<div class="fragment"><div class="line"><span class="comment">// server.cpp</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&gt;</span></div>
@@ -1670,8 +1801,8 @@ $(function(){ initResizable(false); });
 <div class="line">        srv.spinOnce();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1ServerView_html_a1d1e927943503125e53f2130635aec5f"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html#a1d1e927943503125e53f2130635aec5f">rm::ServerView::find</a></div><div class="ttdeci">NodeId find(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</div><div class="ttdoc">通过 BrowseName 的路径搜索命名空间 ns 为 1 的节点</div></div>
-<div class="ttc" id="aclassrm_1_1ServerView_html_a57e9110a945f94b77905bb98ecda85e7"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html#a57e9110a945f94b77905bb98ecda85e7">rm::ServerView::write</a></div><div class="ttdeci">bool write(const NodeId &amp;nd, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
-</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><p>RMVL-Python 提供了 <a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">rm::Server</a> 到 <a class="el" href="../../d0/d24/classrm_1_1ServerView.html" title="OPC UA 服务器视图">rm::ServerView</a> 的转换函数 <code>sv()</code>，可调用相关函数进行转换。</p>
+<div class="fragment"><div class="line"><span class="comment"># server.py</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">from</span> signal <span class="keyword">import</span> signal, SIGINT</div>
 <div class="line"><span class="keyword">import</span> rm</div>
@@ -1697,14 +1828,16 @@ $(function(){ initResizable(false); });
 <div class="line">svr.addVariableNode(num_info)</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># 修改变量值</span></div>
-<div class="line">modify(svr, 100)</div>
+<div class="line">modify(svr.sv(), 100)</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">while</span> <span class="keywordflow">not</span> stop:</div>
 <div class="line">    svr.spinOnce()</div>
 </div><!-- fragment -->  </div> <p>同样的，客户端也可以使用 <code><a class="el" href="../../df/d48/classrm_1_1ClientView.html" title="OPC UA 客户端视图">rm::ClientView</a></code> 来获取不占有所有权的客户端视图，进行变量读写、路径搜索的操作，此处不再赘述。</p>
-<h1><a class="anchor" id="autotoc_md279"></a>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>RMVL 也提供了从 <a class="el" href="../../da/d78/classrm_1_1Client.html" title="OPC UA 客户端">rm::Client</a> 到 <a class="el" href="../../df/d48/classrm_1_1ClientView.html" title="OPC UA 客户端视图">rm::ClientView</a> 的用户定义转换函数。</p>
+ </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><p>RMVL-Python 也提供了 <a class="el" href="../../da/d78/classrm_1_1Client.html" title="OPC UA 客户端">rm::Client</a> 到 <a class="el" href="../../df/d48/classrm_1_1ClientView.html" title="OPC UA 客户端视图">rm::ClientView</a> 的转换函数 <code>cv()</code>，可调用相关函数进行转换。</p>
+ </div> <h1><a class="anchor" id="autotoc_md281"></a>
 5. 参考内容</h1>
-<p><a class="el" href="../../d0/de3/citelist.html#CITEREF_freeopcua22">[6]</a> UaModeler · FreeOpcUa/opcua-modeler · Github </p>
+<p><a class="el" href="../../d0/de3/citelist.html#CITEREF_freeopcua22">[5]</a> UaModeler · FreeOpcUa/opcua-modeler · Github </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
@@ -1712,7 +1845,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.13.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[
