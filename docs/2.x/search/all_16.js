@@ -3,7 +3,7 @@ var searchData=
   ['name_0',['name',['../df/d48/structrm_1_1Argument.html#a08c5da7a5fe72695a7c46003e42bec9e',1,'rm::Argument::name'],['../d6/d4a/structrm_1_1PublishedDataSet.html#a1391031ecb970e141ef6b11ea3e399e4',1,'rm::PublishedDataSet::name'],['../d4/d81/structrm_1_1FieldMetaData.html#a531f0c59b23a82a0df01f838b77efaa5',1,'rm::FieldMetaData::name']]],
   ['newton_20插值多项式_1',['2. Newton 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md178',1,'']]],
   ['newton_20迭代的简化_2',['3. Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md174',1,'']]],
-  ['newton_20迭代_3',['Newton 迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md198',1,'1. Gauss-Newton 迭代'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md173',1,'2. Newton 迭代']]],
+  ['newton_20迭代_3',['Newton 迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md197',1,'1. Gauss-Newton 迭代'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md173',1,'2. Newton 迭代']]],
   ['node_4',['node',['../df/d48/classrm_1_1ClientView.html#a28e0d50c91a5328aa68fb22ee58bb9ee',1,'rm::ClientView::node()'],['../da/d78/classrm_1_1Client.html#a8001ee15cbe169a72bade6b6e4c59125',1,'rm::Client::node()'],['../d0/d24/classrm_1_1ServerView.html#a0eb25168ae9e1983449c640cccca3617',1,'rm::ServerView::node()'],['../d4/d06/classrm_1_1Server.html#a7a3abff380852a83a6b6ef90652d379d',1,'rm::Server::node()']]],
   ['node_5fid_5',['node_id',['../d6/d4a/structrm_1_1PublishedDataSet.html#ad58c956b9694d028edadec45201a6e62',1,'rm::PublishedDataSet']]],
   ['nodebasedatavariabletype_6',['nodeBaseDataVariableType',['../d3/da8/group__opcua.html#ga0230dc0fe786dc983979d2eec0dad230',1,'rm']]],

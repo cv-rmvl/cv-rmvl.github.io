@@ -128,10 +128,10 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md181">1. 卡尔曼滤波</a>
+        <a href="#autotoc_md180">1. 卡尔曼滤波</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md182">1.1 简介</a>
+            <a href="#autotoc_md181">1.1 简介</a>
           </li>
           <li class="level3">
             <a href="#kalman_recursive">1.2 初尝递归算法</a>
@@ -154,13 +154,13 @@ $(function(){ initResizable(false); });
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md184">2. 卡尔曼滤波模块的用法</a>
+        <a href="#autotoc_md183">2. 卡尔曼滤波模块的用法</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md185">2.1 如何配置</a>
+            <a href="#autotoc_md184">2.1 如何配置</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md186">2.2 如何使用</a>
+            <a href="#autotoc_md185">2.2 如何使用</a>
           </li>
           <li class="level3">
             <a href="#ref_paper">参考文献</a>
@@ -195,9 +195,9 @@ $(function(){ initResizable(false); });
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md180"></a>
 1. 卡尔曼滤波</h2>
-<h3><a class="anchor" id="autotoc_md182"></a>
+<h3><a class="anchor" id="autotoc_md181"></a>
 1.1 简介</h3>
 <p>卡尔曼滤波器是一个 Optimal Recursive Data Processing Algorithm，即最优化递归数字处理算法，与其说滤波器，倒不如说这是一个 <b>观测器</b> 。简单来说，卡尔曼滤波器能够估计目标的当前位置，并结合观测结果，以最高置信度获得当前位置。</p>
 <h3><a class="anchor" id="kalman_recursive"></a>
@@ -347,121 +347,121 @@ Ee_2Ee_1&amp;Ee_2^2&amp;\cdots&amp;Ee_2Ee_n\\\vdots&amp;\vdots&amp;\ddots&amp;\v
 Ee_nEe_1&amp;Ee_nEe_2&amp;\cdots&amp;Ee_n^2\end{bmatrix}\\&amp;=
 E\begin{bmatrix}e_1^2&amp;e_1e_2&amp;\cdots&amp;e_1e_n\\
 e_2e_1&amp;e_2^2&amp;\cdots&amp;e_2e_n\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
-e_ne_1&amp;e_ne_2&amp;\cdots&amp;e_n^2\end{bmatrix}=\green{E\left(\pmb e\pmb e^T\right)}\tag{1-10b}\end{align}\]
+e_ne_1&amp;e_ne_2&amp;\cdots&amp;e_n^2\end{bmatrix}=\green{E\left(\boldsymbol e\boldsymbol e^T\right)}\tag{1-10b}\end{align}\]
 </p>
 <h3><a class="anchor" id="kalman_gain_derivate"></a>
 1.5 卡尔曼增益推导</h3>
 <p>对于一个系统，可以使用状态空间方程来描述其运动</p>
 <p class="formulaDsp">
 \[\left\{\begin{align}
-\dot{\pmb x}&amp;=F\pmb x+G\pmb u\\
-\pmb z&amp;=H\pmb x
+\dot{\boldsymbol x}&amp;=F\boldsymbol x+G\boldsymbol u\\
+\boldsymbol z&amp;=H\boldsymbol x
 \end{align}\right.\tag{1-11}\]
 </p>
 <p>根据 <a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a> 中精确解的公式 \(\text{(b)}\)，我们可以知道状态空间方程的解的表达式，即</p>
 <p class="formulaDsp">
-\[\pmb x(t)=e^{F(t-t_0)}\pmb x(t_0)+\int_{t_0}^te^{F(t-\tau)}G\pmb u(\tau)\mathrm d\tau\tag{1-12}\]
+\[\boldsymbol x(t)=e^{F(t-t_0)}\boldsymbol x(t_0)+\int_{t_0}^te^{F(t-\tau)}G\boldsymbol u(\tau)\mathrm d\tau\tag{1-12}\]
 </p>
 <p>以 \(T\)为周期离散采样+零阶保持器，可以得到</p>
 <p class="formulaDsp">
 \[\begin{align}
-\pmb x(t_k)&amp;=e^{F(t_k-t_{k-1})}\pmb x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}G\pmb u(\tau)\mathrm d\tau\\
-&amp;=e^{FT}\pmb x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}\mathrm d\tau·G\pmb u(t_{k-1})\\
-&amp;=e^{FT}\pmb x(t_{k-1})+\left[-F^{-1}e^{F(t_k-\tau)}\right]_{t_{k-1}}^{t_k}·G\pmb u(t_{k-1})\\
-&amp;=e^{FT}\pmb x(t_{k-1})+F^{-1}(e^{FT}-I)G\pmb u(t_{k-1})\\
-\pmb x_k&amp;=\red{e^{FT}}\pmb x_{k-1}+\green{F^{-1}(e^{FT}-I)G}\pmb u_{k-1}\\
-简记为\quad\pmb x_k&amp;=\red A\pmb x_{k-1}+\green B\pmb u_{k-1}\tag{1-13a}\end{align}\]
+\boldsymbol x(t_k)&amp;=e^{F(t_k-t_{k-1})}\boldsymbol x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}G\boldsymbol u(\tau)\mathrm d\tau\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}\mathrm d\tau·G\boldsymbol u(t_{k-1})\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+\left[-F^{-1}e^{F(t_k-\tau)}\right]_{t_{k-1}}^{t_k}·G\boldsymbol u(t_{k-1})\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+F^{-1}(e^{FT}-I)G\boldsymbol u(t_{k-1})\\
+\boldsymbol x_k&amp;=\red{e^{FT}}\boldsymbol x_{k-1}+\green{F^{-1}(e^{FT}-I)G}\boldsymbol u_{k-1}\\
+简记为\quad\boldsymbol x_k&amp;=\red A\boldsymbol x_{k-1}+\green B\boldsymbol u_{k-1}\tag{1-13a}\end{align}\]
 </p>
 <p>因此我们可以得到离散系统的状态空间方程</p>
 <p class="formulaDsp">
 \[\left\{\begin{align}
-\pmb x_k&amp;=A\pmb x_{k-1}+B\pmb u_{k-1}\\
-\pmb z_k&amp;=H\pmb x_k
+\boldsymbol x_k&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\\
+\boldsymbol z_k&amp;=H\boldsymbol x_k
 \end{align}\right.\tag{1-13b}\]
 </p>
 <p>这其实是个不准确的结果，因为如果我们考虑上噪声，公式 \(\fml{1-13b}\) 应该改写为</p>
 <p class="formulaDsp">
 \[\left\{\begin{align}
-\pmb x_k&amp;=A\pmb x_{k-1}+B\pmb u_{k-1}\red{+\pmb w_{k-1}}&amp;p(\pmb w)\sim N(0,Q)\\
-\pmb z_k&amp;=H\pmb x_k\red{+\pmb v_k}&amp;p(\pmb v)\sim N(0,R)
+\boldsymbol x_k&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\red{+\boldsymbol w_{k-1}}&amp;p(\boldsymbol w)\sim N(0,Q)\\
+\boldsymbol z_k&amp;=H\boldsymbol x_k\red{+\boldsymbol v_k}&amp;p(\boldsymbol v)\sim N(0,R)
 \end{align}\right.\tag{1-13c}\]
 </p>
 <ul>
 <li>\(w_{k-1}\) 称为过程噪声，来自于算不准的部分，其中 \(Q\) 满足以下形式   <p class="formulaDsp">
-\[Q=E(\pmb w\pmb w^T)=\begin{bmatrix}\sigma_{w_1}^2&amp;\sigma_{w_1}\sigma_{w_2}&amp;\cdots&amp;\sigma_{w_1}\sigma_{w_n}\\
+\[Q=E(\boldsymbol w\boldsymbol w^T)=\begin{bmatrix}\sigma_{w_1}^2&amp;\sigma_{w_1}\sigma_{w_2}&amp;\cdots&amp;\sigma_{w_1}\sigma_{w_n}\\
   \sigma_{w_2}\sigma_{w_1}&amp;\sigma_{w_2}^2&amp;\cdots&amp;\sigma_{w_2}\sigma_{w_n}\\
   \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\\sigma_{w_n}\sigma_{w_1}&amp;\sigma_{w_n}\sigma_{w_2}&amp;\cdots&amp;\sigma_{w_n}^2\end{bmatrix}\]
 </p>
  称为过程噪声协方差矩阵</li>
 <li>\(v_{k-1}\) 称为测量噪声，来自于测不准的部分，其中 \(R\) 满足以下形式   <p class="formulaDsp">
-\[R=E(\pmb v\pmb v^T)=\begin{bmatrix}\sigma_{v_1}^2&amp;\sigma_{v_1}\sigma_{v_2}&amp;\cdots&amp;\sigma_{v_1}\sigma_{v_n}\\
+\[R=E(\boldsymbol v\boldsymbol v^T)=\begin{bmatrix}\sigma_{v_1}^2&amp;\sigma_{v_1}\sigma_{v_2}&amp;\cdots&amp;\sigma_{v_1}\sigma_{v_n}\\
   \sigma_{v_2}\sigma_{v_1}&amp;\sigma_{v_2}^2&amp;\cdots&amp;\sigma_{v_2}\sigma_{v_n}\\
   \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\\sigma_{v_n}\sigma_{v_1}&amp;\sigma_{v_n}\sigma_{v_2}&amp;\cdots&amp;\sigma_{v_n}^2\end{bmatrix}\]
 </p>
  称为测量噪声协方差矩阵</li>
 </ul>
-<p>但是，这两个误差我们无从得知，我们只能使用公式 \(\fml{1-13b}\) 的形式进行近似估计，通过 \(\pmb x_k=A\pmb x_{k-1}+B\pmb u_{k-1}\) 算出来的 \(\pmb x_k\) 称为<span style="color: red">先验状态估计</span>，一般写为</p>
+<p>但是，这两个误差我们无从得知，我们只能使用公式 \(\fml{1-13b}\) 的形式进行近似估计，通过 \(\boldsymbol x_k=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\) 算出来的 \(\boldsymbol x_k\) 称为<span style="color: red">先验状态估计</span>，一般写为</p>
 <p class="formulaDsp">
-\[\red{\hat{\pmb x}_k^-=A\pmb x_{k-1}+B\pmb u_{k-1}\tag{1-14}}\]
+\[\red{\hat{\boldsymbol x}_k^-=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\tag{1-14}}\]
 </p>
-<p>通过 \(\pmb z_k=H\pmb x_k\) 得到的 \(\pmb x_k\) 是测出来的结果，记为 \(\hat{\pmb x}_{k_{MEA}}\)，即</p>
+<p>通过 \(\boldsymbol z_k=H\boldsymbol x_k\) 得到的 \(\boldsymbol x_k\) 是测出来的结果，记为 \(\hat{\boldsymbol x}_{k_{MEA}}\)，即</p>
 <p class="formulaDsp">
-\[\hat{\pmb x}_{k_{MEA}}=H^+\pmb z_k\tag{1-15}\]
+\[\hat{\boldsymbol x}_{k_{MEA}}=H^+\boldsymbol z_k\tag{1-15}\]
 </p>
 <p>因为 \(H^{-1}\) 可能不存在，这里先使用 M-P 广义逆 \(H^+\) 来表示。</p>
 <dl class="section note"><dt>注解</dt><dd>对于一个线性方程组 <p class="formulaDsp">
-\[A\pmb x=\pmb b\]
+\[A\boldsymbol x=\boldsymbol b\]
 </p>
 必定存在最小二乘解 <p class="formulaDsp">
-\[\pmb x=(A^TA)^{-1}A^T\pmb b\]
+\[\boldsymbol x=(A^TA)^{-1}A^T\boldsymbol b\]
 </p>
 可以令 \(A^+=(A^TA)^{-1}A^T\) 来表示 Moore-Penrose 广义逆，即 <p class="formulaDsp">
-\[\pmb x=A^+\pmb b\]
+\[\boldsymbol x=A^+\boldsymbol b\]
 </p>
 当 \(A\) 可逆时， \(A^+=A^{-1}\).</dd></dl>
-<p>目前的两个结果 \(\hat{\pmb x}_k^-\) 和 \(\hat{\pmb x}_{k_{MEA}}\) 都不准确，因此可以回顾 <a class="el" href="#kalman_data_fusion">1.3 数据融合</a> 的部分，在公式 \(\fml{1-4}\) 中使用了算出来的 \(\teal{x_1}\) 和测出来的 \(\red{x_2}\) 得到了最优估计值 \(\hat x\)，为此我们可以仿照这一步骤来求出离散系统状态的最优估计值 \(\hat{\pmb x}_k\)，称为<span style="color: red">后验状态估计</span>。</p>
+<p>目前的两个结果 \(\hat{\boldsymbol x}_k^-\) 和 \(\hat{\boldsymbol x}_{k_{MEA}}\) 都不准确，因此可以回顾 <a class="el" href="#kalman_data_fusion">1.3 数据融合</a> 的部分，在公式 \(\fml{1-4}\) 中使用了算出来的 \(\teal{x_1}\) 和测出来的 \(\red{x_2}\) 得到了最优估计值 \(\hat x\)，为此我们可以仿照这一步骤来求出离散系统状态的最优估计值 \(\hat{\boldsymbol x}_k\)，称为<span style="color: red">后验状态估计</span>。</p>
 <p class="formulaDsp">
-\[\begin{align}\hat{\pmb x}_k&amp;=\hat{\pmb x}_k^-+\green{G_k}(\hat{\pmb x}_{k_{MEA}}-\hat{\pmb x}_k^-)\\
-&amp;=\hat{\pmb x}_k^-+\green{G_k}(H^+\pmb z_k-\hat{\pmb x}_k^-)\tag{1-16}\end{align}\]
+\[\begin{align}\hat{\boldsymbol x}_k&amp;=\hat{\boldsymbol x}_k^-+\green{G_k}(\hat{\boldsymbol x}_{k_{MEA}}-\hat{\boldsymbol x}_k^-)\\
+&amp;=\hat{\boldsymbol x}_k^-+\green{G_k}(H^+\boldsymbol z_k-\hat{\boldsymbol x}_k^-)\tag{1-16}\end{align}\]
 </p>
 <p>令 \(G_k=K_kH\)，可以得到</p>
 <p class="formulaDsp">
-\[\red{\hat{\pmb x}_k=\hat{\pmb x}_k^-+K_k(\pmb z_k-H\hat{\pmb x}_k^-)\tag{1-17}}\]
+\[\red{\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\tag{1-17}}\]
 </p>
-<p>我们的目标依然很明确，希望求出这个 \(\green{K_k}\)，使得后验状态估计值 \(\hat{\pmb x}_k\) 是最优的，即 \(\hat{\pmb x}_k\) 的方差 \(\Var(\hat{\pmb x}_k)\) 最小，即 \(\hat{\pmb x}_k\to \pmb x_k\)。如何衡量 \(\hat{\pmb x}_k\) 的方差 \(\Var(\hat{\pmb x}_k)\)？我们可以令状态误差 \(\pmb e_k=\pmb x_k-\hat{\pmb x}_k\)，那么此时 \(p(\pmb e_k)\sim N(0,P_k)\)，其中 \(P_k\) 是误差协方差矩阵，并且满足</p>
+<p>我们的目标依然很明确，希望求出这个 \(\green{K_k}\)，使得后验状态估计值 \(\hat{\boldsymbol x}_k\) 是最优的，即 \(\hat{\boldsymbol x}_k\) 的方差 \(\Var(\hat{\boldsymbol x}_k)\) 最小，即 \(\hat{\boldsymbol x}_k\to \boldsymbol x_k\)。如何衡量 \(\hat{\boldsymbol x}_k\) 的方差 \(\Var(\hat{\boldsymbol x}_k)\)？我们可以令状态误差 \(\boldsymbol e_k=\boldsymbol x_k-\hat{\boldsymbol x}_k\)，那么此时 \(p(\boldsymbol e_k)\sim N(0,P_k)\)，其中 \(P_k\) 是误差协方差矩阵，并且满足</p>
 <p class="formulaDsp">
 \[P_k=\begin{bmatrix}\sigma_{e_1}^2&amp;\cdots&amp;\sigma_{e_1}\sigma_{e_n}\\\vdots&amp;&amp;\vdots\\\sigma_{e_n}\sigma_{e_1}&amp;\cdots&amp;\sigma_{e_n}^2\end{bmatrix}\tag{1-18}\]
 </p>
-<p>方差 \(\Var(\hat{\pmb x}_k)\) 最小，即 \(\sum\limits_{i=1}^{n}\sigma_{e_i}^2\) 最小，即 \(P_k\) 的迹 \(\tr(P_k)\) 最小。</p>
+<p>方差 \(\Var(\hat{\boldsymbol x}_k)\) 最小，即 \(\sum\limits_{i=1}^{n}\sigma_{e_i}^2\) 最小，即 \(P_k\) 的迹 \(\tr(P_k)\) 最小。</p>
 <p>对于状态误差，有</p>
 <p class="formulaDsp">
 \[\begin{align}
-\pmb e_k&amp;=\pmb x_k-\hat{\pmb x}_k=\pmb x_k-\left(\hat{\pmb x}_k^-+K_k(\pmb z_k-H\hat{\pmb x}_k^-)\right)\\
-&amp;=\pmb x_k-\hat{\pmb x}_k^--K_k\pmb z_k+K_kH\hat{\pmb x}_k^-\\
-&amp;=\pmb x_k-\hat{\pmb x}_k^--K_k(H\pmb x_k+\pmb v_k)+K_kH\hat{\pmb x}_k^-\\
-&amp;=\pmb x_k-\hat{\pmb x}_k^--K_kH\pmb x_k-K_k\pmb v_k+K_kH\hat{\pmb x}_k^-\\
-&amp;=(\pmb x_k-\hat{\pmb x}_k^-)-K_kH(\pmb x_k-\hat{\pmb x}_k^-)-K_k\pmb v_k\\
-&amp;=(I-K_kH)\teal{(\pmb x_k-\hat{\pmb x}_k^-)}-K_k\pmb v_k\\
-&amp;=(I-K_kH)\teal{\pmb e_k^-}-K_k\pmb v_k\tag{1-19}\end{align}\]
+\boldsymbol e_k&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k=\boldsymbol x_k-\left(\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\right)\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_k\boldsymbol z_k+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_k(H\boldsymbol x_k+\boldsymbol v_k)+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_kH\boldsymbol x_k-K_k\boldsymbol v_k+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)-K_kH(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)-K_k\boldsymbol v_k\\
+&amp;=(I-K_kH)\teal{(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)}-K_k\boldsymbol v_k\\
+&amp;=(I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\tag{1-19}\end{align}\]
 </p>
 <p>则误差协方差矩阵可以表示为</p>
 <p class="formulaDsp">
 \[\begin{align}P_k
-&amp;=E\left(\pmb e_k\pmb e_k^T\right)=E\left[(\pmb x_k-\hat{\pmb x}_k)(\pmb x_k-\hat{\pmb x}_k)^T\right]\\
-&amp;=E\left[\left((I-K_kH)\teal{\pmb e_k^-}-K_k\pmb v_k\right)\left((I-K_kH)\teal{\pmb e_k^-}-K_k\pmb v_k\right)^T\right]\\
-&amp;=E\left[\left(\green{(I-K_kH)\pmb e_k^-}-\red{K_k\pmb v_k}\right)\left(\teal{{\pmb e_k^-}^T(I-K_kH)^T}-\orange{\pmb v_k^TK_k^T}\right)\right]\\
-&amp;=E\left[\green{(I-K_kH)\pmb e_k^-}\teal{{\pmb e_k^-}^T(I-K_kH)^T}-\green{(I-K_kH)\pmb e_k^-}\orange{\pmb v_k^TK_k^T}-\right.\\
-&amp;\transparent=\left.\red{K_k\pmb v_k}\teal{{\pmb e_k^-}^T(I-K_kH)^T}+\red{K_k\pmb v_k}\orange{\pmb v_k^TK_k^T}\right]\\
-&amp;=\red{E(}(I-K_kH)\pmb e_k^-{\pmb e_k^-}^T(I-K_kH)^T\red{)}-\\
-&amp;\transparent=\red{E(}(I-K_kH)\pmb e_k^-\pmb v_k^TK_k^T\red{)}-\\
-&amp;\transparent=\red{E(}K_k\pmb v_k{\pmb e_k^-}^T(I-K_kH)^T\red{)}+\\
-&amp;\transparent=\red{E(}K_k\pmb v_k\pmb v_k^TK_k^T\red{)}\\
-提出常数的期望\quad&amp;=(I-K_kH)\red{E(}\pmb e_k^-{\pmb e_k^-}^T\red{)}(I-K_kH)^T-\\
-&amp;\transparent=(I-K_kH)\red{E(}\pmb e_k^-\pmb v_k^T\red{)}K_k^T-\\
-&amp;\transparent=K_k\red{E(}\pmb v_k{\pmb e_k^-}^T\red{)}(I-K_kH)^T+\\
-&amp;\transparent=K_k\red{E(}\pmb v_k\pmb v_k^T\red{)}K_k^T\\
+&amp;=E\left(\boldsymbol e_k\boldsymbol e_k^T\right)=E\left[(\boldsymbol x_k-\hat{\boldsymbol x}_k)(\boldsymbol x_k-\hat{\boldsymbol x}_k)^T\right]\\
+&amp;=E\left[\left((I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\right)\left((I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\right)^T\right]\\
+&amp;=E\left[\left(\green{(I-K_kH)\boldsymbol e_k^-}-\red{K_k\boldsymbol v_k}\right)\left(\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}-\orange{\boldsymbol v_k^TK_k^T}\right)\right]\\
+&amp;=E\left[\green{(I-K_kH)\boldsymbol e_k^-}\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}-\green{(I-K_kH)\boldsymbol e_k^-}\orange{\boldsymbol v_k^TK_k^T}-\right.\\
+&amp;\transparent=\left.\red{K_k\boldsymbol v_k}\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}+\red{K_k\boldsymbol v_k}\orange{\boldsymbol v_k^TK_k^T}\right]\\
+&amp;=\red{E(}(I-K_kH)\boldsymbol e_k^-{\boldsymbol e_k^-}^T(I-K_kH)^T\red{)}-\\
+&amp;\transparent=\red{E(}(I-K_kH)\boldsymbol e_k^-\boldsymbol v_k^TK_k^T\red{)}-\\
+&amp;\transparent=\red{E(}K_k\boldsymbol v_k{\boldsymbol e_k^-}^T(I-K_kH)^T\red{)}+\\
+&amp;\transparent=\red{E(}K_k\boldsymbol v_k\boldsymbol v_k^TK_k^T\red{)}\\
+提出常数的期望\quad&amp;=(I-K_kH)\red{E(}\boldsymbol e_k^-{\boldsymbol e_k^-}^T\red{)}(I-K_kH)^T-\\
+&amp;\transparent=(I-K_kH)\red{E(}\boldsymbol e_k^-\boldsymbol v_k^T\red{)}K_k^T-\\
+&amp;\transparent=K_k\red{E(}\boldsymbol v_k{\boldsymbol e_k^-}^T\red{)}(I-K_kH)^T+\\
+&amp;\transparent=K_k\red{E(}\boldsymbol v_k\boldsymbol v_k^T\red{)}K_k^T\\
 &amp;=(I-K_kH)\red{P_k^-}(I-K_kH)^T+\\
-\pmb e_k^-和{\pmb v_k}^T相互独立\quad&amp;\transparent=0+\\
+\boldsymbol e_k^-和{\boldsymbol v_k}^T相互独立\quad&amp;\transparent=0+\\
 且期望为0\quad&amp;\transparent=0+\\
 &amp;\transparent=K_k\red{R}K_k^T\\
 &amp;=\left(\green{P_k^-}-\red{K_kHP_k^-}\right)\left(\teal I-\orange{H^TK_k^T}\right)+K_kRK_k^T\\
@@ -494,11 +494,11 @@ P_k^-对称\quad&amp;=P_k^--K_kHP_k^--\left(K_kHP_k^-\right)^T+K_kHP_k^-H^TK_k^T
  </blockquote>
 <p>因此可以得到</p>
 <p class="formulaDsp">
-\[\frac{\mathrm d\tr(AB)}{A}=B^T\tag{1-23a}\]
+\[\frac{\mathrm d\tr(AB)}{\mathrm dA}=B^T\tag{1-23a}\]
 </p>
 <p>同理，我们也能验证如下结论</p>
 <p class="formulaDsp">
-\[\begin{align}\frac{\mathrm d\tr(ABA^T)}{A}&amp;=AB+AB^T\\
+\[\begin{align}\frac{\mathrm d\tr(ABA^T)}{\mathrm dA}&amp;=AB+AB^T\\
 当B对称时\quad&amp;=2AB\end{align}\tag{1-23b}\]
 </p>
 <p>那么，公式 \(\fml{1-22}\)可以写为</p>
@@ -515,26 +515,26 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 </p>
 <p><b>讨论</b></p>
 <ul>
-<li>当 \(R\) 很大时， \(K_k\to0,\quad\hat{\pmb x}_k=\hat{\pmb x}_k^-+0(\pmb z_k-H\hat{\pmb x}_k^-)=\red{\hat{\pmb x}_k^-}\)</li>
-<li>当 \(R\) 很小时， \(K_k\to H^+,\quad\hat{\pmb x}_k=\hat{\pmb x}_k^-+H^+(\pmb z_k-H\hat{\pmb x}_k^-)=H^+\pmb z_k=\red{\hat{\pmb x}_{k_{MEA}}}\)</li>
+<li>当 \(R\) 很大时， \(K_k\to0,\quad\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+0(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)=\red{\hat{\boldsymbol x}_k^-}\)</li>
+<li>当 \(R\) 很小时， \(K_k\to H^+,\quad\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+H^+(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)=H^+\boldsymbol z_k=\red{\hat{\boldsymbol x}_{k_{MEA}}}\)</li>
 </ul>
 <h3><a class="anchor" id="kalman_error_covairance_matrix"></a>
 1.6 误差协方差矩阵</h3>
-<p>我们在计算卡尔曼增益 \(K_k\) 的时候出现了 \(E\left(\pmb e_k^-{\pmb e_k^-}^T\right)\)，并使用 \(P_k^-\) 进行表示，代表先验的误差协方差矩阵，现在要做的就是求出先验误差协方差矩阵 \(P_k^-\)，同样可以由协方差矩阵的定义出发。</p>
-<p>首先先求 \(\pmb e_k^-\)</p>
+<p>我们在计算卡尔曼增益 \(K_k\) 的时候出现了 \(E\left(\boldsymbol e_k^-{\boldsymbol e_k^-}^T\right)\)，并使用 \(P_k^-\) 进行表示，代表先验的误差协方差矩阵，现在要做的就是求出先验误差协方差矩阵 \(P_k^-\)，同样可以由协方差矩阵的定义出发。</p>
+<p>首先先求 \(\boldsymbol e_k^-\)</p>
 <p class="formulaDsp">
-\[\begin{align}\pmb e_k^-&amp;=\pmb x_k-\hat{\pmb x}_k^-\\
-&amp;=A\pmb x_{k-1}+B\pmb u_{k-1}+\pmb w_{k-1}-A\hat{\pmb x}_{k-1}-B\pmb u_{k-1}\\
-&amp;=A(\pmb x_{k-1}-\hat{\pmb x}_{k-1})+\pmb w_{k-1}\\
-&amp;=A\pmb e_{k-1}+\pmb w_{k-1}\tag{1-26}\end{align}\]
+\[\begin{align}\boldsymbol e_k^-&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^-\\
+&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}+\boldsymbol w_{k-1}-A\hat{\boldsymbol x}_{k-1}-B\boldsymbol u_{k-1}\\
+&amp;=A(\boldsymbol x_{k-1}-\hat{\boldsymbol x}_{k-1})+\boldsymbol w_{k-1}\\
+&amp;=A\boldsymbol e_{k-1}+\boldsymbol w_{k-1}\tag{1-26}\end{align}\]
 </p>
 <p>因此先验误差协方差矩阵 \(P_k^-\) 可以表示为</p>
 <p class="formulaDsp">
 \[\begin{align}P_k^-
-&amp;=E\left(\pmb e_k^-{\pmb e_k^-}^T\right)=E\left[(A\pmb e_{k-1}+\pmb w_{k-1})(A\pmb e_{k-1}+\pmb w_{k-1})^T\right]\\
-&amp;=E\left[(A\pmb e_{k-1}+\pmb w_{k-1})(\pmb e_{k-1}^TA^T+\pmb w_{k-1}^T)\right]\\
-&amp;=E\left[A\pmb e_{k-1}\pmb e_{k-1}^TA^T+A\pmb e_{k-1}\pmb w_{k-1}^T+\pmb w_{k-1}\pmb e_{k-1}^TA^T+\pmb w_{k-1}\pmb w_{k-1}^T\right]\\
-&amp;=AE(\pmb e_{k-1}\pmb e_{k-1}^T)A^T+AE\pmb e_{k-1}E\pmb w_{k-1}^T+E\pmb w_{k-1}E\pmb e_{k-1}^TA^T+E(\pmb w_{k-1}\pmb w_{k-1}^T)\\
+&amp;=E\left(\boldsymbol e_k^-{\boldsymbol e_k^-}^T\right)=E\left[(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})^T\right]\\
+&amp;=E\left[(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})(\boldsymbol e_{k-1}^TA^T+\boldsymbol w_{k-1}^T)\right]\\
+&amp;=E\left[A\boldsymbol e_{k-1}\boldsymbol e_{k-1}^TA^T+A\boldsymbol e_{k-1}\boldsymbol w_{k-1}^T+\boldsymbol w_{k-1}\boldsymbol e_{k-1}^TA^T+\boldsymbol w_{k-1}\boldsymbol w_{k-1}^T\right]\\
+&amp;=AE(\boldsymbol e_{k-1}\boldsymbol e_{k-1}^T)A^T+AE\boldsymbol e_{k-1}E\boldsymbol w_{k-1}^T+E\boldsymbol w_{k-1}E\boldsymbol e_{k-1}^TA^T+E(\boldsymbol w_{k-1}\boldsymbol w_{k-1}^T)\\
 &amp;=AP_{k-1}A^T+0+0+Q
 \tag{1-27}\end{align}\]
 </p>
@@ -562,7 +562,7 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 <p><b>① 预测</b></p>
 <ol type="1">
 <li><span style="color: teal">先验状态估计</span> <p class="formulaDsp">
-\[\hat{\pmb x}_k^-=A\pmb x_{k-1}+B\pmb u_{k-1}\]
+\[\hat{\boldsymbol x}_k^-=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\]
 </p>
 </li>
 <li><span style="color: teal">计算先验误差协方差</span> <p class="formulaDsp">
@@ -577,7 +577,7 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 </p>
 </li>
 <li><span style="color: teal">后验状态估计</span> <p class="formulaDsp">
-\[\hat{\pmb x}_k=\hat{\pmb x}_k^-+K_k(\pmb z_k-H\hat{\pmb x}_k^-)\]
+\[\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\]
 </p>
 </li>
 <li><span style="color: teal">更新后验误差协方差</span> <p class="formulaDsp">
@@ -586,9 +586,9 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 </li>
 </ol>
 <hr  />
-<h2><a class="anchor" id="autotoc_md184"></a>
+<h2><a class="anchor" id="autotoc_md183"></a>
 2. 卡尔曼滤波模块的用法</h2>
-<h3><a class="anchor" id="autotoc_md185"></a>
+<h3><a class="anchor" id="autotoc_md184"></a>
 2.1 如何配置</h3>
 <p>首先必须要寻找 RMVL 包，即 <code>find_package(RMVL REQUIRED)</code>，之后可直接在 CMakeLists.txt 中链接库</p>
 <div class="fragment"><div class="line">target_link_libraries(</div>
@@ -596,7 +596,7 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 <div class="line">  PUBLIC rmvl_algorithm</div>
 <div class="line">)</div>
 </div><!-- fragment --><p>这里的 <code>xxx</code> 为需要链接到 algorithm 模块的目标</p>
-<h3><a class="anchor" id="autotoc_md186"></a>
+<h3><a class="anchor" id="autotoc_md185"></a>
 2.2 如何使用</h3>
 <h4>2.2.1 包含头文件</h4>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d0f/kalman_8hpp.html">rmvl/algorithm/kalman.hpp</a>&gt;</span></div>

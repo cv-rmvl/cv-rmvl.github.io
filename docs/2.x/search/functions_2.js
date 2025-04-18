@@ -2,7 +2,7 @@ var searchData=
 [
   ['calcarmornum_0',['calcArmorNum',['../da/df9/classrm_1_1GyroGroup.html#aca439948c823f3c64aa03b9e6d928bb0',1,'rm::GyroGroup']]],
   ['calcgroupfrom3dmessage_1',['calcGroupFrom3DMessage',['../da/df9/classrm_1_1GyroGroup.html#acab4a61749d9a702ac578fcd378a5f81',1,'rm::GyroGroup']]],
-  ['calculatemodenum_2',['calculateModeNum',['../d5/d6c/group__algorithm.html#ga8041626cf548fb4b8048c70888b2283d',1,'rm']]],
+  ['calculatemodenum_2',['calculateModeNum',['../d5/d6c/group__algorithm.html#gae2c3e5b1cc343df2b6afba4d84b6d187',1,'rm']]],
   ['calculaterelativeangle_3',['calculateRelativeAngle',['../d5/d6c/group__algorithm.html#ga90237f8e5effcb48062f24f167c4d726',1,'rm']]],
   ['calculaterelativecenter_4',['calculateRelativeCenter',['../d5/d6c/group__algorithm.html#gaad38b53a7d703ef75889860795c41b94',1,'rm']]],
   ['call_5',['call',['../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3',1,'rm::Client::call(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const'],['../da/d78/classrm_1_1Client.html#afb1489f1748be83fc75c3c10124d16ee',1,'rm::Client::call(std::string_view name, const Variables &amp;inputs) const']]],

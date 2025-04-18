@@ -13,13 +13,14 @@ var searchData=
   ['variable_5fwrite_10',['VARIABLE_WRITE',['../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0',1,'rm']]],
   ['variables_11',['Variables',['../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d',1,'rm']]],
   ['variabletype_12',['VariableType',['../d9/de2/classrm_1_1VariableType.html',1,'rm::VariableType'],['../d9/de2/classrm_1_1VariableType.html#a6f2685c83cc79db18577ee22dd5d2b41',1,'rm::VariableType::VariableType()=default'],['../d9/de2/classrm_1_1VariableType.html#a0b67afadfcb27542b445d890d54e59d3',1,'rm::VariableType::VariableType(Tp val)'],['../d9/de2/classrm_1_1VariableType.html#a22aded241845705ddfc74c577ece25dc',1,'rm::VariableType::VariableType(const std::string &amp;str)'],['../d9/de2/classrm_1_1VariableType.html#ac00e33232d05fdbc552d3022c29430a3',1,'rm::VariableType::VariableType(const char(&amp;str)[N])'],['../d9/de2/classrm_1_1VariableType.html#a770f26b567eae38c03c059867a060571',1,'rm::VariableType::VariableType(const std::vector&lt; Tp &gt; &amp;arr)'],['../d9/de2/classrm_1_1VariableType.html#a7f57c4d3369e645c48e024011f20cdf2',1,'rm::VariableType::VariableType(std::initializer_list&lt; Tp &gt; il)']]],
-  ['version_13',['version',['../da/d1d/classrm_1_1GalaxyCamera.html#acfb2a342f30877f43f1417104256575f',1,'rm::GalaxyCamera::version()'],['../db/d9f/classrm_1_1HikCamera.html#aba25807199c4abb17da2571b157fadbf',1,'rm::HikCamera::version()'],['../de/de8/classrm_1_1MvCamera.html#abf874177488c01f0eff6bde019c47b48',1,'rm::MvCamera::version()'],['../d5/d20/namespacerm.html#a8592384908d8e3e287435d0f4c292945',1,'rm::version()']]],
-  ['version_2ehpp_14',['version.hpp',['../d7/dad/version_8hpp.html',1,'']]],
-  ['vertex_5fk_15',['VERTEX_K',['../dc/d90/classrm_1_1para_1_1PilotParam.html#a2a6f90b97cdcf6607d441392b86768b2',1,'rm::para::PilotParam']]],
-  ['verticalconverttocamera_16',['verticalConvertToCamera',['../d1/dfe/classrm_1_1Rune.html#aa0ea4c848120ed9fc1713f5ed5775735',1,'rm::Rune']]],
-  ['view_17',['View',['../d2/de9/classrm_1_1View.html',1,'rm::View'],['../d2/de9/classrm_1_1View.html#ac31b479a1ec0f908b7cb52a8b6f3da66',1,'rm::View::View()']]],
-  ['view_2ehpp_18',['view.hpp',['../d8/d11/view_8hpp.html',1,'']]],
-  ['vx_19',['vx',['../d4/def/structrm_1_1Translation.html#aa19afb5f82cdfef8d58a0447fc8cbe7d',1,'rm::Translation']]],
-  ['vy_20',['vy',['../d4/def/structrm_1_1Translation.html#a903147cfdfdf145b8a05857a6d677ac4',1,'rm::Translation']]],
-  ['vz_21',['vz',['../d4/def/structrm_1_1Translation.html#a978e6a6f35ae3d668818589f0103d62f',1,'rm::Translation']]]
+  ['variance_13',['variance',['../d5/d6c/group__algorithm.html#gaeccc8db1215050e6b985f4869c5d1b40',1,'rm']]],
+  ['version_14',['version',['../da/d1d/classrm_1_1GalaxyCamera.html#acfb2a342f30877f43f1417104256575f',1,'rm::GalaxyCamera::version()'],['../db/d9f/classrm_1_1HikCamera.html#aba25807199c4abb17da2571b157fadbf',1,'rm::HikCamera::version()'],['../de/de8/classrm_1_1MvCamera.html#abf874177488c01f0eff6bde019c47b48',1,'rm::MvCamera::version()'],['../d5/d20/namespacerm.html#a8592384908d8e3e287435d0f4c292945',1,'rm::version()']]],
+  ['version_2ehpp_15',['version.hpp',['../d7/dad/version_8hpp.html',1,'']]],
+  ['vertex_5fk_16',['VERTEX_K',['../dc/d90/classrm_1_1para_1_1PilotParam.html#a2a6f90b97cdcf6607d441392b86768b2',1,'rm::para::PilotParam']]],
+  ['verticalconverttocamera_17',['verticalConvertToCamera',['../d1/dfe/classrm_1_1Rune.html#aa0ea4c848120ed9fc1713f5ed5775735',1,'rm::Rune']]],
+  ['view_18',['View',['../d2/de9/classrm_1_1View.html',1,'rm::View'],['../d2/de9/classrm_1_1View.html#ac31b479a1ec0f908b7cb52a8b6f3da66',1,'rm::View::View()']]],
+  ['view_2ehpp_19',['view.hpp',['../d8/d11/view_8hpp.html',1,'']]],
+  ['vx_20',['vx',['../d4/def/structrm_1_1Translation.html#aa19afb5f82cdfef8d58a0447fc8cbe7d',1,'rm::Translation']]],
+  ['vy_21',['vy',['../d4/def/structrm_1_1Translation.html#a903147cfdfdf145b8a05857a6d677ac4',1,'rm::Translation']]],
+  ['vz_22',['vz',['../d4/def/structrm_1_1Translation.html#a978e6a6f35ae3d668818589f0103d62f',1,'rm::Translation']]]
 ];
