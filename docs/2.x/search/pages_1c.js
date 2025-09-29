@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['安装总览_0',['安装总览',['../d2/d60/tutorial_install_overview.html',1,'tutorial_table_of_content_config']]]
+  ['和_20cmake_20使用_20rmvl_0',['通过 gcc 和 CMake 使用 RMVL',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]]
 ];

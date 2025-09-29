@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.13.0" doxygen_gitid="3fc9e7f98b8d1156ec627cd3ee6f23984bf4e1b1">
+<tagfile doxygen_version="1.13.2" doxygen_gitid="26342b775ea25e6fefb53220926b20702c56fcb3">
   <compound kind="file">
     <name>root.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
@@ -161,6 +161,11 @@
     <filename>d8/dc6/arm_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>run_in.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
+    <filename>d5/db3/run__in_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>auto_differential.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
     <filename>df/d7b/auto__differential_8md.html</filename>
@@ -251,9 +256,29 @@
     <filename>d4/dbc/camera_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>coro.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>dd/d8a/coro_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>ipc.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d3/d39/ipc_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>light.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
     <filename>d6/d3d/light_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>mqtt.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>dc/d5e/mqtt_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>netapp.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d0/d67/netapp_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>opcua.md</name>
@@ -264,6 +289,11 @@
     <name>serial.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
     <filename>d9/d63/serial_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>socket.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d7/d45/socket_8md.html</filename>
   </compound>
   <compound kind="file">
     <name>tutorial_modules.md</name>
@@ -313,9 +343,8 @@
     <name>combo.h</name>
     <path>rmvl/combo/</path>
     <filename>d8/d36/combo_8h.html</filename>
-    <includes id="d4/d78/math_8hpp" name="math.hpp" local="yes" import="no" module="no" objc="no">rmvl/algorithm/math.hpp</includes>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">rmvl/camera/camutils.hpp</includes>
-    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/io.hpp</includes>
+    <includes id="d9/dc1/io_2include_2rmvl_2io_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/io/util.hpp</includes>
     <includes id="d2/d74/feature_8h" name="feature.h" local="yes" import="no" module="no" objc="no">rmvl/feature/feature.h</includes>
     <class kind="class">rm::combo</class>
     <class kind="class">rm::DefaultCombo</class>
@@ -492,8 +521,8 @@
     <path>rmvl/detector/</path>
     <filename>da/d95/detector_2armor__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">detector.h</includes>
+    <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" import="no" module="no" objc="no">rmvl/combo/armor.h</includes>
     <includes id="d5/d47/ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
-    <includes id="d5/dea/tracker_2planar__tracker_8h" name="planar_tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/planar_tracker.h</includes>
     <class kind="class">rm::ArmorDetector</class>
     <namespace>rm</namespace>
   </compound>
@@ -521,8 +550,8 @@
     <path>rmvl/detector/</path>
     <filename>d1/d6b/detector_2gyro__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">detector.h</includes>
+    <includes id="dd/d92/combo_2armor_8h" name="armor.h" local="yes" import="no" module="no" objc="no">rmvl/combo/armor.h</includes>
     <includes id="d5/d47/ort_8h" name="ort.h" local="yes" import="no" module="no" objc="no">rmvl/ml/ort.h</includes>
-    <includes id="d7/de6/tracker_2gyro__tracker_8h" name="gyro_tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/gyro_tracker.h</includes>
     <class kind="class">rm::GyroDetector</class>
     <namespace>rm</namespace>
   </compound>
@@ -540,7 +569,6 @@
     <path>rmvl/detector/</path>
     <filename>db/dcc/detector_2rune__detector_8h.html</filename>
     <includes id="d5/d9f/detector_8h" name="detector.h" local="yes" import="no" module="no" objc="no">detector.h</includes>
-    <includes id="dd/d0a/tracker_2rune__tracker_8h" name="rune_tracker.h" local="yes" import="no" module="no" objc="no">rmvl/tracker/rune_tracker.h</includes>
     <class kind="class">rm::RuneDetector</class>
     <namespace>rm</namespace>
   </compound>
@@ -996,7 +1024,7 @@
     <name>math.hpp</name>
     <path>rmvl/algorithm/</path>
     <filename>d4/d78/math_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::EwTopsis</class>
     <class kind="class">rm::Munkres</class>
     <namespace>rm</namespace>
@@ -1057,9 +1085,10 @@
     <path>rmvl/camera/</path>
     <filename>d1/da6/camera_2galaxy__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::GalaxyCamera</class>
     <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>galaxy_camera.h</name>
@@ -1075,9 +1104,10 @@
     <path>rmvl/camera/</path>
     <filename>da/d35/camera_2hik__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::HikCamera</class>
     <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>hik_camera.h</name>
@@ -1093,9 +1123,10 @@
     <path>rmvl/camera/</path>
     <filename>d1/d67/camera_2mv__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::MvCamera</class>
     <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>mv_camera.h</name>
@@ -1111,15 +1142,17 @@
     <path>rmvl/camera/</path>
     <filename>dd/d54/camera_2opt__camera_8h.html</filename>
     <includes id="d3/d7e/camutils_8hpp" name="camutils.hpp" local="yes" import="no" module="no" objc="no">camutils.hpp</includes>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="class">rm::OptCamera</class>
     <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
   </compound>
   <compound kind="file">
     <name>opt_camera.h</name>
     <path>rmvlpara/camera/</path>
     <filename>d1/d3e/ara_2camera_2opt__camera_8h.html</filename>
-    <class kind="struct">rm::para::OptCameraParam</class>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::para::OptCameraParam</class>
     <namespace>rm</namespace>
     <namespace>rm::para</namespace>
   </compound>
@@ -1136,25 +1169,10 @@
     <name>core.hpp</name>
     <path>rmvl/</path>
     <filename>da/d47/core_8hpp.html</filename>
-    <includes id="d2/dc6/io_8hpp" name="io.hpp" local="yes" import="no" module="no" objc="no">core/io.hpp</includes>
     <includes id="d7/de9/str_8hpp" name="str.hpp" local="yes" import="no" module="no" objc="no">core/str.hpp</includes>
     <includes id="df/d05/timer_8hpp" name="timer.hpp" local="yes" import="no" module="no" objc="no">core/timer.hpp</includes>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">core/util.hpp</includes>
     <includes id="d7/dad/version_8hpp" name="version.hpp" local="yes" import="no" module="no" objc="no">core/version.hpp</includes>
-  </compound>
-  <compound kind="file">
-    <name>io.hpp</name>
-    <path>rmvl/core/</path>
-    <filename>d2/dc6/io_8hpp.html</filename>
-    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvldef.hpp</includes>
-    <class kind="struct">rm::Translation</class>
-    <class kind="struct">rm::Rotation</class>
-    <class kind="struct">rm::ImuData</class>
-    <class kind="struct">rm::SerialPortMode</class>
-    <class kind="class">rm::SerialPort</class>
-    <class kind="class">rm::PipeServer</class>
-    <class kind="class">rm::PipeClient</class>
-    <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>rmvldef.hpp</name>
@@ -1291,7 +1309,7 @@
   <compound kind="file">
     <name>util.hpp</name>
     <path>rmvl/core/</path>
-    <filename>d0/d3f/util_8hpp.html</filename>
+    <filename>d4/d50/core_2include_2rmvl_2core_2util_8hpp.html</filename>
     <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvldef.hpp</includes>
     <class kind="class">rm::Exception</class>
     <class kind="struct">rm::hash_aggregate</class>
@@ -1498,6 +1516,16 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>util.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>d9/dc1/io_2include_2rmvl_2io_2util_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="struct">rm::Translation</class>
+    <class kind="struct">rm::Rotation</class>
+    <class kind="struct">rm::ImuData</class>
+    <namespace>rm</namespace>
+  </compound>
+  <compound kind="file">
     <name>version.hpp</name>
     <path>rmvl/core/</path>
     <filename>d7/dad/version_8hpp.html</filename>
@@ -1554,6 +1582,114 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>io.hpp</name>
+    <path>rmvl/</path>
+    <filename>d7/d36/rmvl_2io_8hpp.html</filename>
+    <includes id="d9/dc1/io_2include_2rmvl_2io_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">io/util.hpp</includes>
+    <includes id="d1/d02/ipc_8hpp" name="ipc.hpp" local="yes" import="no" module="no" objc="no">io/ipc.hpp</includes>
+    <includes id="d3/d2c/netapp_8hpp" name="netapp.hpp" local="yes" import="no" module="no" objc="no">io/netapp.hpp</includes>
+    <includes id="d1/dc5/serial_8hpp" name="serial.hpp" local="yes" import="no" module="no" objc="no">io/serial.hpp</includes>
+    <includes id="da/dfc/socket_8hpp" name="socket.hpp" local="yes" import="no" module="no" objc="no">io/socket.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>io.hpp</name>
+    <path>rmvlpara/</path>
+    <filename>d1/df9/rmvlpara_2io_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <class kind="class">rm::para::IoParam</class>
+    <namespace>rm</namespace>
+    <namespace>rm::para</namespace>
+  </compound>
+  <compound kind="file">
+    <name>async.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>d5/d2c/async_8hpp.html</filename>
+    <class kind="struct">rm::async::FinalAwaiter</class>
+    <class kind="class">rm::async::BasicPromise</class>
+    <class kind="class">rm::async::Promise</class>
+    <class kind="class">rm::async::Promise&lt; void &gt;</class>
+    <class kind="struct">rm::async::TaskAwaiter</class>
+    <class kind="class">rm::async::Task</class>
+    <class kind="class">rm::async::IOContext</class>
+    <class kind="class">rm::async::AsyncIOAwaiter</class>
+    <class kind="class">rm::async::AsyncReadAwaiter</class>
+    <class kind="class">rm::async::AsyncWriteAwaiter</class>
+    <class kind="class">rm::async::Timer</class>
+    <class kind="class">rm::async::Timer::TimerAwaiter</class>
+    <namespace>rm</namespace>
+    <namespace>rm::async</namespace>
+    <concept>rm::async::InvokableTask</concept>
+  </compound>
+  <compound kind="file">
+    <name>ipc.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>d1/d02/ipc_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
+    <class kind="class">rm::PipeServer</class>
+    <class kind="class">rm::PipeClient</class>
+    <class kind="class">rm::MqServer</class>
+    <class kind="class">rm::MqClient</class>
+    <class kind="class">rm::async::PipeServer</class>
+    <class kind="class">rm::async::PipeClient</class>
+    <namespace>rm</namespace>
+    <namespace>rm::async</namespace>
+  </compound>
+  <compound kind="file">
+    <name>netapp.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>d3/d2c/netapp_8hpp.html</filename>
+    <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
+    <class kind="struct">rm::URLParseInfo</class>
+    <class kind="struct">rm::Request</class>
+    <class kind="struct">rm::Response</class>
+    <class kind="class">rm::async::Webapp</class>
+    <class kind="class">rm::async::Webapp::RoutePattern</class>
+    <class kind="struct">rm::async::Webapp::RouteEntry</class>
+    <namespace>rm</namespace>
+    <namespace>rm::requests</namespace>
+    <namespace>rm::async</namespace>
+    <namespace>rm::async::requests</namespace>
+  </compound>
+  <compound kind="file">
+    <name>serial.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>d1/dc5/serial_8hpp.html</filename>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
+    <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
+    <class kind="class">rm::SerialPort</class>
+    <class kind="class">rm::async::SerialPort</class>
+    <class kind="class">rm::async::SerialPort::SerialReadAwaiter</class>
+    <class kind="class">rm::async::SerialPort::SerialWriteAwaiter</class>
+    <namespace>rm</namespace>
+    <namespace>rm::async</namespace>
+  </compound>
+  <compound kind="file">
+    <name>socket.hpp</name>
+    <path>rmvl/io/</path>
+    <filename>da/dfc/socket_8hpp.html</filename>
+    <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
+    <class kind="struct">rm::ipc</class>
+    <class kind="struct">rm::ip</class>
+    <class kind="struct">rm::ip::tcp</class>
+    <class kind="struct">rm::ip::udp</class>
+    <class kind="class">rm::Endpoint</class>
+    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::Acceptor</class>
+    <class kind="class">rm::Connector</class>
+    <class kind="class">rm::async::Socket</class>
+    <class kind="class">rm::async::Socket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::Socket::SocketWriteAwaiter</class>
+    <class kind="class">rm::async::Acceptor</class>
+    <class kind="class">rm::async::Acceptor::AcceptAwaiter</class>
+    <class kind="class">rm::async::Connector</class>
+    <class kind="class">rm::async::Connector::ConnectAwaiter</class>
+    <namespace>rm</namespace>
+    <namespace>rm::async</namespace>
+    <concept>rm::IpProtocol</concept>
+    <concept>rm::LocalProtocol</concept>
+  </compound>
+  <compound kind="file">
     <name>light.hpp</name>
     <path>rmvl/</path>
     <filename>df/df0/rmvl_2light_8hpp.html</filename>
@@ -1584,7 +1720,7 @@
     <name>lightutils.hpp</name>
     <path>rmvl/light/</path>
     <filename>d6/d29/lightutils_8hpp.html</filename>
-    <includes id="d0/d3f/util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
+    <includes id="d4/d50/core_2include_2rmvl_2core_2util_8hpp" name="util.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/util.hpp</includes>
     <class kind="struct">rm::LightConfig</class>
     <namespace>rm</namespace>
   </compound>
@@ -1745,6 +1881,91 @@
     <namespace>rm</namespace>
   </compound>
   <compound kind="class">
+    <name>rm::async::Acceptor::AcceptAwaiter</name>
+    <filename>da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter.html</filename>
+    <base>rm::async::AsyncReadAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>AcceptAwaiter</name>
+      <anchorfile>da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter.html</anchorfile>
+      <anchor>accddbc64b563bd0ec74e2dc2adcd2948</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd, const Endpoint &amp;ep)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Acceptor</name>
+    <filename>dd/df8/classrm_1_1Acceptor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Acceptor</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>a0896deeb8f169ff2820410d349e9bbb0</anchor>
+      <arglist>(const Endpoint &amp;endpoint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Acceptor</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>a1073bf281268677c0cd10d06a93d2698</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket</type>
+      <name>accept</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>a3d2dacb764adbd2c53ce31ca192f68ea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Acceptor</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>a54d8278749d2c270d3fbfc7d060b4119</anchor>
+      <arglist>(const Endpoint &amp;endpoint, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Endpoint</type>
+      <name>_endpoint</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>a5815d2f48ffbaa4a5be2446206d054ae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
+      <anchor>aac4d1a65f227b3a9e2ea2bae95bf76d8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Acceptor</name>
+    <filename>d9/d1d/classrm_1_1async_1_1Acceptor.html</filename>
+    <base>rm::Acceptor</base>
+    <class kind="class">rm::async::Acceptor::AcceptAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>Acceptor</name>
+      <anchorfile>d9/d1d/classrm_1_1async_1_1Acceptor.html</anchorfile>
+      <anchor>aa5cd2c2253d77fc501d71b100dc9a696</anchor>
+      <arglist>(IOContext &amp;io_context, const Endpoint &amp;endpoint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Acceptor</name>
+      <anchorfile>d9/d1d/classrm_1_1async_1_1Acceptor.html</anchorfile>
+      <anchor>a3b8e179e3db012e91365903e03ae087e</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>AcceptAwaiter</type>
+      <name>accept</name>
+      <anchorfile>d9/d1d/classrm_1_1async_1_1Acceptor.html</anchorfile>
+      <anchor>a3b33a09b31faa5c5886780b91383c3fb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::para::AlgorithmParam</name>
     <filename>d4/da1/classrm_1_1para_1_1AlgorithmParam.html</filename>
     <member kind="function">
@@ -1768,18 +1989,18 @@
       <anchor>a07a26d44154b5864fea3eec801fd647d</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d4/da1/classrm_1_1para_1_1AlgorithmParam.html</anchorfile>
-      <anchor>a231381c4bb01e1f3d4d091bb86994091</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>SECANT_STEP</name>
       <anchorfile>d4/da1/classrm_1_1para_1_1AlgorithmParam.html</anchorfile>
       <anchor>aee4c36d7179dae17069b27daa028ed29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>EXTERIOR</name>
+      <anchorfile>d4/da1/classrm_1_1para_1_1AlgorithmParam.html</anchorfile>
+      <anchor>a0302d24375e1ef139ab7d4bb58e34a26</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1853,13 +2074,6 @@
       <anchorfile>d4/d6e/classrm_1_1para_1_1AnchorParam.html</anchorfile>
       <anchor>ac4653f792093297446e86fa5a2e3f8d9</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d4/d6e/classrm_1_1para_1_1AnchorParam.html</anchorfile>
-      <anchor>a68f70bdb9180e2e8563a826c9d8a949f</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -2131,13 +2345,6 @@
       <anchor>ad7080fd6312cd06586e9383094227f9e</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
-      <anchor>a0d8df0d92b4bdb3fb3f56a1076d8a739</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>int</type>
       <name>GRAY_THRESHOLD_RED</name>
@@ -2204,13 +2411,6 @@
       <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
       <anchor>ad366eeb30add81a1d49eb5beb45fc41e</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>db/db1/classrm_1_1para_1_1ArmorParam.html</anchorfile>
-      <anchor>a96d5f6014fcd3e565d2c02b71f2c8c9a</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -2396,13 +2596,6 @@
       <anchor>ae9e4ac83b6193ddc858d1046ee1ad41f</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
-      <anchor>ab2de5bdbdcb1843d3df6188c7d0cba92</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>YAW_B</name>
@@ -2429,6 +2622,94 @@
       <name>PITCH_K</name>
       <anchorfile>dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html</anchorfile>
       <anchor>ada3c0e77ce2f4b30a7bc7e7cf9d4a26e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::AsyncIOAwaiter</name>
+    <filename>d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>AsyncIOAwaiter</name>
+      <anchorfile>d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html</anchorfile>
+      <anchor>aeec678a03f6e4fdeb8b11b2b3314bd77</anchor>
+      <arglist>(IOContext &amp;context, FileDescriptor fd)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_aioh</name>
+      <anchorfile>d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html</anchorfile>
+      <anchor>ae95c45ff721ae04068fa38125bb6bd2f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_fd</name>
+      <anchorfile>d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html</anchorfile>
+      <anchor>a3c41b142957cf061997f26ed4d8a471f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::AsyncReadAwaiter</name>
+    <filename>df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html</filename>
+    <base>rm::async::AsyncIOAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>AsyncReadAwaiter</name>
+      <anchorfile>df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html</anchorfile>
+      <anchor>a33bee53b70dd046493ada0a264e316ea</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::AsyncWriteAwaiter</name>
+    <filename>db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html</filename>
+    <base>rm::async::AsyncIOAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>AsyncWriteAwaiter</name>
+      <anchorfile>db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html</anchorfile>
+      <anchor>ab6f476b6a5d759007c67d79294385341</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd, std::string_view data)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string_view</type>
+      <name>_data</name>
+      <anchorfile>db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html</anchorfile>
+      <anchor>a83fe6de835d5f9fc9478e1d50eeb8650</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::BasicPromise</name>
+    <filename>d2/da2/classrm_1_1async_1_1BasicPromise.html</filename>
+    <member kind="function">
+      <type>std::suspend_always</type>
+      <name>initial_suspend</name>
+      <anchorfile>d2/da2/classrm_1_1async_1_1BasicPromise.html</anchorfile>
+      <anchor>a5d03f20398ab5940e1da94adacaea3dd</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>unhandled_exception</name>
+      <anchorfile>d2/da2/classrm_1_1async_1_1BasicPromise.html</anchorfile>
+      <anchor>adb5de3501c9e05e68cdf40262eb84a4f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::coroutine_handle</type>
+      <name>previous</name>
+      <anchorfile>d2/da2/classrm_1_1async_1_1BasicPromise.html</anchorfile>
+      <anchor>a972a958fe53cdae82c4652106824ba5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::exception_ptr</type>
+      <name>_exception</name>
+      <anchorfile>d2/da2/classrm_1_1async_1_1BasicPromise.html</anchorfile>
+      <anchor>a7657e4d6b6311493d05fdf8a77243c31</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2589,13 +2870,6 @@
       <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>a8f3f2707d57fde0e13996a44076139ae</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
-      <anchor>af3574d93a375a15e7995b3c3545e17a0</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
@@ -3160,6 +3434,98 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::Connector::ConnectAwaiter</name>
+    <filename>dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html</filename>
+    <base>rm::async::AsyncWriteAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>ConnectAwaiter</name>
+      <anchorfile>dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html</anchorfile>
+      <anchor>a0641287cdf42bac689c4b4b0322e3dc3</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd, const Endpoint &amp;ep, std::string_view url)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Connector</name>
+    <filename>df/d95/classrm_1_1async_1_1Connector.html</filename>
+    <base>rm::Connector</base>
+    <class kind="class">rm::async::Connector::ConnectAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>Connector</name>
+      <anchorfile>df/d95/classrm_1_1async_1_1Connector.html</anchorfile>
+      <anchor>a5d1c94f64d96ebd7e6d7c87d950b27e5</anchor>
+      <arglist>(IOContext &amp;io_context, const Endpoint &amp;endpoint, std::string_view url=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Connector</name>
+      <anchorfile>df/d95/classrm_1_1async_1_1Connector.html</anchorfile>
+      <anchor>a0ff227adee509bd9136f4cc8ff0bc6ef</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>ConnectAwaiter</type>
+      <name>connect</name>
+      <anchorfile>df/d95/classrm_1_1async_1_1Connector.html</anchorfile>
+      <anchor>a42ba64c0e88a51dd14dc0ed32c0022fa</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Connector</name>
+    <filename>de/ddb/classrm_1_1Connector.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Connector</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a6487439de88e3ed06664c4770f17f3a0</anchor>
+      <arglist>(const Endpoint &amp;endpoint, std::string_view url=&quot;127.0.0.1&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Connector</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a4113807a35fa208d437a3b34d380dc39</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket</type>
+      <name>connect</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a22d5d99711a40558878cbf7299599d50</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Connector</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a59de3f3e141535ce81f8a31c2d47a218</anchor>
+      <arglist>(const Endpoint &amp;endpoint, std::string_view url, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>_url</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>ae85184592f560d8c5182c3782a2b431b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Endpoint</type>
+      <name>_endpoint</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a3ea0b4c72cf41acb79c724a571e37aad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
+      <anchor>a8ad5cd1639aa3bc4f452240a935f6565</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::CurveFitter</name>
     <filename>d0/d80/classrm_1_1CurveFitter.html</filename>
     <member kind="function">
@@ -3663,6 +4029,52 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::Endpoint</name>
+    <filename>dc/db5/classrm_1_1Endpoint.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Endpoint</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>a8b65d0d7062e190c4a5da985b29fa4a1</anchor>
+      <arglist>(IpProtocol auto ip, uint16_t port)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Endpoint</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>a86befb2efdfa3e0ee87180c44a278e5d</anchor>
+      <arglist>(LocalProtocol auto lp, std::string_view path)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>family</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>a60fc1c3c0d972c21788e579bf4bc9da2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>ac69adfc36be16e53ca971dd52b97479c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>uint16_t</type>
+      <name>port</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>a434f9a8619442363a8553ec0366e2b37</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>path</name>
+      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
+      <anchor>a8a1b43478b1a0987c4528b3674bd21f8</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Event</name>
     <filename>da/d88/classrm_1_1Event.html</filename>
     <member kind="function">
@@ -4128,6 +4540,39 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::async::FinalAwaiter</name>
+    <filename>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</filename>
+    <templarg>typename Tp</templarg>
+    <member kind="typedef">
+      <type>std::coroutine_handle&lt; Promise&lt; Tp &gt; &gt;</type>
+      <name>handle_t</name>
+      <anchorfile>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</anchorfile>
+      <anchor>a7dd05ffa1428bb33e9842b56460c4d59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>await_ready</name>
+      <anchorfile>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</anchorfile>
+      <anchor>a5d38e377bb1bbe4fce34fbb3d971fa63</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::coroutine_handle</type>
+      <name>await_suspend</name>
+      <anchorfile>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</anchorfile>
+      <anchor>a92982edfad0eda0461fd68f786d20401</anchor>
+      <arglist>(handle_t handle) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>await_resume</name>
+      <anchorfile>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</anchorfile>
+      <anchor>aa0fe185556a21730ce2cc381605b941c</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::GalaxyCamera</name>
     <filename>da/d1d/classrm_1_1GalaxyCamera.html</filename>
@@ -4151,6 +4596,13 @@
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
       <anchor>a32de17e61fe1a689e06f9b349406db05</anchor>
       <arglist>(CameraConfig cfg, std::string_view id=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
+      <anchor>a28862cccd39e535ef21a703e5314255a</anchor>
+      <arglist>(const para::GalaxyCameraParam &amp;param)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -4232,13 +4684,6 @@
       <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
       <anchor>a0e92067eb641d93b06ed96a5a6d7542b</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>aac37ba1d82e42dd90b62957d241003f4</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -4360,13 +4805,6 @@
       <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>a5a6890d01c48f7f7ca45ccdc4af8c45a</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
-      <anchor>ac82c5c769a2e4d866e20223b99018699</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -4640,13 +5078,6 @@
       <anchor>a4022b3158ad91171ddc93d7d63b3de1b</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html</anchorfile>
-      <anchor>a383e2d831886a3a141d05977aeb22905</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>g</name>
@@ -4725,13 +5156,6 @@
       <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
       <anchor>a27afe1bf62141bce907dff62978f3a2d</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d7/d66/classrm_1_1para_1_1GyroDeciderParam.html</anchorfile>
-      <anchor>ab159abf3d272f3afbfb79efd26b6e21e</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -4825,13 +5249,6 @@
       <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
       <anchor>a1c667dfda8e0cafd093b9fe5c76b6f0e</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
-      <anchor>a6b34105a4405864f9a22af39d15e7d89</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
@@ -5066,13 +5483,6 @@
       <anchor>a9a7004681a5be7ae997c0c4a6a627802</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d3/dc2/classrm_1_1para_1_1GyroGroupParam.html</anchorfile>
-      <anchor>a5a7fe9882e283711ec93af9b6e9ae4e6</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>TRACK_FRAMES</name>
@@ -5165,13 +5575,6 @@
       <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
       <anchor>a0241a9f52d37e3cfc0e3a2f600d723b0</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d5/db3/classrm_1_1para_1_1GyroPredictorParam.html</anchorfile>
-      <anchor>a8f6d997548e6f580ef80d76ef45af77f</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -5308,13 +5711,6 @@
       <anchor>a19d7c4c1f07e15554743325c0805bb82</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d8/db8/classrm_1_1para_1_1GyroTrackerParam.html</anchorfile>
-      <anchor>a5680cc27d054c4ba727f55f6db00801f</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>SAMPLE_INTERVAL</name>
@@ -5386,24 +5782,24 @@
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
+    <filename>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>hash_aggregate&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
+      <anchorfile>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
       <anchor>a17ead482bdcd67b2690cb4318ad22a5b</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
     <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</name>
-    <filename>d4/d45/structrm_1_1hash__traits.html</filename>
+    <filename>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</filename>
     <templarg>typename Tp</templarg>
     <member kind="typedef">
       <type>std::hash&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>d4/d45/structrm_1_1hash__traits.html</anchorfile>
+      <anchorfile>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
       <anchor>a64b5c09cc70dbdaba2bebd58ebd287be</anchor>
       <arglist></arglist>
     </member>
@@ -5431,6 +5827,13 @@
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
       <anchor>a1682bbec5e19319c8c8bfd3be9b1de35</anchor>
       <arglist>(CameraConfig cfg, std::string_view info=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
+      <anchor>a68988ac5c6ebaed5ff7199a63a5733ed</anchor>
+      <arglist>(const para::HikCameraParam &amp;param)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -5512,13 +5915,6 @@
       <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
       <anchor>a22ab596811cb11d06617bf07a733b46c</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>a9637cda4c0126aaa83526e83d8aa3c4e</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -5668,13 +6064,6 @@
       <anchor>abf4664055f9ad336da99da6846eb4202</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
-      <anchor>a6dd7eac5abc2e047d616dcd1e81b0f2d</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>DELAY_AFTER_WRITE</name>
@@ -5759,6 +6148,143 @@
       <anchorfile>dc/d80/classrm_1_1Interpolator.html</anchorfile>
       <anchor>a7e2fe8ba70dc3f076cb6fef60e376b55</anchor>
       <arglist>(double x) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::IOContext</name>
+    <filename>d8/ddc/classrm_1_1async_1_1IOContext.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>IOContext</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a046bffc2202b9892a12d13a53d9cf2fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~IOContext</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a07d1751e448da4b0a9d7cf5151fc64f4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spawn</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a1c5b48f71c81630710f26c2d7c32946d</anchor>
+      <arglist>(Callable &amp;&amp;fn, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>FileDescriptor</type>
+      <name>handle</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a4ffe4e2a61a23fb0a2bd15b72d0216de</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>ab6381750261e8ba71ee0a8fd0f0a21dd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stop</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a55fe29c2fbd5eaa2d1e4075a53801a3d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>running</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a6e014a7d3e72b0db079cd33176e4ef3e</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>AsyncIOAwaiter</name>
+      <anchorfile>d8/ddc/classrm_1_1async_1_1IOContext.html</anchorfile>
+      <anchor>a39c9d0d421ed2ef7a314ed1ca4fa6abd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::para::IoParam</name>
+    <filename>d6/d0b/classrm_1_1para_1_1IoParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>IoParam</name>
+      <anchorfile>d6/d0b/classrm_1_1para_1_1IoParam.html</anchorfile>
+      <anchor>a9c0260c06ca10911002af9f27f3a0142</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d6/d0b/classrm_1_1para_1_1IoParam.html</anchorfile>
+      <anchor>a25f66d16c23887a90e5f024ee87c1491</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d6/d0b/classrm_1_1para_1_1IoParam.html</anchorfile>
+      <anchor>aa1ce63bf9681fff61ddb8fc3230e9c95</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>MQ_MAX_MSG</name>
+      <anchorfile>d6/d0b/classrm_1_1para_1_1IoParam.html</anchorfile>
+      <anchor>a801bd0144a1514417f9b314a1b598aa8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>MQ_MSG_SIZE</name>
+      <anchorfile>d6/d0b/classrm_1_1para_1_1IoParam.html</anchorfile>
+      <anchor>a9eb4bdcfb2d04b0aa4f4c34da8846b8b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ip</name>
+    <filename>d7/d8a/structrm_1_1ip.html</filename>
+    <class kind="struct">rm::ip::tcp</class>
+    <class kind="struct">rm::ip::udp</class>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ipc</name>
+    <filename>df/dc3/structrm_1_1ipc.html</filename>
+    <member kind="function" static="yes">
+      <type>static ipc</type>
+      <name>stream</name>
+      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
+      <anchor>ae00b26cdb971165d88a30a4e2464c281</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static ipc</type>
+      <name>packet</name>
+      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
+      <anchor>a24e1dcfa9f9e58bbe712dc78d70ff75b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>family</name>
+      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
+      <anchor>a5a41523d70fb1173fee5b57f7ffdbb64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
+      <anchor>ac57bb04901e1be1ca3ac44c0eeefcbf5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6008,13 +6534,6 @@
       <anchor>a51e36a600f9669f26e32f470fd5d6ce0</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d1/d7d/classrm_1_1para_1_1LightBlobParam.html</anchorfile>
-      <anchor>ac83f85debe301366354fd1b9c1507146</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_LENGTH</name>
@@ -6158,6 +6677,175 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::MqClient</name>
+    <filename>d4/d5a/classrm_1_1MqClient.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>MqClient</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>a57a692bb97c4650b0000b28fb2c4d2d7</anchor>
+      <arglist>(std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MqClient</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>af1f2817084bdc7a4e85e444af64e9a9b</anchor>
+      <arglist>(const MqClient &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MqClient</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>ae41615bd9763c4627daf6859067cabd7</anchor>
+      <arglist>(MqClient &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>MqClient &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>a41fcc46e7953a0339bf86ec93b703e81</anchor>
+      <arglist>(const MqClient &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>MqClient &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>a614b4db1621134cef9e298892b377323</anchor>
+      <arglist>(MqClient &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~MqClient</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>a9752bc3f6d4b4513a5788bb3cd0b70a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>read</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>addd5c4f3ac243b499c5d2e35f41ad8c5</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MqClient &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>abe01ad08134ff4ca4583e48283fbb07f</anchor>
+      <arglist>(std::string &amp;data) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>ab67fae7cc558084ad7b707567da74f34</anchor>
+      <arglist>(std::string_view data, uint32_t prio=0) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MqClient &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>aa45def75d6937d81894f1b14fa19a0bc</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>_mq</name>
+      <anchorfile>d4/d5a/classrm_1_1MqClient.html</anchorfile>
+      <anchor>a923c39244536abad0e0cd164645f3991</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::MqServer</name>
+    <filename>d4/d88/classrm_1_1MqServer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>MqServer</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a673989277a0b93bf91cc1e3daaf068a9</anchor>
+      <arglist>(std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MqServer</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>afc561dbd7d593bbae2ccfa2598e87f5a</anchor>
+      <arglist>(const MqServer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>MqServer</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a4e86450b7cfa95ba2a6d6c514cdca73a</anchor>
+      <arglist>(MqServer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>MqServer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>aba0813f1b47930037880b6d69e877a7a</anchor>
+      <arglist>(const MqServer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>MqServer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>ad32a6e80d06fcfa17faea8843849563c</anchor>
+      <arglist>(MqServer &amp;&amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~MqServer</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a70dd4a3481278015ddb86389465f5780</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>read</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a79560ed0a4e500b6267d62a3d116de1a</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MqServer &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a08a5d3e40d01ee46f4e1e449db77d76b</anchor>
+      <arglist>(std::string &amp;data) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>ae304fb4c8fe1eebae01a7d730890ac42</anchor>
+      <arglist>(std::string_view data, uint32_t prio=0) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MqServer &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>a0feecb765be9bcfd8fb804f279650267</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>_name</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>ae369075680b5ab72e7a679fd4de2aef4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_mq</name>
+      <anchorfile>d4/d88/classrm_1_1MqServer.html</anchorfile>
+      <anchor>aebe626447e765653e25d3d800265e7ad</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Munkres</name>
     <filename>dd/d62/classrm_1_1Munkres.html</filename>
     <member kind="function">
@@ -6205,6 +6893,13 @@
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
       <anchor>a00f5a5778c3237663916a8173806da40</anchor>
       <arglist>(CameraConfig init_mode, std::string_view serial=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
+      <anchor>ad555584f2795187b8ba87bc2887285ac</anchor>
+      <arglist>(const para::MvCameraParam &amp;param)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -6286,13 +6981,6 @@
       <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a68f2d83fe24acca7f746a8986a5fe5cc</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
-      <anchor>a0f956464100520a5de386e707bb0eb7e</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -6864,13 +7552,6 @@
       <anchor>ae37652a767ee2059768a1424fa0c5ec2</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
-      <anchor>a31ddc0a1fa089ee058ac713393a5752b</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>bool</type>
       <name>SERVER_WAIT</name>
@@ -6981,6 +7662,13 @@
       <arglist>(CameraConfig init_mode, std::string_view handle_info=&quot;&quot;)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
+      <anchor>aa6cd2af93a1949a12eadcf0b573e658a</anchor>
+      <arglist>(const para::OptCameraParam &amp;param)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
@@ -7023,83 +7711,83 @@
       <arglist>(CameraConfig init_mode, std::string_view handle_info=&quot;&quot;)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
+  <compound kind="class">
     <name>rm::para::OptCameraParam</name>
-    <filename>d4/d85/structrm_1_1para_1_1OptCameraParam.html</filename>
+    <filename>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OptCameraParam</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>ad81e74009932116693c4bf6808ea7366</anchor>
+      <arglist>()=default</arglist>
+    </member>
     <member kind="function">
       <type>bool</type>
       <name>read</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a07c371edf4541a58571a8d92a63948a0</anchor>
       <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>afb2b6246d8e9d4988aa4f2e25043488d</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
-      <anchor>abc83928da813f9ead4bf687da1546c7d</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>exposure</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a059c84c7cc055c80a3edb189f03b565f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>gamma</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>aad696a032703a9d0b8c2de12267f9c6f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>contrast</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a7196cf8996bfa0cc632df10a06a5aacd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>gain</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a60ef192aae0d1941b66c96b15a0173bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>b_gain</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a0bf1126d92810a95ce8797d81a857221</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>g_gain</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a620ebdd4854643bfea2ca5709da9299f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>double</type>
       <name>r_gain</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>ac53e377508ed84f7a2b1e3a682f434f7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>handle_info</name>
-      <anchorfile>d4/d85/structrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
       <anchor>a663f61bced526f6cc85673c6e5bfd2e7</anchor>
       <arglist></arglist>
     </member>
@@ -7122,6 +7810,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>ConsMode</type>
+      <name>cons_mode</name>
+      <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
+      <anchor>aed6551a55831ec8bc12813e8b5608125</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>LsqMode</type>
       <name>lsq_mode</name>
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
@@ -7133,13 +7828,6 @@
       <name>max_iter</name>
       <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
       <anchor>a2212cc3e39cc6355cb36acca9de5534c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>exterior</name>
-      <anchorfile>d3/dd3/structrm_1_1OptimalOptions.html</anchorfile>
-      <anchor>a8459133a6c063242baa47fb5fbf3ff65</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -7302,13 +7990,6 @@
       <anchor>a225aef13822f51139b662fce424f32d0</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
-      <anchor>a32e00ca0430ae25fc4a1143d2f1e6a9e</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>MIN_AREA</name>
@@ -7336,6 +8017,46 @@
       <anchorfile>dc/d90/classrm_1_1para_1_1PilotParam.html</anchorfile>
       <anchor>a2a6f90b97cdcf6607d441392b86768b2</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::PipeClient</name>
+    <filename>dc/dba/classrm_1_1async_1_1PipeClient.html</filename>
+    <base>rm::PipeClient</base>
+    <member kind="function">
+      <type></type>
+      <name>PipeClient</name>
+      <anchorfile>dc/dba/classrm_1_1async_1_1PipeClient.html</anchorfile>
+      <anchor>a0468b555f916618a1f27fd835bcc5526</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type>AsyncReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>dc/dba/classrm_1_1async_1_1PipeClient.html</anchorfile>
+      <anchor>a092c354c023e37277af3b4e8fadac74c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>PipeClient &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>dc/dba/classrm_1_1async_1_1PipeClient.html</anchorfile>
+      <anchor>a333d62899408b40414ab164aa3e65d09</anchor>
+      <arglist>(std::string &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>AsyncWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>dc/dba/classrm_1_1async_1_1PipeClient.html</anchorfile>
+      <anchor>a473087ec1b1f42d76c85998b7e3a5155</anchor>
+      <arglist>(std::string_view data)</arglist>
+    </member>
+    <member kind="function">
+      <type>PipeClient &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>dc/dba/classrm_1_1async_1_1PipeClient.html</anchorfile>
+      <anchor>a8d2e2ea05da94330bd2b310d2ff57b5f</anchor>
+      <arglist>(std::string_view)=delete</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7384,32 +8105,86 @@
       <arglist>(std::string_view name)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>std::string</type>
       <name>read</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>aa2d12e38ebd4e609bed6654d1d31734f</anchor>
-      <arglist>(std::string &amp;data)</arglist>
+      <anchor>af30fe1660192dc8b07cb005f9cb27167</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function">
       <type>PipeClient &amp;</type>
       <name>operator&gt;&gt;</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>ad9807e3533a77796bccfe929268d3c18</anchor>
-      <arglist>(std::string &amp;data)</arglist>
+      <anchor>aa04f8e265ff3900fadf575ce1e2a9f1f</anchor>
+      <arglist>(std::string &amp;data) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>a19ac665e968448b6dcf934bafc82d4ad</anchor>
-      <arglist>(std::string_view data)</arglist>
+      <anchor>a3ec56ca97d39ba5a2827aed7cebaaded</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
     </member>
     <member kind="function">
       <type>PipeClient &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
-      <anchor>a8b3a4781234808df09dcfefa942e602b</anchor>
+      <anchor>a287887904ee5f92e31ffa0911d799e10</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>PipeClient</name>
+      <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
+      <anchor>a3054976a52ce5fa9907d32f00d0c3c7f</anchor>
+      <arglist>(std::string_view name, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_fd</name>
+      <anchorfile>d8/d8c/classrm_1_1PipeClient.html</anchorfile>
+      <anchor>a471b668420fa4ef0cc771d94e550f88f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::PipeServer</name>
+    <filename>db/dc2/classrm_1_1async_1_1PipeServer.html</filename>
+    <base>rm::PipeServer</base>
+    <member kind="function">
+      <type></type>
+      <name>PipeServer</name>
+      <anchorfile>db/dc2/classrm_1_1async_1_1PipeServer.html</anchorfile>
+      <anchor>a0ee69ac9c889d309c1ebc206ea684238</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type>AsyncReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>db/dc2/classrm_1_1async_1_1PipeServer.html</anchorfile>
+      <anchor>a8e9561a5c4e3f2753799c33436f85ef3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>PipeServer &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>db/dc2/classrm_1_1async_1_1PipeServer.html</anchorfile>
+      <anchor>af4eae79ebdf62c0fe87fa23b6735d17b</anchor>
+      <arglist>(std::string &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>AsyncWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>db/dc2/classrm_1_1async_1_1PipeServer.html</anchorfile>
+      <anchor>ac36cfeb6370eae52c7c23ab605b80e9a</anchor>
       <arglist>(std::string_view data)</arglist>
+    </member>
+    <member kind="function">
+      <type>PipeServer &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>db/dc2/classrm_1_1async_1_1PipeServer.html</anchorfile>
+      <anchor>af4abd4cdc6d3278f81117e4ffe23a864</anchor>
+      <arglist>(std::string_view)=delete</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7458,32 +8233,53 @@
       <arglist>(std::string_view name)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>std::string</type>
       <name>read</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>a604b3fbf49b55111fec2beb5dcf166b7</anchor>
-      <arglist>(std::string &amp;data)</arglist>
+      <anchor>a012ba732a4e7b444732634b805139d33</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function">
       <type>PipeServer &amp;</type>
       <name>operator&gt;&gt;</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>a25a8f43f72cc97f85448716590bf7c7b</anchor>
-      <arglist>(std::string &amp;data)</arglist>
+      <anchor>a64a3c73459d50c13fe58f7bd33055f7d</anchor>
+      <arglist>(std::string &amp;data) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>write</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>a01d9d0b5de312283103f7be620d4ac02</anchor>
-      <arglist>(std::string_view data)</arglist>
+      <anchor>a1347462f04415828095cac96a3efe6fc</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
     </member>
     <member kind="function">
       <type>PipeServer &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
-      <anchor>adf4069a5cd9c49df5fe871c7d8c4bb1a</anchor>
-      <arglist>(std::string_view data)</arglist>
+      <anchor>a464f9746bbf2ca2ff80e946d22de5b7c</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>PipeServer</name>
+      <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
+      <anchor>a7151ba75fbd719a44226e11b598fd454</anchor>
+      <arglist>(std::string_view name, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>_name</name>
+      <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
+      <anchor>a8a4e1709fe2cc872ec23935664602bea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_fd</name>
+      <anchorfile>da/d82/classrm_1_1PipeServer.html</anchorfile>
+      <anchor>a4a74c2c26ec8c482cf7d0323d591d7ad</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7577,13 +8373,6 @@
       <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
       <anchor>a12cfd7a6f9079b05ea256d22a678f03c</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>df/dec/classrm_1_1para_1_1PlanarTrackerParam.html</anchorfile>
-      <anchor>aa584db4e3c2166585b9fa7c9734d140d</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
@@ -7737,6 +8526,95 @@
       <anchorfile>d2/d84/structrm_1_1PreprocessOptions.html</anchorfile>
       <anchor>a3f998cae02faae087e0ac0d20cec63c4</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Promise</name>
+    <filename>dd/df2/classrm_1_1async_1_1Promise.html</filename>
+    <templarg>typename Tp</templarg>
+    <base>rm::async::BasicPromise</base>
+    <member kind="function">
+      <type>auto</type>
+      <name>get_return_object</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>adfbefd8bfa22e48ec5aa7bf16dbea9a8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>FinalAwaiter&lt; Tp &gt;</type>
+      <name>final_suspend</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a95c72250f7a1533159dd1eb8f528d40d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>return_value</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a931453eeafec1229cc056a8eec71d2d9</anchor>
+      <arglist>(Tp value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Tp</type>
+      <name>get</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a77b2c7439844dbc39494afb0b88dfec0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Promise&lt; void &gt;</name>
+    <filename>d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html</filename>
+    <base>rm::async::BasicPromise</base>
+    <base>rm::async::BasicPromise</base>
+    <member kind="function">
+      <type>auto</type>
+      <name>get_return_object</name>
+      <anchorfile>d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html</anchorfile>
+      <anchor>a2ece22e741ae66b7fe9e99836639e901</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>FinalAwaiter&lt; void &gt;</type>
+      <name>final_suspend</name>
+      <anchorfile>d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html</anchorfile>
+      <anchor>a20cadfa1fd235bf1f6e9c450535efc5a</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>return_void</name>
+      <anchorfile>d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html</anchorfile>
+      <anchor>ae37e274896c6c0aa2a8cee982909053f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>get_return_object</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>adfbefd8bfa22e48ec5aa7bf16dbea9a8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>FinalAwaiter&lt; void &gt;</type>
+      <name>final_suspend</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a95c72250f7a1533159dd1eb8f528d40d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>return_value</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a931453eeafec1229cc056a8eec71d2d9</anchor>
+      <arglist>(void value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>get</name>
+      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
+      <anchor>a77b2c7439844dbc39494afb0b88dfec0</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -7903,6 +8781,182 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>rm::Request</name>
+    <filename>d6/d7c/structrm_1_1Request.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>generate</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a4fe81127a6fcd1478a6e3ce0a77fdf18</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Request</type>
+      <name>parse</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>acaaa3807c3855504e4ef7a5390d50867</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="variable">
+      <type>HTTPMethod</type>
+      <name>method</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a0d981dfed41d4c48c4281a2987053454</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>uri</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>ac0dabc9c509701a254fcb63c5a34c726</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+      <name>params</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a81149100be8e185c592024c4de5a620c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+      <name>query</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>ae7804d01592bee35eac7a8088c78d32e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>host</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a7c1873de91884de3dba3ca523eb92aeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>content_type</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>af9867a22ea20589e388283a5a9caa014</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>accept</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a69bbf2a96081d171fda1a0820e907cc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>accept_language</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a3e2bd6b507479308900a03acda5aac88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>connection</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>acf0010e8245a6b2a58910e6ffe20ee99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>body</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>ac9e526e15109ef757c0c89e0808a68fe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::Response</name>
+    <filename>d1/d1b/structrm_1_1Response.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>generate</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>ab1b60b88f4a1c821cad673b7f3201cc8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>ad5a33642f79f4c5dfe12511f84c53ea8</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sendFile</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>ad88f8062ee27ae0672b70ca80a5e0344</anchor>
+      <arglist>(std::string_view file)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>json</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a4e725070153edee892f47772aea8e5ae</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>redirect</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a8beec7f08c526f1efb1ffd7f20b24b3b</anchor>
+      <arglist>(std::string_view url)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>redirect</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>afacd5506f4315669ff0ef0966df8f9de</anchor>
+      <arglist>(uint16_t code, std::string_view url)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a533809d2fbd2f3b4a6d28f02c2c54700</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Response</type>
+      <name>parse</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a1184bbe7f396ca991f04fe070ba1e7f9</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="variable">
+      <type>uint16_t</type>
+      <name>status</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>aeee9acdb108d2050178b96e7a1d988de</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>message</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a7f2a730d2eddb9bc94ac96f77d04de25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+      <name>heads</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>abf3f35839c2db3467fabd24d8487608a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>body</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>ad3920f3bb2240aaedf6d084e704f3e36</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
     <name>rm::Rotation</name>
     <filename>d1/d5f/structrm_1_1Rotation.html</filename>
     <member kind="variable">
@@ -7946,6 +9000,49 @@
       <anchorfile>d1/d5f/structrm_1_1Rotation.html</anchorfile>
       <anchor>a6a569962042ecb9420964a84da712de7</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::async::Webapp::RouteEntry</name>
+    <filename>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RouteEntry</name>
+      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
+      <anchor>a4fb6b726eed8bb89864bda1d3f6b5afd</anchor>
+      <arglist>(std::string_view pattern_str, RouteHandler h)</arglist>
+    </member>
+    <member kind="variable">
+      <type>RoutePattern</type>
+      <name>pattern</name>
+      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
+      <anchor>a2714e68975f850f78542578390a85762</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>RouteHandler</type>
+      <name>handler</name>
+      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
+      <anchor>ae4c402a1fb39bdfed4f44ede63d8b3bf</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Webapp::RoutePattern</name>
+    <filename>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RoutePattern</name>
+      <anchorfile>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</anchorfile>
+      <anchor>af96d493b1c9d678ca2f3d675495f3779</anchor>
+      <arglist>(std::string_view pattern_str)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>match</name>
+      <anchorfile>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</anchorfile>
+      <anchor>acfd1767dd949e225340b436e6733d535</anchor>
+      <arglist>(std::string_view path, std::unordered_map&lt; std::string, std::string &gt; &amp;params) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8101,13 +9198,6 @@
       <anchor>aac4b59e1f60ffc74f2e8d8f728d001a7</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d6/d61/classrm_1_1para_1_1RuneCenterParam.html</anchorfile>
-      <anchor>a032b6c20fe363075c7c6596840770795</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_AREA</name>
@@ -8187,13 +9277,6 @@
       <anchor>af3043250750e2f86c984e064968b7fb1</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d9/de0/classrm_1_1para_1_1RuneDeciderParam.html</anchorfile>
-      <anchor>a2a4f99b12940d60ca0d7aa18232b991b</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>INIT_FREQUENCY</name>
@@ -8272,13 +9355,6 @@
       <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
       <anchor>a47b2fcd65ecec04e7e2c88b24956d00e</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>db/db3/classrm_1_1para_1_1RuneDetectorParam.html</anchorfile>
-      <anchor>a0d692b41631afa1e23156085980f7772</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
@@ -8394,13 +9470,6 @@
       <anchor>aec3bb81b2f601ccaa0e9879e4e0509b6</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d3/dde/classrm_1_1para_1_1RuneGroupParam.html</anchorfile>
-      <anchor>a0598b5ab01a95c05d784f96d48a2cb77</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>double</type>
       <name>INTERVAL_ANGLE</name>
@@ -8439,13 +9508,6 @@
       <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
       <anchor>a708f6c569cabb2131720721705b464b8</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d5/d17/classrm_1_1para_1_1RuneParam.html</anchorfile>
-      <anchor>a329a1fd765244b7ac0a2da1a1f50b95a</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -8554,13 +9616,6 @@
       <anchor>af6aadb2d0848d94f1f7eeb0b8e03400a</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d1/d2f/classrm_1_1para_1_1RunePredictorParam.html</anchorfile>
-      <anchor>a479af9ea9a4979a7a4bd7fe62a80f3fe</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>PREDICT_K</name>
@@ -8667,13 +9722,6 @@
       <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
       <anchor>ab865e722a36fcaae1a1d1297932403ab</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>da/d4f/classrm_1_1para_1_1RuneTargetParam.html</anchorfile>
-      <anchor>a8b1fd5efcfb0935c520808b2e41ea9e2</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -8824,13 +9872,6 @@
       <anchor>a7a913b081083acfacd9a03bb6dea014e</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d6/db7/classrm_1_1para_1_1RuneTrackerParam.html</anchorfile>
-      <anchor>ae0f98ab532a117581eabf3e44f3d2e5d</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>TRACK_FRAMES</name>
@@ -8978,14 +10019,56 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::SerialPort</name>
+    <filename>db/d62/classrm_1_1async_1_1SerialPort.html</filename>
+    <base>rm::SerialPort</base>
+    <class kind="class">rm::async::SerialPort::SerialReadAwaiter</class>
+    <class kind="class">rm::async::SerialPort::SerialWriteAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>SerialPort</name>
+      <anchorfile>db/d62/classrm_1_1async_1_1SerialPort.html</anchorfile>
+      <anchor>a52ef000e575884799c5daa97ffaa4cca</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view device, BaudRate baud_rate)</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>db/d62/classrm_1_1async_1_1SerialPort.html</anchorfile>
+      <anchor>aafb6aa84ad3dc2f351f8461ec1f95295</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialPort &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>db/d62/classrm_1_1async_1_1SerialPort.html</anchorfile>
+      <anchor>a5995f03070ab8b2893a151f0ec1edbb7</anchor>
+      <arglist>(Tp &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>db/d62/classrm_1_1async_1_1SerialPort.html</anchorfile>
+      <anchor>aabf05e901e78269eacd8747a73e8c109</anchor>
+      <arglist>(std::string_view data)</arglist>
+    </member>
+    <member kind="function">
+      <type>SerialPort &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>db/d62/classrm_1_1async_1_1SerialPort.html</anchorfile>
+      <anchor>a275eb0e025f03d88e7c9499554f2aa14</anchor>
+      <arglist>(const Tp &amp;)=delete</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::SerialPort</name>
     <filename>d4/d98/classrm_1_1SerialPort.html</filename>
     <member kind="function">
       <type></type>
       <name>SerialPort</name>
       <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
-      <anchor>af123f2151d6759162b2d5f24e788c88e</anchor>
-      <arglist>(std::string_view device, SerialPortMode mode={})</arglist>
+      <anchor>ab686e2c4569b44a6a37981a9d5655a5e</anchor>
+      <arglist>(std::string_view device, BaudRate baud_rate, SerialReadMode read_mode={})</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -9043,23 +10126,78 @@
       <anchor>aaadfdd019cb71aaf6f52bad22feb8444</anchor>
       <arglist>() const</arglist>
     </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::SerialPortMode</name>
-    <filename>d0/dc5/structrm_1_1SerialPortMode.html</filename>
-    <member kind="variable">
-      <type>BaudRate</type>
-      <name>baud_rate</name>
-      <anchorfile>d0/dc5/structrm_1_1SerialPortMode.html</anchorfile>
-      <anchor>a16f63fa6dbcd6bd4c729ab5ca60fee71</anchor>
+    <member kind="function" protection="protected">
+      <type>long int</type>
+      <name>fdwrite</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a7996a808b43f5abb420b5454e9fad11b</anchor>
+      <arglist>(const void *data, size_t len)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>long int</type>
+      <name>fdread</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a1c11b6246034ccbec3b27a2f15da2b50</anchor>
+      <arglist>(void *data, size_t len)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>FileDescriptor</type>
+      <name>_fd</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>af04aec57a88b79d9ccdb45ab373f790a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>SerialReadMode</type>
-      <name>read_mode</name>
-      <anchorfile>d0/dc5/structrm_1_1SerialPortMode.html</anchorfile>
-      <anchor>a81db67d894e456f49cb7a5afc01385c2</anchor>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>_is_open</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a987a26bf09de936aae406e8712fc2e88</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>_device</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>ac1f5af586c869b6d7f6c22a8f0436165</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>BaudRate</type>
+      <name>_baud_rate</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>a2f38b449c7be41f2ed42bd4bf499997a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SerialReadMode</type>
+      <name>_read_mode</name>
+      <anchorfile>d4/d98/classrm_1_1SerialPort.html</anchorfile>
+      <anchor>af040c9e8d0be065a17b0c4c01db4d4fd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::SerialPort::SerialReadAwaiter</name>
+    <filename>df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html</filename>
+    <base>rm::async::AsyncReadAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SerialReadAwaiter</name>
+      <anchorfile>df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html</anchorfile>
+      <anchor>af55b7ca0d9c163382c1f0f2460a95b2e</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::SerialPort::SerialWriteAwaiter</name>
+    <filename>de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html</filename>
+    <base>rm::async::AsyncWriteAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SerialWriteAwaiter</name>
+      <anchorfile>de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html</anchorfile>
+      <anchor>adb13dea77cc2e8fb04cc8a30e9641b01</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd, std::string_view data)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9341,6 +10479,167 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::Socket</name>
+    <filename>dc/db7/classrm_1_1async_1_1Socket.html</filename>
+    <base>rm::Socket</base>
+    <class kind="class">rm::async::Socket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::Socket::SocketWriteAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>aff82354fd20f3f04e5a06941c63dc5c0</anchor>
+      <arglist>(IOContext &amp;io_context, SocketFd fd)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>a334176669caa187708f5c565e6c836d8</anchor>
+      <arglist>(const Socket &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>a93ef013894f93e13ceed544396c4fabc</anchor>
+      <arglist>(Socket &amp;&amp;other) noexcept=default</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket &amp;</type>
+      <name>operator=</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>ae552dc4ddf7c23315ca49817e4790b7c</anchor>
+      <arglist>(const Socket &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket &amp;</type>
+      <name>operator=</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>aed49d886d63650911776f862103e905c</anchor>
+      <arglist>(Socket &amp;&amp;other)=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Socket</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>a14256bb044bcb35da466f1acaca87c98</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>SocketReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>ae250e6a27ab4e74e11f4300d5bf0e745</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>SocketWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
+      <anchor>a57dcb431d72d0d2a50ced9dad9238c66</anchor>
+      <arglist>(std::string_view data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Socket</name>
+    <filename>d0/dff/classrm_1_1Socket.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>acc7732df1de3d907c0f69ac59471eb2e</anchor>
+      <arglist>(SocketFd fd)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a7b1994128adf2a1329aee6cb77bf8734</anchor>
+      <arglist>(const Socket &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Socket</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a6f2064a551b20cb1be3dc2420c094021</anchor>
+      <arglist>(Socket &amp;&amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>aabbf7fb5e76933a2343f450acfa39ac2</anchor>
+      <arglist>(const Socket &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Socket &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a0e804a9a740c3655cb034001f0525272</anchor>
+      <arglist>(Socket &amp;&amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a8d9eca94b30152a6ded7918719818a2d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Socket</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>abb7f9b63321e992c972433a67a0cd95a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>read</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a24250eb4f990a36d63b7f4c7c7a59f8e</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>a4f1432a8e36f616dd30c477a49260150</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
+      <anchor>aa2e0e0746934fa5994d86d219c3be510</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Socket::SocketReadAwaiter</name>
+    <filename>db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html</filename>
+    <base>rm::async::AsyncReadAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SocketReadAwaiter</name>
+      <anchorfile>db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html</anchorfile>
+      <anchor>a5d092af0c98c0b9fe82e78e48c76b34b</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Socket::SocketWriteAwaiter</name>
+    <filename>d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html</filename>
+    <base>rm::async::AsyncWriteAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SocketWriteAwaiter</name>
+      <anchorfile>d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html</anchorfile>
+      <anchor>adb8caac95510ca92865c9178aeed1987</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd, std::string_view data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::SpiRunePredictor</name>
     <filename>d0/d05/classrm_1_1SpiRunePredictor.html</filename>
     <base>rm::predictor</base>
@@ -9389,13 +10688,6 @@
       <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
       <anchor>af5ad22e14e384872c953c2bc21e241c3</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html</anchorfile>
-      <anchor>ac4240d6bf72b469c6efe8b1ab95fe82e</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
     </member>
     <member kind="variable">
       <type>float</type>
@@ -9651,19 +10943,199 @@
       <anchor>a37a5714c943bf42960a1808b1bba3c09</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>ad9a2f0445b0920ec7b22a7ef892e2f5b</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>MAX_TRACKER_DELTA_DIS</name>
       <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
       <anchor>a3f66b9f1275d445d7cc00ecc8899765f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Task</name>
+    <filename>d5/d31/classrm_1_1async_1_1Task.html</filename>
+    <templarg>typename Tp</templarg>
+    <member kind="typedef">
+      <type>Tp</type>
+      <name>value_type</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a66b5c118c9508b9982167a4c3af642f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Promise&lt; Tp &gt;</type>
+      <name>promise_type</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a259f8e8ef6f05b4dd6e97b72fad18317</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::coroutine_handle&lt; promise_type &gt;</type>
+      <name>handle_t</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a8e5275e5b739e104cc377fc4ea5f8b4c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Task</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a511498633aef07f8f7098cbbdc3edfb2</anchor>
+      <arglist>(handle_t h)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Task</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>ad22cfc265de631e5345abc34b79bbfe6</anchor>
+      <arglist>(const Task &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Task &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a3f6c2f1e9901c573d64f3c77e29246cb</anchor>
+      <arglist>(const Task &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Task</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>af3ad96651e7929c4694db9a723dacdcc</anchor>
+      <arglist>(Task &amp;&amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Task &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a162b4dd73e6a3906d4ca9f1c7a287759</anchor>
+      <arglist>(Task &amp;&amp;other) noexcept=default</arglist>
+    </member>
+    <member kind="function">
+      <type>TaskAwaiter&lt; Tp &gt;</type>
+      <name>operator co_await</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a60be604c48b7bafd703b3ccab74b112d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Task</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>affd0fbbe739de7acb25fca87c2b6a71b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::coroutine_handle</type>
+      <name>handle</name>
+      <anchorfile>d5/d31/classrm_1_1async_1_1Task.html</anchorfile>
+      <anchor>a7cc3f1afb392979fbdd6eef641a2bf95</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::async::TaskAwaiter</name>
+    <filename>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</filename>
+    <templarg>typename Tp</templarg>
+    <member kind="typedef">
+      <type>std::coroutine_handle&lt; Promise&lt; Tp &gt; &gt;</type>
+      <name>handle_t</name>
+      <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
+      <anchor>a7dc5490f0bc4f3ca141dfe6a6bb56e1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>await_ready</name>
+      <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
+      <anchor>a300c4e7320f28b74e39cc5f74818ad17</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>handle_t</type>
+      <name>await_suspend</name>
+      <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
+      <anchor>a11c87fdb8376f495295f5ddbfd220c19</anchor>
+      <arglist>(std::coroutine_handle&lt;&gt; handle) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Tp</type>
+      <name>await_resume</name>
+      <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
+      <anchor>a8abdccf30a3e147209c29f4323ee40a5</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>handle_t</type>
+      <name>self</name>
+      <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
+      <anchor>a726639bc931021cd0a751de37609ce55</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ip::tcp</name>
+    <filename>d0/d8d/structrm_1_1ip_1_1tcp.html</filename>
+    <member kind="function" static="yes">
+      <type>static tcp</type>
+      <name>v4</name>
+      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>a4b4d92eb38062c9df2c18e0b7bbf7c52</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static tcp</type>
+      <name>v6</name>
+      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>a25211dda215dccb3724624600f9185fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>family</name>
+      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>aee786aeda3cf1f1b53108eb42e348d0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>a7214ae6980ee22f4a149844931081885</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Timer</name>
+    <filename>db/dce/classrm_1_1async_1_1Timer.html</filename>
+    <class kind="class">rm::async::Timer::TimerAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>Timer</name>
+      <anchorfile>db/dce/classrm_1_1async_1_1Timer.html</anchorfile>
+      <anchor>a061f448493907cc4cd92439002709689</anchor>
+      <arglist>(IOContext &amp;io_context)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Timer</name>
+      <anchorfile>db/dce/classrm_1_1async_1_1Timer.html</anchorfile>
+      <anchor>aabaa57d0f965bcc566229124c180a8cc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TimerAwaiter</type>
+      <name>sleep_for</name>
+      <anchorfile>db/dce/classrm_1_1async_1_1Timer.html</anchorfile>
+      <anchor>ae44e89a13c9712b1c81fc0c1dbeaecf2</anchor>
+      <arglist>(const std::chrono::duration&lt; Rep, Period &gt; &amp;duration)</arglist>
+    </member>
+    <member kind="function">
+      <type>TimerAwaiter</type>
+      <name>sleep_until</name>
+      <anchorfile>db/dce/classrm_1_1async_1_1Timer.html</anchorfile>
+      <anchor>a49cb7ed7a23128d48358d98765248a11</anchor>
+      <arglist>(const std::chrono::time_point&lt; Clock, Duration &gt; &amp;time_point)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9703,6 +11175,18 @@
       <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
       <anchor>a3a6e9805157ee41cdf6e02b4205ee292</anchor>
       <arglist>(double t)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Timer::TimerAwaiter</name>
+    <filename>da/d52/classrm_1_1async_1_1Timer_1_1TimerAwaiter.html</filename>
+    <base>rm::async::AsyncIOAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>TimerAwaiter</name>
+      <anchorfile>da/d52/classrm_1_1async_1_1Timer_1_1TimerAwaiter.html</anchorfile>
+      <anchor>a7783547c0b1d2a4355e38ca84861fc3b</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd, double duration)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10103,18 +11587,43 @@
       <anchor>af020bb4d6095fc56613c3ce5d3b13c9b</anchor>
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>load</name>
-      <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
-      <anchor>aee7e53e49f305dd7ad0ca3a50d3c316b</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
     <member kind="variable">
       <type>float</type>
       <name>NORMAL_RADIUS_RATIO</name>
       <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
       <anchor>abcbb0a57e0e9d2cdcbca450ba92c240c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ip::udp</name>
+    <filename>dd/d6d/structrm_1_1ip_1_1udp.html</filename>
+    <member kind="function" static="yes">
+      <type>static udp</type>
+      <name>v4</name>
+      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>af492317fe84738c7588c2c4dccc6d6da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static udp</type>
+      <name>v6</name>
+      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>ae90fb1a4e96bced0f2fd6239e4454356</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>family</name>
+      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>a3eda8122e9e02bac9380074eab24fd9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>af85f42ceb7b4bac6be6911ab970d606a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10184,6 +11693,45 @@
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
       <anchor>ad0290392910c1ccb7e97943f250df079</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::URLParseInfo</name>
+    <filename>d8/d24/structrm_1_1URLParseInfo.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>scheme</name>
+      <anchorfile>d8/d24/structrm_1_1URLParseInfo.html</anchorfile>
+      <anchor>a2fbb95da01840edd2876eef9d73de342</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>hostname</name>
+      <anchorfile>d8/d24/structrm_1_1URLParseInfo.html</anchorfile>
+      <anchor>a6a04b2d1a78e6ca84a3930a584ed043d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint16_t</type>
+      <name>port</name>
+      <anchorfile>d8/d24/structrm_1_1URLParseInfo.html</anchorfile>
+      <anchor>ace6ed1201378ebed58eae7d27efe4e2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>path</name>
+      <anchorfile>d8/d24/structrm_1_1URLParseInfo.html</anchorfile>
+      <anchor>afdd3398a193cfc79fcef7726ff4a4d88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>querys</name>
+      <anchorfile>d8/d24/structrm_1_1URLParseInfo.html</anchorfile>
+      <anchor>ac2e8db1cdb8123acdb3e26d828bf0746</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -10545,6 +12093,101 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::async::Webapp</name>
+    <filename>d5/d05/classrm_1_1async_1_1Webapp.html</filename>
+    <class kind="struct">rm::async::Webapp::RouteEntry</class>
+    <class kind="class">rm::async::Webapp::RoutePattern</class>
+    <member kind="typedef">
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
+      <name>RouteHandler</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a76d07efe3486250bb93addc2c7a4bcb4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Webapp</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a858c96036ee911c9deb436834562477c</anchor>
+      <arglist>(IOContext &amp;io_context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>use</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a5d1e7e9924aa9938fdffd3224a9dff89</anchor>
+      <arglist>(ResponseMiddleware mwf)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>listen</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>aa1e8b0622fd2a83569dc491c54534dd9</anchor>
+      <arglist>(uint16_t port, std::function&lt; void()&gt; callback=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>get</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>acd21f1d9201517e167b0ed58902ade65</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>post</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>ad03093cabffef24a3a69bf067e865d73</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>head</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a15c7e68e253d39800f2485f5579f78f9</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>del</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a616ac5cbf31cae60d5cfcd6031add9ba</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>Task</type>
+      <name>spin</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a9ceba340ccc104d25a1b824ac5a12ce8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>running</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a8364bd404098ca561ab7f45374a9e20a</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>stop</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>ae17576ab33122126d2fdd00f231c2a7b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="concept">
+    <name>rm::async::InvokableTask</name>
+    <filename>dd/d35/conceptrm_1_1async_1_1InvokableTask.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>rm::IpProtocol</name>
+    <filename>d1/d54/conceptrm_1_1IpProtocol.html</filename>
+  </compound>
+  <compound kind="concept">
+    <name>rm::LocalProtocol</name>
+    <filename>dd/d21/conceptrm_1_1LocalProtocol.html</filename>
+  </compound>
   <compound kind="namespace">
     <name>cv</name>
     <filename>d2/d75/namespacecv.html</filename>
@@ -10608,11 +12251,14 @@
   <compound kind="namespace">
     <name>rm</name>
     <filename>d5/d20/namespacerm.html</filename>
+    <namespace>rm::async</namespace>
     <namespace>rm::helper</namespace>
     <namespace>rm::numeric_literals</namespace>
     <namespace>rm::para</namespace>
     <namespace>rm::reflect</namespace>
+    <namespace>rm::requests</namespace>
     <namespace>rm::str</namespace>
+    <class kind="class">rm::Acceptor</class>
     <class kind="class">rm::Anchor</class>
     <class kind="struct">rm::Argument</class>
     <class kind="class">rm::Armor</class>
@@ -10627,6 +12273,7 @@
     <class kind="class">rm::combo</class>
     <class kind="struct">rm::CompensateInfo</class>
     <class kind="class">rm::compensator</class>
+    <class kind="class">rm::Connector</class>
     <class kind="class">rm::CurveFitter</class>
     <class kind="struct">rm::DataSourceVariable</class>
     <class kind="class">rm::DataType</class>
@@ -10638,6 +12285,7 @@
     <class kind="class">rm::DefaultTracker</class>
     <class kind="struct">rm::DetectInfo</class>
     <class kind="class">rm::detector</class>
+    <class kind="class">rm::Endpoint</class>
     <class kind="class">rm::Event</class>
     <class kind="class">rm::EventType</class>
     <class kind="class">rm::EwTopsis</class>
@@ -10662,11 +12310,15 @@
     <class kind="class">rm::HikLightController</class>
     <class kind="struct">rm::ImuData</class>
     <class kind="class">rm::Interpolator</class>
+    <class kind="struct">rm::ip</class>
+    <class kind="struct">rm::ipc</class>
     <class kind="class">rm::KalmanFilter</class>
     <class kind="class">rm::KalmanFilterStaticDatas</class>
     <class kind="class">rm::LightBlob</class>
     <class kind="struct">rm::LightConfig</class>
     <class kind="class">rm::Method</class>
+    <class kind="class">rm::MqClient</class>
+    <class kind="class">rm::MqServer</class>
     <class kind="class">rm::Munkres</class>
     <class kind="class">rm::MvCamera</class>
     <class kind="class">rm::NodeId</class>
@@ -10689,6 +12341,8 @@
     <class kind="struct">rm::PublishedDataSet</class>
     <class kind="class">rm::Publisher</class>
     <class kind="class">rm::RaHeap</class>
+    <class kind="struct">rm::Request</class>
+    <class kind="struct">rm::Response</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="class">rm::Rune</class>
     <class kind="class">rm::RuneCenter</class>
@@ -10703,10 +12357,10 @@
     <class kind="class">rm::RungeKutta3</class>
     <class kind="class">rm::RungeKutta4</class>
     <class kind="class">rm::SerialPort</class>
-    <class kind="struct">rm::SerialPortMode</class>
     <class kind="class">rm::Server</class>
     <class kind="class">rm::ServerTimer</class>
     <class kind="class">rm::ServerView</class>
+    <class kind="class">rm::Socket</class>
     <class kind="class">rm::SpiRunePredictor</class>
     <class kind="class">rm::StateInfo</class>
     <class kind="class">rm::Subscriber</class>
@@ -10718,10 +12372,13 @@
     <class kind="struct">rm::Translation</class>
     <class kind="class">rm::TranslationDecider</class>
     <class kind="class">rm::UnionFind</class>
+    <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::UserConfig</class>
     <class kind="class">rm::Variable</class>
     <class kind="class">rm::VariableType</class>
     <class kind="class">rm::View</class>
+    <concept>rm::IpProtocol</concept>
+    <concept>rm::LocalProtocol</concept>
     <member kind="typedef">
       <type>std::deque&lt; double &gt;</type>
       <name>RealSignal</name>
@@ -11045,6 +12702,27 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>int</type>
+      <name>FileDescriptor</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga99ec8bc7726fc0a48a1915ec7ab0ba96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(Response &amp;)&gt;</type>
+      <name>ResponseMiddleware</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gad96ea82122adcfa810cce417cfd05be3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int</type>
+      <name>SocketFd</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga8158c4bbe45484f8a0083cd2ed4dc514</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>std::function&lt; void(ClientView, const Variable &amp;)&gt;</type>
       <name>DataChangeNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -11179,6 +12857,15 @@
       <arglist></arglist>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce">ConjGrad</enumvalue>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789">Simplex</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ConsMode</name>
+      <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
+      <anchor>gaa71c82823a41ad85c8de9d9db8653b4a</anchor>
+      <arglist></arglist>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aad9b3dceaf520ba1fa45c371c498c6baf">Exterior</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4">Lagrange</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -11420,27 +13107,44 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>HTTPMethod</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gae6fd8f56e227d1b8dd738a46939dd2fc</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def">Get</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9">Post</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373">Put</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18">Delete</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f">Patch</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe">Head</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8">Options</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1">Trace</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e">Connect</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>BaudRate</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchorfile>d9/d63/group__io__serial.html</anchorfile>
       <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>SerialReadMode</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchorfile>d9/d63/group__io__serial.html</anchorfile>
       <anchor>ga5ca0d5494f76b1f02b93b4514e32dd5a</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -11906,20 +13610,6 @@
       <arglist>(Tp val, EulerAxis axis)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>writeCorners</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga232b63e9e1364254d512e66377be7af4</anchor>
-      <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>readCorners</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga9aa99cd3878794115ac58d55320e7238</anchor>
-      <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
-    </member>
-    <member kind="function">
       <type>std::string</type>
       <name>format</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
@@ -11988,6 +13678,55 @@
       <anchorfile>d5/d20/namespacerm.html</anchorfile>
       <anchor>a9628d21264c620867bb3ec8265f9e3d0</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>URLParseInfo</type>
+      <name>parseURL</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gaf339c36db4ff3511143e7fcebf9e274a</anchor>
+      <arglist>(std::string_view url)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::tuple&lt; std::string, bool &gt;</type>
+      <name>parseDNS</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadd8208fa61f01c94cc9b8c908e1ebaa2</anchor>
+      <arglist>(std::string_view hostname)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cors</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gab9315d32ca66114991c32b346a228b8e</anchor>
+      <arglist>(Response &amp;res)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga1833a8ef4cc320b8ae6bbfc806cf9c2a</anchor>
+      <arglist>(std::ostream &amp;os, const ImuData &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::istream &amp;</type>
+      <name>operator&gt;&gt;</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga3b95c5e224b21cf2aeb4011fa70df9d3</anchor>
+      <arglist>(std::istream &amp;is, ImuData &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>writeCorners</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga232b63e9e1364254d512e66377be7af4</anchor>
+      <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>readCorners</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga9aa99cd3878794115ac58d55320e7238</anchor>
+      <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
@@ -12078,6 +13817,20 @@
       <name>PI_4</name>
       <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
       <anchor>ga5e1f535c6364c3cf970743f4216bb37b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr FileDescriptor</type>
+      <name>INVALID_FD</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga172f3464b44cc7b57c11d297944c19ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr SocketFd</type>
+      <name>INVALID_SOCKET_FD</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga41eb5b8b262dfe2dd792a2006db325ec</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -12376,6 +14129,76 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>rm::async</name>
+    <filename>dd/d22/namespacerm_1_1async.html</filename>
+    <namespace>rm::async::requests</namespace>
+    <class kind="class">rm::async::Acceptor</class>
+    <class kind="class">rm::async::AsyncIOAwaiter</class>
+    <class kind="class">rm::async::AsyncReadAwaiter</class>
+    <class kind="class">rm::async::AsyncWriteAwaiter</class>
+    <class kind="class">rm::async::BasicPromise</class>
+    <class kind="class">rm::async::Connector</class>
+    <class kind="struct">rm::async::FinalAwaiter</class>
+    <class kind="class">rm::async::IOContext</class>
+    <class kind="class">rm::async::PipeClient</class>
+    <class kind="class">rm::async::PipeServer</class>
+    <class kind="class">rm::async::Promise</class>
+    <class kind="class">rm::async::Promise&lt; void &gt;</class>
+    <class kind="class">rm::async::SerialPort</class>
+    <class kind="class">rm::async::Socket</class>
+    <class kind="class">rm::async::Task</class>
+    <class kind="struct">rm::async::TaskAwaiter</class>
+    <class kind="class">rm::async::Timer</class>
+    <class kind="class">rm::async::Webapp</class>
+    <concept>rm::async::InvokableTask</concept>
+    <member kind="typedef">
+      <type>std::reference_wrapper&lt; IOContext &gt;</type>
+      <name>IOContextRef</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga466f766a229581f699520b48ad4c82e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>co_spawn</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga08c67d225a099f14d0fa9b2082e41030</anchor>
+      <arglist>(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::async::requests</name>
+    <filename>de/d1f/namespacerm_1_1async_1_1requests.html</filename>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>request</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga3c46835427121ff22a497b03ae5529ac</anchor>
+      <arglist>(IOContext &amp;io_context, HTTPMethod method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>get</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gade3bea56ce829f9e47fe981a17e4094a</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>post</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gab422b631d1e40f644e55cae7cdc06c17</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>del</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadb6ac2766171c3158c0d7086874ed724</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>rm::helper</name>
     <filename>de/d53/namespacerm_1_1helper.html</filename>
     <member kind="function">
@@ -12465,10 +14288,11 @@
     <class kind="class">rm::para::GyroTrackerParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::HikLightControlParam</class>
+    <class kind="class">rm::para::IoParam</class>
     <class kind="class">rm::para::LightBlobParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OpcuaParam</class>
-    <class kind="struct">rm::para::OptCameraParam</class>
+    <class kind="class">rm::para::OptCameraParam</class>
     <class kind="class">rm::para::PilotParam</class>
     <class kind="class">rm::para::PlanarTrackerParam</class>
     <class kind="class">rm::para::RuneCenterParam</class>
@@ -12535,6 +14359,13 @@
       <name>opt_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IoParam</type>
+      <name>io_param</name>
+      <anchorfile>de/dd9/group__para__io.html</anchorfile>
+      <anchor>gafb992bcbe13efba54e204eb726b15895</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -12756,6 +14587,38 @@
   <compound kind="namespace">
     <name>rm::reflect::helper</name>
     <filename>d5/d09/namespacerm_1_1reflect_1_1helper.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::requests</name>
+    <filename>d2/d45/namespacerm_1_1requests.html</filename>
+    <member kind="function">
+      <type>Response</type>
+      <name>request</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gad1972828ae5dd6f98672664365f84c0e</anchor>
+      <arglist>(HTTPMethod method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>get</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga6193a01ed7a33f9af6d287b67b7ff906</anchor>
+      <arglist>(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>post</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gabda1198828489a8bfcdace3981cbdace</anchor>
+      <arglist>(std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>del</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga7f288593fbb01a63dac73b90ca9a2cc9</anchor>
+      <arglist>(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::str</name>
@@ -13619,6 +15482,15 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>rm::ConsMode</name>
+      <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
+      <anchor>gaa71c82823a41ad85c8de9d9db8653b4a</anchor>
+      <arglist></arglist>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aad9b3dceaf520ba1fa45c371c498c6baf">Exterior</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4">Lagrange</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>rm::LsqMode</name>
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
       <anchor>gae144aacda45d4d8ed719eb1f5a37605b</anchor>
@@ -13761,6 +15633,7 @@
     <subgroup>para_predictor</subgroup>
     <subgroup>para_decider</subgroup>
     <subgroup>para_algorithm</subgroup>
+    <subgroup>para_io</subgroup>
     <subgroup>para_opcua</subgroup>
   </compound>
   <compound kind="group">
@@ -13981,7 +15854,7 @@
     <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
-    <class kind="struct">rm::para::OptCameraParam</class>
+    <class kind="class">rm::para::OptCameraParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>rm::para::camera_param</name>
@@ -14025,7 +15898,6 @@
     <subgroup>core_reflect</subgroup>
     <subgroup>core_meta</subgroup>
     <subgroup>core_str</subgroup>
-    <subgroup>core_io</subgroup>
     <subgroup>core_timer</subgroup>
     <class kind="class">rm::Exception</class>
     <member kind="define">
@@ -14336,60 +16208,266 @@
     </member>
   </compound>
   <compound kind="group">
-    <name>core_io</name>
-    <title>数据 IO 与通信</title>
-    <filename>d5/d5f/group__core__io.html</filename>
+    <name>core_timer</name>
+    <title>定时、计时模块</title>
+    <filename>db/d06/group__core__timer.html</filename>
+    <class kind="class">rm::Timer</class>
+  </compound>
+  <compound kind="group">
+    <name>io</name>
+    <title>数据 IO 与通信模块</title>
+    <filename>d2/da3/group__io.html</filename>
+    <subgroup>io_ipc</subgroup>
+    <subgroup>io_serial</subgroup>
+    <subgroup>io_net</subgroup>
+    <concept>rm::async::InvokableTask</concept>
+    <class kind="class">rm::async::Promise</class>
+    <class kind="struct">rm::async::FinalAwaiter</class>
+    <class kind="class">rm::async::BasicPromise</class>
+    <class kind="class">rm::async::Promise&lt; void &gt;</class>
+    <class kind="struct">rm::async::TaskAwaiter</class>
+    <class kind="class">rm::async::Task</class>
+    <class kind="class">rm::async::IOContext</class>
+    <class kind="class">rm::async::AsyncIOAwaiter</class>
+    <class kind="class">rm::async::AsyncReadAwaiter</class>
+    <class kind="class">rm::async::AsyncWriteAwaiter</class>
+    <class kind="class">rm::async::Timer</class>
     <class kind="struct">rm::Translation</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="struct">rm::ImuData</class>
-    <class kind="struct">rm::SerialPortMode</class>
-    <class kind="class">rm::SerialPort</class>
-    <class kind="class">rm::PipeServer</class>
-    <class kind="class">rm::PipeClient</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::BaudRate</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
+    <member kind="typedef">
+      <type>int</type>
+      <name>rm::FileDescriptor</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga99ec8bc7726fc0a48a1915ec7ab0ba96</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::SerialReadMode</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
-      <anchor>ga5ca0d5494f76b1f02b93b4514e32dd5a</anchor>
+    <member kind="typedef">
+      <type>std::reference_wrapper&lt; IOContext &gt;</type>
+      <name>rm::async::IOContextRef</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga466f766a229581f699520b48ad4c82e6</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
-      <enumvalue file="d5/d5f/group__core__io.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rm::async::co_spawn</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga08c67d225a099f14d0fa9b2082e41030</anchor>
+      <arglist>(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::ostream &amp;</type>
+      <name>rm::operator&lt;&lt;</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga1833a8ef4cc320b8ae6bbfc806cf9c2a</anchor>
+      <arglist>(std::ostream &amp;os, const ImuData &amp;data)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::istream &amp;</type>
+      <name>rm::operator&gt;&gt;</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga3b95c5e224b21cf2aeb4011fa70df9d3</anchor>
+      <arglist>(std::istream &amp;is, ImuData &amp;data)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>rm::writeCorners</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
       <anchor>ga232b63e9e1364254d512e66377be7af4</anchor>
       <arglist>(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>rm::readCorners</name>
-      <anchorfile>d5/d5f/group__core__io.html</anchorfile>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
       <anchor>ga9aa99cd3878794115ac58d55320e7238</anchor>
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
+    <member kind="variable">
+      <type>constexpr FileDescriptor</type>
+      <name>rm::INVALID_FD</name>
+      <anchorfile>d2/da3/group__io.html</anchorfile>
+      <anchor>ga172f3464b44cc7b57c11d297944c19ed</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
-    <name>core_timer</name>
-    <title>定时、计时模块</title>
-    <filename>db/d06/group__core__timer.html</filename>
-    <class kind="class">rm::Timer</class>
+    <name>io_ipc</name>
+    <title>进程间通信</title>
+    <filename>dd/d63/group__io__ipc.html</filename>
+    <class kind="class">rm::PipeServer</class>
+    <class kind="class">rm::PipeClient</class>
+    <class kind="class">rm::MqServer</class>
+    <class kind="class">rm::MqClient</class>
+    <class kind="class">rm::async::PipeServer</class>
+    <class kind="class">rm::async::PipeClient</class>
+  </compound>
+  <compound kind="group">
+    <name>io_serial</name>
+    <title>串口通信</title>
+    <filename>d9/d63/group__io__serial.html</filename>
+    <class kind="class">rm::SerialPort</class>
+    <class kind="class">rm::async::SerialPort</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::BaudRate</name>
+      <anchorfile>d9/d63/group__io__serial.html</anchorfile>
+      <anchor>ga8847230e42c9ea2972d24a8e6baf7371</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">BR_1200</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">BR_2400</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">BR_4800</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">BR_9600</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">BR_19200</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">BR_38400</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">BR_57600</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BR_115200</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::SerialReadMode</name>
+      <anchorfile>d9/d63/group__io__serial.html</anchorfile>
+      <anchor>ga5ca0d5494f76b1f02b93b4514e32dd5a</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">BLOCK</enumvalue>
+      <enumvalue file="d9/d63/group__io__serial.html" anchor="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">NONBLOCK</enumvalue>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>io_net</name>
+    <title>网络通信</title>
+    <filename>d6/dd4/group__io__net.html</filename>
+    <concept>rm::IpProtocol</concept>
+    <concept>rm::LocalProtocol</concept>
+    <class kind="struct">rm::URLParseInfo</class>
+    <class kind="struct">rm::Request</class>
+    <class kind="struct">rm::Response</class>
+    <class kind="class">rm::async::Webapp</class>
+    <class kind="struct">rm::ipc</class>
+    <class kind="struct">rm::ip</class>
+    <class kind="class">rm::Endpoint</class>
+    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::Acceptor</class>
+    <class kind="class">rm::Connector</class>
+    <class kind="class">rm::async::Socket</class>
+    <class kind="class">rm::async::Acceptor</class>
+    <class kind="class">rm::async::Connector</class>
+    <member kind="typedef">
+      <type>std::function&lt; void(Response &amp;)&gt;</type>
+      <name>rm::ResponseMiddleware</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gad96ea82122adcfa810cce417cfd05be3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int</type>
+      <name>rm::SocketFd</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga8158c4bbe45484f8a0083cd2ed4dc514</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::HTTPMethod</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gae6fd8f56e227d1b8dd738a46939dd2fc</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def">Get</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9">Post</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373">Put</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18">Delete</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f">Patch</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe">Head</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8">Options</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1">Trace</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e">Connect</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
+    </member>
+    <member kind="function">
+      <type>URLParseInfo</type>
+      <name>rm::parseURL</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gaf339c36db4ff3511143e7fcebf9e274a</anchor>
+      <arglist>(std::string_view url)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::tuple&lt; std::string, bool &gt;</type>
+      <name>rm::parseDNS</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadd8208fa61f01c94cc9b8c908e1ebaa2</anchor>
+      <arglist>(std::string_view hostname)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rm::cors</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gab9315d32ca66114991c32b346a228b8e</anchor>
+      <arglist>(Response &amp;res)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>rm::requests::request</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gad1972828ae5dd6f98672664365f84c0e</anchor>
+      <arglist>(HTTPMethod method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>rm::requests::get</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga6193a01ed7a33f9af6d287b67b7ff906</anchor>
+      <arglist>(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>rm::requests::post</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gabda1198828489a8bfcdace3981cbdace</anchor>
+      <arglist>(std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Response</type>
+      <name>rm::requests::del</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga7f288593fbb01a63dac73b90ca9a2cc9</anchor>
+      <arglist>(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>rm::async::requests::request</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga3c46835427121ff22a497b03ae5529ac</anchor>
+      <arglist>(IOContext &amp;io_context, HTTPMethod method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>rm::async::requests::get</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gade3bea56ce829f9e47fe981a17e4094a</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>rm::async::requests::post</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gab422b631d1e40f644e55cae7cdc06c17</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; Response &gt;</type>
+      <name>rm::async::requests::del</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadb6ac2766171c3158c0d7086874ed724</anchor>
+      <arglist>(IOContext &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr SocketFd</type>
+      <name>rm::INVALID_SOCKET_FD</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga41eb5b8b262dfe2dd792a2006db325ec</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>light</name>
@@ -15562,6 +17640,19 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>para_io</name>
+    <title>io 的参数模块</title>
+    <filename>de/dd9/group__para__io.html</filename>
+    <class kind="class">rm::para::IoParam</class>
+    <member kind="variable">
+      <type>IoParam</type>
+      <name>rm::para::io_param</name>
+      <anchorfile>de/dd9/group__para__io.html</anchorfile>
+      <anchor>gafb992bcbe13efba54e204eb726b15895</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>para_opcua</name>
     <title>opcua 的参数模块</title>
     <filename>da/dd3/group__para__opcua.html</filename>
@@ -15661,7 +17752,7 @@
   </compound>
   <compound kind="page">
     <name>tutorial_extra_spi_rune_predictor</name>
-    <title>k 步前向预估神符预测</title>
+    <title>k 步前向预估能量机关预测</title>
     <filename>d3/ded/tutorial_extra_spi_rune_predictor.html</filename>
     <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/spi_rune_predictor.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2predictor_2spi__rune__predictor</docanchor>
     <docanchor file="d3/ded/tutorial_extra_spi_rune_predictor.html" title="前提 1">premise_1</docanchor>
@@ -15743,6 +17834,7 @@
     <subpage>d1/d0a/tutorial_configuration_options.html</subpage>
     <subpage>d1/db4/tutorial_install.html</subpage>
     <subpage>da/d80/tutorial_use.html</subpage>
+    <subpage>d2/d81/tutorial_run_in.html</subpage>
     <subpage>d5/d52/tutorial_other_arm.html</subpage>
     <subpage>d5/d72/tutorial_document.html</subpage>
     <docanchor file="d6/d88/tutorial_table_of_content_config.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/basic_introduction.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2basic__introduction</docanchor>
@@ -15789,9 +17881,15 @@
   </compound>
   <compound kind="page">
     <name>tutorial_other_arm</name>
-    <title>为基于 ARM 的 Linux 系统配置交叉编译</title>
+    <title>为基于 ARM 的 Linux 系统手动配置交叉编译</title>
     <filename>d5/d52/tutorial_other_arm.html</filename>
     <docanchor file="d5/d52/tutorial_other_arm.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/arm.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2other_2arm</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_run_in</name>
+    <title>Run In —— 一键进入全功能 RMVL 编译镜像</title>
+    <filename>d2/d81/tutorial_run_in.html</filename>
+    <docanchor file="d2/d81/tutorial_run_in.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/run_in.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2other_2run__in</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_auto_differential</name>
@@ -15912,14 +18010,39 @@
     <docanchor file="df/d2c/tutorial_modules_camera.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/camera.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2camera</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_modules_coro</name>
+    <title>基于异步 I/O 的协程设施</title>
+    <filename>d5/d7a/tutorial_modules_coro.html</filename>
+    <docanchor file="d5/d7a/tutorial_modules_coro.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/coro.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2coro</docanchor>
+    <docanchor file="d5/d7a/tutorial_modules_coro.html" title="3. Echo Server 示例">echo_server</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_ipc</name>
+    <title>进程间通信设施 —— IPC</title>
+    <filename>d4/d00/tutorial_modules_ipc.html</filename>
+    <docanchor file="d4/d00/tutorial_modules_ipc.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/ipc.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2ipc</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_modules_light</name>
     <title>光源控制器</title>
     <filename>dc/d10/tutorial_modules_light.html</filename>
     <docanchor file="dc/d10/tutorial_modules_light.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/light.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2light</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_modules_mqtt</name>
+    <title>消息队列遥测传输协议 —— MQTT</title>
+    <filename>da/ddb/tutorial_modules_mqtt.html</filename>
+    <docanchor file="da/ddb/tutorial_modules_mqtt.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/mqtt.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2mqtt</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_netapp</name>
+    <title>网络、应用层设施</title>
+    <filename>d4/d7a/tutorial_modules_netapp.html</filename>
+    <docanchor file="d4/d7a/tutorial_modules_netapp.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/netapp.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2netapp</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_modules_opcua</name>
-    <title>工业自动化通信协议 OPC UA</title>
+    <title>工业自动化通信协议 —— OPC UA</title>
     <filename>db/dba/tutorial_modules_opcua.html</filename>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1. 简介">tutorial_opcua_intro</docanchor>
@@ -15936,18 +18059,26 @@
     <title>串口通信模块</title>
     <filename>d3/da4/tutorial_modules_serial.html</filename>
     <docanchor file="d3/da4/tutorial_modules_serial.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/serial.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2serial</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2. 使用">serialport_how_to_use</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.1 初始化">serialport_init</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.2 数据 I/O">serialport_io</docanchor>
-    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.3 链路层协议">serialport_protocol</docanchor>
+    <docanchor file="d3/da4/tutorial_modules_serial.html" title="2.3 链路层协议">serial_protocol</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>tutorial_modules_socket</name>
+    <title>传输层设施 —— Socket</title>
+    <filename>d2/d5d/tutorial_modules_socket.html</filename>
+    <docanchor file="d2/d5d/tutorial_modules_socket.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/socket.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2socket</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_table_of_content_modules</name>
     <title>主要模块使用教程</title>
     <filename>d6/d6e/tutorial_table_of_content_modules.html</filename>
     <subpage>d7/de5/tutorial_modules_aggregate_reflect.html</subpage>
+    <subpage>d5/d7a/tutorial_modules_coro.html</subpage>
+    <subpage>d4/d00/tutorial_modules_ipc.html</subpage>
     <subpage>d3/da4/tutorial_modules_serial.html</subpage>
+    <subpage>d2/d5d/tutorial_modules_socket.html</subpage>
+    <subpage>d4/d7a/tutorial_modules_netapp.html</subpage>
     <subpage>db/dba/tutorial_modules_opcua.html</subpage>
+    <subpage>da/ddb/tutorial_modules_mqtt.html</subpage>
     <subpage>df/d2c/tutorial_modules_camera.html</subpage>
     <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>

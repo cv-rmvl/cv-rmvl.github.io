@@ -1,0 +1,566 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: rm::PipeServer类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pro-methods">Protected 成员函数</a> |
+<a href="#pro-attribs">Protected 属性</a> |
+<a href="../../da/ded/classrm_1_1PipeServer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::PipeServer类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> » <a class="el" href="../../dd/d63/group__io__ipc.html">进程间通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>命名管道服务端  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::PipeServer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="490" scrolling="no" src="../../da/d4e/classrm_1_1PipeServer__inherit__graph.svg" width="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::PipeServer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="534" scrolling="no" src="../../d2/d57/classrm_1_1PipeServer__coll__graph.svg" width="170"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac8b2cd62f92527449a95fe099e445398" id="r_ac8b2cd62f92527449a95fe099e445398"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8b2cd62f92527449a95fe099e445398">PipeServer</a> (const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;)=delete</td></tr>
+<tr class="separator:ac8b2cd62f92527449a95fe099e445398"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afdfa35c510b6699fb78bc6bd5a347fb3" id="r_afdfa35c510b6699fb78bc6bd5a347fb3"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#afdfa35c510b6699fb78bc6bd5a347fb3">PipeServer</a> (<a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afdfa35c510b6699fb78bc6bd5a347fb3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abc81279dae5cf346a0d748b36f0219fe" id="r_abc81279dae5cf346a0d748b36f0219fe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#abc81279dae5cf346a0d748b36f0219fe">operator=</a> (const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;)=delete</td></tr>
+<tr class="separator:abc81279dae5cf346a0d748b36f0219fe"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa82b5be4061a5b73329cfee8f8358d3e" id="r_aa82b5be4061a5b73329cfee8f8358d3e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa82b5be4061a5b73329cfee8f8358d3e">operator=</a> (<a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aa82b5be4061a5b73329cfee8f8358d3e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac9d9bdb644f3b8fb2905c406477ff09f" id="r_ac9d9bdb644f3b8fb2905c406477ff09f"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9d9bdb644f3b8fb2905c406477ff09f">~PipeServer</a> ()</td></tr>
+<tr class="separator:ac9d9bdb644f3b8fb2905c406477ff09f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9c0349b54898b26997e856e3eeed0c17" id="r_a9c0349b54898b26997e856e3eeed0c17"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0349b54898b26997e856e3eeed0c17">PipeServer</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a9c0349b54898b26997e856e3eeed0c17"><td class="mdescLeft"> </td><td class="mdescRight">在文件系统中创建新的命名管道并打开，销毁时自动移除该管道  <br/></td></tr>
+<tr class="separator:a9c0349b54898b26997e856e3eeed0c17"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a012ba732a4e7b444732634b805139d33" id="r_a012ba732a4e7b444732634b805139d33"><td align="right" class="memItemLeft" valign="top">std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#a012ba732a4e7b444732634b805139d33">read</a> () noexcept</td></tr>
+<tr class="memdesc:a012ba732a4e7b444732634b805139d33"><td class="mdescLeft"> </td><td class="mdescRight">从管道读取数据  <br/></td></tr>
+<tr class="separator:a012ba732a4e7b444732634b805139d33"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a64a3c73459d50c13fe58f7bd33055f7d" id="r_a64a3c73459d50c13fe58f7bd33055f7d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a64a3c73459d50c13fe58f7bd33055f7d">operator&gt;&gt;</a> (std::string &amp;data) noexcept</td></tr>
+<tr class="memdesc:a64a3c73459d50c13fe58f7bd33055f7d"><td class="mdescLeft"> </td><td class="mdescRight">从管道读取数据  <br/></td></tr>
+<tr class="separator:a64a3c73459d50c13fe58f7bd33055f7d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1347462f04415828095cac96a3efe6fc" id="r_a1347462f04415828095cac96a3efe6fc"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1347462f04415828095cac96a3efe6fc">write</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a1347462f04415828095cac96a3efe6fc"><td class="mdescLeft"> </td><td class="mdescRight">向管道写入数据  <br/></td></tr>
+<tr class="separator:a1347462f04415828095cac96a3efe6fc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a464f9746bbf2ca2ff80e946d22de5b7c" id="r_a464f9746bbf2ca2ff80e946d22de5b7c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a464f9746bbf2ca2ff80e946d22de5b7c">operator&lt;&lt;</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a464f9746bbf2ca2ff80e946d22de5b7c"><td class="mdescLeft"> </td><td class="mdescRight">向管道写入数据  <br/></td></tr>
+<tr class="separator:a464f9746bbf2ca2ff80e946d22de5b7c"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a7151ba75fbd719a44226e11b598fd454" id="r_a7151ba75fbd719a44226e11b598fd454"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7151ba75fbd719a44226e11b598fd454">PipeServer</a> (std::string_view name, bool ov)</td></tr>
+<tr class="separator:a7151ba75fbd719a44226e11b598fd454"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a8a4e1709fe2cc872ec23935664602bea" id="r_a8a4e1709fe2cc872ec23935664602bea"><td align="right" class="memItemLeft" valign="top">std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4e1709fe2cc872ec23935664602bea">_name</a></td></tr>
+<tr class="memdesc:a8a4e1709fe2cc872ec23935664602bea"><td class="mdescLeft"> </td><td class="mdescRight">命名管道名称  <br/></td></tr>
+<tr class="separator:a8a4e1709fe2cc872ec23935664602bea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4a74c2c26ec8c482cf7d0323d591d7ad" id="r_a4a74c2c26ec8c482cf7d0323d591d7ad"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a74c2c26ec8c482cf7d0323d591d7ad">_fd</a> {}</td></tr>
+<tr class="memdesc:a4a74c2c26ec8c482cf7d0323d591d7ad"><td class="mdescLeft"> </td><td class="mdescRight">文件句柄  <br/></td></tr>
+<tr class="separator:a4a74c2c26ec8c482cf7d0323d591d7ad"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>命名管道服务端 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac8b2cd62f92527449a95fe099e445398" name="ac8b2cd62f92527449a95fe099e445398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b2cd62f92527449a95fe099e445398">◆ </a></span>PipeServer() <span class="overload">[1/4]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::PipeServer::PipeServer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;PipeServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_ac8b2cd62f92527449a95fe099e445398_cgraph.svg" width="192"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="afdfa35c510b6699fb78bc6bd5a347fb3" name="afdfa35c510b6699fb78bc6bd5a347fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdfa35c510b6699fb78bc6bd5a347fb3">◆ </a></span>PipeServer() <span class="overload">[2/4]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::PipeServer::PipeServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;PipeServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_afdfa35c510b6699fb78bc6bd5a347fb3_cgraph.svg" width="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ac9d9bdb644f3b8fb2905c406477ff09f" name="ac9d9bdb644f3b8fb2905c406477ff09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d9bdb644f3b8fb2905c406477ff09f">◆ </a></span>~PipeServer()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::PipeServer::~PipeServer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a9c0349b54898b26997e856e3eeed0c17" name="a9c0349b54898b26997e856e3eeed0c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0349b54898b26997e856e3eeed0c17">◆ </a></span>PipeServer() <span class="overload">[3/4]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::PipeServer::PipeServer </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;PipeServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>在文件系统中创建新的命名管道并打开，销毁时自动移除该管道 </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>Windows 命名管道在构造时会等待客户端连接并阻塞，除非已有客户端连接</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>命名管道名称，Windows 下的命名管道名称为 <code>\\.\pipe\</code> +<code>name</code>, Linux 下的命名管道名称为 <code>/tmp/</code> + <code>name</code>，长度不超过 256 个字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_a9c0349b54898b26997e856e3eeed0c17_cgraph.svg" width="422"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a7151ba75fbd719a44226e11b598fd454" name="a7151ba75fbd719a44226e11b598fd454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7151ba75fbd719a44226e11b598fd454">◆ </a></span>PipeServer() <span class="overload">[4/4]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::PipeServer::PipeServer </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ov</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;PipeServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a464f9746bbf2ca2ff80e946d22de5b7c" name="a464f9746bbf2ca2ff80e946d22de5b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464f9746bbf2ca2ff80e946d22de5b7c">◆ </a></span>operator&lt;&lt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; rm::PipeServer::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>向管道写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="110" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_a464f9746bbf2ca2ff80e946d22de5b7c_cgraph.svg" width="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="abc81279dae5cf346a0d748b36f0219fe" name="abc81279dae5cf346a0d748b36f0219fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc81279dae5cf346a0d748b36f0219fe">◆ </a></span>operator=() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; rm::PipeServer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_abc81279dae5cf346a0d748b36f0219fe_cgraph.svg" width="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="aa82b5be4061a5b73329cfee8f8358d3e" name="aa82b5be4061a5b73329cfee8f8358d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82b5be4061a5b73329cfee8f8358d3e">◆ </a></span>operator=() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; rm::PipeServer::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_aa82b5be4061a5b73329cfee8f8358d3e_cgraph.svg" width="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a64a3c73459d50c13fe58f7bd33055f7d" name="a64a3c73459d50c13fe58f7bd33055f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a3c73459d50c13fe58f7bd33055f7d">◆ </a></span>operator&gt;&gt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp; rm::PipeServer::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从管道读取数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取到的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="110" scrolling="no" src="../../da/d82/classrm_1_1PipeServer_a64a3c73459d50c13fe58f7bd33055f7d_cgraph.svg" width="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a012ba732a4e7b444732634b805139d33" name="a012ba732a4e7b444732634b805139d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012ba732a4e7b444732634b805139d33">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::PipeServer::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer.read(</td><td class="paramname"></td><td>) -&gt; </td><td>res, data</td></tr></table>
+</div><div class="memdoc">
+<p>从管道读取数据 </p>
+<dl class="section return"><dt>返回</dt><dd>读取到的数据，成功时返回非空字符串，失败时返回空字符串 </dd></dl>
+</div>
+</div>
+<a id="a1347462f04415828095cac96a3efe6fc" name="a1347462f04415828095cac96a3efe6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1347462f04415828095cac96a3efe6fc">◆ </a></span>write()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::PipeServer::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.PipeServer.write(</td><td class="paramname">data</td><td>) -&gt; </td><td>res</td></tr></table>
+</div><div class="memdoc">
+<p>向管道写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a4a74c2c26ec8c482cf7d0323d591d7ad" name="a4a74c2c26ec8c482cf7d0323d591d7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a74c2c26ec8c482cf7d0323d591d7ad">◆ </a></span>_fd</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> rm::PipeServer::_fd {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文件句柄 </p>
+</div>
+</div>
+<a id="a8a4e1709fe2cc872ec23935664602bea" name="a8a4e1709fe2cc872ec23935664602bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4e1709fe2cc872ec23935664602bea">◆ </a></span>_name</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::PipeServer::_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>命名管道名称 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d1/d02/ipc_8hpp.html">ipc.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

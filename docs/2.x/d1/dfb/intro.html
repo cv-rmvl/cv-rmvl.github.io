@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 引言与介绍</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.3.0-dev</span>
+                &#160;<span id="projectnumber">2.4.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -186,9 +186,9 @@ $(function(){ initResizable(false); });
 <ul>
 <li><b>1.x</b> —— <em>2021.10</em> 发布<span style="color: green">（未开源）</span>，主要针对 RoboMaster 2021 赛季步兵、英雄机器人代码混乱的情况进行设计，初步尝试了使用抽象工厂设计模式来设计代码架构，届时，SRVL 开发者和使用者的不同需求需要在 SRVL 编译过程中修改编译选项。</li>
 <li><b>2.x</b> —— <em>2022.01</em> 发布<span style="color: green">（未开源）</span>，使用抽象工厂设计模式后出现了维护困难的情况，包括但不限于多个 <a class="el" href="#function_modules">功能模块</a> 共同组合，导致产生非常多的派生工厂，此版本针对这一弊端移除了原先所有的设计模式，各功能模块仅单独存在，不再另外设置组合或其他强依赖关系。此外， <b>2.x</b> 相较于 <b>1.x</b> 添加了全新的内容： <a class="el" href="../../dd/d46/group__group.html">序列组/相关追踪器的空间集合（数据组件）</a> 。</li>
-<li><b>3.x</b> —— <em>2022.08</em> 发布<span style="color: green">（未开源）</span>，架构、功能进一步完善。在开发上，添加了 CI-CD 自动化构建测试工具，使用 GoogleTest 为已有的组件、模块添加了单元测试，使用 benchmark 为部分功能添加了性能基准测试；在功能上，移除原先所有的 <code>group</code> 组件，重定义并完善了 <code>group</code> 组件所应当具备的功能，后续在此系列代码基础上，完成了 <b>RM2023 版整车状态估计</b> ；在使用上，顶层模块与视觉库完全分离，涉及到各个功能开启或关闭的逻辑功能将设置在顶层模块，这一部分内容由用户自行实现。此外，该版本完善了 CMake 的项目构建方式，并且可通过 <code>make install/uninstall</code> 完成编译安装、卸载。</li>
-<li><b>4.x</b> —— <em>2023.09</em> 发布<span style="color: green">（已开源）</span>，并登陆 <a href="https://github.com">Github</a> 平台，更名 RMVL 以追求更加广泛的使用场景。并发布了 <b>RMVL 1.x</b> 系列版本，该系列彻底形成了面向对象迭代器设计模式与责任链设计模式相互结合的代码架构。 <b>4.x</b> 版本在设计之初主要为了简化数据组件的开发，移除了不属于 <a class="el" href="#data_components">数据组件</a> 管理的，但在 <a class="el" href="#function_modules">功能模块</a> 中被设置的信息。此外还为各个 <a class="el" href="#function_modules">功能模块</a> 加入了 <code>XxxInfo</code> 的信息类。该版本首次加入命名空间 <code>rm</code>，避免了与其他库命名冲突的情况。此外，该版本极大程度简化并统一了参数模块的定义方式，将原先繁琐的参数定义、加载的功能使用自定义的参数文件 <code>*.para</code> 以及一组 CMake 函数 <code>rmvl_generate_para</code> 自动完成 C++ 代码生成与文档注解生成，为了更进一步简化参数模块的设计，RMVL 提供了 Visual Studio Code 的插件，为 <code>*.para</code> 文件提供语法高亮、代码提示、悬浮提示与代码块，并为 RMVL 中的部分函数与宏提供了代码提示、悬浮提示与代码块。</li>
-<li><b>RMVL 2.x</b> —— <em>2024.09</em> 发布<span style="color: green">（已开源）</span>，在功能上，该系列首次加入了 Python 支持，可参考 <a class="el" href="../../d8/d88/tutorials_python.html">RMVL-Python 使用教程</a> ，此外还为 Windows 用户提供了 MSVC 编译器的支持，使用 CPack 工具，为 Windows，以及 Debian 系 Linux 发行版制作安装包。在架构上，新增 <a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> ，将原先 <a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> 中的各类算法迁移至该模块。</li>
+<li><b>3.x</b> —— <em>2022.08</em> 发布<span style="color: green">（未开源）</span>，架构、功能进一步完善。在开发上，添加了 CI/CD 自动化构建测试工具，使用 GoogleTest 为已有的组件、模块添加了单元测试，使用 benchmark 为部分功能添加了性能基准测试；在功能上，移除原先所有的 <code>group</code> 组件，重定义并完善了 <code>group</code> 组件所应当具备的功能，后续在此系列代码基础上，完成了 <b>RM2023 版整车状态估计</b> ；在使用上，顶层模块与视觉库完全分离，涉及到各个功能开启或关闭的逻辑功能将设置在顶层模块，这一部分内容由用户自行实现。此外，该版本完善了 CMake 的项目构建方式，并且可通过 <code>make install/uninstall</code> 完成编译安装、卸载。</li>
+<li><b>4.x</b> —— <em>2023.09</em> 发布<span style="color: green">（已开源）</span>，并登陆 <a href="https://github.com/cv-rmvl/rmvl">Github</a> 平台，更名 RMVL 以追求更加广泛的使用场景。并发布了 <b>RMVL 1.x</b> 系列版本，该系列彻底形成了面向对象迭代器设计模式与责任链设计模式相互结合的代码架构，同时将原先的 CI/CD 流水线迁移至 Github Actions。 <b>4.x</b> 版本在设计之初主要为了简化数据组件的开发，移除了不属于 <a class="el" href="#data_components">数据组件</a> 管理的，但在 <a class="el" href="#function_modules">功能模块</a> 中被设置的信息。此外还为各个 <a class="el" href="#function_modules">功能模块</a> 加入了 <code>XxxInfo</code> 的信息类。该版本首次加入命名空间 <code>rm</code>，避免了与其他库命名冲突的情况。此外，该版本极大程度简化并统一了参数模块的定义方式，将原先繁琐的参数定义、加载的功能使用自定义的参数文件 <code>*.para</code> 以及一组 CMake 函数 <code>rmvl_generate_para</code> 自动完成 C++ 代码生成与文档注解生成，为了更进一步简化参数模块的设计，RMVL 提供了 Visual Studio Code 的插件，为 <code>*.para</code> 文件提供语法高亮、代码提示、悬浮提示与代码块，并为 RMVL 中的部分函数与宏提供了代码提示、悬浮提示与代码块。</li>
+<li><b>RMVL 2.x</b> —— <em>2024.09</em> 发布<span style="color: green">（已开源）</span>，在功能上，该系列首次加入了 Python 支持，可参考 <a class="el" href="../../d8/d88/tutorials_python.html">RMVL-Python 使用教程</a> ，此外还为 Windows 用户提供了 MSVC 编译器的支持，使用 CPack 工具，为 Windows 以及 Debian 系 Linux 发行版制作安装包。在架构上，新增 <a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> ，将原先 <a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> 中的各类算法迁移至该模块。新增 <a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> ，提供跨平台的 I/O 协程设施，以及同步、异步的串口通信、进程间通信等内容，并提供了异步的 HTTP Web 后端框架。</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md3"></a>
 使用对象与基本情况</h3>
@@ -271,8 +271,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="comment">/* ... */</span></div>
 <div class="line">}</div>
 <div class="line"><span class="comment">/* ... */</span></div>
-<div class="ttc" id="aclassrm_1_1GyroDetector_html_a4847eef03a2bad126fedfaad567f180e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:62</div></div>
-<div class="ttc" id="aclassrm_1_1RuneDetector_html_a158fb7e5978ef93fb86741dec2fad8ff"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a158fb7e5978ef93fb86741dec2fad8ff">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:46</div></div>
+<div class="ttc" id="aclassrm_1_1GyroDetector_html_a4847eef03a2bad126fedfaad567f180e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:60</div></div>
+<div class="ttc" id="aclassrm_1_1RuneDetector_html_a158fb7e5978ef93fb86741dec2fad8ff"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a158fb7e5978ef93fb86741dec2fad8ff">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:43</div></div>
 <div class="ttc" id="aclassrm_1_1TagDetector_html_a61d242bc1cec93b2ab54a64afb52ffca"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#a61d242bc1cec93b2ab54a64afb52ffca">rm::TagDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>定义</b> tag_detector.h:59</div></div>
 <div class="ttc" id="armvl_2detector_8hpp_html"><div class="ttname"><a href="../../dd/d9f/rmvl_2detector_8hpp.html">detector.hpp</a></div></div>
 </div><!-- fragment --><h3><a class="anchor" id="intro_low_coupled_logic"></a>
@@ -289,12 +289,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a class="code hl_typedef" href="../../d9/d29/classrm_1_1decider.html#a8655c1d33d48671c5ecb63e0c415542e">rm::decider::ptr</a> p_decider = <a class="code hl_function" href="../../de/dfc/classrm_1_1TranslationDecider.html#a50e3961a37db63c1e0c330daa6cdfdd5">rm::TranslationDecider::make_decider</a>();</div>
 <div class="line">std::vector&lt;rm::group::ptr&gt; groups;</div>
 <div class="line"><span class="comment">/* ... */</span></div>
-<div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;detect(groups, src, BLUE, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), cv::getTickCount());</div>
+<div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;detect(groups, src, BLUE, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), Timer::now());</div>
 <div class="line"><span class="keyword">auto</span> compensate_info = p_compensator-&gt;compensate(groups, {imu_data.yaw, imu_data.pitch}, shoot_speed);</div>
 <div class="line"><span class="keyword">auto</span> predict_info = p_predictor-&gt;predict(groups);</div>
 <div class="line"><span class="keyword">auto</span> decide_info = p_decider-&gt;decide(groups);</div>
 <div class="line"><span class="comment">/* ... */</span></div>
-<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:55</div></div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
 <div class="ttc" id="aclassrm_1_1ArmorPredictor_html_a60e21d14289fabf9990e92abb1f48aa8"><div class="ttname"><a href="../../d6/df1/classrm_1_1ArmorPredictor.html#a60e21d14289fabf9990e92abb1f48aa8">rm::ArmorPredictor::make_predictor</a></div><div class="ttdeci">static std::unique_ptr&lt; ArmorPredictor &gt; make_predictor()</div><div class="ttdoc">构建 ArmorPredictor</div><div class="ttdef"><b>定义</b> armor_predictor.h:27</div></div>
 <div class="ttc" id="aclassrm_1_1GravityCompensator_html_af52c5d0ccff5ee75f15cb246f56f0ef6"><div class="ttname"><a href="../../d3/d7a/classrm_1_1GravityCompensator.html#af52c5d0ccff5ee75f15cb246f56f0ef6">rm::GravityCompensator::make_compensator</a></div><div class="ttdeci">static auto make_compensator()</div><div class="ttdoc">构造 GravityCompensator</div><div class="ttdef"><b>定义</b> gravity_compensator.h:30</div></div>
 <div class="ttc" id="aclassrm_1_1TranslationDecider_html_a50e3961a37db63c1e0c330daa6cdfdd5"><div class="ttname"><a href="../../de/dfc/classrm_1_1TranslationDecider.html#a50e3961a37db63c1e0c330daa6cdfdd5">rm::TranslationDecider::make_decider</a></div><div class="ttdeci">static std::unique_ptr&lt; TranslationDecider &gt; make_decider()</div><div class="ttdoc">构造 TranslationDecider</div><div class="ttdef"><b>定义</b> translation_decider.h:29</div></div>
@@ -305,7 +305,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="armvl_2compensator_8hpp_html"><div class="ttname"><a href="../../d6/ddf/rmvl_2compensator_8hpp.html">compensator.hpp</a></div></div>
 <div class="ttc" id="armvl_2decider_8hpp_html"><div class="ttname"><a href="../../de/d18/rmvl_2decider_8hpp.html">decider.hpp</a></div></div>
 <div class="ttc" id="armvl_2predictor_8hpp_html"><div class="ttname"><a href="../../df/d54/rmvl_2predictor_8hpp.html">predictor.hpp</a></div></div>
-<div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> io.hpp:60</div></div>
+<div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> util.hpp:49</div></div>
 </div><!-- fragment --><p>例如，对一个数据组件进行识别的结果并不影响预测的逻辑。换句话说，如果要开发一个 RMVL 视觉功能，在对象识别过程中，异常和不合格的对象不应该被交给预测、补偿和决策模块进行后续处理，而应由识别检测模块本身解决。</p>
 <hr  />
 <h2><a class="anchor" id="api_concepts"></a>
@@ -316,7 +316,7 @@ API 概念</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d4b/rmvl_2camera_8hpp.html">rmvl/camera.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> mv(<a class="code hl_struct" href="../../df/dfa/structrm_1_1CameraConfig.html">rm::CameraConfig</a>{});</div>
-<div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库</div><div class="ttdef"><b>定义</b> mv_camera.h:36</div></div>
+<div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库</div><div class="ttdef"><b>定义</b> mv_camera.h:38</div></div>
 <div class="ttc" id="armvl_2camera_8hpp_html"><div class="ttname"><a href="../../da/d4b/rmvl_2camera_8hpp.html">camera.hpp</a></div><div class="ttdoc">相机调用</div></div>
 <div class="ttc" id="astructrm_1_1CameraConfig_html"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html">rm::CameraConfig</a></div><div class="ttdoc">相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:60</div></div>
 </div><!-- fragment --><p>或使用</p>
@@ -347,8 +347,8 @@ API 概念</h2>
 <div class="line">    printf(<span class="stringliteral">&quot;Failed to load the param: \&quot;camera_param\&quot;.&quot;</span>);</div>
 <div class="ttc" id="aara_2combo_2armor_8h_html"><div class="ttname"><a href="../../da/ded/ara_2combo_2armor_8h.html">armor.h</a></div><div class="ttdoc">ArmorParam module header file (Generated by CMake automatically, DO NOT MODIFY!)</div></div>
 <div class="ttc" id="acamera_8h_html"><div class="ttname"><a href="../../d7/df6/camera_8h.html">camera.h</a></div><div class="ttdoc">CameraParam module header file (Generated by CMake automatically, DO NOT MODIFY!)</div></div>
-<div class="ttc" id="agroup__para__camera_html_ga920ea1f18537e54423f9f6c0ff586b55"><div class="ttname"><a href="../../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55">rm::para::camera_param</a></div><div class="ttdeci">CameraParam camera_param</div><div class="ttdoc">CameraParam 参数模块</div><div class="ttdef"><b>定义</b> camera.h:79</div></div>
-<div class="ttc" id="agroup__para__combo_html_ga82ec73a503c266c1d909e8b133490785"><div class="ttname"><a href="../../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785">rm::para::armor_param</a></div><div class="ttdeci">ArmorParam armor_param</div><div class="ttdoc">ArmorParam 参数模块</div><div class="ttdef"><b>定义</b> armor.h:109</div></div>
+<div class="ttc" id="agroup__para__camera_html_ga920ea1f18537e54423f9f6c0ff586b55"><div class="ttname"><a href="../../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55">rm::para::camera_param</a></div><div class="ttdeci">CameraParam camera_param</div><div class="ttdoc">CameraParam 参数模块</div><div class="ttdef"><b>定义</b> camera.h:71</div></div>
+<div class="ttc" id="agroup__para__combo_html_ga82ec73a503c266c1d909e8b133490785"><div class="ttname"><a href="../../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785">rm::para::armor_param</a></div><div class="ttdeci">ArmorParam armor_param</div><div class="ttdoc">ArmorParam 参数模块</div><div class="ttdef"><b>定义</b> armor.h:101</div></div>
 </div><!-- fragment --><p>这段代码中，<code>armor</code> 和 <code>camera</code> 参数类的头文件被包含，并使用成员方法 <code>read()</code> 来加载参数。</p>
 <h3><a class="anchor" id="intro_error_handle"></a>
 异常处理</h3>
@@ -373,7 +373,7 @@ API 概念</h2>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

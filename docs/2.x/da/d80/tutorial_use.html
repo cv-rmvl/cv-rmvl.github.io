@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 通过 gcc 和 CMake 使用 RMVL</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.3.0-dev</span>
+                &#160;<span id="projectnumber">2.4.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -150,8 +150,8 @@ $(function(){ initResizable(false); });
 </div>
 <div class="textblock"><p>RMVL 部署示例（涉及 extra 模块）</p>
 <p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2linux_2use"></a></p>
-<p><b>上一篇教程：</b><a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a> ↑<br  />
-<b>下一篇教程：</b><a class="el" href="../../d5/d52/tutorial_other_arm.html">为基于 ARM 的 Linux 系统配置交叉编译</a> ↓<br  />
+<p><b>上一篇教程：</b><a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a> <br  />
+<b>下一篇教程：</b><a class="el" href="../../d2/d81/tutorial_run_in.html">Run In —— 一键进入全功能 RMVL 编译镜像</a> <br  />
 </p>
 <hr  />
 <p><b>注意</b></p>
@@ -187,7 +187,7 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_typedef" href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a> detector = <a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
 <div class="line">    std::vector&lt;rm::group::ptr&gt; groups;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> info = detector-&gt;detect(groups, src, <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a>, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>{}, cv::getTickCount());</div>
+<div class="line">    <span class="keyword">auto</span> info = detector-&gt;detect(groups, src, <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a>, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>{}, Timer::now());</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;size of armors = %ld&quot;</span>, info.combos.size());</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_combo : info.combos)</div>
@@ -207,13 +207,13 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:55</div></div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
 <div class="ttc" id="aclassrm_1_1detector_html_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; detector &gt; ptr</div><div class="ttdef"><b>定义</b> detector.h:51</div></div>
 <div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:39</div></div>
 <div class="ttc" id="agroup__core_html_ga06c5efbe33a3db508cbb8c54abb9bd9d"><div class="ttname"><a href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a></div><div class="ttdeci">#define HIGHLIGHT_(...)</div><div class="ttdef"><b>定义</b> util.hpp:29</div></div>
 <div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>定义</b> util.hpp:57</div></div>
 <div class="ttc" id="armvl_2detector_8hpp_html"><div class="ttname"><a href="../../dd/d9f/rmvl_2detector_8hpp.html">detector.hpp</a></div></div>
-<div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> io.hpp:60</div></div>
+<div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> util.hpp:49</div></div>
 </div><!-- fragment --><p><b>编写 CMakeLists.txt</b></p>
 <p>将以下内容写至 <code>CMakeLists.txt</code> 中 </p><div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.16)</div>
 <div class="line"> </div>
@@ -244,7 +244,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

@@ -1,0 +1,421 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: rm::Exception类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d9/db4/classrm_1_1Exception.html">Exception</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d6/d07/classrm_1_1Exception-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Exception类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/util.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::Exception 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d22/classrm_1_1Exception__inherit__graph.svg" width="111" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::Exception 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d6d/classrm_1_1Exception__coll__graph.svg" width="266" height="438"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a24810c6700392bd6902dd07592141655" id="r_a24810c6700392bd6902dd07592141655"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24810c6700392bd6902dd07592141655">Exception</a> ()</td></tr>
+<tr class="memdesc:a24810c6700392bd6902dd07592141655"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造  <br /></td></tr>
+<tr class="separator:a24810c6700392bd6902dd07592141655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36b7c6954b0d3d499e1890c13ef67756" id="r_a36b7c6954b0d3d499e1890c13ef67756"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36b7c6954b0d3d499e1890c13ef67756">Exception</a> (int _code, std::string_view _err, std::string_view _func, std::string_view _file, int _line)</td></tr>
+<tr class="memdesc:a36b7c6954b0d3d499e1890c13ef67756"><td class="mdescLeft">&#160;</td><td class="mdescRight">完整的构造函数。通常不显式调用构造函数。而是使用宏 <a class="el" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd" title="调用错误处理程序">RMVL_Error()</a> 、 <a class="el" href="../../d0/de1/group__core.html#ga6ceb64e0c1708b39fed13fc311c3cdfc" title="调用错误处理程序">RMVL_Error_()</a> 和 <a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c" title="在运行时检查条件，如果失败则抛出异常">RMVL_Assert()</a>  <br /></td></tr>
+<tr class="separator:a36b7c6954b0d3d499e1890c13ef67756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98743c8a0c8f049875f3e4fe3e46f7c" id="r_ae98743c8a0c8f049875f3e4fe3e46f7c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98743c8a0c8f049875f3e4fe3e46f7c">~Exception</a> () noexcept=default</td></tr>
+<tr class="separator:ae98743c8a0c8f049875f3e4fe3e46f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90aeaad5defe33a9200980a9b65237d2" id="r_a90aeaad5defe33a9200980a9b65237d2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90aeaad5defe33a9200980a9b65237d2">what</a> () const noexcept override</td></tr>
+<tr class="separator:a90aeaad5defe33a9200980a9b65237d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aedfdeefb3c145c811dc48db7e2c846d5" id="r_aedfdeefb3c145c811dc48db7e2c846d5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedfdeefb3c145c811dc48db7e2c846d5">msg</a></td></tr>
+<tr class="memdesc:aedfdeefb3c145c811dc48db7e2c846d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化的错误信息  <br /></td></tr>
+<tr class="separator:aedfdeefb3c145c811dc48db7e2c846d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364083e7467c049de49fc9722e62530f" id="r_a364083e7467c049de49fc9722e62530f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364083e7467c049de49fc9722e62530f">code</a></td></tr>
+<tr class="memdesc:a364083e7467c049de49fc9722e62530f"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误码  <br /></td></tr>
+<tr class="separator:a364083e7467c049de49fc9722e62530f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f17cf2c26debcfa8753b8e32eee002a" id="r_a6f17cf2c26debcfa8753b8e32eee002a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f17cf2c26debcfa8753b8e32eee002a">err</a></td></tr>
+<tr class="memdesc:a6f17cf2c26debcfa8753b8e32eee002a"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误描述  <br /></td></tr>
+<tr class="separator:a6f17cf2c26debcfa8753b8e32eee002a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e832407ab3f8c104cb2527bfe38757b" id="r_a3e832407ab3f8c104cb2527bfe38757b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e832407ab3f8c104cb2527bfe38757b">func</a></td></tr>
+<tr class="memdesc:a3e832407ab3f8c104cb2527bfe38757b"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数名，仅在编译器支持获取时可用  <br /></td></tr>
+<tr class="separator:a3e832407ab3f8c104cb2527bfe38757b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88854f435716666380c57082ad920396" id="r_a88854f435716666380c57082ad920396"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88854f435716666380c57082ad920396">file</a></td></tr>
+<tr class="memdesc:a88854f435716666380c57082ad920396"><td class="mdescLeft">&#160;</td><td class="mdescRight">发生错误的源文件名  <br /></td></tr>
+<tr class="separator:a88854f435716666380c57082ad920396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbaf9d2dc88ff17a9c860c5e51fc9cd7" id="r_afbaf9d2dc88ff17a9c860c5e51fc9cd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbaf9d2dc88ff17a9c860c5e51fc9cd7">line</a></td></tr>
+<tr class="memdesc:afbaf9d2dc88ff17a9c860c5e51fc9cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">源文件中发生错误的行号  <br /></td></tr>
+<tr class="separator:afbaf9d2dc88ff17a9c860c5e51fc9cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的 </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a" title="发出错误信号并引发异常">error</a> </dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a24810c6700392bd6902dd07592141655" name="a24810c6700392bd6902dd07592141655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24810c6700392bd6902dd07592141655">&#9670;&#160;</a></span>Exception() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>默认构造 </p>
+
+</div>
+</div>
+<a id="a36b7c6954b0d3d499e1890c13ef67756" name="a36b7c6954b0d3d499e1890c13ef67756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b7c6954b0d3d499e1890c13ef67756">&#9670;&#160;</a></span>Exception() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Exception::Exception </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>_err</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>_func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_line</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>完整的构造函数。通常不显式调用构造函数。而是使用宏 <a class="el" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd" title="调用错误处理程序">RMVL_Error()</a> 、 <a class="el" href="../../d0/de1/group__core.html#ga6ceb64e0c1708b39fed13fc311c3cdfc" title="调用错误处理程序">RMVL_Error_()</a> 和 <a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c" title="在运行时检查条件，如果失败则抛出异常">RMVL_Assert()</a> </p>
+
+</div>
+</div>
+<a id="ae98743c8a0c8f049875f3e4fe3e46f7c" name="ae98743c8a0c8f049875f3e4fe3e46f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98743c8a0c8f049875f3e4fe3e46f7c">&#9670;&#160;</a></span>~Exception()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual rm::Exception::~Exception </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a90aeaad5defe33a9200980a9b65237d2" name="a90aeaad5defe33a9200980a9b65237d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90aeaad5defe33a9200980a9b65237d2">&#9670;&#160;</a></span>what()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * rm::Exception::what </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>错误描述和上下文作为文本字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/db4/classrm_1_1Exception_a90aeaad5defe33a9200980a9b65237d2_cgraph.svg" width="150" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a364083e7467c049de49fc9722e62530f" name="a364083e7467c049de49fc9722e62530f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364083e7467c049de49fc9722e62530f">&#9670;&#160;</a></span>code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rm::Exception::code</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>错误码 </p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d0/de1/group__core.html#gaf7cd096c36c198de2a85d0719fb92b4b" title="RMVL 错误码">RMVLErrorCode</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6f17cf2c26debcfa8753b8e32eee002a" name="a6f17cf2c26debcfa8753b8e32eee002a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f17cf2c26debcfa8753b8e32eee002a">&#9670;&#160;</a></span>err</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Exception::err</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>错误描述 </p>
+
+</div>
+</div>
+<a id="a88854f435716666380c57082ad920396" name="a88854f435716666380c57082ad920396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88854f435716666380c57082ad920396">&#9670;&#160;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Exception::file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发生错误的源文件名 </p>
+
+</div>
+</div>
+<a id="a3e832407ab3f8c104cb2527bfe38757b" name="a3e832407ab3f8c104cb2527bfe38757b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e832407ab3f8c104cb2527bfe38757b">&#9670;&#160;</a></span>func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Exception::func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>函数名，仅在编译器支持获取时可用 </p>
+
+</div>
+</div>
+<a id="afbaf9d2dc88ff17a9c860c5e51fc9cd7" name="afbaf9d2dc88ff17a9c860c5e51fc9cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbaf9d2dc88ff17a9c860c5e51fc9cd7">&#9670;&#160;</a></span>line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rm::Exception::line</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>源文件中发生错误的行号 </p>
+
+</div>
+</div>
+<a id="aedfdeefb3c145c811dc48db7e2c846d5" name="aedfdeefb3c145c811dc48db7e2c846d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfdeefb3c145c811dc48db7e2c846d5">&#9670;&#160;</a></span>msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Exception::msg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>格式化的错误信息 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/core/<a class="el" href="../../d4/d50/core_2include_2rmvl_2core_2util_8hpp.html">util.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

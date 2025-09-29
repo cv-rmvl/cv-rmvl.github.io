@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 并查集</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.3.0-dev</span>
+                &#160;<span id="projectnumber">2.4.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -126,25 +126,25 @@ $(function(){ initResizable(false); });
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md229">1. 什么是并查集</a>
+    <a href="#autotoc_md231">1. 什么是并查集</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md230">2. 使用方法</a>
+    <a href="#autotoc_md232">2. 使用方法</a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md231">3. 例题</a>
+    <a href="#autotoc_md233">3. 例题</a>
   </li>
 </ul>
 </div>
 <div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2union__find"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/01/11</dd></dl>
-<p><b>上一篇教程：</b><a class="el" href="../../d0/d9d/tutorial_modules_fft.html">快速傅里叶变换</a> ↑<br  />
- <b>下一篇教程：</b><a class="el" href="../../d5/db4/tutorial_modules_ra_heap.html">支持随机访问的堆</a> ↓<br  />
+<p><b>上一篇教程：</b><a class="el" href="../../d0/d9d/tutorial_modules_fft.html">快速傅里叶变换</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d5/db4/tutorial_modules_ra_heap.html">支持随机访问的堆</a> <br  />
 </p>
 <hr  />
 <p>相关类 <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html" title="并查集">rm::UnionFind</a></p>
-<h1><a class="anchor" id="autotoc_md229"></a>
+<h1><a class="anchor" id="autotoc_md231"></a>
 1. 什么是并查集</h1>
 <p>并查集是一种树型的数据结构，用于处理一些不相交集合的 <b>合并</b> 及 <b>查询</b> 问题，常常在使用中用森林来表示。</p>
 <p>在一些有 <code>N</code> 个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。</p>
@@ -153,7 +153,7 @@ $(function(){ initResizable(false); });
 <li>如果使用哈希表代替，查找的方法时间复杂度为 \(\text O(1)\)，合并的方法时间复杂度达到了 \(\text O(N)\)。</li>
 </ul>
 <p>使用森林来表示的并查集，查询、合并操作时间复杂度均接近 \(\text O(1)\)。</p>
-<h1><a class="anchor" id="autotoc_md230"></a>
+<h1><a class="anchor" id="autotoc_md232"></a>
 2. 使用方法</h1>
 <p><a class="el" href="../../db/d0c/classrm_1_1UnionFind.html" title="并查集">rm::UnionFind</a> 支持集合的快速合并、查找的结构，提供三种典型操作</p>
 <table class="markdownTable">
@@ -166,7 +166,7 @@ $(function(){ initResizable(false); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">void components(a, b);   </td><td class="markdownTableBodyCenter">获取并查集的连通分量   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md231"></a>
+<h1><a class="anchor" id="autotoc_md233"></a>
 3. 例题</h1>
 <p><b>【LeetCode 200】岛屿数量</b></p>
 <p><b>问题：</b></p>
@@ -198,11 +198,9 @@ $(function(){ initResizable(false); });
 </ul>
 <p><b>代码：</b></p>
 <p>使用 UnionFind 进行解答：</p>
-<div class="fragment"><div class="line"><span class="keyword">class </span>Solution</div>
-<div class="line">{</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Solution {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <span class="keywordtype">int</span> numIslands(vector&lt;vector&lt;char&gt;&gt;&amp; grid)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordtype">int</span> numIslands(vector&lt;vector&lt;char&gt;&gt;&amp; grid) {</div>
 <div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> rows = grid.size();</div>
 <div class="line">        <span class="keywordflow">if</span> (!rows)</div>
 <div class="line">            <span class="keywordflow">return</span> 0;</div>
@@ -216,10 +214,9 @@ $(function(){ initResizable(false); });
 <div class="line">                    data.emplace_back(i * cols + j);</div>
 <div class="line">        UnionFind&lt;char&gt; uf(data.begin(), data.end());</div>
 <div class="line"> </div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; rows; ++r)</div>
-<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; cols; ++c)</div>
-<div class="line">                <span class="keywordflow">if</span> (grid[r][c] == <span class="charliteral">&#39;1&#39;</span>)</div>
-<div class="line">                {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; rows; ++r) {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; cols; ++c) {</div>
+<div class="line">                <span class="keywordflow">if</span> (grid[r][c] == <span class="charliteral">&#39;1&#39;</span>) {</div>
 <div class="line">                    grid[r][c] = <span class="charliteral">&#39;0&#39;</span>;</div>
 <div class="line">                    <span class="keywordflow">if</span> (r - 1 &gt;= 0 &amp;&amp; grid[r - 1][c] == <span class="charliteral">&#39;1&#39;</span>)</div>
 <div class="line">                        uf.merge(r * cols + c, (r - 1) * cols + c);</div>
@@ -230,6 +227,8 @@ $(function(){ initResizable(false); });
 <div class="line">                    <span class="keywordflow">if</span> (c + 1 &lt; cols &amp;&amp; grid[r][c + 1] == <span class="charliteral">&#39;1&#39;</span>)</div>
 <div class="line">                        uf.merge(r * cols + c, r * cols + c + 1);</div>
 <div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
 <div class="line">        <span class="keywordflow">return</span> uf.components();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
@@ -240,7 +239,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

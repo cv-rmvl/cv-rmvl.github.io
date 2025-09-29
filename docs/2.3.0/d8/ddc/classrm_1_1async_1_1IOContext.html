@@ -1,0 +1,417 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: rm::async::IOContext类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="../../dd/dff/classrm_1_1async_1_1IOContext-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::IOContext类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/async.hpp&gt;</code></p>
+<div class="dynheader">
+rm::async::IOContext 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/d8e/classrm_1_1async_1_1IOContext__coll__graph.svg" width="151" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a046bffc2202b9892a12d13a53d9cf2fd" id="r_a046bffc2202b9892a12d13a53d9cf2fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a046bffc2202b9892a12d13a53d9cf2fd">IOContext</a> ()</td></tr>
+<tr class="memdesc:a046bffc2202b9892a12d13a53d9cf2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步 I/O 执行上下文，初始化以异步 I/O 为核心的调度器  <br /></td></tr>
+<tr class="separator:a046bffc2202b9892a12d13a53d9cf2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d1751e448da4b0a9d7cf5151fc64f4" id="r_a07d1751e448da4b0a9d7cf5151fc64f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07d1751e448da4b0a9d7cf5151fc64f4">~IOContext</a> ()</td></tr>
+<tr class="separator:a07d1751e448da4b0a9d7cf5151fc64f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c5b48f71c81630710f26c2d7c32946d" id="r_a1c5b48f71c81630710f26c2d7c32946d"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;Callable, Args...&gt;</td></tr>
+<tr class="memitem:a1c5b48f71c81630710f26c2d7c32946d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1c5b48f71c81630710f26c2d7c32946d">spawn</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a1c5b48f71c81630710f26c2d7c32946d"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 <code><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;&gt;</code> 协程任务，并添加到调度器  <br /></td></tr>
+<tr class="separator:a1c5b48f71c81630710f26c2d7c32946d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ffe4e2a61a23fb0a2bd15b72d0216de" id="r_a4ffe4e2a61a23fb0a2bd15b72d0216de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ffe4e2a61a23fb0a2bd15b72d0216de">handle</a> () const noexcept</td></tr>
+<tr class="memdesc:a4ffe4e2a61a23fb0a2bd15b72d0216de"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异步 I/O 句柄  <br /></td></tr>
+<tr class="separator:a4ffe4e2a61a23fb0a2bd15b72d0216de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6381750261e8ba71ee0a8fd0f0a21dd" id="r_ab6381750261e8ba71ee0a8fd0f0a21dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a> ()</td></tr>
+<tr class="memdesc:ab6381750261e8ba71ee0a8fd0f0a21dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">启用事件循环  <br /></td></tr>
+<tr class="separator:ab6381750261e8ba71ee0a8fd0f0a21dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fe29c2fbd5eaa2d1e4075a53801a3d" id="r_a55fe29c2fbd5eaa2d1e4075a53801a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55fe29c2fbd5eaa2d1e4075a53801a3d">stop</a> () noexcept</td></tr>
+<tr class="memdesc:a55fe29c2fbd5eaa2d1e4075a53801a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止事件循环  <br /></td></tr>
+<tr class="separator:a55fe29c2fbd5eaa2d1e4075a53801a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e014a7d3e72b0db079cd33176e4ef3e" id="r_a6e014a7d3e72b0db079cd33176e4ef3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e014a7d3e72b0db079cd33176e4ef3e">running</a> () const noexcept</td></tr>
+<tr class="memdesc:a6e014a7d3e72b0db079cd33176e4ef3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取运行状态  <br /></td></tr>
+<tr class="separator:a6e014a7d3e72b0db079cd33176e4ef3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a39c9d0d421ed2ef7a314ed1ca4fa6abd" id="r_a39c9d0d421ed2ef7a314ed1ca4fa6abd"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39c9d0d421ed2ef7a314ed1ca4fa6abd">AsyncIOAwaiter</a></td></tr>
+<tr class="separator:a39c9d0d421ed2ef7a314ed1ca4fa6abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a046bffc2202b9892a12d13a53d9cf2fd" name="a046bffc2202b9892a12d13a53d9cf2fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046bffc2202b9892a12d13a53d9cf2fd">&#9670;&#160;</a></span>IOContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::IOContext::IOContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建异步 I/O 执行上下文，初始化以异步 I/O 为核心的调度器 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a046bffc2202b9892a12d13a53d9cf2fd_cgraph.svg" width="159" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a07d1751e448da4b0a9d7cf5151fc64f4" name="a07d1751e448da4b0a9d7cf5151fc64f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d1751e448da4b0a9d7cf5151fc64f4">&#9670;&#160;</a></span>~IOContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::IOContext::~IOContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a07d1751e448da4b0a9d7cf5151fc64f4_cgraph.svg" width="355" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4ffe4e2a61a23fb0a2bd15b72d0216de" name="a4ffe4e2a61a23fb0a2bd15b72d0216de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ffe4e2a61a23fb0a2bd15b72d0216de">&#9670;&#160;</a></span>handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> rm::async::IOContext::handle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取异步 I/O 句柄 </p>
+
+</div>
+</div>
+<a id="ab6381750261e8ba71ee0a8fd0f0a21dd" name="ab6381750261e8ba71ee0a8fd0f0a21dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6381750261e8ba71ee0a8fd0f0a21dd">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::async::IOContext::run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启用事件循环 </p>
+
+</div>
+</div>
+<a id="a6e014a7d3e72b0db079cd33176e4ef3e" name="a6e014a7d3e72b0db079cd33176e4ef3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e014a7d3e72b0db079cd33176e4ef3e">&#9670;&#160;</a></span>running()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::async::IOContext::running </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取运行状态 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a6e014a7d3e72b0db079cd33176e4ef3e_cgraph.svg" width="159" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1c5b48f71c81630710f26c2d7c32946d" name="a1c5b48f71c81630710f26c2d7c32946d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c5b48f71c81630710f26c2d7c32946d">&#9670;&#160;</a></span>spawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;Callable, Args...&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::async::IOContext::spawn </td>
+          <td>(</td>
+          <td class="paramtype">Callable &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成 <code><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;&gt;</code> 协程任务，并添加到调度器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>协程函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>协程函数参数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li><code>fn</code> 必须是一个返回 <code><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;Tp&gt;</code> 的协程函数</li>
+<li>带捕获列表的 lambda 也可以作为 <code>fn</code>，但极易引起悬垂引用的未定义行为 </li>
+</ul>
+</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a1c5b48f71c81630710f26c2d7c32946d_cgraph.svg" width="159" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a55fe29c2fbd5eaa2d1e4075a53801a3d" name="a55fe29c2fbd5eaa2d1e4075a53801a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fe29c2fbd5eaa2d1e4075a53801a3d">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::async::IOContext::stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止事件循环 </p>
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关符号说明</h2>
+<a id="a39c9d0d421ed2ef7a314ed1ca4fa6abd" name="a39c9d0d421ed2ef7a314ed1ca4fa6abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c9d0d421ed2ef7a314ed1ca4fa6abd">&#9670;&#160;</a></span>AsyncIOAwaiter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html">AsyncIOAwaiter</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d5/d2c/async_8hpp.html">async.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

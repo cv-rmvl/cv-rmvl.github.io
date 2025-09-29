@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['弃用列表_0',['弃用列表',['../da/d58/deprecated.html',1,'']]]
+  ['导出数据、发出操控指令_0',['导出数据、发出操控指令',['../db/d4f/tutorial_extra_upper_write_data.html',1,'tutorial_table_of_content_extra']]]
 ];

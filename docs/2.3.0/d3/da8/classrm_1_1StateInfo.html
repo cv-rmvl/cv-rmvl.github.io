@@ -1,0 +1,526 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: rm::StateInfo类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="../../d6/df6/classrm_1_1StateInfo-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::StateInfo类 参考<div class="ingroups"><a class="el" href="../../d6/d59/group__types.html">状态类型系统</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>状态类型系统  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/types.hpp&gt;</code></p>
+<div class="dynheader">
+rm::StateInfo 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="296" scrolling="no" src="../../dd/d78/classrm_1_1StateInfo__coll__graph.svg" width="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a63409242fc794b1d93a8441e9373add1" id="r_a63409242fc794b1d93a8441e9373add1"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a63409242fc794b1d93a8441e9373add1">StateInfo</a> ()=default</td></tr>
+<tr class="separator:a63409242fc794b1d93a8441e9373add1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7d97e04dcef9396de38d2a3811730ba1" id="r_a7d97e04dcef9396de38d2a3811730ba1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d97e04dcef9396de38d2a3811730ba1">add</a> (std::string_view key, double val)</td></tr>
+<tr class="memdesc:a7d97e04dcef9396de38d2a3811730ba1"><td class="mdescLeft"> </td><td class="mdescRight">添加数值状态  <br/></td></tr>
+<tr class="separator:a7d97e04dcef9396de38d2a3811730ba1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a932caf0ad9ca7b3e149f21e9ac1cfe3e" id="r_a932caf0ad9ca7b3e149f21e9ac1cfe3e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a932caf0ad9ca7b3e149f21e9ac1cfe3e">add</a> (std::string_view key, std::string_view str)</td></tr>
+<tr class="memdesc:a932caf0ad9ca7b3e149f21e9ac1cfe3e"><td class="mdescLeft"> </td><td class="mdescRight">添加字符串状态  <br/></td></tr>
+<tr class="separator:a932caf0ad9ca7b3e149f21e9ac1cfe3e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac328d1c5b935f6729d15875fed86b4ca" id="r_ac328d1c5b935f6729d15875fed86b4ca"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac328d1c5b935f6729d15875fed86b4ca">remove</a> (std::string_view key)</td></tr>
+<tr class="memdesc:ac328d1c5b935f6729d15875fed86b4ca"><td class="mdescLeft"> </td><td class="mdescRight">移除状态类型  <br/></td></tr>
+<tr class="separator:ac328d1c5b935f6729d15875fed86b4ca"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a47a14ea7c672ae76a05c2f8d3861477b" id="r_a47a14ea7c672ae76a05c2f8d3861477b"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a14ea7c672ae76a05c2f8d3861477b">contains</a> (std::string_view key) const noexcept</td></tr>
+<tr class="memdesc:a47a14ea7c672ae76a05c2f8d3861477b"><td class="mdescLeft"> </td><td class="mdescRight">是否包含状态类型  <br/></td></tr>
+<tr class="separator:a47a14ea7c672ae76a05c2f8d3861477b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab15a0b3beb80ca4dd2cf93900b1818df" id="r_ab15a0b3beb80ca4dd2cf93900b1818df"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab15a0b3beb80ca4dd2cf93900b1818df">clear</a> () noexcept</td></tr>
+<tr class="memdesc:ab15a0b3beb80ca4dd2cf93900b1818df"><td class="mdescLeft"> </td><td class="mdescRight">清空状态类型  <br/></td></tr>
+<tr class="separator:ab15a0b3beb80ca4dd2cf93900b1818df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2f02af4968074b164073942863baf331" id="r_a2f02af4968074b164073942863baf331"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f02af4968074b164073942863baf331">empty</a> () const noexcept</td></tr>
+<tr class="memdesc:a2f02af4968074b164073942863baf331"><td class="mdescLeft"> </td><td class="mdescRight">状态类型是否为空  <br/></td></tr>
+<tr class="separator:a2f02af4968074b164073942863baf331"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7ef38297dee180a8ed0e6512a728eb5f" id="r_a7ef38297dee180a8ed0e6512a728eb5f"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ef38297dee180a8ed0e6512a728eb5f">at</a> (std::string_view key) const</td></tr>
+<tr class="memdesc:a7ef38297dee180a8ed0e6512a728eb5f"><td class="mdescLeft"> </td><td class="mdescRight">获取状态  <br/></td></tr>
+<tr class="separator:a7ef38297dee180a8ed0e6512a728eb5f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a285447486748ccc220adbfbffe1071d1" id="r_a285447486748ccc220adbfbffe1071d1"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a285447486748ccc220adbfbffe1071d1">at_numeric</a> (std::string_view key) const</td></tr>
+<tr class="memdesc:a285447486748ccc220adbfbffe1071d1"><td class="mdescLeft"> </td><td class="mdescRight">获取数值状态，若状态类型不是数值类型，则抛出 <code>std::bad_variant_access</code> 异常  <br/></td></tr>
+<tr class="separator:a285447486748ccc220adbfbffe1071d1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abbb9262a5adcc1b3756a465c7f3dc587" id="r_abbb9262a5adcc1b3756a465c7f3dc587"><td align="right" class="memItemLeft" valign="top">const std::string &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#abbb9262a5adcc1b3756a465c7f3dc587">at_string</a> (std::string_view key) const</td></tr>
+<tr class="memdesc:abbb9262a5adcc1b3756a465c7f3dc587"><td class="mdescLeft"> </td><td class="mdescRight">获取字符串状态，若状态类型不是字符串类型，则抛出 <code>std::bad_variant_access</code> 异常  <br/></td></tr>
+<tr class="separator:abbb9262a5adcc1b3756a465c7f3dc587"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2dea3bcd1beb046939ef35105c6614b0" id="r_a2dea3bcd1beb046939ef35105c6614b0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dea3bcd1beb046939ef35105c6614b0">at</a> (std::string_view key)</td></tr>
+<tr class="memdesc:a2dea3bcd1beb046939ef35105c6614b0"><td class="mdescLeft"> </td><td class="mdescRight">设置状态  <br/></td></tr>
+<tr class="separator:a2dea3bcd1beb046939ef35105c6614b0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a65b6dfdf9da7d246b164103e3004d51a" id="r_a65b6dfdf9da7d246b164103e3004d51a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a65b6dfdf9da7d246b164103e3004d51a">operator[]</a> (std::string_view key) noexcept</td></tr>
+<tr class="memdesc:a65b6dfdf9da7d246b164103e3004d51a"><td class="mdescLeft"> </td><td class="mdescRight">访问状态  <br/></td></tr>
+<tr class="separator:a65b6dfdf9da7d246b164103e3004d51a"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>状态类型系统 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a63409242fc794b1d93a8441e9373add1" name="a63409242fc794b1d93a8441e9373add1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63409242fc794b1d93a8441e9373add1">◆ </a></span>StateInfo()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::StateInfo::StateInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7d97e04dcef9396de38d2a3811730ba1" name="a7d97e04dcef9396de38d2a3811730ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d97e04dcef9396de38d2a3811730ba1">◆ </a></span>add() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::StateInfo::add </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.add(</td><td class="paramname">key, val</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.add(</td><td class="paramname">key, str</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>添加数值状态 </p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="#a63409242fc794b1d93a8441e9373add1">StateInfo</a> state;</div>
+<div class="line">state.<a class="code hl_function" href="#a7d97e04dcef9396de38d2a3811730ba1">add</a>(<span class="stringliteral">"tag1"</span>, 1.2); <span class="comment">// 添加 tag1 状态类型，值为 1.2</span></div>
+<div class="ttc" id="aclassrm_1_1StateInfo_html_a63409242fc794b1d93a8441e9373add1"><div class="ttname"><a href="#a63409242fc794b1d93a8441e9373add1">rm::StateInfo::StateInfo</a></div><div class="ttdeci">StateInfo()=default</div></div>
+<div class="ttc" id="aclassrm_1_1StateInfo_html_a7d97e04dcef9396de38d2a3811730ba1"><div class="ttname"><a href="#a7d97e04dcef9396de38d2a3811730ba1">rm::StateInfo::add</a></div><div class="ttdeci">void add(std::string_view key, double val)</div><div class="ttdoc">添加数值状态</div></div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>数值状态值 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a932caf0ad9ca7b3e149f21e9ac1cfe3e" name="a932caf0ad9ca7b3e149f21e9ac1cfe3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932caf0ad9ca7b3e149f21e9ac1cfe3e">◆ </a></span>add() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::StateInfo::add </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.add(</td><td class="paramname">key, val</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.add(</td><td class="paramname">key, str</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>添加字符串状态 </p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="#a63409242fc794b1d93a8441e9373add1">StateInfo</a> state;</div>
+<div class="line">state.<a class="code hl_function" href="#a7d97e04dcef9396de38d2a3811730ba1">add</a>(<span class="stringliteral">"tag1"</span>, <span class="stringliteral">"hello"</span>); <span class="comment">// 添加 tag1 状态类型，值为 "hello"</span></div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>字符串状态值 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a2dea3bcd1beb046939ef35105c6614b0" name="a2dea3bcd1beb046939ef35105c6614b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dea3bcd1beb046939ef35105c6614b0">◆ </a></span>at() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; rm::StateInfo::at </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../d3/da8/classrm_1_1StateInfo_a2dea3bcd1beb046939ef35105c6614b0_cgraph.svg" width="294"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a7ef38297dee180a8ed0e6512a728eb5f" name="a7ef38297dee180a8ed0e6512a728eb5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef38297dee180a8ed0e6512a728eb5f">◆ </a></span>at() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; rm::StateInfo::at </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>获取状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../d3/da8/classrm_1_1StateInfo_a7ef38297dee180a8ed0e6512a728eb5f_cgraph.svg" width="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a285447486748ccc220adbfbffe1071d1" name="a285447486748ccc220adbfbffe1071d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285447486748ccc220adbfbffe1071d1">◆ </a></span>at_numeric()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::StateInfo::at_numeric </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.at_numeric(</td><td class="paramname">key</td><td>) -&gt; </td><td>val</td></tr></table>
+</div><div class="memdoc">
+<p>获取数值状态，若状态类型不是数值类型，则抛出 <code>std::bad_variant_access</code> 异常 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../d3/da8/classrm_1_1StateInfo_a285447486748ccc220adbfbffe1071d1_cgraph.svg" width="182"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="abbb9262a5adcc1b3756a465c7f3dc587" name="abbb9262a5adcc1b3756a465c7f3dc587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb9262a5adcc1b3756a465c7f3dc587">◆ </a></span>at_string()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; rm::StateInfo::at_string </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.at_string(</td><td class="paramname">key</td><td>) -&gt; </td><td>val</td></tr></table>
+</div><div class="memdoc">
+<p>获取字符串状态，若状态类型不是字符串类型，则抛出 <code>std::bad_variant_access</code> 异常 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../d3/da8/classrm_1_1StateInfo_abbb9262a5adcc1b3756a465c7f3dc587_cgraph.svg" width="167"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ab15a0b3beb80ca4dd2cf93900b1818df" name="ab15a0b3beb80ca4dd2cf93900b1818df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15a0b3beb80ca4dd2cf93900b1818df">◆ </a></span>clear()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::StateInfo::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.clear(</td><td class="paramname"></td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>清空状态类型 </p>
+</div>
+</div>
+<a id="a47a14ea7c672ae76a05c2f8d3861477b" name="a47a14ea7c672ae76a05c2f8d3861477b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a14ea7c672ae76a05c2f8d3861477b">◆ </a></span>contains()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::StateInfo::contains </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.contains(</td><td class="paramname">key</td><td>) -&gt; </td><td>&lt;Is Contained ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>是否包含状态类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否包含 </dd></dl>
+</div>
+</div>
+<a id="a2f02af4968074b164073942863baf331" name="a2f02af4968074b164073942863baf331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f02af4968074b164073942863baf331">◆ </a></span>empty()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::StateInfo::empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.empty(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Is Empty ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>状态类型是否为空 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../d3/da8/classrm_1_1StateInfo_a2f02af4968074b164073942863baf331_cgraph.svg" width="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a65b6dfdf9da7d246b164103e3004d51a" name="a65b6dfdf9da7d246b164103e3004d51a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b6dfdf9da7d246b164103e3004d51a">◆ </a></span>operator[]()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gaedfc12b5ad98570cda08ea99035e7d14">StateType</a> &amp; rm::StateInfo::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.__getitem__(</td><td class="paramname">key</td><td>) -&gt; </td><td>val</td></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.__setitem__(</td><td class="paramname">key, val</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>访问状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态 </dd></dl>
+</div>
+</div>
+<a id="ac328d1c5b935f6729d15875fed86b4ca" name="ac328d1c5b935f6729d15875fed86b4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac328d1c5b935f6729d15875fed86b4ca">◆ </a></span>remove()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::StateInfo::remove </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.StateInfo.remove(</td><td class="paramname">key</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>移除状态类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>状态类型名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否移除成功 </dd></dl>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/<a class="el" href="../../dd/de3/types_8hpp.html">types.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

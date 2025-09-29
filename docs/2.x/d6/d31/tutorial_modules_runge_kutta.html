@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 常微分方程（组）数值解与 Runge-Kutta 算法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -56,7 +56,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.3.0-dev</span>
+                &#160;<span id="projectnumber">2.4.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -65,7 +65,7 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
@@ -128,39 +128,39 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md218">1. 常微分方程（组）</a>
+        <a href="#autotoc_md220">1. 常微分方程（组）</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md219">2. 求解常微分方程的 Euler 方法</a>
+        <a href="#autotoc_md221">2. 求解常微分方程的 Euler 方法</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md220">2.1 显式 Euler 单步法</a>
+            <a href="#autotoc_md222">2.1 显式 Euler 单步法</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md221">2.2 其余常见的 Euler 单步法</a>
+            <a href="#autotoc_md223">2.2 其余常见的 Euler 单步法</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md222">2.3 局部阶段误差</a>
+            <a href="#autotoc_md224">2.3 局部阶段误差</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md223">3. Runge-Kutta 方法</a>
+        <a href="#autotoc_md225">3. Runge-Kutta 方法</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md224">3.1 二阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md226">3.1 二阶 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md225">3.2 Butcher 表</a>
+            <a href="#autotoc_md227">3.2 Butcher 表</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md226">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md228">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
             <a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md227">3.5 示例代码</a>
+            <a href="#autotoc_md229">3.5 示例代码</a>
           </li>
         </ul>
       </li>
@@ -173,15 +173,15 @@ $(function(){ initResizable(false); });
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2024/01/12 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
-<p><b>上一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> ↑<br  />
- <b>下一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> ↓<br  />
+<p><b>上一篇教程：</b><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> <br  />
 </p>
 <hr  />
 <p class="formulaDsp">
 \[\def\transparent#1{\color{transparent}{#1}}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md218"></a>
+<h2><a class="anchor" id="autotoc_md220"></a>
 1. 常微分方程（组）</h2>
 <p>一个质量-弹簧-阻尼系统的运动微分方程可以表示为</p>
 <p class="formulaDsp">
@@ -217,9 +217,9 @@ $(function(){ initResizable(false); });
 &amp;t_0&lt;t_1&lt;\cdots&lt;t_n&lt;t_{n+1}&lt;\cdots\\&amp;h=t_{n+1}-t_n\quad或\quad t_{n+1}=t_n+h\quad(h=0,1,\cdots)
 \end{align}\]
 </p>
-<h2><a class="anchor" id="autotoc_md219"></a>
+<h2><a class="anchor" id="autotoc_md221"></a>
 2. 求解常微分方程的 Euler 方法</h2>
-<h3><a class="anchor" id="autotoc_md220"></a>
+<h3><a class="anchor" id="autotoc_md222"></a>
 2.1 显式 Euler 单步法</h3>
 <p>先考虑一阶常微分方程 \(\text{(1-4b)}\)的形式，在取定的 \(t_n\)处 Taylor 展开，有</p>
 <p class="formulaDsp">
@@ -233,7 +233,7 @@ x_{n+1}\approx x(t_{n+1})&amp;=x(t_n)+x&#39;(t_n)h+x&#39;&#39;(t_n)\frac{h^2}2+\
 \[x_{n+1}=x_n+hf(t_n,x_n)\tag{2-2}\]
 </p>
 <p>这便是求解常微分方程的基本方法，公式 \(\text{(2-2)}\)被称为 Explicit Euler 显式欧拉公式。</p>
-<h3><a class="anchor" id="autotoc_md221"></a>
+<h3><a class="anchor" id="autotoc_md223"></a>
 2.2 其余常见的 Euler 单步法</h3>
 <p>① Implicit Euler 隐式欧拉公式</p>
 <p class="formulaDsp">
@@ -272,7 +272,7 @@ y(0.6)\approx y_6=\hf5{0.646995}\\
 y(0.7)\approx y_7=\hf6{0.795680}\\
 y(0.8)\approx y_8=\hf7{0.980355}\]
 </p>
-<h3><a class="anchor" id="autotoc_md222"></a>
+<h3><a class="anchor" id="autotoc_md224"></a>
 2.3 局部阶段误差</h3>
 <p>上文的 4 种 Euler 单步法公式，使用哪种精度更高？这里要引入局部阶段误差的概念，因为每一次求解 \(x_i\)都会引入误差，并且误差会进行累积，局部截断误差不考虑迭代求解 \(x_n\)及之前的累积误差，仅考虑从 \(x_n\)到 \(x_{n+1}\)产生的误差，即认为 \(x_n=x(t_n)\)。对于显式 Euler 单步法，可以计算出其局部截断误差 \(T_{n+1}\)。</p>
 <p class="formulaDsp">
@@ -296,7 +296,7 @@ T_{n+1}&amp;=x(t_{n+1})-x(t_n)-\frac12hf(t_n,x(t_n))-\frac12hf(t_{n+1},x(t_{n+1}
 \end{align}\tag{2-6}\]
 </p>
 <p><b>局部截断误差的主项</b>为 \(-\frac1{12}x&#39;&#39;&#39;(t_n)h^3\)，我们称梯形公式具有 2 阶精度。</p>
-<h2><a class="anchor" id="autotoc_md223"></a>
+<h2><a class="anchor" id="autotoc_md225"></a>
 3. Runge-Kutta 方法</h2>
 <p>对于 \(\text{(2-3c)}\)的改进 Euler 公式，可以改写成</p>
 <p class="formulaDsp">
@@ -306,7 +306,7 @@ k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+h,x_n+hk_1)
 \end{align}\right.\tag{3-1}\]
 </p>
 <p>模仿这一写法，我们继续构造新的 2 阶公式</p>
-<h3><a class="anchor" id="autotoc_md224"></a>
+<h3><a class="anchor" id="autotoc_md226"></a>
 3.1 二阶 Runge-Kutta 公式</h3>
 <dl class="section note"><dt>注解</dt><dd>此小节为 2 阶 Runge-Kutta 公式族的推导，涉及到多元函数 \(f(x,y)\)的全导数  <p class="formulaDsp">
 \[\begin{align}\frac{\mathrm df}{\mathrm dx}&amp;=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}·\frac{\mathrm dy}{\mathrm dx}\\
@@ -366,7 +366,7 @@ T_{n+1}&amp;=x(t_{n+1})-x_{n+1}\\
 \[\begin{align}x_{n+1}&amp;=x_n+hk_2\\k_1&amp;=f(t_n,x_n)\\
 k_2&amp;=f\left(t_n+\frac h2,x_n+\frac h2k_1\right)\end{align}\tag{3-7}\]
 </p>
-<h3><a class="anchor" id="autotoc_md225"></a>
+<h3><a class="anchor" id="autotoc_md227"></a>
 3.2 Butcher 表</h3>
 <p>为了便于记录上文的 Runge-Kutta 中点公式，我们将公式 \(\text{(3-2)}\)改写为</p>
 <p class="formulaDsp">
@@ -401,7 +401,7 @@ p_2&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
 p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
 \hline&amp;\lambda_1&amp;\lambda_2&amp;\cdots&amp;\lambda_n\end{array}\tag{3-12}\]
 </p>
-<h3><a class="anchor" id="autotoc_md226"></a>
+<h3><a class="anchor" id="autotoc_md228"></a>
 3.3 三阶 / 四阶 Runge-Kutta 公式</h3>
 <p>这里直接给出对应的 Butcher 表。</p>
 <p>一种 3 级 3 阶 Runge-Kutta 方法的具体形式对应的 Butcher 表</p>
@@ -597,15 +597,14 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 &amp;=\mat{0.75}{-0.75}e^{-2t}+\mat2{-1}e^{-t}+\mat{1.5}{-0.5}t+\mat{-1.75}{0.75}\end{align}\tag{h}\]
 </p>
 <p>把 \(t=1\) 代入上式，可得 \(X=\mat{0.75e^{-2}+2e^{-1}-0.25}{-0.75e^{-2}-e^{-1}+0.25}\approx\mat{0.587260}{-0.219381}\)，数值解 \(X=\mat{0.587286}{-0.219401}\)与之相符。</p>
-<h3><a class="anchor" id="autotoc_md227"></a>
+<h3><a class="anchor" id="autotoc_md229"></a>
 3.5 示例代码</h3>
 <p>现给出上文使用 2 阶 2 级中点公式求解常微分方程组的示例代码</p>
  <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d11/rmvl_2algorithm_8hpp.html">rmvl/algorithm.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a> dot_x1 = [](<span class="keywordtype">double</span> t, <span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> 2 * x[1] + t; };</div>
 <div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a> dot_x2 = [](double, <span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) { <span class="keywordflow">return</span> -x[0] - 3 * x[1]; };</div>
 <div class="line">    <a class="code hl_typedef" href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a> fs = {dot_x1, dot_x2};</div>
@@ -626,9 +625,9 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <div class="line">    <span class="comment">// x* = (0.587260, -0.219381)</span></div>
 <div class="line">    <span class="comment">// x  = (0.587286, -0.219401)</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:264</div></div>
-<div class="ttc" id="agroup__algorithm__numcal_html_ga180667e5e9552a394469cfec8b6ee2b9"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:186</div></div>
-<div class="ttc" id="agroup__algorithm__numcal_html_ga65913019ec4b25a96aa4ec94b83f07ed"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:188</div></div>
+<div class="ttc" id="aclassrm_1_1RungeKutta2_html"><div class="ttname"><a href="../../da/d12/classrm_1_1RungeKutta2.html">rm::RungeKutta2</a></div><div class="ttdoc">2 阶 2 级 Runge-Kutta 求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:257</div></div>
+<div class="ttc" id="agroup__algorithm__numcal_html_ga180667e5e9552a394469cfec8b6ee2b9"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:181</div></div>
+<div class="ttc" id="agroup__algorithm__numcal_html_ga65913019ec4b25a96aa4ec94b83f07ed"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:183</div></div>
 <div class="ttc" id="armvl_2algorithm_8hpp_html"><div class="ttname"><a href="../../d1/d11/rmvl_2algorithm_8hpp.html">algorithm.hpp</a></div><div class="ttdoc">数学、算法模块头文件</div></div>
 </div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
@@ -659,7 +658,7 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[
