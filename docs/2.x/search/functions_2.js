@@ -34,7 +34,7 @@ var searchData=
   ['corner_31',['corner',['../de/dee/classrm_1_1combo.html#a15615366d0c361476c9a604931ed87fb',1,'rm::combo']]],
   ['corners_32',['corners',['../df/db7/classrm_1_1feature.html#a765fe91a41304a1ad249b922b89168a3',1,'rm::feature::corners()'],['../de/dee/classrm_1_1combo.html#a1a782334dd27722875f3f26328ef36b7',1,'rm::combo::corners()'],['../d6/dd2/classrm_1_1tracker.html#a71b8ae7b0eec7ee5e3f55a5725ed91f8',1,'rm::tracker::corners()']]],
   ['correct_33',['correct',['../d9/d1a/classrm_1_1KalmanFilter.html#a1bcf9b2c342ccf827e2fe8e6d04aa645',1,'rm::KalmanFilter::correct()'],['../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a671624a583f4776f337f4a69228f1495',1,'rm::ExtendedKalmanFilter::correct()']]],
-  ['cors_34',['cors',['../d6/dd4/group__io__net.html#gab9315d32ca66114991c32b346a228b8e',1,'rm']]],
+  ['cors_34',['cors',['../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d',1,'rm']]],
   ['cot_35',['cot',['../d5/d6c/group__algorithm.html#ga34f2f328f9b5eec56ee7d278703926bc',1,'rm']]],
   ['create_36',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../df/d48/structrm_1_1Argument.html#a77b6a0932f2e433b6f6dd732fb8b6828',1,'rm::Argument::create()']]],
   ['cross2d_37',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],

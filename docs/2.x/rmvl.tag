@@ -12709,10 +12709,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(Response &amp;)&gt;</type>
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
       <name>ResponseMiddleware</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>gad96ea82122adcfa810cce417cfd05be3</anchor>
+      <anchor>gacd1f5fbb45c26fdfe6ccdf26f49fde4e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -13694,11 +13694,18 @@
       <arglist>(std::string_view hostname)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ResponseMiddleware</type>
+      <name>statics</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gae0c3724271bc4d19e862f3030500f60d</anchor>
+      <arglist>(std::string_view url, std::string_view root)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResponseMiddleware</type>
       <name>cors</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>gab9315d32ca66114991c32b346a228b8e</anchor>
-      <arglist>(Response &amp;res)</arglist>
+      <anchor>gaa40bf87091d5012a8cf00e789cb9c26d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>std::ostream &amp;</type>
@@ -16354,10 +16361,10 @@
     <class kind="class">rm::async::Acceptor</class>
     <class kind="class">rm::async::Connector</class>
     <member kind="typedef">
-      <type>std::function&lt; void(Response &amp;)&gt;</type>
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
       <name>rm::ResponseMiddleware</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>gad96ea82122adcfa810cce417cfd05be3</anchor>
+      <anchor>gacd1f5fbb45c26fdfe6ccdf26f49fde4e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16399,11 +16406,18 @@
       <arglist>(std::string_view hostname)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>ResponseMiddleware</type>
+      <name>rm::statics</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gae0c3724271bc4d19e862f3030500f60d</anchor>
+      <arglist>(std::string_view url, std::string_view root)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResponseMiddleware</type>
       <name>rm::cors</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>gab9315d32ca66114991c32b346a228b8e</anchor>
-      <arglist>(Response &amp;res)</arglist>
+      <anchor>gaa40bf87091d5012a8cf00e789cb9c26d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Response</type>

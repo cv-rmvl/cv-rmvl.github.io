@@ -181,9 +181,9 @@ netapp.hpp 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:gad96ea82122adcfa810cce417cfd05be3" id="r_gad96ea82122adcfa810cce417cfd05be3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gad96ea82122adcfa810cce417cfd05be3">rm::ResponseMiddleware</a> = std::function&lt;void(<a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:gad96ea82122adcfa810cce417cfd05be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应中间件类型  <br /></td></tr>
-<tr class="separator:gad96ea82122adcfa810cce417cfd05be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd1f5fbb45c26fdfe6ccdf26f49fde4e" id="r_gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应中间件类型  <br /></td></tr>
+<tr class="separator:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -213,9 +213,12 @@ netapp.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:gadd8208fa61f01c94cc9b8c908e1ebaa2" id="r_gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gadd8208fa61f01c94cc9b8c908e1ebaa2">rm::parseDNS</a> (std::string_view hostname)</td></tr>
 <tr class="memdesc:gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">域名解析  <br /></td></tr>
 <tr class="separator:gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9315d32ca66114991c32b346a228b8e" id="r_gab9315d32ca66114991c32b346a228b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gab9315d32ca66114991c32b346a228b8e">rm::cors</a> (<a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;res)</td></tr>
-<tr class="memdesc:gab9315d32ca66114991c32b346a228b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息  <br /></td></tr>
-<tr class="separator:gab9315d32ca66114991c32b346a228b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0c3724271bc4d19e862f3030500f60d" id="r_gae0c3724271bc4d19e862f3030500f60d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd4/group__io__net.html#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a> (std::string_view url, std::string_view root)</td></tr>
+<tr class="memdesc:gae0c3724271bc4d19e862f3030500f60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">静态路由中间件，处理对指定 URL 路径的静态文件请求  <br /></td></tr>
+<tr class="separator:gae0c3724271bc4d19e862f3030500f60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa40bf87091d5012a8cf00e789cb9c26d" id="r_gaa40bf87091d5012a8cf00e789cb9c26d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd4/group__io__net.html#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a> ()</td></tr>
+<tr class="memdesc:gaa40bf87091d5012a8cf00e789cb9c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息  <br /></td></tr>
+<tr class="separator:gaa40bf87091d5012a8cf00e789cb9c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad1972828ae5dd6f98672664365f84c0e" id="r_gad1972828ae5dd6f98672664365f84c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gad1972828ae5dd6f98672664365f84c0e">rm::requests::request</a> (<a class="el" href="../../d6/dd4/group__io__net.html#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a> method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</td></tr>
 <tr class="memdesc:gad1972828ae5dd6f98672664365f84c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发出同步 HTTP 请求  <br /></td></tr>
 <tr class="separator:gad1972828ae5dd6f98672664365f84c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -188,9 +188,9 @@ $(function(){ initResizable(false); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:gad96ea82122adcfa810cce417cfd05be3" id="r_gad96ea82122adcfa810cce417cfd05be3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad96ea82122adcfa810cce417cfd05be3">rm::ResponseMiddleware</a> = std::function&lt;void(<a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:gad96ea82122adcfa810cce417cfd05be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应中间件类型  <br /></td></tr>
-<tr class="separator:gad96ea82122adcfa810cce417cfd05be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd1f5fbb45c26fdfe6ccdf26f49fde4e" id="r_gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应中间件类型  <br /></td></tr>
+<tr class="separator:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8158c4bbe45484f8a0083cd2ed4dc514" id="r_ga8158c4bbe45484f8a0083cd2ed4dc514"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">rm::SocketFd</a> = int</td></tr>
 <tr class="separator:ga8158c4bbe45484f8a0083cd2ed4dc514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -222,9 +222,12 @@ $(function(){ initResizable(false); });
 <tr class="memitem:gadd8208fa61f01c94cc9b8c908e1ebaa2" id="r_gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; std::string, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd8208fa61f01c94cc9b8c908e1ebaa2">rm::parseDNS</a> (std::string_view hostname)</td></tr>
 <tr class="memdesc:gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">域名解析  <br /></td></tr>
 <tr class="separator:gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9315d32ca66114991c32b346a228b8e" id="r_gab9315d32ca66114991c32b346a228b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab9315d32ca66114991c32b346a228b8e">rm::cors</a> (<a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;res)</td></tr>
-<tr class="memdesc:gab9315d32ca66114991c32b346a228b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息  <br /></td></tr>
-<tr class="separator:gab9315d32ca66114991c32b346a228b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0c3724271bc4d19e862f3030500f60d" id="r_gae0c3724271bc4d19e862f3030500f60d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a> (std::string_view url, std::string_view root)</td></tr>
+<tr class="memdesc:gae0c3724271bc4d19e862f3030500f60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">静态路由中间件，处理对指定 URL 路径的静态文件请求  <br /></td></tr>
+<tr class="separator:gae0c3724271bc4d19e862f3030500f60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa40bf87091d5012a8cf00e789cb9c26d" id="r_gaa40bf87091d5012a8cf00e789cb9c26d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a> ()</td></tr>
+<tr class="memdesc:gaa40bf87091d5012a8cf00e789cb9c26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息  <br /></td></tr>
+<tr class="separator:gaa40bf87091d5012a8cf00e789cb9c26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad1972828ae5dd6f98672664365f84c0e" id="r_gad1972828ae5dd6f98672664365f84c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad1972828ae5dd6f98672664365f84c0e">rm::requests::request</a> (<a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a> method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body=&quot;&quot;)</td></tr>
 <tr class="memdesc:gad1972828ae5dd6f98672664365f84c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发出同步 HTTP 请求  <br /></td></tr>
 <tr class="separator:gad1972828ae5dd6f98672664365f84c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,14 +261,14 @@ $(function(){ initResizable(false); });
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <p>提供跨平台的同步异步 <a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 通信、HTTP 请求、HTTP Web 后端框架功能 </p>
 <h2 class="groupheader">类型定义说明</h2>
-<a id="gad96ea82122adcfa810cce417cfd05be3" name="gad96ea82122adcfa810cce417cfd05be3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad96ea82122adcfa810cce417cfd05be3">&#9670;&#160;</a></span>ResponseMiddleware</h2>
+<a id="gacd1f5fbb45c26fdfe6ccdf26f49fde4e" name="gacd1f5fbb45c26fdfe6ccdf26f49fde4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">&#9670;&#160;</a></span>ResponseMiddleware</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#gad96ea82122adcfa810cce417cfd05be3">rm::ResponseMiddleware</a> = std::function&lt;void(<a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -342,16 +345,16 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 <h2 class="groupheader">函数说明</h2>
-<a id="gab9315d32ca66114991c32b346a228b8e" name="gab9315d32ca66114991c32b346a228b8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab9315d32ca66114991c32b346a228b8e">&#9670;&#160;</a></span>cors()</h2>
+<a id="gaa40bf87091d5012a8cf00e789cb9c26d" name="gaa40bf87091d5012a8cf00e789cb9c26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa40bf87091d5012a8cf00e789cb9c26d">&#9670;&#160;</a></span>cors()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void rm::cors </td>
+          <td class="memname"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> rm::cors </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>res</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -360,13 +363,11 @@ $(function(){ initResizable(false); });
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/netapp_8hpp.html">rmvl/io/netapp.hpp</a>&gt;</code></p>
 
 <p>跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息 </p>
-<div class="fragment"><div class="line"><span class="comment">// 直接操作 Response 对象</span></div>
-<div class="line"><a class="code hl_function" href="#gab9315d32ca66114991c32b346a228b8e">cors</a>(res);</div>
-<div class="line"><span class="comment">// 或在 Web 应用程序框架中使用</span></div>
+<div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
 <div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
-<div class="line">app.use(<a class="code hl_function" href="#gab9315d32ca66114991c32b346a228b8e">cors</a>);</div>
-<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:325</div></div>
-<div class="ttc" id="agroup__io__net_html_gab9315d32ca66114991c32b346a228b8e"><div class="ttname"><a href="#gab9315d32ca66114991c32b346a228b8e">rm::cors</a></div><div class="ttdeci">void cors(Response &amp;res)</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
+<div class="line">app.use(<a class="code hl_function" href="#gaa40bf87091d5012a8cf00e789cb9c26d">cors</a>());</div>
+<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:339</div></div>
+<div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -858,6 +859,43 @@ $(function(){ initResizable(false); });
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>响应报文 </dd></dl>
+
+</div>
+</div>
+<a id="gae0c3724271bc4d19e862f3030500f60d" name="gae0c3724271bc4d19e862f3030500f60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0c3724271bc4d19e862f3030500f60d">&#9670;&#160;</a></span>statics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> rm::statics </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>root</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d3/d2c/netapp_8hpp.html">rmvl/io/netapp.hpp</a>&gt;</code></p>
+
+<p>静态路由中间件，处理对指定 URL 路径的静态文件请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>URL 路径前缀，例如 <code>/static</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>静态文件根目录，例如 <code>./public</code></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
+<div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
+<div class="line">app.use(<a class="code hl_function" href="#gae0c3724271bc4d19e862f3030500f60d">statics</a>(<span class="stringliteral">&quot;/static&quot;</span>, <span class="stringliteral">&quot;./public&quot;</span>));</div>
+<div class="ttc" id="agroup__io__net_html_gae0c3724271bc4d19e862f3030500f60d"><div class="ttname"><a href="#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a></div><div class="ttdeci">ResponseMiddleware statics(std::string_view url, std::string_view root)</div><div class="ttdoc">静态路由中间件，处理对指定 URL 路径的静态文件请求</div></div>
+</div><!-- fragment --> <dl class="section note"><dt>注解</dt><dd>静态路由仅在未处理请求时有效，若有对应的路由表达成匹配，则静态路由中间件不会被调用 </dd></dl>
 
 </div>
 </div>

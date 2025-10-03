@@ -181,7 +181,7 @@ $(function(){ initResizable(false); });
 <div class="line">        printf(<span class="stringliteral">&quot;Response: %s\n&quot;</span>, response-&gt;body().c_str());</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:210</div></div>
+<div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:224</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <code>requests</code> 替换为 <code>async::requests</code>，并在协程中使用 <code>co_await</code> 关键字等待结果，这里不再赘述。</p>
 <h2><a class="anchor" id="autotoc_md283"></a>
@@ -205,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
 <div class="line">    <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a> app(io_context);</div>
 <div class="line"> </div>
-<div class="line">    app.use(<a class="code hl_function" href="../../d6/dd4/group__io__net.html#gab9315d32ca66114991c32b346a228b8e">cors</a>);</div>
+<div class="line">    app.use(<a class="code hl_function" href="../../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d">cors</a>());</div>
 <div class="line"> </div>
 <div class="line">    app.get(<span class="stringliteral">&quot;/&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;req, <a class="code hl_struct" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;res) {</div>
 <div class="line">        res.<a class="code hl_function" href="../../d1/d1b/structrm_1_1Response.html#ad5a33642f79f4c5dfe12511f84c53ea8">send</a>(<span class="stringliteral">&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>);</div>
@@ -236,9 +236,9 @@ $(function(){ initResizable(false); });
 <div class="line">    io_context.run();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:325</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:339</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Webapp_html_a9ceba340ccc104d25a1b824ac5a12ce8"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html#a9ceba340ccc104d25a1b824ac5a12ce8">rm::async::Webapp::spin</a></div><div class="ttdeci">Task spin()</div><div class="ttdoc">启动事件循环</div></div>
-<div class="ttc" id="agroup__io__net_html_gab9315d32ca66114991c32b346a228b8e"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#gab9315d32ca66114991c32b346a228b8e">rm::cors</a></div><div class="ttdeci">void cors(Response &amp;res)</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
+<div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
 <div class="ttc" id="agroup__io_html_ga08c67d225a099f14d0fa9b2082e41030"><div class="ttname"><a href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:265</div></div>
 <div class="ttc" id="anetapp_8hpp_html"><div class="ttname"><a href="../../d3/d2c/netapp_8hpp.html">netapp.hpp</a></div><div class="ttdoc">异步 IO 的应用层网络通信框架</div></div>
 <div class="ttc" id="astructrm_1_1Request_html"><div class="ttname"><a href="../../d6/d7c/structrm_1_1Request.html">rm::Request</a></div><div class="ttdoc">HTTP 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:73</div></div>
