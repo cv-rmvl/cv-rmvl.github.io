@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['撰写说明文档_0',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]]
+  ['传输层设施_20——_20socket_0',['传输层设施 —— Socket',['../d2/d5d/tutorial_modules_socket.html',1,'tutorial_table_of_content_modules']]]
 ];

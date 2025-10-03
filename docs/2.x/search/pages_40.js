@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['读取（默认）数据以控制逻辑分支_0',['读取（默认）数据以控制逻辑分支',['../d4/de8/tutorial_extra_upper_read_data.html',1,'tutorial_table_of_content_extra']]]
+  ['加权与核函数_0',['3.1 加权与核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md215',1,'']]],
+  ['加载方式_1',['4.1 加载方式',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md342',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['自动求导、数值微分_0',['自动求导、数值微分',['../da/d8f/tutorial_modules_auto_differential.html',1,'tutorial_table_of_content_modules']]]
+  ['初始化_0',['初始化',['../df/d2c/tutorial_modules_camera.html#autotoc_md249',1,'1.1 初始化'],['../db/dba/tutorial_modules_opcua.html#autotoc_md291',1,'2.1 初始化'],['../d3/da4/tutorial_modules_serial.html#autotoc_md315',1,'2.1 初始化']]],
+  ['初尝递归算法_1',['1.2 初尝递归算法',['../dd/dc3/tutorial_modules_kalman.html#kalman_recursive',1,'']]]
 ];

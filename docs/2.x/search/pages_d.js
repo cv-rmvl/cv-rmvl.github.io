@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['topsis_20模型的熵权法_0',['基于 TOPSIS 模型的熵权法',['../df/d25/tutorial_modules_ew_topsis.html',1,'tutorial_table_of_content_modules']]],
-  ['tracker_20模块_1',['如何使用/开发 tracker 模块',['../df/daa/tutorial_extra_how_to_use_tracker.html',1,'tutorial_table_of_content_extra']]]
+  ['gauss_20newton_20迭代_0',['1 Gauss-Newton 迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md205',1,'']]],
+  ['gcc_20和_20cmake_20使用_20rmvl_1',['通过 gcc 和 CMake 使用 RMVL',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]],
+  ['group_20模块_2',['如何使用/开发 group 模块',['../d0/d6e/tutorial_extra_how_to_use_group.html',1,'tutorial_table_of_content_extra']]]
 ];

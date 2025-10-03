@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['编译镜像_0',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]]
+  ['函数插值方法_0',['函数插值方法',['../d8/d57/tutorial_modules_interpolation.html',1,'tutorial_table_of_content_modules']]]
 ];

@@ -5,16 +5,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 支持随机访问的堆</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -44,6 +41,10 @@ MathJax.Hub.Config({
   <script type="text/javascript">
     DoxygenAwesomeParagraphLink.init()
   </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
 </head>
 <body>
   <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -65,33 +66,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,24 +105,24 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">支持随机访问的堆</div></div>
+  <div class="headertitle"><div class="title">支持随机访问的堆 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md216">1. 基本用法</a>
+    <a href="#autotoc_md222">1 基本用法 </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md217">2. 扩展用法</a>
+    <a href="#autotoc_md223">2 扩展用法 </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md218">3. 例题</a>
+    <a href="#autotoc_md224">3 例题 </a>
   </li>
 </ul>
 </div>
@@ -144,42 +134,42 @@ $(function(){ initResizable(false); });
 </p>
 <hr  />
 <p>相关类 <a class="el" href="../../db/d45/classrm_1_1RaHeap.html" title="支持随机访问的堆（与 std::priority_queue 具备相同的基础容器筛选条件）">rm::RaHeap</a></p>
-<h1><a class="anchor" id="autotoc_md216"></a>
-1. 基本用法</h1>
-<p><a class="el" href="../../db/d45/classrm_1_1RaHeap.html" title="支持随机访问的堆（与 std::priority_queue 具备相同的基础容器筛选条件）">rm::RaHeap</a> 的基本用法与标准库中 <code>std::priority_queue</code> 的用法基本一致，都具有以下操作：</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md222"></a>
+1 基本用法</h1>
+<p><a class="el" href="../../db/d45/classrm_1_1RaHeap.html" title="支持随机访问的堆（与 std::priority_queue 具备相同的基础容器筛选条件）">rm::RaHeap</a> 的基本用法与标准库中 <span class="tt">std::priority_queue</span> 的用法基本一致，都具有以下操作：</p>
 <div class="full_width_table"></div><div class="full_width_table"><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">成员方法   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<th class="markdownTableHeadCenter">成员方法  </th><th class="markdownTableHeadCenter">含义  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a14454f127677c167093e86140755c953" title="堆是否为空">rm::RaHeap::empty</a>   </td><td class="markdownTableBodyCenter">判断堆是否为空    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a14454f127677c167093e86140755c953" title="堆是否为空">rm::RaHeap::empty</a>  </td><td class="markdownTableBodyCenter">判断堆是否为空  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a745d6ff4a12059a0827742f880b4f1e0" title="堆的大小">rm::RaHeap::size</a>   </td><td class="markdownTableBodyCenter">获取堆的大小    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a745d6ff4a12059a0827742f880b4f1e0" title="堆的大小">rm::RaHeap::size</a>  </td><td class="markdownTableBodyCenter">获取堆的大小  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#aaa000499295c26ee6b5af3a530320338" title="获取堆顶元素">rm::RaHeap::top</a>   </td><td class="markdownTableBodyCenter">获取堆顶元素    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#aaa000499295c26ee6b5af3a530320338" title="获取堆顶元素">rm::RaHeap::top</a>  </td><td class="markdownTableBodyCenter">获取堆顶元素  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#aadc476f3073f72e2adcdaefc38e81cd1" title="弹出堆顶">rm::RaHeap::pop</a>   </td><td class="markdownTableBodyCenter">弹出堆顶元素    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#aadc476f3073f72e2adcdaefc38e81cd1" title="弹出堆顶">rm::RaHeap::pop</a>  </td><td class="markdownTableBodyCenter">弹出堆顶元素  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ae15c5b60ca561b3a16c88e4cc948717b" title="在堆顶添加元素">rm::RaHeap::push</a>   </td><td class="markdownTableBodyCenter">压入堆顶元素   </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ae15c5b60ca561b3a16c88e4cc948717b" title="在堆顶添加元素">rm::RaHeap::push</a>  </td><td class="markdownTableBodyCenter">压入堆顶元素  </td></tr>
 </table>
 </div><div class="full_width_table"></div><p>可参考以下文档：</p>
 <ul>
 <li><a href="https://zh.cppreference.com/w/cpp/container/priority_queue" target="_blank">C++ 标准库——优先队列 </a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md217"></a>
-2. 扩展用法</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md223"></a>
+2 扩展用法</h1>
 <p>除此之外，RaHeap 还提供了以下扩展用法：</p>
 <div class="full_width_table"></div><div class="full_width_table"><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">成员方法   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<th class="markdownTableHeadCenter">成员方法  </th><th class="markdownTableHeadCenter">含义  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a0b9b82fb4fcb1a1b671855def1fc7dc2" title="更新元素">rm::RaHeap::update</a>   </td><td class="markdownTableBodyCenter">更新某个元素为新值（不存在则直接返回）    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#a0b9b82fb4fcb1a1b671855def1fc7dc2" title="更新元素">rm::RaHeap::update</a>  </td><td class="markdownTableBodyCenter">更新某个元素为新值（不存在则直接返回）  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ae985322beceadf0dba5d796191cab532" title="删除指定元素">rm::RaHeap::erase</a>   </td><td class="markdownTableBodyCenter">删除某个指定元素（不存在则直接返回）    </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#ae985322beceadf0dba5d796191cab532" title="删除指定元素">rm::RaHeap::erase</a>  </td><td class="markdownTableBodyCenter">删除某个指定元素（不存在则直接返回）  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#adbd1cdae8c272dadd4cb29f8f21cbc79" title="导出容器">rm::RaHeap::extract</a>   </td><td class="markdownTableBodyCenter">返回堆的底层容器   </td></tr>
+<td class="markdownTableBodyCenter"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html#adbd1cdae8c272dadd4cb29f8f21cbc79" title="导出容器">rm::RaHeap::extract</a>  </td><td class="markdownTableBodyCenter">返回堆的底层容器  </td></tr>
 </table>
-</div><div class="full_width_table"></div><h1><a class="anchor" id="autotoc_md218"></a>
-3. 例题</h1>
+</div><div class="full_width_table"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md224"></a>
+3 例题</h1>
 <p><b>Dijkstra + 堆优化</b></p>
 <p>使用 RaHeap：</p>
 <div class="fragment"><div class="line"><span class="keyword">using </span>Pair = pair&lt;Node *, int&gt;;</div>
@@ -219,7 +209,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

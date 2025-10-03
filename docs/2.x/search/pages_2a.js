@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['快速傅里叶变换_0',['快速傅里叶变换',['../d0/d9d/tutorial_modules_fft.html',1,'tutorial_table_of_content_modules']]]
+  ['从_20xml_20配置_20opc_20ua_0',['4.2 从 XML 配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'']]]
 ];

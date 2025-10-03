@@ -5,16 +5,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 进程间通信设施 —— IPC</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -44,6 +41,10 @@ MathJax.Hub.Config({
   <script type="text/javascript">
     DoxygenAwesomeParagraphLink.init()
   </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
 </head>
 <body>
   <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -65,33 +66,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,38 +105,38 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">进程间通信设施 —— IPC</div></div>
+  <div class="headertitle"><div class="title">进程间通信设施 —— IPC </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md267">1. 命名管道</a>
+    <a href="#autotoc_md273">1 命名管道 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md268">1.1 同步阻塞</a>
+        <a href="#autotoc_md274">1.1 同步阻塞 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md269">1.2 异步非阻塞</a>
+        <a href="#autotoc_md275">1.2 异步非阻塞 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md270">2. 消息队列（仅 Linux 可用）</a>
+    <a href="#autotoc_md276">2 消息队列（仅 Linux 可用） </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md271">3. Unix Domain Socket</a>
+    <a href="#autotoc_md277">3 Unix Domain Socket </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md272">3.1 同步阻塞</a>
+        <a href="#autotoc_md278">3.1 同步阻塞 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md273">3.2 异步非阻塞</a>
+        <a href="#autotoc_md279">3.2 异步非阻塞 </a>
       </li>
     </ul>
   </li>
@@ -160,8 +150,8 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> <br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md267"></a>
-1. 命名管道</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md273"></a>
+1 命名管道</h1>
 <p>相关类：</p>
 <ul>
 <li>同步： <a class="el" href="../../da/d82/classrm_1_1PipeServer.html" title="命名管道服务端">rm::PipeServer</a>, <a class="el" href="../../d8/d8c/classrm_1_1PipeClient.html" title="命名管道客户端">rm::PipeClient</a></li>
@@ -169,10 +159,12 @@ $(function(){ initResizable(false); });
 </ul>
 <p>管道是一种半双工的通信方式，允许一个进程与另一个进程进行通信。命名管道（Named Pipe）是一种特殊类型的管道，它具有名称，可以在不同的进程之间进行通信。</p>
 <p>RMVL 提供了跨平台的命名管道实现，并提供了协程支持，Windows 下基于 Windows 命名管道，Linux 下基于 Unix FIFO 实现。</p>
-<h2><a class="anchor" id="autotoc_md268"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md274"></a>
 1.1 同步阻塞</h2>
 <p><b>服务端</b></p>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">C++</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"> </div>
@@ -196,7 +188,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassrm_1_1PipeServer_html"><div class="ttname"><a href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></div><div class="ttdoc">命名管道服务端</div><div class="ttdef"><b>定义</b> ipc.hpp:24</div></div>
 <div class="ttc" id="aipc_8hpp_html"><div class="ttname"><a href="../../d1/d02/ipc_8hpp.html">ipc.hpp</a></div><div class="ttdoc">同步/异步的进程间通信框架</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
-</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title">Python</b></p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
 <div class="line">server = <a class="code hl_class" href="../../da/d82/classrm_1_1PipeServer.html">rm.PipeServer</a>(<span class="stringliteral">&quot;mypipe&quot;</span>)</div>
 <div class="line"> </div>
@@ -211,8 +205,12 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keywordflow">return</span> -1</div>
 <div class="line"> </div>
 <div class="line">print(f<span class="stringliteral">&quot;Received: {msg}&quot;</span>)</div>
-</div><!-- fragment --> </div> <p><b>客户端</b></p>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
+</div><!-- fragment --></li>
+</ul>
+</div><div class="tabbed"></div><p><b>客户端</b></p>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">C++</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"> </div>
@@ -233,7 +231,9 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1PipeClient_html"><div class="ttname"><a href="../../d8/d8c/classrm_1_1PipeClient.html">rm::PipeClient</a></div><div class="ttdoc">命名管道客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:79</div></div>
-</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title">Python</b></p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"> </div>
 <div class="line">client = <a class="code hl_class" href="../../d8/d8c/classrm_1_1PipeClient.html">rm.PipeClient</a>(<span class="stringliteral">&quot;mypipe&quot;</span>)</div>
 <div class="line"> </div>
@@ -247,7 +247,9 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="keywordflow">if</span> <span class="keywordflow">not</span> success:</div>
 <div class="line">    print(<span class="stringliteral">&quot;Write failed&quot;</span>)</div>
 <div class="line">    <span class="keywordflow">return</span> -1</div>
-</div><!-- fragment --> </div> <h2><a class="anchor" id="autotoc_md269"></a>
+</div><!-- fragment --></li>
+</ul>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md275"></a>
 1.2 异步非阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
@@ -278,10 +280,11 @@ $(function(){ initResizable(false); });
 <div class="line">    </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">rm::async::PipeServer</a></div><div class="ttdoc">异步命名管道服务端</div><div class="ttdef"><b>定义</b> ipc.hpp:244</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_a8e9561a5c4e3f2753799c33436f85ef3"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#a8e9561a5c4e3f2753799c33436f85ef3">rm::async::PipeServer::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:266</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_ac36cfeb6370eae52c7c23ab605b80e9a"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#ac36cfeb6370eae52c7c23ab605b80e9a">rm::async::PipeServer::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:280</div></div>
@@ -315,14 +318,14 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html">rm::async::PipeClient</a></div><div class="ttdoc">异步命名管道客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:289</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a092c354c023e37277af3b4e8fadac74c"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a092c354c023e37277af3b4e8fadac74c">rm::async::PipeClient::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:302</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a473087ec1b1f42d76c85998b7e3a5155"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a473087ec1b1f42d76c85998b7e3a5155">rm::async::PipeClient::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:316</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md270"></a>
-2. 消息队列（仅 Linux 可用）</h1>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md276"></a>
+2 消息队列（仅 Linux 可用）</h1>
 <p>相关类： <a class="el" href="../../d4/d88/classrm_1_1MqServer.html" title="消息队列服务端">rm::MqServer</a> 及 <a class="el" href="../../d4/d5a/classrm_1_1MqClient.html" title="消息队列客户端">rm::MqClient</a></p>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d02/ipc_8hpp.html">rmvl/io/ipc.hpp</a>&gt;</span></div>
@@ -370,15 +373,15 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1MqClient_html"><div class="ttname"><a href="../../d4/d5a/classrm_1_1MqClient.html">rm::MqClient</a></div><div class="ttdoc">消息队列客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:181</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md271"></a>
-3. Unix Domain Socket</h1>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md277"></a>
+3 Unix Domain Socket</h1>
 <p>相关类：</p>
 <ul>
 <li>同步： <a class="el" href="../../d0/dff/classrm_1_1Socket.html" title="Socket 会话层">rm::Socket</a>, <a class="el" href="../../dd/df8/classrm_1_1Acceptor.html" title="Socket 接受器">rm::Acceptor</a> 及 <a class="el" href="../../de/ddb/classrm_1_1Connector.html" title="Socket 连接器">rm::Connector</a></li>
 <li>异步： <a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">rm::async::Socket</a>, <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步 Socket 接受器">rm::async::Acceptor</a> 及 <a class="el" href="../../df/d95/classrm_1_1async_1_1Connector.html" title="异步 Socket 连接器">rm::async::Connector</a></li>
 </ul>
 <p>一般工程使用中，推荐客户端使用<span style="color: red">同步阻塞</span>方式进行通信，服务端使用<span style="color: red">异步非阻塞</span>方式进行通信，以兼顾高并发性能。有关网络 Socket 通信的内容可参考 <a class="el" href="../../d2/d5d/tutorial_modules_socket.html">传输层设施 —— Socket</a></p>
-<h2><a class="anchor" id="autotoc_md272"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md278"></a>
 3.1 同步阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/dfc/socket_8hpp.html">rmvl/io/socket.hpp</a>&gt;</span></div>
@@ -429,7 +432,7 @@ $(function(){ initResizable(false); });
 <div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, response.c_str());</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Connector_html"><div class="ttname"><a href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></div><div class="ttdoc">Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:257</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md273"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md279"></a>
 3.2 异步非阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/dfc/socket_8hpp.html">rmvl/io/socket.hpp</a>&gt;</span></div>
@@ -465,7 +468,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1Acceptor_html"><div class="ttname"><a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">rm::async::Acceptor</a></div><div class="ttdoc">异步 Socket 接受器</div><div class="ttdef"><b>定义</b> socket.hpp:391</div></div>
@@ -502,7 +505,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1Connector_html"><div class="ttname"><a href="../../df/d95/classrm_1_1async_1_1Connector.html">rm::async::Connector</a></div><div class="ttdoc">异步 Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:441</div></div>
@@ -514,7 +517,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

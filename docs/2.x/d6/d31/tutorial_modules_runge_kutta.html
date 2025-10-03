@@ -5,16 +5,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 常微分方程（组）数值解与 Runge-Kutta 算法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -44,6 +41,10 @@ MathJax.Hub.Config({
   <script type="text/javascript">
     DoxygenAwesomeParagraphLink.init()
   </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
 </head>
 <body>
   <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -65,33 +66,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,12 +105,12 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">常微分方程（组）数值解与 Runge-Kutta 算法</div></div>
+  <div class="headertitle"><div class="title">常微分方程（组）数值解与 Runge-Kutta 算法 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -128,39 +118,39 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md220">1. 常微分方程（组）</a>
+        <a href="#autotoc_md226">1 常微分方程（组） </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md221">2. 求解常微分方程的 Euler 方法</a>
+        <a href="#autotoc_md227">2 求解常微分方程的 Euler 方法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md222">2.1 显式 Euler 单步法</a>
+            <a href="#autotoc_md228">2.1 显式 Euler 单步法 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md223">2.2 其余常见的 Euler 单步法</a>
+            <a href="#autotoc_md229">2.2 其余常见的 Euler 单步法 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md224">2.3 局部阶段误差</a>
+            <a href="#autotoc_md230">2.3 局部阶段误差 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md225">3. Runge-Kutta 方法</a>
+        <a href="#autotoc_md231">3 Runge-Kutta 方法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md226">3.1 二阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md232">3.1 二阶 Runge-Kutta 公式 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md227">3.2 Butcher 表</a>
+            <a href="#autotoc_md233">3.2 Butcher 表 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md228">3.3 三阶 / 四阶 Runge-Kutta 公式</a>
+            <a href="#autotoc_md234">3.3 三阶 / 四阶 Runge-Kutta 公式 </a>
           </li>
           <li class="level3">
-            <a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a>
+            <a href="#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md229">3.5 示例代码</a>
+            <a href="#autotoc_md235">3.5 示例代码 </a>
           </li>
         </ul>
       </li>
@@ -181,8 +171,8 @@ $(function(){ initResizable(false); });
 \[\def\transparent#1{\color{transparent}{#1}}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md220"></a>
-1. 常微分方程（组）</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md226"></a>
+1 常微分方程（组）</h2>
 <p>一个质量-弹簧-阻尼系统的运动微分方程可以表示为</p>
 <p class="formulaDsp">
 \[m\frac{\mathrm d^2x}{\mathrm dt^2}+c\frac{\mathrm dx}{\mathrm dt}+kx=p(t)\tag{1-1a}\]
@@ -217,9 +207,9 @@ $(function(){ initResizable(false); });
 &amp;t_0&lt;t_1&lt;\cdots&lt;t_n&lt;t_{n+1}&lt;\cdots\\&amp;h=t_{n+1}-t_n\quad或\quad t_{n+1}=t_n+h\quad(h=0,1,\cdots)
 \end{align}\]
 </p>
-<h2><a class="anchor" id="autotoc_md221"></a>
-2. 求解常微分方程的 Euler 方法</h2>
-<h3><a class="anchor" id="autotoc_md222"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md227"></a>
+2 求解常微分方程的 Euler 方法</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md228"></a>
 2.1 显式 Euler 单步法</h3>
 <p>先考虑一阶常微分方程 \(\text{(1-4b)}\)的形式，在取定的 \(t_n\)处 Taylor 展开，有</p>
 <p class="formulaDsp">
@@ -233,7 +223,7 @@ x_{n+1}\approx x(t_{n+1})&amp;=x(t_n)+x&#39;(t_n)h+x&#39;&#39;(t_n)\frac{h^2}2+\
 \[x_{n+1}=x_n+hf(t_n,x_n)\tag{2-2}\]
 </p>
 <p>这便是求解常微分方程的基本方法，公式 \(\text{(2-2)}\)被称为 Explicit Euler 显式欧拉公式。</p>
-<h3><a class="anchor" id="autotoc_md223"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md229"></a>
 2.2 其余常见的 Euler 单步法</h3>
 <p>① Implicit Euler 隐式欧拉公式</p>
 <p class="formulaDsp">
@@ -272,7 +262,7 @@ y(0.6)\approx y_6=\hf5{0.646995}\\
 y(0.7)\approx y_7=\hf6{0.795680}\\
 y(0.8)\approx y_8=\hf7{0.980355}\]
 </p>
-<h3><a class="anchor" id="autotoc_md224"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md230"></a>
 2.3 局部阶段误差</h3>
 <p>上文的 4 种 Euler 单步法公式，使用哪种精度更高？这里要引入局部阶段误差的概念，因为每一次求解 \(x_i\)都会引入误差，并且误差会进行累积，局部截断误差不考虑迭代求解 \(x_n\)及之前的累积误差，仅考虑从 \(x_n\)到 \(x_{n+1}\)产生的误差，即认为 \(x_n=x(t_n)\)。对于显式 Euler 单步法，可以计算出其局部截断误差 \(T_{n+1}\)。</p>
 <p class="formulaDsp">
@@ -296,8 +286,8 @@ T_{n+1}&amp;=x(t_{n+1})-x(t_n)-\frac12hf(t_n,x(t_n))-\frac12hf(t_{n+1},x(t_{n+1}
 \end{align}\tag{2-6}\]
 </p>
 <p><b>局部截断误差的主项</b>为 \(-\frac1{12}x&#39;&#39;&#39;(t_n)h^3\)，我们称梯形公式具有 2 阶精度。</p>
-<h2><a class="anchor" id="autotoc_md225"></a>
-3. Runge-Kutta 方法</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md231"></a>
+3 Runge-Kutta 方法</h2>
 <p>对于 \(\text{(2-3c)}\)的改进 Euler 公式，可以改写成</p>
 <p class="formulaDsp">
 \[\left\{\begin{align}
@@ -306,7 +296,7 @@ k_1&amp;=f(t_n,x_n)\\k_2&amp;=f(t_n+h,x_n+hk_1)
 \end{align}\right.\tag{3-1}\]
 </p>
 <p>模仿这一写法，我们继续构造新的 2 阶公式</p>
-<h3><a class="anchor" id="autotoc_md226"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md232"></a>
 3.1 二阶 Runge-Kutta 公式</h3>
 <dl class="section note"><dt>注解</dt><dd>此小节为 2 阶 Runge-Kutta 公式族的推导，涉及到多元函数 \(f(x,y)\)的全导数  <p class="formulaDsp">
 \[\begin{align}\frac{\mathrm df}{\mathrm dx}&amp;=\frac{\partial f}{\partial x}+\frac{\partial f}{\partial y}·\frac{\mathrm dy}{\mathrm dx}\\
@@ -366,7 +356,7 @@ T_{n+1}&amp;=x(t_{n+1})-x_{n+1}\\
 \[\begin{align}x_{n+1}&amp;=x_n+hk_2\\k_1&amp;=f(t_n,x_n)\\
 k_2&amp;=f\left(t_n+\frac h2,x_n+\frac h2k_1\right)\end{align}\tag{3-7}\]
 </p>
-<h3><a class="anchor" id="autotoc_md227"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md233"></a>
 3.2 Butcher 表</h3>
 <p>为了便于记录上文的 Runge-Kutta 中点公式，我们将公式 \(\text{(3-2)}\)改写为</p>
 <p class="formulaDsp">
@@ -401,7 +391,7 @@ p_2&amp;a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
 p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
 \hline&amp;\lambda_1&amp;\lambda_2&amp;\cdots&amp;\lambda_n\end{array}\tag{3-12}\]
 </p>
-<h3><a class="anchor" id="autotoc_md228"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md234"></a>
 3.3 三阶 / 四阶 Runge-Kutta 公式</h3>
 <p>这里直接给出对应的 Butcher 表。</p>
 <p>一种 3 级 3 阶 Runge-Kutta 方法的具体形式对应的 Butcher 表</p>
@@ -414,7 +404,7 @@ p_n&amp;a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\\
 \[\begin{array}{c|cccc}0&amp;0&amp;0&amp;0&amp;0\\\frac12&amp;\frac12&amp;0&amp;0&amp;0\\\frac12&amp;0&amp;\frac12&amp;0&amp;
 0\\1&amp;0&amp;0&amp;1&amp;0\\\hline&amp;\frac16&amp;\frac13&amp;\frac13&amp;\frac16\end{array}\tag{3-13b}\]
 </p>
-<h3><a class="anchor" id="equations_runge_kutta"></a>
+<h3 class="doxsection"><a class="anchor" id="equations_runge_kutta"></a>
 3.4 方程组的 Runge-Kutta 公式</h3>
 <p>对于一阶方程组 \(\boldsymbol x&#39;=\boldsymbol F(t,\boldsymbol x),\ \boldsymbol x(t_0)=\boldsymbol x^{(0)}\)，公式 \(\text{(3-11)}\)可以改写为</p>
 <p class="formulaDsp">
@@ -597,10 +587,12 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 &amp;=\mat{0.75}{-0.75}e^{-2t}+\mat2{-1}e^{-t}+\mat{1.5}{-0.5}t+\mat{-1.75}{0.75}\end{align}\tag{h}\]
 </p>
 <p>把 \(t=1\) 代入上式，可得 \(X=\mat{0.75e^{-2}+2e^{-1}-0.25}{-0.75e^{-2}-e^{-1}+0.25}\approx\mat{0.587260}{-0.219381}\)，数值解 \(X=\mat{0.587286}{-0.219401}\)与之相符。</p>
-<h3><a class="anchor" id="autotoc_md229"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md235"></a>
 3.5 示例代码</h3>
 <p>现给出上文使用 2 阶 2 级中点公式求解常微分方程组的示例代码</p>
- <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d11/rmvl_2algorithm_8hpp.html">rmvl/algorithm.hpp</a>&gt;</span></div>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">C++</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d11/rmvl_2algorithm_8hpp.html">rmvl/algorithm.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"> </div>
@@ -629,7 +621,9 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <div class="ttc" id="agroup__algorithm__numcal_html_ga180667e5e9552a394469cfec8b6ee2b9"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga180667e5e9552a394469cfec8b6ee2b9">rm::Ode</a></div><div class="ttdeci">std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; Ode</div><div class="ttdoc">常微分方程</div><div class="ttdef"><b>定义</b> numcal.hpp:181</div></div>
 <div class="ttc" id="agroup__algorithm__numcal_html_ga65913019ec4b25a96aa4ec94b83f07ed"><div class="ttname"><a href="../../dd/dcf/group__algorithm__numcal.html#ga65913019ec4b25a96aa4ec94b83f07ed">rm::Odes</a></div><div class="ttdeci">std::vector&lt; std::function&lt; double(double, const std::valarray&lt; double &gt; &amp;)&gt; &gt; Odes</div><div class="ttdoc">常微分方程组</div><div class="ttdef"><b>定义</b> numcal.hpp:183</div></div>
 <div class="ttc" id="armvl_2algorithm_8hpp_html"><div class="ttname"><a href="../../d1/d11/rmvl_2algorithm_8hpp.html">algorithm.hpp</a></div><div class="ttdoc">数学、算法模块头文件</div></div>
-</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title">Python</b></p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
 <div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
 <div class="line"> </div>
 <div class="line">fs = []</div>
@@ -651,14 +645,16 @@ l_2&amp;=f_2(t_n+\frac h2,x_{1_n}+\frac h2k_1,x_{2_n}+\frac h2l_1)\end{align}\]
 <div class="line"><span class="comment"># 输出结果为</span></div>
 <div class="line"><span class="comment"># x* = 0.587260, -0.219381</span></div>
 <div class="line"><span class="comment"># x  = 0.587286, -0.219401</span></div>
-</div><!-- fragment --> </div>  </div></div><!-- contents -->
+</div><!-- fragment --></li>
+</ul>
+</div><div class="tabbed"></div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

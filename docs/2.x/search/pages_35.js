@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['硬件设备与软件模块的初始化_0',['硬件设备与软件模块的初始化',['../d1/d67/tutorial_extra_upper_init.html',1,'tutorial_table_of_content_extra']]]
+  ['共轭方向_0',['2.1 共轭方向',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md175',1,'']]],
+  ['共轭梯度方向的构造_1',['2.2 共轭梯度方向的构造',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md176',1,'']]],
+  ['共轭梯度法_2',['2 共轭梯度法',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md174',1,'']]]
 ];

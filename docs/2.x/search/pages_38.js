@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['系统手动配置交叉编译_0',['为基于 ARM 的 Linux 系统手动配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]]
+  ['写在前面_0',['写在前面',['../d1/dfb/intro.html#autotoc_md2',1,'写在前面'],['../d8/d29/tutorial_extra_upper_base.html#autotoc_md71',1,'写在前面']]]
 ];

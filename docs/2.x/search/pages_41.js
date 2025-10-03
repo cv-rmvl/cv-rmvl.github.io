@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
+  ['区间搜索_0',['1 区间搜索',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md167',1,'']]],
+  ['区间消去_1',['2.1 区间消去',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md169',1,'']]]
 ];

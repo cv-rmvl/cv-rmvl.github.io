@@ -6,5 +6,5 @@ var searchData=
   ['前提_202_3',['前提 2',['../d3/ded/tutorial_extra_spi_rune_predictor.html#premise_2',1,'']]],
   ['前提_203_4',['前提 3',['../d3/ded/tutorial_extra_spi_rune_predictor.html#premise_3',1,'']]],
   ['前提_204_5',['前提 4',['../d3/ded/tutorial_extra_spi_rune_predictor.html#premise_4',1,'']]],
-  ['前言_6',['1. 前言',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md82',1,'']]]
+  ['前言_6',['1 前言',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md82',1,'']]]
 ];

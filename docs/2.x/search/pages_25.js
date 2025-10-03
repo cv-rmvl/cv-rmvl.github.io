@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['并查集_0',['并查集',['../d4/d74/tutorial_modules_union_find.html',1,'tutorial_table_of_content_modules']]]
+  ['事件监视_0',['2.6.2 事件监视',['../db/dba/tutorial_modules_opcua.html#autotoc_md300',1,'']]]
 ];
