@@ -19,7 +19,7 @@ var searchData=
   ['spi_5frune_5fpredictor_5fparam_16',['spi_rune_predictor_param',['../dd/dad/group__para__predictor.html#gae5f5f48deeea7beefdd199de18ae8717',1,'rm::para']]],
   ['sqrt_5f2_17',['SQRT_2',['../d5/d6c/group__algorithm.html#ga1979f70b9a07db4c1ee2a96808c90b1b',1,'rm']]],
   ['src_18',['src',['../df/dae/structrm_1_1DetectInfo.html#a08ad5987f2457977fb586fc00d3d8297',1,'rm::DetectInfo']]],
-  ['static_5fprediction_19',['static_prediction',['../d7/d51/structrm_1_1PredictInfo.html#a7371ffc8ac220a200a7397d108a71dab',1,'rm::PredictInfo']]],
-  ['status_20',['status',['../d1/d1b/structrm_1_1Response.html#aeee9acdb108d2050178b96e7a1d988de',1,'rm::Response']]],
+  ['state_19',['state',['../d1/d1b/structrm_1_1Response.html#ac87ea5a9f4b8033545c7402e16a057cf',1,'rm::Response']]],
+  ['static_5fprediction_20',['static_prediction',['../d7/d51/structrm_1_1PredictInfo.html#a7371ffc8ac220a200a7397d108a71dab',1,'rm::PredictInfo']]],
   ['stds_21',['stds',['../d2/d84/structrm_1_1PreprocessOptions.html#a3f998cae02faae087e0ac0d20cec63c4',1,'rm::PreprocessOptions']]]
 ];

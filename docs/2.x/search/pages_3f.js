@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['说明文档_0',['RMVL 说明文档',['../index.html',1,'']]]
+  ['加权与核函数_0',['3.1 加权与核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md209',1,'']]],
+  ['加载方式_1',['4.1 加载方式',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md336',1,'']]]
 ];

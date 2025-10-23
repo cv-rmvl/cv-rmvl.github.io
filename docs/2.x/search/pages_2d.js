@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['支持随机访问的堆_0',['支持随机访问的堆',['../d5/db4/tutorial_modules_ra_heap.html',1,'tutorial_table_of_content_modules']]]
+  ['何为责任链模式_0',['1 何为责任链模式',['../d2/de3/tutorial_extra_upper_process.html#autotoc_md78',1,'']]]
 ];

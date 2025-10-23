@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['读取（默认）数据以控制逻辑分支_0',['读取（默认）数据以控制逻辑分支',['../d4/de8/tutorial_extra_upper_read_data.html',1,'tutorial_table_of_content_extra']]]
+  ['区间搜索_0',['1 区间搜索',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md161',1,'']]],
+  ['区间消去_1',['2.1 区间消去',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md163',1,'']]]
 ];

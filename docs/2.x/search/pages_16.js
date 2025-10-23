@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['光源控制器_0',['光源控制器',['../dc/d10/tutorial_modules_light.html',1,'tutorial_table_of_content_modules']]]
+  ['reactor_20模式_0',['1.1 Reactor 模式',['../d5/d7a/tutorial_modules_coro.html#autotoc_md260',1,'']]],
+  ['richardson_20外推原理_1',['2 Richardson 外推原理',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md144',1,'']]],
+  ['rm_2',['命名空间 rm',['../d1/dfb/intro.html#intro_namespace_rm',1,'']]],
+  ['rmvl_3',['RMVL',['../d5/d52/tutorial_other_arm.html#autotoc_md138',1,'使用提供的工具链构建 RMVL'],['../d1/db4/tutorial_install.html',1,'构建并安装 RMVL'],['../d5/d52/tutorial_other_arm.html#autotoc_md139',1,'自定义工具链构建 RMVL'],['../da/d80/tutorial_use.html',1,'通过 gcc 和 CMake 使用 RMVL']]],
+  ['rmvl_20使用教程_4',['RMVL 使用教程',['../dd/da0/tutorials.html',1,'']]],
+  ['rmvl_20修改后的用法_5',['1.2 RMVL 修改后的用法',['../d2/de3/tutorial_extra_upper_process.html#process_in_rmvl',1,'']]],
+  ['rmvl_20并进行单元测试_6',['3 构建 RMVL 并进行单元测试',['../d1/db4/tutorial_install.html#autotoc_md117',1,'']]],
+  ['rmvl_20撰写说明文档_7',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]],
+  ['rmvl_20的编译、配置选项_8',['RMVL 的编译、配置选项',['../d1/d0a/tutorial_configuration_options.html',1,'tutorial_table_of_content_config']]],
+  ['rmvl_20编译镜像_9',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]],
+  ['rmvl_20说明文档_10',['RMVL 说明文档',['../index.html',1,'']]],
+  ['rmvl_20项目_11',['2 配置 RMVL 项目',['../d1/db4/tutorial_install.html#autotoc_md116',1,'']]],
+  ['rmvl_20python_20使用教程_12',['RMVL-Python 使用教程',['../d8/d88/tutorials_python.html',1,'']]],
+  ['rmvl_20python_20各模块的用法_13',['RMVL-Python 各模块的用法',['../d3/dbb/tutorial_py_table_of_contents_modules.html',1,'tutorials_python']]],
+  ['rmvl_20python_20绑定功能_14',['RMVL Python 绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md342',1,'启用 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md340',1,'如何在配置 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html',1,'RMVL-Python 绑定功能']]],
+  ['rmvl_20python_20绑定是如何生成的_15',['RMVL-Python 绑定是如何生成的',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md339',1,'']]],
+  ['rmvl_5fgenerate_5fmodule_5fpara_16',['3.2 rmvl_generate_module_para',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md334',1,'']]],
+  ['rmvl_5fgenerate_5fpara_17',['3.1 rmvl_generate_para',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md333',1,'']]],
+  ['robust_20核函数_18',['Robust 核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md208',1,'3 Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md211',1,'3.3 常用的 Robust 核函数']]],
+  ['run_20in_20——_20一键进入全功能_20rmvl_20编译镜像_19',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]],
+  ['runge_20kutta_20公式_20',['Runge Kutta 公式',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md226',1,'3.1 二阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md228',1,'3.3 三阶 / 四阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta',1,'3.4 方程组的 Runge-Kutta 公式']]],
+  ['runge_20kutta_20方法_21',['3 Runge-Kutta 方法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md225',1,'']]],
+  ['runge_20kutta_20算法_22',['常微分方程（组）数值解与 Runge-Kutta 算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'tutorial_table_of_content_modules']]],
+  ['runtime_20分类网络部署库_23',['ONNX-Runtime 分类网络部署库',['../d8/d82/tutorial_modules_ort.html',1,'tutorial_table_of_content_modules']]]
 ];

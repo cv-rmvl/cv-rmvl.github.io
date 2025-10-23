@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.13.2" doxygen_gitid="26342b775ea25e6fefb53220926b20702c56fcb3">
+<tagfile doxygen_version="1.15.0" doxygen_gitid="7cca38ba5185457e6d9495bf963d4cdeacebc25a">
   <compound kind="file">
     <name>root.markdown</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
@@ -1643,9 +1643,10 @@
     <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::Request</class>
     <class kind="struct">rm::Response</class>
+    <class kind="class">rm::async::Router</class>
+    <class kind="class">rm::async::Router::RoutePattern</class>
+    <class kind="struct">rm::async::Router::RouteEntry</class>
     <class kind="class">rm::async::Webapp</class>
-    <class kind="class">rm::async::Webapp::RoutePattern</class>
-    <class kind="struct">rm::async::Webapp::RouteEntry</class>
     <namespace>rm</namespace>
     <namespace>rm::requests</namespace>
     <namespace>rm::async</namespace>
@@ -1768,16 +1769,16 @@
     <filename>d2/dfe/client_8hpp.html</filename>
     <includes id="df/de1/object_8hpp" name="object.hpp" local="yes" import="no" module="no" objc="no">object.hpp</includes>
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" import="no" module="no" objc="no">view.hpp</includes>
-    <class kind="class">rm::ClientView</class>
-    <class kind="class">rm::Client</class>
-    <class kind="class">rm::ClientTimer</class>
+    <class kind="class">rm::OpcuaClientView</class>
+    <class kind="class">rm::OpcuaClient</class>
+    <class kind="class">rm::OpcuaClientTimer</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
     <name>event.hpp</name>
     <path>rmvl/opcua/</path>
     <filename>dc/d94/event_8hpp.html</filename>
-    <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" import="no" module="no" objc="no">variable.hpp</includes>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
     <class kind="class">rm::EventType</class>
     <class kind="class">rm::Event</class>
     <namespace>rm</namespace>
@@ -1806,7 +1807,7 @@
     <filename>da/d24/publisher_8hpp.html</filename>
     <includes id="df/d0a/server_8hpp" name="server.hpp" local="yes" import="no" module="no" objc="no">server.hpp</includes>
     <class kind="struct">rm::PublishedDataSet</class>
-    <class kind="class">rm::Publisher</class>
+    <class kind="class">rm::OpcuaPublisher</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1816,9 +1817,9 @@
     <includes id="dc/d94/event_8hpp" name="event.hpp" local="yes" import="no" module="no" objc="no">event.hpp</includes>
     <includes id="df/de1/object_8hpp" name="object.hpp" local="yes" import="no" module="no" objc="no">object.hpp</includes>
     <includes id="d8/d11/view_8hpp" name="view.hpp" local="yes" import="no" module="no" objc="no">view.hpp</includes>
-    <class kind="class">rm::ServerView</class>
-    <class kind="class">rm::Server</class>
-    <class kind="class">rm::ServerTimer</class>
+    <class kind="class">rm::OpcuaServerView</class>
+    <class kind="class">rm::OpcuaServer</class>
+    <class kind="class">rm::OpcuaServerTimer</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1827,7 +1828,7 @@
     <filename>d8/df0/subscriber_8hpp.html</filename>
     <includes id="df/d0a/server_8hpp" name="server.hpp" local="yes" import="no" module="no" objc="no">server.hpp</includes>
     <class kind="struct">rm::FieldMetaData</class>
-    <class kind="class">rm::Subscriber</class>
+    <class kind="class">rm::OpcuaSubscriber</class>
     <namespace>rm</namespace>
   </compound>
   <compound kind="file">
@@ -1876,7 +1877,7 @@
     <name>view.hpp</name>
     <path>rmvl/opcua/</path>
     <filename>d8/d11/view_8hpp.html</filename>
-    <includes id="da/d0e/variable_8hpp" name="variable.hpp" local="yes" import="no" module="no" objc="no">variable.hpp</includes>
+    <includes id="dc/d5f/utilities_8hpp" name="utilities.hpp" local="yes" import="no" module="no" objc="no">utilities.hpp</includes>
     <class kind="class">rm::View</class>
     <namespace>rm</namespace>
   </compound>
@@ -2938,228 +2939,6 @@
       <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
       <anchor>a66d83371ae162712b202f11ae10da3fe</anchor>
       <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::Client</name>
-    <filename>da/d78/classrm_1_1Client.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Client</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a5cf51f6b4eb52e25f1cd5f88f3d0ddbc</anchor>
-      <arglist>(std::string_view address, const UserConfig &amp;user={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Client</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a3672245fcba4f1b6d07bd5a3d960db72</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator ClientView</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a775e277bc3b904731bf15c635f1fdc80</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>ok</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ad6230e9e503e8214976c73a523a14cf6</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spin</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ad0e102e552d72573266114d6956f2aee</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spinOnce</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a74b40046bd18231fab4c3815c0e5b2b4</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>shutdown</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a1f5a7897028994c94f0f89b0cad5f521</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInClient</type>
-      <name>node</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a8001ee15cbe169a72bade6b6e4c59125</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ac3422f4af24930e8864f6acbd8b386c7</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ad2243cf4ad77dbd90ef0c2d23351ed47</anchor>
-      <arglist>(const NodeId &amp;node) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ad469a24e53925cb24aefa06aba4f46ba</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>call</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ac72c2b493f910205aa5aa8088f4119f3</anchor>
-      <arglist>(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>callx</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ad5a3d5727551ba288e9d1a7da7f5bae2</anchor>
-      <arglist>(const NodeId &amp;obj_nd, std::string_view name, Args &amp;&amp;...args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>call</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>afb1489f1748be83fc75c3c10124d16ee</anchor>
-      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>callx</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>ae3edea2e6437937a31e48bccd82e7d5a</anchor>
-      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addViewNode</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a162d041ce6ac27acd458b5cea1912f16</anchor>
-      <arglist>(const View &amp;view) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>monitor</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a66a57a298f87814dbb35dc868f25f7df</anchor>
-      <arglist>(NodeId nd, DataChangeNotificationCallback on_change, uint32_t q_size=10)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>monitor</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>a83a2e99021699e6d673653a527478af0</anchor>
-      <arglist>(const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>remove</name>
-      <anchorfile>da/d78/classrm_1_1Client.html</anchorfile>
-      <anchor>af0715f8ac620461fe22d3bb3ebb9bfd1</anchor>
-      <arglist>(NodeId nd)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::ClientTimer</name>
-    <filename>d8/d29/classrm_1_1ClientTimer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>ClientTimer</name>
-      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
-      <anchor>af0301a509272a9f463413ffe2db4f88b</anchor>
-      <arglist>(ClientView cv, double period, std::function&lt; void()&gt; callback)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~ClientTimer</name>
-      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
-      <anchor>aa191ca2e697bd8d2d73bc1353b827aee</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>d8/d29/classrm_1_1ClientTimer.html</anchorfile>
-      <anchor>a550e0df43d48ce962fe47b15aed70d4d</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::ClientView</name>
-    <filename>df/d48/classrm_1_1ClientView.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>ClientView</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a105d991511bf29a139c3caa5154c3c47</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ClientView</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>afd8ab3e36d5eaa5cb5b986771ea55f6a</anchor>
-      <arglist>(UA_Client *client)</arglist>
-    </member>
-    <member kind="function">
-      <type>ClientView &amp;</type>
-      <name>operator=</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>af38da16798d10461cef77c6c17d79063</anchor>
-      <arglist>(UA_Client *const client)</arglist>
-    </member>
-    <member kind="function">
-      <type>UA_Client *</type>
-      <name>get</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a2bad08fbc1c00ac33802dc2375dfff60</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInClient</type>
-      <name>node</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a28e0d50c91a5328aa68fb22ee58bb9ee</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a5ad81321234d982de821084275f6bcad</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a91fc60eabd16e25f64b6a66845e467c0</anchor>
-      <arglist>(const NodeId &amp;nd) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>df/d48/classrm_1_1ClientView.html</anchorfile>
-      <anchor>a5642ffc4757284f8760d0f3da5b740f7</anchor>
-      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7529,6 +7308,228 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::OpcuaClient</name>
+    <filename>da/d69/classrm_1_1OpcuaClient.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaClient</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a1f629c714a13d1e22890f2e6a7a812cc</anchor>
+      <arglist>(std::string_view address, const UserConfig &amp;user={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~OpcuaClient</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a7c0e12578166470afa566f68b75583a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator OpcuaClientView</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>aa45a42f69059cf23a6b3f1600dafe780</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ok</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>ad0c8c690d9e701c42496a2a94b8cc618</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spin</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>ab315f0dab101e2c7f39f05a9a41dde2a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spinOnce</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a66907cdbe567354b43f266b5f050fb40</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>shutdown</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a66edd726f0439eebba1cbb676011ba4e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInClient</type>
+      <name>node</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a3378175819e56bd7bae04ad16ab3ba36</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>ab400c84d98743701c2af49f5d40e8430</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>ade0d4f8bc494c524cd834a740ece6bae</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a6e81f0a9fd80a5eca446b9811bd5df62</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>call</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>af5c12d18aee68b03c47cd08dc4309c67</anchor>
+      <arglist>(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>callx</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a6065cf3b44baeb8f7ae271b42d3324f7</anchor>
+      <arglist>(const NodeId &amp;obj_nd, std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>call</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>adf3e90fb4fa675d557caab443d2785bd</anchor>
+      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>callx</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a2ee1d2cc44b98a819d02687ec1664904</anchor>
+      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addViewNode</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a7dcbbf51799b30542ab304ee00de3ea9</anchor>
+      <arglist>(const View &amp;view) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>monitor</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a089bc81300500543c1f657610e2185ec</anchor>
+      <arglist>(NodeId nd, DataChangeNotificationCallback on_change, uint32_t q_size=10)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>monitor</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>af08673ae641f9d071af8097a1c2393eb</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>remove</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a0a7948e960fa4dfa1da15363716ad52a</anchor>
+      <arglist>(NodeId nd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaClientTimer</name>
+    <filename>d6/d3d/classrm_1_1OpcuaClientTimer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaClientTimer</name>
+      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
+      <anchor>a04935444265324ad3b0df3c2d0135978</anchor>
+      <arglist>(OpcuaClientView cv, double period, std::function&lt; void()&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~OpcuaClientTimer</name>
+      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
+      <anchor>a48c6c8b8528feeac636eef348f37d2c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
+      <anchor>adaff98ee4c0918b39b99b1505d4fd88c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaClientView</name>
+    <filename>dd/d62/classrm_1_1OpcuaClientView.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaClientView</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a6cfeca1523f27d616ff3ee08d8665423</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaClientView</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a5319bab4458a1bb8858c3ff1a1ff463a</anchor>
+      <arglist>(UA_Client *client)</arglist>
+    </member>
+    <member kind="function">
+      <type>OpcuaClientView &amp;</type>
+      <name>operator=</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a9853d95c65d2414eccee8018d9fa77a8</anchor>
+      <arglist>(UA_Client *const client)</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_Client *</type>
+      <name>get</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a9e38cb421e93a3f242d7781fa621fc1f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInClient</type>
+      <name>node</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>acf9d388c1c64162f6933dda522856d01</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a571252596776f8c9362c816d63361092</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a2af36406517675b59a356d27a0c36e05</anchor>
+      <arglist>(const NodeId &amp;nd) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
+      <anchor>a51fc2b5d2e43b81aad1b89415f50c2c8</anchor>
+      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::para::OpcuaParam</name>
     <filename>da/d23/classrm_1_1para_1_1OpcuaParam.html</filename>
     <member kind="function">
@@ -7635,6 +7636,322 @@
       <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>ae8a491b134c1de92ac05c0ec5ca0e277</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaPublisher</name>
+    <filename>d5/d42/classrm_1_1OpcuaPublisher.html</filename>
+    <base>rm::OpcuaServer</base>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaPublisher</name>
+      <anchorfile>d5/d42/classrm_1_1OpcuaPublisher.html</anchorfile>
+      <anchor>a227ee9222b862c53bda61baaa27dd477</anchor>
+      <arglist>(std::string_view pub_name, const std::string &amp;addr, uint16_t port=4840U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>publish</name>
+      <anchorfile>d5/d42/classrm_1_1OpcuaPublisher.html</anchorfile>
+      <anchor>a589f2dc0f953adde53b3552c76b34f5a</anchor>
+      <arglist>(const std::vector&lt; PublishedDataSet &gt; &amp;datas, double duration)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaServer</name>
+    <filename>d2/df6/classrm_1_1OpcuaServer.html</filename>
+    <member kind="typedef">
+      <type>std::pair&lt; ValueCallbackBeforeRead, ValueCallbackAfterWrite &gt;</type>
+      <name>ValueCallbackWrapper</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a4d4f463ce7e18b4b753c9354b1f9046a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; DataSourceRead, DataSourceWrite &gt;</type>
+      <name>DataSourceCallbackWrapper</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a4e565582ea758b513c60275926a52eed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaServer</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a5b63156011a0ea01ed32e7743ebc44c0</anchor>
+      <arglist>(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaServer</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a4223dbe50b0d0ee31a02b81b2c5e1763</anchor>
+      <arglist>(UA_StatusCode(*on_config)(UA_Server *), uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator OpcuaServerView</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a9c8d337e03aef4c6d5d5c59a2999f68e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spin</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a4f334519578b2f22e767afd7b879afd9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spinOnce</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a01db7e955b9d341897dc6669f0cd65b8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>shutdown</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>afa031aba718db9a8f53689b46a7f48e6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~OpcuaServer</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a5109a9e0adeda9e505fbb8b7c0d6feda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInServer</type>
+      <name>node</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a7baa2c706d630c6ff7aabb2b0475d2da</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>ad8fd91e653b99dc0bd8cec7cf8223193</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addVariableTypeNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>af35dbb5fb0624d616a0f316bc1d9438e</anchor>
+      <arglist>(const VariableType &amp;vtype)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addVariableNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a0c71b9e12bd954e42dd1dfd43d13c1a7</anchor>
+      <arglist>(const Variable &amp;val, const NodeId &amp;parent_nd=nodeObjectsFolder) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>addVariableNodeValueCallback</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a0ee93c0eb5c8746f074c0b0a92552072</anchor>
+      <arglist>(NodeId nd, ValueCallbackBeforeRead before_read, ValueCallbackAfterWrite after_write) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addDataSourceVariableNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a6b05e5a05ed096983addee441deb5003</anchor>
+      <arglist>(const DataSourceVariable &amp;val, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a71b2c935cc2e8b93e9a57aec0cc57ac0</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>ae35abb58c8168851f329d9be0f9ff646</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addMethodNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>ac000111ff10a3aa55351f88b4256a744</anchor>
+      <arglist>(const Method &amp;method, const NodeId &amp;parent_nd=nodeObjectsFolder)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>setMethodNodeCallBack</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a005669fa3c2618035c18c3e61edeba5f</anchor>
+      <arglist>(const NodeId &amp;nd, MethodCallback on_method)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addObjectTypeNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a06f2bc9b6522d0232f2cff1e8cc9d0a4</anchor>
+      <arglist>(const ObjectType &amp;otype)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addObjectNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>aae116bdf93f5c076890e2253c228c33b</anchor>
+      <arglist>(const Object &amp;obj, NodeId parent_nd=nodeObjectsFolder)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addViewNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a066c094e390e404cf8d961c2495a9e4e</anchor>
+      <arglist>(const View &amp;view)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addEventTypeNode</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a391565145ec77f2083330401347e9f40</anchor>
+      <arglist>(const EventType &amp;etype)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>triggerEvent</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>aa5ef906f9e1883f7fdd56bde53808d35</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>UA_Server *</type>
+      <name>_server</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>a1c1131a08a6e0eb69c32bf2c4c1cd807</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::atomic_bool</type>
+      <name>_running</name>
+      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
+      <anchor>aa8ef97a89068e5e02f20b675dd00cfb2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaServerTimer</name>
+    <filename>de/da7/classrm_1_1OpcuaServerTimer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaServerTimer</name>
+      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
+      <anchor>ae352214fcb7ae38e84182cbeaeb241e5</anchor>
+      <arglist>(OpcuaServerView sv, double period, std::function&lt; void(OpcuaServerView)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~OpcuaServerTimer</name>
+      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
+      <anchor>a71fa26bfa39844915ef053d41aab7377</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
+      <anchor>acb62581e6ec783f75beca7945a634791</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaServerView</name>
+    <filename>db/d04/classrm_1_1OpcuaServerView.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaServerView</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>ac9837766317c790836dfbd9015b5cc39</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaServerView</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>a49c32a681ba2c6f9d7c453fc2deb0e4b</anchor>
+      <arglist>(UA_Server *server)</arglist>
+    </member>
+    <member kind="function">
+      <type>OpcuaServerView &amp;</type>
+      <name>operator=</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>ae4f27d445d89b086cfc58d5cf7241b9a</anchor>
+      <arglist>(UA_Server *const server)</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_Server *</type>
+      <name>get</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>a41008ff9e41fb05da569224a62a4b7a0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInServer</type>
+      <name>node</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>a1939fdeeb15b8b61726cf1349bd50ee9</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>a176d065b58f5de275c6672e1366ae3ca</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>ab15781169a1ce953b589f6ebf35eaeeb</anchor>
+      <arglist>(const NodeId &amp;nd) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>ab15b26d867c03dbb682f5fd298f0ded8</anchor>
+      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>triggerEvent</name>
+      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
+      <anchor>ab1fa10327aa7ec58418906162c888fa4</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::OpcuaSubscriber</name>
+    <filename>d1/d04/classrm_1_1OpcuaSubscriber.html</filename>
+    <base>rm::OpcuaServer</base>
+    <member kind="function">
+      <type></type>
+      <name>OpcuaSubscriber</name>
+      <anchorfile>d1/d04/classrm_1_1OpcuaSubscriber.html</anchorfile>
+      <anchor>adc94138e0d29ce12decd674822b28faa</anchor>
+      <arglist>(std::string_view sub_name, const std::string &amp;addr, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NodeId &gt;</type>
+      <name>subscribe</name>
+      <anchorfile>d1/d04/classrm_1_1OpcuaSubscriber.html</anchorfile>
+      <anchor>ae2a6a38453bb391ef7dee59efe0ae826</anchor>
+      <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8589,20 +8906,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>auto</type>
-      <name>get_return_object</name>
-      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
-      <anchor>adfbefd8bfa22e48ec5aa7bf16dbea9a8</anchor>
-      <arglist>() noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>FinalAwaiter&lt; void &gt;</type>
-      <name>final_suspend</name>
-      <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
-      <anchor>a95c72250f7a1533159dd1eb8f528d40d</anchor>
-      <arglist>() noexcept</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>return_value</name>
       <anchorfile>dd/df2/classrm_1_1async_1_1Promise.html</anchorfile>
@@ -8633,25 +8936,6 @@
       <anchorfile>d6/d4a/structrm_1_1PublishedDataSet.html</anchorfile>
       <anchor>ad58c956b9694d028edadec45201a6e62</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::Publisher</name>
-    <filename>d7/dfc/classrm_1_1Publisher.html</filename>
-    <base>rm::Server</base>
-    <member kind="function">
-      <type></type>
-      <name>Publisher</name>
-      <anchorfile>d7/dfc/classrm_1_1Publisher.html</anchorfile>
-      <anchor>a83f322ee11e85c05bd6dffb143b9b700</anchor>
-      <arglist>(std::string_view pub_name, const std::string &amp;addr, uint16_t port=4840U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>publish</name>
-      <anchorfile>d7/dfc/classrm_1_1Publisher.html</anchorfile>
-      <anchor>a44f0c93dbba05e5c7cf4cf933fbc168d</anchor>
-      <arglist>(const std::vector&lt; PublishedDataSet &gt; &amp;datas, double duration)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8879,39 +9163,74 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>send</name>
+      <type>Response &amp;</type>
+      <name>attachment</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>ad5a33642f79f4c5dfe12511f84c53ea8</anchor>
-      <arglist>(std::string_view str)</arglist>
+      <anchor>a60b58fe709efae58354d841fa2778cac</anchor>
+      <arglist>(std::string_view filename)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>sendFile</name>
+      <type>Response &amp;</type>
+      <name>download</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>ad88f8062ee27ae0672b70ca80a5e0344</anchor>
-      <arglist>(std::string_view file)</arglist>
+      <anchor>abe80de2881e8fdee6d8ce3060ff9a552</anchor>
+      <arglist>(std::string_view path, std::string_view filename=&quot;&quot;, std::function&lt; void(bool)&gt; fn=nullptr)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>Response &amp;</type>
+      <name>get</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>ab269cca7adfe9a6c1383006cb2cdfc36</anchor>
+      <arglist>(std::string_view head)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response &amp;</type>
       <name>json</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>a4e725070153edee892f47772aea8e5ae</anchor>
-      <arglist>(std::string_view str)</arglist>
+      <anchor>a9c20bcf3cc2cf310230cddb9dff4a3ac</anchor>
+      <arglist>(const ::rm::json &amp;j)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>Response &amp;</type>
       <name>redirect</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>a8beec7f08c526f1efb1ffd7f20b24b3b</anchor>
+      <anchor>ad826fce8dc7fc91c85917d8cb8671bc6</anchor>
       <arglist>(std::string_view url)</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
+      <type>Response &amp;</type>
       <name>redirect</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>afacd5506f4315669ff0ef0966df8f9de</anchor>
+      <anchor>ae7ce146b369e4956b1fe7d9ddc9af32c</anchor>
       <arglist>(uint16_t code, std::string_view url)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response &amp;</type>
+      <name>send</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>af7639045f9daa366a543da149f3a3da2</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response &amp;</type>
+      <name>sendFile</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a154a22ea3803fc3de113216b48f33be6</anchor>
+      <arglist>(std::string_view file)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response &amp;</type>
+      <name>set</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a0ba9e850cde6ab6498db631f4a4c20bb</anchor>
+      <arglist>(std::string_view key, std::string_view value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Response &amp;</type>
+      <name>status</name>
+      <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
+      <anchor>a496fdd94d4b2de0c70abc29645902cbb</anchor>
+      <arglist>(uint16_t code)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -8929,9 +9248,9 @@
     </member>
     <member kind="variable">
       <type>uint16_t</type>
-      <name>status</name>
+      <name>state</name>
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
-      <anchor>aeee9acdb108d2050178b96e7a1d988de</anchor>
+      <anchor>ac87ea5a9f4b8033545c7402e16a057cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -9003,46 +9322,94 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::async::Webapp::RouteEntry</name>
-    <filename>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</filename>
+    <name>rm::async::Router::RouteEntry</name>
+    <filename>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</filename>
     <member kind="function">
       <type></type>
       <name>RouteEntry</name>
-      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
-      <anchor>a4fb6b726eed8bb89864bda1d3f6b5afd</anchor>
+      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>af187d99f7fe6ddbdb6b5e5155f830ed1</anchor>
       <arglist>(std::string_view pattern_str, RouteHandler h)</arglist>
     </member>
     <member kind="variable">
       <type>RoutePattern</type>
       <name>pattern</name>
-      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
-      <anchor>a2714e68975f850f78542578390a85762</anchor>
+      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>a87843fb26f83b64d41ff7d4b362df4a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>RouteHandler</type>
       <name>handler</name>
-      <anchorfile>da/db4/structrm_1_1async_1_1Webapp_1_1RouteEntry.html</anchorfile>
-      <anchor>ae4c402a1fb39bdfed4f44ede63d8b3bf</anchor>
+      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>a3eaa79ed87c10c9d474b8da42f013bf8</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::async::Webapp::RoutePattern</name>
-    <filename>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</filename>
+    <name>rm::async::Router::RoutePattern</name>
+    <filename>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</filename>
     <member kind="function">
       <type></type>
       <name>RoutePattern</name>
-      <anchorfile>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</anchorfile>
-      <anchor>af96d493b1c9d678ca2f3d675495f3779</anchor>
+      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>af3e9647db4bc0f9e8a9d9b34fdf44dae</anchor>
       <arglist>(std::string_view pattern_str)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>match</name>
-      <anchorfile>df/d38/classrm_1_1async_1_1Webapp_1_1RoutePattern.html</anchorfile>
-      <anchor>acfd1767dd949e225340b436e6733d535</anchor>
+      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>a0087ccb63ddb6eaae0b84b55a47a345d</anchor>
       <arglist>(std::string_view path, std::unordered_map&lt; std::string, std::string &gt; &amp;params) const</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::string &amp;</type>
+      <name>pattern</name>
+      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>af0292fc3d3a538e0a23c002a80d783c5</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Router</name>
+    <filename>d2/d3f/classrm_1_1async_1_1Router.html</filename>
+    <class kind="class">rm::async::Router::RoutePattern</class>
+    <class kind="struct">rm::async::Router::RouteEntry</class>
+    <member kind="function">
+      <type>void</type>
+      <name>get</name>
+      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
+      <anchor>af58a1d735316fcaf93b55c08eb8d5487</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>post</name>
+      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
+      <anchor>a88c2e35add7cd1697a331c510ed1b0d4</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>head</name>
+      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
+      <anchor>aa26b8fba1eed64843ab06b93ccd96fb6</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>del</name>
+      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
+      <anchor>af40cc2783ede4a71e710b38e2e3067e4</anchor>
+      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Webapp</name>
+      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
+      <anchor>af614ad06c6b5c938bff659224d8fb28d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10201,284 +10568,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::Server</name>
-    <filename>d4/d06/classrm_1_1Server.html</filename>
-    <member kind="typedef">
-      <type>std::pair&lt; ValueCallbackBeforeRead, ValueCallbackAfterWrite &gt;</type>
-      <name>ValueCallbackWrapper</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a84dff3cdc1993c1771794d28a5d205db</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::pair&lt; DataSourceRead, DataSourceWrite &gt;</type>
-      <name>DataSourceCallbackWrapper</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ad5a3bc8faffeb21b5690f318791a05ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Server</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ac68cb0753c1691848fd601aa49526096</anchor>
-      <arglist>(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Server</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a6e5106e05f484c0a854a38c64aa73aad</anchor>
-      <arglist>(UA_StatusCode(*on_config)(UA_Server *), uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator ServerView</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ac794ed25658bd3d3061e723db54d9408</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spin</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a411149e392f634f8bc7699e4f68693d3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spinOnce</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a2581c87e97cec2a4b1ff68ff84aef4c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>shutdown</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a40c696a0e6a592c4a0cbd97cc184617b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Server</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a24c4b9937aef50cd2f6b773c909278aa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInServer</type>
-      <name>node</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a7a3abff380852a83a6b6ef90652d379d</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a8aee7e67347f37985c7e97601dcdad1d</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addVariableTypeNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a6f0a847ff6a5a96eb207ac58834e2349</anchor>
-      <arglist>(const VariableType &amp;vtype)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addVariableNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a85c7793671d392f12b9cbefe963ebb45</anchor>
-      <arglist>(const Variable &amp;val, const NodeId &amp;parent_nd=nodeObjectsFolder) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>addVariableNodeValueCallback</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a3daa5a6be597a244880f46fc15487275</anchor>
-      <arglist>(NodeId nd, ValueCallbackBeforeRead before_read, ValueCallbackAfterWrite after_write) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addDataSourceVariableNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a2f66b6a3bdc065ac3ef40dbe663f518c</anchor>
-      <arglist>(const DataSourceVariable &amp;val, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>aa1f3646256369f650c31500ea9916777</anchor>
-      <arglist>(const NodeId &amp;node) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a55c7c980b7c0cf19d4a1dd94961f2345</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addMethodNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>afb7923ae9437706294c9bc3dc3f101b1</anchor>
-      <arglist>(const Method &amp;method, const NodeId &amp;parent_nd=nodeObjectsFolder)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>setMethodNodeCallBack</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>aa9586542b43fd76db6295254dd405554</anchor>
-      <arglist>(const NodeId &amp;nd, MethodCallback on_method)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addObjectTypeNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a2a28d28178452af00e4da475164cfc12</anchor>
-      <arglist>(const ObjectType &amp;otype)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addObjectNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a91ea8b7e8b229cff3b5777700167d607</anchor>
-      <arglist>(const Object &amp;obj, NodeId parent_nd=nodeObjectsFolder)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addViewNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a9c950392ce0b9e1c9d3bdc7c1d64bc93</anchor>
-      <arglist>(const View &amp;view)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addEventTypeNode</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a8edb5901115e3ce9ce96517bfad0b86b</anchor>
-      <arglist>(const EventType &amp;etype)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>triggerEvent</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ac4e89de3d08bca91fc5f1d16b6619e13</anchor>
-      <arglist>(const Event &amp;event) const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>UA_Server *</type>
-      <name>_server</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>ad6302edea1f2de764321375a34c9d62f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::atomic_bool</type>
-      <name>_running</name>
-      <anchorfile>d4/d06/classrm_1_1Server.html</anchorfile>
-      <anchor>a1eec62d0e2a3096d4f99e57e541d96db</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::ServerTimer</name>
-    <filename>d9/d40/classrm_1_1ServerTimer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>ServerTimer</name>
-      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
-      <anchor>a3a1748cdb104e5375029abc4f0d170ab</anchor>
-      <arglist>(ServerView sv, double period, std::function&lt; void(ServerView)&gt; callback)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~ServerTimer</name>
-      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
-      <anchor>a774d12fa2bbca43f7fb5cbb561c0546d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>d9/d40/classrm_1_1ServerTimer.html</anchorfile>
-      <anchor>add2dae5a7a4f100b39e0930794153502</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::ServerView</name>
-    <filename>d0/d24/classrm_1_1ServerView.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>ServerView</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a4350ccda29b0f2a382edf7a0e043ff3c</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ServerView</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>af490d17271b42ecede9c761a894eb0de</anchor>
-      <arglist>(UA_Server *server)</arglist>
-    </member>
-    <member kind="function">
-      <type>ServerView &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a7b910acbdb615e57ce54c8f49278ffe5</anchor>
-      <arglist>(UA_Server *const server)</arglist>
-    </member>
-    <member kind="function">
-      <type>UA_Server *</type>
-      <name>get</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>aaec1d61f9699e09087c1750cf15c3ea0</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInServer</type>
-      <name>node</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a0eb25168ae9e1983449c640cccca3617</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a1d1e927943503125e53f2130635aec5f</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a1518cd4be3a88b8d4826c8f32dabab93</anchor>
-      <arglist>(const NodeId &amp;nd) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a57e9110a945f94b77905bb98ecda85e7</anchor>
-      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>triggerEvent</name>
-      <anchorfile>d0/d24/classrm_1_1ServerView.html</anchorfile>
-      <anchor>a862bfb1bb617d554abc0806b12f930a2</anchor>
-      <arglist>(const Event &amp;event) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>rm::async::Socket</name>
     <filename>dc/db7/classrm_1_1async_1_1Socket.html</filename>
     <base>rm::Socket</base>
@@ -10825,25 +10914,6 @@
       <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
       <anchor>a65b6dfdf9da7d246b164103e3004d51a</anchor>
       <arglist>(std::string_view key) noexcept</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::Subscriber</name>
-    <filename>d4/dea/classrm_1_1Subscriber.html</filename>
-    <base>rm::Server</base>
-    <member kind="function">
-      <type></type>
-      <name>Subscriber</name>
-      <anchorfile>d4/dea/classrm_1_1Subscriber.html</anchorfile>
-      <anchor>a50f0cf4369b3a073edda54ff3a3e0364</anchor>
-      <arglist>(std::string_view sub_name, const std::string &amp;addr, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; NodeId &gt;</type>
-      <name>subscribe</name>
-      <anchorfile>d4/dea/classrm_1_1Subscriber.html</anchorfile>
-      <anchor>abebba9d555fc3c41bc01ad21aa9f038b</anchor>
-      <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11819,6 +11889,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>const auto &amp;</type>
+      <name>data</name>
+      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
+      <anchor>a23d53500e1974b2df94553848310fe55</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>Tp</type>
       <name>cast</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
@@ -11851,13 +11928,6 @@
       <name>type</name>
       <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
       <anchor>a71844415e26655a2105444dd4edde5c8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>const auto &amp;</type>
-      <name>data</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a23d53500e1974b2df94553848310fe55</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -11970,17 +12040,17 @@
       <arglist>(std::initializer_list&lt; Tp &gt; il)</arglist>
     </member>
     <member kind="function">
-      <type>Tp</type>
-      <name>cast</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a99d7d1314a397cfec592811395ad1902</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
       <type>const auto &amp;</type>
       <name>data</name>
       <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
       <anchor>a1bf9e6c71e94738be743015e139c0a0a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Tp</type>
+      <name>cast</name>
+      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
+      <anchor>a99d7d1314a397cfec592811395ad1902</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -12096,21 +12166,19 @@
   <compound kind="class">
     <name>rm::async::Webapp</name>
     <filename>d5/d05/classrm_1_1async_1_1Webapp.html</filename>
-    <class kind="struct">rm::async::Webapp::RouteEntry</class>
-    <class kind="class">rm::async::Webapp::RoutePattern</class>
-    <member kind="typedef">
-      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
-      <name>RouteHandler</name>
-      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
-      <anchor>a76d07efe3486250bb93addc2c7a4bcb4</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>Webapp</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
       <anchor>a858c96036ee911c9deb436834562477c</anchor>
       <arglist>(IOContext &amp;io_context)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>use</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>ace5e5651ec4099b71e43dd38dbea9a90</anchor>
+      <arglist>(std::string_view url, const Router &amp;router)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -12251,132 +12319,132 @@
   <compound kind="namespace">
     <name>rm</name>
     <filename>d5/d20/namespacerm.html</filename>
-    <namespace>rm::async</namespace>
-    <namespace>rm::helper</namespace>
     <namespace>rm::numeric_literals</namespace>
     <namespace>rm::para</namespace>
-    <namespace>rm::reflect</namespace>
-    <namespace>rm::requests</namespace>
     <namespace>rm::str</namespace>
-    <class kind="class">rm::Acceptor</class>
-    <class kind="class">rm::Anchor</class>
-    <class kind="struct">rm::Argument</class>
-    <class kind="class">rm::Armor</class>
-    <class kind="class">rm::ArmorDetector</class>
-    <class kind="class">rm::ArmorPredictor</class>
-    <class kind="struct">rm::CameraConfig</class>
-    <class kind="class">rm::CameraExtrinsics</class>
-    <class kind="class">rm::ClassificationNet</class>
-    <class kind="class">rm::Client</class>
-    <class kind="class">rm::ClientTimer</class>
-    <class kind="class">rm::ClientView</class>
-    <class kind="class">rm::combo</class>
-    <class kind="struct">rm::CompensateInfo</class>
-    <class kind="class">rm::compensator</class>
-    <class kind="class">rm::Connector</class>
-    <class kind="class">rm::CurveFitter</class>
-    <class kind="struct">rm::DataSourceVariable</class>
-    <class kind="class">rm::DataType</class>
-    <class kind="struct">rm::DecideInfo</class>
-    <class kind="class">rm::decider</class>
-    <class kind="class">rm::DefaultCombo</class>
-    <class kind="class">rm::DefaultFeature</class>
-    <class kind="class">rm::DefaultGroup</class>
-    <class kind="class">rm::DefaultTracker</class>
-    <class kind="struct">rm::DetectInfo</class>
-    <class kind="class">rm::detector</class>
-    <class kind="class">rm::Endpoint</class>
-    <class kind="class">rm::Event</class>
-    <class kind="class">rm::EventType</class>
-    <class kind="class">rm::EwTopsis</class>
-    <class kind="class">rm::Exception</class>
-    <class kind="class">rm::ExtendedKalmanFilter</class>
-    <class kind="class">rm::feature</class>
-    <class kind="struct">rm::FieldMetaData</class>
-    <class kind="class">rm::GalaxyCamera</class>
-    <class kind="class">rm::GravityCompensator</class>
-    <class kind="class">rm::group</class>
-    <class kind="class">rm::GyroCompensator</class>
-    <class kind="class">rm::GyroDecider</class>
-    <class kind="class">rm::GyroDetector</class>
-    <class kind="class">rm::GyroGroup</class>
-    <class kind="class">rm::GyroPredictor</class>
-    <class kind="class">rm::GyroTracker</class>
-    <class kind="struct">rm::hash_aggregate</class>
-    <class kind="struct">rm::hash_traits</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
-    <class kind="class">rm::HikCamera</class>
-    <class kind="class">rm::HikLightController</class>
-    <class kind="struct">rm::ImuData</class>
-    <class kind="class">rm::Interpolator</class>
-    <class kind="struct">rm::ip</class>
-    <class kind="struct">rm::ipc</class>
-    <class kind="class">rm::KalmanFilter</class>
-    <class kind="class">rm::KalmanFilterStaticDatas</class>
-    <class kind="class">rm::LightBlob</class>
-    <class kind="struct">rm::LightConfig</class>
-    <class kind="class">rm::Method</class>
-    <class kind="class">rm::MqClient</class>
-    <class kind="class">rm::MqServer</class>
-    <class kind="class">rm::Munkres</class>
-    <class kind="class">rm::MvCamera</class>
-    <class kind="class">rm::NodeId</class>
-    <class kind="class">rm::NonlinearSolver</class>
-    <class kind="class">rm::Object</class>
-    <class kind="class">rm::ObjectType</class>
-    <class kind="class">rm::OnnxNet</class>
-    <class kind="class">rm::OptCamera</class>
-    <class kind="struct">rm::OptimalOptions</class>
-    <class kind="class">rm::OPTLightController</class>
-    <class kind="class">rm::Pilot</class>
-    <class kind="class">rm::PipeClient</class>
-    <class kind="class">rm::PipeServer</class>
-    <class kind="class">rm::PlanarTracker</class>
-    <class kind="class">rm::Polynomial</class>
-    <class kind="struct">rm::PostprocessOptions</class>
-    <class kind="struct">rm::PredictInfo</class>
-    <class kind="class">rm::predictor</class>
-    <class kind="struct">rm::PreprocessOptions</class>
-    <class kind="struct">rm::PublishedDataSet</class>
-    <class kind="class">rm::Publisher</class>
+    <namespace>rm::reflect</namespace>
+    <namespace>rm::async</namespace>
+    <namespace>rm::requests</namespace>
+    <namespace>rm::helper</namespace>
     <class kind="class">rm::RaHeap</class>
-    <class kind="struct">rm::Request</class>
-    <class kind="struct">rm::Response</class>
-    <class kind="struct">rm::Rotation</class>
-    <class kind="class">rm::Rune</class>
-    <class kind="class">rm::RuneCenter</class>
-    <class kind="class">rm::RuneDecider</class>
-    <class kind="class">rm::RuneDetector</class>
-    <class kind="class">rm::RuneGroup</class>
-    <class kind="class">rm::RunePredictor</class>
-    <class kind="class">rm::RuneTarget</class>
-    <class kind="class">rm::RuneTracker</class>
+    <class kind="class">rm::UnionFind</class>
+    <class kind="class">rm::KalmanFilterStaticDatas</class>
+    <class kind="class">rm::KalmanFilter</class>
+    <class kind="class">rm::ExtendedKalmanFilter</class>
+    <class kind="class">rm::EwTopsis</class>
+    <class kind="class">rm::Munkres</class>
+    <class kind="class">rm::Polynomial</class>
+    <class kind="class">rm::Interpolator</class>
+    <class kind="class">rm::CurveFitter</class>
+    <class kind="class">rm::NonlinearSolver</class>
     <class kind="class">rm::RungeKutta</class>
     <class kind="class">rm::RungeKutta2</class>
     <class kind="class">rm::RungeKutta3</class>
     <class kind="class">rm::RungeKutta4</class>
-    <class kind="class">rm::SerialPort</class>
-    <class kind="class">rm::Server</class>
-    <class kind="class">rm::ServerTimer</class>
-    <class kind="class">rm::ServerView</class>
-    <class kind="class">rm::Socket</class>
-    <class kind="class">rm::SpiRunePredictor</class>
-    <class kind="class">rm::StateInfo</class>
-    <class kind="class">rm::Subscriber</class>
-    <class kind="class">rm::Tag</class>
-    <class kind="class">rm::TagDetector</class>
+    <class kind="struct">rm::OptimalOptions</class>
+    <class kind="struct">rm::CameraConfig</class>
+    <class kind="class">rm::CameraExtrinsics</class>
+    <class kind="class">rm::GalaxyCamera</class>
+    <class kind="class">rm::HikCamera</class>
+    <class kind="class">rm::MvCamera</class>
+    <class kind="class">rm::OptCamera</class>
     <class kind="class">rm::Timer</class>
-    <class kind="class">rm::tracker</class>
-    <class kind="class">rm::TrackerState</class>
-    <class kind="struct">rm::Translation</class>
-    <class kind="class">rm::TranslationDecider</class>
-    <class kind="class">rm::UnionFind</class>
+    <class kind="class">rm::Exception</class>
+    <class kind="struct">rm::hash_aggregate</class>
+    <class kind="struct">rm::hash_traits</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+    <class kind="class">rm::PipeServer</class>
+    <class kind="class">rm::PipeClient</class>
+    <class kind="class">rm::MqServer</class>
+    <class kind="class">rm::MqClient</class>
     <class kind="struct">rm::URLParseInfo</class>
+    <class kind="struct">rm::Request</class>
+    <class kind="struct">rm::Response</class>
+    <class kind="class">rm::SerialPort</class>
+    <class kind="struct">rm::ipc</class>
+    <class kind="struct">rm::ip</class>
+    <class kind="class">rm::Endpoint</class>
+    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::Acceptor</class>
+    <class kind="class">rm::Connector</class>
+    <class kind="struct">rm::Translation</class>
+    <class kind="struct">rm::Rotation</class>
+    <class kind="struct">rm::ImuData</class>
+    <class kind="class">rm::HikLightController</class>
+    <class kind="struct">rm::LightConfig</class>
+    <class kind="class">rm::OPTLightController</class>
+    <class kind="struct">rm::PreprocessOptions</class>
+    <class kind="struct">rm::PostprocessOptions</class>
+    <class kind="class">rm::OnnxNet</class>
+    <class kind="class">rm::ClassificationNet</class>
+    <class kind="class">rm::OpcuaClientView</class>
+    <class kind="class">rm::OpcuaClient</class>
+    <class kind="class">rm::OpcuaClientTimer</class>
+    <class kind="class">rm::EventType</class>
+    <class kind="class">rm::Event</class>
+    <class kind="struct">rm::Argument</class>
+    <class kind="class">rm::Method</class>
+    <class kind="class">rm::ObjectType</class>
+    <class kind="class">rm::Object</class>
+    <class kind="struct">rm::PublishedDataSet</class>
+    <class kind="class">rm::OpcuaPublisher</class>
+    <class kind="class">rm::OpcuaServerView</class>
+    <class kind="class">rm::OpcuaServer</class>
+    <class kind="class">rm::OpcuaServerTimer</class>
+    <class kind="struct">rm::FieldMetaData</class>
+    <class kind="class">rm::OpcuaSubscriber</class>
+    <class kind="class">rm::NodeId</class>
+    <class kind="class">rm::DataType</class>
     <class kind="struct">rm::UserConfig</class>
-    <class kind="class">rm::Variable</class>
     <class kind="class">rm::VariableType</class>
+    <class kind="class">rm::Variable</class>
+    <class kind="struct">rm::DataSourceVariable</class>
     <class kind="class">rm::View</class>
+    <class kind="class">rm::StateInfo</class>
+    <class kind="class">rm::Anchor</class>
+    <class kind="class">rm::feature</class>
+    <class kind="class">rm::DefaultFeature</class>
+    <class kind="class">rm::LightBlob</class>
+    <class kind="class">rm::Pilot</class>
+    <class kind="class">rm::RuneCenter</class>
+    <class kind="class">rm::RuneTarget</class>
+    <class kind="class">rm::Tag</class>
+    <class kind="class">rm::Armor</class>
+    <class kind="class">rm::combo</class>
+    <class kind="class">rm::DefaultCombo</class>
+    <class kind="class">rm::Rune</class>
+    <class kind="class">rm::GyroTracker</class>
+    <class kind="class">rm::PlanarTracker</class>
+    <class kind="class">rm::RuneTracker</class>
+    <class kind="class">rm::tracker</class>
+    <class kind="class">rm::DefaultTracker</class>
+    <class kind="class">rm::group</class>
+    <class kind="class">rm::DefaultGroup</class>
+    <class kind="class">rm::TrackerState</class>
+    <class kind="class">rm::GyroGroup</class>
+    <class kind="class">rm::RuneGroup</class>
+    <class kind="class">rm::ArmorDetector</class>
+    <class kind="struct">rm::DetectInfo</class>
+    <class kind="class">rm::detector</class>
+    <class kind="class">rm::GyroDetector</class>
+    <class kind="class">rm::RuneDetector</class>
+    <class kind="class">rm::TagDetector</class>
+    <class kind="struct">rm::CompensateInfo</class>
+    <class kind="class">rm::compensator</class>
+    <class kind="class">rm::GravityCompensator</class>
+    <class kind="class">rm::GyroCompensator</class>
+    <class kind="class">rm::ArmorPredictor</class>
+    <class kind="class">rm::GyroPredictor</class>
+    <class kind="struct">rm::PredictInfo</class>
+    <class kind="class">rm::predictor</class>
+    <class kind="class">rm::RunePredictor</class>
+    <class kind="class">rm::SpiRunePredictor</class>
+    <class kind="struct">rm::DecideInfo</class>
+    <class kind="class">rm::decider</class>
+    <class kind="class">rm::GyroDecider</class>
+    <class kind="class">rm::RuneDecider</class>
+    <class kind="class">rm::TranslationDecider</class>
     <concept>rm::IpProtocol</concept>
     <concept>rm::LocalProtocol</concept>
     <member kind="typedef">
@@ -12723,17 +12791,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ClientView, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaClientView, const Variable &amp;)&gt;</type>
       <name>DataChangeNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9821644743e68d3e9f666d6407613bf3</anchor>
+      <anchor>ga0b1b85ed940dc23f2d05a6e0ee16a669</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
       <name>EventNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae79d27f50272b431ff0bf0ab0ecbd858</anchor>
+      <anchor>ga94446d35d4b86d5e8dfe1aaf1c940f3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -12744,31 +12812,31 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
       <name>ValueCallbackBeforeRead</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6fd19152ee69f8eb87ec85795db24c02</anchor>
+      <anchor>ga20f474d3b49008847c901c4a87a35653</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
       <name>ValueCallbackAfterWrite</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga421679c078aaa2f380ff6a56dccefe5b</anchor>
+      <anchor>gab27db81896788eb00792aa9eb57fb716</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
+      <anchor>gae21ab4b5a8fa038874ae35236ee51cc7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
       <name>FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
+      <anchor>ga9bf9d68f21bba17acaa7b32e9f019f01</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -14139,30 +14207,38 @@
     <name>rm::async</name>
     <filename>dd/d22/namespacerm_1_1async.html</filename>
     <namespace>rm::async::requests</namespace>
-    <class kind="class">rm::async::Acceptor</class>
+    <class kind="class">rm::async::Promise</class>
+    <class kind="struct">rm::async::FinalAwaiter</class>
+    <class kind="class">rm::async::BasicPromise</class>
+    <class kind="class">rm::async::Promise&lt; void &gt;</class>
+    <class kind="struct">rm::async::TaskAwaiter</class>
+    <class kind="class">rm::async::Task</class>
+    <class kind="class">rm::async::IOContext</class>
     <class kind="class">rm::async::AsyncIOAwaiter</class>
     <class kind="class">rm::async::AsyncReadAwaiter</class>
     <class kind="class">rm::async::AsyncWriteAwaiter</class>
-    <class kind="class">rm::async::BasicPromise</class>
-    <class kind="class">rm::async::Connector</class>
-    <class kind="struct">rm::async::FinalAwaiter</class>
-    <class kind="class">rm::async::IOContext</class>
-    <class kind="class">rm::async::PipeClient</class>
+    <class kind="class">rm::async::Timer</class>
     <class kind="class">rm::async::PipeServer</class>
-    <class kind="class">rm::async::Promise</class>
-    <class kind="class">rm::async::Promise&lt; void &gt;</class>
+    <class kind="class">rm::async::PipeClient</class>
+    <class kind="class">rm::async::Router</class>
+    <class kind="class">rm::async::Webapp</class>
     <class kind="class">rm::async::SerialPort</class>
     <class kind="class">rm::async::Socket</class>
-    <class kind="class">rm::async::Task</class>
-    <class kind="struct">rm::async::TaskAwaiter</class>
-    <class kind="class">rm::async::Timer</class>
-    <class kind="class">rm::async::Webapp</class>
+    <class kind="class">rm::async::Acceptor</class>
+    <class kind="class">rm::async::Connector</class>
     <concept>rm::async::InvokableTask</concept>
     <member kind="typedef">
       <type>std::reference_wrapper&lt; IOContext &gt;</type>
       <name>IOContextRef</name>
       <anchorfile>d2/da3/group__io.html</anchorfile>
       <anchor>ga466f766a229581f699520b48ad4c82e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
+      <name>RouteHandler</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga36f1a9f14f289ae521be11fa2a7c2702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14280,38 +14356,38 @@
     <name>rm::para</name>
     <filename>d4/d15/namespacerm_1_1para.html</filename>
     <class kind="class">rm::para::AlgorithmParam</class>
-    <class kind="class">rm::para::AnchorParam</class>
-    <class kind="class">rm::para::ArmorDetectorParam</class>
-    <class kind="class">rm::para::ArmorParam</class>
-    <class kind="class">rm::para::ArmorPredictorParam</class>
     <class kind="class">rm::para::CameraParam</class>
     <class kind="class">rm::para::GalaxyCameraParam</class>
+    <class kind="class">rm::para::HikCameraParam</class>
+    <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="class">rm::para::OptCameraParam</class>
+    <class kind="class">rm::para::IoParam</class>
+    <class kind="class">rm::para::HikLightControlParam</class>
+    <class kind="class">rm::para::OpcuaParam</class>
+    <class kind="class">rm::para::AnchorParam</class>
+    <class kind="class">rm::para::LightBlobParam</class>
+    <class kind="class">rm::para::PilotParam</class>
+    <class kind="class">rm::para::RuneCenterParam</class>
+    <class kind="class">rm::para::RuneTargetParam</class>
+    <class kind="class">rm::para::ArmorParam</class>
+    <class kind="class">rm::para::RuneParam</class>
+    <class kind="class">rm::para::GyroTrackerParam</class>
+    <class kind="class">rm::para::PlanarTrackerParam</class>
+    <class kind="class">rm::para::RuneTrackerParam</class>
+    <class kind="class">rm::para::GyroGroupParam</class>
+    <class kind="class">rm::para::RuneGroupParam</class>
+    <class kind="class">rm::para::ArmorDetectorParam</class>
+    <class kind="class">rm::para::GyroDetectorParam</class>
+    <class kind="class">rm::para::RuneDetectorParam</class>
+    <class kind="class">rm::para::TagDetectorParam</class>
     <class kind="class">rm::para::GravityCompensatorParam</class>
     <class kind="class">rm::para::GyroCompensatorParam</class>
-    <class kind="class">rm::para::GyroDeciderParam</class>
-    <class kind="class">rm::para::GyroDetectorParam</class>
-    <class kind="class">rm::para::GyroGroupParam</class>
+    <class kind="class">rm::para::ArmorPredictorParam</class>
     <class kind="class">rm::para::GyroPredictorParam</class>
-    <class kind="class">rm::para::GyroTrackerParam</class>
-    <class kind="class">rm::para::HikCameraParam</class>
-    <class kind="class">rm::para::HikLightControlParam</class>
-    <class kind="class">rm::para::IoParam</class>
-    <class kind="class">rm::para::LightBlobParam</class>
-    <class kind="class">rm::para::MvCameraParam</class>
-    <class kind="class">rm::para::OpcuaParam</class>
-    <class kind="class">rm::para::OptCameraParam</class>
-    <class kind="class">rm::para::PilotParam</class>
-    <class kind="class">rm::para::PlanarTrackerParam</class>
-    <class kind="class">rm::para::RuneCenterParam</class>
-    <class kind="class">rm::para::RuneDeciderParam</class>
-    <class kind="class">rm::para::RuneDetectorParam</class>
-    <class kind="class">rm::para::RuneGroupParam</class>
-    <class kind="class">rm::para::RuneParam</class>
     <class kind="class">rm::para::RunePredictorParam</class>
-    <class kind="class">rm::para::RuneTargetParam</class>
-    <class kind="class">rm::para::RuneTrackerParam</class>
     <class kind="class">rm::para::SpiRunePredictorParam</class>
-    <class kind="class">rm::para::TagDetectorParam</class>
+    <class kind="class">rm::para::GyroDeciderParam</class>
+    <class kind="class">rm::para::RuneDeciderParam</class>
     <class kind="class">rm::para::TranslationDeciderParam</class>
     <member kind="enumeration">
       <type></type>
@@ -16350,6 +16426,7 @@
     <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::Request</class>
     <class kind="struct">rm::Response</class>
+    <class kind="class">rm::async::Router</class>
     <class kind="class">rm::async::Webapp</class>
     <class kind="struct">rm::ipc</class>
     <class kind="struct">rm::ip</class>
@@ -16365,6 +16442,13 @@
       <name>rm::ResponseMiddleware</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
       <anchor>gacd1f5fbb45c26fdfe6ccdf26f49fde4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
+      <name>rm::async::RouteHandler</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>ga36f1a9f14f289ae521be11fa2a7c2702</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16545,9 +16629,9 @@
     <name>opcua</name>
     <title>OPC UA 模块</title>
     <filename>d3/da8/group__opcua.html</filename>
-    <class kind="class">rm::ClientView</class>
-    <class kind="class">rm::Client</class>
-    <class kind="class">rm::ClientTimer</class>
+    <class kind="class">rm::OpcuaClientView</class>
+    <class kind="class">rm::OpcuaClient</class>
+    <class kind="class">rm::OpcuaClientTimer</class>
     <class kind="class">rm::EventType</class>
     <class kind="class">rm::Event</class>
     <class kind="struct">rm::Argument</class>
@@ -16555,12 +16639,12 @@
     <class kind="class">rm::ObjectType</class>
     <class kind="class">rm::Object</class>
     <class kind="struct">rm::PublishedDataSet</class>
-    <class kind="class">rm::Publisher</class>
-    <class kind="class">rm::ServerView</class>
-    <class kind="class">rm::Server</class>
-    <class kind="class">rm::ServerTimer</class>
+    <class kind="class">rm::OpcuaPublisher</class>
+    <class kind="class">rm::OpcuaServerView</class>
+    <class kind="class">rm::OpcuaServer</class>
+    <class kind="class">rm::OpcuaServerTimer</class>
     <class kind="struct">rm::FieldMetaData</class>
-    <class kind="class">rm::Subscriber</class>
+    <class kind="class">rm::OpcuaSubscriber</class>
     <class kind="class">rm::NodeId</class>
     <class kind="class">rm::DataType</class>
     <class kind="struct">rm::UserConfig</class>
@@ -16583,17 +16667,17 @@
       <arglist>(val,...)</arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ClientView, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaClientView, const Variable &amp;)&gt;</type>
       <name>rm::DataChangeNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9821644743e68d3e9f666d6407613bf3</anchor>
+      <anchor>ga0b1b85ed940dc23f2d05a6e0ee16a669</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
       <name>rm::EventNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae79d27f50272b431ff0bf0ab0ecbd858</anchor>
+      <anchor>ga94446d35d4b86d5e8dfe1aaf1c940f3f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16604,31 +16688,31 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
       <name>rm::ValueCallbackBeforeRead</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga6fd19152ee69f8eb87ec85795db24c02</anchor>
+      <anchor>ga20f474d3b49008847c901c4a87a35653</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
       <name>rm::ValueCallbackAfterWrite</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga421679c078aaa2f380ff6a56dccefe5b</anchor>
+      <anchor>gab27db81896788eb00792aa9eb57fb716</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>rm::FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
+      <anchor>gae21ab4b5a8fa038874ae35236ee51cc7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
       <name>rm::FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
+      <anchor>ga9bf9d68f21bba17acaa7b32e9f019f01</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -18028,7 +18112,7 @@
     <title>基于异步 I/O 的协程设施</title>
     <filename>d5/d7a/tutorial_modules_coro.html</filename>
     <docanchor file="d5/d7a/tutorial_modules_coro.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/coro.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2coro</docanchor>
-    <docanchor file="d5/d7a/tutorial_modules_coro.html" title="3. Echo Server 示例">echo_server</docanchor>
+    <docanchor file="d5/d7a/tutorial_modules_coro.html" title="3 Echo Server 示例">echo_server</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_modules_ipc</name>
@@ -18059,12 +18143,12 @@
     <title>工业自动化通信协议 —— OPC UA</title>
     <filename>db/dba/tutorial_modules_opcua.html</filename>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/opcua.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2opcua</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="1. 简介">tutorial_opcua_intro</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="1 简介">tutorial_opcua_intro</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.1 OPC UA 是什么">tutorial_opcua_intro_what</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.2 open62541 库">tutorial_opcua_intro_open62541</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="1.3 地址空间">tutorial_opcua_intro_address_space</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="2. 服务器/客户端">tutorial_opcua_server_client</docanchor>
-    <docanchor file="db/dba/tutorial_modules_opcua.html" title="3. 发布/订阅">tutorial_opcua_pub_sub</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="2 服务器/客户端">tutorial_opcua_server_client</docanchor>
+    <docanchor file="db/dba/tutorial_modules_opcua.html" title="3 发布/订阅">tutorial_opcua_pub_sub</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="4.1 参数加载">opcua_parameters</docanchor>
     <docanchor file="db/dba/tutorial_modules_opcua.html" title="4.2 从 XML 配置 OPC UA">opcua_nodeset_compiler</docanchor>
   </compound>
@@ -18169,6 +18253,568 @@
     <subpage>df/da2/tutorial_py_table_of_contents_bindings.html</subpage>
     <subpage>d3/dbb/tutorial_py_table_of_contents_modules.html</subpage>
     <docanchor file="d8/d88/tutorials_python.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_tutorials.markdown">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__tutorials</docanchor>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
+    <filename>dir_87afdb654b740152ae499aca4400ec55.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/algorithm</name>
+    <path>rmvl/algorithm/</path>
+    <filename>dir_fb2099489813e98dfc0088d784a50e50.html</filename>
+    <file>datastruct.hpp</file>
+    <file>dsp.hpp</file>
+    <file>kalman.hpp</file>
+    <file>math.hpp</file>
+    <file>numcal.hpp</file>
+    <file>pretreat.hpp</file>
+    <file>transform.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
+    <filename>dir_4fef79e7177ba769987a8da36c892c5f.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/camera</name>
+    <path>rmvl/camera/</path>
+    <filename>dir_68b2675841333b17d262d865224a2a6d.html</filename>
+    <file>camutils.hpp</file>
+    <file>galaxy_camera.h</file>
+    <file>hik_camera.h</file>
+    <file>mv_camera.h</file>
+    <file>opt_camera.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/camera</name>
+    <path>rmvlpara/camera/</path>
+    <filename>dir_21c299e62c75071ae2ddbdcf77d332fa.html</filename>
+    <file>camera.h</file>
+    <file>galaxy_camera.h</file>
+    <file>hik_camera.h</file>
+    <file>mv_camera.h</file>
+    <file>opt_camera.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
+    <filename>dir_e47bc4c88201119324ad1742b0acdaea.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/combo</name>
+    <path>rmvl/combo/</path>
+    <filename>dir_51ed543484fef09623ba53bab7eaba50.html</filename>
+    <file>armor.h</file>
+    <file>combo.h</file>
+    <file>rune.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/combo</name>
+    <path>rmvlpara/combo/</path>
+    <filename>dir_12f7e2719c4aef7ca971bef1458b119e.html</filename>
+    <file>armor.h</file>
+    <file>rune.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
+    <filename>dir_b42c29baecd700a1c7b1f9e031116f59.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/compensator</name>
+    <path>rmvl/compensator/</path>
+    <filename>dir_fc26b6c2ce0d675ae37f0ead7fead92a.html</filename>
+    <file>compensator.h</file>
+    <file>gravity_compensator.h</file>
+    <file>gyro_compensator.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/compensator</name>
+    <path>rmvlpara/compensator/</path>
+    <filename>dir_1ff8083e31e2849e01f39dace2d8f642.html</filename>
+    <file>gravity_compensator.h</file>
+    <file>gyro_compensator.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/core</name>
+    <path>rmvl/core/</path>
+    <filename>dir_021e08c4c598f89101b0aa1de0100d4c.html</filename>
+    <file>rmvldef.hpp</file>
+    <file>str.hpp</file>
+    <file>timer.hpp</file>
+    <file>util.hpp</file>
+    <file>version.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
+    <filename>dir_9c77f252bc2dea7aa2340c49f3ddd30c.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/decider</name>
+    <path>rmvl/decider/</path>
+    <filename>dir_88f2670466b86d71a88ebd58d97f1a71.html</filename>
+    <file>decider.h</file>
+    <file>gyro_decider.h</file>
+    <file>rune_decider.h</file>
+    <file>translation_decider.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/decider</name>
+    <path>rmvlpara/decider/</path>
+    <filename>dir_770dfdf8e90513f6bf55f0695bfb3603.html</filename>
+    <file>gyro_decider.h</file>
+    <file>rune_decider.h</file>
+    <file>translation_decider.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
+    <filename>dir_e7c88c51ab0687dfbc5937f04baf7c42.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/detector</name>
+    <path>rmvl/detector/</path>
+    <filename>dir_1b12cb4dd092e360e17e906bcf9b5c0b.html</filename>
+    <file>armor_detector.h</file>
+    <file>detector.h</file>
+    <file>gyro_detector.h</file>
+    <file>rune_detector.h</file>
+    <file>tag_detector.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/detector</name>
+    <path>rmvlpara/detector/</path>
+    <filename>dir_2f07ba103e00493a07ab46a502d692c8.html</filename>
+    <file>armor_detector.h</file>
+    <file>gyro_detector.h</file>
+    <file>rune_detector.h</file>
+    <file>tag_detector.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
+    <filename>dir_e68e8157741866f444e17edd764ebbae.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</dir>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
+    <filename>dir_426a5ffbbb727b99f4225294c6466649.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</dir>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
+    <filename>dir_08cb09a26daf7692ff65867d96a774b2.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/feature</name>
+    <path>rmvl/feature/</path>
+    <filename>dir_ce8ca8b69315f48cd283f789aa0dd056.html</filename>
+    <file>anchor.h</file>
+    <file>feature.h</file>
+    <file>light_blob.h</file>
+    <file>pilot.h</file>
+    <file>rune_center.h</file>
+    <file>rune_target.h</file>
+    <file>tag.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/feature</name>
+    <path>rmvlpara/feature/</path>
+    <filename>dir_3e5cdcbad10e2274392f9bbc748768cf.html</filename>
+    <file>anchor.h</file>
+    <file>light_blob.h</file>
+    <file>pilot.h</file>
+    <file>rune_center.h</file>
+    <file>rune_target.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
+    <filename>dir_bdac78099532942366d2fabd1b27783f.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/group</name>
+    <path>rmvl/group/</path>
+    <filename>dir_993405bde1c40a0b0112bcd0fe9f1fde.html</filename>
+    <file>group.h</file>
+    <file>gyro_group.h</file>
+    <file>rune_group.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/group</name>
+    <path>rmvlpara/group/</path>
+    <filename>dir_f58d8d58cb13d39e9f4987da0b365be7.html</filename>
+    <file>gyro_group.h</file>
+    <file>rune_group.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
+    <filename>dir_58c94e520695a9c6e49a2b567a210ce0.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</dir>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/io</name>
+    <path>rmvl/io/</path>
+    <filename>dir_bc4d7e1d3f923a65e94f5ee75373b3de.html</filename>
+    <file>async.hpp</file>
+    <file>ipc.hpp</file>
+    <file>netapp.hpp</file>
+    <file>serial.hpp</file>
+    <file>socket.hpp</file>
+    <file>util.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/light</name>
+    <path>rmvl/light/</path>
+    <filename>dir_fe3d19a7723048ccf658f16ac60a0a67.html</filename>
+    <file>hik_light_control.h</file>
+    <file>lightutils.hpp</file>
+    <file>opt_light_control.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/light</name>
+    <path>rmvlpara/light/</path>
+    <filename>dir_9d76333e2953167de3e2f20e7e642e19.html</filename>
+    <file>hik_light_control.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
+    <filename>dir_2b68a0c976a94001a3a52c1a9b6afce2.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
+    <filename>dir_c8c342af8d42b5d680657a324064f568.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/ml</name>
+    <path>rmvl/ml/</path>
+    <filename>dir_333d0aeefdeba1c53236985888de9470.html</filename>
+    <file>ort.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
+    <filename>dir_dd14b81ce98f0efb0c27d4605792b06c.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/opcua</name>
+    <path>rmvl/opcua/</path>
+    <filename>dir_6f345ac53a1eefe67f1e600f9a522fd7.html</filename>
+    <file>client.hpp</file>
+    <file>event.hpp</file>
+    <file>method.hpp</file>
+    <file>object.hpp</file>
+    <file>publisher.hpp</file>
+    <file>server.hpp</file>
+    <file>subscriber.hpp</file>
+    <file>utilities.hpp</file>
+    <file>variable.hpp</file>
+    <file>view.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
+    <filename>dir_eac206f591cba90314701160c24e8a17.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
+    <filename>dir_2d16c776959d732bcd5241749ddcece3.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/predictor</name>
+    <path>rmvl/predictor/</path>
+    <filename>dir_be25d590ea0c4f598694de88b9e8de05.html</filename>
+    <file>armor_predictor.h</file>
+    <file>gyro_predictor.h</file>
+    <file>predictor.h</file>
+    <file>rune_predictor.h</file>
+    <file>spi_rune_predictor.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/predictor</name>
+    <path>rmvlpara/predictor/</path>
+    <filename>dir_9cb561993a62f54b93c7cb98ed21d292.html</filename>
+    <file>armor_predictor.h</file>
+    <file>gyro_predictor.h</file>
+    <file>rune_predictor.h</file>
+    <file>spi_rune_predictor.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
+    <filename>dir_6c8551f4d7dc208509ae2df87f489cca.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
+    <filename>dir_e29f7b20dc4e91179ccf6c1e48f7ce8e.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/</path>
+    <filename>dir_1b5159d8e824ca0372c222fccb8e8031.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</dir>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_b84f0685042b53df8576d9a5df8737a7.html</filename>
+    <dir>rmvl/combo</dir>
+    <file>combo.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_3cd5b91f19adc4085f4b4e39e4ff2f73.html</filename>
+    <dir>rmvl/compensator</dir>
+    <file>compensator.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_7a867aa029234ffc6f7eed334080704b.html</filename>
+    <dir>rmvl/decider</dir>
+    <file>decider.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_4b04c2e007ec9137cdcc6b07f15783dd.html</filename>
+    <dir>rmvl/detector</dir>
+    <file>detector.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_5ac3da02857772deca4fc3f808edbaf5.html</filename>
+    <dir>rmvl/feature</dir>
+    <file>feature.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_3369679d0342e0144be24fe8bcb77137.html</filename>
+    <dir>rmvl/group</dir>
+    <file>group.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_6eee36bbafba159c1f307a96cde9296f.html</filename>
+    <dir>rmvl/predictor</dir>
+    <file>predictor.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_05fa650a38f3f5a08a2422c6dda771be.html</filename>
+    <dir>rmvl/tracker</dir>
+    <file>tracker.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_809e963fb58aef5dff5228943502dc0e.html</filename>
+    <file>types.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_143430c183a215e00fc5688a6b00f801.html</filename>
+    <dir>rmvl/algorithm</dir>
+    <file>algorithm.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_0004eea47629e797f98a68d373747388.html</filename>
+    <dir>rmvl/camera</dir>
+    <file>camera.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_8ce2230b18c62fc4f1b2d4c11ea01049.html</filename>
+    <dir>rmvl/core</dir>
+    <file>core.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_e7d32574a6c4fcfa257018e66cd9435e.html</filename>
+    <dir>rmvl/io</dir>
+    <file>io.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_4273a60eceee48416df95d84f85905d9.html</filename>
+    <dir>rmvl/light</dir>
+    <file>light.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_b5c1b52e49bdab802b985f422853f0cc.html</filename>
+    <dir>rmvl/ml</dir>
+    <file>ml.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_d1896504bf09fddf262d44ed95e52f7a.html</filename>
+    <dir>rmvl/opcua</dir>
+    <file>opcua.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_58222088a8cee0a471f253eac143ba17.html</filename>
+    <dir>rmvlpara/combo</dir>
+    <file>combo.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_f0e88a7a5cb5aab28614e8930b567bd3.html</filename>
+    <dir>rmvlpara/compensator</dir>
+    <file>compensator.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_4d60ae5981f7ce87b742481e65bfd802.html</filename>
+    <dir>rmvlpara/decider</dir>
+    <file>decider.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_45e97b84317156a5954d30eced95ddb6.html</filename>
+    <dir>rmvlpara/detector</dir>
+    <file>detector.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_36b455a1b0f3273f108b36652d153a8a.html</filename>
+    <dir>rmvlpara/feature</dir>
+    <file>feature.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_2ea0c873adea199cd62f1107c61b502b.html</filename>
+    <dir>rmvlpara/group</dir>
+    <file>group.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_b7145cfe89c878932d64aa281be9ef49.html</filename>
+    <dir>rmvlpara/predictor</dir>
+    <file>predictor.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_56f1c6dcc74dc20460c2b77be5c46794.html</filename>
+    <dir>rmvlpara/tracker</dir>
+    <file>tracker.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_d0dd8f3c1ff56d88a0ca94359a28aa0a.html</filename>
+    <file>algorithm.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_1a6308d51d814586b9985a0758773f42.html</filename>
+    <dir>rmvlpara/camera</dir>
+    <file>camera.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_c83cd2ae801cf5a6eebca515f7297a6e.html</filename>
+    <file>io.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_0d09ee667c2a9666a31dfa29c1285dbd.html</filename>
+    <dir>rmvlpara/light</dir>
+    <file>light.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara</name>
+    <path>rmvlpara/</path>
+    <filename>dir_0881cfd4956fe17faae321d2c65bc1f4.html</filename>
+    <file>opcua.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>dir_475f633f804384ebfc31fbf8bd129454.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
+    <filename>dir_6b8d1066f9f8a1d0ae64c8dcf96bf1e3.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/tracker</name>
+    <path>rmvl/tracker/</path>
+    <filename>dir_9c45eb0c4acec6c44430f61dff0bf5e7.html</filename>
+    <file>gyro_tracker.h</file>
+    <file>planar_tracker.h</file>
+    <file>rune_tracker.h</file>
+    <file>tracker.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlpara/tracker</name>
+    <path>rmvlpara/tracker/</path>
+    <filename>dir_6b0b4bc53031f88182b1020c744899c6.html</filename>
+    <file>gyro_tracker.h</file>
+    <file>planar_tracker.h</file>
+    <file>rune_tracker.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
+    <filename>dir_5b0b179e83013be2ae877b5cea1eb6e2.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</dir>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
+    <filename>dir_4ef7a8655673da93818ea708ee8785e2.html</filename>
   </compound>
   <compound kind="page">
     <name>index</name>

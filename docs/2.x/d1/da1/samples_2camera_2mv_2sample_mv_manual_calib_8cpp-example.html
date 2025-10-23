@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: samples/camera/mv/sample_mv_manual_calib.cpp</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,35 +63,24 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="doc-content">
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -137,9 +124,9 @@ $(function(){ initResizable(false); });
 <div class="line">                                   0, 1250, 512,</div>
 <div class="line">                                   0, 0, 1};</div>
 <div class="line"><span class="comment">// 畸变系数</span></div>
-<div class="line"><span class="keyword">static</span> <a class="code hl_typedef" href="../../d5/d6c/group__algorithm.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> distCoeffs = {0, 0, 0, 0, 0};</div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="../../d5/d6c/group__algorithm.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> distCoeffs = {0, 0, 0, 0, 0};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
+<div class="line"><span class="keyword">static</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a id="_a2" name="_a2"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="_a3" name="_a3"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="_a4" name="_a4"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> cameraMatrixCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_)</div>
 <div class="line">{</div>
@@ -183,13 +170,13 @@ $(function(){ initResizable(false); });
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
-<div class="line">    capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line">    capture.set(<a id="_a5" name="_a5"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>);</div>
+<div class="line">    capture.set(<a id="_a6" name="_a6"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture.set(<a id="_a7" name="_a7"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture.set(<a id="_a8" name="_a8"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>);</div>
+<div class="line">    capture.set(<a id="_a9" name="_a9"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture.set(<a id="_a10" name="_a10"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture.set(<a id="_a11" name="_a11"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
 <div class="line"> </div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, cv::WINDOW_NORMAL);</div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;控制面板&quot;</span>, cv::WINDOW_AUTOSIZE);</div>
@@ -223,7 +210,7 @@ $(function(){ initResizable(false); });
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(4)));</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(4, 0)) * 5000 + 500);</div>
 <div class="line"> </div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(1000);</div>
+<div class="line">    <a id="a12" name="a12"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(1000);</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>
 <div class="line"> </div>
@@ -307,7 +294,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

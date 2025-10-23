@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['socket_0',['传输层设施 —— Socket',['../d2/d5d/tutorial_modules_socket.html',1,'tutorial_table_of_content_modules']]]
+  ['feature_20模块_0',['如何使用/开发 feature 模块',['../d5/dee/tutorial_extra_how_to_use_feature.html',1,'tutorial_table_of_content_extra']]]
 ];

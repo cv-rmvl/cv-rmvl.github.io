@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 传输层设施 —— Socket</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,33 +63,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,27 +102,27 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">传输层设施 —— Socket</div></div>
+  <div class="headertitle"><div class="title">传输层设施 —— Socket </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md314">1. Socket 基础</a>
+    <a href="#autotoc_md314">1 Socket 基础 </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md315">2. 用法</a>
+    <a href="#autotoc_md315">2 用法 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md316">2.1 同步阻塞</a>
+        <a href="#autotoc_md316">2.1 同步阻塞 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md317">2.2 异步非阻塞</a>
+        <a href="#autotoc_md317">2.2 异步非阻塞 </a>
       </li>
     </ul>
   </li>
@@ -149,19 +136,19 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../d4/d7a/tutorial_modules_netapp.html">网络、应用层设施</a> <br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md314"></a>
-1. Socket 基础</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md314"></a>
+1 Socket 基础</h1>
 <p>Socket 是网络通信的基本操作单元，提供了应用层与传输层之间的接口。Socket 可以分为多种类型，最常见的有流式套接字（TCP）和数据报套接字（UDP）。RMVL 提供了跨平台的 Socket 实现，并提供了协程支持，Windows 下基于 Winsock2 实现，Linux 下基于 BSD Socket 实现。</p>
 <p>除此之外，Socket 还提供了 Unix Domain Socket（Unix 域套接字）支持，允许在同一台机器上的不同进程之间进行高效的通信，使用方法可参考 <a class="el" href="../../d4/d00/tutorial_modules_ipc.html">进程间通信设施 —— IPC</a> 。</p>
-<h1><a class="anchor" id="autotoc_md315"></a>
-2. 用法</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md315"></a>
+2 用法</h1>
 <p>相关类：</p>
 <ul>
 <li>同步： <a class="el" href="../../d0/dff/classrm_1_1Socket.html" title="Socket 会话层">rm::Socket</a>, <a class="el" href="../../dd/df8/classrm_1_1Acceptor.html" title="Socket 接受器">rm::Acceptor</a> 及 <a class="el" href="../../de/ddb/classrm_1_1Connector.html" title="Socket 连接器">rm::Connector</a></li>
 <li>异步： <a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">rm::async::Socket</a>, <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步 Socket 接受器">rm::async::Acceptor</a> 及 <a class="el" href="../../df/d95/classrm_1_1async_1_1Connector.html" title="异步 Socket 连接器">rm::async::Connector</a></li>
 </ul>
 <p>一般工程使用中，推荐客户端使用<span style="color: red">同步阻塞</span>方式进行通信，服务端使用<span style="color: red">异步非阻塞</span>方式进行通信，以兼顾高并发性能。</p>
-<h2><a class="anchor" id="autotoc_md316"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md316"></a>
 2.1 同步阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/dfc/socket_8hpp.html">rmvl/io/socket.hpp</a>&gt;</span></div>
@@ -219,7 +206,7 @@ $(function(){ initResizable(false); });
 <div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, response.c_str());</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Connector_html"><div class="ttname"><a href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></div><div class="ttdoc">Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:257</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md317"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md317"></a>
 2.2 异步非阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/dfc/socket_8hpp.html">rmvl/io/socket.hpp</a>&gt;</span></div>
@@ -258,10 +245,11 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1Acceptor_html"><div class="ttname"><a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">rm::async::Acceptor</a></div><div class="ttdoc">异步 Socket 接受器</div><div class="ttdef"><b>定义</b> socket.hpp:391</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Socket_html"><div class="ttname"><a href="../../dc/db7/classrm_1_1async_1_1Socket.html">rm::async::Socket</a></div><div class="ttdoc">Socket 异步会话层</div><div class="ttdef"><b>定义</b> socket.hpp:297</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Socket_html_a57dcb431d72d0d2a50ced9dad9238c66"><div class="ttname"><a href="../../dc/db7/classrm_1_1async_1_1Socket.html#a57dcb431d72d0d2a50ced9dad9238c66">rm::async::Socket::write</a></div><div class="ttdeci">SocketWriteAwaiter write(std::string_view data)</div><div class="ttdoc">异步写入数据到已连接的 Socket 中</div><div class="ttdef"><b>定义</b> socket.hpp:376</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Socket_html_ae250e6a27ab4e74e11f4300d5bf0e745"><div class="ttname"><a href="../../dc/db7/classrm_1_1async_1_1Socket.html#ae250e6a27ab4e74e11f4300d5bf0e745">rm::async::Socket::read</a></div><div class="ttdeci">SocketReadAwaiter read()</div><div class="ttdoc">异步读取已连接的 Socket 中的数据</div><div class="ttdef"><b>定义</b> socket.hpp:343</div></div>
@@ -299,7 +287,7 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
 <div class="line"> </div>
-<div class="line">    io_context.run();</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1Connector_html"><div class="ttname"><a href="../../df/d95/classrm_1_1async_1_1Connector.html">rm::async::Connector</a></div><div class="ttdoc">异步 Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:441</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Connector_html_a42ba64c0e88a51dd14dc0ed32c0022fa"><div class="ttname"><a href="../../df/d95/classrm_1_1async_1_1Connector.html#a42ba64c0e88a51dd14dc0ed32c0022fa">rm::async::Connector::connect</a></div><div class="ttdeci">ConnectAwaiter connect()</div><div class="ttdoc">异步连接</div><div class="ttdef"><b>定义</b> socket.hpp:480</div></div>
@@ -310,7 +298,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 多维无约束最优化方法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,33 +63,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,12 +102,12 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">多维无约束最优化方法</div></div>
+  <div class="headertitle"><div class="title">多维无约束最优化方法 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -128,22 +115,22 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md167">1. 最速下降法</a>
+        <a href="#autotoc_md167">1 最速下降法 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md168">2. 共轭梯度法</a>
+        <a href="#autotoc_md168">2 共轭梯度法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md169">2.1 共轭方向</a>
+            <a href="#autotoc_md169">2.1 共轭方向 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md170">2.2 共轭梯度方向的构造</a>
+            <a href="#autotoc_md170">2.2 共轭梯度方向的构造 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md171">2.3 迭代步骤</a>
+            <a href="#autotoc_md171">2.3 迭代步骤 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md172">2.4 如何使用</a>
+            <a href="#autotoc_md172">2.4 如何使用 </a>
           </li>
         </ul>
       </li>
@@ -169,8 +156,8 @@ $(function(){ initResizable(false); });
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md167"></a>
-1. 最速下降法</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md167"></a>
+1 最速下降法</h2>
 <p>沿函数的负梯度方向，函数值下降最多，因此，对于存在导数的连续目标函数，最速下降法是一种简单而有效的优化方法。可以将目标函数的负梯度方向作为寻优方向，即</p>
 <p class="formulaDsp">
 \[\boldsymbol s_k=-\frac{\nabla f(\boldsymbol x_k)}{\|\nabla f(\boldsymbol x_k)\|}\tag{1-1}\]
@@ -196,9 +183,9 @@ $(function(){ initResizable(false); });
 <img src="../../fig1-1.png" alt=""/>
 <div class="caption">
 图 1-1 存在脊线的目标函数</div></div>
-    </center><center></center><h2><a class="anchor" id="autotoc_md168"></a>
-2. 共轭梯度法</h2>
-<h3><a class="anchor" id="autotoc_md169"></a>
+    </center><center></center><h2 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
+2 共轭梯度法</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
 2.1 共轭方向</h3>
 <p>同心椭圆族曲线的两平行切线有这样的特性：通过两平行线与椭圆的切点作连线，该直线通过该椭圆族的中心，如图 2-1 所示。因为该连线的方向与两平行线是共轭方向，所以利用这一特性寻优称为共轭方向法。</p>
 <center></center><center><div class="image">
@@ -218,7 +205,7 @@ $(function(){ initResizable(false); });
 <img src="../../fig2-2.png" alt=""/>
 <div class="caption">
 图 2-2 共轭与正交对比</div></div>
-    </center><center></center><h3><a class="anchor" id="autotoc_md170"></a>
+    </center><center></center><h3 class="doxsection"><a class="anchor" id="autotoc_md170"></a>
 2.2 共轭梯度方向的构造</h3>
 <p>在极值点 \(x^*\) 附近，目标函数可以近似为二次型函数，即 </p><p class="formulaDsp">
 \[f(\boldsymbol x)\approx c+\boldsymbol b^T\boldsymbol x+\frac12\boldsymbol x^T\boldsymbol A\boldsymbol x\tag{2-2}\]
@@ -239,7 +226,7 @@ $(function(){ initResizable(false); });
 <p>从而类似式 \(\fml{2-3}\) 有 </p><p class="formulaDsp">
 \[\boldsymbol s_{k+1}=-\nabla f(\boldsymbol x_{k+1})+\beta_k\boldsymbol s_k\]
 </p>
-<h3><a class="anchor" id="autotoc_md171"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
 2.3 迭代步骤</h3>
 <ol type="1">
 <li>选取初始点 \(\boldsymbol x_0\)，设置判断收敛的正数 \(\epsilon\)；</li>
@@ -252,14 +239,14 @@ $(function(){ initResizable(false); });
 </li>
 <li>令 \(k=k+1\)，返回第 3 步。</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md172"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md172"></a>
 2.4 如何使用</h3>
 <p>首先定义一个目标函数，例如：</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
 <div class="line">    <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>然后调用 <code><a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef" title="无约束多维函数的最小值搜索，可参考 多维无约束最优化方法">rm::fminunc</a></code> 函数：</p>
+</div><!-- fragment --><p>然后调用 <span class="tt"><a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef" title="无约束多维函数的最小值搜索，可参考 多维无约束最优化方法">rm::fminunc</a></span> 函数：</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a>(quadratic, {0, 0});</div>
 <div class="ttc" id="agroup__algorithm__optimal_html_ga4a7d105f2c4e5236f0ab9963d7e0cfef"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::valarray&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::valarray&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索，可参考 多维无约束最优化方法</div></div>
 </div><!-- fragment --><p>汇总起来，共轭梯度法的使用实例如下：</p>
@@ -288,7 +275,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

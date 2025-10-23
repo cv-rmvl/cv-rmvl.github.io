@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['构建并安装_20rmvl_0',['构建并安装 RMVL',['../d1/db4/tutorial_install.html',1,'tutorial_table_of_content_config']]]
+  ['例题_0',['例题',['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md218',1,'3 例题'],['../d4/d74/tutorial_modules_union_find.html#autotoc_md233',1,'3 例题']]]
 ];

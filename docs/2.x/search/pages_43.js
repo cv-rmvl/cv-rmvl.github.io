@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['适用于_20python_20的_20algorithm_20模块_0',['适用于 Python 的 algorithm 模块',['../df/dad/tutorial_py_algorithm.html',1,'tutorial_py_table_of_contents_modules']]],
-  ['适用于_20python_20的_20core_20模块_1',['适用于 Python 的 core 模块',['../d7/d9d/tutorial_py_core.html',1,'tutorial_py_table_of_contents_modules']]],
-  ['适用于_20python_20的_20opc_20ua_20模块_2',['适用于 Python 的 OPC UA 模块',['../d4/de5/tutorial_py_opcua.html',1,'tutorial_py_table_of_contents_modules']]]
+  ['卡尔曼增益推导_0',['1.5 卡尔曼增益推导',['../dd/dc3/tutorial_modules_kalman.html#kalman_gain_derivate',1,'']]],
+  ['卡尔曼滤波模块的用法_1',['2 卡尔曼滤波模块的用法',['../dd/dc3/tutorial_modules_kalman.html#autotoc_md185',1,'']]],
+  ['卡尔曼滤波_2',['卡尔曼滤波',['../dd/dc3/tutorial_modules_kalman.html',1,'卡尔曼滤波'],['../dd/dc3/tutorial_modules_kalman.html#autotoc_md182',1,'1 卡尔曼滤波']]]
 ];

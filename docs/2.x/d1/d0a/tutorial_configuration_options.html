@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: RMVL 的编译、配置选项</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,33 +63,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,38 +102,38 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d88/tutorial_table_of_content_config.html">基本介绍</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d88/tutorial_table_of_content_config.html">基本介绍</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">RMVL 的编译、配置选项</div></div>
+  <div class="headertitle"><div class="title">RMVL 的编译、配置选项 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md102">1. 介绍</a>
+    <a href="#autotoc_md102">1 介绍 </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md103">2. 通用选项</a>
+    <a href="#autotoc_md103">2 通用选项 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md104">2.1 调试构建</a>
+        <a href="#autotoc_md104">2.1 调试构建 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md105">2.2 静态构建与动态构建</a>
+        <a href="#autotoc_md105">2.2 静态构建与动态构建 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md106">2.3 构建测试</a>
+        <a href="#autotoc_md106">2.3 构建测试 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md107">2.4 构建有限的模块集</a>
+        <a href="#autotoc_md107">2.4 构建有限的模块集 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md108">3. 功能特性</a>
+    <a href="#autotoc_md108">3 功能特性 </a>
   </li>
 </ul>
 </div>
@@ -155,15 +142,15 @@ $(function(){ initResizable(false); });
 <b>下一篇教程：</b><a class="el" href="../../d1/db4/tutorial_install.html">构建并安装 RMVL</a> <br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md102"></a>
-1. 介绍</h1>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md102"></a>
+1 介绍</h1>
 <p>配置选项可以通过几种不同的方式设置：</p>
 <ul>
-<li>命令行：<code>cmake -Doption=value ...</code></li>
-<li>初始化缓存文件：<code>cmake -C my_options.txt ...</code></li>
-<li>通过GUI进行交互：<code>cmake-gui ..</code></li>
+<li>命令行：<span class="tt">cmake -Doption=value ...</span></li>
+<li>初始化缓存文件：<span class="tt">cmake -C my_options.txt ...</span></li>
+<li>通过GUI进行交互：<span class="tt">cmake-gui ..</span></li>
 </ul>
-<p>大多数选项可以在 RMVL 的 cmake 脚本中找到：<code>rmvl/CMakeLists.txt</code>。</p>
+<p>大多数选项可以在 RMVL 的 cmake 脚本中找到：<span class="tt">rmvl/CMakeLists.txt</span>。</p>
 <p>可以使用 CMake 工具打印所有可用选项：</p>
 <div class="fragment"><div class="line">cd build</div>
 <div class="line"># 初始化配置</div>
@@ -174,12 +161,12 @@ $(function(){ initResizable(false); });
 <div class="line">cmake -LH ..</div>
 <div class="line"># 打印包含高级变量的所有选项</div>
 <div class="line">cmake -LA ..</div>
-</div><!-- fragment --><p>最常见以及最有用的选项一般均以 <code>BUILD_</code>、<code>WITH_</code>、<code>RMVL_</code>、<code>ENABLE_</code> 开头。</p>
-<h1><a class="anchor" id="autotoc_md103"></a>
-2. 通用选项</h1>
-<h2><a class="anchor" id="autotoc_md104"></a>
+</div><!-- fragment --><p>最常见以及最有用的选项一般均以 <span class="tt">BUILD_</span>、<span class="tt">WITH_</span>、<span class="tt">RMVL_</span>、<span class="tt">ENABLE_</span> 开头。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md103"></a>
+2 通用选项</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md104"></a>
 2.1 调试构建</h2>
-<p><code>CMAKE_BUILD_TYPE</code> 选项可用于启用调试构建。生成的二进制文件将包含调试符号，并且大多数编译器优化将被关闭。</p>
+<p><span class="tt">CMAKE_BUILD_TYPE</span> 选项可用于启用调试构建。生成的二进制文件将包含调试符号，并且大多数编译器优化将被关闭。</p>
 <p>在某些平台上（例如 Linux），必须在配置阶段设置构建类型：</p>
 <div class="fragment"><div class="line">cmake -DCMAKE_BUILD_TYPE=Debug ..</div>
 <div class="line">cmake --build .</div>
@@ -191,37 +178,37 @@ $(function(){ initResizable(false); });
 <li><a href="https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_macros.html">Build type in C++ manual</a></li>
 </ul>
 </dd></dl>
-<h2><a class="anchor" id="autotoc_md105"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md105"></a>
 2.2 静态构建与动态构建</h2>
-<p><code>BUILD_SHARED_LIBS</code> 选项控制是否生成动态（<code>*.dll</code>，<code>*.so</code>，<code>*.dylib</code>）或静态（<code>*.a</code>，<code>*.lib</code>）库。默认值取决于目标平台，在大多数情况下它是 <code>OFF</code>。</p>
+<p><span class="tt">BUILD_SHARED_LIBS</span> 选项控制是否生成动态（<span class="tt">*.dll</span>，<span class="tt">*.so</span>，<span class="tt">*.dylib</span>）或静态（<span class="tt">*.a</span>，<span class="tt">*.lib</span>）库。默认值取决于目标平台，在大多数情况下它是 <span class="tt">OFF</span>。</p>
 <p>示例:</p>
 <div class="fragment"><div class="line">cmake -DBUILD_SHARED_LIBS=ON ..</div>
 </div><!-- fragment --><dl class="section see"><dt>参见</dt><dd><ul>
 <li><a href="https://en.wikipedia.org/wiki/Static_library">Static library in Wiki</a></li>
 </ul>
 </dd></dl>
-<p><code>ENABLE_PIC</code> 启用或禁用 <b>位置无关代码</b> 的生成，在构建动态库或打算链接到动态库的静态库时，必须启用此选项，该选项默认值为<code>ON</code>。</p>
+<p><span class="tt">ENABLE_PIC</span> 启用或禁用 <b>位置无关代码</b> 的生成，在构建动态库或打算链接到动态库的静态库时，必须启用此选项，该选项默认值为<span class="tt">ON</span>。</p>
 <dl class="section see"><dt>参见</dt><dd><ul>
 <li><a href="https://en.wikipedia.org/wiki/Position-independent_code">PIC in Wiki</a></li>
 </ul>
 </dd></dl>
-<h2><a class="anchor" id="autotoc_md106"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md106"></a>
 2.3 构建测试</h2>
-<p>有两种测试：准确性（<code>rmvl_*_test</code>）和性能（<code>rmvl_*_perf</code>），默认情况下禁用测试。</p>
+<p>有两种测试：准确性（<span class="tt">rmvl_*_test</span>）和性能（<span class="tt">rmvl_*_perf</span>），默认情况下禁用测试。</p>
 <p>对应的 CMake 选项:</p>
 <div class="fragment"><div class="line">cmake \</div>
 <div class="line">  -DBUILD_TESTS=ON \</div>
 <div class="line">  -DBUILD_PERF_TESTS=ON \</div>
 <div class="line">  ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md107"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md107"></a>
 2.4 构建有限的模块集</h2>
 <p>每个模块都是 modules 目录的一个子目录。可以禁用一个模块：</p>
 <div class="fragment"><div class="line">cmake -DBUILD_rmvl_armor_detector=OFF ..</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md108"></a>
-3. 功能特性</h1>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md108"></a>
+3 功能特性</h1>
 <p>有许多可选的依赖关系和特性可以打开或关闭，CMake 有一个特殊的选项，允许打印所有可用的配置参数：</p>
 <div class="fragment"><div class="line">cmake -LH ..</div>
-</div><!-- fragment --><p>此外，CMake 在运行后也会通过一系列的 <code>message()</code> 命令输出到终端或 GUI 界面，可在此界面查看部分配置情况。 </p>
+</div><!-- fragment --><p>此外，CMake 在运行后也会通过一系列的 <span class="tt">message()</span> 命令输出到终端或 GUI 界面，可在此界面查看部分配置情况。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
@@ -229,7 +216,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['工业自动化通信协议_20——_20opc_20ua_0',['工业自动化通信协议 —— OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'tutorial_table_of_content_modules']]]
+  ['主要模块使用教程_0',['主要模块使用教程',['../d6/d6e/tutorial_table_of_content_modules.html',1,'tutorials']]],
+  ['主要模块_1',['主要模块',['../d1/dfb/intro.html#main_modules',1,'']]]
 ];

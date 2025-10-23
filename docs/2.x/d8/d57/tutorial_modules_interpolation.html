@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: 函数插值方法</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,33 +63,22 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -115,12 +102,12 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">函数插值方法</div></div>
+  <div class="headertitle"><div class="title">函数插值方法 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -128,10 +115,10 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md179">1. Lagrange 插值多项式</a>
+        <a href="#autotoc_md179">1 Lagrange 插值多项式 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md180">2. Newton 插值多项式</a>
+        <a href="#autotoc_md180">2 Newton 插值多项式 </a>
       </li>
     </ul>
   </li>
@@ -146,8 +133,8 @@ $(function(){ initResizable(false); });
  <b>下一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法</a> <br  />
 </p>
 <hr  />
-<h2><a class="anchor" id="autotoc_md179"></a>
-1. Lagrange 插值多项式</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
+1 Lagrange 插值多项式</h2>
 <p>一般对于一个未知函数，若能从已知的一系列点<span style="color: red">近似</span>地使用多项式函数 \(p(x)\)代替原函数 \(f(x)\)，并且满足</p>
 <p class="formulaDsp">
 \[p(x_i)=f(x_i)=y_i\tag{1-1}\]
@@ -207,8 +194,8 @@ l_2(x)&amp;=\prod\limits_{j=0,j\neq2}^2\frac{x-x_j}{x_i-x_j}=\frac{(x-1)(x-2)}{(
 \[\begin{align}p(x)&amp;=y_1l_0(x)+y_2l_1(x)+y_3l_2(x)\\&amp;=(x-2)(x-3)-(x-1)(x-3)+(x-1)(x-2)\\&amp;=x^2-4x+5\end{align}\]
 </p>
 <dl class="section note"><dt>注解</dt><dd>一般的， \(n\)点 \(n\)次插值得到的插值多项式是<span style="color: red"><b>唯一</b></span>的，读者可以自行使用待定系数法验证</dd></dl>
-<h2><a class="anchor" id="autotoc_md180"></a>
-2. Newton 插值多项式</h2>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md180"></a>
+2 Newton 插值多项式</h2>
 <p>相关类 <a class="el" href="../../dc/d80/classrm_1_1Interpolator.html" title="函数插值器">rm::Interpolator</a></p>
 <p>Lagrange 插值基函数存在一些问题，比如当我们需要在原先节点的基础上再次增加若干个节点，这会导致之前计算出的基函数全部失效，需要重新计算。为此我们需要引入新的插值基函数，这里使用 Newton 插值基函数来避免这一问题。</p>
 <p>Newton 插值基函数的表达式如下</p>
@@ -247,7 +234,7 @@ a_2&amp;=f\left[x_0,x_1,x_2\right]=\frac{f\left[x_0,x_1\right]-f\left[x_1,x_2\ri
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

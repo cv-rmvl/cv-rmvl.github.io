@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: samples/detector/hik/sample_hik_armor_size_classify.cpp</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,35 +63,24 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="doc-content">
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -135,36 +122,36 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> wait_time = 1;</div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> collect_num = 2000;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static</span> <a class="code hl_typedef" href="../../db/d9f/classrm_1_1HikCamera.html#a3f7d02d346e4c300fe4661c17ee9c455">rm::HikCamera::ptr</a> capture;                           <span class="comment">// 相机</span></div>
-<div class="line"><span class="keyword">static</span> <span class="keyword">auto</span> p_detector = <a id="a0" name="a0"></a><a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>(); <span class="comment">// 识别模块</span></div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="../../db/d9f/classrm_1_1HikCamera.html#a3f7d02d346e4c300fe4661c17ee9c455">rm::HikCamera::ptr</a> capture;                           <span class="comment">// 相机</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">auto</span> p_detector = <a id="a1" name="a1"></a><a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>(); <span class="comment">// 识别模块</span></div>
 <div class="line"><span class="keyword">static</span> cv::Mat frame;                                        <span class="comment">// 帧图像</span></div>
 <div class="line"><span class="keyword">static</span> std::vector&lt;rm::group::ptr&gt; groups;                   <span class="comment">// 序列组列表</span></div>
 <div class="line"><span class="keyword">static</span> cv::Mat armor_samples;                                <span class="comment">// 装甲板信息样本</span></div>
 <div class="line"><span class="keyword">static</span> cv::Mat armor_responses;                              <span class="comment">// 装甲板响应/标签</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> collect(<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">rm::PixChannel</a> color, <a class="code hl_enumeration" href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> type, <span class="keywordtype">int</span> begin_idx)</div>
+<div class="line"><span class="keywordtype">void</span> collect(<a id="_a2" name="_a2"></a><a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">rm::PixChannel</a> color, <a id="_a3" name="_a3"></a><a class="code hl_enumeration" href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> type, <span class="keywordtype">int</span> begin_idx)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; collect_num; ++idx)</div>
 <div class="line">    {</div>
 <div class="line">        capture-&gt;read(frame);</div>
 <div class="line">        <span class="keywordflow">if</span> (frame.empty())</div>
-<div class="line">            <a id="a1" name="a1"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7">RMVL_StsBadSize</a>, <span class="stringliteral">&quot;frame is empty, something wrong with the camera.&quot;</span>);</div>
-<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, frame, color, <a id="_a2" name="_a2"></a><a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
+<div class="line">            <a id="a4" name="a4"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a id="_a5" name="_a5"></a><a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7">RMVL_StsBadSize</a>, <span class="stringliteral">&quot;frame is empty, something wrong with the camera.&quot;</span>);</div>
+<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, frame, color, <a id="_a6" name="_a6"></a><a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a id="_a7" name="_a7"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;combos = info.combos;</div>
 <div class="line">        <span class="keywordflow">if</span> (combos.size() != 1)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> (combos.size() &gt; 1)</div>
-<div class="line">                <a id="a3" name="a3"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;Size of the combos is greater than 1, size = %zu&quot;</span>, combos.size());</div>
+<div class="line">                <a id="a8" name="a8"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;Size of the combos is greater than 1, size = %zu&quot;</span>, combos.size());</div>
 <div class="line">            idx--;</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
-<div class="line">            <span class="keyword">auto</span> p_armor = <a id="a4" name="a4"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front());</div>
+<div class="line">            <span class="keyword">auto</span> p_armor = <a id="a9" name="a9"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front());</div>
 <div class="line">            <span class="comment">// 收集数据</span></div>
 <div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 0) = p_armor-&gt;getComboRatio();  <span class="comment">// 装甲板长宽比</span></div>
 <div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 1) = p_armor-&gt;getWidthRatio();  <span class="comment">// 灯条宽度比</span></div>
 <div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 2) = p_armor-&gt;getLengthRatio(); <span class="comment">// 灯条长度比</span></div>
-<div class="line">            armor_responses.at&lt;<span class="keywordtype">int</span>&gt;(begin_idx + idx) = type == <a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a> ? 1 : 2;</div>
+<div class="line">            armor_responses.at&lt;<span class="keywordtype">int</span>&gt;(begin_idx + idx) = type == <a id="_a10" name="_a10"></a><a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a> ? 1 : 2;</div>
 <div class="line"> </div>
 <div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;corners = p_armor-&gt;corners();</div>
 <div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; ++i)</div>
@@ -205,7 +192,7 @@ $(function(){ initResizable(false); });
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 获取命令行参数</span></div>
-<div class="line">    <span class="keyword">auto</span> color = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;color&quot;</span>) == 0 ? <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::PixChannel::BLUE</a> : <a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>::<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a>::<a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">RED</a>;</div>
+<div class="line">    <span class="keyword">auto</span> color = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;color&quot;</span>) == 0 ? <a id="_a11" name="_a11"></a><a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::PixChannel::BLUE</a> : <a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>::<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a>::<a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">RED</a>;</div>
 <div class="line">    std::string model;</div>
 <div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;model&quot;</span>))</div>
 <div class="line">        model = parser.get&lt;std::string&gt;(<span class="stringliteral">&quot;model&quot;</span>);</div>
@@ -216,7 +203,7 @@ $(function(){ initResizable(false); });
 <div class="line">    armor_responses = cv::Mat::zeros(collect_num * 2, 1, CV_32SC1);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 设置相机参数</span></div>
-<div class="line">    capture = <a id="a5" name="a5"></a><a class="code hl_function" href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a>(<a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
+<div class="line">    capture = <a id="a12" name="a12"></a><a class="code hl_function" href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a>(<a id="_a13" name="_a13"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="_a14" name="_a14"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="_a15" name="_a15"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
 <div class="line">    <span class="keywordflow">if</span> (!capture-&gt;isOpened())</div>
 <div class="line">    {</div>
 <div class="line">        printf(<span class="stringliteral">&quot;相机打开失败\n&quot;</span>);</div>
@@ -238,13 +225,13 @@ $(function(){ initResizable(false); });
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>, 0);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>, 0);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
-<div class="line">    capture-&gt;set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a16" name="_a16"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>, 0);</div>
+<div class="line">    capture-&gt;set(<a id="_a17" name="_a17"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture-&gt;set(<a id="_a18" name="_a18"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a19" name="_a19"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>, 0);</div>
+<div class="line">    capture-&gt;set(<a id="_a20" name="_a20"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a21" name="_a21"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a22" name="_a22"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
 <div class="line"> </div>
 <div class="line">    cv::Ptr&lt;cv::ml::SVM&gt; p_svm = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
@@ -260,7 +247,7 @@ $(function(){ initResizable(false); });
 <div class="line">            <span class="keywordflow">return</span> 0;</div>
 <div class="line">        collect(color, <a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a>, 0);</div>
 <div class="line">        cv::destroyAllWindows();</div>
-<div class="line">        <a id="a6" name="a6"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(10);</div>
+<div class="line">        <a id="a23" name="a23"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(10);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// --------------------- 大装甲板收集 ---------------------</span></div>
 <div class="line">        printf(<span class="stringliteral">&quot;\033[32m大装甲板\033[0m信息收集即将开始...\n&quot;</span>);</div>
@@ -268,7 +255,7 @@ $(function(){ initResizable(false); });
 <div class="line">        std::cin &gt;&gt; key_str;</div>
 <div class="line">        <span class="keywordflow">if</span> (key_str != <span class="stringliteral">&quot;ok&quot;</span>)</div>
 <div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        collect(color, <a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a>, collect_num);</div>
+<div class="line">        collect(color, <a id="_a24" name="_a24"></a><a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a>, collect_num);</div>
 <div class="line">        cv::destroyAllWindows();</div>
 <div class="line">        <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(10);</div>
 <div class="line"> </div>
@@ -279,7 +266,7 @@ $(function(){ initResizable(false); });
 <div class="line">        <span class="keywordflow">if</span> (p_svm-&gt;train(armor_samples, cv::ml::ROW_SAMPLE, armor_responses))</div>
 <div class="line">            p_svm-&gt;save(<span class="stringliteral">&quot;out_armor_size.xml&quot;</span>); <span class="comment">// 导出模型</span></div>
 <div class="line">        <span class="keywordflow">else</span></div>
-<div class="line">            <a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a>, <span class="stringliteral">&quot;Failed to train the SVM.&quot;</span>);</div>
+<div class="line">            <a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a id="_a25" name="_a25"></a><a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a>, <span class="stringliteral">&quot;Failed to train the SVM.&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// 测试</span></div>
 <div class="line">        printf(<span class="stringliteral">&quot;想要进行测试吗？\n&quot;</span>);</div>
@@ -360,7 +347,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

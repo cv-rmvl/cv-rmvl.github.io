@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['非线性方程（组）数值解与迭代法_0',['非线性方程（组）数值解与迭代法',['../d8/daf/tutorial_modules_func_iteration.html',1,'tutorial_table_of_content_modules']]],
-  ['非线性最小二乘_1',['非线性最小二乘',['../d8/dd7/tutorial_modules_lsqnonlin.html',1,'tutorial_table_of_content_modules']]]
+  ['发出操控指令至下位机_0',['3 发出操控指令至下位机',['../db/d4f/tutorial_extra_upper_write_data.html#autotoc_md95',1,'']]],
+  ['发布_20订阅_1',['3 发布/订阅',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_pub_sub',1,'']]]
 ];

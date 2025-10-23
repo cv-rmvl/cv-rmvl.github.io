@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['安装总览_0',['安装总览',['../d2/d60/tutorial_install_overview.html',1,'tutorial_table_of_content_config']]]
+  ['串口通信模块_0',['串口通信模块',['../d3/da4/tutorial_modules_serial.html',1,'tutorial_table_of_content_modules']]]
 ];

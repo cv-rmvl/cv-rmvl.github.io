@@ -1,8 +1,8 @@
 var searchData=
 [
   ['data_0',['data',['../d4/d8b/classrm_1_1EventType.html#a59afb058fc821931daabab607dbb20a3',1,'rm::EventType::data()'],['../da/d88/classrm_1_1Event.html#aef8d53c69b0e55cf3d4fac52a7d3baf5',1,'rm::Event::data()'],['../db/d81/classrm_1_1NodeId.html#a2ede2d7ac51431ba4ebf9ad5ab901533',1,'rm::NodeId::data()'],['../d9/de2/classrm_1_1VariableType.html#a1bf9e6c71e94738be743015e139c0a0a',1,'rm::VariableType::data()'],['../df/db8/classrm_1_1Variable.html#a23d53500e1974b2df94553848310fe55',1,'rm::Variable::data()'],['../d2/de9/classrm_1_1View.html#aa722e98ca82adf9ba970868a77e123d2',1,'rm::View::data()'],['../de/dee/classrm_1_1combo.html#a8373fc6dd1e85ef96ade6777bbf1e024',1,'rm::combo::data()'],['../d6/dd2/classrm_1_1tracker.html#a45364a0fdef7fe79df2984f316aec99c',1,'rm::tracker::data()'],['../d6/d6c/classrm_1_1group.html#aaba382ddc65a2911befeb6fe3f3ecc8a',1,'rm::group::data()']]],
-  ['datachangenotificationcallback_1',['DataChangeNotificationCallback',['../d3/da8/group__opcua.html#ga9821644743e68d3e9f666d6407613bf3',1,'rm']]],
-  ['datasourcecallbackwrapper_2',['DataSourceCallbackWrapper',['../d4/d06/classrm_1_1Server.html#ad5a3bc8faffeb21b5690f318791a05ed',1,'rm::Server']]],
+  ['datachangenotificationcallback_1',['DataChangeNotificationCallback',['../d3/da8/group__opcua.html#ga0b1b85ed940dc23f2d05a6e0ee16a669',1,'rm']]],
+  ['datasourcecallbackwrapper_2',['DataSourceCallbackWrapper',['../d2/df6/classrm_1_1OpcuaServer.html#a4e565582ea758b513c60275926a52eed',1,'rm::OpcuaServer']]],
   ['datasourceread_3',['DataSourceRead',['../d3/da8/group__opcua.html#ga54e4a1eb9a1457b075f3b03b60e4e8f7',1,'rm']]],
   ['datasourcevariable_4',['DataSourceVariable',['../db/df0/structrm_1_1DataSourceVariable.html',1,'rm']]],
   ['datasourcewrite_5',['DataSourceWrite',['../d3/da8/group__opcua.html#ga5a581eca483d29be2e2894c313e7ec1f',1,'rm']]],
@@ -26,11 +26,11 @@ var searchData=
   ['defaulttracker_23',['DefaultTracker',['../d3/d25/classrm_1_1DefaultTracker.html',1,'rm']]],
   ['deg_24',['DEG',['../d5/d6c/group__algorithm.html#ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4',1,'rm']]],
   ['deg2rad_25',['deg2rad',['../d5/d6c/group__algorithm.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
-  ['del_26',['del',['../d5/d05/classrm_1_1async_1_1Webapp.html#a616ac5cbf31cae60d5cfcd6031add9ba',1,'rm::async::Webapp::del()'],['../d6/dd4/group__io__net.html#ga7f288593fbb01a63dac73b90ca9a2cc9',1,'rm::requests::del()'],['../d6/dd4/group__io__net.html#gadb6ac2766171c3158c0d7086874ed724',1,'rm::async::requests::del()']]],
+  ['del_26',['del',['../d2/d3f/classrm_1_1async_1_1Router.html#af40cc2783ede4a71e710b38e2e3067e4',1,'rm::async::Router::del()'],['../d5/d05/classrm_1_1async_1_1Webapp.html#a616ac5cbf31cae60d5cfcd6031add9ba',1,'rm::async::Webapp::del()'],['../d6/dd4/group__io__net.html#ga7f288593fbb01a63dac73b90ca9a2cc9',1,'rm::requests::del()'],['../d6/dd4/group__io__net.html#gadb6ac2766171c3158c0d7086874ed724',1,'rm::async::requests::del()']]],
   ['delay_5fafter_5fwrite_27',['DELAY_AFTER_WRITE',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html#ac69289ebae5a4d044d582213bd622a8e',1,'rm::para::HikLightControlParam']]],
   ['delete_28',['Delete',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18',1,'rm']]],
   ['delta_5fy_29',['delta_y',['../d5/d08/classrm_1_1TrackerState.html#a42b1a610feeff38cd3fdf48475038d5b',1,'rm::TrackerState::delta_y() const'],['../d5/d08/classrm_1_1TrackerState.html#ae3ed9e52f861d23dbdfe1fc785362c92',1,'rm::TrackerState::delta_y(float dy)']]],
-  ['demo_30',['4. 使用 Demo',['../df/d2c/tutorial_modules_camera.html#autotoc_md255',1,'']]],
+  ['demo_30',['4 使用 Demo',['../df/d2c/tutorial_modules_camera.html#autotoc_md255',1,'']]],
   ['derivative_31',['derivative',['../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e',1,'rm']]],
   ['description_32',['description',['../d4/d8b/classrm_1_1EventType.html#af236d984eebbfef63fb53554967a18c6',1,'rm::EventType::description'],['../df/d48/structrm_1_1Argument.html#add099a48515506b1cb38e5b82a924503',1,'rm::Argument::description'],['../d4/d91/classrm_1_1Method.html#a3b6e001428888146e110283033414226',1,'rm::Method::description'],['../d4/d40/classrm_1_1ObjectType.html#a31ed7022954d8b57879561007ec36934',1,'rm::ObjectType::description'],['../d8/d9b/classrm_1_1Object.html#a38ff99ec5033cc00b4ea87570cefe493',1,'rm::Object::description'],['../d9/de2/classrm_1_1VariableType.html#ac0deffd48f3ae92d9dd2d25f51ec0749',1,'rm::VariableType::description'],['../df/db8/classrm_1_1Variable.html#ae2192d1434ef12e7db2be77b8d616899',1,'rm::Variable::description'],['../db/df0/structrm_1_1DataSourceVariable.html#a55351ac8f817f4491044cd235903575e',1,'rm::DataSourceVariable::description'],['../d2/de9/classrm_1_1View.html#a4dc6a4eef690e304f864b3485e502cb9',1,'rm::View::description']]],
   ['detect_33',['detect',['../db/d6e/classrm_1_1ArmorDetector.html#a51343ca62795031ad91d572d04753cd6',1,'rm::ArmorDetector::detect()'],['../d3/d77/classrm_1_1detector.html#a4ff537c0ba51075fc229c1f171827565',1,'rm::detector::detect()'],['../dc/d93/classrm_1_1GyroDetector.html#a38815d805b50d6c850e7877114baef0b',1,'rm::GyroDetector::detect()'],['../d6/deb/classrm_1_1RuneDetector.html#a96746f8bbce7b9b055fc87fdcc99803e',1,'rm::RuneDetector::detect()'],['../d8/d35/classrm_1_1TagDetector.html#a0911d9680227b5334efd2e2e4107eb4f',1,'rm::TagDetector::detect()']]],
@@ -53,11 +53,12 @@ var searchData=
   ['distcoeffs_50',['distCoeffs',['../d4/dc5/classrm_1_1para_1_1CameraParam.html#a743d97b84b0203eeaa451bff66400089',1,'rm::para::CameraParam']]],
   ['disturb_5fradius_5fratio_51',['DISTURB_RADIUS_RATIO',['../d9/de0/classrm_1_1para_1_1RuneDeciderParam.html#a1d5a2c956dec930976b7aa19c5ab9b28',1,'rm::para::RuneDeciderParam']]],
   ['document_2emd_52',['document.md',['../d0/df7/document_8md.html',1,'']]],
-  ['domain_20socket_53',['3. Unix Domain Socket',['../d4/d00/tutorial_modules_ipc.html#autotoc_md271',1,'']]],
+  ['domain_20socket_53',['3 Unix Domain Socket',['../d4/d00/tutorial_modules_ipc.html#autotoc_md271',1,'']]],
   ['down_54',['DOWN',['../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f',1,'rm']]],
-  ['doxygen_20概述_55',['Doxygen 概述',['../d5/d72/tutorial_document.html#tutorial_documentation_overview',1,'']]],
-  ['draw_56',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]],
-  ['dsp_2ehpp_57',['dsp.hpp',['../dd/d83/dsp_8hpp.html',1,'']]],
-  ['dx_58',['dx',['../d3/dd3/structrm_1_1OptimalOptions.html#a4dfdc7ebce85a1aaa6ee3e29ad77126b',1,'rm::OptimalOptions']]],
-  ['dynamic_5fprediction_59',['dynamic_prediction',['../d7/d51/structrm_1_1PredictInfo.html#ae4653ee156cd01710c642c8cd92b68a3',1,'rm::PredictInfo']]]
+  ['download_55',['download',['../d1/d1b/structrm_1_1Response.html#abe80de2881e8fdee6d8ce3060ff9a552',1,'rm::Response']]],
+  ['doxygen_20概述_56',['Doxygen 概述',['../d5/d72/tutorial_document.html#tutorial_documentation_overview',1,'']]],
+  ['draw_57',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]],
+  ['dsp_2ehpp_58',['dsp.hpp',['../dd/d83/dsp_8hpp.html',1,'']]],
+  ['dx_59',['dx',['../d3/dd3/structrm_1_1OptimalOptions.html#a4dfdc7ebce85a1aaa6ee3e29ad77126b',1,'rm::OptimalOptions']]],
+  ['dynamic_5fprediction_60',['dynamic_prediction',['../d7/d51/structrm_1_1PredictInfo.html#ae4653ee156cd01710c642c8cd92b68a3',1,'rm::PredictInfo']]]
 ];

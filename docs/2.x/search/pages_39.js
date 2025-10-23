@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['绑定功能_0',['RMVL-Python 绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html',1,'tutorials_python']]]
+  ['函数插值方法_0',['函数插值方法',['../d8/d57/tutorial_modules_interpolation.html',1,'tutorial_table_of_content_modules']]]
 ];

@@ -16,7 +16,7 @@ var searchData=
   ['translationdecider_13',['TranslationDecider',['../de/dfc/classrm_1_1TranslationDecider.html#a687d2dcf2fbd1e1fb1dde9ae27c96d48',1,'rm::TranslationDecider']]],
   ['translationdeciderparam_14',['TranslationDeciderParam',['../d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html#a15910a1614927b54e0a0d08aabc5e8b9',1,'rm::para::TranslationDeciderParam']]],
   ['trigger_15',['trigger',['../db/d24/classrm_1_1OPTLightController.html#ace49b596f62d176595798273bc1fa7f9',1,'rm::OPTLightController']]],
-  ['triggerevent_16',['triggerEvent',['../d0/d24/classrm_1_1ServerView.html#a862bfb1bb617d554abc0806b12f930a2',1,'rm::ServerView::triggerEvent()'],['../d4/d06/classrm_1_1Server.html#ac4e89de3d08bca91fc5f1d16b6619e13',1,'rm::Server::triggerEvent()']]],
+  ['triggerevent_16',['triggerEvent',['../db/d04/classrm_1_1OpcuaServerView.html#ab1fa10327aa7ec58418906162c888fa4',1,'rm::OpcuaServerView::triggerEvent()'],['../d2/df6/classrm_1_1OpcuaServer.html#aa5ef906f9e1883f7fdd56bde53808d35',1,'rm::OpcuaServer::triggerEvent()']]],
   ['tvec_17',['tvec',['../da/dbf/classrm_1_1CameraExtrinsics.html#adaae13c248b8ba4aa1638c2ca4a27b2e',1,'rm::CameraExtrinsics::tvec() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#aa998bc8aca661400075e6753edc30b5e',1,'rm::CameraExtrinsics::tvec(const cv::Vec3f &amp;tvec)']]],
   ['type_18',['type',['../dc/db5/classrm_1_1Endpoint.html#ac69adfc36be16e53ca971dd52b97479c',1,'rm::Endpoint::type()'],['../da/d88/classrm_1_1Event.html#a99b5b919975e18435e1c873de9cafa4f',1,'rm::Event::type()'],['../d8/d9b/classrm_1_1Object.html#a7af282453c720d90d00b9d365f38c135',1,'rm::Object::type()'],['../df/db8/classrm_1_1Variable.html#a71844415e26655a2105444dd4edde5c8',1,'rm::Variable::type()']]]
 ];

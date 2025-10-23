@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['顶层模块开发基本流程_0',['顶层模块开发基本流程',['../d8/d29/tutorial_extra_upper_base.html',1,'tutorial_table_of_content_extra']]]
+  ['变量监视_0',['2.6.1 变量监视',['../db/dba/tutorial_modules_opcua.html#autotoc_md293',1,'']]],
+  ['变量_1',['2.2 变量',['../db/dba/tutorial_modules_opcua.html#autotoc_md288',1,'']]]
 ];

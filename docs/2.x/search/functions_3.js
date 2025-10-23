@@ -6,12 +6,13 @@ var searchData=
   ['decider_3',['decider',['../d9/d29/classrm_1_1decider.html#abbd150ec8eb71a134f2421a861176a26',1,'rm::decider']]],
   ['defaultfeature_4',['DefaultFeature',['../de/de0/classrm_1_1DefaultFeature.html#ac920722958ef17c806a894bf5ad8dc4b',1,'rm::DefaultFeature::DefaultFeature()=default'],['../de/de0/classrm_1_1DefaultFeature.html#a61c74ad2dc9ef03298a258ac0d43fecb',1,'rm::DefaultFeature::DefaultFeature(const cv::Point2f &amp;p)']]],
   ['deg2rad_5',['deg2rad',['../d5/d6c/group__algorithm.html#gae2276554862bce45bc46aa87ac16662b',1,'rm']]],
-  ['del_6',['del',['../d5/d05/classrm_1_1async_1_1Webapp.html#a616ac5cbf31cae60d5cfcd6031add9ba',1,'rm::async::Webapp::del()'],['../d6/dd4/group__io__net.html#ga7f288593fbb01a63dac73b90ca9a2cc9',1,'rm::requests::del()'],['../d6/dd4/group__io__net.html#gadb6ac2766171c3158c0d7086874ed724',1,'rm::async::requests::del()']]],
+  ['del_6',['del',['../d2/d3f/classrm_1_1async_1_1Router.html#af40cc2783ede4a71e710b38e2e3067e4',1,'rm::async::Router::del()'],['../d5/d05/classrm_1_1async_1_1Webapp.html#a616ac5cbf31cae60d5cfcd6031add9ba',1,'rm::async::Webapp::del()'],['../d6/dd4/group__io__net.html#ga7f288593fbb01a63dac73b90ca9a2cc9',1,'rm::requests::del()'],['../d6/dd4/group__io__net.html#gadb6ac2766171c3158c0d7086874ed724',1,'rm::async::requests::del()']]],
   ['delta_5fy_7',['delta_y',['../d5/d08/classrm_1_1TrackerState.html#a42b1a610feeff38cd3fdf48475038d5b',1,'rm::TrackerState::delta_y() const'],['../d5/d08/classrm_1_1TrackerState.html#ae3ed9e52f861d23dbdfe1fc785362c92',1,'rm::TrackerState::delta_y(float dy)']]],
   ['derivative_8',['derivative',['../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e',1,'rm']]],
   ['detect_9',['detect',['../db/d6e/classrm_1_1ArmorDetector.html#a51343ca62795031ad91d572d04753cd6',1,'rm::ArmorDetector::detect()'],['../d3/d77/classrm_1_1detector.html#a4ff537c0ba51075fc229c1f171827565',1,'rm::detector::detect()'],['../dc/d93/classrm_1_1GyroDetector.html#a38815d805b50d6c850e7877114baef0b',1,'rm::GyroDetector::detect()'],['../d6/deb/classrm_1_1RuneDetector.html#a96746f8bbce7b9b055fc87fdcc99803e',1,'rm::RuneDetector::detect()'],['../d8/d35/classrm_1_1TagDetector.html#a0911d9680227b5334efd2e2e4107eb4f',1,'rm::TagDetector::detect()']]],
   ['detector_10',['detector',['../d3/d77/classrm_1_1detector.html#aba1aaea7bc893858ea8029ac5e487474',1,'rm::detector']]],
   ['dft_11',['dft',['../db/d2e/group__algorithm__dsp.html#ga75e44cc69b9a614a1436679d8db60624',1,'rm']]],
   ['distance_12',['distance',['../da/dbf/classrm_1_1CameraExtrinsics.html#a8a90a94644ba8e1dab7a1e51a4e3baad',1,'rm::CameraExtrinsics::distance() const'],['../da/dbf/classrm_1_1CameraExtrinsics.html#af0e485e13a2feb2b1ef267e392267077',1,'rm::CameraExtrinsics::distance(float distance)']]],
-  ['draw_13',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]]
+  ['download_13',['download',['../d1/d1b/structrm_1_1Response.html#abe80de2881e8fdee6d8ce3060ff9a552',1,'rm::Response']]],
+  ['draw_14',['draw',['../db/d2e/group__algorithm__dsp.html#ga7a9d876dea62ff13ee6619f698e19fc5',1,'rm']]]
 ];

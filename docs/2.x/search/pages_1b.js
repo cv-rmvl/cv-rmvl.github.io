@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['各模块的用法_0',['RMVL-Python 各模块的用法',['../d3/dbb/tutorial_py_table_of_contents_modules.html',1,'tutorials_python']]]
+  ['xml_20配置_20opc_20ua_0',['4.2 从 XML 配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'']]]
 ];

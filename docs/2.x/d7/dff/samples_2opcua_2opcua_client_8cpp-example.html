@@ -5,16 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.13.2" />
+  <meta name="generator" content="Doxygen 1.15.0" />
   <title>RMVL: samples/opcua/opcua_client.cpp</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
   <script type="text/javascript" src="../../tutorial-utils.js"></script>
-  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../cookie.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -65,35 +63,24 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.13.2 -->
+<!-- 制作者 Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
-/* @license-end */
 </script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(1); });
-/* @license-end */
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="doc-content">
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -136,10 +123,10 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keyword">enum class</span> Direction</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</a> = 1,</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</a> = 2,</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</a> = 3,</div>
-<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</a> = 4,</div>
+<div class="line">    UP = 1,</div>
+<div class="line">    DOWN = 2,</div>
+<div class="line">    LEFT = 3,</div>
+<div class="line">    RIGHT = 4,</div>
 <div class="line">    ENTER = 0,</div>
 <div class="line">    OTHER = -1</div>
 <div class="line">};</div>
@@ -243,11 +230,11 @@ $(function(){ initResizable(false); });
 <div class="line">    fflush(stdout);</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> find_node_and_mark(<a id="_a1" name="_a1"></a><a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> &amp;cli, <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> find_node_and_mark(<a id="_a1" name="_a1"></a><a class="code hl_class" href="../../da/d69/classrm_1_1OpcuaClient.html">OpcuaClient</a> &amp;cli, <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *names[] = {<span class="stringliteral">&quot;value_1&quot;</span>, <span class="stringliteral">&quot;value_2&quot;</span>, <span class="stringliteral">&quot;add&quot;</span>};</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keywordtype">id</span> + 1 &lt;&lt; <span class="stringliteral">&quot;;14H\033[1;5;33m&lt;--\033[0m&quot;</span> &lt;&lt; std::flush;</div>
-<div class="line">    <span class="keywordflow">return</span> cli.<a id="a2" name="a2"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ac3422f4af24930e8864f6acbd8b386c7">find</a>(names[<span class="keywordtype">id</span>]);</div>
+<div class="line">    <span class="keywordflow">return</span> cli.<a id="a2" name="a2"></a><a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#ab400c84d98743701c2af49f5d40e8430">find</a>(names[<span class="keywordtype">id</span>]);</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="keyword">static</span> std::string tips_op()</div>
@@ -378,8 +365,8 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
-<div class="line">    <span class="keywordflow">if</span> (!cli.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad6230e9e503e8214976c73a523a14cf6">ok</a>())</div>
+<div class="line">    <a class="code hl_class" href="../../da/d69/classrm_1_1OpcuaClient.html">OpcuaClient</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!cli.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#ad0c8c690d9e701c42496a2a94b8cc618">ok</a>())</div>
 <div class="line">        <span class="keywordflow">return</span> -1;</div>
 <div class="line">    clear_sreen();</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;- 0: value_1\n- 1: value_2\n- 2:     add\n- q:    Exit\n&quot;</span>;</div>
@@ -392,13 +379,13 @@ $(function(){ initResizable(false); });
 <div class="line">            <span class="keywordtype">int</span> rw = tips_rw();</div>
 <div class="line">            <span class="keywordflow">if</span> (rw == 0)</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">int</span> val = cli.<a id="a4" name="a4"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a>(nd);</div>
+<div class="line">                <span class="keywordtype">int</span> val = cli.<a id="a4" name="a4"></a><a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#ade0d4f8bc494c524cd834a740ece6bae">read</a>(nd);</div>
 <div class="line">                show_value(0, val);</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span></div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordtype">int</span> val = tips_val&lt;int&gt;(0);</div>
-<div class="line">                cli.<a id="a5" name="a5"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">write</a>(nd, val);</div>
+<div class="line">                cli.<a id="a5" name="a5"></a><a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#a6e81f0a9fd80a5eca446b9811bd5df62">write</a>(nd, val);</div>
 <div class="line">                show_value(0, val);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -408,13 +395,13 @@ $(function(){ initResizable(false); });
 <div class="line">            <span class="keywordtype">int</span> rw = tips_rw();</div>
 <div class="line">            <span class="keywordflow">if</span> (rw == 0)</div>
 <div class="line">            {</div>
-<div class="line">                <span class="keywordtype">double</span> val = cli.<a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a>(nd);</div>
+<div class="line">                <span class="keywordtype">double</span> val = cli.<a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#ade0d4f8bc494c524cd834a740ece6bae">read</a>(nd);</div>
 <div class="line">                show_value(1, val);</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">else</span></div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordtype">double</span> val = tips_val&lt;double&gt;(1);</div>
-<div class="line">                cli.<a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">write</a>(nd, val);</div>
+<div class="line">                cli.<a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#a6e81f0a9fd80a5eca446b9811bd5df62">write</a>(nd, val);</div>
 <div class="line">                show_value(1, val);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -423,7 +410,7 @@ $(function(){ initResizable(false); });
 <div class="line">            find_node_and_mark(cli, 2);</div>
 <div class="line">            <span class="keywordtype">int</span> v1 = tips_arg(<span class="stringliteral">&quot;first&quot;</span>);</div>
 <div class="line">            <span class="keywordtype">int</span> v2 = tips_arg(<span class="stringliteral">&quot;second&quot;</span>);</div>
-<div class="line">            <span class="keyword">auto</span> [result, oargs] = cli.<a id="a6" name="a6"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">call</a>(<span class="stringliteral">&quot;add&quot;</span>, {v1, v2});</div>
+<div class="line">            <span class="keyword">auto</span> [result, oargs] = cli.<a id="a6" name="a6"></a><a class="code hl_function" href="../../da/d69/classrm_1_1OpcuaClient.html#af5c12d18aee68b03c47cd08dc4309c67">call</a>(<span class="stringliteral">&quot;add&quot;</span>, {v1, v2});</div>
 <div class="line">            <span class="keywordflow">if</span> (result)</div>
 <div class="line">                show_value(2, oargs[0].cast&lt;int&gt;());</div>
 <div class="line">            <span class="keywordflow">else</span></div>
@@ -441,18 +428,14 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1Client_html"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html">rm::Client</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>定义</b> client.hpp:118</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_ac3422f4af24930e8864f6acbd8b386c7"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ac3422f4af24930e8864f6acbd8b386c7">rm::Client::find</a></div><div class="ttdeci">NodeId find(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</div><div class="ttdoc">通过 BrowseName 的路径搜索命名空间 ns 为 1 的节点</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_ac72c2b493f910205aa5aa8088f4119f3"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">rm::Client::call</a></div><div class="ttdeci">std::pair&lt; bool, Variables &gt; call(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</div><div class="ttdoc">在客户端调用指定对象节点中的方法</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_ad2243cf4ad77dbd90ef0c2d23351ed47"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">rm::Client::read</a></div><div class="ttdeci">Variable read(const NodeId &amp;node) const</div><div class="ttdoc">从指定的变量节点读数据</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_ad469a24e53925cb24aefa06aba4f46ba"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">rm::Client::write</a></div><div class="ttdeci">bool write(const NodeId &amp;node, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
-<div class="ttc" id="aclassrm_1_1Client_html_ad6230e9e503e8214976c73a523a14cf6"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad6230e9e503e8214976c73a523a14cf6">rm::Client::ok</a></div><div class="ttdeci">bool ok() const</div><div class="ttdoc">是否成功创建客户端并成功连接到服务器</div><div class="ttdef"><b>定义</b> client.hpp:145</div></div>
-<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:42</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:40</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html">rm::OpcuaClient</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>定义</b> client.hpp:114</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html_a6e81f0a9fd80a5eca446b9811bd5df62"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html#a6e81f0a9fd80a5eca446b9811bd5df62">rm::OpcuaClient::write</a></div><div class="ttdeci">bool write(const NodeId &amp;node, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html_ab400c84d98743701c2af49f5d40e8430"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html#ab400c84d98743701c2af49f5d40e8430">rm::OpcuaClient::find</a></div><div class="ttdeci">NodeId find(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</div><div class="ttdoc">通过 BrowseName 的路径搜索命名空间 ns 为 1 的节点</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html_ad0c8c690d9e701c42496a2a94b8cc618"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html#ad0c8c690d9e701c42496a2a94b8cc618">rm::OpcuaClient::ok</a></div><div class="ttdeci">bool ok() const</div><div class="ttdoc">是否成功创建客户端并成功连接到服务器</div><div class="ttdef"><b>定义</b> client.hpp:141</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html_ade0d4f8bc494c524cd834a740ece6bae"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html#ade0d4f8bc494c524cd834a740ece6bae">rm::OpcuaClient::read</a></div><div class="ttdeci">Variable read(const NodeId &amp;node) const</div><div class="ttdoc">从指定的变量节点读数据</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaClient_html_af5c12d18aee68b03c47cd08dc4309c67"><div class="ttname"><a href="../../da/d69/classrm_1_1OpcuaClient.html#af5c12d18aee68b03c47cd08dc4309c67">rm::OpcuaClient::call</a></div><div class="ttdeci">std::pair&lt; bool, Variables &gt; call(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</div><div class="ttdoc">在客户端调用指定对象节点中的方法</div></div>
 <div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
-<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">rm::CompensateType::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdoc">向右强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:52</div></div>
-<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">rm::CompensateType::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdoc">向左强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:51</div></div>
-<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">rm::CompensateType::DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdoc">向下强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:50</div></div>
-<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">rm::CompensateType::UP</a></div><div class="ttdeci">@ UP</div><div class="ttdoc">向上强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:49</div></div>
 <div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:320</div></div>
 <div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
@@ -462,7 +445,7 @@ $(function(){ initResizable(false); });
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.13.2
+</a> 1.15.0
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

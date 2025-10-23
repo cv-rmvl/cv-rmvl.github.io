@@ -13,6 +13,5 @@ var searchData=
   ['preprocessoptions_10',['PreprocessOptions',['../d2/d84/structrm_1_1PreprocessOptions.html',1,'rm']]],
   ['promise_11',['Promise',['../dd/df2/classrm_1_1async_1_1Promise.html',1,'rm::async']]],
   ['promise_3c_20void_20_3e_12',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
-  ['publisheddataset_13',['PublishedDataSet',['../d6/d4a/structrm_1_1PublishedDataSet.html',1,'rm']]],
-  ['publisher_14',['Publisher',['../d7/dfc/classrm_1_1Publisher.html',1,'rm']]]
+  ['publisheddataset_13',['PublishedDataSet',['../d6/d4a/structrm_1_1PublishedDataSet.html',1,'rm']]]
 ];

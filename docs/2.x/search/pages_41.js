@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
+  ['协方差矩阵_0',['1.4 协方差矩阵',['../dd/dc3/tutorial_modules_kalman.html#kalman_covariance_matrix',1,'']]],
+  ['协程调度器_1',['2.1 协程调度器',['../d5/d7a/tutorial_modules_coro.html#autotoc_md263',1,'']]]
 ];
