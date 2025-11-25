@@ -117,32 +117,28 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"> </div>
-<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d2/df6/classrm_1_1OpcuaServer.html">OpcuaServer</a> server(4840);</div>
+<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d2/df6/classrm_1_1OpcuaServer.html">OpcuaServer</a> server(4840, <span class="stringliteral">&quot;RMVL Server Demo&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { server.shutdown(); }</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> clearSreen()</div>
-<div class="line">{</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> clearSreen() {</div>
 <div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
 <div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
 <div class="line"><span class="preprocessor">#else</span></div>
 <div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line">    <span class="keywordflow">if</span> (ch == -1)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (ch == -1) {</div>
 <div class="line">        printf(<span class="stringliteral">&quot;\033[2J&quot;</span>);</div>
 <div class="line">        printf(<span class="stringliteral">&quot;\033[0;0H&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> resetCursor()</div>
-<div class="line">{</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> resetCursor() {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\033[10;0H&quot;</span>);</div>
 <div class="line">    fflush(stdout);</div>
 <div class="line">}</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> show()</div>
-<div class="line">{</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> show() {</div>
 <div class="line">    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *data = <span class="stringliteral">&quot;  ┌────────────────┬────────────────┬────────────────┬────────────────┐\n&quot;</span></div>
 <div class="line">                                 <span class="stringliteral">&quot;  │     NodeId     │  DisplayName   │   BrowseName   │     Value      │\n&quot;</span></div>
 <div class="line">                                 <span class="stringliteral">&quot;  ├────────────────┼────────────────┼────────────────┼────────────────┤\n&quot;</span></div>
@@ -157,14 +153,12 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> std::string nodestr(<span class="keyword">const</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;node) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;ns=&quot;</span> + std::to_string(node.<a id="a2" name="a2"></a><a class="code hl_variable" href="../../db/d81/classrm_1_1NodeId.html#a861ce30ab433d50f5830663485ea45a8">ns</a>) + <span class="stringliteral">&quot;,&quot;</span> + <span class="stringliteral">&quot;s=&quot;</span> + std::to_string(node.<a id="a3" name="a3"></a><a class="code hl_variable" href="../../db/d81/classrm_1_1NodeId.html#a6cdf20128d82582ac90a941da1545dfa">id</a>); }</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col, std::string_view msg)</div>
-<div class="line">{</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col, std::string_view msg) {</div>
 <div class="line">    <span class="keywordflow">if</span> (row &lt; 1 || row &gt; 3 || col &lt; 1 || col &gt; 4)</div>
 <div class="line">        <span class="keywordflow">return</span>;</div>
 <div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> width = 14;</div>
 <div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a> = msg.size();</div>
-<div class="line">    <span class="keywordflow">if</span> (size &gt; width)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (size &gt; width) {</div>
 <div class="line">        msg = msg.substr(0, width);</div>
 <div class="line">        <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a> = width;</div>
 <div class="line">    }</div>
@@ -177,8 +171,7 @@ $(function() {
 <div class="line">    resetCursor();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    signal(SIGINT, onHandle);</div>
 <div class="line">    clearSreen();</div>
 <div class="line">    show();</div>
@@ -244,8 +237,8 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:234</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:291</div></div>
 <div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:302</div></div>
-<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:320</div></div>
-<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:143</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:304</div></div>
+<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:136</div></div>
 <div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表别名</div><div class="ttdef"><b>定义</b> variable.hpp:340</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
 <div class="ttc" id="aserver_8hpp_html"><div class="ttname"><a href="../../df/d0a/server_8hpp.html">server.hpp</a></div><div class="ttdoc">OPC UA 服务器</div></div>

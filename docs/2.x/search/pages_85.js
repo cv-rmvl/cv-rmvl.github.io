@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['检查安装结果_0',['3.2 检查安装结果',['../d1/db4/tutorial_install.html#autotoc_md119',1,'']]]
+  ['核函数_0',['核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md215',1,'3 Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md218',1,'3.3 常用的 Robust 核函数']]]
 ];

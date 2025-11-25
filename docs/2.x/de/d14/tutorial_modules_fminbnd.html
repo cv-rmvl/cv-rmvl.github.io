@@ -118,21 +118,21 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md167">1 区间搜索 </a>
+        <a href="#autotoc_md168">1 区间搜索 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md168">2 黄金分割法 </a>
+        <a href="#autotoc_md169">2 黄金分割法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md169">2.1 区间消去 </a>
+            <a href="#autotoc_md170">2.1 区间消去 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md170">2.2 黄金分割法原理 </a>
+            <a href="#autotoc_md171">2.2 黄金分割法原理 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md171">3 如何使用 </a>
+        <a href="#autotoc_md172">3 如何使用 </a>
       </li>
     </ul>
   </li>
@@ -156,7 +156,7 @@ $(function() {
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md167"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
 1 区间搜索</h2>
 <p>在使用一维优化方法搜索目标函数的极小值点时，首先要确定搜索区间 \([a,b]\)，这个搜索区间要包含目标函数的极小值点，而且是单峰区间，即在这个区间内，目标函数只有一个极小值点。</p>
 <p>在单峰区间内，函数值具有“高—低—高”的特点。根据这一特点，可以采用进退法来找到搜索区间。</p>
@@ -211,9 +211,9 @@ $(function() {
 <p>此时 \(f_1&lt; f_2\)，在连续的 3 个点 \(\alpha_1+h\)， \(\alpha_1+3h\)， \(\alpha_1+7h\)的函数值出现了“两头大、中间小”的情况，则初始搜索区间端点为 </p><p class="formulaDsp">
 \[a=\alpha_1+h=1,\quad b=\alpha_1+7h=7\]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md168"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
 2 黄金分割法</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md169"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md170"></a>
 2.1 区间消去</h3>
 <p>黄金分割法是利用区间消去法的原理，通过不断缩小单峰区间长度，即每次迭代都消去一部分不含极小值点的区间，使搜索区间不断缩小，从而逐渐逼近目标函数极小值点的一种优化方法。黄金分割法是直接寻优法，通过直接比较区间上点的函数值的大小来判断区间的取舍。这种方法具有计算简单、收敛速度快等优点。</p>
 <p>如图 1(b) 所示，在已确定的单峰区间[a,b]内任取 \(\alpha_1\)， \(\alpha_2\)两点，计算并比较两点处的函数值 \(f(\alpha_1)\)和 \(f(\alpha_2)\),可能出现3种情况：</p>
@@ -231,7 +231,7 @@ $(function() {
 <li>若 \(f(\alpha_1)&lt; f(\alpha_2)\)，则将搜索区间缩小为 \([a,\alpha_2]\)</li>
 <li>若 \(f(\alpha_2)\ge f(\alpha_2)\)，则将搜索区间缩小为 \([\alpha_1,b]\)。</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md170"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
 2.2 黄金分割法原理</h3>
 <p>黄金分割法就是基于上述原理来选择区间内计算点的位置的，它有以下要求：</p><ol type="1">
 <li>点 \(\alpha_1\)和 \(\alpha_2\)相对区间 \([a,b]\)的边界要对称布置，即区间 \([a,\alpha_1)\)的大小与区间 \((\alpha_2,b]\)的大小相等；</li>
@@ -263,7 +263,7 @@ $(function() {
 <li>比较 \(f_1\)和 \(f_2\)。当 \(f_1&lt; f_2\)时，消去区间 \((\alpha_2,b]\)。做置换 \(b=\alpha_2\)， \(\alpha_2=\alpha_1\)并另取新点 \(\alpha_1=a+0.382(b-a)\)，如图 2-2(b) 所示，令 \(f_1=f(\alpha_1)\)。当 \(f_1\ge f_2\)时，消去区间 \([a,\alpha_1)\)。做置换 \(a=\alpha_1\)， \(\alpha_1=\alpha_2\)， \(f_1=f_2\)，并另取新点 \(\alpha_2=a+0.618(b-a)\)，如图 2-2(c) 所示，令 \(f_2=f(\alpha_2)\)。</li>
 <li>检查终止条件。若 \(b-a\le\epsilon\)，则输出最优解 \(\alpha^*=\frac12(a+b)\)和最优值 \(f(\alpha^*)\)；否则转第 (2) 步。</li>
 </ol>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md171"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md172"></a>
 3 如何使用</h2>
 <p>RMVL 中提供了一维寻优的函数 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee" title="一维函数最小值搜索">rm::fminbnd</a> ，以下展示了一维寻优的例子。</p>
 <div class="tabbed"></div><div class="tabbed"><ul>

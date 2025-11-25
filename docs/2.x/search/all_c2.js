@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['设计理念_0',['设计理念',['../d1/dfb/intro.html#intro_design_principle',1,'']]]
+  ['订阅_0',['3 发布/订阅',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_pub_sub',1,'']]]
 ];

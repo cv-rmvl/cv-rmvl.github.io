@@ -118,10 +118,10 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md188">1 卡尔曼滤波 </a>
+        <a href="#autotoc_md189">1 卡尔曼滤波 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md189">1.1 简介 </a>
+            <a href="#autotoc_md190">1.1 简介 </a>
           </li>
           <li class="level3">
             <a href="#kalman_recursive">1.2 初尝递归算法 </a>
@@ -144,13 +144,13 @@ $(function() {
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md191">2 卡尔曼滤波模块的用法 </a>
+        <a href="#autotoc_md192">2 卡尔曼滤波模块的用法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md192">2.1 如何配置 </a>
+            <a href="#autotoc_md193">2.1 如何配置 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md193">2.2 如何使用 </a>
+            <a href="#autotoc_md194">2.2 如何使用 </a>
           </li>
           <li class="level3">
             <a href="#ref_paper">参考文献 </a>
@@ -185,9 +185,9 @@ $(function() {
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md188"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md189"></a>
 1 卡尔曼滤波</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md189"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md190"></a>
 1.1 简介</h3>
 <p>卡尔曼滤波器是一个 Optimal Recursive Data Processing Algorithm，即最优化递归数字处理算法，与其说滤波器，倒不如说这是一个 <b>观测器</b> 。简单来说，卡尔曼滤波器能够估计目标的当前位置，并结合观测结果，以最高置信度获得当前位置。</p>
 <h3 class="doxsection"><a class="anchor" id="kalman_recursive"></a>
@@ -576,13 +576,13 @@ P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
 </li>
 </ol>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md191"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
 2 卡尔曼滤波模块的用法</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md192"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md193"></a>
 2.1 如何配置</h3>
 <p>首先必须要寻找 RMVL 包，即 <span class="tt">find_package(RMVL REQUIRED)</span>，之后可直接在 CMakeLists.txt 中链接库</p>
 <div class="fragment"> <div class="line"><span class="keyword">target_link_libraries</span>(</div> <div class="line">&#160;&#160;xxx</div> <div class="line">&#160;&#160;<span class="keyword">PUBLIC</span> rmvl_algorithm</div> <div class="line">)</div> </div><p>这里的 <span class="tt">xxx</span> 为需要链接到 algorithm 模块的目标</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md193"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md194"></a>
 2.2 如何使用</h3>
 <h4>2.2.1 包含头文件</h4>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d0f/kalman_8hpp.html">rmvl/algorithm/kalman.hpp</a>&gt;</span></div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['标题_20id_0',['2.2 标题 ID',['../d5/d72/tutorial_document.html#autotoc_md138',1,'']]]
+  ['架构_0',['CMake 架构',['../d2/d60/tutorial_install_overview.html#autotoc_md111',1,'']]]
 ];

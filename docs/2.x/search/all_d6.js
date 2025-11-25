@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['通信中间件_0',['通信中间件',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md328',1,'']]],
-  ['通信设备_1',['通信设备',['../d1/d67/tutorial_extra_upper_init.html#init_communication',1,'']]],
-  ['通用属性与派生类属性_2',['通用属性与派生类属性',['../d2/d3f/tutorial_extra_how_to_use_combo.html#autotoc_md12',1,'1.2.2 通用属性与派生类属性'],['../df/daa/tutorial_extra_how_to_use_tracker.html#autotoc_md55',1,'1.2.2 通用属性与派生类属性']]],
-  ['通用属性_3',['1.2.1 通用属性',['../d5/dee/tutorial_extra_how_to_use_feature.html#autotoc_md28',1,'']]],
-  ['通用等待器_4',['2.2 通用等待器',['../d5/d7a/tutorial_modules_coro.html#autotoc_md270',1,'']]],
-  ['通用选项_5',['2 通用选项',['../d1/d0a/tutorial_configuration_options.html#autotoc_md103',1,'']]],
-  ['通过_20gcc_20和_20cmake_20使用_20rmvl_6',['通过 gcc 和 CMake 使用 RMVL',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]]
+  ['适用于_20python_20的_20algorithm_20模块_0',['适用于 Python 的 algorithm 模块',['../df/dad/tutorial_py_algorithm.html',1,'tutorial_py_table_of_contents_modules']]],
+  ['适用于_20python_20的_20core_20模块_1',['适用于 Python 的 core 模块',['../d7/d9d/tutorial_py_core.html',1,'tutorial_py_table_of_contents_modules']]],
+  ['适用于_20python_20的_20opc_20ua_20模块_2',['适用于 Python 的 OPC UA 模块',['../d4/de5/tutorial_py_opcua.html',1,'tutorial_py_table_of_contents_modules']]]
 ];

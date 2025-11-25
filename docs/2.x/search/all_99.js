@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['注意事项_0',['2.2 注意事项',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md85',1,'']]]
+  ['法方程求解最小二乘法_0',['4 法方程求解最小二乘法',['../db/da1/tutorial_modules_least_square.html#autotoc_md201',1,'']]]
 ];

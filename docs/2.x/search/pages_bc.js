@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['运行时加载_0',['4 运行时加载',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md341',1,'']]],
-  ['运行_1',['4 运行',['../da/d80/tutorial_use.html#autotoc_md126',1,'']]]
+  ['软件模块_0',['软件模块',['../d1/d67/tutorial_extra_upper_init.html#init_software',1,'']]],
+  ['软触发_1',['软触发',['../df/d2c/tutorial_modules_camera.html#autotoc_md264',1,'4.2 软触发'],['../dd/da0/todo.html#_todo000002',1,'4.2 软触发']]]
 ];

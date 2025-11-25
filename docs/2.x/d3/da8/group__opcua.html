@@ -183,10 +183,10 @@ $(function() {
 <tr class="memdesc:ga20f474d3b49008847c901c4a87a35653"><td class="mdescLeft"> </td><td class="mdescRight">值回调函数，Read 可调用对象定义  <br/></td></tr>
 <tr class="memitem:gab27db81896788eb00792aa9eb57fb716" id="r_gab27db81896788eb00792aa9eb57fb716"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab27db81896788eb00792aa9eb57fb716">rm::ValueCallbackAfterWrite</a> = std::function&lt;void(<a class="el" href="../../db/d04/classrm_1_1OpcuaServerView.html">OpcuaServerView</a>, const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:gab27db81896788eb00792aa9eb57fb716"><td class="mdescLeft"> </td><td class="mdescRight">值回调函数，Write 可调用对象定义  <br/></td></tr>
-<tr class="memitem:gae21ab4b5a8fa038874ae35236ee51cc7" id="r_gae21ab4b5a8fa038874ae35236ee51cc7"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> = std::tuple&lt;UA_Server *, std::string_view, uint16_t&gt;</td></tr>
-<tr class="memdesc:gae21ab4b5a8fa038874ae35236ee51cc7"><td class="mdescLeft"> </td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <br/></td></tr>
-<tr class="memitem:ga9bf9d68f21bba17acaa7b32e9f019f01" id="r_ga9bf9d68f21bba17acaa7b32e9f019f01"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> = std::tuple&lt;UA_Client *, std::string_view, uint16_t&gt;</td></tr>
-<tr class="memdesc:ga9bf9d68f21bba17acaa7b32e9f019f01"><td class="mdescLeft"> </td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <br/></td></tr>
+<tr class="memitem:gac7e58481a10ce3a58ec6a78db8f39cb1" id="r_gac7e58481a10ce3a58ec6a78db8f39cb1"><td align="right" class="memItemLeft" valign="top">typedef std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a></td></tr>
+<tr class="memdesc:gac7e58481a10ce3a58ec6a78db8f39cb1"><td class="mdescLeft"> </td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <br/></td></tr>
+<tr class="memitem:gae83f723555bd94a58063f1db1e0165ed" id="r_gae83f723555bd94a58063f1db1e0165ed"><td align="right" class="memItemLeft" valign="top">typedef std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a></td></tr>
+<tr class="memdesc:gae83f723555bd94a58063f1db1e0165ed"><td class="mdescLeft"> </td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <br/></td></tr>
 <tr class="memitem:ga76910ab7d5d3a5e2f75d0593a97bf61d" id="r_ga76910ab7d5d3a5e2f75d0593a97bf61d"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a> = std::vector&lt;<a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>&gt;</td></tr>
 <tr class="memdesc:ga76910ab7d5d3a5e2f75d0593a97bf61d"><td class="mdescLeft"> </td><td class="mdescRight">变量列表别名  <br/></td></tr>
 <tr class="memitem:ga54e4a1eb9a1457b075f3b03b60e4e8f7" id="r_ga54e4a1eb9a1457b075f3b03b60e4e8f7"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga54e4a1eb9a1457b075f3b03b60e4e8f7">rm::DataSourceRead</a> = std::function&lt;<a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a>(const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;)&gt;</td></tr>
@@ -196,20 +196,15 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-enum-members"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
-<tr class="memitem:gaa64bc43ed66c910d6e7912adbd4c7aad" id="r_gaa64bc43ed66c910d6e7912adbd4c7aad"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa64bc43ed66c910d6e7912adbd4c7aad">rm::TransportID</a> : uint8_t { <a class="el" href="#ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">rm::TransportID::UDP_UADP</a> = 1U
-, <a class="el" href="#ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">rm::TransportID::MQTT_UADP</a> = 2U
-, <a class="el" href="#ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">rm::TransportID::MQTT_JSON</a> = 3U
- }</td></tr>
-<tr class="memdesc:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="mdescLeft"> </td><td class="mdescRight">传输协议  <a href="#gaa64bc43ed66c910d6e7912adbd4c7aad">更多...</a><br/></td></tr>
 <tr class="memitem:ga2aed8fbfc8bf41bec5e62c139b3ce7c2" id="r_ga2aed8fbfc8bf41bec5e62c139b3ce7c2"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2aed8fbfc8bf41bec5e62c139b3ce7c2">rm::AccessLevel</a> : uint8_t { <a class="el" href="#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d">rm::VARIABLE_READ</a> = 1U
 , <a class="el" href="#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0">rm::VARIABLE_WRITE</a> = 2U
  }</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4a5bb978e87fa6230034d85ff23b907">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
+<tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad4a5bb978e87fa6230034d85ff23b907">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
 <tr class="memdesc:gad4a5bb978e87fa6230034d85ff23b907"><td class="mdescLeft"> </td><td class="mdescRight">服务端路径搜索  <br/></td></tr>
-<tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9cd15abdd9c0687cee73ce332008c8d">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
+<tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gac9cd15abdd9c0687cee73ce332008c8d">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
 <tr class="memdesc:gac9cd15abdd9c0687cee73ce332008c8d"><td class="mdescLeft"> </td><td class="mdescRight">客户端路径搜索  <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-var-members"><a id="var-members" name="var-members"></a>
@@ -461,13 +456,13 @@ $(function() {
 </dl>
 </div>
 </div>
-<a id="ga9bf9d68f21bba17acaa7b32e9f019f01" name="ga9bf9d68f21bba17acaa7b32e9f019f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9bf9d68f21bba17acaa7b32e9f019f01">◆ </a></span>FindNodeInClient</h2>
+<a id="gae83f723555bd94a58063f1db1e0165ed" name="gae83f723555bd94a58063f1db1e0165ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae83f723555bd94a58063f1db1e0165ed">◆ </a></span>FindNodeInClient</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> = std::tuple&lt;UA_Client *, std::string_view, uint16_t&gt;</td>
+          <td class="memname">typedef std::tuple&lt;UA_Client *, std::string_view, uint16_t&gt; <a class="el" href="#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -475,13 +470,13 @@ $(function() {
 <p>目标节点信息（客户端指针、浏览名、命名空间索引） </p>
 </div>
 </div>
-<a id="gae21ab4b5a8fa038874ae35236ee51cc7" name="gae21ab4b5a8fa038874ae35236ee51cc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae21ab4b5a8fa038874ae35236ee51cc7">◆ </a></span>FindNodeInServer</h2>
+<a id="gac7e58481a10ce3a58ec6a78db8f39cb1" name="gac7e58481a10ce3a58ec6a78db8f39cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7e58481a10ce3a58ec6a78db8f39cb1">◆ </a></span>FindNodeInServer</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> = std::tuple&lt;UA_Server *, std::string_view, uint16_t&gt;</td>
+          <td class="memname">typedef std::tuple&lt;UA_Server *, std::string_view, uint16_t&gt; <a class="el" href="#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -597,36 +592,6 @@ $(function() {
 </table>
 </div>
 </div>
-<a id="gaa64bc43ed66c910d6e7912adbd4c7aad" name="gaa64bc43ed66c910d6e7912adbd4c7aad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa64bc43ed66c910d6e7912adbd4c7aad">◆ </a></span>TransportID</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum class <a class="el" href="#gaa64bc43ed66c910d6e7912adbd4c7aad">rm::TransportID</a> : uint8_t</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><code>#include &lt;<a class="el" href="../../dc/d5f/utilities_8hpp.html">rmvl/opcua/utilities.hpp</a>&gt;</code></p>
-<p>传输协议 </p>
-<table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f" name="ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f"></a>UDP_UADP <div class="python_language"><b>Python: </b>rm.TransportID.UDP_UADP</div></td><td class="fielddoc"><p>使用 <span class="tt">UDP</span> 传输协议映射和 <span class="tt">UADP</span> 消息映射的组合，此协议用于 <b>无代理</b> 的消息传递 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4" name="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4"></a>MQTT_UADP <div class="python_language"><b>Python: </b>rm.TransportID.MQTT_UADP</div></td><td class="fielddoc"><p>使用 <span class="tt">MQTT</span> 传输协议映射和 <span class="tt">UADP</span> 消息映射的组合，此协议用于 <b>基于代理</b> 的消息传递 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b" name="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b"></a>MQTT_JSON <div class="python_language"><b>Python: </b>rm.TransportID.MQTT_JSON</div></td><td class="fielddoc"><p>使用 <span class="tt">MQTT</span> 传输协议映射和 <span class="tt">JSON</span> 消息映射的组合，此协议用于 <b>基于代理</b> 的消息传递 </p>
-</td></tr>
-</table>
-</div>
-</div>
 <a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">函数说明</h2>
 <a id="gac9cd15abdd9c0687cee73ce332008c8d" name="gac9cd15abdd9c0687cee73ce332008c8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac9cd15abdd9c0687cee73ce332008c8d">◆ </a></span>operator|() <span class="overload">[1/2]</span></h2>
@@ -641,7 +606,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fnic</em></span> )</td>
+          <td class="paramtype"><a class="el" href="#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fnic</em></span> )</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -670,7 +635,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fnis</em></span> )</td>
+          <td class="paramtype"><a class="el" href="#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fnis</em></span> )</td>
         </tr>
       </table>
 </div><div class="memdoc">

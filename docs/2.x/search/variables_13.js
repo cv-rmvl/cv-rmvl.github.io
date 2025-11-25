@@ -21,6 +21,6 @@ var searchData=
   ['translation_18',['translation',['../db/def/structrm_1_1ImuData.html#a35d0301537665d35871863cc60ccfb2c',1,'rm::ImuData']]],
   ['translation_5fdecider_5fparam_19',['translation_decider_param',['../de/dac/group__para__decider.html#gad1cb4f37b95b7caa94ec8e77aa10852e',1,'rm::para']]],
   ['trigger_5fchannel_20',['trigger_channel',['../df/dfa/structrm_1_1CameraConfig.html#a2793b9bee50e7b71206d105e7accb6ca',1,'rm::CameraConfig']]],
-  ['type_21',['type',['../df/dc3/structrm_1_1ipc.html#ac57bb04901e1be1ca3ac44c0eeefcbf5',1,'rm::ipc::type'],['../d0/d8d/structrm_1_1ip_1_1tcp.html#a7214ae6980ee22f4a149844931081885',1,'rm::ip::tcp::type'],['../dd/d6d/structrm_1_1ip_1_1udp.html#af85f42ceb7b4bac6be6911ab970d606a',1,'rm::ip::udp::type'],['../df/d48/structrm_1_1Argument.html#a76d0deaeeed0e4c3b22034f9d03b441d',1,'rm::Argument::type'],['../d4/d81/structrm_1_1FieldMetaData.html#a6111b0a257b7404363f4959d6ab22ee4',1,'rm::FieldMetaData::type']]],
+  ['type_21',['type',['../d9/dc1/structrm_1_1ip_1_1Protocol.html#a2ead43f7cc0b21500024b769efa62e90',1,'rm::ip::Protocol::type'],['../df/d48/structrm_1_1Argument.html#a76d0deaeeed0e4c3b22034f9d03b441d',1,'rm::Argument::type'],['../d4/d81/structrm_1_1FieldMetaData.html#a6111b0a257b7404363f4959d6ab22ee4',1,'rm::FieldMetaData::type']]],
   ['type_5fpriority_22',['TYPE_PRIORITY',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#a8600eb9cb316fa65526aafae92f4e18e',1,'rm::para::GyroDeciderParam']]]
 ];

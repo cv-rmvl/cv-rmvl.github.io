@@ -115,7 +115,6 @@ $(function() {
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#define-members">宏定义</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
-<a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">utilities.hpp 文件参考</div></div>
@@ -160,18 +159,10 @@ utilities.hpp 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
-<tr class="memitem:gae21ab4b5a8fa038874ae35236ee51cc7" id="r_gae21ab4b5a8fa038874ae35236ee51cc7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> = std::tuple&lt;UA_Server *, std::string_view, uint16_t&gt;</td></tr>
-<tr class="memdesc:gae21ab4b5a8fa038874ae35236ee51cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <br /></td></tr>
-<tr class="memitem:ga9bf9d68f21bba17acaa7b32e9f019f01" id="r_ga9bf9d68f21bba17acaa7b32e9f019f01"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> = std::tuple&lt;UA_Client *, std::string_view, uint16_t&gt;</td></tr>
-<tr class="memdesc:ga9bf9d68f21bba17acaa7b32e9f019f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
-枚举</h2></td></tr>
-<tr class="memitem:gaa64bc43ed66c910d6e7912adbd4c7aad" id="r_gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">rm::TransportID</a> : uint8_t { <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">rm::TransportID::UDP_UADP</a> = 1U
-, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">rm::TransportID::MQTT_UADP</a> = 2U
-, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">rm::TransportID::MQTT_JSON</a> = 3U
- }</td></tr>
-<tr class="memdesc:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输协议  <a href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">更多...</a><br /></td></tr>
+<tr class="memitem:gac7e58481a10ce3a58ec6a78db8f39cb1" id="r_gac7e58481a10ce3a58ec6a78db8f39cb1"><td class="memItemLeft" align="right" valign="top">typedef std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a></td></tr>
+<tr class="memdesc:gac7e58481a10ce3a58ec6a78db8f39cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <br /></td></tr>
+<tr class="memitem:gae83f723555bd94a58063f1db1e0165ed" id="r_gae83f723555bd94a58063f1db1e0165ed"><td class="memItemLeft" align="right" valign="top">typedef std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a></td></tr>
+<tr class="memdesc:gae83f723555bd94a58063f1db1e0165ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
@@ -181,9 +172,9 @@ utilities.hpp 的引用(Include)关系图:</div>
 <tr class="memdesc:a4d4519ceccc548819ed27d34d2487684"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取编译期常量 <span class="tt">en-US</span>  <br /></td></tr>
 <tr class="memitem:ad99b14de423561318fb1871889bbb977" id="r_ad99b14de423561318fb1871889bbb977"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html#ad99b14de423561318fb1871889bbb977">rm::helper::to_char</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
 <tr class="memdesc:ad99b14de423561318fb1871889bbb977"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为 <span class="tt">char *</span>  <br /></td></tr>
-<tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gae21ab4b5a8fa038874ae35236ee51cc7">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
+<tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
 <tr class="memdesc:gad4a5bb978e87fa6230034d85ff23b907"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务端路径搜索  <br /></td></tr>
-<tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#ga9bf9d68f21bba17acaa7b32e9f019f01">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
+<tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d">rm::operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
 <tr class="memdesc:gac9cd15abdd9c0687cee73ce332008c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端路径搜索  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>

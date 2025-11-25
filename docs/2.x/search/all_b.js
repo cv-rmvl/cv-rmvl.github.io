@@ -1,8 +1,8 @@
 var searchData=
 [
   ['c_20代码生成_0',['3 C++ 代码生成',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md338',1,'']]],
-  ['c_20h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md309',1,'']]],
-  ['c_20s_20视图_2',['4.3 不占有所有权的 C/S 视图',['../db/dba/tutorial_modules_opcua.html#autotoc_md310',1,'']]],
+  ['c_20h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md308',1,'']]],
+  ['c_20s_20视图_2',['4.3 不占有所有权的 C/S 视图',['../db/dba/tutorial_modules_opcua.html#autotoc_md309',1,'']]],
   ['calcarmornum_3',['calcArmorNum',['../da/df9/classrm_1_1GyroGroup.html#aca439948c823f3c64aa03b9e6d928bb0',1,'rm::GyroGroup']]],
   ['calcgroupfrom3dmessage_4',['calcGroupFrom3DMessage',['../da/df9/classrm_1_1GyroGroup.html#acab4a61749d9a702ac578fcd378a5f81',1,'rm::GyroGroup']]],
   ['calculatemodenum_5',['calculateModeNum',['../d5/d6c/group__algorithm.html#gae2c3e5b1cc343df2b6afba4d84b6d187',1,'rm']]],
@@ -96,7 +96,7 @@ var searchData=
   ['configuration_5foptions_2emd_93',['configuration_options.md',['../de/db0/configuration__options_8md.html',1,'']]],
   ['conjgrad_94',['ConjGrad',['../d2/d62/group__algorithm__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce',1,'rm']]],
   ['connect_95',['Connect',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e',1,'rm']]],
-  ['connect_96',['connect',['../de/ddb/classrm_1_1Connector.html#a22d5d99711a40558878cbf7299599d50',1,'rm::Connector::connect()'],['../df/d95/classrm_1_1async_1_1Connector.html#a42ba64c0e88a51dd14dc0ed32c0022fa',1,'rm::async::Connector::connect()']]],
+  ['connect_96',['connect',['../de/ddb/classrm_1_1Connector.html#aeaf87676fd293ab6c900b23889e5ee3b',1,'rm::Connector::connect()'],['../df/d95/classrm_1_1async_1_1Connector.html#a42ba64c0e88a51dd14dc0ed32c0022fa',1,'rm::async::Connector::connect()']]],
   ['connect_5ftimeout_97',['CONNECT_TIMEOUT',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a31c4f296e56f398db93012c09b936304',1,'rm::para::OpcuaParam']]],
   ['connectawaiter_98',['ConnectAwaiter',['../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html',1,'rm::async::Connector::ConnectAwaiter'],['../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html#a0641287cdf42bac689c4b4b0322e3dc3',1,'rm::async::Connector::ConnectAwaiter::ConnectAwaiter()']]],
   ['connected_99',['connected',['../db/d0c/classrm_1_1UnionFind.html#a378a7089e45837e93c548087d6e454d1',1,'rm::UnionFind']]],
@@ -121,7 +121,7 @@ var searchData=
   ['cors_118',['cors',['../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d',1,'rm']]],
   ['cot_119',['cot',['../d5/d6c/group__algorithm.html#ga34f2f328f9b5eec56ee7d278703926bc',1,'rm']]],
   ['cpu_120',['CPU',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d',1,'rm']]],
-  ['create_121',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../df/d48/structrm_1_1Argument.html#a77b6a0932f2e433b6f6dd732fb8b6828',1,'rm::Argument::create()']]],
+  ['create_121',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../df/d96/classrm_1_1Sender.html#a7a323b97bafe91d55c9e541e1b18a7b5',1,'rm::Sender::create()'],['../d5/dcd/classrm_1_1Listener.html#afda173457db01c8b7e2ff5011f64fab7',1,'rm::Listener::create()'],['../d2/d2a/classrm_1_1async_1_1Sender.html#ab71acd0e71dcf423ca37a4ee51cccb6b',1,'rm::async::Sender::create()'],['../d4/d9f/classrm_1_1async_1_1Listener.html#ae8104910a3f950b16c80fdec53359858',1,'rm::async::Listener::create()'],['../df/d48/structrm_1_1Argument.html#a77b6a0932f2e433b6f6dd732fb8b6828',1,'rm::Argument::create()']]],
   ['cross_122',['Cross',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7ae76b449b9fc8536af7557ffa6321d269',1,'rm']]],
   ['cross2d_123',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
   ['csc_124',['csc',['../d5/d6c/group__algorithm.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['family_0',['family',['../df/dc3/structrm_1_1ipc.html#a5a41523d70fb1173fee5b57f7ffdbb64',1,'rm::ipc::family'],['../d0/d8d/structrm_1_1ip_1_1tcp.html#aee786aeda3cf1f1b53108eb42e348d0a',1,'rm::ip::tcp::family'],['../dd/d6d/structrm_1_1ip_1_1udp.html#a3eda8122e9e02bac9380074eab24fd9a',1,'rm::ip::udp::family']]],
+  ['family_0',['family',['../d9/dc1/structrm_1_1ip_1_1Protocol.html#a4d97f406cda8120cd2ad8ad29c9333bd',1,'rm::ip::Protocol']]],
   ['features_1',['features',['../df/dae/structrm_1_1DetectInfo.html#a178b6a0f251344490532cb793af5a8cf',1,'rm::DetectInfo']]],
   ['file_2',['file',['../d9/db4/classrm_1_1Exception.html#a88854f435716666380c57082ad920396',1,'rm::Exception']]],
   ['fixed_5fangle_3',['FIXED_ANGLE',['../d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html#ab019c7e0391691acab9892d0ebb2dd03',1,'rm::para::SpiRunePredictorParam']]],

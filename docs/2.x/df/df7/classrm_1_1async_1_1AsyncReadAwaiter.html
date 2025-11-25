@@ -124,7 +124,7 @@ $(function() {
 <div class="dynheader">
 类 rm::async::AsyncReadAwaiter 继承关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d3a/classrm_1_1async_1_1AsyncReadAwaiter__inherit__graph.svg" width="484" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d3a/classrm_1_1async_1_1AsyncReadAwaiter__inherit__graph.svg" width="100%" height="553"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 rm::async::AsyncReadAwaiter 的协作图:</div>
@@ -155,9 +155,9 @@ Public 成员函数</h2></td></tr>
 <li>直接使用该类 来实现自己的异步读等待器</li>
 </ul>
 <div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
-<div class="line"><span class="keyword">class </span><a class="code hl_class" href="../../dc/db7/classrm_1_1async_1_1Socket.html">Socket</a> {</div>
+<div class="line"><span class="keyword">class </span>Socket {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    <a class="code hl_class" href="../../dc/db7/classrm_1_1async_1_1Socket.html">Socket</a>(<a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, <a class="code hl_typedef" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd) : _ctx(io_context), <a class="code hl_variable" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">_fd</a>(fd) {}</div>
+<div class="line">    Socket(<a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, <a class="code hl_typedef" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd) : _ctx(io_context), <a class="code hl_variable" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">_fd</a>(fd) {}</div>
 <div class="line">    <a class="code hl_class" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">AsyncReadAwaiter</a> read() { <span class="keywordflow">return</span> {_ctx, _fd}; }</div>
 <div class="line">    <span class="comment">// 其他成员函数...</span></div>
 <div class="line"> </div>
@@ -171,10 +171,9 @@ Public 成员函数</h2></td></tr>
 <div class="line">   <span class="keyword">auto</span> data = <span class="keyword">co_await</span> s.read();</div>
 <div class="line">   <span class="comment">// 处理读取到的数据...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1async_1_1AsyncIOAwaiter_html_a3c41b142957cf061997f26ed4d8a471f"><div class="ttname"><a href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">rm::async::AsyncIOAwaiter::_fd</a></div><div class="ttdeci">FileDescriptor _fd</div><div class="ttdoc">文件句柄</div><div class="ttdef"><b>定义</b> async.hpp:301</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1AsyncReadAwaiter_html"><div class="ttname"><a href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">rm::async::AsyncReadAwaiter</a></div><div class="ttdoc">通用异步读等待器，核心操作使用文件 I/O 系统调用的 read、ReadFile，使用者可以通过</div><div class="ttdef"><b>定义</b> async.hpp:333</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1AsyncIOAwaiter_html_a3c41b142957cf061997f26ed4d8a471f"><div class="ttname"><a href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">rm::async::AsyncIOAwaiter::_fd</a></div><div class="ttdeci">FileDescriptor _fd</div><div class="ttdoc">文件句柄</div><div class="ttdef"><b>定义</b> async.hpp:302</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1AsyncReadAwaiter_html"><div class="ttname"><a href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">rm::async::AsyncReadAwaiter</a></div><div class="ttdoc">通用异步读等待器，核心操作使用文件 I/O 系统调用的 read、ReadFile，使用者可以通过</div><div class="ttdef"><b>定义</b> async.hpp:334</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1Socket_html"><div class="ttname"><a href="../../dc/db7/classrm_1_1async_1_1Socket.html">rm::async::Socket</a></div><div class="ttdoc">Socket 异步会话层</div><div class="ttdef"><b>定义</b> socket.hpp:297</div></div>
 <div class="ttc" id="agroup__io_html_ga99ec8bc7726fc0a48a1915ec7ab0ba96"><div class="ttname"><a href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">rm::FileDescriptor</a></div><div class="ttdeci">int FileDescriptor</div><div class="ttdoc">文件描述符类型定义</div><div class="ttdef"><b>定义</b> async.hpp:43</div></div>
 </div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
 <a id="a33bee53b70dd046493ada0a264e316ea" name="a33bee53b70dd046493ada0a264e316ea"></a>

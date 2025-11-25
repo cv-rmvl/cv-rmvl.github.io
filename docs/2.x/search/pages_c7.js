@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['链路层协议_0',['2.3 链路层协议',['../d3/da4/tutorial_modules_serial.html#serial_protocol',1,'']]]
+  ['部署使用_0',['部署使用',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md86',1,'2.3 部署使用'],['../db/da1/tutorial_modules_least_square.html#autotoc_md202',1,'5 部署使用']]]
 ];

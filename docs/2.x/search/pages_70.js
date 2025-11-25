@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['撰写说明文档_0',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]]
+  ['插值多项式_0',['插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md186',1,'1 Lagrange 插值多项式'],['../d8/d57/tutorial_modules_interpolation.html#autotoc_md187',1,'2 Newton 插值多项式']]]
 ];

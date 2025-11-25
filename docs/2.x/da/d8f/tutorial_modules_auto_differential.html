@@ -118,27 +118,27 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md149">1 基于 Taylor 公式的数值微分 </a>
+        <a href="#autotoc_md150">1 基于 Taylor 公式的数值微分 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md150">2 Richardson 外推原理 </a>
+        <a href="#autotoc_md151">2 Richardson 外推原理 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md151">2.1 公式推导 </a>
+            <a href="#autotoc_md152">2.1 公式推导 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md152">2.2 外推算法总结 </a>
+            <a href="#autotoc_md153">2.2 外推算法总结 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md153">3 如何使用 </a>
+        <a href="#autotoc_md154">3 如何使用 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md154">3.1 一元函数导数示例代码 </a>
+            <a href="#autotoc_md155">3.1 一元函数导数示例代码 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md155">3.2 多元函数梯度示例代码 </a>
+            <a href="#autotoc_md156">3.2 多元函数梯度示例代码 </a>
           </li>
         </ul>
       </li>
@@ -164,7 +164,7 @@ $(function() {
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md149"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
 1 基于 Taylor 公式的数值微分</h2>
 <p>利用以下两个 2 阶 Taylor 公式：</p>
 <p class="formulaDsp">
@@ -185,9 +185,9 @@ f&#39;(x)&amp;\approx\frac{f(x)-f(x-h)}h,\qquad R=\frac{f&#39;&#39;(\eta)}2h+o(h
 \[f&#39;(x)=\frac{f(x+h)-f(x-h)}{2h},\qquad R=-\frac{f&#39;&#39;&#39;(\xi)}{3!}h^2+o(h^2)\tag{1-3b}\]
 </p>
 <p>如果导数 \(f&#39;(x)\)用 \(\fml{1-3b}\)计算，那么截断误差为 \(o(h^2)\)，比 \(\fml{1-2a}\)和 \(\fml{1-2b}\)的截断误差 \(O(h)\)更小。这种方法称为<span style="color: red">中心差商</span>。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
 2 Richardson 外推原理</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
 2.1 公式推导</h3>
 <p>将公式 \(\fml{1-3b}\)扩展，可以得到更完全的写法：</p>
 <p class="formulaDsp">
@@ -233,7 +233,7 @@ f&#39;(x)&amp;\approx\frac{f(x)-f(x-h)}h,\qquad R=\frac{f&#39;&#39;(\eta)}2h+o(h
 \[L\approx\frac{64}{63}\theta\left(\frac h2\right)-\frac1{63}\theta(h)\tag{2-10}\]
 </p>
 <p>读者可以自行验证，按照这个思路可以进一步外推，可执行任意多步得到精度不断提高的新公式，这就是 <span style="color: red">Richardson 外推原理</span>。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
 2.2 外推算法总结</h3>
 <p>令 \(\varphi(h)=\frac{f(x+h)-f(x-h)}{2h}\)，外推 \(M\)步，则外推算法的步骤如下</p>
 <p>① 选取一个适当的 \(h\)值，计算 \(M+1\)个数，记为 \(T(*,*)\)</p>
@@ -251,11 +251,11 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 \[L=T(n,k)+o(h^{2k+2})\qquad(h\to0)\tag{2-13}\]
 </p>
 <p>即 \(T(n,k)\)具备 \(2k+2\)阶的精度。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
 3 如何使用</h2>
 <p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df" title="计算多元函数的梯度">rm::grad</a> 。</p>
 <p>以下展示了使用自动求导、数值微分的例子。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
 3.1 一元函数导数示例代码</h3>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
@@ -288,7 +288,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <div class="line"><span class="comment"># f&#39;(1) = 6.00</span></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
+</div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md156"></a>
 3.2 多元函数梯度示例代码</h3>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>

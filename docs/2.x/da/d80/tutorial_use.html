@@ -154,20 +154,17 @@ $(function() {
 <h3 class="doxsection"><a class="anchor" id="autotoc_md123"></a>
 1 创建项目</h3>
 <p>创建新的文件夹：<span class="tt">rmvl_deploy_test</span>，将其链接至 RMVL</p>
-<div class="fragment"><div class="line">mkdir rmvl_deploy_test build</div>
-<div class="line">cd rmvl_deploy_test</div>
-<div class="line">touch main.cpp CMakeLists.txt</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
+<div class="fragment"> <div class="line"><span class="keywordflow">mkdir</span> rmvl_deploy_test build</div> <div class="line"><span class="keywordflow">cd</span> rmvl_deploy_test</div> <div class="line"><span class="keywordflow">touch</span> main.cpp CMakeLists.txt</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md124"></a>
 2 编写测试文件</h3>
 <p><b>编写 main.cpp</b></p>
 <p>将以下内容写至 <span class="tt">main.cpp</span> 中</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d47/core_8hpp.html">rmvl/core.hpp</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../dd/d9f/rmvl_2detector_8hpp.html">rmvl/detector.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    cv::Mat src = cv::Mat::zeros(cv::Size(1280, 1024), CV_8UC3);</div>
 <div class="line"> </div>
 <div class="line">    cv::line(src, cv::Point(450, 380), cv::Point(440, 470), cv::Scalar(0, 0, 255), 18);</div>
@@ -177,11 +174,10 @@ $(function() {
 <div class="line">    <a class="code hl_typedef" href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a> detector = <a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
 <div class="line">    std::vector&lt;rm::group::ptr&gt; groups;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> info = detector-&gt;detect(groups, src, <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a>, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>{}, Timer::now());</div>
+<div class="line">    <span class="keyword">auto</span> info = detector-&gt;detect(groups, src, <a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a>, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>{}, <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(<span class="stringliteral">&quot;size of armors = %ld&quot;</span>, info.combos.size());</div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_combo : info.combos)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_combo : info.combos) {</div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;corners = p_combo-&gt;corners();</div>
 <div class="line">        cv::line(src, corners[0], corners[2], cv::Scalar(0, 255, 0), 2);</div>
 <div class="line">        cv::line(src, corners[1], corners[3], cv::Scalar(0, 255, 0), 2);</div>
@@ -198,36 +194,23 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
+<div class="ttc" id="aclassrm_1_1Timer_html_adb9e4469df8553941079196a74753f85"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a></div><div class="ttdeci">static double now()</div><div class="ttdoc">返回从构造初期到现在经过的时间（单位：ms）</div></div>
 <div class="ttc" id="aclassrm_1_1detector_html_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; detector &gt; ptr</div><div class="ttdef"><b>定义</b> detector.h:51</div></div>
+<div class="ttc" id="acore_8hpp_html"><div class="ttname"><a href="../../da/d47/core_8hpp.html">core.hpp</a></div><div class="ttdoc">RMVL 核心模块汇总头文件</div></div>
 <div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:39</div></div>
 <div class="ttc" id="agroup__core_html_ga06c5efbe33a3db508cbb8c54abb9bd9d"><div class="ttname"><a href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a></div><div class="ttdeci">#define HIGHLIGHT_(...)</div><div class="ttdef"><b>定义</b> util.hpp:29</div></div>
-<div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>定义</b> util.hpp:57</div></div>
+<div class="ttc" id="agroup__core_html_ga4971e99bcf2438777a50d7a487888174"><div class="ttname"><a href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a></div><div class="ttdeci">#define INFO_(...)</div><div class="ttdef"><b>定义</b> util.hpp:53</div></div>
 <div class="ttc" id="armvl_2detector_8hpp_html"><div class="ttname"><a href="../../dd/d9f/rmvl_2detector_8hpp.html">detector.hpp</a></div></div>
 <div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> util.hpp:49</div></div>
 </div><!-- fragment --><p><b>编写 CMakeLists.txt</b></p>
-<p>将以下内容写至 <span class="tt">CMakeLists.txt</span> 中 </p><div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.16)</div>
-<div class="line"> </div>
-<div class="line">project(rmvl_deploy)</div>
-<div class="line"> </div>
-<div class="line">find_package(RMVL REQUIRED)</div>
-<div class="line"> </div>
-<div class="line">add_executable(demo main.cpp)</div>
-<div class="line"> </div>
-<div class="line">target_link_libraries(</div>
-<div class="line">    demo</div>
-<div class="line">    PRIVATE ${RMVL_LIBS}</div>
-<div class="line">)</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
+<p>将以下内容写至 <span class="tt">CMakeLists.txt</span> 中</p>
+<div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(VERSION 3.16)</div> <div class="line"></div> <div class="line"><span class="keyword">project</span>(rmvl_deploy)</div> <div class="line"></div> <div class="line"><span class="keyword">find_package</span>(RMVL REQUIRED)</div> <div class="line"></div> <div class="line"><span class="keyword">add_executable</span>(demo main.cpp)</div> <div class="line"></div> <div class="line"><span class="keyword">target_link_libraries</span>(</div> <div class="line">&#160;&#160;demo</div> <div class="line">&#160;&#160;PRIVATE ${RMVL_LIBS}</div> <div class="line">)</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md125"></a>
 3 构建项目</h3>
 <p>在 <span class="tt">rmvl_deploy_test</span> 的顶层文件夹中打开终端，输入以下命令</p>
-<div class="fragment"><div class="line">cd build</div>
-<div class="line">cmake ..</div>
-<div class="line">make</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
+<div class="fragment"> <div class="line"><span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> ..</div> <div class="line"><span class="keywordflow">make</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md126"></a>
 4 运行</h3>
 <p>继续输入以下命令</p>
-<div class="fragment"><div class="line">./demo</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="fragment"> <div class="line"><span class="keywordflow">./demo</span></div> </div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

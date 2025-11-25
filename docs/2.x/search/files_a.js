@@ -5,5 +5,6 @@ var searchData=
   ['light_2emd_2',['light.md',['../d6/d3d/light_8md.html',1,'']]],
   ['light_5fblob_2eh_3',['light_blob.h',['../d4/d54/feature_2light__blob_8h.html',1,'(全局命名空间)'],['../d0/def/ara_2feature_2light__blob_8h.html',1,'(全局命名空间)']]],
   ['lightutils_2ehpp_4',['lightutils.hpp',['../d6/d29/lightutils_8hpp.html',1,'']]],
-  ['lsqnonlin_2emd_5',['lsqnonlin.md',['../d8/def/lsqnonlin_8md.html',1,'']]]
+  ['lpss_2emd_5',['lpss.md',['../d8/df9/lpss_8md.html',1,'']]],
+  ['lsqnonlin_2emd_6',['lsqnonlin.md',['../d8/def/lsqnonlin_8md.html',1,'']]]
 ];

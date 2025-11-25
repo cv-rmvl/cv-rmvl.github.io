@@ -118,22 +118,22 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md173">1 最速下降法 </a>
+        <a href="#autotoc_md174">1 最速下降法 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md174">2 共轭梯度法 </a>
+        <a href="#autotoc_md175">2 共轭梯度法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md175">2.1 共轭方向 </a>
+            <a href="#autotoc_md176">2.1 共轭方向 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md176">2.2 共轭梯度方向的构造 </a>
+            <a href="#autotoc_md177">2.2 共轭梯度方向的构造 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md177">2.3 迭代步骤 </a>
+            <a href="#autotoc_md178">2.3 迭代步骤 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md178">2.4 如何使用 </a>
+            <a href="#autotoc_md179">2.4 如何使用 </a>
           </li>
         </ul>
       </li>
@@ -159,7 +159,7 @@ $(function() {
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md173"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
 1 最速下降法</h2>
 <p>沿函数的负梯度方向，函数值下降最多，因此，对于存在导数的连续目标函数，最速下降法是一种简单而有效的优化方法。可以将目标函数的负梯度方向作为寻优方向，即</p>
 <p class="formulaDsp">
@@ -186,9 +186,9 @@ $(function() {
 <img src="../../fig1-1.png" alt=""/>
 <div class="caption">
 图 1-1 存在脊线的目标函数</div></div>
-    </center><center></center><h2 class="doxsection"><a class="anchor" id="autotoc_md174"></a>
+    </center><center></center><h2 class="doxsection"><a class="anchor" id="autotoc_md175"></a>
 2 共轭梯度法</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md175"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
 2.1 共轭方向</h3>
 <p>同心椭圆族曲线的两平行切线有这样的特性：通过两平行线与椭圆的切点作连线，该直线通过该椭圆族的中心，如图 2-1 所示。因为该连线的方向与两平行线是共轭方向，所以利用这一特性寻优称为共轭方向法。</p>
 <center></center><center><div class="image">
@@ -208,7 +208,7 @@ $(function() {
 <img src="../../fig2-2.png" alt=""/>
 <div class="caption">
 图 2-2 共轭与正交对比</div></div>
-    </center><center></center><h3 class="doxsection"><a class="anchor" id="autotoc_md176"></a>
+    </center><center></center><h3 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
 2.2 共轭梯度方向的构造</h3>
 <p>在极值点 \(x^*\) 附近，目标函数可以近似为二次型函数，即 </p><p class="formulaDsp">
 \[f(\boldsymbol x)\approx c+\boldsymbol b^T\boldsymbol x+\frac12\boldsymbol x^T\boldsymbol A\boldsymbol x\tag{2-2}\]
@@ -229,7 +229,7 @@ $(function() {
 <p>从而类似式 \(\fml{2-3}\) 有 </p><p class="formulaDsp">
 \[\boldsymbol s_{k+1}=-\nabla f(\boldsymbol x_{k+1})+\beta_k\boldsymbol s_k\]
 </p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md177"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md178"></a>
 2.3 迭代步骤</h3>
 <ol type="1">
 <li>选取初始点 \(\boldsymbol x_0\)，设置判断收敛的正数 \(\epsilon\)；</li>
@@ -242,7 +242,7 @@ $(function() {
 </li>
 <li>令 \(k=k+1\)，返回第 3 步。</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md178"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md179"></a>
 2.4 如何使用</h3>
 <p>首先定义一个目标函数，例如：</p>
 <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keyword">const</span> std::valarray&lt;double&gt; &amp;x) {</div>

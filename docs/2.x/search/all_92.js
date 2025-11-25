@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['检查安装结果_0',['3.2 检查安装结果',['../d1/db4/tutorial_install.html#autotoc_md119',1,'']]],
-  ['检测与识别模块（功能模块）_1',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
+  ['核函数_0',['核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md215',1,'3 Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md218',1,'3.3 常用的 Robust 核函数']]],
+  ['核心模块_1',['RMVL 核心模块',['../d0/de1/group__core.html',1,'']]]
 ];

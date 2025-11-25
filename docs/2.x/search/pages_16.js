@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['reactor_20模式_0',['1.1 Reactor 模式',['../d5/d7a/tutorial_modules_coro.html#autotoc_md266',1,'']]],
+  ['reactor_20模式_0',['1.1 Reactor 模式',['../d5/d7a/tutorial_modules_coro.html#autotoc_md267',1,'']]],
   ['return_1',['1.5 return',['../d5/d72/tutorial_document.html#autotoc_md133',1,'']]],
-  ['richardson_20外推原理_2',['2 Richardson 外推原理',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md150',1,'']]],
+  ['richardson_20外推原理_2',['2 Richardson 外推原理',['../da/d8f/tutorial_modules_auto_differential.html#autotoc_md151',1,'']]],
   ['rm_3',['命名空间 rm',['../d1/dfb/intro.html#intro_namespace_rm',1,'']]],
   ['rmvl_4',['RMVL',['../d5/d52/tutorial_other_arm.html#autotoc_md144',1,'使用提供的工具链构建 RMVL'],['../d1/db4/tutorial_install.html',1,'构建并安装 RMVL'],['../d5/d52/tutorial_other_arm.html#autotoc_md145',1,'自定义工具链构建 RMVL'],['../da/d80/tutorial_use.html',1,'通过 gcc 和 CMake 使用 RMVL']]],
   ['rmvl_20使用教程_5',['RMVL 使用教程',['../dd/da0/tutorials.html',1,'']]],
@@ -19,10 +19,10 @@ var searchData=
   ['rmvl_20python_20绑定是如何生成的_16',['RMVL-Python 绑定是如何生成的',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md345',1,'']]],
   ['rmvl_5fgenerate_5fmodule_5fpara_17',['3.2 rmvl_generate_module_para',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md340',1,'']]],
   ['rmvl_5fgenerate_5fpara_18',['3.1 rmvl_generate_para',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md339',1,'']]],
-  ['robust_20核函数_19',['Robust 核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md214',1,'3 Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md217',1,'3.3 常用的 Robust 核函数']]],
+  ['robust_20核函数_19',['Robust 核函数',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md215',1,'3 Robust 核函数'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md218',1,'3.3 常用的 Robust 核函数']]],
   ['run_20in_20——_20一键进入全功能_20rmvl_20编译镜像_20',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]],
-  ['runge_20kutta_20公式_21',['Runge Kutta 公式',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md232',1,'3.1 二阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md234',1,'3.3 三阶 / 四阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta',1,'3.4 方程组的 Runge-Kutta 公式']]],
-  ['runge_20kutta_20方法_22',['3 Runge-Kutta 方法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md231',1,'']]],
+  ['runge_20kutta_20公式_21',['Runge Kutta 公式',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md233',1,'3.1 二阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md235',1,'3.3 三阶 / 四阶 Runge-Kutta 公式'],['../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta',1,'3.4 方程组的 Runge-Kutta 公式']]],
+  ['runge_20kutta_20方法_22',['3 Runge-Kutta 方法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md232',1,'']]],
   ['runge_20kutta_20算法_23',['常微分方程（组）数值解与 Runge-Kutta 算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'tutorial_table_of_content_modules']]],
   ['runtime_20分类网络部署库_24',['ONNX-Runtime 分类网络部署库',['../d8/d82/tutorial_modules_ort.html',1,'tutorial_table_of_content_modules']]]
 ];

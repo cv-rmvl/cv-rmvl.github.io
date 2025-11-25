@@ -113,8 +113,10 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#concepts">概念</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
 <a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">socket.hpp 文件参考</div></div>
 </div><!--header-->
@@ -122,8 +124,8 @@ $(function() {
 
 <p>以及基于 socket 的同步/异步 IPC 通信、传输层与会话层通信框架  
 <a href="#details">更多...</a></p>
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
-<code>#include &lt;string_view&gt;</code><br />
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d2c/async_8hpp.html">async.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -139,52 +141,107 @@ socket.hpp 的引用(Include)关系图:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:rm_3A_3Aipc" id="r_rm_3A_3Aipc"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc3/structrm_1_1ipc.html">rm::ipc</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">进程间通信协议族  <a href="../../df/dc3/structrm_1_1ipc.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aip" id="r_rm_3A_3Aip"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8a/structrm_1_1ip.html">rm::ip</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP 协议族  <a href="../../d7/d8a/structrm_1_1ip.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aip_3A_3Atcp" id="r_rm_3A_3Aip_3A_3Atcp"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8d/structrm_1_1ip_1_1tcp.html">rm::ip::tcp</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP 协议  <a href="../../d0/d8d/structrm_1_1ip_1_1tcp.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aip_3A_3Audp" id="r_rm_3A_3Aip_3A_3Audp"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6d/structrm_1_1ip_1_1udp.html">rm::ip::udp</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP 协议  <a href="../../dd/d6d/structrm_1_1ip_1_1udp.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3AProtocol" id="r_rm_3A_3Aip_3A_3AProtocol"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">rm::ip::Protocol</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">网络协议  <a href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3ANetworkv4" id="r_rm_3A_3Aip_3A_3ANetworkv4"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d28/classrm_1_1ip_1_1Networkv4.html">rm::ip::Networkv4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 网络协议  <a href="../../de/d28/classrm_1_1ip_1_1Networkv4.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3ANetworkv6" id="r_rm_3A_3Aip_3A_3ANetworkv6"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d72/classrm_1_1ip_1_1Networkv6.html">rm::ip::Networkv6</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv6 网络协议  <a href="../../d0/d72/classrm_1_1ip_1_1Networkv6.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Amulticast_3A_3AInterface" id="r_rm_3A_3Aip_3A_3Amulticast_3A_3AInterface"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html">rm::ip::multicast::Interface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outbound 多播接口设置选项  <a href="../../dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Amulticast_3A_3ALoopback" id="r_rm_3A_3Aip_3A_3Amulticast_3A_3ALoopback"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html">rm::ip::multicast::Loopback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">多播环回控制选项  <a href="../../d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Amulticast_3A_3AJoinGroup" id="r_rm_3A_3Aip_3A_3Amulticast_3A_3AJoinGroup"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html">rm::ip::multicast::JoinGroup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">加入多播组控制选项  <a href="../../de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ANetworkInterfaceFlag" id="r_rm_3A_3ANetworkInterfaceFlag"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7f/structrm_1_1NetworkInterfaceFlag.html">rm::NetworkInterfaceFlag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口功能与状态标志  <a href="../../d5/d7f/structrm_1_1NetworkInterfaceFlag.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ANetworkInterface" id="r_rm_3A_3ANetworkInterface"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">rm::NetworkInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">网络接口  <a href="../../db/d69/classrm_1_1NetworkInterface.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3AEndpoint" id="r_rm_3A_3AEndpoint"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点  <a href="../../dc/db5/classrm_1_1Endpoint.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3ASocket" id="r_rm_3A_3ASocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dff/classrm_1_1Socket.html">rm::Socket</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dff/classrm_1_1Socket.html" title="Socket 会话层">Socket</a> 会话层  <a href="../../d0/dff/classrm_1_1Socket.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ADgramSocket" id="r_rm_3A_3ADgramSocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d75/classrm_1_1DgramSocket.html">rm::DgramSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html" title="同步数据报式 Socket 监听器">rm::Listener</a> 或 <a class="el" href="../../df/d96/classrm_1_1Sender.html" title="同步数据报式 Socket 发送器">rm::Sender</a> 建立的数据报式 Socket 会话  <a href="../../d0/d75/classrm_1_1DgramSocket.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ASender" id="r_rm_3A_3ASender"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d96/classrm_1_1Sender.html">rm::Sender</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步数据报式 Socket 发送器  <a href="../../df/d96/classrm_1_1Sender.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AListener" id="r_rm_3A_3AListener"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步数据报式 Socket 监听器  <a href="../../d5/dcd/classrm_1_1Listener.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AStreamSocket" id="r_rm_3A_3AStreamSocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">rm::StreamSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 <a class="el" href="../../dd/df8/classrm_1_1Acceptor.html" title="Socket 接受器">rm::Acceptor</a> 或 <a class="el" href="../../de/ddb/classrm_1_1Connector.html" title="Socket 连接器">rm::Connector</a> 建立的流式 Socket 会话  <a href="../../d8/df3/classrm_1_1StreamSocket.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3AAcceptor" id="r_rm_3A_3AAcceptor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df8/classrm_1_1Acceptor.html">rm::Acceptor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dff/classrm_1_1Socket.html" title="Socket 会话层">Socket</a> 接受器  <a href="../../dd/df8/classrm_1_1Acceptor.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket 接受器  <a href="../../dd/df8/classrm_1_1Acceptor.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3AConnector" id="r_rm_3A_3AConnector"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/dff/classrm_1_1Socket.html" title="Socket 会话层">Socket</a> 连接器  <a href="../../de/ddb/classrm_1_1Connector.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ASocket" id="r_rm_3A_3Aasync_3A_3ASocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html">rm::async::Socket</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 异步会话层  <a href="../../dc/db7/classrm_1_1async_1_1Socket.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ASocket_3A_3ASocketReadAwaiter" id="r_rm_3A_3Aasync_3A_3ASocket_3A_3ASocketReadAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html">rm::async::Socket::SocketReadAwaiter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 异步读等待器  <a href="../../db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ASocket_3A_3ASocketWriteAwaiter" id="r_rm_3A_3Aasync_3A_3ASocket_3A_3ASocketWriteAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html">rm::async::Socket::SocketWriteAwaiter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 异步写等待器  <a href="../../d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket 连接器  <a href="../../de/ddb/classrm_1_1Connector.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ADgramSocket" id="r_rm_3A_3Aasync_3A_3ADgramSocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html">rm::async::DgramSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 <a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html" title="异步数据报式 Socket 监听器">rm::async::Listener</a> 建立的数据报式 Socket 异步会话  <a href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ADgramSocket_3A_3ASocketReadAwaiter" id="r_rm_3A_3Aasync_3A_3ADgramSocket_3A_3ASocketReadAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d13/classrm_1_1async_1_1DgramSocket_1_1SocketReadAwaiter.html">rm::async::DgramSocket::SocketReadAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据报式 Socket 异步读等待器  <a href="../../d5/d13/classrm_1_1async_1_1DgramSocket_1_1SocketReadAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ADgramSocket_3A_3ASocketWriteAwaiter" id="r_rm_3A_3Aasync_3A_3ADgramSocket_3A_3ASocketWriteAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html">rm::async::DgramSocket::SocketWriteAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据报式 Socket 异步写等待器  <a href="../../d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ASender" id="r_rm_3A_3Aasync_3A_3ASender"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classrm_1_1async_1_1Sender.html">rm::async::Sender</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步数据报式 Socket 发送器  <a href="../../d2/d2a/classrm_1_1async_1_1Sender.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AListener" id="r_rm_3A_3Aasync_3A_3AListener"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html">rm::async::Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步数据报式 Socket 监听器  <a href="../../d4/d9f/classrm_1_1async_1_1Listener.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AStreamSocket" id="r_rm_3A_3Aasync_3A_3AStreamSocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">rm::async::StreamSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">由 <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步流式 Socket 接受器">rm::async::Acceptor</a> 建立的流式 Socket 异步会话  <a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AStreamSocket_3A_3ASocketReadAwaiter" id="r_rm_3A_3Aasync_3A_3AStreamSocket_3A_3ASocketReadAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html">rm::async::StreamSocket::SocketReadAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式 Socket 异步读等待器  <a href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AStreamSocket_3A_3ASocketWriteAwaiter" id="r_rm_3A_3Aasync_3A_3AStreamSocket_3A_3ASocketWriteAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html">rm::async::StreamSocket::SocketWriteAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式 Socket 异步写等待器  <a href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync_3A_3AAcceptor" id="r_rm_3A_3Aasync_3A_3AAcceptor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">rm::async::Acceptor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步 <a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 接受器  <a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步流式 Socket 接受器  <a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync_3A_3AAcceptor_3A_3AAcceptAwaiter" id="r_rm_3A_3Aasync_3A_3AAcceptor_3A_3AAcceptAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter.html">rm::async::Acceptor::AcceptAwaiter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受等待器  <a href="../../da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync_3A_3AConnector" id="r_rm_3A_3Aasync_3A_3AConnector"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d95/classrm_1_1async_1_1Connector.html">rm::async::Connector</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步 <a class="el" href="../../dc/db7/classrm_1_1async_1_1Socket.html" title="Socket 异步会话层">Socket</a> 连接器  <a href="../../df/d95/classrm_1_1async_1_1Connector.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步流式 Socket 连接器  <a href="../../df/d95/classrm_1_1async_1_1Connector.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync_3A_3AConnector_3A_3AConnectAwaiter" id="r_rm_3A_3Aasync_3A_3AConnector_3A_3AConnectAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html">rm::async::Connector::ConnectAwaiter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接等待器  <a href="../../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
 <tr class="memitem:rm" id="r_rm"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="memitem:rm_3A_3Aip" id="r_rm_3A_3Aip"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df5/namespacerm_1_1ip.html">rm::ip</a></td></tr>
+<tr class="memdesc:d2/df5/namespacerm_1_1ip"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP 协议族，包含 IPv4 和 IPv6 以及多播选项的相关定义 <br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Amulticast" id="r_rm_3A_3Aip_3A_3Amulticast"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/daa/namespacerm_1_1ip_1_1multicast.html">rm::ip::multicast</a></td></tr>
+<tr class="memdesc:d9/daa/namespacerm_1_1ip_1_1multicast"><td class="mdescLeft">&#160;</td><td class="mdescRight">多播 <br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Atcp" id="r_rm_3A_3Aip_3A_3Atcp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html">rm::ip::tcp</a></td></tr>
+<tr class="memdesc:d9/d04/namespacerm_1_1ip_1_1tcp"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP 协议 <br /></td></tr>
+<tr class="memitem:rm_3A_3Aip_3A_3Audp" id="r_rm_3A_3Aip_3A_3Audp"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html">rm::ip::udp</a></td></tr>
+<tr class="memdesc:d0/d7f/namespacerm_1_1ip_1_1udp"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP 协议 <br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync" id="r_rm_3A_3Aasync"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d22/namespacerm_1_1async.html">rm::async</a></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-concepts" class="groupheader"><a id="concepts" name="concepts"></a>
-概念</h2></td></tr>
-<tr class="memitem:rm_3A_3AIpProtocol" id="r_rm_3A_3AIpProtocol"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d54/conceptrm_1_1IpProtocol.html">rm::IpProtocol</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP 协议 <br /></td></tr>
-<tr class="memitem:rm_3A_3ALocalProtocol" id="r_rm_3A_3ALocalProtocol"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d21/conceptrm_1_1LocalProtocol.html">rm::LocalProtocol</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地协议 <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a93cb3889d7f34a85b600304b1ee6e7cf" id="r_a93cb3889d7f34a85b600304b1ee6e7cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93cb3889d7f34a85b600304b1ee6e7cf">sockopt_data_t</a>&#160;&#160;&#160;const void *</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
 <tr class="memitem:ga8158c4bbe45484f8a0083cd2ed4dc514" id="r_ga8158c4bbe45484f8a0083cd2ed4dc514"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">rm::SocketFd</a> = int</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gadb3e4d4f0720bfcbbaa3fd4cf076e69a" id="r_gadb3e4d4f0720bfcbbaa3fd4cf076e69a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">rm::NetworkInterfaceType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111">rm::NetworkInterfaceType::Ethernet</a>
+, <a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75">rm::NetworkInterfaceType::Wireless</a>
+, <a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba">rm::NetworkInterfaceType::PPP</a>
+, <a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d">rm::NetworkInterfaceType::Tunnel</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a">rm::NetworkInterfaceType::Loopback</a>
+, <a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387">rm::NetworkInterfaceType::Other</a>
+, <a class="el" href="../../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e">rm::NetworkInterfaceType::Unknown</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gadb3e4d4f0720bfcbbaa3fd4cf076e69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口驱动类型  <a href="../../d6/dd4/group__io__net.html#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4e4df5dcb3080621b854153ed695bf47" id="r_a4e4df5dcb3080621b854153ed695bf47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">rm::ip::tcp::v4</a> ()</td></tr>
+<tr class="memdesc:a4e4df5dcb3080621b854153ed695bf47"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造端点，以表示 IPv4 TCP 协议  <br /></td></tr>
+<tr class="memitem:a9e4af50464356570ff2c89b1fbe3aaf2" id="r_a9e4af50464356570ff2c89b1fbe3aaf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a9e4af50464356570ff2c89b1fbe3aaf2">rm::ip::tcp::v6</a> ()</td></tr>
+<tr class="memdesc:a9e4af50464356570ff2c89b1fbe3aaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造端点，以表示 IPv6 TCP 协议  <br /></td></tr>
+<tr class="memitem:aa8aad4c3ffaff4a1fd14ceaf137bdde9" id="r_aa8aad4c3ffaff4a1fd14ceaf137bdde9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a> ()</td></tr>
+<tr class="memdesc:aa8aad4c3ffaff4a1fd14ceaf137bdde9"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造端点，以表示 IPv4 UDP 协议  <br /></td></tr>
+<tr class="memitem:a2b3a154a3bb8d9f42294cf9269939f06" id="r_a2b3a154a3bb8d9f42294cf9269939f06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">Protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#a2b3a154a3bb8d9f42294cf9269939f06">rm::ip::udp::v6</a> ()</td></tr>
+<tr class="memdesc:a2b3a154a3bb8d9f42294cf9269939f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造端点，以表示 IPv6 UDP 协议  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
@@ -196,7 +253,22 @@ socket.hpp 的引用(Include)关系图:</div>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2025-07-31</dd></dl>
 <dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2025 (c), zhaoxi </dd></dl>
-</div></div><!-- contents -->
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
+<a id="a93cb3889d7f34a85b600304b1ee6e7cf" name="a93cb3889d7f34a85b600304b1ee6e7cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cb3889d7f34a85b600304b1ee6e7cf">&#9670;&#160;</a></span>sockopt_data_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sockopt_data_t&#160;&#160;&#160;const void *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

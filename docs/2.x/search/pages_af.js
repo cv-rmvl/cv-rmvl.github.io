@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['订阅_0',['3 发布/订阅',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_pub_sub',1,'']]]
+  ['触发属性设置_0',['1.3 触发属性设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md255',1,'']]]
 ];

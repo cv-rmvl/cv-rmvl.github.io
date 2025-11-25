@@ -118,16 +118,16 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md180">1 不动点迭代 </a>
+        <a href="#autotoc_md181">1 不动点迭代 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md181">2 Newton 迭代 </a>
+        <a href="#autotoc_md182">2 Newton 迭代 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md182">3 Newton 迭代的简化 </a>
+        <a href="#autotoc_md183">3 Newton 迭代的简化 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md183">4 使用示例 </a>
+        <a href="#autotoc_md184">4 使用示例 </a>
       </li>
     </ul>
   </li>
@@ -142,7 +142,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md180"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
 1 不动点迭代</h2>
 <p>对于一个函数 \(y=f(x)\)，希望求其零点，即 \(f(x)=0\)，可以将其改写成等价的</p>
 <p class="formulaDsp">
@@ -169,7 +169,7 @@ $(function() {
 <p class="formulaDsp">
 \[x_{k+1}=\frac12\sqrt{10-x_k^3}\]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md181"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
 2 Newton 迭代</h2>
 <p>对于方程 \(f(x)=0\)，其精确解为 \(x^*\)，对于某一次迭代结果 \(x_k\)，将 \(f(x^*)\)在 \(x_k\)处展开，有</p>
 <p class="formulaDsp">
@@ -191,7 +191,7 @@ x^*&amp;=x_k-\frac{f(x_k)}{f&#39;(x_k)}-\frac{f&#39;&#39;(x_k)}{2f&#39;(x_k)}(x^
 \[f(x_{k+1})=x_k-m\frac{f(x_k)}{f&#39;(x_k)}\tag{2-3}\]
 </p>
 <p>方可实现 2 阶收敛。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md182"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
 3 Newton 迭代的简化</h2>
 <p>对于计算机算法而言，普通的 Newton 迭代需要求导 \(f&#39;(x_k)\)的操作，这一步可使用向后差商来代替</p>
 <p class="formulaDsp">
@@ -201,7 +201,7 @@ x^*&amp;=x_k-\frac{f(x_k)}{f&#39;(x_k)}-\frac{f&#39;&#39;(x_k)}{2f&#39;(x_k)}(x^
 <p class="formulaDsp">
 \[f(x_{k+1})=x_k-\frac{f(x_k)}{f(x_k-x_{k-1})}(x_k-x_{k-1})\tag{3-2}\]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md183"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md184"></a>
 4 使用示例</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>

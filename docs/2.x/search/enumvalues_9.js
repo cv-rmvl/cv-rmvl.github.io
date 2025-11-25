@@ -11,5 +11,6 @@ var searchData=
   ['log_5ftrace_8',['LOG_TRACE',['../da/dd3/group__para__opcua.html#ggaec06ec63c2f9a83894885deee5eb4bc5a969fae2ecf92dd187c85e11ee37c5a77',1,'rm::para']]],
   ['log_5fwarning_9',['LOG_WARNING',['../da/dd3/group__para__opcua.html#ggaec06ec63c2f9a83894885deee5eb4bc5ad0cb3df3102ca9270c5785af9a8c137f',1,'rm::para']]],
   ['logpower_10',['LogPower',['../db/d2e/group__algorithm__dsp.html#gga5ef1c945a3703c668c716698ec5da488a6aca4ad337420c34d636f3221a7e8113',1,'rm']]],
-  ['low_5frot_5fspeed_11',['LOW_ROT_SPEED',['../d5/d20/namespacerm.html#ac20f060cfa58609d88a9f385a18fe461af4376ca853eba76460caad39d7b201af',1,'rm']]]
+  ['loopback_11',['Loopback',['../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a',1,'rm']]],
+  ['low_5frot_5fspeed_12',['LOW_ROT_SPEED',['../d5/d20/namespacerm.html#ac20f060cfa58609d88a9f385a18fe461af4376ca853eba76460caad39d7b201af',1,'rm']]]
 ];

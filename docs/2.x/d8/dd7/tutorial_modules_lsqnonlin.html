@@ -118,50 +118,50 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md205">1 Gauss-Newton 迭代 </a>
+        <a href="#autotoc_md206">1 Gauss-Newton 迭代 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md206">1.1 算法原理 </a>
+            <a href="#autotoc_md207">1.1 算法原理 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md207">1.2 迭代步骤 </a>
+            <a href="#autotoc_md208">1.2 迭代步骤 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md208">1.3 改进 </a>
+            <a href="#autotoc_md209">1.3 改进 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md209">1.4 如何使用 </a>
+            <a href="#autotoc_md210">1.4 如何使用 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md210">2 Levenberg–Marquardt 算法 </a>
+        <a href="#autotoc_md211">2 Levenberg–Marquardt 算法 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md211">2.1 算法原理 </a>
+            <a href="#autotoc_md212">2.1 算法原理 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md212">2.2 迭代步骤 </a>
+            <a href="#autotoc_md213">2.2 迭代步骤 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md213">2.3 如何使用 </a>
+            <a href="#autotoc_md214">2.3 如何使用 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md214">3 Robust 核函数 </a>
+        <a href="#autotoc_md215">3 Robust 核函数 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md215">3.1 加权与核函数 </a>
+            <a href="#autotoc_md216">3.1 加权与核函数 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md216">3.2 权值的计算 </a>
+            <a href="#autotoc_md217">3.2 权值的计算 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md217">3.3 常用的 Robust 核函数 </a>
+            <a href="#autotoc_md218">3.3 常用的 Robust 核函数 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md218">3.4 如何使用 </a>
+            <a href="#autotoc_md219">3.4 如何使用 </a>
           </li>
         </ul>
       </li>
@@ -191,9 +191,9 @@ $(function() {
 \def\ptl#1#2{\frac{\partial#1}{\partial#2}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md205"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
 1 Gauss-Newton 迭代</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md206"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
 1.1 算法原理</h3>
 <p>数据处理中，最常见的一种函数形式是 </p><p class="formulaDsp">
 \[f(\boldsymbol x)=\frac12\sum_{i=1}^m\varphi_i^2(\boldsymbol x)\tag{1-1}\]
@@ -235,7 +235,7 @@ $(function() {
 \[\boldsymbol H\approx\left[\boldsymbol J(\boldsymbol x_k)\right]^T\boldsymbol J(\boldsymbol x_k)\tag{1-6}\]
 </p>
 <p>所以，关于 \(\boldsymbol\varphi(\boldsymbol x)\) 不是 \(\boldsymbol x\) 的线性函数时的最小二乘法的迭代公式也可以写为 \(\fml{1-5}\) 的形式。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md207"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md208"></a>
 1.2 迭代步骤</h3>
 <ol type="1">
 <li>选择一初始点 \(\boldsymbol x_0=(x_{1,0},x_{2,0},\cdots,x_{n,0})^T\)；</li>
@@ -255,7 +255,7 @@ $(function() {
 </p>
  为止。 \(\epsilon&#39;\) 和 \(\epsilon&#39;&#39;\) 是预先给定的精度。</li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md208"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md209"></a>
 1.3 改进</h3>
 <p>上述高斯－牛顿最小二乘法利用了目标函数在极小值处近似为自变量各分量的平方和的特点，用 \(\boldsymbol J^T\boldsymbol J\) 近似代替牛顿法中 \(f(\boldsymbol x)\) 的二阶导数矩阵，大大节省了计算量。但是它对初始点 \(\boldsymbol x_0\) 的要求比较严格，如果初始点 \(\boldsymbol x_0\) 与极小点 \(\boldsymbol x^*\) 相距很远，这个算法往往失败。原因是</p>
 <ol type="1">
@@ -269,7 +269,7 @@ $(function() {
 \[\boldsymbol x_{k+1}=\boldsymbol x_k+\alpha_k\boldsymbol s_k\]
 </p>
 <p>以 \(\boldsymbol x_{k+1}\) 代替 \(\boldsymbol x_k\) 重复上述计算过程，直到 \(\|\boldsymbol\varphi(\boldsymbol x_k)\|&lt;\epsilon&#39;\) 或 \(\|\nabla f(\boldsymbol x_k)\|&lt;\epsilon&quot;\) 为止。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md209"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md210"></a>
 1.4 如何使用</h3>
 <p>RMVL 提供了改进的 Gauss-Newton 迭代算法，可参考 <span class="tt"><a class="el" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173" title="非线性最小二乘求解，实现与 agarwal23 类似的算法">rm::lsqnonlin</a></span> 函数。例如，我们需要拟合一个正弦函数 </p><p class="formulaDsp">
 \[y=A\sin(\omega t+\varphi_0)+b\]
@@ -342,9 +342,9 @@ $(function() {
 <div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm.lsqnonlin</a>(lsq_sine_f, [1, 0.02, 0, 1.09]) <span class="comment"># 默认采用 Gauss-Newton 算法</span></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md210"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md211"></a>
 2 Levenberg–Marquardt 算法</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md211"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md212"></a>
 2.1 算法原理</h3>
 <p>普通的 Gauss-Newton 迭代，在初始值附近做了一阶线性化处理，而当初始值与极小值相差较远时，曲线的非线性特性会导致迭代失败。为了解决这个问题，Levenberg–Marquardt 算法在 Gauss-Newton 迭代的基础上，引入了一个参数 \(\lambda\)，使得迭代公式变为 </p><p class="formulaDsp">
 \[\boldsymbol x_{k+1}=\boldsymbol x_k-\left(\boldsymbol J^T\boldsymbol J+\red{\lambda\boldsymbol I}\right)^{-1}\boldsymbol J^T\boldsymbol\varphi(\boldsymbol x_k)\tag{2-1}\]
@@ -359,7 +359,7 @@ $(function() {
 <p class="formulaDsp">
 \[\rho_k=\frac{f(\boldsymbol x_k+\Delta\boldsymbol x_k)-f(\boldsymbol x_k)}{\boldsymbol J(\boldsymbol x_k)\Delta\boldsymbol x_k}\tag{2-3}\]
 </p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md212"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md213"></a>
 2.2 迭代步骤</h3>
 <ol type="1">
 <li>选择一初始点 \(\boldsymbol x_0=(x_{1,0},x_{2,0},\cdots,x_{n,0})^T\)，按照式 \(\fml{2-2}\) 计算 \(\lambda_0\)；</li>
@@ -384,7 +384,7 @@ $(function() {
 </ul>
 </li>
 </ol>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md213"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md214"></a>
 2.3 如何使用</h3>
 <p>还是上面的例子，我们可以使用下面的代码来拟合正弦函数。</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -409,9 +409,9 @@ $(function() {
 <div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm.lsqnonlin</a>(lsq_sine, [1, 0.02, 0, 1.09], options)</div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md214"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md215"></a>
 3 Robust 核函数</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md215"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md216"></a>
 3.1 加权与核函数</h3>
 <p>鲁棒核函数（Robust Kernel Function）是在优化问题中用来减少离群值（outliers）影响的一种技术。在 Bundle Adjustment (BA) 等计算机视觉问题中，鲁棒核函数特别有用，因为这些问题常常受到错误匹配、遮挡或其他因素导致的离群值影响</p>
 <p>标准的最小二乘优化问题可以表示为： </p><p class="formulaDsp">
@@ -452,7 +452,7 @@ $(function() {
 \[w_i=\frac{\rho&#39;(e_i)}{e_i}\tag{3-8}\]
 </p>
 <p>这样，我们就可以将 Huber 核函数的最优化问题转换为加权最小二乘问题。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md216"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md217"></a>
 3.2 权值的计算</h3>
 <p>对于 Huber 损失函数，我们有 </p><p class="formulaDsp">
 \[\rho&#39;(e_i)=\begin{cases}e_i&amp;|e_i|\leq k\\k\cdot\texttt{sgn}(e_i)&amp;|e_i|&gt;k\end{cases}\tag{3-9}\]
@@ -479,7 +479,7 @@ $(function() {
 <p>Levenberg–Marquardt 算法的迭代公式也可以改为 </p><p class="formulaDsp">
 \[\boldsymbol x_{k+1}=\boldsymbol x_k-\left(\boldsymbol J^T\boldsymbol W\boldsymbol J+\lambda\boldsymbol I\right)^{-1}\boldsymbol J^T\boldsymbol W\boldsymbol e\tag{3-11b}\]
 </p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md217"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md218"></a>
 3.3 常用的 Robust 核函数</h3>
 <p>在实际应用中，通常取 \(\rho(s)=\rho\left(\frac{e_1}\sigma\right)\)，而并不直接使用 \(\rho(e_i)\)，其中 \(\sigma\) 一般使用中位绝对偏差（MAD）来估计，以保证不过分受异常值的影响。可使用一下公式来计算 \(\sigma\)： </p><p class="formulaDsp">
 \[\hat\sigma=1.4826\times\text{median}\left\{|e_i-\text{median}(e_i)|\right\}\tag{3-12}\]
@@ -541,7 +541,7 @@ $(function() {
 <li>Tukey 核的 \(k\) 可以取为 4.685；</li>
 <li>Cauchy 核的 \(k\) 可以取为 2.385。</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md218"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md219"></a>
 3.4 如何使用</h3>
 <p>RMVL 提供了带有 Robust 核函数的最小二乘法，可参考 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1" title="带 Robust 核函数的非线性最小二乘求解">rm::lsqnonlinRKF</a> ，对于上面示例中的正弦函数拟合，可以使用下面的代码。</p>
 <div class="tabbed"></div><div class="tabbed"><ul>

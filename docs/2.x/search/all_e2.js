@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['风格的字符串处理_0',['Python 风格的字符串处理',['../d0/d17/group__core__str.html',1,'']]]
+  ['项目_0',['2 配置 RMVL 项目',['../d1/db4/tutorial_install.html#autotoc_md116',1,'']]]
 ];

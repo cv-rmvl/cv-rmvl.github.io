@@ -123,10 +123,9 @@ $(function() {
 <p>异步 IO 的应用层网络通信框架  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &lt;regex&gt;</code><br />
-<code>#include &lt;unordered_map&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d2c/async_8hpp.html">async.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d41/rmvldef_8hpp.html">rmvl/core/rmvldef.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 netapp.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
@@ -146,12 +145,12 @@ netapp.hpp 的引用(Include)关系图:</div>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 请求结构  <a href="../../d6/d7c/structrm_1_1Request.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3AResponse" id="r_rm_3A_3AResponse"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">rm::Response</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 响应结构  <a href="../../d1/d1b/structrm_1_1Response.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ARouter" id="r_rm_3A_3Aasync_3A_3ARouter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d3f/classrm_1_1async_1_1Router.html">rm::async::Router</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 路由器  <a href="../../d2/d3f/classrm_1_1async_1_1Router.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ARouter_3A_3ARoutePattern" id="r_rm_3A_3Aasync_3A_3ARouter_3A_3ARoutePattern"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html">rm::async::Router::RoutePattern</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由模式匹配器  <a href="../../d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Aasync_3A_3ARouter_3A_3ARouteEntry" id="r_rm_3A_3Aasync_3A_3ARouter_3A_3ARouteEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html">rm::async::Router::RouteEntry</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由条目：路由模式 + 处理器  <a href="../../d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ARouter" id="r_rm_3A_3ARouter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de4/classrm_1_1Router.html">rm::Router</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 路由器 目前支持的 HTTP 方法包括 GET、POST、HEAD 和 DELETE  <a href="../../d0/de4/classrm_1_1Router.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ARouter_3A_3ARoutePattern" id="r_rm_3A_3ARouter_3A_3ARoutePattern"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/classrm_1_1Router_1_1RoutePattern.html">rm::Router::RoutePattern</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由模式匹配器  <a href="../../dc/da4/classrm_1_1Router_1_1RoutePattern.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ARouter_3A_3ARouteEntry" id="r_rm_3A_3ARouter_3A_3ARouteEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcd/structrm_1_1Router_1_1RouteEntry.html">rm::Router::RouteEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由条目：路由模式 + 处理器  <a href="../../db/dcd/structrm_1_1Router_1_1RouteEntry.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Aasync_3A_3AWebapp" id="r_rm_3A_3Aasync_3A_3AWebapp"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Web 应用程序框架  <a href="../../d5/d05/classrm_1_1async_1_1Webapp.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
@@ -166,8 +165,8 @@ netapp.hpp 的引用(Include)关系图:</div>
 类型定义</h2></td></tr>
 <tr class="memitem:gacd1f5fbb45c26fdfe6ccdf26f49fde4e" id="r_gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应中间件类型  <br /></td></tr>
-<tr class="memitem:ga36f1a9f14f289ae521be11fa2a7c2702" id="r_ga36f1a9f14f289ae521be11fa2a7c2702"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#ga36f1a9f14f289ae521be11fa2a7c2702">rm::async::RouteHandler</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:ga36f1a9f14f289ae521be11fa2a7c2702"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由类型  <br /></td></tr>
+<tr class="memitem:a796688c2f0e142cb22397b32470a4e98" id="r_a796688c2f0e142cb22397b32470a4e98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html#a796688c2f0e142cb22397b32470a4e98">rm::RouteHandler</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:a796688c2f0e142cb22397b32470a4e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由类型  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>

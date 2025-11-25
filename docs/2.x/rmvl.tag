@@ -271,6 +271,11 @@
     <filename>d6/d3d/light_8md.html</filename>
   </compound>
   <compound kind="file">
+    <name>lpss.md</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
+    <filename>d8/df9/lpss_8md.html</filename>
+  </compound>
+  <compound kind="file">
     <name>mqtt.md</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
     <filename>dc/d5e/mqtt_8md.html</filename>
@@ -1636,12 +1641,13 @@
     <path>rmvl/io/</path>
     <filename>d3/d2c/netapp_8hpp.html</filename>
     <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
+    <includes id="db/d41/rmvldef_8hpp" name="rmvldef.hpp" local="yes" import="no" module="no" objc="no">rmvl/core/rmvldef.hpp</includes>
     <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::Request</class>
     <class kind="struct">rm::Response</class>
-    <class kind="class">rm::async::Router</class>
-    <class kind="class">rm::async::Router::RoutePattern</class>
-    <class kind="struct">rm::async::Router::RouteEntry</class>
+    <class kind="class">rm::Router</class>
+    <class kind="class">rm::Router::RoutePattern</class>
+    <class kind="struct">rm::Router::RouteEntry</class>
     <class kind="class">rm::async::Webapp</class>
     <namespace>rm</namespace>
     <namespace>rm::requests</namespace>
@@ -1666,30 +1672,46 @@
     <path>rmvl/io/</path>
     <filename>da/dfc/socket_8hpp.html</filename>
     <includes id="d5/d2c/async_8hpp" name="async.hpp" local="yes" import="no" module="no" objc="no">async.hpp</includes>
-    <class kind="struct">rm::ipc</class>
-    <class kind="struct">rm::ip</class>
-    <class kind="struct">rm::ip::tcp</class>
-    <class kind="struct">rm::ip::udp</class>
+    <class kind="struct">rm::ip::Protocol</class>
+    <class kind="class">rm::ip::Networkv4</class>
+    <class kind="class">rm::ip::Networkv6</class>
+    <class kind="class">rm::ip::multicast::Interface</class>
+    <class kind="class">rm::ip::multicast::Loopback</class>
+    <class kind="class">rm::ip::multicast::JoinGroup</class>
+    <class kind="struct">rm::NetworkInterfaceFlag</class>
+    <class kind="class">rm::NetworkInterface</class>
     <class kind="class">rm::Endpoint</class>
-    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::DgramSocket</class>
+    <class kind="class">rm::Sender</class>
+    <class kind="class">rm::Listener</class>
+    <class kind="class">rm::StreamSocket</class>
     <class kind="class">rm::Acceptor</class>
     <class kind="class">rm::Connector</class>
-    <class kind="class">rm::async::Socket</class>
-    <class kind="class">rm::async::Socket::SocketReadAwaiter</class>
-    <class kind="class">rm::async::Socket::SocketWriteAwaiter</class>
+    <class kind="class">rm::async::DgramSocket</class>
+    <class kind="class">rm::async::DgramSocket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::DgramSocket::SocketWriteAwaiter</class>
+    <class kind="class">rm::async::Sender</class>
+    <class kind="class">rm::async::Listener</class>
+    <class kind="class">rm::async::StreamSocket</class>
+    <class kind="class">rm::async::StreamSocket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::StreamSocket::SocketWriteAwaiter</class>
     <class kind="class">rm::async::Acceptor</class>
     <class kind="class">rm::async::Acceptor::AcceptAwaiter</class>
     <class kind="class">rm::async::Connector</class>
     <class kind="class">rm::async::Connector::ConnectAwaiter</class>
     <namespace>rm</namespace>
+    <namespace>rm::ip</namespace>
+    <namespace>rm::ip::multicast</namespace>
+    <namespace>rm::ip::tcp</namespace>
+    <namespace>rm::ip::udp</namespace>
     <namespace>rm::async</namespace>
-    <concept>rm::IpProtocol</concept>
-    <concept>rm::LocalProtocol</concept>
-  </compound>
-  <compound kind="file">
-    <name>ssl.hpp</name>
-    <path>rmvl/io/</path>
-    <filename>db/d13/ssl_8hpp.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>sockopt_data_t</name>
+      <anchorfile>da/dfc/socket_8hpp.html</anchorfile>
+      <anchor>a93cb3889d7f34a85b600304b1ee6e7cf</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>light.hpp</name>
@@ -1912,10 +1934,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Socket</type>
+      <type>StreamSocket</type>
       <name>accept</name>
       <anchorfile>dd/df8/classrm_1_1Acceptor.html</anchorfile>
-      <anchor>a3d2dacb764adbd2c53ce31ca192f68ea</anchor>
+      <anchor>a6552cce37d7024ef6960923a3fe451ce</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -3270,10 +3292,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Socket</type>
+      <type>StreamSocket</type>
       <name>connect</name>
       <anchorfile>de/ddb/classrm_1_1Connector.html</anchorfile>
-      <anchor>a22d5d99711a40558878cbf7299599d50</anchor>
+      <anchor>aeaf87676fd293ab6c900b23889e5ee3b</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -3809,21 +3831,74 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::DgramSocket</name>
+    <filename>d4/d37/classrm_1_1async_1_1DgramSocket.html</filename>
+    <base>rm::DgramSocket</base>
+    <class kind="class">rm::async::DgramSocket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::DgramSocket::SocketWriteAwaiter</class>
+    <member kind="function">
+      <type>SocketReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>d4/d37/classrm_1_1async_1_1DgramSocket.html</anchorfile>
+      <anchor>a0a0c7d75cbc009578bad7c26edbb45c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>SocketWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>d4/d37/classrm_1_1async_1_1DgramSocket.html</anchorfile>
+      <anchor>afc40b8ab4759f0e646c696c39cbaa453</anchor>
+      <arglist>(std::string_view addr, const Endpoint &amp;endpoint, std::string_view data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::DgramSocket</name>
+    <filename>d0/d75/classrm_1_1DgramSocket.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
+      <anchor>ade15f6ee52b8b4568137ce9077039b55</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setOption</name>
+      <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
+      <anchor>a5852362ad2fed4216525e9d9120edade</anchor>
+      <arglist>(const SockOpt &amp;opt)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::tuple&lt; std::string, std::string, uint16_t &gt;</type>
+      <name>read</name>
+      <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
+      <anchor>ae5f31aa585b195a3c9733d770ebd70ff</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
+      <anchor>ae94ee1720b8b7569400b190a17cac342</anchor>
+      <arglist>(std::string_view addr, const Endpoint &amp;endpoint, std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
+      <anchor>a631cc255be7c8df01d67365f182f5b5e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Endpoint</name>
     <filename>dc/db5/classrm_1_1Endpoint.html</filename>
     <member kind="function">
       <type></type>
       <name>Endpoint</name>
       <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
-      <anchor>a8b65d0d7062e190c4a5da985b29fa4a1</anchor>
-      <arglist>(IpProtocol auto ip, uint16_t port)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Endpoint</name>
-      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
-      <anchor>a86befb2efdfa3e0ee87180c44a278e5d</anchor>
-      <arglist>(LocalProtocol auto lp, std::string_view path)</arglist>
+      <anchor>a90fcf212e3872b0780b87159962d14f1</anchor>
+      <arglist>(const ip::Protocol &amp;ip, uint16_t port)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -3844,13 +3919,6 @@
       <name>port</name>
       <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
       <anchor>a434f9a8619442363a8553ec0366e2b37</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>path</name>
-      <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
-      <anchor>a8a1b43478b1a0987c4528b3674bd21f8</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -5549,8 +5617,8 @@
     <member kind="function">
       <type>std::size_t</type>
       <name>operator()</name>
-      <anchorfile>d9/d23/structrm_1_1hash__aggregate.html</anchorfile>
-      <anchor>a00d61ec1b59fe90ebe9072214b6a3543</anchor>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga00d61ec1b59fe90ebe9072214b6a3543</anchor>
       <arglist>(const Tp &amp;r) const</arglist>
     </member>
   </compound>
@@ -5567,8 +5635,8 @@
     <member kind="typedef">
       <type>hash_aggregate&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
-      <anchor>a17ead482bdcd67b2690cb4318ad22a5b</anchor>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga17ead482bdcd67b2690cb4318ad22a5b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5579,8 +5647,8 @@
     <member kind="typedef">
       <type>std::hash&lt; Tp &gt;</type>
       <name>hash_func</name>
-      <anchorfile>da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html</anchorfile>
-      <anchor>a64b5c09cc70dbdaba2bebd58ebd287be</anchor>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga64b5c09cc70dbdaba2bebd58ebd287be</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5899,6 +5967,38 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::ip::multicast::Interface</name>
+    <filename>dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Interface</name>
+      <anchorfile>dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html</anchorfile>
+      <anchor>aacf71cc4b11316c1832c8ce82c98bf7c</anchor>
+      <arglist>(std::array&lt; uint8_t, 4 &gt; addr)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>name</name>
+      <anchorfile>dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html</anchorfile>
+      <anchor>a3cfe4d57d499af5511fb17b12612012b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const void *</type>
+      <name>data</name>
+      <anchorfile>dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html</anchorfile>
+      <anchor>af16d2ec61046547623da633bf199018f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>size</name>
+      <anchorfile>dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html</anchorfile>
+      <anchor>a840d552cd033d60da69dcff33cdf6150</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Interpolator</name>
     <filename>dc/d80/classrm_1_1Interpolator.html</filename>
     <member kind="function">
@@ -6029,42 +6129,36 @@
       <arglist></arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>rm::ip</name>
-    <filename>d7/d8a/structrm_1_1ip.html</filename>
-    <class kind="struct">rm::ip::tcp</class>
-    <class kind="struct">rm::ip::udp</class>
-  </compound>
-  <compound kind="struct">
-    <name>rm::ipc</name>
-    <filename>df/dc3/structrm_1_1ipc.html</filename>
-    <member kind="function" static="yes">
-      <type>static ipc</type>
-      <name>stream</name>
-      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
-      <anchor>ae00b26cdb971165d88a30a4e2464c281</anchor>
-      <arglist>()</arglist>
+  <compound kind="class">
+    <name>rm::ip::multicast::JoinGroup</name>
+    <filename>de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>JoinGroup</name>
+      <anchorfile>de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html</anchorfile>
+      <anchor>a66d291cea740854f3d354455a218f96f</anchor>
+      <arglist>(std::string_view group)</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static ipc</type>
-      <name>packet</name>
-      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
-      <anchor>a24e1dcfa9f9e58bbe712dc78d70ff75b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
+    <member kind="function">
       <type>int</type>
-      <name>family</name>
-      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
-      <anchor>a5a41523d70fb1173fee5b57f7ffdbb64</anchor>
-      <arglist></arglist>
+      <name>name</name>
+      <anchorfile>de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html</anchorfile>
+      <anchor>a7487e7b91ecf522d736d8384906e69aa</anchor>
+      <arglist>() const</arglist>
     </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>type</name>
-      <anchorfile>df/dc3/structrm_1_1ipc.html</anchorfile>
-      <anchor>ac57bb04901e1be1ca3ac44c0eeefcbf5</anchor>
-      <arglist></arglist>
+    <member kind="function">
+      <type>const void *</type>
+      <name>data</name>
+      <anchorfile>de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html</anchorfile>
+      <anchor>a397969da0d62a4a860d0f27e13e942c4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>size</name>
+      <anchorfile>de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html</anchorfile>
+      <anchor>a6ec45f6b0a72acd8697bda87e7dbdfcd</anchor>
+      <arglist>() const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6387,6 +6481,110 @@
       <anchorfile>d4/d2d/structrm_1_1LightConfig.html</anchorfile>
       <anchor>a969a11a083f3c8f1ffe10900952a4b6c</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Listener</name>
+    <filename>d4/d9f/classrm_1_1async_1_1Listener.html</filename>
+    <base>rm::Listener</base>
+    <member kind="function">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>d4/d9f/classrm_1_1async_1_1Listener.html</anchorfile>
+      <anchor>aaead4c807bacda92d06e24721279f344</anchor>
+      <arglist>(IOContext &amp;io_context, const Endpoint &amp;endpoint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Listener</name>
+      <anchorfile>d4/d9f/classrm_1_1async_1_1Listener.html</anchorfile>
+      <anchor>a6a1e0c1bb4600953f1b517b021107724</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>DgramSocket</type>
+      <name>create</name>
+      <anchorfile>d4/d9f/classrm_1_1async_1_1Listener.html</anchorfile>
+      <anchor>ae8104910a3f950b16c80fdec53359858</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Listener</name>
+    <filename>d5/dcd/classrm_1_1Listener.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>a6795d1f39c77e62a430e5dd660b27ef1</anchor>
+      <arglist>(const Endpoint &amp;endpoint)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Listener</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>a752f0b8f9e7dfaf8298f30ea1866a2e6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>DgramSocket</type>
+      <name>create</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>afda173457db01c8b7e2ff5011f64fab7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>a8fac49d9cfcfcb0cb73613b147baf8c1</anchor>
+      <arglist>(const Endpoint &amp;endpoint, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Endpoint</type>
+      <name>_endpoint</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>a6d26170fd06c82024a4ee7b7506d9767</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>d5/dcd/classrm_1_1Listener.html</anchorfile>
+      <anchor>aa19d0779fad6776ab58f43fe8903d11c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ip::multicast::Loopback</name>
+    <filename>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Loopback</name>
+      <anchorfile>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</anchorfile>
+      <anchor>ae61b25e54980001437429dd322fe5585</anchor>
+      <arglist>(bool enabled=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>name</name>
+      <anchorfile>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</anchorfile>
+      <anchor>a454db82e797960cd63b7a15efe9f790c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const void *</type>
+      <name>data</name>
+      <anchorfile>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</anchorfile>
+      <anchor>a44626f06f8c10172f0cb020ab5bb09df</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>unsigned int</type>
+      <name>size</name>
+      <anchorfile>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</anchorfile>
+      <anchor>a937d965e2e853134f5e16e064d0a8575</anchor>
+      <arglist>() const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6866,6 +7064,218 @@
       <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
       <anchor>a5195afbfaf099292c5fc20e461927c72</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::NetworkInterface</name>
+    <filename>db/d69/classrm_1_1NetworkInterface.html</filename>
+    <member kind="function">
+      <type>const std::array&lt; uint8_t, 6 &gt; &amp;</type>
+      <name>address</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a54916b1255f07d9d2caf4689aaccd2c0</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>name</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a06bc84dab229878d6dabad4e8f0ba938</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NetworkInterfaceType</type>
+      <name>type</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a81c6037c818017f6c3e082bcd6bf4ef0</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint8_t</type>
+      <name>flag</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>aaf95c41b6c640f79729022de46823761</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>up</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>af307d48bcdecc380f3059f68ec159292</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>loopback</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a74346abb6b568abb3121737b6aed3de6</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>broadcast</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a1bd538f35186b4b7a9567a442b768777</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>p2p</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a50091649ff40faf089866cca9215baa6</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>multicast</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a0eac58dca9e677898c5ef4dbbd55a912</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>running</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a59b38c6e5ac537064f501b5baa75db23</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>to_string</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>ad3c5082982cde0f66c10863846d0432d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; ip::Networkv4 &gt;</type>
+      <name>ipv4</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a8cd7ded988bf61a69da7d3001d704fa8</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; ip::Networkv6 &gt;</type>
+      <name>ipv6</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>afaf90f47d6baa9ea149b4811ad47310f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::vector&lt; NetworkInterface &gt;</type>
+      <name>list</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a79042a03e962c76d08a442e2c57c05f0</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NetworkInterface</type>
+      <name>findByName</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>a11dcdfc98698338a501cf75be4d3dadb</anchor>
+      <arglist>(std::string_view name) noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static NetworkInterface</type>
+      <name>findByAddress</name>
+      <anchorfile>db/d69/classrm_1_1NetworkInterface.html</anchorfile>
+      <anchor>aaf169a30b546e1f5f1c0f31db9e84eef</anchor>
+      <arglist>(const std::array&lt; uint8_t, 6 &gt; &amp;addr) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::NetworkInterfaceFlag</name>
+    <filename>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</filename>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>Up</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>a46b7c52c792d042edcec9e09684e1650</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>Broadcast</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>aeea2c7700e54dc749b94e34dd616a96a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>Loopback</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>aab8bdff2bb0527f07ff64ab35b01f755</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>P2P</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>ad88d7a4843b68942f3a40b1c4a3fc33b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>Multicast</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>a403f69dff1931282dd622f25493349d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>Running</name>
+      <anchorfile>d5/d7f/structrm_1_1NetworkInterfaceFlag.html</anchorfile>
+      <anchor>a695911f4aade31a7d1d4a961198dc259</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ip::Networkv4</name>
+    <filename>de/d28/classrm_1_1ip_1_1Networkv4.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Networkv4</name>
+      <anchorfile>de/d28/classrm_1_1ip_1_1Networkv4.html</anchorfile>
+      <anchor>adbec660422ab9a66f1a0d4359d102e78</anchor>
+      <arglist>(std::array&lt; uint8_t, 4 &gt; addr, std::array&lt; uint8_t, 4 &gt; netmask)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::array&lt; uint8_t, 4 &gt;</type>
+      <name>address</name>
+      <anchorfile>de/d28/classrm_1_1ip_1_1Networkv4.html</anchorfile>
+      <anchor>a98e729d4f2c80ce3eea00c8deee5d315</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::array&lt; uint8_t, 4 &gt;</type>
+      <name>broadcast</name>
+      <anchorfile>de/d28/classrm_1_1ip_1_1Networkv4.html</anchorfile>
+      <anchor>a6e25596f35030741d8397fd956584428</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::array&lt; uint8_t, 4 &gt;</type>
+      <name>netmask</name>
+      <anchorfile>de/d28/classrm_1_1ip_1_1Networkv4.html</anchorfile>
+      <anchor>a0f0472c6cff9a9e3299ad9ac23705623</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ip::Networkv6</name>
+    <filename>d0/d72/classrm_1_1ip_1_1Networkv6.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Networkv6</name>
+      <anchorfile>d0/d72/classrm_1_1ip_1_1Networkv6.html</anchorfile>
+      <anchor>ad38191ec0f7be6d621c6c91f6cd2a5cb</anchor>
+      <arglist>(const std::array&lt; uint8_t, 16 &gt; &amp;addr)</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::array&lt; uint8_t, 16 &gt; &amp;</type>
+      <name>address</name>
+      <anchorfile>d0/d72/classrm_1_1ip_1_1Networkv6.html</anchorfile>
+      <anchor>a97ef925734a97e9eaeb8138fb3c77e95</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8922,6 +9332,24 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>rm::ip::Protocol</name>
+    <filename>d9/dc1/structrm_1_1ip_1_1Protocol.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>family</name>
+      <anchorfile>d9/dc1/structrm_1_1ip_1_1Protocol.html</anchorfile>
+      <anchor>a4d97f406cda8120cd2ad8ad29c9333bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>type</name>
+      <anchorfile>d9/dc1/structrm_1_1ip_1_1Protocol.html</anchorfile>
+      <anchor>a2ead43f7cc0b21500024b769efa62e90</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
     <name>rm::PublishedDataSet</name>
     <filename>d6/d4a/structrm_1_1PublishedDataSet.html</filename>
     <member kind="variable">
@@ -9323,93 +9751,93 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::async::Router::RouteEntry</name>
-    <filename>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</filename>
+    <name>rm::Router::RouteEntry</name>
+    <filename>db/dcd/structrm_1_1Router_1_1RouteEntry.html</filename>
     <member kind="function">
       <type></type>
       <name>RouteEntry</name>
-      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
-      <anchor>af187d99f7fe6ddbdb6b5e5155f830ed1</anchor>
+      <anchorfile>db/dcd/structrm_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>a712a3eec7a5b3d69f7ec563baf32bbbd</anchor>
       <arglist>(std::string_view pattern_str, RouteHandler h)</arglist>
     </member>
     <member kind="variable">
       <type>RoutePattern</type>
       <name>pattern</name>
-      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
-      <anchor>a87843fb26f83b64d41ff7d4b362df4a0</anchor>
+      <anchorfile>db/dcd/structrm_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>acd187d706292b64e5352359339a81ebc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>RouteHandler</type>
       <name>handler</name>
-      <anchorfile>d4/d67/structrm_1_1async_1_1Router_1_1RouteEntry.html</anchorfile>
-      <anchor>a3eaa79ed87c10c9d474b8da42f013bf8</anchor>
+      <anchorfile>db/dcd/structrm_1_1Router_1_1RouteEntry.html</anchorfile>
+      <anchor>ae120d3efe5a069ed27596dd271c955b9</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::async::Router::RoutePattern</name>
-    <filename>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</filename>
+    <name>rm::Router::RoutePattern</name>
+    <filename>dc/da4/classrm_1_1Router_1_1RoutePattern.html</filename>
     <member kind="function">
       <type></type>
       <name>RoutePattern</name>
-      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
-      <anchor>af3e9647db4bc0f9e8a9d9b34fdf44dae</anchor>
+      <anchorfile>dc/da4/classrm_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>a373bd828ae8971c1b7e5e49420b96787</anchor>
       <arglist>(std::string_view pattern_str)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>match</name>
-      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
-      <anchor>a0087ccb63ddb6eaae0b84b55a47a345d</anchor>
+      <anchorfile>dc/da4/classrm_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>a5e6b3a6face890f05a00644f8bb64db2</anchor>
       <arglist>(std::string_view path, std::unordered_map&lt; std::string, std::string &gt; &amp;params) const</arglist>
     </member>
     <member kind="function">
       <type>const std::string &amp;</type>
       <name>pattern</name>
-      <anchorfile>d7/d0e/classrm_1_1async_1_1Router_1_1RoutePattern.html</anchorfile>
-      <anchor>af0292fc3d3a538e0a23c002a80d783c5</anchor>
+      <anchorfile>dc/da4/classrm_1_1Router_1_1RoutePattern.html</anchorfile>
+      <anchor>a78f7f4fe184fbf5af4c9b0eae31ecde2</anchor>
       <arglist>() const noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::async::Router</name>
-    <filename>d2/d3f/classrm_1_1async_1_1Router.html</filename>
-    <class kind="class">rm::async::Router::RoutePattern</class>
-    <class kind="struct">rm::async::Router::RouteEntry</class>
+    <name>rm::Router</name>
+    <filename>d0/de4/classrm_1_1Router.html</filename>
+    <class kind="class">rm::Router::RoutePattern</class>
+    <class kind="struct">rm::Router::RouteEntry</class>
     <member kind="function">
       <type>void</type>
       <name>get</name>
-      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
-      <anchor>af58a1d735316fcaf93b55c08eb8d5487</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>a7f5a0ad5e54c0bb269f6a0ab07376825</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>post</name>
-      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
-      <anchor>a88c2e35add7cd1697a331c510ed1b0d4</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>ad6931cf7de85115f7342488616ec341f</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>head</name>
-      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
-      <anchor>aa26b8fba1eed64843ab06b93ccd96fb6</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>a33589944967c0a7107409ec4c52bba24</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>del</name>
-      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
-      <anchor>af40cc2783ede4a71e710b38e2e3067e4</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>a1be04872064c755df95635305c15508f</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
-    <member kind="friend" protection="private">
+    <member kind="friend">
       <type>friend class</type>
-      <name>Webapp</name>
-      <anchorfile>d2/d3f/classrm_1_1async_1_1Router.html</anchorfile>
-      <anchor>af614ad06c6b5c938bff659224d8fb28d</anchor>
+      <name>async::Webapp</name>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>a546fffdae509a99a720d12ce82d0f8f9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -10387,6 +10815,78 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::Sender</name>
+    <filename>d2/d2a/classrm_1_1async_1_1Sender.html</filename>
+    <base>rm::Sender</base>
+    <member kind="function">
+      <type></type>
+      <name>Sender</name>
+      <anchorfile>d2/d2a/classrm_1_1async_1_1Sender.html</anchorfile>
+      <anchor>a8d75e22eeed0711a0d9da932ec74d958</anchor>
+      <arglist>(IOContext &amp;io_context, const ip::Protocol &amp;protocol)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Sender</name>
+      <anchorfile>d2/d2a/classrm_1_1async_1_1Sender.html</anchorfile>
+      <anchor>adc279b04af470ac7f2e5468ede7dd507</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>DgramSocket</type>
+      <name>create</name>
+      <anchorfile>d2/d2a/classrm_1_1async_1_1Sender.html</anchorfile>
+      <anchor>ab71acd0e71dcf423ca37a4ee51cccb6b</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Sender</name>
+    <filename>df/d96/classrm_1_1Sender.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Sender</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>a38633a7e697ad052e51e8bfbf76db1b1</anchor>
+      <arglist>(const ip::Protocol &amp;protocol)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Sender</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>af418933ab0e0de274b3b3175ddd935f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>DgramSocket</type>
+      <name>create</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>a7a323b97bafe91d55c9e541e1b18a7b5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>Sender</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>a238cff04f9665e137a4420ee7db6aa21</anchor>
+      <arglist>(const ip::Protocol &amp;protocol, bool ov)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ip::Protocol</type>
+      <name>_protocol</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>adc65588adc2589dd0a2273965108a22e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>df/d96/classrm_1_1Sender.html</anchorfile>
+      <anchor>adb40b03072202e2a554d8c3cb3ad117f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::SerialPort</name>
     <filename>db/d62/classrm_1_1async_1_1SerialPort.html</filename>
     <base>rm::SerialPort</base>
@@ -10569,163 +11069,50 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::async::Socket</name>
-    <filename>dc/db7/classrm_1_1async_1_1Socket.html</filename>
-    <base>rm::Socket</base>
-    <class kind="class">rm::async::Socket::SocketReadAwaiter</class>
-    <class kind="class">rm::async::Socket::SocketWriteAwaiter</class>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>aff82354fd20f3f04e5a06941c63dc5c0</anchor>
-      <arglist>(IOContext &amp;io_context, SocketFd fd)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>a334176669caa187708f5c565e6c836d8</anchor>
-      <arglist>(const Socket &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>a93ef013894f93e13ceed544396c4fabc</anchor>
-      <arglist>(Socket &amp;&amp;other) noexcept=default</arglist>
-    </member>
-    <member kind="function">
-      <type>Socket &amp;</type>
-      <name>operator=</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>ae552dc4ddf7c23315ca49817e4790b7c</anchor>
-      <arglist>(const Socket &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>Socket &amp;</type>
-      <name>operator=</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>aed49d886d63650911776f862103e905c</anchor>
-      <arglist>(Socket &amp;&amp;other)=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Socket</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>a14256bb044bcb35da466f1acaca87c98</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type>SocketReadAwaiter</type>
-      <name>read</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>ae250e6a27ab4e74e11f4300d5bf0e745</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>SocketWriteAwaiter</type>
-      <name>write</name>
-      <anchorfile>dc/db7/classrm_1_1async_1_1Socket.html</anchorfile>
-      <anchor>a57dcb431d72d0d2a50ced9dad9238c66</anchor>
-      <arglist>(std::string_view data)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::Socket</name>
-    <filename>d0/dff/classrm_1_1Socket.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>acc7732df1de3d907c0f69ac59471eb2e</anchor>
-      <arglist>(SocketFd fd)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a7b1994128adf2a1329aee6cb77bf8734</anchor>
-      <arglist>(const Socket &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Socket</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a6f2064a551b20cb1be3dc2420c094021</anchor>
-      <arglist>(Socket &amp;&amp;other) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Socket &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>aabbf7fb5e76933a2343f450acfa39ac2</anchor>
-      <arglist>(const Socket &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>Socket &amp;</type>
-      <name>operator=</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a0e804a9a740c3655cb034001f0525272</anchor>
-      <arglist>(Socket &amp;&amp;other) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>invalid</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a8d9eca94b30152a6ded7918719818a2d</anchor>
-      <arglist>() const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Socket</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>abb7f9b63321e992c972433a67a0cd95a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>read</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a24250eb4f990a36d63b7f4c7c7a59f8e</anchor>
-      <arglist>() noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>a4f1432a8e36f616dd30c477a49260150</anchor>
-      <arglist>(std::string_view data) noexcept</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>SocketFd</type>
-      <name>_fd</name>
-      <anchorfile>d0/dff/classrm_1_1Socket.html</anchorfile>
-      <anchor>aa2e0e0746934fa5994d86d219c3be510</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::async::Socket::SocketReadAwaiter</name>
-    <filename>db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html</filename>
+    <name>rm::async::DgramSocket::SocketReadAwaiter</name>
+    <filename>d5/d13/classrm_1_1async_1_1DgramSocket_1_1SocketReadAwaiter.html</filename>
     <base>rm::async::AsyncReadAwaiter</base>
     <member kind="function">
       <type></type>
       <name>SocketReadAwaiter</name>
-      <anchorfile>db/d5c/classrm_1_1async_1_1Socket_1_1SocketReadAwaiter.html</anchorfile>
-      <anchor>a5d092af0c98c0b9fe82e78e48c76b34b</anchor>
+      <anchorfile>d5/d13/classrm_1_1async_1_1DgramSocket_1_1SocketReadAwaiter.html</anchorfile>
+      <anchor>a05bab55ee031a737d25caa683d19c46b</anchor>
       <arglist>(IOContext &amp;ctx, SocketFd fd)</arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::async::Socket::SocketWriteAwaiter</name>
-    <filename>d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html</filename>
+    <name>rm::async::StreamSocket::SocketReadAwaiter</name>
+    <filename>df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html</filename>
+    <base>rm::async::AsyncReadAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SocketReadAwaiter</name>
+      <anchorfile>df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html</anchorfile>
+      <anchor>a5556f787e8fab848d94b11f0543aae93</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::DgramSocket::SocketWriteAwaiter</name>
+    <filename>d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html</filename>
     <base>rm::async::AsyncWriteAwaiter</base>
     <member kind="function">
       <type></type>
       <name>SocketWriteAwaiter</name>
-      <anchorfile>d4/d14/classrm_1_1async_1_1Socket_1_1SocketWriteAwaiter.html</anchorfile>
-      <anchor>adb8caac95510ca92865c9178aeed1987</anchor>
+      <anchorfile>d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html</anchorfile>
+      <anchor>a4a29b9625f0ff1dc22c59a858f7f56eb</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd, std::string_view addr, const Endpoint &amp;ep, std::string_view data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::StreamSocket::SocketWriteAwaiter</name>
+    <filename>df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html</filename>
+    <base>rm::async::AsyncWriteAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SocketWriteAwaiter</name>
+      <anchorfile>df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html</anchorfile>
+      <anchor>af6f6ce3fdcbe339f9adda2c6c9d7a500</anchor>
       <arglist>(IOContext &amp;ctx, SocketFd fd, std::string_view data)</arglist>
     </member>
   </compound>
@@ -10915,6 +11302,66 @@
       <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
       <anchor>a65b6dfdf9da7d246b164103e3004d51a</anchor>
       <arglist>(std::string_view key) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::StreamSocket</name>
+    <filename>d0/dd1/classrm_1_1async_1_1StreamSocket.html</filename>
+    <base>rm::StreamSocket</base>
+    <class kind="class">rm::async::StreamSocket::SocketReadAwaiter</class>
+    <class kind="class">rm::async::StreamSocket::SocketWriteAwaiter</class>
+    <member kind="function">
+      <type>SocketReadAwaiter</type>
+      <name>read</name>
+      <anchorfile>d0/dd1/classrm_1_1async_1_1StreamSocket.html</anchorfile>
+      <anchor>a6317bfabdbcb3e5db24a2f0458bdde1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>SocketWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>d0/dd1/classrm_1_1async_1_1StreamSocket.html</anchorfile>
+      <anchor>af8ffbf887efc2db45b0534dfe41ffb9d</anchor>
+      <arglist>(std::string_view data)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::StreamSocket</name>
+    <filename>d8/df3/classrm_1_1StreamSocket.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>acdd543ab197321b9469732cb42558141</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setOption</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>a5174621cc10c32637fd09ea774a9a0cb</anchor>
+      <arglist>(const SockOpt &amp;opt)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>read</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>af402290edb8cce2da2f9863415ebf5ab</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>a1cda5ff66e1b8b8918ea0c50d94417b3</anchor>
+      <arglist>(std::string_view data) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SocketFd</type>
+      <name>_fd</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>aa5c781257e2d4a66a39447f9f74581ce</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11141,38 +11588,6 @@
       <name>self</name>
       <anchorfile>dd/df8/structrm_1_1async_1_1TaskAwaiter.html</anchorfile>
       <anchor>a726639bc931021cd0a751de37609ce55</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::ip::tcp</name>
-    <filename>d0/d8d/structrm_1_1ip_1_1tcp.html</filename>
-    <member kind="function" static="yes">
-      <type>static tcp</type>
-      <name>v4</name>
-      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
-      <anchor>a4b4d92eb38062c9df2c18e0b7bbf7c52</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static tcp</type>
-      <name>v6</name>
-      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
-      <anchor>a25211dda215dccb3724624600f9185fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>family</name>
-      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
-      <anchor>aee786aeda3cf1f1b53108eb42e348d0a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>type</name>
-      <anchorfile>d0/d8d/structrm_1_1ip_1_1tcp.html</anchorfile>
-      <anchor>a7214ae6980ee22f4a149844931081885</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11663,38 +12078,6 @@
       <name>NORMAL_RADIUS_RATIO</name>
       <anchorfile>d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html</anchorfile>
       <anchor>abcbb0a57e0e9d2cdcbca450ba92c240c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::ip::udp</name>
-    <filename>dd/d6d/structrm_1_1ip_1_1udp.html</filename>
-    <member kind="function" static="yes">
-      <type>static udp</type>
-      <name>v4</name>
-      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
-      <anchor>af492317fe84738c7588c2c4dccc6d6da</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static udp</type>
-      <name>v6</name>
-      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
-      <anchor>ae90fb1a4e96bced0f2fd6239e4454356</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>family</name>
-      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
-      <anchor>a3eda8122e9e02bac9380074eab24fd9a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>type</name>
-      <anchorfile>dd/d6d/structrm_1_1ip_1_1udp.html</anchorfile>
-      <anchor>af85f42ceb7b4bac6be6911ab970d606a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -12199,29 +12582,29 @@
       <type>void</type>
       <name>get</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
-      <anchor>acd21f1d9201517e167b0ed58902ade65</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchor>ab0be207981198e59278253745130ceb1</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>post</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
-      <anchor>ad03093cabffef24a3a69bf067e865d73</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchor>a361f904dfebdf7f1cf35b7cf3788dc14</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>head</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
-      <anchor>a15c7e68e253d39800f2485f5579f78f9</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchor>a4a6e402d7ab9de60bb2e8a339f493e44</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>del</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
-      <anchor>a616ac5cbf31cae60d5cfcd6031add9ba</anchor>
-      <arglist>(std::string_view uri, std::function&lt; void(const Request &amp;, Response &amp;)&gt; callback)</arglist>
+      <anchor>a3e0899601a1c18746a5d5a8b0c63b0c1</anchor>
+      <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
       <type>Task</type>
@@ -12248,14 +12631,6 @@
   <compound kind="concept">
     <name>rm::async::InvokableTask</name>
     <filename>dd/d35/conceptrm_1_1async_1_1InvokableTask.html</filename>
-  </compound>
-  <compound kind="concept">
-    <name>rm::IpProtocol</name>
-    <filename>d1/d54/conceptrm_1_1IpProtocol.html</filename>
-  </compound>
-  <compound kind="concept">
-    <name>rm::LocalProtocol</name>
-    <filename>dd/d21/conceptrm_1_1LocalProtocol.html</filename>
   </compound>
   <compound kind="namespace">
     <name>cv</name>
@@ -12326,6 +12701,7 @@
     <namespace>rm::reflect</namespace>
     <namespace>rm::async</namespace>
     <namespace>rm::requests</namespace>
+    <namespace>rm::ip</namespace>
     <namespace>rm::helper</namespace>
     <class kind="class">rm::RaHeap</class>
     <class kind="class">rm::UnionFind</class>
@@ -12362,11 +12738,15 @@
     <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::Request</class>
     <class kind="struct">rm::Response</class>
+    <class kind="class">rm::Router</class>
     <class kind="class">rm::SerialPort</class>
-    <class kind="struct">rm::ipc</class>
-    <class kind="struct">rm::ip</class>
+    <class kind="struct">rm::NetworkInterfaceFlag</class>
+    <class kind="class">rm::NetworkInterface</class>
     <class kind="class">rm::Endpoint</class>
-    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::DgramSocket</class>
+    <class kind="class">rm::Sender</class>
+    <class kind="class">rm::Listener</class>
+    <class kind="class">rm::StreamSocket</class>
     <class kind="class">rm::Acceptor</class>
     <class kind="class">rm::Connector</class>
     <class kind="struct">rm::Translation</class>
@@ -12446,8 +12826,6 @@
     <class kind="class">rm::GyroDecider</class>
     <class kind="class">rm::RuneDecider</class>
     <class kind="class">rm::TranslationDecider</class>
-    <concept>rm::IpProtocol</concept>
-    <concept>rm::LocalProtocol</concept>
     <member kind="typedef">
       <type>std::deque&lt; double &gt;</type>
       <name>RealSignal</name>
@@ -12785,6 +13163,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
+      <name>RouteHandler</name>
+      <anchorfile>d5/d20/namespacerm.html</anchorfile>
+      <anchor>a796688c2f0e142cb22397b32470a4e98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>int</type>
       <name>SocketFd</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
@@ -12830,14 +13215,14 @@
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae21ab4b5a8fa038874ae35236ee51cc7</anchor>
+      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
       <name>FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9bf9d68f21bba17acaa7b32e9f019f01</anchor>
+      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -13217,6 +13602,20 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>NetworkInterfaceType</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadb3e4d4f0720bfcbbaa3fd4cf076e69a</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111">Ethernet</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75">Wireless</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba">PPP</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d">Tunnel</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a">Loopback</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387">Other</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>LightHandleMode</name>
       <anchorfile>d5/d20/namespacerm.html</anchorfile>
       <anchor>abff8db767f7699d9019525304fd568d7</anchor>
@@ -13235,16 +13634,6 @@
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">CUDA</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">TensorRT</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">OpenVINO</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>TransportID</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaa64bc43ed66c910d6e7912adbd4c7aad</anchor>
-      <arglist></arglist>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">UDP_UADP</enumvalue>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">MQTT_UADP</enumvalue>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">MQTT_JSON</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -13711,6 +14100,13 @@
       <name>getBuildInformation</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gaf02e400b3f459cb836ee81ee05e71ed8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>processId</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gafbe1fc1291dcca5f41435f775d12e320</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -14221,10 +14617,12 @@
     <class kind="class">rm::async::Timer</class>
     <class kind="class">rm::async::PipeServer</class>
     <class kind="class">rm::async::PipeClient</class>
-    <class kind="class">rm::async::Router</class>
     <class kind="class">rm::async::Webapp</class>
     <class kind="class">rm::async::SerialPort</class>
-    <class kind="class">rm::async::Socket</class>
+    <class kind="class">rm::async::DgramSocket</class>
+    <class kind="class">rm::async::Sender</class>
+    <class kind="class">rm::async::Listener</class>
+    <class kind="class">rm::async::StreamSocket</class>
     <class kind="class">rm::async::Acceptor</class>
     <class kind="class">rm::async::Connector</class>
     <concept>rm::async::InvokableTask</concept>
@@ -14233,13 +14631,6 @@
       <name>IOContextRef</name>
       <anchorfile>d2/da3/group__io.html</anchorfile>
       <anchor>ga466f766a229581f699520b48ad4c82e6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
-      <name>RouteHandler</name>
-      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>ga36f1a9f14f289ae521be11fa2a7c2702</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14305,6 +14696,59 @@
       <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
       <anchor>ad99b14de423561318fb1871889bbb977</anchor>
       <arglist>(std::string_view str)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ip</name>
+    <filename>d2/df5/namespacerm_1_1ip.html</filename>
+    <namespace>rm::ip::multicast</namespace>
+    <namespace>rm::ip::tcp</namespace>
+    <namespace>rm::ip::udp</namespace>
+    <class kind="struct">rm::ip::Protocol</class>
+    <class kind="class">rm::ip::Networkv4</class>
+    <class kind="class">rm::ip::Networkv6</class>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ip::multicast</name>
+    <filename>d9/daa/namespacerm_1_1ip_1_1multicast.html</filename>
+    <class kind="class">rm::ip::multicast::Interface</class>
+    <class kind="class">rm::ip::multicast::Loopback</class>
+    <class kind="class">rm::ip::multicast::JoinGroup</class>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ip::tcp</name>
+    <filename>d9/d04/namespacerm_1_1ip_1_1tcp.html</filename>
+    <member kind="function">
+      <type>Protocol</type>
+      <name>v4</name>
+      <anchorfile>d9/d04/namespacerm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>a4e4df5dcb3080621b854153ed695bf47</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Protocol</type>
+      <name>v6</name>
+      <anchorfile>d9/d04/namespacerm_1_1ip_1_1tcp.html</anchorfile>
+      <anchor>a9e4af50464356570ff2c89b1fbe3aaf2</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ip::udp</name>
+    <filename>d0/d7f/namespacerm_1_1ip_1_1udp.html</filename>
+    <member kind="function">
+      <type>Protocol</type>
+      <name>v4</name>
+      <anchorfile>d0/d7f/namespacerm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>aa8aad4c3ffaff4a1fd14ceaf137bdde9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Protocol</type>
+      <name>v6</name>
+      <anchorfile>d0/d7f/namespacerm_1_1ip_1_1udp.html</anchorfile>
+      <anchor>a2b3a154a3bb8d9f42294cf9269939f06</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -15983,6 +16427,7 @@
     <subgroup>core_meta</subgroup>
     <subgroup>core_str</subgroup>
     <subgroup>core_timer</subgroup>
+    <namespace>rm::reflect::helper</namespace>
     <class kind="class">rm::Exception</class>
     <member kind="define">
       <type>#define</type>
@@ -16088,6 +16533,20 @@
       <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gaaa1505e84ee5a1d4ce66ca3a959786a7</anchor>
       <arglist>(expr)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::hash&lt; Tp &gt;</type>
+      <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;::hash_func</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga64b5c09cc70dbdaba2bebd58ebd287be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>hash_aggregate&lt; Tp &gt;</type>
+      <name>rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;::hash_func</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga17ead482bdcd67b2690cb4318ad22a5b</anchor>
+      <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -16213,6 +16672,20 @@
       <name>rm::getBuildInformation</name>
       <anchorfile>d0/de1/group__core.html</anchorfile>
       <anchor>gaf02e400b3f459cb836ee81ee05e71ed8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>rm::hash_aggregate::operator()</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>ga00d61ec1b59fe90ebe9072214b6a3543</anchor>
+      <arglist>(const Tp &amp;r) const</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>rm::processId</name>
+      <anchorfile>d0/de1/group__core.html</anchorfile>
+      <anchor>gafbe1fc1291dcca5f41435f775d12e320</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -16422,20 +16895,24 @@
     <name>io_net</name>
     <title>网络通信</title>
     <filename>d6/dd4/group__io__net.html</filename>
-    <concept>rm::IpProtocol</concept>
-    <concept>rm::LocalProtocol</concept>
+    <namespace>rm::ip</namespace>
     <class kind="struct">rm::URLParseInfo</class>
     <class kind="struct">rm::Request</class>
     <class kind="struct">rm::Response</class>
-    <class kind="class">rm::async::Router</class>
     <class kind="class">rm::async::Webapp</class>
-    <class kind="struct">rm::ipc</class>
-    <class kind="struct">rm::ip</class>
+    <class kind="struct">rm::NetworkInterfaceFlag</class>
+    <class kind="class">rm::NetworkInterface</class>
     <class kind="class">rm::Endpoint</class>
-    <class kind="class">rm::Socket</class>
+    <class kind="class">rm::DgramSocket</class>
+    <class kind="class">rm::Sender</class>
+    <class kind="class">rm::Listener</class>
+    <class kind="class">rm::StreamSocket</class>
     <class kind="class">rm::Acceptor</class>
     <class kind="class">rm::Connector</class>
-    <class kind="class">rm::async::Socket</class>
+    <class kind="class">rm::async::DgramSocket</class>
+    <class kind="class">rm::async::Sender</class>
+    <class kind="class">rm::async::Listener</class>
+    <class kind="class">rm::async::StreamSocket</class>
     <class kind="class">rm::async::Acceptor</class>
     <class kind="class">rm::async::Connector</class>
     <member kind="typedef">
@@ -16443,13 +16920,6 @@
       <name>rm::ResponseMiddleware</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
       <anchor>gacd1f5fbb45c26fdfe6ccdf26f49fde4e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
-      <name>rm::async::RouteHandler</name>
-      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
-      <anchor>ga36f1a9f14f289ae521be11fa2a7c2702</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16475,6 +16945,20 @@
       <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1">Trace</enumvalue>
       <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e">Connect</enumvalue>
       <enumvalue file="d6/dd4/group__io__net.html" anchor="ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::NetworkInterfaceType</name>
+      <anchorfile>d6/dd4/group__io__net.html</anchorfile>
+      <anchor>gadb3e4d4f0720bfcbbaa3fd4cf076e69a</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111">Ethernet</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75">Wireless</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba">PPP</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d">Tunnel</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a">Loopback</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387">Other</enumvalue>
+      <enumvalue file="d6/dd4/group__io__net.html" anchor="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
     </member>
     <member kind="function">
       <type>URLParseInfo</type>
@@ -16706,14 +17190,14 @@
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
       <name>rm::FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae21ab4b5a8fa038874ae35236ee51cc7</anchor>
+      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
       <name>rm::FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9bf9d68f21bba17acaa7b32e9f019f01</anchor>
+      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16736,16 +17220,6 @@
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
       <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::TransportID</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaa64bc43ed66c910d6e7912adbd4c7aad</anchor>
-      <arglist></arglist>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">UDP_UADP</enumvalue>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">MQTT_UADP</enumvalue>
-      <enumvalue file="d3/da8/group__opcua.html" anchor="ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">MQTT_JSON</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -18128,6 +18602,12 @@
     <docanchor file="dc/d10/tutorial_modules_light.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/light.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2light</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_modules_lpss</name>
+    <title>轻量发布订阅服务 —— LPSS</title>
+    <filename>d3/d8e/tutorial_modules_lpss.html</filename>
+    <docanchor file="d3/d8e/tutorial_modules_lpss.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/lpss.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2lpss</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_modules_mqtt</name>
     <title>消息队列遥测传输协议 —— MQTT</title>
     <filename>da/ddb/tutorial_modules_mqtt.html</filename>
@@ -18178,6 +18658,7 @@
     <subpage>d4/d7a/tutorial_modules_netapp.html</subpage>
     <subpage>db/dba/tutorial_modules_opcua.html</subpage>
     <subpage>da/ddb/tutorial_modules_mqtt.html</subpage>
+    <subpage>d3/d8e/tutorial_modules_lpss.html</subpage>
     <subpage>df/d2c/tutorial_modules_camera.html</subpage>
     <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>
@@ -18478,7 +18959,6 @@
     <file>netapp.hpp</file>
     <file>serial.hpp</file>
     <file>socket.hpp</file>
-    <file>ssl.hpp</file>
     <file>util.hpp</file>
   </compound>
   <compound kind="dir">

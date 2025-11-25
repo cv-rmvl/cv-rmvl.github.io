@@ -9,5 +9,6 @@ var searchData=
   ['defaultgroup_6',['DefaultGroup',['../d0/df4/classrm_1_1DefaultGroup.html',1,'rm']]],
   ['defaulttracker_7',['DefaultTracker',['../d3/d25/classrm_1_1DefaultTracker.html',1,'rm']]],
   ['detectinfo_8',['DetectInfo',['../df/dae/structrm_1_1DetectInfo.html',1,'rm']]],
-  ['detector_9',['detector',['../d3/d77/classrm_1_1detector.html',1,'rm']]]
+  ['detector_9',['detector',['../d3/d77/classrm_1_1detector.html',1,'rm']]],
+  ['dgramsocket_10',['DgramSocket',['../d4/d37/classrm_1_1async_1_1DgramSocket.html',1,'rm::async::DgramSocket'],['../d0/d75/classrm_1_1DgramSocket.html',1,'rm::DgramSocket']]]
 ];

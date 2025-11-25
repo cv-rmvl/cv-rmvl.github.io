@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixchannel_0',['PixChannel',['../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34',1,'rm']]]
+  ['ortprovider_0',['OrtProvider',['../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84',1,'rm']]]
 ];
