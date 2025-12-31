@@ -1,0 +1,325 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: rmvl/opcua/utilities.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.2</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d1896504bf09fddf262d44ed95e52f7a.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_6f345ac53a1eefe67f1e600f9a522fd7.html">opcua</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">utilities.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;typeindex&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;open62541/types_generated_handling.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+utilities.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/d46/utilities_8hpp__incl.svg" width="626" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d84/utilities_8hpp__dep__incl.svg" width="440" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">rm::NodeId</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPC UA 节点 ID  <a href="../../dd/dfe/structrm_1_1NodeId.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d6b/classrm_1_1DataType.html">rm::DataType</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPC UA 数据类型  <a href="../../df/d6b/classrm_1_1DataType.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">rm::UserConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户信息  <a href="../../d4/d09/structrm_1_1UserConfig.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html">rm::helper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a4f23f9bdf101287cabbd88a30b07f705" id="r_a4f23f9bdf101287cabbd88a30b07f705"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f23f9bdf101287cabbd88a30b07f705">OPCUA_VERSION</a></td></tr>
+<tr class="separator:a4f23f9bdf101287cabbd88a30b07f705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gad705a86cb2bc6e9bc0ebfca8914ce0e3" id="r_gad705a86cb2bc6e9bc0ebfca8914ce0e3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad705a86cb2bc6e9bc0ebfca8914ce0e3">rm::FindNodeInServer</a> = ::std::tuple&lt;UA_Server *, ::std::string_view, uint16_t&gt;</td></tr>
+<tr class="memdesc:gad705a86cb2bc6e9bc0ebfca8914ce0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（服务端指针、浏览名、命名空间索引）  <br /></td></tr>
+<tr class="separator:gad705a86cb2bc6e9bc0ebfca8914ce0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09801e53791739037ee37c7eaf5a7e5c" id="r_ga09801e53791739037ee37c7eaf5a7e5c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga09801e53791739037ee37c7eaf5a7e5c">rm::FindNodeInClient</a> = ::std::tuple&lt;UA_Client *, ::std::string_view, uint16_t&gt;</td></tr>
+<tr class="memdesc:ga09801e53791739037ee37c7eaf5a7e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标节点信息（客户端指针、浏览名、命名空间索引）  <br /></td></tr>
+<tr class="separator:ga09801e53791739037ee37c7eaf5a7e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaa64bc43ed66c910d6e7912adbd4c7aad" id="r_gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">rm::TransportID</a> : uint8_t { <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadafba0c909830138b35af98e71c55a477f">rm::TransportID::UDP_UADP</a> = 1U
+, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aadacceb01aac2f6500541a40f5133a77dd4">rm::TransportID::MQTT_UADP</a> = 2U
+, <a class="el" href="../../d3/da8/group__opcua.html#ggaa64bc43ed66c910d6e7912adbd4c7aada7a31b0f447760abe3b44ae510c38322b">rm::TransportID::MQTT_JSON</a> = 3U
+ }</td></tr>
+<tr class="memdesc:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">传输协议  <a href="../../d3/da8/group__opcua.html#gaa64bc43ed66c910d6e7912adbd4c7aad">更多...</a><br /></td></tr>
+<tr class="separator:gaa64bc43ed66c910d6e7912adbd4c7aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga3d9c528cacd9b22f26e184aa5adc84b1" id="r_ga3d9c528cacd9b22f26e184aa5adc84b1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga3d9c528cacd9b22f26e184aa5adc84b1">rm::nodeBoolean</a> (0, UA_NS0ID_BOOLEAN)</td></tr>
+<tr class="memdesc:ga3d9c528cacd9b22f26e184aa5adc84b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Boolean</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga3d9c528cacd9b22f26e184aa5adc84b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45d85c6efbd59697a26a4a1e1cf1ec0e" id="r_ga45d85c6efbd59697a26a4a1e1cf1ec0e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga45d85c6efbd59697a26a4a1e1cf1ec0e">rm::nodeSbyte</a> (0, UA_NS0ID_SBYTE)</td></tr>
+<tr class="memdesc:ga45d85c6efbd59697a26a4a1e1cf1ec0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Sbyte</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga45d85c6efbd59697a26a4a1e1cf1ec0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2dc21dee59fe66c7549621d92e807c40" id="r_ga2dc21dee59fe66c7549621d92e807c40"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga2dc21dee59fe66c7549621d92e807c40">rm::nodeByte</a> (0, UA_NS0ID_BYTE)</td></tr>
+<tr class="memdesc:ga2dc21dee59fe66c7549621d92e807c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Byte</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga2dc21dee59fe66c7549621d92e807c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bde51aa3b95d72198b5189a44d0d481" id="r_ga0bde51aa3b95d72198b5189a44d0d481"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga0bde51aa3b95d72198b5189a44d0d481">rm::nodeInt16</a> (0, UA_NS0ID_INT16)</td></tr>
+<tr class="memdesc:ga0bde51aa3b95d72198b5189a44d0d481"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int16</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga0bde51aa3b95d72198b5189a44d0d481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3043a18f4889f72a50c48add84a9d1f7" id="r_ga3043a18f4889f72a50c48add84a9d1f7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga3043a18f4889f72a50c48add84a9d1f7">rm::nodeUint16</a> (0, UA_NS0ID_UINT16)</td></tr>
+<tr class="memdesc:ga3043a18f4889f72a50c48add84a9d1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint16</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga3043a18f4889f72a50c48add84a9d1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8adcb63a19062ecf573460fb63e9ac75" id="r_ga8adcb63a19062ecf573460fb63e9ac75"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga8adcb63a19062ecf573460fb63e9ac75">rm::nodeInt32</a> (0, UA_NS0ID_INT32)</td></tr>
+<tr class="memdesc:ga8adcb63a19062ecf573460fb63e9ac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int32</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga8adcb63a19062ecf573460fb63e9ac75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6898b98ebfd2fb3885d2c5b0c4615e5" id="r_gab6898b98ebfd2fb3885d2c5b0c4615e5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab6898b98ebfd2fb3885d2c5b0c4615e5">rm::nodeUint32</a> (0, UA_NS0ID_UINT32)</td></tr>
+<tr class="memdesc:gab6898b98ebfd2fb3885d2c5b0c4615e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint32</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gab6898b98ebfd2fb3885d2c5b0c4615e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6eee0763839b4100255c1aaa3a2c86d2" id="r_ga6eee0763839b4100255c1aaa3a2c86d2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga6eee0763839b4100255c1aaa3a2c86d2">rm::nodeInt64</a> (0, UA_NS0ID_INT64)</td></tr>
+<tr class="memdesc:ga6eee0763839b4100255c1aaa3a2c86d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Int64</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga6eee0763839b4100255c1aaa3a2c86d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabedb1edaef0424fcda948d057b798592" id="r_gabedb1edaef0424fcda948d057b798592"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gabedb1edaef0424fcda948d057b798592">rm::nodeUint64</a> (0, UA_NS0ID_UINT64)</td></tr>
+<tr class="memdesc:gabedb1edaef0424fcda948d057b798592"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Uint64</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gabedb1edaef0424fcda948d057b798592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae67cb23017a47516537feef9ea0c9392" id="r_gae67cb23017a47516537feef9ea0c9392"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae67cb23017a47516537feef9ea0c9392">rm::nodeFloat</a> (0, UA_NS0ID_FLOAT)</td></tr>
+<tr class="memdesc:gae67cb23017a47516537feef9ea0c9392"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Float</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gae67cb23017a47516537feef9ea0c9392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7fa5b66c57dc862b2efe894d4f415af1" id="r_ga7fa5b66c57dc862b2efe894d4f415af1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga7fa5b66c57dc862b2efe894d4f415af1">rm::nodeDouble</a> (0, UA_NS0ID_DOUBLE)</td></tr>
+<tr class="memdesc:ga7fa5b66c57dc862b2efe894d4f415af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Double</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga7fa5b66c57dc862b2efe894d4f415af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3b251f85c709a8d41bf66661003cc49" id="r_gab3b251f85c709a8d41bf66661003cc49"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab3b251f85c709a8d41bf66661003cc49">rm::nodeString</a> (0, UA_NS0ID_STRING)</td></tr>
+<tr class="memdesc:gab3b251f85c709a8d41bf66661003cc49"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>String</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gab3b251f85c709a8d41bf66661003cc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e1f5d6bdadd80d498f39fd5018d5fa5" id="r_ga2e1f5d6bdadd80d498f39fd5018d5fa5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga2e1f5d6bdadd80d498f39fd5018d5fa5">rm::nodeDatetime</a> (0, UA_NS0ID_DATETIME)</td></tr>
+<tr class="memdesc:ga2e1f5d6bdadd80d498f39fd5018d5fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据类型节点：<code>Datetime</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga2e1f5d6bdadd80d498f39fd5018d5fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga041532456b96e8dac325a89f51b089e6" id="r_ga041532456b96e8dac325a89f51b089e6"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga041532456b96e8dac325a89f51b089e6">rm::nodeObjectsFolder</a> (0, UA_NS0ID_OBJECTSFOLDER)</td></tr>
+<tr class="memdesc:ga041532456b96e8dac325a89f51b089e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>ObjectsFolder</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga041532456b96e8dac325a89f51b089e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15f071574c76e2f0414c90863bff3f0d" id="r_ga15f071574c76e2f0414c90863bff3f0d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga15f071574c76e2f0414c90863bff3f0d">rm::nodeTypesFolder</a> (0, UA_NS0ID_TYPESFOLDER)</td></tr>
+<tr class="memdesc:ga15f071574c76e2f0414c90863bff3f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>TypesFolder</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga15f071574c76e2f0414c90863bff3f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab20fa2fb5ad7d497374809d0fbf09759" id="r_gab20fa2fb5ad7d497374809d0fbf09759"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab20fa2fb5ad7d497374809d0fbf09759">rm::nodeViewsFolder</a> (0, UA_NS0ID_VIEWSFOLDER)</td></tr>
+<tr class="memdesc:gab20fa2fb5ad7d497374809d0fbf09759"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>ViewsFolder</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gab20fa2fb5ad7d497374809d0fbf09759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ba48627cc2e45dc39a0e9303e5d790b" id="r_ga5ba48627cc2e45dc39a0e9303e5d790b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga5ba48627cc2e45dc39a0e9303e5d790b">rm::nodeObjectTypesFolder</a> (0, UA_NS0ID_OBJECTTYPESFOLDER)</td></tr>
+<tr class="memdesc:ga5ba48627cc2e45dc39a0e9303e5d790b"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>ObjectTypesFolder</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga5ba48627cc2e45dc39a0e9303e5d790b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21226d4b81a75f626523d967ea444aa3" id="r_ga21226d4b81a75f626523d967ea444aa3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga21226d4b81a75f626523d967ea444aa3">rm::nodeVariableTypesFolder</a> (0, UA_NS0ID_VARIABLETYPESFOLDER)</td></tr>
+<tr class="memdesc:ga21226d4b81a75f626523d967ea444aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code>VariableTypesFolder</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga21226d4b81a75f626523d967ea444aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb3871a433ab0edaec345fee9e6c38b2" id="r_gaeb3871a433ab0edaec345fee9e6c38b2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gaeb3871a433ab0edaec345fee9e6c38b2">rm::nodeServer</a> (0, UA_NS0ID_SERVER)</td></tr>
+<tr class="memdesc:gaeb3871a433ab0edaec345fee9e6c38b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象节点：<code><a class="el" href="../../d4/d06/classrm_1_1Server.html" title="OPC UA 服务器">Server</a></code> 节点 ID  <br /></td></tr>
+<tr class="separator:gaeb3871a433ab0edaec345fee9e6c38b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad437047f35915ca9624ad1c2f17942f4" id="r_gad437047f35915ca9624ad1c2f17942f4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad437047f35915ca9624ad1c2f17942f4">rm::nodeFolderType</a> (0, UA_NS0ID_FOLDERTYPE)</td></tr>
+<tr class="memdesc:gad437047f35915ca9624ad1c2f17942f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象类型节点：<code>FolderType</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gad437047f35915ca9624ad1c2f17942f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga939cde15e0534f0e800805640f2d5e5a" id="r_ga939cde15e0534f0e800805640f2d5e5a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga939cde15e0534f0e800805640f2d5e5a">rm::nodeBaseObjectType</a> (0, UA_NS0ID_BASEOBJECTTYPE)</td></tr>
+<tr class="memdesc:ga939cde15e0534f0e800805640f2d5e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象类型节点：<code>BaseObjectType</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga939cde15e0534f0e800805640f2d5e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f9df7dd00a9018e44356660d0272809" id="r_ga2f9df7dd00a9018e44356660d0272809"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga2f9df7dd00a9018e44356660d0272809">rm::nodeBaseEventType</a> (0, UA_NS0ID_BASEEVENTTYPE)</td></tr>
+<tr class="memdesc:ga2f9df7dd00a9018e44356660d0272809"><td class="mdescLeft">&#160;</td><td class="mdescRight">对象类型节点：<code>BaseEventType</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga2f9df7dd00a9018e44356660d0272809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab20915b7cf5d31549a6c5541d94c2159" id="r_gab20915b7cf5d31549a6c5541d94c2159"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gab20915b7cf5d31549a6c5541d94c2159">rm::nodeBaseDataVariableType</a> (0, UA_NS0ID_BASEDATAVARIABLETYPE)</td></tr>
+<tr class="memdesc:gab20915b7cf5d31549a6c5541d94c2159"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量类型节点：<code>BaseDataVariableType</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gab20915b7cf5d31549a6c5541d94c2159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2ccc8adc3cb4027c3595ca5fb1729a3" id="r_gae2ccc8adc3cb4027c3595ca5fb1729a3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae2ccc8adc3cb4027c3595ca5fb1729a3">rm::nodePropertyType</a> (0, UA_NS0ID_PROPERTYTYPE)</td></tr>
+<tr class="memdesc:gae2ccc8adc3cb4027c3595ca5fb1729a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量类型节点：<code>PropertyType</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gae2ccc8adc3cb4027c3595ca5fb1729a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1a98aea0a35c74f3088d96b746d19fd" id="r_gae1a98aea0a35c74f3088d96b746d19fd"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae1a98aea0a35c74f3088d96b746d19fd">rm::nodeOrganizes</a> (0, UA_NS0ID_ORGANIZES)</td></tr>
+<tr class="memdesc:gae1a98aea0a35c74f3088d96b746d19fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>Organizes</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gae1a98aea0a35c74f3088d96b746d19fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae20fd2e26487e56b43960879380938ce" id="r_gae20fd2e26487e56b43960879380938ce"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gae20fd2e26487e56b43960879380938ce">rm::nodeHasTypeDefinition</a> (0, UA_NS0ID_HASTYPEDEFINITION)</td></tr>
+<tr class="memdesc:gae20fd2e26487e56b43960879380938ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasTypeDefinition</code> 节点 ID  <br /></td></tr>
+<tr class="separator:gae20fd2e26487e56b43960879380938ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69883befa7f0b1d8b4aae928d58cdb34" id="r_ga69883befa7f0b1d8b4aae928d58cdb34"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga69883befa7f0b1d8b4aae928d58cdb34">rm::nodeHasComponent</a> (0, UA_NS0ID_HASCOMPONENT)</td></tr>
+<tr class="memdesc:ga69883befa7f0b1d8b4aae928d58cdb34"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasComponent</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga69883befa7f0b1d8b4aae928d58cdb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13d561ce57b92cc7c11de2ed77c5e925" id="r_ga13d561ce57b92cc7c11de2ed77c5e925"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga13d561ce57b92cc7c11de2ed77c5e925">rm::nodeHasProperty</a> (0, UA_NS0ID_HASPROPERTY)</td></tr>
+<tr class="memdesc:ga13d561ce57b92cc7c11de2ed77c5e925"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasProperty</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga13d561ce57b92cc7c11de2ed77c5e925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13d3c1e20b19e73b226f5ed58936de32" id="r_ga13d3c1e20b19e73b226f5ed58936de32"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga13d3c1e20b19e73b226f5ed58936de32">rm::nodeHasSubtype</a> (0, UA_NS0ID_HASSUBTYPE)</td></tr>
+<tr class="memdesc:ga13d3c1e20b19e73b226f5ed58936de32"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasSubtype</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga13d3c1e20b19e73b226f5ed58936de32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga971860c2a664220e83791fec6722f75c" id="r_ga971860c2a664220e83791fec6722f75c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga971860c2a664220e83791fec6722f75c">rm::nodeHasModellingRule</a> (0, UA_NS0ID_HASMODELLINGRULE)</td></tr>
+<tr class="memdesc:ga971860c2a664220e83791fec6722f75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">引用类型节点：<code>HasModellingRule</code> 节点 ID  <br /></td></tr>
+<tr class="separator:ga971860c2a664220e83791fec6722f75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8717a113b0b3350ca05b5ed121ad07b" id="r_ad8717a113b0b3350ca05b5ed121ad07b"><td class="memItemLeft" align="right" valign="top">constexpr char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html#ad8717a113b0b3350ca05b5ed121ad07b">rm::helper::zh_CN</a> ()</td></tr>
+<tr class="memdesc:ad8717a113b0b3350ca05b5ed121ad07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取编译期常量 <code>zh-CN</code>  <br /></td></tr>
+<tr class="separator:ad8717a113b0b3350ca05b5ed121ad07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4519ceccc548819ed27d34d2487684" id="r_a4d4519ceccc548819ed27d34d2487684"><td class="memItemLeft" align="right" valign="top">constexpr char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html#a4d4519ceccc548819ed27d34d2487684">rm::helper::en_US</a> ()</td></tr>
+<tr class="memdesc:a4d4519ceccc548819ed27d34d2487684"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取编译期常量 <code>en-US</code>  <br /></td></tr>
+<tr class="separator:a4d4519ceccc548819ed27d34d2487684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99b14de423561318fb1871889bbb977" id="r_ad99b14de423561318fb1871889bbb977"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html#ad99b14de423561318fb1871889bbb977">rm::helper::to_char</a> (std::string_view str)</td></tr>
+<tr class="memdesc:ad99b14de423561318fb1871889bbb977"><td class="mdescLeft">&#160;</td><td class="mdescRight">转为 <code>char *</code>  <br /></td></tr>
+<tr class="separator:ad99b14de423561318fb1871889bbb977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907">rm::operator|</a> (<a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gad705a86cb2bc6e9bc0ebfca8914ce0e3">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
+<tr class="memdesc:gad4a5bb978e87fa6230034d85ff23b907"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务端路径搜索  <br /></td></tr>
+<tr class="separator:gad4a5bb978e87fa6230034d85ff23b907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d">rm::operator|</a> (<a class="el" href="../../dd/dfe/structrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#ga09801e53791739037ee37c7eaf5a7e5c">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>
+<tr class="memdesc:gac9cd15abdd9c0687cee73ce332008c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端路径搜索  <br /></td></tr>
+<tr class="separator:gac9cd15abdd9c0687cee73ce332008c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ga874e392295465b26035dc015e4d55827" id="r_ga874e392295465b26035dc015e4d55827"><td class="memItemLeft" align="right" valign="top">constexpr UA_Byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#ga874e392295465b26035dc015e4d55827">rm::typeflag_ns0</a> []</td></tr>
+<tr class="memdesc:ga874e392295465b26035dc015e4d55827"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code><a class="el" href="../../df/d6b/classrm_1_1DataType.html" title="OPC UA 数据类型">DataType</a></code> 到对应 <code>NS0</code> 下的类型名的映射  <br /></td></tr>
+<tr class="separator:ga874e392295465b26035dc015e4d55827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>zhaoxi (<a href="#" onclick="location.href='mai'+'lto:'+'535'+'39'+'414'+'0@'+'qq.'+'co'+'m'; return false;">53539<span class="obfuscator">.nosp@m.</span>4140<span class="obfuscator">.nosp@m.</span>@qq.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023-10-22</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2023 (c), zhaoxi </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a4f23f9bdf101287cabbd88a30b07f705" name="a4f23f9bdf101287cabbd88a30b07f705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f23f9bdf101287cabbd88a30b07f705">&#9670;&#160;</a></span>OPCUA_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPCUA_VERSION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">                          UA_OPEN62541_VER_MAJOR * 10000 +   \</div>
+<div class="line">                          UA_OPEN62541_VER_MINOR * 100 + \</div>
+<div class="line">                          UA_OPEN62541_VER_PATCH</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

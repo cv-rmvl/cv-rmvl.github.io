@@ -1,0 +1,240 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: 函数插值方法</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">函数插值方法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md149">1. Lagrange 插值多项式</a></li>
+<li class="level2"><a href="#autotoc_md150">2. Newton 插值多项式</a></li>
+</ul>
+</ul>
+</div>
+<div class="textblock"><p>从 <b>Lagrange 插值</b> 与 <b>Newton 插值</b> 两种基函数选取方式介绍函数插值</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2core_2interpolation"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/01/11 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../db/dba/tutorial_modules_opcua.html">工业自动化通信协议 OPC UA</a> ↑<br  />
+</p>
+<p><b>下一篇教程：</b><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法——超定方程组与函数拟合</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md149"></a>
+1. Lagrange 插值多项式</h2>
+<p>一般对于一个未知函数，若能从已知的一系列点<span style="color: red">近似</span>地使用多项式函数 \(p(x)\)代替原函数 \(f(x)\)，并且满足</p>
+<p class="formulaDsp">
+\[p(x_i)=f(x_i)=y_i\tag{1-1}\]
+</p>
+<p>则 \(p(x)\)称为插值多项式。</p>
+<p>也就是说， \(p(x)\)可以表示成多项式 \(\mathbb P[x]_n\)的形式，即</p>
+<p class="formulaDsp">
+\[p(x)=a_0+a_1x+a_2x^2+\cdots+a_{n-1}x^{n-1}\tag{1-2}\]
+</p>
+<p>对于 \(n\)个点，我们可以列出如下表格</p>
+<p class="formulaDsp">
+\[\begin{array}{c|cc}x&amp;x_1&amp;x_2&amp;x_3&amp;\cdots&amp;x_n\\\hline f(x)&amp;y_1&amp;y_2&amp;y_3&amp;\cdots&amp;y_n\end{array}\]
+</p>
+<p>根据 \(\text{(1-1)}\)，将 \(n\)个点分别代入 \(p(x)\)，可以得到</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+p(x_1)&amp;=a_0+a_1x_1+a_2x_1^2+\cdots+a_{n-1}x_1^{n-1}=f(x_1)=y_1\\
+p(x_2)&amp;=a_0+a_1x_2+a_2x_2^2+\cdots+a_{n-1}x_2^{n-1}=f(x_2)=y_2\\
+&amp;=\qquad\qquad\vdots\\
+p(x_n)&amp;=a_0+a_1x_n+a_2x_n^2+\cdots+a_{n-1}x_n^{n-1}=f(x_n)=y_n
+\end{align}\right.\tag{1-3a}\]
+</p>
+<p>要求解 \(a_0\)、 \(a_1\)、 \(\cdots\)、 \(a_{n-1}\)，可以将 \(\text{(1-3a)}\)改写成</p>
+<p class="formulaDsp">
+\[X\pmb a=\begin{bmatrix}1&amp;x_1&amp;\cdots&amp;x_1^{n-1}\\1&amp;x_2&amp;\cdots&amp;x_2^{n-1}\\\vdots&amp;\vdots&amp;\ddots&amp;
+\vdots\\1&amp;x_n&amp;\cdots&amp;x_n^{n-1}\end{bmatrix}\begin{bmatrix}a_0\\a_1\\\vdots\\a_{n-1}\end{bmatrix}=
+\begin{bmatrix}y_1\\y_2\\\vdots\\y_n\end{bmatrix}=\pmb f\tag{1-3b}\]
+</p>
+<p>我们选取的一组基是 \(\left(1,x,x^2,\cdots,x^n\right)\)，在这里系数矩阵 \(X\)是个 Vandermonde 矩阵，求解起来比较复杂。希望寻找一组合适的基，使得 \(\pmb a\)的求解比较简单，如果在某组基 \((l_0(x),l_1(x),l_2(x),\cdots,l_{n-1}(x))\)下，系数矩阵 \(X\)变为单位矩阵，即 \(X=I\)，此时 \(\pmb a=\pmb f\)，此时插值多项式就可以写为</p>
+<p class="formulaDsp">
+\[p(x)=y_1l_0(x)+y_2l_1(x)+y_3l_2(x)+\cdots+y_nl_{n-1}(x)\tag{1-4}\]
+</p>
+<p>要使得 \(X=I\)，也就是需要满足</p>
+<p class="formulaDsp">
+\[l_i(x_j)=\left\{\begin{align}1,\quad i=j\\0,\quad i\neq j\end{align}\right.\tag{1-5}\]
+</p>
+<p>可以取</p>
+<p class="formulaDsp">
+\[l_i(x)=\prod\limits_{j=0,j\neq i}^{n-1}\frac{x-x_j}{x_i-x_j}=\frac{(x-x_0)(x-x_1)\cdots(x-x_{i-1})(x-x_{i+1})\cdots(x-x_{n-1})}{(x_i-x_0)(x_i-x_1)\cdots(x_i-x_{i-1})(x_i-x_{i+1})\cdots(x_i-x_{n-1})}\tag{1-6}\]
+</p>
+<p>这就是 Lagrange 插值基函数， \(\text{(1-4)}\)被称为 Lagrange 插值多项式。</p>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>使用以下节点进行二次插值</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(1\)   </th><th class="markdownTableHeadCenter">\(2\)   </th><th class="markdownTableHeadCenter">\(3\)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\(f(x)\)   </td><td class="markdownTableBodyCenter">\(2\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(2\)   </td></tr>
+</table>
+<p><b>解答</b></p>
+<p class="formulaDsp">
+\[\begin{align}
+l_0(x)&amp;=\prod\limits_{j=0,j\neq0}^2\frac{x-x_j}{x_i-x_j}=\frac{(x-2)(x-3)}{(1-2)(1-3)}=\frac12(x-2)(x-3)\\
+l_1(x)&amp;=\prod\limits_{j=0,j\neq1}^2\frac{x-x_j}{x_i-x_j}=\frac{(x-1)(x-3)}{(2-1)(2-3)}=-(x-1)(x-3)\\
+l_2(x)&amp;=\prod\limits_{j=0,j\neq2}^2\frac{x-x_j}{x_i-x_j}=\frac{(x-1)(x-2)}{(3-1)(3-2)}=\frac12(x-1)(x-2)\\
+\end{align}\]
+</p>
+<p>因此，得到：</p>
+<p class="formulaDsp">
+\[\begin{align}p(x)&amp;=y_1l_0(x)+y_2l_1(x)+y_3l_2(x)\\&amp;=(x-2)(x-3)-(x-1)(x-3)+(x-1)(x-2)\\&amp;=x^2-4x+5\end{align}\]
+</p>
+<dl class="section note"><dt>注解</dt><dd>一般的， \(n\)点 \(n\)次插值得到的插值多项式是<span style="color: red"><b>唯一</b></span>的，读者可以自行使用待定系数法验证</dd></dl>
+<h2><a class="anchor" id="autotoc_md150"></a>
+2. Newton 插值多项式</h2>
+<p>相关类 <a class="el" href="../../dc/d80/classrm_1_1Interpolator.html" title="函数插值器">rm::Interpolator</a></p>
+<hr  />
+<p>Lagrange 插值基函数存在一些问题，比如当我们需要在原先节点的基础上再次增加若干个节点，这会导致之前计算出的基函数全部失效，需要重新计算。为此我们需要引入新的插值基函数，这里使用 Newton 插值基函数来避免这一问题。</p>
+<p>Newton 插值基函数的表达式如下</p>
+<p class="formulaDsp">
+\[l_i(x)=\left\{\begin{array}{lr}1&amp;i=0\\\prod\limits_{j=0}^{i-1}(x-x_j)&amp;i\neq0\end{array}\right.\tag{2-1}\]
+</p>
+<p>Newton 插值多项式可以写为以下形式</p>
+<p class="formulaDsp">
+\[p(x)=a_0l_0(x)+a_1l_1(x)+a_2l_2(x)+\cdots+a_{n-1}l_{n-1}(x)\tag{2-2}\]
+</p>
+<p>其中插值系数 \(a_i\ (i=0,1,2,\cdots,n-1)\)表示为</p>
+<p class="formulaDsp">
+\[\begin{align}a_0&amp;=f\left(x_0\right)\\a_1&amp;=f\left[x_0,x_1\right]=\frac{f(x_0)-f(x_1)}{x_0-x_1}\\
+a_2&amp;=f\left[x_0,x_1,x_2\right]=\frac{f\left[x_0,x_1\right]-f\left[x_1,x_2\right]}{x_0-x_2}\\
+&amp;\ \vdots\\a_{n-1}&amp;=f\left[x_0,x_1,\cdots,x_{n-1}\right]\end{align}\tag{2-3}\]
+</p>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>使用以下节点进行 3 次插值</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(0\)   </th><th class="markdownTableHeadCenter">\(1\)   </th><th class="markdownTableHeadCenter">\(2\)   </th><th class="markdownTableHeadCenter">\(3\)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\(f(x)\)   </td><td class="markdownTableBodyCenter">\(0\)   </td><td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(3\)   </td><td class="markdownTableBodyCenter">\(2\)   </td></tr>
+</table>
+<p><b>解答</b></p>
+<p>列差商表</p>
+<p class="formulaDsp">
+\[\begin{array}{c|cc}x&amp;f(x)&amp;1阶&amp;2阶&amp;3阶\\\hline0&amp;0\\1&amp;1&amp;\frac{1-0}{1-0}=1\\2&amp;3&amp;\frac{3-1}{2-1}=2&amp;\frac{2-1}
+{2-0}=\frac12\\3&amp;2&amp;\frac{2-3}{3-2}=-1&amp;\frac{-1-2}{3-1}=-\frac32&amp;\frac{-\frac32-\frac12}{3-0}=-\frac23\\\end{array}\]
+</p>
+<p>可以得到</p>
+<p class="formulaDsp">
+\[\begin{align}p(x)&amp;=0+x+\frac12x(x-1)-\frac23x(x-1)(x-2)\\&amp;=-\frac23x^3+\frac52x^2-\frac56x\end{align}\]
+</p>
+ </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

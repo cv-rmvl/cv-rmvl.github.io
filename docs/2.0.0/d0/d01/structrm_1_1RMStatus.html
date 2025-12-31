@@ -1,0 +1,346 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: rm::RMStatus结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.0.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d0/dd3/structrm_1_1RMStatus-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::RMStatus结构体 参考<div class="ingroups"><a class="el" href="../../d6/d59/group__types.html">视觉功能相关的类型系统</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>状态类型  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/types.hpp&gt;</code></p>
+<div class="dynheader">
+rm::RMStatus 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d6/da9/structrm_1_1RMStatus__coll__graph.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a17acfcbea87d4714c6992a6eb9c67ba3" id="r_a17acfcbea87d4714c6992a6eb9c67ba3"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:a17acfcbea87d4714c6992a6eb9c67ba3"><td class="memTemplItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17acfcbea87d4714c6992a6eb9c67ba3">to_string</a> (Tp type)</td></tr>
+<tr class="memdesc:a17acfcbea87d4714c6992a6eb9c67ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将类型转化为 <code>std::string</code> 类型  <br /></td></tr>
+<tr class="separator:a17acfcbea87d4714c6992a6eb9c67ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063a552cb0b215c8a63851c3a3e4f8c7" id="r_a063a552cb0b215c8a63851c3a3e4f8c7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a063a552cb0b215c8a63851c3a3e4f8c7">to_string</a> (<a class="el" href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a> type)</td></tr>
+<tr class="memdesc:a063a552cb0b215c8a63851c3a3e4f8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">将机器人类型转化为 <code>std::string</code> 类型  <br /></td></tr>
+<tr class="separator:a063a552cb0b215c8a63851c3a3e4f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a87ee6e0c08b3a8e3b74959fc42ce7ed0" id="r_a87ee6e0c08b3a8e3b74959fc42ce7ed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7">ArmorSizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87ee6e0c08b3a8e3b74959fc42ce7ed0">ArmorSizeTypeID</a> {}</td></tr>
+<tr class="memdesc:a87ee6e0c08b3a8e3b74959fc42ce7ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">装甲板大小类型  <br /></td></tr>
+<tr class="separator:a87ee6e0c08b3a8e3b74959fc42ce7ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3122d79ab5661910f0af7e0f7929a9b3" id="r_a3122d79ab5661910f0af7e0f7929a9b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga083deed637a993d54f06a047224c9b79">RuneType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3122d79ab5661910f0af7e0f7929a9b3">RuneTypeID</a> {}</td></tr>
+<tr class="memdesc:a3122d79ab5661910f0af7e0f7929a9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">能量机关激活类型  <br /></td></tr>
+<tr class="separator:a3122d79ab5661910f0af7e0f7929a9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9b7988448c60f9d48c9ceab08ed9a4" id="r_a7a9b7988448c60f9d48c9ceab08ed9a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga6eb0c54354d1de382a6d3735da2c005c">CompensateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9b7988448c60f9d48c9ceab08ed9a4">CompensateTypeID</a> {}</td></tr>
+<tr class="memdesc:a7a9b7988448c60f9d48c9ceab08ed9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制补偿类型  <br /></td></tr>
+<tr class="separator:a7a9b7988448c60f9d48c9ceab08ed9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4b3c10517eede489cbb1f4458c21a7" id="r_a2a4b3c10517eede489cbb1f4458c21a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4b3c10517eede489cbb1f4458c21a7">RobotTypeID</a> {}</td></tr>
+<tr class="memdesc:a2a4b3c10517eede489cbb1f4458c21a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">机器人类型  <br /></td></tr>
+<tr class="separator:a2a4b3c10517eede489cbb1f4458c21a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3afdb9ba385e55462e18d67b0b92ad5" id="r_ae3afdb9ba385e55462e18d67b0b92ad5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d59/group__types.html#ga53b2ed651ce89a5884af7310fb1a24d6">TagType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3afdb9ba385e55462e18d67b0b92ad5">TagTypeID</a> {}</td></tr>
+<tr class="memdesc:ae3afdb9ba385e55462e18d67b0b92ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">AprilTag 视觉标签类型  <br /></td></tr>
+<tr class="separator:ae3afdb9ba385e55462e18d67b0b92ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>状态类型 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a063a552cb0b215c8a63851c3a3e4f8c7" name="a063a552cb0b215c8a63851c3a3e4f8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a063a552cb0b215c8a63851c3a3e4f8c7">&#9670;&#160;</a></span>to_string() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string rm::RMStatus::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将机器人类型转化为 <code>std::string</code> 类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>RobotType 类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串类型 </dd></dl>
+
+</div>
+</div>
+<a id="a17acfcbea87d4714c6992a6eb9c67ba3" name="a17acfcbea87d4714c6992a6eb9c67ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17acfcbea87d4714c6992a6eb9c67ba3">&#9670;&#160;</a></span>to_string() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string rm::RMStatus::to_string </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将类型转化为 <code>std::string</code> 类型 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html" title="状态类型">RMStatus</a> 子类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串类型 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a87ee6e0c08b3a8e3b74959fc42ce7ed0" name="a87ee6e0c08b3a8e3b74959fc42ce7ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ee6e0c08b3a8e3b74959fc42ce7ed0">&#9670;&#160;</a></span>ArmorSizeTypeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga4c8a071e633e74da2404d335e8e62bb7">ArmorSizeType</a> rm::RMStatus::ArmorSizeTypeID {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>装甲板大小类型 </p>
+
+</div>
+</div>
+<a id="a7a9b7988448c60f9d48c9ceab08ed9a4" name="a7a9b7988448c60f9d48c9ceab08ed9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9b7988448c60f9d48c9ceab08ed9a4">&#9670;&#160;</a></span>CompensateTypeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga6eb0c54354d1de382a6d3735da2c005c">CompensateType</a> rm::RMStatus::CompensateTypeID {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>强制补偿类型 </p>
+
+</div>
+</div>
+<a id="a2a4b3c10517eede489cbb1f4458c21a7" name="a2a4b3c10517eede489cbb1f4458c21a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4b3c10517eede489cbb1f4458c21a7">&#9670;&#160;</a></span>RobotTypeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a> rm::RMStatus::RobotTypeID {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>机器人类型 </p>
+
+</div>
+</div>
+<a id="a3122d79ab5661910f0af7e0f7929a9b3" name="a3122d79ab5661910f0af7e0f7929a9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3122d79ab5661910f0af7e0f7929a9b3">&#9670;&#160;</a></span>RuneTypeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga083deed637a993d54f06a047224c9b79">RuneType</a> rm::RMStatus::RuneTypeID {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>能量机关激活类型 </p>
+
+</div>
+</div>
+<a id="ae3afdb9ba385e55462e18d67b0b92ad5" name="ae3afdb9ba385e55462e18d67b0b92ad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3afdb9ba385e55462e18d67b0b92ad5">&#9670;&#160;</a></span>TagTypeID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d59/group__types.html#ga53b2ed651ce89a5884af7310fb1a24d6">TagType</a> rm::RMStatus::TagTypeID {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AprilTag 视觉标签类型 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>rmvl/<a class="el" href="../../dd/de3/types_8hpp.html">types.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

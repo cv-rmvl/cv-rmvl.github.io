@@ -1,0 +1,202 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 视觉库的配置与构建</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../df/d65/tutorial_table_of_content_introduction.html">视觉库介绍</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">视觉库的配置与构建 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md97">1. 安装依赖</a><ul><li class="level3"><a href="#autotoc_md98">1.1 OpenCV*</a></li>
+<li class="level3"><a href="#autotoc_md99">1.2 Eigen3*</a></li>
+<li class="level3"><a href="#autotoc_md100">1.3 相机 SDK（可选）</a></li>
+<li class="level3"><a href="#autotoc_md101">1.4 onnxruntime</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md102">2. 配置 RMVL 项目</a><ul><li class="level3"><a href="#autotoc_md103">2.1 进入编译空间</a></li>
+<li class="level3"><a href="#autotoc_md104">2.2 请继续在终端中输入以下内容</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md105">3. 构建 RMVL</a></li>
+<li class="level2"><a href="#autotoc_md106">4. 运行 RMVL 的测试用例</a></li>
+</ul>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_linux_tutorial_build"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d1/d0a/tutorial_configuration_options.html">RMVL 的编译、配置选项</a> ↑<br  />
+<b>下一篇教程：</b><a class="el" href="../../d1/db4/tutorial_install.html">视觉库的打包与安装</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md97"></a>
+1. 安装依赖</h2>
+<dl class="section note"><dt>注解</dt><dd>带有 <code>*</code> 的表示必须安装</dd></dl>
+<h3><a class="anchor" id="autotoc_md98"></a>
+1.1 OpenCV*</h3>
+<p>OpenCV 是 RMVL 必需的依赖库，如果没有找到 OpenCV 库，RMVL 将无法构建，下面介绍 OpenCV 的安装方法。</p>
+<p><b>安装 OpenCV 依赖</b></p>
+<div class="fragment"><div class="line">sudo apt install build-essential</div>
+<div class="line">sudo apt install libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg-dev libswscale-dev libtiff5-dev pkg-config</div>
+</div><!-- fragment --><p><b>下载并解压缩 OpenCV</b></p>
+<div class="fragment"><div class="line">wget https://codeload.github.com/opencv/opencv/tar.gz/refs/tags/4.7.0</div>
+<div class="line">tar -xvf 4.7.0</div>
+</div><!-- fragment --><p><b>构建 OpenCV</b></p>
+<div class="fragment"><div class="line">cd opencv-4.7.0</div>
+<div class="line">mkdir build &amp;&amp; cd build</div>
+<div class="line">cmake \</div>
+<div class="line">  -DBUILD_EXAMPLES=OFF \</div>
+<div class="line">  -DBUILD_PERF_TESTS=OFF \</div>
+<div class="line">  -DBUILD_TESTS=OFF \</div>
+<div class="line">  -DBUILD_opencv_python3=OFF \</div>
+<div class="line">  -DBUILD_JAVA=OFF \</div>
+<div class="line">  -DBUILD_opencv_js=OFF \</div>
+<div class="line">  -DBUILD_opencv_gapi=OFF \</div>
+<div class="line">  -DOPENCV_ENABLE_NONFREE=ON \</div>
+<div class="line">  -DENABLE_FAST_MATH=ON \</div>
+<div class="line">  -DWITH_GSTREAMER=ON \</div>
+<div class="line">  -DCMAKE_BUILD_TYPE=Release \</div>
+<div class="line">  ..</div>
+<div class="line"> </div>
+<div class="line">make -j8 &amp;&amp; sudo make install</div>
+</div><!-- fragment --><dl class="section see"><dt>参见</dt><dd><ul>
+<li><a href="https://docs.opencv.org/4.x/">OpenCV documents</a></li>
+</ul>
+</dd></dl>
+<h3><a class="anchor" id="autotoc_md99"></a>
+1.2 Eigen3*</h3>
+<div class="fragment"><div class="line"># use apt to obtain Eigen3</div>
+<div class="line">sudo apt install libeigen3-dev</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md100"></a>
+1.3 相机 SDK（可选）</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">相机厂商   </th><th class="markdownTableHeadCenter">编译选项   </th><th class="markdownTableHeadCenter">CMake 包 <code>find_package(..)</code>   </th><th class="markdownTableHeadCenter">SDK 下载地址（点击即可下载）    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">MindVision   </td><td class="markdownTableBodyCenter"><code>BUILD_rmvl_mv_video_capture</code>   </td><td class="markdownTableBodyCenter">MvSDK   </td><td class="markdownTableBodyCenter"><a href="https://www.mindvision.com.cn/uploadfiles/SDK/linuxSDK_V2.1.0.37.tar.gz">RMVL_mv</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">HikVision   </td><td class="markdownTableBodyCenter"><code>BUILD_rmvl_hik_video_capture</code>   </td><td class="markdownTableBodyCenter">HikSDK   </td><td class="markdownTableBodyCenter"><a href="https://www.hikrobotics.com/cn2/source/support/software/MVS_STD_GML_V2.1.2_221208.zip">RMVL_hik</a>   </td></tr>
+</table>
+<p>以上 SDK 在进行二次封装得到的相机库都需要链接到 OpenCV。</p>
+<h3><a class="anchor" id="autotoc_md101"></a>
+1.4 onnxruntime</h3>
+<p>onnxruntime 库是目前数字识别所依赖的第三方库，如果有需要开启此功能，则需要执行以下命令。</p>
+<div class="fragment"><div class="line"># 获取压缩包</div>
+<div class="line">curl -SL https://github.com/microsoft/onnxruntime/releases/download/v1.12.0/onnxruntime-linux-x64-1.12.0.tgz -o onnxruntime-linux-x64-1.12.0.tgz</div>
+<div class="line"># 解压</div>
+<div class="line">tar -xvf onnxruntime-linux-x64-1.12.0.tgz</div>
+<div class="line"># 安装（复制头文件与库文件）</div>
+<div class="line">sudo mkdir /usr/local/include/onnxruntime</div>
+<div class="line">sudo cp onnxruntime-linux-x64-1.12.0/include/* /usr/local/include/onnxruntime</div>
+<div class="line">sudo cp -r onnxruntime-linux-x64-1.12.0/lib /usr/local</div>
+<div class="line"># 移除中间文件</div>
+<div class="line">rm -r onnxruntime-linux-x64-1.12.0 &amp;&amp; rm onnxruntime-linux-x64-1.12.0.tgz</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md102"></a>
+2. 配置 RMVL 项目</h2>
+<h3><a class="anchor" id="autotoc_md103"></a>
+2.1 进入编译空间</h3>
+<div class="fragment"><div class="line">cd build</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md104"></a>
+2.2 请继续在终端中输入以下内容</h3>
+<div class="fragment"><div class="line"># Open the tests</div>
+<div class="line">cmake -D BUILD_TESTS=ON ..</div>
+</div><!-- fragment --><p>或者使用图形用户界面（GUI）来配置 RMVL</p>
+<div class="fragment"><div class="line">cmake-gui ..</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md105"></a>
+3. 构建 RMVL</h2>
+<div class="fragment"><div class="line">make -j8</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md106"></a>
+4. 运行 RMVL 的测试用例</h2>
+<div class="fragment"><div class="line">ctest</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:17:46 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

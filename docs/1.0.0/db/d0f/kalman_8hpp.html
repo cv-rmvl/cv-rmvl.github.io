@@ -1,0 +1,166 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: rmvl/core/kalman.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_8ce2230b18c62fc4f1b2d4c11ea01049.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_021e08c4c598f89101b0aa1de0100d4c.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle">
+<div class="title">kalman.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>包含轻量级 <code>cv::Matx</code> 的卡尔曼滤波模块  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;opencv2/core/matx.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+kalman.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/df8/kalman_8hpp__incl.svg" width="186" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d02/kalman_8hpp__dep__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX&lt; Tp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用 <code>cv::Matx</code> 的轻量级卡尔曼滤波器库  <a href="../../d4/d9b/classKalmanFilterX.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga40f5dd237fe8949ec88bd08f2f9ac1da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga40f5dd237fe8949ec88bd08f2f9ac1da">KF11f</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; float, 1U, 1U &gt;</td></tr>
+<tr class="memdesc:ga40f5dd237fe8949ec88bd08f2f9ac1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 × 1 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga40f5dd237fe8949ec88bd08f2f9ac1da">更多...</a><br /></td></tr>
+<tr class="separator:ga40f5dd237fe8949ec88bd08f2f9ac1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0229ac65abbee62123ea78f249216631"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga0229ac65abbee62123ea78f249216631">KF11d</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; double, 1U, 1U &gt;</td></tr>
+<tr class="memdesc:ga0229ac65abbee62123ea78f249216631"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 × 1 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga0229ac65abbee62123ea78f249216631">更多...</a><br /></td></tr>
+<tr class="separator:ga0229ac65abbee62123ea78f249216631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d04e37333a3d4e831d731456c804230"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga5d04e37333a3d4e831d731456c804230">KF22f</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; float, 2U, 2U &gt;</td></tr>
+<tr class="memdesc:ga5d04e37333a3d4e831d731456c804230"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 × 2 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga5d04e37333a3d4e831d731456c804230">更多...</a><br /></td></tr>
+<tr class="separator:ga5d04e37333a3d4e831d731456c804230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7249791f8974a435b4faf1e70da69fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#gac7249791f8974a435b4faf1e70da69fe">KF22d</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; double, 2U, 2U &gt;</td></tr>
+<tr class="memdesc:gac7249791f8974a435b4faf1e70da69fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 × 2 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#gac7249791f8974a435b4faf1e70da69fe">更多...</a><br /></td></tr>
+<tr class="separator:gac7249791f8974a435b4faf1e70da69fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae69fa5226bbdf183067ea3b1d0da2694"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#gae69fa5226bbdf183067ea3b1d0da2694">KF33f</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; float, 3U, 3U &gt;</td></tr>
+<tr class="memdesc:gae69fa5226bbdf183067ea3b1d0da2694"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 × 3 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#gae69fa5226bbdf183067ea3b1d0da2694">更多...</a><br /></td></tr>
+<tr class="separator:gae69fa5226bbdf183067ea3b1d0da2694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga179720ef26b0981bde19e42906711c28"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga179720ef26b0981bde19e42906711c28">KF33d</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; double, 3U, 3U &gt;</td></tr>
+<tr class="memdesc:ga179720ef26b0981bde19e42906711c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 × 3 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga179720ef26b0981bde19e42906711c28">更多...</a><br /></td></tr>
+<tr class="separator:ga179720ef26b0981bde19e42906711c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94e2bd2524a0044c233be08172082889"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga94e2bd2524a0044c233be08172082889">KF44f</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; float, 4U, 4U &gt;</td></tr>
+<tr class="memdesc:ga94e2bd2524a0044c233be08172082889"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 × 4 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga94e2bd2524a0044c233be08172082889">更多...</a><br /></td></tr>
+<tr class="separator:ga94e2bd2524a0044c233be08172082889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61e763f53b8c449469e44116f6eb5c74"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga61e763f53b8c449469e44116f6eb5c74">KF44d</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; double, 4U, 4U &gt;</td></tr>
+<tr class="memdesc:ga61e763f53b8c449469e44116f6eb5c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 × 4 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga61e763f53b8c449469e44116f6eb5c74">更多...</a><br /></td></tr>
+<tr class="separator:ga61e763f53b8c449469e44116f6eb5c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga849d8ee03cbc287cf1f2e04a1241e2cf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#ga849d8ee03cbc287cf1f2e04a1241e2cf">KF66f</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; float, 6U, 6U &gt;</td></tr>
+<tr class="memdesc:ga849d8ee03cbc287cf1f2e04a1241e2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">6 × 6 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#ga849d8ee03cbc287cf1f2e04a1241e2cf">更多...</a><br /></td></tr>
+<tr class="separator:ga849d8ee03cbc287cf1f2e04a1241e2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd573a00418ac082f281adad352f50b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dff/group__core__kalman.html#gabd573a00418ac082f281adad352f50b5">KF66d</a> = <a class="el" href="../../d4/d9b/classKalmanFilterX.html">KalmanFilterX</a>&lt; double, 6U, 6U &gt;</td></tr>
+<tr class="memdesc:gabd573a00418ac082f281adad352f50b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">6 × 6 卡尔曼滤波类  <a href="../../d7/dff/group__core__kalman.html#gabd573a00418ac082f281adad352f50b5">更多...</a><br /></td></tr>
+<tr class="separator:gabd573a00418ac082f281adad352f50b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>包含轻量级 <code>cv::Matx</code> 的卡尔曼滤波模块 </p>
+<dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community</dd></dl>
+<p>考虑到 OpenCV 中提供的 <code>cv::KalmanFilter</code> 是基于 <code>cv::Mat</code> 实现的，并且 <code>cv::Mat</code> 的内存操作在运行时是在堆上打开的，因此会消耗大量的时间，所以现在使用 <code>cv::Matx</code> 来复现卡尔曼滤波的功能。并简化部分功能的实现，以达到更方便使用的目的。 </p><dl class="section version"><dt>版本</dt><dd>2.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-10-05</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2022 (c), RoboMaster Vision Community </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:17:46 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

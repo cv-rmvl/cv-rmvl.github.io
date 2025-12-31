@@ -1,0 +1,336 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.16.1" name="generator"/>
+  <title>RMVL: rm::ClassificationNet类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script src="../../doxygen-awesome-tabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d4/de6/classrm_1_1ClassificationNet.html">ClassificationNet</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="#pri-methods">Private 成员函数</a> |
+<a href="../../d4/dee/classrm_1_1ClassificationNet-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::ClassificationNet类 参考<div class="ingroups"><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a> » <a class="el" href="../../dc/d73/group__ml__ort.html">onnxruntime 多态部署库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>分类网络推理类  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/ml/ort.h&gt;</code></p>
+<div class="dynheader">
+类 rm::ClassificationNet 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="390" loading="lazy" scrolling="no" src="../../d0/dc2/classrm_1_1ClassificationNet__inherit__graph.svg" width="148"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::ClassificationNet 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" loading="lazy" scrolling="no" src="../../d5/da4/classrm_1_1ClassificationNet__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6b4d277a98b3403bb1278378b6c09005" id="r_a6b4d277a98b3403bb1278378b6c09005"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a6b4d277a98b3403bb1278378b6c09005">ClassificationNet</a> (std::string_view model_path, <a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> prov=<a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">OrtProvider::CPU</a>)</td></tr>
+<tr class="memdesc:a6b4d277a98b3403bb1278378b6c09005"><td class="mdescLeft"> </td><td class="mdescRight">创建分类网络对象  <br/></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1OnnxNet"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1OnnxNet')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html">rm::OnnxNet</a></td></tr>
+<tr class="memitem:a6dbd13d7a6b4a26a4296da92809dea81 inherit pub_methods_classrm_1_1OnnxNet" id="r_a6dbd13d7a6b4a26a4296da92809dea81"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a6dbd13d7a6b4a26a4296da92809dea81">OnnxNet</a> (std::string_view model_path, <a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> prov)</td></tr>
+<tr class="memdesc:a6dbd13d7a6b4a26a4296da92809dea81 inherit pub_methods_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象  <br/></td></tr>
+<tr class="memitem:a8cf157759b92a6eed2a8675aec1aa1bd inherit pub_methods_classrm_1_1OnnxNet" id="r_a8cf157759b92a6eed2a8675aec1aa1bd"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a8cf157759b92a6eed2a8675aec1aa1bd">printModelInfo</a> () noexcept</td></tr>
+<tr class="memdesc:a8cf157759b92a6eed2a8675aec1aa1bd inherit pub_methods_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">打印模型信息  <br/></td></tr>
+<tr class="memitem:ab70aafd8b3d2bac3170fbb92cb8ba092 inherit pub_methods_classrm_1_1OnnxNet" id="r_ab70aafd8b3d2bac3170fbb92cb8ba092"><td class="memItemLeft">std::any </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#ab70aafd8b3d2bac3170fbb92cb8ba092">inference</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;preop, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop)</td></tr>
+<tr class="memdesc:ab70aafd8b3d2bac3170fbb92cb8ba092 inherit pub_methods_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">推理  <br/></td></tr>
+<tr class="memitem:adfe46ea2dfbc55b99369613a5cf9b754 inherit pub_methods_classrm_1_1OnnxNet" id="r_adfe46ea2dfbc55b99369613a5cf9b754"><td class="memItemLeft">virtual </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#adfe46ea2dfbc55b99369613a5cf9b754">~OnnxNet</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:adbad1162f87690b65574acf49278166a" id="r_adbad1162f87690b65574acf49278166a"><td class="memItemLeft">static std::pair&lt; int, float &gt; </td><td class="memItemRight"><a class="el" href="#adbad1162f87690b65574acf49278166a">cast</a> (const std::any &amp;result)</td></tr>
+<tr class="memdesc:adbad1162f87690b65574acf49278166a"><td class="mdescLeft"> </td><td class="mdescRight">推理结果转换  <br/></td></tr>
+<tr class="inherit_header pub_static_methods_classrm_1_1OnnxNet"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classrm_1_1OnnxNet')"><span class="dynarrow"><span class="arrowhead closed"></span></span>静态 Public 成员函数 继承自 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html">rm::OnnxNet</a></td></tr>
+<tr class="memitem:a599174e651ad53759b0547916f45d010 inherit pub_static_methods_classrm_1_1OnnxNet" id="r_a599174e651ad53759b0547916f45d010"><td class="memItemLeft">static void </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a599174e651ad53759b0547916f45d010">printEnvInfo</a> () noexcept</td></tr>
+<tr class="memdesc:a599174e651ad53759b0547916f45d010 inherit pub_static_methods_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">打印环境信息  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pri-methods"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a15ff35f5e291bdb84a61d22371a20f30" id="r_a15ff35f5e291bdb84a61d22371a20f30"><td class="memItemLeft">std::vector&lt; Ort::Value &gt; </td><td class="memItemRight"><a class="el" href="#a15ff35f5e291bdb84a61d22371a20f30">preProcess</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;options) override</td></tr>
+<tr class="memdesc:a15ff35f5e291bdb84a61d22371a20f30"><td class="mdescLeft"> </td><td class="mdescRight">预处理  <br/></td></tr>
+<tr class="memitem:a66d83371ae162712b202f11ae10da3fe" id="r_a66d83371ae162712b202f11ae10da3fe"><td class="memItemLeft">std::any </td><td class="memItemRight"><a class="el" href="#a66d83371ae162712b202f11ae10da3fe">postProcess</a> (const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop) override</td></tr>
+<tr class="memdesc:a66d83371ae162712b202f11ae10da3fe"><td class="mdescLeft"> </td><td class="mdescRight">后处理  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1OnnxNet"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1OnnxNet')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html">rm::OnnxNet</a></td></tr>
+<tr class="memitem:a5f8f9ec9a9c554698909b8ddd3492363 inherit pro_attribs_classrm_1_1OnnxNet" id="r_a5f8f9ec9a9c554698909b8ddd3492363"><td class="memItemLeft">Ort::MemoryInfo </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a5f8f9ec9a9c554698909b8ddd3492363">_memory_info</a></td></tr>
+<tr class="memdesc:a5f8f9ec9a9c554698909b8ddd3492363 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">内存分配信息  <br/></td></tr>
+<tr class="memitem:ab2b4c1c093bbb4457be83831b6687928 inherit pro_attribs_classrm_1_1OnnxNet" id="r_ab2b4c1c093bbb4457be83831b6687928"><td class="memItemLeft">Ort::Env </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#ab2b4c1c093bbb4457be83831b6687928">_env</a></td></tr>
+<tr class="memdesc:ab2b4c1c093bbb4457be83831b6687928 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">环境配置  <br/></td></tr>
+<tr class="memitem:a1b817f86dd6f03e3c25e14344cef0169 inherit pro_attribs_classrm_1_1OnnxNet" id="r_a1b817f86dd6f03e3c25e14344cef0169"><td class="memItemLeft">Ort::SessionOptions </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a1b817f86dd6f03e3c25e14344cef0169">_session_options</a></td></tr>
+<tr class="memdesc:a1b817f86dd6f03e3c25e14344cef0169 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">会话选项  <br/></td></tr>
+<tr class="memitem:a55c23f4154f72120688582944bc609f1 inherit pro_attribs_classrm_1_1OnnxNet" id="r_a55c23f4154f72120688582944bc609f1"><td class="memItemLeft">std::unique_ptr&lt; Ort::Session &gt; </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a55c23f4154f72120688582944bc609f1">_session</a></td></tr>
+<tr class="memdesc:a55c23f4154f72120688582944bc609f1 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">会话  <br/></td></tr>
+<tr class="memitem:a444b0d5f8648ec289690695e3f1894f6 inherit pro_attribs_classrm_1_1OnnxNet" id="r_a444b0d5f8648ec289690695e3f1894f6"><td class="memItemLeft">std::vector&lt; const char * &gt; </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a444b0d5f8648ec289690695e3f1894f6">_inames</a></td></tr>
+<tr class="memdesc:a444b0d5f8648ec289690695e3f1894f6 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">输入名称  <br/></td></tr>
+<tr class="memitem:a458b3588fb2c6efc844723c5140b6938 inherit pro_attribs_classrm_1_1OnnxNet" id="r_a458b3588fb2c6efc844723c5140b6938"><td class="memItemLeft">std::vector&lt; const char * &gt; </td><td class="memItemRight"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a458b3588fb2c6efc844723c5140b6938">_onames</a></td></tr>
+<tr class="memdesc:a458b3588fb2c6efc844723c5140b6938 inherit pro_attribs_classrm_1_1OnnxNet"><td class="mdescLeft"> </td><td class="mdescRight">输出名称  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
+<div class="textblock"><p>分类网络推理类 </p>
+<dl class="section note"><dt>注解</dt><dd>需满足 </dd>
+<dd>
+<ul>
+<li>输入层为 <span class="tt">[1, c, h, w]</span>，其中 <span class="tt">c</span> 为输入图像的通道数，可以是 <span class="tt">1</span> 或者 <span class="tt">3</span>，<span class="tt">h</span> 为高度，<span class="tt">w</span> 为宽度 </li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>输出层为 <span class="tt">[1, n]</span>，其中 <span class="tt">n</span> 为类别数 </li>
+</ul>
+</dd></dl>
+</div><a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">构造及析构函数说明</h2>
+<a id="a6b4d277a98b3403bb1278378b6c09005" name="a6b4d277a98b3403bb1278378b6c09005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4d277a98b3403bb1278378b6c09005">◆ </a></span>ClassificationNet()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::ClassificationNet::ClassificationNet </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>model_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a></td>          <td class="paramname"><span class="paramname"><em>prov</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d">OrtProvider::CPU</a></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.ClassificationNet(</td><td class="paramname">model_path, prov</td><td>) -&gt; </td><td>&lt;ClassificationNet object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建分类网络对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_path</td><td>模型路径，如果该路径不存在，则程序将因错误而退出 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prov</td><td>Ort 提供者，默认为 <span class="tt"><a class="el" href="../../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d" title="由 CPU 执行">OrtProvider::CPU</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">成员函数说明</h2>
+<a id="adbad1162f87690b65574acf49278166a" name="adbad1162f87690b65574acf49278166a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbad1162f87690b65574acf49278166a">◆ </a></span>cast()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int, float &gt; rm::ClassificationNet::cast </td>
+          <td>(</td>
+          <td class="paramtype">const std::any &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.ClassificationNet.cast(</td><td class="paramname">res</td><td>) -&gt; </td><td>idx, conf</td></tr></table>
+</div><div class="memdoc">
+<p>推理结果转换 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>使用 <span class="tt">std::any</span> 表示的推理结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>转换后的推理结果，为 <span class="tt">std::pair&lt;int, float&gt;</span> 类型，表示分类结果及其置信度 </dd></dl>
+</div>
+</div>
+<a id="a66d83371ae162712b202f11ae10da3fe" name="a66d83371ae162712b202f11ae10da3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66d83371ae162712b202f11ae10da3fe">◆ </a></span>postProcess()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::any rm::ClassificationNet::postProcess </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Ort::Value &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output_tensors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>postop</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>后处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_tensors</td><td>模型的输出 Tensors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">postop</td><td>无需后处理选项，传入 <span class="tt">{}</span> 即可 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>用 <span class="tt">std::any</span> 表示的分类结果及其置信度，可使用 <span class="tt"><a class="el" href="#adbad1162f87690b65574acf49278166a" title="推理结果转换">rm::ClassificationNet::cast</a></span> 函数对返回类型进行转换 </dd></dl>
+<p>重载 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#a55d4a528b133fb7b420ba29726679b4b">rm::OnnxNet</a> .</p>
+</div>
+</div>
+<a id="a15ff35f5e291bdb84a61d22371a20f30" name="a15ff35f5e291bdb84a61d22371a20f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ff35f5e291bdb84a61d22371a20f30">◆ </a></span>preProcess()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Ort::Value &gt; rm::ClassificationNet::preProcess </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>options</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>预处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>所有输入图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>预处理选项，包含各通道的均值和标准差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>模型的输入 Tensors </dd></dl>
+<p>重载 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html#aab093dd8bfe38713aaca5832836a302b">rm::OnnxNet</a> .</p>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

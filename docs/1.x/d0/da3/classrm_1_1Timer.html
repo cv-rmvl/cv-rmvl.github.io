@@ -1,0 +1,301 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: rm::Timer类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0-dev</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d6/d56/classrm_1_1Timer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Timer类 参考<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> &raquo; <a class="el" href="../../db/d06/group__core__timer.html">定时、计时模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>定时器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/timer.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Timer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dd/dcf/classrm_1_1Timer__coll__graph.svg" width="116" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aad64940a0b381fd9ee9a0334f977b6fa" id="r_aad64940a0b381fd9ee9a0334f977b6fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad64940a0b381fd9ee9a0334f977b6fa">Timer</a> ()</td></tr>
+<tr class="separator:aad64940a0b381fd9ee9a0334f977b6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858dbdcba178f8ef78893b213ecf083b" id="r_a858dbdcba178f8ef78893b213ecf083b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a858dbdcba178f8ef78893b213ecf083b">Timer</a> (const <a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a> &amp;)=delete</td></tr>
+<tr class="separator:a858dbdcba178f8ef78893b213ecf083b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c597b6f2eb19f52cd551d846e8ebbe" id="r_af9c597b6f2eb19f52cd551d846e8ebbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9c597b6f2eb19f52cd551d846e8ebbe">operator=</a> (const <a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a> &amp;)=delete</td></tr>
+<tr class="separator:af9c597b6f2eb19f52cd551d846e8ebbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a35e997609e357a174078811dbed6ed54" id="r_a35e997609e357a174078811dbed6ed54"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35e997609e357a174078811dbed6ed54">reset</a> ()</td></tr>
+<tr class="memdesc:a35e997609e357a174078811dbed6ed54"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置定时器  <br /></td></tr>
+<tr class="separator:a35e997609e357a174078811dbed6ed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9e4469df8553941079196a74753f85" id="r_adb9e4469df8553941079196a74753f85"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb9e4469df8553941079196a74753f85">now</a> ()</td></tr>
+<tr class="memdesc:adb9e4469df8553941079196a74753f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回从构造初期到现在经过的时间（单位：s）  <br /></td></tr>
+<tr class="separator:adb9e4469df8553941079196a74753f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>定时器 </p>
+<ul>
+<li>在程序开始时调用 <code><a class="el" href="#a35e997609e357a174078811dbed6ed54" title="重置定时器">reset()</a></code> 函数，之后调用 <code><a class="el" href="#adb9e4469df8553941079196a74753f85" title="返回从构造初期到现在经过的时间（单位：s）">now()</a></code> 函数即可返回从构造初期到现在经过的时间 </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aad64940a0b381fd9ee9a0334f977b6fa" name="aad64940a0b381fd9ee9a0334f977b6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad64940a0b381fd9ee9a0334f977b6fa">&#9670;&#160;</a></span>Timer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Timer::Timer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/da3/classrm_1_1Timer_aad64940a0b381fd9ee9a0334f977b6fa_cgraph.svg" width="318" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a858dbdcba178f8ef78893b213ecf083b" name="a858dbdcba178f8ef78893b213ecf083b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858dbdcba178f8ef78893b213ecf083b">&#9670;&#160;</a></span>Timer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Timer::Timer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="adb9e4469df8553941079196a74753f85" name="adb9e4469df8553941079196a74753f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9e4469df8553941079196a74753f85">&#9670;&#160;</a></span>now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double rm::Timer::now </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回从构造初期到现在经过的时间（单位：s） </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a16">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#a4">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a16">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#a4">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="af9c597b6f2eb19f52cd551d846e8ebbe" name="af9c597b6f2eb19f52cd551d846e8ebbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c597b6f2eb19f52cd551d846e8ebbe">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Timer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/da3/classrm_1_1Timer.html">Timer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35e997609e357a174078811dbed6ed54" name="a35e997609e357a174078811dbed6ed54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e997609e357a174078811dbed6ed54">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::Timer::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置定时器 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/core/<a class="el" href="../../df/d05/timer_8hpp.html">timer.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rm::ArmorDetector类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.3.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html">ArmorDetector</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d5/dc6/classrm_1_1ArmorDetector-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::ArmorDetector类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> &raquo; <a class="el" href="../../d4/d47/group__armor__detector.html">装甲板识别模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>装甲板识别模块  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/detector/armor_detector.h&gt;</code></p>
+<div class="dynheader">
+类 rm::ArmorDetector 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d16/classrm_1_1ArmorDetector__inherit__graph.svg" width="156" height="350"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::ArmorDetector 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/dd4/classrm_1_1ArmorDetector__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae5d393ca9bdbd009cfed6ec1ffd1ecf7" id="r_ae5d393ca9bdbd009cfed6ec1ffd1ecf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d393ca9bdbd009cfed6ec1ffd1ecf7">ArmorDetector</a> ()=default</td></tr>
+<tr class="separator:ae5d393ca9bdbd009cfed6ec1ffd1ecf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d52ae651846d3a4c72b32692e8f90a" id="r_a97d52ae651846d3a4c72b32692e8f90a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97d52ae651846d3a4c72b32692e8f90a">~ArmorDetector</a> ()=default</td></tr>
+<tr class="separator:a97d52ae651846d3a4c72b32692e8f90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186450c9271d6d4a9d4871414d5c8f94" id="r_a186450c9271d6d4a9d4871414d5c8f94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a186450c9271d6d4a9d4871414d5c8f94">ArmorDetector</a> (const std::string &amp;model)</td></tr>
+<tr class="separator:a186450c9271d6d4a9d4871414d5c8f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3d3f5dc60a82c1a666e68b2a0811c0" id="r_a1f3d3f5dc60a82c1a666e68b2a0811c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f3d3f5dc60a82c1a666e68b2a0811c0">detect</a> (std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;groups, cv::Mat &amp;src, <a class="el" href="../../d7/dbd/group__imgproc.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a> color, const <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;gyro_data, double tick) override</td></tr>
+<tr class="memdesc:a1f3d3f5dc60a82c1a666e68b2a0811c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">装甲板识别核心函数  <br /></td></tr>
+<tr class="separator:a1f3d3f5dc60a82c1a666e68b2a0811c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1detector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1detector')"><img src="../../closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="../../d3/d77/classrm_1_1detector.html">rm::detector</a></td></tr>
+<tr class="memitem:aba1aaea7bc893858ea8029ac5e487474 inherit pub_methods_classrm_1_1detector" id="r_aba1aaea7bc893858ea8029ac5e487474"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d77/classrm_1_1detector.html#aba1aaea7bc893858ea8029ac5e487474">detector</a> ()=default</td></tr>
+<tr class="separator:aba1aaea7bc893858ea8029ac5e487474 inherit pub_methods_classrm_1_1detector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0482ef909761c24a05f9765b69b457b inherit pub_methods_classrm_1_1detector" id="r_af0482ef909761c24a05f9765b69b457b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d77/classrm_1_1detector.html#af0482ef909761c24a05f9765b69b457b">~detector</a> ()=default</td></tr>
+<tr class="separator:af0482ef909761c24a05f9765b69b457b inherit pub_methods_classrm_1_1detector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad87c21dd955cb27a9777ad7d7f7ad7fd" id="r_ad87c21dd955cb27a9777ad7d7f7ad7fd"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html">ArmorDetector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad87c21dd955cb27a9777ad7d7f7ad7fd">make_detector</a> ()</td></tr>
+<tr class="memdesc:ad87c21dd955cb27a9777ad7d7f7ad7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html" title="装甲板识别模块">ArmorDetector</a>  <br /></td></tr>
+<tr class="separator:ad87c21dd955cb27a9777ad7d7f7ad7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd32e164153ee77290f6c62991bc87b" id="r_a1fd32e164153ee77290f6c62991bc87b"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html">ArmorDetector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd32e164153ee77290f6c62991bc87b">make_detector</a> (const std::string &amp;model)</td></tr>
+<tr class="memdesc:a1fd32e164153ee77290f6c62991bc87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html" title="装甲板识别模块">ArmorDetector</a>  <br /></td></tr>
+<tr class="separator:a1fd32e164153ee77290f6c62991bc87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_classrm_1_1detector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1detector')"><img src="../../closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="../../d3/d77/classrm_1_1detector.html">rm::detector</a></td></tr>
+<tr class="memitem:a0eaa4d8bcf44807e09e96ae2b9bbfd42 inherit pub_types_classrm_1_1detector" id="r_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../d3/d77/classrm_1_1detector.html">detector</a>&gt;</td></tr>
+<tr class="separator:a0eaa4d8bcf44807e09e96ae2b9bbfd42 inherit pub_types_classrm_1_1detector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1detector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1detector')"><img src="../../closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="../../d3/d77/classrm_1_1detector.html">rm::detector</a></td></tr>
+<tr class="memitem:a664f5cd8345fbadc2a356c84158d958e inherit pro_attribs_classrm_1_1detector" id="r_a664f5cd8345fbadc2a356c84158d958e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d77/classrm_1_1detector.html#a664f5cd8345fbadc2a356c84158d958e">_tick</a></td></tr>
+<tr class="memdesc:a664f5cd8345fbadc2a356c84158d958e inherit pro_attribs_classrm_1_1detector"><td class="mdescLeft">&#160;</td><td class="mdescRight">每一帧对应的时间点  <br /></td></tr>
+<tr class="separator:a664f5cd8345fbadc2a356c84158d958e inherit pro_attribs_classrm_1_1detector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a994b7faa2fb79343d087cbd5b0314f8c inherit pro_attribs_classrm_1_1detector" id="r_a994b7faa2fb79343d087cbd5b0314f8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d77/classrm_1_1detector.html#a994b7faa2fb79343d087cbd5b0314f8c">_gyro_data</a></td></tr>
+<tr class="memdesc:a994b7faa2fb79343d087cbd5b0314f8c inherit pro_attribs_classrm_1_1detector"><td class="mdescLeft">&#160;</td><td class="mdescRight">每一帧对应的陀螺仪数据  <br /></td></tr>
+<tr class="separator:a994b7faa2fb79343d087cbd5b0314f8c inherit pro_attribs_classrm_1_1detector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>装甲板识别模块 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae5d393ca9bdbd009cfed6ec1ffd1ecf7" name="ae5d393ca9bdbd009cfed6ec1ffd1ecf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d393ca9bdbd009cfed6ec1ffd1ecf7">&#9670;&#160;</a></span>ArmorDetector() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::ArmorDetector::ArmorDetector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97d52ae651846d3a4c72b32692e8f90a" name="a97d52ae651846d3a4c72b32692e8f90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97d52ae651846d3a4c72b32692e8f90a">&#9670;&#160;</a></span>~ArmorDetector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::ArmorDetector::~ArmorDetector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a186450c9271d6d4a9d4871414d5c8f94" name="a186450c9271d6d4a9d4871414d5c8f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186450c9271d6d4a9d4871414d5c8f94">&#9670;&#160;</a></span>ArmorDetector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::ArmorDetector::ArmorDetector </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1f3d3f5dc60a82c1a666e68b2a0811c0" name="a1f3d3f5dc60a82c1a666e68b2a0811c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3d3f5dc60a82c1a666e68b2a0811c0">&#9670;&#160;</a></span>detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a> rm::ArmorDetector::detect </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/dbd/group__imgproc.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/d5f/structrm_1_1GyroData.html">GyroData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>装甲板识别核心函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">groups</td><td>序列组容器 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>原图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>待识别的颜色 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_data</td><td>陀螺仪数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>识别信息结构体 </dd></dl>
+
+<p>实现了 <a class="el" href="../../d3/d77/classrm_1_1detector.html#a5c8b6fe0e1628f9f756d146569564bff">rm::detector</a>.</p>
+
+</div>
+</div>
+<a id="ad87c21dd955cb27a9777ad7d7f7ad7fd" name="ad87c21dd955cb27a9777ad7d7f7ad7fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87c21dd955cb27a9777ad7d7f7ad7fd">&#9670;&#160;</a></span>make_detector() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html">ArmorDetector</a> &gt; rm::ArmorDetector::make_detector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html" title="装甲板识别模块">ArmorDetector</a> </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a12">samples/detector/hik/sample_hik_armor_collection.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fd32e164153ee77290f6c62991bc87b" name="a1fd32e164153ee77290f6c62991bc87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd32e164153ee77290f6c62991bc87b">&#9670;&#160;</a></span>make_detector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html">ArmorDetector</a> &gt; rm::ArmorDetector::make_detector </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>model</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html" title="装甲板识别模块">ArmorDetector</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">model</td><td>ONNX_Runtime 数字识别模型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/detector/<a class="el" href="../../da/d95/detector_2armor__detector_8h.html">armor_detector.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

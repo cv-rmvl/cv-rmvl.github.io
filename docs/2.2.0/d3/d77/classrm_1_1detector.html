@@ -1,0 +1,343 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: rm::detector类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d3/d77/classrm_1_1detector.html">detector</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pro-attribs">Protected 属性</a> |
+<a href="../../df/d68/classrm_1_1detector-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::detector类 参考<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>识别检测模块  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/detector/detector.h&gt;</code></p>
+<div class="dynheader">
+类 rm::detector 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="290" scrolling="no" src="../../d6/de7/classrm_1_1detector__inherit__graph.svg" width="627"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::detector 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" scrolling="no" src="../../d5/dc3/classrm_1_1detector__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a0eaa4d8bcf44807e09e96ae2b9bbfd42" id="r_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eaa4d8bcf44807e09e96ae2b9bbfd42">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../d3/d77/classrm_1_1detector.html">detector</a>&gt;</td></tr>
+<tr class="separator:a0eaa4d8bcf44807e09e96ae2b9bbfd42"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aba1aaea7bc893858ea8029ac5e487474" id="r_aba1aaea7bc893858ea8029ac5e487474"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#aba1aaea7bc893858ea8029ac5e487474">detector</a> ()=default</td></tr>
+<tr class="separator:aba1aaea7bc893858ea8029ac5e487474"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af0482ef909761c24a05f9765b69b457b" id="r_af0482ef909761c24a05f9765b69b457b"><td align="right" class="memItemLeft" valign="top">virtual </td><td class="memItemRight" valign="bottom"><a class="el" href="#af0482ef909761c24a05f9765b69b457b">~detector</a> ()=default</td></tr>
+<tr class="separator:af0482ef909761c24a05f9765b69b457b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4ff537c0ba51075fc229c1f171827565" id="r_a4ff537c0ba51075fc229c1f171827565"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ff537c0ba51075fc229c1f171827565">detect</a> (std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, double tick)=0</td></tr>
+<tr class="memdesc:a4ff537c0ba51075fc229c1f171827565"><td class="mdescLeft"> </td><td class="mdescRight">识别接口  <br/></td></tr>
+<tr class="separator:a4ff537c0ba51075fc229c1f171827565"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a664f5cd8345fbadc2a356c84158d958e" id="r_a664f5cd8345fbadc2a356c84158d958e"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a664f5cd8345fbadc2a356c84158d958e">_tick</a></td></tr>
+<tr class="memdesc:a664f5cd8345fbadc2a356c84158d958e"><td class="mdescLeft"> </td><td class="mdescRight">每一帧对应的时间点  <br/></td></tr>
+<tr class="separator:a664f5cd8345fbadc2a356c84158d958e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0bf4f7982d69876728c66b54eab4e538" id="r_a0bf4f7982d69876728c66b54eab4e538"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf4f7982d69876728c66b54eab4e538">_imu_data</a></td></tr>
+<tr class="memdesc:a0bf4f7982d69876728c66b54eab4e538"><td class="mdescLeft"> </td><td class="mdescRight">每一帧对应的 IMU 数据  <br/></td></tr>
+<tr class="separator:a0bf4f7982d69876728c66b54eab4e538"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>识别检测模块 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a0eaa4d8bcf44807e09e96ae2b9bbfd42" name="a0eaa4d8bcf44807e09e96ae2b9bbfd42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eaa4d8bcf44807e09e96ae2b9bbfd42">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a> = std::unique_ptr&lt;<a class="el" href="../../d3/d77/classrm_1_1detector.html">detector</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aba1aaea7bc893858ea8029ac5e487474" name="aba1aaea7bc893858ea8029ac5e487474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1aaea7bc893858ea8029ac5e487474">◆ </a></span>detector()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::detector::detector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="af0482ef909761c24a05f9765b69b457b" name="af0482ef909761c24a05f9765b69b457b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0482ef909761c24a05f9765b69b457b">◆ </a></span>~detector()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual rm::detector::~detector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4ff537c0ba51075fc229c1f171827565" name="a4ff537c0ba51075fc229c1f171827565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff537c0ba51075fc229c1f171827565">◆ </a></span>detect()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html">DetectInfo</a> rm::detector::detect </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.detector.detect(</td><td class="paramname">groups, src, color, imu, tick</td><td>) -&gt; </td><td>info</td></tr></table>
+</div><div class="memdoc">
+<p>识别接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">groups</td><td>序列组容器 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>原图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>待处理的颜色通道，可参考 <a class="el" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34" title="像素通道枚举">rm::PixChannel</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>IMU 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>识别信息结构体 </dd></dl>
+<p>在 <a class="el" href="../../db/d6e/classrm_1_1ArmorDetector.html#a51343ca62795031ad91d572d04753cd6">rm::ArmorDetector</a>, <a class="el" href="../../dc/d93/classrm_1_1GyroDetector.html#a38815d805b50d6c850e7877114baef0b">rm::GyroDetector</a>, <a class="el" href="../../d6/deb/classrm_1_1RuneDetector.html#a96746f8bbce7b9b055fc87fdcc99803e">rm::RuneDetector</a> , 以及 <a class="el" href="../../d8/d35/classrm_1_1TagDetector.html#a0911d9680227b5334efd2e2e4107eb4f">rm::TagDetector</a> 内被实现.</p>
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a0bf4f7982d69876728c66b54eab4e538" name="a0bf4f7982d69876728c66b54eab4e538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf4f7982d69876728c66b54eab4e538">◆ </a></span>_imu_data</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> rm::detector::_imu_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每一帧对应的 IMU 数据 </p>
+</div>
+</div>
+<a id="a664f5cd8345fbadc2a356c84158d958e" name="a664f5cd8345fbadc2a356c84158d958e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664f5cd8345fbadc2a356c84158d958e">◆ </a></span>_tick</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::detector::_tick</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>每一帧对应的时间点 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/detector/<a class="el" href="../../d5/d9f/detector_8h.html">detector.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

@@ -1,0 +1,446 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::GalaxyCamera类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../dd/dda/classrm_1_1GalaxyCamera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::GalaxyCamera类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> » <a class="el" href="../../d4/d59/group__galaxy__camera.html">大恒图像 Galaxy USB3.0/GigE 系列工业相机库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>大恒图像 Galaxy 系列工业相机库  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/camera/galaxy_camera.h&gt;</code></p>
+<div class="dynheader">
+rm::GalaxyCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="236" scrolling="no" src="../../d5/d36/classrm_1_1GalaxyCamera__coll__graph.svg" width="148"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a392b92e2721faf445c8d03d0315a16de" id="r_a392b92e2721faf445c8d03d0315a16de"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a392b92e2721faf445c8d03d0315a16de">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a>&gt;</td></tr>
+<tr class="separator:a392b92e2721faf445c8d03d0315a16de"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a845d09d45365a66da2a30bade3be05b1" id="r_a845d09d45365a66da2a30bade3be05b1"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a845d09d45365a66da2a30bade3be05b1">const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a>&gt;</td></tr>
+<tr class="separator:a845d09d45365a66da2a30bade3be05b1"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a578042f56a48f811eb5854645778d85a" id="r_a578042f56a48f811eb5854645778d85a"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a578042f56a48f811eb5854645778d85a">GalaxyCamera</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view id="")</td></tr>
+<tr class="memdesc:a578042f56a48f811eb5854645778d85a"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html" title="大恒图像 Galaxy 系列工业相机库">GalaxyCamera</a> 对象  <br/></td></tr>
+<tr class="separator:a578042f56a48f811eb5854645778d85a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a66ca5fa6ca3f933a15ff9acdc2e58c15" id="r_a66ca5fa6ca3f933a15ff9acdc2e58c15"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ca5fa6ca3f933a15ff9acdc2e58c15">set</a> (int prop_id, double value=0.0)</td></tr>
+<tr class="memdesc:a66ca5fa6ca3f933a15ff9acdc2e58c15"><td class="mdescLeft"> </td><td class="mdescRight">设置相机参数/事件  <br/></td></tr>
+<tr class="separator:a66ca5fa6ca3f933a15ff9acdc2e58c15"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a506ce35b9ffe7ae4efbb283f2b0ceaf8" id="r_a506ce35b9ffe7ae4efbb283f2b0ceaf8"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a506ce35b9ffe7ae4efbb283f2b0ceaf8">get</a> (int prop_id) const</td></tr>
+<tr class="memdesc:a506ce35b9ffe7ae4efbb283f2b0ceaf8"><td class="mdescLeft"> </td><td class="mdescRight">获取相机参数  <br/></td></tr>
+<tr class="separator:a506ce35b9ffe7ae4efbb283f2b0ceaf8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a95494595f9410e41bf5a265bdce65344" id="r_a95494595f9410e41bf5a265bdce65344"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a95494595f9410e41bf5a265bdce65344">isOpened</a> () const</td></tr>
+<tr class="memdesc:a95494595f9410e41bf5a265bdce65344"><td class="mdescLeft"> </td><td class="mdescRight">相机是否打开  <br/></td></tr>
+<tr class="separator:a95494595f9410e41bf5a265bdce65344"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa24b4d0730567c4ead3844438b40397f" id="r_aa24b4d0730567c4ead3844438b40397f"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa24b4d0730567c4ead3844438b40397f">read</a> (cv::OutputArray image)</td></tr>
+<tr class="memdesc:aa24b4d0730567c4ead3844438b40397f"><td class="mdescLeft"> </td><td class="mdescRight">从相机设备中读取图像  <br/></td></tr>
+<tr class="separator:aa24b4d0730567c4ead3844438b40397f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6fe2b5006cb3accf87efd7006f3249a7" id="r_a6fe2b5006cb3accf87efd7006f3249a7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fe2b5006cb3accf87efd7006f3249a7">operator&gt;&gt;</a> (cv::Mat &amp;image)</td></tr>
+<tr class="memdesc:a6fe2b5006cb3accf87efd7006f3249a7"><td class="mdescLeft"> </td><td class="mdescRight">从相机设备中读取图像  <br/></td></tr>
+<tr class="separator:a6fe2b5006cb3accf87efd7006f3249a7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8258c98d606eb32a971ed1c30aa36051" id="r_a8258c98d606eb32a971ed1c30aa36051"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8258c98d606eb32a971ed1c30aa36051">reconnect</a> ()</td></tr>
+<tr class="memdesc:a8258c98d606eb32a971ed1c30aa36051"><td class="mdescLeft"> </td><td class="mdescRight">相机重连  <br/></td></tr>
+<tr class="separator:a8258c98d606eb32a971ed1c30aa36051"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:acfb2a342f30877f43f1417104256575f" id="r_acfb2a342f30877f43f1417104256575f"><td align="right" class="memItemLeft" valign="top">static std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#acfb2a342f30877f43f1417104256575f">version</a> ()</td></tr>
+<tr class="memdesc:acfb2a342f30877f43f1417104256575f"><td class="mdescLeft"> </td><td class="mdescRight">获取相机库版本  <br/></td></tr>
+<tr class="separator:acfb2a342f30877f43f1417104256575f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a507b19ee51132727677786a7e98c4517" id="r_a507b19ee51132727677786a7e98c4517"><td align="right" class="memItemLeft" valign="top">static std::unique_ptr&lt; <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a507b19ee51132727677786a7e98c4517">make_capture</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view id="")</td></tr>
+<tr class="memdesc:a507b19ee51132727677786a7e98c4517"><td class="mdescLeft"> </td><td class="mdescRight">构建 <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html" title="大恒图像 Galaxy 系列工业相机库">GalaxyCamera</a> 对象  <br/></td></tr>
+<tr class="separator:a507b19ee51132727677786a7e98c4517"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>大恒图像 Galaxy 系列工业相机库 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a845d09d45365a66da2a30bade3be05b1" name="a845d09d45365a66da2a30bade3be05b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845d09d45365a66da2a30bade3be05b1">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a845d09d45365a66da2a30bade3be05b1">rm::GalaxyCamera::const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a392b92e2721faf445c8d03d0315a16de" name="a392b92e2721faf445c8d03d0315a16de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392b92e2721faf445c8d03d0315a16de">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a392b92e2721faf445c8d03d0315a16de">rm::GalaxyCamera::ptr</a> = std::unique_ptr&lt;<a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a578042f56a48f811eb5854645778d85a" name="a578042f56a48f811eb5854645778d85a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578042f56a48f811eb5854645778d85a">◆ </a></span>GalaxyCamera()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::GalaxyCamera::GalaxyCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera(</td><td class="paramname">init_mode[, serial]</td><td>) -&gt; </td><td>&lt;GalaxyCamera object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建 <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html" title="大恒图像 Galaxy 系列工业相机库">GalaxyCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 、 <a class="el" href="../../dc/d90/group__camera.html#ga034d81b381d7c04ba4549cf3533750ff" title="相机数据处理模式">rm::RetrieveMode</a> 和 <a class="el" href="../../dc/d90/group__camera.html#ga0a7fc1f9340aca49db5826b726c100a3" title="相机句柄创建方式">rm::HandleMode</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>相机标识，可以是序列号、IP 地址等 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a506ce35b9ffe7ae4efbb283f2b0ceaf8" name="a506ce35b9ffe7ae4efbb283f2b0ceaf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506ce35b9ffe7ae4efbb283f2b0ceaf8">◆ </a></span>get()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::GalaxyCamera::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prop_id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera.get(</td><td class="paramname">propId</td><td>) -&gt; </td><td>value</td></tr></table>
+</div><div class="memdoc">
+<p>获取相机参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop_id</td><td>参数编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>参数值 </dd></dl>
+</div>
+</div>
+<a id="a95494595f9410e41bf5a265bdce65344" name="a95494595f9410e41bf5a265bdce65344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95494595f9410e41bf5a265bdce65344">◆ </a></span>isOpened()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::GalaxyCamera::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera.isOpened(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;opened ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机是否打开 </p>
+</div>
+</div>
+<a id="a507b19ee51132727677786a7e98c4517" name="a507b19ee51132727677786a7e98c4517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507b19ee51132727677786a7e98c4517">◆ </a></span>make_capture()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a> &gt; rm::GalaxyCamera::make_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构建 <a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html" title="大恒图像 Galaxy 系列工业相机库">GalaxyCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 、 <a class="el" href="../../dc/d90/group__camera.html#ga034d81b381d7c04ba4549cf3533750ff" title="相机数据处理模式">rm::RetrieveMode</a> 和 <a class="el" href="../../dc/d90/group__camera.html#ga0a7fc1f9340aca49db5826b726c100a3" title="相机句柄创建方式">rm::HandleMode</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>相机标识，可以是序列号、IP 地址等 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html" title="大恒图像 Galaxy 系列工业相机库">GalaxyCamera</a> 对象独享指针 </dd></dl>
+</div>
+</div>
+<a id="a6fe2b5006cb3accf87efd7006f3249a7" name="a6fe2b5006cb3accf87efd7006f3249a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe2b5006cb3accf87efd7006f3249a7">◆ </a></span>operator&gt;&gt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d1d/classrm_1_1GalaxyCamera.html">GalaxyCamera</a> &amp; rm::GalaxyCamera::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="aa24b4d0730567c4ead3844438b40397f" name="aa24b4d0730567c4ead3844438b40397f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24b4d0730567c4ead3844438b40397f">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::GalaxyCamera::read </td>
+          <td>(</td>
+          <td class="paramtype">cv::OutputArray</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera.read(</td><td class="paramname"></td><td>) -&gt; </td><td>res, img</td></tr></table>
+</div><div class="memdoc">
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
+</div>
+</div>
+<a id="a8258c98d606eb32a971ed1c30aa36051" name="a8258c98d606eb32a971ed1c30aa36051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8258c98d606eb32a971ed1c30aa36051">◆ </a></span>reconnect()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::GalaxyCamera::reconnect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera.reconnect(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机重连 </p>
+<dl class="section return"><dt>返回</dt><dd>是否成功重连 </dd></dl>
+</div>
+</div>
+<a id="a66ca5fa6ca3f933a15ff9acdc2e58c15" name="a66ca5fa6ca3f933a15ff9acdc2e58c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ca5fa6ca3f933a15ff9acdc2e58c15">◆ </a></span>set()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::GalaxyCamera::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prop_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.GalaxyCamera.set(</td><td class="paramname">propId[, value]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>设置相机参数/事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop_id</td><td>参数/事件编号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>参数/事件值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否设置成功 </dd></dl>
+</div>
+</div>
+<a id="acfb2a342f30877f43f1417104256575f" name="acfb2a342f30877f43f1417104256575f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb2a342f30877f43f1417104256575f">◆ </a></span>version()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string rm::GalaxyCamera::version </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取相机库版本 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/camera/<a class="el" href="../../d1/da6/camera_2galaxy__camera_8h.html">galaxy_camera.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

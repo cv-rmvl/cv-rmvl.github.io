@@ -1,0 +1,279 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 责任链模式下的程序处理</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">责任链模式下的程序处理 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md72">1. 何为责任链模式</a><ul><li class="level3"><a href="#process_common">1.1 常规用法</a></li>
+<li class="level3"><a href="#process_in_rmvl">1.2 RMVL 修改后的用法</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md73">2. 具体使用方法</a></li>
+</ul>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_process"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d4/de8/tutorial_extra_upper_read_data.html">读取（默认）数据以控制逻辑分支</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../db/d4f/tutorial_extra_upper_write_data.html">导出数据、发出操控指令</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md72"></a>
+1. 何为责任链模式</h2>
+<h3><a class="anchor" id="process_common"></a>
+1.1 常规用法</h3>
+<p><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">责任链模式</a>（Chain of Responsibility Pattern）是一种行为型设计模式，其目的是将请求的发送者和接收者解耦，并使多个对象都有机会处理该请求。在责任链模式中，请求沿着一个链路传递，直到有一个对象能够处理它为止。</p>
+<p>在该模式中，通常有一个抽象的处理器（Handler）作为基类，定义了处理请求的接口和链中的下一个处理器的引用。每个具体处理器（Concrete Handler）继承自抽象处理器，实现了处理请求的方法。具体处理器决定是否处理请求，如果可以处理，则进行处理；如果不能处理，则将请求传递给链中的下一个处理器。</p>
+<p>以下是责任链模式的关键角色：</p>
+<ul>
+<li>Handler（处理器）：定义了处理请求的接口和链中的下一个处理器的引用。</li>
+<li>ConcreteHandler（具体处理器）：继承自Handler，实现了处理请求的方法，决定是否处理请求，如果可以处理则进行处理，否则将请求传递给下一个处理器。</li>
+</ul>
+<p>应用责任链模式的主要优点是：</p>
+<ul>
+<li>降低了发送者和接收者之间的耦合，发送者无需知道哪个具体处理器能够处理请求，只需要将请求发送给第一个处理器即可。</li>
+<li>可以动态调整处理链的顺序或新增、删除处理器，灵活性较高。</li>
+</ul>
+<p>适用于以下情况：</p>
+<ul>
+<li>当有多个对象可以处理一个请求，但具体哪个对象将处理请求在运行时才能确定。</li>
+<li>需要将请求的发送者和接收者解耦，避免直接关联。</li>
+</ul>
+<p><b>示例</b></p>
+<p>假设有一个问题反馈系统，用户可以提交问题，并由多个处理器来处理这些问题。首先，定义一个抽象的处理器（Handler）类：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Handler</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">protected</span>:</div>
+<div class="line">    Handler* _next;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Handler() : _next(nullptr) {}</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">inline</span> <span class="keywordtype">void</span> setNext(Handler* next) { _next = next; }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleRequest(<span class="keyword">const</span> std::string&amp; request) = 0;</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>然后，创建两个具体的处理器 <code>ConcreteHandler</code>：<code>BugHandler</code> 和 <code>FeatureHandler</code>。</p>
+<ul>
+<li><code>BugHandler</code> 用于处理与软件缺陷相关的问题</li>
+<li><code>FeatureHandler</code> 用于处理用户新功能请求</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">class </span>BugHandler : <span class="keyword">public</span> Handler</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> handleRequest(<span class="keyword">const</span> std::string&amp; request)<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">if</span> (request == <span class="stringliteral">&quot;Bug&quot;</span>)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;BugHandler: Handling the bug report.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_next != <span class="keyword">nullptr</span>)</div>
+<div class="line">            _next-&gt;handleRequest(request);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>FeatureHandler : <span class="keyword">public</span> Handler</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> handleRequest(<span class="keyword">const</span> std::string&amp; request)<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">if</span> (request == <span class="stringliteral">&quot;Feature&quot;</span>)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;FeatureHandler: Handling the feature request.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_next != <span class="keyword">nullptr</span>)</div>
+<div class="line">            _next-&gt;handleRequest(request);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>现在可以创建责任链并测试它。在下面的示例中，首先将 <code>BugHandler</code> 设置为责任链的第一个处理器，然后将 <code>FeatureHandler</code> 作为下一个处理器。</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    Handler* bugHandler = <span class="keyword">new</span> BugHandler();</div>
+<div class="line">    Handler* featureHandler = <span class="keyword">new</span> FeatureHandler();</div>
+<div class="line"> </div>
+<div class="line">    bugHandler-&gt;setNext(featureHandler);</div>
+<div class="line"> </div>
+<div class="line">    bugHandler-&gt;handleRequest(<span class="stringliteral">&quot;Bug&quot;</span>);</div>
+<div class="line">    bugHandler-&gt;handleRequest(<span class="stringliteral">&quot;Feature&quot;</span>);</div>
+<div class="line">    bugHandler-&gt;handleRequest(<span class="stringliteral">&quot;Enhancement&quot;</span>);</div>
+<div class="line">  </div>
+<div class="line">    <span class="keyword">delete</span> bugHandler;</div>
+<div class="line">    <span class="keyword">delete</span> featureHandler;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>输出结果将是：</p>
+<div class="fragment"><div class="line">BugHandler: Handling the bug report.</div>
+<div class="line">FeatureHandler: Handling the feature request.</div>
+</div><!-- fragment --><p>在这个例子中，如果请求是 <code>"Bug"</code>，则 <code>BugHandler</code> 将处理它；如果请求是 <code>"Feature"</code>，则 <code>FeatureHandler</code> 将处理它；如果请求是其他类型（例如 <code>"Enhancement"</code>），则请求将传递给下一个处理器。这样，责任链模式允许多个对象有机会处理请求，并且可以动态调整节点顺序或新增、删除节点。</p>
+<h3><a class="anchor" id="process_in_rmvl"></a>
+1.2 RMVL 修改后的用法</h3>
+<p><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html#process_common">1.1 常规用法</a> 中要定义指向下一个处理器的抽象指针，并且所有派生处理器均继承自一个基类，RMVL 功能模块不采用这种做法，因为</p>
+<ul>
+<li>可能需要运行多个功能模块，并且功能模块之间可能存在各种各样的组合</li>
+<li>每个功能模块负责的内容以及依赖的目标各不相同</li>
+</ul>
+<p>因此，常规用法中的<span style="color: red">请求</span>在 RMVL 功能模块中表示为<span style="color: red">数据组件</span>，各功能模块的返回值 <code>XxxInfo</code> 则可以作为下一个功能模块的入参。可以继续参考此流程图</p>
+<p><img src="../../upper_base.png" alt="" class="inline" title="upper-base"/></p>
+<p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <code><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a></code>、<code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>、<code><a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a></code>。</p>
+<h2><a class="anchor" id="autotoc_md73"></a>
+2. 具体使用方法</h2>
+<p>下面给出一个简单的例子</p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> run()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">/* 读取数据 raw_data */</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 提取通信得到的控制信息 */</span></div>
+<div class="line">    <span class="keyword">auto</span> flag = raw_data.flag;</div>
+<div class="line">    <span class="keyword">auto</span> color = raw_data.color;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 转换数据 */</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;[detect_flag, compensate_flag, predict_flag, decide_flag, camera_flag] = flag_map[flag];</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 视觉处理，这里采用 LUT 方式控制逻辑分支</span></div>
+<div class="line">    cv::Mat src;</div>
+<div class="line">    <span class="keywordflow">if</span> (!capture_map[camera_flag]-&gt;read(src))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// 不能正常打开相机</span></div>
+<div class="line">        <a class="code" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;相机打开异常&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 程序处理 I: 识别</span></div>
+<div class="line">    DetectInfo detect_info{};</div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        detect_info = detector_map[detect_flag]-&gt;detect(groups, src, color, data, getTickCount());</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code" href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a> &amp;<a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;Occurred an exception! %s&quot;</span>, <a class="code" href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">e</a>.err.c_str());</div>
+<div class="line">        groups.clear();</div>
+<div class="line">        <span class="comment">/* 发送默认数据 */</span></div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 程序处理 II: 补偿</span></div>
+<div class="line">    <span class="keyword">auto</span> compensate_info = compensator_map[compensate_flag]-&gt;compensate(groups, shoot_speed, CompensateType::UNKNOWN);</div>
+<div class="line">    <span class="comment">// 预测</span></div>
+<div class="line">    <span class="keyword">auto</span> predict_info = predictor_map[predict_flag]-&gt;predict(groups, compensate_info.tof);</div>
+<div class="line">    <span class="comment">// 决策</span></div>
+<div class="line">    <span class="keyword">auto</span> decide_info = decider_map[decide_flag]-&gt;decide(groups, detect_info, compensate_info, predict_info);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 导出数据 */</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Exception_html"><div class="ttname"><a href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a></div><div class="ttdoc">该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的</div><div class="ttdef"><b>Definition:</b> util.hpp:136</div></div>
+<div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:36</div></div>
+<div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>Definition:</b> util.hpp:50</div></div>
+<div class="ttc" id="agroup__rmath_html_ga8f0640abdfeaeac18c46eac605f7f0a5"><div class="ttname"><a href="../../d9/d31/group__rmath.html#ga8f0640abdfeaeac18c46eac605f7f0a5">rm::e</a></div><div class="ttdeci">constexpr double e</div><div class="ttdoc">自然对数底数:</div><div class="ttdef"><b>Definition:</b> uty_math.hpp:44</div></div>
+</div><!-- fragment --><p><b>注意</b></p>
+<ul>
+<li>模块内部均设置了异常抛出的功能，当传入了错误的数据会抛出相应的异常，可参考 <a class="el" href="../../d0/de1/group__core.html#ga80e212562e127c2a5a9ff381ae3b9d11">RMVLErrorCode</a> 查看异常的类型。顶层模块需要妥善处理这些异常，例如使用 <code>try-catch</code> 语句来捕获异常，设置默认处理或者直接退出程序；</li>
+<li><b>发送默认数据</b> 与 <b>导出数据</b> 将在下一篇说明文档中介绍。</li>
+</ul>
+<hr  />
+<p>在完成程序处理后，需要完成数据的导出功能，包括</p>
+<ul>
+<li>记录数据到文件</li>
+<li>显示图像、打印信息到屏幕</li>
+<li>发送控制指令到下位机</li>
+</ul>
+<p>等需求，请参阅 <a class="el" href="../../db/d4f/tutorial_extra_upper_write_data.html">导出数据、发出操控指令</a> 一文。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:32:07 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: rm::HikCamera类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0-dev</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../de/d0f/classrm_1_1HikCamera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::HikCamera类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> &raquo; <a class="el" href="../../db/d27/group__hik__camera.html">海康机器人（HikRobot）工业相机库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>海康机器人相机库  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/camera/hik_camera.h&gt;</code></p>
+<div class="dynheader">
+rm::HikCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/dee/classrm_1_1HikCamera__coll__graph.svg" width="142" height="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a3f7d02d346e4c300fe4661c17ee9c455" id="r_a3f7d02d346e4c300fe4661c17ee9c455"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f7d02d346e4c300fe4661c17ee9c455">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a>&gt;</td></tr>
+<tr class="separator:a3f7d02d346e4c300fe4661c17ee9c455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fef8fff42033c631783c31bb5e4d3da" id="r_a3fef8fff42033c631783c31bb5e4d3da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fef8fff42033c631783c31bb5e4d3da">const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a>&gt;</td></tr>
+<tr class="separator:a3fef8fff42033c631783c31bb5e4d3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acc3ea9a280d047545373bb450eab5bee" id="r_acc3ea9a280d047545373bb450eab5bee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc3ea9a280d047545373bb450eab5bee">HikCamera</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view serial=&quot;&quot;)</td></tr>
+<tr class="memdesc:acc3ea9a280d047545373bb450eab5bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html" title="海康机器人相机库">HikCamera</a> 对象  <br /></td></tr>
+<tr class="separator:acc3ea9a280d047545373bb450eab5bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cb3bc607440e6e5fd8258d2a79d8c3" id="r_a77cb3bc607440e6e5fd8258d2a79d8c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77cb3bc607440e6e5fd8258d2a79d8c3">HikCamera</a> (const <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp;)=delete</td></tr>
+<tr class="separator:a77cb3bc607440e6e5fd8258d2a79d8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95273da0f09ef8ca21f98b84bf7f58a" id="r_ad95273da0f09ef8ca21f98b84bf7f58a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95273da0f09ef8ca21f98b84bf7f58a">HikCamera</a> (<a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp;&amp;val)</td></tr>
+<tr class="separator:ad95273da0f09ef8ca21f98b84bf7f58a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2f0541b100e1c07f1401cf168f68a7" id="r_abd2f0541b100e1c07f1401cf168f68a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd2f0541b100e1c07f1401cf168f68a7">~HikCamera</a> ()</td></tr>
+<tr class="separator:abd2f0541b100e1c07f1401cf168f68a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b66798aca86dd7b0222124b58803958" id="r_a8b66798aca86dd7b0222124b58803958"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b66798aca86dd7b0222124b58803958">set</a> (int propId, double value=0.0)</td></tr>
+<tr class="memdesc:a8b66798aca86dd7b0222124b58803958"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置相机参数/事件  <br /></td></tr>
+<tr class="separator:a8b66798aca86dd7b0222124b58803958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13edc2b7e0b40271430883163fce9f1f" id="r_a13edc2b7e0b40271430883163fce9f1f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13edc2b7e0b40271430883163fce9f1f">get</a> (int propId) const</td></tr>
+<tr class="memdesc:a13edc2b7e0b40271430883163fce9f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取相机参数  <br /></td></tr>
+<tr class="separator:a13edc2b7e0b40271430883163fce9f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17da764db5d58689bb1ca5adc7287f1b" id="r_a17da764db5d58689bb1ca5adc7287f1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17da764db5d58689bb1ca5adc7287f1b">isOpened</a> () const</td></tr>
+<tr class="memdesc:a17da764db5d58689bb1ca5adc7287f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机是否打开  <br /></td></tr>
+<tr class="separator:a17da764db5d58689bb1ca5adc7287f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744ac7aea770336ee8fde87a69ae6278" id="r_a744ac7aea770336ee8fde87a69ae6278"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a744ac7aea770336ee8fde87a69ae6278">read</a> (cv::OutputArray image)</td></tr>
+<tr class="memdesc:a744ac7aea770336ee8fde87a69ae6278"><td class="mdescLeft">&#160;</td><td class="mdescRight">从相机设备中读取图像  <br /></td></tr>
+<tr class="separator:a744ac7aea770336ee8fde87a69ae6278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cee142d3fcf1202662552275409411c" id="r_a1cee142d3fcf1202662552275409411c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cee142d3fcf1202662552275409411c">operator&gt;&gt;</a> (cv::Mat &amp;image)</td></tr>
+<tr class="memdesc:a1cee142d3fcf1202662552275409411c"><td class="mdescLeft">&#160;</td><td class="mdescRight">从相机设备中读取图像  <br /></td></tr>
+<tr class="separator:a1cee142d3fcf1202662552275409411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482cc30016dc2405cedeef16d529fa7c" id="r_a482cc30016dc2405cedeef16d529fa7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a482cc30016dc2405cedeef16d529fa7c">reconnect</a> ()</td></tr>
+<tr class="memdesc:a482cc30016dc2405cedeef16d529fa7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机重连  <br /></td></tr>
+<tr class="separator:a482cc30016dc2405cedeef16d529fa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0a584a0b2de4f4812333091467c627fd" id="r_a0a584a0b2de4f4812333091467c627fd"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a584a0b2de4f4812333091467c627fd">make_capture</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view serial=&quot;&quot;)</td></tr>
+<tr class="memdesc:a0a584a0b2de4f4812333091467c627fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建 <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html" title="海康机器人相机库">HikCamera</a> 对象  <br /></td></tr>
+<tr class="separator:a0a584a0b2de4f4812333091467c627fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>海康机器人相机库 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/de4/samples_2camera_2hik_2sample_hik_manual_calib_8cpp-example.html#_a0">samples/camera/hik/sample_hik_manual_calib.cpp</a>, <a class="el" href="../../df/d28/samples_2camera_2hik_2sample_hik_mono_8cpp-example.html#_a0">samples/camera/hik/sample_hik_mono.cpp</a>, <a class="el" href="../../d5/d29/samples_2camera_2hik_2sample_hik_multi_8cpp-example.html#_a1">samples/camera/hik/sample_hik_multi.cpp</a>, <a class="el" href="../../d3/d3f/samples_2camera_2hik_2sample_hik_writer_8cpp-example.html#_a0">samples/camera/hik/sample_hik_writer.cpp</a> , 以及 <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a1">samples/detector/hik/sample_hik_armor_collection.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a3fef8fff42033c631783c31bb5e4d3da" name="a3fef8fff42033c631783c31bb5e4d3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fef8fff42033c631783c31bb5e4d3da">&#9670;&#160;</a></span>const_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a3fef8fff42033c631783c31bb5e4d3da">rm::HikCamera::const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f7d02d346e4c300fe4661c17ee9c455" name="a3f7d02d346e4c300fe4661c17ee9c455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7d02d346e4c300fe4661c17ee9c455">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a3f7d02d346e4c300fe4661c17ee9c455">rm::HikCamera::ptr</a> = std::unique_ptr&lt;<a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="acc3ea9a280d047545373bb450eab5bee" name="acc3ea9a280d047545373bb450eab5bee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc3ea9a280d047545373bb450eab5bee">&#9670;&#160;</a></span>HikCamera() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::HikCamera::HikCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>serial</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建 <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html" title="海康机器人相机库">HikCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 GrabMode 和 RetrieveMode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serial</td><td>相机唯一序列号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77cb3bc607440e6e5fd8258d2a79d8c3" name="a77cb3bc607440e6e5fd8258d2a79d8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cb3bc607440e6e5fd8258d2a79d8c3">&#9670;&#160;</a></span>HikCamera() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::HikCamera::HikCamera </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad95273da0f09ef8ca21f98b84bf7f58a" name="ad95273da0f09ef8ca21f98b84bf7f58a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95273da0f09ef8ca21f98b84bf7f58a">&#9670;&#160;</a></span>HikCamera() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::HikCamera::HikCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd2f0541b100e1c07f1401cf168f68a7" name="abd2f0541b100e1c07f1401cf168f68a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd2f0541b100e1c07f1401cf168f68a7">&#9670;&#160;</a></span>~HikCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::HikCamera::~HikCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a13edc2b7e0b40271430883163fce9f1f" name="a13edc2b7e0b40271430883163fce9f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13edc2b7e0b40271430883163fce9f1f">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::HikCamera::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>propId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取相机参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propId</td><td>参数编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>参数值 </dd></dl>
+
+</div>
+</div>
+<a id="a17da764db5d58689bb1ca5adc7287f1b" name="a17da764db5d58689bb1ca5adc7287f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17da764db5d58689bb1ca5adc7287f1b">&#9670;&#160;</a></span>isOpened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::HikCamera::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相机是否打开 </p>
+
+</div>
+</div>
+<a id="a0a584a0b2de4f4812333091467c627fd" name="a0a584a0b2de4f4812333091467c627fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a584a0b2de4f4812333091467c627fd">&#9670;&#160;</a></span>make_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt; <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &gt; rm::HikCamera::make_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>serial</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建 <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html" title="海康机器人相机库">HikCamera</a> 对象 </p>
+<dl class="section note"><dt>注解</dt><dd>此相机库仅支持 USB 相机设备，暂时对 GigE 网口相机不兼容</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 GrabMode 和 RetrieveMode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serial</td><td>相机唯一序列号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#a8">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cee142d3fcf1202662552275409411c" name="a1cee142d3fcf1202662552275409411c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cee142d3fcf1202662552275409411c">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d9f/classrm_1_1HikCamera.html">HikCamera</a> &amp; rm::HikCamera::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d9f/classrm_1_1HikCamera_a1cee142d3fcf1202662552275409411c_cgraph.svg" width="424" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a744ac7aea770336ee8fde87a69ae6278" name="a744ac7aea770336ee8fde87a69ae6278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744ac7aea770336ee8fde87a69ae6278">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::HikCamera::read </td>
+          <td>(</td>
+          <td class="paramtype">cv::OutputArray</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d5/d29/samples_2camera_2hik_2sample_hik_multi_8cpp-example.html#a13">samples/camera/hik/sample_hik_multi.cpp</a> , 以及 <a class="el" href="../../d3/d3f/samples_2camera_2hik_2sample_hik_writer_8cpp-example.html#a4">samples/camera/hik/sample_hik_writer.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a482cc30016dc2405cedeef16d529fa7c" name="a482cc30016dc2405cedeef16d529fa7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482cc30016dc2405cedeef16d529fa7c">&#9670;&#160;</a></span>reconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::HikCamera::reconnect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相机重连 </p>
+<dl class="section return"><dt>返回</dt><dd>是否成功重连 </dd></dl>
+
+</div>
+</div>
+<a id="a8b66798aca86dd7b0222124b58803958" name="a8b66798aca86dd7b0222124b58803958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b66798aca86dd7b0222124b58803958">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::HikCamera::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>propId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置相机参数/事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propId</td><td>参数/事件编号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>参数/事件值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否设置成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d5/d29/samples_2camera_2hik_2sample_hik_multi_8cpp-example.html#a5">samples/camera/hik/sample_hik_multi.cpp</a> , 以及 <a class="el" href="../../d3/d3f/samples_2camera_2hik_2sample_hik_writer_8cpp-example.html#a6">samples/camera/hik/sample_hik_writer.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/camera/<a class="el" href="../../da/d35/camera_2hik__camera_8h.html">hik_camera.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

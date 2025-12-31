@@ -1,0 +1,311 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: 机器人运动规划</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">机器人运动规划 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md325">1 概述 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md326">1.1 URDF 文件说明 </a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md327">2 快速开始 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md328">2.1 创建规划器 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md329">2.2 更新关节状态 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md330">2.3 关节空间规划 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md331">2.4 笛卡尔空间规划（点到点） </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md332">2.5 笛卡尔空间规划（多点） </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md333">2.6 正运动学查询 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md334">2.7 调整执行速度 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>本教程介绍了 LPSS 机器人扩展中的运动规划功能，展示了如何使用该功能进行机器人运动规划。</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2lpss_2robotpln"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2026/04/29 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d3/d8e/tutorial_modules_lpss.html" title="轻量发布订阅服务 —— LPSS">轻量发布订阅服务 —— LPSS</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../da/df7/tutorial_modules_lpss_robotctl.html" title="机器人控制">机器人控制</a> <br  />
+</p>
+<hr  />
+<p>相关模块： <a class="el" href="../../d2/d7d/group__lpss__robot.html" title="机器人功能扩展">机器人功能扩展</a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md325"></a>
+1 概述</h1>
+<p><span class="tt"><a class="el" href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html" title="机器人规划模块，提供 URDF 解析、正/逆运动学求解、轨迹规划等运动学功能">rm::lpss::RobotPlanner</a></span> 提供 URDF 加载、正/逆运动学求解、以及轨迹规划功能。使用者可以直接指定关节角度或末端位姿来规划平滑的运动轨迹。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md326"></a>
+1.1 URDF 文件说明</h2>
+<p>URDF（Unified Robot Description Format）是 ROS/ROS2 标准的机器人描述格式，用 XML 定义机器人的连杆、关节和动力学属性。可以使用 <b>SW2URDF</b> 插件从 SolidWorks 导出 URDF 文件，或参考 ROS 官方文档手工编写。RMVL 完全兼容标准 URDF 格式，支持加载 ROS/ROS2 生态中的机器人模型。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md327"></a>
+2 快速开始</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md328"></a>
+2.1 创建规划器</h2>
+<p>首先需要创建一个 <span class="tt">RobotPlanner</span> 对象，加载 URDF 模型：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/robot.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建规划器，加载 URDF 文件</span></div>
+<div class="line">    <a class="code hl_class" href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">lpss::RobotPlanner</a> planner(<span class="stringliteral">&quot;/path/to/robot.urdf&quot;</span>);</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// 可选：指定网格文件路径前缀，用于某些需要可视化的场景</span></div>
+<div class="line">    <span class="comment">// lpss::RobotPlanner planner(&quot;/path/to/robot.urdf&quot;, &quot;/path/to/meshes&quot;);</span></div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1RobotPlanner_html"><div class="ttname"><a href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">rm::lpss::RobotPlanner</a></div><div class="ttdoc">机器人规划模块，提供 URDF 解析、正/逆运动学求解、轨迹规划等运动学功能</div><div class="ttdef"><b>定义</b> robot.hpp:94</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md329"></a>
+2.2 更新关节状态</h2>
+<p>在进行轨迹规划前，需要更新规划器中的关节状态（通常是当前机器人的实际关节角度）：</p>
+<div class="fragment"><div class="line"><span class="comment">// 创建关节状态消息</span></div>
+<div class="line"><a class="code hl_class" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> current_state;</div>
+<div class="line">current_state.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#a6bd66f5f2a55aa4f31cb29e62667d6d7">name</a> = {<span class="stringliteral">&quot;joint1&quot;</span>, <span class="stringliteral">&quot;joint2&quot;</span>, <span class="stringliteral">&quot;joint3&quot;</span>};</div>
+<div class="line">current_state.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#aa8a4c1c9f05084bab65b03c598c362a5">position</a> = {0.0, 0.0, 0.0};  <span class="comment">// 当前关节角度</span></div>
+<div class="line">current_state.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#a591220c343ee7049eaa0694ee3438584">velocity</a> = {0.0, 0.0, 0.0};  <span class="comment">// 当前关节速度</span></div>
+<div class="line">current_state.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#af9d677fb0c206b40089c2abd023ce8e6">effort</a> = {0.0, 0.0, 0.0};    <span class="comment">// 当前关节力矩</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 更新规划器</span></div>
+<div class="line">planner.update(current_state);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 或获取当前状态</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;state = planner.joints();</div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointState_html"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html">rm::msg::JointState</a></div><div class="ttdoc">JointState 消息类型：sensor/JointState</div><div class="ttdef"><b>定义</b> joint_state.hpp:32</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_a591220c343ee7049eaa0694ee3438584"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#a591220c343ee7049eaa0694ee3438584">rm::msg::JointState::velocity</a></div><div class="ttdeci">std::vector&lt; double &gt; velocity</div><div class="ttdef"><b>定义</b> joint_state.hpp:37</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_a6bd66f5f2a55aa4f31cb29e62667d6d7"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#a6bd66f5f2a55aa4f31cb29e62667d6d7">rm::msg::JointState::name</a></div><div class="ttdeci">std::vector&lt; std::string &gt; name</div><div class="ttdef"><b>定义</b> joint_state.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_aa8a4c1c9f05084bab65b03c598c362a5"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#aa8a4c1c9f05084bab65b03c598c362a5">rm::msg::JointState::position</a></div><div class="ttdeci">std::vector&lt; double &gt; position</div><div class="ttdef"><b>定义</b> joint_state.hpp:36</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_af9d677fb0c206b40089c2abd023ce8e6"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#af9d677fb0c206b40089c2abd023ce8e6">rm::msg::JointState::effort</a></div><div class="ttdeci">std::vector&lt; double &gt; effort</div><div class="ttdef"><b>定义</b> joint_state.hpp:38</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md330"></a>
+2.3 关节空间规划</h2>
+<p>在已知目标关节角的情况下，可以使用关节空间规划快速生成轨迹：</p>
+<div class="fragment"><div class="line"><span class="comment">// 设置目标关节状态</span></div>
+<div class="line"><a class="code hl_class" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> target;</div>
+<div class="line">target.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#a6bd66f5f2a55aa4f31cb29e62667d6d7">name</a> = {<span class="stringliteral">&quot;joint1&quot;</span>, <span class="stringliteral">&quot;joint2&quot;</span>, <span class="stringliteral">&quot;joint3&quot;</span>};</div>
+<div class="line">target.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#aa8a4c1c9f05084bab65b03c598c362a5">position</a> = {1.57, 0.785, -0.785};  <span class="comment">// 目标关节角</span></div>
+<div class="line">target.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#a591220c343ee7049eaa0694ee3438584">velocity</a> = {0.0, 0.0, 0.0};</div>
+<div class="line">target.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1JointState.html#af9d677fb0c206b40089c2abd023ce8e6">effort</a> = {0.0, 0.0, 0.0};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 规划轨迹</span></div>
+<div class="line"><a class="code hl_class" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> traj = planner.plan(target);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 检查规划结果</span></div>
+<div class="line"><span class="keywordflow">if</span> (traj.<a class="code hl_variable" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e">points</a>.empty()) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;轨迹规划失败！&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;规划成功，轨迹包含 &quot;</span> &lt;&lt; traj.<a class="code hl_variable" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e">points</a>.size() &lt;&lt; <span class="stringliteral">&quot; 个点&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointTrajectory_html"><div class="ttname"><a href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">rm::msg::JointTrajectory</a></div><div class="ttdoc">JointTrajectory 消息类型：motion/JointTrajectory</div><div class="ttdef"><b>定义</b> joint_trajectory.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1JointTrajectory_html_a3ead07a2531ea45ce1c42e7383da493e"><div class="ttname"><a href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e">rm::msg::JointTrajectory::points</a></div><div class="ttdeci">std::vector&lt; JointTrajectoryPoint &gt; points</div><div class="ttdef"><b>定义</b> joint_trajectory.hpp:37</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md331"></a>
+2.4 笛卡尔空间规划（点到点）</h2>
+<p>指定末端执行器的目标位姿，规划器会自动进行逆运动学求解：</p>
+<div class="fragment"><div class="line"><span class="comment">// 创建目标位姿（相对于基坐标系）</span></div>
+<div class="line"><a class="code hl_class" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> target_pose;</div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">x</a> = 0.3;</div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">y</a> = 0.4;</div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#a6fc8ce7475a9a2fd771b5cbf5c58be17">z</a> = 0.5;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 目标姿态（使用四元数表示，此为 z 轴旋转 90 度）</span></div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ad5f6d79e93ad5a776cf1d01c2d6030f8">x</a> = 0.0;</div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#a78fc1c92306bed4b7990a7eb0397b584">y</a> = 0.0;</div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ab5c962ae7862ef79d7465f3bebf7a942">z</a> = 0.7071;  <span class="comment">// sin(45°)</span></div>
+<div class="line">target_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">w</a> = 0.7071;  <span class="comment">// cos(45°)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 规划轨迹（目标连杆为 &quot;end_effector&quot;）</span></div>
+<div class="line"><a class="code hl_class" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> traj = planner.plan(<span class="stringliteral">&quot;end_effector&quot;</span>, target_pose);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (!traj.<a class="code hl_variable" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e">points</a>.empty()) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;轨迹总时间：&quot;</span> &lt;&lt; traj.<a class="code hl_variable" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e">points</a>.back().time_from_start &lt;&lt; <span class="stringliteral">&quot; ms&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Point_html_a6fc8ce7475a9a2fd771b5cbf5c58be17"><div class="ttname"><a href="../../d0/deb/classrm_1_1msg_1_1Point.html#a6fc8ce7475a9a2fd771b5cbf5c58be17">rm::msg::Point::z</a></div><div class="ttdeci">double z</div><div class="ttdef"><b>定义</b> point.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Point_html_adbe0da3d26e20d43d8bea2994969abe2"><div class="ttname"><a href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">rm::msg::Point::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>定义</b> point.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Point_html_af2f5eba8f97d7f0dbdead5528140d9ec"><div class="ttname"><a href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">rm::msg::Point::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>定义</b> point.hpp:34</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Pose_html"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html">rm::msg::Pose</a></div><div class="ttdoc">Pose 消息类型：geometry/Pose</div><div class="ttdef"><b>定义</b> pose.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Pose_html_a54f6b6332ad1283b82f04d90c01b0b78"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">rm::msg::Pose::position</a></div><div class="ttdeci">Point position</div><div class="ttdef"><b>定义</b> pose.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Pose_html_ad3029c9a23f1fc4f2c67cd5366a82912"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">rm::msg::Pose::orientation</a></div><div class="ttdeci">Quaternion orientation</div><div class="ttdef"><b>定义</b> pose.hpp:36</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Quaternion_html_a78fc1c92306bed4b7990a7eb0397b584"><div class="ttname"><a href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#a78fc1c92306bed4b7990a7eb0397b584">rm::msg::Quaternion::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>定义</b> quaternion.hpp:34</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Quaternion_html_aaee87641b557311753b74a62c1397939"><div class="ttname"><a href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">rm::msg::Quaternion::w</a></div><div class="ttdeci">double w</div><div class="ttdef"><b>定义</b> quaternion.hpp:36</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Quaternion_html_ab5c962ae7862ef79d7465f3bebf7a942"><div class="ttname"><a href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ab5c962ae7862ef79d7465f3bebf7a942">rm::msg::Quaternion::z</a></div><div class="ttdeci">double z</div><div class="ttdef"><b>定义</b> quaternion.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Quaternion_html_ad5f6d79e93ad5a776cf1d01c2d6030f8"><div class="ttname"><a href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ad5f6d79e93ad5a776cf1d01c2d6030f8">rm::msg::Quaternion::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>定义</b> quaternion.hpp:33</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md332"></a>
+2.5 笛卡尔空间规划（多点）</h2>
+<p>规划末端执行器通过多个途经点的轨迹：</p>
+<div class="fragment"><div class="line">std::vector&lt;msg::Pose&gt; waypoints;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> p1;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">x</a> = 0.2;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">y</a> = 0.3;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#a6fc8ce7475a9a2fd771b5cbf5c58be17">z</a> = 0.4;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ad5f6d79e93ad5a776cf1d01c2d6030f8">x</a> = 0.0;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#a78fc1c92306bed4b7990a7eb0397b584">y</a> = 0.0;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ab5c962ae7862ef79d7465f3bebf7a942">z</a> = 0.0;</div>
+<div class="line">p1.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">w</a> = 1.0;</div>
+<div class="line">waypoints.push_back(p1);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> p2;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">x</a> = 0.3;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">y</a> = 0.4;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#a6fc8ce7475a9a2fd771b5cbf5c58be17">z</a> = 0.5;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ad5f6d79e93ad5a776cf1d01c2d6030f8">x</a> = 0.0;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#a78fc1c92306bed4b7990a7eb0397b584">y</a> = 0.0;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#ab5c962ae7862ef79d7465f3bebf7a942">z</a> = 0.7071;</div>
+<div class="line">p2.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912">orientation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">w</a> = 0.7071;</div>
+<div class="line">waypoints.push_back(p2);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> traj = planner.plan(<span class="stringliteral">&quot;end_effector&quot;</span>, waypoints);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md333"></a>
+2.6 正运动学查询</h2>
+<div class="fragment"><div class="line"><a class="code hl_class" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> link_pose = planner.linkpose(<span class="stringliteral">&quot;link2&quot;</span>);</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md334"></a>
+2.7 调整执行速度</h2>
+<div class="fragment"><div class="line">planner.setMaxVelocityScalingFactor(0.5); <span class="comment">// 设为 50%</span></div>
+<div class="line"><a class="code hl_class" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> traj = planner.plan(target);</div>
+<div class="line">planner.setMaxVelocityScalingFactor(1.0); <span class="comment">// 恢复 100%</span></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

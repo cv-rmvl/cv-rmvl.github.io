@@ -1,0 +1,377 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: rm::ImuData结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../df/d93/structrm_1_1ImuData-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::ImuData结构体 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>IMU 数据  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/util.hpp&gt;</code></p>
+<div class="dynheader">
+rm::ImuData 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/df1/structrm_1_1ImuData__coll__graph.svg" width="242" height="466"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3eb245e3c297ccec7b40ae8d9b24cc9f" id="r_a3eb245e3c297ccec7b40ae8d9b24cc9f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eb245e3c297ccec7b40ae8d9b24cc9f">write</a> (std::ostream &amp;out, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;data) noexcept</td></tr>
+<tr class="memdesc:a3eb245e3c297ccec7b40ae8d9b24cc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出 IMU 数据，可以是输出到控制台，也可以是输出到文件  <br /></td></tr>
+<tr class="separator:a3eb245e3c297ccec7b40ae8d9b24cc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdeb18aa19d4ca930dd067ca5a2e0cc6" id="r_abdeb18aa19d4ca930dd067ca5a2e0cc6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdeb18aa19d4ca930dd067ca5a2e0cc6">read</a> (std::istream &amp;in, <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;data) noexcept</td></tr>
+<tr class="memdesc:abdeb18aa19d4ca930dd067ca5a2e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">导入 IMU 数据，可以是从控制台读取，也可以是从文件读取  <br /></td></tr>
+<tr class="separator:abdeb18aa19d4ca930dd067ca5a2e0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759638cd0bfb3ef002b6e7038e8d25c2" id="r_a759638cd0bfb3ef002b6e7038e8d25c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a759638cd0bfb3ef002b6e7038e8d25c2">write</a> (std::string_view output_file, const std::vector&lt; <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &gt; &amp;datas) noexcept</td></tr>
+<tr class="memdesc:a759638cd0bfb3ef002b6e7038e8d25c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出所有 IMU 数据到文件  <br /></td></tr>
+<tr class="separator:a759638cd0bfb3ef002b6e7038e8d25c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac148f3915f6bc67b5a6bf367ed82ea51" id="r_ac148f3915f6bc67b5a6bf367ed82ea51"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac148f3915f6bc67b5a6bf367ed82ea51">read</a> (std::string_view input_file) noexcept</td></tr>
+<tr class="memdesc:ac148f3915f6bc67b5a6bf367ed82ea51"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件导入所有 IMU 数据  <br /></td></tr>
+<tr class="separator:ac148f3915f6bc67b5a6bf367ed82ea51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a35d0301537665d35871863cc60ccfb2c" id="r_a35d0301537665d35871863cc60ccfb2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/def/structrm_1_1Translation.html">Translation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35d0301537665d35871863cc60ccfb2c">translation</a></td></tr>
+<tr class="memdesc:a35d0301537665d35871863cc60ccfb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动位置数据  <br /></td></tr>
+<tr class="separator:a35d0301537665d35871863cc60ccfb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6f8265fc1bae78423f2ad132545567" id="r_adf6f8265fc1bae78423f2ad132545567"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d5f/structrm_1_1Rotation.html">Rotation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf6f8265fc1bae78423f2ad132545567">rotation</a></td></tr>
+<tr class="memdesc:adf6f8265fc1bae78423f2ad132545567"><td class="mdescLeft">&#160;</td><td class="mdescRight">转动姿态数据  <br /></td></tr>
+<tr class="separator:adf6f8265fc1bae78423f2ad132545567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>IMU 数据 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a3">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#_a2">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a3">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#_a2">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="abdeb18aa19d4ca930dd067ca5a2e0cc6" name="abdeb18aa19d4ca930dd067ca5a2e0cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdeb18aa19d4ca930dd067ca5a2e0cc6">&#9670;&#160;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::ImuData::read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>导入 IMU 数据，可以是从控制台读取，也可以是从文件读取 </p>
+<ul>
+<li>读取的文件形如以下内容 <div class="fragment"><div class="line">1.9, 2.11, 3.12, 4.13, 5.14, 6.15, 7.16, 8.17, 9.18, 10.19, 11.20, 12.21,</div>
+<div class="line">13.22, 14.23, 15.24, 16.25, 17.26, 18.27, 19.28, 20.29, 21.30, 22.31, 23.32, 24.33,</div>
+</div><!-- fragment --></li>
+<li>例如，第一次调用 <code>read</code> 方法时，IMU 平移的数据为 <code>(1.9, 2.11, 3.12, 4.13, 5.14, 6.15)</code> 旋转的数据为 <code>(7.16, 8.17, 9.18, 10.19, 11.20, 12.21)</code></li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>输入流对象 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取出的 IMU 数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac148f3915f6bc67b5a6bf367ed82ea51" name="ac148f3915f6bc67b5a6bf367ed82ea51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac148f3915f6bc67b5a6bf367ed82ea51">&#9670;&#160;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &gt; rm::ImuData::read </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>input_file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从文件导入所有 IMU 数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file</td><td>输入文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>读取出的所有 IMU 数据 </dd></dl>
+
+</div>
+</div>
+<a id="a3eb245e3c297ccec7b40ae8d9b24cc9f" name="a3eb245e3c297ccec7b40ae8d9b24cc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb245e3c297ccec7b40ae8d9b24cc9f">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::ImuData::write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>导出 IMU 数据，可以是输出到控制台，也可以是输出到文件 </p>
+<ul>
+<li>以 <code>imu_data</code> 的整体写入到输出流对象的末尾</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>输出流对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的 IMU 数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a759638cd0bfb3ef002b6e7038e8d25c2" name="a759638cd0bfb3ef002b6e7038e8d25c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759638cd0bfb3ef002b6e7038e8d25c2">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::ImuData::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>output_file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>datas</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>导出所有 IMU 数据到文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_file</td><td>输出文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">datas</td><td>待写入的所有 IMU 数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="adf6f8265fc1bae78423f2ad132545567" name="adf6f8265fc1bae78423f2ad132545567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6f8265fc1bae78423f2ad132545567">&#9670;&#160;</a></span>rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d5f/structrm_1_1Rotation.html">Rotation</a> rm::ImuData::rotation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转动姿态数据 </p>
+
+</div>
+</div>
+<a id="a35d0301537665d35871863cc60ccfb2c" name="a35d0301537665d35871863cc60ccfb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d0301537665d35871863cc60ccfb2c">&#9670;&#160;</a></span>translation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/def/structrm_1_1Translation.html">Translation</a> rm::ImuData::translation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>移动位置数据 </p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d9/dc1/io_2include_2rmvl_2io_2util_8hpp.html">util.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

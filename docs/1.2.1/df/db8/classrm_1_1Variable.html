@@ -1,0 +1,892 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rm::Variable类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d1/dc5/classrm_1_1Variable-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Variable类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">基于 open62541 的 OPC UA 二次开发库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>OPC UA 变量  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/opcua/variable.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Variable 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d80/classrm_1_1Variable__coll__graph.svg" width="183" height="583"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9b60646a74babdf3b8a9799644e1aee2" id="r_a9b60646a74babdf3b8a9799644e1aee2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b60646a74babdf3b8a9799644e1aee2">Variable</a> ()=default</td></tr>
+<tr class="separator:a9b60646a74babdf3b8a9799644e1aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbab2de16839b2ae68133882182281b3" id="r_acbab2de16839b2ae68133882182281b3"><td class="memTemplParams" colspan="2">template&lt;unsigned int N&gt; </td></tr>
+<tr class="memitem:acbab2de16839b2ae68133882182281b3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbab2de16839b2ae68133882182281b3">Variable</a> (const char(&amp;str)[<a class="el" href="../../d6/d59/group__types.html#gga53b2ed651ce89a5884af7310fb1a24d6a8d9c307cb7f3c4a32822a51922d1ceaa">N</a>])</td></tr>
+<tr class="memdesc:acbab2de16839b2ae68133882182281b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">字面量字符串构造，设置默认值  <br /></td></tr>
+<tr class="separator:acbab2de16839b2ae68133882182281b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87923ba580e81442889d5f8c102fbb6d" id="r_a87923ba580e81442889d5f8c102fbb6d"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; || std::is_same_v&lt;Tp, const char *&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a87923ba580e81442889d5f8c102fbb6d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a87923ba580e81442889d5f8c102fbb6d">Variable</a> (const Tp &amp;val)</td></tr>
+<tr class="memdesc:a87923ba580e81442889d5f8c102fbb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">单值构造  <br /></td></tr>
+<tr class="separator:a87923ba580e81442889d5f8c102fbb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f68758fe25bbb53701374c2d8b936bb" id="r_a1f68758fe25bbb53701374c2d8b936bb"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; &amp;&amp; !std::is_same_v&lt;bool, Tp&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a1f68758fe25bbb53701374c2d8b936bb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1f68758fe25bbb53701374c2d8b936bb">Variable</a> (const std::vector&lt; Tp &gt; &amp;arr)</td></tr>
+<tr class="memdesc:a1f68758fe25bbb53701374c2d8b936bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">列表构造  <br /></td></tr>
+<tr class="separator:a1f68758fe25bbb53701374c2d8b936bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71f41c64028795a747164fae4630a75" id="r_af71f41c64028795a747164fae4630a75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af71f41c64028795a747164fae4630a75">Variable</a> (<a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;vtype)</td></tr>
+<tr class="memdesc:af71f41c64028795a747164fae4630a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">从变量类型构造新的变量节点  <br /></td></tr>
+<tr class="separator:af71f41c64028795a747164fae4630a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824a074396d5e38e122e44e4f8253257" id="r_a824a074396d5e38e122e44e4f8253257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a824a074396d5e38e122e44e4f8253257">Variable</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val)</td></tr>
+<tr class="separator:a824a074396d5e38e122e44e4f8253257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7df7cef1a27bd7f814111eda7cc616c" id="r_aa7df7cef1a27bd7f814111eda7cc616c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7df7cef1a27bd7f814111eda7cc616c">Variable</a> (<a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&amp;val)</td></tr>
+<tr class="separator:aa7df7cef1a27bd7f814111eda7cc616c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87eb459a579d3a81e68d386573f8f595" id="r_a87eb459a579d3a81e68d386573f8f595"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87eb459a579d3a81e68d386573f8f595">operator=</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val)</td></tr>
+<tr class="separator:a87eb459a579d3a81e68d386573f8f595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50df727840e4a833d22bca2868e528f6" id="r_a50df727840e4a833d22bca2868e528f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50df727840e4a833d22bca2868e528f6">operator=</a> (<a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&amp;val)</td></tr>
+<tr class="separator:a50df727840e4a833d22bca2868e528f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90cfcfc195bed939c892126c4313784" id="r_aa90cfcfc195bed939c892126c4313784"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa90cfcfc195bed939c892126c4313784">operator==</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
+<tr class="memdesc:aa90cfcfc195bed939c892126c4313784"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较两个变量是否相等，当且仅当两个变量的数据类型、维数、数据值均相等时返回 <code>true</code>，而不考虑变量的名称、描述等信息  <br /></td></tr>
+<tr class="separator:aa90cfcfc195bed939c892126c4313784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a8a118893a31ca338cab822313e702" id="r_a06a8a118893a31ca338cab822313e702"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06a8a118893a31ca338cab822313e702">operator!=</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
+<tr class="memdesc:a06a8a118893a31ca338cab822313e702"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较两个变量是否不等  <br /></td></tr>
+<tr class="separator:a06a8a118893a31ca338cab822313e702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1463cebb6f4ae2d756ace4e61e4dd61" id="r_ab1463cebb6f4ae2d756ace4e61e4dd61"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1463cebb6f4ae2d756ace4e61e4dd61">empty</a> () const</td></tr>
+<tr class="memdesc:ab1463cebb6f4ae2d756ace4e61e4dd61"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断变量节点是否为空  <br /></td></tr>
+<tr class="separator:ab1463cebb6f4ae2d756ace4e61e4dd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e829435a14b7a4b02ed6bba1a57955" id="r_a52e829435a14b7a4b02ed6bba1a57955"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:a52e829435a14b7a4b02ed6bba1a57955"><td class="memTemplItemLeft" align="right" valign="top">Tp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a52e829435a14b7a4b02ed6bba1a57955">cast</a> ()</td></tr>
+<tr class="memdesc:a52e829435a14b7a4b02ed6bba1a57955"><td class="mdescLeft">&#160;</td><td class="mdescRight">将变量节点转化为指定类型的数据  <br /></td></tr>
+<tr class="separator:a52e829435a14b7a4b02ed6bba1a57955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa594272dc559b6336f4ea1658a3e40" id="r_aaaa594272dc559b6336f4ea1658a3e40"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa594272dc559b6336f4ea1658a3e40">type</a> () const</td></tr>
+<tr class="memdesc:aaaa594272dc559b6336f4ea1658a3e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取用 <code><a class="el" href="../../d9/de2/classrm_1_1VariableType.html" title="OPC UA 变量类型">rm::VariableType</a></code> 表示的变量类型  <br /></td></tr>
+<tr class="separator:aaaa594272dc559b6336f4ea1658a3e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d53500e1974b2df94553848310fe55" id="r_a23d53500e1974b2df94553848310fe55"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23d53500e1974b2df94553848310fe55">data</a> () const</td></tr>
+<tr class="memdesc:a23d53500e1974b2df94553848310fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取数据  <br /></td></tr>
+<tr class="separator:a23d53500e1974b2df94553848310fe55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b6bef275d6c1a370bca2ee822458d0" id="r_a21b6bef275d6c1a370bca2ee822458d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#ga27209e4fc389d967d9031c0534145492">UA_TypeFlag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b6bef275d6c1a370bca2ee822458d0">getDataType</a> () const</td></tr>
+<tr class="memdesc:a21b6bef275d6c1a370bca2ee822458d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取形如 <code>UA_TYPES_&lt;xxx&gt;</code> 的数据类型  <br /></td></tr>
+<tr class="separator:a21b6bef275d6c1a370bca2ee822458d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70524d2a980c7163f7b1ad6aab17db49" id="r_a70524d2a980c7163f7b1ad6aab17db49"><td class="memItemLeft" align="right" valign="top">UA_UInt32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70524d2a980c7163f7b1ad6aab17db49">size</a> () const</td></tr>
+<tr class="memdesc:a70524d2a980c7163f7b1ad6aab17db49"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取大小  <br /></td></tr>
+<tr class="separator:a70524d2a980c7163f7b1ad6aab17db49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f0c782b8e263a50c9b4e8aebff2090" id="r_a98f0c782b8e263a50c9b4e8aebff2090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98f0c782b8e263a50c9b4e8aebff2090">setAccessLevel</a> (uint8_t access_level)</td></tr>
+<tr class="memdesc:a98f0c782b8e263a50c9b4e8aebff2090"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置访问性  <br /></td></tr>
+<tr class="separator:a98f0c782b8e263a50c9b4e8aebff2090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227d3db03c2f426146d046fd8f22f1fb" id="r_a227d3db03c2f426146d046fd8f22f1fb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a227d3db03c2f426146d046fd8f22f1fb">getAccessLevel</a> () const</td></tr>
+<tr class="memdesc:a227d3db03c2f426146d046fd8f22f1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取访问性  <br /></td></tr>
+<tr class="separator:a227d3db03c2f426146d046fd8f22f1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3c9c5cc7059a9da1067124d67c2accba" id="r_a3c9c5cc7059a9da1067124d67c2accba"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:a3c9c5cc7059a9da1067124d67c2accba"><td class="memTemplItemLeft" align="right" valign="top">static Tp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3c9c5cc7059a9da1067124d67c2accba">cast</a> (const <a class="el" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> &amp;val)</td></tr>
+<tr class="memdesc:a3c9c5cc7059a9da1067124d67c2accba"><td class="mdescLeft">&#160;</td><td class="mdescRight">将变量节点转化为指定类型的数据  <br /></td></tr>
+<tr class="separator:a3c9c5cc7059a9da1067124d67c2accba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a3d20725d0f1a56474ff7bf90f57e7c8d" id="r_a3d20725d0f1a56474ff7bf90f57e7c8d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> {}</td></tr>
+<tr class="memdesc:a3d20725d0f1a56474ff7bf90f57e7c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">浏览名称 BrowseName  <br /></td></tr>
+<tr class="separator:a3d20725d0f1a56474ff7bf90f57e7c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3099ea3e54575de460b272a1c496203" id="r_ad3099ea3e54575de460b272a1c496203"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3099ea3e54575de460b272a1c496203">display_name</a> {}</td></tr>
+<tr class="memdesc:ad3099ea3e54575de460b272a1c496203"><td class="mdescLeft">&#160;</td><td class="mdescRight">展示名称 DisplayName  <br /></td></tr>
+<tr class="separator:ad3099ea3e54575de460b272a1c496203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2192d1434ef12e7db2be77b8d616899" id="r_ae2192d1434ef12e7db2be77b8d616899"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2192d1434ef12e7db2be77b8d616899">description</a> {}</td></tr>
+<tr class="memdesc:ae2192d1434ef12e7db2be77b8d616899"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量的描述  <br /></td></tr>
+<tr class="separator:ae2192d1434ef12e7db2be77b8d616899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPC UA 变量 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#_a1">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9b60646a74babdf3b8a9799644e1aee2" name="a9b60646a74babdf3b8a9799644e1aee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b60646a74babdf3b8a9799644e1aee2">&#9670;&#160;</a></span>Variable() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbab2de16839b2ae68133882182281b3" name="acbab2de16839b2ae68133882182281b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbab2de16839b2ae68133882182281b3">&#9670;&#160;</a></span>Variable() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)</td>          <td class="paramname"><span class="paramname"><em>str</em></span>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>字面量字符串构造，设置默认值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>字面量字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a87923ba580e81442889d5f8c102fbb6d" name="a87923ba580e81442889d5f8c102fbb6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87923ba580e81442889d5f8c102fbb6d">&#9670;&#160;</a></span>Variable() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; || std::is_same_v&lt;Tp, const char *&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单值构造 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量的存储数据类型，必须是基础类型、<code>const char *</code> 或 <code>const char (&amp;)[N]</code> 表示的字符串类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>标量、数量值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1f68758fe25bbb53701374c2d8b936bb" name="a1f68758fe25bbb53701374c2d8b936bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f68758fe25bbb53701374c2d8b936bb">&#9670;&#160;</a></span>Variable() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Enable  = std::enable_if_t&lt;std::is_fundamental_v&lt;Tp&gt; &amp;&amp; !std::is_same_v&lt;bool, Tp&gt;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>列表构造 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量的存储数据类型，必须是非 <code>bool</code> 的基础类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">arr</td><td>列表、数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af71f41c64028795a747164fae4630a75" name="af71f41c64028795a747164fae4630a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af71f41c64028795a747164fae4630a75">&#9670;&#160;</a></span>Variable() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vtype</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从变量类型构造新的变量节点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vtype</td><td>既存的待作为变量节点类型信息的使用 <code><a class="el" href="../../d9/de2/classrm_1_1VariableType.html" title="OPC UA 变量类型">rm::VariableType</a></code> 表示的变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a824a074396d5e38e122e44e4f8253257" name="a824a074396d5e38e122e44e4f8253257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824a074396d5e38e122e44e4f8253257">&#9670;&#160;</a></span>Variable() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7df7cef1a27bd7f814111eda7cc616c" name="aa7df7cef1a27bd7f814111eda7cc616c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7df7cef1a27bd7f814111eda7cc616c">&#9670;&#160;</a></span>Variable() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Variable::Variable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a52e829435a14b7a4b02ed6bba1a57955" name="a52e829435a14b7a4b02ed6bba1a57955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e829435a14b7a4b02ed6bba1a57955">&#9670;&#160;</a></span>cast() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::Variable::cast </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将变量节点转化为指定类型的数据 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>该数据类型的数据 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/db8/classrm_1_1Variable_a52e829435a14b7a4b02ed6bba1a57955_cgraph.svg" width="334" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3c9c5cc7059a9da1067124d67c2accba" name="a3c9c5cc7059a9da1067124d67c2accba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9c5cc7059a9da1067124d67c2accba">&#9670;&#160;</a></span>cast() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Tp rm::Variable::cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将变量节点转化为指定类型的数据 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>变量节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Tp 该数据类型的数据 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../df/db8/classrm_1_1Variable_a3c9c5cc7059a9da1067124d67c2accba_cgraph.svg" width="334" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a23d53500e1974b2df94553848310fe55" name="a23d53500e1974b2df94553848310fe55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d53500e1974b2df94553848310fe55">&#9670;&#160;</a></span>data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto &amp; rm::Variable::data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取数据 </p>
+
+</div>
+</div>
+<a id="ab1463cebb6f4ae2d756ace4e61e4dd61" name="ab1463cebb6f4ae2d756ace4e61e4dd61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1463cebb6f4ae2d756ace4e61e4dd61">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Variable::empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断变量节点是否为空 </p>
+
+</div>
+</div>
+<a id="a227d3db03c2f426146d046fd8f22f1fb" name="a227d3db03c2f426146d046fd8f22f1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227d3db03c2f426146d046fd8f22f1fb">&#9670;&#160;</a></span>getAccessLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t rm::Variable::getAccessLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取访问性 </p>
+
+</div>
+</div>
+<a id="a21b6bef275d6c1a370bca2ee822458d0" name="a21b6bef275d6c1a370bca2ee822458d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b6bef275d6c1a370bca2ee822458d0">&#9670;&#160;</a></span>getDataType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/da8/group__opcua.html#ga27209e4fc389d967d9031c0534145492">UA_TypeFlag</a> rm::Variable::getDataType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取形如 <code>UA_TYPES_&lt;xxx&gt;</code> 的数据类型 </p>
+
+</div>
+</div>
+<a id="a06a8a118893a31ca338cab822313e702" name="a06a8a118893a31ca338cab822313e702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a8a118893a31ca338cab822313e702">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Variable::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>比较两个变量是否不等 </p>
+<dl class="section see"><dt>参见</dt><dd><code>rm::Variable::operator==</code></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>另一个变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否不等 </dd></dl>
+
+</div>
+</div>
+<a id="a87eb459a579d3a81e68d386573f8f595" name="a87eb459a579d3a81e68d386573f8f595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87eb459a579d3a81e68d386573f8f595">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp; rm::Variable::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50df727840e4a833d22bca2868e528f6" name="a50df727840e4a833d22bca2868e528f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50df727840e4a833d22bca2868e528f6">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp; rm::Variable::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa90cfcfc195bed939c892126c4313784" name="aa90cfcfc195bed939c892126c4313784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90cfcfc195bed939c892126c4313784">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Variable::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比较两个变量是否相等，当且仅当两个变量的数据类型、维数、数据值均相等时返回 <code>true</code>，而不考虑变量的名称、描述等信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>另一个变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否相等 </dd></dl>
+
+</div>
+</div>
+<a id="a98f0c782b8e263a50c9b4e8aebff2090" name="a98f0c782b8e263a50c9b4e8aebff2090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f0c782b8e263a50c9b4e8aebff2090">&#9670;&#160;</a></span>setAccessLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Variable::setAccessLevel </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>access_level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置访问性 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">access_level</td><td>访问性 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70524d2a980c7163f7b1ad6aab17db49" name="a70524d2a980c7163f7b1ad6aab17db49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70524d2a980c7163f7b1ad6aab17db49">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UA_UInt32 rm::Variable::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取大小 </p>
+<dl class="section note"><dt>注解</dt><dd>未初始化则返回 <code>0</code> </dd></dl>
+
+</div>
+</div>
+<a id="aaaa594272dc559b6336f4ea1658a3e40" name="aaaa594272dc559b6336f4ea1658a3e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa594272dc559b6336f4ea1658a3e40">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d9/de2/classrm_1_1VariableType.html">VariableType</a> * rm::Variable::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取用 <code><a class="el" href="../../d9/de2/classrm_1_1VariableType.html" title="OPC UA 变量类型">rm::VariableType</a></code> 表示的变量类型 </p>
+<dl class="section see"><dt>参见</dt><dd>_type </dd></dl>
+<dl class="section return"><dt>返回</dt><dd>变量类型 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a3d20725d0f1a56474ff7bf90f57e7c8d" name="a3d20725d0f1a56474ff7bf90f57e7c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d20725d0f1a56474ff7bf90f57e7c8d">&#9670;&#160;</a></span>browse_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Variable::browse_name {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>浏览名称 BrowseName </p>
+<ul>
+<li>属于非服务器层面的 ID 号，可用于完成路径搜索</li>
+<li>同一个命名空间 <code>ns</code> 下该名称不能重复 </li>
+</ul>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a3">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2192d1434ef12e7db2be77b8d616899" name="ae2192d1434ef12e7db2be77b8d616899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2192d1434ef12e7db2be77b8d616899">&#9670;&#160;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Variable::description {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>变量的描述 </p>
+
+</div>
+</div>
+<a id="ad3099ea3e54575de460b272a1c496203" name="ad3099ea3e54575de460b272a1c496203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3099ea3e54575de460b272a1c496203">&#9670;&#160;</a></span>display_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Variable::display_name {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>展示名称 DisplayName </p>
+<ul>
+<li>在服务器上对外展示的名字 - <code>en-US</code></li>
+<li>同一个命名空间 <code>ns</code> 下该名称可以相同 </li>
+</ul>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d4/da5/samples_2opcua_2opcua_server_8cpp-example.html#a2">samples/opcua/opcua_server.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/opcua/<a class="el" href="../../da/d0e/variable_8hpp.html">variable.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

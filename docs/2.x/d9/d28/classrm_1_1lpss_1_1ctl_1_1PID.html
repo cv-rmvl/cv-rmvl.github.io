@@ -1,0 +1,333 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: rm::lpss::ctl::PID类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d8/d52/namespacerm_1_1lpss_1_1ctl.html">ctl</a></li><li class="navelem"><a href="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID.html">PID</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../da/d18/classrm_1_1lpss_1_1ctl_1_1PID-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::ctl::PID类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a> &raquo; <a class="el" href="../../d2/d7d/group__lpss__robot.html">机器人功能扩展</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>【控制律组件】单环离散比例-积分-微分控制器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/ctl/pid.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::lpss::ctl::PID 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/de6/classrm_1_1lpss_1_1ctl_1_1PID__inherit__graph.svg" width="198" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::lpss::ctl::PID 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d6e/classrm_1_1lpss_1_1ctl_1_1PID__coll__graph.svg" width="198" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae07de5ec2bb4597b969b01abf34a6d1c" id="r_ae07de5ec2bb4597b969b01abf34a6d1c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae07de5ec2bb4597b969b01abf34a6d1c">reset</a> () noexcept override</td></tr>
+<tr class="memdesc:ae07de5ec2bb4597b969b01abf34a6d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置状态  <br /></td></tr>
+<tr class="memitem:a3372d42e9dc2ac3ddbcbe8d2daf35c09" id="r_a3372d42e9dc2ac3ddbcbe8d2daf35c09"><td class="memItemLeft"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3372d42e9dc2ac3ddbcbe8d2daf35c09">do_compute</a> (const std::vector&lt; double &gt; &amp;desired, const std::vector&lt; double &gt; &amp;fb, int32_t period, std::vector&lt; double &gt; &amp;command) noexcept override</td></tr>
+<tr class="memdesc:a3372d42e9dc2ac3ddbcbe8d2daf35c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次控制计算  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
+<tr class="memitem:a7ae3e53e0f6eeeb9695155c580efa0a8 inherit pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a7ae3e53e0f6eeeb9695155c580efa0a8"><td class="memItemLeft"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a7ae3e53e0f6eeeb9695155c580efa0a8">compute</a> (const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;desired, const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;fb, int32_t period, <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;command) noexcept</td></tr>
+<tr class="memdesc:a7ae3e53e0f6eeeb9695155c580efa0a8 inherit pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次控制计算  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a90de855a608910976ab22739f5b117e5" id="r_a90de855a608910976ab22739f5b117e5"><td class="memItemLeft">static <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ControlLawBase::ptr</a>&#160;</td><td class="memItemRight"><a class="el" href="#a90de855a608910976ab22739f5b117e5">create</a> (const std::vector&lt; double &gt; &amp;kp, const std::vector&lt; double &gt; &amp;ki, const std::vector&lt; double &gt; &amp;kd, <a class="el" href="../../d2/d7d/group__lpss__robot.html#gae2d5379a5239fbb5f3f6774b0bc0491d">InSampleMapping</a> imapping=<a class="el" href="../../d2/d7d/group__lpss__robot.html#ga1fe3b083ecd49d8e3a385c71568b42fc">basic_pos_imapping</a>, <a class="el" href="../../d2/d7d/group__lpss__robot.html#ga790e0df34d156fb99ae3e88bf290784c">OutSampleMapping</a> omapping=<a class="el" href="../../d2/d7d/group__lpss__robot.html#gac161329e130922c510699809be82362f">basic_pos_omapping</a>) noexcept</td></tr>
+<tr class="memdesc:a90de855a608910976ab22739f5b117e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建单环离散 <a class="el" href="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID.html" title="【控制律组件】单环离散比例-积分-微分控制器">PID</a> 控制器实例  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
+<tr class="memitem:a0101494791cdef83b11e481cb18aacfe inherit pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a0101494791cdef83b11e481cb18aacfe"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">ControlLawBase</a>&gt;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>【控制律组件】单环离散比例-积分-微分控制器 </p>
+<p>对于连续系统中，PID 的传递函数表示为 </p><p class="formulaDsp">
+\[G(s)=K_p+\frac{K_i}s+K_ds\tag1\]
+</p>
+<p>将上式与零阶保持器 ZOH 进行串联，可以得到在离散系统中的脉冲传递函数：  </p><p class="formulaDsp">
+\[\begin{aligned}G(z)&amp;=\mathcal{Z}\left\{\frac{1-e^{sT}}s\left(K_p+\frac{K_i}s+K_ds\right)\right\}\\&amp;=K_p+\frac{K_iTz^{-1}}{1-z^{-1}}+K_d
+         \left(1-z^{-1}\right)\end{aligned}\tag2\]
+</p>
+<p>转换为差分方程的形式为 </p><p class="formulaDsp">
+\[u[k]-u[k-1]=(K_p+K_d)x[k]+(K_iT-K_p-2K_d)x[k-1]+K_dx[k-2]\tag3\]
+</p>
+<p>其中， \(u[k]\) 是控制输出， \(x[k]\) 是系统的误差输入， \(T\) 是采样周期。PID 控制器的设计参数为比例增益 \(K_p\)、积分增益 \(K_i\) 和微分增益 \(K_d\)，通过调整它们可以实现对系统动态性能的优化。 </p><dl class="section note"><dt>注解</dt><dd>若要实现多环控制（如外环位置、内环速度），请自行继承 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html" title="【控制律组件】控制律基类，供 RobotController 组合调用">ControlLawBase</a> 并组合多个 <a class="el" href="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID.html" title="【控制律组件】单环离散比例-积分-微分控制器">PID</a> 实例 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a90de855a608910976ab22739f5b117e5" name="a90de855a608910976ab22739f5b117e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90de855a608910976ab22739f5b117e5">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ControlLawBase::ptr</a> rm::lpss::ctl::PID::create </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>kp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ki</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>kd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d7d/group__lpss__robot.html#gae2d5379a5239fbb5f3f6774b0bc0491d">InSampleMapping</a></td>          <td class="paramname"><span class="paramname"><em>imapping</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga1fe3b083ecd49d8e3a385c71568b42fc">basic_pos_imapping</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga790e0df34d156fb99ae3e88bf290784c">OutSampleMapping</a></td>          <td class="paramname"><span class="paramname"><em>omapping</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d7d/group__lpss__robot.html#gac161329e130922c510699809be82362f">basic_pos_omapping</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建单环离散 <a class="el" href="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID.html" title="【控制律组件】单环离散比例-积分-微分控制器">PID</a> 控制器实例 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">kp</td><td>比例增益 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ki</td><td>积分增益 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kd</td><td>微分增益 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imapping</td><td>输入采样映射 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">omapping</td><td>输出采样映射</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID.html" title="【控制律组件】单环离散比例-积分-微分控制器">PID</a> 控制器独占指针 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID_a90de855a608910976ab22739f5b117e5_cgraph.svg" width="312" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3372d42e9dc2ac3ddbcbe8d2daf35c09" name="a3372d42e9dc2ac3ddbcbe8d2daf35c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3372d42e9dc2ac3ddbcbe8d2daf35c09">&#9670;&#160;</a></span>do_compute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a> rm::lpss::ctl::PID::do_compute </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>desired</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>fb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>period</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>command</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行一次控制计算 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">desired</td><td>当前时刻期望状态向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fb</td><td>当前反馈状态向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">period</td><td>控制周期（毫秒） </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">command</td><td>控制命令输出向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>控制计算状态 </dd></dl>
+
+<p>实现了 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#adb32cec39b38cdc61341d6fe921b8889">rm::lpss::ctl::ControlLawBase</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID_a3372d42e9dc2ac3ddbcbe8d2daf35c09_cgraph.svg" width="134" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae07de5ec2bb4597b969b01abf34a6d1c" name="ae07de5ec2bb4597b969b01abf34a6d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07de5ec2bb4597b969b01abf34a6d1c">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::ctl::PID::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置状态 </p>
+
+<p>实现了 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#ab0f4ead56b3f69defc8c8ed2b31e7734">rm::lpss::ctl::ControlLawBase</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

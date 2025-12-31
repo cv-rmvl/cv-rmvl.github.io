@@ -1,0 +1,281 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: rm::Interpolator类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../dc/d80/classrm_1_1Interpolator.html">Interpolator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../dc/daa/classrm_1_1Interpolator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Interpolator类 参考<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> &raquo; <a class="el" href="../../de/d06/group__core__numcal.html">数值计算模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>函数插值器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/numcal.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Interpolator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d6c/classrm_1_1Interpolator__coll__graph.svg" width="127" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a21427fc4da436c487435c1e93793bb20" id="r_a21427fc4da436c487435c1e93793bb20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21427fc4da436c487435c1e93793bb20">Interpolator</a> ()=default</td></tr>
+<tr class="separator:a21427fc4da436c487435c1e93793bb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ea2f1d83c153116246c57cb3477666" id="r_ae1ea2f1d83c153116246c57cb3477666"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1ea2f1d83c153116246c57cb3477666">Interpolator</a> (const std::vector&lt; double &gt; &amp;xs, const std::vector&lt; double &gt; &amp;ys)</td></tr>
+<tr class="memdesc:ae1ea2f1d83c153116246c57cb3477666"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建插值器对象，初始化差商表  <br /></td></tr>
+<tr class="separator:ae1ea2f1d83c153116246c57cb3477666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fa31e65a292c9391245b266d4bad15" id="r_a09fa31e65a292c9391245b266d4bad15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d80/classrm_1_1Interpolator.html">Interpolator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09fa31e65a292c9391245b266d4bad15">add</a> (double x, double y)</td></tr>
+<tr class="memdesc:a09fa31e65a292c9391245b266d4bad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加新的插值节点  <br /></td></tr>
+<tr class="separator:a09fa31e65a292c9391245b266d4bad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2fe8ba70dc3f076cb6fef60e376b55" id="r_a7e2fe8ba70dc3f076cb6fef60e376b55"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e2fe8ba70dc3f076cb6fef60e376b55">operator()</a> (double x) const</td></tr>
+<tr class="memdesc:a7e2fe8ba70dc3f076cb6fef60e376b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算插值多项式在指定点的函数值  <br /></td></tr>
+<tr class="separator:a7e2fe8ba70dc3f076cb6fef60e376b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>函数插值器 </p>
+<ul>
+<li>由于插值多项式具有唯一性，为了提高新增节点时算法的简易性，这里使用 Newton 插值多项式 </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a21427fc4da436c487435c1e93793bb20" name="a21427fc4da436c487435c1e93793bb20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21427fc4da436c487435c1e93793bb20">&#9670;&#160;</a></span>Interpolator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Interpolator::Interpolator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1ea2f1d83c153116246c57cb3477666" name="ae1ea2f1d83c153116246c57cb3477666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ea2f1d83c153116246c57cb3477666">&#9670;&#160;</a></span>Interpolator() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Interpolator::Interpolator </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>xs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ys</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建插值器对象，初始化差商表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">xs</td><td>已知节点的 x 坐标 \(x_0,x_1,\cdots,x_n\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ys</td><td>已知节点的 y 坐标 \(f(x_0),f(x_1),\cdots,f(x_n)\) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a09fa31e65a292c9391245b266d4bad15" name="a09fa31e65a292c9391245b266d4bad15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fa31e65a292c9391245b266d4bad15">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d80/classrm_1_1Interpolator.html">Interpolator</a> &amp; rm::Interpolator::add </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加新的插值节点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>新的插值节点的 x 坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>新的插值节点的 y 坐标 <div class="fragment"><div class="line"><a class="code hl_function" href="#a21427fc4da436c487435c1e93793bb20">Interpolator</a> interf;</div>
+<div class="line"><span class="comment">// 可以链式添加多个插值节点</span></div>
+<div class="line">interf.<a class="code hl_function" href="#a09fa31e65a292c9391245b266d4bad15">add</a>(4, 16).<a class="code hl_function" href="#a09fa31e65a292c9391245b266d4bad15">add</a>(5, 25).<a class="code hl_function" href="#a09fa31e65a292c9391245b266d4bad15">add</a>(6, 36);</div>
+<div class="ttc" id="aclassrm_1_1Interpolator_html_a09fa31e65a292c9391245b266d4bad15"><div class="ttname"><a href="#a09fa31e65a292c9391245b266d4bad15">rm::Interpolator::add</a></div><div class="ttdeci">Interpolator &amp; add(double x, double y)</div><div class="ttdoc">添加新的插值节点</div></div>
+<div class="ttc" id="aclassrm_1_1Interpolator_html_a21427fc4da436c487435c1e93793bb20"><div class="ttname"><a href="#a21427fc4da436c487435c1e93793bb20">rm::Interpolator::Interpolator</a></div><div class="ttdeci">Interpolator()=default</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d80/classrm_1_1Interpolator_a09fa31e65a292c9391245b266d4bad15_cgraph.svg" width="423" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7e2fe8ba70dc3f076cb6fef60e376b55" name="a7e2fe8ba70dc3f076cb6fef60e376b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2fe8ba70dc3f076cb6fef60e376b55">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::Interpolator::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算插值多项式在指定点的函数值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>指定点的 x 坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>插值多项式在指定点的函数值 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/core/<a class="el" href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

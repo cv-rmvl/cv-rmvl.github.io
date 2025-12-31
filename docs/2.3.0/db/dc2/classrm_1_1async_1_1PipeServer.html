@@ -1,0 +1,382 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: rm::async::PipeServer类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">PipeServer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d0/dd2/classrm_1_1async_1_1PipeServer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::PipeServer类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../dd/d63/group__io__ipc.html">进程间通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步命名管道服务端  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::PipeServer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d89/classrm_1_1async_1_1PipeServer__inherit__graph.svg" width="155" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::async::PipeServer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/de1/classrm_1_1async_1_1PipeServer__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0ee69ac9c889d309c1ebc206ea684238" id="r_a0ee69ac9c889d309c1ebc206ea684238"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ee69ac9c889d309c1ebc206ea684238">PipeServer</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view name)</td></tr>
+<tr class="memdesc:a0ee69ac9c889d309c1ebc206ea684238"><td class="mdescLeft">&#160;</td><td class="mdescRight">在文件系统中创建新的命名管道并打开，销毁时自动移除该管道  <br /></td></tr>
+<tr class="separator:a0ee69ac9c889d309c1ebc206ea684238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9561a5c4e3f2753799c33436f85ef3" id="r_a8e9561a5c4e3f2753799c33436f85ef3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">AsyncReadAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e9561a5c4e3f2753799c33436f85ef3">read</a> ()</td></tr>
+<tr class="memdesc:a8e9561a5c4e3f2753799c33436f85ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">从管道读取数据  <br /></td></tr>
+<tr class="separator:a8e9561a5c4e3f2753799c33436f85ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4eae79ebdf62c0fe87fa23b6735d17b" id="r_af4eae79ebdf62c0fe87fa23b6735d17b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4eae79ebdf62c0fe87fa23b6735d17b">operator&gt;&gt;</a> (std::string &amp;)=delete</td></tr>
+<tr class="separator:af4eae79ebdf62c0fe87fa23b6735d17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36cfeb6370eae52c7c23ab605b80e9a" id="r_ac36cfeb6370eae52c7c23ab605b80e9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html">AsyncWriteAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac36cfeb6370eae52c7c23ab605b80e9a">write</a> (std::string_view data)</td></tr>
+<tr class="memdesc:ac36cfeb6370eae52c7c23ab605b80e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">向管道写入数据  <br /></td></tr>
+<tr class="separator:ac36cfeb6370eae52c7c23ab605b80e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4abd4cdc6d3278f81117e4ffe23a864" id="r_af4abd4cdc6d3278f81117e4ffe23a864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4abd4cdc6d3278f81117e4ffe23a864">operator&lt;&lt;</a> (std::string_view)=delete</td></tr>
+<tr class="separator:af4abd4cdc6d3278f81117e4ffe23a864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1PipeServer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1PipeServer')"><img src="../../closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></td></tr>
+<tr class="memitem:ac8b2cd62f92527449a95fe099e445398 inherit pub_methods_classrm_1_1PipeServer" id="r_ac8b2cd62f92527449a95fe099e445398"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#ac8b2cd62f92527449a95fe099e445398">PipeServer</a> (const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;)=delete</td></tr>
+<tr class="separator:ac8b2cd62f92527449a95fe099e445398 inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdfa35c510b6699fb78bc6bd5a347fb3 inherit pub_methods_classrm_1_1PipeServer" id="r_afdfa35c510b6699fb78bc6bd5a347fb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#afdfa35c510b6699fb78bc6bd5a347fb3">PipeServer</a> (<a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afdfa35c510b6699fb78bc6bd5a347fb3 inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc81279dae5cf346a0d748b36f0219fe inherit pub_methods_classrm_1_1PipeServer" id="r_abc81279dae5cf346a0d748b36f0219fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#abc81279dae5cf346a0d748b36f0219fe">operator=</a> (const <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;)=delete</td></tr>
+<tr class="separator:abc81279dae5cf346a0d748b36f0219fe inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82b5be4061a5b73329cfee8f8358d3e inherit pub_methods_classrm_1_1PipeServer" id="r_aa82b5be4061a5b73329cfee8f8358d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#aa82b5be4061a5b73329cfee8f8358d3e">operator=</a> (<a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aa82b5be4061a5b73329cfee8f8358d3e inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d9bdb644f3b8fb2905c406477ff09f inherit pub_methods_classrm_1_1PipeServer" id="r_ac9d9bdb644f3b8fb2905c406477ff09f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#ac9d9bdb644f3b8fb2905c406477ff09f">~PipeServer</a> ()</td></tr>
+<tr class="separator:ac9d9bdb644f3b8fb2905c406477ff09f inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0349b54898b26997e856e3eeed0c17 inherit pub_methods_classrm_1_1PipeServer" id="r_a9c0349b54898b26997e856e3eeed0c17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a9c0349b54898b26997e856e3eeed0c17">PipeServer</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a9c0349b54898b26997e856e3eeed0c17 inherit pub_methods_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">在文件系统中创建新的命名管道并打开，销毁时自动移除该管道  <br /></td></tr>
+<tr class="separator:a9c0349b54898b26997e856e3eeed0c17 inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012ba732a4e7b444732634b805139d33 inherit pub_methods_classrm_1_1PipeServer" id="r_a012ba732a4e7b444732634b805139d33"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a012ba732a4e7b444732634b805139d33">read</a> () noexcept</td></tr>
+<tr class="memdesc:a012ba732a4e7b444732634b805139d33 inherit pub_methods_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">从管道读取数据  <br /></td></tr>
+<tr class="separator:a012ba732a4e7b444732634b805139d33 inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a3c73459d50c13fe58f7bd33055f7d inherit pub_methods_classrm_1_1PipeServer" id="r_a64a3c73459d50c13fe58f7bd33055f7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a64a3c73459d50c13fe58f7bd33055f7d">operator&gt;&gt;</a> (std::string &amp;data) noexcept</td></tr>
+<tr class="memdesc:a64a3c73459d50c13fe58f7bd33055f7d inherit pub_methods_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">从管道读取数据  <br /></td></tr>
+<tr class="separator:a64a3c73459d50c13fe58f7bd33055f7d inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1347462f04415828095cac96a3efe6fc inherit pub_methods_classrm_1_1PipeServer" id="r_a1347462f04415828095cac96a3efe6fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a1347462f04415828095cac96a3efe6fc">write</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a1347462f04415828095cac96a3efe6fc inherit pub_methods_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">向管道写入数据  <br /></td></tr>
+<tr class="separator:a1347462f04415828095cac96a3efe6fc inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464f9746bbf2ca2ff80e946d22de5b7c inherit pub_methods_classrm_1_1PipeServer" id="r_a464f9746bbf2ca2ff80e946d22de5b7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">PipeServer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a464f9746bbf2ca2ff80e946d22de5b7c">operator&lt;&lt;</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a464f9746bbf2ca2ff80e946d22de5b7c inherit pub_methods_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">向管道写入数据  <br /></td></tr>
+<tr class="separator:a464f9746bbf2ca2ff80e946d22de5b7c inherit pub_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classrm_1_1PipeServer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classrm_1_1PipeServer')"><img src="../../closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></td></tr>
+<tr class="memitem:a7151ba75fbd719a44226e11b598fd454 inherit pro_methods_classrm_1_1PipeServer" id="r_a7151ba75fbd719a44226e11b598fd454"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a7151ba75fbd719a44226e11b598fd454">PipeServer</a> (std::string_view name, bool ov)</td></tr>
+<tr class="separator:a7151ba75fbd719a44226e11b598fd454 inherit pro_methods_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1PipeServer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1PipeServer')"><img src="../../closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></td></tr>
+<tr class="memitem:a8a4e1709fe2cc872ec23935664602bea inherit pro_attribs_classrm_1_1PipeServer" id="r_a8a4e1709fe2cc872ec23935664602bea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a8a4e1709fe2cc872ec23935664602bea">_name</a></td></tr>
+<tr class="memdesc:a8a4e1709fe2cc872ec23935664602bea inherit pro_attribs_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名管道名称  <br /></td></tr>
+<tr class="separator:a8a4e1709fe2cc872ec23935664602bea inherit pro_attribs_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a74c2c26ec8c482cf7d0323d591d7ad inherit pro_attribs_classrm_1_1PipeServer" id="r_a4a74c2c26ec8c482cf7d0323d591d7ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html#a4a74c2c26ec8c482cf7d0323d591d7ad">_fd</a> {}</td></tr>
+<tr class="memdesc:a4a74c2c26ec8c482cf7d0323d591d7ad inherit pro_attribs_classrm_1_1PipeServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件句柄  <br /></td></tr>
+<tr class="separator:a4a74c2c26ec8c482cf7d0323d591d7ad inherit pro_attribs_classrm_1_1PipeServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步命名管道服务端 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0ee69ac9c889d309c1ebc206ea684238" name="a0ee69ac9c889d309c1ebc206ea684238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee69ac9c889d309c1ebc206ea684238">&#9670;&#160;</a></span>PipeServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::PipeServer::PipeServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在文件系统中创建新的命名管道并打开，销毁时自动移除该管道 </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>Windows 命名管道在构造时会等待客户端连接并阻塞，除非已有客户端连接</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>命名管道名称，Windows 下的命名管道名称为 <code>\\.\pipe\</code> + <code>name</code>, Linux 下的命名管道名称为 <code>/tmp/</code> + <code>name</code>，长度不超过 256 个字符 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af4abd4cdc6d3278f81117e4ffe23a864" name="af4abd4cdc6d3278f81117e4ffe23a864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4abd4cdc6d3278f81117e4ffe23a864">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">PipeServer</a> &amp; rm::async::PipeServer::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dc2/classrm_1_1async_1_1PipeServer_af4abd4cdc6d3278f81117e4ffe23a864_cgraph.svg" width="363" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af4eae79ebdf62c0fe87fa23b6735d17b" name="af4eae79ebdf62c0fe87fa23b6735d17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4eae79ebdf62c0fe87fa23b6735d17b">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">PipeServer</a> &amp; rm::async::PipeServer::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/dc2/classrm_1_1async_1_1PipeServer_af4eae79ebdf62c0fe87fa23b6735d17b_cgraph.svg" width="363" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8e9561a5c4e3f2753799c33436f85ef3" name="a8e9561a5c4e3f2753799c33436f85ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e9561a5c4e3f2753799c33436f85ef3">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">AsyncReadAwaiter</a> rm::async::PipeServer::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从管道读取数据 </p>
+<dl class="section return"><dt>返回</dt><dd>读取到的数据，成功时返回非空字符串，失败时返回空字符串 <div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line">std::string <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a> = <span class="keyword">co_await</span> server.read();</div>
+<div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="ac36cfeb6370eae52c7c23ab605b80e9a" name="ac36cfeb6370eae52c7c23ab605b80e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36cfeb6370eae52c7c23ab605b80e9a">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html">AsyncWriteAwaiter</a> rm::async::PipeServer::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向管道写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 <div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> server.write(<span class="stringliteral">&quot;Hello World!&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d1/d02/ipc_8hpp.html">ipc.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

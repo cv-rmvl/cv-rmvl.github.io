@@ -1,0 +1,174 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: 如何使用/开发 combo 模块</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">如何使用/开发 combo 模块</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md8">1. 如何使用</a><ul><li class="level2"><a href="#autotoc_md9">1.1 有关构造与创建</a></li>
+<li class="level2"><a href="#autotoc_md10">1.2 信息获取</a><ul><li class="level3"><a href="#autotoc_md11">1.2.1 数据信息</a></li>
+<li class="level3"><a href="#autotoc_md12">1.2.2 通用属性与派生类属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md13">2. 如何开发</a></li>
+</ul>
+</div>
+<div class="textblock"><p>包含 combo 模块的创建、信息获取以及开发时的注意事项</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2combo_2how__to__use"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/07/07 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d4/d03/tutorial_extra_april_tag.html">AprilTag 视觉标签</a> ↑<br  />
+</p>
+<p><b>下一篇教程：</b><a class="el" href="../../df/daa/tutorial_extra_how_to_use_tracker.html">如何使用/开发 tracker 模块</a> ↓<br  />
+</p>
+<hr  />
+<p>基类 <a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">rm::combo</a></p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+1. 如何使用</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+1.1 有关构造与创建</h2>
+<p>特征组合 <code>combo</code> 对象创建方法与 <code>feature</code> 基本一致，都是使用静态工厂函数，这里是使用 <code>make_combo</code> 完成构建，同样会在最初进行能否构造的判断。</p>
+<p>构造一个装甲板的代码如下</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_combo = make_combo(p_left, p_right, gyro_data, tick);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+1.2 信息获取</h2>
+<p><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a> 与 <a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a> 在信息获取上基本一致，但 <a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a> 内部维护了图像特征相关的信息，这一类数据在获取上与 STL 容器的操作基本一致。</p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+1.2.1 数据信息</h3>
+<p><code>combo</code> 记录了空间上彼此关联的一组 <code>feature</code>，内部使用 <code>vector&lt;feature::ptr&gt;</code> 表示。<code>combo</code> 提供了与序列式容器类似的访问操作，包括</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">信息获取接口   </th><th class="markdownTableHeadCenter">实现功能    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>at(idx)</code>   </td><td class="markdownTableBodyCenter">获取指定的下表<code>idx</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>data()</code>   </td><td class="markdownTableBodyCenter">获取<code>vector&lt;feature::ptr&gt;</code>（特征列表）的数据    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>size()</code>   </td><td class="markdownTableBodyCenter">获取特征列表的大小    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>empty()</code>   </td><td class="markdownTableBodyCenter">判断特征列表是否为空   </td></tr>
+</table>
+<h3><a class="anchor" id="autotoc_md12"></a>
+1.2.2 通用属性与派生类属性</h3>
+<p>包含高度、宽度、角度、中心点、角点列表、类型信息、相机外参等内容，访问方式与 <code>feature</code> 完全一致，这里不再赘述。</p>
+<h1><a class="anchor" id="autotoc_md13"></a>
+2. 如何开发</h1>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

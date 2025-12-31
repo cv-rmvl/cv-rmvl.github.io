@@ -1,0 +1,283 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: 多维无约束最优化方法</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.0-dev</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">多维无约束最优化方法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md167">1. 最速下降法</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md168">2. 共轭梯度法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md169">2.1 共轭方向</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md170">2.2 共轭梯度方向的构造</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md171">2.3 迭代步骤</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md172">2.4 如何使用</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>包含最速下降、共轭梯度的介绍</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2fminunc"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/05/06 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../de/d14/tutorial_modules_fminbnd.html">一维最优化方法</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> ↓<br  />
+</p>
+<hr  />
+<p class="formulaDsp">
+\[
+\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\fml#1{\text{(#1)}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md167"></a>
+1. 最速下降法</h2>
+<p>沿函数的负梯度方向，函数值下降最多，因此，对于存在导数的连续目标函数，最速下降法是一种简单而有效的优化方法。可以将目标函数的负梯度方向作为寻优方向，即</p>
+<p class="formulaDsp">
+\[\pmb s_k=-\frac{\nabla f(\pmb x_k)}{\|\nabla f(\pmb x_k)\|}\tag{1-1}\]
+</p>
+<p>因此当前点为 \(\pmb x_k\) 时，下一个点的表达式为</p>
+<p class="formulaDsp">
+\[\pmb x_{k+1}=\pmb x_k+\alpha_k\pmb s_k=\pmb x_k-\alpha_k\frac{\nabla f(\pmb x_k)}{\|\nabla f(\pmb x_k)\|}\tag{1-2}\]
+</p>
+<p>对于每轮得到的一个新的负梯度方向，再利用 <a class="el" href="../../de/d14/tutorial_modules_fminbnd.html">一维最优化方法</a> 求解 \(\alpha_k\)。最速下降法的迭代步骤如下：</p>
+<ol type="1">
+<li>选取初始点 \(\pmb x_0\)，设置判断收敛的正数 \(\epsilon\)；</li>
+<li>令 \(k=0\)；</li>
+<li>计算 \(-\nabla f(\pmb x_k)\)；</li>
+<li>按 \(\fml{1-2}\) 计算 \(\pmb s_k\)，若 \(\|\pmb s_k\|&lt;\epsilon\)，则停止迭代， \(\pmb x_k\) 为最优解，否则进行下一步；</li>
+<li>进行一维搜索，求解 \(\alpha_k\)，使 <p class="formulaDsp">
+\[f(\pmb x_k+\alpha_k\pmb s_k)=\min_{\alpha&gt;0}f(\pmb x_k+\alpha\pmb s_k)\tag{1-3}\]
+</p>
+</li>
+<li>计算 \(\pmb x_{k+1}=\pmb x_k+\alpha_k\pmb s_k\)，令 \(k=k+1\)，返回第 3 步。</li>
+</ol>
+<p>最速下降法对于一般的函数而言，在远离极值点时函数值下降得很快，最速下降法队椭圆类函数十分有效，可以很快搜索到接近极值点。但是当距离极值点较近时，特别是存在脊线的目标函数，收敛过程可能会十分缓慢，如图 1-1 所示。</p>
+<center></center><center><div class="image">
+<img src="../../fig1-1.png" alt=""/>
+<div class="caption">
+图 1-1 存在脊线的目标函数</div></div>
+    </center><center></center><h2><a class="anchor" id="autotoc_md168"></a>
+2. 共轭梯度法</h2>
+<h3><a class="anchor" id="autotoc_md169"></a>
+2.1 共轭方向</h3>
+<p>同心椭圆族曲线的两平行切线有这样的特性：通过两平行线与椭圆的切点作连线，该直线通过该椭圆族的中心，如图 2-1 所示。因为该连线的方向与两平行线是共轭方向，所以利用这一特性寻优称为共轭方向法。</p>
+<center></center><center><div class="image">
+<img src="../../fig2-1.png" alt=""/>
+<div class="caption">
+图 2-1 平行的同心椭圆族的切点连线过其中心</div></div>
+    </center><center></center><p>如果有一组 \(n\) 个非零向量组 \(\pmb s_1,\pmb s_2,\dots,\pmb s_n\in\pmb E^n\)，且这个向量组中的任意两个向量关于 \(n\) 阶实对称正定矩阵 \(\pmb A\) 满足式 </p><p class="formulaDsp">
+\[\pmb s_i^T\pmb A\pmb s_j=0,\quad i,j=1,2,\dots,n\ 且\ i\ne j\tag{2-1}\]
+</p>
+<p> 则称</p>
+<ul>
+<li>向量组 \(\pmb s_1,\pmb s_2,\dots,\pmb s_n\) 是关于矩阵 \(\pmb A\) 共轭的；</li>
+<li>\(\pmb s_i\) 和 \(\pmb s_j\) 是实对称正定矩阵 \(\pmb A\) 的共轭方向。</li>
+</ul>
+<p>有这一个特殊情况，当矩阵 \(\pmb A\) 是单位矩阵时，向量的共轭就相当于向量的正交。共轭方向相当于将原来的非正椭圆函数通过矩阵 \(\pmb A\) 变换为正圆函数，而共轭方向 \(\pmb s_1\) 和 \(\pmb s_2\) 则是变换后的垂直方向 \(\pmb p_1\) 和 \(\pmb p_2\)，如图 2-2 所示。</p>
+<center></center><center><div class="image">
+<img src="../../fig2-2.png" alt=""/>
+<div class="caption">
+图 2-2 共轭与正交对比</div></div>
+    </center><center></center><h3><a class="anchor" id="autotoc_md170"></a>
+2.2 共轭梯度方向的构造</h3>
+<p>在极值点 \(x^*\) 附近，目标函数可以近似为二次型函数，即 </p><p class="formulaDsp">
+\[f(\pmb x)\approx c+\pmb b^T\pmb x+\frac12\pmb x^T\pmb A\pmb x\tag{2-2}\]
+</p>
+<ol type="1">
+<li>从 \(\pmb x_k\) 点出发，沿负梯度 \(\pmb s_k=-\nabla f(\pmb x_k)\) 方向寻优，得到新优化点 \(\pmb x_{k+1}\)。再按下式构造与 \(\pmb s_k\) 共轭的方向 \(\pmb s_{k+1}\)： <p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\tag{2-3}\]
+</p>
+ 在公式 \(\fml{2-3}\) 中， \(\beta_k\) 按下式计算时，可满足共轭条件 \(\pmb s_{k+1}^T\pmb A\pmb s_k=0\)： <p class="formulaDsp">
+\[\beta_k=\frac{\|\nabla f(\pmb x_{k+1})\|^2}{\|\nabla f(\pmb x_k)\|^2}\tag{2-4}\]
+</p>
+</li>
+<li>沿着 \(\pmb s_{k+1}\) 方向寻优，直至求出极值 \(\pmb x^*\)。</li>
+</ol>
+<p>上面只是对目标函数为二次型函数的情况求得了构成共轭方向的系数 \(\beta_k\)，对于一般的目标函数，有 </p><p class="formulaDsp">
+\[\beta_k=\frac{\|\nabla f(\pmb x_{k+1})\|^2-[\nabla f(\pmb x_{k+1})]^T\nabla f(\pmb x_k)}{\|\nabla f(\pmb x_k)\|^2}\tag{2-5}\]
+</p>
+<p>从而类似式 \(\fml{2-3}\) 有 </p><p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\]
+</p>
+<h3><a class="anchor" id="autotoc_md171"></a>
+2.3 迭代步骤</h3>
+<ol type="1">
+<li>选取初始点 \(\pmb x_0\)，设置判断收敛的正数 \(\epsilon\)；</li>
+<li>令 \(k=0\)， \(\pmb s_0=-\nabla f(\pmb x_0)\)；</li>
+<li>进行一维搜索，求解 \(\alpha_k\)，使 \(f(\pmb x_k+\alpha_k\pmb s_k)=\min_{\alpha&gt;0}f(\pmb x_k+\alpha\pmb s_k)\)</li>
+<li>计算 \(\nabla f(\pmb x_{k+1})\)，并令 \(\pmb x_{k+1}=\pmb x_k+\alpha_k\pmb s_k\)；</li>
+<li>若 \(\|\nabla f(\pmb x_{k+1})\|&lt;\epsilon\)，则停止迭代， \(\pmb x_{k+1}\) 为最优解，否则按 \(\fml{2-5}\) 计算 \(\beta_k\)，令 <p class="formulaDsp">
+\[\pmb s_{k+1}=-\nabla f(\pmb x_{k+1})+\beta_k\pmb s_k\]
+</p>
+</li>
+<li>令 \(k=k+1\)，返回第 3 步。</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md172"></a>
+2.4 如何使用</h3>
+<p>首先定义一个目标函数，例如：</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keyword">const</span> std::vector&lt;double&gt; &amp;x)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
+<div class="line">    <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>然后调用 <code><a class="el" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12" title="无约束多维函数的最小值搜索 conjgrad neldermead ，可参考 多维无约束最优化方法">rm::fminunc</a></code> 函数：</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a>(quadratic, {0, 0});</div>
+<div class="ttc" id="agroup__core__optimal_html_gad3a27f53f42ecf71dc3b2a187f674e12"><div class="ttname"><a href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a></div><div class="ttdeci">std::pair&lt; std::vector&lt; double &gt;, double &gt; fminunc(FuncNd func, const std::vector&lt; double &gt; &amp;x0, const OptimalOptions &amp;options={})</div><div class="ttdoc">无约束多维函数的最小值搜索 conjgrad neldermead ，可参考 多维无约束最优化方法</div></div>
+</div><!-- fragment --><p>汇总起来，共轭梯度法的使用实例如下：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/numcal.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 定义二次函数</span></div>
+<div class="line">    <span class="keyword">auto</span> quadratic = [](<span class="keyword">const</span> std::vector&lt;double&gt; &amp;x) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;x1 = x[0], &amp;x2 = x[1];</div>
+<div class="line">        <span class="keywordflow">return</span> 60 - 10 * x1 - 4 * x2 + x1 * x1 + x2 * x2 - x1 * x2;</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 求解无约束多维最优化问题，默认使用共轭梯度法</span></div>
+<div class="line">    <span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d8/db4/group__core__optimal.html#gad3a27f53f42ecf71dc3b2a187f674e12">rm::fminunc</a>(quadratic, {0, 0});</div>
+<div class="line">    printf(<span class="stringliteral">&quot;min[f(x,y)] = f(%f, %f) = %f\n&quot;</span>, x[0], x[1], fval);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>运行结果如下：</p>
+<div class="fragment"><div class="line">min[f(x,y)] = f(8.0000, 6.0000) = 8.0000</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

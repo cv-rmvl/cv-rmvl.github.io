@@ -1,0 +1,353 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: 一维最优化方法</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">一维最优化方法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md159">1. 区间搜索</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md160">2. 黄金分割法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md161">2.1 区间消去</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md162">2.2 黄金分割法原理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md163">3. 如何使用</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>包含区间搜索以及黄金分割法的介绍</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2fminbnd"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/05/06 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../da/d8f/tutorial_modules_auto_differential.html">自动求导、数值微分</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a> ↓<br  />
+</p>
+<hr  />
+<p class="formulaDsp">
+\[\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\fml#1{\text{(#1)}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md159"></a>
+1. 区间搜索</h2>
+<p>在使用一维优化方法搜索目标函数的极小值点时，首先要确定搜索区间 \([a,b]\)，这个搜索区间要包含目标函数的极小值点，而且是单峰区间，即在这个区间内，目标函数只有一个极小值点。</p>
+<p>在单峰区间内，函数值具有“高—低—高”的特点。根据这一特点，可以采用进退法来找到搜索区间。</p>
+<p>进退法分为</p>
+<ul>
+<li>初始探察确定进退</li>
+<li>前进或者后退寻查</li>
+</ul>
+<p>两步，其步骤如下</p>
+<center></center><center><div class="image">
+<img src="../../forward.png" alt=""/>
+<div class="caption">
+图 1 进退法</div></div>
+    </center><center></center><ol type="1">
+<li>选择一个初始点 \(\alpha_1\)和一个初始步长 \(h\)。</li>
+<li>如图 1(a) 所示，计算点 \(\alpha_1\)和点 \(\alpha_1+h\)对应的函数值 \(f(\alpha_1)\)和 \(f(\alpha_1+h)\)，令 <p class="formulaDsp">
+\[f_1=f(\alpha_1),\quad f_2=f(\alpha_1+h)\]
+</p>
+</li>
+<li>比较 \(f_1\)和 \(f_2\)，若 \(f_1&gt;f_2\)，则执行前进运算，将步长加大 \(k\)倍（如加大 2 倍），取新点 \(\alpha_1+3h\)，如图 1(b) 所示，计算其函数值，并令 <p class="formulaDsp">
+\[f_1=f(\alpha_1+h),\quad f_2=f(\alpha_1+3h)\]
+</p>
+若 \(f_1&lt; f_2\)，则初始搜索区间端点为 <p class="formulaDsp">
+\[a=\alpha_1,\quad b=\alpha_1+3h\]
+</p>
+若 \(f_1=f_2\)，则初始搜索区间端点为 <p class="formulaDsp">
+\[a=\alpha_1+h,\quad b=\alpha_1+3h\]
+</p>
+若 \(f_1&gt;f_2\)，则要继续做前进运算，且步长再加大两倍，取第 4 个点 \(\alpha_1+7h\)，再比较第 3 和第 4 个点处的函数值……如此反复循环，直到在连续的 3 个点的函数值出现“两头大、中间小”的情况为止。</li>
+<li>如果在 <b>步骤 3</b> 中出现 \(f_1&lt; f_2\)的情况，则执行后退运算，将步长变为负值，取新点 \(\alpha_1-h\)，计算函数值，令 <p class="formulaDsp">
+\[f_1=f(\alpha_1-h),\quad f_2=f(\alpha_1)\]
+</p>
+若 \(f_1&gt;f_2\)，则初始搜索区间端点为 <p class="formulaDsp">
+\[a=\alpha_1-h,\quad b=\alpha_1+h\]
+</p>
+若 \(f_1=f_2\)，则初始搜索区间端点为 <p class="formulaDsp">
+\[a=\alpha_1-h,\quad b=\alpha_1\]
+</p>
+若 \(f_1&lt; f_2\)，则要继续做后退运算，且步长再加大两倍，取第 4 个点 \(\alpha_1-3h\)，再比较第 3 和第 4 个点处的函数值……如此反复循环，直到在连续的 3 个点的函数值出现“两头大、中间小”的情况为止。</li>
+</ol>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>试用进退法确定目标函数 \(f(\alpha)=\alpha^2-5\alpha+8\)的一维优化初始搜索区间 \([a,b]\)。设初始点 \(\alpha_1=0\)，初始步长 \(h=1\)</p>
+<p><b>解：</b> 由初始点 \(\alpha_1=0\)，初始步长 \(h=1\)，得 </p><p class="formulaDsp">
+\[f_1=f(\alpha_1)=8,\quad f_2=f(\alpha_1+h)=4\]
+</p>
+<p>因为 \(f_1&gt;f_2\)，所以执行前进运算，将步长加大 2 倍，取新点 \(\alpha_1+3h=3\)，令 </p><p class="formulaDsp">
+\[f_1=f(\alpha_1+h)=4,\quad f_2=f(\alpha_1+3h)=2\]
+</p>
+<p>因为 \(f_1&gt;f_2\)，应继续做前进运算，且步长再加大 2 倍，取第 4 个点 \(\alpha_1+7h=7\)。令 </p><p class="formulaDsp">
+\[f_1=f(\alpha_1+3h)=2,\quad f_2=f(\alpha_1+7h)=22\]
+</p>
+<p>此时 \(f_1&lt; f_2\)，在连续的 3 个点 \(\alpha_1+h\)， \(\alpha_1+3h\)， \(\alpha_1+7h\)的函数值出现了“两头大、中间小”的情况，则初始搜索区间端点为 </p><p class="formulaDsp">
+\[a=\alpha_1+h=1,\quad b=\alpha_1+7h=7\]
+</p>
+<h2><a class="anchor" id="autotoc_md160"></a>
+2. 黄金分割法</h2>
+<h3><a class="anchor" id="autotoc_md161"></a>
+2.1 区间消去</h3>
+<p>黄金分割法是利用区间消去法的原理，通过不断缩小单峰区间长度，即每次迭代都消去一部分不含极小值点的区间，使搜索区间不断缩小，从而逐渐逼近目标函数极小值点的一种优化方法。黄金分割法是直接寻优法，通过直接比较区间上点的函数值的大小来判断区间的取舍。这种方法具有计算简单、收敛速度快等优点。</p>
+<p>如图 1(b) 所示，在已确定的单峰区间[a,b]内任取 \(\alpha_1\)， \(\alpha_2\)两点，计算并比较两点处的函数值 \(f(\alpha_1)\)和 \(f(\alpha_2)\),可能出现3种情况：</p>
+<ol type="1">
+<li>\(f(\alpha_1)&lt; f(\alpha_2)\)，因为函数是单峰的，所以极小值点必定位于点 \(\alpha_2\)的左侧，即 \(\alpha^*\in[a,\alpha_2]\)，搜索区间可以缩小为 \([a,\alpha_2]\)，如图 2-1(a) 所示；</li>
+<li>\(f(\alpha_1)&gt;f(\alpha_2)\)，极小值点必定位于点 \(\alpha_1\)的右侧，即 \(\alpha^*\in[\alpha_1,b]\)，搜索区间可以缩小为 \([\alpha_1,b]\)，如图 2-1(b) 所示；</li>
+<li>\(f(\alpha_1)=f(\alpha_2)\)，极小值点必定位于点 \(\alpha_1\)和 \(\alpha_2\)之间，即 \(\alpha^*\in[\alpha_1,\alpha_2]\)，搜索区间可缩小为 \([\alpha_1,\alpha_2]\)，如图 2-1(c) 所示。</li>
+</ol>
+<center></center><center><div class="image">
+<img src="../../region_reduce.png" alt=""/>
+<div class="caption">
+图 2-1 搜索区间缩小示意图</div></div>
+    </center><center></center><p>根据上述方法，可在新搜索区间里再取两个新点比较函数值来继续缩小区间，但这样做效率较低，应该考虑利用已经计算过的区间内剩下的那个点。对于以上的 (1)、(2) 两种情况，可以在新搜索区间内取一点 \(x_3\)和该区间内剩下的那个点（第 (1) 种情况的 \(\alpha_1\)点或第 (2) 种情况的 \(\alpha_2\)点）进行函数值的比较来继续缩短搜索区间。而第 (3) 种情况则要取两个新点进行比较，为统一起见，将前面 3 种情况综合为以下两种情况:</p>
+<ol type="1">
+<li>若 \(f(\alpha_1)&lt; f(\alpha_2)\)，则将搜索区间缩小为 \([a,\alpha_2]\)</li>
+<li>若 \(f(\alpha_2)\ge f(\alpha_2)\)，则将搜索区间缩小为 \([\alpha_1,b]\)。</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md162"></a>
+2.2 黄金分割法原理</h3>
+<p>黄金分割法就是基于上述原理来选择区间内计算点的位置的，它有以下要求：</p><ol type="1">
+<li>点 \(\alpha_1\)和 \(\alpha_2\)相对区间 \([a,b]\)的边界要对称布置，即区间 \([a,\alpha_1)\)的大小与区间 \((\alpha_2,b]\)的大小相等；</li>
+<li>每次计算一个新点，要求保留的区间长度 \(l\)与原区间长度 \(L\)之比等于被消去的区间长度 \(L-l\)与保留区间长度 \(l\)之比，即要求下式成立： <p class="formulaDsp">
+\[\frac lL=\frac{L-l}l\tag{2-1}\]
+</p>
+</li>
+</ol>
+<p>令 </p><p class="formulaDsp">
+\[\lambda=\frac lL\]
+</p>
+<p>将上式代入式 \(\fml{2-1}\)，有 </p><p class="formulaDsp">
+\[\lambda^2+\lambda-1=0\tag{2-2}\]
+</p>
+<p>求解式 \(\fml{2-2}\)，得 </p><p class="formulaDsp">
+\[\lambda=\frac{\sqrt5-1}2\approx0.618\]
+</p>
+<p>该方法保证每次迭代都以同一比率缩小区间，缩短率为 \(0.618\)，故黄金分割法又称为 \(0.618\)法。保留的区间长度为整个区间长度的 \(0.618\)倍，消去的区间长度为整个区间长度的 \(0.382\)倍。</p>
+<p>黄金分割法的计算步骤如下：</p>
+<center></center><center><div class="image">
+<img src="../../principle.png" alt=""/>
+<div class="caption">
+图 2-2 黄金分割法原理</div></div>
+    </center><center></center><ol type="1">
+<li>在 \([a,b]\)内取两点 \(\alpha_1\)， \(\alpha_2\)，如图 2-2(a) 所示，使 <p class="formulaDsp">
+\[\begin{align}\alpha_1&amp;=a+0.382(b-a)\\\alpha_2&amp;=a+0.618(b-a)\end{align}\]
+</p>
+令 \(f_1=f(\alpha_1)\)， \(f_2=f(\alpha_2)\)。</li>
+<li>比较 \(f_1\)和 \(f_2\)。当 \(f_1&lt; f_2\)时，消去区间 \((\alpha_2,b]\)。做置换 \(b=\alpha_2\)， \(\alpha_2=\alpha_1\)并另取新点 \(\alpha_1=a+0.382(b-a)\)，如图 2-2(b) 所示，令 \(f_1=f(\alpha_1)\)。当 \(f_1\ge f_2\)时，消去区间 \([a,\alpha_1)\)。做置换 \(a=\alpha_1\)， \(\alpha_1=\alpha_2\)， \(f_1=f_2\)，并另取新点 \(\alpha_2=a+0.618(b-a)\)，如图 2-2(c) 所示，令 \(f_2=f(\alpha_2)\)。</li>
+<li>检查终止条件。若 \(b-a\le\epsilon\)，则输出最优解 \(\alpha^*=\frac12(a+b)\)和最优值 \(f(\alpha^*)\)；否则转第 (2) 步。</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md163"></a>
+3. 如何使用</h2>
+<p>RMVL 中提供了一维寻优的函数 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee" title="一维函数最小值搜索">rm::fminbnd</a> ，以下展示了一维寻优的例子。</p>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>添加源文件 <code>main.cpp</code> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../da/d3b/numcal_8hpp.html">rmvl/algorithm/numcal.hpp</a>&gt;</span></div>
+<div class="line">   </div>
+<div class="line"><span class="comment">// 自定义函数 f(x)=x²+4x-3</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">double</span> quadratic(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> x * x + 4 * x - 3; }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 确定搜索区间</span></div>
+<div class="line">    <span class="keyword">auto</span> [x1, x2] = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a>(quadratic, 0);</div>
+<div class="line">    <span class="comment">// 添加优化选项（容许误差和最大迭代次数）</span></div>
+<div class="line">    <a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a> options;</div>
+<div class="line">    options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">max_iter</a> = 100; <span class="comment">// 最大迭代次数是 100，不加以设置默认是 1000</span></div>
+<div class="line">    options.<a class="code hl_variable" href="../../d3/dd3/structrm_1_1OptimalOptions.html#a63d056c22bd74468ce2b1fcb0602a4f7">tol</a> = 1e-4;     <span class="comment">// 容许误差是 1e-4，不加以设置默认是 1e-6</span></div>
+<div class="line">    <span class="comment">// 一维寻优</span></div>
+<div class="line">    <span class="keyword">auto</span> [x, fval] = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a>(quadratic, x1, x2, options);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;x    = %f\n&quot;</span>, x);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;fval = %f\n&quot;</span>, fval);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gaab485911ef8cdc37e5ef92b839ec107c"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a></div><div class="ttdeci">std::pair&lt; double, double &gt; region(Func1d func, double x0, double delta=1)</div><div class="ttdoc">采用进退法确定搜索区间</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_gae8c5462fcdf30d76ea709bbc2e08d3ee"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a></div><div class="ttdeci">std::pair&lt; double, double &gt; fminbnd(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</div><div class="ttdoc">一维函数最小值搜索</div></div>
+<div class="ttc" id="anumcal_8hpp_html"><div class="ttname"><a href="../../da/d3b/numcal_8hpp.html">numcal.hpp</a></div><div class="ttdoc">数值计算与最优化模块</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">无约束多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:336</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a2212cc3e39cc6355cb36acca9de5534c"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a2212cc3e39cc6355cb36acca9de5534c">rm::OptimalOptions::max_iter</a></div><div class="ttdeci">int max_iter</div><div class="ttdoc">最大迭代次数</div><div class="ttdef"><b>定义</b> numcal.hpp:340</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html_a63d056c22bd74468ce2b1fcb0602a4f7"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html#a63d056c22bd74468ce2b1fcb0602a4f7">rm::OptimalOptions::tol</a></div><div class="ttdeci">double tol</div><div class="ttdoc">误差容限</div><div class="ttdef"><b>定义</b> numcal.hpp:343</div></div>
+</div><!-- fragment --><p>添加 <code>CMakeLists.txt</code></p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.10)</div>
+<div class="line">project(FminbndDemo)</div>
+<div class="line">find_package(RMVL COMPONENTS algorithm REQUIRED)</div>
+<div class="line">add_executable(demo main.cpp)</div>
+<div class="line">target_link_libraries(demo PRIVATE ${RMVL_LIBS})</div>
+</div><!-- fragment --><p>在项目根目录打开终端，输入以下命令以构建、运行</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake ..</div>
+<div class="line">cmake --build . --parallel 4</div>
+<div class="line">./demo</div>
+</div><!-- fragment --><p>可以看到运行结果</p>
+<div class="fragment"><div class="line">x    = -2.000000</div>
+<div class="line">fval = -7.000000</div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><p>添加 <code>main.py</code> 文件，在其中写入</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># 确定搜索区间</span></div>
+<div class="line">quadratic = <span class="keyword">lambda</span> x: x * x + 4 * x - 3</div>
+<div class="line">x1, x2 = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm.region</a>(quadratic, 0)</div>
+<div class="line"><span class="comment"># 添加优化选项（容许误差和最大迭代次数）</span></div>
+<div class="line">options = <a class="code hl_struct" href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm.OptimalOptions</a>()</div>
+<div class="line">options.max_iter = 100  <span class="comment"># 最大迭代次数是 100，不加以设置默认是 1000</span></div>
+<div class="line">options.tol = 1e-4      <span class="comment"># 容许误差是 1e-4，不加以设置默认是 1e-6</span></div>
+<div class="line"><span class="comment"># 一维寻优</span></div>
+<div class="line">x, fval = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm.fminbnd</a>(quadratic, x1, x2, options)</div>
+<div class="line">print(<span class="stringliteral">&quot;x    = {:.6f}&quot;</span>.format(x))</div>
+<div class="line">print(<span class="stringliteral">&quot;fval = {:.6f}&quot;</span>.format(fval))</div>
+</div><!-- fragment --><p>在项目根目录打开终端，输入以下命令以运行</p>
+<div class="fragment"><div class="line">python main.py</div>
+</div><!-- fragment --><p>可以看到运行结果</p>
+<div class="fragment"><div class="line">x    = -2.000000</div>
+<div class="line">fval = -7.000000</div>
+</div><!-- fragment --> </div>  </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
