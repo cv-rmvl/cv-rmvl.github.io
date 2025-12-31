@@ -1,0 +1,631 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::Response结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d1/d1b/structrm_1_1Response.html">Response</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d8/dde/structrm_1_1Response-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Response结构体 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP 响应结构  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Response 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d4a/structrm_1_1Response__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab1b60b88f4a1c821cad673b7f3201cc8" id="r_ab1b60b88f4a1c821cad673b7f3201cc8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8">generate</a> ()</td></tr>
+<tr class="memdesc:ab1b60b88f4a1c821cad673b7f3201cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 HTTP 响应报文  <br /></td></tr>
+<tr class="memitem:a60b58fe709efae58354d841fa2778cac" id="r_a60b58fe709efae58354d841fa2778cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b58fe709efae58354d841fa2778cac">attachment</a> (std::string_view filename)</td></tr>
+<tr class="memdesc:a60b58fe709efae58354d841fa2778cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置附件响应头 <span class="tt">Content-Disposition</span>，一般需要配合 <span class="tt"><a class="el" href="#af7639045f9daa366a543da149f3a3da2" title="发送响应数据">send()</a></span> 或 <span class="tt"><a class="el" href="#a154a22ea3803fc3de113216b48f33be6" title="发送文件内容作为响应">sendFile()</a></span> 使用  <br /></td></tr>
+<tr class="memitem:abe80de2881e8fdee6d8ce3060ff9a552" id="r_abe80de2881e8fdee6d8ce3060ff9a552"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe80de2881e8fdee6d8ce3060ff9a552">download</a> (std::string_view path, std::string_view filename=&quot;&quot;, std::function&lt; void(bool)&gt; fn=nullptr)</td></tr>
+<tr class="memdesc:abe80de2881e8fdee6d8ce3060ff9a552"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置附件响应头 <span class="tt">Content-Disposition</span> 并发送文件内容作为响应  <br /></td></tr>
+<tr class="memitem:ab269cca7adfe9a6c1383006cb2cdfc36" id="r_ab269cca7adfe9a6c1383006cb2cdfc36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab269cca7adfe9a6c1383006cb2cdfc36">get</a> (std::string_view head)</td></tr>
+<tr class="memdesc:ab269cca7adfe9a6c1383006cb2cdfc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指定的 HTTP 响应头  <br /></td></tr>
+<tr class="memitem:a9c20bcf3cc2cf310230cddb9dff4a3ac" id="r_a9c20bcf3cc2cf310230cddb9dff4a3ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c20bcf3cc2cf310230cddb9dff4a3ac">json</a> (const ::rm::json &amp;j)</td></tr>
+<tr class="memdesc:a9c20bcf3cc2cf310230cddb9dff4a3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 JSON 格式的响应数据  <br /></td></tr>
+<tr class="memitem:ad826fce8dc7fc91c85917d8cb8671bc6" id="r_ad826fce8dc7fc91c85917d8cb8671bc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad826fce8dc7fc91c85917d8cb8671bc6">redirect</a> (std::string_view url)</td></tr>
+<tr class="memdesc:ad826fce8dc7fc91c85917d8cb8671bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送重定向响应  <br /></td></tr>
+<tr class="memitem:ae7ce146b369e4956b1fe7d9ddc9af32c" id="r_ae7ce146b369e4956b1fe7d9ddc9af32c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ce146b369e4956b1fe7d9ddc9af32c">redirect</a> (uint16_t code, std::string_view url)</td></tr>
+<tr class="memdesc:ae7ce146b369e4956b1fe7d9ddc9af32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">重定向响应  <br /></td></tr>
+<tr class="memitem:af7639045f9daa366a543da149f3a3da2" id="r_af7639045f9daa366a543da149f3a3da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7639045f9daa366a543da149f3a3da2">send</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
+<tr class="memdesc:af7639045f9daa366a543da149f3a3da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送响应数据  <br /></td></tr>
+<tr class="memitem:a154a22ea3803fc3de113216b48f33be6" id="r_a154a22ea3803fc3de113216b48f33be6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154a22ea3803fc3de113216b48f33be6">sendFile</a> (std::string_view file)</td></tr>
+<tr class="memdesc:a154a22ea3803fc3de113216b48f33be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送文件内容作为响应  <br /></td></tr>
+<tr class="memitem:a0ba9e850cde6ab6498db631f4a4c20bb" id="r_a0ba9e850cde6ab6498db631f4a4c20bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ba9e850cde6ab6498db631f4a4c20bb">set</a> (std::string_view key, std::string_view value)</td></tr>
+<tr class="memdesc:a0ba9e850cde6ab6498db631f4a4c20bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置响应头  <br /></td></tr>
+<tr class="memitem:a496fdd94d4b2de0c70abc29645902cbb" id="r_a496fdd94d4b2de0c70abc29645902cbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a496fdd94d4b2de0c70abc29645902cbb">status</a> (uint16_t code)</td></tr>
+<tr class="memdesc:a496fdd94d4b2de0c70abc29645902cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置响应的 HTTP 状态，注意此方法会覆盖原有状态  <br /></td></tr>
+<tr class="memitem:a533809d2fbd2f3b4a6d28f02c2c54700" id="r_a533809d2fbd2f3b4a6d28f02c2c54700"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a533809d2fbd2f3b4a6d28f02c2c54700">operator bool</a> () const noexcept</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a1184bbe7f396ca991f04fe070ba1e7f9" id="r_a1184bbe7f396ca991f04fe070ba1e7f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1184bbe7f396ca991f04fe070ba1e7f9">parse</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
+<tr class="memdesc:a1184bbe7f396ca991f04fe070ba1e7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析 HTTP 响应  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:ac87ea5a9f4b8033545c7402e16a057cf" id="r_ac87ea5a9f4b8033545c7402e16a057cf"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac87ea5a9f4b8033545c7402e16a057cf">state</a> {}</td></tr>
+<tr class="memdesc:ac87ea5a9f4b8033545c7402e16a057cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应行：状态码  <br /></td></tr>
+<tr class="memitem:a7f2a730d2eddb9bc94ac96f77d04de25" id="r_a7f2a730d2eddb9bc94ac96f77d04de25"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2a730d2eddb9bc94ac96f77d04de25">message</a> {}</td></tr>
+<tr class="memdesc:a7f2a730d2eddb9bc94ac96f77d04de25"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应行：状态消息  <br /></td></tr>
+<tr class="memitem:abf3f35839c2db3467fabd24d8487608a" id="r_abf3f35839c2db3467fabd24d8487608a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf3f35839c2db3467fabd24d8487608a">heads</a> {}</td></tr>
+<tr class="memdesc:abf3f35839c2db3467fabd24d8487608a"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应头  <br /></td></tr>
+<tr class="memitem:ad3920f3bb2240aaedf6d084e704f3e36" id="r_ad3920f3bb2240aaedf6d084e704f3e36"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3920f3bb2240aaedf6d084e704f3e36">body</a> {}</td></tr>
+<tr class="memdesc:ad3920f3bb2240aaedf6d084e704f3e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">响应数据  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP 响应结构 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a60b58fe709efae58354d841fa2778cac" name="a60b58fe709efae58354d841fa2778cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b58fe709efae58354d841fa2778cac">&#9670;&#160;</a></span>attachment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::attachment </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置附件响应头 <span class="tt">Content-Disposition</span>，一般需要配合 <span class="tt"><a class="el" href="#af7639045f9daa366a543da149f3a3da2" title="发送响应数据">send()</a></span> 或 <span class="tt"><a class="el" href="#a154a22ea3803fc3de113216b48f33be6" title="发送文件内容作为响应">sendFile()</a></span> 使用 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>附件文件名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><span class="tt"><a class="el" href="#abe80de2881e8fdee6d8ce3060ff9a552" title="设置附件响应头 Content-Disposition 并发送文件内容作为响应">download()</a></span> </dd></dl>
+
+</div>
+</div>
+<a id="abe80de2881e8fdee6d8ce3060ff9a552" name="abe80de2881e8fdee6d8ce3060ff9a552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe80de2881e8fdee6d8ce3060ff9a552">&#9670;&#160;</a></span>download()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::download </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>filename</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(bool)&gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置附件响应头 <span class="tt">Content-Disposition</span> 并发送文件内容作为响应 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>附件文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>发送完成后的回调函数，参数表示是否发送成功</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><span class="tt"><a class="el" href="#a60b58fe709efae58354d841fa2778cac" title="设置附件响应头 Content-Disposition，一般需要配合 send() 或 sendFile() 使用">attachment()</a></span> </dd></dl>
+
+</div>
+</div>
+<a id="ab1b60b88f4a1c821cad673b7f3201cc8" name="ab1b60b88f4a1c821cad673b7f3201cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b60b88f4a1c821cad673b7f3201cc8">&#9670;&#160;</a></span>generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Response::generate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成 HTTP 响应报文 </p>
+<dl class="section return"><dt>返回</dt><dd>响应报文 </dd></dl>
+
+</div>
+</div>
+<a id="ab269cca7adfe9a6c1383006cb2cdfc36" name="ab269cca7adfe9a6c1383006cb2cdfc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab269cca7adfe9a6c1383006cb2cdfc36">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::get </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>head</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回指定的 HTTP 响应头 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应头，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>响应头字段名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9c20bcf3cc2cf310230cddb9dff4a3ac" name="a9c20bcf3cc2cf310230cddb9dff4a3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c20bcf3cc2cf310230cddb9dff4a3ac">&#9670;&#160;</a></span>json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::json </td>
+          <td>(</td>
+          <td class="paramtype">const ::rm::json &amp;</td>          <td class="paramname"><span class="paramname"><em>j</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送 JSON 格式的响应数据 </p>
+<dl class="section note"><dt>注解</dt><dd>一般在仅用于设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法，在 Webapp 中会自动进行调用</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">j</td><td>JSON 对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a533809d2fbd2f3b4a6d28f02c2c54700" name="a533809d2fbd2f3b4a6d28f02c2c54700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533809d2fbd2f3b4a6d28f02c2c54700">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Response::operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1184bbe7f396ca991f04fe070ba1e7f9" name="a1184bbe7f396ca991f04fe070ba1e7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1184bbe7f396ca991f04fe070ba1e7f9">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> rm::Response::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解析 HTTP 响应 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>HTTP 响应报文 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>解析后的响应对象 </dd></dl>
+
+</div>
+</div>
+<a id="ad826fce8dc7fc91c85917d8cb8671bc6" name="ad826fce8dc7fc91c85917d8cb8671bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad826fce8dc7fc91c85917d8cb8671bc6">&#9670;&#160;</a></span>redirect() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::redirect </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送重定向响应 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>重定向的 URL，支持相对路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d1b/structrm_1_1Response_ad826fce8dc7fc91c85917d8cb8671bc6_cgraph.svg" width="166" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae7ce146b369e4956b1fe7d9ddc9af32c" name="ae7ce146b369e4956b1fe7d9ddc9af32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ce146b369e4956b1fe7d9ddc9af32c">&#9670;&#160;</a></span>redirect() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::redirect </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重定向响应 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>状态码 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>重定向的 URL，支持相对路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7639045f9daa366a543da149f3a3da2" name="af7639045f9daa366a543da149f3a3da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7639045f9daa366a543da149f3a3da2">&#9670;&#160;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::send </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送响应数据 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>响应数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a154a22ea3803fc3de113216b48f33be6" name="a154a22ea3803fc3de113216b48f33be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154a22ea3803fc3de113216b48f33be6">&#9670;&#160;</a></span>sendFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::sendFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>file</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送文件内容作为响应 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应内容，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>文件名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ba9e850cde6ab6498db631f4a4c20bb" name="a0ba9e850cde6ab6498db631f4a4c20bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba9e850cde6ab6498db631f4a4c20bb">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::set </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置响应头 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应头，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>响应头字段名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>响应头字段值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a496fdd94d4b2de0c70abc29645902cbb" name="a496fdd94d4b2de0c70abc29645902cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496fdd94d4b2de0c70abc29645902cbb">&#9670;&#160;</a></span>status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp; rm::Response::status </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置响应的 HTTP 状态，注意此方法会覆盖原有状态 </p>
+<dl class="section note"><dt>注解</dt><dd>一般用于 Webapp 中，直接使用仅设置响应状态，实际生成响应报文需调用 <span class="tt"><a class="el" href="#ab1b60b88f4a1c821cad673b7f3201cc8" title="生成 HTTP 响应报文">generate()</a></span> 方法</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>状态码 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ad3920f3bb2240aaedf6d084e704f3e36" name="ad3920f3bb2240aaedf6d084e704f3e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3920f3bb2240aaedf6d084e704f3e36">&#9670;&#160;</a></span>body</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Response::body {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>响应数据 </p>
+
+</div>
+</div>
+<a id="abf3f35839c2db3467fabd24d8487608a" name="abf3f35839c2db3467fabd24d8487608a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3f35839c2db3467fabd24d8487608a">&#9670;&#160;</a></span>heads</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; rm::Response::heads {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>响应头 </p>
+
+</div>
+</div>
+<a id="a7f2a730d2eddb9bc94ac96f77d04de25" name="a7f2a730d2eddb9bc94ac96f77d04de25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2a730d2eddb9bc94ac96f77d04de25">&#9670;&#160;</a></span>message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::Response::message {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>响应行：状态消息 </p>
+
+</div>
+</div>
+<a id="ac87ea5a9f4b8033545c7402e16a057cf" name="ac87ea5a9f4b8033545c7402e16a057cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87ea5a9f4b8033545c7402e16a057cf">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::Response::state {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>响应行：状态码 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::async::Listener类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a href="../../d4/d9f/classrm_1_1async_1_1Listener.html">Listener</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../df/d00/classrm_1_1async_1_1Listener-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::Listener类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步数据报式 Socket 监听器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::Listener 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d41/classrm_1_1async_1_1Listener__inherit__graph.svg" width="138" height="310"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::async::Listener 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/d0a/classrm_1_1async_1_1Listener__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aaead4c807bacda92d06e24721279f344" id="r_aaead4c807bacda92d06e24721279f344"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaead4c807bacda92d06e24721279f344">Listener</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint)</td></tr>
+<tr class="memdesc:aaead4c807bacda92d06e24721279f344"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步数据报式 Socket 监听器  <br /></td></tr>
+<tr class="memitem:a6a1e0c1bb4600953f1b517b021107724" id="r_a6a1e0c1bb4600953f1b517b021107724"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a1e0c1bb4600953f1b517b021107724">~Listener</a> ()=default</td></tr>
+<tr class="memitem:ae8104910a3f950b16c80fdec53359858" id="r_ae8104910a3f950b16c80fdec53359858"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html">DgramSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8104910a3f950b16c80fdec53359858">create</a> ()</td></tr>
+<tr class="memdesc:ae8104910a3f950b16c80fdec53359858"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步绑定 Socket  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1Listener"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1Listener')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></td></tr>
+<tr class="memitem:ae2fd67f5e339321fef483d671b42565c inherit pub_methods_classrm_1_1Listener" id="r_ae2fd67f5e339321fef483d671b42565c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#ae2fd67f5e339321fef483d671b42565c">Listener</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, bool blocking=true)</td></tr>
+<tr class="memdesc:ae2fd67f5e339321fef483d671b42565c inherit pub_methods_classrm_1_1Listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建数据报式 Socket 监听器  <br /></td></tr>
+<tr class="memitem:a752f0b8f9e7dfaf8298f30ea1866a2e6 inherit pub_methods_classrm_1_1Listener" id="r_a752f0b8f9e7dfaf8298f30ea1866a2e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#a752f0b8f9e7dfaf8298f30ea1866a2e6">~Listener</a> ()</td></tr>
+<tr class="memitem:afda173457db01c8b7e2ff5011f64fab7 inherit pub_methods_classrm_1_1Listener" id="r_afda173457db01c8b7e2ff5011f64fab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d75/classrm_1_1DgramSocket.html">DgramSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#afda173457db01c8b7e2ff5011f64fab7">create</a> ()</td></tr>
+<tr class="memdesc:afda173457db01c8b7e2ff5011f64fab7 inherit pub_methods_classrm_1_1Listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步绑定 Socket（阻塞）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classrm_1_1Listener"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classrm_1_1Listener')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></td></tr>
+<tr class="memitem:a7c6b9442c37d208bc37afcd47d595eae inherit pro_methods_classrm_1_1Listener" id="r_a7c6b9442c37d208bc37afcd47d595eae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#a7c6b9442c37d208bc37afcd47d595eae">Listener</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, bool blocking, bool ov)</td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1Listener"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1Listener')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></td></tr>
+<tr class="memitem:a6d26170fd06c82024a4ee7b7506d9767 inherit pro_attribs_classrm_1_1Listener" id="r_a6d26170fd06c82024a4ee7b7506d9767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#a6d26170fd06c82024a4ee7b7506d9767">_endpoint</a></td></tr>
+<tr class="memdesc:a6d26170fd06c82024a4ee7b7506d9767 inherit pro_attribs_classrm_1_1Listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点  <br /></td></tr>
+<tr class="memitem:aa19d0779fad6776ab58f43fe8903d11c inherit pro_attribs_classrm_1_1Listener" id="r_aa19d0779fad6776ab58f43fe8903d11c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html#aa19d0779fad6776ab58f43fe8903d11c">_fd</a> {<a class="el" href="../../d6/dd4/group__io__net.html#ga41eb5b8b262dfe2dd792a2006db325ec">INVALID_SOCKET_FD</a>}</td></tr>
+<tr class="memdesc:aa19d0779fad6776ab58f43fe8903d11c inherit pro_attribs_classrm_1_1Listener"><td class="mdescLeft">&#160;</td><td class="mdescRight">未建立会话的 Socket 描述符  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步数据报式 Socket 监听器 </p>
+<ul>
+<li><a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html" title="异步数据报式 Socket 监听器">async::Listener</a> 拥有 <a class="el" href="../../d2/d2a/classrm_1_1async_1_1Sender.html" title="异步数据报式 Socket 发送器">async::Sender</a> 的全部功能，在仅需要发送数据时可使用 <a class="el" href="../../d2/d2a/classrm_1_1async_1_1Sender.html" title="异步数据报式 Socket 发送器">async::Sender</a> </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="aaead4c807bacda92d06e24721279f344" name="aaead4c807bacda92d06e24721279f344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaead4c807bacda92d06e24721279f344">&#9670;&#160;</a></span>Listener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::Listener::Listener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建异步数据报式 Socket 监听器 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keyword">auto</span> listener = <a class="code hl_class" href="../../d4/d9f/classrm_1_1async_1_1Listener.html">rm::async::Listener</a>(io_context, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a>(), 12345));</div>
+<div class="ttc" id="aclassrm_1_1Endpoint_html"><div class="ttname"><a href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></div><div class="ttdoc">端点</div><div class="ttdef"><b>定义</b> socket.hpp:275</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Listener_html"><div class="ttname"><a href="../../d4/d9f/classrm_1_1async_1_1Listener.html">rm::async::Listener</a></div><div class="ttdoc">异步数据报式 Socket 监听器</div><div class="ttdef"><b>定义</b> socket.hpp:747</div></div>
+<div class="ttc" id="anamespacerm_1_1ip_1_1udp_html_aa8aad4c3ffaff4a1fd14ceaf137bdde9"><div class="ttname"><a href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 UDP 协议</div></div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">endpoint</td><td>端点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a1e0c1bb4600953f1b517b021107724" name="a6a1e0c1bb4600953f1b517b021107724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1e0c1bb4600953f1b517b021107724">&#9670;&#160;</a></span>~Listener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::Listener::~Listener </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ae8104910a3f950b16c80fdec53359858" name="ae8104910a3f950b16c80fdec53359858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8104910a3f950b16c80fdec53359858">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html">DgramSocket</a> rm::async::Listener::create </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步绑定 Socket </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keyword">auto</span> socket = listener.create(); <span class="comment">// 注意：此处不是异步操作，不得使用 co_await !!!</span></div>
+</div><!-- fragment --><dl class="section return"><dt>返回</dt><dd>数据报式 Socket 会话对象 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

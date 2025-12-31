@@ -1,0 +1,894 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.15.0" name="generator"/>
+  <title>RMVL: 网络通信</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script src="../../doxygen-awesome-tabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> |
+<a href="#nested-classes">类</a> |
+<a href="#typedef-members">类型定义</a> |
+<a href="#enum-members">枚举</a> |
+<a href="#func-members">函数</a> |
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">网络通信 <div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>提供跨平台的同步异步 Socket 通信、HTTP 请求、HTTP Web 后端框架功能  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+网络通信 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" loading="lazy" scrolling="no" src="../../d6/dd4/group__io__net.svg" width="268"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:rm_3A_3Aip" id="r_rm_3A_3Aip"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df5/namespacerm_1_1ip.html">rm::ip</a></td></tr>
+<tr class="memdesc:d2/df5/namespacerm_1_1ip"><td class="mdescLeft"> </td><td class="mdescRight">IP 协议族，包含 IPv4 和 IPv6 以及多播选项的相关定义 <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3AURLParseInfo" id="r_rm_3A_3AURLParseInfo"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/structrm_1_1URLParseInfo.html">rm::URLParseInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">URL 解析结果  <a href="../../d8/d24/structrm_1_1URLParseInfo.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3ARequest" id="r_rm_3A_3ARequest"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d7c/structrm_1_1Request.html">rm::Request</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">HTTP 请求结构  <a href="../../d6/d7c/structrm_1_1Request.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AResponse" id="r_rm_3A_3AResponse"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">rm::Response</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">HTTP 响应结构  <a href="../../d1/d1b/structrm_1_1Response.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AWebapp" id="r_rm_3A_3Aasync_3A_3AWebapp"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Web 应用程序框架  <a href="../../d5/d05/classrm_1_1async_1_1Webapp.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3ANetworkInterfaceFlag" id="r_rm_3A_3ANetworkInterfaceFlag"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7f/structrm_1_1NetworkInterfaceFlag.html">rm::NetworkInterfaceFlag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">接口功能与状态标志  <a href="../../d5/d7f/structrm_1_1NetworkInterfaceFlag.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3ANetworkInterface" id="r_rm_3A_3ANetworkInterface"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">rm::NetworkInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">网络接口  <a href="../../db/d69/classrm_1_1NetworkInterface.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AEndpoint" id="r_rm_3A_3AEndpoint"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">端点  <a href="../../dc/db5/classrm_1_1Endpoint.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3ADgramSocket" id="r_rm_3A_3ADgramSocket"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d75/classrm_1_1DgramSocket.html">rm::DgramSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">由 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html" title="同步数据报式 Socket 监听器">rm::Listener</a> 或 <a class="el" href="../../df/d96/classrm_1_1Sender.html" title="同步数据报式 Socket 发送器">rm::Sender</a> 建立的数据报式 Socket 会话  <a href="../../d0/d75/classrm_1_1DgramSocket.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3ASender" id="r_rm_3A_3ASender"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d96/classrm_1_1Sender.html">rm::Sender</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">同步数据报式 Socket 发送器  <a href="../../df/d96/classrm_1_1Sender.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AListener" id="r_rm_3A_3AListener"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">同步数据报式 Socket 监听器  <a href="../../d5/dcd/classrm_1_1Listener.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AStreamSocket" id="r_rm_3A_3AStreamSocket"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">rm::StreamSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">由 <a class="el" href="../../dd/df8/classrm_1_1Acceptor.html" title="Socket 接受器">rm::Acceptor</a> 或 <a class="el" href="../../de/ddb/classrm_1_1Connector.html" title="Socket 连接器">rm::Connector</a> 建立的流式 Socket 会话  <a href="../../d8/df3/classrm_1_1StreamSocket.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AAcceptor" id="r_rm_3A_3AAcceptor"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/df8/classrm_1_1Acceptor.html">rm::Acceptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Socket 接受器  <a href="../../dd/df8/classrm_1_1Acceptor.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3AConnector" id="r_rm_3A_3AConnector"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Socket 连接器  <a href="../../de/ddb/classrm_1_1Connector.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ADgramSocket" id="r_rm_3A_3Aasync_3A_3ADgramSocket"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html">rm::async::DgramSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">由 <a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html" title="异步数据报式 Socket 监听器">rm::async::Listener</a> 建立的数据报式 Socket 异步会话  <a href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3ASender" id="r_rm_3A_3Aasync_3A_3ASender"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2a/classrm_1_1async_1_1Sender.html">rm::async::Sender</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">异步数据报式 Socket 发送器  <a href="../../d2/d2a/classrm_1_1async_1_1Sender.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AListener" id="r_rm_3A_3Aasync_3A_3AListener"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html">rm::async::Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">异步数据报式 Socket 监听器  <a href="../../d4/d9f/classrm_1_1async_1_1Listener.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AStreamSocket" id="r_rm_3A_3Aasync_3A_3AStreamSocket"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">rm::async::StreamSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">由 <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步流式 Socket 接受器">rm::async::Acceptor</a> 建立的流式 Socket 异步会话  <a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AAcceptor" id="r_rm_3A_3Aasync_3A_3AAcceptor"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">rm::async::Acceptor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">异步流式 Socket 接受器  <a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html#details">更多...</a><br/></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3AConnector" id="r_rm_3A_3Aasync_3A_3AConnector"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d95/classrm_1_1async_1_1Connector.html">rm::async::Connector</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">异步流式 Socket 连接器  <a href="../../df/d95/classrm_1_1async_1_1Connector.html#details">更多...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gacd1f5fbb45c26fdfe6ccdf26f49fde4e" id="r_gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="mdescLeft"> </td><td class="mdescRight">响应中间件类型  <br/></td></tr>
+<tr class="memitem:ga8158c4bbe45484f8a0083cd2ed4dc514" id="r_ga8158c4bbe45484f8a0083cd2ed4dc514"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">rm::SocketFd</a> = int</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-enum-members"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gae6fd8f56e227d1b8dd738a46939dd2fc" id="r_gae6fd8f56e227d1b8dd738a46939dd2fc"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">rm::HTTPMethod</a> : uint8_t { <br/>
+  <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def">rm::HTTPMethod::Get</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9">rm::HTTPMethod::Post</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373">rm::HTTPMethod::Put</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18">rm::HTTPMethod::Delete</a>
+, <br/>
+  <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f">rm::HTTPMethod::Patch</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe">rm::HTTPMethod::Head</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8">rm::HTTPMethod::Options</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1">rm::HTTPMethod::Trace</a>
+, <br/>
+  <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e">rm::HTTPMethod::Connect</a>
+, <a class="el" href="#ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e">rm::HTTPMethod::Unknown</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gae6fd8f56e227d1b8dd738a46939dd2fc"><td class="mdescLeft"> </td><td class="mdescRight">HTTP 请求方法  <a href="#gae6fd8f56e227d1b8dd738a46939dd2fc">更多...</a><br/></td></tr>
+<tr class="memitem:gadb3e4d4f0720bfcbbaa3fd4cf076e69a" id="r_gadb3e4d4f0720bfcbbaa3fd4cf076e69a"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">rm::NetworkInterfaceType</a> : uint8_t { <br/>
+  <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111">rm::NetworkInterfaceType::Ethernet</a>
+, <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75">rm::NetworkInterfaceType::Wireless</a>
+, <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba">rm::NetworkInterfaceType::PPP</a>
+, <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d">rm::NetworkInterfaceType::Tunnel</a>
+, <br/>
+  <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a">rm::NetworkInterfaceType::Loopback</a>
+, <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387">rm::NetworkInterfaceType::Other</a>
+, <a class="el" href="#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e">rm::NetworkInterfaceType::Unknown</a>
+<br/>
+ }</td></tr>
+<tr class="memdesc:gadb3e4d4f0720bfcbbaa3fd4cf076e69a"><td class="mdescLeft"> </td><td class="mdescRight">接口驱动类型  <a href="#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">更多...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaf339c36db4ff3511143e7fcebf9e274a" id="r_gaf339c36db4ff3511143e7fcebf9e274a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d8/d24/structrm_1_1URLParseInfo.html">URLParseInfo</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf339c36db4ff3511143e7fcebf9e274a">rm::parseURL</a> (std::string_view url)</td></tr>
+<tr class="memdesc:gaf339c36db4ff3511143e7fcebf9e274a"><td class="mdescLeft"> </td><td class="mdescRight">解析 URL  <br/></td></tr>
+<tr class="memitem:gadd8208fa61f01c94cc9b8c908e1ebaa2" id="r_gadd8208fa61f01c94cc9b8c908e1ebaa2"><td align="right" class="memItemLeft" valign="top">std::tuple&lt; std::string, bool &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd8208fa61f01c94cc9b8c908e1ebaa2">rm::parseDNS</a> (std::string_view hostname)</td></tr>
+<tr class="memdesc:gadd8208fa61f01c94cc9b8c908e1ebaa2"><td class="mdescLeft"> </td><td class="mdescRight">域名解析  <br/></td></tr>
+<tr class="memitem:gae0c3724271bc4d19e862f3030500f60d" id="r_gae0c3724271bc4d19e862f3030500f60d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a> (std::string_view url, std::string_view root)</td></tr>
+<tr class="memdesc:gae0c3724271bc4d19e862f3030500f60d"><td class="mdescLeft"> </td><td class="mdescRight">静态路由中间件，处理对指定 URL 路径的静态文件请求  <br/></td></tr>
+<tr class="memitem:gaa40bf87091d5012a8cf00e789cb9c26d" id="r_gaa40bf87091d5012a8cf00e789cb9c26d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a> ()</td></tr>
+<tr class="memdesc:gaa40bf87091d5012a8cf00e789cb9c26d"><td class="mdescLeft"> </td><td class="mdescRight">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息  <br/></td></tr>
+<tr class="memitem:gad1972828ae5dd6f98672664365f84c0e" id="r_gad1972828ae5dd6f98672664365f84c0e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad1972828ae5dd6f98672664365f84c0e">rm::requests::request</a> (<a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a> method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body="")</td></tr>
+<tr class="memdesc:gad1972828ae5dd6f98672664365f84c0e"><td class="mdescLeft"> </td><td class="mdescRight">发出同步 HTTP 请求  <br/></td></tr>
+<tr class="memitem:ga6193a01ed7a33f9af6d287b67b7ff906" id="r_ga6193a01ed7a33f9af6d287b67b7ff906"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a> (std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:ga6193a01ed7a33f9af6d287b67b7ff906"><td class="mdescLeft"> </td><td class="mdescRight">发出同步 GET 请求  <br/></td></tr>
+<tr class="memitem:gabda1198828489a8bfcdace3981cbdace" id="r_gabda1198828489a8bfcdace3981cbdace"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#gabda1198828489a8bfcdace3981cbdace">rm::requests::post</a> (std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:gabda1198828489a8bfcdace3981cbdace"><td class="mdescLeft"> </td><td class="mdescRight">发出同步 POST 请求  <br/></td></tr>
+<tr class="memitem:ga7f288593fbb01a63dac73b90ca9a2cc9" id="r_ga7f288593fbb01a63dac73b90ca9a2cc9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7f288593fbb01a63dac73b90ca9a2cc9">rm::requests::del</a> (std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:ga7f288593fbb01a63dac73b90ca9a2cc9"><td class="mdescLeft"> </td><td class="mdescRight">发出同步 DELETE 请求  <br/></td></tr>
+<tr class="memitem:ga3c46835427121ff22a497b03ae5529ac" id="r_ga3c46835427121ff22a497b03ae5529ac"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3c46835427121ff22a497b03ae5529ac">rm::async::requests::request</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, <a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a> method, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={}, std::string_view body="")</td></tr>
+<tr class="memdesc:ga3c46835427121ff22a497b03ae5529ac"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 HTTP 请求  <br/></td></tr>
+<tr class="memitem:gade3bea56ce829f9e47fe981a17e4094a" id="r_gade3bea56ce829f9e47fe981a17e4094a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gade3bea56ce829f9e47fe981a17e4094a">rm::async::requests::get</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:gade3bea56ce829f9e47fe981a17e4094a"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 GET 请求  <br/></td></tr>
+<tr class="memitem:gab422b631d1e40f644e55cae7cdc06c17" id="r_gab422b631d1e40f644e55cae7cdc06c17"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab422b631d1e40f644e55cae7cdc06c17">rm::async::requests::post</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view url, std::string_view body, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:gab422b631d1e40f644e55cae7cdc06c17"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 POST 请求  <br/></td></tr>
+<tr class="memitem:gadb6ac2766171c3158c0d7086874ed724" id="r_gadb6ac2766171c3158c0d7086874ed724"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#gadb6ac2766171c3158c0d7086874ed724">rm::async::requests::del</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:gadb6ac2766171c3158c0d7086874ed724"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 DELETE 请求  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-var-members"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ga41eb5b8b262dfe2dd792a2006db325ec" id="r_ga41eb5b8b262dfe2dd792a2006db325ec"><td align="right" class="memItemLeft" valign="top">constexpr <a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga41eb5b8b262dfe2dd792a2006db325ec">rm::INVALID_SOCKET_FD</a> = -1</td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
+<p>提供跨平台的同步异步 Socket 通信、HTTP 请求、HTTP Web 后端框架功能 </p>
+<a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">类型定义说明</h2>
+<a id="gacd1f5fbb45c26fdfe6ccdf26f49fde4e" name="gacd1f5fbb45c26fdfe6ccdf26f49fde4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">◆ </a></span>ResponseMiddleware</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>响应中间件类型 </p>
+</div>
+</div>
+<a id="ga8158c4bbe45484f8a0083cd2ed4dc514" name="ga8158c4bbe45484f8a0083cd2ed4dc514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8158c4bbe45484f8a0083cd2ed4dc514">◆ </a></span>SocketFd</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">rm::SocketFd</a> = int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+</div>
+</div>
+<a id="doc-enum-members" name="doc-enum-members"></a><h2 class="groupheader" id="header-doc-enum-members">枚举类型说明</h2>
+<a id="gae6fd8f56e227d1b8dd738a46939dd2fc" name="gae6fd8f56e227d1b8dd738a46939dd2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6fd8f56e227d1b8dd738a46939dd2fc">◆ </a></span>HTTPMethod</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">rm::HTTPMethod</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>HTTP 请求方法 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def" name="ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def"></a>Get <div class="python_language"><b>Python: </b>rm.HTTPMethod.Get</div></td><td class="fielddoc"><p>从服务器获取资源，用于请求数据而不对数据进行更改 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9" name="ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9"></a>Post <div class="python_language"><b>Python: </b>rm.HTTPMethod.Post</div></td><td class="fielddoc"><p>向服务器发送数据，用于提交表单数据或上传文件 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373" name="ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373"></a>Put <div class="python_language"><b>Python: </b>rm.HTTPMethod.Put</div></td><td class="fielddoc"><p>向服务器发送数据，一般用于更新现有资源 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18" name="ggae6fd8f56e227d1b8dd738a46939dd2fcaf2a6c498fb90ee345d997f888fce3b18"></a>Delete <div class="python_language"><b>Python: </b>rm.HTTPMethod.Delete</div></td><td class="fielddoc"><p>从服务器删除指定的资源，请求中包含要删除的资源标识符 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f" name="ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f"></a>Patch <div class="python_language"><b>Python: </b>rm.HTTPMethod.Patch</div></td><td class="fielddoc"><p>对资源进行部分修改，与 <span class="tt">Put</span> 类似，但 <span class="tt">Patch</span> 只更改部分数据而不是替换整个资源 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe" name="ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe"></a>Head <div class="python_language"><b>Python: </b>rm.HTTPMethod.Head</div></td><td class="fielddoc"><p>类似于 <span class="tt">Get</span>，但服务器只返回响应的头部，不返回实际数据，常用于检查资源的元数据 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8" name="ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8"></a>Options <div class="python_language"><b>Python: </b>rm.HTTPMethod.Options</div></td><td class="fielddoc"><p>返回服务器支持的 HTTP 方法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1" name="ggae6fd8f56e227d1b8dd738a46939dd2fcadd4ec0ac4e58f7c32a01244ae91150b1"></a>Trace <div class="python_language"><b>Python: </b>rm.HTTPMethod.Trace</div></td><td class="fielddoc"><p>回显服务器收到的请求，主要用于诊断 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e" name="ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e"></a>Connect <div class="python_language"><b>Python: </b>rm.HTTPMethod.Connect</div></td><td class="fielddoc"><p>建立一个到服务器的隧道，通常用于 HTTPS 连接 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e" name="ggae6fd8f56e227d1b8dd738a46939dd2fca88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown <div class="python_language"><b>Python: </b>rm.HTTPMethod.Unknown</div></td><td class="fielddoc"><p>未知方法 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="gadb3e4d4f0720bfcbbaa3fd4cf076e69a" name="gadb3e4d4f0720bfcbbaa3fd4cf076e69a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">◆ </a></span>NetworkInterfaceType</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">rm::NetworkInterfaceType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<p>接口驱动类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aabe2ae05fb04ddcf6efa31e63e0f0e111"></a>Ethernet </td><td class="fielddoc"><p>以太网 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75"></a>Wireless </td><td class="fielddoc"><p>无线接口 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba"></a>PPP </td><td class="fielddoc"><p>点对点协议 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aaeebee9ab199d3cc4d44e19b341b65b7d"></a>Tunnel </td><td class="fielddoc"><p>隧道接口 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa5fe85aee0186c2f1199f028218fb670a"></a>Loopback </td><td class="fielddoc"><p><span class="tt">lo</span> 回环设备 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387"></a>Other </td><td class="fielddoc"><p>其他 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e" name="ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa88183b946cc5f0e8c96b2e66e1c74a7e"></a>Unknown </td><td class="fielddoc"><p>未知类型 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">函数说明</h2>
+<a id="gaa40bf87091d5012a8cf00e789cb9c26d" name="gaa40bf87091d5012a8cf00e789cb9c26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa40bf87091d5012a8cf00e789cb9c26d">◆ </a></span>cors()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> rm::cors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息 </p>
+<div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
+<div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
+<div class="line">app.use(<a class="code hl_function" href="#gaa40bf87091d5012a8cf00e789cb9c26d">cors</a>());</div>
+<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:482</div></div>
+<div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gadb6ac2766171c3158c0d7086874ed724" name="gadb6ac2766171c3158c0d7086874ed724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb6ac2766171c3158c0d7086874ed724">◆ </a></span>del() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; rm::async::requests::del </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出异步 DELETE 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">rm::async::Task&lt;Response&gt;</a> </dd></dl>
+</div>
+</div>
+<a id="ga7f288593fbb01a63dac73b90ca9a2cc9" name="ga7f288593fbb01a63dac73b90ca9a2cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f288593fbb01a63dac73b90ca9a2cc9">◆ </a></span>del() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> rm::requests::del </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出同步 DELETE 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a> 响应报文 </dd></dl>
+</div>
+</div>
+<a id="gade3bea56ce829f9e47fe981a17e4094a" name="gade3bea56ce829f9e47fe981a17e4094a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade3bea56ce829f9e47fe981a17e4094a">◆ </a></span>get() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; rm::async::requests::get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出异步 GET 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">rm::async::Task&lt;Response&gt;</a> </dd></dl>
+</div>
+</div>
+<a id="ga6193a01ed7a33f9af6d287b67b7ff906" name="ga6193a01ed7a33f9af6d287b67b7ff906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6193a01ed7a33f9af6d287b67b7ff906">◆ </a></span>get() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> rm::requests::get </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出同步 GET 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a> 响应报文 </dd></dl>
+</div>
+</div>
+<a id="gadd8208fa61f01c94cc9b8c908e1ebaa2" name="gadd8208fa61f01c94cc9b8c908e1ebaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd8208fa61f01c94cc9b8c908e1ebaa2">◆ </a></span>parseDNS()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt; std::string, bool &gt; rm::parseDNS </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>hostname</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>域名解析 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hostname</td><td>域名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ip</td><td>IP 地址 </td></tr>
+    <tr><td class="paramname">isv6</td><td>是否为 IPv6 地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="gaf339c36db4ff3511143e7fcebf9e274a" name="gaf339c36db4ff3511143e7fcebf9e274a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf339c36db4ff3511143e7fcebf9e274a">◆ </a></span>parseURL()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d24/structrm_1_1URLParseInfo.html">URLParseInfo</a> rm::parseURL </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>解析 URL </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>统一资源定位符，例如 <span class="tt"><a href="http://example.com:8080/path">http://example.com:8080/path</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">scheme</td><td>协议部分，例如 <span class="tt">http</span> 或 <span class="tt">https</span> </td></tr>
+    <tr><td class="paramname">hostname</td><td>域名部分，例如 <span class="tt">example.com</span> </td></tr>
+    <tr><td class="paramname">port</td><td>端口号，默认为 80 (HTTP) 或 443 (HTTPS) </td></tr>
+    <tr><td class="paramname">path</td><td>路径部分，例如 <span class="tt">/path/to/resource</span> </td></tr>
+    <tr><td class="paramname">querys</td><td>以 <span class="tt">std::vector</span> 存储的查询参数部分，例如 <span class="tt">[key=value, key2=value2]</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="gab422b631d1e40f644e55cae7cdc06c17" name="gab422b631d1e40f644e55cae7cdc06c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab422b631d1e40f644e55cae7cdc06c17">◆ </a></span>post() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; rm::async::requests::post </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>body</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出异步 POST 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">rm::async::Task&lt;Response&gt;</a> </dd></dl>
+</div>
+</div>
+<a id="gabda1198828489a8bfcdace3981cbdace" name="gabda1198828489a8bfcdace3981cbdace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabda1198828489a8bfcdace3981cbdace">◆ </a></span>post() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> rm::requests::post </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>body</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出同步 POST 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a> 响应报文 </dd></dl>
+</div>
+</div>
+<a id="ga3c46835427121ff22a497b03ae5529ac" name="ga3c46835427121ff22a497b03ae5529ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c46835427121ff22a497b03ae5529ac">◆ </a></span>request() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; rm::async::requests::request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a></td>          <td class="paramname"><span class="paramname"><em>method</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>body</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出异步 HTTP 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>请求方法 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>可选的请求体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>响应报文的异步任务 </dd></dl>
+</div>
+</div>
+<a id="gad1972828ae5dd6f98672664365f84c0e" name="gad1972828ae5dd6f98672664365f84c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1972828ae5dd6f98672664365f84c0e">◆ </a></span>request() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> rm::requests::request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a></td>          <td class="paramname"><span class="paramname"><em>method</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>body</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出同步 HTTP 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>请求方法 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 查询参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>可选的请求体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>响应报文 </dd></dl>
+</div>
+</div>
+<a id="gae0c3724271bc4d19e862f3030500f60d" name="gae0c3724271bc4d19e862f3030500f60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0c3724271bc4d19e862f3030500f60d">◆ </a></span>statics()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">ResponseMiddleware</a> rm::statics </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>root</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>静态路由中间件，处理对指定 URL 路径的静态文件请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>URL 路径前缀，例如 <span class="tt">/static</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>静态文件根目录，例如 <span class="tt">./public</span></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
+<div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
+<div class="line">app.use(<a class="code hl_function" href="#gae0c3724271bc4d19e862f3030500f60d">statics</a>(<span class="stringliteral">"/static"</span>, <span class="stringliteral">"./public"</span>));</div>
+<div class="ttc" id="agroup__io__net_html_gae0c3724271bc4d19e862f3030500f60d"><div class="ttname"><a href="#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a></div><div class="ttdeci">ResponseMiddleware statics(std::string_view url, std::string_view root)</div><div class="ttdoc">静态路由中间件，处理对指定 URL 路径的静态文件请求</div></div>
+</div><!-- fragment --> <dl class="section note"><dt>注解</dt><dd>静态路由仅在未处理请求时有效，若有对应的路由表达成匹配，则静态路由中间件不会被调用 </dd></dl>
+</div>
+</div>
+<a id="doc-var-members" name="doc-var-members"></a><h2 class="groupheader" id="header-doc-var-members">变量说明</h2>
+<a id="ga41eb5b8b262dfe2dd792a2006db325ec" name="ga41eb5b8b262dfe2dd792a2006db325ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41eb5b8b262dfe2dd792a2006db325ec">◆ </a></span>INVALID_SOCKET_FD</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a> rm::INVALID_SOCKET_FD = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

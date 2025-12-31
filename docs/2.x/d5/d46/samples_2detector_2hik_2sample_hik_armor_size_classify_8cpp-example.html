@@ -1,0 +1,345 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: samples/detector/hik/sample_hik_armor_size_classify.cpp</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">samples/detector/hik/sample_hik_armor_size_classify.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>大小装甲板分类例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/camera/hik_camera.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/core/timer.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/core/util.hpp&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/detector/armor_detector.h&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/ml.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> wait_time = 1;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> collect_num = 2000;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="../../db/d9f/classrm_1_1HikCamera.html#a3f7d02d346e4c300fe4661c17ee9c455">rm::HikCamera::ptr</a> capture;                           <span class="comment">// 相机</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">auto</span> p_detector = <a id="a1" name="a1"></a><a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>(); <span class="comment">// 识别模块</span></div>
+<div class="line"><span class="keyword">static</span> cv::Mat frame;                                        <span class="comment">// 帧图像</span></div>
+<div class="line"><span class="keyword">static</span> std::vector&lt;rm::group::ptr&gt; groups;                   <span class="comment">// 序列组列表</span></div>
+<div class="line"><span class="keyword">static</span> cv::Mat armor_samples;                                <span class="comment">// 装甲板信息样本</span></div>
+<div class="line"><span class="keyword">static</span> cv::Mat armor_responses;                              <span class="comment">// 装甲板响应/标签</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> collect(<a id="_a2" name="_a2"></a><a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">rm::PixChannel</a> color, <a id="_a3" name="_a3"></a><a class="code hl_enumeration" href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a> type, <span class="keywordtype">int</span> begin_idx) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = 0; idx &lt; collect_num; ++idx) {</div>
+<div class="line">        capture-&gt;read(frame);</div>
+<div class="line">        <span class="keywordflow">if</span> (frame.empty())</div>
+<div class="line">            <a id="a4" name="a4"></a><a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a id="_a5" name="_a5"></a><a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7">RMVL_StsBadSize</a>, <span class="stringliteral">&quot;frame is empty, something wrong with the camera.&quot;</span>);</div>
+<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, frame, color, <a id="_a6" name="_a6"></a><a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a id="_a7" name="_a7"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;combos = info.combos;</div>
+<div class="line">        <span class="keywordflow">if</span> (combos.size() != 1) {</div>
+<div class="line">            <span class="keywordflow">if</span> (combos.size() &gt; 1)</div>
+<div class="line">                <a id="a8" name="a8"></a><a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;Size of the combos is greater than 1, size = %zu&quot;</span>, combos.size());</div>
+<div class="line">            idx--;</div>
+<div class="line">        } <span class="keywordflow">else</span> {</div>
+<div class="line">            <span class="keyword">auto</span> p_armor = <a id="a9" name="a9"></a><a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front());</div>
+<div class="line">            <span class="comment">// 收集数据</span></div>
+<div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 0) = p_armor-&gt;getComboRatio();  <span class="comment">// 装甲板长宽比</span></div>
+<div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 1) = p_armor-&gt;getWidthRatio();  <span class="comment">// 灯条宽度比</span></div>
+<div class="line">            armor_samples.at&lt;<span class="keywordtype">float</span>&gt;(begin_idx + idx, 2) = p_armor-&gt;getLengthRatio(); <span class="comment">// 灯条长度比</span></div>
+<div class="line">            armor_responses.at&lt;<span class="keywordtype">int</span>&gt;(begin_idx + idx) = type == <a id="_a10" name="_a10"></a><a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a> ? 1 : 2;</div>
+<div class="line"> </div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;corners = p_armor-&gt;corners();</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; ++i)</div>
+<div class="line">                line(frame, corners[i], corners[(i + 1) % 4], cv::Scalar(0, 255, 0), 2);</div>
+<div class="line">        }</div>
+<div class="line">        putText(frame, std::to_string(idx), cv::Point(20, 50), cv::FONT_HERSHEY_COMPLEX, 1.0, cv::Scalar(255, 255, 255), 1);</div>
+<div class="line">        imshow(<span class="stringliteral">&quot;信息收集&quot;</span>, frame);</div>
+<div class="line">        <span class="keywordtype">int</span> ch = cv::waitKey(wait_time);</div>
+<div class="line">        <span class="keywordflow">if</span> (ch == 27)</div>
+<div class="line">            cv::waitKey(0);</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == 113) <span class="comment">// &#39;q&#39;</span></div>
+<div class="line">            exit(0);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *keys = <span class="stringliteral">&quot;{ ? h help  |     | 帮助信息 }&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;{ m model   |     | 模型路径，这将跳过训练直接进行测试 }&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;{ n num     |2000 | 每种装甲板收集的数量 }&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;{ w waitkey |1    | cv::cv::waitKey(?) }&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;{ c color   |0    | 识别装甲板颜色 &#39;\033[33m0\033[0m&#39;: 识别蓝色，&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;&#39;\033[33m1\033[0m&#39;: 识别红色 }&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *help = <span class="stringliteral">&quot;                      \033[34;1m使用说明\033[0m\n&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;程序会收集大小装甲板数据各 &#39;num&#39; 张（默认为 2000 张），通过采集\n1) &quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;装甲板长宽比 combo_ratio\n2) 灯条宽度比 width_ratio\n3) 灯条长度比 &quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;length_ratio\n5) 共 3 个指标特征，进行 SVM 二分类，分类后的结果将自&quot;</span></div>
+<div class="line">                             <span class="stringliteral">&quot;动\n导出至 \033[33mout_armor_size.xml\033[0m 中&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line">    <span class="comment">// 命令行参数初始化</span></div>
+<div class="line">    cv::CommandLineParser parser(argc, argv, keys);</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;help&quot;</span>)) {</div>
+<div class="line">        parser.printMessage();</div>
+<div class="line">        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, help);</div>
+<div class="line">        exit(0);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 获取命令行参数</span></div>
+<div class="line">    <span class="keyword">auto</span> color = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;color&quot;</span>) == 0 ? <a id="_a11" name="_a11"></a><a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::PixChannel::BLUE</a> : <a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>::<a class="code hl_enumeration" href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">PixChannel</a>::<a class="code hl_enumvalue" href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">RED</a>;</div>
+<div class="line">    std::string model;</div>
+<div class="line">    <span class="keywordflow">if</span> (parser.has(<span class="stringliteral">&quot;model&quot;</span>))</div>
+<div class="line">        model = parser.get&lt;std::string&gt;(<span class="stringliteral">&quot;model&quot;</span>);</div>
+<div class="line">    collect_num = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;num&quot;</span>);</div>
+<div class="line">    wait_time = parser.get&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;waitkey&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    armor_samples = cv::Mat::zeros(collect_num * 2, 3, CV_32FC1);</div>
+<div class="line">    armor_responses = cv::Mat::zeros(collect_num * 2, 1, CV_32SC1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 设置相机参数</span></div>
+<div class="line">    capture = <a id="a12" name="a12"></a><a class="code hl_function" href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a>(<a id="_a13" name="_a13"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="_a14" name="_a14"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="_a15" name="_a15"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
+<div class="line">    <span class="keywordflow">if</span> (!capture-&gt;isOpened()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;相机打开失败\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">int</span> exposure = 3000;</div>
+<div class="line">    <span class="keywordtype">int</span> gain = 8;</div>
+<div class="line">    <span class="keywordtype">int</span> r_gain = 1500;</div>
+<div class="line">    <span class="keywordtype">int</span> g_gain = 1500;</div>
+<div class="line">    <span class="keywordtype">int</span> b_gain = 1500;</div>
+<div class="line"> </div>
+<div class="line">    cv::FileStorage fs_mv_set(<span class="stringliteral">&quot;out_para.yml&quot;</span>, cv::FileStorage::READ);</div>
+<div class="line">    <span class="keywordflow">if</span> (fs_mv_set.isOpened()) {</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; exposure);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>] &gt;&gt; gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>] &gt;&gt; r_gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>] &gt;&gt; g_gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    capture-&gt;set(<a id="_a16" name="_a16"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>, 0);</div>
+<div class="line">    capture-&gt;set(<a id="_a17" name="_a17"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture-&gt;set(<a id="_a18" name="_a18"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a19" name="_a19"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>, 0);</div>
+<div class="line">    capture-&gt;set(<a id="_a20" name="_a20"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a21" name="_a21"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture-&gt;set(<a id="_a22" name="_a22"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line"> </div>
+<div class="line">    cv::Ptr&lt;cv::ml::SVM&gt; p_svm = <span class="keyword">nullptr</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (model.empty()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;=======================================\n&quot;</span>);</div>
+<div class="line">        <span class="comment">// --------------------- 小装甲板收集 ---------------------</span></div>
+<div class="line">        std::string key_str;</div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[32m小装甲板\033[0m信息收集即将开始...\n&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;输入 \033[33;1mok\033[0m 来开始收集 &gt;&gt;&gt; &quot;</span>);</div>
+<div class="line">        std::cin &gt;&gt; key_str;</div>
+<div class="line">        <span class="keywordflow">if</span> (key_str != <span class="stringliteral">&quot;ok&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">        collect(color, <a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a>, 0);</div>
+<div class="line">        cv::destroyAllWindows();</div>
+<div class="line">        <a id="a23" name="a23"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(10);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// --------------------- 大装甲板收集 ---------------------</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[32m大装甲板\033[0m信息收集即将开始...\n&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;输入 \033[33;1mok\033[0m 来开始收集 &gt;&gt;&gt; &quot;</span>);</div>
+<div class="line">        std::cin &gt;&gt; key_str;</div>
+<div class="line">        <span class="keywordflow">if</span> (key_str != <span class="stringliteral">&quot;ok&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">        collect(color, <a id="_a24" name="_a24"></a><a class="code hl_enumvalue" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a>, collect_num);</div>
+<div class="line">        cv::destroyAllWindows();</div>
+<div class="line">        <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(10);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 训练与分类</span></div>
+<div class="line">        p_svm = cv::ml::SVM::create();</div>
+<div class="line">        p_svm-&gt;setType(cv::ml::SVM::C_SVC);</div>
+<div class="line">        p_svm-&gt;setKernel(cv::ml::SVM::RBF);</div>
+<div class="line">        <span class="keywordflow">if</span> (p_svm-&gt;train(armor_samples, cv::ml::ROW_SAMPLE, armor_responses))</div>
+<div class="line">            p_svm-&gt;save(<span class="stringliteral">&quot;out_armor_size.xml&quot;</span>); <span class="comment">// 导出模型</span></div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            <a class="code hl_define" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(<a id="_a25" name="_a25"></a><a class="code hl_enumvalue" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a>, <span class="stringliteral">&quot;Failed to train the SVM.&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 测试</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;想要进行测试吗？\n&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;输入 \033[33;1mok\033[0m 来进行测试 &gt;&gt;&gt; &quot;</span>);</div>
+<div class="line">        std::cin &gt;&gt; key_str;</div>
+<div class="line">        <span class="keywordflow">if</span> (key_str != <span class="stringliteral">&quot;ok&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        p_svm = cv::ml::SVM::load(model);</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;在键盘上按下一次 \033[33mEsc\033[0m 来暂停，按下两次 \033[33mEsc\033[0m 来退出测试\n&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">while</span> (capture-&gt;read(frame)) {</div>
+<div class="line">        <span class="keyword">auto</span> info = p_detector-&gt;detect(groups, frame, color, <a class="code hl_struct" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a>(), <a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a>());</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;combos = info.combos;</div>
+<div class="line">        <span class="keywordflow">if</span> (!combos.empty()) {</div>
+<div class="line">            <span class="keywordflow">if</span> (combos.size() &gt; 1)</div>
+<div class="line">                <a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;Size of the combos is greater than 1, size = %zu&quot;</span>, combos.size());</div>
+<div class="line">            <span class="keyword">auto</span> p_armor = <a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a>(combos.front());</div>
+<div class="line">            <span class="comment">// 收集数据</span></div>
+<div class="line">            cv::Matx13f test_sample;</div>
+<div class="line">            test_sample(0) = p_armor-&gt;getComboRatio();  <span class="comment">// 装甲板长宽比</span></div>
+<div class="line">            test_sample(1) = p_armor-&gt;getWidthRatio();  <span class="comment">// 灯条宽度比</span></div>
+<div class="line">            test_sample(2) = p_armor-&gt;getLengthRatio(); <span class="comment">// 灯条长度比</span></div>
+<div class="line">            <span class="comment">// 测试</span></div>
+<div class="line">            <span class="keywordtype">float</span> result = p_svm-&gt;predict(test_sample);</div>
+<div class="line">            putText(frame, result == 1 ? <span class="stringliteral">&quot;SMALL&quot;</span> : <span class="stringliteral">&quot;BIG&quot;</span>, cv::Point(20, 50),</div>
+<div class="line">                    cv::FONT_HERSHEY_COMPLEX, 1.0, cv::Scalar(255, 255, 255), 2);</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;corners = p_armor-&gt;corners();</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 4; ++i)</div>
+<div class="line">                line(frame, corners[i], corners[(i + 1) % 4], cv::Scalar(0, 255, 0), 2);</div>
+<div class="line">        }</div>
+<div class="line">        imshow(<span class="stringliteral">&quot;模型测试&quot;</span>, frame);</div>
+<div class="line">        <span class="keywordflow">if</span> (cv::waitKey(wait_time) == 27)</div>
+<div class="line">            <span class="keywordflow">if</span> (cv::waitKey(0) == 27)</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
+<div class="ttc" id="aclassrm_1_1Armor_html_a2f4493aedb4af4b7830218b193535dbf"><div class="ttname"><a href="../../df/d41/classrm_1_1Armor.html#a2f4493aedb4af4b7830218b193535dbf">rm::Armor::cast</a></div><div class="ttdeci">static ptr cast(combo::ptr p_combo)</div><div class="ttdef"><b>定义</b> armor.h:88</div></div>
+<div class="ttc" id="aclassrm_1_1HikCamera_html_a1d95e550e3958c39a1094fffb565b11b"><div class="ttname"><a href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a></div><div class="ttdeci">static std::unique_ptr&lt; HikCamera &gt; make_capture(CameraConfig cfg, std::string_view info=&quot;&quot;)</div><div class="ttdoc">构建 HikCamera 对象</div><div class="ttdef"><b>定义</b> hik_camera.h:65</div></div>
+<div class="ttc" id="aclassrm_1_1HikCamera_html_a3f7d02d346e4c300fe4661c17ee9c455"><div class="ttname"><a href="../../db/d9f/classrm_1_1HikCamera.html#a3f7d02d346e4c300fe4661c17ee9c455">rm::HikCamera::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; HikCamera &gt; ptr</div><div class="ttdef"><b>定义</b> hik_camera.h:40</div></div>
+<div class="ttc" id="aclassrm_1_1Timer_html_ad2681cbe206911a68e6b98f07dac26a4"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a></div><div class="ttdeci">static void sleep_for(double t)</div><div class="ttdoc">当前线程休眠指定时间</div></div>
+<div class="ttc" id="aclassrm_1_1Timer_html_adb9e4469df8553941079196a74753f85"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85">rm::Timer::now</a></div><div class="ttdeci">static double now()</div><div class="ttdoc">返回从构造初期到现在经过的时间（单位：ms）</div></div>
+<div class="ttc" id="agroup__algorithm__pretreat_html_ga0c0d16290797cbf7399f9bedf3784e34"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#ga0c0d16290797cbf7399f9bedf3784e34">rm::PixChannel</a></div><div class="ttdeci">PixChannel</div><div class="ttdoc">像素通道枚举</div><div class="ttdef"><b>定义</b> pretreat.hpp:36</div></div>
+<div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469">rm::RED</a></div><div class="ttdeci">@ RED</div><div class="ttdoc">红色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:39</div></div>
+<div class="ttc" id="agroup__algorithm__pretreat_html_gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be"><div class="ttname"><a href="../../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be">rm::BLUE</a></div><div class="ttdeci">@ BLUE</div><div class="ttdoc">蓝色通道</div><div class="ttdef"><b>定义</b> pretreat.hpp:37</div></div>
+<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:54</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:108</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:107</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_MANUAL_EXPOSURE</div><div class="ttdoc">手动曝光</div><div class="ttdef"><b>定义</b> camutils.hpp:99</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_EXPOSURE</div><div class="ttdoc">曝光值</div><div class="ttdef"><b>定义</b> camutils.hpp:103</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a></div><div class="ttdeci">@ CAMERA_MANUAL_WB</div><div class="ttdoc">手动白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:102</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a></div><div class="ttdeci">@ CAMERA_WB_RGAIN</div><div class="ttdoc">白平衡红色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:106</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>定义</b> camutils.hpp:104</div></div>
+<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:36</div></div>
+<div class="ttc" id="agroup__combo__armor_html_ga4c8a071e633e74da2404d335e8e62bb7"><div class="ttname"><a href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">rm::ArmorSizeType</a></div><div class="ttdeci">ArmorSizeType</div><div class="ttdoc">装甲板大小类型</div><div class="ttdef"><b>定义</b> armor.h:30</div></div>
+<div class="ttc" id="agroup__combo__armor_html_gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7"><div class="ttname"><a href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7">rm::ArmorSizeType::SMALL</a></div><div class="ttdeci">@ SMALL</div><div class="ttdoc">小装甲板</div><div class="ttdef"><b>定义</b> armor.h:32</div></div>
+<div class="ttc" id="agroup__combo__armor_html_gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139"><div class="ttname"><a href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7aa60c6c694491d75b439073b8cb05b139">rm::ArmorSizeType::BIG</a></div><div class="ttdeci">@ BIG</div><div class="ttdoc">大装甲板</div><div class="ttdef"><b>定义</b> armor.h:33</div></div>
+<div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>定义</b> util.hpp:35</div></div>
+<div class="ttc" id="agroup__core_html_gaf280cef1ac39cc635210419c6aa9e8dd"><div class="ttname"><a href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a></div><div class="ttdeci">#define RMVL_Error(code, msg)</div><div class="ttdoc">调用错误处理程序</div><div class="ttdef"><b>定义</b> util.hpp:200</div></div>
+<div class="ttc" id="agroup__core_html_ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7"><div class="ttname"><a href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7">RMVL_StsBadSize</a></div><div class="ttdeci">@ RMVL_StsBadSize</div><div class="ttdoc">数组大小不正确 Incorrect size of the array</div><div class="ttdef"><b>定义</b> util.hpp:80</div></div>
+<div class="ttc" id="agroup__core_html_ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24"><div class="ttname"><a href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a></div><div class="ttdeci">@ RMVL_StsError</div><div class="ttdoc">未指定（未知）错误 Unspecified (Unknown) error</div><div class="ttdef"><b>定义</b> util.hpp:77</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+<div class="ttc" id="astructrm_1_1CameraConfig_html_a1a285fd4742e8ced4907f83d520c943b"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args &amp;&amp;...modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:72</div></div>
+<div class="ttc" id="astructrm_1_1ImuData_html"><div class="ttname"><a href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></div><div class="ttdoc">IMU 数据</div><div class="ttdef"><b>定义</b> util.hpp:49</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 进程间通信</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">进程间通信 <div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供跨平台的同步异步 <b>命名管道</b> 、 <b>消息队列</b> 以及 <b>共享内存</b> 的通信功能  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+进程间通信 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d63/group__io__ipc.svg" width="280" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3APipeServer" id="r_rm_3A_3APipeServer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名管道服务端  <a href="../../da/d82/classrm_1_1PipeServer.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3APipeClient" id="r_rm_3A_3APipeClient"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classrm_1_1PipeClient.html">rm::PipeClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">命名管道客户端  <a href="../../d8/d8c/classrm_1_1PipeClient.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AMqServer" id="r_rm_3A_3AMqServer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">rm::MqServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列服务端  <a href="../../d4/d88/classrm_1_1MqServer.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AMqClient" id="r_rm_3A_3AMqClient"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d5a/classrm_1_1MqClient.html">rm::MqClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列客户端  <a href="../../d4/d5a/classrm_1_1MqClient.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ASHMBase" id="r_rm_3A_3ASHMBase"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8b/classrm_1_1SHMBase.html">rm::SHMBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享内存对象基类  <a href="../../d5/d8b/classrm_1_1SHMBase.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AAtomicSHM_3C_20T_2C_20typename_20_3E" id="r_rm_3A_3AAtomicSHM_3C_20T_2C_20typename_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd5/classrm_1_1AtomicSHM.html">rm::AtomicSHM&lt; T, typename &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPMC 原子共享内存对象  <a href="../../da/dd5/classrm_1_1AtomicSHM.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3ARingBufferSlotSHM_3C_20T_2C_20Capacity_2C_20typename_20_3E" id="r_rm_3A_3ARingBufferSlotSHM_3C_20T_2C_20Capacity_2C_20typename_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">rm::RingBufferSlotSHM&lt; T, Capacity, typename &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于共享内存的无锁 MPMC（多生产者多消费者）环形缓冲区  <a href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3APipeServer" id="r_rm_3A_3Aasync_3A_3APipeServer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">rm::async::PipeServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步命名管道服务端  <a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Aasync_3A_3APipeClient" id="r_rm_3A_3Aasync_3A_3APipeClient"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/classrm_1_1async_1_1PipeClient.html">rm::async::PipeClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步命名管道客户端  <a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gaa5e56db45633b1f96a1b9a33a259f3b4" id="r_gaa5e56db45633b1f96a1b9a33a259f3b4"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gaa5e56db45633b1f96a1b9a33a259f3b4 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa5e56db45633b1f96a1b9a33a259f3b4">rm::RingBufferSlotSHM2</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 2&gt;</td></tr>
+<tr class="memdesc:gaa5e56db45633b1f96a1b9a33a259f3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+<tr class="memitem:gaa6747b22d72fb8cb87a04b8d07c301be" id="r_gaa6747b22d72fb8cb87a04b8d07c301be"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gaa6747b22d72fb8cb87a04b8d07c301be template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6747b22d72fb8cb87a04b8d07c301be">rm::RingBufferSlotSHM4</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 4&gt;</td></tr>
+<tr class="memdesc:gaa6747b22d72fb8cb87a04b8d07c301be"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+<tr class="memitem:ga02c76381e836054e5ad1bb798be9d430" id="r_ga02c76381e836054e5ad1bb798be9d430"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga02c76381e836054e5ad1bb798be9d430 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga02c76381e836054e5ad1bb798be9d430">rm::RingBufferSlotSHM8</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 8&gt;</td></tr>
+<tr class="memdesc:ga02c76381e836054e5ad1bb798be9d430"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+<tr class="memitem:gac43ca7a29780ea113bd2f41c93379fa5" id="r_gac43ca7a29780ea113bd2f41c93379fa5"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gac43ca7a29780ea113bd2f41c93379fa5 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac43ca7a29780ea113bd2f41c93379fa5">rm::RingBufferSlotSHM16</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 16&gt;</td></tr>
+<tr class="memdesc:gac43ca7a29780ea113bd2f41c93379fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+<tr class="memitem:ga06da4228d835a13bf3e2f13674abece0" id="r_ga06da4228d835a13bf3e2f13674abece0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga06da4228d835a13bf3e2f13674abece0 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga06da4228d835a13bf3e2f13674abece0">rm::RingBufferSlotSHM32</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 32&gt;</td></tr>
+<tr class="memdesc:ga06da4228d835a13bf3e2f13674abece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">32 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+<tr class="memitem:ga77102d4cd1060b69645484542bf5bfe0" id="r_ga77102d4cd1060b69645484542bf5bfe0"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga77102d4cd1060b69645484542bf5bfe0 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga77102d4cd1060b69645484542bf5bfe0">rm::RingBufferSlotSHM64</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 64&gt;</td></tr>
+<tr class="memdesc:ga77102d4cd1060b69645484542bf5bfe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">64 槽位共享内存无锁环形缓冲区  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<p>提供跨平台的同步异步 <b>命名管道</b> 、 <b>消息队列</b> 以及 <b>共享内存</b> 的通信功能 </p>
+<p>进程间通信（Inter-Process Communication, IPC）是指在不同进程之间传递数据和消息的机制。常见的 IPC 方式包括命名管道（Named Pipes）、消息队列（Message Queues）和共享内存（Shared Memory）。本模块提供了跨平台的 IPC 功能，支持同步和异步操作，方便开发者在多进程应用中实现高效的数据交换与协作。</p>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="gac43ca7a29780ea113bd2f41c93379fa5" name="gac43ca7a29780ea113bd2f41c93379fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac43ca7a29780ea113bd2f41c93379fa5">&#9670;&#160;</a></span>RingBufferSlotSHM16</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gac43ca7a29780ea113bd2f41c93379fa5">rm::RingBufferSlotSHM16</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 16&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>16 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa5e56db45633b1f96a1b9a33a259f3b4" name="gaa5e56db45633b1f96a1b9a33a259f3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5e56db45633b1f96a1b9a33a259f3b4">&#9670;&#160;</a></span>RingBufferSlotSHM2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaa5e56db45633b1f96a1b9a33a259f3b4">rm::RingBufferSlotSHM2</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 2&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>2 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga06da4228d835a13bf3e2f13674abece0" name="ga06da4228d835a13bf3e2f13674abece0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06da4228d835a13bf3e2f13674abece0">&#9670;&#160;</a></span>RingBufferSlotSHM32</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga06da4228d835a13bf3e2f13674abece0">rm::RingBufferSlotSHM32</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 32&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>32 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa6747b22d72fb8cb87a04b8d07c301be" name="gaa6747b22d72fb8cb87a04b8d07c301be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6747b22d72fb8cb87a04b8d07c301be">&#9670;&#160;</a></span>RingBufferSlotSHM4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaa6747b22d72fb8cb87a04b8d07c301be">rm::RingBufferSlotSHM4</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 4&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>4 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga77102d4cd1060b69645484542bf5bfe0" name="ga77102d4cd1060b69645484542bf5bfe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77102d4cd1060b69645484542bf5bfe0">&#9670;&#160;</a></span>RingBufferSlotSHM64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga77102d4cd1060b69645484542bf5bfe0">rm::RingBufferSlotSHM64</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 64&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>64 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga02c76381e836054e5ad1bb798be9d430" name="ga02c76381e836054e5ad1bb798be9d430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02c76381e836054e5ad1bb798be9d430">&#9670;&#160;</a></span>RingBufferSlotSHM8</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga02c76381e836054e5ad1bb798be9d430">rm::RingBufferSlotSHM8</a> = <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html">RingBufferSlotSHM</a>&lt;T, 8&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+
+<p>8 槽位共享内存无锁环形缓冲区 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>共享数据类型，必须是可平凡复制类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 传输层设施 —— Socket</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">传输层设施 —— Socket </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md337">1 Socket 基础 </a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md338">2 用法 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md339">2.1 同步阻塞 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md340">2.2 异步非阻塞 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md341">2.3 Socket 控制选项 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2socket"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025/09/25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d4/d7a/tutorial_modules_netapp.html">网络、应用层设施</a> <br  />
+</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md337"></a>
+1 Socket 基础</h1>
+<p>Socket 是网络通信的基本操作单元，提供了应用层与传输层之间的接口。Socket 可以分为多种类型，最常见的有流式套接字（TCP）和数据报套接字（UDP）。RMVL 提供了跨平台的 Socket 实现，并提供了协程支持，Windows 下基于 Winsock2 实现，Linux 下基于 BSD Socket 实现。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
+2 用法</h1>
+<p>相关类：</p>
+<ul>
+<li>同步：<ul>
+<li>流式 <a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html" title="由 rm::Acceptor 或 rm::Connector 建立的流式 Socket 会话">rm::StreamSocket</a> 以及 <a class="el" href="../../dd/df8/classrm_1_1Acceptor.html" title="Socket 接受器">rm::Acceptor</a> 和 <a class="el" href="../../de/ddb/classrm_1_1Connector.html" title="Socket 连接器">rm::Connector</a></li>
+<li>数据报式 <a class="el" href="../../d0/d75/classrm_1_1DgramSocket.html" title="由 rm::Listener 或 rm::Sender 建立的数据报式 Socket 会话">rm::DgramSocket</a> 以及 <a class="el" href="../../df/d96/classrm_1_1Sender.html" title="同步数据报式 Socket 发送器">rm::Sender</a> 和 <a class="el" href="../../d5/dcd/classrm_1_1Listener.html" title="同步数据报式 Socket 监听器">rm::Listener</a></li>
+</ul>
+</li>
+<li>异步：<ul>
+<li>流式 <a class="el" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html" title="由 rm::async::Acceptor 建立的流式 Socket 异步会话">rm::async::StreamSocket</a> 以及 <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步流式 Socket 接受器">rm::async::Acceptor</a> 和 <a class="el" href="../../df/d95/classrm_1_1async_1_1Connector.html" title="异步流式 Socket 连接器">rm::async::Connector</a></li>
+<li>数据报式 <a class="el" href="../../d4/d37/classrm_1_1async_1_1DgramSocket.html" title="由 rm::async::Listener 建立的数据报式 Socket 异步会话">rm::async::DgramSocket</a> 以及 <a class="el" href="../../d2/d2a/classrm_1_1async_1_1Sender.html" title="异步数据报式 Socket 发送器">rm::async::Sender</a> 和 <a class="el" href="../../d4/d9f/classrm_1_1async_1_1Listener.html" title="异步数据报式 Socket 监听器">rm::async::Listener</a></li>
+</ul>
+</li>
+</ul>
+<p>一般工程使用中，对于流式 Socket 推荐客户端使用<span style="color: red">同步阻塞</span>方式进行通信，服务端使用<span style="color: red">异步非阻塞</span>方式进行通信，以兼顾高并发性能。对于数据报式 Socket，则根据具体需求选择同步或异步方式，例如在多播场景下，使用同步阻塞的 Listener 和 Sender 即可实现绝大部分功能。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
+2.1 同步阻塞</h2>
+<p>下面展示了流式 Socket 的同步阻塞用法。</p>
+<p><b>服务端</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/socket.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../dd/df8/classrm_1_1Acceptor.html">Acceptor</a> acceptor(<a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>(<a class="code hl_function" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">ip::tcp::v4</a>(), 8080));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 阻塞的等待客户端连接</span></div>
+<div class="line">    <span class="keyword">auto</span> socket = acceptor.accept();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 读取数据</span></div>
+<div class="line">    std::string request = socket.read();</div>
+<div class="line">    <span class="keywordflow">if</span> (request.empty()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Read failed\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, request.c_str());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 发送响应</span></div>
+<div class="line">    <span class="keywordtype">bool</span> success = socket.write(<span class="stringliteral">&quot;response&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!success) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Write failed\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Acceptor_html"><div class="ttname"><a href="../../dd/df8/classrm_1_1Acceptor.html">rm::Acceptor</a></div><div class="ttdoc">Socket 接受器</div><div class="ttdef"><b>定义</b> socket.hpp:540</div></div>
+<div class="ttc" id="aclassrm_1_1Endpoint_html"><div class="ttname"><a href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></div><div class="ttdoc">端点</div><div class="ttdef"><b>定义</b> socket.hpp:275</div></div>
+<div class="ttc" id="anamespacerm_1_1ip_1_1tcp_html_a4e4df5dcb3080621b854153ed695bf47"><div class="ttname"><a href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">rm::ip::tcp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 TCP 协议</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --><p><b>客户端</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/socket.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../de/ddb/classrm_1_1Connector.html">Connector</a> connector(<a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>(<a class="code hl_function" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">ip::tcp::v4</a>(), 8080), <span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> socket = connector.connect();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 发送请求</span></div>
+<div class="line">    <span class="keywordtype">bool</span> success = socket.write(<span class="stringliteral">&quot;request&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!success) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Write failed\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 读取响应</span></div>
+<div class="line">    std::string response = socket.read();</div>
+<div class="line">    <span class="keywordflow">if</span> (response.empty()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Read failed\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, response.c_str());</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Connector_html"><div class="ttname"><a href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></div><div class="ttdoc">Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:580</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
+2.2 异步非阻塞</h2>
+<p>下面展示了流式 Socket 的异步非阻塞用法。</p>
+<p><b>服务端</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/socket.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> session(<a class="code hl_class" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">async::StreamSocket</a> socket) {</div>
+<div class="line">    <span class="comment">// 读取数据</span></div>
+<div class="line">    std::string request = <span class="keyword">co_await</span> socket.<a class="code hl_function" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#a6317bfabdbcb3e5db24a2f0458bdde1c">read</a>();</div>
+<div class="line">    <span class="keywordflow">if</span> (request.empty()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Read failed\n&quot;</span>);</div>
+<div class="line">        <span class="keyword">co_return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, request.c_str());</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 发送响应</span></div>
+<div class="line">    <span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> socket.<a class="code hl_function" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#af8ffbf887efc2db45b0534dfe41ffb9d">write</a>(<span class="stringliteral">&quot;response&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!success) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Write failed\n&quot;</span>);</div>
+<div class="line">        <span class="keyword">co_return</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
+<div class="line">    <a class="code hl_class" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">async::Acceptor</a> acceptor(io_context, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>(<a class="code hl_function" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">ip::tcp::v4</a>(), 8080));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 异步等待客户端连接</span></div>
+<div class="line">    <a class="code hl_function" href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">co_spawn</a>(io_context, [&amp;]() -&gt; <a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> {</div>
+<div class="line">        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">            <span class="keyword">auto</span> socket = <span class="keyword">co_await</span> acceptor.accept();</div>
+<div class="line">            <span class="comment">// 为每个连接启动一个协程任务</span></div>
+<div class="line">            <a class="code hl_function" href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">co_spawn</a>(io_context, session, std::move(socket));</div>
+<div class="line">        }</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
+<div class="line"> </div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1Acceptor_html"><div class="ttname"><a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">rm::async::Acceptor</a></div><div class="ttdoc">异步流式 Socket 接受器</div><div class="ttdef"><b>定义</b> socket.hpp:868</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1StreamSocket_html"><div class="ttname"><a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">rm::async::StreamSocket</a></div><div class="ttdoc">由 rm::async::Acceptor 建立的流式 Socket 异步会话</div><div class="ttdef"><b>定义</b> socket.hpp:778</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1StreamSocket_html_a6317bfabdbcb3e5db24a2f0458bdde1c"><div class="ttname"><a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#a6317bfabdbcb3e5db24a2f0458bdde1c">rm::async::StreamSocket::read</a></div><div class="ttdeci">SocketReadAwaiter read()</div><div class="ttdoc">异步读取已连接的 Socket 中的数据</div><div class="ttdef"><b>定义</b> socket.hpp:820</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1StreamSocket_html_af8ffbf887efc2db45b0534dfe41ffb9d"><div class="ttname"><a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#af8ffbf887efc2db45b0534dfe41ffb9d">rm::async::StreamSocket::write</a></div><div class="ttdeci">SocketWriteAwaiter write(std::string_view data)</div><div class="ttdoc">异步写入数据到已连接的 Socket 中</div><div class="ttdef"><b>定义</b> socket.hpp:853</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:146</div></div>
+<div class="ttc" id="agroup__io_html_ga08c67d225a099f14d0fa9b2082e41030"><div class="ttname"><a href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:265</div></div>
+</div><!-- fragment --><p><b>客户端</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/socket.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> session(<a class="code hl_class" href="../../df/d95/classrm_1_1async_1_1Connector.html">async::Connector</a> &amp;connector) {</div>
+<div class="line">    <span class="keyword">auto</span> socket = <span class="keyword">co_await</span> connector.<a class="code hl_function" href="../../df/d95/classrm_1_1async_1_1Connector.html#a42ba64c0e88a51dd14dc0ed32c0022fa">connect</a>();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 发送请求</span></div>
+<div class="line">    <span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> socket.<a class="code hl_function" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#af8ffbf887efc2db45b0534dfe41ffb9d">write</a>(<span class="stringliteral">&quot;request&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!success) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Write failed\n&quot;</span>);</div>
+<div class="line">        <span class="keyword">co_return</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 读取响应</span></div>
+<div class="line">     std::string response = <span class="keyword">co_await</span> socket.<a class="code hl_function" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html#a6317bfabdbcb3e5db24a2f0458bdde1c">read</a>();</div>
+<div class="line">    <span class="keywordflow">if</span> (response.empty()) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Read failed\n&quot;</span>);</div>
+<div class="line">        <span class="keyword">co_return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, response.c_str());</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
+<div class="line">    <a class="code hl_class" href="../../df/d95/classrm_1_1async_1_1Connector.html">async::Connector</a> connector(io_context, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>(<a class="code hl_function" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">ip::tcp::v4</a>(), 8080), <span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">co_spawn</a>(io_context, session, std::ref(connector));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 此处可以使用 co_spawn 注册其他 I/O 任务</span></div>
+<div class="line"> </div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1Connector_html"><div class="ttname"><a href="../../df/d95/classrm_1_1async_1_1Connector.html">rm::async::Connector</a></div><div class="ttdoc">异步流式 Socket 连接器</div><div class="ttdef"><b>定义</b> socket.hpp:918</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Connector_html_a42ba64c0e88a51dd14dc0ed32c0022fa"><div class="ttname"><a href="../../df/d95/classrm_1_1async_1_1Connector.html#a42ba64c0e88a51dd14dc0ed32c0022fa">rm::async::Connector::connect</a></div><div class="ttdeci">ConnectAwaiter connect()</div><div class="ttdoc">异步连接</div><div class="ttdef"><b>定义</b> socket.hpp:957</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md341"></a>
+2.3 Socket 控制选项</h2>
+<p>Socket 类提供了一些控制选项，用于配置 Socket 的行为，例如设置监听方的多播选项等</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> reader = <a class="code hl_class" href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">ip::udp::v4</a>(), 8080);</div>
+<div class="line"><span class="comment">// 加入多播组</span></div>
+<div class="line">reader.setOption(<a class="code hl_class" href="../../de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html">ip::multicast::JoinGroup</a>(<span class="stringliteral">&quot;224.0.0.1&quot;</span>));</div>
+<div class="line"><span class="comment">// 启用多播环回</span></div>
+<div class="line">reader.setOption(<a class="code hl_class" href="../../d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html">ip::multicast::Loopback</a>(<span class="keyword">true</span>));</div>
+<div class="ttc" id="aclassrm_1_1Listener_html"><div class="ttname"><a href="../../d5/dcd/classrm_1_1Listener.html">rm::Listener</a></div><div class="ttdoc">同步数据报式 Socket 监听器</div><div class="ttdef"><b>定义</b> socket.hpp:444</div></div>
+<div class="ttc" id="aclassrm_1_1ip_1_1multicast_1_1JoinGroup_html"><div class="ttname"><a href="../../de/d7a/classrm_1_1ip_1_1multicast_1_1JoinGroup.html">rm::ip::multicast::JoinGroup</a></div><div class="ttdoc">加入多播组控制选项</div><div class="ttdef"><b>定义</b> socket.hpp:143</div></div>
+<div class="ttc" id="aclassrm_1_1ip_1_1multicast_1_1Loopback_html"><div class="ttname"><a href="../../d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html">rm::ip::multicast::Loopback</a></div><div class="ttdoc">多播环回控制选项</div><div class="ttdef"><b>定义</b> socket.hpp:128</div></div>
+<div class="ttc" id="anamespacerm_1_1ip_1_1udp_html_aa8aad4c3ffaff4a1fd14ceaf137bdde9"><div class="ttname"><a href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 UDP 协议</div></div>
+</div><!-- fragment --><p>以及发送方的多播选项</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> writer = <a class="code hl_class" href="../../df/d96/classrm_1_1Sender.html">rm::Sender</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">ip::udp::v4</a>());</div>
+<div class="line"><span class="comment">// 设置多播接口</span></div>
+<div class="line">writer.setOption(<a class="code hl_class" href="../../dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html">ip::multicast::Interface</a>(<span class="stringliteral">&quot;192.168.1.100&quot;</span>));</div>
+<div class="ttc" id="aclassrm_1_1Sender_html"><div class="ttname"><a href="../../df/d96/classrm_1_1Sender.html">rm::Sender</a></div><div class="ttdoc">同步数据报式 Socket 发送器</div><div class="ttdef"><b>定义</b> socket.hpp:404</div></div>
+<div class="ttc" id="aclassrm_1_1ip_1_1multicast_1_1Interface_html"><div class="ttname"><a href="../../dd/dd7/classrm_1_1ip_1_1multicast_1_1Interface.html">rm::ip::multicast::Interface</a></div><div class="ttdoc">Outbound 多播接口设置选项</div><div class="ttdef"><b>定义</b> socket.hpp:108</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 串口通信模块</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">串口通信模块 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md330">1 简介 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md331">2 同步模式使用 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md332">2.1 初始化 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md333">2.2 数据 I/O </a>
+          </li>
+          <li class="level3">
+            <a href="#serial_protocol">2.3 链路层协议 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md334">2.4 用法 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md335">3 异步模式使用 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>串口通信模块使用教程</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2serial"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025/09/25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d4/d00/tutorial_modules_ipc.html">进程间通信设施 —— IPC</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d2/d5d/tutorial_modules_socket.html">传输层设施 —— Socket</a> <br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 及 <a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a></p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md330"></a>
+1 简介</h2>
+<p>串口通信是一种通过串行数据传输进行通信的方式。它使用串行接口将数据以逐位的方式进行传输，常用于连接计算机与外部设备、嵌入式系统之间的数据传输。</p>
+<p>串口通信一般涉及两个主要概念： <b>串口</b> 和 <b>波特率</b> 。</p>
+<ul>
+<li>串口：指的是通信中的物理接口，常见的有 <span class="tt">RS-232</span>、<span class="tt">RS-485</span>、<span class="tt">UART</span> 等标准。每个串口都有相应的引脚用于发送和接收数据以及控制信号。</li>
+<li>波特率：也称作数据传输速率，指的是每秒钟传输的位数。波特率决定了传输速度的快慢，通常使用常见的波特率如 9600、115200 等。</li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md331"></a>
+2 同步模式使用</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md332"></a>
+2.1 初始化</h3>
+<p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 的构造函数原型如下</p>
+<div class="fragment"><div class="line">SerialPort(std::string_view device, BaudRate baud_rate, SerialReadMode read_mode = {});</div>
+</div><!-- fragment --><div class="full_width_table"></div><div class="full_width_table"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">参数  </th><th class="markdownTableHeadCenter">含义  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><span class="tt">device</span>  </td><td class="markdownTableBodyCenter">设备名，在 Windows 上一般是 <span class="tt">COMx</span>，Linux 上一般为 <span class="tt">ttyUSBx</span> 或 <span class="tt">ttyACMx</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><span class="tt">baud_rate</span>  </td><td class="markdownTableBodyCenter">波特率  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><span class="tt">read_mode</span>  </td><td class="markdownTableBodyCenter">读取模式，表示阻塞与非阻塞， <a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a> 不提供该参数  </td></tr>
+</table>
+</div><div class="full_width_table"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md333"></a>
+2.2 数据 I/O</h3>
+<p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 提供了极其方便的串口读取、写入的接口。</p>
+<h5>读取函数原型</h5>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> read(uint8_t head, uint8_t tail, AggregateT &amp;data); <span class="comment">// (1) 指定头尾帧的读取结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> read(AggregateT &amp;data);                             <span class="comment">// (2) 读取结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keywordtype">bool</span> read(std::string &amp;data);                            <span class="comment">// (3) 读取字符串数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateOrStringT&gt;</div>
+<div class="line">SerialPort &amp;operator&gt;&gt;(AggregateOrStringT &amp;data);        <span class="comment">// (4) 串口读取操作符重载</span></div>
+</div><!-- fragment --><h5>写入函数原型</h5>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateT&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> write(<span class="keyword">const</span> AggregateT &amp;data);                      <span class="comment">// (5) 写入结构化数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keywordtype">bool</span> write(std::string_view data);                       <span class="comment">// (6) 写入字符串数据</span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AggregateOrStringT&gt;</div>
+<div class="line">SerialPort &amp;operator&lt;&lt;(<span class="keyword">const</span> AggregateOrStringT &amp;data);  <span class="comment">// (7) 串口写入操作符重载</span></div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>读取、写入的数据 </td></tr>
+    <tr><td class="paramname">head</td><td>帧头 </td></tr>
+    <tr><td class="paramname">tail</td><td>帧尾</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>注解</b></p>
+<div style="margin-left: 40px;">(3) 和 (5) 带有 Python 接口</div><h3 class="doxsection"><a class="anchor" id="serial_protocol"></a>
+2.3 链路层协议</h3>
+<p><b>写数据（视觉端 → 电控端）</b></p>
+<p>SerialPort 的通信协议一般就是指数据链路层的协议，采用封装成帧的方式，由于终端设备输出缓冲区可在写入数据前被清空，因此 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 的 <span class="tt">write</span> 方法不设置任何帧头帧尾。</p>
+<p><b>读数据（电控端 → 视觉端）</b></p>
+<p>而输入缓冲区则会持续收到来自下位机的数据，因此 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 的 <span class="tt">read</span> 方法提供了两个 <span class="tt">uint8_t</span> 类型帧头帧尾的传入参数，下位机发送的数据需要在有效数据包前后设置两个 <span class="tt">uint8_t</span> 的校验位，帧头和帧尾具体的数据可自行设置。</p>
+<p>需要注意的是，在读取数据前需要留意</p>
+<ul>
+<li>协议（结构体）内容</li>
+<li>内存对齐规则，关于内存对齐可使用 <span class="tt">#pragma pack</span> 宏或使用 C++ 标准的 <span class="tt">alignas</span> 关键字</li>
+<li>头尾帧是否一致</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md334"></a>
+2.4 用法</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/serial.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>Data {</div>
+<div class="line">    uint8_t head[4]{};</div>
+<div class="line">    <span class="keywordtype">float</span> x{};</div>
+<div class="line">    <span class="keywordtype">float</span> y{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建串口对象，以非阻塞模式打开 /dev/ttyUSB0，设置波特率为 115200</span></div>
+<div class="line">    <span class="keyword">auto</span> serial = <a class="code hl_class" href="../../d4/d98/classrm_1_1SerialPort.html">SerialPort</a>(<span class="stringliteral">&quot;/dev/ttyUSB0&quot;</span>, <a class="code hl_enumvalue" href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BaudRate::BR_115200</a>, <a class="code hl_enumvalue" href="../../d9/d63/group__io__serial.html#gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">SerialReadMode::NONBLOCK</a>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 1. 字符串读写</span></div>
+<div class="line">    std::string <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a>{};</div>
+<div class="line">    <span class="keywordtype">bool</span> success = serial.read(<a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a>);</div>
+<div class="line">    success = serial.write(<span class="stringliteral">&quot;test string&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 2. 聚合体读写</span></div>
+<div class="line">    Data data{};</div>
+<div class="line">    success = serial.read(data);</div>
+<div class="line">    Data send_data = {1, 2, 3, 4, 1.1f, 2.2f};</div>
+<div class="line">    success = serial.write(send_data);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 3. 带帧头帧尾的聚合体读取</span></div>
+<div class="line">    <span class="comment">// 适合于同步非阻塞模式下大量数据的读取处理</span></div>
+<div class="line">    success = serial.read(0x44, 0x55, data);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1SerialPort_html"><div class="ttname"><a href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></div><div class="ttdoc">同步模式串行接口通信库</div><div class="ttdef"><b>定义</b> serial.hpp:50</div></div>
+<div class="ttc" id="agroup__io__serial_html_gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0"><div class="ttname"><a href="../../d9/d63/group__io__serial.html#gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">rm::SerialReadMode::NONBLOCK</a></div><div class="ttdeci">@ NONBLOCK</div><div class="ttdoc">同步非阻塞模式，即读取数据时不会等待，如果没有数据到来则立即返回 -1</div><div class="ttdef"><b>定义</b> serial.hpp:46</div></div>
+<div class="ttc" id="agroup__io__serial_html_gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a"><div class="ttname"><a href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">rm::BaudRate::BR_115200</a></div><div class="ttdeci">@ BR_115200</div><div class="ttdoc">波特率 115200</div><div class="ttdef"><b>定义</b> serial.hpp:40</div></div>
+<div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md335"></a>
+3 异步模式使用</h2>
+<p><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a> 需要配合 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html" title="异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度">rm::async::IOContext</a> 使用，目前，异步串口仅提供了字符串读写的功能</p>
+<div class="fragment"><div class="line">SerialReadAwaiter read();</div>
+<div class="line"> </div>
+<div class="line">SerialWriteAwaiter write(std::string_view);</div>
+</div><!-- fragment --><p>其中 SerialReadAwaiter 为串口读等待器，相比于 <a class="el" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html" title="通用异步读等待器，核心操作使用文件 I/O 系统调用的 read、ReadFile，使用者可以通过">rm::async::AsyncReadAwaiter</a> 增加了读缓冲区清理的功能。同理，SerialWriteAwaiter 增加了写缓冲区清理的功能。用法如下：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/serial.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> session(<a class="code hl_class" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">async::SerialPort</a> serial) {</div>
+<div class="line">    <span class="comment">// 仅支持字符串读写</span></div>
+<div class="line">    std::string <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a> = <span class="keyword">co_await</span> serial.<a class="code hl_function" href="../../db/d62/classrm_1_1async_1_1SerialPort.html#aafb6aa84ad3dc2f351f8461ec1f95295">read</a>();</div>
+<div class="line">    <span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> serial.<a class="code hl_function" href="../../db/d62/classrm_1_1async_1_1SerialPort.html#aabf05e901e78269eacd8747a73e8c109">write</a>(<span class="stringliteral">&quot;test string&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
+<div class="line">    <a class="code hl_class" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">async::SerialPort</a> serial(io_context, <span class="stringliteral">&quot;/dev/ttyUSB0&quot;</span>, <a class="code hl_enumvalue" href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BaudRate::BR_115200</a>);</div>
+<div class="line"> </div>
+<div class="line">    co_spawn(io_context, session, std::move(serial));</div>
+<div class="line"> </div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1SerialPort_html"><div class="ttname"><a href="../../db/d62/classrm_1_1async_1_1SerialPort.html">rm::async::SerialPort</a></div><div class="ttdoc">异步串行接口通信库，仅支持读写字符串</div><div class="ttdef"><b>定义</b> serial.hpp:182</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1SerialPort_html_aabf05e901e78269eacd8747a73e8c109"><div class="ttname"><a href="../../db/d62/classrm_1_1async_1_1SerialPort.html#aabf05e901e78269eacd8747a73e8c109">rm::async::SerialPort::write</a></div><div class="ttdeci">SerialWriteAwaiter write(std::string_view data)</div><div class="ttdoc">异步写入串口数据</div><div class="ttdef"><b>定义</b> serial.hpp:258</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1SerialPort_html_aafb6aa84ad3dc2f351f8461ec1f95295"><div class="ttname"><a href="../../db/d62/classrm_1_1async_1_1SerialPort.html#aafb6aa84ad3dc2f351f8461ec1f95295">rm::async::SerialPort::read</a></div><div class="ttdeci">SerialReadAwaiter read()</div><div class="ttdoc">异步读取串口数据</div><div class="ttdef"><b>定义</b> serial.hpp:226</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:146</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

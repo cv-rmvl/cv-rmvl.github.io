@@ -1,0 +1,267 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::GyroCompensator类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d9/d2d/classrm_1_1GyroCompensator.html">GyroCompensator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d7/d26/classrm_1_1GyroCompensator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::GyroCompensator类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../d7/d4f/group__compensator.html">补偿模块（功能模块）</a> &raquo; <a class="el" href="../../d3/d06/group__gyro__compensator.html">整车状态估计补偿模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>整车状态补偿模块  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/compensator/gyro_compensator.h&gt;</code></p>
+<div class="dynheader">
+类 rm::GyroCompensator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/dc4/classrm_1_1GyroCompensator__inherit__graph.svg" width="159" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::GyroCompensator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dce/classrm_1_1GyroCompensator__coll__graph.svg" width="159" height="270"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4d706d12a985fb91a215ffe227351b30" id="r_a4d706d12a985fb91a215ffe227351b30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d706d12a985fb91a215ffe227351b30">GyroCompensator</a> ()</td></tr>
+<tr class="memdesc:a4d706d12a985fb91a215ffe227351b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 <a class="el" href="../../d9/d2d/classrm_1_1GyroCompensator.html" title="整车状态补偿模块">GyroCompensator</a> 对象  <br /></td></tr>
+<tr class="memitem:aa37efa7b74e5155e54793eaba449373b" id="r_aa37efa7b74e5155e54793eaba449373b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html">CompensateInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa37efa7b74e5155e54793eaba449373b">compensate</a> (const std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;groups, float shoot_speed, <a class="el" href="../../d7/d4f/group__compensator.html#ga6eb0c54354d1de382a6d3735da2c005c">CompensateType</a> com_flag) override</td></tr>
+<tr class="memdesc:aa37efa7b74e5155e54793eaba449373b"><td class="mdescLeft">&#160;</td><td class="mdescRight">补偿函数，未考虑空气阻力，仅使用抛物线模型 <a class="el" href="../../d0/de3/citelist.html#CITEREF_icra2019">[12]</a>  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1compensator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1compensator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../df/d72/classrm_1_1compensator.html">rm::compensator</a></td></tr>
+<tr class="memitem:ac3365bfdcce985d29c6489974267b6bf inherit pub_methods_classrm_1_1compensator" id="r_ac3365bfdcce985d29c6489974267b6bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d72/classrm_1_1compensator.html#ac3365bfdcce985d29c6489974267b6bf">compensator</a> ()=default</td></tr>
+<tr class="memitem:a9f28a1c57fcd9206605f0467c07c023d inherit pub_methods_classrm_1_1compensator" id="r_a9f28a1c57fcd9206605f0467c07c023d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d72/classrm_1_1compensator.html#a9f28a1c57fcd9206605f0467c07c023d">~compensator</a> ()=default</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a7d83282d064c7327581d248b2ccc23b4" id="r_a7d83282d064c7327581d248b2ccc23b4"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d83282d064c7327581d248b2ccc23b4">make_compensator</a> ()</td></tr>
+<tr class="memdesc:a7d83282d064c7327581d248b2ccc23b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用静态工厂函数创建 <a class="el" href="../../d9/d2d/classrm_1_1GyroCompensator.html" title="整车状态补偿模块">GyroCompensator</a> 对象  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_classrm_1_1compensator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1compensator')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="../../df/d72/classrm_1_1compensator.html">rm::compensator</a></td></tr>
+<tr class="memitem:a83b85a64e4716ba1146cce81c7399c1a inherit pub_types_classrm_1_1compensator" id="r_a83b85a64e4716ba1146cce81c7399c1a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d72/classrm_1_1compensator.html#a83b85a64e4716ba1146cce81c7399c1a">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../df/d72/classrm_1_1compensator.html#ac3365bfdcce985d29c6489974267b6bf">compensator</a>&gt;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>整车状态补偿模块 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a4d706d12a985fb91a215ffe227351b30" name="a4d706d12a985fb91a215ffe227351b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d706d12a985fb91a215ffe227351b30">&#9670;&#160;</a></span>GyroCompensator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::GyroCompensator::GyroCompensator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建 <a class="el" href="../../d9/d2d/classrm_1_1GyroCompensator.html" title="整车状态补偿模块">GyroCompensator</a> 对象 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="aa37efa7b74e5155e54793eaba449373b" name="aa37efa7b74e5155e54793eaba449373b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37efa7b74e5155e54793eaba449373b">&#9670;&#160;</a></span>compensate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html">CompensateInfo</a> rm::GyroCompensator::compensate </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>groups</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>shoot_speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d4f/group__compensator.html#ga6eb0c54354d1de382a6d3735da2c005c">CompensateType</a></td>          <td class="paramname"><span class="paramname"><em>com_flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>补偿函数，未考虑空气阻力，仅使用抛物线模型 <a class="el" href="../../d0/de3/citelist.html#CITEREF_icra2019">[12]</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">groups</td><td>所有序列组 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shoot_speed</td><td>子弹射速 (m/s) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">com_flag</td><td>手动调节补偿标志 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>补偿模块信息 </dd></dl>
+
+<p>实现了 <a class="el" href="../../df/d72/classrm_1_1compensator.html#a22465cc4deedab79ebc3f0c13b4bd9ff">rm::compensator</a>.</p>
+
+</div>
+</div>
+<a id="a7d83282d064c7327581d248b2ccc23b4" name="a7d83282d064c7327581d248b2ccc23b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d83282d064c7327581d248b2ccc23b4">&#9670;&#160;</a></span>make_compensator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::GyroCompensator::make_compensator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用静态工厂函数创建 <a class="el" href="../../d9/d2d/classrm_1_1GyroCompensator.html" title="整车状态补偿模块">GyroCompensator</a> 对象 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

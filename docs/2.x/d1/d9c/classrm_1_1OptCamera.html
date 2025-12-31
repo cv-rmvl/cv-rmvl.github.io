@@ -1,0 +1,402 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.15.0" name="generator"/>
+  <title>RMVL: rm::OptCamera类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script src="../../doxygen-awesome-tabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d1/d9c/classrm_1_1OptCamera.html">OptCamera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../d1/dc9/classrm_1_1OptCamera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::OptCamera类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../dc/d90/group__camera.html">相机模块</a> » <a class="el" href="../../d4/d5d/group__opt__camera.html">奥普特机器视觉 USB3.0/GigE 系列工业相机库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>奥普特机器视觉相机库  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/camera/opt_camera.h&gt;</code></p>
+<div class="dynheader">
+rm::OptCamera 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="216" loading="lazy" scrolling="no" src="../../de/df3/classrm_1_1OptCamera__coll__graph.svg" width="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a0bd2a4729f868e47fb367cfc326edfdb" id="r_a0bd2a4729f868e47fb367cfc326edfdb"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd2a4729f868e47fb367cfc326edfdb">ptr</a> = std::unique_ptr&lt;<a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a>&gt;</td></tr>
+<tr class="memitem:a65cf38ee7a0994ac4724b534d217a32c" id="r_a65cf38ee7a0994ac4724b534d217a32c"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a65cf38ee7a0994ac4724b534d217a32c">const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a148a85fc19416be18b4e394173d70e16" id="r_a148a85fc19416be18b4e394173d70e16"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view handle_info="")</td></tr>
+<tr class="memdesc:a148a85fc19416be18b4e394173d70e16"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../d1/d9c/classrm_1_1OptCamera.html" title="奥普特机器视觉相机库">OptCamera</a> 对象  <br/></td></tr>
+<tr class="memitem:aa6cd2af93a1949a12eadcf0b573e658a" id="r_aa6cd2af93a1949a12eadcf0b573e658a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6cd2af93a1949a12eadcf0b573e658a">load</a> (const para::OptCameraParam &amp;param)</td></tr>
+<tr class="memdesc:aa6cd2af93a1949a12eadcf0b573e658a"><td class="mdescLeft"> </td><td class="mdescRight">加载奥普特相机参数  <br/></td></tr>
+<tr class="memitem:a23ccd190a49c93dadecbe9fbe41496f2" id="r_a23ccd190a49c93dadecbe9fbe41496f2"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a23ccd190a49c93dadecbe9fbe41496f2">set</a> (int prop_id, double value=0.0)</td></tr>
+<tr class="memdesc:a23ccd190a49c93dadecbe9fbe41496f2"><td class="mdescLeft"> </td><td class="mdescRight">设置相机参数、触发相机事件  <br/></td></tr>
+<tr class="memitem:a50e332c292f17bc9fe5b3e8968537f35" id="r_a50e332c292f17bc9fe5b3e8968537f35"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="#a50e332c292f17bc9fe5b3e8968537f35">get</a> (int prop_id) const</td></tr>
+<tr class="memdesc:a50e332c292f17bc9fe5b3e8968537f35"><td class="mdescLeft"> </td><td class="mdescRight">获取相机参数  <br/></td></tr>
+<tr class="memitem:a508cf0639d7ba77360b922a9df1c46fc" id="r_a508cf0639d7ba77360b922a9df1c46fc"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a508cf0639d7ba77360b922a9df1c46fc">isOpened</a> () const</td></tr>
+<tr class="memdesc:a508cf0639d7ba77360b922a9df1c46fc"><td class="mdescLeft"> </td><td class="mdescRight">相机是否已经打开  <br/></td></tr>
+<tr class="memitem:ad3fda65f0d59b2bc770cdfd6b433ce72" id="r_ad3fda65f0d59b2bc770cdfd6b433ce72"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3fda65f0d59b2bc770cdfd6b433ce72">read</a> (cv::OutputArray image)</td></tr>
+<tr class="memdesc:ad3fda65f0d59b2bc770cdfd6b433ce72"><td class="mdescLeft"> </td><td class="mdescRight">从相机设备中读取图像  <br/></td></tr>
+<tr class="memitem:a4f5a8284640af26bafa603ea365cfad9" id="r_a4f5a8284640af26bafa603ea365cfad9"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f5a8284640af26bafa603ea365cfad9">reconnect</a> ()</td></tr>
+<tr class="memdesc:a4f5a8284640af26bafa603ea365cfad9"><td class="mdescLeft"> </td><td class="mdescRight">相机重连  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a329d68cf716a6381ea42afa85bf1d4e3" id="r_a329d68cf716a6381ea42afa85bf1d4e3"><td align="right" class="memItemLeft" valign="top">static std::unique_ptr&lt; <a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a329d68cf716a6381ea42afa85bf1d4e3">make_capture</a> (<a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a> init_mode, std::string_view handle_info="")</td></tr>
+<tr class="memdesc:a329d68cf716a6381ea42afa85bf1d4e3"><td class="mdescLeft"> </td><td class="mdescRight">构建 <a class="el" href="../../d1/d9c/classrm_1_1OptCamera.html" title="奥普特机器视觉相机库">OptCamera</a> 对象  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
+<div class="textblock"><p>奥普特机器视觉相机库 </p>
+</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">成员类型定义说明</h2>
+<a id="a65cf38ee7a0994ac4724b534d217a32c" name="a65cf38ee7a0994ac4724b534d217a32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cf38ee7a0994ac4724b534d217a32c">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a65cf38ee7a0994ac4724b534d217a32c">rm::OptCamera::const_ptr</a> = std::unique_ptr&lt;const <a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a0bd2a4729f868e47fb367cfc326edfdb" name="a0bd2a4729f868e47fb367cfc326edfdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd2a4729f868e47fb367cfc326edfdb">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a0bd2a4729f868e47fb367cfc326edfdb">rm::OptCamera::ptr</a> = std::unique_ptr&lt;<a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">构造及析构函数说明</h2>
+<a id="a148a85fc19416be18b4e394173d70e16" name="a148a85fc19416be18b4e394173d70e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a148a85fc19416be18b4e394173d70e16">◆ </a></span>OptCamera()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::OptCamera::OptCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>handle_info</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera(</td><td class="paramname">init_mode[, handle_info]</td><td>) -&gt; </td><td>&lt;OptCamera object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建 <a class="el" href="../../d1/d9c/classrm_1_1OptCamera.html" title="奥普特机器视觉相机库">OptCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 rm::HandleMode、 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 和 rm::RetrieveMode，如果 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">rm::GrabMode</a> 配置为 <span class="tt"><a class="el" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da3c02a379965ab0dfcd77b1c484450433" title="硬触发">rm::GrabMode::Hardware</a></span>，则需要添加触发通道的配置项，例如 <span class="tt"><a class="el" href="../../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa965c0cc3993772fa0890e4f26c953467" title="通道 1">rm::TriggerChannel::Chn1</a></span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_info</td><td>句柄信息，例如序列号、IP、用户标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" loading="lazy" scrolling="no" src="../../d1/d9c/classrm_1_1OptCamera_a148a85fc19416be18b4e394173d70e16_cgraph.svg" width="198"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">成员函数说明</h2>
+<a id="a50e332c292f17bc9fe5b3e8968537f35" name="a50e332c292f17bc9fe5b3e8968537f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e332c292f17bc9fe5b3e8968537f35">◆ </a></span>get()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::OptCamera::get </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prop_id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera.get(</td><td class="paramname">propId</td><td>) -&gt; </td><td>value</td></tr></table>
+</div><div class="memdoc">
+<p>获取相机参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop_id</td><td>参数编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>参数值 </dd></dl>
+</div>
+</div>
+<a id="a508cf0639d7ba77360b922a9df1c46fc" name="a508cf0639d7ba77360b922a9df1c46fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508cf0639d7ba77360b922a9df1c46fc">◆ </a></span>isOpened()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OptCamera::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera.isOpened(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;opened ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机是否已经打开 </p>
+</div>
+</div>
+<a id="aa6cd2af93a1949a12eadcf0b573e658a" name="aa6cd2af93a1949a12eadcf0b573e658a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6cd2af93a1949a12eadcf0b573e658a">◆ </a></span>load()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::OptCamera::load </td>
+          <td>(</td>
+          <td class="paramtype">const para::OptCameraParam &amp;</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>加载奥普特相机参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>相机参数对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a329d68cf716a6381ea42afa85bf1d4e3" name="a329d68cf716a6381ea42afa85bf1d4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329d68cf716a6381ea42afa85bf1d4e3">◆ </a></span>make_capture()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="#a148a85fc19416be18b4e394173d70e16">OptCamera</a> &gt; rm::OptCamera::make_capture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfa/structrm_1_1CameraConfig.html">CameraConfig</a></td>          <td class="paramname"><span class="paramname"><em>init_mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>handle_info</em></span><span class="paramdefsep"> = </span><span class="paramdefval">""</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>构建 <a class="el" href="../../d1/d9c/classrm_1_1OptCamera.html" title="奥普特机器视觉相机库">OptCamera</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">init_mode</td><td>相机初始化配置模式，需要配置 HandleMode、GrabMode 和 RetrieveMode，如果 <a class="el" href="../../dc/d90/group__camera.html#ga90ca2fddbb5f19ea4dc6f862157be49d" title="相机采集模式">GrabMode</a> 配置为 <span class="tt"><a class="el" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da3c02a379965ab0dfcd77b1c484450433" title="硬触发">GrabMode::Hardware</a></span>，则需要添加触发通道的配置项，例如 <span class="tt"><a class="el" href="../../dc/d90/group__camera.html#ggafd1e51b9b1633d344461f1cb73a26b7aa965c0cc3993772fa0890e4f26c953467" title="通道 1">TriggerChannel::Chn1</a></span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle_info</td><td>句柄信息，例如序列号、IP、用户标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="68" loading="lazy" scrolling="no" src="../../d1/d9c/classrm_1_1OptCamera_a329d68cf716a6381ea42afa85bf1d4e3_cgraph.svg" width="398"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ad3fda65f0d59b2bc770cdfd6b433ce72" name="ad3fda65f0d59b2bc770cdfd6b433ce72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fda65f0d59b2bc770cdfd6b433ce72">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OptCamera::read </td>
+          <td>(</td>
+          <td class="paramtype">cv::OutputArray</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera.read(</td><td class="paramname"></td><td>) -&gt; </td><td>res, img</td></tr></table>
+</div><div class="memdoc">
+<p>从相机设备中读取图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">image</td><td>待读入的图像 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" loading="lazy" scrolling="no" src="../../d1/d9c/classrm_1_1OptCamera_ad3fda65f0d59b2bc770cdfd6b433ce72_cgraph.svg" width="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a4f5a8284640af26bafa603ea365cfad9" name="a4f5a8284640af26bafa603ea365cfad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f5a8284640af26bafa603ea365cfad9">◆ </a></span>reconnect()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OptCamera::reconnect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera.reconnect(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>相机重连 </p>
+<dl class="section return"><dt>返回</dt><dd>是否重连成功 </dd></dl>
+</div>
+</div>
+<a id="a23ccd190a49c93dadecbe9fbe41496f2" name="a23ccd190a49c93dadecbe9fbe41496f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ccd190a49c93dadecbe9fbe41496f2">◆ </a></span>set()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::OptCamera::set </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>prop_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.0</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OptCamera.set(</td><td class="paramname">propId[, value]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>设置相机参数、触发相机事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prop_id</td><td>参数/事件编号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>参数/事件值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否设置成功 </dd></dl>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

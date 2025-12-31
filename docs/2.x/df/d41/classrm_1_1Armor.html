@@ -1,0 +1,803 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.15.0" name="generator"/>
+  <title>RMVL: rm::Armor类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script src="../../doxygen-awesome-tabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/d41/classrm_1_1Armor.html">Armor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../da/d21/classrm_1_1Armor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Armor类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a> » <a class="el" href="../../db/d22/group__combo__armor.html">装甲模块特征组合</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>装甲模块组合特征  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/combo/armor.h&gt;</code></p>
+<div class="dynheader">
+类 rm::Armor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" loading="lazy" scrolling="no" src="../../d3/d97/classrm_1_1Armor__inherit__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::Armor 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" loading="lazy" scrolling="no" src="../../d2/d8f/classrm_1_1Armor__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a62319fe075aa4582f5750d46e9915fbe" id="r_a62319fe075aa4582f5750d46e9915fbe"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../df/d41/classrm_1_1Armor.html">Armor</a>&gt;</td></tr>
+<tr class="memitem:a00e22e82607f5b8aaf39faa2233a30c2" id="r_a00e22e82607f5b8aaf39faa2233a30c2"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../df/d41/classrm_1_1Armor.html">Armor</a>&gt;</td></tr>
+<tr class="inherit_header pub_types_classrm_1_1combo"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1combo')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="../../de/dee/classrm_1_1combo.html">rm::combo</a></td></tr>
+<tr class="memitem:ae108afd463d341245250b4f527961eb9 inherit pub_types_classrm_1_1combo" id="r_ae108afd463d341245250b4f527961eb9"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../de/dee/classrm_1_1combo.html">combo</a>&gt;</td></tr>
+<tr class="memitem:aed29cdc7345ef603e685a99a0586339a inherit pub_types_classrm_1_1combo" id="r_aed29cdc7345ef603e685a99a0586339a"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#aed29cdc7345ef603e685a99a0586339a">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../de/dee/classrm_1_1combo.html">combo</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af1b1d22e40e3bc9683a7c55c34b67917" id="r_af1b1d22e40e3bc9683a7c55c34b67917"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b1d22e40e3bc9683a7c55c34b67917">clone</a> (double <a class="el" href="../../de/dee/classrm_1_1combo.html#aa2d39c4fac7331834505670cdad63410">tick</a>) override</td></tr>
+<tr class="memdesc:af1b1d22e40e3bc9683a7c55c34b67917"><td class="mdescLeft"> </td><td class="mdescRight">从另一个组合体进行构造  <br/></td></tr>
+<tr class="memitem:ab9340ce4013cfaf063ff13877a576174" id="r_ab9340ce4013cfaf063ff13877a576174"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9340ce4013cfaf063ff13877a576174">getComboRatio</a> ()</td></tr>
+<tr class="memdesc:ab9340ce4013cfaf063ff13877a576174"><td class="mdescLeft"> </td><td class="mdescRight">获取组合特征宽高比  <br/></td></tr>
+<tr class="memitem:ab08c9fa51247de4b63d64356eca1cd85" id="r_ab08c9fa51247de4b63d64356eca1cd85"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab08c9fa51247de4b63d64356eca1cd85">getWidthRatio</a> ()</td></tr>
+<tr class="memdesc:ab08c9fa51247de4b63d64356eca1cd85"><td class="mdescLeft"> </td><td class="mdescRight">获取左右灯条宽度的比值  <br/></td></tr>
+<tr class="memitem:a64bbe0d6073bd83ddde1a6fc76bae13b" id="r_a64bbe0d6073bd83ddde1a6fc76bae13b"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bbe0d6073bd83ddde1a6fc76bae13b">getLengthRatio</a> ()</td></tr>
+<tr class="memdesc:a64bbe0d6073bd83ddde1a6fc76bae13b"><td class="mdescLeft"> </td><td class="mdescRight">获取左右灯条长度的比值  <br/></td></tr>
+<tr class="memitem:a435c983ef75c6d99eb18caa1c520a460" id="r_a435c983ef75c6d99eb18caa1c520a460"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="#a435c983ef75c6d99eb18caa1c520a460">getCornerAngle</a> ()</td></tr>
+<tr class="memdesc:a435c983ef75c6d99eb18caa1c520a460"><td class="mdescLeft"> </td><td class="mdescRight">获取左右灯条错位角  <br/></td></tr>
+<tr class="memitem:a7859d5aa504c68532ad4468812283001" id="r_a7859d5aa504c68532ad4468812283001"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7859d5aa504c68532ad4468812283001">getError</a> ()</td></tr>
+<tr class="memdesc:a7859d5aa504c68532ad4468812283001"><td class="mdescLeft"> </td><td class="mdescRight">获取匹配误差  <br/></td></tr>
+<tr class="memitem:a74064d4d9afc36caddcf09155b652aa7" id="r_a74064d4d9afc36caddcf09155b652aa7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a74064d4d9afc36caddcf09155b652aa7">setType</a> (<a class="el" href="../../db/d22/group__combo__armor.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a> stat)</td></tr>
+<tr class="memdesc:a74064d4d9afc36caddcf09155b652aa7"><td class="mdescLeft"> </td><td class="mdescRight">设置机器人类型 <a class="el" href="../../db/d22/group__combo__armor.html#gacd7f1723e9b020d34b5bbc041faaea89" title="机器人类型">RobotType</a>  <br/></td></tr>
+<tr class="memitem:a8b54d9b43a97b6f5a40f539baa1cfe15" id="r_a8b54d9b43a97b6f5a40f539baa1cfe15"><td align="right" class="memItemLeft" valign="top">const cv::Vec2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b54d9b43a97b6f5a40f539baa1cfe15">getPose</a> () const</td></tr>
+<tr class="memdesc:a8b54d9b43a97b6f5a40f539baa1cfe15"><td class="mdescLeft"> </td><td class="mdescRight">获取装甲板姿态法向量  <br/></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1combo"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1combo')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../de/dee/classrm_1_1combo.html">rm::combo</a></td></tr>
+<tr class="memitem:a711954174ea89dcf81d20ce34f342b6f inherit pub_methods_classrm_1_1combo" id="r_a711954174ea89dcf81d20ce34f342b6f"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a711954174ea89dcf81d20ce34f342b6f">height</a> () const</td></tr>
+<tr class="memdesc:a711954174ea89dcf81d20ce34f342b6f inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体高度  <br/></td></tr>
+<tr class="memitem:ac38cbf6d552b489a9520a8a97c7cb455 inherit pub_methods_classrm_1_1combo" id="r_ac38cbf6d552b489a9520a8a97c7cb455"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#ac38cbf6d552b489a9520a8a97c7cb455">width</a> () const</td></tr>
+<tr class="memdesc:ac38cbf6d552b489a9520a8a97c7cb455 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体宽度  <br/></td></tr>
+<tr class="memitem:aec670358cb75cbbc580e3b6ae5c6d043 inherit pub_methods_classrm_1_1combo" id="r_aec670358cb75cbbc580e3b6ae5c6d043"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#aec670358cb75cbbc580e3b6ae5c6d043">angle</a> () const</td></tr>
+<tr class="memdesc:aec670358cb75cbbc580e3b6ae5c6d043 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体角度  <br/></td></tr>
+<tr class="memitem:a05ae219576f0dfb487ca8c762de68683 inherit pub_methods_classrm_1_1combo" id="r_a05ae219576f0dfb487ca8c762de68683"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a05ae219576f0dfb487ca8c762de68683">center</a> () const</td></tr>
+<tr class="memdesc:a05ae219576f0dfb487ca8c762de68683 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体中心点  <br/></td></tr>
+<tr class="memitem:a1a782334dd27722875f3f26328ef36b7 inherit pub_methods_classrm_1_1combo" id="r_a1a782334dd27722875f3f26328ef36b7"><td align="right" class="memItemLeft" valign="top">const std::vector&lt; cv::Point2f &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a1a782334dd27722875f3f26328ef36b7">corners</a> () const</td></tr>
+<tr class="memdesc:a1a782334dd27722875f3f26328ef36b7 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体角点  <br/></td></tr>
+<tr class="memitem:a15615366d0c361476c9a604931ed87fb inherit pub_methods_classrm_1_1combo" id="r_a15615366d0c361476c9a604931ed87fb"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a15615366d0c361476c9a604931ed87fb">corner</a> (int idx) const</td></tr>
+<tr class="memdesc:a15615366d0c361476c9a604931ed87fb inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取指定角点  <br/></td></tr>
+<tr class="memitem:a0ac0ad15a2d3a6bc1dfa9cc0c337597d inherit pub_methods_classrm_1_1combo" id="r_a0ac0ad15a2d3a6bc1dfa9cc0c337597d"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../da/dbf/classrm_1_1CameraExtrinsics.html">CameraExtrinsics</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a0ac0ad15a2d3a6bc1dfa9cc0c337597d">extrinsic</a> () const</td></tr>
+<tr class="memdesc:a0ac0ad15a2d3a6bc1dfa9cc0c337597d inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体相机外参  <br/></td></tr>
+<tr class="memitem:a0dcbd79c52c84dbed01fdd71030a6202 inherit pub_methods_classrm_1_1combo" id="r_a0dcbd79c52c84dbed01fdd71030a6202"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a0dcbd79c52c84dbed01fdd71030a6202">state</a> () const</td></tr>
+<tr class="memdesc:a0dcbd79c52c84dbed01fdd71030a6202 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体状态  <br/></td></tr>
+<tr class="memitem:a9ed12512646ee1528c3e6a87ed1138f7 inherit pub_methods_classrm_1_1combo" id="r_a9ed12512646ee1528c3e6a87ed1138f7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a9ed12512646ee1528c3e6a87ed1138f7">state</a> ()</td></tr>
+<tr class="memdesc:a9ed12512646ee1528c3e6a87ed1138f7 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体状态  <br/></td></tr>
+<tr class="memitem:aa2d39c4fac7331834505670cdad63410 inherit pub_methods_classrm_1_1combo" id="r_aa2d39c4fac7331834505670cdad63410"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#aa2d39c4fac7331834505670cdad63410">tick</a> () const</td></tr>
+<tr class="memdesc:aa2d39c4fac7331834505670cdad63410 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取捕获该组合体的时间点  <br/></td></tr>
+<tr class="memitem:a060263ec08721d73cccb2e0893efc8da inherit pub_methods_classrm_1_1combo" id="r_a060263ec08721d73cccb2e0893efc8da"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a060263ec08721d73cccb2e0893efc8da">getRelativeAngle</a> () const</td></tr>
+<tr class="memdesc:a060263ec08721d73cccb2e0893efc8da inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体的相对目标转角  <br/></td></tr>
+<tr class="memitem:a192bb85b27235741e52b166d87626535 inherit pub_methods_classrm_1_1combo" id="r_a192bb85b27235741e52b166d87626535"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a192bb85b27235741e52b166d87626535">imu</a> () const</td></tr>
+<tr class="memdesc:a192bb85b27235741e52b166d87626535 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体当前的 IMU 数据  <br/></td></tr>
+<tr class="memitem:a598dee68540b167ea70baca72d1a3e4f inherit pub_methods_classrm_1_1combo" id="r_a598dee68540b167ea70baca72d1a3e4f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a598dee68540b167ea70baca72d1a3e4f">at</a> (std::size_t idx)</td></tr>
+<tr class="memdesc:a598dee68540b167ea70baca72d1a3e4f inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取指定特征  <br/></td></tr>
+<tr class="memitem:a7ae4a3179305b849bf2cb090d510a989 inherit pub_methods_classrm_1_1combo" id="r_a7ae4a3179305b849bf2cb090d510a989"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../df/db7/classrm_1_1feature.html#a8f1b9bf143d7baa3360f1e2d0ad2f1be">feature::const_ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a7ae4a3179305b849bf2cb090d510a989">at</a> (std::size_t idx) const</td></tr>
+<tr class="memdesc:a7ae4a3179305b849bf2cb090d510a989 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取指定特征  <br/></td></tr>
+<tr class="memitem:a8373fc6dd1e85ef96ade6777bbf1e024 inherit pub_methods_classrm_1_1combo" id="r_a8373fc6dd1e85ef96ade6777bbf1e024"><td align="right" class="memItemLeft" valign="top">const std::vector&lt; <a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a8373fc6dd1e85ef96ade6777bbf1e024">data</a> () const</td></tr>
+<tr class="memdesc:a8373fc6dd1e85ef96ade6777bbf1e024 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取特征列表数据  <br/></td></tr>
+<tr class="memitem:a624c2081115ab2fc170ab496779d30d8 inherit pub_methods_classrm_1_1combo" id="r_a624c2081115ab2fc170ab496779d30d8"><td align="right" class="memItemLeft" valign="top">std::size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a624c2081115ab2fc170ab496779d30d8">size</a> () const</td></tr>
+<tr class="memdesc:a624c2081115ab2fc170ab496779d30d8 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">获取特征列表大小  <br/></td></tr>
+<tr class="memitem:aee50158d2e5bf793b1400c73d01d4f26 inherit pub_methods_classrm_1_1combo" id="r_aee50158d2e5bf793b1400c73d01d4f26"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#aee50158d2e5bf793b1400c73d01d4f26">empty</a> () const</td></tr>
+<tr class="memdesc:aee50158d2e5bf793b1400c73d01d4f26 inherit pub_methods_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">判断特征列表是否为空  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a7e5007bddd6aae25e69eeb0447dde76d" id="r_a7e5007bddd6aae25e69eeb0447dde76d"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e5007bddd6aae25e69eeb0447dde76d">make_combo</a> (<a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a> p_left, <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a> p_right, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, double <a class="el" href="../../de/dee/classrm_1_1combo.html#aa2d39c4fac7331834505670cdad63410">tick</a>, <a class="el" href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">ArmorSizeType</a> armor_size_type=<a class="el" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">ArmorSizeType::UNKNOWN</a>)</td></tr>
+<tr class="memdesc:a7e5007bddd6aae25e69eeb0447dde76d"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="../../df/d41/classrm_1_1Armor.html" title="装甲模块组合特征">Armor</a> 构造接口  <br/></td></tr>
+<tr class="memitem:a2f4493aedb4af4b7830218b193535dbf" id="r_a2f4493aedb4af4b7830218b193535dbf"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f4493aedb4af4b7830218b193535dbf">cast</a> (<a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> p_combo)</td></tr>
+<tr class="memitem:aed27ae5ce8f6ac38be41428514a8da92" id="r_aed27ae5ce8f6ac38be41428514a8da92"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">const_ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#aed27ae5ce8f6ac38be41428514a8da92">cast</a> (<a class="el" href="../../de/dee/classrm_1_1combo.html#aed29cdc7345ef603e685a99a0586339a">combo::const_ptr</a> p_combo)</td></tr>
+<tr class="memitem:a7ab4bacdacf1a09f0040ccf77dd5db75" id="r_a7ab4bacdacf1a09f0040ccf77dd5db75"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ab4bacdacf1a09f0040ccf77dd5db75">loadSVM</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a7ab4bacdacf1a09f0040ccf77dd5db75"><td class="mdescLeft"> </td><td class="mdescRight">加载 SVM 装甲板大小分类的 *.xml 文件  <br/></td></tr>
+<tr class="memitem:a52d395b722d528337d10213f161fb427" id="r_a52d395b722d528337d10213f161fb427"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a52d395b722d528337d10213f161fb427">imuConvertToCamera</a> (const cv::Matx33f &amp;gyro_rmat, const cv::Vec3f &amp;gyro_tvec, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, cv::Matx33f &amp;cam_rmat, cv::Vec3f &amp;cam_tvec)</td></tr>
+<tr class="memdesc:a52d395b722d528337d10213f161fb427"><td class="mdescLeft"> </td><td class="mdescRight">装甲板相机外参从 IMU 坐标系转化为相机坐标系  <br/></td></tr>
+<tr class="memitem:a937a6ec962f676e342459efb0fb99a45" id="r_a937a6ec962f676e342459efb0fb99a45"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a937a6ec962f676e342459efb0fb99a45">cameraConvertToImu</a> (const cv::Matx33f &amp;cam_rmat, const cv::Vec3f &amp;cam_tvec, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, cv::Matx33f &amp;gyro_rmat, cv::Vec3f &amp;gyro_tvec)</td></tr>
+<tr class="memdesc:a937a6ec962f676e342459efb0fb99a45"><td class="mdescLeft"> </td><td class="mdescRight">装甲板相机外参从相机坐标系转化为 IMU 坐标系  <br/></td></tr>
+<tr class="memitem:a5afe2c2cfe6fe816e5afdebe36965824" id="r_a5afe2c2cfe6fe816e5afdebe36965824"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5afe2c2cfe6fe816e5afdebe36965824">isContainBlob</a> (<a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a> blob, <a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">Armor::ptr</a> armor)</td></tr>
+<tr class="memdesc:a5afe2c2cfe6fe816e5afdebe36965824"><td class="mdescLeft"> </td><td class="mdescRight">判断单个装甲板所在区域内是否包含指定的灯条  <br/></td></tr>
+<tr class="memitem:a57af2840f0a444a32a35277f1e048301" id="r_a57af2840f0a444a32a35277f1e048301"><td align="right" class="memItemLeft" valign="top">static cv::Mat </td><td class="memItemRight" valign="bottom"><a class="el" href="#a57af2840f0a444a32a35277f1e048301">getNumberROI</a> (cv::Mat src, <a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">const_ptr</a> p_armor)</td></tr>
+<tr class="memdesc:a57af2840f0a444a32a35277f1e048301"><td class="mdescLeft"> </td><td class="mdescRight">根据图像中指定装甲板的信息，截取仅包含数字的 ROI  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1combo"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1combo')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../de/dee/classrm_1_1combo.html">rm::combo</a></td></tr>
+<tr class="memitem:a3f293d48074d033976a392b6af76a077 inherit pro_attribs_classrm_1_1combo" id="r_a3f293d48074d033976a392b6af76a077"><td align="right" class="memItemLeft" valign="top">std::vector&lt; <a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">feature::ptr</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a3f293d48074d033976a392b6af76a077">_features</a></td></tr>
+<tr class="memdesc:a3f293d48074d033976a392b6af76a077 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">特征列表  <br/></td></tr>
+<tr class="memitem:a7f5b35b7c8180a9baf6d29bdf02a4cec inherit pro_attribs_classrm_1_1combo" id="r_a7f5b35b7c8180a9baf6d29bdf02a4cec"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a7f5b35b7c8180a9baf6d29bdf02a4cec">_height</a> {}</td></tr>
+<tr class="memdesc:a7f5b35b7c8180a9baf6d29bdf02a4cec inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">高度  <br/></td></tr>
+<tr class="memitem:a34cb5217b65f3de92ab86e193b0f7777 inherit pro_attribs_classrm_1_1combo" id="r_a34cb5217b65f3de92ab86e193b0f7777"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a34cb5217b65f3de92ab86e193b0f7777">_width</a> {}</td></tr>
+<tr class="memdesc:a34cb5217b65f3de92ab86e193b0f7777 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">宽度  <br/></td></tr>
+<tr class="memitem:ac773595a9ef2e49cd5d3f6aeea6af4c9 inherit pro_attribs_classrm_1_1combo" id="r_ac773595a9ef2e49cd5d3f6aeea6af4c9"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#ac773595a9ef2e49cd5d3f6aeea6af4c9">_angle</a> {}</td></tr>
+<tr class="memdesc:ac773595a9ef2e49cd5d3f6aeea6af4c9 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">角度  <br/></td></tr>
+<tr class="memitem:a68a73d70328b6ddf8eea9bb139c045f1 inherit pro_attribs_classrm_1_1combo" id="r_a68a73d70328b6ddf8eea9bb139c045f1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a68a73d70328b6ddf8eea9bb139c045f1">_state</a> {}</td></tr>
+<tr class="memdesc:a68a73d70328b6ddf8eea9bb139c045f1 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">状态  <br/></td></tr>
+<tr class="memitem:ab54ddb536c7f73d654184bf3c0b60450 inherit pro_attribs_classrm_1_1combo" id="r_ab54ddb536c7f73d654184bf3c0b60450"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#ab54ddb536c7f73d654184bf3c0b60450">_center</a></td></tr>
+<tr class="memdesc:ab54ddb536c7f73d654184bf3c0b60450 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">中心点  <br/></td></tr>
+<tr class="memitem:af50431df744ce2323191b23fa978f21e inherit pro_attribs_classrm_1_1combo" id="r_af50431df744ce2323191b23fa978f21e"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#af50431df744ce2323191b23fa978f21e">_relative_angle</a></td></tr>
+<tr class="memdesc:af50431df744ce2323191b23fa978f21e inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">相对目标转角  <br/></td></tr>
+<tr class="memitem:a06f3956d4999110d5b6057338cbc117f inherit pro_attribs_classrm_1_1combo" id="r_a06f3956d4999110d5b6057338cbc117f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a06f3956d4999110d5b6057338cbc117f">_imu_data</a></td></tr>
+<tr class="memdesc:a06f3956d4999110d5b6057338cbc117f inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">当前 IMU 数据  <br/></td></tr>
+<tr class="memitem:a689edad0d5134163d010a6d66e8a058a inherit pro_attribs_classrm_1_1combo" id="r_a689edad0d5134163d010a6d66e8a058a"><td align="right" class="memItemLeft" valign="top">std::vector&lt; cv::Point2f &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a689edad0d5134163d010a6d66e8a058a">_corners</a></td></tr>
+<tr class="memdesc:a689edad0d5134163d010a6d66e8a058a inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">角点  <br/></td></tr>
+<tr class="memitem:afd5ecdf92fb1d5c486664e377d92e582 inherit pro_attribs_classrm_1_1combo" id="r_afd5ecdf92fb1d5c486664e377d92e582"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/dbf/classrm_1_1CameraExtrinsics.html">CameraExtrinsics</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#afd5ecdf92fb1d5c486664e377d92e582">_extrinsic</a></td></tr>
+<tr class="memdesc:afd5ecdf92fb1d5c486664e377d92e582 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">相机外参  <br/></td></tr>
+<tr class="memitem:a5813134dcf5da4fe2079f3f5d83179b7 inherit pro_attribs_classrm_1_1combo" id="r_a5813134dcf5da4fe2079f3f5d83179b7"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dee/classrm_1_1combo.html#a5813134dcf5da4fe2079f3f5d83179b7">_tick</a> {}</td></tr>
+<tr class="memdesc:a5813134dcf5da4fe2079f3f5d83179b7 inherit pro_attribs_classrm_1_1combo"><td class="mdescLeft"> </td><td class="mdescRight">捕获该组合体时的时间点  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
+<div class="textblock"><p>装甲模块组合特征 </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>特征包括 <span class="tt">[0]</span>: 左灯条，<span class="tt">[1]</span>: 右灯条</li>
+<li>角点为 <span class="tt">[0]</span>: 左灯条下顶点，<span class="tt">[1]</span>: 左灯条上顶点，<span class="tt">[2]</span>: 右灯条上顶点，<span class="tt">[3]</span>: 右灯条下顶点 </li>
+</ul>
+</dd></dl>
+</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">成员类型定义说明</h2>
+<a id="a00e22e82607f5b8aaf39faa2233a30c2" name="a00e22e82607f5b8aaf39faa2233a30c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e22e82607f5b8aaf39faa2233a30c2">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">rm::Armor::const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../df/d41/classrm_1_1Armor.html">Armor</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a62319fe075aa4582f5750d46e9915fbe" name="a62319fe075aa4582f5750d46e9915fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62319fe075aa4582f5750d46e9915fbe">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">rm::Armor::ptr</a> = std::shared_ptr&lt;<a class="el" href="../../df/d41/classrm_1_1Armor.html">Armor</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">成员函数说明</h2>
+<a id="a937a6ec962f676e342459efb0fb99a45" name="a937a6ec962f676e342459efb0fb99a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937a6ec962f676e342459efb0fb99a45">◆ </a></span>cameraConvertToImu()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Armor::cameraConvertToImu </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_rmat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_tvec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_rmat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_tvec</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>装甲板相机外参从相机坐标系转化为 IMU 坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cam_rmat</td><td>相机坐标系下的装甲板旋转矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cam_tvec</td><td>相机坐标系下的装甲板平移向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>IMU 数据信息 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">gyro_rmat</td><td>IMU 坐标系下的装甲板旋转矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">gyro_tvec</td><td>IMU 坐标系下的装甲板平移向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="aed27ae5ce8f6ac38be41428514a8da92" name="aed27ae5ce8f6ac38be41428514a8da92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed27ae5ce8f6ac38be41428514a8da92">◆ </a></span>cast() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">const_ptr</a> rm::Armor::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dee/classrm_1_1combo.html#aed29cdc7345ef603e685a99a0586339a">combo::const_ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_combo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a2f4493aedb4af4b7830218b193535dbf" name="a2f4493aedb4af4b7830218b193535dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4493aedb4af4b7830218b193535dbf">◆ </a></span>cast() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">ptr</a> rm::Armor::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_combo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a20">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#a9">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a20">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#a9">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="af1b1d22e40e3bc9683a7c55c34b67917" name="af1b1d22e40e3bc9683a7c55c34b67917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b1d22e40e3bc9683a7c55c34b67917">◆ </a></span>clone()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> rm::Armor::clone </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.clone(</td><td class="paramname">t</td><td>) -&gt; </td><td>&lt;rm.Armor object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>从另一个组合体进行构造 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点，可用 <span class="tt"><a class="el" href="../../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85" title="返回从构造初期到现在经过的时间（单位：ms）">rm::Timer::now()</a></span> 获取 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向新组合体的共享指针 </dd></dl>
+<p>实现了 <a class="el" href="../../de/dee/classrm_1_1combo.html#a574ae395776d322e4afc0644119222d0">rm::combo</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" loading="lazy" scrolling="no" src="../../df/d41/classrm_1_1Armor_af1b1d22e40e3bc9683a7c55c34b67917_cgraph.svg" width="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ab9340ce4013cfaf063ff13877a576174" name="ab9340ce4013cfaf063ff13877a576174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9340ce4013cfaf063ff13877a576174">◆ </a></span>getComboRatio()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::Armor::getComboRatio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getComboRatio(</td><td class="paramname"></td><td>) -&gt; </td><td>ratio</td></tr></table>
+</div><div class="memdoc">
+<p>获取组合特征宽高比 </p>
+</div>
+</div>
+<a id="a435c983ef75c6d99eb18caa1c520a460" name="a435c983ef75c6d99eb18caa1c520a460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435c983ef75c6d99eb18caa1c520a460">◆ </a></span>getCornerAngle()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::Armor::getCornerAngle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getCornerAngle(</td><td class="paramname"></td><td>) -&gt; </td><td>angle</td></tr></table>
+</div><div class="memdoc">
+<p>获取左右灯条错位角 </p>
+</div>
+</div>
+<a id="a7859d5aa504c68532ad4468812283001" name="a7859d5aa504c68532ad4468812283001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7859d5aa504c68532ad4468812283001">◆ </a></span>getError()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::Armor::getError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getError(</td><td class="paramname"></td><td>) -&gt; </td><td>err</td></tr></table>
+</div><div class="memdoc">
+<p>获取匹配误差 </p>
+</div>
+</div>
+<a id="a64bbe0d6073bd83ddde1a6fc76bae13b" name="a64bbe0d6073bd83ddde1a6fc76bae13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bbe0d6073bd83ddde1a6fc76bae13b">◆ </a></span>getLengthRatio()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::Armor::getLengthRatio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getLengthRatio(</td><td class="paramname"></td><td>) -&gt; </td><td>ratio</td></tr></table>
+</div><div class="memdoc">
+<p>获取左右灯条长度的比值 </p>
+</div>
+</div>
+<a id="a57af2840f0a444a32a35277f1e048301" name="a57af2840f0a444a32a35277f1e048301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57af2840f0a444a32a35277f1e048301">◆ </a></span>getNumberROI()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat rm::Armor::getNumberROI </td>
+          <td>(</td>
+          <td class="paramtype">cv::Mat</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a00e22e82607f5b8aaf39faa2233a30c2">const_ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_armor</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>根据图像中指定装甲板的信息，截取仅包含数字的 ROI </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>输入图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_armor</td><td>指定的参考装甲板 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>ROI </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a19">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a19">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="a8b54d9b43a97b6f5a40f539baa1cfe15" name="a8b54d9b43a97b6f5a40f539baa1cfe15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b54d9b43a97b6f5a40f539baa1cfe15">◆ </a></span>getPose()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const cv::Vec2f &amp; rm::Armor::getPose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getPose(</td><td class="paramname"></td><td>) -&gt; </td><td>px, py</td></tr></table>
+</div><div class="memdoc">
+<p>获取装甲板姿态法向量 </p>
+</div>
+</div>
+<a id="ab08c9fa51247de4b63d64356eca1cd85" name="ab08c9fa51247de4b63d64356eca1cd85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08c9fa51247de4b63d64356eca1cd85">◆ </a></span>getWidthRatio()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::Armor::getWidthRatio </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.getWidthRatio(</td><td class="paramname"></td><td>) -&gt; </td><td>ratio</td></tr></table>
+</div><div class="memdoc">
+<p>获取左右灯条宽度的比值 </p>
+</div>
+</div>
+<a id="a52d395b722d528337d10213f161fb427" name="a52d395b722d528337d10213f161fb427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d395b722d528337d10213f161fb427">◆ </a></span>imuConvertToCamera()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Armor::imuConvertToCamera </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_rmat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_tvec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_rmat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_tvec</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>装甲板相机外参从 IMU 坐标系转化为相机坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_rmat</td><td>IMU 坐标系下的装甲板旋转矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_tvec</td><td>IMU 坐标系下的装甲板平移向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>IMU 数据信息 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cam_rmat</td><td>相机坐标系下的装甲板旋转矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cam_tvec</td><td>相机坐标系下的装甲板平移向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a5afe2c2cfe6fe816e5afdebe36965824" name="a5afe2c2cfe6fe816e5afdebe36965824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5afe2c2cfe6fe816e5afdebe36965824">◆ </a></span>isContainBlob()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Armor::isContainBlob </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a></td>          <td class="paramname"><span class="paramname"><em>blob</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">Armor::ptr</a></td>          <td class="paramname"><span class="paramname"><em>armor</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>判断单个装甲板所在区域内是否包含指定的灯条 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">blob</td><td>指定的灯条 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">armor</td><td>单一装甲板 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否包含灯条中心 </dd></dl>
+</div>
+</div>
+<a id="a7ab4bacdacf1a09f0040ccf77dd5db75" name="a7ab4bacdacf1a09f0040ccf77dd5db75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ab4bacdacf1a09f0040ccf77dd5db75">◆ </a></span>loadSVM()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Armor::loadSVM </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.loadSVM(</td><td class="paramname">path</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>加载 SVM 装甲板大小分类的 *.xml 文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>*.xml 文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" loading="lazy" scrolling="no" src="../../df/d41/classrm_1_1Armor_a7ab4bacdacf1a09f0040ccf77dd5db75_cgraph.svg" width="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a7e5007bddd6aae25e69eeb0447dde76d" name="a7e5007bddd6aae25e69eeb0447dde76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5007bddd6aae25e69eeb0447dde76d">◆ </a></span>make_combo()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a62319fe075aa4582f5750d46e9915fbe">ptr</a> rm::Armor::make_combo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/df8/classrm_1_1LightBlob.html#ac0cf095a5503da7133975beb1a35061b">LightBlob::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d22/group__combo__armor.html#ga4c8a071e633e74da2404d335e8e62bb7">ArmorSizeType</a></td>          <td class="paramname"><span class="paramname"><em>armor_size_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3">ArmorSizeType::UNKNOWN</a></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.make_combo(</td><td class="paramname">l, r, imu, t[, type]</td><td>) -&gt; </td><td>&lt;rm.Armor object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p><a class="el" href="../../df/d41/classrm_1_1Armor.html" title="装甲模块组合特征">Armor</a> 构造接口 </p>
+<dl class="section note"><dt>注解</dt><dd>若提供具体的 <span class="tt">armor_size_type</span> 参数，则不进行可行性验证，直接强制构造</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_left</td><td>左灯条共享指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_right</td><td>右灯条共享指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>当前时刻组合特征对应的 IMU 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>捕获组合特征的时间点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">armor_size_type</td><td>需要指定的大小装甲板类型，默认为 <span class="tt"><a class="el" href="../../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a696b031073e74bf2cb98e5ef201d4aa3" title="未知">ArmorSizeType::UNKNOWN</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>若成功，返回 <a class="el" href="../../df/d41/classrm_1_1Armor.html" title="装甲模块组合特征">Armor</a> 的共享指针，否则返回空 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" loading="lazy" scrolling="no" src="../../df/d41/classrm_1_1Armor_a7e5007bddd6aae25e69eeb0447dde76d_cgraph.svg" width="339"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a74064d4d9afc36caddcf09155b652aa7" name="a74064d4d9afc36caddcf09155b652aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74064d4d9afc36caddcf09155b652aa7">◆ </a></span>setType()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Armor::setType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d22/group__combo__armor.html#gacd7f1723e9b020d34b5bbc041faaea89">RobotType</a></td>          <td class="paramname"><span class="paramname"><em>stat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Armor.setType(</td><td class="paramname">stat</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>设置机器人类型 <a class="el" href="../../db/d22/group__combo__armor.html#gacd7f1723e9b020d34b5bbc041faaea89" title="机器人类型">RobotType</a> </p>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

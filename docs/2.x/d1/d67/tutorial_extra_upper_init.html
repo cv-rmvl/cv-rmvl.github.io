@@ -1,0 +1,293 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 硬件设备与软件模块的初始化</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">硬件设备与软件模块的初始化 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md75">概述 </a>
+      </li>
+      <li class="level2">
+        <a href="#init_software">软件模块 </a>
+      </li>
+      <li class="level2">
+        <a href="#init_perception">感知设备 </a>
+      </li>
+      <li class="level2">
+        <a href="#init_communication">通信设备 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2upper_2upper__init"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/10/02</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d8/d29/tutorial_extra_upper_base.html">顶层模块开发基本流程</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d4/de8/tutorial_extra_upper_read_data.html">读取（默认）数据以控制逻辑分支</a> <br  />
+</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
+概述</h2>
+<p>软件模块一般在使用时仅涉及到 4 个功能模块，即 <a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> ， <a class="el" href="../../d7/d4f/group__compensator.html">补偿模块（功能模块）</a> ， <a class="el" href="../../db/d29/group__predictor.html">目标预测模块（功能模块）</a> ，和 <a class="el" href="../../d9/dbe/group__decider.html">决策模块（功能模块）</a> 。此外，用户仍然可以基于 RMVL 提供的抽象类数据组件（如 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> ）完成适用于个人项目中派生数据组件的接口设计，在这种情况下，初始化的内容可能需要考虑到这些数据组件，在本文中不多介绍。</p>
+<p>而硬件设备主要有感知设备 SDK 和通信设备相关层级支持（及相关通信中间件），目前 RMVL 包含的感知设备 SDK 涉及到</p>
+ <input type='checkbox' checked='checked' disabled> 
+相机设备
+ </br>   <input type='checkbox' checked='checked' disabled> 
+光源控制器
+ </br>   <input type='checkbox' disabled> 
+激光雷达
+ </br> <p>通信设备相关层级支持涉及到</p>
+ <input type='checkbox' checked='checked' disabled> 
+进程间通信
+ </br>   <input type='checkbox' checked='checked' disabled> 
+串口通信
+ </br>   <input type='checkbox' checked='checked' disabled> 
+以 Socket 为核心的传输层
+ </br>   <input type='checkbox' checked='checked' disabled> 
+以 HTTP 为核心的应用层及后端框架
+ </br> <p>通信中间件涉及到</p>
+ <input type='checkbox' checked='checked' disabled> 
+OPC UA
+ </br>   <input type='checkbox' disabled> 
+MQTT
+ </br> <h2 class="doxsection"><a class="anchor" id="init_software"></a>
+软件模块</h2>
+<p>实际上，各个功能模块在运行时初始化的主要依据正是通信传输的控制信息，这里仅介绍功能模块在运行时初始化的最一般写法。</p>
+<p>4 个功能模块均提供了对应的 <span class="tt">make_xxx</span> 静态工厂函数，可直接使用此函数完成初始化操作，在 <a class="el" href="../../d1/dfb/intro.html#api_concepts">API 概念</a> 的 <b>低耦合逻辑</b> 中涉及到了以下写法，其中最后一个序列组列表则是贯穿于所有功能模块的数据组件集合。</p>
+<div class="fragment"><div class="line"><span class="comment">// 创建 detector</span></div>
+<div class="line"><a class="code hl_typedef" href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a> p_detector = <a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
+<div class="line"><span class="comment">// 创建 compensator</span></div>
+<div class="line"><a class="code hl_typedef" href="../../df/d72/classrm_1_1compensator.html#a83b85a64e4716ba1146cce81c7399c1a">rm::compensator::ptr</a> p_compensator = <a class="code hl_function" href="../../d3/d7a/classrm_1_1GravityCompensator.html#af52c5d0ccff5ee75f15cb246f56f0ef6">rm::GravityCompensator::make_compensator</a>();</div>
+<div class="line"><span class="comment">// 创建 predictor</span></div>
+<div class="line"><a class="code hl_typedef" href="../../dc/d74/classrm_1_1predictor.html#a9bea1d235d789bfaf9e68f53ea847d6a">rm::predictor::ptr</a> p_predictor = <a class="code hl_function" href="../../d6/df1/classrm_1_1ArmorPredictor.html#a60e21d14289fabf9990e92abb1f48aa8">rm::ArmorPredictor::make_predictor</a>();</div>
+<div class="line"><span class="comment">// 创建 decider</span></div>
+<div class="line"><a class="code hl_typedef" href="../../d9/d29/classrm_1_1decider.html#a8655c1d33d48671c5ecb63e0c415542e">rm::decider::ptr</a> p_decider = <a class="code hl_function" href="../../de/dfc/classrm_1_1TranslationDecider.html#a50e3961a37db63c1e0c330daa6cdfdd5">rm::TranslationDecider::make_decider</a>();</div>
+<div class="line"><span class="comment">// 默认初始化 group 列表</span></div>
+<div class="line">std::vector&lt;rm::group::ptr&gt; groups;</div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
+<div class="ttc" id="aclassrm_1_1ArmorPredictor_html_a60e21d14289fabf9990e92abb1f48aa8"><div class="ttname"><a href="../../d6/df1/classrm_1_1ArmorPredictor.html#a60e21d14289fabf9990e92abb1f48aa8">rm::ArmorPredictor::make_predictor</a></div><div class="ttdeci">static std::unique_ptr&lt; ArmorPredictor &gt; make_predictor()</div><div class="ttdoc">构建 ArmorPredictor</div><div class="ttdef"><b>定义</b> armor_predictor.h:27</div></div>
+<div class="ttc" id="aclassrm_1_1GravityCompensator_html_af52c5d0ccff5ee75f15cb246f56f0ef6"><div class="ttname"><a href="../../d3/d7a/classrm_1_1GravityCompensator.html#af52c5d0ccff5ee75f15cb246f56f0ef6">rm::GravityCompensator::make_compensator</a></div><div class="ttdeci">static auto make_compensator()</div><div class="ttdoc">构造 GravityCompensator</div><div class="ttdef"><b>定义</b> gravity_compensator.h:30</div></div>
+<div class="ttc" id="aclassrm_1_1TranslationDecider_html_a50e3961a37db63c1e0c330daa6cdfdd5"><div class="ttname"><a href="../../de/dfc/classrm_1_1TranslationDecider.html#a50e3961a37db63c1e0c330daa6cdfdd5">rm::TranslationDecider::make_decider</a></div><div class="ttdeci">static std::unique_ptr&lt; TranslationDecider &gt; make_decider()</div><div class="ttdoc">构造 TranslationDecider</div><div class="ttdef"><b>定义</b> translation_decider.h:29</div></div>
+<div class="ttc" id="aclassrm_1_1compensator_html_a83b85a64e4716ba1146cce81c7399c1a"><div class="ttname"><a href="../../df/d72/classrm_1_1compensator.html#a83b85a64e4716ba1146cce81c7399c1a">rm::compensator::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; compensator &gt; ptr</div><div class="ttdef"><b>定义</b> compensator.h:59</div></div>
+<div class="ttc" id="aclassrm_1_1decider_html_a8655c1d33d48671c5ecb63e0c415542e"><div class="ttname"><a href="../../d9/d29/classrm_1_1decider.html#a8655c1d33d48671c5ecb63e0c415542e">rm::decider::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; decider &gt; ptr</div><div class="ttdef"><b>定义</b> decider.h:43</div></div>
+<div class="ttc" id="aclassrm_1_1detector_html_a0eaa4d8bcf44807e09e96ae2b9bbfd42"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#a0eaa4d8bcf44807e09e96ae2b9bbfd42">rm::detector::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; detector &gt; ptr</div><div class="ttdef"><b>定义</b> detector.h:51</div></div>
+<div class="ttc" id="aclassrm_1_1predictor_html_a9bea1d235d789bfaf9e68f53ea847d6a"><div class="ttname"><a href="../../dc/d74/classrm_1_1predictor.html#a9bea1d235d789bfaf9e68f53ea847d6a">rm::predictor::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; predictor &gt; ptr</div><div class="ttdef"><b>定义</b> predictor.h:60</div></div>
+</div><!-- fragment --><p>此外，要注意某些静态工厂函数<span style="color: red">可能需要传入参数</span>，这些参数一般就是对应功能类的构造函数的入参。具体的功能模块在使用上均可参考该类对应的说明文档。</p>
+<h2 class="doxsection"><a class="anchor" id="init_perception"></a>
+感知设备</h2>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">相机设备</b></p>
+<p class="startli">相机模块可参考手册 <a class="el" href="../../df/d2c/tutorial_modules_camera.html">相机设备</a> ，此处不多赘述，以 <a class="el" href="../../db/d9f/classrm_1_1HikCamera.html" title="海康机器人相机库">rm::HikCamera</a> 为例，直接使用</p>
+<div class="fragment"><div class="line"><span class="comment">// 创建并初始化相机</span></div>
+<div class="line"><span class="keyword">auto</span> p_capture = <a class="code hl_function" href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a>(<a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
+<div class="ttc" id="aclassrm_1_1HikCamera_html_a1d95e550e3958c39a1094fffb565b11b"><div class="ttname"><a href="../../db/d9f/classrm_1_1HikCamera.html#a1d95e550e3958c39a1094fffb565b11b">rm::HikCamera::make_capture</a></div><div class="ttdeci">static std::unique_ptr&lt; HikCamera &gt; make_capture(CameraConfig cfg, std::string_view info=&quot;&quot;)</div><div class="ttdoc">构建 HikCamera 对象</div><div class="ttdef"><b>定义</b> hik_camera.h:65</div></div>
+<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:54</div></div>
+<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:36</div></div>
+<div class="ttc" id="astructrm_1_1CameraConfig_html_a1a285fd4742e8ced4907f83d520c943b"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args &amp;&amp;...modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:72</div></div>
+</div><!-- fragment --><p class="startli">即可完成相机的初始化。</p>
+</li>
+<li><p class="startli"><b class="tab-title">光源控制器</b></p>
+<p class="startli"><a class="el" href="../../dc/d10/tutorial_modules_light.html">光源控制器</a> 一文中指引了有关 SDK 的安装，可参考其相关类完成开发工作。</p>
+</li>
+<li><p class="startli"><b class="tab-title">激光雷达</b></p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">待办事项</a></b></dt><dd>本小节暂无</dd></dl>
+</li>
+</ul>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="init_communication"></a>
+通信设备</h2>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">串口通信</b></p>
+<p class="startli">串行接口通信，使用方法见 <a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a></p>
+<p class="startli"><b>示例</b></p>
+<div class="fragment"><div class="line"><span class="comment">/* code */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#pragma pack(1)</span></div>
+<div class="line"><span class="comment">// 发送协议</span></div>
+<div class="line"><span class="keyword">struct </span>SendStruct {</div>
+<div class="line">    uint8_t test;</div>
+<div class="line">    <span class="comment">/* code */</span></div>
+<div class="line">};</div>
+<div class="line"><span class="preprocessor">#pragma pack()</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment">    不使用 #pragma pack 预处理器宏实现取消内存对齐，也可以使用</span></div>
+<div class="line"><span class="comment">    C++11 提供的关键字 alignas，例如下面的接收协议</span></div>
+<div class="line"><span class="comment">*/</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 接收协议</span></div>
+<div class="line"><span class="keyword">struct </span><span class="keyword">alignas</span>(1) ReceiveStruct {</div>
+<div class="line">    uint8_t test;</div>
+<div class="line">    <span class="comment">/* code */</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* code */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建并初始化串口通信</span></div>
+<div class="line">    <span class="keyword">auto</span> port = <a class="code hl_class" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a>(<span class="stringliteral">&quot;/dev/ttyACM0&quot;</span>, BaudRate::BR_115200, SerialReadMode::NONBLOCK);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* code */</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* code */</span></div>
+<div class="ttc" id="aclassrm_1_1SerialPort_html"><div class="ttname"><a href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></div><div class="ttdoc">同步模式串行接口通信库</div><div class="ttdef"><b>定义</b> serial.hpp:50</div></div>
+</div><!-- fragment --><dl class="section note"><dt>注解</dt><dd><ul>
+<li>取消内存对齐可参考 <a href="https://zh.cppreference.com/w/cpp/language/alignas">alignas</a> 和 <a href="https://zh.cppreference.com/w/cpp/preprocessor/impl#.23pragma_pack">pragma pack</a></li>
+<li>初始化硬件设备同时要定义好串口通信协议</li>
+<li>串口通信协议可参考 <a class="el" href="../../d3/da4/tutorial_modules_serial.html#serial_protocol">2.3 链路层协议</a> 小节</li>
+</ul>
+</dd></dl>
+</li>
+<li><b class="tab-title">其余层级支持</b><ul>
+<li>进程间通信，使用方法见 <a class="el" href="../../d4/d00/tutorial_modules_ipc.html">进程间通信设施 —— IPC</a><ul>
+<li>跨平台的同步支持包括 <a class="el" href="../../da/d82/classrm_1_1PipeServer.html" title="命名管道服务端">rm::PipeServer</a> 和 <a class="el" href="../../d8/d8c/classrm_1_1PipeClient.html" title="命名管道客户端">rm::PipeClient</a> ，对应的异步协程支持包括 <a class="el" href="../../db/dc2/classrm_1_1async_1_1PipeServer.html" title="异步命名管道服务端">rm::async::PipeServer</a> 和 <a class="el" href="../../dc/dba/classrm_1_1async_1_1PipeClient.html" title="异步命名管道客户端">rm::async::PipeClient</a></li>
+<li>Linux 下基于 Unix FIFO 实现的 <a class="el" href="../../d4/d88/classrm_1_1MqServer.html" title="消息队列服务端">rm::MqServer</a> 和 <a class="el" href="../../d4/d5a/classrm_1_1MqClient.html" title="消息队列客户端">rm::MqClient</a></li>
+</ul>
+</li>
+<li>以 Socket 为核心的传输层支持，使用方法见 <a class="el" href="../../d2/d5d/tutorial_modules_socket.html">传输层设施 —— Socket</a></li>
+<li>以 HTTP 为核心的应用层及后端框架支持，使用方法见 <a class="el" href="../../d4/d7a/tutorial_modules_netapp.html">网络、应用层设施</a><ul>
+<li>基础工具包括 <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 和 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></li>
+<li>同步请求工具包括 <a class="el" href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906" title="发出同步 GET 请求">rm::requests::get</a> 和 <a class="el" href="../../d6/dd4/group__io__net.html#gabda1198828489a8bfcdace3981cbdace" title="发出同步 POST 请求">rm::requests::post</a> 等，对应的异步请求工具包括 <a class="el" href="../../d6/dd4/group__io__net.html#gade3bea56ce829f9e47fe981a17e4094a" title="发出异步 GET 请求">rm::async::requests::get</a> 和 <a class="el" href="../../d6/dd4/group__io__net.html#gab422b631d1e40f644e55cae7cdc06c17" title="发出异步 POST 请求">rm::async::requests::post</a> 等</li>
+<li>后端框架包括 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b class="tab-title">通信中间件</b><ul>
+<li>OPC UA，使用方法见 <a class="el" href="../../db/dba/tutorial_modules_opcua.html">工业自动化通信协议 —— OPC UA</a></li>
+<li>MQTT，使用方法见 <a class="el" href="../../da/ddb/tutorial_modules_mqtt.html">消息队列遥测传输协议 —— MQTT</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="tabbed"></div><hr  />
+<p>涉及到运行时切换模块的功能，可以对上述 <a class="el" href="#init_software">软件模块</a> 中的写法进行拓展，请继续阅读下一篇 <a class="el" href="../../d4/de8/tutorial_extra_upper_read_data.html">读取（默认）数据以控制逻辑分支</a> 以了解数据信息是如何控制程序分支的。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

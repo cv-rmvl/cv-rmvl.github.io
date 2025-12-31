@@ -1,0 +1,209 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::async::Acceptor::AcceptAwaiter类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html">Acceptor</a></li><li class="navelem"><a href="../../da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter.html">AcceptAwaiter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d2/d1b/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::Acceptor::AcceptAwaiter类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>接受等待器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::Acceptor::AcceptAwaiter 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/def/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter__inherit__graph.svg" width="203" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::async::Acceptor::AcceptAwaiter 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/db4/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter__coll__graph.svg" width="203" height="476"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:accddbc64b563bd0ec74e2dc2adcd2948" id="r_accddbc64b563bd0ec74e2dc2adcd2948"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accddbc64b563bd0ec74e2dc2adcd2948">AcceptAwaiter</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, <a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a> fd, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;ep)</td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1async_1_1AsyncReadAwaiter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1async_1_1AsyncReadAwaiter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html">rm::async::AsyncReadAwaiter</a></td></tr>
+<tr class="memitem:a33bee53b70dd046493ada0a264e316ea inherit pub_methods_classrm_1_1async_1_1AsyncReadAwaiter" id="r_a33bee53b70dd046493ada0a264e316ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html#a33bee53b70dd046493ada0a264e316ea">AsyncReadAwaiter</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, <a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd)</td></tr>
+<tr class="memdesc:a33bee53b70dd046493ada0a264e316ea inherit pub_methods_classrm_1_1async_1_1AsyncReadAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步读等待器  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1async_1_1AsyncIOAwaiter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1async_1_1AsyncIOAwaiter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html">rm::async::AsyncIOAwaiter</a></td></tr>
+<tr class="memitem:aeec678a03f6e4fdeb8b11b2b3314bd77 inherit pub_methods_classrm_1_1async_1_1AsyncIOAwaiter" id="r_aeec678a03f6e4fdeb8b11b2b3314bd77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#aeec678a03f6e4fdeb8b11b2b3314bd77">AsyncIOAwaiter</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;context, <a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd)</td></tr>
+<tr class="memdesc:aeec678a03f6e4fdeb8b11b2b3314bd77 inherit pub_methods_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步 IO 等待器  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html">rm::async::AsyncIOAwaiter</a></td></tr>
+<tr class="memitem:ae95c45ff721ae04068fa38125bb6bd2f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter" id="r_ae95c45ff721ae04068fa38125bb6bd2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#ae95c45ff721ae04068fa38125bb6bd2f">_aioh</a> {<a class="el" href="../../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed">INVALID_FD</a>}</td></tr>
+<tr class="memdesc:ae95c45ff721ae04068fa38125bb6bd2f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步 I/O 文件描述符（Windows 下为 IOCP，Linux 下为 epoll）  <br /></td></tr>
+<tr class="memitem:a3c41b142957cf061997f26ed4d8a471f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter" id="r_a3c41b142957cf061997f26ed4d8a471f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">_fd</a> {<a class="el" href="../../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed">INVALID_FD</a>}</td></tr>
+<tr class="memdesc:a3c41b142957cf061997f26ed4d8a471f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件句柄  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>接受等待器 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="accddbc64b563bd0ec74e2dc2adcd2948" name="accddbc64b563bd0ec74e2dc2adcd2948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accddbc64b563bd0ec74e2dc2adcd2948">&#9670;&#160;</a></span>AcceptAwaiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::Acceptor::AcceptAwaiter::AcceptAwaiter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a></td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ep</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/dd0/classrm_1_1async_1_1Acceptor_1_1AcceptAwaiter_accddbc64b563bd0ec74e2dc2adcd2948_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

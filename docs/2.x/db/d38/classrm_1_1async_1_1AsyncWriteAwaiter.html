@@ -1,0 +1,274 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::async::AsyncWriteAwaiter类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a href="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html">AsyncWriteAwaiter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="../../db/d92/classrm_1_1async_1_1AsyncWriteAwaiter-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::AsyncWriteAwaiter类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>通用异步写等待器，核心操作使用文件 I/O 系统调用的 <span class="tt">write</span>、<span class="tt">WriteFile</span>，使用者可以通过  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/async.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::AsyncWriteAwaiter 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d6b/classrm_1_1async_1_1AsyncWriteAwaiter__inherit__graph.svg" width="100%" height="553"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::async::AsyncWriteAwaiter 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d7b/classrm_1_1async_1_1AsyncWriteAwaiter__coll__graph.svg" width="336" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab6f476b6a5d759007c67d79294385341" id="r_ab6f476b6a5d759007c67d79294385341"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6f476b6a5d759007c67d79294385341">AsyncWriteAwaiter</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, <a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd, std::string_view data)</td></tr>
+<tr class="memdesc:ab6f476b6a5d759007c67d79294385341"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步写等待器  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1async_1_1AsyncIOAwaiter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1async_1_1AsyncIOAwaiter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html">rm::async::AsyncIOAwaiter</a></td></tr>
+<tr class="memitem:aeec678a03f6e4fdeb8b11b2b3314bd77 inherit pub_methods_classrm_1_1async_1_1AsyncIOAwaiter" id="r_aeec678a03f6e4fdeb8b11b2b3314bd77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#aeec678a03f6e4fdeb8b11b2b3314bd77">AsyncIOAwaiter</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;context, <a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd)</td></tr>
+<tr class="memdesc:aeec678a03f6e4fdeb8b11b2b3314bd77 inherit pub_methods_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步 IO 等待器  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a83fe6de835d5f9fc9478e1d50eeb8650" id="r_a83fe6de835d5f9fc9478e1d50eeb8650"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83fe6de835d5f9fc9478e1d50eeb8650">_data</a> {}</td></tr>
+<tr class="memdesc:a83fe6de835d5f9fc9478e1d50eeb8650"><td class="mdescLeft">&#160;</td><td class="mdescRight">待写入的数据  <br /></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html">rm::async::AsyncIOAwaiter</a></td></tr>
+<tr class="memitem:ae95c45ff721ae04068fa38125bb6bd2f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter" id="r_ae95c45ff721ae04068fa38125bb6bd2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#ae95c45ff721ae04068fa38125bb6bd2f">_aioh</a> {<a class="el" href="../../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed">INVALID_FD</a>}</td></tr>
+<tr class="memdesc:ae95c45ff721ae04068fa38125bb6bd2f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步 I/O 文件描述符（Windows 下为 IOCP，Linux 下为 epoll）  <br /></td></tr>
+<tr class="memitem:a3c41b142957cf061997f26ed4d8a471f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter" id="r_a3c41b142957cf061997f26ed4d8a471f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">_fd</a> {<a class="el" href="../../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed">INVALID_FD</a>}</td></tr>
+<tr class="memdesc:a3c41b142957cf061997f26ed4d8a471f inherit pro_attribs_classrm_1_1async_1_1AsyncIOAwaiter"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件句柄  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>通用异步写等待器，核心操作使用文件 I/O 系统调用的 <span class="tt">write</span>、<span class="tt">WriteFile</span>，使用者可以通过 </p>
+<ul>
+<li>继承该类并选择性的实现 <span class="tt">await_suspend</span> 以及 <span class="tt">await_resume</span> 方法</li>
+<li>直接使用该类 来实现自己的异步写等待器</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keyword">class </span>Socket {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    Socket(<a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, <a class="code hl_typedef" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> fd) : _ctx(io_context), <a class="code hl_variable" href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">_fd</a>(fd) {}</div>
+<div class="line">    <a class="code hl_class" href="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html">AsyncWriteAwaiter</a> write(std::string_view data) { <span class="keywordflow">return</span> {_ctx, _fd, data}; }</div>
+<div class="line">    <span class="comment">// 其他成员函数...</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    IOContext &amp;_ctx;</div>
+<div class="line">    FileDescriptor _fd{INVALID_FD};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 在协程中使用异步写等待器</span></div>
+<div class="line">Task&lt;&gt; session(Socket &amp;s) {</div>
+<div class="line">    <span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> s.write(<span class="stringliteral">&quot;Hello, World!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (success) {</div>
+<div class="line">        <span class="comment">// 处理写入成功的逻辑...</span></div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        <span class="comment">// 处理写入失败的逻辑...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1AsyncIOAwaiter_html_a3c41b142957cf061997f26ed4d8a471f"><div class="ttname"><a href="../../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html#a3c41b142957cf061997f26ed4d8a471f">rm::async::AsyncIOAwaiter::_fd</a></div><div class="ttdeci">FileDescriptor _fd</div><div class="ttdoc">文件句柄</div><div class="ttdef"><b>定义</b> async.hpp:302</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1AsyncWriteAwaiter_html"><div class="ttname"><a href="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html">rm::async::AsyncWriteAwaiter</a></div><div class="ttdoc">通用异步写等待器，核心操作使用文件 I/O 系统调用的 write、WriteFile，使用者可以通过</div><div class="ttdef"><b>定义</b> async.hpp:380</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="agroup__io_html_ga99ec8bc7726fc0a48a1915ec7ab0ba96"><div class="ttname"><a href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">rm::FileDescriptor</a></div><div class="ttdeci">int FileDescriptor</div><div class="ttdoc">文件描述符类型定义</div><div class="ttdef"><b>定义</b> async.hpp:43</div></div>
+</div><!-- fragment --> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ab6f476b6a5d759007c67d79294385341" name="ab6f476b6a5d759007c67d79294385341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f476b6a5d759007c67d79294385341">&#9670;&#160;</a></span>AsyncWriteAwaiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::AsyncWriteAwaiter::AsyncWriteAwaiter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a></td>          <td class="paramname"><span class="paramname"><em>fd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建异步写等待器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>需要监听的文件描述符（文件句柄） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter_ab6f476b6a5d759007c67d79294385341_cgraph.svg" width="440" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a83fe6de835d5f9fc9478e1d50eeb8650" name="a83fe6de835d5f9fc9478e1d50eeb8650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fe6de835d5f9fc9478e1d50eeb8650">&#9670;&#160;</a></span>_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view rm::async::AsyncWriteAwaiter::_data {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>待写入的数据 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

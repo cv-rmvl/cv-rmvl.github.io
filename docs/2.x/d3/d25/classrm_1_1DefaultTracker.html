@@ -1,0 +1,423 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.15.0" name="generator"/>
+  <title>RMVL: rm::DefaultTracker类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script src="../../doxygen-awesome-tabs.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d3/d25/classrm_1_1DefaultTracker.html">DefaultTracker</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../df/ddd/classrm_1_1DefaultTracker-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::DefaultTracker类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../de/dca/group__tracker.html">追踪器/特征组合的时间序列（数据组件）</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>默认追踪器，时间序列仅用于存储组合体，可退化为 <span class="tt">combos</span> 使用  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/tracker/tracker.h&gt;</code></p>
+<div class="dynheader">
+类 rm::DefaultTracker 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" loading="lazy" scrolling="no" src="../../d7/da7/classrm_1_1DefaultTracker__inherit__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::DefaultTracker 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" loading="lazy" scrolling="no" src="../../d9/dc6/classrm_1_1DefaultTracker__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a7fd70296e25b53d2d06b9ae38c09f7d7" id="r_a7fd70296e25b53d2d06b9ae38c09f7d7"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html">DefaultTracker</a>&gt;</td></tr>
+<tr class="memitem:a73f5c309cdd340e49c00bec06c5d558e" id="r_a73f5c309cdd340e49c00bec06c5d558e"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f5c309cdd340e49c00bec06c5d558e">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html">DefaultTracker</a>&gt;</td></tr>
+<tr class="inherit_header pub_types_classrm_1_1tracker"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1tracker')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html">rm::tracker</a></td></tr>
+<tr class="memitem:a18e7a8f1a3ada69ee2ca9ecbf520d28f inherit pub_types_classrm_1_1tracker" id="r_a18e7a8f1a3ada69ee2ca9ecbf520d28f"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d6/dd2/classrm_1_1tracker.html">tracker</a>&gt;</td></tr>
+<tr class="memitem:aefadcd53bcf46900b72ef845539307e3 inherit pub_types_classrm_1_1tracker" id="r_aefadcd53bcf46900b72ef845539307e3"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aefadcd53bcf46900b72ef845539307e3">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d6/dd2/classrm_1_1tracker.html">tracker</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af5bb528bc9d90dbc18d9d477ed33584a" id="r_af5bb528bc9d90dbc18d9d477ed33584a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#af5bb528bc9d90dbc18d9d477ed33584a">clone</a> () override</td></tr>
+<tr class="memdesc:af5bb528bc9d90dbc18d9d477ed33584a"><td class="mdescLeft"> </td><td class="mdescRight">从另一个追踪器进行构造  <br/></td></tr>
+<tr class="memitem:a2f450e0e0ac528dddd517c07b447a4bf" id="r_a2f450e0e0ac528dddd517c07b447a4bf"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f450e0e0ac528dddd517c07b447a4bf">update</a> (<a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> p_combo) override</td></tr>
+<tr class="memdesc:a2f450e0e0ac528dddd517c07b447a4bf"><td class="mdescLeft"> </td><td class="mdescRight">使用已捕获的 <span class="tt"><a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">combo</a></span> 更新追踪器  <br/></td></tr>
+<tr class="memitem:a0b02b13f9144e4bbdf5f36cd7307acc4" id="r_a0b02b13f9144e4bbdf5f36cd7307acc4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b02b13f9144e4bbdf5f36cd7307acc4">update</a> (double tick, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu) override</td></tr>
+<tr class="memdesc:a0b02b13f9144e4bbdf5f36cd7307acc4"><td class="mdescLeft"> </td><td class="mdescRight">未捕获 <span class="tt"><a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">combo</a></span>，仅更新消失帧数  <br/></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1tracker"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1tracker')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html">rm::tracker</a></td></tr>
+<tr class="memitem:afb40171dc09a86cc608726933f2a808d inherit pub_methods_classrm_1_1tracker" id="r_afb40171dc09a86cc608726933f2a808d"><td align="right" class="memItemLeft" valign="top">virtual bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#afb40171dc09a86cc608726933f2a808d">invalid</a> () const</td></tr>
+<tr class="memdesc:afb40171dc09a86cc608726933f2a808d inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">判断追踪器是否无效  <br/></td></tr>
+<tr class="memitem:ac8ee87007b3562fb041d1e9a37bbafa3 inherit pub_methods_classrm_1_1tracker" id="r_ac8ee87007b3562fb041d1e9a37bbafa3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3">front</a> () const</td></tr>
+<tr class="memdesc:ac8ee87007b3562fb041d1e9a37bbafa3 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取时间队列中最新的组合体  <br/></td></tr>
+<tr class="memitem:a95e2205b9cb89c69bfe6cdb6374d3e92 inherit pub_methods_classrm_1_1tracker" id="r_a95e2205b9cb89c69bfe6cdb6374d3e92"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a95e2205b9cb89c69bfe6cdb6374d3e92">back</a> () const</td></tr>
+<tr class="memdesc:a95e2205b9cb89c69bfe6cdb6374d3e92 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取时间队列中最后的组合体  <br/></td></tr>
+<tr class="memitem:a15e43b61005034545f920e6aa189fa9d inherit pub_methods_classrm_1_1tracker" id="r_a15e43b61005034545f920e6aa189fa9d"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a15e43b61005034545f920e6aa189fa9d">getVanishNumber</a> () const</td></tr>
+<tr class="memdesc:a15e43b61005034545f920e6aa189fa9d inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取掉帧数  <br/></td></tr>
+<tr class="memitem:af972bfc25bffad86b27c7c00be291162 inherit pub_methods_classrm_1_1tracker" id="r_af972bfc25bffad86b27c7c00be291162"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#af972bfc25bffad86b27c7c00be291162">size</a> () const</td></tr>
+<tr class="memdesc:af972bfc25bffad86b27c7c00be291162 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取序列数量信息  <br/></td></tr>
+<tr class="memitem:a45364a0fdef7fe79df2984f316aec99c inherit pub_methods_classrm_1_1tracker" id="r_a45364a0fdef7fe79df2984f316aec99c"><td align="right" class="memItemLeft" valign="top">const std::deque&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a45364a0fdef7fe79df2984f316aec99c">data</a> () const</td></tr>
+<tr class="memdesc:a45364a0fdef7fe79df2984f316aec99c inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取时间序列原始数据  <br/></td></tr>
+<tr class="memitem:acf128ce58cb3bba710da7bec7bff5138 inherit pub_methods_classrm_1_1tracker" id="r_acf128ce58cb3bba710da7bec7bff5138"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#acf128ce58cb3bba710da7bec7bff5138">empty</a> () const</td></tr>
+<tr class="memdesc:acf128ce58cb3bba710da7bec7bff5138 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">序列是否为空  <br/></td></tr>
+<tr class="memitem:aed0d49ffc09034acaf708d147aa32837 inherit pub_methods_classrm_1_1tracker" id="r_aed0d49ffc09034acaf708d147aa32837"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aed0d49ffc09034acaf708d147aa32837">at</a> (size_t _n) const</td></tr>
+<tr class="memdesc:aed0d49ffc09034acaf708d147aa32837 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">索引 - 容器仅能通过内部 at 实现访问保证下标安全  <br/></td></tr>
+<tr class="memitem:a5d02a1d965dee5cb3918d1234f4e91d4 inherit pub_methods_classrm_1_1tracker" id="r_a5d02a1d965dee5cb3918d1234f4e91d4"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a5d02a1d965dee5cb3918d1234f4e91d4">state</a> () const</td></tr>
+<tr class="memdesc:a5d02a1d965dee5cb3918d1234f4e91d4 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器状态  <br/></td></tr>
+<tr class="memitem:abb6af5f000c7193263592066840ef4d7 inherit pub_methods_classrm_1_1tracker" id="r_abb6af5f000c7193263592066840ef4d7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#abb6af5f000c7193263592066840ef4d7">state</a> ()</td></tr>
+<tr class="memdesc:abb6af5f000c7193263592066840ef4d7 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器状态  <br/></td></tr>
+<tr class="memitem:a7397bcb42be2121f181c083fe9b6f0c8 inherit pub_methods_classrm_1_1tracker" id="r_a7397bcb42be2121f181c083fe9b6f0c8"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a7397bcb42be2121f181c083fe9b6f0c8">height</a> () const</td></tr>
+<tr class="memdesc:a7397bcb42be2121f181c083fe9b6f0c8 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器修正后的高度  <br/></td></tr>
+<tr class="memitem:ad25bdb07623542f0bf554ee8aeae04fc inherit pub_methods_classrm_1_1tracker" id="r_ad25bdb07623542f0bf554ee8aeae04fc"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#ad25bdb07623542f0bf554ee8aeae04fc">width</a> () const</td></tr>
+<tr class="memdesc:ad25bdb07623542f0bf554ee8aeae04fc inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器修正后的宽度  <br/></td></tr>
+<tr class="memitem:a87c051004952d896b1b37acbfb719c60 inherit pub_methods_classrm_1_1tracker" id="r_a87c051004952d896b1b37acbfb719c60"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a87c051004952d896b1b37acbfb719c60">angle</a> () const</td></tr>
+<tr class="memdesc:a87c051004952d896b1b37acbfb719c60 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器修正后的角度  <br/></td></tr>
+<tr class="memitem:aac821f01ceb4849e539f32a0212e3bc6 inherit pub_methods_classrm_1_1tracker" id="r_aac821f01ceb4849e539f32a0212e3bc6"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aac821f01ceb4849e539f32a0212e3bc6">center</a> () const</td></tr>
+<tr class="memdesc:aac821f01ceb4849e539f32a0212e3bc6 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器修正后的中心点  <br/></td></tr>
+<tr class="memitem:a71b8ae7b0eec7ee5e3f55a5725ed91f8 inherit pub_methods_classrm_1_1tracker" id="r_a71b8ae7b0eec7ee5e3f55a5725ed91f8"><td align="right" class="memItemLeft" valign="top">const std::vector&lt; cv::Point2f &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a71b8ae7b0eec7ee5e3f55a5725ed91f8">corners</a> () const</td></tr>
+<tr class="memdesc:a71b8ae7b0eec7ee5e3f55a5725ed91f8 inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器修正后的角点  <br/></td></tr>
+<tr class="memitem:a28b05008dc032edbd5135b967e49cbdc inherit pub_methods_classrm_1_1tracker" id="r_a28b05008dc032edbd5135b967e49cbdc"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a28b05008dc032edbd5135b967e49cbdc">getRelativeAngle</a> () const</td></tr>
+<tr class="memdesc:a28b05008dc032edbd5135b967e49cbdc inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">修正后的相对角度（角度制）  <br/></td></tr>
+<tr class="memitem:a1a436daa7c88ad74db57a04469f6214f inherit pub_methods_classrm_1_1tracker" id="r_a1a436daa7c88ad74db57a04469f6214f"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../da/dbf/classrm_1_1CameraExtrinsics.html">CameraExtrinsics</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a1a436daa7c88ad74db57a04469f6214f">extrinsic</a> () const</td></tr>
+<tr class="memdesc:a1a436daa7c88ad74db57a04469f6214f inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">修正后的相机外参  <br/></td></tr>
+<tr class="memitem:ae2cef32a353a1aeb040e64137992be2d inherit pub_methods_classrm_1_1tracker" id="r_ae2cef32a353a1aeb040e64137992be2d"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#ae2cef32a353a1aeb040e64137992be2d">speed</a> () const</td></tr>
+<tr class="memdesc:ae2cef32a353a1aeb040e64137992be2d inherit pub_methods_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">获取追踪器修正后的目标转角速度（角度制）  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab6c61bf77aaafb9467b654a1658eec8b" id="r_ab6c61bf77aaafb9467b654a1658eec8b"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c61bf77aaafb9467b654a1658eec8b">make_tracker</a> (<a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> p_combo)</td></tr>
+<tr class="memdesc:ab6c61bf77aaafb9467b654a1658eec8b"><td class="mdescLeft"> </td><td class="mdescRight">构造 <a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html" title="默认追踪器，时间序列仅用于存储组合体，可退化为 combos 使用">DefaultTracker</a>  <br/></td></tr>
+<tr class="memitem:a149563469d4b4f38c97bf2cd4d60f489" id="r_a149563469d4b4f38c97bf2cd4d60f489"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a149563469d4b4f38c97bf2cd4d60f489">cast</a> (<a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> p_tracker)</td></tr>
+<tr class="memitem:a972e024950e574c5abe2e3366bda758d" id="r_a972e024950e574c5abe2e3366bda758d"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#a73f5c309cdd340e49c00bec06c5d558e">const_ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a972e024950e574c5abe2e3366bda758d">cast</a> (<a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aefadcd53bcf46900b72ef845539307e3">tracker::const_ptr</a> p_tracker)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1tracker"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1tracker')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html">rm::tracker</a></td></tr>
+<tr class="memitem:ac0ee3006f78c88e7586337ae31f7b84e inherit pro_attribs_classrm_1_1tracker" id="r_ac0ee3006f78c88e7586337ae31f7b84e"><td align="right" class="memItemLeft" valign="top">std::deque&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#ac0ee3006f78c88e7586337ae31f7b84e">_combo_deque</a></td></tr>
+<tr class="memdesc:ac0ee3006f78c88e7586337ae31f7b84e inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">组合体时间队列  <br/></td></tr>
+<tr class="memitem:a10968a6b1c550c75cd6429e7ad231459 inherit pro_attribs_classrm_1_1tracker" id="r_a10968a6b1c550c75cd6429e7ad231459"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a10968a6b1c550c75cd6429e7ad231459">_vanish_num</a> {}</td></tr>
+<tr class="memdesc:a10968a6b1c550c75cd6429e7ad231459 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">消失帧数  <br/></td></tr>
+<tr class="memitem:abe9165591bf205d7a18b0b50d2812336 inherit pro_attribs_classrm_1_1tracker" id="r_abe9165591bf205d7a18b0b50d2812336"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d3/da8/classrm_1_1StateInfo.html">StateInfo</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#abe9165591bf205d7a18b0b50d2812336">_state</a> {}</td></tr>
+<tr class="memdesc:abe9165591bf205d7a18b0b50d2812336 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器状态  <br/></td></tr>
+<tr class="memitem:a257002afd64725c1a7600d9bab223af4 inherit pro_attribs_classrm_1_1tracker" id="r_a257002afd64725c1a7600d9bab223af4"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a257002afd64725c1a7600d9bab223af4">_height</a> {}</td></tr>
+<tr class="memdesc:a257002afd64725c1a7600d9bab223af4 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器高度（可表示修正后）  <br/></td></tr>
+<tr class="memitem:aaf5af91a3da35f1a594bf16a0438e02f inherit pro_attribs_classrm_1_1tracker" id="r_aaf5af91a3da35f1a594bf16a0438e02f"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aaf5af91a3da35f1a594bf16a0438e02f">_width</a> {}</td></tr>
+<tr class="memdesc:aaf5af91a3da35f1a594bf16a0438e02f inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器宽度（可表示修正后）  <br/></td></tr>
+<tr class="memitem:afc341e5fb35bba2a861df6708b58af58 inherit pro_attribs_classrm_1_1tracker" id="r_afc341e5fb35bba2a861df6708b58af58"><td align="right" class="memItemLeft" valign="top">float </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#afc341e5fb35bba2a861df6708b58af58">_angle</a> {}</td></tr>
+<tr class="memdesc:afc341e5fb35bba2a861df6708b58af58 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器角度（可表示修正后）  <br/></td></tr>
+<tr class="memitem:a77316683c43bd9e513c33d530feff5da inherit pro_attribs_classrm_1_1tracker" id="r_a77316683c43bd9e513c33d530feff5da"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a77316683c43bd9e513c33d530feff5da">_center</a></td></tr>
+<tr class="memdesc:a77316683c43bd9e513c33d530feff5da inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器中心点（可表示修正后）  <br/></td></tr>
+<tr class="memitem:af4d4519872242d840c0abd070394f505 inherit pro_attribs_classrm_1_1tracker" id="r_af4d4519872242d840c0abd070394f505"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#af4d4519872242d840c0abd070394f505">_relative_angle</a></td></tr>
+<tr class="memdesc:af4d4519872242d840c0abd070394f505 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">相对目标转角（可表示修正后）  <br/></td></tr>
+<tr class="memitem:a9e945863e3ef998d7c2db9bbbf7ff94e inherit pro_attribs_classrm_1_1tracker" id="r_a9e945863e3ef998d7c2db9bbbf7ff94e"><td align="right" class="memItemLeft" valign="top">std::vector&lt; cv::Point2f &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a9e945863e3ef998d7c2db9bbbf7ff94e">_corners</a></td></tr>
+<tr class="memdesc:a9e945863e3ef998d7c2db9bbbf7ff94e inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">追踪器角点（可表示修正后）  <br/></td></tr>
+<tr class="memitem:a086bd208346a0c3ed530d54217064c77 inherit pro_attribs_classrm_1_1tracker" id="r_a086bd208346a0c3ed530d54217064c77"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../da/dbf/classrm_1_1CameraExtrinsics.html">CameraExtrinsics</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a086bd208346a0c3ed530d54217064c77">_extrinsic</a></td></tr>
+<tr class="memdesc:a086bd208346a0c3ed530d54217064c77 inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">相机外参（可表示修正后）  <br/></td></tr>
+<tr class="memitem:ae058d22a675b2713d3dd831580af71fd inherit pro_attribs_classrm_1_1tracker" id="r_ae058d22a675b2713d3dd831580af71fd"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#ae058d22a675b2713d3dd831580af71fd">_speed</a></td></tr>
+<tr class="memdesc:ae058d22a675b2713d3dd831580af71fd inherit pro_attribs_classrm_1_1tracker"><td class="mdescLeft"> </td><td class="mdescRight">相对目标转角速度  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
+<div class="textblock"><p>默认追踪器，时间序列仅用于存储组合体，可退化为 <span class="tt">combos</span> 使用 </p>
+</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">成员类型定义说明</h2>
+<a id="a73f5c309cdd340e49c00bec06c5d558e" name="a73f5c309cdd340e49c00bec06c5d558e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73f5c309cdd340e49c00bec06c5d558e">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a73f5c309cdd340e49c00bec06c5d558e">rm::DefaultTracker::const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html">DefaultTracker</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a7fd70296e25b53d2d06b9ae38c09f7d7" name="a7fd70296e25b53d2d06b9ae38c09f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd70296e25b53d2d06b9ae38c09f7d7">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">rm::DefaultTracker::ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html">DefaultTracker</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">成员函数说明</h2>
+<a id="a972e024950e574c5abe2e3366bda758d" name="a972e024950e574c5abe2e3366bda758d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972e024950e574c5abe2e3366bda758d">◆ </a></span>cast() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a73f5c309cdd340e49c00bec06c5d558e">const_ptr</a> rm::DefaultTracker::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#aefadcd53bcf46900b72ef845539307e3">tracker::const_ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_tracker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="a149563469d4b4f38c97bf2cd4d60f489" name="a149563469d4b4f38c97bf2cd4d60f489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149563469d4b4f38c97bf2cd4d60f489">◆ </a></span>cast() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">ptr</a> rm::DefaultTracker::cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_tracker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="af5bb528bc9d90dbc18d9d477ed33584a" name="af5bb528bc9d90dbc18d9d477ed33584a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5bb528bc9d90dbc18d9d477ed33584a">◆ </a></span>clone()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> rm::DefaultTracker::clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.clone(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;rm.DefaultTracker object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>从另一个追踪器进行构造 </p>
+<dl class="section return"><dt>返回</dt><dd>指向新追踪器的共享指针 </dd></dl>
+<p>实现了 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a1ab30bb2ae54111f57669acc924c6419">rm::tracker</a>.</p>
+</div>
+</div>
+<a id="ab6c61bf77aaafb9467b654a1658eec8b" name="ab6c61bf77aaafb9467b654a1658eec8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c61bf77aaafb9467b654a1658eec8b">◆ </a></span>make_tracker()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fd70296e25b53d2d06b9ae38c09f7d7">ptr</a> rm::DefaultTracker::make_tracker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_combo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.make_tracker(</td><td class="paramname">combo</td><td>) -&gt; </td><td>&lt;rm.DefaultTracker object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>构造 <a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html" title="默认追踪器，时间序列仅用于存储组合体，可退化为 combos 使用">DefaultTracker</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_combo</td><td>第一帧组合体（不允许为空） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d3/d25/classrm_1_1DefaultTracker.html" title="默认追踪器，时间序列仅用于存储组合体，可退化为 combos 使用">DefaultTracker</a> 共享指针 </dd></dl>
+</div>
+</div>
+<a id="a2f450e0e0ac528dddd517c07b447a4bf" name="a2f450e0e0ac528dddd517c07b447a4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f450e0e0ac528dddd517c07b447a4bf">◆ </a></span>update() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::DefaultTracker::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_combo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.update(</td><td class="paramname">combo</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.update(</td><td class="paramname">tick, imu</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>使用已捕获的 <span class="tt"><a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">combo</a></span> 更新追踪器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_combo</td><td>更新的组合体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>实现了 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a310170ae8ed124af33d8cc4e7b1a560e">rm::tracker</a>.</p>
+</div>
+</div>
+<a id="a0b02b13f9144e4bbdf5f36cd7307acc4" name="a0b02b13f9144e4bbdf5f36cd7307acc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b02b13f9144e4bbdf5f36cd7307acc4">◆ </a></span>update() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::DefaultTracker::update </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.update(</td><td class="paramname">combo</td><td>) -&gt; </td><td>None</td></tr><tr><td style="width: 15px;"></td><td>rm.DefaultTracker.update(</td><td class="paramname">tick, imu</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>未捕获 <span class="tt"><a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">combo</a></span>，仅更新消失帧数 </p>
+<p>实现了 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#af463570ac9e0d80620b42274bc3cc96e">rm::tracker</a>.</p>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

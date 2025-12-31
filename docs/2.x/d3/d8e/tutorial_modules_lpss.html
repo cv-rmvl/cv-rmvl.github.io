@@ -1,0 +1,537 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 轻量发布订阅服务 —— LPSS</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">轻量发布订阅服务 —— LPSS </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md286">1 机制 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md287">1.1 简介 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md288">1.2 服务发现 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md289">1.2.1 节点发现协议 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md290">1.2.2 通信端点发现协议 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md291">1.3 数据传输 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md292">1.3.1 话题输入输出机制 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md293">1.3.2 序列化与反序列化 </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md294">2 使用示例 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md295">2.1 创建简单的发布者与订阅者 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md296">2.1.1 发布者示例 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md297">2.1.2 订阅者示例 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md298">2.2 创建自定义消息类型的发布者与订阅者 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md299">2.2.1 创建项目结构 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md300">2.2.2 文件内容 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md301">2.2.3 构建与运行 </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>模拟 ROS 2/DDS 的以数据为中心的轻量级发布订阅服务</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2lpss"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025/11/25 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../da/ddb/tutorial_modules_mqtt.html">消息队列遥测传输协议 —— MQTT</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d2c/tutorial_modules_camera.html">相机设备</a> <br  />
+</p>
+<hr  />
+<p>相关模块： <a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> ， <a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html">消息模块使用教程</a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md286"></a>
+1 机制</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md287"></a>
+1.1 简介</h2>
+<p>Lightweight Pub/Sub Service (LPSS)，即轻量发布订阅服务，通过模仿 ROS 2(DDS) 的去中心化设计，以数据为核心，使用二进制直接存储的序列化与反序列化方式，提供两层的服务发现机制，建立起数据输出端（发布者）与输入端（订阅者）之间的 UDPv4 单播或 SHM 共享内存的实时通信。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md288"></a>
+1.2 服务发现</h2>
+<p>LPSS 标准提供</p>
+<ul>
+<li>NDP 节点发现协议，用于发现网络中的节点</li>
+<li>EDP 通信端点发现协议，用于发现节点上的发布者和订阅者</li>
+</ul>
+<p>两层的服务发现机制，确保发布者和订阅者能够在去中心化的网络环境中找到彼此，并进行高效的数据交换。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md289"></a>
+1.2.1 节点发现协议</h3>
+<p>即 Node Discovery Protocol(NDP)， <a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> 提供的 RNDP 是节点发现协议的 RMVL 实现，NDP 标准的数据包格式如下所示：</p>
+<blockquote class="doxtable">
+<p>NDP 包含 \(14\) 字节的 Header 头部信息和 \(6n\) 字节的 Data 数据信息，Header 头部信息用于标识数据包类型，Data 数据信息用于存储节点的详细信息。</p>
+<ol type="1">
+<li>其中，Header 头部信息的第 \(0\sim3\) 字节为 NDP 标识符，<u>可自行定义</u>，建议使用 ASCII 字符来表示，第 \(4\sim7\) 字节为 GUID 的低 4 字节主 MAC 地址，选取依据为：有线网卡 &gt; 无线网卡 &gt; 虚拟网卡，若系统中存在多个同类型的网卡，则选取第一个启用的网卡；第 \(8\sim9\) 字节为 GUID 的 PID 部分；第 \(10\sim11\) 字节为 GUID 的 Entity ID 部分，属于无效字段，一般可以设置为 <span class="tt">0</span>；第 \(12\) 字节为单字节无符号整数表示的 LocatorNum，用于标记 Data 数据信息的段数；第 \(13\) 字节为单字节无符号整数表示的 HBT，单位为秒，用于提示本节点的最大心跳包超时时间。</li>
+<li>后续的 Data 数据信息部分，每 \(6\) 字节表示一个节点的信息，第 \(0\sim1\) 字节为 Locator 的 Port 部分，表示 EDP 通信端点的端口号，采用大端序存储；第 \(2\sim5\) 字节为 Locator 的 Addr 部分，表示 EDP 通信端点的 IPv4 地址。每个节点可以包含多个 Locator 信息段，具体数量由 Header 头部信息中的 LocatorNum 字段决定，并且由实际的网卡数量所限制。 </li>
+</ol>
+</blockquote>
+<p>此外，实现方需使用 UDPv4 多播的方式发送 NDP 数据包，且多播地址为 <span class="tt">239.255.0.5</span>，多播端口为 <span class="tt">7500 + &lt;LPSS_DOMAIN_ID&gt;</span>，其中 <span class="tt">LPSS_DOMAIN_ID</span> 是一个单字节无符号整数。标准还规定每个节点应当周期性地发送心跳包，以维持其在网络中的可见性，心跳包的发送频率应当小于等于 \(\frac{\text{HBT}}2\) 的值。</p>
+<p>实现方需完成生命周期管理，需要不短于每隔 1s 的频率检查所有的已发现的节点在上次收到的心跳包的时间戳与当前时间间隔是否超过 HBT，若超过则删除。</p>
+<p>RNDP 同样满足以上 NDP 标准，具体的信息格式如下所示：</p>
+<div class="full_width_table"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">0 byte</th><th class="markdownTableHeadCenter">1 byte</th><th class="markdownTableHeadCenter">2 byte</th><th class="markdownTableHeadCenter">3 byte</th><th class="markdownTableHeadCenter">4 byte</th><th class="markdownTableHeadCenter">5 byte</th><th class="markdownTableHeadCenter">6 byte</th><th class="markdownTableHeadCenter">7 byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>'R'</code></td><td class="markdownTableBodyCenter"><code>'N'</code></td><td class="markdownTableBodyCenter"><code>'D'</code></td><td class="markdownTableBodyCenter"><code>'P'</code></td><td class="markdownTableBodyCenter" colspan="4">GUID MAC</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">8 byte</th><th class="markdownTableHeadCenter">9 byte</th><th class="markdownTableHeadCenter">10 byte</th><th class="markdownTableHeadCenter">11 byte</th><th class="markdownTableHeadCenter">12 byte</th><th class="markdownTableHeadCenter">13 byte</th><th class="markdownTableHeadCenter">14 byte</th><th class="markdownTableHeadCenter">15 byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="2">GUID PID</td><td class="markdownTableBodyCenter" colspan="2">GUID Entity ID</td><td class="markdownTableBodyCenter">LocatorNum</td><td class="markdownTableBodyCenter">HBT</td><td class="markdownTableBodyCenter" colspan="2">Port 0</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">16 byte</th><th class="markdownTableHeadCenter">17 byte</th><th class="markdownTableHeadCenter">18 byte</th><th class="markdownTableHeadCenter">19 byte</th><th class="markdownTableHeadCenter">20 byte</th><th class="markdownTableHeadCenter">21 byte</th><th class="markdownTableHeadCenter">22 byte</th><th class="markdownTableHeadCenter">23 byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="4">Addr 0</td><td class="markdownTableBodyCenter" colspan="2">Port 1</td><td class="markdownTableBodyCenter" colspan="2">Addr 1</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">24 byte</th><th class="markdownTableHeadCenter">25 byte</th><th class="markdownTableHeadCenter">...</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="2">Addr 1</td><td class="markdownTableBodyCenter">...</td></tr>
+</table>
+</div><h3 class="doxsection"><a class="anchor" id="autotoc_md290"></a>
+1.2.2 通信端点发现协议</h3>
+<p>即 Endpoint Discovery Protocol(EDP)， <a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> 提供的 REDP 是通信端点发现协议的 RMVL 实现，EDP 标准的数据包格式如下所示：</p>
+<blockquote class="doxtable">
+<p>EDP 包含 \(14\) 字节的 Header 头部信息和 \(2+n\) 字节的 Data 数据信息，Header 头部信息用于标识数据包、承载 GUID、状态标志以及话题大小。Data 数据信息用于存储 TIO 阶段实际通信时 UDPv4 通道的端口号和话题名称，其中话题名称也作为 SHM 通道的共享内存名称。</p>
+<ol type="1">
+<li>其中，Header 头部信息的第 \(0\sim3\) 字节为 EDP 标识符，<u>可自行定义</u>，建议使用 ASCII 字符来表示，第 \(4\sim7\) 字节为 GUID 的低 4 字节主 MAC 地址，选取依据同 NDP；第 \(8\sim9\) 字节为 GUID 的 PID 部分；第 \(10\sim11\) 字节为 GUID 的 Entity ID 部分，每个节点中的发布者、订阅者将有不同的 Entity ID；第 \(12\) 字节为单字节无符号整数表示的 Status 状态标志，用于标记本次操作属于添加、移除发布者、订阅者，第 \(13\) 字节为单字节无符号整数表示的 TopicSize，表示话题名称的字节大小。</li>
+<li>后续的 Data 数据信息部分，第 \(0\sim1\) 字节为 Locator 的 Port 部分，表示实际通信时 UDPv4 通道的端口号，采用大端序存储；第 \(2\sim(2+\text{TopicSize})\) 字节为 TopicName 部分，表示话题名称的字符串内容，采用 UTF-8 编码存储。 </li>
+</ol>
+</blockquote>
+<p>当触发以下事件时，节点将通过 UDPv4 单播的方式发送 EDP 数据包，目标地址为对应节点的 Locator 列表中的 Addr 和 Port：</p>
+<ol type="1">
+<li>发现新节点时<ul>
+<li>遍历本地的发布者，向新节点依次发送 Add 和 Writer 状态的 EDP 数据包，EDP 报文中 Port 可不作设置；</li>
+<li>遍历本地的订阅者，向新节点依次发送 Add 和 Reader 状态的 EDP 数据包；</li>
+</ul>
+</li>
+<li>创建发布者时，遍历本地已发现的节点，向每个节点依次发送 Add 和 Writer 状态的 EDP 数据包，EDP 报文中 Port 可不作设置；</li>
+<li>创建订阅者时，遍历本地已发现的节点，向每个节点依次发送 Add 和 Reader 状态的 EDP 数据包；</li>
+<li>节点销毁时<ul>
+<li>遍历已发现的节点，向每个节点依次发送 Remove 和 Writer 状态的 EDP 数据包，EDP 报文中 Port 可不作设置；</li>
+<li>遍历已发现的节点，向每个节点依次发送 Remove 和 Reader 状态的 EDP 数据包，EDP 报文中 Port 可不作设置；</li>
+</ul>
+</li>
+</ol>
+<p>REDP 同样满足以上 EDP 标准，具体的信息格式如下所示：</p>
+<div class="full_width_table"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">0 byte</th><th class="markdownTableHeadCenter">1 byte</th><th class="markdownTableHeadCenter">2 byte</th><th class="markdownTableHeadCenter">3 byte</th><th class="markdownTableHeadCenter">4 byte</th><th class="markdownTableHeadCenter">5 byte</th><th class="markdownTableHeadCenter">6 byte</th><th class="markdownTableHeadCenter">7 byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>'R'</code></td><td class="markdownTableBodyCenter"><code>'E'</code></td><td class="markdownTableBodyCenter"><code>'D'</code></td><td class="markdownTableBodyCenter"><code>'P'</code></td><td class="markdownTableBodyCenter" colspan="4">GUID MAC</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">8 byte</th><th class="markdownTableHeadCenter">9 byte</th><th class="markdownTableHeadCenter">10 byte</th><th class="markdownTableHeadCenter">11 byte</th><th class="markdownTableHeadCenter">12 byte</th><th class="markdownTableHeadCenter">13 byte</th><th class="markdownTableHeadCenter">14 byte</th><th class="markdownTableHeadCenter">15 byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="2">GUID PID</td><td class="markdownTableBodyCenter" colspan="2">GUID Entity ID</td><td class="markdownTableBodyCenter">Status</td><td class="markdownTableBodyCenter">TopicSize</td><td class="markdownTableBodyCenter" colspan="2">Port</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">16 byte</th><th class="markdownTableHeadCenter">...</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter" colspan="2">Topic</td></tr>
+</table>
+</div><h2 class="doxsection"><a class="anchor" id="autotoc_md291"></a>
+1.3 数据传输</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md292"></a>
+1.3.1 话题输入输出机制</h3>
+<p>即 Topic Input/Output (TIO)， <a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> 提供的 RTIO 是话题输入输出协议的 RMVL 实现，TIO 标准的数据包格式如下所示：</p>
+<blockquote class="doxtable">
+<p>一个完整的 TIO 数据包含 \(6+M+N\) 字节的 Header 头部信息和剩下的 Payload 负载信息，Header 头部信息用于标识数据包，以及提供话题、消息类型相关信息，Paylaod 负载用于存储后续实际通信时的数据内容。</p>
+<ol type="1">
+<li>其中，Header 头部信息的第 \(0\sim3\) 字节为 TIO 标识符，<u>可自行定义</u>，建议使用 ASCII 字符来表示，第 \(4\) 字节为话题字符串长度 TopicSize，记作 \(M\)；第 \(5\sim4+M\) 字节为话题名称字符串；第 \(5+M\) 字节为消息类型字符串长度 TypeSize，记作 \(N\)，第 \(6+M\sim5+M+N\) 字节为消息类型字符串。</li>
+<li>后续的 Payload 负载信息部分，由序列化与反序列化的具体协议提供支持。 </li>
+</ol>
+</blockquote>
+<p>RTIO 同样满足以上 TIO 标准，具体的信息格式如下所示：</p>
+<div class="full_width_table"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">0 byte</th><th class="markdownTableHeadCenter">1 byte</th><th class="markdownTableHeadCenter">2 byte</th><th class="markdownTableHeadCenter">3 byte</th><th class="markdownTableHeadCenter">4 byte</th><th class="markdownTableHeadCenter">5 byte</th><th class="markdownTableHeadCenter">...</th><th class="markdownTableHeadCenter">4+M byte</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>'R'</code></td><td class="markdownTableBodyCenter"><code>'T'</code></td><td class="markdownTableBodyCenter"><code>'I'</code></td><td class="markdownTableBodyCenter"><code>'O'</code></td><td class="markdownTableBodyCenter">TopicSize</td><td class="markdownTableBodyCenter" colspan="3">Topic</td></tr>
+<tr class="markdownTableRowEven">
+<th class="markdownTableHeadCenter">5+M byte</th><th class="markdownTableHeadCenter">6+M byte</th><th class="markdownTableHeadCenter">...</th><th class="markdownTableHeadCenter">5+M+N byte</th><th class="markdownTableHeadCenter">...</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">TypeSize</td><td class="markdownTableBodyCenter" colspan="3">Type</td><td class="markdownTableBodyCenter">Payload</td></tr>
+</table>
+</div><h3 class="doxsection"><a class="anchor" id="autotoc_md293"></a>
+1.3.2 序列化与反序列化</h3>
+<p>TIO 标准不要求采用任何特定的序列化与反序列化方式，一切由实现方自行提供。因此 RMVL 使用二进制直接序列化 / 反序列化的方式，不区分端序（这会降低一部分兼容性，但在主流架构以及 OS 上均一致），因此数据在发布者与订阅者之间的传输效率非常高。此外 RMVL 提供了消息类型的自动代码生成工具，用户可以通过定义消息类型的 <span class="tt">*.msg</span> 文件，使用 RMVL 提供的代码生成工具生成对应的 C++ 代码文件，从而简化消息类型的创建过程。</p>
+<p>RMVL 内置了一些常用的消息类型，用户可以直接使用这些消息类型，而无需自行定义和生成代码。同时，RMVL 提供了 <span class="tt">rmvl_generate_msg</span> 的 CMake 函数，可以辅助用户完成自定义消息类型的代码生成过程，详情可参考 <a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html">消息模块使用教程</a> 。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md294"></a>
+2 使用示例</h1>
+<p>LPSS 提供了简单易用的发布者与订阅者接口，用户可以方便地创建发布者与订阅者，实现节点间的数据通信。以下示例展示了如何使用 LPSS 创建发布者与订阅者。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md295"></a>
+2.1 创建简单的发布者与订阅者</h2>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md296"></a>
+2.1.1 发布者示例</h3>
+<p><b>示例 1</b></p>
+<p>下面的示例展示了如何创建一个发布者，该发布者每隔 100 毫秒发布一次包含递增计数值的字符串消息。</p>
+<div class="fragment"><div class="line"><span class="comment">// RMVL 内置的第三方 fmt 库，用于格式化字符串，不需要 fmt 库的不用包含该头文件</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><span class="comment">// LPSS 完整功能的头文件</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="comment">// 内置的 std 分组的 String 消息类型头文件</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals; <span class="comment">// 使用时间字面量，如 100ms、5s 等</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;                   <span class="comment">// 使用 RMVL 提供的命名空间</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建 LPSS 节点</span></div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="comment">// 创建发布者，发布 String 类型的消息到 /topic 话题</span></div>
+<div class="line">    <span class="keyword">auto</span> publisher = nd.createPublisher&lt;<a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>&gt;(<span class="stringliteral">&quot;/topic&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 准备消息类型</span></div>
+<div class="line">    <span class="keyword">auto</span> <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a> = <a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>();</div>
+<div class="line">    uint16_t count{};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 循环发布消息</span></div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">        <span class="comment">// sleep 是为了模拟程序可能执行的其他功能</span></div>
+<div class="line">        std::this_thread::sleep_for(100ms);</div>
+<div class="line">        <span class="comment">// 设置消息内容，这里使用的是 RMVL 内置的第三方 fmt 库，也可以使用别的方式进行设置</span></div>
+<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.data = fmt::format(<span class="stringliteral">&quot;Times: {}&quot;</span>, count++);</div>
+<div class="line">        <span class="comment">// 发布消息，这一步会完成消息的序列化和传输</span></div>
+<div class="line">        publisher.publish(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> lpss.hpp:110</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1String_html"><div class="ttname"><a href="../../d3/db4/classrm_1_1msg_1_1String.html">rm::msg::String</a></div><div class="ttdoc">String 消息类型：std/String</div><div class="ttdef"><b>定义</b> string.hpp:25</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> point.hpp:19</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --><p><b>示例 2</b></p>
+<p>下面的示例展示了如何创建一个发布者类，该类每隔 10 毫秒发布一次颜色消息。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="comment">// 内置的 std 分组的 ColorRGBA 消息类型头文件</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/color_rgba.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 自定义的发布者类，继承自 lpss::Node</span></div>
+<div class="line"><span class="keyword">class </span>MyPublisher : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyPublisher() : Node() {</div>
+<div class="line">        <span class="comment">// 在构造函数中创建发布者，发布 ColorRGBA 类型的消息到 /color 话题</span></div>
+<div class="line">        _pub = this-&gt;createPublisher&lt;msg::ColorRGBA&gt;(<span class="stringliteral">&quot;/color&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordtype">void</span> publish(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a) {</div>
+<div class="line">        <span class="comment">// 设置消息内容</span></div>
+<div class="line">        _msg.r = r;</div>
+<div class="line">        _msg.g = g;</div>
+<div class="line">        _msg.b = b;</div>
+<div class="line">        _msg.a = a;</div>
+<div class="line">        <span class="comment">// 或者直接使用下面的聚合初始化方式进行设置</span></div>
+<div class="line">        <span class="comment">// _msg = {r, g, b, a};</span></div>
+<div class="line">        <span class="comment">// 发布消息</span></div>
+<div class="line">        _pub.publish(_msg);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="comment">// 持有的实际发布者对象</span></div>
+<div class="line">    <a class="code hl_class" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">lpss::Publisher&lt;msg::ColorRGBA&gt;</a> _pub{};</div>
+<div class="line">    <span class="comment">// 消息对象</span></div>
+<div class="line">    <a class="code hl_class" href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">msg::ColorRGBA</a> _msg{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建自定义的发布者</span></div>
+<div class="line">    <span class="keyword">auto</span> publisher = MyPublisher{};</div>
+<div class="line"> </div>
+<div class="line">    uint16_t count{};</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">        std::this_thread::sleep_for(10ms);</div>
+<div class="line">        publisher.publish(1.0f, 0.0f, 0.0f, 1.0f);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Publisher_html"><div class="ttname"><a href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">rm::lpss::Publisher</a></div><div class="ttdoc">发布者代理</div><div class="ttdef"><b>定义</b> lpss.hpp:42</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1ColorRGBA_html"><div class="ttname"><a href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">rm::msg::ColorRGBA</a></div><div class="ttdoc">ColorRGBA 消息类型：std/ColorRGBA</div><div class="ttdef"><b>定义</b> color_rgba.hpp:25</div></div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md297"></a>
+2.1.2 订阅者示例</h3>
+<p><b>示例 1</b></p>
+<p>下面展示了如何创建一个订阅者，该订阅者订阅 <span class="tt">/topic</span> 话题的字符串消息，并在收到消息时打印消息内容。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="comment">// 创建 LPSS 节点</span></div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="comment">// 创建订阅者，订阅 /topic 话题的 String 类型的消息</span></div>
+<div class="line">    <span class="keyword">auto</span> subscriber = nd.createSubscriber&lt;<a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>&gt;(</div>
+<div class="line">        <span class="stringliteral">&quot;/topic&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a> &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">            <span class="comment">// 收到消息后的回调函数，这里使用的是 lambda 表达式，内部仅简单地打印收到的消息内容</span></div>
+<div class="line">            fmt::println(<span class="stringliteral">&quot;I heard: &#39;{}&#39;&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.data);</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">        <span class="comment">// 下面的 sleep 只是为了保持程序运行，可以在这里执行其他功能</span></div>
+<div class="line">        std::this_thread::sleep_for(1s);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>示例 2</b></p>
+<p>下面展示了如何创建一个订阅者类，该类订阅 <span class="tt">/color</span> 话题的颜色消息，并在收到消息时打印颜色值。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/color_rgba.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>MySubscriber : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MySubscriber() : Node() {</div>
+<div class="line">        _sub = this-&gt;createSubscriber&lt;msg::ColorRGBA&gt;(</div>
+<div class="line">            <span class="stringliteral">&quot;/color&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">msg::ColorRGBA</a> &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">                fmt::println(<span class="stringliteral">&quot;R: {}, G:{}, B:{}, A:{}&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.r, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.g, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.b, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.a);</div>
+<div class="line">            });</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code hl_class" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">lpss::Subscriber&lt;msg::ColorRGBA&gt;</a> _sub{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> subscriber = MySubscriber{};</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">        <span class="comment">// 保持程序运行，可以在这里执行其他功能</span></div>
+<div class="line">        std::this_thread::sleep_for(1s);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Subscriber_html"><div class="ttname"><a href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">rm::lpss::Subscriber</a></div><div class="ttdoc">订阅者代理</div><div class="ttdef"><b>定义</b> lpss.hpp:81</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md298"></a>
+2.2 创建自定义消息类型的发布者与订阅者</h2>
+<p>除了使用 RMVL 内置的消息类型外，用户还可以自定义消息类型，并使用这些自定义的消息类型创建发布者与订阅者。下面的示例展示了如何定义一个自定义的消息类型，并使用该消息类型创建发布者与订阅者。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md299"></a>
+2.2.1 创建项目结构</h3>
+<p>首先可以创建一个项目，假设项目名称为 <span class="tt">demo</span>，并在其中创建</p>
+<ul>
+<li><span class="tt">msg</span> 目录，用于存放自定义的消息类型文件；</li>
+<li><span class="tt">src</span> 目录，用于存放发布者与订阅者的源代码文件；</li>
+<li><span class="tt">CMakeLists.txt</span> 文件，用于配置项目的构建过程。</li>
+</ul>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
+2.2.2 文件内容</h3>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
+<div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(VERSION 3.16)</div> <div class="line"><span class="keyword">project</span>(LPSSDemo)</div> <div class="line"></div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD 17)</div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED ON)</div> <div class="line"></div> <div class="line"><span class="comment"># 查找 RMVL 包，其中包含了自动代码生成的功能</span></div> <div class="line"><span class="keyword">find_package</span>(RMVL REQUIRED)</div> <div class="line"></div> <div class="line"><span class="comment"># 生成自定义消息类型的代码</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(MyCustomMsg)</div> <div class="line"><span class="keyword">add_library</span>(my_custom_msg src/_rm_codegen_msg_my_custom_msg.cpp)</div> <div class="line"><span class="keyword">target_include_directories</span>(my_custom_msg</div> <div class="line">&#160;&#160;<span class="keyword">PUBLIC</span> include</div> <div class="line">)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加发布者和订阅者的可执行文件</span></div> <div class="line"><span class="keywordflow">foreach</span>(m pub sub)</div> <div class="line">&#160;&#160;<span class="keyword">rmvl_add_exe</span>(${m}</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">SOURCES</span> src/${m}.cpp</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">DEPENDS</span> lpss</div> <div class="line">&#160;&#160;)</div> <div class="line"></div> <div class="line">&#160;&#160;<span class="keyword">target_include_directories</span>(${m} <span class="keyword">PRIVATE</span> include)</div> <div class="line"><span class="keywordflow">endforeach</span>()</div> </div></li>
+<li><p class="startli"><b class="tab-title">MyCustomMsg.msg</b></p>
+<p class="startli">在 <span class="tt">msg</span> 目录下创建 <span class="tt">MyCustomMsg.msg</span> 文件，定义自定义的消息类型：</p>
+<div class="fragment"> <div class="line"><span class="comment"># MyCustomMsg.msg</span></div> <div class="line"></div> <div class="line"><span class="keywordtype">int32</span> id</div> <div class="line"><span class="keywordtype">string</span> name</div> <div class="line"><span class="keywordtype">bool</span> is_active</div> </div></li>
+<li><p class="startli"><b class="tab-title">pub.cpp</b></p>
+<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">pub.cpp</span> 文件，实现发布者：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;rmvlmsg/my_custom_msg.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="keyword">auto</span> publisher = nd.createPublisher&lt;msg::MyCustomMsg&gt;(<span class="stringliteral">&quot;/my_custom_topic&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    msg::MyCustomMsg <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>;</div>
+<div class="line">    int32_t count{0};</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line">        std::this_thread::sleep_for(50ms);</div>
+<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id = count++;</div>
+<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name = <span class="stringliteral">&quot;Message_&quot;</span> + std::to_string(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id);</div>
+<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active = (<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id % 2 == 0);</div>
+<div class="line">        publisher.publish(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b class="tab-title">sub.cpp</b></p>
+<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">sub.cpp</span> 文件，实现订阅者：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;rmvlmsg/my_custom_msg.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="keyword">auto</span> subscriber = nd.createSubscriber&lt;msg::MyCustomMsg&gt;(</div>
+<div class="line">        <span class="stringliteral">&quot;/my_custom_topic&quot;</span>, [](<span class="keyword">const</span> msg::MyCustomMsg &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">            fmt::println(<span class="stringliteral">&quot;ID: {}, Name: {}, Active: {}&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active);</div>
+<div class="line">        });</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">        std::this_thread::sleep_for(1s);</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+</ul>
+</div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
+2.2.3 构建与运行</h3>
+<p>在项目根目录下运行以下命令进行构建，并运行发布者：</p>
+<div class="fragment"> <div class="line"><span class="comment"># Build</span></div> <div class="line"><span class="keywordflow">mkdir</span> build &amp;&amp; <span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> ..</div> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">--build</span> .</div> <div class="line"></div> <div class="line"><span class="comment"># Run</span></div> <div class="line">./pub</div> </div><p>然后在另一个终端中运行订阅者，记得进入 build 目录：</p>
+<div class="fragment"> <div class="line">./sub</div> </div> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

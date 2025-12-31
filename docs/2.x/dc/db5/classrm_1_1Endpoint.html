@@ -1,0 +1,317 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::Endpoint类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="../../df/dac/classrm_1_1Endpoint-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Endpoint类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>端点  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Endpoint 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5e/classrm_1_1Endpoint__coll__graph.svg" width="144" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a90fcf212e3872b0780b87159962d14f1" id="r_a90fcf212e3872b0780b87159962d14f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90fcf212e3872b0780b87159962d14f1">Endpoint</a> (const <a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">ip::Protocol</a> &amp;<a class="el" href="../../d2/df5/namespacerm_1_1ip.html">ip</a>, uint16_t <a class="el" href="#a434f9a8619442363a8553ec0366e2b37">port</a>)</td></tr>
+<tr class="memdesc:a90fcf212e3872b0780b87159962d14f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 Socket 端点  <br /></td></tr>
+<tr class="memitem:a60fc1c3c0d972c21788e579bf4bc9da2" id="r_a60fc1c3c0d972c21788e579bf4bc9da2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60fc1c3c0d972c21788e579bf4bc9da2">family</a> () const</td></tr>
+<tr class="memdesc:a60fc1c3c0d972c21788e579bf4bc9da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取协议族  <br /></td></tr>
+<tr class="memitem:ac69adfc36be16e53ca971dd52b97479c" id="r_ac69adfc36be16e53ca971dd52b97479c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac69adfc36be16e53ca971dd52b97479c">type</a> () const</td></tr>
+<tr class="memdesc:ac69adfc36be16e53ca971dd52b97479c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Socket 类型  <br /></td></tr>
+<tr class="memitem:a434f9a8619442363a8553ec0366e2b37" id="r_a434f9a8619442363a8553ec0366e2b37"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434f9a8619442363a8553ec0366e2b37">port</a> () const</td></tr>
+<tr class="memdesc:a434f9a8619442363a8553ec0366e2b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取端口号  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a2fd5dcde65450d0ffa53e01e0e297076" id="r_a2fd5dcde65450d0ffa53e01e0e297076"><td class="memItemLeft" align="right" valign="top">static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd5dcde65450d0ffa53e01e0e297076">ANY_PORT</a> = 0</td></tr>
+<tr class="memdesc:a2fd5dcde65450d0ffa53e01e0e297076"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意可用或自动分配端口标识  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>端点 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a90fcf212e3872b0780b87159962d14f1" name="a90fcf212e3872b0780b87159962d14f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fcf212e3872b0780b87159962d14f1">&#9670;&#160;</a></span>Endpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Endpoint::Endpoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/dc1/structrm_1_1ip_1_1Protocol.html">ip::Protocol</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ip</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>port</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造 Socket 端点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>网络协议 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>端口号，为 <span class="tt">0</span> 时表示任意可用或自动分配 <div class="fragment"><div class="line"><a class="code hl_function" href="#a90fcf212e3872b0780b87159962d14f1">Endpoint</a> ep(<a class="code hl_function" href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">ip::tcp::v4</a>(), 8080);</div>
+<div class="ttc" id="aclassrm_1_1Endpoint_html_a90fcf212e3872b0780b87159962d14f1"><div class="ttname"><a href="#a90fcf212e3872b0780b87159962d14f1">rm::Endpoint::Endpoint</a></div><div class="ttdeci">Endpoint(const ip::Protocol &amp;ip, uint16_t port)</div><div class="ttdoc">构造 Socket 端点</div><div class="ttdef"><b>定义</b> socket.hpp:288</div></div>
+<div class="ttc" id="anamespacerm_1_1ip_1_1tcp_html_a4e4df5dcb3080621b854153ed695bf47"><div class="ttname"><a href="../../d9/d04/namespacerm_1_1ip_1_1tcp.html#a4e4df5dcb3080621b854153ed695bf47">rm::ip::tcp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 TCP 协议</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/db5/classrm_1_1Endpoint_a90fcf212e3872b0780b87159962d14f1_cgraph.svg" width="352" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a60fc1c3c0d972c21788e579bf4bc9da2" name="a60fc1c3c0d972c21788e579bf4bc9da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fc1c3c0d972c21788e579bf4bc9da2">&#9670;&#160;</a></span>family()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rm::Endpoint::family </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取协议族 </p>
+
+</div>
+</div>
+<a id="a434f9a8619442363a8553ec0366e2b37" name="a434f9a8619442363a8553ec0366e2b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434f9a8619442363a8553ec0366e2b37">&#9670;&#160;</a></span>port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::Endpoint::port </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取端口号 </p>
+
+</div>
+</div>
+<a id="ac69adfc36be16e53ca971dd52b97479c" name="ac69adfc36be16e53ca971dd52b97479c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69adfc36be16e53ca971dd52b97479c">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rm::Endpoint::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 Socket 类型 </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a2fd5dcde65450d0ffa53e01e0e297076" name="a2fd5dcde65450d0ffa53e01e0e297076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd5dcde65450d0ffa53e01e0e297076">&#9670;&#160;</a></span>ANY_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rm::Endpoint::ANY_PORT = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>任意可用或自动分配端口标识 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

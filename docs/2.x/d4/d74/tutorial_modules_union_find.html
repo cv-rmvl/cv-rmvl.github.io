@@ -1,0 +1,240 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: 并查集</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">并查集 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md238">1 什么是并查集 </a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md239">2 使用方法 </a>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md240">3 例题 </a>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2union__find"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/01/11</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d0/d9d/tutorial_modules_fft.html">快速傅里叶变换</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d5/db4/tutorial_modules_ra_heap.html">支持随机访问的堆</a> <br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html" title="并查集">rm::UnionFind</a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md238"></a>
+1 什么是并查集</h1>
+<p>并查集是一种树型的数据结构，用于处理一些不相交集合的 <b>合并</b> 及 <b>查询</b> 问题，常常在使用中用森林来表示。</p>
+<p>在一些有 <span class="tt">N</span> 个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。</p>
+<ul>
+<li>如果使用链表代替，查找的方法时间复杂度达到了 \(\text O(N)\)，合并的方法时间复杂度为 \(\text O(1)\)。</li>
+<li>如果使用哈希表代替，查找的方法时间复杂度为 \(\text O(1)\)，合并的方法时间复杂度达到了 \(\text O(N)\)。</li>
+</ul>
+<p>使用森林来表示的并查集，查询、合并操作时间复杂度均接近 \(\text O(1)\)。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md239"></a>
+2 使用方法</h1>
+<p><a class="el" href="../../db/d0c/classrm_1_1UnionFind.html" title="并查集">rm::UnionFind</a> 支持集合的快速合并、查找的结构，提供三种典型操作</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">成员方法  </th><th class="markdownTableHeadCenter">含义  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">bool connected(a, b);  </td><td class="markdownTableBodyCenter">两个元素是否在一个集合中  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">void merge(a, b);  </td><td class="markdownTableBodyCenter">两个元素所在集合进行合并  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">void components(a, b);  </td><td class="markdownTableBodyCenter">获取并查集的连通分量  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md240"></a>
+3 例题</h1>
+<p><b>【LeetCode 200】岛屿数量</b></p>
+<p><b>问题：</b></p>
+<p>给你一个由 <span class="tt">'1'</span>（陆地）和 <span class="tt">'0'</span>（水）组成的的二维网格，请你计算网格中岛屿的数量。</p>
+<p>岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。</p>
+<p>此外，你可以假设该网格的四条边均被水包围。</p>
+<p><b>示例 1：</b></p>
+<div class="fragment"><div class="line">输入：grid = [</div>
+<div class="line">  [&#39;1&#39;,&#39;1&#39;,&#39;1&#39;,&#39;1&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;1&#39;,&#39;1&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;1&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;]</div>
+<div class="line">]</div>
+<div class="line">输出：1</div>
+</div><!-- fragment --><p><b>示例 2：</b></p>
+<div class="fragment"><div class="line">输入：grid = [</div>
+<div class="line">  [&#39;1&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;1&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;0&#39;,&#39;0&#39;],</div>
+<div class="line">  [&#39;0&#39;,&#39;0&#39;,&#39;0&#39;,&#39;1&#39;,&#39;1&#39;]</div>
+<div class="line">]</div>
+<div class="line">输出：3</div>
+</div><!-- fragment --><p><b>提示：</b></p>
+<ul>
+<li><span class="tt">m == grid.length</span></li>
+<li><span class="tt">n == grid[i].length</span></li>
+<li><span class="tt">1 &lt;= m, n &lt;= 300</span></li>
+<li><span class="tt">grid[i][j]</span> 的值为 <span class="tt">'0'</span> 或 <span class="tt">'1'</span></li>
+</ul>
+<p><b>代码：</b></p>
+<p>使用 UnionFind 进行解答：</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>Solution {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">int</span> numIslands(vector&lt;vector&lt;char&gt;&gt;&amp; grid) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> rows = grid.size();</div>
+<div class="line">        <span class="keywordflow">if</span> (!rows)</div>
+<div class="line">            <span class="keywordflow">return</span> 0;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> cols = grid[0].size();</div>
+<div class="line"> </div>
+<div class="line">        vector&lt;char&gt; data;</div>
+<div class="line">        data.reserve(rows * cols);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; rows; ++i)</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; cols; ++j)</div>
+<div class="line">                <span class="keywordflow">if</span> (grid[i][j] == <span class="charliteral">&#39;1&#39;</span>)</div>
+<div class="line">                    data.emplace_back(i * cols + j);</div>
+<div class="line">        UnionFind&lt;char&gt; uf(data.begin(), data.end());</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; rows; ++r) {</div>
+<div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; cols; ++c) {</div>
+<div class="line">                <span class="keywordflow">if</span> (grid[r][c] == <span class="charliteral">&#39;1&#39;</span>) {</div>
+<div class="line">                    grid[r][c] = <span class="charliteral">&#39;0&#39;</span>;</div>
+<div class="line">                    <span class="keywordflow">if</span> (r - 1 &gt;= 0 &amp;&amp; grid[r - 1][c] == <span class="charliteral">&#39;1&#39;</span>)</div>
+<div class="line">                        uf.merge(r * cols + c, (r - 1) * cols + c);</div>
+<div class="line">                    <span class="keywordflow">if</span> (r + 1 &lt; rows &amp;&amp; grid[r + 1][c] == <span class="charliteral">&#39;1&#39;</span>)</div>
+<div class="line">                        uf.merge(r * cols + c, (r + 1) * cols + c);</div>
+<div class="line">                    <span class="keywordflow">if</span> (c - 1 &gt;= 0 &amp;&amp; grid[r][c - 1] == <span class="charliteral">&#39;1&#39;</span>)</div>
+<div class="line">                        uf.merge(r * cols + c, r * cols + c - 1);</div>
+<div class="line">                    <span class="keywordflow">if</span> (c + 1 &lt; cols &amp;&amp; grid[r][c + 1] == <span class="charliteral">&#39;1&#39;</span>)</div>
+<div class="line">                        uf.merge(r * cols + c, r * cols + c + 1);</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> uf.components();</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::KalmanFilter&lt; Tp, StateDim, MeasureDim &gt; 模板类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../de/d27/classrm_1_1KalmanFilter-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::KalmanFilter&lt; Tp, StateDim, MeasureDim &gt; 模板类 参考<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> &raquo; <a class="el" href="../../d7/db3/group__algorithm__kalman.html">卡尔曼滤波模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>卡尔曼滤波器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::KalmanFilter&lt; Tp, StateDim, MeasureDim &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/dfd/classrm_1_1KalmanFilter__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::KalmanFilter&lt; Tp, StateDim, MeasureDim &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d87/classrm_1_1KalmanFilter__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7356110c8d9c7c63f8a8d5a26af28955" id="r_a7356110c8d9c7c63f8a8d5a26af28955"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7356110c8d9c7c63f8a8d5a26af28955">KalmanFilter</a> ()</td></tr>
+<tr class="memdesc:a7356110c8d9c7c63f8a8d5a26af28955"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新的 <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html" title="卡尔曼滤波器">KalmanFilter</a> 对象  <br /></td></tr>
+<tr class="memitem:af582f4adaeeb639abf4e62c53817d7f6" id="r_af582f4adaeeb639abf4e62c53817d7f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af582f4adaeeb639abf4e62c53817d7f6">setA</a> (const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;state_tf)</td></tr>
+<tr class="memdesc:af582f4adaeeb639abf4e62c53817d7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置状态转移矩阵 \(A\)  <br /></td></tr>
+<tr class="memitem:ae877137380d48b8a004de3f6b588de11" id="r_ae877137380d48b8a004de3f6b588de11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae877137380d48b8a004de3f6b588de11">setH</a> (const cv::Matx&lt; Tp, MeasureDim, StateDim &gt; &amp;observe_tf)</td></tr>
+<tr class="memdesc:ae877137380d48b8a004de3f6b588de11"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置观测矩阵 \(H\)  <br /></td></tr>
+<tr class="memitem:a87a02cc3e6d0bbba66f08d5347127cb1" id="r_a87a02cc3e6d0bbba66f08d5347127cb1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87a02cc3e6d0bbba66f08d5347127cb1">predict</a> ()</td></tr>
+<tr class="memdesc:a87a02cc3e6d0bbba66f08d5347127cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡尔曼滤波的预测部分，包括状态量的先验估计和误差协方差的先验估计  <br /></td></tr>
+<tr class="memitem:a1bcf9b2c342ccf827e2fe8e6d04aa645" id="r_a1bcf9b2c342ccf827e2fe8e6d04aa645"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bcf9b2c342ccf827e2fe8e6d04aa645">correct</a> (const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;zk)</td></tr>
+<tr class="memdesc:a1bcf9b2c342ccf827e2fe8e6d04aa645"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡尔曼滤波器校正部分，包含卡尔曼增益的计算、状态量的后验估计和误差协方差的后验估计  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1KalmanFilterStaticDatas"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1KalmanFilterStaticDatas')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html">rm::KalmanFilterStaticDatas&lt; Tp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memitem:aa9316466c6d0e86f690ef8a45ba7769b inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_aa9316466c6d0e86f690ef8a45ba7769b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa9316466c6d0e86f690ef8a45ba7769b">KalmanFilterStaticDatas</a> ()</td></tr>
+<tr class="memdesc:aa9316466c6d0e86f690ef8a45ba7769b inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新的卡尔曼滤波静态数据  <br /></td></tr>
+<tr class="memitem:aa32899fa6bb9fc4d52a62feae756a71a inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_aa32899fa6bb9fc4d52a62feae756a71a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">init</a> (const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, Tp <a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">error</a>)</td></tr>
+<tr class="memdesc:aa32899fa6bb9fc4d52a62feae756a71a inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）  <br /></td></tr>
+<tr class="memitem:ae425c3a2e7955359368bb54ee82e2519 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_ae425c3a2e7955359368bb54ee82e2519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#ae425c3a2e7955359368bb54ee82e2519">init</a> (const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;<a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">error</a>)</td></tr>
+<tr class="memdesc:ae425c3a2e7955359368bb54ee82e2519 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化状态以及对应的误差协方差矩阵（对角矩阵）  <br /></td></tr>
+<tr class="memitem:a47d69bda49836961e21571c1267c3312 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_a47d69bda49836961e21571c1267c3312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">setR</a> (const cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt; &amp;measure_err)</td></tr>
+<tr class="memdesc:a47d69bda49836961e21571c1267c3312 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置测量噪声协方差矩阵 \(R\)  <br /></td></tr>
+<tr class="memitem:a27e04aa239c0302d8a31aad3ebf2f130 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_a27e04aa239c0302d8a31aad3ebf2f130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">setQ</a> (const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;process_err)</td></tr>
+<tr class="memdesc:a27e04aa239c0302d8a31aad3ebf2f130 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置过程噪声协方差矩阵 \(Q\)  <br /></td></tr>
+<tr class="memitem:a0c274368fa49c45b5cd72b70087fb454 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas" id="r_a0c274368fa49c45b5cd72b70087fb454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a0c274368fa49c45b5cd72b70087fb454">setP</a> (const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;state_err)</td></tr>
+<tr class="memdesc:a0c274368fa49c45b5cd72b70087fb454 inherit pub_methods_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置误差协方差矩阵 \(P\)  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1KalmanFilterStaticDatas')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html">rm::KalmanFilterStaticDatas&lt; Tp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memitem:a72a0df6ada811d0ab913f725f758077d inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a72a0df6ada811d0ab913f725f758077d"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a72a0df6ada811d0ab913f725f758077d">x</a></td></tr>
+<tr class="memdesc:a72a0df6ada811d0ab913f725f758077d inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态的后验估计 \(\hat{\boldsymbol x}\)  <br /></td></tr>
+<tr class="memitem:aab4782f248cece387a6631aeb00c0a83 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_aab4782f248cece387a6631aeb00c0a83"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aab4782f248cece387a6631aeb00c0a83">x_</a></td></tr>
+<tr class="memdesc:aab4782f248cece387a6631aeb00c0a83 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态的先验估计 \(\hat{\boldsymbol x}^-\)  <br /></td></tr>
+<tr class="memitem:a216ae90ab33826f48234e40d2876c871 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a216ae90ab33826f48234e40d2876c871"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, MeasureDim, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a216ae90ab33826f48234e40d2876c871">z</a></td></tr>
+<tr class="memdesc:a216ae90ab33826f48234e40d2876c871 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">观测向量 \(\boldsymbol z\)  <br /></td></tr>
+<tr class="memitem:a7365c668ce291f76e9df5d953f73fdd1 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a7365c668ce291f76e9df5d953f73fdd1"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, StateDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a7365c668ce291f76e9df5d953f73fdd1">Q</a></td></tr>
+<tr class="memdesc:a7365c668ce291f76e9df5d953f73fdd1 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">过程噪声协方差矩阵 \(Q\)  <br /></td></tr>
+<tr class="memitem:a86abc56aa7577b4a24046a149e1a1c8c inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a86abc56aa7577b4a24046a149e1a1c8c"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a86abc56aa7577b4a24046a149e1a1c8c">R</a></td></tr>
+<tr class="memdesc:a86abc56aa7577b4a24046a149e1a1c8c inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">测量噪声协方差矩阵 \(R\)  <br /></td></tr>
+<tr class="memitem:a0a243b7cab92e0d7ded01188cec120c5 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a0a243b7cab92e0d7ded01188cec120c5"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, StateDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a0a243b7cab92e0d7ded01188cec120c5">P</a></td></tr>
+<tr class="memdesc:a0a243b7cab92e0d7ded01188cec120c5 inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">后验误差协方差矩阵 \(P\)  <br /></td></tr>
+<tr class="memitem:a53bc381f8358111ff99037d158c2221f inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a53bc381f8358111ff99037d158c2221f"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, StateDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a53bc381f8358111ff99037d158c2221f">P_</a></td></tr>
+<tr class="memdesc:a53bc381f8358111ff99037d158c2221f inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">先验误差协方差矩阵 \(P^-\)  <br /></td></tr>
+<tr class="memitem:af71f2ec7a5649f1eb1994597a14aff9e inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_af71f2ec7a5649f1eb1994597a14aff9e"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, StateDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#af71f2ec7a5649f1eb1994597a14aff9e">I</a></td></tr>
+<tr class="memdesc:af71f2ec7a5649f1eb1994597a14aff9e inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">单位矩阵 \(I\)  <br /></td></tr>
+<tr class="memitem:a8fcb8b5a6a6c4af02183dc6734daf20d inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas" id="r_a8fcb8b5a6a6c4af02183dc6734daf20d"><td class="memItemLeft" align="right" valign="top">cv::Matx&lt; Tp, StateDim, MeasureDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a8fcb8b5a6a6c4af02183dc6734daf20d">K</a></td></tr>
+<tr class="memdesc:a8fcb8b5a6a6c4af02183dc6734daf20d inherit pro_attribs_classrm_1_1KalmanFilterStaticDatas"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡尔曼增益 \(K\)  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt;<br />
+class rm::KalmanFilter&lt; Tp, StateDim, MeasureDim &gt;</div><p>卡尔曼滤波器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>数据类型 </td></tr>
+    <tr><td class="paramname">StateDim</td><td>状态量个数 </td></tr>
+    <tr><td class="paramname">MeasureDim</td><td>观测量个数 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a7356110c8d9c7c63f8a8d5a26af28955" name="a7356110c8d9c7c63f8a8d5a26af28955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7356110c8d9c7c63f8a8d5a26af28955">&#9670;&#160;</a></span>KalmanFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a>&lt; Tp, StateDim, MeasureDim &gt;::KalmanFilter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造新的 <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html" title="卡尔曼滤波器">KalmanFilter</a> 对象 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a1bcf9b2c342ccf827e2fe8e6d04aa645" name="a1bcf9b2c342ccf827e2fe8e6d04aa645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bcf9b2c342ccf827e2fe8e6d04aa645">&#9670;&#160;</a></span>correct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a>&lt; Tp, StateDim, MeasureDim &gt;::correct </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>zk</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>卡尔曼滤波器校正部分，包含卡尔曼增益的计算、状态量的后验估计和误差协方差的后验估计 </p>
+<p>公式如下  </p><p class="formulaDsp">
+\[\begin{align}K_k&amp;=P_k^-H^T\left(HP_k^-H^T+R\right)^{-1}\\\hat{\boldsymbol x}_k&amp;=\hat{\boldsymbol
+        x}_k^-+K\left(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-\right)\\P_k&amp;=\left(I-K_kH\right)P_k^-\end{align}\]
+</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">zk</td><td>观测量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>后验状态估计 </dd></dl>
+
+</div>
+</div>
+<a id="a87a02cc3e6d0bbba66f08d5347127cb1" name="a87a02cc3e6d0bbba66f08d5347127cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a02cc3e6d0bbba66f08d5347127cb1">&#9670;&#160;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a>&lt; Tp, StateDim, MeasureDim &gt;::predict </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>卡尔曼滤波的预测部分，包括状态量的先验估计和误差协方差的先验估计 </p>
+<p>公式如下 </p><p class="formulaDsp">
+\[\begin{align}\hat{\boldsymbol x}_k^-&amp;=A\hat{\boldsymbol x}_{k-1}\\P_k^-&amp;=AP_{k-1}A^T+Q\end{align}\]
+</p>
+<dl class="section return"><dt>返回</dt><dd>先验状态估计 </dd></dl>
+
+</div>
+</div>
+<a id="af582f4adaeeb639abf4e62c53817d7f6" name="af582f4adaeeb639abf4e62c53817d7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af582f4adaeeb639abf4e62c53817d7f6">&#9670;&#160;</a></span>setA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a>&lt; Tp, StateDim, MeasureDim &gt;::setA </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>state_tf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置状态转移矩阵 \(A\) </p>
+<p>包含 <span class="tt"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a72a0df6ada811d0ab913f725f758077d" title="状态的后验估计">x</a></span> 方向位置、<span class="tt">y</span> 方向位置、<span class="tt"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a72a0df6ada811d0ab913f725f758077d" title="状态的后验估计">x</a></span> 方向速度和 <span class="tt">y</span> 方向速度的运动过程一般可以描述为   </p><p class="formulaDsp">
+\[\left\{\begin{align}x_{n+1}&amp;=x_n+{v_x}_nt+\frac12{a_x}_nt^2\\y_{n+1}&amp;=y_n+{v_y}_nt
++\frac12{a_y}_nt^2\\{v_x}_{n+1}&amp;={v_x}_n+{a_x}_nt\\{v_y}_{n+1}&amp;={v_y}_n+{a_y}_nt
+\end{align}\right.\tag1\]
+</p>
+<p>使用矩阵表示为    </p><p class="formulaDsp">
+\[\begin{bmatrix}x_{n+1}\\y_{n+1}\\{v_x}_{n+1}\\
+{v_y}_{n+1}\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;t&amp;0\\0&amp;1&amp;0&amp;t\\0&amp;0&amp;1&amp;0\\0&amp;0&amp;0&amp;1\end{bmatrix}
+\begin{bmatrix}x_n\\y_n\\{v_x}_n\\{v_y}_n\end{bmatrix}+\begin{bmatrix}\frac12t^2&amp;0\\
+0&amp;\frac12t^2\\t&amp;0\\0&amp;t\end{bmatrix}\begin{bmatrix}{a_x}_n\\{a_y}_n\end{bmatrix}\tag2\]
+</p>
+<p> 即可以写成 </p><p class="formulaDsp">
+\[\boldsymbol{x}_{n+1}=A\boldsymbol{x}_n+B\boldsymbol{u}_n\tag3\]
+</p>
+<p> 在这条公式中</p><ul>
+<li>\(A\) 是状态转移矩阵</li>
+<li>\(\boldsymbol x\) 是状态向量</li>
+<li>\(n\) 和 \(n+1\) 表示当前帧和上一帧的数据</li>
+<li>\(B\) 是控制矩阵</li>
+<li>\(\boldsymbol u\) 是控制向量</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">state_tf</td><td>状态转移矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae877137380d48b8a004de3f6b588de11" name="ae877137380d48b8a004de3f6b588de11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae877137380d48b8a004de3f6b588de11">&#9670;&#160;</a></span>setH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp, unsigned StateDim, unsigned MeasureDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a>&lt; Tp, StateDim, MeasureDim &gt;::setH </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx&lt; Tp, MeasureDim, StateDim &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>observe_tf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置观测矩阵 \(H\) </p>
+<p>若状态向量包含以下内容： \([p, v, a]^T\) ，然而观测向量仅包含 \([p, v]^T\) ， 在这种情况下，需要使用一个观测矩阵 \(H_{2\times3}\)。在上述例子中可表示为  </p><p class="formulaDsp">
+\[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
+\begin{bmatrix}p\\v\\a\end{bmatrix}\]
+</p>
+ <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">observe_tf</td><td>观测矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

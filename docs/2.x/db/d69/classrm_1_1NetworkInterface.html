@@ -1,0 +1,644 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::NetworkInterface类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d8/de8/classrm_1_1NetworkInterface-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::NetworkInterface类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>网络接口  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<div class="dynheader">
+rm::NetworkInterface 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d56/classrm_1_1NetworkInterface__coll__graph.svg" width="148" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a54916b1255f07d9d2caf4689aaccd2c0" id="r_a54916b1255f07d9d2caf4689aaccd2c0"><td class="memItemLeft" align="right" valign="top">const std::array&lt; uint8_t, 6 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54916b1255f07d9d2caf4689aaccd2c0">address</a> () const noexcept</td></tr>
+<tr class="memdesc:a54916b1255f07d9d2caf4689aaccd2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取网络接口的 MAC 地址  <br /></td></tr>
+<tr class="memitem:a06bc84dab229878d6dabad4e8f0ba938" id="r_a06bc84dab229878d6dabad4e8f0ba938"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06bc84dab229878d6dabad4e8f0ba938">name</a> () const noexcept</td></tr>
+<tr class="memdesc:a06bc84dab229878d6dabad4e8f0ba938"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取接口名称  <br /></td></tr>
+<tr class="memitem:a81c6037c818017f6c3e082bcd6bf4ef0" id="r_a81c6037c818017f6c3e082bcd6bf4ef0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd4/group__io__net.html#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">NetworkInterfaceType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c6037c818017f6c3e082bcd6bf4ef0">type</a> () const noexcept</td></tr>
+<tr class="memdesc:a81c6037c818017f6c3e082bcd6bf4ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取接口类型  <br /></td></tr>
+<tr class="memitem:aaf95c41b6c640f79729022de46823761" id="r_aaf95c41b6c640f79729022de46823761"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf95c41b6c640f79729022de46823761">flag</a> () const noexcept</td></tr>
+<tr class="memdesc:aaf95c41b6c640f79729022de46823761"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取接口功能与状态标志  <br /></td></tr>
+<tr class="memitem:af307d48bcdecc380f3059f68ec159292" id="r_af307d48bcdecc380f3059f68ec159292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af307d48bcdecc380f3059f68ec159292">up</a> () const noexcept</td></tr>
+<tr class="memdesc:af307d48bcdecc380f3059f68ec159292"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口是否启用  <br /></td></tr>
+<tr class="memitem:a74346abb6b568abb3121737b6aed3de6" id="r_a74346abb6b568abb3121737b6aed3de6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74346abb6b568abb3121737b6aed3de6">loopback</a> () const noexcept</td></tr>
+<tr class="memdesc:a74346abb6b568abb3121737b6aed3de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否为回环接口  <br /></td></tr>
+<tr class="memitem:a1bd538f35186b4b7a9567a442b768777" id="r_a1bd538f35186b4b7a9567a442b768777"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd538f35186b4b7a9567a442b768777">broadcast</a> () const noexcept</td></tr>
+<tr class="memdesc:a1bd538f35186b4b7a9567a442b768777"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否支持广播  <br /></td></tr>
+<tr class="memitem:a50091649ff40faf089866cca9215baa6" id="r_a50091649ff40faf089866cca9215baa6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50091649ff40faf089866cca9215baa6">p2p</a> () const noexcept</td></tr>
+<tr class="memdesc:a50091649ff40faf089866cca9215baa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否为点对点接口  <br /></td></tr>
+<tr class="memitem:a0eac58dca9e677898c5ef4dbbd55a912" id="r_a0eac58dca9e677898c5ef4dbbd55a912"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eac58dca9e677898c5ef4dbbd55a912">multicast</a> () const noexcept</td></tr>
+<tr class="memdesc:a0eac58dca9e677898c5ef4dbbd55a912"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否支持多播  <br /></td></tr>
+<tr class="memitem:a59b38c6e5ac537064f501b5baa75db23" id="r_a59b38c6e5ac537064f501b5baa75db23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59b38c6e5ac537064f501b5baa75db23">running</a> () const noexcept</td></tr>
+<tr class="memdesc:a59b38c6e5ac537064f501b5baa75db23"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口是否正在运行  <br /></td></tr>
+<tr class="memitem:ad3c5082982cde0f66c10863846d0432d" id="r_ad3c5082982cde0f66c10863846d0432d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3c5082982cde0f66c10863846d0432d">to_string</a> () const</td></tr>
+<tr class="memdesc:ad3c5082982cde0f66c10863846d0432d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 MAC 地址的字符串表示形式  <br /></td></tr>
+<tr class="memitem:a8cd7ded988bf61a69da7d3001d704fa8" id="r_a8cd7ded988bf61a69da7d3001d704fa8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../de/d28/classrm_1_1ip_1_1Networkv4.html">ip::Networkv4</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cd7ded988bf61a69da7d3001d704fa8">ipv4</a> () const noexcept</td></tr>
+<tr class="memdesc:a8cd7ded988bf61a69da7d3001d704fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 IPv4 地址列表  <br /></td></tr>
+<tr class="memitem:afaf90f47d6baa9ea149b4811ad47310f" id="r_afaf90f47d6baa9ea149b4811ad47310f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d0/d72/classrm_1_1ip_1_1Networkv6.html">ip::Networkv6</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf90f47d6baa9ea149b4811ad47310f">ipv6</a> () const noexcept</td></tr>
+<tr class="memdesc:afaf90f47d6baa9ea149b4811ad47310f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 IPv6 地址列表  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a79042a03e962c76d08a442e2c57c05f0" id="r_a79042a03e962c76d08a442e2c57c05f0"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79042a03e962c76d08a442e2c57c05f0">list</a> () noexcept</td></tr>
+<tr class="memdesc:a79042a03e962c76d08a442e2c57c05f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有网络接口的 MAC 地址列表  <br /></td></tr>
+<tr class="memitem:a11dcdfc98698338a501cf75be4d3dadb" id="r_a11dcdfc98698338a501cf75be4d3dadb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11dcdfc98698338a501cf75be4d3dadb">findByName</a> (std::string_view <a class="el" href="#a06bc84dab229878d6dabad4e8f0ba938">name</a>) noexcept</td></tr>
+<tr class="memdesc:a11dcdfc98698338a501cf75be4d3dadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据名称查找网络接口  <br /></td></tr>
+<tr class="memitem:aaf169a30b546e1f5f1c0f31db9e84eef" id="r_aaf169a30b546e1f5f1c0f31db9e84eef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf169a30b546e1f5f1c0f31db9e84eef">findByAddress</a> (const std::array&lt; uint8_t, 6 &gt; &amp;addr) noexcept</td></tr>
+<tr class="memdesc:aaf169a30b546e1f5f1c0f31db9e84eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据 MAC 地址查找网络接口  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>网络接口 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a54916b1255f07d9d2caf4689aaccd2c0" name="a54916b1255f07d9d2caf4689aaccd2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54916b1255f07d9d2caf4689aaccd2c0">&#9670;&#160;</a></span>address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt; uint8_t, 6 &gt; &amp; rm::NetworkInterface::address </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取网络接口的 MAC 地址 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d69/classrm_1_1NetworkInterface_a54916b1255f07d9d2caf4689aaccd2c0_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1bd538f35186b4b7a9567a442b768777" name="a1bd538f35186b4b7a9567a442b768777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd538f35186b4b7a9567a442b768777">&#9670;&#160;</a></span>broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::broadcast </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否支持广播 </p>
+
+</div>
+</div>
+<a id="aaf169a30b546e1f5f1c0f31db9e84eef" name="aaf169a30b546e1f5f1c0f31db9e84eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf169a30b546e1f5f1c0f31db9e84eef">&#9670;&#160;</a></span>findByAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a> rm::NetworkInterface::findByAddress </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; uint8_t, 6 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据 MAC 地址查找网络接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>MAC 地址字节数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>找到的网络接口，未找到时返回一个无效的接口 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d69/classrm_1_1NetworkInterface_aaf169a30b546e1f5f1c0f31db9e84eef_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a11dcdfc98698338a501cf75be4d3dadb" name="a11dcdfc98698338a501cf75be4d3dadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11dcdfc98698338a501cf75be4d3dadb">&#9670;&#160;</a></span>findByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a> rm::NetworkInterface::findByName </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据名称查找网络接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>名称字符串，如 "eth0" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>找到的网络接口，未找到时返回一个无效的接口 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d69/classrm_1_1NetworkInterface_a11dcdfc98698338a501cf75be4d3dadb_cgraph.svg" width="350" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaf95c41b6c640f79729022de46823761" name="aaf95c41b6c640f79729022de46823761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf95c41b6c640f79729022de46823761">&#9670;&#160;</a></span>flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t rm::NetworkInterface::flag </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取接口功能与状态标志 </p>
+
+</div>
+</div>
+<a id="a8cd7ded988bf61a69da7d3001d704fa8" name="a8cd7ded988bf61a69da7d3001d704fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd7ded988bf61a69da7d3001d704fa8">&#9670;&#160;</a></span>ipv4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../de/d28/classrm_1_1ip_1_1Networkv4.html">ip::Networkv4</a> &gt; rm::NetworkInterface::ipv4 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 IPv4 地址列表 </p>
+
+</div>
+</div>
+<a id="afaf90f47d6baa9ea149b4811ad47310f" name="afaf90f47d6baa9ea149b4811ad47310f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf90f47d6baa9ea149b4811ad47310f">&#9670;&#160;</a></span>ipv6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d0/d72/classrm_1_1ip_1_1Networkv6.html">ip::Networkv6</a> &gt; rm::NetworkInterface::ipv6 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 IPv6 地址列表 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d69/classrm_1_1NetworkInterface_afaf90f47d6baa9ea149b4811ad47310f_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a79042a03e962c76d08a442e2c57c05f0" name="a79042a03e962c76d08a442e2c57c05f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79042a03e962c76d08a442e2c57c05f0">&#9670;&#160;</a></span>list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../db/d69/classrm_1_1NetworkInterface.html">NetworkInterface</a> &gt; rm::NetworkInterface::list </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取所有网络接口的 MAC 地址列表 </p>
+
+</div>
+</div>
+<a id="a74346abb6b568abb3121737b6aed3de6" name="a74346abb6b568abb3121737b6aed3de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74346abb6b568abb3121737b6aed3de6">&#9670;&#160;</a></span>loopback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::loopback </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否为回环接口 </p>
+
+</div>
+</div>
+<a id="a0eac58dca9e677898c5ef4dbbd55a912" name="a0eac58dca9e677898c5ef4dbbd55a912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eac58dca9e677898c5ef4dbbd55a912">&#9670;&#160;</a></span>multicast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::multicast </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否支持多播 </p>
+
+</div>
+</div>
+<a id="a06bc84dab229878d6dabad4e8f0ba938" name="a06bc84dab229878d6dabad4e8f0ba938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06bc84dab229878d6dabad4e8f0ba938">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::NetworkInterface::name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取接口名称 </p>
+
+</div>
+</div>
+<a id="a50091649ff40faf089866cca9215baa6" name="a50091649ff40faf089866cca9215baa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50091649ff40faf089866cca9215baa6">&#9670;&#160;</a></span>p2p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::p2p </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否为点对点接口 </p>
+
+</div>
+</div>
+<a id="a59b38c6e5ac537064f501b5baa75db23" name="a59b38c6e5ac537064f501b5baa75db23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b38c6e5ac537064f501b5baa75db23">&#9670;&#160;</a></span>running()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::running </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>接口是否正在运行 </p>
+
+</div>
+</div>
+<a id="ad3c5082982cde0f66c10863846d0432d" name="ad3c5082982cde0f66c10863846d0432d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c5082982cde0f66c10863846d0432d">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::NetworkInterface::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取 MAC 地址的字符串表示形式 </p>
+
+</div>
+</div>
+<a id="a81c6037c818017f6c3e082bcd6bf4ef0" name="a81c6037c818017f6c3e082bcd6bf4ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c6037c818017f6c3e082bcd6bf4ef0">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dd4/group__io__net.html#gadb3e4d4f0720bfcbbaa3fd4cf076e69a">NetworkInterfaceType</a> rm::NetworkInterface::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取接口类型 </p>
+
+</div>
+</div>
+<a id="af307d48bcdecc380f3059f68ec159292" name="af307d48bcdecc380f3059f68ec159292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af307d48bcdecc380f3059f68ec159292">&#9670;&#160;</a></span>up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::NetworkInterface::up </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>接口是否启用 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

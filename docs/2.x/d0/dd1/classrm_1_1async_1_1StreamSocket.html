@@ -1,0 +1,252 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::async::StreamSocket类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">StreamSocket</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../df/de0/classrm_1_1async_1_1StreamSocket-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::StreamSocket类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>由 <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步流式 Socket 接受器">rm::async::Acceptor</a> 建立的流式 Socket 异步会话  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::StreamSocket 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/daf/classrm_1_1async_1_1StreamSocket__inherit__graph.svg" width="174" height="290"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::async::StreamSocket 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d5d/classrm_1_1async_1_1StreamSocket__coll__graph.svg" width="174" height="427"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:SocketReadAwaiter" id="r_SocketReadAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html">SocketReadAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式 Socket 异步读等待器  <a href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:SocketWriteAwaiter" id="r_SocketWriteAwaiter"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html">SocketWriteAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式 Socket 异步写等待器  <a href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6317bfabdbcb3e5db24a2f0458bdde1c" id="r_a6317bfabdbcb3e5db24a2f0458bdde1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html">SocketReadAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6317bfabdbcb3e5db24a2f0458bdde1c">read</a> ()</td></tr>
+<tr class="memdesc:a6317bfabdbcb3e5db24a2f0458bdde1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步读取已连接的 Socket 中的数据  <br /></td></tr>
+<tr class="memitem:af8ffbf887efc2db45b0534dfe41ffb9d" id="r_af8ffbf887efc2db45b0534dfe41ffb9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html">SocketWriteAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8ffbf887efc2db45b0534dfe41ffb9d">write</a> (std::string_view data)</td></tr>
+<tr class="memdesc:af8ffbf887efc2db45b0534dfe41ffb9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步写入数据到已连接的 Socket 中  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1StreamSocket"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1StreamSocket')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">rm::StreamSocket</a></td></tr>
+<tr class="memitem:acdd543ab197321b9469732cb42558141 inherit pub_methods_classrm_1_1StreamSocket" id="r_acdd543ab197321b9469732cb42558141"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#acdd543ab197321b9469732cb42558141">invalid</a> () const noexcept</td></tr>
+<tr class="memdesc:acdd543ab197321b9469732cb42558141 inherit pub_methods_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话是否失效  <br /></td></tr>
+<tr class="memitem:a5174621cc10c32637fd09ea774a9a0cb inherit pub_methods_classrm_1_1StreamSocket" id="r_a5174621cc10c32637fd09ea774a9a0cb"><td class="memTemplParams" colspan="2">template&lt;typename SockOpt&gt; </td></tr>
+<tr class="memitem:a5174621cc10c32637fd09ea774a9a0cb inherit pub_methods_classrm_1_1StreamSocket template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#a5174621cc10c32637fd09ea774a9a0cb">setOption</a> (const SockOpt &amp;opt)</td></tr>
+<tr class="memdesc:a5174621cc10c32637fd09ea774a9a0cb inherit pub_methods_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 Socket 选项  <br /></td></tr>
+<tr class="memitem:a1dd96dd150b411386b44cd583d8ea62e inherit pub_methods_classrm_1_1StreamSocket" id="r_a1dd96dd150b411386b44cd583d8ea62e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#a1dd96dd150b411386b44cd583d8ea62e">endpoint</a> () const</td></tr>
+<tr class="memdesc:a1dd96dd150b411386b44cd583d8ea62e inherit pub_methods_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取绑定的端点  <br /></td></tr>
+<tr class="memitem:af402290edb8cce2da2f9863415ebf5ab inherit pub_methods_classrm_1_1StreamSocket" id="r_af402290edb8cce2da2f9863415ebf5ab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#af402290edb8cce2da2f9863415ebf5ab">read</a> () noexcept</td></tr>
+<tr class="memdesc:af402290edb8cce2da2f9863415ebf5ab inherit pub_methods_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步读取已连接的 Socket 中的数据（阻塞）  <br /></td></tr>
+<tr class="memitem:a1cda5ff66e1b8b8918ea0c50d94417b3 inherit pub_methods_classrm_1_1StreamSocket" id="r_a1cda5ff66e1b8b8918ea0c50d94417b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#a1cda5ff66e1b8b8918ea0c50d94417b3">write</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a1cda5ff66e1b8b8918ea0c50d94417b3 inherit pub_methods_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步写入数据到已连接的 Socket 中（阻塞）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1StreamSocket"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1StreamSocket')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">rm::StreamSocket</a></td></tr>
+<tr class="memitem:aa5c781257e2d4a66a39447f9f74581ce inherit pro_attribs_classrm_1_1StreamSocket" id="r_aa5c781257e2d4a66a39447f9f74581ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html#aa5c781257e2d4a66a39447f9f74581ce">_fd</a> {<a class="el" href="../../d6/dd4/group__io__net.html#ga41eb5b8b262dfe2dd792a2006db325ec">INVALID_SOCKET_FD</a>}</td></tr>
+<tr class="memdesc:aa5c781257e2d4a66a39447f9f74581ce inherit pro_attribs_classrm_1_1StreamSocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话文件描述符  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>由 <a class="el" href="../../d9/d1d/classrm_1_1async_1_1Acceptor.html" title="异步流式 Socket 接受器">rm::async::Acceptor</a> 建立的流式 Socket 异步会话 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a6317bfabdbcb3e5db24a2f0458bdde1c" name="a6317bfabdbcb3e5db24a2f0458bdde1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6317bfabdbcb3e5db24a2f0458bdde1c">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d1e/classrm_1_1async_1_1StreamSocket_1_1SocketReadAwaiter.html">SocketReadAwaiter</a> rm::async::StreamSocket::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步读取已连接的 Socket 中的数据 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keyword">auto</span> <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a> = <span class="keyword">co_await</span> socket.read();</div>
+<div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
+</div><!-- fragment --><dl class="section return"><dt>返回</dt><dd>使用 <span class="tt">std::string</span> 存储的读取到的数据 </dd></dl>
+
+</div>
+</div>
+<a id="af8ffbf887efc2db45b0534dfe41ffb9d" name="af8ffbf887efc2db45b0534dfe41ffb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ffbf887efc2db45b0534dfe41ffb9d">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d4e/classrm_1_1async_1_1StreamSocket_1_1SocketWriteAwaiter.html">SocketWriteAwaiter</a> rm::async::StreamSocket::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步写入数据到已连接的 Socket 中 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> socket.write(<span class="stringliteral">&quot;Hello, World!&quot;</span>);</div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

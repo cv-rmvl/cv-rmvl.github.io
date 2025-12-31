@@ -1,0 +1,259 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: samples/opcua/opcua_server.cpp</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">samples/opcua/opcua_server.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPC UA 服务器例程</p>
+<p>OPC UA 服务器例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/opcua/server.hpp&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d2/df6/classrm_1_1OpcuaServer.html">OpcuaServer</a> server(4840, <span class="stringliteral">&quot;RMVL Server Demo&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { server.shutdown(); }</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> clearSreen() {</div>
+<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">    <span class="keywordflow">if</span> (ch == -1) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[2J&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[0;0H&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> resetCursor() {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\033[10;0H&quot;</span>);</div>
+<div class="line">    fflush(stdout);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> show() {</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *data = <span class="stringliteral">&quot;  ┌────────────────┬────────────────┬────────────────┬────────────────┐\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  │     NodeId     │  DisplayName   │   BrowseName   │     Value      │\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  ├────────────────┼────────────────┼────────────────┼────────────────┤\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  │                │                │                │                │\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  ├────────────────┼────────────────┼────────────────┼────────────────┤\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  │                │                │                │                │\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  ├────────────────┼────────────────┼────────────────┼────────────────┤\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  │                │                │                │                │\n&quot;</span></div>
+<div class="line">                                 <span class="stringliteral">&quot;  └────────────────┴────────────────┴────────────────┴────────────────┘\n&quot;</span>;</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s&quot;</span>, data);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> std::string nodestr(<span class="keyword">const</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;node) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;ns=&quot;</span> + std::to_string(node.<a id="a2" name="a2"></a><a class="code hl_variable" href="../../db/d81/classrm_1_1NodeId.html#a861ce30ab433d50f5830663485ea45a8">ns</a>) + <span class="stringliteral">&quot;,&quot;</span> + <span class="stringliteral">&quot;s=&quot;</span> + std::to_string(node.<a id="a3" name="a3"></a><a class="code hl_variable" href="../../db/d81/classrm_1_1NodeId.html#a6cdf20128d82582ac90a941da1545dfa">id</a>); }</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> update(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> col, std::string_view <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">    <span class="keywordflow">if</span> (row &lt; 1 || row &gt; 3 || col &lt; 1 || col &gt; 4)</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> width = 14;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a> = <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.size();</div>
+<div class="line">    <span class="keywordflow">if</span> (size &gt; width) {</div>
+<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a> = <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.substr(0, width);</div>
+<div class="line">        <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a> = width;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">int</span> real_row = 2 * row + 2;</div>
+<div class="line">    <span class="keywordtype">int</span> real_col = 17 * col - 12;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> padding = (width - <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>) / 2;</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\033[%d;%dH&quot;</span>, real_row, real_col);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%*s%s%*s&quot;</span>, padding, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.data(), padding + (width - size) % 2, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">    resetCursor();</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    signal(SIGINT, onHandle);</div>
+<div class="line">    clearSreen();</div>
+<div class="line">    show();</div>
+<div class="line"> </div>
+<div class="line">    <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">Variable</a> value_1 = 42;</div>
+<div class="line">    value_1.<a id="a5" name="a5"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Value 1&quot;</span>;</div>
+<div class="line">    value_1.<a id="a6" name="a6"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;value_1&quot;</span>;</div>
+<div class="line">    <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">Variable</a> value_2 = 3.14;</div>
+<div class="line">    value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Value 2&quot;</span>;</div>
+<div class="line">    value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;value_2&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::string last_call = <span class="stringliteral">&quot;-- None --&quot;</span>;</div>
+<div class="line">    <a id="_a7" name="_a7"></a><a class="code hl_class" href="../../d4/d91/classrm_1_1Method.html">Method</a> add = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;, <span class="keyword">const</span> <a id="_a8" name="_a8"></a><a class="code hl_typedef" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;iargs) -&gt; std::pair&lt;bool, Variables&gt; {</div>
+<div class="line">        <span class="keywordtype">int</span> num1 = iargs[0], num2 = iargs[1];</div>
+<div class="line">        <span class="keywordtype">int</span> res = num1 + num2;</div>
+<div class="line">        last_call = <span class="stringliteral">&quot;Result: &quot;</span> + std::to_string(res);</div>
+<div class="line">        <span class="keywordflow">return</span> {<span class="keyword">true</span>, {res}};</div>
+<div class="line">    };</div>
+<div class="line">    add.<a id="a9" name="a9"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">display_name</a> = <span class="stringliteral">&quot;Add&quot;</span>;</div>
+<div class="line">    add.<a id="a10" name="a10"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">browse_name</a> = <span class="stringliteral">&quot;add&quot;</span>;</div>
+<div class="line">    add.<a id="a11" name="a11"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">iargs</a> = {{<span class="stringliteral">&quot;num1&quot;</span>, <a id="_a12" name="_a12"></a><a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}, {<span class="stringliteral">&quot;num2&quot;</span>, <a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}};</div>
+<div class="line">    add.<a id="a13" name="a13"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">oargs</a> = {{<span class="stringliteral">&quot;result&quot;</span>, <a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}};</div>
+<div class="line">    <span class="keyword">auto</span> nd_value_1 = server.addVariableNode(value_1);</div>
+<div class="line">    <span class="keyword">auto</span> nd_value_2 = server.addVariableNode(value_2);</div>
+<div class="line">    <span class="keyword">auto</span> nd_add = server.addMethodNode(add);</div>
+<div class="line"> </div>
+<div class="line">    update(1, 1, nodestr(nd_value_1));</div>
+<div class="line">    update(1, 2, value_1.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a>);</div>
+<div class="line">    update(1, 3, value_1.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a>);</div>
+<div class="line">    update(2, 1, nodestr(nd_value_2));</div>
+<div class="line">    update(2, 2, value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a>);</div>
+<div class="line">    update(2, 3, value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a>);</div>
+<div class="line">    update(3, 1, nodestr(nd_add));</div>
+<div class="line">    update(3, 2, add.<a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">display_name</a>);</div>
+<div class="line">    update(3, 3, add.<a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">browse_name</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a id="_a14" name="_a14"></a><a class="code hl_class" href="../../de/da7/classrm_1_1OpcuaServerTimer.html">OpcuaServerTimer</a> timer(server, 50, [&amp;](<a id="_a15" name="_a15"></a><a class="code hl_class" href="../../db/d04/classrm_1_1OpcuaServerView.html">OpcuaServerView</a> sv) {</div>
+<div class="line">        <span class="keyword">auto</span> value_1 = sv.<a id="a16" name="a16"></a><a class="code hl_function" href="../../db/d04/classrm_1_1OpcuaServerView.html#ab15781169a1ce953b589f6ebf35eaeeb">read</a>(sv.<a id="a17" name="a17"></a><a class="code hl_function" href="../../db/d04/classrm_1_1OpcuaServerView.html#a176d065b58f5de275c6672e1366ae3ca">find</a>(<span class="stringliteral">&quot;value_1&quot;</span>));</div>
+<div class="line">        update(1, 4, std::to_string(value_1.<a id="a18" name="a18"></a><a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;<span class="keywordtype">int</span>&gt;()));</div>
+<div class="line">        <span class="keyword">auto</span> value_2 = sv.<a class="code hl_function" href="../../db/d04/classrm_1_1OpcuaServerView.html#ab15781169a1ce953b589f6ebf35eaeeb">read</a>(sv.<a class="code hl_function" href="../../db/d04/classrm_1_1OpcuaServerView.html#a176d065b58f5de275c6672e1366ae3ca">find</a>(<span class="stringliteral">&quot;value_2&quot;</span>));</div>
+<div class="line">        update(2, 4, std::to_string(value_2.<a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;<span class="keywordtype">double</span>&gt;()));</div>
+<div class="line">        update(3, 4, last_call);</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    server.spin();</div>
+<div class="line">    resetCursor();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:54</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:87</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:72</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:81</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:90</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:40</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html_a6cdf20128d82582ac90a941da1545dfa"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html#a6cdf20128d82582ac90a941da1545dfa">rm::NodeId::id</a></div><div class="ttdeci">uint32_t id</div><div class="ttdoc">节点号</div><div class="ttdef"><b>定义</b> utilities.hpp:86</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html_a861ce30ab433d50f5830663485ea45a8"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html#a861ce30ab433d50f5830663485ea45a8">rm::NodeId::ns</a></div><div class="ttdeci">uint16_t ns</div><div class="ttdoc">命名空间</div><div class="ttdef"><b>定义</b> utilities.hpp:85</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaServerTimer_html"><div class="ttname"><a href="../../de/da7/classrm_1_1OpcuaServerTimer.html">rm::OpcuaServerTimer</a></div><div class="ttdoc">OPC UA 服务器定时器</div><div class="ttdef"><b>定义</b> server.hpp:344</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaServerView_html"><div class="ttname"><a href="../../db/d04/classrm_1_1OpcuaServerView.html">rm::OpcuaServerView</a></div><div class="ttdoc">OPC UA 服务器视图</div><div class="ttdef"><b>定义</b> server.hpp:28</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaServerView_html_a176d065b58f5de275c6672e1366ae3ca"><div class="ttname"><a href="../../db/d04/classrm_1_1OpcuaServerView.html#a176d065b58f5de275c6672e1366ae3ca">rm::OpcuaServerView::find</a></div><div class="ttdeci">NodeId find(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</div><div class="ttdoc">通过 BrowseName 的路径搜索命名空间 ns 为 1 的节点</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaServerView_html_ab15781169a1ce953b589f6ebf35eaeeb"><div class="ttname"><a href="../../db/d04/classrm_1_1OpcuaServerView.html#ab15781169a1ce953b589f6ebf35eaeeb">rm::OpcuaServerView::read</a></div><div class="ttdeci">Variable read(const NodeId &amp;nd) const</div><div class="ttdoc">从指定的变量节点读数据</div></div>
+<div class="ttc" id="aclassrm_1_1OpcuaServer_html"><div class="ttname"><a href="../../d2/df6/classrm_1_1OpcuaServer.html">rm::OpcuaServer</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:123</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:147</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:234</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:291</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:302</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:304</div></div>
+<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:136</div></div>
+<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表别名</div><div class="ttdef"><b>定义</b> variable.hpp:340</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> point.hpp:19</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
