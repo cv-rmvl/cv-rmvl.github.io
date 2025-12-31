@@ -1,0 +1,166 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 线程与线程池管理</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../d8/de2/tutorial_table_of_content_common.html">通用模块教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">线程与线程池管理 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#autotoc_md82">1. 引言</a></li>
+<li class="level1"><a href="#autotoc_md83">2. 操作原则</a><ul><li class="level2"><a href="#autotoc_md84">2.1 基本概念</a><ul><ul><li class="level4"><a href="#autotoc_md85">互斥锁 Mutex</a></li>
+<li class="level4"><a href="#autotoc_md86">条件变量 Condition variable</a></li>
+<li class="level4"><a href="#autotoc_md87">任务队列 Task queue</a></li>
+</ul>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md88">2.2 流程图</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md89">3. C++ 语言细节</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_common_thread_pool_tutorial_common_thread_pool"></a></p>
+<dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022/02/09</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d0/dc4/tutorial_common_singleton.html">单例模板</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d7/d05/tutorial_common_camera.html">相机设备</a> ↓<br  />
+</p>
+<hr  />
+<p>相关类 rm::ThreadPool, rm::PriorityThreadPool</p>
+<h1><a class="anchor" id="autotoc_md82"></a>
+1. 引言</h1>
+<p>自从线程支持库 <code>std::thread</code> 被添加到 C++11 标准中以来，C++ 摆脱了不支持并发编程的历史。然而，与其他编程语言相比，C++ 的多线程支持程度较低,像线程池等概念在标准库中没有实现。现在，在 RMVL 中已经添加了用于线程池的库，以便于开发异步编程。</p>
+<h1><a class="anchor" id="autotoc_md83"></a>
+2. 操作原则</h1>
+<h2><a class="anchor" id="autotoc_md84"></a>
+2.1 基本概念</h2>
+<h4><a class="anchor" id="autotoc_md85"></a>
+互斥锁 Mutex</h4>
+<p>互斥锁（Mutexes）用于确保共享数据操作的完整性。每个对象对应一个称为互斥锁的标记，用于确保在任何给定时间只有一个线程可以访问该对象。当多个线程访问同一块内存时，首先访问内存的线程会对该空间进行锁定，后续的线程由于互斥锁而被阻塞。</p>
+<p>可参考:</p>
+<ul>
+<li><a href="https://en.cppreference.com/w/cpp/thread/mutex" target="_blank">Document of std::mutex </a></li>
+<li><a href="https://zh.cppreference.com/w/cpp/thread/mutex" target="_blank">std::mutex 中文文档 </a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md86"></a>
+条件变量 Condition variable</h4>
+<p>条件变量（Condition variable）是使用在线程之间共享的全局变量进行同步的另一种机制。它主要由两个动作组成：一个线程会 <b>阻塞</b> 以等待条件变量满足某一条件，而另一个线程则使条件变量满足条件，即发送信号表示条件已满足。</p>
+<p>可参考:</p>
+<ul>
+<li><a href="https://en.cppreference.com/w/cpp/thread/condition_variable" target="_blank">Document of std::condition_variable </a></li>
+<li><a href="https://zh.cppreference.com/w/cpp/thread/condition_variable" target="_blank">std::condition_variable 中文文档 </a></li>
+</ul>
+<h4><a class="anchor" id="autotoc_md87"></a>
+任务队列 Task queue</h4>
+<p>任务队列（Task queue）用于存储按顺序执行的任务。每个任务通常是一个没有参数和返回值的 <code>void(*)(void)</code> 函数。通常，我们使用 <code>push()</code> 方法将函数指针推入任务队列中，线程池中的线程在执行完任务后会自动从队列中弹出以执行下一个任务。</p>
+<h2><a class="anchor" id="autotoc_md88"></a>
+2.2 流程图</h2>
+<p>RMVL 中线程池的简化工作流程图如下</p>
+<center> <a href="https://imgse.com/i/xqJxcF" target="_blank"><img src="https://s1.ax1x.com/2022/11/03/xqJxcF.png" alt="" width="500" height="521/" class="inline"/> </a> </center><h1><a class="anchor" id="autotoc_md89"></a>
+3. C++ 语言细节</h1>
+<p>如上所述，任务通常是无参数、无返回的函数。</p>
+<p>函数原型：</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Task&gt;</div>
+<div class="line"><span class="keywordtype">void</span> addTask(_Task &amp;&amp;task);</div>
+</div><!-- fragment --><p>我们可以使用 <code>lambda</code> 表达式或 <code>bind</code> 表达式来构造这个函数，例如</p>
+<div class="fragment"><div class="line">tp.addTask(bind(</div>
+<div class="line">    [](vector&lt;int&gt; &amp;m)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;element : m)</div>
+<div class="line">            element += 10;</div>
+<div class="line">    }, ref(mat)));</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:17:46 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

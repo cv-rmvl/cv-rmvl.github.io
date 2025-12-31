@@ -1,0 +1,225 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: samples/opcua/opcua_client.cpp</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.1.1</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">samples/opcua/opcua_client.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPC UA 客户端例程</p>
+<p>OPC UA 客户端例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dfe/client_8hpp.html">rmvl/opcua/client.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keywordtype">void</span> read(<a id="_a0" name="_a0"></a><a class="code hl_class" href="../../df/d48/classrm_1_1ClientView.html">ClientView</a> client, <span class="keyword">const</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;node)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">auto</span> val = client.<a id="a2" name="a2"></a><a class="code hl_function" href="../../df/d48/classrm_1_1ClientView.html#a91fc60eabd16e25f64b6a66845e467c0">read</a>(node).<a id="a3" name="a3"></a><a class="code hl_function" href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">cast</a>&lt;Tp&gt;();</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[32mValue: &quot;</span>&lt;&lt; val &lt;&lt; <span class="stringliteral">&quot;\033[0m\n&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keywordtype">void</span> write(<a class="code hl_class" href="../../df/d48/classrm_1_1ClientView.html">ClientView</a> client, <span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;node)</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Please input the value to write: &quot;</span>;</div>
+<div class="line">    Tp val{};</div>
+<div class="line">    std::cin &gt;&gt; val;</div>
+<div class="line">    client.<a id="a4" name="a4"></a><a class="code hl_function" href="../../df/d48/classrm_1_1ClientView.html#a5642ffc4757284f8760d0f3da5b740f7">write</a>(node, val);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[32mSuccess to write\033[0m\n&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keywordtype">void</span> value(<a class="code hl_class" href="../../df/d48/classrm_1_1ClientView.html">ClientView</a> client, <span class="keyword">const</span> <a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> &amp;node)</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;- 0: Read\n- 1: Write\n&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Please input the number to operate: \n&quot;</span>;</div>
+<div class="line">    std::string num{};</div>
+<div class="line">    std::cin &gt;&gt; num;</div>
+<div class="line">    <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;0&quot;</span>)</div>
+<div class="line">        read&lt;Tp&gt;(client, node);</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line">        write&lt;Tp&gt;(client, node);</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[31mInvalid number\033[0m\n&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> call(<a id="_a5" name="_a5"></a><a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> &amp;client)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> num1{}, num2{};</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Calculate the sum of &#39;num1&#39; and &#39;num2&#39;:\n&quot;</span>;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Input num1: &quot;</span>;</div>
+<div class="line">    std::cin &gt;&gt; num1;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Input num2: &quot;</span>;</div>
+<div class="line">    std::cin &gt;&gt; num2;</div>
+<div class="line">    <span class="keyword">auto</span> [result, oargs] = client.<a id="a6" name="a6"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">call</a>(<span class="stringliteral">&quot;add&quot;</span>, {num1, num2});</div>
+<div class="line">    <span class="keywordflow">if</span> (result)</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\033[32mResult: &quot;</span> &lt;&lt; oargs[0].cast&lt;<span class="keywordtype">int</span>&gt;() &lt;&lt; <span class="stringliteral">&quot;\033[0m\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\033[31mFail to call the method node\033[0m\n&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!cli.ok())</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;- 0: value_1\n- 1: value_2\n- 2: add\n- q: Exit\n&quot;</span>;</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Please input the number to operate:\n&quot;</span>;</div>
+<div class="line">        std::string num{};</div>
+<div class="line">        std::cin &gt;&gt; num;</div>
+<div class="line">        <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;0&quot;</span>)</div>
+<div class="line">            value&lt;int&gt;(cli, cli.find(<span class="stringliteral">&quot;value_1&quot;</span>));</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line">            value&lt;double&gt;(cli, cli.find(<span class="stringliteral">&quot;value_2&quot;</span>));</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;2&quot;</span>)</div>
+<div class="line">            call(cli);</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;q&quot;</span>)</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            printf(<span class="stringliteral">&quot;\033[31mInvalid number\033[0m\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1ClientView_html"><div class="ttname"><a href="../../df/d48/classrm_1_1ClientView.html">rm::ClientView</a></div><div class="ttdoc">OPC UA 客户端视图</div><div class="ttdef"><b>定义</b> client.hpp:31</div></div>
+<div class="ttc" id="aclassrm_1_1ClientView_html_a5642ffc4757284f8760d0f3da5b740f7"><div class="ttname"><a href="../../df/d48/classrm_1_1ClientView.html#a5642ffc4757284f8760d0f3da5b740f7">rm::ClientView::write</a></div><div class="ttdeci">bool write(const NodeId &amp;nd, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
+<div class="ttc" id="aclassrm_1_1ClientView_html_a91fc60eabd16e25f64b6a66845e467c0"><div class="ttname"><a href="../../df/d48/classrm_1_1ClientView.html#a91fc60eabd16e25f64b6a66845e467c0">rm::ClientView::read</a></div><div class="ttdeci">Variable read(const NodeId &amp;nd) const</div><div class="ttdoc">从指定的变量节点读数据</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html">rm::Client</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>定义</b> client.hpp:118</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ac72c2b493f910205aa5aa8088f4119f3"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">rm::Client::call</a></div><div class="ttdeci">std::pair&lt; bool, Variables &gt; call(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</div><div class="ttdoc">在客户端调用指定对象节点中的方法</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:40</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3c9c5cc7059a9da1067124d67c2accba"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3c9c5cc7059a9da1067124d67c2accba">rm::Variable::cast</a></div><div class="ttdeci">static Tp cast(const rm::Variable &amp;val)</div><div class="ttdoc">将变量节点转化为指定类型的数据</div><div class="ttdef"><b>定义</b> variable.hpp:201</div></div>
+<div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

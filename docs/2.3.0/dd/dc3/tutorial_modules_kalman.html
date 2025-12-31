@@ -1,0 +1,651 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: 卡尔曼滤波</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">卡尔曼滤波</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md182">1. 卡尔曼滤波</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md183">1.1 简介</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_recursive">1.2 初尝递归算法</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_data_fusion">1.3 数据融合</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_covariance_matrix">1.4 协方差矩阵</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_gain_derivate">1.5 卡尔曼增益推导</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_error_covairance_matrix">1.6 误差协方差矩阵</a>
+          </li>
+          <li class="level3">
+            <a href="#kalman_filter_formulas">1.7 汇总</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md185">2. 卡尔曼滤波模块的用法</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md186">2.1 如何配置</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md187">2.2 如何使用</a>
+          </li>
+          <li class="level3">
+            <a href="#ref_paper">参考文献</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>卡尔曼滤波详细公式推导</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2kalman"></a></p>
+<dl class="section author"><dt>作者</dt><dd>张华铨 </dd>
+<dd>
+赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/03/24 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>2.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../db/d71/tutorial_modules_ekf.html">扩展卡尔曼滤波</a> <br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html" title="卡尔曼滤波器">rm::KalmanFilter</a></p>
+<p class="formulaDsp">
+\[\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\Var{\mathrm{Var}}
+\def\Cov{\mathrm{Cov}}
+\def\tr{\mathrm{tr}}
+\def\fml#1{\text{(#1)}}
+\]
+</p>
+<h2><a class="anchor" id="autotoc_md182"></a>
+1. 卡尔曼滤波</h2>
+<h3><a class="anchor" id="autotoc_md183"></a>
+1.1 简介</h3>
+<p>卡尔曼滤波器是一个 Optimal Recursive Data Processing Algorithm，即最优化递归数字处理算法，与其说滤波器，倒不如说这是一个 <b>观测器</b> 。简单来说，卡尔曼滤波器能够估计目标的当前位置，并结合观测结果，以最高置信度获得当前位置。</p>
+<h3><a class="anchor" id="kalman_recursive"></a>
+1.2 初尝递归算法</h3>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>我们需要测量一个硬币的长度 \(x\)，现测出了如下结果</p>
+<p class="formulaDsp">
+\[\begin{align}z_1&amp;=30.2\mathrm{mm}\\z_2&amp;=29.7\mathrm{mm}\\z_3&amp;=30.1\mathrm{mm}\\&amp;\vdots\end{align}\]
+</p>
+<p>我们要利用这些观测结果来估计硬币的真实长度，很自然的我们可以想到使用<span style="color: red">取平均</span>的方式，我们可以利用 \(k\) 个观测值，求出硬币长度在第 \(k\) 次的估计值 \(\hat x_k\)。</p>
+<p class="formulaDsp">
+\[\hat x_k=\frac{z_1+z_2+\cdots+z_k}k\tag{1-1}\]
+</p>
+<p>这是一条非常简单的取算数平均的公式，但是我们为了估计硬币的长度，需要用到所有的观测值，例如我们已经测了 5 次硬币的长度，并且使用公式 \(\fml{1-1}\) 得到了第 5 次的平均值（长度的估计值），在测完第 6 次长度准备计算第 6 次估计值的时候，使用公式 \(\fml{1-1}\) 还需要重新使用前 5 次的观测值。当观测次数非常高的时候，计算的压力就逐渐高起来了。</p>
+<p>针对这一问题，我们可以改写公式 \(\fml{1-1}\)</p>
+<p class="formulaDsp">
+\[\begin{align}\hat x_k&amp;=\frac1k(z_1+z_2+\cdots+z_k)\\
+&amp;=\frac1k(z_1+z_2+\cdots+z_{k-1})+\frac1kz_k\\
+&amp;=\frac{k-1}k·\frac1{\red{k-1}}\red{(z_1+z_2+\cdots+z_{k-1})}+\frac1kz_k\\
+&amp;=\frac{k-1}k\red{\hat x_{k-1}}-\frac1kz_k\\&amp;=\hat x_{k-1}-\frac1k\hat x_{k-1}+\frac1kz_k\\
+&amp;=\hat x_{k-1}+\frac1k(z_k-\hat x_{k-1})\tag{1-2a}\end{align}\]
+</p>
+<p>这样我们就把硬币长度的估计值，改写成由上一次估计值和当前观测值共同作用的形式。并且我们发现，随着测量次数 \(k\) 增大， \(\frac1k\) 趋向于 \(0\)， \(\hat x_k\) 趋向于 \(\hat x_{k-1}\)，这也就是说，随着 \(k\) 增长，测量结果将不再重要。</p>
+<p>为了不失一般性，我们把公式 \(\fml{1-2a}\) 的结果改写成以下形式。</p>
+<p class="formulaDsp">
+\[\boxed{\hat x_k=\hat x_{k-1}+\red{K_k}(z_k-\hat x_{k-1})}\tag{1-2b}\]
+</p>
+<p>其中 \(K_k\) 表示 Kalman Gain，即卡尔曼增益。对于 \(K_k\)，我们先给出他的计算结果。</p>
+<p class="formulaDsp">
+\[K_k=\frac{e_{{EST}_{k-1}}}{e_{{EST}_{k-1}}+e_{{MEA}_k}}\tag{1-3}\]
+</p>
+<p>其中， \(e_{{EST}_{k-1}}\) 表示第 \(k-1\) 次的估计误差， \(e_{{MEA}_k}\) 表示第 \(k\) 次的测量误差。可以得到，在 \(k\) 时刻，</p>
+<ol type="1">
+<li>若 \(e_{{EST}_{k-1}}\gg e_{{MEA}_k}\)，则 \(K_k\to1\)， \(\hat x_k=\hat x_{k-1}+1\times(z_k-\hat x_{k-1})=z_k\)</li>
+<li>若 \(e_{{EST}_{k-1}}\ll e_{{MEA}_k}\)，则 \(K_k\to0\)， \(\hat x_k=\hat x_{k-1}+0\times(z_k-\hat x_{k-1})=\hat x_{k-1}\)</li>
+</ol>
+<h3><a class="anchor" id="kalman_data_fusion"></a>
+1.3 数据融合</h3>
+<p>现在我们可以使用公式 \(\fml{1-2b}\) 的思想来研究数据融合。如果有一辆车以恒定速度行驶，现在得到了两个数据：</p>
+<ul>
+<li>根据匀速公式计算得到的汽车当前位置（算出来的，记作 \(\teal{x_1}\)）</li>
+<li>汽车的当前距离传感器数据（测出来的，记作 \(\red{x_2}\)）</li>
+</ul>
+<center></center><center><div class="image">
+<img src="../../car_predict.jpg" alt=""/>
+<div class="caption">
+图1-1 汽车运动估计</div></div>
+    </center><center></center><p>由于自身的原因，它的位置并不是由匀速运动公式得到的精确位置，它的距离传感器数据也不完全准确。两者都有一定的误差。那么我们现在如何估计汽车的实际位置呢？</p>
+<p>我们使用公式 \(\fml{1-2b}\) 的思想，得到估计值</p>
+<p class="formulaDsp">
+\[\hat x=\teal{x_1}+\green{K_k}(\red{x_2}-\teal{x_1})\tag{1-4}\]
+</p>
+<p>我们的目标很明确，希望求出这个 \(\green{K_k}\)，使得估计值 \(\hat x\) 是最优的，即 \(\hat x\) 的方差 \(\Var(\hat x)\) 最小，即 \(\hat x\to x_{实际值}\)。</p>
+<p>不妨令 \(\left\{\begin{align}\teal{x_1=30\mathrm m\qquad\sigma_1=2\mathrm m}\\\red{x_2=32\mathrm m\qquad\sigma_2=4\mathrm m}\end{align}\right.\)，则有</p>
+<p class="formulaDsp">
+\[\begin{align}\Var(\hat x)&amp;=\Var[x_1+K_k(x_2-x_1)]\\&amp;=\Var(x_1-K_kx_1+K_kx_2)\\
+&amp;=\Var[(1-K_k)x_1+K_kx_2]\\由x_1和x_2相互独立\quad&amp;=\Var[(1-k)x_1]+\Var(K_kx_2)\\
+&amp;=(1-K_k)^2\Var(x_1)+K_k^2\Var(x_2)\\
+&amp;=(1-K_k)^2\sigma_1^2+K_k^2\sigma_2^2\tag{1-5}\end{align}\]
+</p>
+<p>要求 \(\Var(\hat x)\) 的最小值，只需令 \(\mathrm \Var(\hat x)&#39;|_{K_k}=0\) 即可，即：</p>
+<p class="formulaDsp">
+\[\frac{\mathrm d\Var(\hat x)}{\mathrm dK_k}=-2(1-K_k)\sigma_1^2+2K_k\sigma_2^2=0\tag{1-6}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[K_k=\frac{\sigma_1^2}{\sigma_1^2+\sigma_2^2}\tag{1-7}\]
+</p>
+<p>代入数据后，有</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+K_k&amp;=\frac{2^2}{2^2+4^2}=0.2\\
+\hat x&amp;=30+0.2(32-30)=30.4\mathrm m\quad\orange{理论最优解}\\
+\sigma_{\hat x}^2&amp;=(1-0.2)^22^2+0.2^24^2=3.2\quad(\sigma_{\hat x}=1.79)
+\end{align}\right.\]
+</p>
+<h3><a class="anchor" id="kalman_covariance_matrix"></a>
+1.4 协方差矩阵</h3>
+<div class="full_width_table"></div><div class="full_width_table"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">数据   </th><th class="markdownTableHeadCenter">\(x\)   </th><th class="markdownTableHeadCenter">\(y\)   </th><th class="markdownTableHeadCenter">\(z\)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\(1\)   </td><td class="markdownTableBodyCenter">\(x_1\)   </td><td class="markdownTableBodyCenter">\(y_1\)   </td><td class="markdownTableBodyCenter">\(z_1\)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">\(2\)   </td><td class="markdownTableBodyCenter">\(x_2\)   </td><td class="markdownTableBodyCenter">\(y_2\)   </td><td class="markdownTableBodyCenter">\(z_2\)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">\(3\)   </td><td class="markdownTableBodyCenter">\(x_3\)   </td><td class="markdownTableBodyCenter">\(y_3\)   </td><td class="markdownTableBodyCenter">\(z_3\)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">平均值   </td><td class="markdownTableBodyCenter">\(\bar x\)   </td><td class="markdownTableBodyCenter">\(\bar y\)   </td><td class="markdownTableBodyCenter">\(\bar z\)   </td></tr>
+</table>
+</div><div class="full_width_table"></div><p><b>方差</b></p>
+<p>表明单个变量的波动程度</p>
+<p class="formulaDsp">
+\[\begin{align}
+\Var(x)&amp;=\frac13\left[(x_1-\bar x)^2+(x_2-\bar x)^2+(x_3-\bar x)^2\right]=\frac13\sum_{i=1}^3(x-\bar x)^2\stackrel{\triangle}{=}\sigma_x^2\\
+\Var(y)&amp;=\frac13\left[(y_1-\bar y)^2+(y_2-\bar y)^2+(y_3-\bar y)^2\right]=\frac13\sum_{i=1}^3(y-\bar y)^2\stackrel{\triangle}{=}\sigma_y^2\\
+\Var(z)&amp;=\frac13\left[(z_1-\bar z)^2+(z_2-\bar z)^2+(z_3-\bar z)^2\right]=\frac13\sum_{i=1}^3(z-\bar z)^2\stackrel{\triangle}{=}\sigma_z^2
+\end{align}\]
+</p>
+<p>一般的，方差具有以下推导公式</p>
+<p class="formulaDsp">
+\[\begin{align}\Var(X)&amp;=\frac1n\sum_{i=1}^n(X-\bar X)^2\\&amp;=\frac1n\sum_{i=1}^n(X-EX)^2\\
+定义\quad&amp;=\green{E\left[(X-EX)^2\right]}\\
+&amp;=E\left[X^2-2X·EX+(EX)^2\right]\\&amp;=EX^2-2EX·EX+(EX)^2\\
+&amp;=\red{EX^2-(EX)^2}\tag{1-8}\end{align}\]
+</p>
+<p><b>协方差</b></p>
+<p>表明变量之间的相关性，为正数表示正相关，为负数表示负相关，绝对值越大表示相关性越强</p>
+<p class="formulaDsp">
+\[\begin{align}
+\Cov(x,y)&amp;=\frac13\left[(x_1-\bar x)(y_1-\bar y)+(x_2-\bar x)(y_2-\bar y)+(x_3-\bar x)(y_3-\bar y)\right]\\
+&amp;=\frac13\sum_{i=1}^3(x-\bar x)(y-\bar y)\stackrel{\triangle}{=}\sigma_x\sigma_y\\
+\Cov(y,z)&amp;=\frac13\left[(y_1-\bar y)(z_1-\bar z)+(y_2-\bar y)(z_2-\bar z)+(y_3-\bar y)(z_3-\bar z)\right]\\
+&amp;=\frac13\sum_{i=1}^3(y-\bar y)(z-\bar z)\stackrel{\triangle}{=}\sigma_y\sigma_z\\
+\Cov(x,z)&amp;=\frac13\left[(x_1-\bar x)(z_1-\bar z)+(x_2-\bar x)(z_2-\bar z)+(x_3-\bar x)(z_3-\bar z)\right]\\
+&amp;=\frac13\sum_{i=1}^3(x-\bar x)(z-\bar z)\stackrel{\triangle}{=}\sigma_x\sigma_z
+\end{align}\]
+</p>
+<p>一般的，协方差具有以下推导公式</p>
+<p class="formulaDsp">
+\[\begin{align}\Cov(X,Y)
+&amp;=\frac1n\sum_{i=1}^n(X-\bar X)(Y-\bar Y)\\
+&amp;=\frac1n\sum_{i=1}^n(X-EX)(Y-EY)\\
+定义\quad&amp;=\green{E\left[(X-EX)(Y-EY)\right]}\\
+&amp;=E(XY-X·EY-Y·EX+EX·EY)\\
+&amp;=E(XY)-EX·EY-EY·EX+EX·EY\\
+&amp;=\red{E(XY)-EXEY}
+\tag{1-9}\end{align}\]
+</p>
+<p><b>协方差矩阵</b></p>
+<p>按照协方差的定义出发，可以有</p>
+<p class="formulaDsp">
+\[\begin{align}\Cov(x_i,x_j)
+&amp;=E\left[(x_i-Ex_i)(x_j-Ex_j)\right]=\sigma_{x_i}\sigma_{x_j}\\
+令误差e_i=x_i-E(x_i)\quad&amp;=\green{E(e_ie_j)}
+\tag{1-10a}\end{align}\]
+</p>
+<p>若取 \(i,j=1,2,\cdots,n\)，则可以得到协方差矩阵 \(P\)，表示为</p>
+<p class="formulaDsp">
+\[\begin{align}P&amp;=\begin{bmatrix}
+\sigma_{x_1}^2&amp;\sigma_{x_1}\sigma_{x_2}&amp;\cdots&amp;\sigma_{x_1}\sigma_{x_n}\\
+\sigma_{x_2}\sigma_{x_1}&amp;\sigma_{x_2}^2&amp;\cdots&amp;\sigma_{x_2}\sigma_{x_n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\sigma_{x_n}\sigma_{x_1}&amp;\sigma_{x_n}\sigma_{x_2}&amp;\cdots&amp;\sigma_{x_n}^2
+\end{bmatrix}\\&amp;=\begin{bmatrix}Ee_1^2&amp;Ee_1Ee_2&amp;\cdots&amp;Ee_1Ee_n\\
+Ee_2Ee_1&amp;Ee_2^2&amp;\cdots&amp;Ee_2Ee_n\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+Ee_nEe_1&amp;Ee_nEe_2&amp;\cdots&amp;Ee_n^2\end{bmatrix}\\&amp;=
+E\begin{bmatrix}e_1^2&amp;e_1e_2&amp;\cdots&amp;e_1e_n\\
+e_2e_1&amp;e_2^2&amp;\cdots&amp;e_2e_n\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+e_ne_1&amp;e_ne_2&amp;\cdots&amp;e_n^2\end{bmatrix}=\green{E\left(\boldsymbol e\boldsymbol e^T\right)}\tag{1-10b}\end{align}\]
+</p>
+<h3><a class="anchor" id="kalman_gain_derivate"></a>
+1.5 卡尔曼增益推导</h3>
+<p>对于一个系统，可以使用状态空间方程来描述其运动</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\dot{\boldsymbol x}&amp;=F\boldsymbol x+G\boldsymbol u\\
+\boldsymbol z&amp;=H\boldsymbol x
+\end{align}\right.\tag{1-11}\]
+</p>
+<p>根据 <a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html#equations_runge_kutta">3.4 方程组的 Runge-Kutta 公式</a> 中精确解的公式 \(\text{(b)}\)，我们可以知道状态空间方程的解的表达式，即</p>
+<p class="formulaDsp">
+\[\boldsymbol x(t)=e^{F(t-t_0)}\boldsymbol x(t_0)+\int_{t_0}^te^{F(t-\tau)}G\boldsymbol u(\tau)\mathrm d\tau\tag{1-12}\]
+</p>
+<p>以 \(T\)为周期离散采样+零阶保持器，可以得到</p>
+<p class="formulaDsp">
+\[\begin{align}
+\boldsymbol x(t_k)&amp;=e^{F(t_k-t_{k-1})}\boldsymbol x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}G\boldsymbol u(\tau)\mathrm d\tau\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+\int_{t_{k-1}}^{t_k}e^{F(t_k-\tau)}\mathrm d\tau·G\boldsymbol u(t_{k-1})\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+\left[-F^{-1}e^{F(t_k-\tau)}\right]_{t_{k-1}}^{t_k}·G\boldsymbol u(t_{k-1})\\
+&amp;=e^{FT}\boldsymbol x(t_{k-1})+F^{-1}(e^{FT}-I)G\boldsymbol u(t_{k-1})\\
+\boldsymbol x_k&amp;=\red{e^{FT}}\boldsymbol x_{k-1}+\green{F^{-1}(e^{FT}-I)G}\boldsymbol u_{k-1}\\
+简记为\quad\boldsymbol x_k&amp;=\red A\boldsymbol x_{k-1}+\green B\boldsymbol u_{k-1}\tag{1-13a}\end{align}\]
+</p>
+<p>因此我们可以得到离散系统的状态空间方程</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\boldsymbol x_k&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\\
+\boldsymbol z_k&amp;=H\boldsymbol x_k
+\end{align}\right.\tag{1-13b}\]
+</p>
+<p>这其实是个不准确的结果，因为如果我们考虑上噪声，公式 \(\fml{1-13b}\) 应该改写为</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}
+\boldsymbol x_k&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\red{+\boldsymbol w_{k-1}}&amp;p(\boldsymbol w)\sim N(0,Q)\\
+\boldsymbol z_k&amp;=H\boldsymbol x_k\red{+\boldsymbol v_k}&amp;p(\boldsymbol v)\sim N(0,R)
+\end{align}\right.\tag{1-13c}\]
+</p>
+<ul>
+<li>\(w_{k-1}\) 称为过程噪声，来自于算不准的部分，其中 \(Q\) 满足以下形式   <p class="formulaDsp">
+\[Q=E(\boldsymbol w\boldsymbol w^T)=\begin{bmatrix}\sigma_{w_1}^2&amp;\sigma_{w_1}\sigma_{w_2}&amp;\cdots&amp;\sigma_{w_1}\sigma_{w_n}\\
+  \sigma_{w_2}\sigma_{w_1}&amp;\sigma_{w_2}^2&amp;\cdots&amp;\sigma_{w_2}\sigma_{w_n}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\\sigma_{w_n}\sigma_{w_1}&amp;\sigma_{w_n}\sigma_{w_2}&amp;\cdots&amp;\sigma_{w_n}^2\end{bmatrix}\]
+</p>
+ 称为过程噪声协方差矩阵</li>
+<li>\(v_{k-1}\) 称为测量噪声，来自于测不准的部分，其中 \(R\) 满足以下形式   <p class="formulaDsp">
+\[R=E(\boldsymbol v\boldsymbol v^T)=\begin{bmatrix}\sigma_{v_1}^2&amp;\sigma_{v_1}\sigma_{v_2}&amp;\cdots&amp;\sigma_{v_1}\sigma_{v_n}\\
+  \sigma_{v_2}\sigma_{v_1}&amp;\sigma_{v_2}^2&amp;\cdots&amp;\sigma_{v_2}\sigma_{v_n}\\
+  \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\\sigma_{v_n}\sigma_{v_1}&amp;\sigma_{v_n}\sigma_{v_2}&amp;\cdots&amp;\sigma_{v_n}^2\end{bmatrix}\]
+</p>
+ 称为测量噪声协方差矩阵</li>
+</ul>
+<p>但是，这两个误差我们无从得知，我们只能使用公式 \(\fml{1-13b}\) 的形式进行近似估计，通过 \(\boldsymbol x_k=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\) 算出来的 \(\boldsymbol x_k\) 称为<span style="color: red">先验状态估计</span>，一般写为</p>
+<p class="formulaDsp">
+\[\red{\hat{\boldsymbol x}_k^-=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\tag{1-14}}\]
+</p>
+<p>通过 \(\boldsymbol z_k=H\boldsymbol x_k\) 得到的 \(\boldsymbol x_k\) 是测出来的结果，记为 \(\hat{\boldsymbol x}_{k_{MEA}}\)，即</p>
+<p class="formulaDsp">
+\[\hat{\boldsymbol x}_{k_{MEA}}=H^+\boldsymbol z_k\tag{1-15}\]
+</p>
+<p>因为 \(H^{-1}\) 可能不存在，这里先使用 M-P 广义逆 \(H^+\) 来表示。</p>
+<dl class="section note"><dt>注解</dt><dd>对于一个线性方程组 <p class="formulaDsp">
+\[A\boldsymbol x=\boldsymbol b\]
+</p>
+必定存在最小二乘解 <p class="formulaDsp">
+\[\boldsymbol x=(A^TA)^{-1}A^T\boldsymbol b\]
+</p>
+可以令 \(A^+=(A^TA)^{-1}A^T\) 来表示 Moore-Penrose 广义逆，即 <p class="formulaDsp">
+\[\boldsymbol x=A^+\boldsymbol b\]
+</p>
+当 \(A\) 可逆时， \(A^+=A^{-1}\).</dd></dl>
+<p>目前的两个结果 \(\hat{\boldsymbol x}_k^-\) 和 \(\hat{\boldsymbol x}_{k_{MEA}}\) 都不准确，因此可以回顾 <a class="el" href="#kalman_data_fusion">1.3 数据融合</a> 的部分，在公式 \(\fml{1-4}\) 中使用了算出来的 \(\teal{x_1}\) 和测出来的 \(\red{x_2}\) 得到了最优估计值 \(\hat x\)，为此我们可以仿照这一步骤来求出离散系统状态的最优估计值 \(\hat{\boldsymbol x}_k\)，称为<span style="color: red">后验状态估计</span>。</p>
+<p class="formulaDsp">
+\[\begin{align}\hat{\boldsymbol x}_k&amp;=\hat{\boldsymbol x}_k^-+\green{G_k}(\hat{\boldsymbol x}_{k_{MEA}}-\hat{\boldsymbol x}_k^-)\\
+&amp;=\hat{\boldsymbol x}_k^-+\green{G_k}(H^+\boldsymbol z_k-\hat{\boldsymbol x}_k^-)\tag{1-16}\end{align}\]
+</p>
+<p>令 \(G_k=K_kH\)，可以得到</p>
+<p class="formulaDsp">
+\[\red{\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\tag{1-17}}\]
+</p>
+<p>我们的目标依然很明确，希望求出这个 \(\green{K_k}\)，使得后验状态估计值 \(\hat{\boldsymbol x}_k\) 是最优的，即 \(\hat{\boldsymbol x}_k\) 的方差 \(\Var(\hat{\boldsymbol x}_k)\) 最小，即 \(\hat{\boldsymbol x}_k\to \boldsymbol x_k\)。如何衡量 \(\hat{\boldsymbol x}_k\) 的方差 \(\Var(\hat{\boldsymbol x}_k)\)？我们可以令状态误差 \(\boldsymbol e_k=\boldsymbol x_k-\hat{\boldsymbol x}_k\)，那么此时 \(p(\boldsymbol e_k)\sim N(0,P_k)\)，其中 \(P_k\) 是误差协方差矩阵，并且满足</p>
+<p class="formulaDsp">
+\[P_k=\begin{bmatrix}\sigma_{e_1}^2&amp;\cdots&amp;\sigma_{e_1}\sigma_{e_n}\\\vdots&amp;&amp;\vdots\\\sigma_{e_n}\sigma_{e_1}&amp;\cdots&amp;\sigma_{e_n}^2\end{bmatrix}\tag{1-18}\]
+</p>
+<p>方差 \(\Var(\hat{\boldsymbol x}_k)\) 最小，即 \(\sum\limits_{i=1}^{n}\sigma_{e_i}^2\) 最小，即 \(P_k\) 的迹 \(\tr(P_k)\) 最小。</p>
+<p>对于状态误差，有</p>
+<p class="formulaDsp">
+\[\begin{align}
+\boldsymbol e_k&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k=\boldsymbol x_k-\left(\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\right)\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_k\boldsymbol z_k+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_k(H\boldsymbol x_k+\boldsymbol v_k)+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^--K_kH\boldsymbol x_k-K_k\boldsymbol v_k+K_kH\hat{\boldsymbol x}_k^-\\
+&amp;=(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)-K_kH(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)-K_k\boldsymbol v_k\\
+&amp;=(I-K_kH)\teal{(\boldsymbol x_k-\hat{\boldsymbol x}_k^-)}-K_k\boldsymbol v_k\\
+&amp;=(I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\tag{1-19}\end{align}\]
+</p>
+<p>则误差协方差矩阵可以表示为</p>
+<p class="formulaDsp">
+\[\begin{align}P_k
+&amp;=E\left(\boldsymbol e_k\boldsymbol e_k^T\right)=E\left[(\boldsymbol x_k-\hat{\boldsymbol x}_k)(\boldsymbol x_k-\hat{\boldsymbol x}_k)^T\right]\\
+&amp;=E\left[\left((I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\right)\left((I-K_kH)\teal{\boldsymbol e_k^-}-K_k\boldsymbol v_k\right)^T\right]\\
+&amp;=E\left[\left(\green{(I-K_kH)\boldsymbol e_k^-}-\red{K_k\boldsymbol v_k}\right)\left(\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}-\orange{\boldsymbol v_k^TK_k^T}\right)\right]\\
+&amp;=E\left[\green{(I-K_kH)\boldsymbol e_k^-}\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}-\green{(I-K_kH)\boldsymbol e_k^-}\orange{\boldsymbol v_k^TK_k^T}-\right.\\
+&amp;\transparent=\left.\red{K_k\boldsymbol v_k}\teal{{\boldsymbol e_k^-}^T(I-K_kH)^T}+\red{K_k\boldsymbol v_k}\orange{\boldsymbol v_k^TK_k^T}\right]\\
+&amp;=\red{E(}(I-K_kH)\boldsymbol e_k^-{\boldsymbol e_k^-}^T(I-K_kH)^T\red{)}-\\
+&amp;\transparent=\red{E(}(I-K_kH)\boldsymbol e_k^-\boldsymbol v_k^TK_k^T\red{)}-\\
+&amp;\transparent=\red{E(}K_k\boldsymbol v_k{\boldsymbol e_k^-}^T(I-K_kH)^T\red{)}+\\
+&amp;\transparent=\red{E(}K_k\boldsymbol v_k\boldsymbol v_k^TK_k^T\red{)}\\
+提出常数的期望\quad&amp;=(I-K_kH)\red{E(}\boldsymbol e_k^-{\boldsymbol e_k^-}^T\red{)}(I-K_kH)^T-\\
+&amp;\transparent=(I-K_kH)\red{E(}\boldsymbol e_k^-\boldsymbol v_k^T\red{)}K_k^T-\\
+&amp;\transparent=K_k\red{E(}\boldsymbol v_k{\boldsymbol e_k^-}^T\red{)}(I-K_kH)^T+\\
+&amp;\transparent=K_k\red{E(}\boldsymbol v_k\boldsymbol v_k^T\red{)}K_k^T\\
+&amp;=(I-K_kH)\red{P_k^-}(I-K_kH)^T+\\
+\boldsymbol e_k^-和{\boldsymbol v_k}^T相互独立\quad&amp;\transparent=0+\\
+且期望为0\quad&amp;\transparent=0+\\
+&amp;\transparent=K_k\red{R}K_k^T\\
+&amp;=\left(\green{P_k^-}-\red{K_kHP_k^-}\right)\left(\teal I-\orange{H^TK_k^T}\right)+K_kRK_k^T\\
+&amp;=\green{P_k^-}-\red{K_kHP_k^-}-\green{P_k^-}\orange{H^TK_k^T}+\red{K_kHP_k^-}\orange{H^TK_k^T}+K_kRK_k^T\\
+P_k^-对称\quad&amp;=P_k^--K_kHP_k^--\left(K_kHP_k^-\right)^T+K_kHP_k^-H^TK_k^T+K_kRK_k^T
+\tag{1-20}\end{align}\]
+</p>
+<p>因此， \(P_k\) 的迹可以表示为</p>
+<p class="formulaDsp">
+\[\tr(P_k)=\tr(P_k^-)-2\tr(K_kHP_k^-)+\tr(K_kHP_k^-H^TK_k^T)+\tr(K_kRK_k^T)\tag{1-21}\]
+</p>
+<p>希望 \(\tr(P_k)\) 有最小值，则需要对 \(K_k\) 求导，则有</p>
+<p class="formulaDsp">
+\[\frac{\mathrm d\tr(P_k)}{\mathrm dK_k}=0-2\frac{\mathrm d\tr(K_kHP_k^-)}{\mathrm dK_k}+\frac{\mathrm d\tr(K_kHP_k^-H^TK_k^T)}{\mathrm dK_k}+\frac{\mathrm d\tr(K_kRK_k^T)}{\mathrm dK_k}=0\tag{1-22}\]
+</p>
+<p>对于形如 \(\frac{\mathrm d\tr(AB)}{A}\) 的导数计算，可以通过拿一个 2 阶矩阵作为例子</p>
+<blockquote class="doxtable">
+<p>令 </p><p class="formulaDsp">
+\[A=\begin{bmatrix}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22}\end{bmatrix},\quad B=\begin{bmatrix}b_{11}&amp;b_{12}\\b_{21}&amp;b_{22}\end{bmatrix}\]
+</p>
+<p> 则 </p><p class="formulaDsp">
+\[AB=\begin{bmatrix}a_{11}b_{11}+a_{12}b_{21}&amp;a_{11}b_{21}+a_{12}b_{22}\\a_{21}b_{11}+a_{22}b_{21}&amp;a_{21}b_{12}+a_{22}b_{22}\end{bmatrix}\]
+</p>
+<p> 则 </p><p class="formulaDsp">
+\[\tr(AB)=a_{11}b_{11}+a_{12}b_{21}+a_{21}b_{12}+a_{22}b_{22}\]
+</p>
+<p> 则 </p><p class="formulaDsp">
+\[\frac{\mathrm d\tr(AB)}{\mathrm dA}=\begin{bmatrix}\frac{\partial\tr(AB)}{\partial a_{11}}&amp;\frac{\partial\tr(AB)}{\partial a_{12}}\\\frac{\partial\tr(AB)}{\partial a_{21}}&amp;\frac{\partial\tr(AB)}{\partial a_{22}}\end{bmatrix}=\begin{bmatrix}b_{11}&amp;b_{21}\\b_{12}&amp;b_{22}\end{bmatrix}=B^T\]
+</p>
+ </blockquote>
+<p>因此可以得到</p>
+<p class="formulaDsp">
+\[\frac{\mathrm d\tr(AB)}{\mathrm dA}=B^T\tag{1-23a}\]
+</p>
+<p>同理，我们也能验证如下结论</p>
+<p class="formulaDsp">
+\[\begin{align}\frac{\mathrm d\tr(ABA^T)}{\mathrm dA}&amp;=AB+AB^T\\
+当B对称时\quad&amp;=2AB\end{align}\tag{1-23b}\]
+</p>
+<p>那么，公式 \(\fml{1-22}\)可以写为</p>
+<p class="formulaDsp">
+\[\begin{align}2\frac{\mathrm d\tr(K_kHP_k^-)}{\mathrm dK_k}
+&amp;=\frac{\mathrm d\tr(K_kHP_k^-H^TK_k^T)}{\mathrm dK_k}+\frac{\mathrm d\tr(K_kRK_k^T)}{\mathrm dK_k}\\
+2{P_k^-}^TH^T&amp;=2K_kHP_k^-H^T+2K_kR\\
+P_k^-H^T&amp;=K_k\left(HP_k^-H^T+R\right)
+\tag{1-24}\end{align}\]
+</p>
+<p>最终可以得到误差协方差矩阵的迹最小时的<span style="color: red">卡尔曼增益</span> \(K_k\) 的表达式</p>
+<p class="formulaDsp">
+\[\red{K_k=P_k^-H^T\left(HP_k^-H^T+R\right)^{-1}\tag{1-25}}\]
+</p>
+<p><b>讨论</b></p>
+<ul>
+<li>当 \(R\) 很大时， \(K_k\to0,\quad\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+0(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)=\red{\hat{\boldsymbol x}_k^-}\)</li>
+<li>当 \(R\) 很小时， \(K_k\to H^+,\quad\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+H^+(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)=H^+\boldsymbol z_k=\red{\hat{\boldsymbol x}_{k_{MEA}}}\)</li>
+</ul>
+<h3><a class="anchor" id="kalman_error_covairance_matrix"></a>
+1.6 误差协方差矩阵</h3>
+<p>我们在计算卡尔曼增益 \(K_k\) 的时候出现了 \(E\left(\boldsymbol e_k^-{\boldsymbol e_k^-}^T\right)\)，并使用 \(P_k^-\) 进行表示，代表先验的误差协方差矩阵，现在要做的就是求出先验误差协方差矩阵 \(P_k^-\)，同样可以由协方差矩阵的定义出发。</p>
+<p>首先先求 \(\boldsymbol e_k^-\)</p>
+<p class="formulaDsp">
+\[\begin{align}\boldsymbol e_k^-&amp;=\boldsymbol x_k-\hat{\boldsymbol x}_k^-\\
+&amp;=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}+\boldsymbol w_{k-1}-A\hat{\boldsymbol x}_{k-1}-B\boldsymbol u_{k-1}\\
+&amp;=A(\boldsymbol x_{k-1}-\hat{\boldsymbol x}_{k-1})+\boldsymbol w_{k-1}\\
+&amp;=A\boldsymbol e_{k-1}+\boldsymbol w_{k-1}\tag{1-26}\end{align}\]
+</p>
+<p>因此先验误差协方差矩阵 \(P_k^-\) 可以表示为</p>
+<p class="formulaDsp">
+\[\begin{align}P_k^-
+&amp;=E\left(\boldsymbol e_k^-{\boldsymbol e_k^-}^T\right)=E\left[(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})^T\right]\\
+&amp;=E\left[(A\boldsymbol e_{k-1}+\boldsymbol w_{k-1})(\boldsymbol e_{k-1}^TA^T+\boldsymbol w_{k-1}^T)\right]\\
+&amp;=E\left[A\boldsymbol e_{k-1}\boldsymbol e_{k-1}^TA^T+A\boldsymbol e_{k-1}\boldsymbol w_{k-1}^T+\boldsymbol w_{k-1}\boldsymbol e_{k-1}^TA^T+\boldsymbol w_{k-1}\boldsymbol w_{k-1}^T\right]\\
+&amp;=AE(\boldsymbol e_{k-1}\boldsymbol e_{k-1}^T)A^T+AE\boldsymbol e_{k-1}E\boldsymbol w_{k-1}^T+E\boldsymbol w_{k-1}E\boldsymbol e_{k-1}^TA^T+E(\boldsymbol w_{k-1}\boldsymbol w_{k-1}^T)\\
+&amp;=AP_{k-1}A^T+0+0+Q
+\tag{1-27}\end{align}\]
+</p>
+<p>最终可以得到<span style="color: red">先验误差协方差矩阵</span>的表达式</p>
+<p class="formulaDsp">
+\[\red{P_k^-=AP_{k-1}A^T+Q\tag{1-28}}\]
+</p>
+<p>在求解 \(P_k^-\) 的时候用到了 \(P_{k-1}\)，因此需要进一步求解 \(P_k\)，从而为下一次 \(P_{k+1}^-\) 所使用。</p>
+<p>由 <a class="el" href="#kalman_gain_derivate">1.5 卡尔曼增益推导</a> 的公式 \(\fml{1-20}\) 可以得到</p>
+<p class="formulaDsp">
+\[\begin{align}P_k
+&amp;=\green{P_k^-}-\red{K_kHP_k^-}-\green{P_k^-}\orange{H^TK_k^T}+\red{K_kHP_k^-}\orange{H^TK_k^T}+K_kRK_k^T\\
+&amp;=P_k^--K_kHP_k^--P_k^-H^TK_k^T+K_k(HP_k^-H^T+R)K_k^T\\
+代入\fml{1-25}\quad&amp;=P_k^--K_kHP_k^--P_k^-H^TK_k^T+P_k^-H^TK_k^T\\
+&amp;=P_k^--K_kHP_k^-\tag{1-29}\end{align}\]
+</p>
+<p>即所谓后验误差协方差矩阵 \(P_k\)</p>
+<p class="formulaDsp">
+\[\red{P_k=(I-K_kH)P_k^-\tag{1-30}}\]
+</p>
+<h3><a class="anchor" id="kalman_filter_formulas"></a>
+1.7 汇总</h3>
+<p>至此，Kalman Filter 的 5 大公式已经全部求出，分别是公式 \(\fml{1-14}\)、公式 \(\fml{1-17}\)、公式 \(\fml{1-25}\)、公式 \(\fml{1-28}\) 和公式 \(\fml{1-30}\)</p>
+<p>按照处理顺序，卡尔曼滤波器划分为两个部分</p>
+<p><b>① 预测</b></p>
+<ol type="1">
+<li><span style="color: teal">先验状态估计</span> <p class="formulaDsp">
+\[\hat{\boldsymbol x}_k^-=A\boldsymbol x_{k-1}+B\boldsymbol u_{k-1}\]
+</p>
+</li>
+<li><span style="color: teal">计算先验误差协方差</span> <p class="formulaDsp">
+\[P_k^-=AP_{k-1}A^T+Q\]
+</p>
+</li>
+</ol>
+<p><b>② 校正（更新）</b></p>
+<ol type="1">
+<li><span style="color: teal">计算卡尔曼增益</span> <p class="formulaDsp">
+\[K_k=P_k^-H^T\left(HP_k^-H^T+R\right)^{-1}\]
+</p>
+</li>
+<li><span style="color: teal">后验状态估计</span> <p class="formulaDsp">
+\[\hat{\boldsymbol x}_k=\hat{\boldsymbol x}_k^-+K_k(\boldsymbol z_k-H\hat{\boldsymbol x}_k^-)\]
+</p>
+</li>
+<li><span style="color: teal">更新后验误差协方差</span> <p class="formulaDsp">
+\[P_k=(I-K_kH)P_k^-\]
+</p>
+</li>
+</ol>
+<hr  />
+<h2><a class="anchor" id="autotoc_md185"></a>
+2. 卡尔曼滤波模块的用法</h2>
+<h3><a class="anchor" id="autotoc_md186"></a>
+2.1 如何配置</h3>
+<p>首先必须要寻找 RMVL 包，即 <code>find_package(RMVL REQUIRED)</code>，之后可直接在 CMakeLists.txt 中链接库</p>
+<div class="fragment"> <div class="line"><span class="keyword">target_link_libraries</span>(</div> <div class="line">&#160;&#160;xxx</div> <div class="line">&#160;&#160;<span class="keyword">PUBLIC</span> rmvl_algorithm</div> <div class="line">)</div> </div><p>这里的 <code>xxx</code> 为需要链接到 algorithm 模块的目标</p>
+<h3><a class="anchor" id="autotoc_md187"></a>
+2.2 如何使用</h3>
+<h4>2.2.1 包含头文件</h4>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d0f/kalman_8hpp.html">rmvl/algorithm/kalman.hpp</a>&gt;</span></div>
+<div class="ttc" id="akalman_8hpp_html"><div class="ttname"><a href="../../db/d0f/kalman_8hpp.html">kalman.hpp</a></div><div class="ttdoc">包含轻量级 cv::Matx 的卡尔曼滤波模块</div></div>
+</div><!-- fragment --><h4>2.2.2 创建并初始化卡尔曼滤波器对象</h4>
+<p>取</p><ul>
+<li>数据类型 <code>Tp</code> = <code>double</code></li>
+<li>状态量阶数 <code>StateDim</code> = <code>4</code></li>
+<li>观测量阶数 <code>MeatureDim</code> = <code>2</code></li>
+<li>无系统输入</li>
+</ul>
+<p>可以得到以下代码</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter&lt;double, 4, 2&gt;</a> filter; <span class="comment">// 简写可以写成 rm::KF42d filter</span></div>
+<div class="line"> </div>
+<div class="line">filter.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">setR</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line">filter.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">setQ</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line">cv::Vec4f init_vec = {<span class="comment">/* ... */</span>};</div>
+<div class="line">filter.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">init</a>(init_vec, pred_err);</div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a27e04aa239c0302d8a31aad3ebf2f130"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">rm::KalmanFilterStaticDatas::setQ</a></div><div class="ttdeci">void setQ(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;process_err)</div><div class="ttdoc">设置过程噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:90</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a47d69bda49836961e21571c1267c3312"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">rm::KalmanFilterStaticDatas::setR</a></div><div class="ttdeci">void setR(const cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt; &amp;measure_err)</div><div class="ttdoc">设置测量噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:83</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_aa32899fa6bb9fc4d52a62feae756a71a"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">rm::KalmanFilterStaticDatas::init</a></div><div class="ttdeci">void init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, Tp error)</div><div class="ttdoc">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）</div><div class="ttdef"><b>定义</b> kalman.hpp:60</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter</a></div><div class="ttdoc">卡尔曼滤波器</div><div class="ttdef"><b>定义</b> kalman.hpp:120</div></div>
+</div><!-- fragment --><h4>2.2.3 运行</h4>
+<div class="fragment"><div class="line">filter.<a class="code hl_function" href="../../d9/d1a/classrm_1_1KalmanFilter.html#af582f4adaeeb639abf4e62c53817d7f6">setA</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line">filter.<a class="code hl_function" href="../../d9/d1a/classrm_1_1KalmanFilter.html#ae877137380d48b8a004de3f6b588de11">setH</a>(<span class="comment">/* ... */</span>);</div>
+<div class="line"><span class="comment">// Prediction</span></div>
+<div class="line">filter.<a class="code hl_function" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a87a02cc3e6d0bbba66f08d5347127cb1">predict</a>();</div>
+<div class="line"><span class="comment">// Correction</span></div>
+<div class="line">cv::Vec2f zk = {<span class="comment">/* ... */</span>};</div>
+<div class="line"><span class="keyword">auto</span> corr = filter.<a class="code hl_function" href="../../d9/d1a/classrm_1_1KalmanFilter.html#a1bcf9b2c342ccf827e2fe8e6d04aa645">correct</a>(zk);</div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a1bcf9b2c342ccf827e2fe8e6d04aa645"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a1bcf9b2c342ccf827e2fe8e6d04aa645">rm::KalmanFilter::correct</a></div><div class="ttdeci">auto correct(const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;zk)</div><div class="ttdoc">卡尔曼滤波器校正部分，包含卡尔曼增益的计算、状态量的后验估计和误差协方差的后验估计</div><div class="ttdef"><b>定义</b> kalman.hpp:186</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_a87a02cc3e6d0bbba66f08d5347127cb1"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#a87a02cc3e6d0bbba66f08d5347127cb1">rm::KalmanFilter::predict</a></div><div class="ttdeci">auto predict()</div><div class="ttdoc">卡尔曼滤波的预测部分，包括状态量的先验估计和误差协方差的先验估计</div><div class="ttdef"><b>定义</b> kalman.hpp:169</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_ae877137380d48b8a004de3f6b588de11"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#ae877137380d48b8a004de3f6b588de11">rm::KalmanFilter::setH</a></div><div class="ttdeci">void setH(const cv::Matx&lt; Tp, MeasureDim, StateDim &gt; &amp;observe_tf)</div><div class="ttdoc">设置观测矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:161</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilter_html_af582f4adaeeb639abf4e62c53817d7f6"><div class="ttname"><a href="../../d9/d1a/classrm_1_1KalmanFilter.html#af582f4adaeeb639abf4e62c53817d7f6">rm::KalmanFilter::setA</a></div><div class="ttdeci">void setA(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;state_tf)</div><div class="ttdoc">设置状态转移矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:150</div></div>
+</div><!-- fragment --><hr  />
+<h3><a class="anchor" id="ref_paper"></a>
+参考文献</h3>
+<ul>
+<li>卡尔曼滤波 <a class="el" href="../../d0/de3/citelist.html#CITEREF_kalman60">[9]</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

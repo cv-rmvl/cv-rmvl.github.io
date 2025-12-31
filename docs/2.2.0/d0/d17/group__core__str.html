@@ -1,0 +1,314 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: Python 风格的字符串处理</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Python 风格的字符串处理<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Python 风格的字符串处理 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/d17/group__core__str.svg" width="348" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gadf0b167884deb47575179962b66c4341" id="r_gadf0b167884deb47575179962b66c4341"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadf0b167884deb47575179962b66c4341">rm::str::split</a> (std::string_view str, std::string_view delim)</td></tr>
+<tr class="memdesc:gadf0b167884deb47575179962b66c4341"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串分割  <br /></td></tr>
+<tr class="separator:gadf0b167884deb47575179962b66c4341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6dbfb3a75e7aa6352b02002438c5918c" id="r_ga6dbfb3a75e7aa6352b02002438c5918c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6dbfb3a75e7aa6352b02002438c5918c">rm::str::join</a> (const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</td></tr>
+<tr class="memdesc:ga6dbfb3a75e7aa6352b02002438c5918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串连接  <br /></td></tr>
+<tr class="separator:ga6dbfb3a75e7aa6352b02002438c5918c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabecfe8c875f8bb2a439b66acbdef9ab3" id="r_gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabecfe8c875f8bb2a439b66acbdef9ab3">rm::str::strip</a> (std::string_view str)</td></tr>
+<tr class="memdesc:gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">去除字符串两端的空白字符  <br /></td></tr>
+<tr class="separator:gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae46127fdf7d9a6deca77b3aee4445166" id="r_gae46127fdf7d9a6deca77b3aee4445166"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae46127fdf7d9a6deca77b3aee4445166">rm::str::lower</a> (std::string_view str)</td></tr>
+<tr class="memdesc:gae46127fdf7d9a6deca77b3aee4445166"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为小写  <br /></td></tr>
+<tr class="separator:gae46127fdf7d9a6deca77b3aee4445166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga603f0fec4d9dc80c6be715ef36fa6a9a" id="r_ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">rm::str::upper</a> (std::string_view str)</td></tr>
+<tr class="memdesc:ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为大写  <br /></td></tr>
+<tr class="separator:ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga6dbfb3a75e7aa6352b02002438c5918c" name="ga6dbfb3a75e7aa6352b02002438c5918c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6dbfb3a75e7aa6352b02002438c5918c">&#9670;&#160;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::str::join </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>strs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>delim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>字符串连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strs</td><td>待连接的字符串数组 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>连接符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>连接后的字符串 </dd></dl>
+
+</div>
+</div>
+<a id="gae46127fdf7d9a6deca77b3aee4445166" name="gae46127fdf7d9a6deca77b3aee4445166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae46127fdf7d9a6deca77b3aee4445166">&#9670;&#160;</a></span>lower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::str::lower </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>将字符串转换为小写 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+
+</div>
+</div>
+<a id="gadf0b167884deb47575179962b66c4341" name="gadf0b167884deb47575179962b66c4341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf0b167884deb47575179962b66c4341">&#9670;&#160;</a></span>split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; rm::str::split </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>delim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>字符串分割 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待分割的字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>分割符 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>分割后的字符串数组 </dd></dl>
+
+</div>
+</div>
+<a id="gabecfe8c875f8bb2a439b66acbdef9ab3" name="gabecfe8c875f8bb2a439b66acbdef9ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabecfe8c875f8bb2a439b66acbdef9ab3">&#9670;&#160;</a></span>strip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view rm::str::strip </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>去除字符串两端的空白字符 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+
+</div>
+</div>
+<a id="ga603f0fec4d9dc80c6be715ef36fa6a9a" name="ga603f0fec4d9dc80c6be715ef36fa6a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">&#9670;&#160;</a></span>upper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::str::upper </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de9/str_8hpp.html">rmvl/core/str.hpp</a>&gt;</code></p>
+
+<p>将字符串转换为大写 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

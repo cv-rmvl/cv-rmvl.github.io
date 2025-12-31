@@ -1,0 +1,287 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 为 RMVL 撰写说明文档</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d88/tutorial_table_of_content_config.html">视觉库环境配置教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">为 RMVL 撰写说明文档 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><li class="level1"><a href="#tutorial_documentation_overview">Doxygen 概述</a><ul><li class="level2"><a href="#tutorial_documentation_intro">介绍</a></li>
+<li class="level2"><a href="#tutorial_documentation_install">安装</a></li>
+<li class="level2"><a href="#tutorial_documentation_generate">生成文档</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#tutorial_documentation_quick_start">快速开始</a><ul><li class="level2"><a href="#tutorial_documentation_layout">文档布局</a></li>
+<li class="level2"><a href="#tutorial_documentation_content">详细内容</a><ul><li class="level3"><a href="#autotoc_md126">1. 基本命令</a></li>
+<li class="level3"><a href="#autotoc_md127">2. 页面相关</a><ul><li class="level4"><a href="#autotoc_md128">2.1 Markdown 支持</a></li>
+<li class="level4"><a href="#autotoc_md129">2.2 标题 ID</a></li>
+<li class="level4"><a href="#autotoc_md130">2.3 子页面与跳转</a></li>
+</ul>
+</li>
+<li class="level3"><a href="#autotoc_md131">3. 代码块</a></li>
+<li class="level3"><a href="#autotoc_md132">4. 按钮</a></li>
+<li class="level3"><a href="#autotoc_md133">按钮示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#tutorial_documentation_refs">参考</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_introduction_miscellaneous_document"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d5/d52/tutorial_other_arm.html">为基于 ARM 的 Linux 系统配置交叉编译</a> ↑<br  />
+</p>
+<hr  />
+<h1><a class="anchor" id="tutorial_documentation_overview"></a>
+Doxygen 概述</h1>
+<h2><a class="anchor" id="tutorial_documentation_intro"></a>
+介绍</h2>
+<p><a href="http://www.doxygen.nl">Doxygen</a> 是用于构建文档系统的工具，包含非常多的实用特性，包括：</p><ul>
+<li>通过解析程序源代码来生成正确的文档</li>
+<li>检查文档中的错误</li>
+<li>插入图像和公式</li>
+<li>使用 Markdown 标记语法，以及纯粹的 HTML 文本格式</li>
+<li>以不同的格式生成文档，例如 HTML、LaTeX、man 等</li>
+</ul>
+<p>RMVL 视觉库现有的文档都已转化为了 Doxygen 格式。</p>
+<h2><a class="anchor" id="tutorial_documentation_install"></a>
+安装</h2>
+<p>可在官方网站的<a href="http://doxygen.nl/download.html">下载</a>和<a href="http://doxygen.nl/manual/install.html">安装</a>页面进行查看，一些 Linux 发行版也提供了有关 Doxygen 的包，例如 Ubuntu 可通过以下命令进行安装。 </p><div class="fragment"><div class="line">sudo apt install doxygen doxygen-gui graphviz</div>
+</div><!-- fragment --><h2><a class="anchor" id="tutorial_documentation_generate"></a>
+生成文档</h2>
+<ul>
+<li>获取 RMVL 源码（version: 2.7 之后版本均可）</li>
+<li>在项目文件夹顶层创建 <code>build</code> 文件夹，并 <code>cd build</code></li>
+<li>运行 <code>cmake</code>，或使用 <code>cmake-gui</code> <div class="fragment"><div class="line">cmake -DBUILD_DOCS=ON ..</div>
+</div><!-- fragment --></li>
+<li>运行 <code>make</code> <div class="fragment"><div class="line">make doxygen</div>
+</div><!-- fragment --></li>
+<li>在你的浏览器中打开 <em>'html/index.html'</em> 文件</li>
+</ul>
+<h1><a class="anchor" id="tutorial_documentation_quick_start"></a>
+快速开始</h1>
+<dl class="section note"><dt>注解</dt><dd>以下内容为 RMVL 特有的文档，若是自己书写的其他项目，文档的布局、协议都可以视需求情况而定。</dd></dl>
+<h2><a class="anchor" id="tutorial_documentation_layout"></a>
+文档布局</h2>
+<p>有关文档的一切内容均放置在 <code>&lt;path-to-rmvl&gt;/doc</code> 中，下面列举一些关于文档生成重要的部分</p>
+<ul>
+<li><b>Doxyfile.in</b> - 由 cmake 自动生成 Doxyfile，来为 <code>make doxygen</code> 提供文档构建指南。内部定义了有关文档构建范式的所有内容，包括构建类型（HTML、LaTeX 等）、构建工作空间、源代码中的构建内容等；</li>
+<li><b>doxygen-awesome.css</b> - 样式文件，源自于 GitHub 的 <a href="https://github.com/jothepro/doxygen-awesome-css">doxygen-awesome-css</a> 项目；</li>
+<li><b>header.html, footer.html</b> - 定义了页眉与页脚的格式，其中包含一些 js 脚本的导入；</li>
+<li><b>root.markdown.in</b> - 由 cmake 自动生成 root.markdown，作为文档首页</li>
+</ul>
+<p>此外，RMVL 的文档在构建中会自动递归索引项目顶级目录下的所有文件，最终生成包含以下几个部分</p>
+<ul>
+<li><p class="startli"><b>源代码</b> 中的实体，包括类、函数、枚举等内容，这些内容需要被定义在相应的头文件中。</p>
+<dl class="section note"><dt>注解</dt><dd>自动的代码解析会寻找所有的头文件（<em>".h, .hpp"</em>）以及部分源文件（<em>"sample_*.cpp"</em>）的内容</dd></dl>
+</li>
+<li><b>页面</b> 是放置与任何源代码实体不直接连接的图像和代码示例的大块文本的区域，页面应该位于单独的文件中，并包含在几个预定义的位置，比如说本教程就是这样一个页面的例子。</li>
+<li><b>图像</b> 可以用来说明所描述的事物，这些文件通常位于与页面相同的位置，可以插入到文档的任何位置。</li>
+<li><b>示例代码</b> 展示了如何在实际应用程序中使用该库，每个示例都是代表一个简单应用程序的自包含文件。这些文件的部分内容可以包含在文档和教程中，以演示函数调用和对象协作。</li>
+<li><b>参考书目</b> 用于创建一个公共的书目，所有作为 RMVL 功能基础的科学书籍、文章和论文集都应列入此参考书目。</li>
+</ul>
+<h2><a class="anchor" id="tutorial_documentation_content"></a>
+详细内容</h2>
+<p>为了给类、函数或其他实体生成文档，需要使用特定的注释方式，比如说</p>
+<pre class="fragment">/**
+ * @brief 计算相机中心与目标中心之间的相对角度
+ * @note 公式推导参考函数 @ref calculateRelativeCenter() ，现直接给出结果 \f[\begin{bmatrix}
+ *       \tan{yaw}\\\tan{pitch}\\1\end{bmatrix}=\begin{bmatrix}f_x&amp;0&amp;u_0\\0&amp;f_y&amp;v_0\\0&amp;0&amp;1
+ *       \end{bmatrix}^{-1}\begin{bmatrix}u\\v\\1\end{bmatrix}\f]
+ *
+ * @param[in] cameraMatrix 相机内参矩阵
+ * @param[in] center 像素坐标系下的目标中心
+ * @return 相对角度，目标在图像右方，point.x 为正，目标在图像下方，point.y 为正
+ */
+cv::Point2f calculateRelativeAngle(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center);
+</pre><h3><a class="anchor" id="autotoc_md126"></a>
+1. 基本命令</h3>
+<ul>
+<li><b>brief</b> - 表示一段函数、类、枚举、结构的简要信息</li>
+<li><b>param</b> - 通常表示函数的参数，包含传入、传出、传入兼传出参数 3 种，可分别用 <code>[in]</code>、<code>[out]</code> 和 <code>[in out]</code> 做区分，例如 <pre class="fragment">  @param[in] cameraMatrix 相机内参矩阵</pre><ul>
+<li>结果如下 <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><b>note</b> - 注解，可包含对类、函数的详细介绍或者使用注意事项，也可包含一些公式信息，具体的公式写法在后续的 <b>f</b> 会进行介绍，note 的使用如下 <pre class="fragment">  @note 公式推导参考函数 @ref calculateRelativeCenter()</pre><ul>
+<li>结果如下 <dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="../../d9/d31/group__rmath.html#gaad38b53a7d703ef75889860795c41b94">calculateRelativeCenter()</a></dd></dl>
+</li>
+</ul>
+</li>
+<li><b>return</b> - 表示返回值 <pre class="fragment">  @return 相对角度</pre><ul>
+<li>结果如下 <dl class="section return"><dt>返回</dt><dd>相对角度</dd></dl>
+</li>
+</ul>
+</li>
+<li><b>f</b> - 公式 内联公式使用 <code>f$</code> 命令开始 <pre class="fragment">  \f$ ... \f$</pre> 块公式使用 <code>f[</code> 和 <code>f]</code> 命令 <pre class="fragment">  \f[ ... \f]</pre> 示例 <pre class="fragment">  若状态向量包含以下内容：\f$[p, v, a]\f$ ，然而观测向量仅包含 \f$[p, v]\f$，
+  在这种情况下，需要使用一个观测转换矩阵 \f$H_{2\times3}\f$。在上述例子中克表示为
+  \f[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix}
+  \begin{bmatrix}p\\v\\a\end{bmatrix}\f]</pre><ul>
+<li><p class="startli">结果如下</p>
+<p class="startli">若状态向量包含以下内容： \([p, v, a]\) ，然而观测向量仅包含 \([p, v]\)， 在这种情况下，需要使用一个观测转换矩阵 \(H_{2\times3}\)。在上述例子中克表示为 </p><p class="formulaDsp">
+\[\begin{bmatrix}p\\v\end{bmatrix}=\begin{bmatrix}1&amp;0&amp;0\\0&amp;1&amp;0\end{bmatrix} \begin{bmatrix}p\\v\\a\end{bmatrix}\]
+</p>
+</li>
+</ul>
+</li>
+<li><b>defgroup</b> 与 <b>addtogroup</b> -</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md127"></a>
+2. 页面相关</h3>
+<h4><a class="anchor" id="autotoc_md128"></a>
+2.1 Markdown 支持</h4>
+<p>Doxygen 支持部分 Markdown 语法与扩展，本篇教程页面同样使用了很多的 Markdown 语法。</p>
+<h4><a class="anchor" id="autotoc_md129"></a>
+2.2 标题 ID</h4>
+<p>每个文档页面都应该为自己设置一个 ID，比如本篇教程的标题和 ID 如下</p>
+<pre class="fragment">为 RMVL 撰写说明文档 {#tutorial_document}
+</pre><h4><a class="anchor" id="autotoc_md130"></a>
+2.3 子页面与跳转</h4>
+<p>使用以下命令进行子页面的跳转</p>
+<pre class="fragment">@subpage xxx
+</pre><p>使用以下命令进行页面内或其他地方的引用</p>
+<pre class="fragment">@ref xxx
+</pre><h3><a class="anchor" id="autotoc_md131"></a>
+3. 代码块</h3>
+<p>使用以下命令创建代码块</p>
+<pre class="fragment">@code{.cpp}
+std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
+@endcode
+</pre><p>渲染结果如下</p>
+<div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md132"></a>
+4. 按钮</h3>
+<p>使用以下命令创建按钮</p>
+<pre class="fragment">### 按钮示例
+
+@add_toggle{C++}
+
+    This is C++.
+
+    @code{.cpp}
+    std::cout &lt;&lt; "Hello World" &lt;&lt; std::endl;
+    @endcode
+
+@end_toggle
+
+@add_toggle{Python}
+
+    This is Python.
+
+    @code{.py}
+    print("Hello World")
+    @endcode
+
+@end_toggle</pre><p>渲染结果如下</p>
+<h3><a class="anchor" id="autotoc_md133"></a>
+按钮示例</h3>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><p>This is C++. </p><div class="fragment"><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><p>This is Python. </p><div class="fragment"><div class="line">print(<span class="stringliteral">&quot;Hello World&quot;</span>)</div>
+</div><!-- fragment --> </div> <h1><a class="anchor" id="tutorial_documentation_refs"></a>
+参考</h1>
+<ul>
+<li><a href="http://www.doxygen.nl">Doxygen</a> - Doxygen 主页面</li>
+<li><a href="http://www.doxygen.nl/manual/docblocks.html">Documenting basics</a> - 如何在代码中包含文档内容</li>
+<li><a href="http://www.doxygen.nl/manual/markdown.html">Markdown support</a> - 支持的标记与扩展</li>
+<li><a href="http://www.doxygen.nl/manual/formulas.html">Formulas support</a> - 如何包含公式 </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:32:07 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

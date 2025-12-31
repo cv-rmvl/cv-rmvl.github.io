@@ -1,0 +1,158 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<title>RMVL: 在整车状态估计中涉及到的预测量</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.4.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">在整车状态估计中涉及到的预测量</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md38">预测量分类</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md39">调参策略</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2predictor_2gyro__predictor"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/07/23</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d5/d6f/tutorial_extra_how_to_use_predictor.html">如何使用/开发 predictor 模块</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d3/ded/tutorial_extra_spi_rune_predictor.html">k 步前向预估神符预测</a> ↓<br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../d4/d7b/classrm_1_1GyroPredictor.html" title="整车状态预测模块">rm::GyroPredictor</a></p>
+<h2><a class="anchor" id="autotoc_md38"></a>
+预测量分类</h2>
+<ul>
+<li>静态响应预测量：包含旋转、平移两种，由于通信延迟的存在需要提前瞄准的预测量，调节参数为 <code>B</code>，为时间量（单位/秒）</li>
+<li>动态响应预测量：包含旋转、平移两种，对击中目标起到决定性作用的预测量，与子弹飞行时间呈正相关，调节参数为 <code>K</code>，为无量纲量</li>
+<li>射击延迟预测量：一般在跟随目标的情况下， <code>Kt + B</code> 的预测量会让云台响应到 <code>Kt</code> 预测量的位置，这正是参数 <code>B</code> 的作用，此时目标与发射机构之间都只差近似 <code>Kt</code> 的角度。而通过判断云台是否进入 <code>Kt</code> 的预测圈内（在决策中由 <code>canShoot</code> 判断）来进行发弹控制，因此即使存在发弹延迟，也能够保证在紧跟目标的情况下击打中目标。然而，在不跟随目标的情况下，由于发弹延迟存在，单靠 <code>Kt</code> 预测圈的发弹控制绝对不可能击打到目标，因此需要引入第三个预测量： <b>射击延迟预测量</b> 。射击延迟预测量目前仅包含旋转一种，因为只有旋转分量需要让云台保持静止（瞄准中心点）或者切换，该预测量用于抵消射击延迟带来的发射滞后，调节参数为 <code>SHOOT_B</code>，为时间量（单位/秒）</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md39"></a>
+调参策略</h2>
+<ul>
+<li>对于参数 <code>K</code> 和参数 <code>B</code> 而言，调参方式与单纯的平移目标完全一致，即先设 <code>K</code> 为 <code>0</code> 并调节参数 <code>B</code> 直至目标不再滞后，即目标中心稳定进入预测圈内。之后再调节参数 <code>K</code> 以击中单纯的平移目标。此时发弹控制由 <code>Kt</code> 决定。</li>
+<li>对于参数 <code>SHOOT_B</code> 而言，可以从其定义出发进行分析：该参数用于抵消射击延迟，原先的发弹控制仅由 <code>Kt</code> 动态响应预测量进行控制。若仍采用 <code>Kt</code> 作为发弹策略，则无法击中目标，因此需要在云台静止状态（瞄准中心点时）调节该参数以确定参数 <code>SHOOT_B</code>。此时发弹控制则由 <code>Kt + SHOOT_B</code> 共同控制。 </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

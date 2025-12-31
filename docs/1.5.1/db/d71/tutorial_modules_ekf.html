@@ -1,0 +1,341 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: 扩展卡尔曼滤波</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">扩展卡尔曼滤波</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md150">1. 非线性函数的线性化</a>
+        <ul>
+          <li class="level3">
+            <a href="#ekf_state_function_linearization">1.1 状态方程线性化</a>
+          </li>
+          <li class="level3">
+            <a href="#ekf_observation_function_linearization">1.2 观测方程线性化</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md151">2. 扩展卡尔曼滤波</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md152">2.1 公式汇总</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md153">2.2 EKF 模块的使用</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>扩展卡尔曼滤波</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2ekf"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/04/19 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d5/d1c/tutorial_modules_dft.html">离散傅里叶变换</a> ↓<br  />
+</p>
+<hr  />
+<p>相关类 <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html" title="扩展卡尔曼滤波器">rm::ExtendedKalmanFilter</a></p>
+<p class="formulaDsp">
+\[\def\red#1{\color{red}{#1}}
+\def\teal#1{\color{teal}{#1}}
+\def\green#1{\color{green}{#1}}
+\def\transparent#1{\color{transparent}{#1}}
+\def\orange#1{\color{orange}{#1}}
+\def\Var{\mathrm{Var}}
+\def\Cov{\mathrm{Cov}}
+\def\tr{\mathrm{tr}}
+\def\fml#1{\text{(#1)}}
+\def\ptl#1#2{\frac{\partial#1}{\partial#2}}
+\]
+</p>
+<p>在阅读本教程前，请确保已经熟悉标准的 <a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波</a> ，因为核心公式不变，只是在原来的基础上增加了非线性函数线性化的部分。</p>
+<h2><a class="anchor" id="autotoc_md150"></a>
+1. 非线性函数的线性化</h2>
+<p>对于一个线性系统，可以用状态空间方程描述其运动过程</p>
+<p class="formulaDsp">
+\[\begin{align}\dot{\pmb x}&amp;=A\pmb x+B\pmb u\\\pmb y&amp;=C\pmb x\end{align}\tag{1-1}\]
+</p>
+<p>离散化，并考虑噪声后可以写为</p>
+<p class="formulaDsp">
+\[\begin{align}\dot{\pmb x}_k&amp;=A\pmb x_{k-1}+B\pmb u_{k-1}+\pmb w_{k-1}&amp;&amp;\pmb w_{k-1}\sim N(0,Q)\tag{1-2a}\\
+\pmb z_k&amp;=H\pmb x_{k-1}+\pmb v_k&amp;&amp;\pmb v_k\sim N(0,R)\tag{1-2b}\end{align}\]
+</p>
+<p>但对于一个非线性系统，我们就无法使用矩阵来表示了，我们需要写为</p>
+<p class="formulaDsp">
+\[\left\{\begin{align}\dot{\pmb x}_k&amp;=\pmb f_A(\pmb x_{k-1},\pmb u_{k-1},\pmb w_{k-1})\\
+\pmb z_k&amp;=\pmb f_H(\pmb x_{k-1},\pmb v_{k-1})\end{align}\right.\tag{1-3}\]
+</p>
+<p>其中， \(\pmb f_A\) 和 \(\pmb f_H\) 都为非线性函数。我们在非线性函数中同样考虑了噪声，但是对于状态量以及观测量本身的噪声而言，<span style="color: red">正态分布的随机变量通过非线性系统后就不再服从正态分布了</span>。因此我们可以利用 <b>泰勒展开</b> ，将非线性系统线性化，即</p>
+<p class="formulaDsp">
+\[f(x)\approx f(x_0)+\frac{\mathrm df}{\mathrm dx}(x-x_0)\tag{1-4}\]
+</p>
+<p>对于多元函数而言，泰勒展开可以写为</p>
+<p class="formulaDsp">
+\[f(x,y,z)\approx f(x_0,y_0,z_0)+\begin{bmatrix}f&#39;_x(x_0,y_0,z_0)&amp;f&#39;_y(x_0,y_0,z_0)&amp;f&#39;_z(x_0,y_0,z_0)\end{bmatrix}\begin{bmatrix}x-x_0\\y-y_0\\z-z_0\end{bmatrix}\tag{1-5a}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[f(\pmb x)\approx f(\pmb x_0)+\ptl fx(\pmb x-\pmb x_0)=f(\pmb x_0)+\nabla f(\pmb x_0)(\pmb x-\pmb x_0)\tag{1-5b}\]
+</p>
+<h3><a class="anchor" id="ekf_state_function_linearization"></a>
+1.1 状态方程线性化</h3>
+<p>对公式 \(\fml{1-2a}\) 在 \(\hat{\pmb x}_{k-1}\) 处进行线性化，即选取 \(\text{k-1}\) 时刻的后验状态估计作为展开点，有</p>
+<p class="formulaDsp">
+\[\pmb x_k=\pmb f_A(\hat{\pmb x}_{k-1},\pmb u_{k-1},\pmb w_{k-1})+J_A(\pmb x_{k-1}-\hat x_{k-1})+W\pmb w_{k-1}\tag{1-6}\]
+</p>
+<p>令 \(\pmb w_{k-1}=\pmb 0\)，则 \(f_A(\hat{\pmb x}_{k-1},\pmb u_{k-1},\pmb w_{k-1})=f_A(\hat{\pmb x}_{k-1},\pmb u_{k-1},\pmb 0)\stackrel{\triangle}=\tilde{\pmb x}_{k-1}\)，有</p>
+<p class="formulaDsp">
+\[\red{\pmb x_k=\tilde{\pmb x}_{k-1}+J_A(\pmb x_{k-1}-\hat x_{k-1})+W\pmb w_{k-1}\qquad W\pmb w_{k-1}\sim N(0,WQW^T)\tag{1-7}}\]
+</p>
+<p>其中</p>
+<p class="formulaDsp">
+\[\begin{align}J_A&amp;=\left.\ptl{f_A}{\pmb x}\right|_{(\hat{\pmb x}_{k-1},\pmb u_{k-1})}=\begin{bmatrix}\ptl{{f_A}_1}{x_1}&amp;\ptl{{f_A}_1}{x_2}&amp;\cdots&amp;\ptl{{f_A}_1}{x_n}\\\ptl{{f_A}_2}{x_1}&amp;\ptl{{f_A}_2}{x_2}&amp;\cdots&amp;\ptl{{f_A}_2}{x_n}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\\ptl{{f_A}_n}{x_1}&amp;\ptl{{f_A}_n}{x_2}&amp;\cdots&amp;\ptl{{f_A}_n}{x_n}\end{bmatrix}\\
+W&amp;=\left.\ptl{f_A}{\pmb w}\right|_{(\hat{\pmb w}_{k-1},\pmb u_{k-1})}\end{align}\]
+</p>
+<h3><a class="anchor" id="ekf_observation_function_linearization"></a>
+1.2 观测方程线性化</h3>
+<p>对公式 \(\fml{1-2b}\) 在 \(\hat{\pmb x}_k\) 处进行线性化，有</p>
+<p class="formulaDsp">
+\[\pmb z_k=\pmb f_H(\tilde{\pmb x}_k,\pmb v_k)+J_H(\pmb x_k-\tilde x_k)+V\pmb v_k\tag{1-8}\]
+</p>
+<p>令 \(\pmb v_k=\pmb 0\)，则 \(f_H(\tilde{\pmb x}_k,\pmb v_k)=f_H(\tilde{\pmb x}_k,\pmb 0)\stackrel{\triangle}=\tilde{\pmb z}_k\)，有</p>
+<p class="formulaDsp">
+\[\red{\pmb z_k=\tilde{\pmb z}_k+J_H(\pmb x_k-\tilde x_k)+V\pmb v_k\qquad V\pmb v_k\sim N(0,VRV^T)\tag{1-9}}\]
+</p>
+<p>其中</p>
+<p class="formulaDsp">
+\[J_H=\left.\ptl{f_H}{\pmb x}\right|_{\tilde{\pmb x}_k},\qquad V=\left.\ptl{f_H}{\pmb v}\right|_{\tilde{\pmb x}_k}\]
+</p>
+<h2><a class="anchor" id="autotoc_md151"></a>
+2. 扩展卡尔曼滤波</h2>
+<h3><a class="anchor" id="autotoc_md152"></a>
+2.1 公式汇总</h3>
+<p>根据卡尔曼滤波的 <a class="el" href="../../dd/dc3/tutorial_modules_kalman.html#kalman_filter_formulas">1.7 汇总</a> 可以相应的改写非线性系统下的卡尔曼滤波公式，从而得到如下的扩展卡尔曼滤波公式。</p>
+<p><b>① 预测</b></p>
+<ol type="1">
+<li><span style="color: teal">先验状态估计</span> <p class="formulaDsp">
+\[\hat{\pmb x}_k^-=\pmb f_A(\pmb x_{k-1},\pmb u_{k-1},\pmb 0)\]
+</p>
+</li>
+<li><span style="color: teal">计算先验误差协方差</span> <p class="formulaDsp">
+\[P_k^-=J_AP_{k-1}J_A^T+WQW^T\]
+</p>
+</li>
+</ol>
+<p><b>② 校正（更新）</b></p>
+<ol type="1">
+<li><span style="color: teal">计算卡尔曼增益</span> <p class="formulaDsp">
+\[K_k=P_k^-J_H^T\left(J_HP_k^-J_H^T+VRV^T\right)^{-1}\]
+</p>
+</li>
+<li><span style="color: teal">后验状态估计</span> <p class="formulaDsp">
+\[\hat{\pmb x}_k=\hat{\pmb x}_k^-+K_k\left[\pmb z_k-\pmb f_H(\hat{\pmb x}_k^-,\pmb 0)\right]\]
+</p>
+</li>
+<li><span style="color: teal">更新后验误差协方差</span> <p class="formulaDsp">
+\[P_k=(I-K_kJ_H)P_k^-\]
+</p>
+</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md153"></a>
+2.2 EKF 模块的使用</h3>
+<p>下面拿扩展卡尔曼模块单元测试的内容举例子</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../db/d0f/kalman_8hpp.html">rmvl/core/kalman.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 状态量   x = [ cx, cy, θ, ω, r ]ᵀ</span></div>
+<div class="line">    <span class="comment">//              ┌ cx                  ┌ 1  0  0  0  0 ┐</span></div>
+<div class="line">    <span class="comment">//              │ cy                  │ 0  1  0  0  0 │</span></div>
+<div class="line">    <span class="comment">// 状态方程 F = │ θ + ωT         Ja = │ 0  0  1  T  0 │ = A</span></div>
+<div class="line">    <span class="comment">//              │ ω                   │ 0  0  0  1  0 │</span></div>
+<div class="line">    <span class="comment">//              └ r                   └ 0  0  0  0  1 ┘</span></div>
+<div class="line">    <span class="comment">// 观测量   z = [ px, py, θ ]ᵀ</span></div>
+<div class="line">    <span class="comment">//              ┌ cx + rcosθ          ┌ 1  0 -rsinθ  0  cosθ ┐</span></div>
+<div class="line">    <span class="comment">// 观测方程 H = │ cy + rsinθ     Jh = │ 0  1  rcosθ  0  sinθ │</span></div>
+<div class="line">    <span class="comment">//              └ θ                   └ 0  0    1    0    0  ┘</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 正态分布噪声</span></div>
+<div class="line">    std::default_random_engine ng;</div>
+<div class="line">    std::normal_distribution&lt;double&gt; err{0, 1};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 创建扩展卡尔曼滤波</span></div>
+<div class="line">    <a class="code hl_typedef" href="../../d7/dff/group__core__kalman.html#gaaf746913f270b00a5ce8334f97e99776">rm::EKF53d</a> ekf;</div>
+<div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">init</a>({0, 0, 0, 0, 150}, 1e5);</div>
+<div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">setQ</a>(1e-1 * cv::Matx&lt;double, 5, 5&gt;::eye());</div>
+<div class="line">    ekf.<a class="code hl_function" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">setR</a>(cv::Matx33d::diag({1e-3, 1e-3, 1e-3}));</div>
+<div class="line">    <span class="keywordtype">double</span> t{0.01};</div>
+<div class="line">    <span class="comment">// 设置状态方程（这里的例子是线性的，但一般都是非线性的）</span></div>
+<div class="line">    ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1e9c373d94b15d20d2eb123b396a9011">setFa</a>([=](<span class="keyword">const</span> cv::Matx&lt;double, 5, 1&gt; &amp;x) -&gt; cv::Matx&lt;double, 5, 1&gt; {</div>
+<div class="line">        <span class="keywordflow">return</span> {x(0),</div>
+<div class="line">                x(1),</div>
+<div class="line">                x(2) + x(3) * t,</div>
+<div class="line">                x(3),</div>
+<div class="line">                x(4)};</div>
+<div class="line">    });</div>
+<div class="line">    <span class="comment">// 设置观测方程</span></div>
+<div class="line">    ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#af20ca18e3eeb3a6f34591dfb2b335369">setFh</a>([=](<span class="keyword">const</span> cv::Matx&lt;double, 5, 1&gt; &amp;x) -&gt; cv::Matx&lt;double, 3, 1&gt; {</div>
+<div class="line">        <span class="keywordflow">return</span> {x(0) + x(4) * std::cos(x(2)),</div>
+<div class="line">                x(1) + x(4) * std::sin(x(2)),</div>
+<div class="line">                x(2)};</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// 预测部分，设置状态方程 Jacobi 矩阵，获取先验状态估计</span></div>
+<div class="line">        ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#afea963d643b819569c129dbd6a25725c">setJa</a>({1, 0, 0, 0, 0,</div>
+<div class="line">                   0, 1, 0, 0, 0,</div>
+<div class="line">                   0, 0, 1, t, 0,</div>
+<div class="line">                   0, 0, 0, 1, 0,</div>
+<div class="line">                   0, 0, 0, 0, 1});</div>
+<div class="line">        <span class="keyword">auto</span> x_ = ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1f038c85a574839742e202dd17aceccf">predict</a>();</div>
+<div class="line">        <span class="comment">// 更新部分，设置观测方程 Jacobi 矩阵，获取后验状态估计</span></div>
+<div class="line">        ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a021455a6d388179f0aa3b19c6f70caeb">setJh</a>({1, 0, -x_(4) * std::sin(x_(2)), 0, std::cos(x_(2)),</div>
+<div class="line">                   0, 1, x_(4) * std::cos(x_(2)), 0, std::sin(x_(2)),</div>
+<div class="line">                   0, 0, 1, 0, 0});</div>
+<div class="line">        <span class="comment">// 以 20 为半径，0.02/T 为角速度的圆周运动（图像上是顺时针），并人为加上观测噪声</span></div>
+<div class="line">        <span class="keyword">auto</span> x = ekf.<a class="code hl_function" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a671624a583f4776f337f4a69228f1495">correct</a>({500 + 200 * std::cos(0.02 * i) + err(ng),</div>
+<div class="line">                              500 + 200 * std::sin(0.02 * i) + err(ng),</div>
+<div class="line">                              0.02 * i + 0.01 * err(ng)});</div>
+<div class="line">        printf(<span class="stringliteral">&quot;x = [%.3f, %.3f, %.3f, %.3f, %.3f]\n&quot;</span>, x(0), x(1), x(2), x(3), x(4));</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a021455a6d388179f0aa3b19c6f70caeb"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a021455a6d388179f0aa3b19c6f70caeb">rm::ExtendedKalmanFilter::setJh</a></div><div class="ttdeci">void setJh(const cv::Matx&lt; Tp, MeasureDim, StateDim &gt; &amp;observe_jac)</div><div class="ttdoc">设置观测方程雅可比矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:261</div></div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a1e9c373d94b15d20d2eb123b396a9011"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1e9c373d94b15d20d2eb123b396a9011">rm::ExtendedKalmanFilter::setFa</a></div><div class="ttdeci">void setFa(const std::function&lt; cv::Matx&lt; Tp, StateDim, 1 &gt;(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;)&gt; &amp;state_func)</div><div class="ttdoc">设置非线性的离散状态方程</div><div class="ttdef"><b>定义</b> kalman.hpp:268</div></div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a1f038c85a574839742e202dd17aceccf"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a1f038c85a574839742e202dd17aceccf">rm::ExtendedKalmanFilter::predict</a></div><div class="ttdeci">auto predict()</div><div class="ttdoc">扩展卡尔曼滤波的预测部分，包括状态量的先验估计和误差协方差的先验估计</div><div class="ttdef"><b>定义</b> kalman.hpp:300</div></div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_a671624a583f4776f337f4a69228f1495"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#a671624a583f4776f337f4a69228f1495">rm::ExtendedKalmanFilter::correct</a></div><div class="ttdeci">auto correct(const cv::Matx&lt; Tp, MeasureDim, 1 &gt; &amp;zk)</div><div class="ttdoc">扩展卡尔曼滤波的校正部分，包含卡尔曼增益的计算、状态量的后验估计和误差协方差的后验估计</div><div class="ttdef"><b>定义</b> kalman.hpp:318</div></div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_af20ca18e3eeb3a6f34591dfb2b335369"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#af20ca18e3eeb3a6f34591dfb2b335369">rm::ExtendedKalmanFilter::setFh</a></div><div class="ttdeci">void setFh(const std::function&lt; cv::Matx&lt; Tp, MeasureDim, 1 &gt;(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;)&gt; &amp;observe_func)</div><div class="ttdoc">设置非线性的离散观测方程</div><div class="ttdef"><b>定义</b> kalman.hpp:275</div></div>
+<div class="ttc" id="aclassrm_1_1ExtendedKalmanFilter_html_afea963d643b819569c129dbd6a25725c"><div class="ttname"><a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#afea963d643b819569c129dbd6a25725c">rm::ExtendedKalmanFilter::setJa</a></div><div class="ttdeci">void setJa(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;state_jac)</div><div class="ttdoc">设置状态方程雅可比矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:254</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a27e04aa239c0302d8a31aad3ebf2f130"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a27e04aa239c0302d8a31aad3ebf2f130">rm::KalmanFilterStaticDatas::setQ</a></div><div class="ttdeci">void setQ(const cv::Matx&lt; Tp, StateDim, StateDim &gt; &amp;process_err)</div><div class="ttdoc">设置过程噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:99</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_a47d69bda49836961e21571c1267c3312"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a47d69bda49836961e21571c1267c3312">rm::KalmanFilterStaticDatas::setR</a></div><div class="ttdeci">void setR(const cv::Matx&lt; Tp, MeasureDim, MeasureDim &gt; &amp;measure_err)</div><div class="ttdoc">设置测量噪声协方差矩阵</div><div class="ttdef"><b>定义</b> kalman.hpp:92</div></div>
+<div class="ttc" id="aclassrm_1_1KalmanFilterStaticDatas_html_aa32899fa6bb9fc4d52a62feae756a71a"><div class="ttname"><a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#aa32899fa6bb9fc4d52a62feae756a71a">rm::KalmanFilterStaticDatas::init</a></div><div class="ttdeci">void init(const cv::Matx&lt; Tp, StateDim, 1 &gt; &amp;x0, Tp error)</div><div class="ttdoc">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）</div><div class="ttdef"><b>定义</b> kalman.hpp:69</div></div>
+<div class="ttc" id="agroup__core__kalman_html_gaaf746913f270b00a5ce8334f97e99776"><div class="ttname"><a href="../../d7/dff/group__core__kalman.html#gaaf746913f270b00a5ce8334f97e99776">rm::EKF53d</a></div><div class="ttdeci">ExtendedKalmanFilter&lt; double, 5U, 3U &gt; EKF53d</div><div class="ttdoc">5 × 3 扩展卡尔曼滤波器</div><div class="ttdef"><b>定义</b> kalman.hpp:340</div></div>
+<div class="ttc" id="akalman_8hpp_html"><div class="ttname"><a href="../../db/d0f/kalman_8hpp.html">kalman.hpp</a></div><div class="ttdoc">包含轻量级 cv::Matx 的卡尔曼滤波模块</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

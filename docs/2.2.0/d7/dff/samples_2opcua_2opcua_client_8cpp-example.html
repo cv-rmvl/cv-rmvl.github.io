@@ -1,0 +1,473 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: samples/opcua/opcua_client.cpp</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">samples/opcua/opcua_client.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPC UA 客户端例程</p>
+<p>OPC UA 客户端例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><span class="preprocessor">#include &lt;conio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="preprocessor">#include &lt;termios.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d2/dfe/client_8hpp.html">rmvl/opcua/client.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">enum class</span> Direction</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</a> = 1,</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</a> = 2,</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</a> = 3,</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</a> = 4,</div>
+<div class="line">    ENTER = 0,</div>
+<div class="line">    OTHER = -1</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line">Direction get_direction()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> ch = _getch();</div>
+<div class="line">    <span class="keywordflow">if</span> (ch == 0xE0)</div>
+<div class="line">    {</div>
+<div class="line">        ch = _getch();</div>
+<div class="line">        <span class="keywordflow">switch</span> (ch)</div>
+<div class="line">        {</div>
+<div class="line">        <span class="keywordflow">case</span> 72:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::UP;</div>
+<div class="line">        <span class="keywordflow">case</span> 80:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::DOWN;</div>
+<div class="line">        <span class="keywordflow">case</span> 75:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::LEFT;</div>
+<div class="line">        <span class="keywordflow">case</span> 77:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::RIGHT;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;\r&#39;</span> || ch == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line">        <span class="keywordflow">return</span> Direction::ENTER;</div>
+<div class="line">    <span class="keywordflow">return</span> Direction::OTHER;</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="comment">// 设置终端为非阻塞模式</span></div>
+<div class="line"><span class="keywordtype">void</span> setNonBlocking(<span class="keywordtype">bool</span> enable)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">struct </span>termios tty;</div>
+<div class="line">    tcgetattr(STDIN_FILENO, &amp;tty);</div>
+<div class="line">    <span class="keywordflow">if</span> (enable)</div>
+<div class="line">    {</div>
+<div class="line">        tty.c_lflag &amp;= ~ICANON;</div>
+<div class="line">        tty.c_lflag &amp;= ~ECHO;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        tty.c_lflag |= ICANON;</div>
+<div class="line">        tty.c_lflag |= ECHO;</div>
+<div class="line">    }</div>
+<div class="line">    tcsetattr(STDIN_FILENO, TCSANOW, &amp;tty);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 读取单个字符</span></div>
+<div class="line"><span class="keywordtype">char</span> _getch()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">char</span> buf = 0;</div>
+<div class="line">    setNonBlocking(<span class="keyword">true</span>);</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a> = read(STDIN_FILENO, &amp;buf, 1);</div>
+<div class="line">    <span class="keywordflow">if</span> (size &lt; 0)</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    setNonBlocking(<span class="keyword">false</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> buf;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">Direction get_direction()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">char</span> ch = _getch();</div>
+<div class="line">    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;\033&#39;</span>)</div>
+<div class="line">    {</div>
+<div class="line">        _getch(); <span class="comment">// 跳过 &#39;[&#39;</span></div>
+<div class="line">        <span class="keywordflow">switch</span> (_getch())</div>
+<div class="line">        {</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="charliteral">&#39;A&#39;</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::UP;</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="charliteral">&#39;B&#39;</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::DOWN;</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::RIGHT;</div>
+<div class="line">        <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line">            <span class="keywordflow">return</span> Direction::LEFT;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;\r&#39;</span> || ch == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line">        <span class="keywordflow">return</span> Direction::ENTER;</div>
+<div class="line">    <span class="keywordflow">return</span> Direction::OTHER;</div>
+<div class="line">}</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> clear_sreen()</div>
+<div class="line">{</div>
+<div class="line"><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;cls&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line">    <span class="keywordtype">int</span> ch = system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">    <span class="keywordflow">if</span> (ch == -1)</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[2J&quot;</span>);</div>
+<div class="line">        printf(<span class="stringliteral">&quot;\033[0;0H&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> clear_mark()</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\033[1;3H0\033[2;3H1\033[3;3H2\033[4;3Hq\033[0m\033[1;14H%*s\033[2;14H%*s\033[3;14H%*s\033[4;14H%*s&quot;</span>,</div>
+<div class="line">           13, <span class="stringliteral">&quot; &quot;</span>, 13, <span class="stringliteral">&quot; &quot;</span>, 13, <span class="stringliteral">&quot; &quot;</span>, 13, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line">    fflush(stdout);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a> find_node_and_mark(<a id="_a1" name="_a1"></a><a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> &amp;cli, <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *names[] = {<span class="stringliteral">&quot;value_1&quot;</span>, <span class="stringliteral">&quot;value_2&quot;</span>, <span class="stringliteral">&quot;add&quot;</span>};</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keywordtype">id</span> + 1 &lt;&lt; <span class="stringliteral">&quot;;14H\033[1;5;33m&lt;--\033[0m&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">    <span class="keywordflow">return</span> cli.<a id="a2" name="a2"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ac3422f4af24930e8864f6acbd8b386c7">find</a>(names[<span class="keywordtype">id</span>]);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> std::string tips_op()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[1;3H\033[33m0\033[2;3H1\033[3;3H2\033[4;3Hq\033[0m&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[1;26H\033[K┌───────────────────────┐&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;26H\033[K│     Input the ID:     │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;26H\033[K│                       │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[4;26H\033[K└───────────────────────┘&quot;</span></div>
+<div class="line">              &lt;&lt; std::flush;</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *choice_map[4] = {<span class="stringliteral">&quot;0&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2&quot;</span>, <span class="stringliteral">&quot;q&quot;</span>};</div>
+<div class="line">    uint8_t choice_idx{};</div>
+<div class="line">    Direction ch{Direction::OTHER};</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (choice_idx == 0)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;28H\033[3;4;33m&#39;0&#39;\033[0m   &#39;1&#39;   &#39;2&#39;   &#39;q&#39;\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (choice_idx == 1)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;28H&#39;0&#39;   \033[3;4;33m&#39;1&#39;\033[0m   &#39;2&#39;   &#39;q&#39;\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (choice_idx == 2)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;28H&#39;0&#39;   &#39;1&#39;   \033[3;4;33m&#39;2&#39;\033[0m   &#39;q&#39;\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;28H&#39;0&#39;   &#39;1&#39;   &#39;2&#39;   \033[3;4;33m&#39;q&#39;\033[0m\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line"> </div>
+<div class="line">        ch = get_direction();</div>
+<div class="line">        <span class="keywordflow">if</span> (ch == Direction::RIGHT)</div>
+<div class="line">            choice_idx = (choice_idx + 1) % 4;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == Direction::LEFT)</div>
+<div class="line">            choice_idx = (choice_idx + 3) % 4;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == Direction::ENTER)</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    clear_mark();</div>
+<div class="line">    <span class="keywordflow">return</span> choice_map[choice_idx];</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> tips_rw()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[1;26H┌───────────────────────┐&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;26H│ Select the operation: │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;26H│    Read      Write    │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[4;26H└───────────────────────┘&quot;</span></div>
+<div class="line">              &lt;&lt; std::flush;</div>
+<div class="line">    uint8_t choice_idx{};</div>
+<div class="line">    <span class="keyword">auto</span> ch{Direction::OTHER};</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (choice_idx == 0)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;31H\033[3;4;33mRead\033[0m      Write\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;31HRead      \033[3;4;33mWrite\033[0m\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line"> </div>
+<div class="line">        ch = get_direction();</div>
+<div class="line">        <span class="keywordflow">if</span> (ch == Direction::ENTER)</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch != Direction::OTHER)</div>
+<div class="line">            choice_idx = !choice_idx;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> choice_idx;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">static</span> Tp tips_val(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keywordtype">id</span> + 1</div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;;18H\033[1;5;33mWrite\033[0m&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[1;26H┌───────────────────────┐&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;26H│    Input the value    │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;26H│ --&gt;                   │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[4;26H└───────────────────────┘&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;32H&quot;</span></div>
+<div class="line">              &lt;&lt; std::flush;</div>
+<div class="line">    Tp val{};</div>
+<div class="line">    std::cin &gt;&gt; val;</div>
+<div class="line">    <span class="keywordflow">return</span> val;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> tips_arg(std::string_view <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[1;26H┌─ Calculate the sum of 2 numbers ─┐&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;26H│                                  │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;26H│ --&gt;                              │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[4;26H└──────────────────────────────────┘&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;28H&quot;</span></div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;Input the \033[33m&quot;</span> &lt;&lt; <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a> &lt;&lt; <span class="stringliteral">&quot;\033[0m argument (int): &quot;</span> &lt;&lt; <span class="stringliteral">&quot;\033[3;32H&quot;</span></div>
+<div class="line">              &lt;&lt; std::flush;</div>
+<div class="line">    <span class="keywordtype">int</span> val{};</div>
+<div class="line">    std::cin &gt;&gt; val;</div>
+<div class="line">    <span class="keywordflow">return</span> val;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> show_value(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, Tp val)</div>
+<div class="line">{</div>
+<div class="line">    clear_mark();</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[&quot;</span> &lt;&lt; <span class="keywordtype">id</span> + 1 &lt;&lt; <span class="stringliteral">&quot;;14H\033[1;32m&lt;--\033[0m \033[32m&quot;</span> &lt;&lt; val &lt;&lt; <span class="stringliteral">&quot;\033[0m&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> ask_exit()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[1;24H ┌────────────────────────────────────────┐&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[2;24H │                                        │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[3;24H │   Are you sure to exit this program?   │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[4;24H │                                        │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[5;24H │                                        │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[6;24H │                                        │&quot;</span></div>
+<div class="line">                 <span class="stringliteral">&quot;\033[7;24H └────────────────────────────────────────┘&quot;</span></div>
+<div class="line">              &lt;&lt; std::flush;</div>
+<div class="line">    <span class="keywordtype">int</span> choice{}; <span class="comment">// 0: Yes, 1: No</span></div>
+<div class="line">    Direction ch{Direction::OTHER};</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (choice == 0)</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[5;35H\033[3;4;33mYes\033[0m                 No\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;\033[5;35HYes                 \033[3;4;33mNo\033[0m\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line"> </div>
+<div class="line">        ch = get_direction();</div>
+<div class="line">        <span class="keywordflow">if</span> (ch == Direction::ENTER)</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch != Direction::OTHER)</div>
+<div class="line">            choice = !choice;</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\033[1;24H\033[K\033[2;24H\033[K\033[3;24H\033[K\033[4;24H\033[K\033[5;24H\033[K\033[6;24H\033[K\033[7;24H\033[K&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">    <span class="keywordflow">return</span> choice == 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="../../da/d78/classrm_1_1Client.html">Client</a> cli(<span class="stringliteral">&quot;opc.tcp://127.0.0.1:4840&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!cli.<a id="a3" name="a3"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad6230e9e503e8214976c73a523a14cf6">ok</a>())</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    clear_sreen();</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;- 0: value_1\n- 1: value_2\n- 2:     add\n- q:    Exit\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">auto</span> num = tips_op();</div>
+<div class="line">        <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;0&quot;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">auto</span> nd = find_node_and_mark(cli, 0);</div>
+<div class="line">            <span class="keywordtype">int</span> rw = tips_rw();</div>
+<div class="line">            <span class="keywordflow">if</span> (rw == 0)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">int</span> val = cli.<a id="a4" name="a4"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a>(nd);</div>
+<div class="line">                show_value(0, val);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">int</span> val = tips_val&lt;int&gt;(0);</div>
+<div class="line">                cli.<a id="a5" name="a5"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">write</a>(nd, val);</div>
+<div class="line">                show_value(0, val);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;1&quot;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keyword">auto</span> nd = find_node_and_mark(cli, 1);</div>
+<div class="line">            <span class="keywordtype">int</span> rw = tips_rw();</div>
+<div class="line">            <span class="keywordflow">if</span> (rw == 0)</div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">double</span> val = cli.<a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a>(nd);</div>
+<div class="line">                show_value(1, val);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">                <span class="keywordtype">double</span> val = tips_val&lt;double&gt;(1);</div>
+<div class="line">                cli.<a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">write</a>(nd, val);</div>
+<div class="line">                show_value(1, val);</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (num == <span class="stringliteral">&quot;2&quot;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            find_node_and_mark(cli, 2);</div>
+<div class="line">            <span class="keywordtype">int</span> v1 = tips_arg(<span class="stringliteral">&quot;first&quot;</span>);</div>
+<div class="line">            <span class="keywordtype">int</span> v2 = tips_arg(<span class="stringliteral">&quot;second&quot;</span>);</div>
+<div class="line">            <span class="keyword">auto</span> [result, oargs] = cli.<a id="a6" name="a6"></a><a class="code hl_function" href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">call</a>(<span class="stringliteral">&quot;add&quot;</span>, {v1, v2});</div>
+<div class="line">            <span class="keywordflow">if</span> (result)</div>
+<div class="line">                show_value(2, oargs[0].cast&lt;int&gt;());</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">&quot;\033[3;14H\033[31m\u2716\033[0m&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (ask_exit())</div>
+<div class="line">            {</div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">&quot;\033[5;1H&quot;</span> &lt;&lt; std::flush;</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Client_html"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html">rm::Client</a></div><div class="ttdoc">OPC UA 客户端</div><div class="ttdef"><b>定义</b> client.hpp:118</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ac3422f4af24930e8864f6acbd8b386c7"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ac3422f4af24930e8864f6acbd8b386c7">rm::Client::find</a></div><div class="ttdeci">NodeId find(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</div><div class="ttdoc">通过 BrowseName 的路径搜索命名空间 ns 为 1 的节点</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ac72c2b493f910205aa5aa8088f4119f3"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ac72c2b493f910205aa5aa8088f4119f3">rm::Client::call</a></div><div class="ttdeci">std::pair&lt; bool, Variables &gt; call(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</div><div class="ttdoc">在客户端调用指定对象节点中的方法</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ad2243cf4ad77dbd90ef0c2d23351ed47"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad2243cf4ad77dbd90ef0c2d23351ed47">rm::Client::read</a></div><div class="ttdeci">Variable read(const NodeId &amp;node) const</div><div class="ttdoc">从指定的变量节点读数据</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ad469a24e53925cb24aefa06aba4f46ba"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad469a24e53925cb24aefa06aba4f46ba">rm::Client::write</a></div><div class="ttdeci">bool write(const NodeId &amp;node, const Variable &amp;val) const</div><div class="ttdoc">给指定的变量节点写数据</div></div>
+<div class="ttc" id="aclassrm_1_1Client_html_ad6230e9e503e8214976c73a523a14cf6"><div class="ttname"><a href="../../da/d78/classrm_1_1Client.html#ad6230e9e503e8214976c73a523a14cf6">rm::Client::ok</a></div><div class="ttdeci">bool ok() const</div><div class="ttdoc">是否成功创建客户端并成功连接到服务器</div><div class="ttdef"><b>定义</b> client.hpp:144</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:42</div></div>
+<div class="ttc" id="aclient_8hpp_html"><div class="ttname"><a href="../../d2/dfe/client_8hpp.html">client.hpp</a></div><div class="ttdoc">OPC UA 客户端</div></div>
+<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">rm::CompensateType::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdoc">向右强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:52</div></div>
+<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">rm::CompensateType::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdoc">向左强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:51</div></div>
+<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">rm::CompensateType::DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdoc">向下强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:50</div></div>
+<div class="ttc" id="agroup__compensator_html_gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1"><div class="ttname"><a href="../../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">rm::CompensateType::UP</a></div><div class="ttdeci">@ UP</div><div class="ttdoc">向上强制补偿</div><div class="ttdef"><b>定义</b> compensator.h:49</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:320</div></div>
+<div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

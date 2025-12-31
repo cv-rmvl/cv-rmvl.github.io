@@ -1,0 +1,497 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: rmvl/core/rmvldef.hpp 文件参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_8ce2230b18c62fc4f1b2d4c11ea01049.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_021e08c4c598f89101b0aa1de0100d4c.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle"><div class="title">rmvldef.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d7/d17/rmvldef_8hpp__dep__incl.svg" width="100%" height="459"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:adb727b4251edb5665a1759087238483b" id="r_adb727b4251edb5665a1759087238483b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb727b4251edb5665a1759087238483b">__RMVL_CAT__</a>(x,  y)</td></tr>
+<tr class="separator:adb727b4251edb5665a1759087238483b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe5ff1f318d8f5cc62abc7abcaa4fd4" id="r_afbe5ff1f318d8f5cc62abc7abcaa4fd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbe5ff1f318d8f5cc62abc7abcaa4fd4">__RMVL_CAT_</a>(x,  y)</td></tr>
+<tr class="separator:afbe5ff1f318d8f5cc62abc7abcaa4fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d9ead2c495c90a7a3b2abd20d2d042" id="r_ae8d9ead2c495c90a7a3b2abd20d2d042"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8d9ead2c495c90a7a3b2abd20d2d042">__RMVL_CAT</a>(x,  y)</td></tr>
+<tr class="separator:ae8d9ead2c495c90a7a3b2abd20d2d042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c514b4e5760169a36f318be58aba27a" id="r_a8c514b4e5760169a36f318be58aba27a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c514b4e5760169a36f318be58aba27a">__RMVL_EXPAND</a>(x)</td></tr>
+<tr class="separator:a8c514b4e5760169a36f318be58aba27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb177183ad89215a455ff6907afdc21c" id="r_afb177183ad89215a455ff6907afdc21c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb177183ad89215a455ff6907afdc21c">RMVL_Func</a>&#160;&#160;&#160;&quot;&lt;unknown&gt;&quot;</td></tr>
+<tr class="separator:afb177183ad89215a455ff6907afdc21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a3b092f51aa842b048266a4b7b528f" id="r_aa8a3b092f51aa842b048266a4b7b528f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="separator:aa8a3b092f51aa842b048266a4b7b528f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa4c94d6db3208f2a1d44a4f9addd7b" id="r_a4fa4c94d6db3208f2a1d44a4f9addd7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fa4c94d6db3208f2a1d44a4f9addd7b">RMVL_EXPORTS_W</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:a4fa4c94d6db3208f2a1d44a4f9addd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号并生成包装器代码，指定为普通函数、非多态相关的类  <br /></td></tr>
+<tr class="separator:a4fa4c94d6db3208f2a1d44a4f9addd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01289b7578cf2c59770d6a5d7733f6f6" id="r_a01289b7578cf2c59770d6a5d7733f6f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01289b7578cf2c59770d6a5d7733f6f6">RMVL_EXPORTS_W_AG</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:a01289b7578cf2c59770d6a5d7733f6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号，指定为聚合类，并生成包装器代码  <br /></td></tr>
+<tr class="separator:a01289b7578cf2c59770d6a5d7733f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684791b9f17677e97cdb43e03c42de72" id="r_a684791b9f17677e97cdb43e03c42de72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a684791b9f17677e97cdb43e03c42de72">RMVL_EXPORTS_W_ABS</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:a684791b9f17677e97cdb43e03c42de72"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号，指定为抽象类，并用共享指针完成内存管理，并生成包装器代码  <br /></td></tr>
+<tr class="separator:a684791b9f17677e97cdb43e03c42de72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4a49fb9b7c04651c0811240d3fc88d" id="r_aca4a49fb9b7c04651c0811240d3fc88d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca4a49fb9b7c04651c0811240d3fc88d">RMVL_EXPORTS_W_ABU</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:aca4a49fb9b7c04651c0811240d3fc88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号，指定为抽象类，并用独占指针完成内存管理，并生成包装器代码  <br /></td></tr>
+<tr class="separator:aca4a49fb9b7c04651c0811240d3fc88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1adc75e3b98be721e10218235eac6562" id="r_a1adc75e3b98be721e10218235eac6562"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1adc75e3b98be721e10218235eac6562">RMVL_EXPORTS_W_DES</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:a1adc75e3b98be721e10218235eac6562"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号，指定为抽象类的派生类，并用共享指针完成内存管理，并生成包装器代码  <br /></td></tr>
+<tr class="separator:a1adc75e3b98be721e10218235eac6562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c52be0b06c5be3e5be38e0352e2c88" id="r_a18c52be0b06c5be3e5be38e0352e2c88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c52be0b06c5be3e5be38e0352e2c88">RMVL_EXPORTS_W_DEU</a>&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td></tr>
+<tr class="memdesc:a18c52be0b06c5be3e5be38e0352e2c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出符号，指定为抽象类的派生类，并用独占指针完成内存管理，并生成包装器代码  <br /></td></tr>
+<tr class="separator:a18c52be0b06c5be3e5be38e0352e2c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe0e2f0b584afc497410ecdf1b9a537" id="r_a5fe0e2f0b584afc497410ecdf1b9a537"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fe0e2f0b584afc497410ecdf1b9a537">RMVL_W</a></td></tr>
+<tr class="memdesc:a5fe0e2f0b584afc497410ecdf1b9a537"><td class="mdescLeft">&#160;</td><td class="mdescRight">为方法生成包装器代码  <br /></td></tr>
+<tr class="separator:a5fe0e2f0b584afc497410ecdf1b9a537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf70b0135fc2731e5d4649646ab6523" id="r_afdf70b0135fc2731e5d4649646ab6523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdf70b0135fc2731e5d4649646ab6523">RMVL_W_SUBST</a>(str)</td></tr>
+<tr class="memdesc:afdf70b0135fc2731e5d4649646ab6523"><td class="mdescLeft">&#160;</td><td class="mdescRight">为方法生成包装器代码，并指定从 <code>misc</code> 中替换  <br /></td></tr>
+<tr class="separator:afdf70b0135fc2731e5d4649646ab6523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd2e3f9203b6d74f54e1e4f414b05c0" id="r_affd2e3f9203b6d74f54e1e4f414b05c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affd2e3f9203b6d74f54e1e4f414b05c0">RMVL_W_RW</a></td></tr>
+<tr class="memdesc:affd2e3f9203b6d74f54e1e4f414b05c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">为读写属性生成包装器代码  <br /></td></tr>
+<tr class="separator:affd2e3f9203b6d74f54e1e4f414b05c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db977a010507a60edc6d89cdf9cb36f" id="r_a5db977a010507a60edc6d89cdf9cb36f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db977a010507a60edc6d89cdf9cb36f">RMVL_IMPL</a></td></tr>
+<tr class="separator:a5db977a010507a60edc6d89cdf9cb36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001a76120d4b5ed98d330247ba9a9338" id="r_a001a76120d4b5ed98d330247ba9a9338"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001a76120d4b5ed98d330247ba9a9338">RMVL_IMPL_DEF</a>(class_name)</td></tr>
+<tr class="memdesc:a001a76120d4b5ed98d330247ba9a9338"><td class="mdescLeft">&#160;</td><td class="mdescRight">PIMPL 模式的删除器的完整定义  <br /></td></tr>
+<tr class="separator:a001a76120d4b5ed98d330247ba9a9338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ae8d9ead2c495c90a7a3b2abd20d2d042" name="ae8d9ead2c495c90a7a3b2abd20d2d042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d9ead2c495c90a7a3b2abd20d2d042">&#9670;&#160;</a></span>__RMVL_CAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __RMVL_CAT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#afbe5ff1f318d8f5cc62abc7abcaa4fd4">__RMVL_CAT_</a>(x, y)</div>
+<div class="ttc" id="armvldef_8hpp_html_afbe5ff1f318d8f5cc62abc7abcaa4fd4"><div class="ttname"><a href="#afbe5ff1f318d8f5cc62abc7abcaa4fd4">__RMVL_CAT_</a></div><div class="ttdeci">#define __RMVL_CAT_(x, y)</div><div class="ttdef"><b>定义</b> rmvldef.hpp:5</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afbe5ff1f318d8f5cc62abc7abcaa4fd4" name="afbe5ff1f318d8f5cc62abc7abcaa4fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbe5ff1f318d8f5cc62abc7abcaa4fd4">&#9670;&#160;</a></span>__RMVL_CAT_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __RMVL_CAT_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#adb727b4251edb5665a1759087238483b">__RMVL_CAT__</a>(x, y)</div>
+<div class="ttc" id="armvldef_8hpp_html_adb727b4251edb5665a1759087238483b"><div class="ttname"><a href="#adb727b4251edb5665a1759087238483b">__RMVL_CAT__</a></div><div class="ttdeci">#define __RMVL_CAT__(x, y)</div><div class="ttdef"><b>定义</b> rmvldef.hpp:4</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb727b4251edb5665a1759087238483b" name="adb727b4251edb5665a1759087238483b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb727b4251edb5665a1759087238483b">&#9670;&#160;</a></span>__RMVL_CAT__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __RMVL_CAT__</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">x##y</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8c514b4e5760169a36f318be58aba27a" name="a8c514b4e5760169a36f318be58aba27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c514b4e5760169a36f318be58aba27a">&#9670;&#160;</a></span>__RMVL_EXPAND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __RMVL_EXPAND</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">x</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa8a3b092f51aa842b048266a4b7b528f" name="aa8a3b092f51aa842b048266a4b7b528f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a3b092f51aa842b048266a4b7b528f">&#9670;&#160;</a></span>RMVL_EXPORTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fa4c94d6db3208f2a1d44a4f9addd7b" name="a4fa4c94d6db3208f2a1d44a4f9addd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa4c94d6db3208f2a1d44a4f9addd7b">&#9670;&#160;</a></span>RMVL_EXPORTS_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号并生成包装器代码，指定为普通函数、非多态相关的类 </p>
+
+</div>
+</div>
+<a id="a684791b9f17677e97cdb43e03c42de72" name="a684791b9f17677e97cdb43e03c42de72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684791b9f17677e97cdb43e03c42de72">&#9670;&#160;</a></span>RMVL_EXPORTS_W_ABS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W_ABS&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号，指定为抽象类，并用共享指针完成内存管理，并生成包装器代码 </p>
+
+</div>
+</div>
+<a id="aca4a49fb9b7c04651c0811240d3fc88d" name="aca4a49fb9b7c04651c0811240d3fc88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4a49fb9b7c04651c0811240d3fc88d">&#9670;&#160;</a></span>RMVL_EXPORTS_W_ABU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W_ABU&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号，指定为抽象类，并用独占指针完成内存管理，并生成包装器代码 </p>
+
+</div>
+</div>
+<a id="a01289b7578cf2c59770d6a5d7733f6f6" name="a01289b7578cf2c59770d6a5d7733f6f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01289b7578cf2c59770d6a5d7733f6f6">&#9670;&#160;</a></span>RMVL_EXPORTS_W_AG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W_AG&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号，指定为聚合类，并生成包装器代码 </p>
+
+</div>
+</div>
+<a id="a1adc75e3b98be721e10218235eac6562" name="a1adc75e3b98be721e10218235eac6562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1adc75e3b98be721e10218235eac6562">&#9670;&#160;</a></span>RMVL_EXPORTS_W_DES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W_DES&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号，指定为抽象类的派生类，并用共享指针完成内存管理，并生成包装器代码 </p>
+
+</div>
+</div>
+<a id="a18c52be0b06c5be3e5be38e0352e2c88" name="a18c52be0b06c5be3e5be38e0352e2c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c52be0b06c5be3e5be38e0352e2c88">&#9670;&#160;</a></span>RMVL_EXPORTS_W_DEU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_EXPORTS_W_DEU&#160;&#160;&#160;<a class="el" href="#aa8a3b092f51aa842b048266a4b7b528f">RMVL_EXPORTS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>导出符号，指定为抽象类的派生类，并用独占指针完成内存管理，并生成包装器代码 </p>
+
+</div>
+</div>
+<a id="afb177183ad89215a455ff6907afdc21c" name="afb177183ad89215a455ff6907afdc21c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb177183ad89215a455ff6907afdc21c">&#9670;&#160;</a></span>RMVL_Func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_Func&#160;&#160;&#160;&quot;&lt;unknown&gt;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5db977a010507a60edc6d89cdf9cb36f" name="a5db977a010507a60edc6d89cdf9cb36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db977a010507a60edc6d89cdf9cb36f">&#9670;&#160;</a></span>RMVL_IMPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_IMPL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keyword">class </span>Impl;                                 \</div>
+<div class="line">    <span class="keyword">struct </span>ImplDeleter                          \</div>
+<div class="line">    {                                           \</div>
+<div class="line">        <span class="keywordtype">void</span> operator()(Impl *) <span class="keyword">const</span> <span class="keyword">noexcept</span>; \</div>
+<div class="line">    };                                          \</div>
+<div class="line">    std::unique_ptr&lt;Impl, ImplDeleter&gt; _impl</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a001a76120d4b5ed98d330247ba9a9338" name="a001a76120d4b5ed98d330247ba9a9338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001a76120d4b5ed98d330247ba9a9338">&#9670;&#160;</a></span>RMVL_IMPL_DEF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_IMPL_DEF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>class_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordtype">void</span> class_name::ImplDeleter::operator()(class_name::Impl *p) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keyword">delete</span> p; }</div>
+</div><!-- fragment -->
+<p>PIMPL 模式的删除器的完整定义 </p>
+
+</div>
+</div>
+<a id="a5fe0e2f0b584afc497410ecdf1b9a537" name="a5fe0e2f0b584afc497410ecdf1b9a537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe0e2f0b584afc497410ecdf1b9a537">&#9670;&#160;</a></span>RMVL_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_W</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为方法生成包装器代码 </p>
+
+</div>
+</div>
+<a id="affd2e3f9203b6d74f54e1e4f414b05c0" name="affd2e3f9203b6d74f54e1e4f414b05c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd2e3f9203b6d74f54e1e4f414b05c0">&#9670;&#160;</a></span>RMVL_W_RW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_W_RW</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为读写属性生成包装器代码 </p>
+
+</div>
+</div>
+<a id="afdf70b0135fc2731e5d4649646ab6523" name="afdf70b0135fc2731e5d4649646ab6523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf70b0135fc2731e5d4649646ab6523">&#9670;&#160;</a></span>RMVL_W_SUBST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RMVL_W_SUBST</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为方法生成包装器代码，并指定从 <code>misc</code> 中替换 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

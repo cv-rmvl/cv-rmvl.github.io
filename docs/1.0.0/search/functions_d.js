@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['onnxrt_1225',['OnnxRT',['../d7/d1f/classrm_1_1OnnxRT.html#a713a2b80c37182f92a7276fe7e72dac1',1,'rm::OnnxRT']]],
+  ['open_1226',['open',['../d8/d08/classrm_1_1HikVideoCapture.html#a31629e6a984c201f472d4f7055339326',1,'rm::HikVideoCapture::open()'],['../d7/d8f/classrm_1_1MvVideoCapture.html#a4c395fbdf9fce8543daeecf2e2f1d7cb',1,'rm::MvVideoCapture::open()'],['../d4/d98/classrm_1_1SerialPort.html#a5878ae463d12958f5fbbe9da2cd5cd8e',1,'rm::SerialPort::open()']]],
+  ['operator_22_22_5fpi_1227',['operator&quot;&quot;_PI',['../d9/d31/group__rmath.html#ga2e927cd02b2c9bad4967e98b48af90c3',1,'rm::operator&quot;&quot;_PI(long double num)'],['../d9/d31/group__rmath.html#ga06504684e964e35e13160f8b61a3cc09',1,'rm::operator&quot;&quot;_PI(long long unsigned num)']]],
+  ['operator_22_22_5fto_5fdeg_1228',['operator&quot;&quot;_to_deg',['../d9/d31/group__rmath.html#ga3ba3a491192fe99af2ac194e02634076',1,'rm::operator&quot;&quot;_to_deg(long double num)'],['../d9/d31/group__rmath.html#gacce741fda964869fd0f751af68fe8d36',1,'rm::operator&quot;&quot;_to_deg(long long unsigned num)']]],
+  ['operator_22_22_5fto_5frad_1229',['operator&quot;&quot;_to_rad',['../d9/d31/group__rmath.html#gaf0b2fd7c35c621f929e288248cc2ce15',1,'rm::operator&quot;&quot;_to_rad(long double num)'],['../d9/d31/group__rmath.html#ga92b330a71638187072b8744726666141',1,'rm::operator&quot;&quot;_to_rad(long long unsigned num)']]],
+  ['operator_2b_1230',['operator+',['../d9/d31/group__rmath.html#gacd95d3a66578731549301e7e5fed0932',1,'rm::operator+(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)'],['../d9/d31/group__rmath.html#gafb9686a5036653f977c1945db4bc262a',1,'rm::operator+(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)']]],
+  ['operator_2d_1231',['operator-',['../d9/d31/group__rmath.html#gaab48d17bee4ad33e84961a0af9434f7d',1,'rm::operator-(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)'],['../d9/d31/group__rmath.html#gad7e0ddce9ef33cf84aa998eb69f8366f',1,'rm::operator-(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)']]],
+  ['operator_3e_3e_1232',['operator&gt;&gt;',['../d7/d8f/classrm_1_1MvVideoCapture.html#a8cfb91b3529c2112b81ca7449ad6d5e0',1,'rm::MvVideoCapture::operator&gt;&gt;()'],['../d8/d08/classrm_1_1HikVideoCapture.html#a4daf8728964f4794a5fe70ecb7837593',1,'rm::HikVideoCapture::operator&gt;&gt;()']]],
+  ['ortparam_1233',['OrtParam',['../da/dd2/classrm_1_1para_1_1OrtParam.html#aff93a69af113d9baab2e3c9cbd098865',1,'rm::para::OrtParam']]],
+  ['outpostdecider_1234',['OutpostDecider',['../db/de5/classrm_1_1OutpostDecider.html#a88064215e2083f1771eda8ec21dff099',1,'rm::OutpostDecider']]],
+  ['outpostdeciderparam_1235',['OutpostDeciderParam',['../db/d91/classrm_1_1para_1_1OutpostDeciderParam.html#a41856f56804ee75a116984a8bb704e20',1,'rm::para::OutpostDeciderParam']]]
+];

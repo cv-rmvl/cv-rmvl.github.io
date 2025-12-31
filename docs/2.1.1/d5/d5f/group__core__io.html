@@ -1,0 +1,339 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: 数据 IO 与通信</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.1</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> |
+<a href="#enum-members">枚举</a> |
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">数据 IO 与通信<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+数据 IO 与通信 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d5/d5f/group__core__io.svg" width="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/def/structrm_1_1Translation.html">rm::Translation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">移动位置信息  <a href="../../d4/def/structrm_1_1Translation.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d5f/structrm_1_1Rotation.html">rm::Rotation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">转动姿态信息  <a href="../../d1/d5f/structrm_1_1Rotation.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/structrm_1_1ImuData.html">rm::ImuData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">IMU 数据  <a href="../../db/def/structrm_1_1ImuData.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dc5/structrm_1_1SerialPortMode.html">rm::SerialPortMode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">串口通信模式  <a href="../../d0/dc5/structrm_1_1SerialPortMode.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">串行接口通信库  <a href="../../d4/d98/classrm_1_1SerialPort.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">命名管道服务端  <a href="../../da/d82/classrm_1_1PipeServer.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/classrm_1_1PipeClient.html">rm::PipeClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">命名管道客户端  <a href="../../d8/d8c/classrm_1_1PipeClient.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga8847230e42c9ea2972d24a8e6baf7371" id="r_ga8847230e42c9ea2972d24a8e6baf7371"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8847230e42c9ea2972d24a8e6baf7371">rm::BaudRate</a> : uint8_t { <br/>
+  <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce">rm::BaudRate::BR_1200</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b">rm::BaudRate::BR_2400</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac">rm::BaudRate::BR_4800</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c">rm::BaudRate::BR_9600</a>
+, <br/>
+  <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29">rm::BaudRate::BR_19200</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4">rm::BaudRate::BR_38400</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06">rm::BaudRate::BR_57600</a>
+, <a class="el" href="#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">rm::BaudRate::BR_115200</a>
+<br/>
+ }</td></tr>
+<tr class="separator:ga8847230e42c9ea2972d24a8e6baf7371"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga5ca0d5494f76b1f02b93b4514e32dd5a" id="r_ga5ca0d5494f76b1f02b93b4514e32dd5a"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5ca0d5494f76b1f02b93b4514e32dd5a">rm::SerialReadMode</a> : uint8_t { <a class="el" href="#gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66">rm::SerialReadMode::BLOCK</a>
+, <a class="el" href="#gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0">rm::SerialReadMode::NONBLOCK</a>
+ }</td></tr>
+<tr class="memdesc:ga5ca0d5494f76b1f02b93b4514e32dd5a"><td class="mdescLeft"> </td><td class="mdescRight">串口数据读取模式  <a href="#ga5ca0d5494f76b1f02b93b4514e32dd5a">更多...</a><br/></td></tr>
+<tr class="separator:ga5ca0d5494f76b1f02b93b4514e32dd5a"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga232b63e9e1364254d512e66377be7af4" id="r_ga232b63e9e1364254d512e66377be7af4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga232b63e9e1364254d512e66377be7af4">rm::writeCorners</a> (std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga232b63e9e1364254d512e66377be7af4"><td class="mdescLeft"> </td><td class="mdescRight">导出角点数据  <br/></td></tr>
+<tr class="separator:ga232b63e9e1364254d512e66377be7af4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga9aa99cd3878794115ac58d55320e7238" id="r_ga9aa99cd3878794115ac58d55320e7238"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9aa99cd3878794115ac58d55320e7238">rm::readCorners</a> (std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</td></tr>
+<tr class="memdesc:ga9aa99cd3878794115ac58d55320e7238"><td class="mdescLeft"> </td><td class="mdescRight">导入角点数据  <br/></td></tr>
+<tr class="separator:ga9aa99cd3878794115ac58d55320e7238"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga8847230e42c9ea2972d24a8e6baf7371" name="ga8847230e42c9ea2972d24a8e6baf7371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8847230e42c9ea2972d24a8e6baf7371">◆ </a></span>BaudRate</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga8847230e42c9ea2972d24a8e6baf7371">rm::BaudRate</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d2/dc6/io_8hpp.html">rmvl/core/io.hpp</a>&gt;</code></p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce" name="gga8847230e42c9ea2972d24a8e6baf7371a10dde95c93ce9afacafdbac8db998dce"></a>BR_1200 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_1200</div></td><td class="fielddoc"><p>波特率 1200 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b" name="gga8847230e42c9ea2972d24a8e6baf7371ada9ea2395de9b84212e6ec5cfa755c0b"></a>BR_2400 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_2400</div></td><td class="fielddoc"><p>波特率 2400 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac" name="gga8847230e42c9ea2972d24a8e6baf7371a35ca327da7d657828472aa52c96c34ac"></a>BR_4800 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_4800</div></td><td class="fielddoc"><p>波特率 4800 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c" name="gga8847230e42c9ea2972d24a8e6baf7371ac934a28b7b5e2f77dabea10b21fc658c"></a>BR_9600 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_9600</div></td><td class="fielddoc"><p>波特率 9600 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29" name="gga8847230e42c9ea2972d24a8e6baf7371a9946aa433f26f750242c11a55e7eca29"></a>BR_19200 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_19200</div></td><td class="fielddoc"><p>波特率 19200 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4" name="gga8847230e42c9ea2972d24a8e6baf7371adc1f9e26ae886c53804bcaf5cbb3eea4"></a>BR_38400 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_38400</div></td><td class="fielddoc"><p>波特率 38400 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06" name="gga8847230e42c9ea2972d24a8e6baf7371a41422c0c37e20f1cd41f74f113d40a06"></a>BR_57600 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_57600</div></td><td class="fielddoc"><p>波特率 57600 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a" name="gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a"></a>BR_115200 <div class="python_language"><b>Python: </b>rm.BaudRate.BR_115200</div></td><td class="fielddoc"><p>波特率 115200 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga5ca0d5494f76b1f02b93b4514e32dd5a" name="ga5ca0d5494f76b1f02b93b4514e32dd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ca0d5494f76b1f02b93b4514e32dd5a">◆ </a></span>SerialReadMode</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga5ca0d5494f76b1f02b93b4514e32dd5a">rm::SerialReadMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d2/dc6/io_8hpp.html">rmvl/core/io.hpp</a>&gt;</code></p>
+<p>串口数据读取模式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66" name="gga5ca0d5494f76b1f02b93b4514e32dd5aa4d34f53389ed7f28ca91fc31ea360a66"></a>BLOCK <div class="python_language"><b>Python: </b>rm.SerialReadMode.BLOCK</div></td><td class="fielddoc"><p>阻塞模式，即读取数据时会一直等待直到有数据到来 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0" name="gga5ca0d5494f76b1f02b93b4514e32dd5aaafc3203b70037086fb9aa7f2ced7a9f0"></a>NONBLOCK <div class="python_language"><b>Python: </b>rm.SerialReadMode.NONBLOCK</div></td><td class="fielddoc"><p>非阻塞模式，即读取数据时不会等待，如果没有数据到来则立即返回 <code>-1</code> </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga9aa99cd3878794115ac58d55320e7238" name="ga9aa99cd3878794115ac58d55320e7238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa99cd3878794115ac58d55320e7238">◆ </a></span>readCorners()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::readCorners </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>corners</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d2/dc6/io_8hpp.html">rmvl/core/io.hpp</a>&gt;</code></p>
+<p>导入角点数据 </p>
+<ul>
+<li>读取的文件形如以下内容 <div class="fragment"><div class="line">1.9, 2.11,</div>
+<div class="line">3.12, 4.13, 5.14, 6.15,</div>
+<div class="line">---</div>
+<div class="line">7.16, 8.17,</div>
+<div class="line">---</div>
+</div><!-- fragment --></li>
+<li>第一次调用 <code>readCorners</code> 时读取到的内容为 <code>{(1.9, 2.11)} 和 {(3.12, 4.13), (5.14, 6.15)}</code></li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>输入流对象 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">corners</td><td>读取出的角点数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/de2/samples_2tutorial_code_2io_2sample_read_corners_8cpp-example.html#a0">samples/tutorial_code/io/sample_read_corners.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="ga232b63e9e1364254d512e66377be7af4" name="ga232b63e9e1364254d512e66377be7af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga232b63e9e1364254d512e66377be7af4">◆ </a></span>writeCorners()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::writeCorners </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>corners</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d2/dc6/io_8hpp.html">rmvl/core/io.hpp</a>&gt;</code></p>
+<p>导出角点数据 </p>
+<ul>
+<li>以 <code>corners</code> 的整体写入到输出流对象的末尾</li>
+<li>文件内容可参见 <a class="el" href="#ga9aa99cd3878794115ac58d55320e7238">readCorners</a></li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">out</td><td>输出流对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">corners</td><td>待写入的角点数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d9/de7/samples_2tutorial_code_2io_2sample_write_corners_8cpp-example.html#a1">samples/tutorial_code/io/sample_write_corners.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

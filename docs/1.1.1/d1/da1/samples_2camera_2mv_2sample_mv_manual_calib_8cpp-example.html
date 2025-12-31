@@ -1,0 +1,276 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: samples/camera/mv/sample_mv_manual_calib.cpp</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">samples/camera/mv/sample_mv_manual_calib.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>迈德威视相机手动标定例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/calib3d.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../d1/d67/camera_2mv__camera_8h.html">rmvl/camera/mv_camera.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d4/d15/namespacerm_1_1para.html">para</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"><span class="keyword">using namespace </span><a class="code" href="../../d2/d75/namespacecv.html">cv</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 内参矩阵</span></div>
+<div class="line"><span class="keyword">static</span> Matx&lt;double, 3, 3&gt; cameraMatrix = {1250, 0, 640,</div>
+<div class="line">                                          0, 1250, 512,</div>
+<div class="line">                                          0, 0, 1};</div>
+<div class="line"><span class="comment">// 畸变系数</span></div>
+<div class="line"><span class="keyword">static</span> Matx&lt;double, 5, 1&gt; distCoeffs = {0, 0, 0, 0, 0};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> MvCamera capture(<a name="a0"></a><a class="code" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">GRAB_CONTINUOUS</a>, <a name="a1"></a><a class="code" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">RETRIEVE_CV</a>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> cameraMatrixCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_)</div>
+<div class="line">{</div>
+<div class="line">    Point *mat_pos = <span class="keyword">static_cast&lt;</span>Point *<span class="keyword">&gt;</span>(mat_pos_);</div>
+<div class="line">    <span class="comment">// 内参矩阵</span></div>
+<div class="line">    cameraMatrix(mat_pos-&gt;x, mat_pos-&gt;y) = pos;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> distCoeffCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_)</div>
+<div class="line">{</div>
+<div class="line">    Point *mat_pos = <span class="keyword">static_cast&lt;</span>Point *<span class="keyword">&gt;</span>(mat_pos_);</div>
+<div class="line">    <span class="comment">// 畸变系数</span></div>
+<div class="line">    <span class="keywordflow">if</span> (mat_pos-&gt;x == 0 || mat_pos-&gt;x == 1)</div>
+<div class="line">        distCoeffs(mat_pos-&gt;x, mat_pos-&gt;y) = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(-5000. + pos) / 5000.;</div>
+<div class="line">    <span class="keywordflow">if</span> (mat_pos-&gt;x == 2 || mat_pos-&gt;x == 3 || mat_pos-&gt;x == 4)</div>
+<div class="line">        distCoeffs(mat_pos-&gt;x, mat_pos-&gt;y) = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(-500. + pos) / 5000.;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 读取相机内参、畸变系数</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name = <span class="stringliteral">&quot;out_calibration.yml&quot;</span>;</div>
+<div class="line">    FileStorage fs_mv_in(file_name, FileStorage::READ);</div>
+<div class="line">    fs_mv_in[<span class="stringliteral">&quot;cameraMatrix&quot;</span>].isNone() ? void(0) : (fs_mv_in[<span class="stringliteral">&quot;cameraMatrix&quot;</span>] &gt;&gt; cameraMatrix);</div>
+<div class="line">    fs_mv_in[<span class="stringliteral">&quot;distCoeffs&quot;</span>].isNone() ? void(0) : (fs_mv_in[<span class="stringliteral">&quot;distCoeffs&quot;</span>] &gt;&gt; distCoeffs);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> exposure = 10000;</div>
+<div class="line">    <span class="keywordtype">int</span> gain = 64;</div>
+<div class="line">    <span class="keywordtype">int</span> r_gain = 100;</div>
+<div class="line">    <span class="keywordtype">int</span> g_gain = 100;</div>
+<div class="line">    <span class="keywordtype">int</span> b_gain = 100;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 设置相机参数</span></div>
+<div class="line">    FileStorage fs_mv_set(<span class="stringliteral">&quot;out_para.yml&quot;</span>, FileStorage::READ);</div>
+<div class="line">    <span class="keywordflow">if</span> (fs_mv_set.isOpened())</div>
+<div class="line">    {</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; exposure);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>] &gt;&gt; gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>] &gt;&gt; r_gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>] &gt;&gt; g_gain);</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    capture.set(<a name="a2"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">CAMERA_MANUAL_EXPOSURE</a>);</div>
+<div class="line">    capture.set(<a name="a3"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">CAMERA_EXPOSURE</a>, exposure);</div>
+<div class="line">    capture.set(<a name="a4"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">CAMERA_GAIN</a>, gain);</div>
+<div class="line">    capture.set(<a name="a5"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">CAMERA_MANUAL_WB</a>);</div>
+<div class="line">    capture.set(<a name="a6"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">CAMERA_WB_RGAIN</a>, r_gain);</div>
+<div class="line">    capture.set(<a name="a7"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">CAMERA_WB_GGAIN</a>, g_gain);</div>
+<div class="line">    capture.set(<a name="a8"></a><a class="code" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line"> </div>
+<div class="line">    namedWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, WINDOW_NORMAL);</div>
+<div class="line">    namedWindow(<span class="stringliteral">&quot;控制面板&quot;</span>, WINDOW_AUTOSIZE);</div>
+<div class="line">    Mat track_bar_img = Mat::zeros(Size(800, 1), CV_8UC1);</div>
+<div class="line"> </div>
+<div class="line">    vector&lt;Point&gt; matrix_pose; <span class="comment">// 设置内参矩阵对应的参数位置</span></div>
+<div class="line">    vector&lt;Point&gt; dist_pose;   <span class="comment">// 设置畸变系数对应的参数位置</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++)</div>
+<div class="line">            matrix_pose.emplace_back(i, j);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 6; i++)</div>
+<div class="line">        dist_pose.emplace_back(i, 0);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 设置滑动条</span></div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;内参 (0, 0)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, cameraMatrixCallBack, &amp;(matrix_pose.at(0)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 0)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(0, 0));</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;内参 (1, 1)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, cameraMatrixCallBack, &amp;(matrix_pose.at(0)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 1)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(1, 1));</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;内参 (0, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 3000, cameraMatrixCallBack, &amp;(matrix_pose.at(2)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;内参 (0, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(0, 2));</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;内参 (1, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 3000, cameraMatrixCallBack, &amp;(matrix_pose.at(5)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;内参 (1, 2)&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, cameraMatrix(1, 2));</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;畸变 0&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, distCoeffCallBack, &amp;(dist_pose.at(0)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;畸变 0&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(0, 0) * 5000 + 5000);</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;畸变 1&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 10000, distCoeffCallBack, &amp;(dist_pose.at(1)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;畸变 1&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(1, 0) * 5000 + 5000);</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;畸变 2&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(2)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;畸变 2&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(2, 0) * 5000 + 500);</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;畸变 3&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(3)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;畸变 3&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(3, 0) * 5000 + 500);</div>
+<div class="line">    createTrackbar(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(4)));</div>
+<div class="line">    setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, distCoeffs(4, 0) * 5000 + 500);</div>
+<div class="line"> </div>
+<div class="line">    sleep(1);</div>
+<div class="line"> </div>
+<div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>
+<div class="line"> </div>
+<div class="line">    Mat frame;</div>
+<div class="line">    <span class="keywordflow">if</span> (!capture.read(frame))</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    resizeWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, Size(frame.cols * 0.8, frame.rows * 0.8));</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (!capture.read(frame))</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 图像矫正</span></div>
+<div class="line">        Mat map1, map2;</div>
+<div class="line">        initUndistortRectifyMap(cameraMatrix, distCoeffs, Mat(), cameraMatrix, frame.size(), CV_32FC1, map1, map2);</div>
+<div class="line">        remap(frame, frame, map1, map2, INTER_NEAREST);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// 绘制参照线</span></div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= frame.cols; i += frame.cols / 10)</div>
+<div class="line">            line(frame, Point(i, 0), Point(i, frame.rows), Scalar(0, 0, 255), 1);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt;= frame.rows; j += frame.rows / 10)</div>
+<div class="line">            line(frame, Point(0, j), Point(frame.cols, j), Scalar(0, 0, 255), 1);</div>
+<div class="line"> </div>
+<div class="line">        imshow(<span class="stringliteral">&quot;图像画面&quot;</span>, frame);</div>
+<div class="line">        imshow(<span class="stringliteral">&quot;控制面板&quot;</span>, track_bar_img);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">char</span> c = waitKey(1);</div>
+<div class="line">        <span class="comment">// 退出程序</span></div>
+<div class="line">        <span class="keywordflow">if</span> (c == 27)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (waitKey(0) == 27)</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="comment">// 保存参数</span></div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;s&#39;</span>)</div>
+<div class="line">        {</div>
+<div class="line">            FileStorage fs_mv_out(file_name, FileStorage::WRITE);</div>
+<div class="line">            fs_mv_out &lt;&lt; <span class="stringliteral">&quot;cameraMatrix&quot;</span> &lt;&lt; cameraMatrix;</div>
+<div class="line">            fs_mv_out &lt;&lt; <span class="stringliteral">&quot;distCoeffs&quot;</span> &lt;&lt; distCoeffs;</div>
+<div class="line"> </div>
+<div class="line">            printf(<span class="stringliteral">&quot;\033[32mSuccess to write the parameters into \&quot;%s\&quot;\033[0m\n&quot;</span>, file_name);</div>
+<div class="line">            printf(<span class="stringliteral">&quot;                  ┌ %-5.4g, %-5.4g, %-5.4g ┐\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot; -- cameraMatrix: │ %-5.4g, %-5.4g, %-5.4g │\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;                  └ %-5.4g, %-5.4g, %-5.4g ┘\n&quot;</span>,</div>
+<div class="line">                   cameraMatrix(0, 0), cameraMatrix(0, 1), cameraMatrix(0, 2),</div>
+<div class="line">                   cameraMatrix(1, 0), cameraMatrix(1, 1), cameraMatrix(1, 2),</div>
+<div class="line">                   cameraMatrix(2, 0), cameraMatrix(2, 1), cameraMatrix(2, 2));</div>
+<div class="line">            printf(<span class="stringliteral">&quot;               ┌ %-8.5g ┐\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;               │ %-8.5g │\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot; -- distCoeffs: │ %-8.5g │\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;               │ %-8.5g │\n&quot;</span></div>
+<div class="line">                   <span class="stringliteral">&quot;               └ %-8.5g ┘\n&quot;</span>,</div>
+<div class="line">                   distCoeffs(0), distCoeffs(1), distCoeffs(2), distCoeffs(3), distCoeffs(4));</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="acamera_2mv__camera_8h_html"><div class="ttname"><a href="../../d1/d67/camera_2mv__camera_8h.html">mv_camera.h</a></div><div class="ttdoc">MindVision camera driver header file</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量 Blue channel gain of white balance</div><div class="ttdef"><b>Definition:</b> camutils.hpp:65</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量 Green channel gain of white balance</div><div class="ttdef"><b>Definition:</b> camutils.hpp:64</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_MANUAL_EXPOSURE</div><div class="ttdoc">手动曝光 Manual exposure</div><div class="ttdef"><b>Definition:</b> camutils.hpp:58</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_EXPOSURE</div><div class="ttdoc">曝光值 Expusure</div><div class="ttdef"><b>Definition:</b> camutils.hpp:60</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a></div><div class="ttdeci">@ CAMERA_MANUAL_WB</div><div class="ttdoc">手动白平衡 Manual white balance</div><div class="ttdef"><b>Definition:</b> camutils.hpp:59</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a></div><div class="ttdeci">@ CAMERA_WB_RGAIN</div><div class="ttdoc">白平衡红色分量 Red channel gain of white balance</div><div class="ttdef"><b>Definition:</b> camutils.hpp:63</div></div>
+<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益 Analog gain</div><div class="ttdef"><b>Definition:</b> camutils.hpp:61</div></div>
+<div class="ttc" id="agroup__camera_html_gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a></div><div class="ttdeci">@ RETRIEVE_CV</div><div class="ttdoc">使用 OpenCV 的 'cvtColor' 进行处理 Retrieve using cvtColor function in OpenCV</div><div class="ttdef"><b>Definition:</b> camutils.hpp:41</div></div>
+<div class="ttc" id="agroup__camera_html_ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e"><div class="ttname"><a href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a></div><div class="ttdeci">@ GRAB_CONTINUOUS</div><div class="ttdoc">连续采样 Continuous grabbing</div><div class="ttdef"><b>Definition:</b> camutils.hpp:31</div></div>
+<div class="ttc" id="anamespacecv_html"><div class="ttname"><a href="../../d2/d75/namespacecv.html">cv</a></div><div class="ttdef"><b>Definition:</b> uty_math.hpp:65</div></div>
+<div class="ttc" id="anamespacerm_1_1para_html"><div class="ttname"><a href="../../d4/d15/namespacerm_1_1para.html">rm::para</a></div><div class="ttdef"><b>Definition:</b> camera.h:17</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>Definition:</b> camutils.hpp:23</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:32:07 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

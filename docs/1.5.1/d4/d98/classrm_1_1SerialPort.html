@@ -1,0 +1,401 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: rm::SerialPort类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">SerialPort</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d3/ddf/classrm_1_1SerialPort-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::SerialPort类 参考<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> &raquo; <a class="el" href="../../dd/d89/group__serial.html">串口通信模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>串行接口通信库  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/serial.hpp&gt;</code></p>
+<div class="dynheader">
+rm::SerialPort 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d50/classrm_1_1SerialPort__coll__graph.svg" width="124" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af3c8690ef2eb867b6a038da5905ba294" id="r_af3c8690ef2eb867b6a038da5905ba294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3c8690ef2eb867b6a038da5905ba294">SerialPort</a> (const std::string &amp;device={}, int baud_rate=B115200)</td></tr>
+<tr class="memdesc:af3c8690ef2eb867b6a038da5905ba294"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">SerialPort</a> 对象，并自动打开  <br /></td></tr>
+<tr class="separator:af3c8690ef2eb867b6a038da5905ba294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee72b3518b3e8c8a3ff8f2c44c03513" id="r_abee72b3518b3e8c8a3ff8f2c44c03513"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abee72b3518b3e8c8a3ff8f2c44c03513">~SerialPort</a> ()</td></tr>
+<tr class="memdesc:abee72b3518b3e8c8a3ff8f2c44c03513"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构串口对象  <br /></td></tr>
+<tr class="separator:abee72b3518b3e8c8a3ff8f2c44c03513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5878ae463d12958f5fbbe9da2cd5cd8e" id="r_a5878ae463d12958f5fbbe9da2cd5cd8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5878ae463d12958f5fbbe9da2cd5cd8e">open</a> ()</td></tr>
+<tr class="memdesc:a5878ae463d12958f5fbbe9da2cd5cd8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开指定串口，或自动搜索所有可用的设备，并尝试打开第一个  <br /></td></tr>
+<tr class="separator:a5878ae463d12958f5fbbe9da2cd5cd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1e906641a46ad064c400e8c7722bcb" id="r_a9a1e906641a46ad064c400e8c7722bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a1e906641a46ad064c400e8c7722bcb">close</a> ()</td></tr>
+<tr class="memdesc:a9a1e906641a46ad064c400e8c7722bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭串口  <br /></td></tr>
+<tr class="separator:a9a1e906641a46ad064c400e8c7722bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b67b9894f70d514c16f7d70d9c29d84" id="r_a9b67b9894f70d514c16f7d70d9c29d84"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a9b67b9894f70d514c16f7d70d9c29d84"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9b67b9894f70d514c16f7d70d9c29d84">read</a> (unsigned char head_flag, unsigned char tail_flag, Tp &amp;data)</td></tr>
+<tr class="memdesc:a9b67b9894f70d514c16f7d70d9c29d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">从串口读取数据到结构体  <br /></td></tr>
+<tr class="separator:a9b67b9894f70d514c16f7d70d9c29d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b285854e6ff4cee27a5019d94a73cf5" id="r_a5b285854e6ff4cee27a5019d94a73cf5"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a5b285854e6ff4cee27a5019d94a73cf5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5b285854e6ff4cee27a5019d94a73cf5">write</a> (const Tp &amp;data)</td></tr>
+<tr class="memdesc:a5b285854e6ff4cee27a5019d94a73cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">结构体数据写入串口  <br /></td></tr>
+<tr class="separator:a5b285854e6ff4cee27a5019d94a73cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadfdd019cb71aaf6f52bad22feb8444" id="r_aaadfdd019cb71aaf6f52bad22feb8444"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaadfdd019cb71aaf6f52bad22feb8444">isOpened</a> () const</td></tr>
+<tr class="memdesc:aaadfdd019cb71aaf6f52bad22feb8444"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口是否打开  <br /></td></tr>
+<tr class="separator:aaadfdd019cb71aaf6f52bad22feb8444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>串行接口通信库 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="af3c8690ef2eb867b6a038da5905ba294" name="af3c8690ef2eb867b6a038da5905ba294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c8690ef2eb867b6a038da5905ba294">&#9670;&#160;</a></span>SerialPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::SerialPort::SerialPort </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>baud_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">B115200</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造新 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">SerialPort</a> 对象，并自动打开 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">device</td><td>设备名，默认为空 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baud_rate</td><td>波特率，默认为 <code>B115200</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abee72b3518b3e8c8a3ff8f2c44c03513" name="abee72b3518b3e8c8a3ff8f2c44c03513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee72b3518b3e8c8a3ff8f2c44c03513">&#9670;&#160;</a></span>~SerialPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::SerialPort::~SerialPort </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构串口对象 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d98/classrm_1_1SerialPort_abee72b3518b3e8c8a3ff8f2c44c03513_cgraph.svg" width="406" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9a1e906641a46ad064c400e8c7722bcb" name="a9a1e906641a46ad064c400e8c7722bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1e906641a46ad064c400e8c7722bcb">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::SerialPort::close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭串口 </p>
+
+</div>
+</div>
+<a id="aaadfdd019cb71aaf6f52bad22feb8444" name="aaadfdd019cb71aaf6f52bad22feb8444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaadfdd019cb71aaf6f52bad22feb8444">&#9670;&#160;</a></span>isOpened()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::SerialPort::isOpened </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>串口是否打开 </p>
+
+</div>
+</div>
+<a id="a5878ae463d12958f5fbbe9da2cd5cd8e" name="a5878ae463d12958f5fbbe9da2cd5cd8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5878ae463d12958f5fbbe9da2cd5cd8e">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::SerialPort::open </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开指定串口，或自动搜索所有可用的设备，并尝试打开第一个 </p>
+
+</div>
+</div>
+<a id="a9b67b9894f70d514c16f7d70d9c29d84" name="a9b67b9894f70d514c16f7d70d9c29d84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b67b9894f70d514c16f7d70d9c29d84">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::SerialPort::read </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char</td>          <td class="paramname"><span class="paramname"><em>head_flag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char</td>          <td class="paramname"><span class="paramname"><em>tail_flag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从串口读取数据到结构体 </p>
+<dl class="section note"><dt>注解</dt><dd>每次读取后会清空缓冲区</dd></dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>读取到结构体的类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head_flag</td><td>头帧 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tail_flag</td><td>尾帧 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取的结构体数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否读取成功 </dd></dl>
+
+</div>
+</div>
+<a id="a5b285854e6ff4cee27a5019d94a73cf5" name="a5b285854e6ff4cee27a5019d94a73cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b285854e6ff4cee27a5019d94a73cf5">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::SerialPort::write </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>结构体数据写入串口 </p>
+<dl class="section note"><dt>注解</dt><dd>每次写入前会清空缓冲区</dd></dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>写入结构体的类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>要写入的结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/core/<a class="el" href="../../d1/dc5/serial_8hpp.html">serial.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

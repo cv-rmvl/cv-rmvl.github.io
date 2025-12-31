@@ -1,0 +1,547 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::OnnxNet类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.1</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html">OnnxNet</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="#pro-attribs">Protected 属性</a> |
+<a href="#pri-methods">Private 成员函数</a> |
+<a href="../../d9/d89/classrm_1_1OnnxNet-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::OnnxNet类 参考<div class="ingroups"><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a> » <a class="el" href="../../dc/d73/group__ml__ort.html">onnxruntime 多态部署库</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>ONNX-Runtime (Ort) 部署库基类 <a class="el" href="../../d0/de3/citelist.html#CITEREF_microsoft23ort">[13]</a>  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/ml/ort.h&gt;</code></p>
+<div class="dynheader">
+类 rm::OnnxNet 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="390" scrolling="no" src="../../d2/d23/classrm_1_1OnnxNet__inherit__graph.svg" width="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::OnnxNet 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" scrolling="no" src="../../d2/d19/classrm_1_1OnnxNet__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6dbd13d7a6b4a26a4296da92809dea81" id="r_a6dbd13d7a6b4a26a4296da92809dea81"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dbd13d7a6b4a26a4296da92809dea81">OnnxNet</a> (std::string_view model_path, <a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> prov)</td></tr>
+<tr class="memdesc:a6dbd13d7a6b4a26a4296da92809dea81"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象  <br/></td></tr>
+<tr class="separator:a6dbd13d7a6b4a26a4296da92809dea81"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8cf157759b92a6eed2a8675aec1aa1bd" id="r_a8cf157759b92a6eed2a8675aec1aa1bd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf157759b92a6eed2a8675aec1aa1bd">printModelInfo</a> () noexcept</td></tr>
+<tr class="memdesc:a8cf157759b92a6eed2a8675aec1aa1bd"><td class="mdescLeft"> </td><td class="mdescRight">打印模型信息  <br/></td></tr>
+<tr class="separator:a8cf157759b92a6eed2a8675aec1aa1bd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab70aafd8b3d2bac3170fbb92cb8ba092" id="r_ab70aafd8b3d2bac3170fbb92cb8ba092"><td align="right" class="memItemLeft" valign="top">std::any </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab70aafd8b3d2bac3170fbb92cb8ba092">inference</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;preop, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop)</td></tr>
+<tr class="memdesc:ab70aafd8b3d2bac3170fbb92cb8ba092"><td class="mdescLeft"> </td><td class="mdescRight">推理  <br/></td></tr>
+<tr class="separator:ab70aafd8b3d2bac3170fbb92cb8ba092"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adfe46ea2dfbc55b99369613a5cf9b754" id="r_adfe46ea2dfbc55b99369613a5cf9b754"><td align="right" class="memItemLeft" valign="top">virtual </td><td class="memItemRight" valign="bottom"><a class="el" href="#adfe46ea2dfbc55b99369613a5cf9b754">~OnnxNet</a> ()=default</td></tr>
+<tr class="separator:adfe46ea2dfbc55b99369613a5cf9b754"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a599174e651ad53759b0547916f45d010" id="r_a599174e651ad53759b0547916f45d010"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a599174e651ad53759b0547916f45d010">printEnvInfo</a> () noexcept</td></tr>
+<tr class="memdesc:a599174e651ad53759b0547916f45d010"><td class="mdescLeft"> </td><td class="mdescRight">打印环境信息  <br/></td></tr>
+<tr class="separator:a599174e651ad53759b0547916f45d010"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a5f8f9ec9a9c554698909b8ddd3492363" id="r_a5f8f9ec9a9c554698909b8ddd3492363"><td align="right" class="memItemLeft" valign="top">Ort::MemoryInfo </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8f9ec9a9c554698909b8ddd3492363">_memory_info</a></td></tr>
+<tr class="memdesc:a5f8f9ec9a9c554698909b8ddd3492363"><td class="mdescLeft"> </td><td class="mdescRight">内存分配信息  <br/></td></tr>
+<tr class="separator:a5f8f9ec9a9c554698909b8ddd3492363"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab2b4c1c093bbb4457be83831b6687928" id="r_ab2b4c1c093bbb4457be83831b6687928"><td align="right" class="memItemLeft" valign="top">Ort::Env </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b4c1c093bbb4457be83831b6687928">_env</a></td></tr>
+<tr class="memdesc:ab2b4c1c093bbb4457be83831b6687928"><td class="mdescLeft"> </td><td class="mdescRight">环境配置  <br/></td></tr>
+<tr class="separator:ab2b4c1c093bbb4457be83831b6687928"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b817f86dd6f03e3c25e14344cef0169" id="r_a1b817f86dd6f03e3c25e14344cef0169"><td align="right" class="memItemLeft" valign="top">Ort::SessionOptions </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b817f86dd6f03e3c25e14344cef0169">_session_options</a></td></tr>
+<tr class="memdesc:a1b817f86dd6f03e3c25e14344cef0169"><td class="mdescLeft"> </td><td class="mdescRight">会话选项  <br/></td></tr>
+<tr class="separator:a1b817f86dd6f03e3c25e14344cef0169"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a55c23f4154f72120688582944bc609f1" id="r_a55c23f4154f72120688582944bc609f1"><td align="right" class="memItemLeft" valign="top">std::unique_ptr&lt; Ort::Session &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c23f4154f72120688582944bc609f1">_session</a></td></tr>
+<tr class="memdesc:a55c23f4154f72120688582944bc609f1"><td class="mdescLeft"> </td><td class="mdescRight">会话  <br/></td></tr>
+<tr class="separator:a55c23f4154f72120688582944bc609f1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a444b0d5f8648ec289690695e3f1894f6" id="r_a444b0d5f8648ec289690695e3f1894f6"><td align="right" class="memItemLeft" valign="top">std::vector&lt; const char * &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a444b0d5f8648ec289690695e3f1894f6">_inames</a></td></tr>
+<tr class="memdesc:a444b0d5f8648ec289690695e3f1894f6"><td class="mdescLeft"> </td><td class="mdescRight">输入名称  <br/></td></tr>
+<tr class="separator:a444b0d5f8648ec289690695e3f1894f6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a458b3588fb2c6efc844723c5140b6938" id="r_a458b3588fb2c6efc844723c5140b6938"><td align="right" class="memItemLeft" valign="top">std::vector&lt; const char * &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a458b3588fb2c6efc844723c5140b6938">_onames</a></td></tr>
+<tr class="memdesc:a458b3588fb2c6efc844723c5140b6938"><td class="mdescLeft"> </td><td class="mdescRight">输出名称  <br/></td></tr>
+<tr class="separator:a458b3588fb2c6efc844723c5140b6938"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aab093dd8bfe38713aaca5832836a302b" id="r_aab093dd8bfe38713aaca5832836a302b"><td align="right" class="memItemLeft" valign="top">virtual std::vector&lt; Ort::Value &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#aab093dd8bfe38713aaca5832836a302b">preProcess</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;preop)</td></tr>
+<tr class="memdesc:aab093dd8bfe38713aaca5832836a302b"><td class="mdescLeft"> </td><td class="mdescRight">预处理  <br/></td></tr>
+<tr class="separator:aab093dd8bfe38713aaca5832836a302b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a55d4a528b133fb7b420ba29726679b4b" id="r_a55d4a528b133fb7b420ba29726679b4b"><td align="right" class="memItemLeft" valign="top">virtual std::any </td><td class="memItemRight" valign="bottom"><a class="el" href="#a55d4a528b133fb7b420ba29726679b4b">postProcess</a> (const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop)</td></tr>
+<tr class="memdesc:a55d4a528b133fb7b420ba29726679b4b"><td class="mdescLeft"> </td><td class="mdescRight">后处理  <br/></td></tr>
+<tr class="separator:a55d4a528b133fb7b420ba29726679b4b"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>ONNX-Runtime (Ort) 部署库基类 <a class="el" href="../../d0/de3/citelist.html#CITEREF_microsoft23ort">[13]</a> </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6dbd13d7a6b4a26a4296da92809dea81" name="a6dbd13d7a6b4a26a4296da92809dea81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbd13d7a6b4a26a4296da92809dea81">◆ </a></span>OnnxNet()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::OnnxNet::OnnxNet </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>model_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a></td>          <td class="paramname"><span class="paramname"><em>prov</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet(</td><td class="paramname">model_path, prov</td><td>) -&gt; </td><td>&lt;OnnxNet object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_path</td><td>模型路径，如果该路径不存在，则程序将因错误而退出 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prov</td><td>Ort 提供者 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="adfe46ea2dfbc55b99369613a5cf9b754" name="adfe46ea2dfbc55b99369613a5cf9b754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe46ea2dfbc55b99369613a5cf9b754">◆ </a></span>~OnnxNet()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual rm::OnnxNet::~OnnxNet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab70aafd8b3d2bac3170fbb92cb8ba092" name="ab70aafd8b3d2bac3170fbb92cb8ba092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70aafd8b3d2bac3170fbb92cb8ba092">◆ </a></span>inference()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::any rm::OnnxNet::inference </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>preop</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>postop</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet.inference(</td><td class="paramname">images, preop, postop</td><td>) -&gt; </td><td>res</td></tr></table>
+</div><div class="memdoc">
+<p>推理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>所有输入图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">preop</td><td>预处理选项，不同网络有不同的预处理选项 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">postop</td><td>后处理选项，不同网络有不同的后处理选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>使用 <code>std::any</code> 表示的所有推理结果，需要根据具体的网络进行解析 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>可使用 <code>&lt;class-type&gt;::cast</code> 函数对返回类型进行转换 </dd></dl>
+</div>
+</div>
+<a id="a55d4a528b133fb7b420ba29726679b4b" name="a55d4a528b133fb7b420ba29726679b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d4a528b133fb7b420ba29726679b4b">◆ </a></span>postProcess()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::any rm::OnnxNet::postProcess </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Ort::Value &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output_tensors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>postop</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>后处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">output_tensors</td><td>模型的输出 Tensors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">postop</td><td>后处理选项，不同网络有不同的后处理选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>使用 <code>std::any</code> 表示的所有推理结果，需要根据具体的网络进行解析 </dd></dl>
+<p>被 <a class="el" href="../../d4/de6/classrm_1_1ClassificationNet.html#a66d83371ae162712b202f11ae10da3fe">rm::ClassificationNet</a> 重载.</p>
+</div>
+</div>
+<a id="aab093dd8bfe38713aaca5832836a302b" name="aab093dd8bfe38713aaca5832836a302b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab093dd8bfe38713aaca5832836a302b">◆ </a></span>preProcess()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; Ort::Value &gt; rm::OnnxNet::preProcess </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>preop</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>预处理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>所有输入图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">preop</td><td>预处理选项，不同网络有不同的预处理选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>模型的输入 Tensors </dd></dl>
+<p>被 <a class="el" href="../../d4/de6/classrm_1_1ClassificationNet.html#a15ff35f5e291bdb84a61d22371a20f30">rm::ClassificationNet</a> 重载.</p>
+</div>
+</div>
+<a id="a599174e651ad53759b0547916f45d010" name="a599174e651ad53759b0547916f45d010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599174e651ad53759b0547916f45d010">◆ </a></span>printEnvInfo()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::OnnxNet::printEnvInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet.printEnvInfo(</td><td class="paramname"></td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>打印环境信息 </p>
+</div>
+</div>
+<a id="a8cf157759b92a6eed2a8675aec1aa1bd" name="a8cf157759b92a6eed2a8675aec1aa1bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf157759b92a6eed2a8675aec1aa1bd">◆ </a></span>printModelInfo()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::OnnxNet::printModelInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet.printModelInfo(</td><td class="paramname"></td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>打印模型信息 </p>
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab2b4c1c093bbb4457be83831b6687928" name="ab2b4c1c093bbb4457be83831b6687928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b4c1c093bbb4457be83831b6687928">◆ </a></span>_env</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ort::Env rm::OnnxNet::_env</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>环境配置 </p>
+</div>
+</div>
+<a id="a444b0d5f8648ec289690695e3f1894f6" name="a444b0d5f8648ec289690695e3f1894f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a444b0d5f8648ec289690695e3f1894f6">◆ </a></span>_inames</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;const char *&gt; rm::OnnxNet::_inames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>输入名称 </p>
+</div>
+</div>
+<a id="a5f8f9ec9a9c554698909b8ddd3492363" name="a5f8f9ec9a9c554698909b8ddd3492363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8f9ec9a9c554698909b8ddd3492363">◆ </a></span>_memory_info</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ort::MemoryInfo rm::OnnxNet::_memory_info</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>内存分配信息 </p>
+</div>
+</div>
+<a id="a458b3588fb2c6efc844723c5140b6938" name="a458b3588fb2c6efc844723c5140b6938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458b3588fb2c6efc844723c5140b6938">◆ </a></span>_onames</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;const char *&gt; rm::OnnxNet::_onames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>输出名称 </p>
+</div>
+</div>
+<a id="a55c23f4154f72120688582944bc609f1" name="a55c23f4154f72120688582944bc609f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c23f4154f72120688582944bc609f1">◆ </a></span>_session</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;Ort::Session&gt; rm::OnnxNet::_session</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>会话 </p>
+</div>
+</div>
+<a id="a1b817f86dd6f03e3c25e14344cef0169" name="a1b817f86dd6f03e3c25e14344cef0169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b817f86dd6f03e3c25e14344cef0169">◆ </a></span>_session_options</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ort::SessionOptions rm::OnnxNet::_session_options</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>会话选项 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/ml/<a class="el" href="../../d5/d47/ort_8h.html">ort.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

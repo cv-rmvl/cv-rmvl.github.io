@@ -1,0 +1,202 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: samples/opcua/opcua_server.cpp</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">samples/opcua/opcua_server.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPC UA 服务器例程</p>
+<p>OPC UA 服务器例程</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="../../df/d0a/server_8hpp.html">rmvl/opcua/server.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><a id="_a0" name="_a0"></a><a class="code hl_class" href="../../d4/d06/classrm_1_1Server.html">Server</a> server(4840);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> onHandle(<span class="keywordtype">int</span>) { server.shutdown(); }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    signal(SIGINT, onHandle);</div>
+<div class="line"> </div>
+<div class="line">    <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">Variable</a> value_1 = 42;</div>
+<div class="line">    value_1.<a id="a2" name="a2"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Value 1&quot;</span>;</div>
+<div class="line">    value_1.<a id="a3" name="a3"></a><a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;value_1&quot;</span>;</div>
+<div class="line">    <a class="code hl_class" href="../../df/db8/classrm_1_1Variable.html">Variable</a> value_2 = 3.14;</div>
+<div class="line">    value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">display_name</a> = <span class="stringliteral">&quot;Value 2&quot;</span>;</div>
+<div class="line">    value_2.<a class="code hl_variable" href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">browse_name</a> = <span class="stringliteral">&quot;value_2&quot;</span>;</div>
+<div class="line">    <a id="_a4" name="_a4"></a><a class="code hl_class" href="../../d4/d91/classrm_1_1Method.html">Method</a> add = [](<a id="_a5" name="_a5"></a><a class="code hl_class" href="../../d0/d24/classrm_1_1ServerView.html">ServerView</a>, <span class="keyword">const</span> <a id="_a6" name="_a6"></a><a class="code hl_class" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;, <span class="keyword">const</span> <a class="code hl_typedef" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;iargs) -&gt; std::pair&lt;bool, Variables&gt; {</div>
+<div class="line">        <span class="keywordtype">int</span> num1 = iargs[0], num2 = iargs[1];</div>
+<div class="line">        <a class="code hl_typedef" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> oargs = {num1 + num2};</div>
+<div class="line">        <span class="keywordflow">return</span> {<span class="keyword">true</span>, oargs};</div>
+<div class="line">    };</div>
+<div class="line">    add.<a id="a7" name="a7"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">display_name</a> = <span class="stringliteral">&quot;Add&quot;</span>;</div>
+<div class="line">    add.<a id="a8" name="a8"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">browse_name</a> = <span class="stringliteral">&quot;add&quot;</span>;</div>
+<div class="line">    add.<a id="a9" name="a9"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">iargs</a> = {{<span class="stringliteral">&quot;num1&quot;</span>, <a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}, {<span class="stringliteral">&quot;num2&quot;</span>, <a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}};</div>
+<div class="line">    add.<a id="a10" name="a10"></a><a class="code hl_variable" href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">oargs</a> = {{<span class="stringliteral">&quot;result&quot;</span>, <a class="code hl_variable" href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">tpInt32</a>}};</div>
+<div class="line">    server.addVariableNode(value_1);</div>
+<div class="line">    server.addVariableNode(value_2);</div>
+<div class="line">    server.addMethodNode(add);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;节点信息:\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;  ObjectFolders:\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;  - value_1:\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      node: Variable\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      value: 42\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      type: Int32\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;  - value_2:\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      node: Variable\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      value: 3.14\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      type: Double\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;  - add:\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      node: Method\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      input: num1(Int32), num2(Int32)\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;      output: result(Int32)\n&quot;</span>);</div>
+<div class="line">    server.spin();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1Method_html"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html">rm::Method</a></div><div class="ttdoc">OPC UA 方法</div><div class="ttdef"><b>定义</b> method.hpp:51</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a34efd80aa625fbe427cdeef38f043e57"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a34efd80aa625fbe427cdeef38f043e57">rm::Method::iargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; iargs</div><div class="ttdoc">传入参数列表</div><div class="ttdef"><b>定义</b> method.hpp:84</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a522f942626277a8867b179de55343ff8"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a522f942626277a8867b179de55343ff8">rm::Method::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> method.hpp:69</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_a788d4252a3ee5193159cbf20df06d6f4"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#a788d4252a3ee5193159cbf20df06d6f4">rm::Method::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> method.hpp:78</div></div>
+<div class="ttc" id="aclassrm_1_1Method_html_aab157329af3899e55bb21e4df4f8b583"><div class="ttname"><a href="../../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583">rm::Method::oargs</a></div><div class="ttdeci">std::vector&lt; Argument &gt; oargs</div><div class="ttdoc">传出参数列表</div><div class="ttdef"><b>定义</b> method.hpp:87</div></div>
+<div class="ttc" id="aclassrm_1_1NodeId_html"><div class="ttname"><a href="../../db/d81/classrm_1_1NodeId.html">rm::NodeId</a></div><div class="ttdoc">OPC UA 节点 ID</div><div class="ttdef"><b>定义</b> utilities.hpp:40</div></div>
+<div class="ttc" id="aclassrm_1_1ServerView_html"><div class="ttname"><a href="../../d0/d24/classrm_1_1ServerView.html">rm::ServerView</a></div><div class="ttdoc">OPC UA 服务器视图</div><div class="ttdef"><b>定义</b> server.hpp:31</div></div>
+<div class="ttc" id="aclassrm_1_1Server_html"><div class="ttname"><a href="../../d4/d06/classrm_1_1Server.html">rm::Server</a></div><div class="ttdoc">OPC UA 服务器</div><div class="ttdef"><b>定义</b> server.hpp:147</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html">rm::Variable</a></div><div class="ttdoc">OPC UA 变量</div><div class="ttdef"><b>定义</b> variable.hpp:136</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_a3d20725d0f1a56474ff7bf90f57e7c8d"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#a3d20725d0f1a56474ff7bf90f57e7c8d">rm::Variable::browse_name</a></div><div class="ttdeci">std::string browse_name</div><div class="ttdoc">浏览名称 BrowseName</div><div class="ttdef"><b>定义</b> variable.hpp:262</div></div>
+<div class="ttc" id="aclassrm_1_1Variable_html_ad3099ea3e54575de460b272a1c496203"><div class="ttname"><a href="../../df/db8/classrm_1_1Variable.html#ad3099ea3e54575de460b272a1c496203">rm::Variable::display_name</a></div><div class="ttdeci">std::string display_name</div><div class="ttdoc">展示名称 DisplayName</div><div class="ttdef"><b>定义</b> variable.hpp:271</div></div>
+<div class="ttc" id="agroup__opcua_html_ga70f36ce12e26a1f938b1ab6cc5622b25"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga70f36ce12e26a1f938b1ab6cc5622b25">rm::tpInt32</a></div><div class="ttdeci">constexpr DataType tpInt32</div><div class="ttdoc">数据类型：Int32</div><div class="ttdef"><b>定义</b> utilities.hpp:147</div></div>
+<div class="ttc" id="agroup__opcua_html_ga76910ab7d5d3a5e2f75d0593a97bf61d"><div class="ttname"><a href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">rm::Variables</a></div><div class="ttdeci">std::vector&lt; Variable &gt; Variables</div><div class="ttdoc">变量列表</div><div class="ttdef"><b>定义</b> variable.hpp:309</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:20</div></div>
+<div class="ttc" id="aserver_8hpp_html"><div class="ttname"><a href="../../df/d0a/server_8hpp.html">server.hpp</a></div><div class="ttdoc">OPC UA 服务器</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

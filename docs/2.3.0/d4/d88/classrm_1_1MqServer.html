@@ -1,0 +1,516 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: rm::MqServer类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pro-attribs">Protected 属性</a> |
+<a href="../../db/dfa/classrm_1_1MqServer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::MqServer类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> » <a class="el" href="../../dd/d63/group__io__ipc.html">进程间通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>消息队列服务端  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/io/ipc.hpp&gt;</code></p>
+<div class="dynheader">
+rm::MqServer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="514" scrolling="no" src="../../d2/dd2/classrm_1_1MqServer__coll__graph.svg" width="178"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a673989277a0b93bf91cc1e3daaf068a9" id="r_a673989277a0b93bf91cc1e3daaf068a9"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a673989277a0b93bf91cc1e3daaf068a9">MqServer</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a673989277a0b93bf91cc1e3daaf068a9"><td class="mdescLeft"> </td><td class="mdescRight">构造消息队列服务端  <br/></td></tr>
+<tr class="separator:a673989277a0b93bf91cc1e3daaf068a9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afc561dbd7d593bbae2ccfa2598e87f5a" id="r_afc561dbd7d593bbae2ccfa2598e87f5a"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#afc561dbd7d593bbae2ccfa2598e87f5a">MqServer</a> (const <a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;)=delete</td></tr>
+<tr class="separator:afc561dbd7d593bbae2ccfa2598e87f5a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4e86450b7cfa95ba2a6d6c514cdca73a" id="r_a4e86450b7cfa95ba2a6d6c514cdca73a"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e86450b7cfa95ba2a6d6c514cdca73a">MqServer</a> (<a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a4e86450b7cfa95ba2a6d6c514cdca73a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aba0813f1b47930037880b6d69e877a7a" id="r_aba0813f1b47930037880b6d69e877a7a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#aba0813f1b47930037880b6d69e877a7a">operator=</a> (const <a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;)=delete</td></tr>
+<tr class="separator:aba0813f1b47930037880b6d69e877a7a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad32a6e80d06fcfa17faea8843849563c" id="r_ad32a6e80d06fcfa17faea8843849563c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad32a6e80d06fcfa17faea8843849563c">operator=</a> (<a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ad32a6e80d06fcfa17faea8843849563c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a70dd4a3481278015ddb86389465f5780" id="r_a70dd4a3481278015ddb86389465f5780"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a70dd4a3481278015ddb86389465f5780">~MqServer</a> ()</td></tr>
+<tr class="separator:a70dd4a3481278015ddb86389465f5780"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a79560ed0a4e500b6267d62a3d116de1a" id="r_a79560ed0a4e500b6267d62a3d116de1a"><td align="right" class="memItemLeft" valign="top">std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#a79560ed0a4e500b6267d62a3d116de1a">read</a> () noexcept</td></tr>
+<tr class="memdesc:a79560ed0a4e500b6267d62a3d116de1a"><td class="mdescLeft"> </td><td class="mdescRight">从消息队列读取数据  <br/></td></tr>
+<tr class="separator:a79560ed0a4e500b6267d62a3d116de1a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a08a5d3e40d01ee46f4e1e449db77d76b" id="r_a08a5d3e40d01ee46f4e1e449db77d76b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a08a5d3e40d01ee46f4e1e449db77d76b">operator&gt;&gt;</a> (std::string &amp;data) noexcept</td></tr>
+<tr class="memdesc:a08a5d3e40d01ee46f4e1e449db77d76b"><td class="mdescLeft"> </td><td class="mdescRight">从消息队列读取数据  <br/></td></tr>
+<tr class="separator:a08a5d3e40d01ee46f4e1e449db77d76b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae304fb4c8fe1eebae01a7d730890ac42" id="r_ae304fb4c8fe1eebae01a7d730890ac42"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ae304fb4c8fe1eebae01a7d730890ac42">write</a> (std::string_view data, uint32_t prio=0) noexcept</td></tr>
+<tr class="memdesc:ae304fb4c8fe1eebae01a7d730890ac42"><td class="mdescLeft"> </td><td class="mdescRight">向消息队列写入数据  <br/></td></tr>
+<tr class="separator:ae304fb4c8fe1eebae01a7d730890ac42"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0feecb765be9bcfd8fb804f279650267" id="r_a0feecb765be9bcfd8fb804f279650267"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0feecb765be9bcfd8fb804f279650267">operator&lt;&lt;</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:a0feecb765be9bcfd8fb804f279650267"><td class="mdescLeft"> </td><td class="mdescRight">向消息队列写入数据  <br/></td></tr>
+<tr class="separator:a0feecb765be9bcfd8fb804f279650267"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ae369075680b5ab72e7a679fd4de2aef4" id="r_ae369075680b5ab72e7a679fd4de2aef4"><td align="right" class="memItemLeft" valign="top">std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="#ae369075680b5ab72e7a679fd4de2aef4">_name</a> {}</td></tr>
+<tr class="memdesc:ae369075680b5ab72e7a679fd4de2aef4"><td class="mdescLeft"> </td><td class="mdescRight">消息队列名称  <br/></td></tr>
+<tr class="separator:ae369075680b5ab72e7a679fd4de2aef4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aebe626447e765653e25d3d800265e7ad" id="r_aebe626447e765653e25d3d800265e7ad"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe626447e765653e25d3d800265e7ad">_mq</a> {}</td></tr>
+<tr class="memdesc:aebe626447e765653e25d3d800265e7ad"><td class="mdescLeft"> </td><td class="mdescRight">消息队列描述符句柄  <br/></td></tr>
+<tr class="separator:aebe626447e765653e25d3d800265e7ad"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>消息队列服务端 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a673989277a0b93bf91cc1e3daaf068a9" name="a673989277a0b93bf91cc1e3daaf068a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673989277a0b93bf91cc1e3daaf068a9">◆ </a></span>MqServer() <span class="overload">[1/3]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::MqServer::MqServer </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MqServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;MqServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>构造消息队列服务端 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>消息队列名称，必须以 ‘’/'<code>开头，例如</code>"/test_mq"` </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="afc561dbd7d593bbae2ccfa2598e87f5a" name="afc561dbd7d593bbae2ccfa2598e87f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc561dbd7d593bbae2ccfa2598e87f5a">◆ </a></span>MqServer() <span class="overload">[2/3]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::MqServer::MqServer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MqServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;MqServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_afc561dbd7d593bbae2ccfa2598e87f5a_cgraph.svg" width="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a4e86450b7cfa95ba2a6d6c514cdca73a" name="a4e86450b7cfa95ba2a6d6c514cdca73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e86450b7cfa95ba2a6d6c514cdca73a">◆ </a></span>MqServer() <span class="overload">[3/3]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::MqServer::MqServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MqServer(</td><td class="paramname">name</td><td>) -&gt; </td><td>&lt;MqServer object&gt;</td></tr></table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_a4e86450b7cfa95ba2a6d6c514cdca73a_cgraph.svg" width="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a70dd4a3481278015ddb86389465f5780" name="a70dd4a3481278015ddb86389465f5780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70dd4a3481278015ddb86389465f5780">◆ </a></span>~MqServer()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::MqServer::~MqServer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0feecb765be9bcfd8fb804f279650267" name="a0feecb765be9bcfd8fb804f279650267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0feecb765be9bcfd8fb804f279650267">◆ </a></span>operator&lt;&lt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; rm::MqServer::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>向消息队列写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="86" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_a0feecb765be9bcfd8fb804f279650267_cgraph.svg" width="396"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="aba0813f1b47930037880b6d69e877a7a" name="aba0813f1b47930037880b6d69e877a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0813f1b47930037880b6d69e877a7a">◆ </a></span>operator=() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; rm::MqServer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_aba0813f1b47930037880b6d69e877a7a_cgraph.svg" width="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ad32a6e80d06fcfa17faea8843849563c" name="ad32a6e80d06fcfa17faea8843849563c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32a6e80d06fcfa17faea8843849563c">◆ </a></span>operator=() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; rm::MqServer::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_ad32a6e80d06fcfa17faea8843849563c_cgraph.svg" width="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a08a5d3e40d01ee46f4e1e449db77d76b" name="a08a5d3e40d01ee46f4e1e449db77d76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a5d3e40d01ee46f4e1e449db77d76b">◆ </a></span>operator&gt;&gt;()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d88/classrm_1_1MqServer.html">MqServer</a> &amp; rm::MqServer::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>从消息队列读取数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>读取到的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="86" scrolling="no" src="../../d4/d88/classrm_1_1MqServer_a08a5d3e40d01ee46f4e1e449db77d76b_cgraph.svg" width="396"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a79560ed0a4e500b6267d62a3d116de1a" name="a79560ed0a4e500b6267d62a3d116de1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79560ed0a4e500b6267d62a3d116de1a">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::MqServer::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MqServer.read(</td><td class="paramname"></td><td>) -&gt; </td><td>data</td></tr></table>
+</div><div class="memdoc">
+<p>从消息队列读取数据 </p>
+<dl class="section return"><dt>返回</dt><dd>读取到的数据，成功时返回非空字符串，失败时返回空字符串 </dd></dl>
+</div>
+</div>
+<a id="ae304fb4c8fe1eebae01a7d730890ac42" name="ae304fb4c8fe1eebae01a7d730890ac42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae304fb4c8fe1eebae01a7d730890ac42">◆ </a></span>write()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::MqServer::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>prio</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.MqServer.write(</td><td class="paramname">data</td><td>) -&gt; </td><td>res</td></tr></table>
+</div><div class="memdoc">
+<p>向消息队列写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prio</td><td>消息优先级，数值越大优先级越高，相同优先级的消息按照 FIFO 处理 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aebe626447e765653e25d3d800265e7ad" name="aebe626447e765653e25d3d800265e7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe626447e765653e25d3d800265e7ad">◆ </a></span>_mq</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a> rm::MqServer::_mq {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>消息队列描述符句柄 </p>
+</div>
+</div>
+<a id="ae369075680b5ab72e7a679fd4de2aef4" name="ae369075680b5ab72e7a679fd4de2aef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae369075680b5ab72e7a679fd4de2aef4">◆ </a></span>_name</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::MqServer::_name {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>消息队列名称 </p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d1/d02/ipc_8hpp.html">ipc.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

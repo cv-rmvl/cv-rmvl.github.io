@@ -1,0 +1,433 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: rm::async::SerialPort类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.3.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../dc/d21/classrm_1_1async_1_1SerialPort-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::SerialPort类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d9/d63/group__io__serial.html">串口通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步串行接口通信库，仅支持读写字符串  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/serial.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::SerialPort 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d1/d90/classrm_1_1async_1_1SerialPort__inherit__graph.svg" width="148" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::async::SerialPort 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/de3/classrm_1_1async_1_1SerialPort__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html">SerialReadAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口读等待器  <a href="../../df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html">SerialWriteAwaiter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口写等待器  <a href="../../de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a52ef000e575884799c5daa97ffaa4cca" id="r_a52ef000e575884799c5daa97ffaa4cca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ef000e575884799c5daa97ffaa4cca">SerialPort</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view device, <a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a> baud_rate)</td></tr>
+<tr class="memdesc:a52ef000e575884799c5daa97ffaa4cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新串口对象  <br /></td></tr>
+<tr class="separator:a52ef000e575884799c5daa97ffaa4cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb6aa84ad3dc2f351f8461ec1f95295" id="r_aafb6aa84ad3dc2f351f8461ec1f95295"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html">SerialReadAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafb6aa84ad3dc2f351f8461ec1f95295">read</a> ()</td></tr>
+<tr class="memdesc:aafb6aa84ad3dc2f351f8461ec1f95295"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步读取串口数据  <br /></td></tr>
+<tr class="separator:aafb6aa84ad3dc2f351f8461ec1f95295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5995f03070ab8b2893a151f0ec1edbb7" id="r_a5995f03070ab8b2893a151f0ec1edbb7"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a5995f03070ab8b2893a151f0ec1edbb7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5995f03070ab8b2893a151f0ec1edbb7">operator&gt;&gt;</a> (Tp &amp;)=delete</td></tr>
+<tr class="separator:a5995f03070ab8b2893a151f0ec1edbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf05e901e78269eacd8747a73e8c109" id="r_aabf05e901e78269eacd8747a73e8c109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html">SerialWriteAwaiter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabf05e901e78269eacd8747a73e8c109">write</a> (std::string_view data)</td></tr>
+<tr class="memdesc:aabf05e901e78269eacd8747a73e8c109"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步写入串口数据  <br /></td></tr>
+<tr class="separator:aabf05e901e78269eacd8747a73e8c109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275eb0e025f03d88e7c9499554f2aa14" id="r_a275eb0e025f03d88e7c9499554f2aa14"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a275eb0e025f03d88e7c9499554f2aa14"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a275eb0e025f03d88e7c9499554f2aa14">operator&lt;&lt;</a> (const Tp &amp;)=delete</td></tr>
+<tr class="separator:a275eb0e025f03d88e7c9499554f2aa14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1SerialPort"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1SerialPort')"><img src="../../closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></td></tr>
+<tr class="memitem:ab686e2c4569b44a6a37981a9d5655a5e inherit pub_methods_classrm_1_1SerialPort" id="r_ab686e2c4569b44a6a37981a9d5655a5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#ab686e2c4569b44a6a37981a9d5655a5e">SerialPort</a> (std::string_view device, <a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a> baud_rate, <a class="el" href="../../d9/d63/group__io__serial.html#ga5ca0d5494f76b1f02b93b4514e32dd5a">SerialReadMode</a> read_mode={})</td></tr>
+<tr class="memdesc:ab686e2c4569b44a6a37981a9d5655a5e inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新串口对象  <br /></td></tr>
+<tr class="separator:ab686e2c4569b44a6a37981a9d5655a5e inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a84f3be4561ecd69896c6d17273e2d5 inherit pub_methods_classrm_1_1SerialPort" id="r_a6a84f3be4561ecd69896c6d17273e2d5"><td class="memTemplParams" colspan="2">template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate_v&lt;Tp&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a6a84f3be4561ecd69896c6d17273e2d5 inherit pub_methods_classrm_1_1SerialPort"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a6a84f3be4561ecd69896c6d17273e2d5">read</a> (uint8_t head_flag, uint8_t tail_flag, Tp &amp;data)</td></tr>
+<tr class="memdesc:a6a84f3be4561ecd69896c6d17273e2d5 inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">从串口读取数据到聚合体中  <br /></td></tr>
+<tr class="separator:a6a84f3be4561ecd69896c6d17273e2d5 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7552a6365a14fa9d9c4f5c9a90d0e12 inherit pub_methods_classrm_1_1SerialPort" id="r_aa7552a6365a14fa9d9c4f5c9a90d0e12"><td class="memTemplParams" colspan="2">template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate_v&lt;Tp&gt;&gt;&gt; </td></tr>
+<tr class="memitem:aa7552a6365a14fa9d9c4f5c9a90d0e12 inherit pub_methods_classrm_1_1SerialPort"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#aa7552a6365a14fa9d9c4f5c9a90d0e12">read</a> (Tp &amp;data)</td></tr>
+<tr class="memdesc:aa7552a6365a14fa9d9c4f5c9a90d0e12 inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">不带头尾标志的数据读取，从串口读取数据到聚合体中  <br /></td></tr>
+<tr class="separator:aa7552a6365a14fa9d9c4f5c9a90d0e12 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474ed9040d83a6f17b5ba84ca9d989a4 inherit pub_methods_classrm_1_1SerialPort" id="r_a474ed9040d83a6f17b5ba84ca9d989a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a474ed9040d83a6f17b5ba84ca9d989a4">read</a> (std::string &amp;data)</td></tr>
+<tr class="memdesc:a474ed9040d83a6f17b5ba84ca9d989a4 inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">不带头尾标志的数据读取，从串口读取字符串  <br /></td></tr>
+<tr class="separator:a474ed9040d83a6f17b5ba84ca9d989a4 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82efa7857c9b5f7c87b4ef85ef2e46f2 inherit pub_methods_classrm_1_1SerialPort" id="r_a82efa7857c9b5f7c87b4ef85ef2e46f2"><td class="memTemplParams" colspan="2">template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate_v&lt;Tp&gt; || std::is_same_v&lt;Tp, std::string&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a82efa7857c9b5f7c87b4ef85ef2e46f2 inherit pub_methods_classrm_1_1SerialPort"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">SerialPort</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a82efa7857c9b5f7c87b4ef85ef2e46f2">operator&gt;&gt;</a> (Tp &amp;data)</td></tr>
+<tr class="separator:a82efa7857c9b5f7c87b4ef85ef2e46f2 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee3d27bd99cc3835fe0c4c1d5f520df inherit pub_methods_classrm_1_1SerialPort" id="r_acee3d27bd99cc3835fe0c4c1d5f520df"><td class="memTemplParams" colspan="2">template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate_v&lt;Tp&gt;&gt;&gt; </td></tr>
+<tr class="memitem:acee3d27bd99cc3835fe0c4c1d5f520df inherit pub_methods_classrm_1_1SerialPort"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#acee3d27bd99cc3835fe0c4c1d5f520df">write</a> (const Tp &amp;data)</td></tr>
+<tr class="memdesc:acee3d27bd99cc3835fe0c4c1d5f520df inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据写入串口  <br /></td></tr>
+<tr class="separator:acee3d27bd99cc3835fe0c4c1d5f520df inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877a2754512534717e518c4291154236 inherit pub_methods_classrm_1_1SerialPort" id="r_a877a2754512534717e518c4291154236"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a877a2754512534717e518c4291154236">write</a> (std::string_view data)</td></tr>
+<tr class="memdesc:a877a2754512534717e518c4291154236 inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入字符串到串口  <br /></td></tr>
+<tr class="separator:a877a2754512534717e518c4291154236 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea46070225797fc3a68ab3ece6ddd5b inherit pub_methods_classrm_1_1SerialPort" id="r_a6ea46070225797fc3a68ab3ece6ddd5b"><td class="memTemplParams" colspan="2">template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate_v&lt;Tp&gt; || std::is_same_v&lt;Tp, std::string_view&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a6ea46070225797fc3a68ab3ece6ddd5b inherit pub_methods_classrm_1_1SerialPort"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">SerialPort</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a6ea46070225797fc3a68ab3ece6ddd5b">operator&lt;&lt;</a> (const Tp &amp;data)</td></tr>
+<tr class="separator:a6ea46070225797fc3a68ab3ece6ddd5b inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadfdd019cb71aaf6f52bad22feb8444 inherit pub_methods_classrm_1_1SerialPort" id="r_aaadfdd019cb71aaf6f52bad22feb8444"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444">isOpened</a> () const</td></tr>
+<tr class="memdesc:aaadfdd019cb71aaf6f52bad22feb8444 inherit pub_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口是否打开  <br /></td></tr>
+<tr class="separator:aaadfdd019cb71aaf6f52bad22feb8444 inherit pub_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classrm_1_1SerialPort"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classrm_1_1SerialPort')"><img src="../../closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></td></tr>
+<tr class="memitem:a7996a808b43f5abb420b5454e9fad11b inherit pro_methods_classrm_1_1SerialPort" id="r_a7996a808b43f5abb420b5454e9fad11b"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a7996a808b43f5abb420b5454e9fad11b">fdwrite</a> (const void *data, size_t len)</td></tr>
+<tr class="memdesc:a7996a808b43f5abb420b5454e9fad11b inherit pro_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入数据（基于文件描述符）  <br /></td></tr>
+<tr class="separator:a7996a808b43f5abb420b5454e9fad11b inherit pro_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c11b6246034ccbec3b27a2f15da2b50 inherit pro_methods_classrm_1_1SerialPort" id="r_a1c11b6246034ccbec3b27a2f15da2b50"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a1c11b6246034ccbec3b27a2f15da2b50">fdread</a> (void *data, size_t len)</td></tr>
+<tr class="memdesc:a1c11b6246034ccbec3b27a2f15da2b50 inherit pro_methods_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据（基于文件描述符）  <br /></td></tr>
+<tr class="separator:a1c11b6246034ccbec3b27a2f15da2b50 inherit pro_methods_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1SerialPort"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1SerialPort')"><img src="../../closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html">rm::SerialPort</a></td></tr>
+<tr class="memitem:af04aec57a88b79d9ccdb45ab373f790a inherit pro_attribs_classrm_1_1SerialPort" id="r_af04aec57a88b79d9ccdb45ab373f790a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#af04aec57a88b79d9ccdb45ab373f790a">_fd</a> {<a class="el" href="../../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed">INVALID_FD</a>}</td></tr>
+<tr class="memdesc:af04aec57a88b79d9ccdb45ab373f790a inherit pro_attribs_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件描述符（文件句柄）  <br /></td></tr>
+<tr class="separator:af04aec57a88b79d9ccdb45ab373f790a inherit pro_attribs_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987a26bf09de936aae406e8712fc2e88 inherit pro_attribs_classrm_1_1SerialPort" id="r_a987a26bf09de936aae406e8712fc2e88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a987a26bf09de936aae406e8712fc2e88">_is_open</a> {}</td></tr>
+<tr class="memdesc:a987a26bf09de936aae406e8712fc2e88 inherit pro_attribs_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口打开标志位  <br /></td></tr>
+<tr class="separator:a987a26bf09de936aae406e8712fc2e88 inherit pro_attribs_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f5af586c869b6d7f6c22a8f0436165 inherit pro_attribs_classrm_1_1SerialPort" id="r_ac1f5af586c869b6d7f6c22a8f0436165"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#ac1f5af586c869b6d7f6c22a8f0436165">_device</a></td></tr>
+<tr class="memdesc:ac1f5af586c869b6d7f6c22a8f0436165 inherit pro_attribs_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备名  <br /></td></tr>
+<tr class="separator:ac1f5af586c869b6d7f6c22a8f0436165 inherit pro_attribs_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f38b449c7be41f2ed42bd4bf499997a inherit pro_attribs_classrm_1_1SerialPort" id="r_a2f38b449c7be41f2ed42bd4bf499997a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#a2f38b449c7be41f2ed42bd4bf499997a">_baud_rate</a></td></tr>
+<tr class="memdesc:a2f38b449c7be41f2ed42bd4bf499997a inherit pro_attribs_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">波特率  <br /></td></tr>
+<tr class="separator:a2f38b449c7be41f2ed42bd4bf499997a inherit pro_attribs_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af040c9e8d0be065a17b0c4c01db4d4fd inherit pro_attribs_classrm_1_1SerialPort" id="r_af040c9e8d0be065a17b0c4c01db4d4fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d63/group__io__serial.html#ga5ca0d5494f76b1f02b93b4514e32dd5a">SerialReadMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html#af040c9e8d0be065a17b0c4c01db4d4fd">_read_mode</a></td></tr>
+<tr class="memdesc:af040c9e8d0be065a17b0c4c01db4d4fd inherit pro_attribs_classrm_1_1SerialPort"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步读取模式  <br /></td></tr>
+<tr class="separator:af040c9e8d0be065a17b0c4c01db4d4fd inherit pro_attribs_classrm_1_1SerialPort"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步串行接口通信库，仅支持读写字符串 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a52ef000e575884799c5daa97ffaa4cca" name="a52ef000e575884799c5daa97ffaa4cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ef000e575884799c5daa97ffaa4cca">&#9670;&#160;</a></span>SerialPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::SerialPort::SerialPort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a></td>          <td class="paramname"><span class="paramname"><em>baud_rate</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造新串口对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">device</td><td>设备名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baud_rate</td><td>波特率 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d62/classrm_1_1async_1_1SerialPort_a52ef000e575884799c5daa97ffaa4cca_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a275eb0e025f03d88e7c9499554f2aa14" name="a275eb0e025f03d88e7c9499554f2aa14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275eb0e025f03d88e7c9499554f2aa14">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a> &amp; rm::async::SerialPort::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d62/classrm_1_1async_1_1SerialPort_a275eb0e025f03d88e7c9499554f2aa14_cgraph.svg" width="350" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5995f03070ab8b2893a151f0ec1edbb7" name="a5995f03070ab8b2893a151f0ec1edbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5995f03070ab8b2893a151f0ec1edbb7">&#9670;&#160;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a> &amp; rm::async::SerialPort::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">Tp &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d62/classrm_1_1async_1_1SerialPort_a5995f03070ab8b2893a151f0ec1edbb7_cgraph.svg" width="350" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aafb6aa84ad3dc2f351f8461ec1f95295" name="aafb6aa84ad3dc2f351f8461ec1f95295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb6aa84ad3dc2f351f8461ec1f95295">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d02/classrm_1_1async_1_1SerialPort_1_1SerialReadAwaiter.html">SerialReadAwaiter</a> rm::async::SerialPort::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步读取串口数据 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line">std::string <a class="code hl_namespace" href="../../d4/dfc/namespacerm_1_1str.html">str</a> = <span class="keyword">co_await</span> serial.read();</div>
+<div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
+</div><!-- fragment --> <dl class="section return"><dt>返回</dt><dd>读取到的字符串数据 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d62/classrm_1_1async_1_1SerialPort_aafb6aa84ad3dc2f351f8461ec1f95295_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aabf05e901e78269eacd8747a73e8c109" name="aabf05e901e78269eacd8747a73e8c109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf05e901e78269eacd8747a73e8c109">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html">SerialWriteAwaiter</a> rm::async::SerialPort::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步写入串口数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 <div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keywordtype">bool</span> success = <span class="keyword">co_await</span> serial.write(<span class="stringliteral">&quot;12345&quot;</span>);</div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/d62/classrm_1_1async_1_1SerialPort_aabf05e901e78269eacd8747a73e8c109_cgraph.svg" width="156" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/io/<a class="el" href="../../d1/dc5/serial_8hpp.html">serial.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

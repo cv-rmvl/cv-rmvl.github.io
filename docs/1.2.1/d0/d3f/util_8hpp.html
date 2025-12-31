@@ -1,0 +1,271 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rmvl/core/util.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_8ce2230b18c62fc4f1b2d4c11ea01049.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_021e08c4c598f89101b0aa1de0100d4c.html">core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">util.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;rmvl/rmvl_modules.hpp&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../db/d41/rmvldef_8hpp.html">rmvldef.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+util.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/da4/util_8hpp__incl.svg" width="572" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件被哪些文件直接或间接地引用了:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dd/d9a/util_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的  <a href="../../d9/db4/classrm_1_1Exception.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/db0/structrm_1_1reflect_1_1helper_1_1init.html">rm::reflect::helper::init</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor helper  <a href="../../dc/db0/structrm_1_1reflect_1_1helper_1_1init.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d1f/structrm_1_1reflect_1_1helper_1_1size__tag.html">rm::reflect::helper::size_tag&lt; N &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dde/structrm_1_1reflect_1_1helper_1_1size__tag_3_010_01_4.html">rm::reflect::helper::size_tag&lt; 0 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d23/structrm_1_1hash__aggregate.html">rm::hash_aggregate&lt; Tp, Enable &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">专为聚合类添加的 hash 生成可调用对象  <a href="../../d9/d23/structrm_1_1hash__aggregate.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">非聚合类哈希生成函数类型 traits  <a href="../../da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">聚合类哈希生成函数类型 traits  <a href="../../de/dd7/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_01std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd6/namespacerm_1_1reflect.html">rm::reflect</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d09/namespacerm_1_1reflect_1_1helper.html">rm::reflect::helper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga06c5efbe33a3db508cbb8c54abb9bd9d" id="r_ga06c5efbe33a3db508cbb8c54abb9bd9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a>(...)</td></tr>
+<tr class="separator:ga06c5efbe33a3db508cbb8c54abb9bd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97b1a53e1d700c98f544df01557c56cd" id="r_ga97b1a53e1d700c98f544df01557c56cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(...)</td></tr>
+<tr class="separator:ga97b1a53e1d700c98f544df01557c56cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae88c2a47405718d1f01ab5da116c0c6c" id="r_gae88c2a47405718d1f01ab5da116c0c6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a>(...)</td></tr>
+<tr class="separator:gae88c2a47405718d1f01ab5da116c0c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fdfbca3e848ceaea5debb80759891e2" id="r_ga9fdfbca3e848ceaea5debb80759891e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(...)</td></tr>
+<tr class="separator:ga9fdfbca3e848ceaea5debb80759891e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4971e99bcf2438777a50d7a487888174" id="r_ga4971e99bcf2438777a50d7a487888174"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(...)</td></tr>
+<tr class="separator:ga4971e99bcf2438777a50d7a487888174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2dca616638730846c7c5e4e40190b1c0" id="r_ga2dca616638730846c7c5e4e40190b1c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga2dca616638730846c7c5e4e40190b1c0">DEBUG_WARNING_</a>(...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(__VA_ARGS__)</td></tr>
+<tr class="separator:ga2dca616638730846c7c5e4e40190b1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09d07224c75e71706e88adc741cc2736" id="r_ga09d07224c75e71706e88adc741cc2736"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga09d07224c75e71706e88adc741cc2736">DEBUG_ERROR_</a>(...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(__VA_ARGS__)</td></tr>
+<tr class="separator:ga09d07224c75e71706e88adc741cc2736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12a394b5fa2ecff86fc9507e50baddf8" id="r_ga12a394b5fa2ecff86fc9507e50baddf8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga12a394b5fa2ecff86fc9507e50baddf8">DEBUG_HIGHLIGHT_</a>(...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ga06c5efbe33a3db508cbb8c54abb9bd9d">HIGHLIGHT_</a>(__VA_ARGS__)</td></tr>
+<tr class="separator:ga12a394b5fa2ecff86fc9507e50baddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccd0338b2232e52b906d170ec729bfd1" id="r_gaccd0338b2232e52b906d170ec729bfd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaccd0338b2232e52b906d170ec729bfd1">DEBUG_INFO_</a>(...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ga4971e99bcf2438777a50d7a487888174">INFO_</a>(__VA_ARGS__)</td></tr>
+<tr class="separator:gaccd0338b2232e52b906d170ec729bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf37f371d52655217e8ff510643f21228" id="r_gaf37f371d52655217e8ff510643f21228"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaf37f371d52655217e8ff510643f21228">DEBUG_PASS_</a>(...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#gae88c2a47405718d1f01ab5da116c0c6c">PASS_</a>(__VA_ARGS__)</td></tr>
+<tr class="separator:gaf37f371d52655217e8ff510643f21228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9fc9a56859b55f64f40af4c5f26adae" id="r_gae9fc9a56859b55f64f40af4c5f26adae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gae9fc9a56859b55f64f40af4c5f26adae">RMVL_ERRHANDLE</a>(...)&#160;&#160;&#160;breakOnError()</td></tr>
+<tr class="separator:gae9fc9a56859b55f64f40af4c5f26adae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf280cef1ac39cc635210419c6aa9e8dd" id="r_gaf280cef1ac39cc635210419c6aa9e8dd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaf280cef1ac39cc635210419c6aa9e8dd">RMVL_Error</a>(code,  msg)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">rm::error</a>(code, msg, <a class="el" href="../../d0/de1/group__core.html#gafb177183ad89215a455ff6907afdc21c">RMVL_Func</a>, __FILE__, __LINE__)</td></tr>
+<tr class="memdesc:gaf280cef1ac39cc635210419c6aa9e8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用错误处理程序  <br /></td></tr>
+<tr class="separator:gaf280cef1ac39cc635210419c6aa9e8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ceb64e0c1708b39fed13fc311c3cdfc" id="r_ga6ceb64e0c1708b39fed13fc311c3cdfc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga6ceb64e0c1708b39fed13fc311c3cdfc">RMVL_Error_</a>(code,  fmt, ...)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">rm::error</a>(code, <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">rm::format</a>(fmt, __VA_ARGS__), <a class="el" href="../../d0/de1/group__core.html#gafb177183ad89215a455ff6907afdc21c">RMVL_Func</a>, __FILE__, __LINE__)</td></tr>
+<tr class="memdesc:ga6ceb64e0c1708b39fed13fc311c3cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用错误处理程序  <br /></td></tr>
+<tr class="separator:ga6ceb64e0c1708b39fed13fc311c3cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac56d8385bc039215b7c14f05210dab1c" id="r_gac56d8385bc039215b7c14f05210dab1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c">RMVL_Assert</a>(expr)&#160;&#160;&#160;(!!(expr)) ? (void(0)) : <a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">rm::error</a>(<a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaeb1914b1d3bd797296feba9b74cf6c2">RMVL_StsAssert</a>, #expr, <a class="el" href="../../d0/de1/group__core.html#gafb177183ad89215a455ff6907afdc21c">RMVL_Func</a>, __FILE__, __LINE__)</td></tr>
+<tr class="memdesc:gac56d8385bc039215b7c14f05210dab1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在运行时检查条件，如果失败则抛出异常  <br /></td></tr>
+<tr class="separator:gac56d8385bc039215b7c14f05210dab1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa1505e84ee5a1d4ce66ca3a959786a7" id="r_gaaa1505e84ee5a1d4ce66ca3a959786a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaaa1505e84ee5a1d4ce66ca3a959786a7">RMVL_DbgAssert</a>(expr)&#160;&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#gac56d8385bc039215b7c14f05210dab1c">RMVL_Assert</a>(expr)</td></tr>
+<tr class="memdesc:gaaa1505e84ee5a1d4ce66ca3a959786a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">在 Debug 条件下或启用静态分析工具的情况下，在运行时检查条件，如果失败则抛出异常  <br /></td></tr>
+<tr class="separator:gaaa1505e84ee5a1d4ce66ca3a959786a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaf7cd096c36c198de2a85d0719fb92b4b" id="r_gaf7cd096c36c198de2a85d0719fb92b4b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaf7cd096c36c198de2a85d0719fb92b4b">RMVLErrorCode</a> : int { <br />
+&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba856586874a2d744a818342ad634869d1">RMVL_StsOk</a> = 0
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4badbb04baae7a4aab87d74dfbddf48a828">RMVL_StsBackTrace</a> = -1
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bac4915210559ba2da2e35daf2fabedf24">RMVL_StsError</a> = -2
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba071c5577bf7946d53d6c8d010fe925e1">RMVL_StsNoMem</a> = -3
+, <br />
+&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bae9adacf618624ed9e1236bab70c227a4">RMVL_StsBadArg</a> = -4
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba516a60b4258ac9fb1251b66a121283e7">RMVL_StsBadSize</a> = -5
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba3f8d82d5412e115672d7eb10f51dca17">RMVL_StsNullPtr</a> = -6
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaed4ac1e4599dc43bc84084672d6bacb">RMVL_StsNotaNumber</a> = -7
+, <br />
+&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba1caf46b424ef4a4a00f584ff8e7d17e4">RMVL_StsDivByZero</a> = -8
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bae1c6cc94e9a0882777a400aa11d2d441">RMVL_StsOutOfRange</a> = -9
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaeb1914b1d3bd797296feba9b74cf6c2">RMVL_StsAssert</a> = -10
+, <a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba57a8acaa184c6b31afc5901b1d6d4c00">RMVL_StsInvFmt</a> = -11
+, <br />
+&#160;&#160;<a class="el" href="../../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba59242f30afedb168324b811aed9f446c">RMVL_BadDynamicType</a> = -12
+<br />
+ }</td></tr>
+<tr class="memdesc:gaf7cd096c36c198de2a85d0719fb92b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">RMVL 错误码  <a href="../../d0/de1/group__core.html#gaf7cd096c36c198de2a85d0719fb92b4b">更多...</a><br /></td></tr>
+<tr class="separator:gaf7cd096c36c198de2a85d0719fb92b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga9d783cbcd4b7f38b293c4a666c2f89fc" id="r_ga9d783cbcd4b7f38b293c4a666c2f89fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">rm::format</a> (const char *fmt,...)</td></tr>
+<tr class="memdesc:ga9d783cbcd4b7f38b293c4a666c2f89fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回使用类 <code>printf</code> 表达式格式化的文本字符串。  <br /></td></tr>
+<tr class="separator:ga9d783cbcd4b7f38b293c4a666c2f89fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd73800a8a628c56c9d308c22fc719cb" id="r_gabd73800a8a628c56c9d308c22fc719cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gabd73800a8a628c56c9d308c22fc719cb">rm::breakOnError</a> ()</td></tr>
+<tr class="memdesc:gabd73800a8a628c56c9d308c22fc719cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发非法内存操作  <br /></td></tr>
+<tr class="separator:gabd73800a8a628c56c9d308c22fc719cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b257f4387ea37392a61bd7f1f254aee" id="r_ga9b257f4387ea37392a61bd7f1f254aee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga9b257f4387ea37392a61bd7f1f254aee">rm::throwError</a> (const <a class="el" href="../../d9/db4/classrm_1_1Exception.html">Exception</a> &amp;exc)</td></tr>
+<tr class="memdesc:ga9b257f4387ea37392a61bd7f1f254aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">抛出异常  <br /></td></tr>
+<tr class="separator:ga9b257f4387ea37392a61bd7f1f254aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe1da7007de9e49ed54906db46b2635a" id="r_gabe1da7007de9e49ed54906db46b2635a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">rm::error</a> (int _code, std::string_view _err, const char *_func, const char *_file, int _line)</td></tr>
+<tr class="memdesc:gabe1da7007de9e49ed54906db46b2635a"><td class="mdescLeft">&#160;</td><td class="mdescRight">发出错误信号并引发异常  <br /></td></tr>
+<tr class="separator:gabe1da7007de9e49ed54906db46b2635a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf02e400b3f459cb836ee81ee05e71ed8" id="r_gaf02e400b3f459cb836ee81ee05e71ed8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaf02e400b3f459cb836ee81ee05e71ed8">rm::getBuildInformation</a> ()</td></tr>
+<tr class="memdesc:gaf02e400b3f459cb836ee81ee05e71ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回完整的配置输出  <br /></td></tr>
+<tr class="separator:gaf02e400b3f459cb836ee81ee05e71ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc3b4f53ef6981ca8c58abd401a506b9" id="r_gadc3b4f53ef6981ca8c58abd401a506b9"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:gadc3b4f53ef6981ca8c58abd401a506b9"><td class="memTemplItemLeft" align="right" valign="top">consteval std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a> (auto &amp;&amp;...args)</td></tr>
+<tr class="memdesc:gadc3b4f53ef6981ca8c58abd401a506b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定类型的成员个数  <br /></td></tr>
+<tr class="separator:gadc3b4f53ef6981ca8c58abd401a506b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9863cff22a9ace50a697915560ee8290" id="r_ga9863cff22a9ace50a697915560ee8290"><td class="memTemplParams" colspan="2">template&lt;typename Tp , typename Callable &gt; </td></tr>
+<tr class="memitem:ga9863cff22a9ace50a697915560ee8290"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#ga9863cff22a9ace50a697915560ee8290">rm::reflect::for_each</a> (Tp &amp;&amp;val, Callable &amp;&amp;f)</td></tr>
+<tr class="memdesc:ga9863cff22a9ace50a697915560ee8290"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历聚合类的每一个数据成员  <br /></td></tr>
+<tr class="separator:ga9863cff22a9ace50a697915560ee8290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca3e9de5d5043a1c038a42c9f4f0a22c" id="r_gaca3e9de5d5043a1c038a42c9f4f0a22c"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:gaca3e9de5d5043a1c038a42c9f4f0a22c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a> (const Tp &amp;lhs, const Tp &amp;rhs)</td></tr>
+<tr class="memdesc:gaca3e9de5d5043a1c038a42c9f4f0a22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个聚合类数据是否相同  <br /></td></tr>
+<tr class="separator:gaca3e9de5d5043a1c038a42c9f4f0a22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-11-03</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2023 (c), RoboMaster Vision Community </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

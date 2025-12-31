@@ -1,0 +1,367 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<title>RMVL: rm::ArrayTool类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d1/d2c/classrm_1_1ArrayTool.html">ArrayTool</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../db/dfe/classrm_1_1ArrayTool-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::ArrayTool类 参考<div class="ingroups"><a class="el" href="../../d7/dbd/group__imgproc.html">图像处理</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>阵列工具  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/imgproc/paint.hpp&gt;</code></p>
+<div class="dynheader">
+rm::ArrayTool 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d1f/classrm_1_1ArrayTool__coll__graph.svg" width="116" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab3de1a169d5c8f9a17abf300c0060828" id="r_ab3de1a169d5c8f9a17abf300c0060828"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:ab3de1a169d5c8f9a17abf300c0060828"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab3de1a169d5c8f9a17abf300c0060828">linear2D</a> (const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point_&lt; Tp &gt; &amp;spacing, std::size_t times)</td></tr>
+<tr class="memdesc:ab3de1a169d5c8f9a17abf300c0060828"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面线性阵列  <br /></td></tr>
+<tr class="separator:ab3de1a169d5c8f9a17abf300c0060828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff6497bd27edca47987bb3803e10d0b" id="r_a7ff6497bd27edca47987bb3803e10d0b"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:a7ff6497bd27edca47987bb3803e10d0b"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7ff6497bd27edca47987bb3803e10d0b">circular2D</a> (const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point_&lt; Tp &gt; &amp;center, double spacing, std::size_t times)</td></tr>
+<tr class="memdesc:a7ff6497bd27edca47987bb3803e10d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">平面圆周阵列  <br /></td></tr>
+<tr class="separator:a7ff6497bd27edca47987bb3803e10d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac940251932dabfda335f17d121f5a05a" id="r_ac940251932dabfda335f17d121f5a05a"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:ac940251932dabfda335f17d121f5a05a"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac940251932dabfda335f17d121f5a05a">linear3D</a> (const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point3_&lt; Tp &gt; &amp;spacing, std::size_t times)</td></tr>
+<tr class="memdesc:ac940251932dabfda335f17d121f5a05a"><td class="mdescLeft">&#160;</td><td class="mdescRight">空间线性阵列  <br /></td></tr>
+<tr class="separator:ac940251932dabfda335f17d121f5a05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9abfe168058d279827dafa7d4318a88" id="r_ab9abfe168058d279827dafa7d4318a88"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:ab9abfe168058d279827dafa7d4318a88"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab9abfe168058d279827dafa7d4318a88">circular3D</a> (const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;sketch, const cv::Point3_&lt; Tp &gt; &amp;center, const cv::Vec3d &amp;axis, double spacing, std::size_t times)</td></tr>
+<tr class="memdesc:ab9abfe168058d279827dafa7d4318a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">空间圆周阵列  <br /></td></tr>
+<tr class="separator:ab9abfe168058d279827dafa7d4318a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>阵列工具 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a7ff6497bd27edca47987bb3803e10d0b" name="a7ff6497bd27edca47987bb3803e10d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff6497bd27edca47987bb3803e10d0b">&#9670;&#160;</a></span>circular2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt; rm::ArrayTool::circular2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sketch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面圆周阵列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sketch</td><td>阵列特征 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center</td><td>阵列中心 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spacing</td><td>阵列间距（Δθ，角度制，像素坐标系） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">times</td><td>阵列个数（包括原特征） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>阵列结果 </dd></dl>
+
+</div>
+</div>
+<a id="ab9abfe168058d279827dafa7d4318a88" name="ab9abfe168058d279827dafa7d4318a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9abfe168058d279827dafa7d4318a88">&#9670;&#160;</a></span>circular3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt; rm::ArrayTool::circular3D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sketch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec3d &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>空间圆周阵列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sketch</td><td>阵列特征 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center</td><td>阵列中心 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>阵列转轴 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spacing</td><td>阵列间距（Δθ，角度制） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">times</td><td>阵列个数（包括原特征） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>阵列结果 </dd></dl>
+
+</div>
+</div>
+<a id="ab3de1a169d5c8f9a17abf300c0060828" name="ab3de1a169d5c8f9a17abf300c0060828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3de1a169d5c8f9a17abf300c0060828">&#9670;&#160;</a></span>linear2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &gt; rm::ArrayTool::linear2D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point_&lt; Tp &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sketch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平面线性阵列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sketch</td><td>阵列特征 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spacing</td><td>阵列间距（Δx, Δy） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">times</td><td>阵列个数（包括原特征） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>阵列结果 </dd></dl>
+
+</div>
+</div>
+<a id="ac940251932dabfda335f17d121f5a05a" name="ac940251932dabfda335f17d121f5a05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac940251932dabfda335f17d121f5a05a">&#9670;&#160;</a></span>linear3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &gt; rm::ArrayTool::linear3D </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Point3_&lt; Tp &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sketch</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>spacing</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>times</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>空间线性阵列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sketch</td><td>阵列特征 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spacing</td><td>阵列间距（Δx, Δy, Δz） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">times</td><td>阵列个数（包括原特征） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>阵列结果 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/imgproc/<a class="el" href="../../d9/db3/paint_8hpp.html">paint.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.11.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
