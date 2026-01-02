@@ -210,7 +210,7 @@ $(function() {
 <li>后续的 Data 数据信息部分，每 \(6\) 字节表示一个节点的信息，第 \(0\sim1\) 字节为 Locator 的 Port 部分，表示 EDP 通信端点的端口号，采用大端序存储；第 \(2\sim5\) 字节为 Locator 的 Addr 部分，表示 EDP 通信端点的 IPv4 地址。每个节点可以包含多个 Locator 信息段，具体数量由 Header 头部信息中的 LocatorNum 字段决定，并且由实际的网卡数量所限制。 </li>
 </ol>
 </blockquote>
-<p>此外，实现方需使用 UDPv4 多播的方式发送 NDP 数据包，且多播地址为 <span class="tt">239.255.0.5</span>，多播端口为 <span class="tt">7500 + &lt;LPSS_DOMAIN_ID&gt;</span>，其中 <span class="tt">LPSS_DOMAIN_ID</span> 是一个单字节无符号整数。标准还规定每个节点应当周期性地发送心跳包，以维持其在网络中的可见性，心跳包的发送频率应当小于等于 \(\frac{\text{HBT}}2\) 的值。</p>
+<p>此外，实现方需使用 UDPv4 多播的方式发送 NDP 数据包，且多播地址为 <span class="tt">239.255.0.5</span>，多播端口为 <span class="tt">7500 + &lt;LPSS_DOMAIN_ID&gt;</span>，其中 <span class="tt">LPSS_DOMAIN_ID</span> 是一个单字节无符号整数。标准还规定每个节点应当周期性地发送心跳包，以维持其在网络中的可见性，心跳包的发送周期应当小于等于 \(\frac{\text{HBT}}2\) 的值。</p>
 <p>实现方需完成生命周期管理，需要不短于每隔 1s 的频率检查所有的已发现的节点在上次收到的心跳包的时间戳与当前时间间隔是否超过 HBT，若超过则删除。</p>
 <p>RNDP 同样满足以上 NDP 标准，具体的信息格式如下所示：</p>
 <div class="full_width_table"> <table class="markdownTable">
@@ -455,19 +455,17 @@ $(function() {
 2.2.1 创建项目结构</h3>
 <p>首先可以创建一个项目，假设项目名称为 <span class="tt">demo</span>，并在其中创建</p>
 <ul>
-<li><span class="tt">msg</span> 目录，用于存放自定义的消息类型文件；</li>
+<li><span class="tt">custom_msg</span> 目录，用于存放自定义的消息类型文件，以及自动生成的代码；</li>
 <li><span class="tt">src</span> 目录，用于存放发布者与订阅者的源代码文件；</li>
 <li><span class="tt">CMakeLists.txt</span> 文件，用于配置项目的构建过程。</li>
 </ul>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
 2.2.2 文件内容</h3>
+<p>基本内容：</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
-<div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(VERSION 3.16)</div> <div class="line"><span class="keyword">project</span>(LPSSDemo)</div> <div class="line"></div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD 17)</div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED ON)</div> <div class="line"></div> <div class="line"><span class="comment"># 查找 RMVL 包，其中包含了自动代码生成的功能</span></div> <div class="line"><span class="keyword">find_package</span>(RMVL REQUIRED)</div> <div class="line"></div> <div class="line"><span class="comment"># 生成自定义消息类型的代码</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(MyCustomMsg)</div> <div class="line"><span class="keyword">add_library</span>(my_custom_msg src/_rm_codegen_msg_my_custom_msg.cpp)</div> <div class="line"><span class="keyword">target_include_directories</span>(my_custom_msg</div> <div class="line">&#160;&#160;<span class="keyword">PUBLIC</span> include</div> <div class="line">)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加发布者和订阅者的可执行文件</span></div> <div class="line"><span class="keywordflow">foreach</span>(m pub sub)</div> <div class="line">&#160;&#160;<span class="keyword">rmvl_add_exe</span>(${m}</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">SOURCES</span> src/${m}.cpp</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">DEPENDS</span> lpss</div> <div class="line">&#160;&#160;)</div> <div class="line"></div> <div class="line">&#160;&#160;<span class="keyword">target_include_directories</span>(${m} <span class="keyword">PRIVATE</span> include)</div> <div class="line"><span class="keywordflow">endforeach</span>()</div> </div></li>
-<li><p class="startli"><b class="tab-title">MyCustomMsg.msg</b></p>
-<p class="startli">在 <span class="tt">msg</span> 目录下创建 <span class="tt">MyCustomMsg.msg</span> 文件，定义自定义的消息类型：</p>
-<div class="fragment"> <div class="line"><span class="comment"># MyCustomMsg.msg</span></div> <div class="line"></div> <div class="line"><span class="keywordtype">int32</span> id</div> <div class="line"><span class="keywordtype">string</span> name</div> <div class="line"><span class="keywordtype">bool</span> is_active</div> </div></li>
-<li><p class="startli"><b class="tab-title">pub.cpp</b></p>
+<div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(VERSION 3.16)</div> <div class="line"><span class="keyword">project</span>(LPSSDemo)</div> <div class="line"></div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD 17)</div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED ON)</div> <div class="line"></div> <div class="line"><span class="comment"># 查找 RMVL 包，其中包含了自动代码生成的功能</span></div> <div class="line"><span class="keyword">find_package</span>(RMVL REQUIRED)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加子目录</span></div> <div class="line"><span class="keyword">add_subdirectory</span>(custom_msg)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加发布者和订阅者的可执行文件</span></div> <div class="line"><span class="keywordflow">foreach</span>(m pub sub)</div> <div class="line">&#160;&#160;<span class="keyword">rmvl_add_exe</span>(${m}</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">SOURCES</span> src/${m}.cpp</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">DEPENDS</span> lpss custom_msg</div> <div class="line">&#160;&#160;)</div> <div class="line"><span class="keywordflow">endforeach</span>()</div> </div></li>
+<li><p class="startli"><b class="tab-title">src/pub.cpp</b></p>
 <p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">pub.cpp</span> 文件，实现发布者：</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -493,7 +491,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
-<li><p class="startli"><b class="tab-title">sub.cpp</b></p>
+<li><p class="startli"><b class="tab-title">src/sub.cpp</b></p>
 <p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">sub.cpp</span> 文件，实现订阅者：</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
@@ -514,6 +512,18 @@ $(function() {
 <div class="line">        std::this_thread::sleep_for(1s);</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
+</ul>
+</div><div class="tabbed"></div><p>然后在 <span class="tt">custom_msg</span> 目录下创建</p>
+<ul>
+<li><span class="tt">msg</span> 目录，用于存放自定义的消息类型定义文件；</li>
+<li><span class="tt">CMakeLists.txt</span> 文件，配置消息类型的代码生成。</li>
+</ul>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">MyCustomMsg.msg</b></p>
+<p class="startli">在 <span class="tt">msg</span> 目录下创建 <span class="tt">MyCustomMsg.msg</span> 文件，定义自定义的消息类型：</p>
+<div class="fragment"> <div class="line"><span class="comment"># MyCustomMsg.msg</span></div> <div class="line"></div> <div class="line"><span class="keywordtype">int32</span> id</div> <div class="line"><span class="keywordtype">string</span> name</div> <div class="line"><span class="keywordtype">bool</span> is_active</div> </div></li>
+<li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 生成自定义消息类型的代码</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(MyCustomMsg)</div> <div class="line"><span class="comment"># 添加模块</span></div> <div class="line"><span class="keyword">rmvl_add_module</span>(custom_msg)</div> </div></li>
 </ul>
 </div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
 2.2.3 构建与运行</h3>

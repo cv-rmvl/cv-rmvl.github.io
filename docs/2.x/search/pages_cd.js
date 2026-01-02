@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['静态构建与动态构建_0',['2.2 静态构建与动态构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md105',1,'']]]
+  ['链路层协议_0',['2.3 链路层协议',['../d3/da4/tutorial_modules_serial.html#serial_protocol',1,'']]]
 ];

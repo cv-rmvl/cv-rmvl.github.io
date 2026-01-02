@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['黄金分割法原理_0',['2.2 黄金分割法原理',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md171',1,'']]],
-  ['黄金分割法_1',['2 黄金分割法',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md169',1,'']]]
+  ['预测模块_0',['2.3 预测模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md67',1,'']]],
+  ['预测量分类_1',['预测量分类',['../d0/da1/tutorial_extra_gyro_predictor.html#autotoc_md38',1,'']]],
+  ['预测_2',['预测',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md49',1,'']]]
 ];

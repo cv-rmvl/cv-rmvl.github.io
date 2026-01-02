@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md266',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md333',1,'2.2 数据 I/O']]],
+  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md266',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md334',1,'2.2 数据 I/O']]],
   ['o_20的协程设施_1',['基于异步 I/O 的协程设施',['../d5/d7a/tutorial_modules_coro.html',1,'tutorial_table_of_content_modules']]],
   ['oargs_2',['oargs',['../d4/d91/classrm_1_1Method.html#aab157329af3899e55bb21e4df4f8b583',1,'rm::Method']]],
   ['object_3',['Object',['../d8/d9b/classrm_1_1Object.html',1,'rm::Object'],['../d8/d9b/classrm_1_1Object.html#aa230f549c885a9f7a4f9d2786c370fd6',1,'rm::Object::Object()']]],

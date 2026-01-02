@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['控制选项_0',['2.3 Socket 控制选项',['../d2/d5d/tutorial_modules_socket.html#autotoc_md341',1,'']]]
+  ['按钮_0',['4 按钮',['../d5/d72/tutorial_document.html#autotoc_md141',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['网络、应用层设施_0',['网络、应用层设施',['../d4/d7a/tutorial_modules_netapp.html',1,'tutorial_table_of_content_modules']]],
-  ['网络通信_1',['网络通信',['../d6/dd4/group__io__net.html',1,'']]]
+  ['编写测试文件_0',['2 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md124',1,'']]],
+  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md118',1,'']]],
+  ['编译镜像_2',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]]
 ];

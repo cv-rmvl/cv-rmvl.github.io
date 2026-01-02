@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['插值多项式_0',['插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md186',1,'1 Lagrange 插值多项式'],['../d8/d57/tutorial_modules_interpolation.html#autotoc_md187',1,'2 Newton 插值多项式']]]
+  ['控制选项_0',['2.3 Socket 控制选项',['../d2/d5d/tutorial_modules_socket.html#autotoc_md342',1,'']]]
 ];

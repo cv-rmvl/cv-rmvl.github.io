@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['用法_0',['用法',['../d5/d7a/tutorial_modules_coro.html#autotoc_md269',1,'2 用法'],['../d2/d5d/tutorial_modules_socket.html#autotoc_md338',1,'2 用法'],['../d3/da4/tutorial_modules_serial.html#autotoc_md334',1,'2.4 用法']]]
+  ['生成文档_0',['生成文档',['../d5/d72/tutorial_document.html#tutorial_documentation_generate',1,'']]],
+  ['生成_20c_20h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md326',1,'']]]
 ];

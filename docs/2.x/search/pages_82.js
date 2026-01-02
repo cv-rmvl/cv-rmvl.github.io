@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['权值的计算_0',['3.2 权值的计算',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md217',1,'']]]
+  ['杂项_0',['杂项',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md100',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['超定线性方程组_0',['2 超定线性方程组',['../db/da1/tutorial_modules_least_square.html#autotoc_md198',1,'']]]
+  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
 ];

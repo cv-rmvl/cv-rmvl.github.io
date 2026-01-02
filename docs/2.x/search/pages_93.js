@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['特征_0',['1.1 特征',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md60',1,'']]]
+  ['熵权法介绍_0',['熵权法介绍',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md164',1,'']]],
+  ['熵权法公式_1',['熵权法公式',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md165',1,'']]]
 ];

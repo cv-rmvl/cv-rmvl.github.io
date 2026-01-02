@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['熵权法介绍_0',['熵权法介绍',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md164',1,'']]],
-  ['熵权法公式_1',['熵权法公式',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md165',1,'']]]
+  ['源码安装_0',['源码安装',['../d2/d60/tutorial_install_overview.html#autotoc_md110',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['导出数据、发出操控指令_0',['导出数据、发出操控指令',['../db/d4f/tutorial_extra_upper_write_data.html',1,'tutorial_table_of_content_extra']]]
+  ['对象_0',['2.4 对象',['../db/dba/tutorial_modules_opcua.html#autotoc_md313',1,'']]]
 ];

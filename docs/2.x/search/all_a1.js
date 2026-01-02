@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['熵权法介绍_0',['熵权法介绍',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md164',1,'']]],
-  ['熵权法公式_1',['熵权法公式',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md165',1,'']]]
+  ['激活、未激活神符决策模块_0',['激活、未激活神符决策模块',['../d6/dcd/group__rune__decider.html',1,'']]],
+  ['激活、未激活神符识别模块_1',['激活、未激活神符识别模块',['../d0/d52/group__rune__detector.html',1,'']]]
 ];
