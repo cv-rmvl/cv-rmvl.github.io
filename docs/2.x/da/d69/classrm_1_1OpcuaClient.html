@@ -154,6 +154,11 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a2ee1d2cc44b98a819d02687ec1664904" id="r_a2ee1d2cc44b98a819d02687ec1664904"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a2ee1d2cc44b98a819d02687ec1664904 template"><td align="right" class="memItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ee1d2cc44b98a819d02687ec1664904">callx</a> (std::string_view name, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:a2ee1d2cc44b98a819d02687ec1664904"><td class="mdescLeft"> </td><td class="mdescRight">直接以底层数据调用 ObjectsFolder 中的方法  <br/></td></tr>
+<tr class="memitem:acbd92831fce6552fca096ae47da7dd65" id="r_acbd92831fce6552fca096ae47da7dd65"><td align="right" class="memItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#acbd92831fce6552fca096ae47da7dd65">findcall</a> (std::string_view name, const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;inputs) const</td></tr>
+<tr class="memdesc:acbd92831fce6552fca096ae47da7dd65"><td class="mdescLeft"> </td><td class="mdescRight">支持路径搜索的调用方法  <br/></td></tr>
+<tr class="memitem:a5d263eadcd9bb8a1f0bf4ea7e54ea7e5" id="r_a5d263eadcd9bb8a1f0bf4ea7e54ea7e5"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a5d263eadcd9bb8a1f0bf4ea7e54ea7e5 template"><td align="right" class="memItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d263eadcd9bb8a1f0bf4ea7e54ea7e5">findcallx</a> (std::string_view name, Args &amp;&amp;...args) const</td></tr>
+<tr class="memdesc:a5d263eadcd9bb8a1f0bf4ea7e54ea7e5"><td class="mdescLeft"> </td><td class="mdescRight">支持路径搜索的调用方法  <br/></td></tr>
 <tr class="memitem:a7dcbbf51799b30542ab304ee00de3ea9" id="r_a7dcbbf51799b30542ab304ee00de3ea9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dcbbf51799b30542ab304ee00de3ea9">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view) const</td></tr>
 <tr class="memdesc:a7dcbbf51799b30542ab304ee00de3ea9"><td class="mdescLeft"> </td><td class="mdescRight">添加 OPC UA 视图节点 ViewNode 至 <span class="tt">ViewsFolder</span> 中  <br/></td></tr>
 <tr class="memitem:a089bc81300500543c1f657610e2185ec" id="r_a089bc81300500543c1f657610e2185ec"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a089bc81300500543c1f657610e2185ec">monitor</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd, <a class="el" href="../../d3/da8/group__opcua.html#ga0b1b85ed940dc23f2d05a6e0ee16a669">DataChangeNotificationCallback</a> on_change, uint32_t q_size=10)</td></tr>
@@ -268,7 +273,8 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">res,oargs</td><td></td></tr>
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -312,7 +318,8 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">res,oargs</td><td></td></tr>
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -367,7 +374,8 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">res,oargs</td><td></td></tr>
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -416,7 +424,8 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="retval"><dt>返回值</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">res,oargs</td><td></td></tr>
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
   </table>
   </dd>
 </dl>
@@ -467,6 +476,95 @@ template&lt;typename... Args&gt; </div>
 <div class="ttc" id="aclassrm_1_1OpcuaClient_html_a3378175819e56bd7bae04ad16ab3ba36"><div class="ttname"><a href="#a3378175819e56bd7bae04ad16ab3ba36">rm::OpcuaClient::node</a></div><div class="ttdeci">FindNodeInClient node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> client.hpp:174</div></div>
 </div><!-- fragment --> <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a2">samples/opcua/opcua_client.cpp</a>.</dd>
 </dl>
+</div>
+</div>
+<a id="acbd92831fce6552fca096ae47da7dd65" name="acbd92831fce6552fca096ae47da7dd65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd92831fce6552fca096ae47da7dd65">◆ </a></span>findcall()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::OpcuaClient::findcall </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span> ) const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OpcuaClient.findcall(</td><td class="paramname">name, inputs</td><td>) -&gt; </td><td>res, outputs</td></tr></table>
+</div><div class="memdoc">
+<p>支持路径搜索的调用方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 <span class="tt">browse_name</span> 的完整路径，使用 <span class="tt">/</span> 分隔，例如 <span class="tt">person/set_age</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>输入参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 <div class="fragment"><div class="line"><span class="comment">// 例如调用 ObjectsFolder 下 person 节点的 set_age 方法，注意这里的 person 是 BrowseName</span></div>
+<div class="line"><span class="keyword">auto</span> [res, outputs] = cli.findcall(<span class="stringliteral">"person/set_age"</span>, {18});</div>
+</div><!-- fragment --> </dd></dl>
+</div>
+</div>
+<a id="a5d263eadcd9bb8a1f0bf4ea7e54ea7e5" name="a5d263eadcd9bb8a1f0bf4ea7e54ea7e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d263eadcd9bb8a1f0bf4ea7e54ea7e5">◆ </a></span>findcallx()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::OpcuaClient::findcallx </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>支持路径搜索的调用方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 <span class="tt">browse_name</span> 的完整路径，使用 <span class="tt">/</span> 分隔，例如 <span class="tt">person/set_age</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>方法的所有传入参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res</td><td>调用是否成功 </td></tr>
+    <tr><td class="paramname">oargs</td><td>输出参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 <div class="fragment"><div class="line"><span class="comment">// 例如调用 ObjectsFolder 下 person 节点的 set_age 方法，注意这里的 person 是 BrowseName</span></div>
+<div class="line"><span class="keyword">auto</span> [res, outputs] = cli.findcallx(<span class="stringliteral">"person/set_age"</span>, 18);</div>
+</div><!-- fragment --> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" loading="lazy" scrolling="no" src="../../da/d69/classrm_1_1OpcuaClient_a5d263eadcd9bb8a1f0bf4ea7e54ea7e5_cgraph.svg" width="399"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <a id="af08673ae641f9d071af8097a1c2393eb" name="af08673ae641f9d071af8097a1c2393eb"></a>

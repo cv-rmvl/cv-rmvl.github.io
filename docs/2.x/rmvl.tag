@@ -6208,8 +6208,8 @@
       <type></type>
       <name>Node</name>
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>a9582f748b344a6d93f0313540ab3c392</anchor>
-      <arglist>(uint8_t domain_id=0)</arglist>
+      <anchor>a07b13466e5916f9c19241a6368f99ef1</anchor>
+      <arglist>(std::string_view name, uint8_t domain_id=0)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -6786,6 +6786,20 @@
       <name>callx</name>
       <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
       <anchor>a2ee1d2cc44b98a819d02687ec1664904</anchor>
+      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>findcall</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>acbd92831fce6552fca096ae47da7dd65</anchor>
+      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>findcallx</name>
+      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
+      <anchor>a5d263eadcd9bb8a1f0bf4ea7e54ea7e5</anchor>
       <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
     </member>
     <member kind="function">
@@ -8873,8 +8887,8 @@
       <type>bool</type>
       <name>write</name>
       <anchorfile>d0/df0/classrm_1_1RingBufferSlotSHM.html</anchorfile>
-      <anchor>a3dfc8e359f41dce3a07d9d338190ed80</anchor>
-      <arglist>(const T &amp;value) noexcept</arglist>
+      <anchor>af5cb2fa8b24757a112d5ef205dc8f08f</anchor>
+      <arglist>(const T &amp;value, bool overwrite=false) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -10313,13 +10327,6 @@
       <anchorfile>d5/d8b/classrm_1_1SHMBase.html</anchorfile>
       <anchor>a1450c37790924495b06552c2ab2a7f8c</anchor>
       <arglist>() const noexcept</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>destroy</name>
-      <anchorfile>d5/d8b/classrm_1_1SHMBase.html</anchorfile>
-      <anchor>aa8ed630180952e1c2c6ea899ce3e4c38</anchor>
-      <arglist>(std::string_view name)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18590,14 +18597,20 @@
     <docanchor file="d8/d88/tutorials_python.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_tutorials.markdown">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__tutorials</docanchor>
   </compound>
   <compound kind="dir">
+    <name>/home/zhaoxi/.rmvltmp</name>
+    <path>/home/zhaoxi/.rmvltmp/</path>
+    <filename>dir_1f1d0efd9512274b6da9f0fd2f0a959f.html</filename>
+    <dir>/home/zhaoxi/.rmvltmp/rmvl</dir>
+  </compound>
+  <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
-    <filename>dir_87afdb654b740152ae499aca4400ec55.html</filename>
+    <filename>dir_e50287f1f1670e190e9bc32316e07cd0.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/algorithm</name>
     <path>rmvl/algorithm/</path>
-    <filename>dir_fb2099489813e98dfc0088d784a50e50.html</filename>
+    <filename>dir_50512aa9fb4f372b00bb7d3dd7bed6da.html</filename>
     <file>datastruct.hpp</file>
     <file>dsp.hpp</file>
     <file>kalman.hpp</file>
@@ -18607,14 +18620,14 @@
     <file>transform.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
-    <filename>dir_4fef79e7177ba769987a8da36c892c5f.html</filename>
+    <name>/home/zhaoxi/.rmvltmp/rmvl/build</name>
+    <path>/home/zhaoxi/.rmvltmp/rmvl/build/</path>
+    <filename>dir_cd8ac429d3635d4587aced71884d1809.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/camera</name>
     <path>rmvl/camera/</path>
-    <filename>dir_68b2675841333b17d262d865224a2a6d.html</filename>
+    <filename>dir_78d299521c5e5119829508c3d43929a2.html</filename>
     <file>camutils.hpp</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -18624,7 +18637,7 @@
   <compound kind="dir">
     <name>rmvlpara/camera</name>
     <path>rmvlpara/camera/</path>
-    <filename>dir_21c299e62c75071ae2ddbdcf77d332fa.html</filename>
+    <filename>dir_ebdaf7c4480af2485cd1079a530006ed.html</filename>
     <file>camera.h</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -18633,12 +18646,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
-    <filename>dir_e47bc4c88201119324ad1742b0acdaea.html</filename>
+    <filename>dir_8e89044452c59cecaf5a8786a7bc962f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/combo</name>
     <path>rmvl/combo/</path>
-    <filename>dir_51ed543484fef09623ba53bab7eaba50.html</filename>
+    <filename>dir_acb2f6a56ddbfb8fd0027f6092b50357.html</filename>
     <file>armor.h</file>
     <file>combo.h</file>
     <file>rune.h</file>
@@ -18646,19 +18659,19 @@
   <compound kind="dir">
     <name>rmvlpara/combo</name>
     <path>rmvlpara/combo/</path>
-    <filename>dir_12f7e2719c4aef7ca971bef1458b119e.html</filename>
+    <filename>dir_d0f9619331cf590bad76d8382f10d02e.html</filename>
     <file>armor.h</file>
     <file>rune.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
-    <filename>dir_b42c29baecd700a1c7b1f9e031116f59.html</filename>
+    <filename>dir_de2cc6b631065704a5bdc8e7bb83857f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/compensator</name>
     <path>rmvl/compensator/</path>
-    <filename>dir_fc26b6c2ce0d675ae37f0ead7fead92a.html</filename>
+    <filename>dir_e6e26513ce4fb2be4152a4f4e3106553.html</filename>
     <file>compensator.h</file>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
@@ -18666,14 +18679,14 @@
   <compound kind="dir">
     <name>rmvlpara/compensator</name>
     <path>rmvlpara/compensator/</path>
-    <filename>dir_1ff8083e31e2849e01f39dace2d8f642.html</filename>
+    <filename>dir_534a86d4a8a523e40dba2f6cd1811521.html</filename>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/core</name>
     <path>rmvl/core/</path>
-    <filename>dir_021e08c4c598f89101b0aa1de0100d4c.html</filename>
+    <filename>dir_569626e2623775c4b315b058ffdf7fd1.html</filename>
     <file>rmvldef.hpp</file>
     <file>str.hpp</file>
     <file>timer.hpp</file>
@@ -18683,12 +18696,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
-    <filename>dir_9c77f252bc2dea7aa2340c49f3ddd30c.html</filename>
+    <filename>dir_313831fb0971a0102fc34a9f18b1b871.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/decider</name>
     <path>rmvl/decider/</path>
-    <filename>dir_88f2670466b86d71a88ebd58d97f1a71.html</filename>
+    <filename>dir_99cae2823b81ddec0315950cb5bb6870.html</filename>
     <file>decider.h</file>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
@@ -18697,7 +18710,7 @@
   <compound kind="dir">
     <name>rmvlpara/decider</name>
     <path>rmvlpara/decider/</path>
-    <filename>dir_770dfdf8e90513f6bf55f0695bfb3603.html</filename>
+    <filename>dir_95301558a91d69b4536a2adea25af130.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
@@ -18705,24 +18718,25 @@
   <compound kind="dir">
     <name>rmvl/io/details</name>
     <path>rmvl/io/details/</path>
-    <filename>dir_157202709cbc4694d5907c5a05c8e98a.html</filename>
+    <filename>dir_6f78c87e3e2ceb6b479ed29227597b08.html</filename>
     <file>shm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss/details</name>
     <path>rmvl/lpss/details/</path>
-    <filename>dir_5007f63d103a5996924fd883732b56d6.html</filename>
+    <filename>dir_ca23c258a1c76f951e9da2fe98bc44d2.html</filename>
     <file>node_impl.hpp</file>
+    <file>node_rsd.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
-    <filename>dir_e7c88c51ab0687dfbc5937f04baf7c42.html</filename>
+    <filename>dir_d9c756e959361f33ed9638ae15658304.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/detector</name>
     <path>rmvl/detector/</path>
-    <filename>dir_1b12cb4dd092e360e17e906bcf9b5c0b.html</filename>
+    <filename>dir_5583ecb43e7cf22b2bbeeae47e33aabf.html</filename>
     <file>armor_detector.h</file>
     <file>detector.h</file>
     <file>gyro_detector.h</file>
@@ -18732,7 +18746,7 @@
   <compound kind="dir">
     <name>rmvlpara/detector</name>
     <path>rmvlpara/detector/</path>
-    <filename>dir_2f07ba103e00493a07ab46a502d692c8.html</filename>
+    <filename>dir_b8598dd91f2e19ccea15cd6ae3a714bc.html</filename>
     <file>armor_detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
@@ -18741,14 +18755,14 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
-    <filename>dir_e68e8157741866f444e17edd764ebbae.html</filename>
+    <filename>dir_63aeb613b811ed2eb9140a1126087187.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
-    <filename>dir_426a5ffbbb727b99f4225294c6466649.html</filename>
+    <filename>dir_8ce2022e601f7a489c46d4ebdc49aba7.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</dir>
@@ -18762,12 +18776,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
-    <filename>dir_08cb09a26daf7692ff65867d96a774b2.html</filename>
+    <filename>dir_281684d37e85ceee3c6d925f5cd2e690.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/feature</name>
     <path>rmvl/feature/</path>
-    <filename>dir_ce8ca8b69315f48cd283f789aa0dd056.html</filename>
+    <filename>dir_3ce520876fede39f67af7c3a8a3c0862.html</filename>
     <file>anchor.h</file>
     <file>feature.h</file>
     <file>light_blob.h</file>
@@ -18779,7 +18793,7 @@
   <compound kind="dir">
     <name>rmvlpara/feature</name>
     <path>rmvlpara/feature/</path>
-    <filename>dir_3e5cdcbad10e2274392f9bbc748768cf.html</filename>
+    <filename>dir_1c8a3e591ae66fc114bb81ccec1f535b.html</filename>
     <file>anchor.h</file>
     <file>light_blob.h</file>
     <file>pilot.h</file>
@@ -18789,7 +18803,7 @@
   <compound kind="dir">
     <name>rmvlmsg/geometry</name>
     <path>rmvlmsg/geometry/</path>
-    <filename>dir_24f8d8e0ab921bff01fcae06f7e49506.html</filename>
+    <filename>dir_16654e9243cb65bdf93bb5869ab9cc97.html</filename>
     <file>point.hpp</file>
     <file>point32.hpp</file>
     <file>polygon.hpp</file>
@@ -18803,12 +18817,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
-    <filename>dir_bdac78099532942366d2fabd1b27783f.html</filename>
+    <filename>dir_729098440371f0d4df427f6c7ff7dcf0.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/group</name>
     <path>rmvl/group/</path>
-    <filename>dir_993405bde1c40a0b0112bcd0fe9f1fde.html</filename>
+    <filename>dir_3e80edd7e209d4c78df4a504a463a87b.html</filename>
     <file>group.h</file>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
@@ -18816,14 +18830,14 @@
   <compound kind="dir">
     <name>rmvlpara/group</name>
     <path>rmvlpara/group/</path>
-    <filename>dir_f58d8d58cb13d39e9f4987da0b365be7.html</filename>
+    <filename>dir_087da8d79feadcd317f1eb22af008cfd.html</filename>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
-    <filename>dir_58c94e520695a9c6e49a2b567a210ce0.html</filename>
+    <filename>dir_aa22c37ac578673e90f287158c6a7019.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</dir>
@@ -18831,7 +18845,7 @@
   <compound kind="dir">
     <name>rmvl/io</name>
     <path>rmvl/io/</path>
-    <filename>dir_bc4d7e1d3f923a65e94f5ee75373b3de.html</filename>
+    <filename>dir_66f856895de826d01e5b96701d8b13b6.html</filename>
     <dir>rmvl/io/details</dir>
     <file>async.hpp</file>
     <file>ipc.hpp</file>
@@ -18843,7 +18857,7 @@
   <compound kind="dir">
     <name>rmvl/light</name>
     <path>rmvl/light/</path>
-    <filename>dir_fe3d19a7723048ccf658f16ac60a0a67.html</filename>
+    <filename>dir_be15d5cdc57a7070d3ae8f434633911a.html</filename>
     <file>hik_light_control.h</file>
     <file>lightutils.hpp</file>
     <file>opt_light_control.h</file>
@@ -18851,43 +18865,43 @@
   <compound kind="dir">
     <name>rmvlpara/light</name>
     <path>rmvlpara/light/</path>
-    <filename>dir_9d76333e2953167de3e2f20e7e642e19.html</filename>
+    <filename>dir_c3693fdd57a10ef1bc7620e54ce9498a.html</filename>
     <file>hik_light_control.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
-    <filename>dir_2b68a0c976a94001a3a52c1a9b6afce2.html</filename>
+    <filename>dir_fa2eec13076e9f96774fe6e21fa951d4.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss</name>
     <path>rmvl/lpss/</path>
-    <filename>dir_6dab983623edcfe7d7eb4c8db8a91100.html</filename>
+    <filename>dir_577d59d13decd0a00a9a3145f56c7b2f.html</filename>
     <dir>rmvl/lpss/details</dir>
-    <file>node_rsd.hpp</file>
+    <file>node.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
-    <filename>dir_c8c342af8d42b5d680657a324064f568.html</filename>
+    <filename>dir_3a31d66722521052f8304ab21c00ca17.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/ml</name>
     <path>rmvl/ml/</path>
-    <filename>dir_333d0aeefdeba1c53236985888de9470.html</filename>
+    <filename>dir_96aeefc62acd539b27e83661f3581d52.html</filename>
     <file>ort.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
-    <filename>dir_dd14b81ce98f0efb0c27d4605792b06c.html</filename>
+    <filename>dir_efca97ecc042efa865eaefd41f9be988.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
     <path>rmvl/opcua/</path>
-    <filename>dir_6f345ac53a1eefe67f1e600f9a522fd7.html</filename>
+    <filename>dir_fb7d5e5fa92dc084c164886a77a2be86.html</filename>
     <file>client.hpp</file>
     <file>event.hpp</file>
     <file>method.hpp</file>
@@ -18902,17 +18916,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
-    <filename>dir_eac206f591cba90314701160c24e8a17.html</filename>
+    <filename>dir_cb4ca42878937429832ea22c8d56fec0.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
-    <filename>dir_2d16c776959d732bcd5241749ddcece3.html</filename>
+    <filename>dir_40b99015e00a250f3754dffac633688b.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/predictor</name>
     <path>rmvl/predictor/</path>
-    <filename>dir_be25d590ea0c4f598694de88b9e8de05.html</filename>
+    <filename>dir_82d1e6ec8ec7cb629af3674341cdc95d.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>predictor.h</file>
@@ -18922,7 +18936,7 @@
   <compound kind="dir">
     <name>rmvlpara/predictor</name>
     <path>rmvlpara/predictor/</path>
-    <filename>dir_9cb561993a62f54b93c7cb98ed21d292.html</filename>
+    <filename>dir_b7e07b1f242d523e7d34928268d8c8e5.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>rune_predictor.h</file>
@@ -18931,142 +18945,148 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
-    <filename>dir_6c8551f4d7dc208509ae2df87f489cca.html</filename>
+    <filename>dir_d0f7e421e0997c0bf11dc5a06fb3c605.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
-    <filename>dir_e29f7b20dc4e91179ccf6c1e48f7ce8e.html</filename>
+    <filename>dir_5bafbfe2a1ced00a837924a7d9c23d39.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/</path>
-    <filename>dir_1b5159d8e824ca0372c222fccb8e8031.html</filename>
+    <filename>dir_1c6aa230f859dc3670992dca1c451e7a.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</dir>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_b84f0685042b53df8576d9a5df8737a7.html</filename>
+    <filename>dir_ff03e4bf742ea8099ec4cfcdac358710.html</filename>
     <dir>rmvl/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3cd5b91f19adc4085f4b4e39e4ff2f73.html</filename>
+    <filename>dir_bbdada461bd67ec39ad4c5a7e52c1704.html</filename>
     <dir>rmvl/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_7a867aa029234ffc6f7eed334080704b.html</filename>
+    <filename>dir_7674f2a10684fb8c82ccd4da2e5351d6.html</filename>
     <dir>rmvl/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_4b04c2e007ec9137cdcc6b07f15783dd.html</filename>
+    <filename>dir_f2e18b45b93189891b180df6464050f4.html</filename>
     <dir>rmvl/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_5ac3da02857772deca4fc3f808edbaf5.html</filename>
+    <filename>dir_f6e5f49e6ef35977bb5d7e75a68963cc.html</filename>
     <dir>rmvl/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3369679d0342e0144be24fe8bcb77137.html</filename>
+    <filename>dir_774c12e4d1f477ca15af185e62a1572e.html</filename>
     <dir>rmvl/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_6eee36bbafba159c1f307a96cde9296f.html</filename>
+    <filename>dir_90f3991ba10c058a285f03a6035e2a3c.html</filename>
     <dir>rmvl/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_05fa650a38f3f5a08a2422c6dda771be.html</filename>
+    <filename>dir_3354db72e67a6a30846355467a09f36b.html</filename>
     <dir>rmvl/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_809e963fb58aef5dff5228943502dc0e.html</filename>
+    <filename>dir_71bf6823197d27734da63e942b8d187c.html</filename>
     <file>types.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_143430c183a215e00fc5688a6b00f801.html</filename>
+    <filename>dir_0b91645aa8def3c8ac2250a6a7e35f1a.html</filename>
     <dir>rmvl/algorithm</dir>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_0004eea47629e797f98a68d373747388.html</filename>
+    <filename>dir_461ed81535f9510a759df52724b26998.html</filename>
     <dir>rmvl/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_8ce2230b18c62fc4f1b2d4c11ea01049.html</filename>
+    <filename>dir_efd1512632de5fdeabf2ca758db8fb4d.html</filename>
     <dir>rmvl/core</dir>
     <file>core.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_e7d32574a6c4fcfa257018e66cd9435e.html</filename>
+    <filename>dir_127904d2b519627d1987d4f85dc3e9ed.html</filename>
     <dir>rmvl/io</dir>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_4273a60eceee48416df95d84f85905d9.html</filename>
+    <filename>dir_5d2c5c18c4107ce6371e97cb9b4863fc.html</filename>
     <dir>rmvl/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_056965ee29af610b58b6eed68da89d07.html</filename>
+    <filename>dir_2409041128f30c7e632a1d2686a5a378.html</filename>
     <dir>rmvl/lpss</dir>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_b5c1b52e49bdab802b985f422853f0cc.html</filename>
+    <filename>dir_87735ccda0193a5376fd86df094b9d06.html</filename>
     <dir>rmvl/ml</dir>
     <file>ml.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_d1896504bf09fddf262d44ed95e52f7a.html</filename>
+    <filename>dir_99c4a071f9876207aeb2ccd26e68c4dd.html</filename>
     <dir>rmvl/opcua</dir>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
+    <name>/home/zhaoxi/.rmvltmp/rmvl</name>
+    <path>/home/zhaoxi/.rmvltmp/rmvl/</path>
+    <filename>dir_d892ad31c88a7738f8012346252ba931.html</filename>
+    <dir>/home/zhaoxi/.rmvltmp/rmvl/build</dir>
+  </compound>
+  <compound kind="dir">
     <name>rmvlmsg</name>
     <path>rmvlmsg/</path>
-    <filename>dir_4d50aa784517d57a06ecfff1c8a1efd8.html</filename>
+    <filename>dir_584b56ed427fc12411d4172925c74074.html</filename>
     <dir>rmvlmsg/geometry</dir>
     <dir>rmvlmsg/sensor</dir>
     <dir>rmvlmsg/std</dir>
@@ -19074,101 +19094,101 @@
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_58222088a8cee0a471f253eac143ba17.html</filename>
+    <filename>dir_bd0853e39d9979da024d4a6722daad0b.html</filename>
     <dir>rmvlpara/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_f0e88a7a5cb5aab28614e8930b567bd3.html</filename>
+    <filename>dir_71f52d487cf2933c7e27d03587dcdf91.html</filename>
     <dir>rmvlpara/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_4d60ae5981f7ce87b742481e65bfd802.html</filename>
+    <filename>dir_4486d76bf6cc85e9bb825e727d134df0.html</filename>
     <dir>rmvlpara/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_45e97b84317156a5954d30eced95ddb6.html</filename>
+    <filename>dir_68f8e3f54c502890141b94aecfd7f2ec.html</filename>
     <dir>rmvlpara/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_36b455a1b0f3273f108b36652d153a8a.html</filename>
+    <filename>dir_d0e91ac94a1f2c6911aff14c70246c72.html</filename>
     <dir>rmvlpara/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_2ea0c873adea199cd62f1107c61b502b.html</filename>
+    <filename>dir_b5dc5d48234085622b23760ad1bbf09c.html</filename>
     <dir>rmvlpara/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_b7145cfe89c878932d64aa281be9ef49.html</filename>
+    <filename>dir_78b1583f1b463aa7a8e22968a1705c35.html</filename>
     <dir>rmvlpara/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_56f1c6dcc74dc20460c2b77be5c46794.html</filename>
+    <filename>dir_6c997901f901bc002c0fa812b622e527.html</filename>
     <dir>rmvlpara/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_d0dd8f3c1ff56d88a0ca94359a28aa0a.html</filename>
+    <filename>dir_8a57e973e059eabb9cda737bc07949f4.html</filename>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_1a6308d51d814586b9985a0758773f42.html</filename>
+    <filename>dir_7df43d62cd237bbfe6c772bfcd92ab52.html</filename>
     <dir>rmvlpara/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_c83cd2ae801cf5a6eebca515f7297a6e.html</filename>
+    <filename>dir_13bc97c3e9aa29cb4dff0af470d22055.html</filename>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_0d09ee667c2a9666a31dfa29c1285dbd.html</filename>
+    <filename>dir_67d781d51c42d4a8c0b1389395433309.html</filename>
     <dir>rmvlpara/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_54dc165de3f051bd04cea3d4dc4160e9.html</filename>
+    <filename>dir_01990b82e018726217bbdfc12151d26a.html</filename>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_0881cfd4956fe17faae321d2c65bc1f4.html</filename>
+    <filename>dir_51d997721f514119dc3de95d480ef505.html</filename>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/sensor</name>
     <path>rmvlmsg/sensor/</path>
-    <filename>dir_f09e4dbe1c52ab070e0d16b057d7c7ea.html</filename>
+    <filename>dir_7d10cd3360dad54eb56db20dff9f921b.html</filename>
     <file>camera_info.hpp</file>
     <file>image.hpp</file>
     <file>imu.hpp</file>
@@ -19178,7 +19198,7 @@
   <compound kind="dir">
     <name>rmvlmsg/std</name>
     <path>rmvlmsg/std/</path>
-    <filename>dir_567b0f3791db27fa1ff59d607208e840.html</filename>
+    <filename>dir_355971bc52002f4e58fade7fdd0e1fd4.html</filename>
     <file>bool.hpp</file>
     <file>char.hpp</file>
     <file>color_rgba.hpp</file>
@@ -19198,17 +19218,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
-    <filename>dir_475f633f804384ebfc31fbf8bd129454.html</filename>
+    <filename>dir_37d8d1d8fd20c6853ee9a8117ea58f32.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
-    <filename>dir_6b8d1066f9f8a1d0ae64c8dcf96bf1e3.html</filename>
+    <filename>dir_a9f58f6f91a5dabd2195d8cc1f02f871.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/tracker</name>
     <path>rmvl/tracker/</path>
-    <filename>dir_9c45eb0c4acec6c44430f61dff0bf5e7.html</filename>
+    <filename>dir_4ca38ea3da80f7d4b36b0beb918106f8.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19217,7 +19237,7 @@
   <compound kind="dir">
     <name>rmvlpara/tracker</name>
     <path>rmvlpara/tracker/</path>
-    <filename>dir_6b0b4bc53031f88182b1020c744899c6.html</filename>
+    <filename>dir_d301de7fcf533dbc68142aa95cf635fe.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19225,7 +19245,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
-    <filename>dir_5b0b179e83013be2ae877b5cea1eb6e2.html</filename>
+    <filename>dir_26c5c64eeef8370ce1acbf07045fbc29.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</dir>
@@ -19233,7 +19253,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
-    <filename>dir_4ef7a8655673da93818ea708ee8785e2.html</filename>
+    <filename>dir_a318c6cfe6210b0cec382b58a20f9e91.html</filename>
   </compound>
   <compound kind="page">
     <name>index</name>

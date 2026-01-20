@@ -7,12 +7,14 @@ var searchData=
   ['find_4',['find',['../dd/d62/classrm_1_1OpcuaClientView.html#a571252596776f8c9362c816d63361092',1,'rm::OpcuaClientView::find()'],['../da/d69/classrm_1_1OpcuaClient.html#ab400c84d98743701c2af49f5d40e8430',1,'rm::OpcuaClient::find()'],['../db/d04/classrm_1_1OpcuaServerView.html#a176d065b58f5de275c6672e1366ae3ca',1,'rm::OpcuaServerView::find()'],['../d2/df6/classrm_1_1OpcuaServer.html#ad8fd91e653b99dc0bd8cec7cf8223193',1,'rm::OpcuaServer::find()']]],
   ['findbyaddress_5',['findByAddress',['../db/d69/classrm_1_1NetworkInterface.html#aaf169a30b546e1f5f1c0f31db9e84eef',1,'rm::NetworkInterface']]],
   ['findbyname_6',['findByName',['../db/d69/classrm_1_1NetworkInterface.html#a11dcdfc98698338a501cf75be4d3dadb',1,'rm::NetworkInterface']]],
-  ['flag_7',['flag',['../db/d69/classrm_1_1NetworkInterface.html#aaf95c41b6c640f79729022de46823761',1,'rm::NetworkInterface']]],
-  ['fminbnd_8',['fminbnd',['../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee',1,'rm']]],
-  ['fmincon_9',['fmincon',['../d2/d62/group__algorithm__optimal.html#ga59ea1658679b6b7067111f3aee854f59',1,'rm']]],
-  ['fminunc_10',['fminunc',['../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef',1,'rm']]],
-  ['for_5feach_11',['for_each',['../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
-  ['format_12',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
-  ['from_5fstring_13',['from_string',['../d0/d1a/classrm_1_1Anchor.html#ae02ab582d1c87e50481e74fc4060f728',1,'rm::Anchor']]],
-  ['front_14',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]]
+  ['findcall_7',['findcall',['../da/d69/classrm_1_1OpcuaClient.html#acbd92831fce6552fca096ae47da7dd65',1,'rm::OpcuaClient']]],
+  ['findcallx_8',['findcallx',['../da/d69/classrm_1_1OpcuaClient.html#a5d263eadcd9bb8a1f0bf4ea7e54ea7e5',1,'rm::OpcuaClient']]],
+  ['flag_9',['flag',['../db/d69/classrm_1_1NetworkInterface.html#aaf95c41b6c640f79729022de46823761',1,'rm::NetworkInterface']]],
+  ['fminbnd_10',['fminbnd',['../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee',1,'rm']]],
+  ['fmincon_11',['fmincon',['../d2/d62/group__algorithm__optimal.html#ga59ea1658679b6b7067111f3aee854f59',1,'rm']]],
+  ['fminunc_12',['fminunc',['../d2/d62/group__algorithm__optimal.html#ga4a7d105f2c4e5236f0ab9963d7e0cfef',1,'rm']]],
+  ['for_5feach_13',['for_each',['../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290',1,'rm::reflect']]],
+  ['format_14',['format',['../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc',1,'rm']]],
+  ['from_5fstring_15',['from_string',['../d0/d1a/classrm_1_1Anchor.html#ae02ab582d1c87e50481e74fc4060f728',1,'rm::Anchor']]],
+  ['front_16',['front',['../d6/dd2/classrm_1_1tracker.html#ac8ee87007b3562fb041d1e9a37bbafa3',1,'rm::tracker']]]
 ];
