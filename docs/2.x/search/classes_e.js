@@ -13,6 +13,7 @@ var searchData=
   ['opcuaserverview_10',['OpcuaServerView',['../db/d04/classrm_1_1OpcuaServerView.html',1,'rm']]],
   ['opcuasubscriber_11',['OpcuaSubscriber',['../d1/d04/classrm_1_1OpcuaSubscriber.html',1,'rm']]],
   ['optcamera_12',['OptCamera',['../d1/d9c/classrm_1_1OptCamera.html',1,'rm']]],
-  ['optimaloptions_13',['OptimalOptions',['../d3/dd3/structrm_1_1OptimalOptions.html',1,'rm']]],
-  ['optlightcontroller_14',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html',1,'rm']]]
+  ['optcameraparam_13',['OptCameraParam',['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html',1,'rm::para']]],
+  ['optimaloptions_14',['OptimalOptions',['../d3/dd3/structrm_1_1OptimalOptions.html',1,'rm']]],
+  ['optlightcontroller_15',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html',1,'rm']]]
 ];

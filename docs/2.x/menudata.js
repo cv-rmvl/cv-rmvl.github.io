@@ -103,16 +103,7 @@ var menudata={children:[
 {text:"s",url:"namespacemembers_type.html#index_s"},
 {text:"v",url:"namespacemembers_type.html#index_v"}]},
 {text:"枚举",url:"namespacemembers_enum.html"},
-{text:"枚举值",url:"namespacemembers_eval.html",children:[
-{text:"a",url:"namespacemembers_eval.html#index_a"},
-{text:"b",url:"namespacemembers_eval.html#index_b"},
-{text:"c",url:"namespacemembers_eval.html#index_c"},
-{text:"d",url:"namespacemembers_eval.html#index_d"},
-{text:"g",url:"namespacemembers_eval.html#index_g"},
-{text:"p",url:"namespacemembers_eval.html#index_p"},
-{text:"r",url:"namespacemembers_eval.html#index_r"},
-{text:"v",url:"namespacemembers_eval.html#index_v"},
-{text:"y",url:"namespacemembers_eval.html#index_y"}]}]}]},
+{text:"枚举值",url:"namespacemembers_eval.html"}]}]},
 {text:"概念",url:"concepts.html"},
 {text:"类",url:"annotated.html",children:[
 {text:"类列表",url:"annotated.html"},

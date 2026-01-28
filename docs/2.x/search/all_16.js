@@ -10,7 +10,7 @@ var searchData=
   ['newton_20插值多项式_7',['2 Newton 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md187',1,'']]],
   ['newton_20迭代的简化_8',['3 Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md183',1,'']]],
   ['newton_20迭代_9',['Newton 迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md206',1,'1 Gauss-Newton 迭代'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md182',1,'2 Newton 迭代']]],
-  ['node_10',['Node',['../d2/da8/classrm_1_1lpss_1_1Node.html',1,'rm::lpss::Node'],['../d2/da8/classrm_1_1lpss_1_1Node.html#a07b13466e5916f9c19241a6368f99ef1',1,'rm::lpss::Node::Node()']]],
+  ['node_10',['Node',['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html',1,'rm::lpss::async::Node'],['../d2/da8/classrm_1_1lpss_1_1Node.html',1,'rm::lpss::Node'],['../d2/da8/classrm_1_1lpss_1_1Node.html#a07b13466e5916f9c19241a6368f99ef1',1,'rm::lpss::Node::Node()'],['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#aa9215ac625dd32deee2d92847c51cc8d',1,'rm::lpss::async::Node::Node()']]],
   ['node_11',['node',['../dd/d62/classrm_1_1OpcuaClientView.html#acf9d388c1c64162f6933dda522856d01',1,'rm::OpcuaClientView::node()'],['../da/d69/classrm_1_1OpcuaClient.html#a3378175819e56bd7bae04ad16ab3ba36',1,'rm::OpcuaClient::node()'],['../db/d04/classrm_1_1OpcuaServerView.html#a1939fdeeb15b8b61726cf1349bd50ee9',1,'rm::OpcuaServerView::node()'],['../d2/df6/classrm_1_1OpcuaServer.html#a7baa2c706d630c6ff7aabb2b0475d2da',1,'rm::OpcuaServer::node()']]],
   ['node_5fid_12',['node_id',['../d6/d4a/structrm_1_1PublishedDataSet.html#ad58c956b9694d028edadec45201a6e62',1,'rm::PublishedDataSet']]],
   ['nodebasedatavariabletype_13',['nodeBaseDataVariableType',['../d3/da8/group__opcua.html#ga0230dc0fe786dc983979d2eec0dad230',1,'rm']]],

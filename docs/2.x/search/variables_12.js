@@ -2,7 +2,7 @@ var searchData=
 [
   ['r_0',['R',['../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#a86abc56aa7577b4a24046a149e1a1c8c',1,'rm::KalmanFilterStaticDatas']]],
   ['r_1',['r',['../d8/da1/classrm_1_1msg_1_1ColorRGBA.html#a16da575a863aabda47f5c84454bfc482',1,'rm::msg::ColorRGBA']]],
-  ['r_5fgain_2',['r_gain',['../d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html#a45cd01528153faef2d0fce94dcad3ea0',1,'rm::para::GalaxyCameraParam::r_gain'],['../de/d4f/classrm_1_1para_1_1HikCameraParam.html#a6788e5ede5461a1b594023fd972ffcdd',1,'rm::para::HikCameraParam::r_gain'],['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a59cc8626854f9c0ad04a926bac322fcb',1,'rm::para::MvCameraParam::r_gain']]],
+  ['r_5fgain_2',['r_gain',['../d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html#a45cd01528153faef2d0fce94dcad3ea0',1,'rm::para::GalaxyCameraParam::r_gain'],['../de/d4f/classrm_1_1para_1_1HikCameraParam.html#a6788e5ede5461a1b594023fd972ffcdd',1,'rm::para::HikCameraParam::r_gain'],['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a59cc8626854f9c0ad04a926bac322fcb',1,'rm::para::MvCameraParam::r_gain'],['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#ac53e377508ed84f7a2b1e3a682f434f7',1,'rm::para::OptCameraParam::r_gain']]],
   ['ratio_5fthreshold_3',['RATIO_THRESHOLD',['../d1/d7d/classrm_1_1para_1_1LightBlobParam.html#afa78d40cc7c0d9881689ade18b5ddbad',1,'rm::para::LightBlobParam']]],
   ['raw_5fdatas_5fsize_4',['RAW_DATAS_SIZE',['../d3/dde/classrm_1_1para_1_1RuneGroupParam.html#a4c95d8549d5c952ea82bba3cfbd72bcc',1,'rm::para::RuneGroupParam']]],
   ['rendergraph_5',['rendergraph',['../df/dae/structrm_1_1DetectInfo.html#a1b8c880a362b968307d679d5fbb7d0f7',1,'rm::DetectInfo']]],

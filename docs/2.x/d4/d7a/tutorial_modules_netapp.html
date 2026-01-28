@@ -118,13 +118,13 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md304">1 HTTP 数据结构 </a>
+        <a href="#autotoc_md307">1 HTTP 数据结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md305">2 HTTP 请求工具 </a>
+        <a href="#autotoc_md308">2 HTTP 请求工具 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md306">3 Web 后端框架 </a>
+        <a href="#autotoc_md309">3 Web 后端框架 </a>
       </li>
     </ul>
   </li>
@@ -143,7 +143,7 @@ $(function() {
 <li>请求工具： <a class="el" href="../../d6/dd4/group__io__net.html#gad1972828ae5dd6f98672664365f84c0e" title="发出同步 HTTP 请求">rm::requests::request</a> 及 <a class="el" href="../../d6/dd4/group__io__net.html#ga3c46835427121ff22a497b03ae5529ac" title="发出异步 HTTP 请求">rm::async::requests::request</a></li>
 <li>后端框架： <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md304"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md307"></a>
 1 HTTP 数据结构</h2>
 <p>相关类： <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 及 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></p>
 <p>两个类均提供了</p>
@@ -152,7 +152,7 @@ $(function() {
 <li><span class="tt">parse</span> 静态成员函数，用于从 HTTP 格式的字符串解析出请求/响应结构，在接收到 Socket 原始数据后可调用此方法进行解析</li>
 </ul>
 <p><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a> 还提供了多种简化生成响应的成员函数，如 <span class="tt">send</span>、<span class="tt">json</span>、<span class="tt">redirect</span> 等。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md305"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
 2 HTTP 请求工具</h2>
 <p>相关函数：</p>
 <ul>
@@ -174,7 +174,7 @@ $(function() {
 <div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:278</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <span class="tt">requests</span> 替换为 <span class="tt">async::requests</span>，并在协程中使用 <span class="tt">co_await</span> 关键字等待结果，这里不再赘述。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md306"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
 3 Web 后端框架</h2>
 <p>RMVL 提供了 HTTP 的后端应用框架 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 。这是 <a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> 的集大成者，设计理念参考 JavaScript 的 Express 框架，这里给出一个简单的 Web 服务器示例：</p>
 <div class="fragment"><div class="line"><span class="comment">// demo.cpp</span></div>

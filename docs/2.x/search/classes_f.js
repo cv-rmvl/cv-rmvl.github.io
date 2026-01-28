@@ -19,5 +19,5 @@ var searchData=
   ['promise_3c_20void_20_3e_16',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
   ['protocol_17',['Protocol',['../d9/dc1/structrm_1_1ip_1_1Protocol.html',1,'rm::ip']]],
   ['publisheddataset_18',['PublishedDataSet',['../d6/d4a/structrm_1_1PublishedDataSet.html',1,'rm']]],
-  ['publisher_19',['Publisher',['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss']]]
+  ['publisher_19',['Publisher',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; MsgType &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; MsgType &gt;']]]
 ];

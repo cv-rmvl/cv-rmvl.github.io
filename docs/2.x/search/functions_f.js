@@ -21,6 +21,6 @@ var searchData=
   ['printenvinfo_18',['printEnvInfo',['../dc/d1c/classrm_1_1OnnxNet.html#a599174e651ad53759b0547916f45d010',1,'rm::OnnxNet']]],
   ['printmodelinfo_19',['printModelInfo',['../dc/d1c/classrm_1_1OnnxNet.html#a8cf157759b92a6eed2a8675aec1aa1bd',1,'rm::OnnxNet']]],
   ['processid_20',['processId',['../d0/de1/group__core.html#gafbe1fc1291dcca5f41435f775d12e320',1,'rm']]],
-  ['publish_21',['publish',['../d8/dff/classrm_1_1lpss_1_1Publisher.html#a05060ac1764a53ce9b3b01f56d2796a2',1,'rm::lpss::Publisher::publish()'],['../d5/d42/classrm_1_1OpcuaPublisher.html#a589f2dc0f953adde53b3552c76b34f5a',1,'rm::OpcuaPublisher::publish()']]],
+  ['publish_21',['publish',['../d8/dff/classrm_1_1lpss_1_1Publisher.html#a05060ac1764a53ce9b3b01f56d2796a2',1,'rm::lpss::Publisher::publish()'],['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html#a34fb2d824b791166707912d049148744',1,'rm::lpss::async::Publisher::publish()'],['../d5/d42/classrm_1_1OpcuaPublisher.html#a589f2dc0f953adde53b3552c76b34f5a',1,'rm::OpcuaPublisher::publish()']]],
   ['push_22',['push',['../db/d45/classrm_1_1RaHeap.html#ae15c5b60ca561b3a16c88e4cc948717b',1,'rm::RaHeap::push(const Tp &amp;x)'],['../db/d45/classrm_1_1RaHeap.html#ab7a859cc7c7af30ac73740cfd9ebc440',1,'rm::RaHeap::push(Tp &amp;&amp;x)']]]
 ];

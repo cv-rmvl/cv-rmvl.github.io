@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['patch_0',['Patch',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca156e10596fdc76ee5300bab931d89c0f',1,'rm']]],
-  ['phase_1',['Phase',['../db/d2e/group__algorithm__dsp.html#gga5ef1c945a3703c668c716698ec5da488a5e35d7fff7b903516cba242ff68fc6d3',1,'rm']]],
-  ['pitch_2',['PITCH',['../db/d29/group__predictor.html#gga2b0e6c03b95a421669eb858ff0aa5f0faf3f3b5497eb80da2d676c0836327373d',1,'rm']]],
-  ['pos_5fx_3',['POS_X',['../db/d29/group__predictor.html#gga2b0e6c03b95a421669eb858ff0aa5f0fa70102e19f9e41c79442d4e6cd70ae139',1,'rm']]],
-  ['pos_5fy_4',['POS_Y',['../db/d29/group__predictor.html#gga2b0e6c03b95a421669eb858ff0aa5f0fa02d5bfc7d75353cd65c573442ba5f2eb',1,'rm']]],
-  ['pos_5fz_5',['POS_Z',['../db/d29/group__predictor.html#gga2b0e6c03b95a421669eb858ff0aa5f0fa7b462cfa221e1ea1dc40c95b42853da2',1,'rm']]],
-  ['post_6',['Post',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9',1,'rm']]],
-  ['power_7',['Power',['../db/d2e/group__algorithm__dsp.html#gga5ef1c945a3703c668c716698ec5da488add4fe0cc913f704600b97d1f5dd285de',1,'rm']]],
-  ['ppp_8',['PPP',['../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aab55e74d4007b674b329d70f5550028ba',1,'rm']]],
-  ['put_9',['Put',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcad0bf1810982e9728fcf3ac444a015373',1,'rm']]]
+  ['once_5fexposure_0',['once_exposure',['../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7',1,'rm']]],
+  ['once_5fwb_1',['once_wb',['../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643',1,'rm']]],
+  ['opencv_2',['OpenCV',['../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9',1,'rm']]],
+  ['openvino_3',['OpenVINO',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f',1,'rm']]],
+  ['options_4',['Options',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8',1,'rm']]],
+  ['other_5',['Other',['../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387',1,'rm']]],
+  ['outpost_6',['OUTPOST',['../db/d22/group__combo__armor.html#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331',1,'rm']]]
 ];

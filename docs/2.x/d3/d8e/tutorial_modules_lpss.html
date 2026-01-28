@@ -146,7 +146,7 @@ $(function() {
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md294">2 使用示例 </a>
+    <a href="#autotoc_md294">2 同步模式使用示例 </a>
     <ul>
       <li class="level2">
         <a href="#autotoc_md295">2.1 创建简单的发布者与订阅者 </a>
@@ -159,19 +159,30 @@ $(function() {
           </li>
         </ul>
       </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md298">3 异步模式使用示例 </a>
+    <ul>
       <li class="level2">
-        <a href="#autotoc_md298">2.2 创建自定义消息类型的发布者与订阅者 </a>
-        <ul>
-          <li class="level3">
-            <a href="#autotoc_md299">2.2.1 创建项目结构 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md300">2.2.2 文件内容 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md301">2.2.3 构建与运行 </a>
-          </li>
-        </ul>
+        <a href="#autotoc_md299">3.1 异步发布者示例 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md300">3.2 异步订阅者示例 </a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md301">4 创建自定义消息类型 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md302">4.1 创建项目结构 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md303">4.2 文件内容 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md304">4.3 构建与运行 </a>
       </li>
     </ul>
   </li>
@@ -261,7 +272,7 @@ $(function() {
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">0 byte</th><th class="markdownTableHeadCenter">1 byte</th><th class="markdownTableHeadCenter">2 byte</th><th class="markdownTableHeadCenter">3 byte</th><th class="markdownTableHeadCenter">4 byte</th><th class="markdownTableHeadCenter">5 byte</th><th class="markdownTableHeadCenter">6 byte</th><th class="markdownTableHeadCenter">7 byte</th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>'R'</code></td><td class="markdownTableBodyCenter"><code>'E'</code></td><td class="markdownTableBodyCenter"><code>'D'</code></td><td class="markdownTableBodyCenter"><code>'P'</code></td><td class="markdownTableBodyCenter" colspan="4">GUID MAC</td></tr>
+<td class="markdownTableBodyCenter"><code>'E'</code></td><td class="markdownTableBodyCenter"><code>'D'</code></td><td class="markdownTableBodyCenter"><code>'0'</code></td><td class="markdownTableBodyCenter"><code>'1'</code></td><td class="markdownTableBodyCenter" colspan="4">GUID MAC</td></tr>
 <tr class="markdownTableRowEven">
 <th class="markdownTableHeadCenter">8 byte</th><th class="markdownTableHeadCenter">9 byte</th><th class="markdownTableHeadCenter">10 byte</th><th class="markdownTableHeadCenter">11 byte</th><th class="markdownTableHeadCenter">12 byte</th><th class="markdownTableHeadCenter">13 byte</th><th class="markdownTableHeadCenter">14 byte</th><th class="markdownTableHeadCenter">15 byte</th></tr>
 <tr class="markdownTableRowOdd">
@@ -288,7 +299,7 @@ $(function() {
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">0 byte</th><th class="markdownTableHeadCenter">1 byte</th><th class="markdownTableHeadCenter">2 byte</th><th class="markdownTableHeadCenter">3 byte</th><th class="markdownTableHeadCenter">4 byte</th><th class="markdownTableHeadCenter">5 byte</th><th class="markdownTableHeadCenter">...</th><th class="markdownTableHeadCenter">4+M byte</th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter"><code>'R'</code></td><td class="markdownTableBodyCenter"><code>'M'</code></td><td class="markdownTableBodyCenter"><code>'T'</code></td><td class="markdownTableBodyCenter"><code>'P'</code></td><td class="markdownTableBodyCenter">TopicSize</td><td class="markdownTableBodyCenter" colspan="3">Topic</td></tr>
+<td class="markdownTableBodyCenter"><code>'M'</code></td><td class="markdownTableBodyCenter"><code>'T'</code></td><td class="markdownTableBodyCenter"><code>'0'</code></td><td class="markdownTableBodyCenter"><code>'1'</code></td><td class="markdownTableBodyCenter">TopicSize</td><td class="markdownTableBodyCenter" colspan="3">Topic</td></tr>
 <tr class="markdownTableRowEven">
 <th class="markdownTableHeadCenter">5+M byte</th><th class="markdownTableHeadCenter">6+M byte</th><th class="markdownTableHeadCenter">...</th><th class="markdownTableHeadCenter">5+M+N byte</th><th class="markdownTableHeadCenter">...</th></tr>
 <tr class="markdownTableRowOdd">
@@ -299,18 +310,17 @@ $(function() {
 <p>MTP 标准使用二进制直接序列化 / 反序列化的方式，不区分端序（这会降低一部分兼容性，但在主流架构以及 OS 上均一致），因此数据在发布者与订阅者之间的传输效率非常高。此外 RMVL 提供了消息类型的自动代码生成工具，用户可以通过定义消息类型的 <span class="tt">*.msg</span> 文件，使用 RMVL 提供的代码生成工具生成对应的 C++ 代码文件，从而简化消息类型的创建过程。</p>
 <p>RMVL 内置了一些常用的消息类型，用户可以直接使用这些消息类型，而无需自行定义和生成代码。同时，RMVL 提供了 <span class="tt">rmvl_generate_msg</span> 的 CMake 函数，可以辅助用户完成自定义消息类型的代码生成过程，详情可参考 <a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html">消息模块使用教程</a> 。</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md294"></a>
-2 使用示例</h1>
-<p>LPSS 提供了简单易用的发布者与订阅者接口，用户可以方便地创建发布者与订阅者，实现节点间的数据通信。以下示例展示了如何使用 LPSS 创建发布者与订阅者。</p>
+2 同步模式使用示例</h1>
+<p>LPSS 提供了简单易用的发布者与订阅者接口，用户可以方便地创建发布者与订阅者，实现节点间的数据通信。每个节点内部维护了众多线程，以下示例展示了如何使用 LPSS 创建发布者与订阅者。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md295"></a>
 2.1 创建简单的发布者与订阅者</h2>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md296"></a>
 2.1.1 发布者示例</h3>
-<p><b>示例 1</b></p>
 <p>下面的示例展示了如何创建一个发布者，该发布者每隔 100 毫秒发布一次包含递增计数值的字符串消息。</p>
 <div class="fragment"><div class="line"><span class="comment">// RMVL 内置的第三方 fmt 库，用于格式化字符串，不需要 fmt 库的不用包含该头文件</span></div>
 <div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
-<div class="line"><span class="comment">// LPSS 完整功能的头文件</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="comment">// LPSS 节点功能的头文件</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
 <div class="line"><span class="comment">// 内置的 std 分组的 String 消息类型头文件</span></div>
 <div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -319,7 +329,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <span class="comment">// 创建 LPSS 节点</span></div>
-<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>(<span class="stringliteral">&quot;pub_node&quot;</span>);</div>
 <div class="line">    <span class="comment">// 创建发布者，发布 String 类型的消息到 /topic 话题</span></div>
 <div class="line">    <span class="keyword">auto</span> publisher = nd.createPublisher&lt;<a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>&gt;(<span class="stringliteral">&quot;/topic&quot;</span>);</div>
 <div class="line"> </div>
@@ -338,65 +348,15 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:104</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:111</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1String_html"><div class="ttname"><a href="../../d3/db4/classrm_1_1msg_1_1String.html">rm::msg::String</a></div><div class="ttdoc">String 消息类型：std/String</div><div class="ttdef"><b>定义</b> string.hpp:26</div></div>
 <div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> point.hpp:20</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
-</div><!-- fragment --><p><b>示例 2</b></p>
-<p>下面的示例展示了如何创建一个发布者类，该类每隔 10 毫秒发布一次颜色消息。</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
-<div class="line"><span class="comment">// 内置的 std 分组的 ColorRGBA 消息类型头文件</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/color_rgba.hpp&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
-<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// 自定义的发布者类，继承自 lpss::Node</span></div>
-<div class="line"><span class="keyword">class </span>MyPublisher : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a> {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyPublisher() : Node() {</div>
-<div class="line">        <span class="comment">// 在构造函数中创建发布者，发布 ColorRGBA 类型的消息到 /color 话题</span></div>
-<div class="line">        _pub = this-&gt;createPublisher&lt;msg::ColorRGBA&gt;(<span class="stringliteral">&quot;/color&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">    </div>
-<div class="line">    <span class="keywordtype">void</span> publish(<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a) {</div>
-<div class="line">        <span class="comment">// 设置消息内容</span></div>
-<div class="line">        _msg.r = r;</div>
-<div class="line">        _msg.g = g;</div>
-<div class="line">        _msg.b = b;</div>
-<div class="line">        _msg.a = a;</div>
-<div class="line">        <span class="comment">// 或者直接使用下面的聚合初始化方式进行设置</span></div>
-<div class="line">        <span class="comment">// _msg = {r, g, b, a};</span></div>
-<div class="line">        <span class="comment">// 发布消息</span></div>
-<div class="line">        _pub.publish(_msg);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <span class="comment">// 持有的实际发布者对象</span></div>
-<div class="line">    <a class="code hl_class" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">lpss::Publisher&lt;msg::ColorRGBA&gt;</a> _pub{};</div>
-<div class="line">    <span class="comment">// 消息对象</span></div>
-<div class="line">    <a class="code hl_class" href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">msg::ColorRGBA</a> _msg{};</div>
-<div class="line">};</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="comment">// 创建自定义的发布者</span></div>
-<div class="line">    <span class="keyword">auto</span> publisher = MyPublisher{};</div>
-<div class="line"> </div>
-<div class="line">    uint16_t count{};</div>
-<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line">        std::this_thread::sleep_for(10ms);</div>
-<div class="line">        publisher.publish(1.0f, 0.0f, 0.0f, 1.0f);</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1Publisher_html"><div class="ttname"><a href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">rm::lpss::Publisher</a></div><div class="ttdoc">发布者代理</div><div class="ttdef"><b>定义</b> node.hpp:36</div></div>
-<div class="ttc" id="aclassrm_1_1msg_1_1ColorRGBA_html"><div class="ttname"><a href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">rm::msg::ColorRGBA</a></div><div class="ttdoc">ColorRGBA 消息类型：std/ColorRGBA</div><div class="ttdef"><b>定义</b> color_rgba.hpp:26</div></div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md297"></a>
 2.1.2 订阅者示例</h3>
-<p><b>示例 1</b></p>
 <p>下面展示了如何创建一个订阅者，该订阅者订阅 <span class="tt">/topic</span> 话题的字符串消息，并在收到消息时打印消息内容。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
@@ -404,7 +364,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <span class="comment">// 创建 LPSS 节点</span></div>
-<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
+<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>(<span class="stringliteral">&quot;sub_node&quot;</span>);</div>
 <div class="line">    <span class="comment">// 创建订阅者，订阅 /topic 话题的 String 类型的消息</span></div>
 <div class="line">    <span class="keyword">auto</span> subscriber = nd.createSubscriber&lt;<a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>&gt;(</div>
 <div class="line">        <span class="stringliteral">&quot;/topic&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a> &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
@@ -417,56 +377,93 @@ $(function() {
 <div class="line">        std::this_thread::sleep_for(1s);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><b>示例 2</b></p>
-<p>下面展示了如何创建一个订阅者类，该类订阅 <span class="tt">/color</span> 话题的颜色消息，并在收到消息时打印颜色值。</p>
+</div><!-- fragment --><dl class="section warning"><dt>警告</dt><dd>订阅者的回调函数是在 LPSS 内部的线程中执行的，如果用户定义了多个订阅者，这些订阅者的回调函数可能会在不同的线程中并发执行。因此，用户在编写回调函数时<u><em><b>需要注意线程安全问题</b></em></u>，避免在回调函数中使用非线程安全的资源，或者使用适当的同步机制来保护共享资源，如果想避免这一问题，可以考虑使用下文异步模式的发布订阅服务。</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md298"></a>
+3 异步模式使用示例</h1>
+<p>LPSS 同样支持异步模式的发布订阅服务，均定义在 <span class="tt"><a class="el" href="../../d4/d36/namespacerm_1_1lpss_1_1async.html" title="基于 C++20 协程的异步操作">rm::lpss::async</a></span> 命名空间中。内部使用 coroutine + epoll/IOCP 的方式创建发布者与订阅者，实现更加灵活的数据通信，但需要 C++20 的支持，详情请参见 <a class="el" href="../../d5/d7a/tutorial_modules_coro.html">基于异步 I/O 的协程设施</a> 。下面的示例展示了如何使用异步模式创建发布者与订阅者。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md299"></a>
+3.1 异步发布者示例</h2>
+<p>异步模式的 LPSS 节点增加了定时器功能，可以方便地实现周期性任务。下面的示例展示了如何创建一个异步发布者，该发布者每隔 20 毫秒发布一次包含递增计数值的字符串消息。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/color_rgba.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
+<div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span>MySubscriber : <span class="keyword">public</span> <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a> {</div>
+<div class="line"><span class="keyword">class </span>MyPublisher : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">lpss::async::Node</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MySubscriber() : Node() {</div>
-<div class="line">        _sub = this-&gt;createSubscriber&lt;msg::ColorRGBA&gt;(</div>
-<div class="line">            <span class="stringliteral">&quot;/color&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="../../d8/da1/classrm_1_1msg_1_1ColorRGBA.html">msg::ColorRGBA</a> &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
-<div class="line">                fmt::println(<span class="stringliteral">&quot;R: {}, G:{}, B:{}, A:{}&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.r, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.g, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.b, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.a);</div>
-<div class="line">            });</div>
+<div class="line">    MyPublisher(std::string_view name) : <a class="code hl_namespace" href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a>::<a class="code hl_namespace" href="../../dd/d22/namespacerm_1_1async.html">async</a>::Node(name) {</div>
+<div class="line">        _pub = this-&gt;createPublisher&lt;msg::String&gt;(<span class="stringliteral">&quot;/topic&quot;</span>);</div>
+<div class="line">        _timer = this-&gt;createTimer(20ms, [<span class="keyword">this</span>]() {</div>
+<div class="line">            <span class="keyword">auto</span> <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a> = <a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a>{};</div>
+<div class="line">            <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.data = fmt::format(<span class="stringliteral">&quot;Async Times: {}&quot;</span>, _count++);</div>
+<div class="line">            _pub-&gt;publish(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">        });</div>
 <div class="line">    }</div>
-<div class="line">    </div>
+<div class="line">  </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a class="code hl_class" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">lpss::Subscriber&lt;msg::ColorRGBA&gt;</a> _sub{};</div>
+<div class="line">    uint16_t _count{};</div>
+<div class="line">    lpss::async::Publisher&lt;msg::String&gt;::ptr _pub{};</div>
+<div class="line">    lpss::async::Timer::ptr _timer{};</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="keyword">auto</span> subscriber = MySubscriber{};</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line">        <span class="comment">// 保持程序运行，可以在这里执行其他功能</span></div>
-<div class="line">        std::this_thread::sleep_for(1s);</div>
-<div class="line">    }</div>
+<div class="line">    <span class="keyword">auto</span> node = MyPublisher(<span class="stringliteral">&quot;async_pub_node&quot;</span>);</div>
+<div class="line">    node.spin();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1Subscriber_html"><div class="ttname"><a href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">rm::lpss::Subscriber</a></div><div class="ttdoc">订阅者代理</div><div class="ttdef"><b>定义</b> node.hpp:75</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md298"></a>
-2.2 创建自定义消息类型的发布者与订阅者</h2>
-<p>除了使用 RMVL 内置的消息类型外，用户还可以自定义消息类型，并使用这些自定义的消息类型创建发布者与订阅者。下面的示例展示了如何定义一个自定义的消息类型，并使用该消息类型创建发布者与订阅者。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md299"></a>
-2.2.1 创建项目结构</h3>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:290</div></div>
+<div class="ttc" id="anamespacerm_1_1async_html"><div class="ttname"><a href="../../dd/d22/namespacerm_1_1async.html">rm::async</a></div><div class="ttdef"><b>定义</b> async.hpp:51</div></div>
+<div class="ttc" id="anamespacerm_1_1lpss_html"><div class="ttname"><a href="../../d0/d65/namespacerm_1_1lpss.html">rm::lpss</a></div><div class="ttdoc">轻量发布订阅服务框架命名空间，包含节点、发布者、订阅者等相关定义</div><div class="ttdef"><b>定义</b> node_impl.hpp:18</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
+3.2 异步订阅者示例</h2>
+<p>下面展示了如何创建一个异步订阅者，该订阅者订阅 <span class="tt">/topic</span> 话题的字符串消息，并在收到消息时打印消息内容。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvlmsg/std/string.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>MySubscriber : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">lpss::async::Node</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MySubscriber(std::string_view name) : <a class="code hl_namespace" href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a>::<a class="code hl_namespace" href="../../dd/d22/namespacerm_1_1async.html">async</a>::Node(name) {</div>
+<div class="line">        _sub = this-&gt;createSubscriber&lt;msg::String&gt;(<span class="stringliteral">&quot;/topic&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_class" href="../../d3/db4/classrm_1_1msg_1_1String.html">msg::String</a> &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">            fmt::println(<span class="stringliteral">&quot;Async I heard: &#39;{}&#39;&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.data);</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code hl_typedef" href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html#af000f93621cca361ae7919be33812530">lpss::async::Subscriber&lt;msg::String&gt;::ptr</a> _sub{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> node = MySubscriber(<span class="stringliteral">&quot;async_sub_node&quot;</span>);</div>
+<div class="line">    node.spin();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Subscriber_html_af000f93621cca361ae7919be33812530"><div class="ttname"><a href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html#af000f93621cca361ae7919be33812530">rm::lpss::async::Subscriber::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Subscriber&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:244</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
+4 创建自定义消息类型</h1>
+<p>除了使用 RMVL 内置的消息类型外，用户还可以自定义消息类型，并使用这些自定义的消息类型创建发布者与订阅者。下面的示例展示了如何定义一个自定义的消息类型，并使用该消息类型创建异步的发布者与订阅者。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md302"></a>
+4.1 创建项目结构</h2>
 <p>首先可以创建一个项目，假设项目名称为 <span class="tt">demo</span>，并在其中创建</p>
 <ul>
 <li><span class="tt">custom_msg</span> 目录，用于存放自定义的消息类型文件，以及自动生成的代码；</li>
 <li><span class="tt">src</span> 目录，用于存放发布者与订阅者的源代码文件；</li>
 <li><span class="tt">CMakeLists.txt</span> 文件，用于配置项目的构建过程。</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
-2.2.2 文件内容</h3>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md303"></a>
+4.2 文件内容</h2>
 <p>基本内容：</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
 <div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(VERSION 3.16)</div> <div class="line"><span class="keyword">project</span>(LPSSDemo)</div> <div class="line"></div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD 17)</div> <div class="line"><span class="keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED ON)</div> <div class="line"></div> <div class="line"><span class="comment"># 查找 RMVL 包，其中包含了自动代码生成的功能</span></div> <div class="line"><span class="keyword">find_package</span>(RMVL REQUIRED)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加子目录</span></div> <div class="line"><span class="keyword">add_subdirectory</span>(custom_msg)</div> <div class="line"></div> <div class="line"><span class="comment"># 添加发布者和订阅者的可执行文件</span></div> <div class="line"><span class="keywordflow">foreach</span>(m pub sub)</div> <div class="line">&#160;&#160;<span class="keyword">rmvl_add_exe</span>(${m}</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">SOURCES</span> src/${m}.cpp</div> <div class="line">&#160;&#160;&#160;&#160;<span class="keyword">DEPENDS</span> lpss custom_msg</div> <div class="line">&#160;&#160;)</div> <div class="line"><span class="keywordflow">endforeach</span>()</div> </div></li>
 <li><p class="startli"><b class="tab-title">src/pub.cpp</b></p>
-<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">pub.cpp</span> 文件，实现发布者：</p>
+<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">pub.cpp</span> 文件，实现异步发布者：</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;rmvlmsg/my_custom_msg.hpp&quot;</span></div>
@@ -474,25 +471,33 @@ $(function() {
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
-<div class="line">    <span class="keyword">auto</span> publisher = nd.createPublisher&lt;msg::MyCustomMsg&gt;(<span class="stringliteral">&quot;/my_custom_topic&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">    msg::MyCustomMsg <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>;</div>
-<div class="line">    int32_t count{0};</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line">        std::this_thread::sleep_for(50ms);</div>
-<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id = count++;</div>
-<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name = <span class="stringliteral">&quot;Message_&quot;</span> + std::to_string(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id);</div>
-<div class="line">        <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active = (<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id % 2 == 0);</div>
-<div class="line">        publisher.publish(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line"><span class="keyword">class </span>CustomMsgPublisher : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">lpss::async::Node</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    CustomMsgPublisher(std::string_view name) : <a class="code hl_namespace" href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a>::<a class="code hl_namespace" href="../../dd/d22/namespacerm_1_1async.html">async</a>::Node(name) {</div>
+<div class="line">        _pub = this-&gt;createPublisher&lt;msg::MyCustomMsg&gt;(<span class="stringliteral">&quot;/my_custom_topic&quot;</span>);</div>
+<div class="line">        _timer = this-&gt;createTimer(50ms, [<span class="keyword">this</span>]() {</div>
+<div class="line">            msg::MyCustomMsg <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>;</div>
+<div class="line">            <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id = _count++;</div>
+<div class="line">            <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name = <span class="stringliteral">&quot;Message_&quot;</span> + std::to_string(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id);</div>
+<div class="line">            <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active = (<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id % 2 == 0);</div>
+<div class="line">            _pub-&gt;publish(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">        });</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    int32_t _count{};</div>
+<div class="line">    <a class="code hl_typedef" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html#a2e0305f507e9683a44478fcf7d1ecc36">lpss::async::Publisher&lt;msg::MyCustomMsg&gt;::ptr</a> _pub{};</div>
+<div class="line">    lpss::async::Timer::ptr _timer{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> nd = CustomMsgPublisher(<span class="stringliteral">&quot;custom_msg_pub_node&quot;</span>);</div>
+<div class="line">    nd.spin();</div>
 <div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Publisher_html_a2e0305f507e9683a44478fcf7d1ecc36"><div class="ttname"><a href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html#a2e0305f507e9683a44478fcf7d1ecc36">rm::lpss::async::Publisher::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Publisher&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:201</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">src/sub.cpp</b></p>
-<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">sub.cpp</span> 文件，实现订阅者：</p>
+<p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">sub.cpp</span> 文件，实现异步订阅者：</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/lpss.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -501,15 +506,22 @@ $(function() {
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <span class="keyword">auto</span> nd = <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a>();</div>
-<div class="line">    <span class="keyword">auto</span> subscriber = nd.createSubscriber&lt;msg::MyCustomMsg&gt;(</div>
-<div class="line">        <span class="stringliteral">&quot;/my_custom_topic&quot;</span>, [](<span class="keyword">const</span> msg::MyCustomMsg &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
-<div class="line">            fmt::println(<span class="stringliteral">&quot;ID: {}, Name: {}, Active: {}&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active);</div>
-<div class="line">        });</div>
+<div class="line"><span class="keyword">class </span>CustomMsgSubscriber : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">lpss::async::Node</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    CustomMsgSubscriber(std::string_view name) : <a class="code hl_namespace" href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a>::<a class="code hl_namespace" href="../../dd/d22/namespacerm_1_1async.html">async</a>::Node(name) {</div>
+<div class="line">        _sub = this-&gt;createSubscriber&lt;msg::MyCustomMsg&gt;(</div>
+<div class="line">            <span class="stringliteral">&quot;/my_custom_topic&quot;</span>, [](<span class="keyword">const</span> msg::MyCustomMsg &amp;<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) {</div>
+<div class="line">                fmt::println(<span class="stringliteral">&quot;ID: {}, Name: {}, Active: {}&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.id, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.name, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.is_active);</div>
+<div class="line">            });</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line">        std::this_thread::sleep_for(1s);</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <a class="code hl_typedef" href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html#af000f93621cca361ae7919be33812530">lpss::async::Subscriber&lt;msg::MyCustomMsg&gt;::ptr</a> _sub{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <span class="keyword">auto</span> nd = CustomMsgSubscriber(<span class="stringliteral">&quot;custom_msg_sub_node&quot;</span>);</div>
+<div class="line">    nd.spin();</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
 </ul>
@@ -525,8 +537,8 @@ $(function() {
 <li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
 <div class="fragment"> <div class="line"><span class="comment"># 生成自定义消息类型的代码</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(MyCustomMsg)</div> <div class="line"><span class="comment"># 添加模块</span></div> <div class="line"><span class="keyword">rmvl_add_module</span>(custom_msg)</div> </div></li>
 </ul>
-</div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
-2.2.3 构建与运行</h3>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md304"></a>
+4.3 构建与运行</h2>
 <p>在项目根目录下运行以下命令进行构建，并运行发布者：</p>
 <div class="fragment"> <div class="line"><span class="comment"># Build</span></div> <div class="line"><span class="keywordflow">mkdir</span> build &amp;&amp; <span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> ..</div> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">--build</span> .</div> <div class="line"></div> <div class="line"><span class="comment"># Run</span></div> <div class="line">./pub</div> </div><p>然后在另一个终端中运行订阅者，记得进入 build 目录：</p>
 <div class="fragment"> <div class="line">./sub</div> </div> </div></div><!-- contents -->

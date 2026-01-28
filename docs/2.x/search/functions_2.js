@@ -35,9 +35,10 @@ var searchData=
   ['cors_32',['cors',['../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d',1,'rm']]],
   ['cot_33',['cot',['../d5/d6c/group__algorithm.html#ga34f2f328f9b5eec56ee7d278703926bc',1,'rm']]],
   ['create_34',['create',['../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b',1,'rm::CameraConfig::create()'],['../df/d96/classrm_1_1Sender.html#a7a323b97bafe91d55c9e541e1b18a7b5',1,'rm::Sender::create()'],['../d5/dcd/classrm_1_1Listener.html#afda173457db01c8b7e2ff5011f64fab7',1,'rm::Listener::create()'],['../d2/d2a/classrm_1_1async_1_1Sender.html#ab71acd0e71dcf423ca37a4ee51cccb6b',1,'rm::async::Sender::create()'],['../d4/d9f/classrm_1_1async_1_1Listener.html#ae8104910a3f950b16c80fdec53359858',1,'rm::async::Listener::create()'],['../df/d48/structrm_1_1Argument.html#a77b6a0932f2e433b6f6dd732fb8b6828',1,'rm::Argument::create()']]],
-  ['createpublisher_35',['createPublisher',['../d2/da8/classrm_1_1lpss_1_1Node.html#a93c7802b1b73791aff10414c7aa97d5b',1,'rm::lpss::Node']]],
-  ['createsubscriber_36',['createSubscriber',['../d2/da8/classrm_1_1lpss_1_1Node.html#a8bf16f9ee141dce717956c595df2414a',1,'rm::lpss::Node']]],
-  ['cross2d_37',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
-  ['csc_38',['csc',['../d5/d6c/group__algorithm.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],
-  ['curvefitter_39',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter']]]
+  ['createpublisher_35',['createPublisher',['../d2/da8/classrm_1_1lpss_1_1Node.html#a93c7802b1b73791aff10414c7aa97d5b',1,'rm::lpss::Node::createPublisher()'],['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#afc9ef574725d49c5888d16dd12b5d032',1,'rm::lpss::async::Node::createPublisher()']]],
+  ['createsubscriber_36',['createSubscriber',['../d2/da8/classrm_1_1lpss_1_1Node.html#a8bf16f9ee141dce717956c595df2414a',1,'rm::lpss::Node::createSubscriber()'],['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#a41d46271105eb611acb38d2f171207c5',1,'rm::lpss::async::Node::createSubscriber(std::string_view topic, SubscribeMsgCallback callback) noexcept']]],
+  ['createtimer_37',['createTimer',['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ad8e1d6fdce37519bcff17a935ff3980b',1,'rm::lpss::async::Node']]],
+  ['cross2d_38',['cross2D',['../d5/d6c/group__algorithm.html#ga11685dd1fe47d4629bd0905b374e8570',1,'rm::cross2D(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)'],['../d5/d6c/group__algorithm.html#ga666e346a612561f12c110d612421fb4a',1,'rm::cross2D(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)']]],
+  ['csc_39',['csc',['../d5/d6c/group__algorithm.html#ga312dc3324c726a5cb63097132ddf1e9b',1,'rm']]],
+  ['curvefitter_40',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html#a38ef183c727ce4bcc03b797676961fad',1,'rm::CurveFitter']]]
 ];

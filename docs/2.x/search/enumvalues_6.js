@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['hardware_0',['Hardware',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da3c02a379965ab0dfcd77b1c484450433',1,'rm']]],
-  ['head_1',['Head',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca98921133d10fbdb0fb6dbb7b2648befe',1,'rm']]],
-  ['hero_2',['HERO',['../db/d22/group__combo__armor.html#ggacd7f1723e9b020d34b5bbc041faaea89a94d8cb5ddfb70936c8b59cc77d12fb36',1,'rm']]],
-  ['high_5frot_5fspeed_3',['HIGH_ROT_SPEED',['../d5/d20/namespacerm.html#ac20f060cfa58609d88a9f385a18fe461a0cd3be325d6551bd163e4e12bff4cc81',1,'rm']]],
-  ['huber_4',['Huber',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18',1,'rm']]]
+  ['gain_0',['gain',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b',1,'rm']]],
+  ['gamma_1',['gamma',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea',1,'rm']]],
+  ['get_2',['Get',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def',1,'rm']]],
+  ['gm_3',['GM',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a64f3bd1741ab8d6ba545a1ae09bb8728',1,'rm']]],
+  ['gn_4',['GN',['../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605baaccb66f0ecd826aac89065990e1da97f',1,'rm']]],
+  ['green_5',['GREEN',['../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d',1,'rm']]]
 ];

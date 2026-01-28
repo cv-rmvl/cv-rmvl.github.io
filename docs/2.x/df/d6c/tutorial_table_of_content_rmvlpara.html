@@ -118,30 +118,30 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md359">1 参数模块简介 </a>
+        <a href="#autotoc_md362">1 参数模块简介 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md360">2 参数规范文件 </a>
+        <a href="#autotoc_md363">2 参数规范文件 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md361">3 C++ 代码生成 </a>
+        <a href="#autotoc_md364">3 C++ 代码生成 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md362">3.1 rmvl_generate_para </a>
+            <a href="#autotoc_md365">3.1 rmvl_generate_para </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md363">3.2 rmvl_generate_module_para </a>
+            <a href="#autotoc_md366">3.2 rmvl_generate_module_para </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md364">4 运行时加载 </a>
+        <a href="#autotoc_md367">4 运行时加载 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md365">4.1 加载方式 </a>
+            <a href="#autotoc_md368">4.1 加载方式 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md366">4.2 YAML 文件格式 </a>
+            <a href="#autotoc_md369">4.2 YAML 文件格式 </a>
           </li>
         </ul>
       </li>
@@ -154,7 +154,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html">消息模块使用教程</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md359"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md362"></a>
 1 参数模块简介</h2>
 <p>RMVL 中，一部分模块（涉及主要模块和扩展模块）的功能在不同运行环境或者不同需求的情况下需要有不同的参数配置，为此 RVML 将这些运行时可变的参数提炼出来，并且使用统一的管理方式，完成了参数类型、参数默认值、参数名、参数运行时加载的定义。</p>
 <p>原先若有计划使用运行时参数，在</p>
@@ -163,7 +163,7 @@ $(function() {
 <li>新增某一参数类（结构体）</li>
 </ul>
 <p>的时候，需要在头文件以及对应源文件的位置写上大量重复的代码，管理极其不方便。为此 RMVL 参数模块定义了新的参数规范文件，这类文件以 <span class="tt">*.para</span> 为后缀，以及提供了 CMake 配置期间将 <span class="tt">*.para</span> 转换为对应 <span class="tt">*.h(hpp)</span> 以及 <span class="tt">*.cpp</span> 的 CMake 函数 <span class="tt">rmvl_generate_para</span>，该函数定义在 <span class="tt">&lt;project&gt;/cmake/RMVLCodeGenerate.cmake</span> 文件中。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md360"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md363"></a>
 2 参数规范文件</h2>
 <p>这里举一个 <span class="tt">*.para</span> 文件的示例，写法与 ROS Message 的 <span class="tt">*.msg</span> 文件类似，不过参数的类型均使用 C/C++ 中的类型，并且添加了注释功能。</p>
 <div class="fragment"> <div class="line"><span class="comment">#################### 光学参数 ####################</span></div> <div class="line"><span class="keywordtype">float</span> exposure = 1500&#160;&#160;<span class="comment"># 相机曝光</span></div> <div class="line"><span class="keywordtype">float</span> saturation = 100&#160;<span class="comment"># 相机饱和度</span></div> <div class="line"><span class="keywordtype">float</span> gain = 64&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 相机数字增益</span></div> <div class="line"><span class="keywordtype">uint32_t</span> b_gain = 1500&#160;<span class="comment"># 相机蓝色增益</span></div> <div class="line"><span class="keywordtype">uint32_t</span> g_gain = 1500&#160;<span class="comment"># 相机绿色增益</span></div> <div class="line"><span class="keywordtype">uint32_t</span> r_gain = 1500&#160;<span class="comment"># 相机红色增益</span></div> <div class="line"><span class="keywordtype">int</span> auto_exposure = 0&#160;&#160;<span class="comment"># 相机自动曝光模式</span></div> <div class="line"><span class="keywordtype">int</span> auto_wb = 0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 相机自动白平衡模式</span></div> <div class="line"></div> <div class="line"><span class="comment">#################### 设备参数 ####################</span></div> <div class="line"><span class="keywordtype">int</span> grab_mode = 1&#160;&#160;&#160;&#160;&#160;<span class="comment"># 相机 grab 模式</span></div> <div class="line"><span class="keywordtype">int</span> retrieve_mode = 1&#160;<span class="comment"># 相机 retrieve 模式</span></div> <div class="line"><span class="keywordtype">string</span> serial_number&#160;&#160;<span class="comment"># 相机序列号</span></div> </div><p>这里列出参数规范文件的参数类型表</p>
@@ -193,14 +193,14 @@ $(function() {
 </ul>
 </dd></dl>
 <p>枚举类型可在每个枚举项后加上具体的值，也能使用 <span class="tt">#</span> 为枚举项添加注释，例如</p>
-<div class="fragment"> <div class="line"><span class="keyword">enum</span>&#160;<span class="keywordtype">ColorMode</span>&#160;<span class="comment"># 颜色类型</span></div> <div class="line">&#160;&#160;RED&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 红色</span></div> <div class="line">&#160;&#160;GREEN&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 绿色</span></div> <div class="line">&#160;&#160;BLUE = 4&#160;&#160;&#160;&#160;&#160;<span class="comment"># 蓝色</span></div> <div class="line">&#160;&#160;GRAY = 5</div> <div class="line"><span class="keyword">endenum</span></div> <div class="line"></div> <div class="line"><span class="keywordtype">ColorMode</span> COLOR = ColorMode::RED&#160;<span class="comment"># 颜色信息</span></div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md361"></a>
+<div class="fragment"> <div class="line"><span class="keyword">enum</span>&#160;<span class="keywordtype">ColorMode</span>&#160;<span class="comment"># 颜色类型</span></div> <div class="line">&#160;&#160;RED&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 红色</span></div> <div class="line">&#160;&#160;GREEN&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># 绿色</span></div> <div class="line">&#160;&#160;BLUE = 4&#160;&#160;&#160;&#160;&#160;<span class="comment"># 蓝色</span></div> <div class="line">&#160;&#160;GRAY = 5</div> <div class="line"><span class="keyword">endenum</span></div> <div class="line"></div> <div class="line"><span class="keywordtype">ColorMode</span> COLOR = ColorMode::RED&#160;<span class="comment"># 颜色信息</span></div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md364"></a>
 3 C++ 代码生成</h2>
 <p>从 <span class="tt">*.para</span> 到对应的 C++ 代码生成的过程依赖 RMVL 提供的两条 CMake 函数，分别是</p>
 <ul>
 <li><span class="tt">rmvl_generate_para</span></li>
 <li><span class="tt">rmvl_generate_module_para</span></li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md362"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md365"></a>
 3.1 rmvl_generate_para</h3>
 <p>根据指定的目标名在 param 文件夹下对应的 *.para 参数规范文件和可选的模块名生成对应的 C++ 代码。</p>
 <p><b>用法</b></p>
@@ -218,7 +218,7 @@ $(function() {
 <li><span class="tt">include/rmvlpara/mytarget.hpp</span></li>
 <li><span class="tt">src/para/mytarget.cpp</span></li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md363"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md366"></a>
 3.2 rmvl_generate_module_para</h3>
 <p>根据给定模块下所有的 para 目标，生成对应的 C++ 代码</p>
 <p><b>用法</b></p>
@@ -229,9 +229,9 @@ $(function() {
 <div class="line"><span class="preprocessor">#include &quot;m/a2.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;m/a3.h&quot;</span></div>
 </div><!-- fragment --><p>以上内容均是在 CMake 配置期间自动完成，只需定义好参数规范文件 <span class="tt">*.para</span> 以及相应的 CMake 函数即可。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md364"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md367"></a>
 4 运行时加载</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md365"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md368"></a>
 4.1 加载方式</h3>
 <p>例如，对于以下的 <span class="tt">test.para</span> 文件</p>
 <div class="fragment"> <div class="line"><span class="keywordtype">int</span> abc = 10&#160;<span class="comment"># 测试数</span></div> </div><p>在使用 <span class="tt">rmvl_generate_para(test)</span> 之后，生成的头文件代码中，类相关的代码如下</p>
@@ -241,7 +241,7 @@ $(function() {
 <div class="line"><a class="code hl_variable" href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a>.read(prefix_path + <span class="stringliteral">&quot;algorithm.yml&quot;</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
 <div class="ttc" id="agroup__para__algorithm_html_ga53c0a2fe632cf1f3bb67aff47b8873b6"><div class="ttname"><a href="../../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6">rm::para::algorithm_param</a></div><div class="ttdeci">AlgorithmParam algorithm_param</div><div class="ttdoc">AlgorithmParam 参数模块</div><div class="ttdef"><b>定义</b> algorithm.hpp:73</div></div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md366"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md369"></a>
 4.2 YAML 文件格式</h3>
 <p>对于某个 <span class="tt">*.para</span> 文件中的参数，可以通过 YAML 文件进行运行时配置，例如</p>
 <div class="fragment"> <div class="line"><span class="keywordtype">int</span> num = 10&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># Test number</span></div> <div class="line"><span class="keywordtype">float</span> value = 4.2&#160;<span class="comment"># Test value</span></div> <div class="line"><span class="keywordtype">string</span> name&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="comment"># Test name</span></div> </div><p>对应的 YAML 文件可以写为</p>

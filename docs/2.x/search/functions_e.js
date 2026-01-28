@@ -37,5 +37,6 @@ var searchData=
   ['operator_5b_5d_34',['operator[]',['../d4/d8b/classrm_1_1EventType.html#a384bd9277b4555a6181f6b4c7cb021fe',1,'rm::EventType::operator[]()'],['../da/d88/classrm_1_1Event.html#a7c2d1cf8d52769eb2bfb7532bacfb472',1,'rm::Event::operator[]()'],['../d3/da8/classrm_1_1StateInfo.html#a65b6dfdf9da7d246b164103e3004d51a',1,'rm::StateInfo::operator[]()']]],
   ['operator_7c_35',['operator|',['../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907',1,'rm::operator|(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)'],['../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d',1,'rm::operator|(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)']]],
   ['optcamera_36',['OptCamera',['../d1/d9c/classrm_1_1OptCamera.html#a148a85fc19416be18b4e394173d70e16',1,'rm::OptCamera']]],
-  ['optlightcontroller_37',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a0f4df8b14f7464fa662b1ec79ca6cf40',1,'rm::OPTLightController']]]
+  ['optcameraparam_37',['OptCameraParam',['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#ad81e74009932116693c4bf6808ea7366',1,'rm::para::OptCameraParam']]],
+  ['optlightcontroller_38',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a0f4df8b14f7464fa662b1ec79ca6cf40',1,'rm::OPTLightController']]]
 ];

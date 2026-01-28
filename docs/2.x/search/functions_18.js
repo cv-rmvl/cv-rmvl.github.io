@@ -13,7 +13,7 @@ var searchData=
   ['_7emqclient_10',['~MqClient',['../d4/d5a/classrm_1_1MqClient.html#a9752bc3f6d4b4513a5788bb3cd0b70a5',1,'rm::MqClient']]],
   ['_7emqserver_11',['~MqServer',['../d4/d88/classrm_1_1MqServer.html#a70dd4a3481278015ddb86389465f5780',1,'rm::MqServer']]],
   ['_7emunkres_12',['~Munkres',['../dd/d62/classrm_1_1Munkres.html#adece76360ad2b2b1798c3ddd903567c9',1,'rm::Munkres']]],
-  ['_7enode_13',['~Node',['../d2/da8/classrm_1_1lpss_1_1Node.html#aa358a0e3e9efb136dabf92dd48d6c290',1,'rm::lpss::Node']]],
+  ['_7enode_13',['~Node',['../d2/da8/classrm_1_1lpss_1_1Node.html#aa358a0e3e9efb136dabf92dd48d6c290',1,'rm::lpss::Node::~Node()'],['../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#a1818afc4e3b81e58724302e228c67b44',1,'rm::lpss::async::Node::~Node()']]],
   ['_7eonnxnet_14',['~OnnxNet',['../dc/d1c/classrm_1_1OnnxNet.html#adfe46ea2dfbc55b99369613a5cf9b754',1,'rm::OnnxNet']]],
   ['_7eopcuaclient_15',['~OpcuaClient',['../da/d69/classrm_1_1OpcuaClient.html#a7c0e12578166470afa566f68b75583a8',1,'rm::OpcuaClient']]],
   ['_7eopcuaclienttimer_16',['~OpcuaClientTimer',['../d6/d3d/classrm_1_1OpcuaClientTimer.html#a48c6c8b8528feeac636eef348f37d2c6',1,'rm::OpcuaClientTimer']]],
@@ -24,6 +24,7 @@ var searchData=
   ['_7epredictor_21',['~predictor',['../dc/d74/classrm_1_1predictor.html#a93f50465708fea95e13cc36c393ed56c',1,'rm::predictor']]],
   ['_7esender_22',['~Sender',['../df/d96/classrm_1_1Sender.html#af418933ab0e0de274b3b3175ddd935f8',1,'rm::Sender::~Sender()'],['../d2/d2a/classrm_1_1async_1_1Sender.html#adc279b04af470ac7f2e5468ede7dd507',1,'rm::async::Sender::~Sender()']]],
   ['_7eshmbase_23',['~SHMBase',['../d5/d8b/classrm_1_1SHMBase.html#a2c99bc69f15c71bf08642343233c371f',1,'rm::SHMBase']]],
-  ['_7etask_24',['~Task',['../d5/d31/classrm_1_1async_1_1Task.html#affd0fbbe739de7acb25fca87c2b6a71b',1,'rm::async::Task']]],
-  ['_7etimer_25',['~Timer',['../db/dce/classrm_1_1async_1_1Timer.html#aabaa57d0f965bcc566229124c180a8cc',1,'rm::async::Timer']]]
+  ['_7esignal_24',['~Signal',['../d7/d53/classrm_1_1async_1_1Signal.html#a9c7fdfdfbf5b5be91981ad110e4136c7',1,'rm::async::Signal']]],
+  ['_7etask_25',['~Task',['../d5/d31/classrm_1_1async_1_1Task.html#affd0fbbe739de7acb25fca87c2b6a71b',1,'rm::async::Task']]],
+  ['_7etimer_26',['~Timer',['../db/dce/classrm_1_1async_1_1Timer.html#aabaa57d0f965bcc566229124c180a8cc',1,'rm::async::Timer']]]
 ];

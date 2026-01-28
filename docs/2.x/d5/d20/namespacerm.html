@@ -124,6 +124,7 @@ $(function() {
 <tr class="memitem:ip" id="r_ip"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/df5/namespacerm_1_1ip.html">ip</a></td></tr>
 <tr class="memdesc:d2/df5/namespacerm_1_1ip"><td class="mdescLeft"> </td><td class="mdescRight">IP 协议族，包含 IPv4 和 IPv6 以及多播选项的相关定义 <br/></td></tr>
 <tr class="memitem:lpss" id="r_lpss"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></td></tr>
+<tr class="memdesc:d0/d65/namespacerm_1_1lpss"><td class="mdescLeft"> </td><td class="mdescRight">轻量发布订阅服务框架命名空间，包含节点、发布者、订阅者等相关定义 <br/></td></tr>
 <tr class="memitem:msg" id="r_msg"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a></td></tr>
 <tr class="memdesc:de/dd0/namespacerm_1_1msg"><td class="mdescLeft"> </td><td class="mdescRight">LPSS 消息类型命名空间 <br/></td></tr>
 <tr class="memitem:helper" id="r_helper"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d53/namespacerm_1_1helper.html">helper</a></td></tr>
@@ -603,36 +604,34 @@ $(function() {
 , <a class="el" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffaf20e3c5e54c0ab3d375d660b3f896f6a">RetrieveMode::SDK</a>
  }</td></tr>
 <tr class="memdesc:ga034d81b381d7c04ba4549cf3533750ff"><td class="mdescLeft"> </td><td class="mdescRight">相机数据处理模式  <a href="../../dc/d90/group__camera.html#ga034d81b381d7c04ba4549cf3533750ff">更多...</a><br/></td></tr>
-<tr class="memitem:ga3dabb1d304a05608ec415f8f6c289423" id="r_ga3dabb1d304a05608ec415f8f6c289423"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#ga3dabb1d304a05608ec415f8f6c289423">CameraProperties</a> : uint16_t { <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb">CAMERA_AUTO_EXPOSURE</a> = 0x1
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">CAMERA_MANUAL_EXPOSURE</a> = 0x2
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568">CAMERA_ONCE_EXPOSURE</a> = 0x3
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972">CAMERA_AUTO_WB</a> = 0x10
+<tr class="memitem:ga99adb67cebfd7d04dd4ca9bdd4960377" id="r_ga99adb67cebfd7d04dd4ca9bdd4960377"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#ga99adb67cebfd7d04dd4ca9bdd4960377">CameraProperties</a> : uint8_t { <br/>
+  <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">CameraProperties::auto_exposure</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">CameraProperties::auto_wb</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">CameraProperties::exposure</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">CameraProperties::gain</a>
 , <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">CAMERA_MANUAL_WB</a> = 0x11
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">CAMERA_EXPOSURE</a> = 0x20
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">CAMERA_GAIN</a> = 0x21
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103">CAMERA_GAMMA</a> = 0x22
+  <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea">CameraProperties::gamma</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">CameraProperties::wb_rgain</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">CameraProperties::wb_ggain</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">CameraProperties::wb_bgain</a>
 , <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">CAMERA_WB_RGAIN</a> = 0x23
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">CAMERA_WB_GGAIN</a> = 0x24
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">CAMERA_WB_BGAIN</a> = 0x25
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9">CAMERA_CONTRAST</a> = 0x26
+  <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db">CameraProperties::contrast</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287">CameraProperties::saturation</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5">CameraProperties::sharpness</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c">CameraProperties::frame_height</a>
 , <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc">CAMERA_SATURATION</a> = 0x27
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f">CAMERA_SHARPNESS</a> = 0x28
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634">CAMERA_FRAME_HEIGHT</a> = 0x30
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22">CAMERA_FRAME_WIDTH</a> = 0x31
-, <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898">CAMERA_TRIGGER_DELAY</a> = 0x40
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71">CAMERA_TRIGGER_COUNT</a> = 0x41
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83">CAMERA_TRIGGER_PERIOD</a> = 0x42
-, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313">CAMERA_TRIGGER_SOFT</a> = 0x43
-, <br/>
-  <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa">CAMERA_ONCE_WB</a> = 0x44
+  <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea">CameraProperties::frame_width</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2">CameraProperties::trigger_delay</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b">CameraProperties::trigger_count</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">CameraProperties::trigger_period</a>
 <br/>
  }</td></tr>
-<tr class="memdesc:ga3dabb1d304a05608ec415f8f6c289423"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时属性  <a href="../../dc/d90/group__camera.html#ga3dabb1d304a05608ec415f8f6c289423">更多...</a><br/></td></tr>
+<tr class="memdesc:ga99adb67cebfd7d04dd4ca9bdd4960377"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时属性  <a href="../../dc/d90/group__camera.html#ga99adb67cebfd7d04dd4ca9bdd4960377">更多...</a><br/></td></tr>
+<tr class="memitem:ga7187e1219e13ae6a717cce746e4c9136" id="r_ga7187e1219e13ae6a717cce746e4c9136"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#ga7187e1219e13ae6a717cce746e4c9136">CameraEvents</a> : uint8_t { <a class="el" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7">once_exposure</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">once_wb</a>
+, <a class="el" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">software</a>
+ }</td></tr>
+<tr class="memdesc:ga7187e1219e13ae6a717cce746e4c9136"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时事件  <a href="../../dc/d90/group__camera.html#ga7187e1219e13ae6a717cce746e4c9136">更多...</a><br/></td></tr>
 <tr class="memitem:gae6fd8f56e227d1b8dd738a46939dd2fc" id="r_gae6fd8f56e227d1b8dd738a46939dd2fc"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dd4/group__io__net.html#gae6fd8f56e227d1b8dd738a46939dd2fc">HTTPMethod</a> : uint8_t { <br/>
   <a class="el" href="../../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcac55582518cba2c464f29f5bae1c68def">HTTPMethod::Get</a>
 , <a class="el" href="../../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca03d947a2158373c3b9d74325850cb8b9">HTTPMethod::Post</a>
@@ -898,6 +897,10 @@ $(function() {
 <tr class="memdesc:ga232b63e9e1364254d512e66377be7af4"><td class="mdescLeft"> </td><td class="mdescRight">导出角点数据  <br/></td></tr>
 <tr class="memitem:ga9aa99cd3878794115ac58d55320e7238" id="r_ga9aa99cd3878794115ac58d55320e7238"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/group__io.html#ga9aa99cd3878794115ac58d55320e7238">readCorners</a> (std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</td></tr>
 <tr class="memdesc:ga9aa99cd3878794115ac58d55320e7238"><td class="mdescLeft"> </td><td class="mdescRight">导入角点数据  <br/></td></tr>
+<tr class="memitem:ga7693b65d2f2576faf723ed302890d741" id="r_ga7693b65d2f2576faf723ed302890d741"><td align="right" class="memItemLeft" valign="top">cv::Mat </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de3/group__lpss.html#ga7693b65d2f2576faf723ed302890d741">from_msg</a> (const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &amp;img_msg)</td></tr>
+<tr class="memdesc:ga7693b65d2f2576faf723ed302890d741"><td class="mdescLeft"> </td><td class="mdescRight">从 Image 消息转换为 cv::Mat  <br/></td></tr>
+<tr class="memitem:gacbf360391ff80a9c4c599951028e4cfd" id="r_gacbf360391ff80a9c4c599951028e4cfd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de3/group__lpss.html#gacbf360391ff80a9c4c599951028e4cfd">to_msg</a> (cv::Mat img, std::string_view encoding)</td></tr>
+<tr class="memdesc:gacbf360391ff80a9c4c599951028e4cfd"><td class="mdescLeft"> </td><td class="mdescRight">从 cv::Mat 转换为 Image 消息  <br/></td></tr>
 <tr class="memitem:gad4a5bb978e87fa6230034d85ff23b907" id="r_gad4a5bb978e87fa6230034d85ff23b907"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gad4a5bb978e87fa6230034d85ff23b907">operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gac7e58481a10ce3a58ec6a78db8f39cb1">rm::FindNodeInServer</a> &amp;&amp;fnis)</td></tr>
 <tr class="memdesc:gad4a5bb978e87fa6230034d85ff23b907"><td class="mdescLeft"> </td><td class="mdescRight">服务端路径搜索  <br/></td></tr>
 <tr class="memitem:gac9cd15abdd9c0687cee73ce332008c8d" id="r_gac9cd15abdd9c0687cee73ce332008c8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da8/group__opcua.html#gac9cd15abdd9c0687cee73ce332008c8d">operator|</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> origin, <a class="el" href="../../d3/da8/group__opcua.html#gae83f723555bd94a58063f1db1e0165ed">rm::FindNodeInClient</a> &amp;&amp;fnic)</td></tr>

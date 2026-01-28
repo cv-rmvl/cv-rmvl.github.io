@@ -117,8 +117,8 @@ $(function() {
 <div class="line"><span class="preprocessor">#include &lt;opencv2/imgproc.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;rmvl/algorithm/math.hpp&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;rmvl/core/timer.hpp&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;rmvl/camera/mv_camera.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;rmvl/core/timer.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
@@ -131,15 +131,13 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a id="_a2" name="_a2"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="_a3" name="_a3"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="_a4" name="_a4"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> cameraMatrixCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_)</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">void</span> cameraMatrixCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_) {</div>
 <div class="line">    cv::Point *mat_pos = <span class="keyword">reinterpret_cast&lt;</span>cv::Point *<span class="keyword">&gt;</span>(mat_pos_);</div>
 <div class="line">    <span class="comment">// 内参矩阵</span></div>
 <div class="line">    cameraMatrix(mat_pos-&gt;x, mat_pos-&gt;y) = pos;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> distCoeffCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_)</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">void</span> distCoeffCallBack(<span class="keywordtype">int</span> pos, <span class="keywordtype">void</span> *mat_pos_) {</div>
 <div class="line">    cv::Point *mat_pos = <span class="keyword">reinterpret_cast&lt;</span>cv::Point *<span class="keyword">&gt;</span>(mat_pos_);</div>
 <div class="line">    <span class="comment">// 畸变系数</span></div>
 <div class="line">    <span class="keywordflow">if</span> (mat_pos-&gt;x == 0 || mat_pos-&gt;x == 1)</div>
@@ -148,38 +146,36 @@ $(function() {
 <div class="line">        distCoeffs(mat_pos-&gt;x, mat_pos-&gt;y) = <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(-500. + pos) / 5000.;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <span class="comment">// 读取相机内参、畸变系数</span></div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name = <span class="stringliteral">&quot;out_calibration.yml&quot;</span>;</div>
 <div class="line">    cv::FileStorage fs_mv_in(file_name, cv::FileStorage::READ);</div>
 <div class="line">    fs_mv_in[<span class="stringliteral">&quot;cameraMatrix&quot;</span>].isNone() ? void(0) : (fs_mv_in[<span class="stringliteral">&quot;cameraMatrix&quot;</span>] &gt;&gt; cameraMatrix);</div>
 <div class="line">    fs_mv_in[<span class="stringliteral">&quot;distCoeffs&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_in[<span class="stringliteral">&quot;distCoeffs&quot;</span>] &gt;&gt; distCoeffs);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">int</span> exposure = 10000;</div>
-<div class="line">    <span class="keywordtype">int</span> gain = 64;</div>
+<div class="line">    <span class="keywordtype">double</span> <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">exposure</a> = 10000;</div>
+<div class="line">    <span class="keywordtype">int</span> <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">gain</a> = 64;</div>
 <div class="line">    <span class="keywordtype">int</span> r_gain = 100;</div>
 <div class="line">    <span class="keywordtype">int</span> g_gain = 100;</div>
 <div class="line">    <span class="keywordtype">int</span> b_gain = 100;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 设置相机参数</span></div>
 <div class="line">    cv::FileStorage fs_mv_set(<span class="stringliteral">&quot;out_para.yml&quot;</span>, cv::FileStorage::READ);</div>
-<div class="line">    <span class="keywordflow">if</span> (fs_mv_set.isOpened())</div>
-<div class="line">    {</div>
-<div class="line">        fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; exposure);</div>
+<div class="line">    <span class="keywordflow">if</span> (fs_mv_set.isOpened()) {</div>
+<div class="line">        fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>].isNone() ? void(0) : (fs_mv_set[<span class="stringliteral">&quot;exposure&quot;</span>] &gt;&gt; <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">exposure</a>);</div>
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;gain&quot;</span>] &gt;&gt; gain);</div>
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;r_gain&quot;</span>] &gt;&gt; r_gain);</div>
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;g_gain&quot;</span>] &gt;&gt; g_gain);</div>
 <div class="line">        fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>].isNone() ? <span class="keywordtype">void</span>(0) : (fs_mv_set[<span class="stringliteral">&quot;b_gain&quot;</span>] &gt;&gt; b_gain);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    capture.set(<a id="_a5" name="_a5"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a>);</div>
-<div class="line">    capture.set(<a id="_a6" name="_a6"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a>, exposure);</div>
-<div class="line">    capture.set(<a id="_a7" name="_a7"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a>, gain);</div>
-<div class="line">    capture.set(<a id="_a8" name="_a8"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a>);</div>
-<div class="line">    capture.set(<a id="_a9" name="_a9"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a>, r_gain);</div>
-<div class="line">    capture.set(<a id="_a10" name="_a10"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a>, g_gain);</div>
-<div class="line">    capture.set(<a id="_a11" name="_a11"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a>, b_gain);</div>
+<div class="line">    capture.set(<a id="_a5" name="_a5"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a>, <span class="keyword">false</span>);</div>
+<div class="line">    capture.set(<a id="_a6" name="_a6"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">rm::CameraProperties::exposure</a>, exposure);</div>
+<div class="line">    capture.set(<a id="_a7" name="_a7"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">rm::CameraProperties::gain</a>, gain);</div>
+<div class="line">    capture.set(<a id="_a8" name="_a8"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a>, <span class="keyword">false</span>);</div>
+<div class="line">    capture.set(<a id="_a9" name="_a9"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">rm::CameraProperties::wb_rgain</a>, r_gain);</div>
+<div class="line">    capture.set(<a id="_a10" name="_a10"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">rm::CameraProperties::wb_ggain</a>, g_gain);</div>
+<div class="line">    capture.set(<a id="_a11" name="_a11"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">rm::CameraProperties::wb_bgain</a>, b_gain);</div>
 <div class="line"> </div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, cv::WINDOW_NORMAL);</div>
 <div class="line">    namedWindow(<span class="stringliteral">&quot;控制面板&quot;</span>, cv::WINDOW_AUTOSIZE);</div>
@@ -223,8 +219,7 @@ $(function() {
 <div class="line">    resizeWindow(<span class="stringliteral">&quot;图像画面&quot;</span>, cv::Size(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.cols * 0.8),</div>
 <div class="line">                                      <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame.rows * 0.8)));</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">        <span class="keywordflow">if</span> (!capture.read(frame))</div>
 <div class="line">            <span class="keywordflow">continue</span>;</div>
 <div class="line">        <span class="keywordflow">if</span> (frame.type() == CV_8UC1)</div>
@@ -245,14 +240,12 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="keywordtype">char</span> c = cv::waitKey(1);</div>
 <div class="line">        <span class="comment">// 退出程序</span></div>
-<div class="line">        <span class="keywordflow">if</span> (c == 27)</div>
-<div class="line">        {</div>
+<div class="line">        <span class="keywordflow">if</span> (c == 27) {</div>
 <div class="line">            <span class="keywordflow">if</span> (cv::waitKey(0) == 27)</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">        }</div>
 <div class="line">        <span class="comment">// 保存参数</span></div>
-<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;s&#39;</span>)</div>
-<div class="line">        {</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;s&#39;</span>) {</div>
 <div class="line">            cv::FileStorage fs_mv_out(file_name, cv::FileStorage::WRITE);</div>
 <div class="line">            fs_mv_out &lt;&lt; <span class="stringliteral">&quot;cameraMatrix&quot;</span> &lt;&lt; cameraMatrix;</div>
 <div class="line">            fs_mv_out &lt;&lt; <span class="stringliteral">&quot;distCoeffs&quot;</span> &lt;&lt; distCoeffs;</div>
@@ -278,16 +271,16 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库</div><div class="ttdef"><b>定义</b> mv_camera.h:37</div></div>
 <div class="ttc" id="aclassrm_1_1Timer_html_ad2681cbe206911a68e6b98f07dac26a4"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a></div><div class="ttdeci">static void sleep_for(double t)</div><div class="ttdoc">当前线程休眠指定时间</div></div>
 <div class="ttc" id="agroup__algorithm_html_ga544b37a37f56482fe9f9fb486abf1b57"><div class="ttname"><a href="../../d5/d6c/group__algorithm.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a></div><div class="ttdeci">Matx&lt; double, 5, 1 &gt; Matx51d</div><div class="ttdef"><b>定义</b> math.hpp:65</div></div>
-<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:54</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a></div><div class="ttdeci">@ CAMERA_WB_BGAIN</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:108</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a></div><div class="ttdeci">@ CAMERA_WB_GGAIN</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:107</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_MANUAL_EXPOSURE</div><div class="ttdoc">手动曝光</div><div class="ttdef"><b>定义</b> camutils.hpp:99</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a></div><div class="ttdeci">@ CAMERA_EXPOSURE</div><div class="ttdoc">曝光值</div><div class="ttdef"><b>定义</b> camutils.hpp:103</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a></div><div class="ttdeci">@ CAMERA_MANUAL_WB</div><div class="ttdoc">手动白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:102</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a></div><div class="ttdeci">@ CAMERA_WB_RGAIN</div><div class="ttdoc">白平衡红色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:106</div></div>
-<div class="ttc" id="agroup__camera_html_gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a></div><div class="ttdeci">@ CAMERA_GAIN</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>定义</b> camutils.hpp:104</div></div>
-<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:36</div></div>
-<div class="ttc" id="astructrm_1_1CameraConfig_html_a1a285fd4742e8ced4907f83d520c943b"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args &amp;&amp;...modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:72</div></div>
+<div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:49</div></div>
+<div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:33</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">rm::CameraProperties::wb_bgain</a></div><div class="ttdeci">@ wb_bgain</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:97</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a></div><div class="ttdeci">@ auto_wb</div><div class="ttdoc">自动白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:91</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a></div><div class="ttdeci">@ auto_exposure</div><div class="ttdoc">自动曝光</div><div class="ttdef"><b>定义</b> camutils.hpp:90</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">rm::CameraProperties::wb_ggain</a></div><div class="ttdeci">@ wb_ggain</div><div class="ttdoc">白平衡绿色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:96</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">rm::CameraProperties::exposure</a></div><div class="ttdeci">@ exposure</div><div class="ttdoc">曝光值</div><div class="ttdef"><b>定义</b> camutils.hpp:92</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">rm::CameraProperties::wb_rgain</a></div><div class="ttdeci">@ wb_rgain</div><div class="ttdoc">白平衡红色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:95</div></div>
+<div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">rm::CameraProperties::gain</a></div><div class="ttdeci">@ gain</div><div class="ttdoc">模拟增益</div><div class="ttdef"><b>定义</b> camutils.hpp:93</div></div>
+<div class="ttc" id="astructrm_1_1CameraConfig_html_a1a285fd4742e8ced4907f83d520c943b"><div class="ttname"><a href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a></div><div class="ttdeci">static CameraConfig create(Args &amp;&amp;...modes)</div><div class="ttdoc">创建相机初始化配置模式</div><div class="ttdef"><b>定义</b> camutils.hpp:66</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

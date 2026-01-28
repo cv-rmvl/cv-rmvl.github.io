@@ -2214,6 +2214,13 @@
       <anchor>afc40b8ab4759f0e646c696c39cbaa453</anchor>
       <arglist>(std::string_view addr, const Endpoint &amp;endpoint, std::string_view data)</arglist>
     </member>
+    <member kind="function">
+      <type>SocketWriteAwaiter</type>
+      <name>write</name>
+      <anchorfile>d4/d37/classrm_1_1async_1_1DgramSocket.html</anchorfile>
+      <anchor>a3790b4d7c31c984d4e2b69fba25733a3</anchor>
+      <arglist>(std::array&lt; uint8_t, 4 &gt; addr, const Endpoint &amp;endpoint, std::string_view data)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>rm::DgramSocket</name>
@@ -2912,29 +2919,36 @@
       <type>void</type>
       <name>load</name>
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
-      <anchor>a28862cccd39e535ef21a703e5314255a</anchor>
-      <arglist>(const para::GalaxyCameraParam &amp;param)</arglist>
+      <anchor>aae166f38f883b072b5795db1dd635dbe</anchor>
+      <arglist>(const para::GalaxyCameraParam &amp;param) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
-      <anchor>a8f5fb9662ecee064ff29d985483f0887</anchor>
-      <arglist>(int prop_id, double value=0.0) const</arglist>
+      <anchor>a935b9baaeac3a7dca6702c513aa2f267</anchor>
+      <arglist>(CameraProperties prop_id, Tp value) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
-      <anchor>a506ce35b9ffe7ae4efbb283f2b0ceaf8</anchor>
-      <arglist>(int prop_id) const</arglist>
+      <anchor>a033b3d4c8fb9db15886b093e38a74b6b</anchor>
+      <arglist>(CameraProperties prop_id) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>trigger</name>
+      <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
+      <anchor>aadf2435c735008da7ff18d1924addc18</anchor>
+      <arglist>(CameraEvents event_id) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
-      <anchor>a95494595f9410e41bf5a265bdce65344</anchor>
-      <arglist>() const</arglist>
+      <anchor>a80956f29b4811cdb7225483bdd36c0a2</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -3004,10 +3018,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>int64_t</type>
       <name>saturation</name>
       <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>ae43e8b545037fea25878f481a3c9c1cb</anchor>
+      <anchor>a72c5cbd597529feb66a5c7173ae16b02</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4196,29 +4210,36 @@
       <type>void</type>
       <name>load</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a68988ac5c6ebaed5ff7199a63a5733ed</anchor>
-      <arglist>(const para::HikCameraParam &amp;param)</arglist>
+      <anchor>a1ceb2829eccc0a0cee1ca8c059c36857</anchor>
+      <arglist>(const para::HikCameraParam &amp;param) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a8b66798aca86dd7b0222124b58803958</anchor>
-      <arglist>(int propId, double value=0.0)</arglist>
+      <anchor>a58eb4d0873a70ee46ed5677f3f2b964d</anchor>
+      <arglist>(CameraProperties propId, Tp value) noexcept</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a13edc2b7e0b40271430883163fce9f1f</anchor>
-      <arglist>(int propId) const</arglist>
+      <anchor>ad6434b3a821f283b7acfd137e30e338a</anchor>
+      <arglist>(CameraProperties propId) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>trigger</name>
+      <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
+      <anchor>aa156111c4e68b8ca96d938afb8e1f269</anchor>
+      <arglist>(CameraEvents eventId) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>db/d9f/classrm_1_1HikCamera.html</anchorfile>
-      <anchor>a17da764db5d58689bb1ca5adc7287f1b</anchor>
-      <arglist>() const</arglist>
+      <anchor>a4cfe9174ef7e29689cf622647acf591f</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -4323,17 +4344,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>bool</type>
       <name>auto_exposure</name>
       <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>af07f5e8bf9fb4b81e00ae988847381f4</anchor>
+      <anchor>acdbcc896984bf935d38a263c573ea57b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int</type>
+      <type>bool</type>
       <name>auto_wb</name>
       <anchorfile>de/d4f/classrm_1_1para_1_1HikCameraParam.html</anchorfile>
-      <anchor>abd5362ad3109d62bf0e4889292ec42e6</anchor>
+      <anchor>a6e8d0149da47b759a7e48e02142e09c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4468,17 +4489,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>uint32_t</type>
+      <type>int32_t</type>
       <name>height</name>
       <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
-      <anchor>add63adfc95e2cb49d76c80c85875ab70</anchor>
+      <anchor>aebcaf2296b7b22af72ec573fbfd1a280</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>uint32_t</type>
+      <type>int32_t</type>
       <name>width</name>
       <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
-      <anchor>a8fee6c63b25dd59465c9246b15631333</anchor>
+      <anchor>ad681732c6c540ba2f0c59eeb2ef94b32</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -5799,29 +5820,36 @@
       <type>void</type>
       <name>load</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>ad555584f2795187b8ba87bc2887285ac</anchor>
-      <arglist>(const para::MvCameraParam &amp;param)</arglist>
+      <anchor>a942d6e45f01c44f8e2e7c300685dc22a</anchor>
+      <arglist>(const para::MvCameraParam &amp;param) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>aa5f360ee53e8528cee8310e937e9ad56</anchor>
-      <arglist>(int propId, double value=0.0)</arglist>
+      <anchor>aac35e1a9cf9c85906b454baa29012e5e</anchor>
+      <arglist>(CameraProperties propId, Tp value) noexcept</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>a4e5e948680747bdd22f64753e0437e5e</anchor>
-      <arglist>(int propId) const</arglist>
+      <anchor>a8dba028972e4e0facff75cec1c6f13f5</anchor>
+      <arglist>(CameraProperties propId) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>trigger</name>
+      <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
+      <anchor>a3187434245e5aebec7c97b3e0744d45a</anchor>
+      <arglist>(CameraEvents eventId) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>de/de8/classrm_1_1MvCamera.html</anchorfile>
-      <anchor>afc51568a8a254ab21b469c90f864bf58</anchor>
-      <arglist>() const</arglist>
+      <anchor>acfa4721253130631715d6fb56f79199b</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -5884,10 +5912,10 @@
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
     <member kind="variable">
-      <type>double</type>
+      <type>int</type>
       <name>exposure</name>
       <anchorfile>d1/d75/classrm_1_1para_1_1MvCameraParam.html</anchorfile>
-      <anchor>a817e151b4ce99d1599ff09eb2168998f</anchor>
+      <anchor>a29377870ce8518a8de11e6ddb02c8621</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6202,6 +6230,52 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::lpss::async::Node</name>
+    <filename>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Node</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>aa9215ac625dd32deee2d92847c51cc8d</anchor>
+      <arglist>(std::string_view name, uint8_t domain_id=0)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Node</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a1818afc4e3b81e58724302e228c67b44</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Publisher&lt; MsgType &gt;::ptr</type>
+      <name>createPublisher</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>afc9ef574725d49c5888d16dd12b5d032</anchor>
+      <arglist>(std::string_view topic) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Subscriber&lt; MsgType &gt;::ptr</type>
+      <name>createSubscriber</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a41d46271105eb611acb38d2f171207c5</anchor>
+      <arglist>(std::string_view topic, SubscribeMsgCallback callback) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Timer::ptr</type>
+      <name>createTimer</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>ad8e1d6fdce37519bcff17a935ff3980b</anchor>
+      <arglist>(std::chrono::duration&lt; Rep, Period &gt; dur, TimerCallback callback) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spin</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>ac19d563e835538932223d6be7471816d</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::lpss::Node</name>
     <filename>d2/da8/classrm_1_1lpss_1_1Node.html</filename>
     <member kind="function">
@@ -6231,13 +6305,6 @@
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
       <anchor>a8bf16f9ee141dce717956c595df2414a</anchor>
       <arglist>(std::string_view topic, SubscribeMsgCallback &amp;&amp;callback) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Guid</type>
-      <name>guid</name>
-      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>a8de1ef9537de5b914ba854f5eec46f28</anchor>
-      <arglist>() const noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7369,29 +7436,36 @@
       <type>void</type>
       <name>load</name>
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
-      <anchor>aa6cd2af93a1949a12eadcf0b573e658a</anchor>
-      <arglist>(const para::OptCameraParam &amp;param)</arglist>
+      <anchor>a96c6168efe3e942aed06222d3a5b075f</anchor>
+      <arglist>(const para::OptCameraParam &amp;param) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>set</name>
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
-      <anchor>a23ccd190a49c93dadecbe9fbe41496f2</anchor>
-      <arglist>(int prop_id, double value=0.0)</arglist>
+      <anchor>a99637e58c4f2652b364c30540efbf8ce</anchor>
+      <arglist>(CameraProperties prop_id, Tp value) noexcept</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>get</name>
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
-      <anchor>a50e332c292f17bc9fe5b3e8968537f35</anchor>
-      <arglist>(int prop_id) const</arglist>
+      <anchor>a301fff036807ed0da898b6e7014f0bc1</anchor>
+      <arglist>(CameraProperties prop_id) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>trigger</name>
+      <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
+      <anchor>aadc8be411d8dae72cde7977a1c6d2fe8</anchor>
+      <arglist>(CameraEvents event_id) const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
-      <anchor>a508cf0639d7ba77360b922a9df1c46fc</anchor>
-      <arglist>() const</arglist>
+      <anchor>a6dbb59ff53d47682d2412bfeb1b55d61</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -7413,6 +7487,87 @@
       <anchorfile>d1/d9c/classrm_1_1OptCamera.html</anchorfile>
       <anchor>a329d68cf716a6381ea42afa85bf1d4e3</anchor>
       <arglist>(CameraConfig init_mode, std::string_view handle_info=&quot;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::para::OptCameraParam</name>
+    <filename>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>OptCameraParam</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>ad81e74009932116693c4bf6808ea7366</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a07c371edf4541a58571a8d92a63948a0</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>afb2b6246d8e9d4988aa4f2e25043488d</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>exposure</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a059c84c7cc055c80a3edb189f03b565f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gamma</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>aad696a032703a9d0b8c2de12267f9c6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int64_t</type>
+      <name>contrast</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>aee3deca04cdf8ab72d79796b2bd35f2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>gain</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a60ef192aae0d1941b66c96b15a0173bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>b_gain</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a0bf1126d92810a95ce8797d81a857221</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>g_gain</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a620ebdd4854643bfea2ca5709da9299f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>r_gain</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>ac53e377508ed84f7a2b1e3a682f434f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>handle_info</name>
+      <anchorfile>dd/dc2/classrm_1_1para_1_1OptCameraParam.html</anchorfile>
+      <anchor>a663f61bced526f6cc85673c6e5bfd2e7</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -8451,6 +8606,32 @@
       <anchorfile>d6/d4a/structrm_1_1PublishedDataSet.html</anchorfile>
       <anchor>ad58c956b9694d028edadec45201a6e62</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::async::Publisher</name>
+    <filename>d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html</filename>
+    <templarg>typename MsgType</templarg>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Publisher&lt; MsgType &gt; &gt;</type>
+      <name>ptr</name>
+      <anchorfile>d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html</anchorfile>
+      <anchor>a2e0305f507e9683a44478fcf7d1ecc36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html</anchorfile>
+      <anchor>af0201d41987cc8e1b391a5ed6afac5ef</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>publish</name>
+      <anchorfile>d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html</anchorfile>
+      <anchor>a34fb2d824b791166707912d049148744</anchor>
+      <arglist>(const MsgType &amp;msg)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10330,6 +10511,44 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::async::Signal</name>
+    <filename>d7/d53/classrm_1_1async_1_1Signal.html</filename>
+    <class kind="class">rm::async::Signal::SignalAwaiter</class>
+    <member kind="function">
+      <type></type>
+      <name>Signal</name>
+      <anchorfile>d7/d53/classrm_1_1async_1_1Signal.html</anchorfile>
+      <anchor>a555e9c78dfe0af68265aa0c3ccbb2281</anchor>
+      <arglist>(IOContext &amp;io_context, int signum)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Signal</name>
+      <anchorfile>d7/d53/classrm_1_1async_1_1Signal.html</anchorfile>
+      <anchor>a9c7fdfdfbf5b5be91981ad110e4136c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>SignalAwaiter</type>
+      <name>wait</name>
+      <anchorfile>d7/d53/classrm_1_1async_1_1Signal.html</anchorfile>
+      <anchor>a557e423873a3a0f1cad34c97b98a74d3</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::Signal::SignalAwaiter</name>
+    <filename>de/d99/classrm_1_1async_1_1Signal_1_1SignalAwaiter.html</filename>
+    <base>rm::async::AsyncIOAwaiter</base>
+    <member kind="function">
+      <type></type>
+      <name>SignalAwaiter</name>
+      <anchorfile>de/d99/classrm_1_1async_1_1Signal_1_1SignalAwaiter.html</anchorfile>
+      <anchor>a3e4763b0dcd8bd5cb1161121cdd32025</anchor>
+      <arglist>(IOContext &amp;ctx, FileDescriptor fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::DgramSocket::SocketReadAwaiter</name>
     <filename>d5/d13/classrm_1_1async_1_1DgramSocket_1_1SocketReadAwaiter.html</filename>
     <base>rm::async::AsyncReadAwaiter</base>
@@ -10363,6 +10582,13 @@
       <anchorfile>d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html</anchorfile>
       <anchor>a4a29b9625f0ff1dc22c59a858f7f56eb</anchor>
       <arglist>(IOContext &amp;ctx, SocketFd fd, std::string_view addr, const Endpoint &amp;ep, std::string_view data)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>SocketWriteAwaiter</name>
+      <anchorfile>d0/d11/classrm_1_1async_1_1DgramSocket_1_1SocketWriteAwaiter.html</anchorfile>
+      <anchor>a4fb5370bd0f7d4a13475e9ae4188e04c</anchor>
+      <arglist>(IOContext &amp;ctx, SocketFd fd, std::array&lt; uint8_t, 4 &gt; addr, const Endpoint &amp;ep, std::string_view data)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10672,6 +10898,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::lpss::async::Subscriber</name>
+    <filename>d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html</filename>
+    <templarg>typename MsgType</templarg>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Subscriber&lt; MsgType &gt; &gt;</type>
+      <name>ptr</name>
+      <anchorfile>d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html</anchorfile>
+      <anchor>af000f93621cca361ae7919be33812530</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html</anchorfile>
+      <anchor>a583aed7bea179dcd854193c31e249818</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::lpss::Subscriber</name>
     <filename>dd/db5/classrm_1_1lpss_1_1Subscriber.html</filename>
     <templarg>typename MsgType</templarg>
@@ -10941,6 +11186,18 @@
       <anchorfile>db/dce/classrm_1_1async_1_1Timer.html</anchorfile>
       <anchor>a49cb7ed7a23128d48358d98765248a11</anchor>
       <arglist>(const std::chrono::time_point&lt; Clock, Duration &gt; &amp;time_point)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::async::Timer</name>
+    <filename>d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html</filename>
+    <base>rm::async::Timer</base>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Timer &gt;</type>
+      <name>ptr</name>
+      <anchorfile>d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html</anchorfile>
+      <anchor>a9aaf5fff6fc83a195defefd8d59a1bde</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13150,133 +13407,48 @@
       <type></type>
       <name>CameraProperties</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>ga3dabb1d304a05608ec415f8f6c289423</anchor>
+      <anchor>ga99adb67cebfd7d04dd4ca9bdd4960377</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">auto_exposure</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">auto_wb</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">exposure</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">gain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea">gamma</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">wb_rgain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">wb_ggain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">wb_bgain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db">contrast</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287">saturation</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5">sharpness</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c">frame_height</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea">frame_width</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2">trigger_delay</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b">trigger_count</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">trigger_period</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>CameraEvents</name>
+      <anchorfile>dc/d90/group__camera.html</anchorfile>
+      <anchor>ga7187e1219e13ae6a717cce746e4c9136</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CAMERA_AUTO_EXPOSURE</name>
+      <name>once_exposure</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CAMERA_MANUAL_EXPOSURE</name>
+      <name>once_wb</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>CAMERA_ONCE_EXPOSURE</name>
+      <name>software</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_AUTO_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_MANUAL_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_EXPOSURE</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_GAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_GAMMA</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_WB_RGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_WB_GGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_WB_BGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_CONTRAST</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_SATURATION</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_SHARPNESS</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_FRAME_HEIGHT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_FRAME_WIDTH</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_TRIGGER_DELAY</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_TRIGGER_COUNT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_TRIGGER_PERIOD</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_TRIGGER_SOFT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>CAMERA_ONCE_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -13935,6 +14107,20 @@
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
+      <type>cv::Mat</type>
+      <name>from_msg</name>
+      <anchorfile>d7/de3/group__lpss.html</anchorfile>
+      <anchor>ga7693b65d2f2576faf723ed302890d741</anchor>
+      <arglist>(const msg::Image &amp;img_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Image</type>
+      <name>to_msg</name>
+      <anchorfile>d7/de3/group__lpss.html</anchorfile>
+      <anchor>gacbf360391ff80a9c4c599951028e4cfd</anchor>
+      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
+    </member>
+    <member kind="function">
       <type>NodeId</type>
       <name>operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -14335,6 +14521,7 @@
     <class kind="class">rm::async::AsyncReadAwaiter</class>
     <class kind="class">rm::async::AsyncWriteAwaiter</class>
     <class kind="class">rm::async::Timer</class>
+    <class kind="class">rm::async::Signal</class>
     <class kind="class">rm::async::PipeServer</class>
     <class kind="class">rm::async::PipeClient</class>
     <class kind="class">rm::async::Webapp</class>
@@ -14474,9 +14661,25 @@
   <compound kind="namespace">
     <name>rm::lpss</name>
     <filename>d0/d65/namespacerm_1_1lpss.html</filename>
+    <namespace>rm::lpss::async</namespace>
     <class kind="class">rm::lpss::Publisher</class>
     <class kind="class">rm::lpss::Subscriber</class>
     <class kind="class">rm::lpss::Node</class>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::lpss::async</name>
+    <filename>d4/d36/namespacerm_1_1lpss_1_1async.html</filename>
+    <class kind="class">rm::lpss::async::Publisher</class>
+    <class kind="class">rm::lpss::async::Subscriber</class>
+    <class kind="class">rm::lpss::async::Timer</class>
+    <class kind="class">rm::lpss::async::Node</class>
+    <member kind="function" static="yes">
+      <type>static rm::async::Task</type>
+      <name>timer_task</name>
+      <anchorfile>d4/d36/namespacerm_1_1lpss_1_1async.html</anchorfile>
+      <anchor>afc91c5efbb2940af90c5f80f9530e523</anchor>
+      <arglist>(Timer::ptr timer, std::chrono::duration&lt; Rep, Period &gt; dur, TimerCallback cb)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::msg</name>
@@ -14565,6 +14768,7 @@
     <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="class">rm::para::OptCameraParam</class>
     <class kind="class">rm::para::IoParam</class>
     <class kind="class">rm::para::HikLightControlParam</class>
     <class kind="class">rm::para::LpssParam</class>
@@ -14640,6 +14844,13 @@
       <name>mv_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>gae34c710391d67b7cf31e2e1906a6da51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>OptCameraParam</type>
+      <name>opt_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -15981,133 +16192,48 @@
       <type></type>
       <name>rm::CameraProperties</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>ga3dabb1d304a05608ec415f8f6c289423</anchor>
+      <anchor>ga99adb67cebfd7d04dd4ca9bdd4960377</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">auto_exposure</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">auto_wb</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">exposure</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">gain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea">gamma</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">wb_rgain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">wb_ggain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">wb_bgain</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db">contrast</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287">saturation</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5">sharpness</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c">frame_height</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea">frame_width</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2">trigger_delay</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b">trigger_count</enumvalue>
+      <enumvalue file="dc/d90/group__camera.html" anchor="gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">trigger_period</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::CameraEvents</name>
+      <anchorfile>dc/d90/group__camera.html</anchorfile>
+      <anchor>ga7187e1219e13ae6a717cce746e4c9136</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>rm::CAMERA_AUTO_EXPOSURE</name>
+      <name>rm::once_exposure</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>rm::CAMERA_MANUAL_EXPOSURE</name>
+      <name>rm::once_wb</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>rm::CAMERA_ONCE_EXPOSURE</name>
+      <name>rm::software</name>
       <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_AUTO_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_MANUAL_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_EXPOSURE</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_GAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_GAMMA</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_WB_RGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_WB_GGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_WB_BGAIN</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_CONTRAST</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_SATURATION</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_SHARPNESS</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_FRAME_HEIGHT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_FRAME_WIDTH</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_TRIGGER_DELAY</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_TRIGGER_COUNT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_TRIGGER_PERIOD</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_TRIGGER_SOFT</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::CAMERA_ONCE_WB</name>
-      <anchorfile>dc/d90/group__camera.html</anchorfile>
-      <anchor>gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa</anchor>
+      <anchor>gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16143,6 +16269,7 @@
     <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
+    <class kind="class">rm::para::OptCameraParam</class>
     <member kind="variable">
       <type>CameraParam</type>
       <name>rm::para::camera_param</name>
@@ -16169,6 +16296,13 @@
       <name>rm::para::mv_camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>gae34c710391d67b7cf31e2e1906a6da51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>OptCameraParam</type>
+      <name>rm::para::opt_camera_param</name>
+      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
+      <anchor>ga51aacb62a2e4a8f56ded609537d236f3</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16576,6 +16710,7 @@
     <class kind="class">rm::async::AsyncReadAwaiter</class>
     <class kind="class">rm::async::AsyncWriteAwaiter</class>
     <class kind="class">rm::async::Timer</class>
+    <class kind="class">rm::async::Signal</class>
     <class kind="struct">rm::Translation</class>
     <class kind="struct">rm::Rotation</class>
     <class kind="struct">rm::ImuData</class>
@@ -16920,9 +17055,21 @@
     <name>lpss</name>
     <title>轻量发布订阅服务</title>
     <filename>d7/de3/group__lpss.html</filename>
-    <class kind="class">rm::lpss::Publisher</class>
-    <class kind="class">rm::lpss::Subscriber</class>
-    <class kind="class">rm::lpss::Node</class>
+    <namespace>rm::lpss</namespace>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>rm::from_msg</name>
+      <anchorfile>d7/de3/group__lpss.html</anchorfile>
+      <anchor>ga7693b65d2f2576faf723ed302890d741</anchor>
+      <arglist>(const msg::Image &amp;img_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Image</type>
+      <name>rm::to_msg</name>
+      <anchorfile>d7/de3/group__lpss.html</anchorfile>
+      <anchor>gacbf360391ff80a9c4c599951028e4cfd</anchor>
+      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>ml</name>
@@ -18597,20 +18744,20 @@
     <docanchor file="d8/d88/tutorials_python.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_tutorials.markdown">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__tutorials</docanchor>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp</name>
-    <path>/home/zhaoxi/.rmvltmp/</path>
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/</path>
     <filename>dir_1f1d0efd9512274b6da9f0fd2f0a959f.html</filename>
-    <dir>/home/zhaoxi/.rmvltmp/rmvl</dir>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
-    <filename>dir_e50287f1f1670e190e9bc32316e07cd0.html</filename>
+    <filename>dir_87afdb654b740152ae499aca4400ec55.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/algorithm</name>
     <path>rmvl/algorithm/</path>
-    <filename>dir_50512aa9fb4f372b00bb7d3dd7bed6da.html</filename>
+    <filename>dir_fb2099489813e98dfc0088d784a50e50.html</filename>
     <file>datastruct.hpp</file>
     <file>dsp.hpp</file>
     <file>kalman.hpp</file>
@@ -18620,14 +18767,14 @@
     <file>transform.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp/rmvl/build</name>
-    <path>/home/zhaoxi/.rmvltmp/rmvl/build/</path>
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl/build</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl/build/</path>
     <filename>dir_cd8ac429d3635d4587aced71884d1809.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/camera</name>
     <path>rmvl/camera/</path>
-    <filename>dir_78d299521c5e5119829508c3d43929a2.html</filename>
+    <filename>dir_68b2675841333b17d262d865224a2a6d.html</filename>
     <file>camutils.hpp</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -18637,21 +18784,22 @@
   <compound kind="dir">
     <name>rmvlpara/camera</name>
     <path>rmvlpara/camera/</path>
-    <filename>dir_ebdaf7c4480af2485cd1079a530006ed.html</filename>
+    <filename>dir_21c299e62c75071ae2ddbdcf77d332fa.html</filename>
     <file>camera.h</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
     <file>mv_camera.h</file>
+    <file>opt_camera.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
-    <filename>dir_8e89044452c59cecaf5a8786a7bc962f.html</filename>
+    <filename>dir_e47bc4c88201119324ad1742b0acdaea.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/combo</name>
     <path>rmvl/combo/</path>
-    <filename>dir_acb2f6a56ddbfb8fd0027f6092b50357.html</filename>
+    <filename>dir_51ed543484fef09623ba53bab7eaba50.html</filename>
     <file>armor.h</file>
     <file>combo.h</file>
     <file>rune.h</file>
@@ -18659,19 +18807,19 @@
   <compound kind="dir">
     <name>rmvlpara/combo</name>
     <path>rmvlpara/combo/</path>
-    <filename>dir_d0f9619331cf590bad76d8382f10d02e.html</filename>
+    <filename>dir_12f7e2719c4aef7ca971bef1458b119e.html</filename>
     <file>armor.h</file>
     <file>rune.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
-    <filename>dir_de2cc6b631065704a5bdc8e7bb83857f.html</filename>
+    <filename>dir_b42c29baecd700a1c7b1f9e031116f59.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/compensator</name>
     <path>rmvl/compensator/</path>
-    <filename>dir_e6e26513ce4fb2be4152a4f4e3106553.html</filename>
+    <filename>dir_fc26b6c2ce0d675ae37f0ead7fead92a.html</filename>
     <file>compensator.h</file>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
@@ -18679,14 +18827,14 @@
   <compound kind="dir">
     <name>rmvlpara/compensator</name>
     <path>rmvlpara/compensator/</path>
-    <filename>dir_534a86d4a8a523e40dba2f6cd1811521.html</filename>
+    <filename>dir_1ff8083e31e2849e01f39dace2d8f642.html</filename>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/core</name>
     <path>rmvl/core/</path>
-    <filename>dir_569626e2623775c4b315b058ffdf7fd1.html</filename>
+    <filename>dir_021e08c4c598f89101b0aa1de0100d4c.html</filename>
     <file>rmvldef.hpp</file>
     <file>str.hpp</file>
     <file>timer.hpp</file>
@@ -18696,12 +18844,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
-    <filename>dir_313831fb0971a0102fc34a9f18b1b871.html</filename>
+    <filename>dir_9c77f252bc2dea7aa2340c49f3ddd30c.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/decider</name>
     <path>rmvl/decider/</path>
-    <filename>dir_99cae2823b81ddec0315950cb5bb6870.html</filename>
+    <filename>dir_88f2670466b86d71a88ebd58d97f1a71.html</filename>
     <file>decider.h</file>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
@@ -18710,7 +18858,7 @@
   <compound kind="dir">
     <name>rmvlpara/decider</name>
     <path>rmvlpara/decider/</path>
-    <filename>dir_95301558a91d69b4536a2adea25af130.html</filename>
+    <filename>dir_770dfdf8e90513f6bf55f0695bfb3603.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
@@ -18718,25 +18866,25 @@
   <compound kind="dir">
     <name>rmvl/io/details</name>
     <path>rmvl/io/details/</path>
-    <filename>dir_6f78c87e3e2ceb6b479ed29227597b08.html</filename>
+    <filename>dir_157202709cbc4694d5907c5a05c8e98a.html</filename>
     <file>shm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss/details</name>
     <path>rmvl/lpss/details/</path>
-    <filename>dir_ca23c258a1c76f951e9da2fe98bc44d2.html</filename>
+    <filename>dir_5007f63d103a5996924fd883732b56d6.html</filename>
     <file>node_impl.hpp</file>
     <file>node_rsd.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
-    <filename>dir_d9c756e959361f33ed9638ae15658304.html</filename>
+    <filename>dir_e7c88c51ab0687dfbc5937f04baf7c42.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/detector</name>
     <path>rmvl/detector/</path>
-    <filename>dir_5583ecb43e7cf22b2bbeeae47e33aabf.html</filename>
+    <filename>dir_1b12cb4dd092e360e17e906bcf9b5c0b.html</filename>
     <file>armor_detector.h</file>
     <file>detector.h</file>
     <file>gyro_detector.h</file>
@@ -18746,7 +18894,7 @@
   <compound kind="dir">
     <name>rmvlpara/detector</name>
     <path>rmvlpara/detector/</path>
-    <filename>dir_b8598dd91f2e19ccea15cd6ae3a714bc.html</filename>
+    <filename>dir_2f07ba103e00493a07ab46a502d692c8.html</filename>
     <file>armor_detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
@@ -18755,14 +18903,14 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
-    <filename>dir_63aeb613b811ed2eb9140a1126087187.html</filename>
+    <filename>dir_e68e8157741866f444e17edd764ebbae.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
-    <filename>dir_8ce2022e601f7a489c46d4ebdc49aba7.html</filename>
+    <filename>dir_426a5ffbbb727b99f4225294c6466649.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</dir>
@@ -18776,12 +18924,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
-    <filename>dir_281684d37e85ceee3c6d925f5cd2e690.html</filename>
+    <filename>dir_08cb09a26daf7692ff65867d96a774b2.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/feature</name>
     <path>rmvl/feature/</path>
-    <filename>dir_3ce520876fede39f67af7c3a8a3c0862.html</filename>
+    <filename>dir_ce8ca8b69315f48cd283f789aa0dd056.html</filename>
     <file>anchor.h</file>
     <file>feature.h</file>
     <file>light_blob.h</file>
@@ -18793,7 +18941,7 @@
   <compound kind="dir">
     <name>rmvlpara/feature</name>
     <path>rmvlpara/feature/</path>
-    <filename>dir_1c8a3e591ae66fc114bb81ccec1f535b.html</filename>
+    <filename>dir_3e5cdcbad10e2274392f9bbc748768cf.html</filename>
     <file>anchor.h</file>
     <file>light_blob.h</file>
     <file>pilot.h</file>
@@ -18803,7 +18951,7 @@
   <compound kind="dir">
     <name>rmvlmsg/geometry</name>
     <path>rmvlmsg/geometry/</path>
-    <filename>dir_16654e9243cb65bdf93bb5869ab9cc97.html</filename>
+    <filename>dir_24f8d8e0ab921bff01fcae06f7e49506.html</filename>
     <file>point.hpp</file>
     <file>point32.hpp</file>
     <file>polygon.hpp</file>
@@ -18817,12 +18965,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
-    <filename>dir_729098440371f0d4df427f6c7ff7dcf0.html</filename>
+    <filename>dir_bdac78099532942366d2fabd1b27783f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/group</name>
     <path>rmvl/group/</path>
-    <filename>dir_3e80edd7e209d4c78df4a504a463a87b.html</filename>
+    <filename>dir_993405bde1c40a0b0112bcd0fe9f1fde.html</filename>
     <file>group.h</file>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
@@ -18830,14 +18978,14 @@
   <compound kind="dir">
     <name>rmvlpara/group</name>
     <path>rmvlpara/group/</path>
-    <filename>dir_087da8d79feadcd317f1eb22af008cfd.html</filename>
+    <filename>dir_f58d8d58cb13d39e9f4987da0b365be7.html</filename>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
-    <filename>dir_aa22c37ac578673e90f287158c6a7019.html</filename>
+    <filename>dir_58c94e520695a9c6e49a2b567a210ce0.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</dir>
@@ -18845,7 +18993,7 @@
   <compound kind="dir">
     <name>rmvl/io</name>
     <path>rmvl/io/</path>
-    <filename>dir_66f856895de826d01e5b96701d8b13b6.html</filename>
+    <filename>dir_bc4d7e1d3f923a65e94f5ee75373b3de.html</filename>
     <dir>rmvl/io/details</dir>
     <file>async.hpp</file>
     <file>ipc.hpp</file>
@@ -18857,7 +19005,7 @@
   <compound kind="dir">
     <name>rmvl/light</name>
     <path>rmvl/light/</path>
-    <filename>dir_be15d5cdc57a7070d3ae8f434633911a.html</filename>
+    <filename>dir_fe3d19a7723048ccf658f16ac60a0a67.html</filename>
     <file>hik_light_control.h</file>
     <file>lightutils.hpp</file>
     <file>opt_light_control.h</file>
@@ -18865,43 +19013,44 @@
   <compound kind="dir">
     <name>rmvlpara/light</name>
     <path>rmvlpara/light/</path>
-    <filename>dir_c3693fdd57a10ef1bc7620e54ce9498a.html</filename>
+    <filename>dir_9d76333e2953167de3e2f20e7e642e19.html</filename>
     <file>hik_light_control.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
-    <filename>dir_fa2eec13076e9f96774fe6e21fa951d4.html</filename>
+    <filename>dir_2b68a0c976a94001a3a52c1a9b6afce2.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss</name>
     <path>rmvl/lpss/</path>
-    <filename>dir_577d59d13decd0a00a9a3145f56c7b2f.html</filename>
+    <filename>dir_6dab983623edcfe7d7eb4c8db8a91100.html</filename>
     <dir>rmvl/lpss/details</dir>
+    <file>cv.hpp</file>
     <file>node.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
-    <filename>dir_3a31d66722521052f8304ab21c00ca17.html</filename>
+    <filename>dir_c8c342af8d42b5d680657a324064f568.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/ml</name>
     <path>rmvl/ml/</path>
-    <filename>dir_96aeefc62acd539b27e83661f3581d52.html</filename>
+    <filename>dir_333d0aeefdeba1c53236985888de9470.html</filename>
     <file>ort.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
-    <filename>dir_efca97ecc042efa865eaefd41f9be988.html</filename>
+    <filename>dir_dd14b81ce98f0efb0c27d4605792b06c.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
     <path>rmvl/opcua/</path>
-    <filename>dir_fb7d5e5fa92dc084c164886a77a2be86.html</filename>
+    <filename>dir_6f345ac53a1eefe67f1e600f9a522fd7.html</filename>
     <file>client.hpp</file>
     <file>event.hpp</file>
     <file>method.hpp</file>
@@ -18916,17 +19065,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
-    <filename>dir_cb4ca42878937429832ea22c8d56fec0.html</filename>
+    <filename>dir_eac206f591cba90314701160c24e8a17.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
-    <filename>dir_40b99015e00a250f3754dffac633688b.html</filename>
+    <filename>dir_2d16c776959d732bcd5241749ddcece3.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/predictor</name>
     <path>rmvl/predictor/</path>
-    <filename>dir_82d1e6ec8ec7cb629af3674341cdc95d.html</filename>
+    <filename>dir_be25d590ea0c4f598694de88b9e8de05.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>predictor.h</file>
@@ -18936,7 +19085,7 @@
   <compound kind="dir">
     <name>rmvlpara/predictor</name>
     <path>rmvlpara/predictor/</path>
-    <filename>dir_b7e07b1f242d523e7d34928268d8c8e5.html</filename>
+    <filename>dir_9cb561993a62f54b93c7cb98ed21d292.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>rune_predictor.h</file>
@@ -18945,148 +19094,148 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
-    <filename>dir_d0f7e421e0997c0bf11dc5a06fb3c605.html</filename>
+    <filename>dir_6c8551f4d7dc208509ae2df87f489cca.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
-    <filename>dir_5bafbfe2a1ced00a837924a7d9c23d39.html</filename>
+    <filename>dir_e29f7b20dc4e91179ccf6c1e48f7ce8e.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/</path>
-    <filename>dir_1c6aa230f859dc3670992dca1c451e7a.html</filename>
+    <filename>dir_1b5159d8e824ca0372c222fccb8e8031.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</dir>
   </compound>
   <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl/</path>
+    <filename>dir_d892ad31c88a7738f8012346252ba931.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/.rmvltmp/rmvl/build</dir>
+  </compound>
+  <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_ff03e4bf742ea8099ec4cfcdac358710.html</filename>
+    <filename>dir_b84f0685042b53df8576d9a5df8737a7.html</filename>
     <dir>rmvl/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_bbdada461bd67ec39ad4c5a7e52c1704.html</filename>
+    <filename>dir_3cd5b91f19adc4085f4b4e39e4ff2f73.html</filename>
     <dir>rmvl/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_7674f2a10684fb8c82ccd4da2e5351d6.html</filename>
+    <filename>dir_7a867aa029234ffc6f7eed334080704b.html</filename>
     <dir>rmvl/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_f2e18b45b93189891b180df6464050f4.html</filename>
+    <filename>dir_4b04c2e007ec9137cdcc6b07f15783dd.html</filename>
     <dir>rmvl/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_f6e5f49e6ef35977bb5d7e75a68963cc.html</filename>
+    <filename>dir_5ac3da02857772deca4fc3f808edbaf5.html</filename>
     <dir>rmvl/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_774c12e4d1f477ca15af185e62a1572e.html</filename>
+    <filename>dir_3369679d0342e0144be24fe8bcb77137.html</filename>
     <dir>rmvl/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_90f3991ba10c058a285f03a6035e2a3c.html</filename>
+    <filename>dir_6eee36bbafba159c1f307a96cde9296f.html</filename>
     <dir>rmvl/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3354db72e67a6a30846355467a09f36b.html</filename>
+    <filename>dir_05fa650a38f3f5a08a2422c6dda771be.html</filename>
     <dir>rmvl/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_71bf6823197d27734da63e942b8d187c.html</filename>
+    <filename>dir_809e963fb58aef5dff5228943502dc0e.html</filename>
     <file>types.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_0b91645aa8def3c8ac2250a6a7e35f1a.html</filename>
+    <filename>dir_143430c183a215e00fc5688a6b00f801.html</filename>
     <dir>rmvl/algorithm</dir>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_461ed81535f9510a759df52724b26998.html</filename>
+    <filename>dir_0004eea47629e797f98a68d373747388.html</filename>
     <dir>rmvl/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_efd1512632de5fdeabf2ca758db8fb4d.html</filename>
+    <filename>dir_8ce2230b18c62fc4f1b2d4c11ea01049.html</filename>
     <dir>rmvl/core</dir>
     <file>core.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_127904d2b519627d1987d4f85dc3e9ed.html</filename>
+    <filename>dir_e7d32574a6c4fcfa257018e66cd9435e.html</filename>
     <dir>rmvl/io</dir>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_5d2c5c18c4107ce6371e97cb9b4863fc.html</filename>
+    <filename>dir_4273a60eceee48416df95d84f85905d9.html</filename>
     <dir>rmvl/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_2409041128f30c7e632a1d2686a5a378.html</filename>
+    <filename>dir_056965ee29af610b58b6eed68da89d07.html</filename>
     <dir>rmvl/lpss</dir>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_87735ccda0193a5376fd86df094b9d06.html</filename>
+    <filename>dir_b5c1b52e49bdab802b985f422853f0cc.html</filename>
     <dir>rmvl/ml</dir>
     <file>ml.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_99c4a071f9876207aeb2ccd26e68c4dd.html</filename>
+    <filename>dir_d1896504bf09fddf262d44ed95e52f7a.html</filename>
     <dir>rmvl/opcua</dir>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp/rmvl</name>
-    <path>/home/zhaoxi/.rmvltmp/rmvl/</path>
-    <filename>dir_d892ad31c88a7738f8012346252ba931.html</filename>
-    <dir>/home/zhaoxi/.rmvltmp/rmvl/build</dir>
-  </compound>
-  <compound kind="dir">
     <name>rmvlmsg</name>
     <path>rmvlmsg/</path>
-    <filename>dir_584b56ed427fc12411d4172925c74074.html</filename>
+    <filename>dir_4d50aa784517d57a06ecfff1c8a1efd8.html</filename>
     <dir>rmvlmsg/geometry</dir>
     <dir>rmvlmsg/sensor</dir>
     <dir>rmvlmsg/std</dir>
@@ -19094,101 +19243,101 @@
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_bd0853e39d9979da024d4a6722daad0b.html</filename>
+    <filename>dir_58222088a8cee0a471f253eac143ba17.html</filename>
     <dir>rmvlpara/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_71f52d487cf2933c7e27d03587dcdf91.html</filename>
+    <filename>dir_f0e88a7a5cb5aab28614e8930b567bd3.html</filename>
     <dir>rmvlpara/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_4486d76bf6cc85e9bb825e727d134df0.html</filename>
+    <filename>dir_4d60ae5981f7ce87b742481e65bfd802.html</filename>
     <dir>rmvlpara/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_68f8e3f54c502890141b94aecfd7f2ec.html</filename>
+    <filename>dir_45e97b84317156a5954d30eced95ddb6.html</filename>
     <dir>rmvlpara/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_d0e91ac94a1f2c6911aff14c70246c72.html</filename>
+    <filename>dir_36b455a1b0f3273f108b36652d153a8a.html</filename>
     <dir>rmvlpara/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_b5dc5d48234085622b23760ad1bbf09c.html</filename>
+    <filename>dir_2ea0c873adea199cd62f1107c61b502b.html</filename>
     <dir>rmvlpara/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_78b1583f1b463aa7a8e22968a1705c35.html</filename>
+    <filename>dir_b7145cfe89c878932d64aa281be9ef49.html</filename>
     <dir>rmvlpara/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_6c997901f901bc002c0fa812b622e527.html</filename>
+    <filename>dir_56f1c6dcc74dc20460c2b77be5c46794.html</filename>
     <dir>rmvlpara/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_8a57e973e059eabb9cda737bc07949f4.html</filename>
+    <filename>dir_d0dd8f3c1ff56d88a0ca94359a28aa0a.html</filename>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_7df43d62cd237bbfe6c772bfcd92ab52.html</filename>
+    <filename>dir_1a6308d51d814586b9985a0758773f42.html</filename>
     <dir>rmvlpara/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_13bc97c3e9aa29cb4dff0af470d22055.html</filename>
+    <filename>dir_c83cd2ae801cf5a6eebca515f7297a6e.html</filename>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_67d781d51c42d4a8c0b1389395433309.html</filename>
+    <filename>dir_0d09ee667c2a9666a31dfa29c1285dbd.html</filename>
     <dir>rmvlpara/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_01990b82e018726217bbdfc12151d26a.html</filename>
+    <filename>dir_54dc165de3f051bd04cea3d4dc4160e9.html</filename>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_51d997721f514119dc3de95d480ef505.html</filename>
+    <filename>dir_0881cfd4956fe17faae321d2c65bc1f4.html</filename>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/sensor</name>
     <path>rmvlmsg/sensor/</path>
-    <filename>dir_7d10cd3360dad54eb56db20dff9f921b.html</filename>
+    <filename>dir_f09e4dbe1c52ab070e0d16b057d7c7ea.html</filename>
     <file>camera_info.hpp</file>
     <file>image.hpp</file>
     <file>imu.hpp</file>
@@ -19198,7 +19347,7 @@
   <compound kind="dir">
     <name>rmvlmsg/std</name>
     <path>rmvlmsg/std/</path>
-    <filename>dir_355971bc52002f4e58fade7fdd0e1fd4.html</filename>
+    <filename>dir_567b0f3791db27fa1ff59d607208e840.html</filename>
     <file>bool.hpp</file>
     <file>char.hpp</file>
     <file>color_rgba.hpp</file>
@@ -19218,17 +19367,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
-    <filename>dir_37d8d1d8fd20c6853ee9a8117ea58f32.html</filename>
+    <filename>dir_475f633f804384ebfc31fbf8bd129454.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
-    <filename>dir_a9f58f6f91a5dabd2195d8cc1f02f871.html</filename>
+    <filename>dir_6b8d1066f9f8a1d0ae64c8dcf96bf1e3.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/tracker</name>
     <path>rmvl/tracker/</path>
-    <filename>dir_4ca38ea3da80f7d4b36b0beb918106f8.html</filename>
+    <filename>dir_9c45eb0c4acec6c44430f61dff0bf5e7.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19237,7 +19386,7 @@
   <compound kind="dir">
     <name>rmvlpara/tracker</name>
     <path>rmvlpara/tracker/</path>
-    <filename>dir_d301de7fcf533dbc68142aa95cf635fe.html</filename>
+    <filename>dir_6b0b4bc53031f88182b1020c744899c6.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19245,7 +19394,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
-    <filename>dir_26c5c64eeef8370ce1acbf07045fbc29.html</filename>
+    <filename>dir_5b0b179e83013be2ae877b5cea1eb6e2.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</dir>
@@ -19253,7 +19402,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
-    <filename>dir_a318c6cfe6210b0cec382b58a20f9e91.html</filename>
+    <filename>dir_4ef7a8655673da93818ea708ee8785e2.html</filename>
   </compound>
   <compound kind="page">
     <name>index</name>

@@ -118,13 +118,13 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md355">1 概述 </a>
+        <a href="#autotoc_md358">1 概述 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md356">2 内置消息类型 </a>
+        <a href="#autotoc_md359">2 内置消息类型 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md357">3 自动代码生成 </a>
+        <a href="#autotoc_md360">3 自动代码生成 </a>
       </li>
     </ul>
   </li>
@@ -136,10 +136,10 @@ $(function() {
 </p>
 <hr  />
 <p>此模块主要为 <a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> 提供支持，详细使用说明请参考 <a class="el" href="../../d3/d8e/tutorial_modules_lpss.html">轻量发布订阅服务 —— LPSS</a> 。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md355"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md358"></a>
 1 概述</h2>
 <p>RMVL 消息描述文件（<span class="tt">*.msg</span>）用于定义消息的数据结构和字段类型，类似于 ROS 消息定义文件。通过定义消息描述文件，用户可以方便地在 RMVL 中进行数据传输，这在分布式系统、网络通信中尤为重要。 RMVL 提供了一套简洁的消息定义语法，与 ROS/ROS 2 的定义语法大致兼容，同样支持多种数据类型和较为复杂的数据结构。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md356"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md359"></a>
 2 内置消息类型</h2>
 <p>以下是一些常用的内置消息类型，分为三个主要分组：<span class="tt">std</span>、<span class="tt">geometry</span> 和 <span class="tt">sensor</span>。用户可以根据需要在自定义的 <span class="tt">*.msg</span> 文件中引用这些内置消息类型。</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -225,7 +225,7 @@ $(function() {
 </div><p class="startli">与 <span class="tt">geometry</span> 分组的消息类似，在自定义 <span class="tt">*.msg</span> 文件中使用 <span class="tt">sensor</span> 分组的消息时，需要手动指定分组前缀，即要手动添加 <span class="tt">sensor/</span> 前缀，例如：</p>
 <div class="fragment"> <div class="line"><span class="comment"># 自定义消息类型 SCARA.msg</span></div> <div class="line"><span class="keyword">Header</span> header</div> <div class="line"></div> <div class="line"><span class="keywordtype">string</span> robot_name</div> <div class="line"><span class="keywordtype">uint8</span>[4] ip</div> <div class="line"><span class="keyword">sensor/JointState</span> joint_state</div> </div></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md357"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md360"></a>
 3 自动代码生成</h2>
 <p>RMVL 提供了 <span class="tt">rmvl_generate_msg</span> 的 CMake 函数，用于生成消息类型的 C++ 代码文件，用于生成独立模块的消息类型。用户只需在模块的 CMakeLists.txt 文件中调用该函数，并提供消息类型的名称和路径，RMVL 将自动生成相应的 C++ 代码文件。</p>
 <div class="fragment"> <div class="line"><span class="comment"># 根据 msg/test.msg 文件生成消息类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlmsg/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 msg/dir/test.msg 文件生成消息类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlmsg/dir/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(dir/test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 msg/test2.msg 文件生成消息类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlmsg/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(</div> <div class="line">&#160;&#160;test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 msg/dir/test2.msg 文件生成消息类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlmsg/dir/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(</div> <div class="line">&#160;&#160;dir/test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> </div> </div></div><!-- contents -->

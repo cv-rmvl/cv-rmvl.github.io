@@ -153,93 +153,111 @@ $(function() {
 , <a class="el" href="#gga034d81b381d7c04ba4549cf3533750ffaf20e3c5e54c0ab3d375d660b3f896f6a">rm::RetrieveMode::SDK</a>
  }</td></tr>
 <tr class="memdesc:ga034d81b381d7c04ba4549cf3533750ff"><td class="mdescLeft"> </td><td class="mdescRight">相机数据处理模式  <a href="#ga034d81b381d7c04ba4549cf3533750ff">更多...</a><br/></td></tr>
-<tr class="memitem:ga3dabb1d304a05608ec415f8f6c289423" id="r_ga3dabb1d304a05608ec415f8f6c289423"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3dabb1d304a05608ec415f8f6c289423">rm::CameraProperties</a> : uint16_t { <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb">rm::CAMERA_AUTO_EXPOSURE</a> = 0x1
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a> = 0x2
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568">rm::CAMERA_ONCE_EXPOSURE</a> = 0x3
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972">rm::CAMERA_AUTO_WB</a> = 0x10
+<tr class="memitem:ga99adb67cebfd7d04dd4ca9bdd4960377" id="r_ga99adb67cebfd7d04dd4ca9bdd4960377"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99adb67cebfd7d04dd4ca9bdd4960377">rm::CameraProperties</a> : uint8_t { <br/>
+  <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408">rm::CameraProperties::exposure</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b">rm::CameraProperties::gain</a>
 , <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a> = 0x11
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a> = 0x20
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a> = 0x21
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103">rm::CAMERA_GAMMA</a> = 0x22
+  <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea">rm::CameraProperties::gamma</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291">rm::CameraProperties::wb_rgain</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80">rm::CameraProperties::wb_ggain</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">rm::CameraProperties::wb_bgain</a>
 , <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a> = 0x23
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a> = 0x24
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a> = 0x25
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9">rm::CAMERA_CONTRAST</a> = 0x26
+  <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db">rm::CameraProperties::contrast</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287">rm::CameraProperties::saturation</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5">rm::CameraProperties::sharpness</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c">rm::CameraProperties::frame_height</a>
 , <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc">rm::CAMERA_SATURATION</a> = 0x27
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f">rm::CAMERA_SHARPNESS</a> = 0x28
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634">rm::CAMERA_FRAME_HEIGHT</a> = 0x30
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22">rm::CAMERA_FRAME_WIDTH</a> = 0x31
-, <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898">rm::CAMERA_TRIGGER_DELAY</a> = 0x40
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71">rm::CAMERA_TRIGGER_COUNT</a> = 0x41
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83">rm::CAMERA_TRIGGER_PERIOD</a> = 0x42
-, <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313">rm::CAMERA_TRIGGER_SOFT</a> = 0x43
-, <br/>
-  <a class="el" href="#gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa">rm::CAMERA_ONCE_WB</a> = 0x44
+  <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea">rm::CameraProperties::frame_width</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2">rm::CameraProperties::trigger_delay</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b">rm::CameraProperties::trigger_count</a>
+, <a class="el" href="#gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">rm::CameraProperties::trigger_period</a>
 <br/>
  }</td></tr>
-<tr class="memdesc:ga3dabb1d304a05608ec415f8f6c289423"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时属性  <a href="#ga3dabb1d304a05608ec415f8f6c289423">更多...</a><br/></td></tr>
+<tr class="memdesc:ga99adb67cebfd7d04dd4ca9bdd4960377"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时属性  <a href="#ga99adb67cebfd7d04dd4ca9bdd4960377">更多...</a><br/></td></tr>
+<tr class="memitem:ga7187e1219e13ae6a717cce746e4c9136" id="r_ga7187e1219e13ae6a717cce746e4c9136"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7187e1219e13ae6a717cce746e4c9136">rm::CameraEvents</a> : uint8_t { <a class="el" href="#gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7">rm::once_exposure</a>
+, <a class="el" href="#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">rm::once_wb</a>
+, <a class="el" href="#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::software</a>
+ }</td></tr>
+<tr class="memdesc:ga7187e1219e13ae6a717cce746e4c9136"><td class="mdescLeft"> </td><td class="mdescRight">相机运行时事件  <a href="#ga7187e1219e13ae6a717cce746e4c9136">更多...</a><br/></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
 <a id="doc-enum-members" name="doc-enum-members"></a><h2 class="groupheader" id="header-doc-enum-members">枚举类型说明</h2>
-<a id="ga3dabb1d304a05608ec415f8f6c289423" name="ga3dabb1d304a05608ec415f8f6c289423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3dabb1d304a05608ec415f8f6c289423">◆ </a></span>CameraProperties</h2>
+<a id="ga7187e1219e13ae6a717cce746e4c9136" name="ga7187e1219e13ae6a717cce746e4c9136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7187e1219e13ae6a717cce746e4c9136">◆ </a></span>CameraEvents</h2>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#ga3dabb1d304a05608ec415f8f6c289423">rm::CameraProperties</a> : uint16_t</td>
+          <td class="memname">enum <a class="el" href="#ga7187e1219e13ae6a717cce746e4c9136">rm::CameraEvents</a> : uint8_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p><code>#include &lt;rmvl/camera/camutils.hpp&gt;</code></p>
+<p>相机运行时事件 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7" name="gga7187e1219e13ae6a717cce746e4c9136a4aa5edce0139180264614652219591c7"></a>once_exposure <div class="python_language"><b>Python: </b>rm.once_exposure</div></td><td class="fielddoc"><p>单次曝光 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643" name="gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643"></a>once_wb <div class="python_language"><b>Python: </b>rm.once_wb</div></td><td class="fielddoc"><p>执行单次白平衡 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2" name="gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2"></a>software <div class="python_language"><b>Python: </b>rm.software</div></td><td class="fielddoc"><p>执行软触发 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga99adb67cebfd7d04dd4ca9bdd4960377" name="ga99adb67cebfd7d04dd4ca9bdd4960377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99adb67cebfd7d04dd4ca9bdd4960377">◆ </a></span>CameraProperties</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga99adb67cebfd7d04dd4ca9bdd4960377">rm::CameraProperties</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/camera/camutils.hpp&gt;</code></p>
 <p>相机运行时属性 </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb" name="gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb"></a>CAMERA_AUTO_EXPOSURE <div class="python_language"><b>Python: </b>rm.CAMERA_AUTO_EXPOSURE</div></td><td class="fielddoc"><p>自动曝光 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395" name="gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395"></a>auto_exposure <div class="python_language"><b>Python: </b>rm.CameraProperties.auto_exposure</div></td><td class="fielddoc"><p>自动曝光 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13" name="gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13"></a>CAMERA_MANUAL_EXPOSURE <div class="python_language"><b>Python: </b>rm.CAMERA_MANUAL_EXPOSURE</div></td><td class="fielddoc"><p>手动曝光 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31" name="gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31"></a>auto_wb <div class="python_language"><b>Python: </b>rm.CameraProperties.auto_wb</div></td><td class="fielddoc"><p>自动白平衡 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568" name="gga3dabb1d304a05608ec415f8f6c289423a8b69486bb4913dd09814d341a399f568"></a>CAMERA_ONCE_EXPOSURE <div class="python_language"><b>Python: </b>rm.CAMERA_ONCE_EXPOSURE</div></td><td class="fielddoc"><p>单次曝光 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408" name="gga99adb67cebfd7d04dd4ca9bdd4960377ab1b57b87d3b0adf8903512fb2e794408"></a>exposure <div class="python_language"><b>Python: </b>rm.CameraProperties.exposure</div></td><td class="fielddoc"><p>曝光值 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972" name="gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972"></a>CAMERA_AUTO_WB <div class="python_language"><b>Python: </b>rm.CAMERA_AUTO_WB</div></td><td class="fielddoc"><p>自动白平衡 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b" name="gga99adb67cebfd7d04dd4ca9bdd4960377ad2d74b47b149d8090871a2f33e80809b"></a>gain <div class="python_language"><b>Python: </b>rm.CameraProperties.gain</div></td><td class="fielddoc"><p>模拟增益 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c" name="gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c"></a>CAMERA_MANUAL_WB <div class="python_language"><b>Python: </b>rm.CAMERA_MANUAL_WB</div></td><td class="fielddoc"><p>手动白平衡 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea" name="gga99adb67cebfd7d04dd4ca9bdd4960377a05b048d7242cb7b8b57cfa3b1d65ecea"></a>gamma <div class="python_language"><b>Python: </b>rm.CameraProperties.gamma</div></td><td class="fielddoc"><p>Gamma 值 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c" name="gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c"></a>CAMERA_EXPOSURE <div class="python_language"><b>Python: </b>rm.CAMERA_EXPOSURE</div></td><td class="fielddoc"><p>曝光值 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291" name="gga99adb67cebfd7d04dd4ca9bdd4960377ab26aed45ced3bfb3f58f99b472806291"></a>wb_rgain <div class="python_language"><b>Python: </b>rm.CameraProperties.wb_rgain</div></td><td class="fielddoc"><p>白平衡红色分量 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16" name="gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16"></a>CAMERA_GAIN <div class="python_language"><b>Python: </b>rm.CAMERA_GAIN</div></td><td class="fielddoc"><p>模拟增益 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80" name="gga99adb67cebfd7d04dd4ca9bdd4960377aa90f87f76bfd19b801bb63d61f418e80"></a>wb_ggain <div class="python_language"><b>Python: </b>rm.CameraProperties.wb_ggain</div></td><td class="fielddoc"><p>白平衡绿色分量 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103" name="gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103"></a>CAMERA_GAMMA <div class="python_language"><b>Python: </b>rm.CAMERA_GAMMA</div></td><td class="fielddoc"><p>Gamma 值 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134" name="gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134"></a>wb_bgain <div class="python_language"><b>Python: </b>rm.CameraProperties.wb_bgain</div></td><td class="fielddoc"><p>白平衡蓝色分量 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801" name="gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801"></a>CAMERA_WB_RGAIN <div class="python_language"><b>Python: </b>rm.CAMERA_WB_RGAIN</div></td><td class="fielddoc"><p>白平衡红色分量 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db" name="gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db"></a>contrast <div class="python_language"><b>Python: </b>rm.CameraProperties.contrast</div></td><td class="fielddoc"><p>对比度 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58" name="gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58"></a>CAMERA_WB_GGAIN <div class="python_language"><b>Python: </b>rm.CAMERA_WB_GGAIN</div></td><td class="fielddoc"><p>白平衡绿色分量 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287" name="gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287"></a>saturation <div class="python_language"><b>Python: </b>rm.CameraProperties.saturation</div></td><td class="fielddoc"><p>饱和度 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e" name="gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e"></a>CAMERA_WB_BGAIN <div class="python_language"><b>Python: </b>rm.CAMERA_WB_BGAIN</div></td><td class="fielddoc"><p>白平衡蓝色分量 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5" name="gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5"></a>sharpness <div class="python_language"><b>Python: </b>rm.CameraProperties.sharpness</div></td><td class="fielddoc"><p>锐度 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9" name="gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9"></a>CAMERA_CONTRAST <div class="python_language"><b>Python: </b>rm.CAMERA_CONTRAST</div></td><td class="fielddoc"><p>对比度 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c" name="gga99adb67cebfd7d04dd4ca9bdd4960377a33d1bb622c36f9e346d607fc4ee2d55c"></a>frame_height <div class="python_language"><b>Python: </b>rm.CameraProperties.frame_height</div></td><td class="fielddoc"><p>图像帧高度 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc" name="gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc"></a>CAMERA_SATURATION <div class="python_language"><b>Python: </b>rm.CAMERA_SATURATION</div></td><td class="fielddoc"><p>饱和度 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea" name="gga99adb67cebfd7d04dd4ca9bdd4960377a5ca9ab391b99231c06a40604615fb3ea"></a>frame_width <div class="python_language"><b>Python: </b>rm.CameraProperties.frame_width</div></td><td class="fielddoc"><p>图像帧宽度 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f" name="gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f"></a>CAMERA_SHARPNESS <div class="python_language"><b>Python: </b>rm.CAMERA_SHARPNESS</div></td><td class="fielddoc"><p>锐度 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2" name="gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2"></a>trigger_delay <div class="python_language"><b>Python: </b>rm.CameraProperties.trigger_delay</div></td><td class="fielddoc"><p>硬触发采集延迟（微秒 \(μs\)） </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634" name="gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634"></a>CAMERA_FRAME_HEIGHT <div class="python_language"><b>Python: </b>rm.CAMERA_FRAME_HEIGHT</div></td><td class="fielddoc"><p>图像帧高度 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b" name="gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b"></a>trigger_count <div class="python_language"><b>Python: </b>rm.CameraProperties.trigger_count</div></td><td class="fielddoc"><p>单次触发时的触发帧数 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22" name="gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22"></a>CAMERA_FRAME_WIDTH <div class="python_language"><b>Python: </b>rm.CAMERA_FRAME_WIDTH</div></td><td class="fielddoc"><p>图像帧宽度 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898" name="gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898"></a>CAMERA_TRIGGER_DELAY <div class="python_language"><b>Python: </b>rm.CAMERA_TRIGGER_DELAY</div></td><td class="fielddoc"><p>硬触发采集延迟（微秒 \(μs\)） </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71" name="gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71"></a>CAMERA_TRIGGER_COUNT <div class="python_language"><b>Python: </b>rm.CAMERA_TRIGGER_COUNT</div></td><td class="fielddoc"><p>单次触发时的触发帧数 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83" name="gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83"></a>CAMERA_TRIGGER_PERIOD <div class="python_language"><b>Python: </b>rm.CAMERA_TRIGGER_PERIOD</div></td><td class="fielddoc"><p>单次触发时多次采集的周期（微秒 \(μs\)） </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313" name="gga3dabb1d304a05608ec415f8f6c289423a12208efc7911e8dfb4b9fb46aa6bb313"></a>CAMERA_TRIGGER_SOFT <div class="python_language"><b>Python: </b>rm.CAMERA_TRIGGER_SOFT</div></td><td class="fielddoc"><p>执行软触发 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa" name="gga3dabb1d304a05608ec415f8f6c289423aad4505f28b41f355ff821263345544aa"></a>CAMERA_ONCE_WB <div class="python_language"><b>Python: </b>rm.CAMERA_ONCE_WB</div></td><td class="fielddoc"><p>执行单次白平衡 </p>
+<tr><td class="fieldname"><a id="gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b" name="gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b"></a>trigger_period <div class="python_language"><b>Python: </b>rm.CameraProperties.trigger_period</div></td><td class="fielddoc"><p>单次触发时多次采集的周期（微秒 \(μs\)） </p>
 </td></tr>
 </table>
 </div>

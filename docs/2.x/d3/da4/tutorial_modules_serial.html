@@ -118,27 +118,27 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md331">1 简介 </a>
+        <a href="#autotoc_md334">1 简介 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md332">2 同步模式使用 </a>
+        <a href="#autotoc_md335">2 同步模式使用 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md333">2.1 初始化 </a>
+            <a href="#autotoc_md336">2.1 初始化 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md334">2.2 数据 I/O </a>
+            <a href="#autotoc_md337">2.2 数据 I/O </a>
           </li>
           <li class="level3">
             <a href="#serial_protocol">2.3 链路层协议 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md335">2.4 用法 </a>
+            <a href="#autotoc_md338">2.4 用法 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md336">3 异步模式使用 </a>
+        <a href="#autotoc_md339">3 异步模式使用 </a>
       </li>
     </ul>
   </li>
@@ -154,7 +154,7 @@ $(function() {
 </p>
 <hr  />
 <p>相关类 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 及 <a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a></p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md331"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md334"></a>
 1 简介</h2>
 <p>串口通信是一种通过串行数据传输进行通信的方式。它使用串行接口将数据以逐位的方式进行传输，常用于连接计算机与外部设备、嵌入式系统之间的数据传输。</p>
 <p>串口通信一般涉及两个主要概念： <b>串口</b> 和 <b>波特率</b> 。</p>
@@ -162,9 +162,9 @@ $(function() {
 <li>串口：指的是通信中的物理接口，常见的有 <span class="tt">RS-232</span>、<span class="tt">RS-485</span>、<span class="tt">UART</span> 等标准。每个串口都有相应的引脚用于发送和接收数据以及控制信号。</li>
 <li>波特率：也称作数据传输速率，指的是每秒钟传输的位数。波特率决定了传输速度的快慢，通常使用常见的波特率如 9600、115200 等。</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md332"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md335"></a>
 2 同步模式使用</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md333"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md336"></a>
 2.1 初始化</h3>
 <p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 的构造函数原型如下</p>
 <div class="fragment"><div class="line">SerialPort(std::string_view device, BaudRate baud_rate, SerialReadMode read_mode = {});</div>
@@ -178,7 +178,7 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter"><span class="tt">read_mode</span>  </td><td class="markdownTableBodyCenter">读取模式，表示阻塞与非阻塞， <a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a> 不提供该参数  </td></tr>
 </table>
-</div><div class="full_width_table"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md334"></a>
+</div><div class="full_width_table"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md337"></a>
 2.2 数据 I/O</h3>
 <p><a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="同步模式串行接口通信库">rm::SerialPort</a> 提供了极其方便的串口读取、写入的接口。</p>
 <h5>读取函数原型</h5>
@@ -216,7 +216,7 @@ $(function() {
 <li>内存对齐规则，关于内存对齐可使用 <span class="tt">#pragma pack</span> 宏或使用 C++ 标准的 <span class="tt">alignas</span> 关键字</li>
 <li>头尾帧是否一致</li>
 </ul>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md335"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
 2.4 用法</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/serial.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -252,7 +252,7 @@ $(function() {
 <div class="ttc" id="agroup__io__serial_html_gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a"><div class="ttname"><a href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">rm::BaudRate::BR_115200</a></div><div class="ttdeci">@ BR_115200</div><div class="ttdoc">波特率 115200</div><div class="ttdef"><b>定义</b> serial.hpp:40</div></div>
 <div class="ttc" id="anamespacerm_1_1str_html"><div class="ttname"><a href="../../d4/dfc/namespacerm_1_1str.html">rm::str</a></div><div class="ttdef"><b>定义</b> str.hpp:19</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md336"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
 3 异步模式使用</h2>
 <p><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html" title="异步串行接口通信库，仅支持读写字符串">rm::async::SerialPort</a> 需要配合 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html" title="异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度">rm::async::IOContext</a> 使用，目前，异步串口仅提供了字符串读写的功能</p>
 <div class="fragment"><div class="line">SerialReadAwaiter read();</div>

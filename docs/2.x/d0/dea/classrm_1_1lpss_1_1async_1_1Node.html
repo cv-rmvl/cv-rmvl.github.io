@@ -1,0 +1,401 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::lpss::async::Node类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d4/d36/namespacerm_1_1lpss_1_1async.html">async</a></li><li class="navelem"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">Node</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d0/dec/classrm_1_1lpss_1_1async_1_1Node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::async::Node类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>轻量级发布订阅服务异步节点  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/node.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::lpss::async::Node 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/dfe/classrm_1_1lpss_1_1async_1_1Node__inherit__graph.svg" width="170" height="290"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::lpss::async::Node 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d08/classrm_1_1lpss_1_1async_1_1Node__coll__graph.svg" width="170" height="290"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa9215ac625dd32deee2d92847c51cc8d" id="r_aa9215ac625dd32deee2d92847c51cc8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9215ac625dd32deee2d92847c51cc8d">Node</a> (std::string_view name, uint8_t domain_id=0)</td></tr>
+<tr class="memdesc:aa9215ac625dd32deee2d92847c51cc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建通用节点，默认域 ID 为 0  <br /></td></tr>
+<tr class="memitem:a1818afc4e3b81e58724302e228c67b44" id="r_a1818afc4e3b81e58724302e228c67b44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1818afc4e3b81e58724302e228c67b44">~Node</a> ()</td></tr>
+<tr class="memitem:afc9ef574725d49c5888d16dd12b5d032" id="r_afc9ef574725d49c5888d16dd12b5d032"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
+<tr class="memitem:afc9ef574725d49c5888d16dd12b5d032 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc9ef574725d49c5888d16dd12b5d032">createPublisher</a> (std::string_view topic) noexcept</td></tr>
+<tr class="memdesc:afc9ef574725d49c5888d16dd12b5d032"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
+<tr class="memitem:a41d46271105eb611acb38d2f171207c5" id="r_a41d46271105eb611acb38d2f171207c5"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a41d46271105eb611acb38d2f171207c5 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt;::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41d46271105eb611acb38d2f171207c5">createSubscriber</a> (std::string_view topic, SubscribeMsgCallback callback) noexcept</td></tr>
+<tr class="memdesc:a41d46271105eb611acb38d2f171207c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建订阅者  <br /></td></tr>
+<tr class="memitem:ad8e1d6fdce37519bcff17a935ff3980b" id="r_ad8e1d6fdce37519bcff17a935ff3980b"><td class="memTemplParams" colspan="2">template&lt;typename Rep, typename Period, typename TimerCallback&gt; </td></tr>
+<tr class="memitem:ad8e1d6fdce37519bcff17a935ff3980b template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html#a9aaf5fff6fc83a195defefd8d59a1bde">Timer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8e1d6fdce37519bcff17a935ff3980b">createTimer</a> (std::chrono::duration&lt; Rep, Period &gt; dur, TimerCallback callback) noexcept</td></tr>
+<tr class="memdesc:ad8e1d6fdce37519bcff17a935ff3980b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步定时器  <br /></td></tr>
+<tr class="memitem:ac19d563e835538932223d6be7471816d" id="r_ac19d563e835538932223d6be7471816d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac19d563e835538932223d6be7471816d">spin</a> ()</td></tr>
+<tr class="memdesc:ac19d563e835538932223d6be7471816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行异步 IO 上下文  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>轻量级发布订阅服务异步节点 </p>
+<ul>
+<li>内置节点发现协议 NDP (<a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html" title="轻量级发布订阅服务异步节点">Node</a> Discovery Protocol)，用于节点间的自动发现与通信</li>
+<li>内置通信端点发现协议 EDP (<a class="el" href="../../dc/db5/classrm_1_1Endpoint.html" title="端点">Endpoint</a> Discovery Protocol)，用于发布者与订阅者间的自动发现与通信 <dl class="section see"><dt>参见</dt><dd>详情见 <a class="el" href="../../d3/d8e/tutorial_modules_lpss.html">轻量发布订阅服务 —— LPSS</a> </dd></dl>
+</li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="aa9215ac625dd32deee2d92847c51cc8d" name="aa9215ac625dd32deee2d92847c51cc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9215ac625dd32deee2d92847c51cc8d">&#9670;&#160;</a></span>Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::async::Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>domain_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建通用节点，默认域 ID 为 0 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>节点名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">domain_id</td><td>域 ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1818afc4e3b81e58724302e228c67b44" name="a1818afc4e3b81e58724302e228c67b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1818afc4e3b81e58724302e228c67b44">&#9670;&#160;</a></span>~Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::async::Node::~Node </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="afc9ef574725d49c5888d16dd12b5d032" name="afc9ef574725d49c5888d16dd12b5d032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc9ef574725d49c5888d16dd12b5d032">&#9670;&#160;</a></span>createPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MsgType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;::ptr rm::lpss::async::Node::createPublisher </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>topic</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建发布者 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MsgType</td><td>消息类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>话题名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>发布者对象的智能指针 </dd></dl>
+
+</div>
+</div>
+<a id="a41d46271105eb611acb38d2f171207c5" name="a41d46271105eb611acb38d2f171207c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d46271105eb611acb38d2f171207c5">&#9670;&#160;</a></span>createSubscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MsgType, typename SubscribeMsgCallback, typename Enable&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt;::ptr rm::lpss::async::Node::createSubscriber </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>topic</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SubscribeMsgCallback</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建订阅者 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MsgType</td><td>消息类型 </td></tr>
+    <tr><td class="paramname">SubscribeMsgCallback</td><td>订阅回调函数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>话题名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>订阅回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>订阅者对象的智能指针 </dd></dl>
+
+</div>
+</div>
+<a id="ad8e1d6fdce37519bcff17a935ff3980b" name="ad8e1d6fdce37519bcff17a935ff3980b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e1d6fdce37519bcff17a935ff3980b">&#9670;&#160;</a></span>createTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Rep, typename Period, typename TimerCallback&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html#a9aaf5fff6fc83a195defefd8d59a1bde">Timer::ptr</a> rm::lpss::async::Node::createTimer </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::duration&lt; Rep, Period &gt;</td>          <td class="paramname"><span class="paramname"><em>dur</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TimerCallback</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建异步定时器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Rep</td><td>定时器时间间隔的表示类型 </td></tr>
+    <tr><td class="paramname">Period</td><td>定时器时间间隔的周期类型 </td></tr>
+    <tr><td class="paramname">TimerCallback</td><td>定时器回调函数类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dur</td><td>定时器时间间隔 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>定时器回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>定时器对象的智能指针 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node_ad8e1d6fdce37519bcff17a935ff3980b_cgraph.svg" width="599" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac19d563e835538932223d6be7471816d" name="ac19d563e835538932223d6be7471816d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19d563e835538932223d6be7471816d">&#9670;&#160;</a></span>spin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::async::Node::spin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>运行异步 IO 上下文 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

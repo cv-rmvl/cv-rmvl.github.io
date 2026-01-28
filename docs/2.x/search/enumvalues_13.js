@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wireless_0',['Wireless',['../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa7beff197adfc70df7ee315bfa4b1af75',1,'rm']]]
+  ['variable_5fread_0',['VARIABLE_READ',['../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d',1,'rm']]],
+  ['variable_5fwrite_1',['VARIABLE_WRITE',['../d3/da8/group__opcua.html#gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0',1,'rm']]]
 ];
