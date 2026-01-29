@@ -262,13 +262,13 @@ $(function() {
 <p>手动/自动设置曝光</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
-<div class="fragment"><div class="line">capture.set(rm::CAMERA_MANUAL_EXPOSURE); <span class="comment">// 手动曝光</span></div>
-<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a>);   <span class="comment">// 自动曝光</span></div>
+<div class="fragment"><div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a>, <span class="keyword">false</span>); <span class="comment">// 手动曝光</span></div>
+<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a>, <span class="keyword">true</span>);  <span class="comment">// 自动曝光</span></div>
 <div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a67f5b3633184924d27aa9d5486d4f395">rm::CameraProperties::auto_exposure</a></div><div class="ttdeci">@ auto_exposure</div><div class="ttdoc">自动曝光</div><div class="ttdef"><b>定义</b> camutils.hpp:90</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">Python</b></p>
-<div class="fragment"><div class="line">capture.set(rm.CAMERA_MANUAL_EXPOSURE) <span class="comment"># 手动曝光</span></div>
-<div class="line">capture.set(rm.CameraProperties::auto_exposure)   <span class="comment"># 自动曝光</span></div>
+<div class="fragment"><div class="line">capture.set(rm.CameraProperties::auto_exposure, <span class="keyword">False</span>) <span class="comment"># 手动曝光</span></div>
+<div class="line">capture.set(rm.CameraProperties::auto_exposure, <span class="keyword">True</span>)  <span class="comment"># 自动曝光</span></div>
 </div><!-- fragment --></li>
 </ul>
 </div><div class="tabbed"></div><p>设置曝光值</p>
@@ -286,13 +286,13 @@ $(function() {
 <p>手动/自动设置白平衡</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
-<div class="fragment"><div class="line">capture.set(rm::CAMERA_MANUAL_WB); <span class="comment">// 手动白平衡</span></div>
-<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a>);   <span class="comment">// 自动白平衡</span></div>
+<div class="fragment"><div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a>, <span class="keyword">false</span>); <span class="comment">// 手动白平衡</span></div>
+<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a>, <span class="keyword">true</span>);  <span class="comment">// 自动白平衡</span></div>
 <div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a39df955b7d4e057ec0c9d3a0bd00fc31">rm::CameraProperties::auto_wb</a></div><div class="ttdeci">@ auto_wb</div><div class="ttdoc">自动白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:91</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">Python</b></p>
-<div class="fragment"><div class="line">capture.set(rm.CAMERA_MANUAL_WB) <span class="comment"># 手动白平衡</span></div>
-<div class="line">capture.set(rm.CameraProperties::auto_wb)   <span class="comment"># 自动白平衡</span></div>
+<div class="fragment"><div class="line">capture.set(rm.CameraProperties::auto_wb, <span class="keyword">False</span>) <span class="comment"># 手动白平衡</span></div>
+<div class="line">capture.set(rm.CameraProperties::auto_wb, <span class="keyword">True</span>)  <span class="comment"># 自动白平衡</span></div>
 </div><!-- fragment --></li>
 </ul>
 </div><div class="tabbed"></div><p>设置各通道增益，并生效（在手动设置白平衡模式下有效）</p>
@@ -346,9 +346,9 @@ $(function() {
 <div class="line"><span class="comment">// 设置单次触发时多次采集的周期为 100 μs，即一次触发信号能触发多帧画面，每帧间隔为 100 μs</span></div>
 <div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">rm::CameraProperties::trigger_period</a>, 100);</div>
 <div class="line"><span class="comment">// 执行一次白平衡操作，仅在手动白平衡模式下有效</span></div>
-<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">rm::CameraEvents::once_wb</a>);</div>
+<div class="line">capture.trigger(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">rm::CameraEvents::once_wb</a>);</div>
 <div class="line"><span class="comment">// 执行一次软触发，仅在软触发模式下有效</span></div>
-<div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::CameraEvents::software</a>);</div>
+<div class="line">capture.trigger(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::CameraEvents::software</a>);</div>
 <div class="ttc" id="agroup__camera_html_gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">rm::once_wb</a></div><div class="ttdeci">@ once_wb</div><div class="ttdoc">执行单次白平衡</div><div class="ttdef"><b>定义</b> camutils.hpp:111</div></div>
 <div class="ttc" id="agroup__camera_html_gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::software</a></div><div class="ttdeci">@ software</div><div class="ttdoc">执行软触发</div><div class="ttdef"><b>定义</b> camutils.hpp:112</div></div>
 <div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a5b3e7931ea6c6bfa6417c297371d11a2">rm::CameraProperties::trigger_delay</a></div><div class="ttdeci">@ trigger_delay</div><div class="ttdoc">硬触发采集延迟（微秒 ）</div><div class="ttdef"><b>定义</b> camutils.hpp:103</div></div>
@@ -363,9 +363,9 @@ $(function() {
 <div class="line"><span class="comment"># 设置单次触发时多次采集的周期为 100 μs，即一次触发信号能触发多帧画面，每帧间隔为 100 μs</span></div>
 <div class="line">capture.set(rm.CameraProperties::trigger_period, 100)</div>
 <div class="line"><span class="comment"># 执行一次白平衡操作，仅在手动白平衡模式下有效</span></div>
-<div class="line">capture.set(rm.CameraEvents::once_wb)</div>
+<div class="line">capture.trigger(rm.CameraEvents::once_wb)</div>
 <div class="line"><span class="comment"># 执行一次软触发，仅在软触发模式下有效</span></div>
-<div class="line">capture.set(rm.CameraEvents::software)</div>
+<div class="line">capture.trigger(rm.CameraEvents::software)</div>
 </div><!-- fragment --></li>
 </ul>
 </div><div class="tabbed"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md256"></a>
@@ -461,7 +461,7 @@ $(function() {
 <div class="line">    std::thread th([&amp;run]() {</div>
 <div class="line">        <span class="keywordflow">while</span> (run) {</div>
 <div class="line">            Timer::sleep_for(10);</div>
-<div class="line">            capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::CameraEvents::software</a>); <span class="comment">// 触发</span></div>
+<div class="line">            capture.trigger(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::CameraEvents::software</a>); <span class="comment">// 触发</span></div>
 <div class="line">        }</div>
 <div class="line">    });</div>
 <div class="line"> </div>
