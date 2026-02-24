@@ -126,7 +126,7 @@ $(function() {
 <div class="dynheader">
 rm::Router 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d09/classrm_1_1Router__coll__graph.svg" width="87" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d09/classrm_1_1Router__coll__graph.svg" width="87" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -135,6 +135,8 @@ rm::Router 的协作图:</div>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由模式匹配器  <a href="../../dc/da4/classrm_1_1Router_1_1RoutePattern.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:RouteEntry" id="r_RouteEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcd/structrm_1_1Router_1_1RouteEntry.html">RouteEntry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由条目：路由模式 + 处理器  <a href="../../db/dcd/structrm_1_1Router_1_1RouteEntry.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:WSRouteEntry" id="r_WSRouteEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/df5/structrm_1_1Router_1_1WSRouteEntry.html">WSRouteEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket 路由条目  <a href="../../d4/df5/structrm_1_1Router_1_1WSRouteEntry.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -146,6 +148,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a33589944967c0a7107409ec4c52bba24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Head 请求路由  <br /></td></tr>
 <tr class="memitem:a1be04872064c755df95635305c15508f" id="r_a1be04872064c755df95635305c15508f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1be04872064c755df95635305c15508f">del</a> (std::string_view uri, <a class="el" href="../../d5/d20/namespacerm.html#a796688c2f0e142cb22397b32470a4e98">RouteHandler</a> callback)</td></tr>
 <tr class="memdesc:a1be04872064c755df95635305c15508f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete 请求路由  <br /></td></tr>
+<tr class="memitem:a7b138d03664cd052c652e38ff93602d9" id="r_a7b138d03664cd052c652e38ff93602d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b138d03664cd052c652e38ff93602d9">ws</a> (std::string_view uri, <a class="el" href="../../dd/d22/namespacerm_1_1async.html#a553b0e3e50ccc7265c30a739cc71e0a4">async::WebSocketHandler</a> callback)</td></tr>
+<tr class="memdesc:a7b138d03664cd052c652e38ff93602d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket 路由  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 友元</h2></td></tr>
@@ -300,6 +304,44 @@ Public 成员函数</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>统一资源标识符，支持路径参数，如 "/api/:name" </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Post 响应回调 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b138d03664cd052c652e38ff93602d9" name="a7b138d03664cd052c652e38ff93602d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b138d03664cd052c652e38ff93602d9">&#9670;&#160;</a></span>ws()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Router::ws </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>uri</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d22/namespacerm_1_1async.html#a553b0e3e50ccc7265c30a739cc71e0a4">async::WebSocketHandler</a></td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WebSocket 路由 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>统一资源标识符，支持路径参数，如 "/api/:room" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>WebSocket 连接处理回调 </td></tr>
   </table>
   </dd>
 </dl>

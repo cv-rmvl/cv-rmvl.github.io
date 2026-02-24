@@ -154,6 +154,8 @@ $(function() {
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步命名管道服务端  <a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:PipeClient" id="r_PipeClient"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/classrm_1_1async_1_1PipeClient.html">PipeClient</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步命名管道客户端  <a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:WebSocket" id="r_WebSocket"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">WebSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html" title="WebSocket 连接对象接口">WebSocket</a> 连接对象接口  <a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Webapp" id="r_Webapp"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">Webapp</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Web 应用程序框架  <a href="../../d5/d05/classrm_1_1async_1_1Webapp.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:SerialPort" id="r_SerialPort"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d62/classrm_1_1async_1_1SerialPort.html">SerialPort</a></td></tr>
@@ -180,6 +182,8 @@ $(function() {
 类型定义</h2></td></tr>
 <tr class="memitem:ga466f766a229581f699520b48ad4c82e6" id="r_ga466f766a229581f699520b48ad4c82e6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/group__io.html#ga466f766a229581f699520b48ad4c82e6">IOContextRef</a> = std::reference_wrapper&lt;<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a>&gt;</td></tr>
 <tr class="memdesc:ga466f766a229581f699520b48ad4c82e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步 I/O 执行上下文左值引用包装器  <br /></td></tr>
+<tr class="memitem:a553b0e3e50ccc7265c30a739cc71e0a4" id="r_a553b0e3e50ccc7265c30a739cc71e0a4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a553b0e3e50ccc7265c30a739cc71e0a4">WebSocketHandler</a> = std::function&lt;<a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt;&gt;(<a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">WebSocket</a> &amp;, const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:a553b0e3e50ccc7265c30a739cc71e0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html" title="WebSocket 连接对象接口">WebSocket</a> 路由处理函数：收到握手请求建立连接后调用  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
@@ -188,6 +192,23 @@ requires InvokableTask&lt;Callable, Args...&gt;</td></tr>
 <tr class="memitem:ga08c67d225a099f14d0fa9b2082e41030 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da3/group__io.html#ga08c67d225a099f14d0fa9b2082e41030">co_spawn</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
 <tr class="memdesc:ga08c67d225a099f14d0fa9b2082e41030"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定的执行上下文中生成并调度一个协程任务  <br /></td></tr>
 </table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="a553b0e3e50ccc7265c30a739cc71e0a4" name="a553b0e3e50ccc7265c30a739cc71e0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553b0e3e50ccc7265c30a739cc71e0a4">&#9670;&#160;</a></span>WebSocketHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a553b0e3e50ccc7265c30a739cc71e0a4">rm::async::WebSocketHandler</a> = std::function&lt;<a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt;&gt;(<a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">WebSocket</a> &amp;, const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html" title="WebSocket 连接对象接口">WebSocket</a> 路由处理函数：收到握手请求建立连接后调用 </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

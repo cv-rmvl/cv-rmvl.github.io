@@ -345,6 +345,7 @@ $(function() {
 <div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ac3649ee31c430fabfe598c368f69528b">rm::CameraProperties::trigger_count</a>, 5);</div>
 <div class="line"><span class="comment">// 设置单次触发时多次采集的周期为 100 μs，即一次触发信号能触发多帧画面，每帧间隔为 100 μs</span></div>
 <div class="line">capture.set(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ad5ad623589f7afc4c09758f818228b8b">rm::CameraProperties::trigger_period</a>, 100);</div>
+<div class="line"> </div>
 <div class="line"><span class="comment">// 执行一次白平衡操作，仅在手动白平衡模式下有效</span></div>
 <div class="line">capture.trigger(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136aa68813af43795ef9975e4da5ac6bf643">rm::CameraEvents::once_wb</a>);</div>
 <div class="line"><span class="comment">// 执行一次软触发，仅在软触发模式下有效</span></div>
@@ -362,6 +363,7 @@ $(function() {
 <div class="line">capture.set(rm.CameraProperties::trigger_count, 5)</div>
 <div class="line"><span class="comment"># 设置单次触发时多次采集的周期为 100 μs，即一次触发信号能触发多帧画面，每帧间隔为 100 μs</span></div>
 <div class="line">capture.set(rm.CameraProperties::trigger_period, 100)</div>
+<div class="line"> </div>
 <div class="line"><span class="comment"># 执行一次白平衡操作，仅在手动白平衡模式下有效</span></div>
 <div class="line">capture.trigger(rm.CameraEvents::once_wb)</div>
 <div class="line"><span class="comment"># 执行一次软触发，仅在软触发模式下有效</span></div>
@@ -373,38 +375,34 @@ $(function() {
 <p>RMVL 提供了全局的相机参数对象： <a class="el" href="../../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55" title="CameraParam 参数模块">rm::para::camera_param</a> ，详情可参考类 <a class="el" href="../../d4/dc5/classrm_1_1para_1_1CameraParam.html" title="CameraParam 参数模块">rm::para::CameraParam</a></p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md257"></a>
 3 示例程序</h1>
-<p>在构建 RMVL 时，需开启 <span class="tt">BUILD_EXAMPLES</span> 选项（默认开启）</p>
-<div class="fragment"><div class="line">cmake -DBUILD_EXAMPLES=ON ..</div>
-<div class="line">cmake --build . --parallel 4</div>
-<div class="line">cd build</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md258"></a>
 3.1 单相机</h2>
-<p>单相机例程，在 build 文件夹下执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_mono</div>
+<p>单相机例程，打开终端，输入以下命令</p>
+<div class="fragment"><div class="line">rmvl_mv_mono</div>
 </div><!-- fragment --><p>相机按照连续采样、<span class="tt">cvtColor</span> 处理方式运行，程序运行中，<span class="tt">cv::waitKey(1)</span> 接受到 <span class="tt">s</span> 键被按下时，可将参数保存到 <span class="tt">out_para.yml</span> 文件中。</p>
 <p>键入一次 <span class="tt">Esc</span> 可暂停程序，按其余键可恢复。键入两次 <span class="tt">Esc</span> 可退出程序。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md259"></a>
 3.2 多相机</h2>
-<p>多相机例程，在 <span class="tt">build</span> 文件夹下执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_multi</div>
+<p>多相机例程，打开终端，输入以下命令</p>
+<div class="fragment"><div class="line">rmvl_mv_multi</div>
 </div><!-- fragment --><p>相机按照连续采样、<span class="tt">cvtColor</span> 处理方式运行，程序会枚举所有的相机设备，并可视化的显示出来，指定一个序列号来启动某一相机。</p>
 <p>程序运行过程中，相机参数会自动从 <span class="tt">out_para.yml</span> 中加载，若没有则会按照默认值运行。</p>
 <p>键入一次 <span class="tt">Esc</span> 可暂停程序，按其余键可恢复。键入两次 <span class="tt">Esc</span> 可退出程序。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md260"></a>
 3.3 相机录屏</h2>
-<p>相机录屏例程，在 build 文件夹下执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_writer</div>
+<p>相机录屏例程，打开终端，输入以下命令</p>
+<div class="fragment"><div class="line">rmvl_mv_writer</div>
 </div><!-- fragment --><p>相机按照连续采样、<span class="tt">cvtColor</span> 处理方式运行，<span class="tt">-o</span> 可指定输出文件名，否则默认输出到 <span class="tt">ts.avi</span>，例如</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_writer -o=aaa.avi</div>
+<div class="fragment"><div class="line">rmvl_mv_writer -o=aaa.avi</div>
 </div><!-- fragment --><p>程序运行过程中，相机参数会自动从 <span class="tt">out_para.yml</span> 中加载，若没有则会按照默认值运行。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md261"></a>
 3.4 相机标定</h2>
-<p>MvCamera 相机自动标定程序，在 <span class="tt">build</span> 文件夹下执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_auto_calib -w=&lt;?&gt; -h=&lt;?&gt; -s=&lt;?&gt; -d=&lt;?&gt; -n=&lt;?&gt;</div>
+<p>MvCamera 相机自动标定程序，打开终端，输入以下命令</p>
+<div class="fragment"><div class="line">rmvl_mv_auto_calib -w=&lt;?&gt; -h=&lt;?&gt; -s=&lt;?&gt; -d=&lt;?&gt; -n=&lt;?&gt;</div>
 </div><!-- fragment --><p><span class="tt">&lt;?&gt;</span> 表示可调节，具体帮助可直接执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_calibration -help</div>
+<div class="fragment"><div class="line">rmvl_mv_calibration -help</div>
 </div><!-- fragment --><p>另外还有相机手动标定程序，可执行以下命令</p>
-<div class="fragment"><div class="line">bin/rmvl_mv_manual_calib</div>
+<div class="fragment"><div class="line">rmvl_mv_manual_calib</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md262"></a>
 4 使用 Demo</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md263"></a>
@@ -448,10 +446,12 @@ $(function() {
 4.2 软触发</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/camera/mv_camera.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;rmvl/core/timer.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <span class="keyword">auto</span> camera_config = <a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede">rm::GrabMode::Software</a>, <a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>)</div>
@@ -460,7 +460,7 @@ $(function() {
 <div class="line">    <span class="keywordtype">bool</span> run = <span class="keyword">true</span>;</div>
 <div class="line">    std::thread th([&amp;run]() {</div>
 <div class="line">        <span class="keywordflow">while</span> (run) {</div>
-<div class="line">            Timer::sleep_for(10);</div>
+<div class="line">            std::this_thread::sleep_for(10ms);           <span class="comment">// 每隔 10ms 触发一次</span></div>
 <div class="line">            capture.trigger(<a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2">rm::CameraEvents::software</a>); <span class="comment">// 触发</span></div>
 <div class="line">        }</div>
 <div class="line">    });</div>

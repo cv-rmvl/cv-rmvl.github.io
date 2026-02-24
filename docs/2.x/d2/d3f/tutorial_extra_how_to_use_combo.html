@@ -159,8 +159,8 @@ $(function() {
 1.1 有关构造与创建</h2>
 <p>特征组合 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a></span> 对象创建方法与 <span class="tt"><a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a></span> 基本一致，都是使用静态工厂函数，这里是使用 <span class="tt">make_combo</span> 完成构建，同样会在最初进行能否构造的判断。</p>
 <p>构造一个装甲板的代码如下</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> p_combo = <a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#a7e5007bddd6aae25e69eeb0447dde76d">rm::Armor::make_combo</a>(p_left, p_right, imu_data, tick);</div>
-<div class="ttc" id="aclassrm_1_1Armor_html_a7e5007bddd6aae25e69eeb0447dde76d"><div class="ttname"><a href="../../df/d41/classrm_1_1Armor.html#a7e5007bddd6aae25e69eeb0447dde76d">rm::Armor::make_combo</a></div><div class="ttdeci">static ptr make_combo(LightBlob::ptr p_left, LightBlob::ptr p_right, const ImuData &amp;imu_data, double tick, ArmorSizeType armor_size_type=ArmorSizeType::UNKNOWN)</div><div class="ttdoc">Armor 构造接口</div></div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_combo = <a class="code hl_function" href="../../df/d41/classrm_1_1Armor.html#aaf8a7bf553cf1865eb48f645b34c051f">rm::Armor::make_combo</a>(p_left, p_right, imu_data, tick);</div>
+<div class="ttc" id="aclassrm_1_1Armor_html_aaf8a7bf553cf1865eb48f645b34c051f"><div class="ttname"><a href="../../df/d41/classrm_1_1Armor.html#aaf8a7bf553cf1865eb48f645b34c051f">rm::Armor::make_combo</a></div><div class="ttdeci">static ptr make_combo(LightBlob::ptr p_left, LightBlob::ptr p_right, const ImuData &amp;imu_data, int64_t tick, ArmorSizeType armor_size_type=ArmorSizeType::UNKNOWN)</div><div class="ttdoc">Armor 构造接口</div></div>
 </div><!-- fragment --><p><a class="el" href="../../de/dee/classrm_1_1combo.html" title="特征组合体">rm::combo</a> 提供了 <span class="tt">clone</span> 纯虚拟函数，用于完全复制一份数据，适合于强制构造无视匹配要求的情况。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 1.2 信息获取</h2>
@@ -194,9 +194,9 @@ $(function() {
 <li>必须定义 <span class="tt">MyCombo::ptr</span> 和 <span class="tt">MyCombo::const_ptr</span> 作为 <span class="tt">std::shared_ptr&lt;MyCombo&gt;</span> 和 <span class="tt">std::shared_ptr&lt;const MyCombo&gt;</span> 的别名；</li>
 <li>必须实现以 <span class="tt">MyCombo::ptr</span> 为返回值的 <span class="tt">MyCombo::make_combo</span> 静态工厂函数；</li>
 <li>不得定义公开数据成员，避免对数据成员的直接操作，设置、获取操作应该使用形如 <span class="tt">setXXX</span> 或 <span class="tt">getXXX</span> 的成员方法；</li>
-<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html#ga24c32811ed541fdacd4d507a451b2bc8">RMVL_COMBO_CAST</a></span> 宏，例如</p>
+<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html#ga24c32811ed541fdacd4d507a451b2bc8" title="rm::combo 特征组合类型转换宏">RMVL_COMBO_CAST</a></span> 宏，例如</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../dd/dd2/group__combo.html#ga24c32811ed541fdacd4d507a451b2bc8">RMVL_COMBO_CAST</a>(MyCombo);</div>
-<div class="ttc" id="agroup__combo_html_ga24c32811ed541fdacd4d507a451b2bc8"><div class="ttname"><a href="../../dd/dd2/group__combo.html#ga24c32811ed541fdacd4d507a451b2bc8">RMVL_COMBO_CAST</a></div><div class="ttdeci">#define RMVL_COMBO_CAST(name)</div><div class="ttdef"><b>定义</b> combo.h:106</div></div>
+<div class="ttc" id="agroup__combo_html_ga24c32811ed541fdacd4d507a451b2bc8"><div class="ttname"><a href="../../dd/dd2/group__combo.html#ga24c32811ed541fdacd4d507a451b2bc8">RMVL_COMBO_CAST</a></div><div class="ttdeci">#define RMVL_COMBO_CAST(name)</div><div class="ttdoc">rm::combo 特征组合类型转换宏</div><div class="ttdef"><b>定义</b> combo.h:107</div></div>
 </div><!-- fragment --> </li>
 </ol>
 </div></div><!-- contents -->

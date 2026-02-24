@@ -240,12 +240,11 @@ $(function() {
 <img src="../../upper_base.png" alt=""/>
 <div class="caption">
 图 1 顶层模块流程图</div></div>
-    </center><center></center><p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <span class="tt"><a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a></span>、<span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>、<span class="tt"><a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a></span>。</p>
+    </center><center></center><p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <span class="tt">rm::DetectInfo</span>、<span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>、<span class="tt">rm::PredictInfo</span>。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md79"></a>
 2 具体使用方法</h2>
 <p>下面给出一个简单的例子</p>
-<div class="fragment"><div class="line"><span class="keywordtype">bool</span> run()</div>
-<div class="line">{</div>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> run() {</div>
 <div class="line">    <span class="comment">/* 读取数据 raw_data */</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* 提取通信得到的控制信息 */</span></div>
@@ -257,8 +256,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 视觉处理，这里采用 LUT 方式控制逻辑分支</span></div>
 <div class="line">    cv::Mat src;</div>
-<div class="line">    <span class="keywordflow">if</span> (!capture_map[camera_flag]-&gt;read(src))</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (!capture_map[camera_flag]-&gt;read(src)) {</div>
 <div class="line">        <span class="comment">// 不能正常打开相机</span></div>
 <div class="line">        <a class="code hl_define" href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a>(<span class="stringliteral">&quot;相机打开异常&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -266,12 +264,9 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 程序处理 I: 识别</span></div>
 <div class="line">    DetectInfo detect_info{};</div>
-<div class="line">    <span class="keywordflow">try</span></div>
-<div class="line">    {</div>
-<div class="line">        detect_info = detector_map[detect_flag]-&gt;detect(groups, src, color, data, Timer::now());</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a> &amp;e)</div>
-<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">        detect_info = detector_map[detect_flag]-&gt;detect(groups, src, color, data, <a class="code hl_function" href="../../d8/d74/classrm_1_1Time.html#a89f133f8d517b90b207ca4a84f6c0c5e">rm::Time::now</a>());</div>
+<div class="line">    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a> &amp;e) {</div>
 <div class="line">        <a class="code hl_define" href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a>(<span class="stringliteral">&quot;Occurred an exception! %s&quot;</span>, e.err.c_str());</div>
 <div class="line">        groups.clear();</div>
 <div class="line">        <span class="comment">/* 发送默认数据 */</span></div>
@@ -290,6 +285,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Exception_html"><div class="ttname"><a href="../../d9/db4/classrm_1_1Exception.html">rm::Exception</a></div><div class="ttdoc">该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的</div><div class="ttdef"><b>定义</b> util.hpp:129</div></div>
+<div class="ttc" id="aclassrm_1_1Time_html_a89f133f8d517b90b207ca4a84f6c0c5e"><div class="ttname"><a href="../../d8/d74/classrm_1_1Time.html#a89f133f8d517b90b207ca4a84f6c0c5e">rm::Time::now</a></div><div class="ttdeci">static int64_t now()</div><div class="ttdoc">返回 Epoch 时间（单位：毫秒）</div><div class="ttdef"><b>定义</b> timer.hpp:37</div></div>
 <div class="ttc" id="agroup__core_html_ga97b1a53e1d700c98f544df01557c56cd"><div class="ttname"><a href="../../d0/de1/group__core.html#ga97b1a53e1d700c98f544df01557c56cd">WARNING_</a></div><div class="ttdeci">#define WARNING_(...)</div><div class="ttdef"><b>定义</b> util.hpp:35</div></div>
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:47</div></div>
 </div><!-- fragment --><p><b>注意</b></p>

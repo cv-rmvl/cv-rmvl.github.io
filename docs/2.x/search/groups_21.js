@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['机器学习与深度学习支持库_0',['机器学习与深度学习支持库',['../dd/ded/group__ml.html',1,'']]]
+  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]]
 ];

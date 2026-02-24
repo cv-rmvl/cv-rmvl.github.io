@@ -113,8 +113,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
 <a href="../../dc/d20/classrm_1_1UnionFind-members.html">所有成员列表</a>  </div>
-  <div class="headertitle"><div class="title">rm::UnionFind&lt; Tp &gt; 模板类 参考<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> &raquo; <a class="el" href="../../d8/d04/group__algorithm__datastruct.html">数据结构</a></div></div></div>
+  <div class="headertitle"><div class="title">rm::UnionFind&lt; Tp &gt; 模板类 参考<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> &raquo; <a class="el" href="../../d6/dcf/group__algorithm__data.html">数据结构</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -125,7 +127,7 @@ $(function() {
 <div class="dynheader">
 rm::UnionFind&lt; Tp &gt; 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d66/classrm_1_1UnionFind__coll__graph.svg" width="146" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d66/classrm_1_1UnionFind__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -150,6 +152,22 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a980856286ac887cbc980e304c54b488c"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出数据  <br /></td></tr>
 <tr class="memitem:ad0290392910c1ccb7e97943f250df079" id="r_ad0290392910c1ccb7e97943f250df079"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0290392910c1ccb7e97943f250df079">components</a> ()</td></tr>
 <tr class="memdesc:ad0290392910c1ccb7e97943f250df079"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取连通分量  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a7f2866ac985d6c6d9a8d9f8275dc1195" id="r_a7f2866ac985d6c6d9a8d9f8275dc1195"><td class="memItemLeft" align="right" valign="top">Tp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2866ac985d6c6d9a8d9f8275dc1195">findRep</a> (Tp element)</td></tr>
+<tr class="memdesc:a7f2866ac985d6c6d9a8d9f8275dc1195"><td class="mdescLeft">&#160;</td><td class="mdescRight">寻找代表元素  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a0b3870b114cb049e20dc3e85579bdec5" id="r_a0b3870b114cb049e20dc3e85579bdec5"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; Tp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b3870b114cb049e20dc3e85579bdec5">_element_set</a></td></tr>
+<tr class="memdesc:a0b3870b114cb049e20dc3e85579bdec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">元素集合  <br /></td></tr>
+<tr class="memitem:a28c3c1133dcd7db340291f5ead3462c5" id="r_a28c3c1133dcd7db340291f5ead3462c5"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; Tp, Tp &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c3c1133dcd7db340291f5ead3462c5">_parent_map</a></td></tr>
+<tr class="memdesc:a28c3c1133dcd7db340291f5ead3462c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">父元素哈希表  <br /></td></tr>
+<tr class="memitem:ac83ef02214d9958ad8be6518cd0880d3" id="r_ac83ef02214d9958ad8be6518cd0880d3"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; Tp, std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac83ef02214d9958ad8be6518cd0880d3">_size_map</a></td></tr>
+<tr class="memdesc:ac83ef02214d9958ad8be6518cd0880d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">集合大小  <br /></td></tr>
+<tr class="memitem:ae2c092b19249fa3cde3c383777cf3cda" id="r_ae2c092b19249fa3cde3c383777cf3cda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2c092b19249fa3cde3c383777cf3cda">_connected_component</a> {}</td></tr>
+<tr class="memdesc:ae2c092b19249fa3cde3c383777cf3cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">连通分量  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename Tp&gt;<br />
@@ -382,6 +400,11 @@ template&lt;typename Tp&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>是否在同一个集合 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d0c/classrm_1_1UnionFind_a378a7089e45837e93c548087d6e454d1_cgraph.svg" width="388" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -412,6 +435,40 @@ template&lt;typename Tp&gt; </div>
 
 <p>导出数据 </p>
 <dl class="section return"><dt>返回</dt><dd>Key: 集合代表元素，Value: 集合 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d0c/classrm_1_1UnionFind_a980856286ac887cbc980e304c54b488c_cgraph.svg" width="368" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7f2866ac985d6c6d9a8d9f8275dc1195" name="a7f2866ac985d6c6d9a8d9f8275dc1195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2866ac985d6c6d9a8d9f8275dc1195">&#9670;&#160;</a></span>findRep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html">rm::UnionFind</a>&lt; Tp &gt;::findRep </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>element</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>寻找代表元素 </p>
 
 </div>
 </div>
@@ -452,6 +509,116 @@ template&lt;typename Tp&gt; </div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d0c/classrm_1_1UnionFind_aa4e2b0813a58c916260efd063da5baaf_cgraph.svg" width="364" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ae2c092b19249fa3cde3c383777cf3cda" name="ae2c092b19249fa3cde3c383777cf3cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c092b19249fa3cde3c383777cf3cda">&#9670;&#160;</a></span>_connected_component</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html">rm::UnionFind</a>&lt; Tp &gt;::_connected_component {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连通分量 </p>
+
+</div>
+</div>
+<a id="a0b3870b114cb049e20dc3e85579bdec5" name="a0b3870b114cb049e20dc3e85579bdec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3870b114cb049e20dc3e85579bdec5">&#9670;&#160;</a></span>_element_set</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt;Tp&gt; <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html">rm::UnionFind</a>&lt; Tp &gt;::_element_set</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>元素集合 </p>
+
+</div>
+</div>
+<a id="a28c3c1133dcd7db340291f5ead3462c5" name="a28c3c1133dcd7db340291f5ead3462c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c3c1133dcd7db340291f5ead3462c5">&#9670;&#160;</a></span>_parent_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;Tp, Tp&gt; <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html">rm::UnionFind</a>&lt; Tp &gt;::_parent_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>父元素哈希表 </p>
+
+</div>
+</div>
+<a id="ac83ef02214d9958ad8be6518cd0880d3" name="ac83ef02214d9958ad8be6518cd0880d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac83ef02214d9958ad8be6518cd0880d3">&#9670;&#160;</a></span>_size_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;Tp, std::size_t&gt; <a class="el" href="../../db/d0c/classrm_1_1UnionFind.html">rm::UnionFind</a>&lt; Tp &gt;::_size_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>集合大小 </p>
 
 </div>
 </div>

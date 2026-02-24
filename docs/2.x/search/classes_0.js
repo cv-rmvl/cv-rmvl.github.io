@@ -8,12 +8,13 @@ var searchData=
   ['argument_5',['Argument',['../df/d48/structrm_1_1Argument.html',1,'rm']]],
   ['armor_6',['Armor',['../df/d41/classrm_1_1Armor.html',1,'rm']]],
   ['armordetector_7',['ArmorDetector',['../db/d6e/classrm_1_1ArmorDetector.html',1,'rm']]],
-  ['armordetectorparam_8',['ArmorDetectorParam',['../d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html',1,'rm::para']]],
-  ['armorparam_9',['ArmorParam',['../db/db1/classrm_1_1para_1_1ArmorParam.html',1,'rm::para']]],
-  ['armorpredictor_10',['ArmorPredictor',['../d6/df1/classrm_1_1ArmorPredictor.html',1,'rm']]],
-  ['armorpredictorparam_11',['ArmorPredictorParam',['../dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html',1,'rm::para']]],
-  ['asyncioawaiter_12',['AsyncIOAwaiter',['../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html',1,'rm::async']]],
-  ['asyncreadawaiter_13',['AsyncReadAwaiter',['../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html',1,'rm::async']]],
-  ['asyncwriteawaiter_14',['AsyncWriteAwaiter',['../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html',1,'rm::async']]],
-  ['atomicshm_15',['AtomicSHM',['../da/dd5/classrm_1_1AtomicSHM.html',1,'rm']]]
+  ['armordetectorinfo_8',['ArmorDetectorInfo',['../d4/db4/structrm_1_1ArmorDetectorInfo.html',1,'rm']]],
+  ['armordetectorparam_9',['ArmorDetectorParam',['../d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html',1,'rm::para']]],
+  ['armorparam_10',['ArmorParam',['../db/db1/classrm_1_1para_1_1ArmorParam.html',1,'rm::para']]],
+  ['armorpredictor_11',['ArmorPredictor',['../d6/df1/classrm_1_1ArmorPredictor.html',1,'rm']]],
+  ['armorpredictorparam_12',['ArmorPredictorParam',['../dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html',1,'rm::para']]],
+  ['asyncioawaiter_13',['AsyncIOAwaiter',['../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html',1,'rm::async']]],
+  ['asyncreadawaiter_14',['AsyncReadAwaiter',['../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html',1,'rm::async']]],
+  ['asyncwriteawaiter_15',['AsyncWriteAwaiter',['../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html',1,'rm::async']]],
+  ['atomicshm_16',['AtomicSHM',['../da/dd5/classrm_1_1AtomicSHM.html',1,'rm']]]
 ];

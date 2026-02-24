@@ -52,7 +52,6 @@ var menudata={children:[
 {text:"u",url:"namespacemembers_u.html#index_u"},
 {text:"v",url:"namespacemembers_v.html#index_v"},
 {text:"w",url:"namespacemembers_w.html#index_w"},
-{text:"y",url:"namespacemembers_y.html#index_y"},
 {text:"z",url:"namespacemembers_z.html#index_z"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
 {text:"b",url:"namespacemembers_func.html#index_b"},
@@ -101,7 +100,8 @@ var menudata={children:[
 {text:"o",url:"namespacemembers_type.html#index_o"},
 {text:"r",url:"namespacemembers_type.html#index_r"},
 {text:"s",url:"namespacemembers_type.html#index_s"},
-{text:"v",url:"namespacemembers_type.html#index_v"}]},
+{text:"v",url:"namespacemembers_type.html#index_v"},
+{text:"w",url:"namespacemembers_type.html#index_w"}]},
 {text:"枚举",url:"namespacemembers_enum.html"},
 {text:"枚举值",url:"namespacemembers_eval.html"}]}]},
 {text:"概念",url:"concepts.html"},
@@ -200,5 +200,6 @@ var menudata={children:[
 {text:"r",url:"functions_type.html#index_r"},
 {text:"s",url:"functions_type.html#index_s"},
 {text:"v",url:"functions_type.html#index_v"}]},
+{text:"枚举值",url:"functions_eval.html"},
 {text:"相关符号",url:"functions_rela.html"}]}]},
 {text:"示例",url:"examples.html"}]}

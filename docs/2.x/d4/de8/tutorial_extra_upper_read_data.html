@@ -223,10 +223,10 @@ $(function() {
 <div class="line">    detector_map[<span class="stringliteral">&quot;gyro_detector&quot;</span>] = <a class="code hl_function" href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a>();</div>
 <div class="line">    detector_map[<span class="stringliteral">&quot;tag_detector&quot;</span>] = <a class="code hl_function" href="../../d8/d35/classrm_1_1TagDetector.html#a61d242bc1cec93b2ab54a64afb52ffca">rm::TagDetector::make_detector</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:53</div></div>
-<div class="ttc" id="aclassrm_1_1GyroDetector_html_a4847eef03a2bad126fedfaad567f180e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:60</div></div>
-<div class="ttc" id="aclassrm_1_1RuneDetector_html_a158fb7e5978ef93fb86741dec2fad8ff"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a158fb7e5978ef93fb86741dec2fad8ff">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:43</div></div>
-<div class="ttc" id="aclassrm_1_1TagDetector_html_a61d242bc1cec93b2ab54a64afb52ffca"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#a61d242bc1cec93b2ab54a64afb52ffca">rm::TagDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>定义</b> tag_detector.h:59</div></div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_a7cb826c0d675b35606d3efef46a9b587"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static auto make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:68</div></div>
+<div class="ttc" id="aclassrm_1_1GyroDetector_html_a4847eef03a2bad126fedfaad567f180e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:73</div></div>
+<div class="ttc" id="aclassrm_1_1RuneDetector_html_a158fb7e5978ef93fb86741dec2fad8ff"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a158fb7e5978ef93fb86741dec2fad8ff">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:58</div></div>
+<div class="ttc" id="aclassrm_1_1TagDetector_html_a61d242bc1cec93b2ab54a64afb52ffca"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#a61d242bc1cec93b2ab54a64afb52ffca">rm::TagDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>定义</b> tag_detector.h:57</div></div>
 </div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
 2.2 注意事项</h3>
 <h4 class="doxsection"><a class="anchor" id="map_tip1"></a>
@@ -311,11 +311,9 @@ $(function() {
 <div class="line"><span class="comment">/* code */</span></div>
 </div><!-- fragment --><h4>方法 2</h4>
 <p>定义指针常量，以保证指针指向不会被修改，这种做法可操作性更强。</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="../../d3/d77/classrm_1_1detector.html">rm::detector</a> *<span class="keyword">const</span> p_detector = detector_map[detect_str].get();</div>
-<div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;<a class="code hl_function" href="../../d3/d77/classrm_1_1detector.html#a4ff537c0ba51075fc229c1f171827565">detect</a>(<span class="comment">/* code */</span>);</div>
+<div class="fragment"><div class="line">rm::detector *<span class="keyword">const</span> p_detector = detector_map[detect_str].get();</div>
+<div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;detect(<span class="comment">/* code */</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
-<div class="ttc" id="aclassrm_1_1detector_html"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html">rm::detector</a></div><div class="ttdoc">识别检测模块</div><div class="ttdef"><b>定义</b> detector.h:45</div></div>
-<div class="ttc" id="aclassrm_1_1detector_html_a4ff537c0ba51075fc229c1f171827565"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#a4ff537c0ba51075fc229c1f171827565">rm::detector::detect</a></div><div class="ttdeci">virtual DetectInfo detect(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick)=0</div><div class="ttdoc">识别接口</div></div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
 3 功能切换方式</h2>
 <h3 class="doxsection"><a class="anchor" id="autotoc_md88"></a>

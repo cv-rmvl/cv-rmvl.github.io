@@ -8,7 +8,7 @@ var searchData=
   ['equal_5',['equal',['../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c',1,'rm::reflect']]],
   ['erase_6',['erase',['../db/d45/classrm_1_1RaHeap.html#ae985322beceadf0dba5d796191cab532',1,'rm::RaHeap']]],
   ['error_7',['error',['../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a',1,'rm']]],
-  ['euler2mat_8',['euler2Mat',['../d5/d6c/group__algorithm.html#gabaff301294fb35cd202fdc1f2ce6e44f',1,'rm']]],
+  ['euler2mat_8',['euler2Mat',['../d7/da1/group__algorithm__math.html#gabaff301294fb35cd202fdc1f2ce6e44f',1,'rm']]],
   ['event_9',['Event',['../da/d88/classrm_1_1Event.html#a38cc061a1260bff8107021ffe409c50b',1,'rm::Event']]],
   ['eventtype_10',['EventType',['../d4/d8b/classrm_1_1EventType.html#adf9f0a8f9d43104311e23215284ab843',1,'rm::EventType']]],
   ['ewtopsis_11',['EwTopsis',['../d4/d84/classrm_1_1EwTopsis.html#a2e51bf69fdf6387fb6a64780d1ab6566',1,'rm::EwTopsis']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['多态部署库_0',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]]
+  ['基础数学库_0',['基础数学库',['../d7/da1/group__algorithm__math.html',1,'']]]
 ];

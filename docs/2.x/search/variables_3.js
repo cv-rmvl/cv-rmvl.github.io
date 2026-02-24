@@ -2,7 +2,7 @@ var searchData=
 [
   ['camera_5fparam_0',['camera_param',['../d2/df4/group__para__camera.html#ga920ea1f18537e54423f9f6c0ff586b55',1,'rm::para']]],
   ['cameramatrix_1',['cameraMatrix',['../d4/dc5/classrm_1_1para_1_1CameraParam.html#ae0a0d04be6bab74823058767e3c42082',1,'rm::para::CameraParam']]],
-  ['can_5fshoot_2',['can_shoot',['../d9/da7/structrm_1_1DecideInfo.html#a5d656fe8a18262e02e08ab77235f1ef9',1,'rm::DecideInfo']]],
+  ['can_5fshoot_2',['can_shoot',['../d7/d2b/structrm_1_1GyroDecider_1_1Info.html#ae691cf5b1d380c65362b484ddfb42c98',1,'rm::GyroDecider::Info::can_shoot'],['../d0/d8f/structrm_1_1RuneDecider_1_1Info.html#ac814e961de30ce1709ad3e02ddd3908a',1,'rm::RuneDecider::Info::can_shoot'],['../d9/d88/structrm_1_1TranslationDecider_1_1Info.html#ae4b1dec86bee3651d6a040505b084024',1,'rm::TranslationDecider::Info::can_shoot']]],
   ['cd_3',['Cd',['../df/d85/classrm_1_1para_1_1GravityCompensatorParam.html#a9efc242ef7be980ccbce845be34dafba',1,'rm::para::GravityCompensatorParam']]],
   ['center3d_5fq_4',['CENTER3D_Q',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html#a6628b6b0495cc157e2ed70d810193ae7',1,'rm::para::GyroGroupParam']]],
   ['center3d_5fr_5',['CENTER3D_R',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html#ab1a35a4977c6ac45f509d344f9d7c6d6',1,'rm::para::GyroGroupParam']]],
@@ -12,13 +12,14 @@ var searchData=
   ['close_5flength_9',['CLOSE_LENGTH',['../d1/d7d/classrm_1_1para_1_1LightBlobParam.html#a8997e4e875a39dfb6e7c7376db26d5bf',1,'rm::para::LightBlobParam']]],
   ['code_10',['code',['../d9/db4/classrm_1_1Exception.html#a364083e7467c049de49fc9722e62530f',1,'rm::Exception']]],
   ['coeff_5fk_11',['COEFF_K',['../d5/d17/classrm_1_1para_1_1RuneParam.html#aabc6f018f4ac9f83b8004b7b007a5823',1,'rm::para::RuneParam']]],
-  ['color_12',['color',['../d5/da4/structrm_1_1PostprocessOptions.html#a7b2e347ec471e587fecf66fd640790a9',1,'rm::PostprocessOptions']]],
-  ['combos_13',['combos',['../df/dae/structrm_1_1DetectInfo.html#a55b300565e761f25b38b6894da58ac48',1,'rm::DetectInfo']]],
-  ['compensation_14',['compensation',['../d5/da4/structrm_1_1CompensateInfo.html#a6c9cd39856cffa38dcb1d0dd24d484ff',1,'rm::CompensateInfo']]],
-  ['concentricity_5fratio_15',['CONCENTRICITY_RATIO',['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#ad9e9350a1258de20d5194eef9caa4433',1,'rm::para::RuneDetectorParam']]],
-  ['connect_5ftimeout_16',['CONNECT_TIMEOUT',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a31c4f296e56f398db93012c09b936304',1,'rm::para::OpcuaParam']]],
-  ['connection_17',['connection',['../d6/d7c/structrm_1_1Request.html#acf0010e8245a6b2a58910e6ffe20ee99',1,'rm::Request']]],
-  ['cons_5fmode_18',['cons_mode',['../d3/dd3/structrm_1_1OptimalOptions.html#aed6551a55831ec8bc12813e8b5608125',1,'rm::OptimalOptions']]],
-  ['content_5ftype_19',['content_type',['../d6/d7c/structrm_1_1Request.html#af9867a22ea20589e388283a5a9caa014',1,'rm::Request']]],
-  ['contrast_20',['contrast',['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a5c185cd5c0f38424ca8e23357089642b',1,'rm::para::MvCameraParam::contrast'],['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#aee3deca04cdf8ab72d79796b2bd35f2d',1,'rm::para::OptCameraParam::contrast']]]
+  ['color_12',['color',['../d0/da6/classrm_1_1msg_1_1Marker.html#a754660a8983583b8223dc4935767d24d',1,'rm::msg::Marker::color'],['../d5/da4/structrm_1_1PostprocessOptions.html#a7b2e347ec471e587fecf66fd640790a9',1,'rm::PostprocessOptions::color']]],
+  ['colors_13',['colors',['../d0/da6/classrm_1_1msg_1_1Marker.html#a5be6b781da2134e9d3aece8b68ed73bf',1,'rm::msg::Marker']]],
+  ['combos_14',['combos',['../d4/db4/structrm_1_1ArmorDetectorInfo.html#a7c42d991d0c6f8e932d4a9cb108d161d',1,'rm::ArmorDetectorInfo::combos'],['../d0/d7c/structrm_1_1GyroDetectorInfo.html#afb0249b21184094d4c20c4ef6060dac7',1,'rm::GyroDetectorInfo::combos'],['../d5/d9c/structrm_1_1RuneDetectorInfo.html#ade24029c3dd0e07b5f6958262e915a4d',1,'rm::RuneDetectorInfo::combos']]],
+  ['compensation_15',['compensation',['../d5/da4/structrm_1_1CompensateInfo.html#a6c9cd39856cffa38dcb1d0dd24d484ff',1,'rm::CompensateInfo']]],
+  ['concentricity_5fratio_16',['CONCENTRICITY_RATIO',['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#ad9e9350a1258de20d5194eef9caa4433',1,'rm::para::RuneDetectorParam']]],
+  ['connect_5ftimeout_17',['CONNECT_TIMEOUT',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a31c4f296e56f398db93012c09b936304',1,'rm::para::OpcuaParam']]],
+  ['connection_18',['connection',['../d6/d7c/structrm_1_1Request.html#acf0010e8245a6b2a58910e6ffe20ee99',1,'rm::Request']]],
+  ['cons_5fmode_19',['cons_mode',['../d3/dd3/structrm_1_1OptimalOptions.html#aed6551a55831ec8bc12813e8b5608125',1,'rm::OptimalOptions']]],
+  ['content_5ftype_20',['content_type',['../d6/d7c/structrm_1_1Request.html#af9867a22ea20589e388283a5a9caa014',1,'rm::Request']]],
+  ['contrast_21',['contrast',['../d1/d75/classrm_1_1para_1_1MvCameraParam.html#a5c185cd5c0f38424ca8e23357089642b',1,'rm::para::MvCameraParam::contrast'],['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#aee3deca04cdf8ab72d79796b2bd35f2d',1,'rm::para::OptCameraParam::contrast']]]
 ];

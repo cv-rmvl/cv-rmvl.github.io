@@ -197,9 +197,9 @@ $(function() {
 <li>必须定义 <span class="tt">MyTracker::ptr</span> 和 <span class="tt">MyTracker::const_ptr</span> 作为 <span class="tt">std::shared_ptr&lt;MyTracker&gt;</span> 和 <span class="tt">std::shared_ptr&lt;const MyTracker&gt;</span> 的别名；</li>
 <li>必须实现以 <span class="tt">MyTracker::ptr</span> 为返回值的 <span class="tt">MyTracker::make_tracker</span> 静态工厂函数；</li>
 <li>不得定义公开数据成员，避免对数据成员的直接操作，设置、获取操作应该使用形如 <span class="tt">setXXX</span> 或 <span class="tt">getXXX</span> 的成员方法；</li>
-<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a></span> 宏，例如</p>
+<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5" title="rm::tracker 追踪器类型转换宏">RMVL_TRACKER_CAST</a></span> 宏，例如</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a>(MyTracker);</div>
-<div class="ttc" id="agroup__tracker_html_ga9e3030832380159c0148548f67ffa0b5"><div class="ttname"><a href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a></div><div class="ttdeci">#define RMVL_TRACKER_CAST(name)</div><div class="ttdef"><b>定义</b> tracker.h:106</div></div>
+<div class="ttc" id="agroup__tracker_html_ga9e3030832380159c0148548f67ffa0b5"><div class="ttname"><a href="../../de/dca/group__tracker.html#ga9e3030832380159c0148548f67ffa0b5">RMVL_TRACKER_CAST</a></div><div class="ttdeci">#define RMVL_TRACKER_CAST(name)</div><div class="ttdoc">rm::tracker 追踪器类型转换宏</div><div class="ttdef"><b>定义</b> tracker.h:105</div></div>
 </div><!-- fragment --> </li>
 </ol>
 </div></div><!-- contents -->

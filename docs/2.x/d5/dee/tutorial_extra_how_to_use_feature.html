@@ -161,7 +161,7 @@ $(function() {
 <div class="fragment"><div class="line"><span class="comment">// 入参是用 std::vector&lt;cv::Point&gt; 所表示的轮廓</span></div>
 <div class="line"><a class="code hl_typedef" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a> p_light_blob = <a class="code hl_function" href="../../d0/df8/classrm_1_1LightBlob.html#a0ce1a244e257259b6db060cbc014f929">rm::LightBlob::make_feature</a>(contour);</div>
 <div class="ttc" id="aclassrm_1_1LightBlob_html_a0ce1a244e257259b6db060cbc014f929"><div class="ttname"><a href="../../d0/df8/classrm_1_1LightBlob.html#a0ce1a244e257259b6db060cbc014f929">rm::LightBlob::make_feature</a></div><div class="ttdeci">static ptr make_feature(const std::vector&lt; cv::Point &gt; &amp;contour)</div><div class="ttdoc">LightBlob 构造接口</div></div>
-<div class="ttc" id="aclassrm_1_1feature_html_aefb5a3f900441fd3a7bda03031e16b04"><div class="ttname"><a href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; feature &gt; ptr</div><div class="ttdef"><b>定义</b> feature.h:39</div></div>
+<div class="ttc" id="aclassrm_1_1feature_html_aefb5a3f900441fd3a7bda03031e16b04"><div class="ttname"><a href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; feature &gt; ptr</div><div class="ttdef"><b>定义</b> feature.h:37</div></div>
 </div><!-- fragment --><p><a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 提供了 <span class="tt">clone</span> 纯虚拟函数，用于完全复制一份数据，适合于强制构造无视匹配要求的情况。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md27"></a>
 1.2 信息获取</h2>
@@ -201,9 +201,9 @@ $(function() {
 <li>必须定义 <span class="tt">MyFeature::ptr</span> 和 <span class="tt">MyFeature::const_ptr</span> 作为 <span class="tt">std::shared_ptr&lt;MyFeature&gt;</span> 和 <span class="tt">std::shared_ptr&lt;const MyFeature&gt;</span> 的别名；</li>
 <li>必须实现以 <span class="tt">MyFeature::ptr</span> 为返回值的 <span class="tt">MyFeature::make_feature</span> 静态工厂函数；</li>
 <li>不得在派生类中定义公开数据成员，避免对数据成员的直接操作，设置、获取操作应该使用形如 <span class="tt">setXXX</span> 或 <span class="tt">getXXX</span> 的成员方法；</li>
-<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a></span> 宏，例如</p>
+<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <span class="tt">cast</span> 静态函数，方便起见，可以使用 <span class="tt"><a class="el" href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967" title="rm::feature 轮廓特征类型转换宏">RMVL_FEATURE_CAST</a></span> 宏，例如</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a>(MyFeature);</div>
-<div class="ttc" id="agroup__feature_html_ga05cff275afa35e1f1a76a3b98af63967"><div class="ttname"><a href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a></div><div class="ttdeci">#define RMVL_FEATURE_CAST(name)</div><div class="ttdef"><b>定义</b> feature.h:67</div></div>
+<div class="ttc" id="agroup__feature_html_ga05cff275afa35e1f1a76a3b98af63967"><div class="ttname"><a href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a></div><div class="ttdeci">#define RMVL_FEATURE_CAST(name)</div><div class="ttdoc">rm::feature 轮廓特征类型转换宏</div><div class="ttdef"><b>定义</b> feature.h:66</div></div>
 </div><!-- fragment --> </li>
 </ol>
 </div></div><!-- contents -->

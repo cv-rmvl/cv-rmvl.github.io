@@ -306,8 +306,8 @@
       <type>combo::ptr</type>
       <name>clone</name>
       <anchorfile>df/d41/classrm_1_1Armor.html</anchorfile>
-      <anchor>af1b1d22e40e3bc9683a7c55c34b67917</anchor>
-      <arglist>(double tick) override</arglist>
+      <anchor>af052a9bea7fce9e32fb09c016912ec2d</anchor>
+      <arglist>(int64_t tick) override</arglist>
     </member>
     <member kind="function">
       <type>float</type>
@@ -362,8 +362,8 @@
       <type>static ptr</type>
       <name>make_combo</name>
       <anchorfile>df/d41/classrm_1_1Armor.html</anchorfile>
-      <anchor>a7e5007bddd6aae25e69eeb0447dde76d</anchor>
-      <arglist>(LightBlob::ptr p_left, LightBlob::ptr p_right, const ImuData &amp;imu_data, double tick, ArmorSizeType armor_size_type=ArmorSizeType::UNKNOWN)</arglist>
+      <anchor>aaf8a7bf553cf1865eb48f645b34c051f</anchor>
+      <arglist>(LightBlob::ptr p_left, LightBlob::ptr p_right, const ImuData &amp;imu_data, int64_t tick, ArmorSizeType armor_size_type=ArmorSizeType::UNKNOWN)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -418,13 +418,19 @@
   <compound kind="class">
     <name>rm::ArmorDetector</name>
     <filename>db/d6e/classrm_1_1ArmorDetector.html</filename>
-    <base>rm::detector</base>
+    <member kind="typedef">
+      <type>std::unique_ptr&lt; ArmorDetector &gt;</type>
+      <name>ptr</name>
+      <anchorfile>db/d6e/classrm_1_1ArmorDetector.html</anchorfile>
+      <anchor>acebffd4a35b1c64c89030cfda4be9514</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
-      <type>DetectInfo</type>
+      <type>ArmorDetectorInfo</type>
       <name>detect</name>
       <anchorfile>db/d6e/classrm_1_1ArmorDetector.html</anchorfile>
-      <anchor>a51343ca62795031ad91d572d04753cd6</anchor>
-      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick) override</arglist>
+      <anchor>ac85f000ec58a3e377b7013e35b7ba825</anchor>
+      <arglist>(std::vector&lt; tracker::ptr &gt; &amp;trackers, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static auto</type>
@@ -439,6 +445,59 @@
       <anchorfile>db/d6e/classrm_1_1ArmorDetector.html</anchorfile>
       <anchor>ad6f6506387dfc982ca50706b23a75278</anchor>
       <arglist>(std::string_view model)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ArmorDetectorInfo</name>
+    <filename>d4/db4/structrm_1_1ArmorDetectorInfo.html</filename>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>src</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>ac7a0cfb282006a343d398c22bef60057</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>gray</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>a0bd47c8554ff56504fd24856155b6b37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>bin</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>a6ef152a1f73a0343b6f213479358611c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; cv::Mat &gt;</type>
+      <name>rois</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>aa7d948b5d35006ea484b8e1964f16e99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>rendergraph</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>ad53f6b553590b159fd982a949b55d319</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; combo::ptr &gt;</type>
+      <name>combos</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>a7c42d991d0c6f8e932d4a9cb108d161d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; feature::ptr &gt;</type>
+      <name>features</name>
+      <anchorfile>d4/db4/structrm_1_1ArmorDetectorInfo.html</anchorfile>
+      <anchor>ae8226e8fbeae60d5ca0ae9ecb2b1d8f6</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -676,13 +735,13 @@
   <compound kind="class">
     <name>rm::ArmorPredictor</name>
     <filename>d6/df1/classrm_1_1ArmorPredictor.html</filename>
-    <base>rm::predictor</base>
+    <class kind="struct">rm::ArmorPredictor::Info</class>
     <member kind="function">
-      <type>PredictInfo</type>
+      <type>Info</type>
       <name>predict</name>
       <anchorfile>d6/df1/classrm_1_1ArmorPredictor.html</anchorfile>
-      <anchor>ae34b7071be2b1bf6533ee0bc87ccee11</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof) override</arglist>
+      <anchor>ab482c5f5697cf7994eb09e00e4ec8fa8</anchor>
+      <arglist>(const std::vector&lt; tracker::ptr &gt; &amp;trackers, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof) const</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; ArmorPredictor &gt;</type>
@@ -1349,8 +1408,8 @@
       <type>virtual ptr</type>
       <name>clone</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a574ae395776d322e4afc0644119222d0</anchor>
-      <arglist>(double tick)=0</arglist>
+      <anchor>a95e6f0835b708c706c61c4af096e2b9f</anchor>
+      <arglist>(int64_t tick)=0</arglist>
     </member>
     <member kind="function">
       <type>float</type>
@@ -1416,10 +1475,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>double</type>
+      <type>int64_t</type>
       <name>tick</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>aa2d39c4fac7331834505670cdad63410</anchor>
+      <anchor>a04fa8b099f47a3c28967dfa5f8f4246a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -1542,10 +1601,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>double</type>
+      <type>int64_t</type>
       <name>_tick</name>
       <anchorfile>de/dee/classrm_1_1combo.html</anchorfile>
-      <anchor>a5813134dcf5da4fe2079f3f5d83179b7</anchor>
+      <anchor>ac4fe36c94ba9b803fad91b79908eb739</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1565,38 +1624,6 @@
       <anchorfile>d5/da4/structrm_1_1CompensateInfo.html</anchorfile>
       <anchor>a28b265fe8333ab5aac798f33e64a14a7</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::compensator</name>
-    <filename>df/d72/classrm_1_1compensator.html</filename>
-    <member kind="typedef">
-      <type>std::unique_ptr&lt; compensator &gt;</type>
-      <name>ptr</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>a83b85a64e4716ba1146cce81c7399c1a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>compensator</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>ac3365bfdcce985d29c6489974267b6bf</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~compensator</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>a9f28a1c57fcd9206605f0467c07c023d</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual CompensateInfo</type>
-      <name>compensate</name>
-      <anchorfile>df/d72/classrm_1_1compensator.html</anchorfile>
-      <anchor>a22465cc4deedab79ebc3f0c13b4bd9ff</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1792,406 +1819,6 @@
       <anchorfile>df/d6b/classrm_1_1DataType.html</anchorfile>
       <anchor>ac3a393d0a3d118f2d1c88bd726454210</anchor>
       <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::DecideInfo</name>
-    <filename>d9/da7/structrm_1_1DecideInfo.html</filename>
-    <member kind="variable">
-      <type>tracker::ptr</type>
-      <name>target</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>a2a63084477ae23a3f912aecadb9203f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Point2f</type>
-      <name>shoot_center</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>a9e3fcea9fee275bdf0698e1714f35bfa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Point2f</type>
-      <name>exp_angle</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>af1baafb80b1dc5fb963b25bda461f5ca</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Point2f</type>
-      <name>exp_center2d</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>a199e394a99df6b11f307f5bda2eb63e5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Point3f</type>
-      <name>exp_center3d</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>a1b11db65fe4c71a754a3738adf920e74</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>bool</type>
-      <name>can_shoot</name>
-      <anchorfile>d9/da7/structrm_1_1DecideInfo.html</anchorfile>
-      <anchor>a5d656fe8a18262e02e08ab77235f1ef9</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::decider</name>
-    <filename>d9/d29/classrm_1_1decider.html</filename>
-    <member kind="typedef">
-      <type>std::unique_ptr&lt; decider &gt;</type>
-      <name>ptr</name>
-      <anchorfile>d9/d29/classrm_1_1decider.html</anchorfile>
-      <anchor>a8655c1d33d48671c5ecb63e0c415542e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>decider</name>
-      <anchorfile>d9/d29/classrm_1_1decider.html</anchorfile>
-      <anchor>abbd150ec8eb71a134f2421a861176a26</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~decider</name>
-      <anchorfile>d9/d29/classrm_1_1decider.html</anchorfile>
-      <anchor>ad4f80f913557ca8154610e1f1bb84c52</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual DecideInfo</type>
-      <name>decide</name>
-      <anchorfile>d9/d29/classrm_1_1decider.html</anchorfile>
-      <anchor>abe1f602915a0ef9c38ae1bbec9473837</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::DefaultCombo</name>
-    <filename>d1/daf/classrm_1_1DefaultCombo.html</filename>
-    <base>rm::combo</base>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; DefaultCombo &gt;</type>
-      <name>ptr</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>a12bcd68c49b7a56141e206ad4dc19c3e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; const DefaultCombo &gt;</type>
-      <name>const_ptr</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>a667f4deb33ec30feda08ee779dbf97ba</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>combo::ptr</type>
-      <name>clone</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>ae9bf5b1abfd8bd566bfdfdad6121336b</anchor>
-      <arglist>(double tick) override</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>make_combo</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>a18332ef4588a91e7e6b50c75bdf454e9</anchor>
-      <arglist>(feature::ptr p_feature, double tick)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>cast</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>aae90ed75de14e4fff74e315e9b3b319d</anchor>
-      <arglist>(combo::ptr p_combo)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const_ptr</type>
-      <name>cast</name>
-      <anchorfile>d1/daf/classrm_1_1DefaultCombo.html</anchorfile>
-      <anchor>a8ac243ad20087e3028c45e5c46a4b6aa</anchor>
-      <arglist>(combo::const_ptr p_combo)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::DefaultFeature</name>
-    <filename>de/de0/classrm_1_1DefaultFeature.html</filename>
-    <base>rm::feature</base>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; DefaultFeature &gt;</type>
-      <name>ptr</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>aefc43488f8e43fdc554d0bce0fcc37d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; const DefaultFeature &gt;</type>
-      <name>const_ptr</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>ac94ee2e909867564c0da790303ce98ec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>DefaultFeature</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>ac920722958ef17c806a894bf5ad8dc4b</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>DefaultFeature</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>a61c74ad2dc9ef03298a258ac0d43fecb</anchor>
-      <arglist>(const cv::Point2f &amp;p)</arglist>
-    </member>
-    <member kind="function">
-      <type>feature::ptr</type>
-      <name>clone</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>adef4caed5d04b96855e65b0e080dedca</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>make_feature</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>a1e8209453ce1161416e165c149ccb970</anchor>
-      <arglist>(const cv::Point2f &amp;p)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>cast</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>ac32e27c4ae74f86cb6dea28afd5e1995</anchor>
-      <arglist>(feature::ptr p_feature)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const_ptr</type>
-      <name>cast</name>
-      <anchorfile>de/de0/classrm_1_1DefaultFeature.html</anchorfile>
-      <anchor>aa935aa05448ce078f668ecb6b9b5d5e0</anchor>
-      <arglist>(feature::const_ptr p_feature)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::DefaultGroup</name>
-    <filename>d0/df4/classrm_1_1DefaultGroup.html</filename>
-    <base>rm::group</base>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; DefaultGroup &gt;</type>
-      <name>ptr</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>ac008fea3efdc61f9d59106d2d6ef9d2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; const DefaultGroup &gt;</type>
-      <name>const_ptr</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>abde4ccf240909708a4724a65dafeb3db</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>group::ptr</type>
-      <name>clone</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>a7323a60bd82ad19748a56e005b42bc4d</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>sync</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>a94b7f20edf3bf6ba57fb024dd4b21cba</anchor>
-      <arglist>(const ImuData &amp;imu, double tick) override</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>make_group</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>a37301c52d055ac89f5b1dc0abc90ce05</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>cast</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>a2a6b3319d32be5880e0328916570e380</anchor>
-      <arglist>(group::ptr p_group)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const_ptr</type>
-      <name>cast</name>
-      <anchorfile>d0/df4/classrm_1_1DefaultGroup.html</anchorfile>
-      <anchor>a6b82f6bb6a21b2f57ab85dc1b6cf4539</anchor>
-      <arglist>(group::const_ptr p_group)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::DefaultTracker</name>
-    <filename>d3/d25/classrm_1_1DefaultTracker.html</filename>
-    <base>rm::tracker</base>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; DefaultTracker &gt;</type>
-      <name>ptr</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a7fd70296e25b53d2d06b9ae38c09f7d7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::shared_ptr&lt; const DefaultTracker &gt;</type>
-      <name>const_ptr</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a73f5c309cdd340e49c00bec06c5d558e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>tracker::ptr</type>
-      <name>clone</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>af5bb528bc9d90dbc18d9d477ed33584a</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>update</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a2f450e0e0ac528dddd517c07b447a4bf</anchor>
-      <arglist>(combo::ptr p_combo) override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>update</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a0b02b13f9144e4bbdf5f36cd7307acc4</anchor>
-      <arglist>(double tick, const ImuData &amp;imu) override</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>make_tracker</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>ab6c61bf77aaafb9467b654a1658eec8b</anchor>
-      <arglist>(combo::ptr p_combo)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static ptr</type>
-      <name>cast</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a149563469d4b4f38c97bf2cd4d60f489</anchor>
-      <arglist>(tracker::ptr p_tracker)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static const_ptr</type>
-      <name>cast</name>
-      <anchorfile>d3/d25/classrm_1_1DefaultTracker.html</anchorfile>
-      <anchor>a972e024950e574c5abe2e3366bda758d</anchor>
-      <arglist>(tracker::const_ptr p_tracker)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::DetectInfo</name>
-    <filename>df/dae/structrm_1_1DetectInfo.html</filename>
-    <member kind="variable">
-      <type>cv::Mat</type>
-      <name>src</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a08ad5987f2457977fb586fc00d3d8297</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Mat</type>
-      <name>gray</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>aeac85ccd53db90f62f2b522704dfd6a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Mat</type>
-      <name>bin</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a601c518dfcf607c06879556b7f63f251</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::vector&lt; cv::Mat &gt;</type>
-      <name>rois</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a5bd3077e1347503e7e12ac23bbc9fde3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>cv::Mat</type>
-      <name>rendergraph</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a1b8c880a362b968307d679d5fbb7d0f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::vector&lt; combo::ptr &gt;</type>
-      <name>combos</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a55b300565e761f25b38b6894da58ac48</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::vector&lt; feature::ptr &gt;</type>
-      <name>features</name>
-      <anchorfile>df/dae/structrm_1_1DetectInfo.html</anchorfile>
-      <anchor>a178b6a0f251344490532cb793af5a8cf</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::detector</name>
-    <filename>d3/d77/classrm_1_1detector.html</filename>
-    <member kind="typedef">
-      <type>std::unique_ptr&lt; detector &gt;</type>
-      <name>ptr</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>a0eaa4d8bcf44807e09e96ae2b9bbfd42</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>detector</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>aba1aaea7bc893858ea8029ac5e487474</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~detector</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>af0482ef909761c24a05f9765b69b457b</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual DetectInfo</type>
-      <name>detect</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>a4ff537c0ba51075fc229c1f171827565</anchor>
-      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick)=0</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>_tick</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>a664f5cd8345fbadc2a356c84158d958e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ImuData</type>
-      <name>_imu_data</name>
-      <anchorfile>d3/d77/classrm_1_1detector.html</anchorfile>
-      <anchor>a0bf4f7982d69876728c66b54eab4e538</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3077,7 +2704,6 @@
   <compound kind="class">
     <name>rm::GravityCompensator</name>
     <filename>d3/d7a/classrm_1_1GravityCompensator.html</filename>
-    <base>rm::compensator</base>
     <member kind="function">
       <type></type>
       <name>GravityCompensator</name>
@@ -3096,8 +2722,8 @@
       <type>CompensateInfo</type>
       <name>compensate</name>
       <anchorfile>d3/d7a/classrm_1_1GravityCompensator.html</anchorfile>
-      <anchor>adad2de49dba7c1d5429fdc368e3b13b1</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag) override</arglist>
+      <anchor>a9f10a0b7868536f2f6a48559dc0cceb5</anchor>
+      <arglist>(const std::vector&lt; tracker::ptr &gt; &amp;trackers, float shoot_speed, CompensateType com_flag)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static auto</type>
@@ -3356,7 +2982,6 @@
   <compound kind="class">
     <name>rm::GyroCompensator</name>
     <filename>d9/d2d/classrm_1_1GyroCompensator.html</filename>
-    <base>rm::compensator</base>
     <member kind="function">
       <type></type>
       <name>GyroCompensator</name>
@@ -3368,8 +2993,8 @@
       <type>CompensateInfo</type>
       <name>compensate</name>
       <anchorfile>d9/d2d/classrm_1_1GyroCompensator.html</anchorfile>
-      <anchor>aa37efa7b74e5155e54793eaba449373b</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag) override</arglist>
+      <anchor>ae67fe4a5394e9ee65b8010e33b4adca3</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, float shoot_speed, CompensateType com_flag)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static auto</type>
@@ -3435,7 +3060,7 @@
   <compound kind="class">
     <name>rm::GyroDecider</name>
     <filename>dc/d0b/classrm_1_1GyroDecider.html</filename>
-    <base>rm::decider</base>
+    <class kind="struct">rm::GyroDecider::Info</class>
     <member kind="function">
       <type></type>
       <name>GyroDecider</name>
@@ -3444,11 +3069,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>DecideInfo</type>
+      <type>Info</type>
       <name>decide</name>
       <anchorfile>dc/d0b/classrm_1_1GyroDecider.html</anchorfile>
-      <anchor>ad02fbd7d38677cebf18fec5029cbbe53</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>a8d787c23388bf1728494e4a85b3dd833</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, tracker::ptr last_target, const CompensateInfo &amp;compensate_info, const GyroPredictor::Info &amp;predict_info)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; GyroDecider &gt;</type>
@@ -3521,7 +3146,6 @@
   <compound kind="class">
     <name>rm::GyroDetector</name>
     <filename>dc/d93/classrm_1_1GyroDetector.html</filename>
-    <base>rm::detector</base>
     <member kind="typedef">
       <type>std::unique_ptr&lt; GyroDetector &gt;</type>
       <name>ptr</name>
@@ -3530,11 +3154,11 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>DetectInfo</type>
+      <type>GyroDetectorInfo</type>
       <name>detect</name>
       <anchorfile>dc/d93/classrm_1_1GyroDetector.html</anchorfile>
-      <anchor>a38815d805b50d6c850e7877114baef0b</anchor>
-      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick) override</arglist>
+      <anchor>ab1ce7989cf860201b21bf709d958a66f</anchor>
+      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -3549,6 +3173,59 @@
       <anchorfile>dc/d93/classrm_1_1GyroDetector.html</anchorfile>
       <anchor>a2493d551bd86c88630c542208f6d0508</anchor>
       <arglist>(std::string_view model, int armor_num=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::GyroDetectorInfo</name>
+    <filename>d0/d7c/structrm_1_1GyroDetectorInfo.html</filename>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>src</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>a1cfe9efc0ec3f19d7e3a1b1098b66830</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>gray</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>a6fcc5c1e3f794605ff4a4b287c8c3d8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>bin</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>acada91d44144bd8e8eee98160978ee54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; cv::Mat &gt;</type>
+      <name>rois</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>aaecb4be4ef549404c19074d642567f4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>rendergraph</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>a010742b48844bead587407ce1214edd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; combo::ptr &gt;</type>
+      <name>combos</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>afb0249b21184094d4c20c4ef6060dac7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; feature::ptr &gt;</type>
+      <name>features</name>
+      <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
+      <anchor>ad189a2a53df59f282cedf294a480c90a</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3861,13 +3538,61 @@
   <compound kind="class">
     <name>rm::GyroPredictor</name>
     <filename>d4/d7b/classrm_1_1GyroPredictor.html</filename>
-    <base>rm::predictor</base>
+    <class kind="struct">rm::GyroPredictor::Info</class>
+    <member kind="enumvalue">
+      <name>POS_X</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2ea639cf3bb2658e9624d91c54f91acb995</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POS_Y</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2eaa1f82a86b508184c17afb457dac56d31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POS_Z</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2eac28934551aa73817867a5ea8497dc1d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ANG_Y</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2ea0f6bf0e571f6243a26d7545dba7104da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POS_X</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2ea639cf3bb2658e9624d91c54f91acb995</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POS_Y</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2eaa1f82a86b508184c17afb457dac56d31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>POS_Z</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2eac28934551aa73817867a5ea8497dc1d8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>ANG_Y</name>
+      <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
+      <anchor>a3b7977e1e7503f643760c39cdd2dbb2ea0f6bf0e571f6243a26d7545dba7104da</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
-      <type>PredictInfo</type>
+      <type>Info</type>
       <name>predict</name>
       <anchorfile>d4/d7b/classrm_1_1GyroPredictor.html</anchorfile>
-      <anchor>a3a91fd6bac3b707e84d161da038635c7</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof) override</arglist>
+      <anchor>aedfb4b471e7b40bd9b78cc9385c0541f</anchor>
+      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; GyroPredictor &gt;</type>
@@ -4161,10 +3886,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>double</type>
+      <type>int64_t</type>
       <name>stamp</name>
       <anchorfile>de/de3/classrm_1_1msg_1_1Header.html</anchorfile>
-      <anchor>ae4cbb19996b8709610e09d82d8392eda</anchor>
+      <anchor>a269ea828985d89265373a7ae542ba308</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4450,10 +4175,10 @@
       <arglist>(const std::string &amp;path) const</arglist>
     </member>
     <member kind="variable">
-      <type>double</type>
+      <type>int64_t</type>
       <name>DELAY_AFTER_WRITE</name>
       <anchorfile>dc/db1/classrm_1_1para_1_1HikLightControlParam.html</anchorfile>
-      <anchor>ac69289ebae5a4d044d582213bd622a8e</anchor>
+      <anchor>a7470afa539bfbb7e573528497bf0c27b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -4648,6 +4373,187 @@
       <name>rotation</name>
       <anchorfile>db/def/structrm_1_1ImuData.html</anchorfile>
       <anchor>adf6f8265fc1bae78423f2ad132545567</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::ArmorPredictor::Info</name>
+    <filename>d6/d96/structrm_1_1ArmorPredictor_1_1Info.html</filename>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, std::array&lt; double, 2 &gt; &gt;</type>
+      <name>static_prediction</name>
+      <anchorfile>d6/d96/structrm_1_1ArmorPredictor_1_1Info.html</anchorfile>
+      <anchor>ab26fbc63468b502838cf0c216f7518c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, std::array&lt; double, 2 &gt; &gt;</type>
+      <name>dynamic_prediction</name>
+      <anchorfile>d6/d96/structrm_1_1ArmorPredictor_1_1Info.html</anchorfile>
+      <anchor>a99ecb25b720ff5f229f3ca0a562d97d7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::GyroDecider::Info</name>
+    <filename>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</filename>
+    <member kind="variable">
+      <type>tracker::ptr</type>
+      <name>target</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>a6420afc24da8374fb3e42b330b3393e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>shoot_center</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>a5b6253600c7f917f253d000aec17f881</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_angle</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>af42f4bc1d70737a9e47d00ee0a1202d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_center2d</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>af142fddb0c0be22c92b962bca7545b94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point3f</type>
+      <name>exp_center3d</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>a83bf4b8165ad2cb87f61ad58eb995e0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>can_shoot</name>
+      <anchorfile>d7/d2b/structrm_1_1GyroDecider_1_1Info.html</anchorfile>
+      <anchor>ae691cf5b1d380c65362b484ddfb42c98</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::GyroPredictor::Info</name>
+    <filename>d7/de7/structrm_1_1GyroPredictor_1_1Info.html</filename>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, std::array&lt; double, 4 &gt; &gt;</type>
+      <name>static_prediction</name>
+      <anchorfile>d7/de7/structrm_1_1GyroPredictor_1_1Info.html</anchorfile>
+      <anchor>ae33dbf65a09cacb2e8162ff8a634199f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, std::array&lt; double, 4 &gt; &gt;</type>
+      <name>dynamic_prediction</name>
+      <anchorfile>d7/de7/structrm_1_1GyroPredictor_1_1Info.html</anchorfile>
+      <anchor>a00f1b381dbcbd8218adf6e6d5a28b493</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, double &gt;</type>
+      <name>shoot_delay_prediction</name>
+      <anchorfile>d7/de7/structrm_1_1GyroPredictor_1_1Info.html</anchorfile>
+      <anchor>ad366ceb2b993aff2fd48eba78c619b4e</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::RuneDecider::Info</name>
+    <filename>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</filename>
+    <member kind="variable">
+      <type>tracker::ptr</type>
+      <name>target</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>a935e481f3994b8bc124a28335483ddb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>shoot_center</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>a11720e2ba5c3bd0cd1fa5689c3540373</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_angle</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>a864f5327c300dca70eadfae3ec3fe288</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_center2d</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>aeb491db1a41b09ae69029acc9b201b33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point3f</type>
+      <name>exp_center3d</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>a353cc6d4d8d957b111c8d2002c6e9741</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>can_shoot</name>
+      <anchorfile>d0/d8f/structrm_1_1RuneDecider_1_1Info.html</anchorfile>
+      <anchor>ac814e961de30ce1709ad3e02ddd3908a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::TranslationDecider::Info</name>
+    <filename>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</filename>
+    <member kind="variable">
+      <type>tracker::ptr</type>
+      <name>target</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>a4ec5afdb897fc7a0aadf94c992400a5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>shoot_center</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>acc9f52975e94c0330eeab6bac37d480f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_angle</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>ac22188f4394d5a471f49fa446a14ec88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point2f</type>
+      <name>exp_center2d</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>a24b8aad551570e5593b7658523ab3ec2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Point3f</type>
+      <name>exp_center3d</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>ac5cb032b80c32910a18e0270b7c72450</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>can_shoot</name>
+      <anchorfile>d9/d88/structrm_1_1TranslationDecider_1_1Info.html</anchorfile>
+      <anchor>ae4b1dec86bee3651d6a040505b084024</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5465,6 +5371,231 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::msg::Marker</name>
+    <filename>d0/da6/classrm_1_1msg_1_1Marker.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>ac926291ae805e1d454b4541a584ebf84</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a8bf9157b89439806f6925afb6593c1a9</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Marker</type>
+      <name>deserialize</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>adfd0f46c19ea53d2943ded5cf4ad949f</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>Header</type>
+      <name>header</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a6b4afc4e0003c7bcf8017820bff0d02f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>ns</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a6a842205d9aab89f9ca51bff491a4895</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int32_t</type>
+      <name>id</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a71ef5871ed5fb9e9d76e98be3c2bed75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>type</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>aefea197f1376e90ddb960effb4ce7c0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>action</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a6b940e197e385672ebe8f91bbce214f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Pose</type>
+      <name>pose</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a5a171deb990b176eebd8b2244ceba3d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Vector3</type>
+      <name>scale</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a3f8e07c5e3b4cbe788c3d4220a46a760</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ColorRGBA</type>
+      <name>color</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a754660a8983583b8223dc4935767d24d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; Point &gt;</type>
+      <name>points</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a2ad6c3011d2cf75d1cf1d78057de6b3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; ColorRGBA &gt;</type>
+      <name>colors</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a5be6b781da2134e9d3aece8b68ed73bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_ARROW</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a9afcb83afdf8e138eecb93825654a87e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_CUBE</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a3ff909c2e5d825c94c373ddd23515944</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_SPHERE</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a4f838eef7ccd62b741be393f2ab8f401</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_CYLINDER</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a93105142760f990609542d8cda7403ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_LINE_STRIP</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>aff851651b774e1365b6c15a70656adbc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_LINE_LIST</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a02f38751571c445c3bad7bf8f042abda</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_CUBE_LIST</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>ab1d9214f40610d3e20a84bc17cf08815</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_SPHERE_LIST</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a48b2905e796081eb77b2b15c1e9960a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>TYPE_POINTS</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a84a68b926d29d1f8d987f6de74595620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>ACTION_ADD</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>adf444d1b5c12aa1aa9361ec58f27de5c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>ACTION_DELETE</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a2aac88254492d4b8ddf60bb471329d5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>ACTION_DELETEALL</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>ad497d5f2f62c55b48dddb25d92d0111a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
+      <anchor>a35dcabd29f59b34d254a4b51c7c69598</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::MarkerArray</name>
+    <filename>d2/dde/classrm_1_1msg_1_1MarkerArray.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
+      <anchor>a6331686c5be528c7ce3aca7fcb1f8a31</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
+      <anchor>afbcfd1b4278750b422fa79fc49e1e84c</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static MarkerArray</type>
+      <name>deserialize</name>
+      <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
+      <anchor>ae7c0465d367f7c0cabb1dcaa2123bb80</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; Marker &gt;</type>
+      <name>markers</name>
+      <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
+      <anchor>aee21d8a7b0a31737917e1f11dc30e53e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
+      <anchor>ac22b2c81e7680a7bf0f285c56218249b</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Method</name>
     <filename>d4/d91/classrm_1_1Method.html</filename>
     <member kind="function">
@@ -6243,8 +6374,15 @@
       <type></type>
       <name>~Node</name>
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
-      <anchor>a1818afc4e3b81e58724302e228c67b44</anchor>
-      <arglist>()</arglist>
+      <anchor>aa72dd056a0678313906462d614bf4a6e</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Guid</type>
+      <name>guid</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a365a5c84001622f7e1d466c4c8a697d8</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>Publisher&lt; MsgType &gt;::ptr</type>
@@ -6261,6 +6399,20 @@
       <arglist>(std::string_view topic, SubscribeMsgCallback callback) noexcept</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>destroyPublisher</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a26b36ee5aeaac4bc9b02b7f2a8cdcf5e</anchor>
+      <arglist>(typename Publisher&lt; MsgType &gt;::ptr pub)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>destroySubscriber</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>acb8c16c137c542b4910617e7a34a2499</anchor>
+      <arglist>(typename Subscriber&lt; MsgType &gt;::ptr sub)</arglist>
+    </member>
+    <member kind="function">
       <type>Timer::ptr</type>
       <name>createTimer</name>
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
@@ -6273,6 +6425,55 @@
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
       <anchor>ac19d563e835538932223d6be7471816d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>shutdown</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a48f377161a570f982cf62c597f6d8d77</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>rm::async::IOContext</type>
+      <name>_ctx</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a1ded25e7f1200241144308b3e00ec2b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; Guid, NodeStorageInfo, GuidHash &gt;</type>
+      <name>_discovered_nodes</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a9352ea3132959104fcf268f5ddc9bc77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DataWriterBase::ptr &gt;</type>
+      <name>_local_writers</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>ac7551c742b0bbbb72ab003b5818dc9ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DataReaderBase::ptr &gt;</type>
+      <name>_local_readers</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a6bdd1813a01271a6c8495b93fb3d4e9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DiscoveredWriterStorageInfo &gt;</type>
+      <name>_discovered_writers</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>aec419465f4052e91d6dd09a65b9c6d3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DiscoveredReaderStorageInfo &gt;</type>
+      <name>_discovered_readers</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a7710239f22b9b159dc206e8045d47bde</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -6289,8 +6490,15 @@
       <type></type>
       <name>~Node</name>
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>aa358a0e3e9efb136dabf92dd48d6c290</anchor>
-      <arglist>()</arglist>
+      <anchor>aca6efc26b3a60e7fa84b89118fe643e7</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Guid</type>
+      <name>guid</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a8de1ef9537de5b914ba854f5eec46f28</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>Publisher&lt; MsgType &gt;</type>
@@ -6305,6 +6513,83 @@
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
       <anchor>a8bf16f9ee141dce717956c595df2414a</anchor>
       <arglist>(std::string_view topic, SubscribeMsgCallback &amp;&amp;callback) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>destroyPublisher</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a45833dd795f5bd723bb60292fe503929</anchor>
+      <arglist>(const Publisher&lt; MsgType &gt; &amp;pub)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>destroySubscriber</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>aeb9b7dbe43717b2d47a06d86a55b730c</anchor>
+      <arglist>(const Subscriber&lt; MsgType &gt; &amp;sub)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>shutdown</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>ae4168a1a5fccf155483d1f738699de8d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::shared_mutex</type>
+      <name>_nodes_mtx</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>ad7a61bc56c88a38d5512903c91cb3562</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; Guid, NodeStorageInfo, GuidHash &gt;</type>
+      <name>_discovered_nodes</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>ae4ae7e9d39c7e3b249ae3d3f576a2ee7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::shared_mutex</type>
+      <name>_local_mtx</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a86b5b6886104211984254977ca18cd37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DataWriterBase::ptr &gt;</type>
+      <name>_local_writers</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a0cbae45ba24020f96fe57bdfb3e59ab5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DataReaderBase::ptr &gt;</type>
+      <name>_local_readers</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>ab9c2831c827c81a775b671c4c6b6760c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::shared_mutex</type>
+      <name>_discovered_mtx</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a5cc45916590203720bc9de99b64070e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DiscoveredWriterStorageInfo &gt;</type>
+      <name>_discovered_writers</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a8c8b6bfc295ce20e59994c9c58a1edf5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; std::string, DiscoveredReaderStorageInfo &gt;</type>
+      <name>_discovered_readers</name>
+      <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
+      <anchor>a1c7588fe3404a5769b3a70e443f8e31a</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8423,63 +8708,6 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::PredictInfo</name>
-    <filename>d7/d51/structrm_1_1PredictInfo.html</filename>
-    <member kind="variable">
-      <type>std::unordered_map&lt; tracker::const_ptr, cv::Vec&lt; double, 9 &gt; &gt;</type>
-      <name>static_prediction</name>
-      <anchorfile>d7/d51/structrm_1_1PredictInfo.html</anchorfile>
-      <anchor>a7371ffc8ac220a200a7397d108a71dab</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::unordered_map&lt; tracker::const_ptr, cv::Vec&lt; double, 9 &gt; &gt;</type>
-      <name>dynamic_prediction</name>
-      <anchorfile>d7/d51/structrm_1_1PredictInfo.html</anchorfile>
-      <anchor>ae4653ee156cd01710c642c8cd92b68a3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::unordered_map&lt; tracker::const_ptr, cv::Vec&lt; double, 9 &gt; &gt;</type>
-      <name>shoot_delay_prediction</name>
-      <anchorfile>d7/d51/structrm_1_1PredictInfo.html</anchorfile>
-      <anchor>ac83e1a1cbb6c754b7cb61bb7521e9d07</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::predictor</name>
-    <filename>dc/d74/classrm_1_1predictor.html</filename>
-    <member kind="typedef">
-      <type>std::unique_ptr&lt; predictor &gt;</type>
-      <name>ptr</name>
-      <anchorfile>dc/d74/classrm_1_1predictor.html</anchorfile>
-      <anchor>a9bea1d235d789bfaf9e68f53ea847d6a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>predictor</name>
-      <anchorfile>dc/d74/classrm_1_1predictor.html</anchorfile>
-      <anchor>a8336af525a0508d04caa29ac4f54ca51</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~predictor</name>
-      <anchorfile>dc/d74/classrm_1_1predictor.html</anchorfile>
-      <anchor>a93f50465708fea95e13cc36c393ed56c</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual PredictInfo</type>
-      <name>predict</name>
-      <anchorfile>dc/d74/classrm_1_1predictor.html</anchorfile>
-      <anchor>a8300d0054e59cbf215cc7d1a6ac0a246</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
     <name>rm::PreprocessOptions</name>
     <filename>d2/d84/structrm_1_1PreprocessOptions.html</filename>
     <member kind="variable">
@@ -8633,6 +8861,13 @@
       <anchor>a34fb2d824b791166707912d049148744</anchor>
       <arglist>(const MsgType &amp;msg)</arglist>
     </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>rm::lpss::Publisher</name>
@@ -8651,6 +8886,13 @@
       <anchorfile>d8/dff/classrm_1_1lpss_1_1Publisher.html</anchorfile>
       <anchor>a05060ac1764a53ce9b3b01f56d2796a2</anchor>
       <arglist>(const MsgType &amp;msg)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>d8/dff/classrm_1_1lpss_1_1Publisher.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8920,6 +9162,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+      <name>heads</name>
+      <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
+      <anchor>a6215f8a222f1f91cf8611b9ff21b3142</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>std::string</type>
       <name>body</name>
       <anchorfile>d6/d7c/structrm_1_1Request.html</anchorfile>
@@ -9180,6 +9429,7 @@
     <filename>d0/de4/classrm_1_1Router.html</filename>
     <class kind="class">rm::Router::RoutePattern</class>
     <class kind="struct">rm::Router::RouteEntry</class>
+    <class kind="struct">rm::Router::WSRouteEntry</class>
     <member kind="function">
       <type>void</type>
       <name>get</name>
@@ -9207,6 +9457,13 @@
       <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
       <anchor>a1be04872064c755df95635305c15508f</anchor>
       <arglist>(std::string_view uri, RouteHandler callback)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ws</name>
+      <anchorfile>d0/de4/classrm_1_1Router.html</anchorfile>
+      <anchor>a7b138d03664cd052c652e38ff93602d9</anchor>
+      <arglist>(std::string_view uri, async::WebSocketHandler callback)</arglist>
     </member>
     <member kind="friend">
       <type>friend class</type>
@@ -9238,8 +9495,8 @@
       <type>combo::ptr</type>
       <name>clone</name>
       <anchorfile>d1/dfe/classrm_1_1Rune.html</anchorfile>
-      <anchor>a4a0a7bc315e12314f8f7064c16cae39b</anchor>
-      <arglist>(double tick) override</arglist>
+      <anchor>a8675db9d6956ff19760e079cceb439fb</anchor>
+      <arglist>(int64_t tick) override</arglist>
     </member>
     <member kind="function">
       <type>float</type>
@@ -9259,8 +9516,8 @@
       <type>static ptr</type>
       <name>make_combo</name>
       <anchorfile>d1/dfe/classrm_1_1Rune.html</anchorfile>
-      <anchor>a25cfbd9854ab35eaf1002f8ef987b1d4</anchor>
-      <arglist>(RuneTarget::ptr p_target, RuneCenter::ptr p_center, const ImuData &amp;imu_data, double tick, bool force=false)</arglist>
+      <anchor>a0aa01655891d46cf3092e1dd19f25493</anchor>
+      <arglist>(RuneTarget::ptr p_target, RuneCenter::ptr p_center, const ImuData &amp;imu_data, int64_t tick, bool force=false)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -9401,7 +9658,7 @@
   <compound kind="class">
     <name>rm::RuneDecider</name>
     <filename>df/de5/classrm_1_1RuneDecider.html</filename>
-    <base>rm::decider</base>
+    <class kind="struct">rm::RuneDecider::Info</class>
     <member kind="function">
       <type></type>
       <name>RuneDecider</name>
@@ -9410,11 +9667,11 @@
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type>DecideInfo</type>
+      <type>Info</type>
       <name>decide</name>
       <anchorfile>df/de5/classrm_1_1RuneDecider.html</anchorfile>
-      <anchor>a70fd768995865f3d1250f04f5861a82a</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>a4b56b677f6367d56303a07bddc40ee9f</anchor>
+      <arglist>(group::ptr group, bool is_active, tracker::ptr last_target, const CompensateInfo &amp;compensate_info, const RunePredictorInfo &amp;predict_info)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; RuneDecider &gt;</type>
@@ -9480,7 +9737,6 @@
   <compound kind="class">
     <name>rm::RuneDetector</name>
     <filename>d6/deb/classrm_1_1RuneDetector.html</filename>
-    <base>rm::detector</base>
     <member kind="typedef">
       <type>std::unique_ptr&lt; RuneDetector &gt;</type>
       <name>ptr</name>
@@ -9489,11 +9745,11 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>DetectInfo</type>
+      <type>RuneDetectorInfo</type>
       <name>detect</name>
       <anchorfile>d6/deb/classrm_1_1RuneDetector.html</anchorfile>
-      <anchor>a96746f8bbce7b9b055fc87fdcc99803e</anchor>
-      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick) override</arglist>
+      <anchor>ac246bb12d921dcea604c39dadb454bfe</anchor>
+      <arglist>(group::ptr &amp;group, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -9501,6 +9757,59 @@
       <anchorfile>d6/deb/classrm_1_1RuneDetector.html</anchorfile>
       <anchor>a158fb7e5978ef93fb86741dec2fad8ff</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::RuneDetectorInfo</name>
+    <filename>d5/d9c/structrm_1_1RuneDetectorInfo.html</filename>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>src</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>a71e532438fdaa69cf40115cf0d67609a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>gray</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>a85c6e326d53e5ec45fe96aa2a64d12f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>bin</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>a879e7f2d6c62c861e9c2edc3bc4e06c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; cv::Mat &gt;</type>
+      <name>rois</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>a76c52c7c70cf7710532ff47372fe838e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>cv::Mat</type>
+      <name>rendergraph</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>af5c73ca2f33b3e92eeed0917229ee5c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; combo::ptr &gt;</type>
+      <name>combos</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>ade24029c3dd0e07b5f6958262e915a4d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; feature::ptr &gt;</type>
+      <name>features</name>
+      <anchorfile>d5/d9c/structrm_1_1RuneDetectorInfo.html</anchorfile>
+      <anchor>ace2ea636c48d3b7a465943e10e23380d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9740,7 +10049,6 @@
   <compound kind="class">
     <name>rm::RunePredictor</name>
     <filename>db/d9e/classrm_1_1RunePredictor.html</filename>
-    <base>rm::predictor</base>
     <member kind="function">
       <type></type>
       <name>RunePredictor</name>
@@ -9749,11 +10057,11 @@
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type>PredictInfo</type>
+      <type>RunePredictorInfo</type>
       <name>predict</name>
       <anchorfile>db/d9e/classrm_1_1RunePredictor.html</anchorfile>
-      <anchor>a430eec09ac300c7f6c930870d0724a80</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof) override</arglist>
+      <anchor>ab0c371495379fe5ab7b0943759c33f23</anchor>
+      <arglist>(const std::vector&lt; RuneTracker::ptr &gt; &amp;trackers, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; RunePredictor &gt;</type>
@@ -9761,6 +10069,24 @@
       <anchorfile>db/d9e/classrm_1_1RunePredictor.html</anchorfile>
       <anchor>a742879b650bb5e04e454dd957757a00c</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::RunePredictorInfo</name>
+    <filename>dd/d7e/structrm_1_1RunePredictorInfo.html</filename>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, double &gt;</type>
+      <name>static_prediction</name>
+      <anchorfile>dd/d7e/structrm_1_1RunePredictorInfo.html</anchorfile>
+      <anchor>a6e83e38c83dd706a43ed45f4d45ef5f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::unordered_map&lt; tracker::const_ptr, double &gt;</type>
+      <name>dynamic_prediction</name>
+      <anchorfile>dd/d7e/structrm_1_1RunePredictorInfo.html</anchorfile>
+      <anchor>a8c2d76618eb0c04c7380b82e56d8fdb5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10606,7 +10932,6 @@
   <compound kind="class">
     <name>rm::SpiRunePredictor</name>
     <filename>d0/d05/classrm_1_1SpiRunePredictor.html</filename>
-    <base>rm::predictor</base>
     <member kind="function">
       <type></type>
       <name>SpiRunePredictor</name>
@@ -10615,11 +10940,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>PredictInfo</type>
+      <type>RunePredictorInfo</type>
       <name>predict</name>
       <anchorfile>d0/d05/classrm_1_1SpiRunePredictor.html</anchorfile>
-      <anchor>a46d226f49916b91b304d69b32c522c2f</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof) override</arglist>
+      <anchor>ac1324d1013aec682488767828125cde6</anchor>
+      <arglist>(RuneGroup::ptr group, const std::unordered_map&lt; tracker::ptr, double &gt; &amp;tof)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; SpiRunePredictor &gt;</type>
@@ -10850,6 +11175,13 @@
       <anchor>a1cda5ff66e1b8b8918ea0c50d94417b3</anchor>
       <arglist>(std::string_view data) noexcept</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close</name>
+      <anchorfile>d8/df3/classrm_1_1StreamSocket.html</anchorfile>
+      <anchor>ab6c206d33c32b93c94a8cd18211a9dae</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>SocketFd</type>
       <name>_fd</name>
@@ -10915,6 +11247,13 @@
       <anchor>a583aed7bea179dcd854193c31e249818</anchor>
       <arglist>() const noexcept</arglist>
     </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>rm::lpss::Subscriber</name>
@@ -10926,6 +11265,13 @@
       <anchorfile>dd/db5/classrm_1_1lpss_1_1Subscriber.html</anchorfile>
       <anchor>af9e772485c4d7a244d36afe30f8b53a4</anchor>
       <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>dd/db5/classrm_1_1lpss_1_1Subscriber.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10945,6 +11291,13 @@
       <anchorfile>de/d29/classrm_1_1Tag.html</anchorfile>
       <anchor>ab394c3d4e2b98fba2797a1e0a4138fc8</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>type</name>
+      <anchorfile>de/d29/classrm_1_1Tag.html</anchorfile>
+      <anchor>a04af72b961614a643e521536fe106c62</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
       <type>feature::ptr</type>
@@ -10978,7 +11331,6 @@
   <compound kind="class">
     <name>rm::TagDetector</name>
     <filename>d8/d35/classrm_1_1TagDetector.html</filename>
-    <base>rm::detector</base>
     <member kind="typedef">
       <type>std::unique_ptr&lt; TagDetector &gt;</type>
       <name>ptr</name>
@@ -10987,11 +11339,11 @@
       <arglist></arglist>
     </member>
     <member kind="function">
-      <type>DetectInfo</type>
+      <type>std::vector&lt; Tag::const_ptr &gt;</type>
       <name>detect</name>
       <anchorfile>d8/d35/classrm_1_1TagDetector.html</anchorfile>
-      <anchor>a0911d9680227b5334efd2e2e4107eb4f</anchor>
-      <arglist>(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, uint8_t color, const ImuData &amp;imu_data, double tick) override</arglist>
+      <anchor>a8131bb05aea909e6e1b4c5a8d1e19a03</anchor>
+      <arglist>(cv::Mat src)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -10999,38 +11351,6 @@
       <anchorfile>d8/d35/classrm_1_1TagDetector.html</anchorfile>
       <anchor>a61d242bc1cec93b2ab54a64afb52ffca</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::para::TagDetectorParam</name>
-    <filename>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>TagDetectorParam</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a22805025f99eda8a85161e884bb43cfe</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>read</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a7d5eff0d172c9e09b96b4105bc80ceb9</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a37a5714c943bf42960a1808b1bba3c09</anchor>
-      <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="variable">
-      <type>float</type>
-      <name>MAX_TRACKER_DELTA_DIS</name>
-      <anchorfile>d6/d10/classrm_1_1para_1_1TagDetectorParam.html</anchorfile>
-      <anchor>a3f66b9f1275d445d7cc00ecc8899765f</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11156,6 +11476,70 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::msg::Time</name>
+    <filename>d2/d47/classrm_1_1msg_1_1Time.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d2/d47/classrm_1_1msg_1_1Time.html</anchorfile>
+      <anchor>a6bc534e858cc88739ec31d505407ce88</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d2/d47/classrm_1_1msg_1_1Time.html</anchorfile>
+      <anchor>a6b2b49ae7cb58c51913a5385ea8e429a</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Time</type>
+      <name>deserialize</name>
+      <anchorfile>d2/d47/classrm_1_1msg_1_1Time.html</anchorfile>
+      <anchor>a8e6090ab8e54a5328ede6b98c5ffd219</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>int64_t</type>
+      <name>data</name>
+      <anchorfile>d2/d47/classrm_1_1msg_1_1Time.html</anchorfile>
+      <anchor>a748561cd6111caeff78c6554aeabb9ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d2/d47/classrm_1_1msg_1_1Time.html</anchorfile>
+      <anchor>a4e8f6b05fa65b14500839f8d1fde0a6e</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::Time</name>
+    <filename>d8/d74/classrm_1_1Time.html</filename>
+    <member kind="function" static="yes">
+      <type>static int64_t</type>
+      <name>now_s</name>
+      <anchorfile>d8/d74/classrm_1_1Time.html</anchorfile>
+      <anchor>aa0f9e1d3fb443c741ccb02dc9848e630</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int64_t</type>
+      <name>now</name>
+      <anchorfile>d8/d74/classrm_1_1Time.html</anchorfile>
+      <anchor>a89f133f8d517b90b207ca4a84f6c0c5e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int64_t</type>
+      <name>now_us</name>
+      <anchorfile>d8/d74/classrm_1_1Time.html</anchorfile>
+      <anchor>ab3c73b2c64fce0b377d81ce1a7988426</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::Timer</name>
     <filename>db/dce/classrm_1_1async_1_1Timer.html</filename>
     <class kind="class">rm::async::Timer::TimerAwaiter</class>
@@ -11198,45 +11582,6 @@
       <anchorfile>d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html</anchorfile>
       <anchor>a9aaf5fff6fc83a195defefd8d59a1bde</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::Timer</name>
-    <filename>d0/da3/classrm_1_1Timer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Timer</name>
-      <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
-      <anchor>aad64940a0b381fd9ee9a0334f977b6fa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>reset</name>
-      <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
-      <anchor>a35e997609e357a174078811dbed6ed54</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static double</type>
-      <name>now</name>
-      <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
-      <anchor>adb9e4469df8553941079196a74753f85</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>sleep_for</name>
-      <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
-      <anchor>ad2681cbe206911a68e6b98f07dac26a4</anchor>
-      <arglist>(double t)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static void</type>
-      <name>sleep_until</name>
-      <anchorfile>d0/da3/classrm_1_1Timer.html</anchorfile>
-      <anchor>a3a6e9805157ee41cdf6e02b4205ee292</anchor>
-      <arglist>(double t)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11648,7 +11993,7 @@
   <compound kind="class">
     <name>rm::TranslationDecider</name>
     <filename>de/dfc/classrm_1_1TranslationDecider.html</filename>
-    <base>rm::decider</base>
+    <class kind="struct">rm::TranslationDecider::Info</class>
     <member kind="function">
       <type></type>
       <name>TranslationDecider</name>
@@ -11657,11 +12002,11 @@
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
-      <type>DecideInfo</type>
+      <type>Info</type>
       <name>decide</name>
       <anchorfile>de/dfc/classrm_1_1TranslationDecider.html</anchorfile>
-      <anchor>a1a8af79f57be8c3b60a12e8f875a322b</anchor>
-      <arglist>(const std::vector&lt; group::ptr &gt; &amp;groups, const StateInfo &amp;flag, tracker::ptr last_target, const DetectInfo &amp;detect_info, const CompensateInfo &amp;compensate_info, const PredictInfo &amp;predict_info) override</arglist>
+      <anchor>a9d56f137670afb7fc0452f3041418355</anchor>
+      <arglist>(const std::vector&lt; tracker::ptr &gt; &amp;trackers, tracker::ptr last_target, cv::Mat src, const CompensateInfo &amp;compensate_info, const ArmorPredictor::Info &amp;predict_info)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::unique_ptr&lt; TranslationDecider &gt;</type>
@@ -11978,6 +12323,41 @@
       <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
       <anchor>ad0290392910c1ccb7e97943f250df079</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Tp</type>
+      <name>findRep</name>
+      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
+      <anchor>a7f2866ac985d6c6d9a8d9f8275dc1195</anchor>
+      <arglist>(Tp element)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_set&lt; Tp &gt;</type>
+      <name>_element_set</name>
+      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
+      <anchor>a0b3870b114cb049e20dc3e85579bdec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; Tp, Tp &gt;</type>
+      <name>_parent_map</name>
+      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
+      <anchor>a28c3c1133dcd7db340291f5ead3462c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unordered_map&lt; Tp, std::size_t &gt;</type>
+      <name>_size_map</name>
+      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
+      <anchor>ac83ef02214d9958ad8be6518cd0880d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>_connected_component</name>
+      <anchorfile>db/d0c/classrm_1_1UnionFind.html</anchorfile>
+      <anchor>ae2c092b19249fa3cde3c383777cf3cda</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12491,10 +12871,24 @@
       <arglist>(std::string_view uri, RouteHandler callback)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>ws</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a5093cf61a12e3dfb557ad79c8b634ed5</anchor>
+      <arglist>(std::string_view uri, WebSocketHandler callback)</arglist>
+    </member>
+    <member kind="function">
       <type>Task</type>
       <name>spin</name>
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
       <anchor>a9ceba340ccc104d25a1b824ac5a12ce8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Task</type>
+      <name>spinWithoutSigint</name>
+      <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
+      <anchor>a6f2ba39471dccfc877d06060f81930ec</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -12510,6 +12904,45 @@
       <anchorfile>d5/d05/classrm_1_1async_1_1Webapp.html</anchorfile>
       <anchor>ae17576ab33122126d2fdd00f231c2a7b</anchor>
       <arglist>() noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::async::WebSocket</name>
+    <filename>d3/d6f/classrm_1_1async_1_1WebSocket.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WebSocket</name>
+      <anchorfile>d3/d6f/classrm_1_1async_1_1WebSocket.html</anchorfile>
+      <anchor>a1793edd918beb798bfb2200efbf2ac05</anchor>
+      <arglist>(StreamSocket socket)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~WebSocket</name>
+      <anchorfile>d3/d6f/classrm_1_1async_1_1WebSocket.html</anchorfile>
+      <anchor>a7b9597dd05fb91704ad9090257831b1e</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; bool &gt;</type>
+      <name>send</name>
+      <anchorfile>d3/d6f/classrm_1_1async_1_1WebSocket.html</anchorfile>
+      <anchor>a7c6c11da4509b1160f7f0b691dd3cad7</anchor>
+      <arglist>(std::string_view message)</arglist>
+    </member>
+    <member kind="function">
+      <type>Task&lt; std::string &gt;</type>
+      <name>recv</name>
+      <anchorfile>d3/d6f/classrm_1_1async_1_1WebSocket.html</anchorfile>
+      <anchor>a8ff7cafe1c4cdce5338ff4cc33cce729</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_open</name>
+      <anchorfile>d3/d6f/classrm_1_1async_1_1WebSocket.html</anchorfile>
+      <anchor>a6a6e68bf7d1edb60d1a4f51b0cd6a517</anchor>
+      <arglist>() const noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12558,6 +12991,31 @@
       <arglist>[]</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::Router::WSRouteEntry</name>
+    <filename>d4/df5/structrm_1_1Router_1_1WSRouteEntry.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>WSRouteEntry</name>
+      <anchorfile>d4/df5/structrm_1_1Router_1_1WSRouteEntry.html</anchorfile>
+      <anchor>a34df3e21f5cbd653b077ef93702e1edc</anchor>
+      <arglist>(std::string_view pattern_str, async::WebSocketHandler h)</arglist>
+    </member>
+    <member kind="variable">
+      <type>RoutePattern</type>
+      <name>pattern</name>
+      <anchorfile>d4/df5/structrm_1_1Router_1_1WSRouteEntry.html</anchorfile>
+      <anchor>aa2b8de385f7de87e4b19cfc2a5187025</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>async::WebSocketHandler</type>
+      <name>handler</name>
+      <anchorfile>d4/df5/structrm_1_1Router_1_1WSRouteEntry.html</anchorfile>
+      <anchor>a7c11bb72515296af233bcc67b18c13e8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="concept">
     <name>rm::async::InvokableTask</name>
     <filename>dd/d35/conceptrm_1_1async_1_1InvokableTask.html</filename>
@@ -12568,56 +13026,56 @@
     <member kind="typedef">
       <type>Matx&lt; float, 1, 1 &gt;</type>
       <name>Matx11f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga776f3b69cfa1e8c4e77919d8a0231a68</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 1 &gt;</type>
       <name>Matx11d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab9d84a5a35b7177cbb2d1471680af33c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 1 &gt;</type>
       <name>Matx51f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga541c9f30e5a0608a481c908deaa6a4ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 1, 5 &gt;</type>
       <name>Matx15f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga0a51e6b389329cf2925e764635bb2ba7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 1 &gt;</type>
       <name>Matx51d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga544b37a37f56482fe9f9fb486abf1b57</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 5 &gt;</type>
       <name>Matx15d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga9a814ad228e3f2fa506286fbdb80c93d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 5 &gt;</type>
       <name>Matx55f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gad1e50ace9e3d660f0b5ab600d51ade14</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 5 &gt;</type>
       <name>Matx55d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga629446df8c807dcc235b61c81d953934</anchor>
       <arglist></arglist>
     </member>
@@ -12632,6 +13090,7 @@
     <namespace>rm::async</namespace>
     <namespace>rm::requests</namespace>
     <namespace>rm::ip</namespace>
+    <namespace>rm::cvmsg</namespace>
     <namespace>rm::lpss</namespace>
     <namespace>rm::msg</namespace>
     <namespace>rm::helper</namespace>
@@ -12657,7 +13116,7 @@
     <class kind="class">rm::HikCamera</class>
     <class kind="class">rm::MvCamera</class>
     <class kind="class">rm::OptCamera</class>
-    <class kind="class">rm::Timer</class>
+    <class kind="class">rm::Time</class>
     <class kind="class">rm::Exception</class>
     <class kind="struct">rm::hash_aggregate</class>
     <class kind="struct">rm::hash_traits</class>
@@ -12720,7 +13179,6 @@
     <class kind="class">rm::StateInfo</class>
     <class kind="class">rm::Anchor</class>
     <class kind="class">rm::feature</class>
-    <class kind="class">rm::DefaultFeature</class>
     <class kind="class">rm::LightBlob</class>
     <class kind="class">rm::Pilot</class>
     <class kind="class">rm::RuneCenter</class>
@@ -12728,36 +13186,30 @@
     <class kind="class">rm::Tag</class>
     <class kind="class">rm::Armor</class>
     <class kind="class">rm::combo</class>
-    <class kind="class">rm::DefaultCombo</class>
     <class kind="class">rm::Rune</class>
     <class kind="class">rm::GyroTracker</class>
     <class kind="class">rm::PlanarTracker</class>
     <class kind="class">rm::RuneTracker</class>
     <class kind="class">rm::tracker</class>
-    <class kind="class">rm::DefaultTracker</class>
     <class kind="class">rm::group</class>
-    <class kind="class">rm::DefaultGroup</class>
     <class kind="class">rm::TrackerState</class>
     <class kind="class">rm::GyroGroup</class>
     <class kind="class">rm::RuneGroup</class>
+    <class kind="struct">rm::ArmorDetectorInfo</class>
     <class kind="class">rm::ArmorDetector</class>
-    <class kind="struct">rm::DetectInfo</class>
-    <class kind="class">rm::detector</class>
+    <class kind="struct">rm::GyroDetectorInfo</class>
     <class kind="class">rm::GyroDetector</class>
+    <class kind="struct">rm::RuneDetectorInfo</class>
     <class kind="class">rm::RuneDetector</class>
     <class kind="class">rm::TagDetector</class>
     <class kind="struct">rm::CompensateInfo</class>
-    <class kind="class">rm::compensator</class>
     <class kind="class">rm::GravityCompensator</class>
     <class kind="class">rm::GyroCompensator</class>
     <class kind="class">rm::ArmorPredictor</class>
+    <class kind="struct">rm::RunePredictorInfo</class>
     <class kind="class">rm::GyroPredictor</class>
-    <class kind="struct">rm::PredictInfo</class>
-    <class kind="class">rm::predictor</class>
     <class kind="class">rm::RunePredictor</class>
     <class kind="class">rm::SpiRunePredictor</class>
-    <class kind="struct">rm::DecideInfo</class>
-    <class kind="class">rm::decider</class>
     <class kind="class">rm::GyroDecider</class>
     <class kind="class">rm::RuneDecider</class>
     <class kind="class">rm::TranslationDecider</class>
@@ -13244,32 +13696,32 @@
     <member kind="enumeration">
       <type></type>
       <name>AngleMode</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>RAD</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DEG</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>CalPlane</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -13323,43 +13775,43 @@
     <member kind="enumeration">
       <type></type>
       <name>PixChannel</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BLUE</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>GREEN</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>RED</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>AUTOCOLOR</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>gga0c0d16290797cbf7399f9bedf3784e34ab0e4d59a7ecae4b5f372d2c72ede6ef0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>EulerAxis</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -13595,80 +14047,26 @@
     <member kind="enumeration">
       <type></type>
       <name>CompensateType</name>
-      <anchorfile>d7/d4f/group__compensator.html</anchorfile>
-      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
+      <anchorfile>d5/d20/namespacerm.html</anchorfile>
+      <anchor>a6eb0c54354d1de382a6d3735da2c005c</anchor>
       <arglist></arglist>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
-    </member>
-    <member kind="enumvalue">
-      <name>POS_X</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa70102e19f9e41c79442d4e6cd70ae139</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>POS_Y</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>POS_Z</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa7b462cfa221e1ea1dc40c95b42853da2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ANG_X</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faed7435c589e92e0796662db489f4d4b0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ANG_Y</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf416871a708c21e64c74a85796b780f5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ANG_Z</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa0bec87b7046ca08f65f0dd0e48b32438</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>YAW</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fad75124f786dafe1024988bc6b03c8060</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PITCH</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf3f3b5497eb80da2d676c0836327373d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>ROLL</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa940fc54478cc7b30a59936ea2ad613bb</anchor>
-      <arglist></arglist>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="a6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="a6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="a6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="a6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
+      <enumvalue file="d5/d20/namespacerm.html" anchor="a6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
     </member>
     <member kind="function">
       <type></type>
       <name>UnionFind</name>
-      <anchorfile>d8/d04/group__algorithm__datastruct.html</anchorfile>
+      <anchorfile>d6/dcf/group__algorithm__data.html</anchorfile>
       <anchor>gac3a2a54908e6f1423ef088de094df40f</anchor>
       <arglist>(InputIterator, InputIterator) -&gt; UnionFind&lt; typename std::iterator_traits&lt; InputIterator &gt;::value_type &gt;</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>UnionFind</name>
-      <anchorfile>d8/d04/group__algorithm__datastruct.html</anchorfile>
+      <anchorfile>d6/dcf/group__algorithm__data.html</anchorfile>
       <anchor>ga63e76bf1d5eefdde17063c601941d527</anchor>
       <arglist>(Range &amp;&amp;) -&gt; UnionFind&lt; typename std::ranges::range_value_t&lt; Range &gt; &gt;</arglist>
     </member>
@@ -13703,168 +14101,168 @@
     <member kind="function">
       <type>constexpr Tp</type>
       <name>operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
       <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
       <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>deg2rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
       <arglist>(Tp deg)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rad2deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
       <arglist>(Tp rad)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
       <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getHAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>getVAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>getDeltaAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
       <arglist>(Tp angle_1, Tp angle_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>sec</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>csc</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>cot</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>sgn</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>sigmoid</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
       <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
     </member>
     <member kind="function">
       <type>constexpr std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>mean</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa8e83adf49a2ce3cd9f411241903dd61</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
       <type>constexpr std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>variance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaeccc8db1215050e6b985f4869c5d1b40</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>cross2D</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
       <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>cross2D</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
       <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
       <type>std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>calculateModeNum</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae2c3e5b1cc343df2b6afba4d84b6d187</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
@@ -13927,49 +14325,49 @@
     <member kind="function">
       <type>cv::Mat</type>
       <name>binary</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>ga0236746604f96e3650909c8275560225</anchor>
       <arglist>(cv::Mat src, uint8_t ch1, uint8_t ch2, uint8_t threshold)</arglist>
     </member>
     <member kind="function">
       <type>cv::Mat</type>
       <name>binary</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
       <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
       <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>calculateRelativeAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>calculateRelativeCenter</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
     </member>
     <member kind="function">
       <type>cv::Vec2f</type>
       <name>cameraConvertToPixel</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>cameraConvertToPixel</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
       <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
       <name>euler2Mat</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
       <arglist>(Tp val, EulerAxis axis)</arglist>
     </member>
@@ -14107,20 +14505,6 @@
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
-      <type>cv::Mat</type>
-      <name>from_msg</name>
-      <anchorfile>d7/de3/group__lpss.html</anchorfile>
-      <anchor>ga7693b65d2f2576faf723ed302890d741</anchor>
-      <arglist>(const msg::Image &amp;img_msg)</arglist>
-    </member>
-    <member kind="function">
-      <type>msg::Image</type>
-      <name>to_msg</name>
-      <anchorfile>d7/de3/group__lpss.html</anchorfile>
-      <anchor>gacbf360391ff80a9c4c599951028e4cfd</anchor>
-      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
-    </member>
-    <member kind="function">
       <type>NodeId</type>
       <name>operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
@@ -14165,35 +14549,35 @@
     <member kind="variable">
       <type>constexpr float</type>
       <name>FLOAT_MAX</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga4a13736bb50157ad2bf1c980e4a9cc06</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr float</type>
       <name>FLOAT_MIN</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae447539d828046ab559762ff2f7773ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>e</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>SQRT_2</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
       <arglist></arglist>
     </member>
@@ -14524,6 +14908,7 @@
     <class kind="class">rm::async::Signal</class>
     <class kind="class">rm::async::PipeServer</class>
     <class kind="class">rm::async::PipeClient</class>
+    <class kind="class">rm::async::WebSocket</class>
     <class kind="class">rm::async::Webapp</class>
     <class kind="class">rm::async::SerialPort</class>
     <class kind="class">rm::async::DgramSocket</class>
@@ -14538,6 +14923,13 @@
       <name>IOContextRef</name>
       <anchorfile>d2/da3/group__io.html</anchorfile>
       <anchor>ga466f766a229581f699520b48ad4c82e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; Task&lt;&gt;(WebSocket &amp;, const Request &amp;)&gt;</type>
+      <name>WebSocketHandler</name>
+      <anchorfile>dd/d22/namespacerm_1_1async.html</anchorfile>
+      <anchor>a553b0e3e50ccc7265c30a739cc71e0a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14578,6 +14970,94 @@
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
       <anchor>gadb6ac2766171c3158c0d7086874ed724</anchor>
       <arglist>(IOContext &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::cvmsg</name>
+    <filename>d7/d8c/namespacerm_1_1cvmsg.html</filename>
+    <member kind="function">
+      <type>cv::Point3d</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>ada76d06a00c194a90cdb540c58a0cba4</anchor>
+      <arglist>(const msg::Point &amp;pt_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Point</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>a1ff2b0f1b02995768ef65bc63a4033d3</anchor>
+      <arglist>(const cv::Point3d &amp;pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Point3f</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>aac07b844d4bc068ca8b00b82b142bc42</anchor>
+      <arglist>(const msg::Point32 &amp;pt_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Point32</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>ad2aeb34f687c9d88a1fe14eb673296e8</anchor>
+      <arglist>(const cv::Point3f &amp;pt)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Vec3d</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>a41dc49241a2c3ac26a5cb0c0cdfeb7a2</anchor>
+      <arglist>(const msg::Vector3 &amp;vec_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Vector3</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>a3c7ce0145f447925e43fbaeaf0dcfcdb</anchor>
+      <arglist>(const cv::Vec3d &amp;vec)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Quatd</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>abad0a0f77db6df713a898fb7981d91f1</anchor>
+      <arglist>(const msg::Quaternion &amp;quat_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Quaternion</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>ac0e59f725b0ef8bb754695ad62bbf195</anchor>
+      <arglist>(const cv::Quatd &amp;quat)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Affine3d</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>a4b6a2c8ce00082a7a1e96d473e4eefc1</anchor>
+      <arglist>(const msg::Transform &amp;tf_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Transform</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>aa2496e56f6203fdfe1ad6100dc8e02ae</anchor>
+      <arglist>(const cv::Affine3d &amp;tf)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>from_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>af74c4255ab2f923ad054ac2ffc4ebc63</anchor>
+      <arglist>(const msg::Image &amp;img_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Image</type>
+      <name>to_msg</name>
+      <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
+      <anchor>ab2a4bbd84cc6666b56f11833c04790b1</anchor>
+      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -14709,10 +15189,13 @@
     <class kind="class">rm::msg::Int64</class>
     <class kind="class">rm::msg::Int8</class>
     <class kind="class">rm::msg::String</class>
+    <class kind="class">rm::msg::Time</class>
     <class kind="class">rm::msg::UInt16</class>
     <class kind="class">rm::msg::UInt32</class>
     <class kind="class">rm::msg::UInt64</class>
     <class kind="class">rm::msg::UInt8</class>
+    <class kind="class">rm::msg::Marker</class>
+    <class kind="class">rm::msg::MarkerArray</class>
   </compound>
   <compound kind="namespace">
     <name>rm::numeric_literals</name>
@@ -14720,42 +15203,42 @@
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaae346087df690ca4296911daaadfbbda</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab4884bbee674cac21e3ee00e16b315d3</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga13b00e1ca5a58a911ac9a53862d4a090</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga3805561febf4b3cfe827c985219fc816</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga3452f8c1e466c8c4aa422c4e1ed6486d</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>operator&quot;&quot;_to_deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaab580e56d4f4b3e264d90bed9403204d</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
@@ -14788,7 +15271,6 @@
     <class kind="class">rm::para::ArmorDetectorParam</class>
     <class kind="class">rm::para::GyroDetectorParam</class>
     <class kind="class">rm::para::RuneDetectorParam</class>
-    <class kind="class">rm::para::TagDetectorParam</class>
     <class kind="class">rm::para::GravityCompensatorParam</class>
     <class kind="class">rm::para::GyroCompensatorParam</class>
     <class kind="class">rm::para::ArmorPredictorParam</class>
@@ -14987,13 +15469,6 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>TagDetectorParam</type>
-      <name>tag_detector_param</name>
-      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
-      <anchor>gacbe69fb1012f52ea59a3a598060f7e9e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
       <type>GravityCompensatorParam</type>
       <name>gravity_compensator_param</name>
       <anchorfile>da/df1/group__para__compensator.html</anchorfile>
@@ -15162,411 +15637,473 @@
     <name>algorithm</name>
     <title>数学、算法模块</title>
     <filename>d5/d6c/group__algorithm.html</filename>
-    <subgroup>algorithm_datastruct</subgroup>
-    <subgroup>algorithm_dsp</subgroup>
-    <subgroup>algorithm_kalman</subgroup>
-    <subgroup>algorithm_numcal</subgroup>
-    <subgroup>algorithm_optimal</subgroup>
-    <subgroup>algorithm_pretreat</subgroup>
+    <subgroup>algorithm_math</subgroup>
+    <subgroup>algorithm_cal</subgroup>
+    <subgroup>algorithm_data</subgroup>
+    <subgroup>algorithm_img</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>algorithm_math</name>
+    <title>基础数学库</title>
+    <filename>d7/da1/group__algorithm__math.html</filename>
     <namespace>rm::numeric_literals</namespace>
     <class kind="class">rm::EwTopsis</class>
     <class kind="class">rm::Munkres</class>
     <member kind="typedef">
       <type>Matx&lt; float, 1, 1 &gt;</type>
       <name>cv::Matx11f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga776f3b69cfa1e8c4e77919d8a0231a68</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 1 &gt;</type>
       <name>cv::Matx11d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab9d84a5a35b7177cbb2d1471680af33c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 1 &gt;</type>
       <name>cv::Matx51f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga541c9f30e5a0608a481c908deaa6a4ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 1, 5 &gt;</type>
       <name>cv::Matx15f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga0a51e6b389329cf2925e764635bb2ba7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 1 &gt;</type>
       <name>cv::Matx51d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga544b37a37f56482fe9f9fb486abf1b57</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 1, 5 &gt;</type>
       <name>cv::Matx15d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga9a814ad228e3f2fa506286fbdb80c93d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; float, 5, 5 &gt;</type>
       <name>cv::Matx55f</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gad1e50ace9e3d660f0b5ab600d51ade14</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Matx&lt; double, 5, 5 &gt;</type>
       <name>cv::Matx55d</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga629446df8c807dcc235b61c81d953934</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>rm::AngleMode</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf5bed2d75219e503cecfb0bde26b786c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::RAD</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>rm::DEG</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>rm::CalPlane</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1de7e89888bac78375dd440afb9a57ae</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">xyz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">xOy</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">xOz</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">yOz</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
       <name>rm::EulerAxis</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga9efb6b0afed03a8afe74adea283e4e20</anchor>
       <arglist></arglist>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="d5/d6c/group__algorithm.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
+      <enumvalue file="d7/da1/group__algorithm__math.html" anchor="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaae346087df690ca4296911daaadfbbda</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab4884bbee674cac21e3ee00e16b315d3</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga13b00e1ca5a58a911ac9a53862d4a090</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_to_rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga3805561febf4b3cfe827c985219fc816</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga3452f8c1e466c8c4aa422c4e1ed6486d</anchor>
       <arglist>(long double num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr double</type>
       <name>rm::numeric_literals::operator&quot;&quot;_to_deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaab580e56d4f4b3e264d90bed9403204d</anchor>
       <arglist>(long long unsigned num)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga24cdb2a95b720c25718a10f0c231beb7</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
       <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>rm::operator+</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaac9085ed7bb655273d94dd7a9e9bb7a5</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gab25b059e83d92ca52c5191f32cf93b6e</anchor>
       <arglist>(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</arglist>
     </member>
     <member kind="function">
       <type>constexpr cv::Matx&lt; Tp, 1, 1 &gt;</type>
       <name>rm::operator-</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga389ef0083eef431267d7c699425a7936</anchor>
       <arglist>(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::deg2rad</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae2276554862bce45bc46aa87ac16662b</anchor>
       <arglist>(Tp deg)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::rad2deg</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga60d67240dab96ee04ac0daf7b3ba3900</anchor>
       <arglist>(Tp rad)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga5014be0e5feea956ca0938f748da0e49</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf777281f09dd091cdf95b41ce2078fbc</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1341a4b42493c1bebd817de335bff266</anchor>
       <arglist>(const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga0097e1799eec67200f4a9dfa81b03fe2</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, CalPlane calplane=CalPlane::xyz)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getDistance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa45e15c33236ea83c0af5876c3dfdfb5</anchor>
       <arglist>(const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getHAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga10690718e851a53f751c5fc9925ae9ea</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
       <name>rm::getVAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gabb356f903a2d2b2907137ba8463b13d8</anchor>
       <arglist>(const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, AngleMode mode=RAD)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::getDeltaAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1d86bfb5c70014f9a55a499a502054ae</anchor>
       <arglist>(Tp angle_1, Tp angle_2)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::sec</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga2376ca67d6e7b3f7f560cdcb92517cee</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::csc</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga312dc3324c726a5cb63097132ddf1e9b</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::cot</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga34f2f328f9b5eec56ee7d278703926bc</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::sgn</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa63dd59871f7ac738e9d66ec4af1701e</anchor>
       <arglist>(Tp x)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::sigmoid</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1125e569bf93394a8544bffc795f5274</anchor>
       <arglist>(Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</arglist>
     </member>
     <member kind="function">
       <type>constexpr std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>rm::mean</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaa8e83adf49a2ce3cd9f411241903dd61</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
       <type>constexpr std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>rm::variance</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaeccc8db1215050e6b985f4869c5d1b40</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::cross2D</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga11685dd1fe47d4629bd0905b374e8570</anchor>
       <arglist>(const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Tp</type>
       <name>rm::cross2D</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga666e346a612561f12c110d612421fb4a</anchor>
       <arglist>(const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</arglist>
     </member>
     <member kind="function">
       <type>std::iterator_traits&lt; ForwardIterator &gt;::value_type</type>
       <name>rm::calculateModeNum</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae2c3e5b1cc343df2b6afba4d84b6d187</anchor>
       <arglist>(ForwardIterator first, ForwardIterator last)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>rm::calculateRelativeAngle</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga90237f8e5effcb48062f24f167c4d726</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>rm::calculateRelativeCenter</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaad38b53a7d703ef75889860795c41b94</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</arglist>
     </member>
     <member kind="function">
       <type>cv::Vec2f</type>
       <name>rm::cameraConvertToPixel</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga017b4a4f0e4bd876c014103e15568c05</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Vec3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
       <type>cv::Point2f</type>
       <name>rm::cameraConvertToPixel</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga99243f33c29a3b278e6a9246e63277f2</anchor>
       <arglist>(const cv::Matx33f &amp;cameraMatrix, const cv::Matx51f &amp;distCoeffs, const cv::Point3f &amp;center3d)</arglist>
     </member>
     <member kind="function">
       <type>cv::Matx&lt; Tp, 3, 3 &gt;</type>
       <name>rm::euler2Mat</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gabaff301294fb35cd202fdc1f2ce6e44f</anchor>
       <arglist>(Tp val, EulerAxis axis)</arglist>
     </member>
     <member kind="variable">
       <type>constexpr float</type>
       <name>rm::FLOAT_MAX</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga4a13736bb50157ad2bf1c980e4a9cc06</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr float</type>
       <name>rm::FLOAT_MIN</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gae447539d828046ab559762ff2f7773ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>rm::PI</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>gaf50b316ad04ad15688d925e9ae4730fa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>rm::e</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga8f0640abdfeaeac18c46eac605f7f0a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr double</type>
       <name>rm::SQRT_2</name>
-      <anchorfile>d5/d6c/group__algorithm.html</anchorfile>
+      <anchorfile>d7/da1/group__algorithm__math.html</anchorfile>
       <anchor>ga1979f70b9a07db4c1ee2a96808c90b1b</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="group">
-    <name>algorithm_datastruct</name>
+    <name>algorithm_cal</name>
+    <title>数据与信号处理</title>
+    <filename>d0/d47/group__algorithm__cal.html</filename>
+    <subgroup>algorithm_dsp</subgroup>
+    <subgroup>algorithm_kalman</subgroup>
+    <subgroup>algorithm_numcal</subgroup>
+    <subgroup>algorithm_optimal</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>algorithm_data</name>
     <title>数据结构</title>
-    <filename>d8/d04/group__algorithm__datastruct.html</filename>
+    <filename>d6/dcf/group__algorithm__data.html</filename>
     <class kind="class">rm::RaHeap</class>
     <class kind="class">rm::UnionFind</class>
     <member kind="function">
       <type></type>
       <name>rm::UnionFind</name>
-      <anchorfile>d8/d04/group__algorithm__datastruct.html</anchorfile>
+      <anchorfile>d6/dcf/group__algorithm__data.html</anchorfile>
       <anchor>gac3a2a54908e6f1423ef088de094df40f</anchor>
       <arglist>(InputIterator, InputIterator) -&gt; UnionFind&lt; typename std::iterator_traits&lt; InputIterator &gt;::value_type &gt;</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>rm::UnionFind</name>
-      <anchorfile>d8/d04/group__algorithm__datastruct.html</anchorfile>
+      <anchorfile>d6/dcf/group__algorithm__data.html</anchorfile>
       <anchor>ga63e76bf1d5eefdde17063c601941d527</anchor>
       <arglist>(Range &amp;&amp;) -&gt; UnionFind&lt; typename std::ranges::range_value_t&lt; Range &gt; &gt;</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>algorithm_img</name>
+    <title>图像处理</title>
+    <filename>dc/d85/group__algorithm__img.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::PixChannel</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::BLUE</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::GREEN</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::RED</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::AUTOCOLOR</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ab0e4d59a7ecae4b5f372d2c72ede6ef0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>rm::binary</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>ga0236746604f96e3650909c8275560225</anchor>
+      <arglist>(cv::Mat src, uint8_t ch1, uint8_t ch2, uint8_t threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>cv::Mat</type>
+      <name>rm::binary</name>
+      <anchorfile>dc/d85/group__algorithm__img.html</anchorfile>
+      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
+      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -16065,56 +16602,6 @@
       <anchorfile>d2/d62/group__algorithm__optimal.html</anchorfile>
       <anchor>ga5a7f8fec980372cfd29fd21d37721ef1</anchor>
       <arglist>(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</arglist>
-    </member>
-  </compound>
-  <compound kind="group">
-    <name>algorithm_pretreat</name>
-    <title>图像预处理模块</title>
-    <filename>de/d3d/group__algorithm__pretreat.html</filename>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::PixChannel</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>ga0c0d16290797cbf7399f9bedf3784e34</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::BLUE</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34aac8810d381bba03a2163864256d3b7be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::GREEN</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ac49d25b6c55491f1037e9d350c749d5d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::RED</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::AUTOCOLOR</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>gga0c0d16290797cbf7399f9bedf3784e34ab0e4d59a7ecae4b5f372d2c72ede6ef0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>rm::binary</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>ga0236746604f96e3650909c8275560225</anchor>
-      <arglist>(cv::Mat src, uint8_t ch1, uint8_t ch2, uint8_t threshold)</arglist>
-    </member>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>rm::binary</name>
-      <anchorfile>de/d3d/group__algorithm__pretreat.html</anchorfile>
-      <anchor>gad0757d5623b5f2848bb4ed6b73f073da</anchor>
-      <arglist>(cv::Mat src, uint8_t threshold)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -16680,16 +17167,19 @@
     <class kind="class">rm::msg::Int64</class>
     <class kind="class">rm::msg::Int8</class>
     <class kind="class">rm::msg::String</class>
+    <class kind="class">rm::msg::Time</class>
     <class kind="class">rm::msg::UInt16</class>
     <class kind="class">rm::msg::UInt32</class>
     <class kind="class">rm::msg::UInt64</class>
     <class kind="class">rm::msg::UInt8</class>
+    <class kind="class">rm::msg::Marker</class>
+    <class kind="class">rm::msg::MarkerArray</class>
   </compound>
   <compound kind="group">
     <name>core_timer</name>
     <title>定时、计时模块</title>
     <filename>db/d06/group__core__timer.html</filename>
-    <class kind="class">rm::Timer</class>
+    <class kind="class">rm::Time</class>
   </compound>
   <compound kind="group">
     <name>io</name>
@@ -17055,21 +17545,8 @@
     <name>lpss</name>
     <title>轻量发布订阅服务</title>
     <filename>d7/de3/group__lpss.html</filename>
+    <namespace>rm::cvmsg</namespace>
     <namespace>rm::lpss</namespace>
-    <member kind="function">
-      <type>cv::Mat</type>
-      <name>rm::from_msg</name>
-      <anchorfile>d7/de3/group__lpss.html</anchorfile>
-      <anchor>ga7693b65d2f2576faf723ed302890d741</anchor>
-      <arglist>(const msg::Image &amp;img_msg)</arglist>
-    </member>
-    <member kind="function">
-      <type>msg::Image</type>
-      <name>rm::to_msg</name>
-      <anchorfile>d7/de3/group__lpss.html</anchorfile>
-      <anchor>gacbf360391ff80a9c4c599951028e4cfd</anchor>
-      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>ml</name>
@@ -17560,7 +18037,6 @@
     <subgroup>rune_target</subgroup>
     <subgroup>tag</subgroup>
     <class kind="class">rm::feature</class>
-    <class kind="class">rm::DefaultFeature</class>
     <member kind="define">
       <type>#define</type>
       <name>RMVL_FEATURE_CAST</name>
@@ -17668,7 +18144,6 @@
     <subgroup>combo_armor</subgroup>
     <subgroup>combo_rune</subgroup>
     <class kind="class">rm::combo</class>
-    <class kind="class">rm::DefaultCombo</class>
     <member kind="define">
       <type>#define</type>
       <name>RMVL_COMBO_CAST</name>
@@ -17772,7 +18247,6 @@
     <subgroup>gyro_tracker</subgroup>
     <subgroup>rune_tracker</subgroup>
     <class kind="class">rm::tracker</class>
-    <class kind="class">rm::DefaultTracker</class>
     <member kind="define">
       <type>#define</type>
       <name>RMVL_TRACKER_CAST</name>
@@ -17835,7 +18309,6 @@
     <subgroup>gyro_group</subgroup>
     <subgroup>rune_group</subgroup>
     <class kind="class">rm::group</class>
-    <class kind="class">rm::DefaultGroup</class>
     <member kind="define">
       <type>#define</type>
       <name>RMVL_GROUP_CAST</name>
@@ -17885,25 +18358,26 @@
     <subgroup>gyro_detector</subgroup>
     <subgroup>rune_detector</subgroup>
     <subgroup>tag_detector</subgroup>
-    <class kind="struct">rm::DetectInfo</class>
-    <class kind="class">rm::detector</class>
   </compound>
   <compound kind="group">
     <name>armor_detector</name>
     <title>装甲板识别模块</title>
     <filename>d4/d47/group__armor__detector.html</filename>
+    <class kind="struct">rm::ArmorDetectorInfo</class>
     <class kind="class">rm::ArmorDetector</class>
   </compound>
   <compound kind="group">
     <name>gyro_detector</name>
     <title>整车状态识别模块</title>
     <filename>de/dee/group__gyro__detector.html</filename>
+    <class kind="struct">rm::GyroDetectorInfo</class>
     <class kind="class">rm::GyroDetector</class>
   </compound>
   <compound kind="group">
     <name>rune_detector</name>
     <title>激活、未激活神符识别模块</title>
     <filename>d0/d52/group__rune__detector.html</filename>
+    <class kind="struct">rm::RuneDetectorInfo</class>
     <class kind="class">rm::RuneDetector</class>
   </compound>
   <compound kind="group">
@@ -17919,7 +18393,6 @@
     <class kind="class">rm::para::ArmorDetectorParam</class>
     <class kind="class">rm::para::GyroDetectorParam</class>
     <class kind="class">rm::para::RuneDetectorParam</class>
-    <class kind="class">rm::para::TagDetectorParam</class>
     <member kind="variable">
       <type>ArmorDetectorParam</type>
       <name>rm::para::armor_detector_param</name>
@@ -17941,13 +18414,6 @@
       <anchor>ga21d8dd13fa8d9335599602dcbb6cec27</anchor>
       <arglist></arglist>
     </member>
-    <member kind="variable">
-      <type>TagDetectorParam</type>
-      <name>rm::para::tag_detector_param</name>
-      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
-      <anchor>gacbe69fb1012f52ea59a3a598060f7e9e</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>compensator</name>
@@ -17955,20 +18421,6 @@
     <filename>d7/d4f/group__compensator.html</filename>
     <subgroup>gravity_compensator</subgroup>
     <subgroup>gyro_compensator</subgroup>
-    <class kind="struct">rm::CompensateInfo</class>
-    <class kind="class">rm::compensator</class>
-    <member kind="enumeration">
-      <type></type>
-      <name>rm::CompensateType</name>
-      <anchorfile>d7/d4f/group__compensator.html</anchorfile>
-      <anchor>ga6eb0c54354d1de382a6d3735da2c005c</anchor>
-      <arglist></arglist>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cafbaedde498cdead4f2780217646e9ba1">UP</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005cac4e0e4e3118472beeb2ae75827450f1f">DOWN</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758">LEFT</enumvalue>
-      <enumvalue file="d7/d4f/group__compensator.html" anchor="gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403">RIGHT</enumvalue>
-    </member>
   </compound>
   <compound kind="group">
     <name>gravity_compensator</name>
@@ -18011,62 +18463,6 @@
     <subgroup>gyro_predictor</subgroup>
     <subgroup>rune_predictor</subgroup>
     <subgroup>spi_rune_predictor</subgroup>
-    <class kind="struct">rm::PredictInfo</class>
-    <class kind="class">rm::predictor</class>
-    <member kind="enumvalue">
-      <name>rm::POS_X</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa70102e19f9e41c79442d4e6cd70ae139</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::POS_Y</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa02d5bfc7d75353cd65c573442ba5f2eb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::POS_Z</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa7b462cfa221e1ea1dc40c95b42853da2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::ANG_X</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faed7435c589e92e0796662db489f4d4b0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::ANG_Y</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf416871a708c21e64c74a85796b780f5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::ANG_Z</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa0bec87b7046ca08f65f0dd0e48b32438</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::YAW</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fad75124f786dafe1024988bc6b03c8060</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::PITCH</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0faf3f3b5497eb80da2d676c0836327373d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>rm::ROLL</name>
-      <anchorfile>db/d29/group__predictor.html</anchorfile>
-      <anchor>gga2b0e6c03b95a421669eb858ff0aa5f0fa940fc54478cc7b30a59936ea2ad613bb</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="group">
     <name>armor_predictor</name>
@@ -18136,8 +18532,6 @@
     <subgroup>gyro_decider</subgroup>
     <subgroup>translation_decider</subgroup>
     <subgroup>rune_decider</subgroup>
-    <class kind="struct">rm::DecideInfo</class>
-    <class kind="class">rm::decider</class>
   </compound>
   <compound kind="group">
     <name>gyro_decider</name>
@@ -18744,20 +19138,20 @@
     <docanchor file="d8/d88/tutorials_python.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_tutorials.markdown">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__tutorials</docanchor>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/</path>
-    <filename>dir_4652efb63654806a3f946b19e48bf6ac.html</filename>
-    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl</dir>
+    <name>/home/zhaoxi/.rmvltmp</name>
+    <path>/home/zhaoxi/.rmvltmp/</path>
+    <filename>dir_1f1d0efd9512274b6da9f0fd2f0a959f.html</filename>
+    <dir>/home/zhaoxi/.rmvltmp/rmvl</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
-    <filename>dir_87afdb654b740152ae499aca4400ec55.html</filename>
+    <filename>dir_e50287f1f1670e190e9bc32316e07cd0.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/algorithm</name>
     <path>rmvl/algorithm/</path>
-    <filename>dir_fb2099489813e98dfc0088d784a50e50.html</filename>
+    <filename>dir_50512aa9fb4f372b00bb7d3dd7bed6da.html</filename>
     <file>datastruct.hpp</file>
     <file>dsp.hpp</file>
     <file>kalman.hpp</file>
@@ -18767,20 +19161,14 @@
     <file>transform.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
-    <filename>dir_4fef79e7177ba769987a8da36c892c5f.html</filename>
-    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp</dir>
-  </compound>
-  <compound kind="dir">
-    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build/</path>
-    <filename>dir_59c58acd01e7244ebc7d3036e65beb15.html</filename>
+    <name>/home/zhaoxi/.rmvltmp/rmvl/build</name>
+    <path>/home/zhaoxi/.rmvltmp/rmvl/build/</path>
+    <filename>dir_cd8ac429d3635d4587aced71884d1809.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/camera</name>
     <path>rmvl/camera/</path>
-    <filename>dir_68b2675841333b17d262d865224a2a6d.html</filename>
+    <filename>dir_78d299521c5e5119829508c3d43929a2.html</filename>
     <file>camutils.hpp</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -18790,7 +19178,7 @@
   <compound kind="dir">
     <name>rmvlpara/camera</name>
     <path>rmvlpara/camera/</path>
-    <filename>dir_21c299e62c75071ae2ddbdcf77d332fa.html</filename>
+    <filename>dir_ebdaf7c4480af2485cd1079a530006ed.html</filename>
     <file>camera.h</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -18800,12 +19188,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
-    <filename>dir_e47bc4c88201119324ad1742b0acdaea.html</filename>
+    <filename>dir_8e89044452c59cecaf5a8786a7bc962f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/combo</name>
     <path>rmvl/combo/</path>
-    <filename>dir_51ed543484fef09623ba53bab7eaba50.html</filename>
+    <filename>dir_acb2f6a56ddbfb8fd0027f6092b50357.html</filename>
     <file>armor.h</file>
     <file>combo.h</file>
     <file>rune.h</file>
@@ -18813,34 +19201,34 @@
   <compound kind="dir">
     <name>rmvlpara/combo</name>
     <path>rmvlpara/combo/</path>
-    <filename>dir_12f7e2719c4aef7ca971bef1458b119e.html</filename>
+    <filename>dir_d0f9619331cf590bad76d8382f10d02e.html</filename>
     <file>armor.h</file>
     <file>rune.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
-    <filename>dir_b42c29baecd700a1c7b1f9e031116f59.html</filename>
+    <filename>dir_de2cc6b631065704a5bdc8e7bb83857f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/compensator</name>
     <path>rmvl/compensator/</path>
-    <filename>dir_fc26b6c2ce0d675ae37f0ead7fead92a.html</filename>
-    <file>compensator.h</file>
+    <filename>dir_e6e26513ce4fb2be4152a4f4e3106553.html</filename>
+    <dir>rmvl/compensator/details</dir>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara/compensator</name>
     <path>rmvlpara/compensator/</path>
-    <filename>dir_1ff8083e31e2849e01f39dace2d8f642.html</filename>
+    <filename>dir_534a86d4a8a523e40dba2f6cd1811521.html</filename>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/core</name>
     <path>rmvl/core/</path>
-    <filename>dir_021e08c4c598f89101b0aa1de0100d4c.html</filename>
+    <filename>dir_569626e2623775c4b315b058ffdf7fd1.html</filename>
     <file>rmvldef.hpp</file>
     <file>str.hpp</file>
     <file>timer.hpp</file>
@@ -18850,13 +19238,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
-    <filename>dir_9c77f252bc2dea7aa2340c49f3ddd30c.html</filename>
+    <filename>dir_313831fb0971a0102fc34a9f18b1b871.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/decider</name>
     <path>rmvl/decider/</path>
-    <filename>dir_88f2670466b86d71a88ebd58d97f1a71.html</filename>
-    <file>decider.h</file>
+    <filename>dir_99cae2823b81ddec0315950cb5bb6870.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
@@ -18864,35 +19251,46 @@
   <compound kind="dir">
     <name>rmvlpara/decider</name>
     <path>rmvlpara/decider/</path>
-    <filename>dir_770dfdf8e90513f6bf55f0695bfb3603.html</filename>
+    <filename>dir_95301558a91d69b4536a2adea25af130.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
   </compound>
   <compound kind="dir">
+    <name>rmvl/compensator/details</name>
+    <path>rmvl/compensator/details/</path>
+    <filename>dir_9b8ccca9a3a4060ac5343280b238cc82.html</filename>
+    <file>common.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/predictor/details</name>
+    <path>rmvl/predictor/details/</path>
+    <filename>dir_97cdcbdc95919c69bd4ed41ef4ef9d3d.html</filename>
+    <file>rune.hpp</file>
+  </compound>
+  <compound kind="dir">
     <name>rmvl/io/details</name>
     <path>rmvl/io/details/</path>
-    <filename>dir_157202709cbc4694d5907c5a05c8e98a.html</filename>
+    <filename>dir_6f78c87e3e2ceb6b479ed29227597b08.html</filename>
     <file>shm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss/details</name>
     <path>rmvl/lpss/details/</path>
-    <filename>dir_5007f63d103a5996924fd883732b56d6.html</filename>
+    <filename>dir_ca23c258a1c76f951e9da2fe98bc44d2.html</filename>
     <file>node_impl.hpp</file>
     <file>node_rsd.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
-    <filename>dir_e7c88c51ab0687dfbc5937f04baf7c42.html</filename>
+    <filename>dir_d9c756e959361f33ed9638ae15658304.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/detector</name>
     <path>rmvl/detector/</path>
-    <filename>dir_1b12cb4dd092e360e17e906bcf9b5c0b.html</filename>
+    <filename>dir_5583ecb43e7cf22b2bbeeae47e33aabf.html</filename>
     <file>armor_detector.h</file>
-    <file>detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
     <file>tag_detector.h</file>
@@ -18900,23 +19298,22 @@
   <compound kind="dir">
     <name>rmvlpara/detector</name>
     <path>rmvlpara/detector/</path>
-    <filename>dir_2f07ba103e00493a07ab46a502d692c8.html</filename>
+    <filename>dir_b8598dd91f2e19ccea15cd6ae3a714bc.html</filename>
     <file>armor_detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
-    <file>tag_detector.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
-    <filename>dir_e68e8157741866f444e17edd764ebbae.html</filename>
+    <filename>dir_63aeb613b811ed2eb9140a1126087187.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
-    <filename>dir_426a5ffbbb727b99f4225294c6466649.html</filename>
+    <filename>dir_8ce2022e601f7a489c46d4ebdc49aba7.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</dir>
@@ -18930,12 +19327,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
-    <filename>dir_08cb09a26daf7692ff65867d96a774b2.html</filename>
+    <filename>dir_281684d37e85ceee3c6d925f5cd2e690.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/feature</name>
     <path>rmvl/feature/</path>
-    <filename>dir_ce8ca8b69315f48cd283f789aa0dd056.html</filename>
+    <filename>dir_3ce520876fede39f67af7c3a8a3c0862.html</filename>
     <file>anchor.h</file>
     <file>feature.h</file>
     <file>light_blob.h</file>
@@ -18947,7 +19344,7 @@
   <compound kind="dir">
     <name>rmvlpara/feature</name>
     <path>rmvlpara/feature/</path>
-    <filename>dir_3e5cdcbad10e2274392f9bbc748768cf.html</filename>
+    <filename>dir_1c8a3e591ae66fc114bb81ccec1f535b.html</filename>
     <file>anchor.h</file>
     <file>light_blob.h</file>
     <file>pilot.h</file>
@@ -18957,7 +19354,7 @@
   <compound kind="dir">
     <name>rmvlmsg/geometry</name>
     <path>rmvlmsg/geometry/</path>
-    <filename>dir_24f8d8e0ab921bff01fcae06f7e49506.html</filename>
+    <filename>dir_16654e9243cb65bdf93bb5869ab9cc97.html</filename>
     <file>point.hpp</file>
     <file>point32.hpp</file>
     <file>polygon.hpp</file>
@@ -18971,12 +19368,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
-    <filename>dir_bdac78099532942366d2fabd1b27783f.html</filename>
+    <filename>dir_729098440371f0d4df427f6c7ff7dcf0.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/group</name>
     <path>rmvl/group/</path>
-    <filename>dir_993405bde1c40a0b0112bcd0fe9f1fde.html</filename>
+    <filename>dir_3e80edd7e209d4c78df4a504a463a87b.html</filename>
     <file>group.h</file>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
@@ -18984,14 +19381,14 @@
   <compound kind="dir">
     <name>rmvlpara/group</name>
     <path>rmvlpara/group/</path>
-    <filename>dir_f58d8d58cb13d39e9f4987da0b365be7.html</filename>
+    <filename>dir_087da8d79feadcd317f1eb22af008cfd.html</filename>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
-    <filename>dir_58c94e520695a9c6e49a2b567a210ce0.html</filename>
+    <filename>dir_aa22c37ac578673e90f287158c6a7019.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</dir>
@@ -18999,7 +19396,7 @@
   <compound kind="dir">
     <name>rmvl/io</name>
     <path>rmvl/io/</path>
-    <filename>dir_bc4d7e1d3f923a65e94f5ee75373b3de.html</filename>
+    <filename>dir_66f856895de826d01e5b96701d8b13b6.html</filename>
     <dir>rmvl/io/details</dir>
     <file>async.hpp</file>
     <file>ipc.hpp</file>
@@ -19011,7 +19408,7 @@
   <compound kind="dir">
     <name>rmvl/light</name>
     <path>rmvl/light/</path>
-    <filename>dir_fe3d19a7723048ccf658f16ac60a0a67.html</filename>
+    <filename>dir_be15d5cdc57a7070d3ae8f434633911a.html</filename>
     <file>hik_light_control.h</file>
     <file>lightutils.hpp</file>
     <file>opt_light_control.h</file>
@@ -19019,18 +19416,18 @@
   <compound kind="dir">
     <name>rmvlpara/light</name>
     <path>rmvlpara/light/</path>
-    <filename>dir_9d76333e2953167de3e2f20e7e642e19.html</filename>
+    <filename>dir_c3693fdd57a10ef1bc7620e54ce9498a.html</filename>
     <file>hik_light_control.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
-    <filename>dir_2b68a0c976a94001a3a52c1a9b6afce2.html</filename>
+    <filename>dir_fa2eec13076e9f96774fe6e21fa951d4.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss</name>
     <path>rmvl/lpss/</path>
-    <filename>dir_6dab983623edcfe7d7eb4c8db8a91100.html</filename>
+    <filename>dir_577d59d13decd0a00a9a3145f56c7b2f.html</filename>
     <dir>rmvl/lpss/details</dir>
     <file>cv.hpp</file>
     <file>node.hpp</file>
@@ -19038,25 +19435,25 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
-    <filename>dir_c8c342af8d42b5d680657a324064f568.html</filename>
+    <filename>dir_3a31d66722521052f8304ab21c00ca17.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/ml</name>
     <path>rmvl/ml/</path>
-    <filename>dir_333d0aeefdeba1c53236985888de9470.html</filename>
+    <filename>dir_96aeefc62acd539b27e83661f3581d52.html</filename>
     <file>ort.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
-    <filename>dir_dd14b81ce98f0efb0c27d4605792b06c.html</filename>
+    <filename>dir_efca97ecc042efa865eaefd41f9be988.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
     <path>rmvl/opcua/</path>
-    <filename>dir_6f345ac53a1eefe67f1e600f9a522fd7.html</filename>
+    <filename>dir_fb7d5e5fa92dc084c164886a77a2be86.html</filename>
     <file>client.hpp</file>
     <file>event.hpp</file>
     <file>method.hpp</file>
@@ -19071,27 +19468,27 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
-    <filename>dir_eac206f591cba90314701160c24e8a17.html</filename>
+    <filename>dir_cb4ca42878937429832ea22c8d56fec0.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
-    <filename>dir_2d16c776959d732bcd5241749ddcece3.html</filename>
+    <filename>dir_40b99015e00a250f3754dffac633688b.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/predictor</name>
     <path>rmvl/predictor/</path>
-    <filename>dir_be25d590ea0c4f598694de88b9e8de05.html</filename>
+    <filename>dir_82d1e6ec8ec7cb629af3674341cdc95d.html</filename>
+    <dir>rmvl/predictor/details</dir>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
-    <file>predictor.h</file>
     <file>rune_predictor.h</file>
     <file>spi_rune_predictor.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara/predictor</name>
     <path>rmvlpara/predictor/</path>
-    <filename>dir_9cb561993a62f54b93c7cb98ed21d292.html</filename>
+    <filename>dir_b7e07b1f242d523e7d34928268d8c8e5.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>rune_predictor.h</file>
@@ -19100,250 +19497,251 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
-    <filename>dir_6c8551f4d7dc208509ae2df87f489cca.html</filename>
+    <filename>dir_d0f7e421e0997c0bf11dc5a06fb3c605.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
-    <filename>dir_e29f7b20dc4e91179ccf6c1e48f7ce8e.html</filename>
+    <filename>dir_5bafbfe2a1ced00a837924a7d9c23d39.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/</path>
-    <filename>dir_1b5159d8e824ca0372c222fccb8e8031.html</filename>
+    <filename>dir_1c6aa230f859dc3670992dca1c451e7a.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</dir>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl</name>
-    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/</path>
-    <filename>dir_157ff2a39937ca58ddeb0b9a58d5e7e7.html</filename>
-    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build</dir>
-  </compound>
-  <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_b84f0685042b53df8576d9a5df8737a7.html</filename>
+    <filename>dir_ff03e4bf742ea8099ec4cfcdac358710.html</filename>
     <dir>rmvl/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3cd5b91f19adc4085f4b4e39e4ff2f73.html</filename>
+    <filename>dir_bbdada461bd67ec39ad4c5a7e52c1704.html</filename>
     <dir>rmvl/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_7a867aa029234ffc6f7eed334080704b.html</filename>
+    <filename>dir_7674f2a10684fb8c82ccd4da2e5351d6.html</filename>
     <dir>rmvl/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_4b04c2e007ec9137cdcc6b07f15783dd.html</filename>
+    <filename>dir_f2e18b45b93189891b180df6464050f4.html</filename>
     <dir>rmvl/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_5ac3da02857772deca4fc3f808edbaf5.html</filename>
+    <filename>dir_f6e5f49e6ef35977bb5d7e75a68963cc.html</filename>
     <dir>rmvl/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3369679d0342e0144be24fe8bcb77137.html</filename>
+    <filename>dir_774c12e4d1f477ca15af185e62a1572e.html</filename>
     <dir>rmvl/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_6eee36bbafba159c1f307a96cde9296f.html</filename>
+    <filename>dir_90f3991ba10c058a285f03a6035e2a3c.html</filename>
     <dir>rmvl/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_05fa650a38f3f5a08a2422c6dda771be.html</filename>
+    <filename>dir_3354db72e67a6a30846355467a09f36b.html</filename>
     <dir>rmvl/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_809e963fb58aef5dff5228943502dc0e.html</filename>
+    <filename>dir_71bf6823197d27734da63e942b8d187c.html</filename>
     <file>types.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_143430c183a215e00fc5688a6b00f801.html</filename>
+    <filename>dir_0b91645aa8def3c8ac2250a6a7e35f1a.html</filename>
     <dir>rmvl/algorithm</dir>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_0004eea47629e797f98a68d373747388.html</filename>
+    <filename>dir_461ed81535f9510a759df52724b26998.html</filename>
     <dir>rmvl/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_8ce2230b18c62fc4f1b2d4c11ea01049.html</filename>
+    <filename>dir_efd1512632de5fdeabf2ca758db8fb4d.html</filename>
     <dir>rmvl/core</dir>
     <file>core.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_e7d32574a6c4fcfa257018e66cd9435e.html</filename>
+    <filename>dir_127904d2b519627d1987d4f85dc3e9ed.html</filename>
     <dir>rmvl/io</dir>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_4273a60eceee48416df95d84f85905d9.html</filename>
+    <filename>dir_5d2c5c18c4107ce6371e97cb9b4863fc.html</filename>
     <dir>rmvl/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_056965ee29af610b58b6eed68da89d07.html</filename>
+    <filename>dir_2409041128f30c7e632a1d2686a5a378.html</filename>
     <dir>rmvl/lpss</dir>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_b5c1b52e49bdab802b985f422853f0cc.html</filename>
+    <filename>dir_87735ccda0193a5376fd86df094b9d06.html</filename>
     <dir>rmvl/ml</dir>
     <file>ml.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_d1896504bf09fddf262d44ed95e52f7a.html</filename>
+    <filename>dir_99c4a071f9876207aeb2ccd26e68c4dd.html</filename>
     <dir>rmvl/opcua</dir>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
+    <name>/home/zhaoxi/.rmvltmp/rmvl</name>
+    <path>/home/zhaoxi/.rmvltmp/rmvl/</path>
+    <filename>dir_d892ad31c88a7738f8012346252ba931.html</filename>
+    <dir>/home/zhaoxi/.rmvltmp/rmvl/build</dir>
+  </compound>
+  <compound kind="dir">
     <name>rmvlmsg</name>
     <path>rmvlmsg/</path>
-    <filename>dir_4d50aa784517d57a06ecfff1c8a1efd8.html</filename>
+    <filename>dir_584b56ed427fc12411d4172925c74074.html</filename>
     <dir>rmvlmsg/geometry</dir>
     <dir>rmvlmsg/sensor</dir>
     <dir>rmvlmsg/std</dir>
+    <dir>rmvlmsg/viz</dir>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_58222088a8cee0a471f253eac143ba17.html</filename>
+    <filename>dir_bd0853e39d9979da024d4a6722daad0b.html</filename>
     <dir>rmvlpara/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_f0e88a7a5cb5aab28614e8930b567bd3.html</filename>
+    <filename>dir_71f52d487cf2933c7e27d03587dcdf91.html</filename>
     <dir>rmvlpara/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_4d60ae5981f7ce87b742481e65bfd802.html</filename>
+    <filename>dir_4486d76bf6cc85e9bb825e727d134df0.html</filename>
     <dir>rmvlpara/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_45e97b84317156a5954d30eced95ddb6.html</filename>
+    <filename>dir_68f8e3f54c502890141b94aecfd7f2ec.html</filename>
     <dir>rmvlpara/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_36b455a1b0f3273f108b36652d153a8a.html</filename>
+    <filename>dir_d0e91ac94a1f2c6911aff14c70246c72.html</filename>
     <dir>rmvlpara/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_2ea0c873adea199cd62f1107c61b502b.html</filename>
+    <filename>dir_b5dc5d48234085622b23760ad1bbf09c.html</filename>
     <dir>rmvlpara/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_b7145cfe89c878932d64aa281be9ef49.html</filename>
+    <filename>dir_78b1583f1b463aa7a8e22968a1705c35.html</filename>
     <dir>rmvlpara/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_56f1c6dcc74dc20460c2b77be5c46794.html</filename>
+    <filename>dir_6c997901f901bc002c0fa812b622e527.html</filename>
     <dir>rmvlpara/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_d0dd8f3c1ff56d88a0ca94359a28aa0a.html</filename>
+    <filename>dir_8a57e973e059eabb9cda737bc07949f4.html</filename>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_1a6308d51d814586b9985a0758773f42.html</filename>
+    <filename>dir_7df43d62cd237bbfe6c772bfcd92ab52.html</filename>
     <dir>rmvlpara/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_c83cd2ae801cf5a6eebca515f7297a6e.html</filename>
+    <filename>dir_13bc97c3e9aa29cb4dff0af470d22055.html</filename>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_0d09ee667c2a9666a31dfa29c1285dbd.html</filename>
+    <filename>dir_67d781d51c42d4a8c0b1389395433309.html</filename>
     <dir>rmvlpara/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_54dc165de3f051bd04cea3d4dc4160e9.html</filename>
+    <filename>dir_01990b82e018726217bbdfc12151d26a.html</filename>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_0881cfd4956fe17faae321d2c65bc1f4.html</filename>
+    <filename>dir_51d997721f514119dc3de95d480ef505.html</filename>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/sensor</name>
     <path>rmvlmsg/sensor/</path>
-    <filename>dir_f09e4dbe1c52ab070e0d16b057d7c7ea.html</filename>
+    <filename>dir_7d10cd3360dad54eb56db20dff9f921b.html</filename>
     <file>camera_info.hpp</file>
     <file>image.hpp</file>
     <file>imu.hpp</file>
@@ -19353,7 +19751,7 @@
   <compound kind="dir">
     <name>rmvlmsg/std</name>
     <path>rmvlmsg/std/</path>
-    <filename>dir_567b0f3791db27fa1ff59d607208e840.html</filename>
+    <filename>dir_355971bc52002f4e58fade7fdd0e1fd4.html</filename>
     <file>bool.hpp</file>
     <file>char.hpp</file>
     <file>color_rgba.hpp</file>
@@ -19365,6 +19763,7 @@
     <file>int64.hpp</file>
     <file>int8.hpp</file>
     <file>string.hpp</file>
+    <file>time.hpp</file>
     <file>uint16.hpp</file>
     <file>uint32.hpp</file>
     <file>uint64.hpp</file>
@@ -19373,17 +19772,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
-    <filename>dir_475f633f804384ebfc31fbf8bd129454.html</filename>
+    <filename>dir_37d8d1d8fd20c6853ee9a8117ea58f32.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
-    <filename>dir_6b8d1066f9f8a1d0ae64c8dcf96bf1e3.html</filename>
+    <filename>dir_a9f58f6f91a5dabd2195d8cc1f02f871.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/tracker</name>
     <path>rmvl/tracker/</path>
-    <filename>dir_9c45eb0c4acec6c44430f61dff0bf5e7.html</filename>
+    <filename>dir_4ca38ea3da80f7d4b36b0beb918106f8.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19392,7 +19791,7 @@
   <compound kind="dir">
     <name>rmvlpara/tracker</name>
     <path>rmvlpara/tracker/</path>
-    <filename>dir_6b0b4bc53031f88182b1020c744899c6.html</filename>
+    <filename>dir_d301de7fcf533dbc68142aa95cf635fe.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -19400,7 +19799,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
-    <filename>dir_5b0b179e83013be2ae877b5cea1eb6e2.html</filename>
+    <filename>dir_26c5c64eeef8370ce1acbf07045fbc29.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</dir>
@@ -19408,7 +19807,14 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
-    <filename>dir_4ef7a8655673da93818ea708ee8785e2.html</filename>
+    <filename>dir_a318c6cfe6210b0cec382b58a20f9e91.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlmsg/viz</name>
+    <path>rmvlmsg/viz/</path>
+    <filename>dir_f4cbc5aa62a3ae0bacaef4014a57dde8.html</filename>
+    <file>marker.hpp</file>
+    <file>marker_array.hpp</file>
   </compound>
   <compound kind="page">
     <name>index</name>

@@ -3,7 +3,7 @@ var searchData=
   ['l2_0',['L2',['../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a7e6aa2d53f6ee2b1a34b017fa403cb76',1,'rm']]],
   ['lagrange_1',['Lagrange',['../d2/d62/group__algorithm__optimal.html#ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4',1,'rm']]],
   ['lagrange_20插值多项式_2',['1 Lagrange 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md186',1,'']]],
-  ['left_3',['LEFT',['../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758',1,'rm']]],
+  ['left_3',['LEFT',['../d5/d20/namespacerm.html#a6eb0c54354d1de382a6d3735da2c005ca684d325a7303f52e64011467ff5c5758',1,'rm']]],
   ['levenberg–marquardt_20算法_4',['2 Levenberg–Marquardt 算法',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md211',1,'']]],
   ['lifetime_5fcount_5',['LIFETIME_COUNT',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a05475d623d8fbe83db552b705f41a37b',1,'rm::para::OpcuaParam']]],
   ['light_20的参数模块_6',['light 的参数模块',['../d5/de1/group__para__light.html',1,'']]],

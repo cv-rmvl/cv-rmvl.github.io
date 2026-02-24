@@ -9,8 +9,7 @@ var searchData=
   ['colorrgba_6',['ColorRGBA',['../d8/da1/classrm_1_1msg_1_1ColorRGBA.html',1,'rm::msg']]],
   ['combo_7',['combo',['../de/dee/classrm_1_1combo.html',1,'rm']]],
   ['compensateinfo_8',['CompensateInfo',['../d5/da4/structrm_1_1CompensateInfo.html',1,'rm']]],
-  ['compensator_9',['compensator',['../df/d72/classrm_1_1compensator.html',1,'rm']]],
-  ['connectawaiter_10',['ConnectAwaiter',['../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html',1,'rm::async::Connector']]],
-  ['connector_11',['Connector',['../df/d95/classrm_1_1async_1_1Connector.html',1,'rm::async::Connector'],['../de/ddb/classrm_1_1Connector.html',1,'rm::Connector']]],
-  ['curvefitter_12',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm']]]
+  ['connectawaiter_9',['ConnectAwaiter',['../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html',1,'rm::async::Connector']]],
+  ['connector_10',['Connector',['../df/d95/classrm_1_1async_1_1Connector.html',1,'rm::async::Connector'],['../de/ddb/classrm_1_1Connector.html',1,'rm::Connector']]],
+  ['curvefitter_11',['CurveFitter',['../d0/d80/classrm_1_1CurveFitter.html',1,'rm']]]
 ];

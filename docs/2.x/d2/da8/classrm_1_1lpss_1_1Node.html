@@ -112,6 +112,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
 <a href="../../d8/d03/classrm_1_1lpss_1_1Node-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">rm::lpss::Node类 参考</div></div>
 </div><!--header-->
@@ -122,27 +123,51 @@ $(function() {
 
 <p><code>#include &lt;rmvl/lpss/node.hpp&gt;</code></p>
 <div class="dynheader">
-类 rm::lpss::Node 继承关系图:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d57/classrm_1_1lpss_1_1Node__inherit__graph.svg" width="170" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 rm::lpss::Node 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d15/classrm_1_1lpss_1_1Node__coll__graph.svg" width="170" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d15/classrm_1_1lpss_1_1Node__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a07b13466e5916f9c19241a6368f99ef1" id="r_a07b13466e5916f9c19241a6368f99ef1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07b13466e5916f9c19241a6368f99ef1">Node</a> (std::string_view name, uint8_t domain_id=0)</td></tr>
 <tr class="memdesc:a07b13466e5916f9c19241a6368f99ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建通用节点，默认域 ID 为 0  <br /></td></tr>
-<tr class="memitem:aa358a0e3e9efb136dabf92dd48d6c290" id="r_aa358a0e3e9efb136dabf92dd48d6c290"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa358a0e3e9efb136dabf92dd48d6c290">~Node</a> ()</td></tr>
+<tr class="memitem:aca6efc26b3a60e7fa84b89118fe643e7" id="r_aca6efc26b3a60e7fa84b89118fe643e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca6efc26b3a60e7fa84b89118fe643e7">~Node</a> () noexcept</td></tr>
+<tr class="memitem:a8de1ef9537de5b914ba854f5eec46f28" id="r_a8de1ef9537de5b914ba854f5eec46f28"><td class="memItemLeft" align="right" valign="top">Guid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8de1ef9537de5b914ba854f5eec46f28">guid</a> () const noexcept</td></tr>
+<tr class="memdesc:a8de1ef9537de5b914ba854f5eec46f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取节点唯一标识符  <br /></td></tr>
 <tr class="memitem:a93c7802b1b73791aff10414c7aa97d5b" id="r_a93c7802b1b73791aff10414c7aa97d5b"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
 <tr class="memitem:a93c7802b1b73791aff10414c7aa97d5b template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93c7802b1b73791aff10414c7aa97d5b">createPublisher</a> (std::string_view topic) noexcept</td></tr>
 <tr class="memdesc:a93c7802b1b73791aff10414c7aa97d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
 <tr class="memitem:a8bf16f9ee141dce717956c595df2414a" id="r_a8bf16f9ee141dce717956c595df2414a"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a8bf16f9ee141dce717956c595df2414a template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bf16f9ee141dce717956c595df2414a">createSubscriber</a> (std::string_view topic, SubscribeMsgCallback &amp;&amp;callback) noexcept</td></tr>
 <tr class="memdesc:a8bf16f9ee141dce717956c595df2414a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建订阅者  <br /></td></tr>
+<tr class="memitem:a45833dd795f5bd723bb60292fe503929" id="r_a45833dd795f5bd723bb60292fe503929"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
+<tr class="memitem:a45833dd795f5bd723bb60292fe503929 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45833dd795f5bd723bb60292fe503929">destroyPublisher</a> (const <a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a>&lt; MsgType &gt; &amp;pub)</td></tr>
+<tr class="memdesc:a45833dd795f5bd723bb60292fe503929"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁发布者  <br /></td></tr>
+<tr class="memitem:aeb9b7dbe43717b2d47a06d86a55b730c" id="r_aeb9b7dbe43717b2d47a06d86a55b730c"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
+<tr class="memitem:aeb9b7dbe43717b2d47a06d86a55b730c template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb9b7dbe43717b2d47a06d86a55b730c">destroySubscriber</a> (const <a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt; &amp;sub)</td></tr>
+<tr class="memdesc:aeb9b7dbe43717b2d47a06d86a55b730c"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁订阅者  <br /></td></tr>
+<tr class="memitem:ae4168a1a5fccf155483d1f738699de8d" id="r_ae4168a1a5fccf155483d1f738699de8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4168a1a5fccf155483d1f738699de8d">shutdown</a> () noexcept</td></tr>
+<tr class="memdesc:ae4168a1a5fccf155483d1f738699de8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">手动停止节点运行  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ad7a61bc56c88a38d5512903c91cb3562" id="r_ad7a61bc56c88a38d5512903c91cb3562"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7a61bc56c88a38d5512903c91cb3562">_nodes_mtx</a> {}</td></tr>
+<tr class="memdesc:ad7a61bc56c88a38d5512903c91cb3562"><td class="mdescLeft">&#160;</td><td class="mdescRight">节点读写锁  <br /></td></tr>
+<tr class="memitem:ae4ae7e9d39c7e3b249ae3d3f576a2ee7" id="r_ae4ae7e9d39c7e3b249ae3d3f576a2ee7"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; Guid, NodeStorageInfo, GuidHash &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4ae7e9d39c7e3b249ae3d3f576a2ee7">_discovered_nodes</a> {}</td></tr>
+<tr class="memdesc:ae4ae7e9d39c7e3b249ae3d3f576a2ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">已发现的节点列表  <br /></td></tr>
+<tr class="memitem:a86b5b6886104211984254977ca18cd37" id="r_a86b5b6886104211984254977ca18cd37"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86b5b6886104211984254977ca18cd37">_local_mtx</a> {}</td></tr>
+<tr class="memdesc:a86b5b6886104211984254977ca18cd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地实体读写锁  <br /></td></tr>
+<tr class="memitem:a0cbae45ba24020f96fe57bdfb3e59ab5" id="r_a0cbae45ba24020f96fe57bdfb3e59ab5"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, DataWriterBase::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cbae45ba24020f96fe57bdfb3e59ab5">_local_writers</a> {}</td></tr>
+<tr class="memdesc:a0cbae45ba24020f96fe57bdfb3e59ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">已注册的 Writers 列表  <br /></td></tr>
+<tr class="memitem:ab9c2831c827c81a775b671c4c6b6760c" id="r_ab9c2831c827c81a775b671c4c6b6760c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, DataReaderBase::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9c2831c827c81a775b671c4c6b6760c">_local_readers</a> {}</td></tr>
+<tr class="memdesc:ab9c2831c827c81a775b671c4c6b6760c"><td class="mdescLeft">&#160;</td><td class="mdescRight">已注册的 Readers 列表  <br /></td></tr>
+<tr class="memitem:a5cc45916590203720bc9de99b64070e2" id="r_a5cc45916590203720bc9de99b64070e2"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc45916590203720bc9de99b64070e2">_discovered_mtx</a> {}</td></tr>
+<tr class="memdesc:a5cc45916590203720bc9de99b64070e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">已发现实体读写锁  <br /></td></tr>
+<tr class="memitem:a8c8b6bfc295ce20e59994c9c58a1edf5" id="r_a8c8b6bfc295ce20e59994c9c58a1edf5"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, DiscoveredWriterStorageInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c8b6bfc295ce20e59994c9c58a1edf5">_discovered_writers</a> {}</td></tr>
+<tr class="memdesc:a8c8b6bfc295ce20e59994c9c58a1edf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">已发现的 Writers 列表  <br /></td></tr>
+<tr class="memitem:a1c7588fe3404a5769b3a70e443f8e31a" id="r_a1c7588fe3404a5769b3a70e443f8e31a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, DiscoveredReaderStorageInfo &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c7588fe3404a5769b3a70e443f8e31a">_discovered_readers</a> {}</td></tr>
+<tr class="memdesc:a1c7588fe3404a5769b3a70e443f8e31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">已发现的 Readers 列表  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>轻量级发布订阅服务节点 </p>
@@ -190,11 +215,14 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="aa358a0e3e9efb136dabf92dd48d6c290" name="aa358a0e3e9efb136dabf92dd48d6c290"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa358a0e3e9efb136dabf92dd48d6c290">&#9670;&#160;</a></span>~Node()</h2>
+<a id="aca6efc26b3a60e7fa84b89118fe643e7" name="aca6efc26b3a60e7fa84b89118fe643e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6efc26b3a60e7fa84b89118fe643e7">&#9670;&#160;</a></span>~Node()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">rm::lpss::Node::~Node </td>
@@ -203,7 +231,17 @@ Public 成员函数</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da8/classrm_1_1lpss_1_1Node_aca6efc26b3a60e7fa84b89118fe643e7_cgraph.svg" width="386" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -247,6 +285,11 @@ template&lt;typename MsgType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html" title="发布者代理">Publisher&lt;MsgType&gt;</a> 发布者对象 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da8/classrm_1_1lpss_1_1Node_a93c7802b1b73791aff10414c7aa97d5b_cgraph.svg" width="406" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -295,6 +338,335 @@ template&lt;typename MsgType, typename SubscribeMsgCallback, typename Enable&gt;
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html" title="订阅者代理">Subscriber&lt;MsgType&gt;</a> 订阅者对象 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da8/classrm_1_1lpss_1_1Node_a8bf16f9ee141dce717956c595df2414a_cgraph.svg" width="414" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a45833dd795f5bd723bb60292fe503929" name="a45833dd795f5bd723bb60292fe503929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45833dd795f5bd723bb60292fe503929">&#9670;&#160;</a></span>destroyPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MsgType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::Node::destroyPublisher </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a>&lt; MsgType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pub</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>销毁发布者 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MsgType</td><td>消息类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pub</td><td>发布者对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da8/classrm_1_1lpss_1_1Node_a45833dd795f5bd723bb60292fe503929_cgraph.svg" width="412" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aeb9b7dbe43717b2d47a06d86a55b730c" name="aeb9b7dbe43717b2d47a06d86a55b730c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9b7dbe43717b2d47a06d86a55b730c">&#9670;&#160;</a></span>destroySubscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MsgType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::Node::destroySubscriber </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sub</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>销毁订阅者 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MsgType</td><td>消息类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sub</td><td>订阅者对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da8/classrm_1_1lpss_1_1Node_aeb9b7dbe43717b2d47a06d86a55b730c_cgraph.svg" width="420" height="102"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8de1ef9537de5b914ba854f5eec46f28" name="a8de1ef9537de5b914ba854f5eec46f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de1ef9537de5b914ba854f5eec46f28">&#9670;&#160;</a></span>guid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Guid rm::lpss::Node::guid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取节点唯一标识符 </p>
+
+</div>
+</div>
+<a id="ae4168a1a5fccf155483d1f738699de8d" name="ae4168a1a5fccf155483d1f738699de8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4168a1a5fccf155483d1f738699de8d">&#9670;&#160;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::Node::shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>手动停止节点运行 </p>
+<dl class="section note"><dt>注解</dt><dd>推荐使用析构函数自动清理资源并停止节点，除非在多线程环境中需要提前停止节点以释放资源 </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a5cc45916590203720bc9de99b64070e2" name="a5cc45916590203720bc9de99b64070e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc45916590203720bc9de99b64070e2">&#9670;&#160;</a></span>_discovered_mtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex rm::lpss::Node::_discovered_mtx {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已发现实体读写锁 </p>
+
+</div>
+</div>
+<a id="ae4ae7e9d39c7e3b249ae3d3f576a2ee7" name="ae4ae7e9d39c7e3b249ae3d3f576a2ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ae7e9d39c7e3b249ae3d3f576a2ee7">&#9670;&#160;</a></span>_discovered_nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;Guid, NodeStorageInfo, GuidHash&gt; rm::lpss::Node::_discovered_nodes {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已发现的节点列表 </p>
+
+</div>
+</div>
+<a id="a1c7588fe3404a5769b3a70e443f8e31a" name="a1c7588fe3404a5769b3a70e443f8e31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7588fe3404a5769b3a70e443f8e31a">&#9670;&#160;</a></span>_discovered_readers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, DiscoveredReaderStorageInfo&gt; rm::lpss::Node::_discovered_readers {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已发现的 Readers 列表 </p>
+
+</div>
+</div>
+<a id="a8c8b6bfc295ce20e59994c9c58a1edf5" name="a8c8b6bfc295ce20e59994c9c58a1edf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8b6bfc295ce20e59994c9c58a1edf5">&#9670;&#160;</a></span>_discovered_writers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, DiscoveredWriterStorageInfo&gt; rm::lpss::Node::_discovered_writers {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已发现的 Writers 列表 </p>
+
+</div>
+</div>
+<a id="a86b5b6886104211984254977ca18cd37" name="a86b5b6886104211984254977ca18cd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b5b6886104211984254977ca18cd37">&#9670;&#160;</a></span>_local_mtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex rm::lpss::Node::_local_mtx {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>本地实体读写锁 </p>
+
+</div>
+</div>
+<a id="ab9c2831c827c81a775b671c4c6b6760c" name="ab9c2831c827c81a775b671c4c6b6760c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c2831c827c81a775b671c4c6b6760c">&#9670;&#160;</a></span>_local_readers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, DataReaderBase::ptr&gt; rm::lpss::Node::_local_readers {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已注册的 Readers 列表 </p>
+
+</div>
+</div>
+<a id="a0cbae45ba24020f96fe57bdfb3e59ab5" name="a0cbae45ba24020f96fe57bdfb3e59ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbae45ba24020f96fe57bdfb3e59ab5">&#9670;&#160;</a></span>_local_writers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, DataWriterBase::ptr&gt; rm::lpss::Node::_local_writers {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已注册的 Writers 列表 </p>
+
+</div>
+</div>
+<a id="ad7a61bc56c88a38d5512903c91cb3562" name="ad7a61bc56c88a38d5512903c91cb3562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a61bc56c88a38d5512903c91cb3562">&#9670;&#160;</a></span>_nodes_mtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex rm::lpss::Node::_nodes_mtx {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>节点读写锁 </p>
 
 </div>
 </div>

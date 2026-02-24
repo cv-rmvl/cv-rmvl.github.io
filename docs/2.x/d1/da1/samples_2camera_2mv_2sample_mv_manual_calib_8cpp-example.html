@@ -110,7 +110,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <p>迈德威视相机手动标定例程</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/calib3d.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;opencv2/highgui.hpp&gt;</span></div>
@@ -118,7 +118,6 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &quot;rmvl/algorithm/math.hpp&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;rmvl/camera/mv_camera.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;rmvl/core/timer.hpp&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"> </div>
@@ -127,7 +126,7 @@ $(function() {
 <div class="line">                                   0, 1250, 512,</div>
 <div class="line">                                   0, 0, 1};</div>
 <div class="line"><span class="comment">// 畸变系数</span></div>
-<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="../../d5/d6c/group__algorithm.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> distCoeffs = {0, 0, 0, 0, 0};</div>
+<div class="line"><span class="keyword">static</span> <a id="_a0" name="_a0"></a><a class="code hl_typedef" href="../../d7/da1/group__algorithm__math.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> distCoeffs = {0, 0, 0, 0, 0};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <a id="_a1" name="_a1"></a><a class="code hl_class" href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a> capture(<a id="_a2" name="_a2"></a><a class="code hl_function" href="../../df/dfa/structrm_1_1CameraConfig.html#a1a285fd4742e8ced4907f83d520c943b">rm::CameraConfig::create</a>(<a id="_a3" name="_a3"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a>, <a id="_a4" name="_a4"></a><a class="code hl_enumvalue" href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a>));</div>
 <div class="line"> </div>
@@ -209,7 +208,7 @@ $(function() {
 <div class="line">    cv::createTrackbar(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">nullptr</span>, 1000, distCoeffCallBack, &amp;(dist_pose.at(4)));</div>
 <div class="line">    cv::setTrackbarPos(<span class="stringliteral">&quot;畸变 4&quot;</span>, <span class="stringliteral">&quot;控制面板&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(distCoeffs(4, 0)) * 5000 + 500);</div>
 <div class="line"> </div>
-<div class="line">    <a id="a12" name="a12"></a><a class="code hl_function" href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a>(1000);</div>
+<div class="line">    std::this_thread::sleep_for(1000ms);</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;Press the &#39;s&#39; key to save the parameters to the yaml file: \033[33m%s\033[0m\n&quot;</span>, file_name);</div>
 <div class="line"> </div>
@@ -269,8 +268,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1MvCamera_html"><div class="ttname"><a href="../../de/de8/classrm_1_1MvCamera.html">rm::MvCamera</a></div><div class="ttdoc">迈德威视相机库</div><div class="ttdef"><b>定义</b> mv_camera.h:37</div></div>
-<div class="ttc" id="aclassrm_1_1Timer_html_ad2681cbe206911a68e6b98f07dac26a4"><div class="ttname"><a href="../../d0/da3/classrm_1_1Timer.html#ad2681cbe206911a68e6b98f07dac26a4">rm::Timer::sleep_for</a></div><div class="ttdeci">static void sleep_for(double t)</div><div class="ttdoc">当前线程休眠指定时间</div></div>
-<div class="ttc" id="agroup__algorithm_html_ga544b37a37f56482fe9f9fb486abf1b57"><div class="ttname"><a href="../../d5/d6c/group__algorithm.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a></div><div class="ttdeci">Matx&lt; double, 5, 1 &gt; Matx51d</div><div class="ttdef"><b>定义</b> math.hpp:65</div></div>
+<div class="ttc" id="agroup__algorithm__math_html_ga544b37a37f56482fe9f9fb486abf1b57"><div class="ttname"><a href="../../d7/da1/group__algorithm__math.html#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a></div><div class="ttdeci">Matx&lt; double, 5, 1 &gt; Matx51d</div><div class="ttdef"><b>定义</b> math.hpp:65</div></div>
 <div class="ttc" id="agroup__camera_html_gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9">rm::RetrieveMode::OpenCV</a></div><div class="ttdeci">@ OpenCV</div><div class="ttdoc">使用 OpenCV 的 &#39;cvtColor&#39; 进行处理</div><div class="ttdef"><b>定义</b> camutils.hpp:49</div></div>
 <div class="ttc" id="agroup__camera_html_gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7">rm::GrabMode::Continuous</a></div><div class="ttdeci">@ Continuous</div><div class="ttdoc">连续采样</div><div class="ttdef"><b>定义</b> camutils.hpp:33</div></div>
 <div class="ttc" id="agroup__camera_html_gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134"><div class="ttname"><a href="../../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3285e8a2520fa343627af20c53048134">rm::CameraProperties::wb_bgain</a></div><div class="ttdeci">@ wb_bgain</div><div class="ttdoc">白平衡蓝色分量</div><div class="ttdef"><b>定义</b> camutils.hpp:97</div></div>

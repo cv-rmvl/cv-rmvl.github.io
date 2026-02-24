@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['轻量发布订阅服务_0',['轻量发布订阅服务',['../d7/de3/group__lpss.html',1,'']]]
+  ['识别模块_0',['AprilTag(Tag25h9) 识别模块',['../d6/d8c/group__tag__detector.html',1,'']]]
 ];

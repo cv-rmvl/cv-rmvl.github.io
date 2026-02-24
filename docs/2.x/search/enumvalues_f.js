@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['rad_0',['RAD',['../d5/d6c/group__algorithm.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
-  ['red_1',['RED',['../de/d3d/group__algorithm__pretreat.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469',1,'rm']]],
+  ['rad_0',['RAD',['../d7/da1/group__algorithm__math.html#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95',1,'rm']]],
+  ['red_1',['RED',['../dc/d85/group__algorithm__img.html#gga0c0d16290797cbf7399f9bedf3784e34a80885ec8c9c340162adc3320f706a469',1,'rm']]],
   ['ridders_2',['Ridders',['../d2/d62/group__algorithm__optimal.html#gga329a52f13003e4dd7914217ed7f3f5eda44072b728f2cf14e689c6d971e4091f6',1,'rm']]],
-  ['right_3',['RIGHT',['../d7/d4f/group__compensator.html#gga6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
+  ['right_3',['RIGHT',['../d5/d20/namespacerm.html#a6eb0c54354d1de382a6d3735da2c005ca21507b40c80068eda19865706fdc2403',1,'rm']]],
   ['rmvl_5fbaddynamictype_4',['RMVL_BadDynamicType',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba59242f30afedb168324b811aed9f446c',1,'util.hpp']]],
   ['rmvl_5fstsassert_5',['RMVL_StsAssert',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4baaeb1914b1d3bd797296feba9b74cf6c2',1,'util.hpp']]],
   ['rmvl_5fstsbacktrace_6',['RMVL_StsBackTrace',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4badbb04baae7a4aab87d74dfbddf48a828',1,'util.hpp']]],
@@ -18,6 +18,5 @@ var searchData=
   ['rmvl_5fstsnullptr_15',['RMVL_StsNullPtr',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba3f8d82d5412e115672d7eb10f51dca17',1,'util.hpp']]],
   ['rmvl_5fstsok_16',['RMVL_StsOk',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4ba856586874a2d744a818342ad634869d1',1,'util.hpp']]],
   ['rmvl_5fstsoutofrange_17',['RMVL_StsOutOfRange',['../d0/de1/group__core.html#ggaf7cd096c36c198de2a85d0719fb92b4bae1c6cc94e9a0882777a400aa11d2d441',1,'util.hpp']]],
-  ['roll_18',['ROLL',['../db/d29/group__predictor.html#gga2b0e6c03b95a421669eb858ff0aa5f0fa940fc54478cc7b30a59936ea2ad613bb',1,'rm']]],
-  ['rotaryenc_19',['RotaryEnc',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49dad367701db149cd84bb54e1203aa9961e',1,'rm']]]
+  ['rotaryenc_18',['RotaryEnc',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49dad367701db149cd84bb54e1203aa9961e',1,'rm']]]
 ];

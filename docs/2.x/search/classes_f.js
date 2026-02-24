@@ -12,12 +12,10 @@ var searchData=
   ['polynomial_9',['Polynomial',['../db/d3e/classrm_1_1Polynomial.html',1,'rm']]],
   ['pose_10',['Pose',['../d4/d23/classrm_1_1msg_1_1Pose.html',1,'rm::msg']]],
   ['postprocessoptions_11',['PostprocessOptions',['../d5/da4/structrm_1_1PostprocessOptions.html',1,'rm']]],
-  ['predictinfo_12',['PredictInfo',['../d7/d51/structrm_1_1PredictInfo.html',1,'rm']]],
-  ['predictor_13',['predictor',['../dc/d74/classrm_1_1predictor.html',1,'rm']]],
-  ['preprocessoptions_14',['PreprocessOptions',['../d2/d84/structrm_1_1PreprocessOptions.html',1,'rm']]],
-  ['promise_15',['Promise',['../dd/df2/classrm_1_1async_1_1Promise.html',1,'rm::async']]],
-  ['promise_3c_20void_20_3e_16',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
-  ['protocol_17',['Protocol',['../d9/dc1/structrm_1_1ip_1_1Protocol.html',1,'rm::ip']]],
-  ['publisheddataset_18',['PublishedDataSet',['../d6/d4a/structrm_1_1PublishedDataSet.html',1,'rm']]],
-  ['publisher_19',['Publisher',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; MsgType &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; MsgType &gt;']]]
+  ['preprocessoptions_12',['PreprocessOptions',['../d2/d84/structrm_1_1PreprocessOptions.html',1,'rm']]],
+  ['promise_13',['Promise',['../dd/df2/classrm_1_1async_1_1Promise.html',1,'rm::async']]],
+  ['promise_3c_20void_20_3e_14',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
+  ['protocol_15',['Protocol',['../d9/dc1/structrm_1_1ip_1_1Protocol.html',1,'rm::ip']]],
+  ['publisheddataset_16',['PublishedDataSet',['../d6/d4a/structrm_1_1PublishedDataSet.html',1,'rm']]],
+  ['publisher_17',['Publisher',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; MsgType &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; MsgType &gt;']]]
 ];
