@@ -143,8 +143,8 @@ $(function() {
 <tr class="memdesc:aa2496e56f6203fdfe1ad6100dc8e02ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 cv::Affine3d 转换为 Transform 消息  <br /></td></tr>
 <tr class="memitem:af74c4255ab2f923ad054ac2ffc4ebc63" id="r_af74c4255ab2f923ad054ac2ffc4ebc63"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af74c4255ab2f923ad054ac2ffc4ebc63">from_msg</a> (const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &amp;img_msg)</td></tr>
 <tr class="memdesc:af74c4255ab2f923ad054ac2ffc4ebc63"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 Image 消息转换为 cv::Mat  <br /></td></tr>
-<tr class="memitem:ab2a4bbd84cc6666b56f11833c04790b1" id="r_ab2a4bbd84cc6666b56f11833c04790b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a4bbd84cc6666b56f11833c04790b1">to_msg</a> (cv::Mat img, std::string_view encoding)</td></tr>
-<tr class="memdesc:ab2a4bbd84cc6666b56f11833c04790b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 cv::Mat 转换为 Image 消息  <br /></td></tr>
+<tr class="memitem:aa7d005b7903c0339feec41fe8dec0df1" id="r_aa7d005b7903c0339feec41fe8dec0df1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d005b7903c0339feec41fe8dec0df1">to_msg</a> (cv::Mat img, uint8_t encoding)</td></tr>
+<tr class="memdesc:aa7d005b7903c0339feec41fe8dec0df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 cv::Mat 转换为 Image 消息  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>OpenCV 与 LPSS 消息转换命名空间 </p>
@@ -435,8 +435,8 @@ $(function() {
 
 </div>
 </div>
-<a id="ab2a4bbd84cc6666b56f11833c04790b1" name="ab2a4bbd84cc6666b56f11833c04790b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a4bbd84cc6666b56f11833c04790b1">&#9670;&#160;</a></span>to_msg() <span class="overload">[6/6]</span></h2>
+<a id="aa7d005b7903c0339feec41fe8dec0df1" name="aa7d005b7903c0339feec41fe8dec0df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d005b7903c0339feec41fe8dec0df1">&#9670;&#160;</a></span>to_msg() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,7 +449,7 @@ $(function() {
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>encoding</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>encoding</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -458,7 +458,7 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td>OpenCV 图像矩阵 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">encoding</td><td>图像编码格式，包括 "rgb8", "bgr8", "mono8", "mono16", "rgba8", "bgra8", "bayer_rggb8" 和 "bayer_bggr8" </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">encoding</td><td>图像编码格式，必须是 <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html" title="Image 消息类型：sensor/Image">msg::Image</a> 中定义的编码类型之一 </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['joint_5fnames_0',['joint_names',['../d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html#ae812cd7c7fae956b64897a79c9a78a3b',1,'rm::msg::MultiDOFJointState']]]
+  ['joint_5fnames_0',['joint_names',['../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a6f3df9e2163a2adb1c01d59ec8243aa4',1,'rm::msg::JointTrajectory::joint_names'],['../d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html#ae812cd7c7fae956b64897a79c9a78a3b',1,'rm::msg::MultiDOFJointState::joint_names']]]
 ];

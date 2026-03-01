@@ -17,7 +17,7 @@ var searchData=
   ['pitch_5fresponse_5fdelay_14',['PITCH_RESPONSE_DELAY',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#ac2dec924b8eca1bb92643507166f67c4',1,'rm::para::GyroDeciderParam']]],
   ['pitch_5fspeed_15',['pitch_speed',['../d1/d5f/structrm_1_1Rotation.html#a769cc35bf3dbb04edc9f4011106b623b',1,'rm::Rotation']]],
   ['planar_5ftracker_5fparam_16',['planar_tracker_param',['../db/d32/group__para__tracker.html#ga2634fdefa2c8f2424920699323ca6af8',1,'rm::para']]],
-  ['points_17',['points',['../dc/d40/classrm_1_1msg_1_1Polygon.html#ad1c50bc96659ba03a601a8596e7183c9',1,'rm::msg::Polygon::points'],['../d0/da6/classrm_1_1msg_1_1Marker.html#a2ad6c3011d2cf75d1cf1d78057de6b3c',1,'rm::msg::Marker::points']]],
+  ['points_17',['points',['../dc/d40/classrm_1_1msg_1_1Polygon.html#ad1c50bc96659ba03a601a8596e7183c9',1,'rm::msg::Polygon::points'],['../d7/db9/classrm_1_1msg_1_1JointTrajectory.html#a3ead07a2531ea45ce1c42e7383da493e',1,'rm::msg::JointTrajectory::points'],['../d0/da6/classrm_1_1msg_1_1Marker.html#a2ad6c3011d2cf75d1cf1d78057de6b3c',1,'rm::msg::Marker::points']]],
   ['port_18',['port',['../d8/d24/structrm_1_1URLParseInfo.html#ace6ed1201378ebed58eae7d27efe4e2c',1,'rm::URLParseInfo']]],
   ['pose_19',['pose',['../d0/da6/classrm_1_1msg_1_1Marker.html#a5a171deb990b176eebd8b2244ceba3d5',1,'rm::msg::Marker']]],
   ['pose_5fq_20',['POSE_Q',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html#a0d1323f90ee3e844e9e69ce99dd6147f',1,'rm::para::GyroTrackerParam']]],
@@ -25,10 +25,11 @@ var searchData=
   ['position_22',['position',['../d4/d23/classrm_1_1msg_1_1Pose.html#a54f6b6332ad1283b82f04d90c01b0b78',1,'rm::msg::Pose::position'],['../de/de3/classrm_1_1msg_1_1JointState.html#aa8a4c1c9f05084bab65b03c598c362a5',1,'rm::msg::JointState::position']]],
   ['position_5fq_23',['POSITION_Q',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html#a633a2259eb4d696ac8ee11a42648efde',1,'rm::para::GyroTrackerParam']]],
   ['position_5fr_24',['POSITION_R',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html#a618a0c3055a6672706875dd6ac50a32a',1,'rm::para::GyroTrackerParam']]],
-  ['pre_5faim_5fangle_25',['PRE_AIM_ANGLE',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#ac5b178031d6e96ac7d76d2edcfd5d2fb',1,'rm::para::GyroDeciderParam']]],
-  ['predict_5fb_26',['PREDICT_B',['../d1/d2f/classrm_1_1para_1_1RunePredictorParam.html#aeced44ff2844da1f0c372202fcc24fc5',1,'rm::para::RunePredictorParam']]],
-  ['predict_5fk_27',['PREDICT_K',['../d1/d2f/classrm_1_1para_1_1RunePredictorParam.html#a76d435d0850df4ce8f236411e8ac9c37',1,'rm::para::RunePredictorParam']]],
-  ['previous_28',['previous',['../d2/da2/classrm_1_1async_1_1BasicPromise.html#a972a958fe53cdae82c4652106824ba5b',1,'rm::async::BasicPromise']]],
-  ['priority_29',['PRIORITY',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#abfc071d9179010971c314c81b65faf22',1,'rm::para::OpcuaParam']]],
-  ['publishing_5finterval_30',['PUBLISHING_INTERVAL',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a24f5d2f4ab53cd42f9d6144571ae9bfe',1,'rm::para::OpcuaParam']]]
+  ['positions_25',['positions',['../d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html#ac0ba08348fa4ffa63c048f90eba8b5a1',1,'rm::msg::JointTrajectoryPoint']]],
+  ['pre_5faim_5fangle_26',['PRE_AIM_ANGLE',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#ac5b178031d6e96ac7d76d2edcfd5d2fb',1,'rm::para::GyroDeciderParam']]],
+  ['predict_5fb_27',['PREDICT_B',['../d1/d2f/classrm_1_1para_1_1RunePredictorParam.html#aeced44ff2844da1f0c372202fcc24fc5',1,'rm::para::RunePredictorParam']]],
+  ['predict_5fk_28',['PREDICT_K',['../d1/d2f/classrm_1_1para_1_1RunePredictorParam.html#a76d435d0850df4ce8f236411e8ac9c37',1,'rm::para::RunePredictorParam']]],
+  ['previous_29',['previous',['../d2/da2/classrm_1_1async_1_1BasicPromise.html#a972a958fe53cdae82c4652106824ba5b',1,'rm::async::BasicPromise']]],
+  ['priority_30',['PRIORITY',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#abfc071d9179010971c314c81b65faf22',1,'rm::para::OpcuaParam']]],
+  ['publishing_5finterval_31',['PUBLISHING_INTERVAL',['../da/d23/classrm_1_1para_1_1OpcuaParam.html#a24f5d2f4ab53cd42f9d6144571ae9bfe',1,'rm::para::OpcuaParam']]]
 ];

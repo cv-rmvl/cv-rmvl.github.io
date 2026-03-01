@@ -4228,10 +4228,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::string</type>
+      <type>uint8_t</type>
       <name>encoding</name>
       <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
-      <anchor>a85749be3483b687f478d291684863c4e</anchor>
+      <anchor>af7217c7f084ac5e0045bcf451944a1aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4239,6 +4239,90 @@
       <name>data</name>
       <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
       <anchor>a07362edb80b81f508bc38eac6ae51937</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_rgb8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>abb7288a1eebf9d87586b935e4b78a935</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bgr8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a81f1fbbff8068aa4528bb38dd8612533</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_mono8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>ae8f5bc2f79b1c55f2bb50e5f404ccf2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_mono16</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a4511524004d02ca45e410f95404c8bed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_rgba8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a22bdb115ceb0a7d465611871891048ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bgra8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>aab085c798ff3f499b0a317f6c2fa89fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bayer_rggb8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a9abe5cd2ef35b40f10fbffd197030f8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bayer_bggr8</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a1f5d434d2ab1c53b859f8441fa8bec85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bayer_rggb16</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a6afc6b980321c1d38698d33dec9bec20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_bayer_bggbr16</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>a6bf13cea0d4e9291c5c7c17b4d0c2263</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_yuv422</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>aa17782c4e63cb9313edaea15339759b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr uint8_t</type>
+      <name>encoding_yuv420</name>
+      <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
+      <anchor>adb17ec57fe35190201465f94f3148e52</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -4930,6 +5014,126 @@
       <name>msg_type</name>
       <anchorfile>de/de3/classrm_1_1msg_1_1JointState.html</anchorfile>
       <anchor>ad54e924c19109f5962d1dce98f68c038</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::JointTrajectory</name>
+    <filename>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a88c59d716ab3c4c6ad9a4ea11a6c1862</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a29179f1a5c29eaedf9a86c7bf3339042</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static JointTrajectory</type>
+      <name>deserialize</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a160a3a0bd01e507971656c0220fbd13b</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>Header</type>
+      <name>header</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a63ab67b6d0964ec1afc080291916692e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>joint_names</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a6f3df9e2163a2adb1c01d59ec8243aa4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; JointTrajectoryPoint &gt;</type>
+      <name>points</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a3ead07a2531ea45ce1c42e7383da493e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
+      <anchor>a18387dacf46799cf8aca5285781eceb4</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::JointTrajectoryPoint</name>
+    <filename>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>a26696c7f5f11e1e9274b1074e1f598c6</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>af6d02511731f82d7e893b7fbe5cd295c</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static JointTrajectoryPoint</type>
+      <name>deserialize</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>a46f264f56f30d6ac2a34d5e9dea66ecd</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>positions</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>ac0ba08348fa4ffa63c048f90eba8b5a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>velocities</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>a5d43d258d9ce2f06017f23a0dfa83d2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>accelerations</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>adb2ef6ab4fb79295a1d6221537f9d5e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; double &gt;</type>
+      <name>effort</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>ae565d2956590beab605d58b2c34ec31e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int64_t</type>
+      <name>time_from_start</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>a9761684ea9ab83e3e8ac78383c5a00ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
+      <anchor>adac1342f5565f7662e22a3c784649ecc</anchor>
       <arglist>[]</arglist>
     </member>
   </compound>
@@ -11476,6 +11680,45 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::msg::TF</name>
+    <filename>d7/dc5/classrm_1_1msg_1_1TF.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
+      <anchor>a394133c4aae47a229215059f5169e20a</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
+      <anchor>abe58c00efc3365e3ff426c4b7965dd47</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TF</type>
+      <name>deserialize</name>
+      <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
+      <anchor>a4a5c8d16333c2a6a25a73a9ac84447ba</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; TransformStamped &gt;</type>
+      <name>transforms</name>
+      <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
+      <anchor>a5b4c0475c7aec6910bc0723b82de1384</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
+      <anchor>a743ce8ed04d9fab3996c515ccd35a938</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::msg::Time</name>
     <filename>d2/d47/classrm_1_1msg_1_1Time.html</filename>
     <member kind="function">
@@ -11941,6 +12184,59 @@
       <name>msg_type</name>
       <anchorfile>df/d0f/classrm_1_1msg_1_1Transform.html</anchorfile>
       <anchor>a34aa68828b037051468bd2ad4c4daa04</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::TransformStamped</name>
+    <filename>db/d5d/classrm_1_1msg_1_1TransformStamped.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>a7d6424485609e4c220ead2f0ce7548c5</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>ae430422418f2c3d72b1822bc755c4017</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TransformStamped</type>
+      <name>deserialize</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>aa84abeb69ea28e06e2e8e1b32165d135</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>Header</type>
+      <name>header</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>ac0a4d84be5f571316883b40209af84d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>child_frame_id</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>aa0410c71c5cfa6ce986b83f21507cb6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Transform</type>
+      <name>transform</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>aac272aa4a475a3bb2b3fd739868879d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
+      <anchor>a27d5e389b7cef3d9f2e1dad88bc05ac7</anchor>
       <arglist>[]</arglist>
     </member>
   </compound>
@@ -15056,8 +15352,8 @@
       <type>msg::Image</type>
       <name>to_msg</name>
       <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
-      <anchor>ab2a4bbd84cc6666b56f11833c04790b1</anchor>
-      <arglist>(cv::Mat img, std::string_view encoding)</arglist>
+      <anchor>aa7d005b7903c0339feec41fe8dec0df1</anchor>
+      <arglist>(cv::Mat img, uint8_t encoding)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -15170,9 +15466,13 @@
     <class kind="class">rm::msg::Pose</class>
     <class kind="class">rm::msg::Quaternion</class>
     <class kind="class">rm::msg::Transform</class>
+    <class kind="class">rm::msg::TransformStamped</class>
     <class kind="class">rm::msg::Twist</class>
     <class kind="class">rm::msg::Vector3</class>
     <class kind="class">rm::msg::Wrench</class>
+    <class kind="class">rm::msg::JointTrajectory</class>
+    <class kind="class">rm::msg::JointTrajectoryPoint</class>
+    <class kind="class">rm::msg::TF</class>
     <class kind="class">rm::msg::CameraInfo</class>
     <class kind="class">rm::msg::Image</class>
     <class kind="class">rm::msg::Imu</class>
@@ -17148,9 +17448,13 @@
     <class kind="class">rm::msg::Pose</class>
     <class kind="class">rm::msg::Quaternion</class>
     <class kind="class">rm::msg::Transform</class>
+    <class kind="class">rm::msg::TransformStamped</class>
     <class kind="class">rm::msg::Twist</class>
     <class kind="class">rm::msg::Vector3</class>
     <class kind="class">rm::msg::Wrench</class>
+    <class kind="class">rm::msg::JointTrajectory</class>
+    <class kind="class">rm::msg::JointTrajectoryPoint</class>
+    <class kind="class">rm::msg::TF</class>
     <class kind="class">rm::msg::CameraInfo</class>
     <class kind="class">rm::msg::Image</class>
     <class kind="class">rm::msg::Imu</class>
@@ -19361,6 +19665,7 @@
     <file>pose.hpp</file>
     <file>quaternion.hpp</file>
     <file>transform.hpp</file>
+    <file>transform_stamped.hpp</file>
     <file>twist.hpp</file>
     <file>vector3.hpp</file>
     <file>wrench.hpp</file>
@@ -19449,6 +19754,14 @@
     <filename>dir_efca97ecc042efa865eaefd41f9be988.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlmsg/motion</name>
+    <path>rmvlmsg/motion/</path>
+    <filename>dir_59d0329fab7f711087ed1d8ef1e451e9.html</filename>
+    <file>joint_trajectory.hpp</file>
+    <file>joint_trajectory_point.hpp</file>
+    <file>tf.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
@@ -19640,6 +19953,7 @@
     <path>rmvlmsg/</path>
     <filename>dir_584b56ed427fc12411d4172925c74074.html</filename>
     <dir>rmvlmsg/geometry</dir>
+    <dir>rmvlmsg/motion</dir>
     <dir>rmvlmsg/sensor</dir>
     <dir>rmvlmsg/std</dir>
     <dir>rmvlmsg/viz</dir>
