@@ -1,0 +1,277 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::lpss::async::RobotStatePublisher类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d4/d36/namespacerm_1_1lpss_1_1async.html">async</a></li><li class="navelem"><a href="../../d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html">RobotStatePublisher</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d9/d30/classrm_1_1lpss_1_1async_1_1RobotStatePublisher-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::async::RobotStatePublisher类 参考<div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> &raquo; <a class="el" href="../../d2/d7d/group__lpss__robot.html">机器人功能扩展</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步机器人状态发布者，基于定时器周期性发布 TF 和 URDF 消息  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/robot.hpp&gt;</code></p>
+<div class="dynheader">
+rm::lpss::async::RobotStatePublisher 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d44/classrm_1_1lpss_1_1async_1_1RobotStatePublisher__coll__graph.svg" width="190" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af72b66f810e028ac63f69842eb474cc6" id="r_af72b66f810e028ac63f69842eb474cc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af72b66f810e028ac63f69842eb474cc6">RobotStatePublisher</a> (std::string_view name, <a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">Node</a> &amp;node, <a class="el" href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">RobotPlanner</a> &amp;planner, uint32_t period)</td></tr>
+<tr class="memdesc:af72b66f810e028ac63f69842eb474cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造异步状态发布者  <br /></td></tr>
+<tr class="memitem:a40db451dc36de3b70029e98657422326" id="r_a40db451dc36de3b70029e98657422326"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40db451dc36de3b70029e98657422326">~RobotStatePublisher</a> ()</td></tr>
+<tr class="memitem:a866fe1a3af83c56f1d55bee1ed610268" id="r_a866fe1a3af83c56f1d55bee1ed610268"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866fe1a3af83c56f1d55bee1ed610268">RobotStatePublisher</a> (const RobotStatePublisher &amp;)=delete</td></tr>
+<tr class="memitem:a03e3877e06cefa8758745dded42e2dcb" id="r_a03e3877e06cefa8758745dded42e2dcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af72b66f810e028ac63f69842eb474cc6">RobotStatePublisher</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e3877e06cefa8758745dded42e2dcb">operator=</a> (const <a class="el" href="#af72b66f810e028ac63f69842eb474cc6">RobotStatePublisher</a> &amp;)=delete</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步机器人状态发布者，基于定时器周期性发布 TF 和 URDF 消息 </p>
+<p>事件循环仍然由 <span class="tt">node</span> 管理，需要由用户自行调用 <span class="tt">node.spin()</span> 来驱动定时器回调的执行。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="af72b66f810e028ac63f69842eb474cc6" name="af72b66f810e028ac63f69842eb474cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72b66f810e028ac63f69842eb474cc6">&#9670;&#160;</a></span>RobotStatePublisher() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::async::RobotStatePublisher::RobotStatePublisher </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">RobotPlanner</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>planner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>period</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造异步状态发布者 </p>
+<p>基于事件循环定时器，周期性发布 TF 和 URDF 数据。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>机器人名称，将用于构造发布主题名称前缀，如 <span class="tt">&lt;name&gt;/tf</span> 和 <span class="tt">&lt;name&gt;/robot_description</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>LPSS 节点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">planner</td><td>机器人规划器对象，发布者将从中获取 TF 和 URDF 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">period</td><td>TF 消息发布周期（单位：毫秒），URDF 消息发布周期将固定设置为 1s </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40db451dc36de3b70029e98657422326" name="a40db451dc36de3b70029e98657422326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40db451dc36de3b70029e98657422326">&#9670;&#160;</a></span>~RobotStatePublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::async::RobotStatePublisher::~RobotStatePublisher </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a866fe1a3af83c56f1d55bee1ed610268" name="a866fe1a3af83c56f1d55bee1ed610268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866fe1a3af83c56f1d55bee1ed610268">&#9670;&#160;</a></span>RobotStatePublisher() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::async::RobotStatePublisher::RobotStatePublisher </td>
+          <td>(</td>
+          <td class="paramtype">const RobotStatePublisher &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher_a866fe1a3af83c56f1d55bee1ed610268_cgraph.svg" width="467" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a03e3877e06cefa8758745dded42e2dcb" name="a03e3877e06cefa8758745dded42e2dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e3877e06cefa8758745dded42e2dcb">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af72b66f810e028ac63f69842eb474cc6">RobotStatePublisher</a> &amp; rm::lpss::async::RobotStatePublisher::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#af72b66f810e028ac63f69842eb474cc6">RobotStatePublisher</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher_a03e3877e06cefa8758745dded42e2dcb_cgraph.svg" width="450" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

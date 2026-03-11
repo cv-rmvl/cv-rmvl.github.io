@@ -6722,15 +6722,15 @@
       <type>void</type>
       <name>destroyPublisher</name>
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>a45833dd795f5bd723bb60292fe503929</anchor>
-      <arglist>(const Publisher&lt; MsgType &gt; &amp;pub)</arglist>
+      <anchor>a6c9c108ad9df3664254ae9557806be00</anchor>
+      <arglist>(Publisher&lt; MsgType &gt; &amp;pub)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>destroySubscriber</name>
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>aeb9b7dbe43717b2d47a06d86a55b730c</anchor>
-      <arglist>(const Subscriber&lt; MsgType &gt; &amp;sub)</arglist>
+      <anchor>a400742c61a387e84ae277a1bf7645ec3</anchor>
+      <arglist>(Subscriber&lt; MsgType &gt; &amp;sub)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -9530,6 +9530,165 @@
       <anchorfile>d0/df0/classrm_1_1RingBufferSlotSHM.html</anchorfile>
       <anchor>a065702eeab4aa110c675e1eac379ee65</anchor>
       <arglist>(T &amp;value) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::RobotPlanner</name>
+    <filename>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotPlanner</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>ab85fc4901dca7cfe36b06d39fb5dffad</anchor>
+      <arglist>(std::string_view urdf_path, std::string_view mesh_path={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RobotPlanner</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>acefe722a26d77aa1561bb8279adecc60</anchor>
+      <arglist>(RobotPlanner &amp;&amp;) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotPlanner &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a0ffc28051815ca0acd72212f9c40803c</anchor>
+      <arglist>(RobotPlanner &amp;&amp;) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~RobotPlanner</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>ad9406b5e1206f2a27f90eb5ce5b50a40</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>load</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>ae2bbd5478ca2e7f2579f96d85cd26a6d</anchor>
+      <arglist>(std::string_view urdf_path, std::string_view mesh_path={})</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a9dfa52cb525a37122157877b6693d292</anchor>
+      <arglist>(const msg::JointState &amp;joint_state)</arglist>
+    </member>
+    <member kind="function">
+      <type>const msg::JointState &amp;</type>
+      <name>joints</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a10051738d1e8c9f6a42880df490a6c0f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const msg::URDF &amp;</type>
+      <name>urdf</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>ac77fe6ae14d7cfe810ee8caf6845c176</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const msg::TF &amp;</type>
+      <name>tf</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a565c725e09ec2b098e84e9a021571fb0</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::JointTrajectory</type>
+      <name>plan</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a7898abd061d0f1bd6f5b8e02d997ec6e</anchor>
+      <arglist>(std::string_view frame, const msg::Pose &amp;target_pose) const</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Pose</type>
+      <name>linkpose</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>aa1d8c5c6f380b1430803b65ce3704f27</anchor>
+      <arglist>(std::string_view link_name) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::unique_ptr&lt; Impl &gt;</type>
+      <name>_impl</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a1f02f502cfcbd86e28f26f847b1e90b0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::async::RobotStatePublisher</name>
+    <filename>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotStatePublisher</name>
+      <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>af72b66f810e028ac63f69842eb474cc6</anchor>
+      <arglist>(std::string_view name, Node &amp;node, RobotPlanner &amp;planner, uint32_t period)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~RobotStatePublisher</name>
+      <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a40db451dc36de3b70029e98657422326</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RobotStatePublisher</name>
+      <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a866fe1a3af83c56f1d55bee1ed610268</anchor>
+      <arglist>(const RobotStatePublisher &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotStatePublisher &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a03e3877e06cefa8758745dded42e2dcb</anchor>
+      <arglist>(const RobotStatePublisher &amp;)=delete</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::RobotStatePublisher</name>
+    <filename>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>RobotStatePublisher</name>
+      <anchorfile>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a46e224d605f4f798b16b56517b64ebda</anchor>
+      <arglist>(std::string_view name, Node &amp;node, RobotPlanner &amp;planner, uint32_t period)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~RobotStatePublisher</name>
+      <anchorfile>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>abfceedc6b6398d6f1a96e35d1b75a9c8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RobotStatePublisher</name>
+      <anchorfile>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a6fbb321717af9d8e188d91c562f48d00</anchor>
+      <arglist>(const RobotStatePublisher &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>RobotStatePublisher &amp;</type>
+      <name>operator=</name>
+      <anchorfile>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>a30816da147cacdb715ee7e4b8e413540</anchor>
+      <arglist>(const RobotStatePublisher &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>std::mutex &amp;</type>
+      <name>mutex</name>
+      <anchorfile>db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>af0291051df296ceab46db37276f92bab</anchor>
+      <arglist>() noexcept</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -12656,6 +12815,52 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::msg::URDF</name>
+    <filename>d0/d8c/classrm_1_1msg_1_1URDF.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a3d9937adc1691ca6356cde6e60c25e4d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a4e54a4ce2780d71274645be63664b304</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static URDF</type>
+      <name>deserialize</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a77d930693766afacf0d72efe73f1bbed</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>data</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a372a6bb9e45f323d786f17207180427c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>mesh_path</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a01f7d04314c50f4601e670dcd4a99963</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d0/d8c/classrm_1_1msg_1_1URDF.html</anchorfile>
+      <anchor>a0a6bb4f6f9d984235a806ddaa5865836</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::URLParseInfo</name>
     <filename>d8/d24/structrm_1_1URLParseInfo.html</filename>
@@ -15441,6 +15646,29 @@
     <class kind="class">rm::lpss::Publisher</class>
     <class kind="class">rm::lpss::Subscriber</class>
     <class kind="class">rm::lpss::Node</class>
+    <class kind="class">rm::lpss::RobotPlanner</class>
+    <class kind="class">rm::lpss::RobotStatePublisher</class>
+    <member kind="function">
+      <type>msg::Quaternion</type>
+      <name>operator*</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gac77be6e93b1909a6e4cb384b130001ef</anchor>
+      <arglist>(const msg::Quaternion &amp;q1, const msg::Quaternion &amp;q2)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Vector3</type>
+      <name>rotate</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gaec3c92e79e26b527b042a9d398e7bf96</anchor>
+      <arglist>(const msg::Quaternion &amp;q, const msg::Vector3 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Transform</type>
+      <name>operator*</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gaa56dd4a5b3a54c42127aa6ee53d6ea89</anchor>
+      <arglist>(const msg::Transform &amp;t1, const msg::Transform &amp;t2)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::lpss::async</name>
@@ -15449,13 +15677,7 @@
     <class kind="class">rm::lpss::async::Subscriber</class>
     <class kind="class">rm::lpss::async::Timer</class>
     <class kind="class">rm::lpss::async::Node</class>
-    <member kind="function" static="yes">
-      <type>static rm::async::Task</type>
-      <name>timer_task</name>
-      <anchorfile>d4/d36/namespacerm_1_1lpss_1_1async.html</anchorfile>
-      <anchor>afc91c5efbb2940af90c5f80f9530e523</anchor>
-      <arglist>(Timer::ptr timer, std::chrono::duration&lt; Rep, Period &gt; dur, TimerCallback cb)</arglist>
-    </member>
+    <class kind="class">rm::lpss::async::RobotStatePublisher</class>
   </compound>
   <compound kind="namespace">
     <name>rm::msg</name>
@@ -15473,6 +15695,7 @@
     <class kind="class">rm::msg::JointTrajectory</class>
     <class kind="class">rm::msg::JointTrajectoryPoint</class>
     <class kind="class">rm::msg::TF</class>
+    <class kind="class">rm::msg::URDF</class>
     <class kind="class">rm::msg::CameraInfo</class>
     <class kind="class">rm::msg::Image</class>
     <class kind="class">rm::msg::Imu</class>
@@ -17455,6 +17678,7 @@
     <class kind="class">rm::msg::JointTrajectory</class>
     <class kind="class">rm::msg::JointTrajectoryPoint</class>
     <class kind="class">rm::msg::TF</class>
+    <class kind="class">rm::msg::URDF</class>
     <class kind="class">rm::msg::CameraInfo</class>
     <class kind="class">rm::msg::Image</class>
     <class kind="class">rm::msg::Imu</class>
@@ -17849,8 +18073,38 @@
     <name>lpss</name>
     <title>轻量发布订阅服务</title>
     <filename>d7/de3/group__lpss.html</filename>
+    <subgroup>lpss_robot</subgroup>
     <namespace>rm::cvmsg</namespace>
     <namespace>rm::lpss</namespace>
+  </compound>
+  <compound kind="group">
+    <name>lpss_robot</name>
+    <title>机器人功能扩展</title>
+    <filename>d2/d7d/group__lpss__robot.html</filename>
+    <class kind="class">rm::lpss::RobotPlanner</class>
+    <class kind="class">rm::lpss::RobotStatePublisher</class>
+    <class kind="class">rm::lpss::async::RobotStatePublisher</class>
+    <member kind="function">
+      <type>msg::Quaternion</type>
+      <name>rm::lpss::operator*</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gac77be6e93b1909a6e4cb384b130001ef</anchor>
+      <arglist>(const msg::Quaternion &amp;q1, const msg::Quaternion &amp;q2)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Vector3</type>
+      <name>rm::lpss::rotate</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gaec3c92e79e26b527b042a9d398e7bf96</anchor>
+      <arglist>(const msg::Quaternion &amp;q, const msg::Vector3 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::Transform</type>
+      <name>rm::lpss::operator*</name>
+      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
+      <anchor>gaa56dd4a5b3a54c42127aa6ee53d6ea89</anchor>
+      <arglist>(const msg::Transform &amp;t1, const msg::Transform &amp;t2)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>ml</name>
@@ -19736,6 +19990,7 @@
     <dir>rmvl/lpss/details</dir>
     <file>cv.hpp</file>
     <file>node.hpp</file>
+    <file>robot.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
@@ -19762,6 +20017,7 @@
     <file>joint_trajectory.hpp</file>
     <file>joint_trajectory_point.hpp</file>
     <file>tf.hpp</file>
+    <file>urdf.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
