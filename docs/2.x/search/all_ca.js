@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['误差协方差矩阵_0',['1.6 误差协方差矩阵',['../dd/dc3/tutorial_modules_kalman.html#kalman_error_covairance_matrix',1,'']]]
+  ['说明文档_0',['RMVL 说明文档',['../index.html',1,'']]]
 ];
