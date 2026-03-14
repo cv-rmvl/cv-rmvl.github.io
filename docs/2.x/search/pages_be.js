@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['跨平台支持_0',['跨平台支持',['../d1/dfb/intro.html#intro_cross_platform',1,'']]]
+  ['超定线性方程组_0',['2 超定线性方程组',['../db/da1/tutorial_modules_least_square.html#autotoc_md198',1,'']]]
 ];

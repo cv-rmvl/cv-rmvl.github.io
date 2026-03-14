@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['获取聚合体元素个数_0',['2 获取聚合体元素个数',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md243',1,'']]]
+  ['节点发现协议_0',['1.2.1 节点发现协议',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md289',1,'']]]
 ];
