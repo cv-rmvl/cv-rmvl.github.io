@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['何为责任链模式_0',['1 何为责任链模式',['../d2/de3/tutorial_extra_upper_process.html#autotoc_md78',1,'']]]
+  ['构建并安装_20rmvl_0',['构建并安装 RMVL',['../d1/db4/tutorial_install.html',1,'tutorial_table_of_content_config']]]
 ];

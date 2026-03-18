@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['内置消息类型_0',['2 内置消息类型',['../d2/d9b/tutorial_table_of_content_rmvlmsg.html#autotoc_md359',1,'']]]
+  ['绑定功能_0',['RMVL-Python 绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html',1,'tutorials_python']]]
 ];

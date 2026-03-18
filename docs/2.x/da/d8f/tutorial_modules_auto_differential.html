@@ -5,13 +5,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.15.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 自动求导、数值微分</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -57,7 +59,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.4.0</span>
+                &#160;<span id="projectnumber">2.5.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -66,22 +68,33 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.15.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
+/* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,12 +118,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">自动求导、数值微分 </div></div>
+  <div class="headertitle"><div class="title">自动求导、数值微分</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -118,27 +131,27 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md150">1 基于 Taylor 公式的数值微分 </a>
+        <a href="#autotoc_md150">1 基于 Taylor 公式的数值微分</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md151">2 Richardson 外推原理 </a>
+        <a href="#autotoc_md151">2 Richardson 外推原理</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md152">2.1 公式推导 </a>
+            <a href="#autotoc_md152">2.1 公式推导</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md153">2.2 外推算法总结 </a>
+            <a href="#autotoc_md153">2.2 外推算法总结</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md154">3 如何使用 </a>
+        <a href="#autotoc_md154">3 如何使用</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md155">3.1 一元函数导数示例代码 </a>
+            <a href="#autotoc_md155">3.1 一元函数导数示例代码</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md156">3.2 多元函数梯度示例代码 </a>
+            <a href="#autotoc_md156">3.2 多元函数梯度示例代码</a>
           </li>
         </ul>
       </li>
@@ -147,7 +160,7 @@ $(function() {
 </ul>
 </div>
 <div class="textblock"><p>包含中心差商以及 Richardson 外推原理的介绍</p>
-<p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2algorithm_2auto__differential"></a></p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2auto__differential"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2024/05/06 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
@@ -164,7 +177,7 @@ $(function() {
 \def\fml#1{\text{(#1)}}
 \]
 </p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md150"></a>
+<h2><a class="anchor" id="autotoc_md150"></a>
 1 基于 Taylor 公式的数值微分</h2>
 <p>利用以下两个 2 阶 Taylor 公式：</p>
 <p class="formulaDsp">
@@ -185,9 +198,9 @@ f&#39;(x)&amp;\approx\frac{f(x)-f(x-h)}h,\qquad R=\frac{f&#39;&#39;(\eta)}2h+o(h
 \[f&#39;(x)=\frac{f(x+h)-f(x-h)}{2h},\qquad R=-\frac{f&#39;&#39;&#39;(\xi)}{3!}h^2+o(h^2)\tag{1-3b}\]
 </p>
 <p>如果导数 \(f&#39;(x)\)用 \(\fml{1-3b}\)计算，那么截断误差为 \(o(h^2)\)，比 \(\fml{1-2a}\)和 \(\fml{1-2b}\)的截断误差 \(O(h)\)更小。这种方法称为<span style="color: red">中心差商</span>。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md151"></a>
+<h2><a class="anchor" id="autotoc_md151"></a>
 2 Richardson 外推原理</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md152"></a>
+<h3><a class="anchor" id="autotoc_md152"></a>
 2.1 公式推导</h3>
 <p>将公式 \(\fml{1-3b}\)扩展，可以得到更完全的写法：</p>
 <p class="formulaDsp">
@@ -233,7 +246,7 @@ f&#39;(x)&amp;\approx\frac{f(x)-f(x-h)}h,\qquad R=\frac{f&#39;&#39;(\eta)}2h+o(h
 \[L\approx\frac{64}{63}\theta\left(\frac h2\right)-\frac1{63}\theta(h)\tag{2-10}\]
 </p>
 <p>读者可以自行验证，按照这个思路可以进一步外推，可执行任意多步得到精度不断提高的新公式，这就是 <span style="color: red">Richardson 外推原理</span>。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md153"></a>
+<h3><a class="anchor" id="autotoc_md153"></a>
 2.2 外推算法总结</h3>
 <p>令 \(\varphi(h)=\frac{f(x+h)-f(x-h)}{2h}\)，外推 \(M\)步，则外推算法的步骤如下</p>
 <p>① 选取一个适当的 \(h\)值，计算 \(M+1\)个数，记为 \(T(*,*)\)</p>
@@ -251,11 +264,11 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 \[L=T(n,k)+o(h^{2k+2})\qquad(h\to0)\tag{2-13}\]
 </p>
 <p>即 \(T(n,k)\)具备 \(2k+2\)阶的精度。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md154"></a>
+<h2><a class="anchor" id="autotoc_md154"></a>
 3 如何使用</h2>
 <p>RMVL 中提供了一元函数以及多元函数的微分工具，求解一元函数导数时可使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gad269c00a143e239e4c56922766bb2a2e" title="计算一元函数的导数">rm::derivative</a> ，求解多元函数梯度是需要使用 <a class="el" href="../../d2/d62/group__algorithm__optimal.html#gaa93c2a0dd4c42255cd83a086ced9e9df" title="计算多元函数的梯度">rm::grad</a> 。</p>
 <p>以下展示了使用自动求导、数值微分的例子。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md155"></a>
+<h3><a class="anchor" id="autotoc_md155"></a>
 3.1 一元函数导数示例代码</h3>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
@@ -287,7 +300,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <div class="line"><span class="comment"># f&#39;(1) = 6.00</span></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md156"></a>
+</div><div class="tabbed"></div><h3><a class="anchor" id="autotoc_md156"></a>
 3.2 多元函数梯度示例代码</h3>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">C++</b></p>
@@ -323,7 +336,7 @@ k&amp;=1,2,\cdots,M\\n&amp;=k,k+1,\cdots,M
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.15.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

@@ -5,13 +5,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.15.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 硬件设备与软件模块的初始化</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -57,7 +59,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.4.0</span>
+                &#160;<span id="projectnumber">2.5.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -66,22 +68,33 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.15.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
+/* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,12 +118,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">硬件设备与软件模块的初始化 </div></div>
+  <div class="headertitle"><div class="title">硬件设备与软件模块的初始化</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -118,29 +131,29 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md75">概述 </a>
+        <a href="#autotoc_md75">概述</a>
       </li>
       <li class="level2">
-        <a href="#init_software">软件模块 </a>
+        <a href="#init_software">软件模块</a>
       </li>
       <li class="level2">
-        <a href="#init_perception">感知设备 </a>
+        <a href="#init_perception">感知设备</a>
       </li>
       <li class="level2">
-        <a href="#init_communication">通信设备 </a>
+        <a href="#init_communication">通信设备</a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2extra_2upper_2upper__init"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2upper_2upper__init"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/10/02</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d8/d29/tutorial_extra_upper_base.html">顶层模块开发基本流程</a> <br  />
  <b>下一篇教程：</b><a class="el" href="../../d4/de8/tutorial_extra_upper_read_data.html">读取（默认）数据以控制逻辑分支</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md75"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 概述</h2>
 <p>软件模块一般在使用时仅涉及到 4 个功能模块，即 <a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> ， <a class="el" href="../../d7/d4f/group__compensator.html">补偿模块（功能模块）</a> ， <a class="el" href="../../db/d29/group__predictor.html">目标预测模块（功能模块）</a> ，和 <a class="el" href="../../d9/dbe/group__decider.html">决策模块（功能模块）</a> 。此外，用户仍然可以基于 RMVL 提供的抽象类数据组件（如 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> ）完成适用于个人项目中派生数据组件的接口设计，在这种情况下，初始化的内容可能需要考虑到这些数据组件，在本文中不多介绍。</p>
 <p>而硬件设备主要有感知设备 SDK 和通信设备相关层级支持（及相关通信中间件），目前 RMVL 包含的感知设备 SDK 涉及到</p>
@@ -164,10 +177,10 @@ $(function() {
 OPC UA
  </br>   <input type='checkbox' disabled> 
 MQTT
- </br> <h2 class="doxsection"><a class="anchor" id="init_software"></a>
+ </br> <h2><a class="anchor" id="init_software"></a>
 软件模块</h2>
 <p>实际上，各个功能模块在运行时初始化的主要依据正是通信传输的控制信息，这里仅介绍功能模块在运行时初始化的最一般写法。</p>
-<p>4 个功能模块均提供了对应的 <span class="tt">make_xxx</span> 静态工厂函数，可直接使用此函数完成初始化操作，在 <a class="el" href="../../d1/dfb/intro.html#api_concepts">API 概念</a> 的 <b>低耦合逻辑</b> 中涉及到了以下写法，其中最后一个序列组列表则是贯穿于所有功能模块的数据组件集合。</p>
+<p>4 个功能模块均提供了对应的 <code>make_xxx</code> 静态工厂函数，可直接使用此函数完成初始化操作，在 <a class="el" href="../../d1/dfb/intro.html#api_concepts">API 概念</a> 的 <b>低耦合逻辑</b> 中涉及到了以下写法，其中最后一个序列组列表则是贯穿于所有功能模块的数据组件集合。</p>
 <div class="fragment"><div class="line"><span class="comment">// 创建 detector</span></div>
 <div class="line">rm::detector::ptr p_detector = <a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#a7cb826c0d675b35606d3efef46a9b587">rm::ArmorDetector::make_detector</a>();</div>
 <div class="line"><span class="comment">// 创建 compensator</span></div>
@@ -183,7 +196,7 @@ MQTT
 <div class="ttc" id="aclassrm_1_1GravityCompensator_html_af52c5d0ccff5ee75f15cb246f56f0ef6"><div class="ttname"><a href="../../d3/d7a/classrm_1_1GravityCompensator.html#af52c5d0ccff5ee75f15cb246f56f0ef6">rm::GravityCompensator::make_compensator</a></div><div class="ttdeci">static auto make_compensator()</div><div class="ttdoc">构造 GravityCompensator</div><div class="ttdef"><b>定义</b> gravity_compensator.h:28</div></div>
 <div class="ttc" id="aclassrm_1_1TranslationDecider_html_a50e3961a37db63c1e0c330daa6cdfdd5"><div class="ttname"><a href="../../de/dfc/classrm_1_1TranslationDecider.html#a50e3961a37db63c1e0c330daa6cdfdd5">rm::TranslationDecider::make_decider</a></div><div class="ttdeci">static std::unique_ptr&lt; TranslationDecider &gt; make_decider()</div><div class="ttdoc">构造 TranslationDecider</div><div class="ttdef"><b>定义</b> translation_decider.h:42</div></div>
 </div><!-- fragment --><p>此外，要注意某些静态工厂函数<span style="color: red">可能需要传入参数</span>，这些参数一般就是对应功能类的构造函数的入参。具体的功能模块在使用上均可参考该类对应的说明文档。</p>
-<h2 class="doxsection"><a class="anchor" id="init_perception"></a>
+<h2><a class="anchor" id="init_perception"></a>
 感知设备</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">相机设备</b></p>
@@ -203,7 +216,7 @@ MQTT
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">待办事项</a></b></dt><dd>本小节暂无</dd></dl>
 </li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="init_communication"></a>
+</div><div class="tabbed"></div><h2><a class="anchor" id="init_communication"></a>
 通信设备</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">串口通信</b></p>
@@ -278,7 +291,7 @@ MQTT
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.15.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

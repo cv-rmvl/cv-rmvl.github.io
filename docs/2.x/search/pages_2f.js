@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['使用对象与基本情况_0',['使用对象与基本情况',['../d1/dfb/intro.html#autotoc_md3',1,'']]],
-  ['使用技巧_1',['4 使用技巧',['../db/dba/tutorial_modules_opcua.html#autotoc_md326',1,'']]],
-  ['使用提供的工具链构建_20rmvl_2',['使用提供的工具链构建 RMVL',['../d5/d52/tutorial_other_arm.html#autotoc_md144',1,'']]],
-  ['使用教程_3',['使用教程',['../dd/da0/tutorials.html',1,'RMVL 使用教程'],['../d8/d88/tutorials_python.html',1,'RMVL-Python 使用教程']]],
-  ['使用方法_4',['2 使用方法',['../d4/d74/tutorial_modules_union_find.html#autotoc_md239',1,'']]],
-  ['使用此方法的前提_5',['使用此方法的前提',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md44',1,'']]],
-  ['使用示例_6',['使用示例',['../d2/d81/tutorial_run_in.html#autotoc_md148',1,'使用示例'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md184',1,'4 使用示例']]],
-  ['使用_20demo_7',['4 使用 Demo',['../df/d2c/tutorial_modules_camera.html#autotoc_md262',1,'']]],
-  ['使用_20rmvl_8',['通过 gcc 和 CMake 使用 RMVL',['../da/d80/tutorial_use.html',1,'tutorial_table_of_content_config']]]
+  ['模块_0',['模块',['../d2/d3f/tutorial_extra_how_to_use_combo.html',1,'如何使用/开发 combo 模块'],['../d9/de9/tutorial_extra_how_to_use_compensator.html',1,'如何使用/开发 compensator 模块'],['../d6/d94/tutorial_extra_how_to_use_decider.html',1,'如何使用/开发 decider 模块'],['../d0/d9e/tutorial_extra_how_to_use_detector.html',1,'如何使用/开发 detector 模块'],['../d5/dee/tutorial_extra_how_to_use_feature.html',1,'如何使用/开发 feature 模块'],['../d0/d6e/tutorial_extra_how_to_use_group.html',1,'如何使用/开发 group 模块'],['../d5/d6f/tutorial_extra_how_to_use_predictor.html',1,'如何使用/开发 predictor 模块'],['../df/daa/tutorial_extra_how_to_use_tracker.html',1,'如何使用/开发 tracker 模块'],['../df/dad/tutorial_py_algorithm.html',1,'适用于 Python 的 algorithm 模块'],['../d7/d9d/tutorial_py_core.html',1,'适用于 Python 的 core 模块'],['../d4/de5/tutorial_py_opcua.html',1,'适用于 Python 的 OPC UA 模块']]],
+  ['模型的熵权法_1',['基于 TOPSIS 模型的熵权法',['../df/d25/tutorial_modules_ew_topsis.html',1,'tutorial_table_of_content_modules']]]
 ];

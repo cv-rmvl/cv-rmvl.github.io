@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['低耦合逻辑_0',['低耦合逻辑',['../d1/dfb/intro.html#intro_low_coupled_logic',1,'']]]
+  ['最小二乘法_0',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]]
 ];

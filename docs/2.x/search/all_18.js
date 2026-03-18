@@ -30,7 +30,7 @@ var searchData=
   ['pitch_5fresponse_5fdelay_27',['PITCH_RESPONSE_DELAY',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#ac2dec924b8eca1bb92643507166f67c4',1,'rm::para::GyroDeciderParam']]],
   ['pitch_5fspeed_28',['pitch_speed',['../d1/d5f/structrm_1_1Rotation.html#a769cc35bf3dbb04edc9f4011106b623b',1,'rm::Rotation']]],
   ['pixchannel_29',['PixChannel',['../dc/d85/group__algorithm__img.html#ga0c0d16290797cbf7399f9bedf3784e34',1,'rm']]],
-  ['plan_30',['plan',['../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html#a7898abd061d0f1bd6f5b8e02d997ec6e',1,'rm::lpss::RobotPlanner']]],
+  ['plan_30',['plan',['../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html#aac50eb348794b05f148dc5c08a0b6e89',1,'rm::lpss::RobotPlanner::plan(const msg::JointState &amp;target) const'],['../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html#a31d3c6237b883bfc46e582ad038e17ae',1,'rm::lpss::RobotPlanner::plan(std::string_view frame, const msg::Pose &amp;target) const'],['../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html#a0687e512278dd834529df4e09237a3b2',1,'rm::lpss::RobotPlanner::plan(std::string_view frame, const std::vector&lt; msg::Pose &gt; &amp;waypoints) const']]],
   ['planar_5ftracker_5fparam_31',['planar_tracker_param',['../db/d32/group__para__tracker.html#ga2634fdefa2c8f2424920699323ca6af8',1,'rm::para']]],
   ['planartracker_32',['PlanarTracker',['../d1/dc8/classrm_1_1PlanarTracker.html',1,'rm']]],
   ['planartrackerparam_33',['PlanarTrackerParam',['../df/dec/classrm_1_1para_1_1PlanarTrackerParam.html',1,'rm::para::PlanarTrackerParam'],['../df/dec/classrm_1_1para_1_1PlanarTrackerParam.html#ac60ef995d3a7828b31e7e9125f44a99e',1,'rm::para::PlanarTrackerParam::PlanarTrackerParam()']]],

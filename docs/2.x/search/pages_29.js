@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['介绍_0',['介绍',['../d5/d72/tutorial_document.html#tutorial_documentation_intro',1,'介绍'],['../d1/d0a/tutorial_configuration_options.html#autotoc_md102',1,'1 介绍']]]
+  ['快捷开发工具_0',['RMVL 快捷开发工具',['../dd/dbc/tutorial_rdt.html',1,'']]],
+  ['快速傅里叶变换_1',['快速傅里叶变换',['../d0/d9d/tutorial_modules_fft.html',1,'tutorial_table_of_content_modules']]]
 ];

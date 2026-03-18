@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['识别模块_0',['识别模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md65',1,'2.1 识别模块'],['../d6/d8c/group__tag__detector.html',1,'AprilTag(Tag25h9) 识别模块']]]
+  ['详细内容_0',['详细内容',['../d5/d72/tutorial_document.html#tutorial_documentation_content',1,'']]],
+  ['详细步骤_1',['详细步骤',['../da/d80/tutorial_use.html#autotoc_md122',1,'']]]
 ];

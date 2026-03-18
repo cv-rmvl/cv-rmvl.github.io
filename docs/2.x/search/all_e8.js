@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['风格的字符串处理_0',['Python 风格的字符串处理',['../d0/d17/group__core__str.html',1,'']]]
+  ['黄金分割法原理_0',['2.2 黄金分割法原理',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md171',1,'']]],
+  ['黄金分割法_1',['2 黄金分割法',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md169',1,'']]]
 ];

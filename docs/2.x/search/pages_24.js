@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['主要模块使用教程_0',['主要模块使用教程',['../d6/d6e/tutorial_table_of_content_modules.html',1,'tutorials']]],
-  ['主要模块_1',['主要模块',['../d1/dfb/intro.html#main_modules',1,'']]]
+  ['常微分方程（组）数值解与_20runge_20kutta_20算法_0',['常微分方程（组）数值解与 Runge-Kutta 算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'tutorial_table_of_content_modules']]]
 ];

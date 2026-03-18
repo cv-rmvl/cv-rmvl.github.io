@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['为基于_20arm_20的_20linux_20系统手动配置交叉编译_0',['为基于 ARM 的 Linux 系统手动配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]],
-  ['为_20rmvl_20撰写说明文档_1',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]]
+  ['工业自动化通信协议_20——_20opc_20ua_0',['工业自动化通信协议 —— OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'tutorial_table_of_content_modules']]],
+  ['工具_1',['工具',['../dc/d52/tutorial_rdt_lpss.html',1,'LPSS CLI 工具'],['../d4/de3/tutorial_rdt_rmvl.html',1,'RMVL CLI 工具']]]
 ];

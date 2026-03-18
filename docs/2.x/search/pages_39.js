@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['写在前面_0',['写在前面',['../d1/dfb/intro.html#autotoc_md2',1,'写在前面'],['../d8/d29/tutorial_extra_upper_base.html#autotoc_md71',1,'写在前面']]]
+  ['编译镜像_0',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['区间搜索_0',['1 区间搜索',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md168',1,'']]],
-  ['区间消去_1',['2.1 区间消去',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md170',1,'']]]
+  ['进程间通信设施_20——_20ipc_0',['进程间通信设施 —— IPC',['../d4/d00/tutorial_modules_ipc.html',1,'tutorial_table_of_content_modules']]]
 ];

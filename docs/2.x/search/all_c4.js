@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['触发属性设置_0',['1.3 触发属性设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md255',1,'']]]
+  ['设计理念_0',['设计理念',['../d1/dfb/intro.html#intro_design_principle',1,'']]]
 ];

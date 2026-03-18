@@ -5,13 +5,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
-  <meta name="generator" content="Doxygen 1.15.0" />
+  <meta name="generator" content="Doxygen 1.13.2" />
   <title>RMVL: 责任链模式下的程序处理</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../../jquery.js"></script>
   <script type="text/javascript" src="../../dynsections.js"></script>
-  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -57,7 +59,7 @@ MathJax.Hub.Config({
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.4.0</span>
+                &#160;<span id="projectnumber">2.5.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -66,22 +68,33 @@ MathJax.Hub.Config({
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.15.0 -->
+<!-- 制作者 Doxygen 1.13.2 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('../../',true,false,'search.php','搜索',false);
   $(function() { init_search(); });
 });
+/* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,12 +118,12 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div><div class="header">
-  <div class="headertitle"><div class="title">责任链模式下的程序处理 </div></div>
+  <div class="headertitle"><div class="title">责任链模式下的程序处理</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>目录</h3>
@@ -118,33 +131,33 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md78">1 何为责任链模式 </a>
+        <a href="#autotoc_md78">1 何为责任链模式</a>
         <ul>
           <li class="level3">
-            <a href="#process_common">1.1 常规用法 </a>
+            <a href="#process_common">1.1 常规用法</a>
           </li>
           <li class="level3">
-            <a href="#process_in_rmvl">1.2 RMVL 修改后的用法 </a>
+            <a href="#process_in_rmvl">1.2 RMVL 修改后的用法</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md79">2 具体使用方法 </a>
+        <a href="#autotoc_md79">2 具体使用方法</a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2extra_2upper_2upper__process"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2upper_2upper__process"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d4/de8/tutorial_extra_upper_read_data.html">读取（默认）数据以控制逻辑分支</a> <br  />
  <b>下一篇教程：</b><a class="el" href="../../db/d4f/tutorial_extra_upper_write_data.html">导出数据、发出操控指令</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md78"></a>
 1 何为责任链模式</h2>
-<h3 class="doxsection"><a class="anchor" id="process_common"></a>
+<h3><a class="anchor" id="process_common"></a>
 1.1 常规用法</h3>
 <p><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">责任链模式</a>（Chain of Responsibility Pattern）是一种行为型设计模式，其目的是将请求的发送者和接收者解耦，并使多个对象都有机会处理该请求。在责任链模式中，请求沿着一个链路传递，直到有一个对象能够处理它为止。</p>
 <p>在该模式中，通常有一个抽象的处理器（Handler）作为基类，定义了处理请求的接口和链中的下一个处理器的引用。每个具体处理器（Concrete Handler）继承自抽象处理器，实现了处理请求的方法。具体处理器决定是否处理请求，如果可以处理，则进行处理；如果不能处理，则将请求传递给链中的下一个处理器。</p>
@@ -179,10 +192,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> handleRequest(<span class="keyword">const</span> std::string&amp; request) = 0;</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>然后，创建两个具体的处理器 <span class="tt">ConcreteHandler</span>：<span class="tt">BugHandler</span> 和 <span class="tt">FeatureHandler</span>。</p>
+</div><!-- fragment --><p>然后，创建两个具体的处理器 <code>ConcreteHandler</code>：<code>BugHandler</code> 和 <code>FeatureHandler</code>。</p>
 <ul>
-<li><span class="tt">BugHandler</span> 用于处理与软件缺陷相关的问题</li>
-<li><span class="tt">FeatureHandler</span> 用于处理用户新功能请求</li>
+<li><code>BugHandler</code> 用于处理与软件缺陷相关的问题</li>
+<li><code>FeatureHandler</code> 用于处理用户新功能请求</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">class </span>BugHandler : <span class="keyword">public</span> Handler</div>
 <div class="line">{</div>
@@ -207,7 +220,7 @@ $(function() {
 <div class="line">            _next-&gt;handleRequest(request);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-</div><!-- fragment --><p>现在可以创建责任链并测试它。在下面的示例中，首先将 <span class="tt">BugHandler</span> 设置为责任链的第一个处理器，然后将 <span class="tt">FeatureHandler</span> 作为下一个处理器。</p>
+</div><!-- fragment --><p>现在可以创建责任链并测试它。在下面的示例中，首先将 <code>BugHandler</code> 设置为责任链的第一个处理器，然后将 <code>FeatureHandler</code> 作为下一个处理器。</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    Handler* bugHandler = <span class="keyword">new</span> BugHandler();</div>
@@ -227,21 +240,21 @@ $(function() {
 </div><!-- fragment --><p>输出结果将是：</p>
 <div class="fragment"><div class="line">BugHandler: Handling the bug report.</div>
 <div class="line">FeatureHandler: Handling the feature request.</div>
-</div><!-- fragment --><p>在这个例子中，如果请求是 <span class="tt">"Bug"</span>，则 <span class="tt">BugHandler</span> 将处理它；如果请求是 <span class="tt">"Feature"</span>，则 <span class="tt">FeatureHandler</span> 将处理它；如果请求是其他类型（例如 <span class="tt">"Enhancement"</span>），则请求将传递给下一个处理器。这样，责任链模式允许多个对象有机会处理请求，并且可以动态调整节点顺序或新增、删除节点。</p>
-<h3 class="doxsection"><a class="anchor" id="process_in_rmvl"></a>
+</div><!-- fragment --><p>在这个例子中，如果请求是 <code>"Bug"</code>，则 <code>BugHandler</code> 将处理它；如果请求是 <code>"Feature"</code>，则 <code>FeatureHandler</code> 将处理它；如果请求是其他类型（例如 <code>"Enhancement"</code>），则请求将传递给下一个处理器。这样，责任链模式允许多个对象有机会处理请求，并且可以动态调整节点顺序或新增、删除节点。</p>
+<h3><a class="anchor" id="process_in_rmvl"></a>
 1.2 RMVL 修改后的用法</h3>
 <p><a class="el" href="#process_common">1.1 常规用法</a> 中要定义指向下一个处理器的抽象指针，并且所有派生处理器均继承自一个基类，RMVL 功能模块不采用这种做法，因为</p>
 <ul>
 <li>可能需要运行多个功能模块，并且功能模块之间可能存在各种各样的组合</li>
 <li>每个功能模块负责的内容以及依赖的目标各不相同</li>
 </ul>
-<p>因此，常规用法中的<span style="color: red">请求</span>在 RMVL 功能模块中表示为<span style="color: red">数据组件</span>，各功能模块的返回值 <span class="tt">XxxInfo</span> 则可以作为下一个功能模块的入参。可以继续参考此流程图</p>
+<p>因此，常规用法中的<span style="color: red">请求</span>在 RMVL 功能模块中表示为<span style="color: red">数据组件</span>，各功能模块的返回值 <code>XxxInfo</code> 则可以作为下一个功能模块的入参。可以继续参考此流程图</p>
 <center></center><center><div class="image">
 <img src="../../upper_base.png" alt=""/>
 <div class="caption">
 图 1 顶层模块流程图</div></div>
-    </center><center></center><p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <span class="tt">rm::DetectInfo</span>、<span class="tt"><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></span>、<span class="tt">rm::PredictInfo</span>。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md79"></a>
+    </center><center></center><p>程序处理III（预测）的入参包含了补偿模块的返回值信息 <code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>，程序处理IV（决策）的入参包含了前 3 个模块的返回值 <code>rm::DetectInfo</code>、<code><a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a></code>、<code>rm::PredictInfo</code>。</p>
+<h2><a class="anchor" id="autotoc_md79"></a>
 2 具体使用方法</h2>
 <p>下面给出一个简单的例子</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> run() {</div>
@@ -290,7 +303,7 @@ $(function() {
 <div class="ttc" id="agroup__core_html_ga9fdfbca3e848ceaea5debb80759891e2"><div class="ttname"><a href="../../d0/de1/group__core.html#ga9fdfbca3e848ceaea5debb80759891e2">ERROR_</a></div><div class="ttdeci">#define ERROR_(...)</div><div class="ttdef"><b>定义</b> util.hpp:47</div></div>
 </div><!-- fragment --><p><b>注意</b></p>
 <ul>
-<li>模块内部均设置了异常抛出的功能，当传入了错误的数据会抛出相应的异常，可参考 <a class="el" href="../../d0/de1/group__core.html#gaf7cd096c36c198de2a85d0719fb92b4b">RMVLErrorCode</a> 查看异常的类型。顶层模块需要妥善处理这些异常，例如使用 <span class="tt">try-catch</span> 语句来捕获异常，设置默认处理或者直接退出程序；</li>
+<li>模块内部均设置了异常抛出的功能，当传入了错误的数据会抛出相应的异常，可参考 <a class="el" href="../../d0/de1/group__core.html#gaf7cd096c36c198de2a85d0719fb92b4b">RMVLErrorCode</a> 查看异常的类型。顶层模块需要妥善处理这些异常，例如使用 <code>try-catch</code> 语句来捕获异常，设置默认处理或者直接退出程序；</li>
 <li><b>发送默认数据</b> 与 <b>导出数据</b> 将在下一篇说明文档中介绍。</li>
 </ul>
 <hr  />
@@ -308,7 +321,7 @@ $(function() {
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.15.0
+</a> 1.13.2
 </small></address>
 <script type="text/javascript">
 //<![CDATA[

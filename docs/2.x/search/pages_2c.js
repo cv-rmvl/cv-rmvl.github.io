@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['传输层设施_20——_20socket_0',['传输层设施 —— Socket',['../d2/d5d/tutorial_modules_socket.html',1,'tutorial_table_of_content_modules']]]
+  ['支持随机访问的堆_0',['支持随机访问的堆',['../d5/db4/tutorial_modules_ra_heap.html',1,'tutorial_table_of_content_modules']]]
 ];

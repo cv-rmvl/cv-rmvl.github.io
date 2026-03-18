@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['卡尔曼增益推导_0',['1.5 卡尔曼增益推导',['../dd/dc3/tutorial_modules_kalman.html#kalman_gain_derivate',1,'']]],
-  ['卡尔曼滤波模块的用法_1',['2 卡尔曼滤波模块的用法',['../dd/dc3/tutorial_modules_kalman.html#autotoc_md192',1,'']]],
-  ['卡尔曼滤波_2',['卡尔曼滤波',['../dd/dc3/tutorial_modules_kalman.html',1,'卡尔曼滤波'],['../dd/dc3/tutorial_modules_kalman.html#autotoc_md189',1,'1 卡尔曼滤波']]]
+  ['非线性方程（组）数值解与迭代法_0',['非线性方程（组）数值解与迭代法',['../d8/daf/tutorial_modules_func_iteration.html',1,'tutorial_table_of_content_modules']]],
+  ['非线性最小二乘_1',['非线性最小二乘',['../d8/dd7/tutorial_modules_lsqnonlin.html',1,'tutorial_table_of_content_modules']]]
 ];

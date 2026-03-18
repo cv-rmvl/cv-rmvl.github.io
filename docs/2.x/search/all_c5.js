@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['订阅者示例_0',['2.1.2 订阅者示例',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md297',1,'']]],
-  ['订阅_1',['3 发布/订阅',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_pub_sub',1,'']]]
+  ['识别模块_0',['识别模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md65',1,'2.1 识别模块'],['../d6/d8c/group__tag__detector.html',1,'AprilTag(Tag25h9) 识别模块']]]
 ];

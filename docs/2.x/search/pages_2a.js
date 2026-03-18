@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['从_20xml_20配置_20opc_20ua_0',['4.2 从 XML 配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'']]]
+  ['扩展卡尔曼滤波_0',['扩展卡尔曼滤波',['../db/d71/tutorial_modules_ekf.html',1,'tutorial_table_of_content_modules']]],
+  ['扩展模块使用教程_1',['扩展模块使用教程',['../d6/d3f/tutorial_table_of_content_extra.html',1,'tutorials']]]
 ];
