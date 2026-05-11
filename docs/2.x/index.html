@@ -15,13 +15,15 @@
   <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-  <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="doxygen.css" rel="stylesheet" type="text/css" />
   <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
@@ -171,7 +173,7 @@ $(function() {
 <p class="startli">手动安装依赖、项目配置、编译安装</p>
 </li>
 <li><p class="startli"><a class="el" href="dd/dbc/tutorial_rdt.html" title="RMVL 快捷开发工具">RMVL 快捷开发工具</a></p>
-<p class="startli">使用 <span class="tt">rdt</span> 进行 RMVL 安装及其相关模块的开发、调试<span style="color: red">（Linux 平台下强烈推荐）</span></p>
+<p class="startli">使用 <span class="tt">rdt</span> 进行 RMVL 一键安装及其相关模块的开发、调试<span style="color: red">（Linux 平台下强烈推荐）</span></p>
 </li>
 <li><p class="startli"><a class="el" href="d8/d29/tutorial_extra_upper_base.html" title="顶层模块开发基本流程">顶层模块开发基本流程</a></p>
 <p class="startli">部署与构建顶层模块 </p>

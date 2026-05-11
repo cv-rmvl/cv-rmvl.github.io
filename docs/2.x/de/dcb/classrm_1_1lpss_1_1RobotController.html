@@ -15,13 +15,15 @@
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-  <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
   <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
@@ -129,8 +131,8 @@ rm::lpss::RobotController 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a4b74f73684bf202b991f62c2948510a3" id="r_a4b74f73684bf202b991f62c2948510a3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4b74f73684bf202b991f62c2948510a3">RobotController</a> (const std::vector&lt; std::string &gt; &amp;joint_names, <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ctl::ControlLawBase::ptr</a> ctl_law=<a class="el" href="../../d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html#af84adc14512b642debaf7a7abff305a2">ctl::UnitTF::create</a>(<a class="el" href="../../d2/d7d/group__lpss__robot.html#ga1fe3b083ecd49d8e3a385c71568b42fc">ctl::basic_pos_imapping</a>, <a class="el" href="../../d2/d7d/group__lpss__robot.html#gac161329e130922c510699809be82362f">ctl::basic_pos_omapping</a>))</td></tr>
-<tr class="memdesc:a4b74f73684bf202b991f62c2948510a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造机器人控制器  <br /></td></tr>
+<tr class="memitem:a3eaf58c519f71d0aa2c4d4b4fff0f651" id="r_a3eaf58c519f71d0aa2c4d4b4fff0f651"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3eaf58c519f71d0aa2c4d4b4fff0f651">RobotController</a> (const std::vector&lt; std::string &gt; &amp;joint_names, <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ctl::ControlLawBase::ptr</a> ctl_law=<a class="el" href="../../d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html#ae98aefb66f440905c3349b4608a0702b">ctl::UnitTF::create</a>())</td></tr>
+<tr class="memdesc:a3eaf58c519f71d0aa2c4d4b4fff0f651"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造机器人控制器  <br /></td></tr>
 <tr class="memitem:aea96999e8388505a0d9d05b5ebfdc994" id="r_aea96999e8388505a0d9d05b5ebfdc994"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea96999e8388505a0d9d05b5ebfdc994">submit</a> (const <a class="el" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> &amp;traj)</td></tr>
 <tr class="memdesc:aea96999e8388505a0d9d05b5ebfdc994"><td class="mdescLeft">&#160;</td><td class="mdescRight">提交待执行关节轨迹  <br /></td></tr>
 <tr class="memitem:a09d2363ce418bf4e7ef2dc4825945934" id="r_a09d2363ce418bf4e7ef2dc4825945934"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09d2363ce418bf4e7ef2dc4825945934">reset</a> () noexcept</td></tr>
@@ -141,8 +143,8 @@ Public 成员函数</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>机器人控制模块 </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
-<a id="a4b74f73684bf202b991f62c2948510a3" name="a4b74f73684bf202b991f62c2948510a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b74f73684bf202b991f62c2948510a3">&#9670;&#160;</a></span>RobotController()</h2>
+<a id="a3eaf58c519f71d0aa2c4d4b4fff0f651" name="a3eaf58c519f71d0aa2c4d4b4fff0f651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eaf58c519f71d0aa2c4d4b4fff0f651">&#9670;&#160;</a></span>RobotController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +157,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ctl::ControlLawBase::ptr</a></td>          <td class="paramname"><span class="paramname"><em>ctl_law</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html#af84adc14512b642debaf7a7abff305a2">ctl::UnitTF::create</a>(<a class="el" href="../../d2/d7d/group__lpss__robot.html#ga1fe3b083ecd49d8e3a385c71568b42fc">ctl::basic_pos_imapping</a>,&#160;<a class="el" href="../../d2/d7d/group__lpss__robot.html#gac161329e130922c510699809be82362f">ctl::basic_pos_omapping</a>)</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ctl::ControlLawBase::ptr</a></td>          <td class="paramname"><span class="paramname"><em>ctl_law</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html#ae98aefb66f440905c3349b4608a0702b">ctl::UnitTF::create</a>()</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -171,7 +173,7 @@ Public 成员函数</h2></td></tr>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/dcb/classrm_1_1lpss_1_1RobotController_a4b74f73684bf202b991f62c2948510a3_cgraph.svg" width="366" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/dcb/classrm_1_1lpss_1_1RobotController_a3eaf58c519f71d0aa2c4d4b4fff0f651_cgraph.svg" width="544" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

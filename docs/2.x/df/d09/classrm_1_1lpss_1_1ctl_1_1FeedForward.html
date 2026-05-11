@@ -15,13 +15,15 @@
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-  <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
   <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
@@ -167,7 +169,7 @@ Public 成员函数</h2></td></tr>
 <p> 对其进行拉普拉斯变换后得到系统开环传递函数为 </p><p class="formulaDsp">
 \[G_s(s)=\frac{k_M}{Js^2+cs}\tag3\]
 </p>
-<p>一般我们会使用双环反馈控制器来控制电机的位置，内环为速度环，外环为位置环，如下图所示： </p><center><img src="../../motor.png" alt="motor" width="70%" class="inline"/><div style="margin-top: 0.4em;">图2：带前馈的双环控制电机调速模型</div></center><p> 其中， \(G_{c1}(s)\) 和 \(G_{c2}(s)\) 分别为位置环和速度环的控制器传递函数， \(G_{f1}(s)\) 和 \(G_{f2}(s)\) 分别为位置环和速度环的前馈传递函数。对于内环速度环， 理论上全补偿的前馈传递函数具有如下形式 </p><p class="formulaDsp">
+<p>一般我们会使用双环反馈控制器来控制电机的位置，内环为速度环，外环为位置环，如下图所示： </p><center><img src="../../motor.png" alt="motor" width="70%" class="inline"/><div style="margin-top: 0.4em;">图2：带前馈的双环控制电机调速模型</div></center><p> 其中， \(G_{c1}(s)\) 和 \(G_{c2}(s)\) 分别为位置环和速度环的控制器传递函数， \(G_{f1}(s)\) 和 \(G_{f2}(s)\) 分别为位置环和速度环的前馈传递函数。 理论上全补偿的前馈传递函数具有如下形式 </p><p class="formulaDsp">
 \[\begin{aligned}G_{f1}(s)&amp;=s\\G_{f2}(s)&amp;=\frac{Js+c}{k_M}\end{aligned}\tag4\]
 </p>
 <p>如果对于单环控制，则前馈传递函数的理论补偿形式为 </p><p class="formulaDsp">

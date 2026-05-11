@@ -15,13 +15,15 @@
   <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
-  <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  extensions: ["tex2jax.js"],
-  jax: ["input/TeX","output/HTML-CSS"],
-});
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
 </script>
-<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
   <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
@@ -117,7 +119,7 @@ $(function() {
 <p>成员的完整列表，这些成员属于 <a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a>,包括所有继承而来的类成员</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html#a09d2363ce418bf4e7ef2dc4825945934">reset</a>() noexcept</td><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html#a4b74f73684bf202b991f62c2948510a3">RobotController</a>(const std::vector&lt; std::string &gt; &amp;joint_names, ctl::ControlLawBase::ptr ctl_law=ctl::UnitTF::create(ctl::basic_pos_imapping, ctl::basic_pos_omapping))</td><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html#a3eaf58c519f71d0aa2c4d4b4fff0f651">RobotController</a>(const std::vector&lt; std::string &gt; &amp;joint_names, ctl::ControlLawBase::ptr ctl_law=ctl::UnitTF::create())</td><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html#aaf36a0d3e84f284042799087e2f85cb1">sample</a>(const msg::JointState &amp;feedback={}) noexcept</td><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html#aea96999e8388505a0d9d05b5ebfdc994">submit</a>(const msg::JointTrajectory &amp;traj)</td><td class="entry"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->

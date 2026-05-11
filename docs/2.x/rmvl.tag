@@ -9784,8 +9784,8 @@
       <type></type>
       <name>RobotController</name>
       <anchorfile>de/dcb/classrm_1_1lpss_1_1RobotController.html</anchorfile>
-      <anchor>a4b74f73684bf202b991f62c2948510a3</anchor>
-      <arglist>(const std::vector&lt; std::string &gt; &amp;joint_names, ctl::ControlLawBase::ptr ctl_law=ctl::UnitTF::create(ctl::basic_pos_imapping, ctl::basic_pos_omapping))</arglist>
+      <anchor>a3eaf58c519f71d0aa2c4d4b4fff0f651</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;joint_names, ctl::ControlLawBase::ptr ctl_law=ctl::UnitTF::create())</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -13268,8 +13268,8 @@
       <type>static ControlLawBase::ptr</type>
       <name>create</name>
       <anchorfile>d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html</anchorfile>
-      <anchor>af84adc14512b642debaf7a7abff305a2</anchor>
-      <arglist>(InSampleMapping imapping, OutSampleMapping omapping) noexcept</arglist>
+      <anchor>ae98aefb66f440905c3349b4608a0702b</anchor>
+      <arglist>(InSampleMapping imapping=basic_pos_imapping, OutSampleMapping omapping=basic_pos_omapping) noexcept</arglist>
     </member>
     <member kind="function" protection="private">
       <type>ControlStatus</type>
