@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -eu
+
+echo -e "Welcome to use rdt/rmvl installation wizard \033[1;32mv1.0.0\033[0m"
+
+bak_name="rmvl-dev-tools-$(date +%s)"
+
+if ! git --version &> /dev/null; then
+  echo -e "Git 未被安装，可以通过 \033[33msudo apt install git\033[0m 来安装"
+  exit 1
+fi
+
+trap cleanup_int INT
+cleanup_int() {
+  rm -rf "$HOME/.rmvldev/rmvl-dev-tools"
+  if [ -d "$HOME/.rmvldev/$bak_name" ]; then
+    mv "$HOME/.rmvldev/$bak_name" "$HOME/.rmvldev/rmvl-dev-tools"
+  fi
+}
+
+mkdir -p "$HOME/.rmvldev" && cd "$HOME/.rmvldev"
+if [ -d "rmvl-dev-tools" ]; then
+  mv "rmvl-dev-tools" "$bak_name"
+fi
+git clone --quiet --depth=1 https://github.com/cv-rmvl/rmvl-dev-tools
+bash rmvl-dev-tools/setup/install.bash
+if [ -d "$HOME/.rmvldev/$bak_name" ]; then
+  rm -rf "$HOME/.rmvldev/$bak_name"
+fi
+
+echo "以后可使用 \033[33mrmvl update tool\033[0m 命令更新 rdt 和 rmvl 工具"
+echo "可键入 \033[33mrmvl help\033[0m 来查看详细帮助信息"
