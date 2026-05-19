@@ -30,5 +30,5 @@ var searchData=
   ['usb3_200_20相机库_27',['迈德威视 USB3.0 相机库',['../dd/df4/group__mv__camera.html',1,'']]],
   ['usb3_200_20gige_20系列工业相机库_28',['USB3 0 GigE 系列工业相机库',['../d4/d59/group__galaxy__camera.html',1,'大恒图像 Galaxy USB3.0/GigE 系列工业相机库'],['../d4/d5d/group__opt__camera.html',1,'奥普特机器视觉 USB3.0/GigE 系列工业相机库'],['../db/d27/group__hik__camera.html',1,'海康机器人 USB3.0/GigE 系列工业相机库']]],
   ['use_29',['use',['../d5/d05/classrm_1_1async_1_1Webapp.html#ace5e5651ec4099b71e43dd38dbea9a90',1,'rm::async::Webapp::use(std::string_view url, const Router &amp;router)'],['../d5/d05/classrm_1_1async_1_1Webapp.html#a5d1e7e9924aa9938fdffd3224a9dff89',1,'rm::async::Webapp::use(ResponseMiddleware mwf)']]],
-  ['userconfig_30',['UserConfig',['../d4/d09/structrm_1_1UserConfig.html',1,'rm']]]
+  ['userconfig_30',['UserConfig',['../d4/da9/structrm_1_1ua_1_1UserConfig.html',1,'rm::ua']]]
 ];

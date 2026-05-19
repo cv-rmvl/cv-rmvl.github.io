@@ -8,5 +8,5 @@ var searchData=
   ['unittf_5',['UnitTF',['../d2/d2b/classrm_1_1lpss_1_1ctl_1_1UnitTF.html',1,'rm::lpss::ctl']]],
   ['urdf_6',['URDF',['../d0/d8c/classrm_1_1msg_1_1URDF.html',1,'rm::msg']]],
   ['urlparseinfo_7',['URLParseInfo',['../d8/d24/structrm_1_1URLParseInfo.html',1,'rm']]],
-  ['userconfig_8',['UserConfig',['../d4/d09/structrm_1_1UserConfig.html',1,'rm']]]
+  ['userconfig_8',['UserConfig',['../d4/da9/structrm_1_1ua_1_1UserConfig.html',1,'rm::ua']]]
 ];

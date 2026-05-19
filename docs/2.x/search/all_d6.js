@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['跨平台支持_0',['跨平台支持',['../d1/dfb/intro.html#intro_cross_platform',1,'']]]
+  ['轮询判断_0',['3.1 轮询判断',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md88',1,'']]]
 ];

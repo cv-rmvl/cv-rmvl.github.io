@@ -246,41 +246,41 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::Argument</name>
-    <filename>df/d48/structrm_1_1Argument.html</filename>
+    <name>rm::ua::Argument</name>
+    <filename>d9/d39/structrm_1_1ua_1_1Argument.html</filename>
     <member kind="function" static="yes">
       <type>static Argument</type>
       <name>create</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a77b6a0932f2e433b6f6dd732fb8b6828</anchor>
+      <anchorfile>d9/d39/structrm_1_1ua_1_1Argument.html</anchorfile>
+      <anchor>a3c95ce37ddc4c4bbbeef6cbd31b6aa9a</anchor>
       <arglist>(const std::string &amp;name, DataType type, uint32_t dims=1, const std::string &amp;desc=&quot;&quot;)</arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>name</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a08c5da7a5fe72695a7c46003e42bec9e</anchor>
+      <anchorfile>d9/d39/structrm_1_1ua_1_1Argument.html</anchorfile>
+      <anchor>a28813ff3a7acb8186ef6b293e72295b5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>DataType</type>
       <name>type</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>a76d0deaeeed0e4c3b22034f9d03b441d</anchor>
+      <anchorfile>d9/d39/structrm_1_1ua_1_1Argument.html</anchorfile>
+      <anchor>a2187b36941284f8fdda83335a9ec5498</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>dims</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>abef1f97d81b25e806f344b3070ddca69</anchor>
+      <anchorfile>d9/d39/structrm_1_1ua_1_1Argument.html</anchorfile>
+      <anchor>a8a39e074a4995503eb91ce6349df1559</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>df/d48/structrm_1_1Argument.html</anchorfile>
-      <anchor>add099a48515506b1cb38e5b82a924503</anchor>
+      <anchorfile>d9/d39/structrm_1_1ua_1_1Argument.html</anchorfile>
+      <anchor>a1f7140d3d403f13dd7cffe58eb58d582</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1349,6 +1349,242 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::ua::Client</name>
+    <filename>d6/df1/classrm_1_1ua_1_1Client.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Client</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a59f60e3e993011c7ccc917bce998c120</anchor>
+      <arglist>(std::string_view address, const UserConfig &amp;user={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Client</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a3313d92bb6fdd7ee510c8a1a6f222a3a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator ClientView</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>af3b3e61962e477cf0d225065e6026e1b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ok</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a401f4ce413315feadea0753fbe1efad7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spin</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a8c5565e081477c63ece513bfb0f4946f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spinOnce</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>af4a5e96f05f7037c23f7563768e9b295</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>shutdown</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a193445f721fa9258bba99db1f0f6d927</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInClient</type>
+      <name>node</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>ab338ef3dea5f83e688768579b5a87c32</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a077141afb8917ee39e3577dfbb849e32</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>aa59308a0b8c0a59675be3844fde045f3</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a8b9d0fc5917e4e6ae769986f322ca69c</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>call</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a5a8565018a1efbabba0b11b3b2c865bd</anchor>
+      <arglist>(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>callx</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a35f38fc80528e1efae96a02167b28ba8</anchor>
+      <arglist>(const NodeId &amp;obj_nd, std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>call</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a4924f302810b67e5d6564abdd985c827</anchor>
+      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>callx</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>ab24043cf0574b2b00ca1f8120a51369c</anchor>
+      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>findcall</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a7dda1db85f33bb05f7d90503b8f64066</anchor>
+      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; bool, Variables &gt;</type>
+      <name>findcallx</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a872ae54cdcd689feb98de8b42d10dbd1</anchor>
+      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addViewNode</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a39761b30171eea65c3448969ba09c34c</anchor>
+      <arglist>(const View &amp;view) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>monitor</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a4d3e56769c3903f59c660c2afb7a3147</anchor>
+      <arglist>(NodeId nd, DataChangeNotificationCallback on_change, uint32_t q_size=10)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>monitor</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>ad7051810b0313fc73cb3aefb3719286b</anchor>
+      <arglist>(const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>remove</name>
+      <anchorfile>d6/df1/classrm_1_1ua_1_1Client.html</anchorfile>
+      <anchor>a414aba76954fb4dcd13096d1eaf02fe0</anchor>
+      <arglist>(NodeId nd)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::ClientTimer</name>
+    <filename>d5/d49/classrm_1_1ua_1_1ClientTimer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ClientTimer</name>
+      <anchorfile>d5/d49/classrm_1_1ua_1_1ClientTimer.html</anchorfile>
+      <anchor>a9366995aaf542a793312ba1961c32f65</anchor>
+      <arglist>(ClientView cv, double period, std::function&lt; void()&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ClientTimer</name>
+      <anchorfile>d5/d49/classrm_1_1ua_1_1ClientTimer.html</anchorfile>
+      <anchor>a9a2978eba57be0dc097793b1e758fb8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d5/d49/classrm_1_1ua_1_1ClientTimer.html</anchorfile>
+      <anchor>af7616a828ad6a0f238e85c055895ae4e</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::ClientView</name>
+    <filename>df/d78/classrm_1_1ua_1_1ClientView.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ClientView</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>aa5c71172efada47620045a1be0974ec3</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ClientView</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>abe140ae0a8aa4c4121f79dcf7c2b1757</anchor>
+      <arglist>(UA_Client *client)</arglist>
+    </member>
+    <member kind="function">
+      <type>ClientView &amp;</type>
+      <name>operator=</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>a84f0da7ea5c3731e79c942eb3297a18f</anchor>
+      <arglist>(UA_Client *const client)</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_Client *</type>
+      <name>get</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>a3304fa115494729d988a5d5c3ea2fcc4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInClient</type>
+      <name>node</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>aa5b77cfec9b506cf2b14a9676945f7ec</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>a90ae94389fa075eaec696f2977f283ce</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>ad8c7e8fd4784129f5d5dd9010679dd69</anchor>
+      <arglist>(const NodeId &amp;nd) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
+      <anchor>a0930e46458d06a8e1eefcee6575ffe6d</anchor>
+      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::msg::ColorRGBA</name>
     <filename>d8/da1/classrm_1_1msg_1_1ColorRGBA.html</filename>
     <member kind="function">
@@ -1797,87 +2033,87 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::DataSourceVariable</name>
-    <filename>db/df0/structrm_1_1DataSourceVariable.html</filename>
+    <name>rm::ua::DataSourceVariable</name>
+    <filename>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</filename>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>aefdc3db2c51e922d4036482ab18f5464</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a72719d7fe86b4878597db50e2ed5f40b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>a510e4c14093ad1b0d00f9741a2aade73</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>adf004ae88894245316c7da65389e6acb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>abde072a7732e7819eedc111d3247d9ce</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a6569c5e7589f2df70d07e22cd1b497e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>a55351ac8f817f4491044cd235903575e</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>abdd1433105eb6cf3eead19cd558c375c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint8_t</type>
       <name>access_level</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>a2f7331c4fc40d61c1c68a46c849b5759</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>a0934436c80394012b7678ad524d4536e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>DataSourceRead</type>
       <name>on_read</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>ae383dacc7235c683d9ee0170b0d68f70</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>ada4e546f54d9aee3b2059dfe1768eebb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>DataSourceWrite</type>
       <name>on_write</name>
-      <anchorfile>db/df0/structrm_1_1DataSourceVariable.html</anchorfile>
-      <anchor>a775e12c26cbca768b8f7a8875625dabe</anchor>
+      <anchorfile>d8/df0/structrm_1_1ua_1_1DataSourceVariable.html</anchorfile>
+      <anchor>aaa77b125674027f725b602500c7ff9ed</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::DataType</name>
-    <filename>df/d6b/classrm_1_1DataType.html</filename>
+    <name>rm::ua::DataType</name>
+    <filename>d9/d0f/classrm_1_1ua_1_1DataType.html</filename>
     <member kind="function">
       <type></type>
       <name>DataType</name>
-      <anchorfile>df/d6b/classrm_1_1DataType.html</anchorfile>
-      <anchor>aae31b987403b50c826a0fcd4d951663f</anchor>
+      <anchorfile>d9/d0f/classrm_1_1ua_1_1DataType.html</anchorfile>
+      <anchor>ab568e1e2c58334962b2f8b30fe02b9ef</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
       <name>DataType</name>
-      <anchorfile>df/d6b/classrm_1_1DataType.html</anchorfile>
-      <anchor>a56f7794285e2aef3bc7f4aba4757c293</anchor>
+      <anchorfile>d9/d0f/classrm_1_1ua_1_1DataType.html</anchorfile>
+      <anchor>a7397732b2f7b29bedd52da1e918d34da</anchor>
       <arglist>(uint32_t id)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>DataType</name>
-      <anchorfile>df/d6b/classrm_1_1DataType.html</anchorfile>
-      <anchor>aacadc166494300f13fb0452dd4059aba</anchor>
+      <anchorfile>d9/d0f/classrm_1_1ua_1_1DataType.html</anchorfile>
+      <anchor>a2bd662e470fd5ad3c94040c9c7e84319</anchor>
       <arglist>(const std::type_info &amp;tp)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>operator uint32_t</name>
-      <anchorfile>df/d6b/classrm_1_1DataType.html</anchorfile>
-      <anchor>ac3a393d0a3d118f2d1c88bd726454210</anchor>
+      <anchorfile>d9/d0f/classrm_1_1ua_1_1DataType.html</anchorfile>
+      <anchor>a82d80cd95921d708ff85bf772c1abce1</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -2002,136 +2238,136 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::Event</name>
-    <filename>da/d88/classrm_1_1Event.html</filename>
+    <name>rm::ua::Event</name>
+    <filename>da/d84/classrm_1_1ua_1_1Event.html</filename>
     <member kind="function">
       <type></type>
       <name>Event</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a38cc061a1260bff8107021ffe409c50b</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>a449f16e652edc9d15ad864e0564d8e19</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a7d385f0b3aa66134913aa957e3a61a93</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>af4e59e44482a548074d2e3f0f1baed84</anchor>
       <arglist>(const std::string &amp;browse_name, int prop)</arglist>
     </member>
     <member kind="function">
       <type>int &amp;</type>
       <name>operator[]</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a7c2d1cf8d52769eb2bfb7532bacfb472</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>ac3c6506c9ad4dda052324b6c3a805f1f</anchor>
       <arglist>(const std::string &amp;browse_name)</arglist>
     </member>
     <member kind="function">
       <type>const std::unordered_map&lt; std::string, int &gt; &amp;</type>
       <name>data</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>aef8d53c69b0e55cf3d4fac52a7d3baf5</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>ab4744ef487a66a013a18dee350325062</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>EventType</type>
       <name>type</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a99b5b919975e18435e1c873de9cafa4f</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>a4df9c470799e7c1315cbebfb321f9552</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Event</type>
       <name>makeFrom</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>adf51802a6cfc556a40398a85dcbf616e</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>add79a78cd17bd5590f488956fa22d70e</anchor>
       <arglist>(const EventType &amp;etype)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a1f51b2065d8596efc8d184b594c4eae7</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>a76aab627cfb7d6c9595593c0cb22a3af</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>source_name</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>abfe7aa4c0e741c3153e5381f8435c408</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>a2fb595fa8c5f585f2e34cb4516ad3111</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>message</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>a5314db12c69e9b73053f857d7ebb7c31</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>a9c7eee0d46568519ad9449a12a6a9f9e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>severity</name>
-      <anchorfile>da/d88/classrm_1_1Event.html</anchorfile>
-      <anchor>abc5ddf9ef071cef4d6512383ae0ebf37</anchor>
+      <anchorfile>da/d84/classrm_1_1ua_1_1Event.html</anchorfile>
+      <anchor>ab6a26099cffcd97a383318025490a5f6</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::EventType</name>
-    <filename>d4/d8b/classrm_1_1EventType.html</filename>
+    <name>rm::ua::EventType</name>
+    <filename>dc/df5/classrm_1_1ua_1_1EventType.html</filename>
     <member kind="function">
       <type></type>
       <name>EventType</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>adf9f0a8f9d43104311e23215284ab843</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>ab6c29f0615179a1fd7184b4de0c8e4e7</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a8c53b5aea80b7223011b9bbd365235b0</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>ae31d88e454f6f5bf898a5447abe95235</anchor>
       <arglist>(const std::string &amp;browse_name, int prop)</arglist>
     </member>
     <member kind="function">
       <type>int &amp;</type>
       <name>operator[]</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a384bd9277b4555a6181f6b4c7cb021fe</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>a09b9ce1e916858e2099d79f5f863c2a0</anchor>
       <arglist>(const std::string &amp;browse_name)</arglist>
     </member>
     <member kind="function">
       <type>const std::unordered_map&lt; std::string, int &gt; &amp;</type>
       <name>data</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a59afb058fc821931daabab607dbb20a3</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>a0770112b2776ba9348cb21a7baa9af90</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a150853f8bbececd6a49c6ca38610f269</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>a9f2701734b0ef6fd4b78923838d6968f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a7008f8e44e97e971a6528f1f0a3abbc0</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>a551b51de6959a324d32b9241131deba8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>a467f7cd2159c5c3c452e08fdd90b4a1c</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>aa10a0c0cadc014d11df541e4a2efcab8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d4/d8b/classrm_1_1EventType.html</anchorfile>
-      <anchor>af236d984eebbfef63fb53554967a18c6</anchor>
+      <anchorfile>dc/df5/classrm_1_1ua_1_1EventType.html</anchorfile>
+      <anchor>aa457011f3d9b0a986409e0de5d42a1d2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2455,41 +2691,41 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::FieldMetaData</name>
-    <filename>d4/d81/structrm_1_1FieldMetaData.html</filename>
+    <name>rm::ua::FieldMetaData</name>
+    <filename>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</filename>
     <member kind="function" static="yes">
       <type>static FieldMetaData</type>
       <name>makeFrom</name>
-      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
-      <anchor>a0ab4ace8bfbd37293a3b292297463204</anchor>
+      <anchorfile>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</anchorfile>
+      <anchor>a178256ad56b94aeff2970ce364171c9e</anchor>
       <arglist>(const Variable &amp;val)</arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>name</name>
-      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
-      <anchor>a531f0c59b23a82a0df01f838b77efaa5</anchor>
+      <anchorfile>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</anchorfile>
+      <anchor>a1965335ea962dd47a64255c8a0ea09ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>DataType</type>
       <name>type</name>
-      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
-      <anchor>a6111b0a257b7404363f4959d6ab22ee4</anchor>
+      <anchorfile>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</anchorfile>
+      <anchor>a87f88e01b2fa95fd24000888326286ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>value_rank</name>
-      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
-      <anchor>a5fa6244f5c9a5169e966d7eeef8821f2</anchor>
+      <anchorfile>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</anchorfile>
+      <anchor>a4600c5d8b1f3622e9fad01237442b609</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d4/d81/structrm_1_1FieldMetaData.html</anchorfile>
-      <anchor>a9316ecc5202117ce798d53f3994a17e7</anchor>
+      <anchorfile>df/d6e/structrm_1_1ua_1_1FieldMetaData.html</anchorfile>
+      <anchor>ae62f2ca2dbbd988e770ac71cf2b53c57</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2711,94 +2947,6 @@
       <anchorfile>da/d1d/classrm_1_1GalaxyCamera.html</anchorfile>
       <anchor>a236d0d1019082cfc41c395bfb863d506</anchor>
       <arglist>(CameraConfig cfg, std::string_view id=&quot;&quot;)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::para::GalaxyCameraParam</name>
-    <filename>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>GalaxyCameraParam</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a89bb7c04ca1aa223a32d053e47b363e7</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>read</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a3e34e464aae18cac36452b09c8d2bcd4</anchor>
-      <arglist>(const std::string &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a0e92067eb641d93b06ed96a5a6d7542b</anchor>
-      <arglist>(const std::string &amp;path) const</arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>exposure</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a0ed1c2e8e85ef91faa4e403989e4c30e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int64_t</type>
-      <name>saturation</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a72c5cbd597529feb66a5c7173ae16b02</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>gain</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>ad015ea025dbafcc7d0ba6a7fef103298</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>b_gain</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a5a851010df54d56318877dbe8e43f71f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>g_gain</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a07e97049beaff5cdc6aa113eb764b56d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>double</type>
-      <name>r_gain</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a45cd01528153faef2d0fce94dcad3ea0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>grab_mode</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a0c8da953514c5a9fe74047ffdb167b40</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>retrieve_mode</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a6a28895d5993888bff2ecea4bd1fc672</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::string</type>
-      <name>id</name>
-      <anchorfile>d1/d9a/classrm_1_1para_1_1GalaxyCameraParam.html</anchorfile>
-      <anchor>a67a505926d7b70583a51ee03f34934a5</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5977,69 +6125,69 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::Method</name>
-    <filename>d4/d91/classrm_1_1Method.html</filename>
+    <name>rm::ua::Method</name>
+    <filename>d5/d0c/classrm_1_1ua_1_1Method.html</filename>
     <member kind="function">
       <type></type>
       <name>Method</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a62bd1252e254505ff6980e079a14fa5d</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>afb8314f902698a38e56cb3ded24ff32a</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Method</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>ac7275277db90d8eab074d02f21c73e43</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a4bb812b18a6947d7435ef722f127f745</anchor>
       <arglist>(Callable cb)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>ade851713fe58fd8df827f29669ba20d3</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a0ac00707049b7158d4cec1d26df1a2d7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a522f942626277a8867b179de55343ff8</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a0701ae4a1281b92ca9edac49174d1e26</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a788d4252a3ee5193159cbf20df06d6f4</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a608de3e7191819e7a7050024c6be3351</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a3b6e001428888146e110283033414226</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a04f5b438937b812304f2da8cd9f36e01</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; Argument &gt;</type>
       <name>iargs</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a34efd80aa625fbe427cdeef38f043e57</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a087cc998d6ea5d23e8dcd8c81d8e88fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::vector&lt; Argument &gt;</type>
       <name>oargs</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>aab157329af3899e55bb21e4df4f8b583</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>aded74c95e8ca7976038af622a0bc9537</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>MethodCallback</type>
       <name>func</name>
-      <anchorfile>d4/d91/classrm_1_1Method.html</anchorfile>
-      <anchor>a6e162f12f2d9702bf3a9fc1abc93a7aa</anchor>
+      <anchorfile>d5/d0c/classrm_1_1ua_1_1Method.html</anchorfile>
+      <anchor>a9041044e4183c8bbd84fdcdbc6227177</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -6981,111 +7129,111 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::NodeId</name>
-    <filename>db/d81/classrm_1_1NodeId.html</filename>
+    <name>rm::ua::NodeId</name>
+    <filename>da/d81/classrm_1_1ua_1_1NodeId.html</filename>
     <member kind="function">
       <type></type>
       <name>NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>adcc38dc62e845d97c6de1bc0c300ac5e</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>ab26285511a7f4ded8a6ed2ed622c1043</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
       <name>NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a87b23935d31d55f3c7d490463ef0d4f4</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a8545e707bbe869be014a90bfeca541db</anchor>
       <arglist>(uint16_t ns_, uint32_t id_)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a4475982c9b722a108163346cce4d3528</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a9df3839bef180000ce8c61ea5abf9698</anchor>
       <arglist>(const UA_NodeId &amp;nd)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a8a7b9b1ca815a7854c700ecef83b3522</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a92f43ec3788e9d5e993dc2e82771a6a7</anchor>
       <arglist>(const NodeId &amp;nd)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>ad9217f72df2a48908b551e409f297227</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>ad905955fbb61bfd9dfd93c9808722ae5</anchor>
       <arglist>(NodeId &amp;&amp;nd) noexcept</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator=</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>ae39f95f2fbf912aea0dc36d14c058a21</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>aa2c59c7bbcd0577a2f6d359dc35a6245</anchor>
       <arglist>(const NodeId &amp;nd)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>operator=</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>ac05fa9cb0217f2416bc9e56bf52e2cd5</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a64483cba6241c2f13be7f83b38212e4a</anchor>
       <arglist>(NodeId &amp;&amp;nd) noexcept</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a1cefd03db8d381991cfb6aa4e65d788d</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a70ef99f87cc020f7ef31c0ea2e9fc268</anchor>
       <arglist>(const NodeId &amp;nd) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator!=</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a56cabe9c17a33457bb1d49b25d6a495b</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>ad66716890c5df274d1009ab0e492d91d</anchor>
       <arglist>(const NodeId &amp;nd) const</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
       <name>operator UA_NodeId</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a1b6979b1d49d66d681df4814e517944e</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a6c1bea536ef3d3a1edd26d676ce396f5</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>UA_NodeId</type>
       <name>data</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a2ede2d7ac51431ba4ebf9ad5ab901533</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>acab3b034cfa1567aeafeac15271e7b50</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>empty</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>abb7c5b9139614d2cf7a79aa76c806ecf</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a79786f912f89579a462a7c44cad0927e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>clear</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>ad2a7a2ab4dd831b36f2c86583990f070</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>ad2c2c1ee87755de69bbf19306d6eaab4</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a861ce30ab433d50f5830663485ea45a8</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>a42e76670c4bc588d483c29c908469d09</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint32_t</type>
       <name>id</name>
-      <anchorfile>db/d81/classrm_1_1NodeId.html</anchorfile>
-      <anchor>a6cdf20128d82582ac90a941da1545dfa</anchor>
+      <anchorfile>da/d81/classrm_1_1ua_1_1NodeId.html</anchorfile>
+      <anchor>ab9a381e019863f8e8eea21967e818247</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7122,206 +7270,206 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::Object</name>
-    <filename>d8/d9b/classrm_1_1Object.html</filename>
+    <name>rm::ua::Object</name>
+    <filename>d4/d1c/classrm_1_1ua_1_1Object.html</filename>
     <member kind="function">
       <type></type>
       <name>Object</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>aa230f549c885a9f7a4f9d2786c370fd6</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a8821623588fa40bcdafc2c3d8d664c53</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>ObjectType</type>
       <name>type</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a7af282453c720d90d00b9d365f38c135</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>ac2c2c98db8b880d0cb10619e626e99c1</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>aa61e1bab707b656b224827f4746e259b</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>ae5ca9cd90e948eab197f131d1173eb6f</anchor>
       <arglist>(const Variable &amp;variable)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a7be5ccfefef3395ec77eb5a28780dd5b</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a410b60947c65d011347e9af8d712661f</anchor>
       <arglist>(const DataSourceVariable &amp;dsv)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a8fc819c2becd5ce492157e2b09d36f77</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a53951b3e5cb1af6fb2c896087643494c</anchor>
       <arglist>(const Method &amp;method)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>empty</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a4b6c5ec06c3ae14505ff87deee39bd34</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>ae50bd71fd071446ced7de498a5cc233f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::Variable &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, Variable &gt; &amp;</type>
       <name>getVariables</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a86ef769988bc60032f1bf9669eaf3a05</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>af399d984aa42e50a8767844bb17b05ac</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::DataSourceVariable &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, DataSourceVariable &gt; &amp;</type>
       <name>getDataSourceVariables</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>abf89c20c4e529b8681a059aa7becae52</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a61bb87aa075db949d43f41ccfd31a64d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::Method &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, Method &gt; &amp;</type>
       <name>getMethods</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a09f128fa0b3c1864f400aa8fb08c3204</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>ac374d98870f43637cdc5e6cf1d08fbb3</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Object</type>
       <name>makeFrom</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a895066a1a50595d5b668627111a3bb4c</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a873b04c93cea1b562a06a377f1810a61</anchor>
       <arglist>(const ObjectType &amp;otype)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a1b139bbef8ddf396c592aa50024ee835</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a52b9cfdda90c402c4e8f85a7a0c67ae1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>aa3acefd9587e6669ab311f8d11f8c94b</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a9042e0fe834267d93153f299d77afd9c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a82d108ca995445032d4cae85906b4771</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a590f1230618cccc3fb923294a5911e5c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d8/d9b/classrm_1_1Object.html</anchorfile>
-      <anchor>a38ff99ec5033cc00b4ea87570cefe493</anchor>
+      <anchorfile>d4/d1c/classrm_1_1ua_1_1Object.html</anchorfile>
+      <anchor>a02bf3efbcc8edde53bbeb09f323154a7</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::ObjectType</name>
-    <filename>d4/d40/classrm_1_1ObjectType.html</filename>
+    <name>rm::ua::ObjectType</name>
+    <filename>d2/d36/classrm_1_1ua_1_1ObjectType.html</filename>
     <member kind="function">
       <type></type>
       <name>ObjectType</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>ad7cfb6d5afafc6c8b50c917a6401185d</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>ab7debe5c56998099d487a7eac1dfc020</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>ab6c69d67111b7671940395d27acb383b</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>ad798f2ef40ba9d79c5aa34b685af1b98</anchor>
       <arglist>(const Variable &amp;variable)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a1a95481360dbfe0c8d4984c97ecc957b</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>acfc8fe64ff575f956e592bae2aad1fcf</anchor>
       <arglist>(const DataSourceVariable &amp;dsv)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>af536a18a7f1814d0eced7b30d2b01f25</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a46dd4e4cc67a5310ff3026a19e4cf9de</anchor>
       <arglist>(const Method &amp;method)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>empty</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a4ed4ff3e2410f4d772c664a7cb244404</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>acc5fb9b6dd550a43cabf1e47b0b0f155</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setBase</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a61c9446b49381dddb2ec7277a3f11495</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a6b6e67ed1f43c8c95d6f23b35d59ad74</anchor>
       <arglist>(ObjectType &amp;otype)</arglist>
     </member>
     <member kind="function">
       <type>const ObjectType *</type>
       <name>base</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a50e4f570d7ba65917e9fdb8c4b0fce1b</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>aaba603549efed0f5840f60a31b7feace</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::Variable &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, Variable &gt; &amp;</type>
       <name>getVariables</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a764751494151c9e3207871c4f820ab3a</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a42a81d4b67b66c30b2afbbb586a9632c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::DataSourceVariable &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, DataSourceVariable &gt; &amp;</type>
       <name>getDataSourceVariables</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a08f7b2d5702961f1397f1dec48cf98f0</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a5d19b4eaa0fb447143b3d46741b0079d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const std::unordered_map&lt; std::string, rm::Method &gt; &amp;</type>
+      <type>const std::unordered_map&lt; std::string, Method &gt; &amp;</type>
       <name>getMethods</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a1a1873d46c0ce6bc327e300d47c9ccf4</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a4189279aa10c94ae4ca8795272087e35</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>adc34b6a67ba8b45ffcbe599091e51c17</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>af94628ea32256815fd41a001cdc4383d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a861d5b9d3f3f3c018ec2869d05c6b82c</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>ad5a5be71a3e3e60824a383447986f137</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a1224869089b5fd2740d5ded5740249e7</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>a67c47e76ba91931bd164bb312bac4bfb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d4/d40/classrm_1_1ObjectType.html</anchorfile>
-      <anchor>a31ed7022954d8b57879561007ec36934</anchor>
+      <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
+      <anchor>ad8b2bccd26cbbe8a91c2a1dff3dae01d</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -7418,242 +7566,6 @@
       <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
       <anchor>a55d4a528b133fb7b420ba29726679b4b</anchor>
       <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaClient</name>
-    <filename>da/d69/classrm_1_1OpcuaClient.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaClient</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a1f629c714a13d1e22890f2e6a7a812cc</anchor>
-      <arglist>(std::string_view address, const UserConfig &amp;user={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OpcuaClient</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a7c0e12578166470afa566f68b75583a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator OpcuaClientView</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>aa45a42f69059cf23a6b3f1600dafe780</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>ok</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>ad0c8c690d9e701c42496a2a94b8cc618</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spin</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>ab315f0dab101e2c7f39f05a9a41dde2a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spinOnce</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a66907cdbe567354b43f266b5f050fb40</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>shutdown</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a66edd726f0439eebba1cbb676011ba4e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInClient</type>
-      <name>node</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a3378175819e56bd7bae04ad16ab3ba36</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>ab400c84d98743701c2af49f5d40e8430</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>ade0d4f8bc494c524cd834a740ece6bae</anchor>
-      <arglist>(const NodeId &amp;node) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a6e81f0a9fd80a5eca446b9811bd5df62</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>call</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>af5c12d18aee68b03c47cd08dc4309c67</anchor>
-      <arglist>(const NodeId &amp;obj_nd, std::string_view name, const Variables &amp;inputs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>callx</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a6065cf3b44baeb8f7ae271b42d3324f7</anchor>
-      <arglist>(const NodeId &amp;obj_nd, std::string_view name, Args &amp;&amp;...args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>call</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>adf3e90fb4fa675d557caab443d2785bd</anchor>
-      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>callx</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a2ee1d2cc44b98a819d02687ec1664904</anchor>
-      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>findcall</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>acbd92831fce6552fca096ae47da7dd65</anchor>
-      <arglist>(std::string_view name, const Variables &amp;inputs) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; bool, Variables &gt;</type>
-      <name>findcallx</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a5d263eadcd9bb8a1f0bf4ea7e54ea7e5</anchor>
-      <arglist>(std::string_view name, Args &amp;&amp;...args) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addViewNode</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a7dcbbf51799b30542ab304ee00de3ea9</anchor>
-      <arglist>(const View &amp;view) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>monitor</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a089bc81300500543c1f657610e2185ec</anchor>
-      <arglist>(NodeId nd, DataChangeNotificationCallback on_change, uint32_t q_size=10)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>monitor</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>af08673ae641f9d071af8097a1c2393eb</anchor>
-      <arglist>(const std::vector&lt; std::string &gt; &amp;names, EventNotificationCallback on_event)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>remove</name>
-      <anchorfile>da/d69/classrm_1_1OpcuaClient.html</anchorfile>
-      <anchor>a0a7948e960fa4dfa1da15363716ad52a</anchor>
-      <arglist>(NodeId nd)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaClientTimer</name>
-    <filename>d6/d3d/classrm_1_1OpcuaClientTimer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaClientTimer</name>
-      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
-      <anchor>a04935444265324ad3b0df3c2d0135978</anchor>
-      <arglist>(OpcuaClientView cv, double period, std::function&lt; void()&gt; callback)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OpcuaClientTimer</name>
-      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
-      <anchor>a48c6c8b8528feeac636eef348f37d2c6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>d6/d3d/classrm_1_1OpcuaClientTimer.html</anchorfile>
-      <anchor>adaff98ee4c0918b39b99b1505d4fd88c</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaClientView</name>
-    <filename>dd/d62/classrm_1_1OpcuaClientView.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaClientView</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a6cfeca1523f27d616ff3ee08d8665423</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaClientView</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a5319bab4458a1bb8858c3ff1a1ff463a</anchor>
-      <arglist>(UA_Client *client)</arglist>
-    </member>
-    <member kind="function">
-      <type>OpcuaClientView &amp;</type>
-      <name>operator=</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a9853d95c65d2414eccee8018d9fa77a8</anchor>
-      <arglist>(UA_Client *const client)</arglist>
-    </member>
-    <member kind="function">
-      <type>UA_Client *</type>
-      <name>get</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a9e38cb421e93a3f242d7781fa621fc1f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInClient</type>
-      <name>node</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>acf9d388c1c64162f6933dda522856d01</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a571252596776f8c9362c816d63361092</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a2af36406517675b59a356d27a0c36e05</anchor>
-      <arglist>(const NodeId &amp;nd) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>dd/d62/classrm_1_1OpcuaClientView.html</anchorfile>
-      <anchor>a51fc2b5d2e43b81aad1b89415f50c2c8</anchor>
-      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7763,322 +7675,6 @@
       <anchorfile>da/d23/classrm_1_1para_1_1OpcuaParam.html</anchorfile>
       <anchor>ae8a491b134c1de92ac05c0ec5ca0e277</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaPublisher</name>
-    <filename>d5/d42/classrm_1_1OpcuaPublisher.html</filename>
-    <base>rm::OpcuaServer</base>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaPublisher</name>
-      <anchorfile>d5/d42/classrm_1_1OpcuaPublisher.html</anchorfile>
-      <anchor>a227ee9222b862c53bda61baaa27dd477</anchor>
-      <arglist>(std::string_view pub_name, const std::string &amp;addr, uint16_t port=4840U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>publish</name>
-      <anchorfile>d5/d42/classrm_1_1OpcuaPublisher.html</anchorfile>
-      <anchor>a589f2dc0f953adde53b3552c76b34f5a</anchor>
-      <arglist>(const std::vector&lt; PublishedDataSet &gt; &amp;datas, double duration)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaServer</name>
-    <filename>d2/df6/classrm_1_1OpcuaServer.html</filename>
-    <member kind="typedef">
-      <type>std::pair&lt; ValueCallbackBeforeRead, ValueCallbackAfterWrite &gt;</type>
-      <name>ValueCallbackWrapper</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a4d4f463ce7e18b4b753c9354b1f9046a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::pair&lt; DataSourceRead, DataSourceWrite &gt;</type>
-      <name>DataSourceCallbackWrapper</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a4e565582ea758b513c60275926a52eed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaServer</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a5b63156011a0ea01ed32e7743ebc44c0</anchor>
-      <arglist>(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaServer</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a4223dbe50b0d0ee31a02b81b2c5e1763</anchor>
-      <arglist>(UA_StatusCode(*on_config)(UA_Server *), uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator OpcuaServerView</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a9c8d337e03aef4c6d5d5c59a2999f68e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spin</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a4f334519578b2f22e767afd7b879afd9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>spinOnce</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a01db7e955b9d341897dc6669f0cd65b8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>shutdown</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>afa031aba718db9a8f53689b46a7f48e6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OpcuaServer</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a5109a9e0adeda9e505fbb8b7c0d6feda</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInServer</type>
-      <name>node</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a7baa2c706d630c6ff7aabb2b0475d2da</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>ad8fd91e653b99dc0bd8cec7cf8223193</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addVariableTypeNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>af35dbb5fb0624d616a0f316bc1d9438e</anchor>
-      <arglist>(const VariableType &amp;vtype)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addVariableNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a0c71b9e12bd954e42dd1dfd43d13c1a7</anchor>
-      <arglist>(const Variable &amp;val, const NodeId &amp;parent_nd=nodeObjectsFolder) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>addVariableNodeValueCallback</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a0ee93c0eb5c8746f074c0b0a92552072</anchor>
-      <arglist>(NodeId nd, ValueCallbackBeforeRead before_read, ValueCallbackAfterWrite after_write) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addDataSourceVariableNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a6b05e5a05ed096983addee441deb5003</anchor>
-      <arglist>(const DataSourceVariable &amp;val, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a71b2c935cc2e8b93e9a57aec0cc57ac0</anchor>
-      <arglist>(const NodeId &amp;node) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>ae35abb58c8168851f329d9be0f9ff646</anchor>
-      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addMethodNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>ac000111ff10a3aa55351f88b4256a744</anchor>
-      <arglist>(const Method &amp;method, const NodeId &amp;parent_nd=nodeObjectsFolder)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>setMethodNodeCallBack</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a005669fa3c2618035c18c3e61edeba5f</anchor>
-      <arglist>(const NodeId &amp;nd, MethodCallback on_method)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addObjectTypeNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a06f2bc9b6522d0232f2cff1e8cc9d0a4</anchor>
-      <arglist>(const ObjectType &amp;otype)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addObjectNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>aae116bdf93f5c076890e2253c228c33b</anchor>
-      <arglist>(const Object &amp;obj, NodeId parent_nd=nodeObjectsFolder)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addViewNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a066c094e390e404cf8d961c2495a9e4e</anchor>
-      <arglist>(const View &amp;view)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>addEventTypeNode</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a391565145ec77f2083330401347e9f40</anchor>
-      <arglist>(const EventType &amp;etype)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>triggerEvent</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>aa5ef906f9e1883f7fdd56bde53808d35</anchor>
-      <arglist>(const Event &amp;event) const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>UA_Server *</type>
-      <name>_server</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>a1c1131a08a6e0eb69c32bf2c4c1cd807</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>std::atomic_bool</type>
-      <name>_running</name>
-      <anchorfile>d2/df6/classrm_1_1OpcuaServer.html</anchorfile>
-      <anchor>aa8ef97a89068e5e02f20b675dd00cfb2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaServerTimer</name>
-    <filename>de/da7/classrm_1_1OpcuaServerTimer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaServerTimer</name>
-      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
-      <anchor>ae352214fcb7ae38e84182cbeaeb241e5</anchor>
-      <arglist>(OpcuaServerView sv, double period, std::function&lt; void(OpcuaServerView)&gt; callback)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~OpcuaServerTimer</name>
-      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
-      <anchor>a71fa26bfa39844915ef053d41aab7377</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>cancel</name>
-      <anchorfile>de/da7/classrm_1_1OpcuaServerTimer.html</anchorfile>
-      <anchor>acb62581e6ec783f75beca7945a634791</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaServerView</name>
-    <filename>db/d04/classrm_1_1OpcuaServerView.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaServerView</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>ac9837766317c790836dfbd9015b5cc39</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaServerView</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>a49c32a681ba2c6f9d7c453fc2deb0e4b</anchor>
-      <arglist>(UA_Server *server)</arglist>
-    </member>
-    <member kind="function">
-      <type>OpcuaServerView &amp;</type>
-      <name>operator=</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>ae4f27d445d89b086cfc58d5cf7241b9a</anchor>
-      <arglist>(UA_Server *const server)</arglist>
-    </member>
-    <member kind="function">
-      <type>UA_Server *</type>
-      <name>get</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>a41008ff9e41fb05da569224a62a4b7a0</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>FindNodeInServer</type>
-      <name>node</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>a1939fdeeb15b8b61726cf1349bd50ee9</anchor>
-      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>find</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>a176d065b58f5de275c6672e1366ae3ca</anchor>
-      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>Variable</type>
-      <name>read</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>ab15781169a1ce953b589f6ebf35eaeeb</anchor>
-      <arglist>(const NodeId &amp;nd) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>write</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>ab15b26d867c03dbb682f5fd298f0ded8</anchor>
-      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>triggerEvent</name>
-      <anchorfile>db/d04/classrm_1_1OpcuaServerView.html</anchorfile>
-      <anchor>ab1fa10327aa7ec58418906162c888fa4</anchor>
-      <arglist>(const Event &amp;event) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>rm::OpcuaSubscriber</name>
-    <filename>d1/d04/classrm_1_1OpcuaSubscriber.html</filename>
-    <base>rm::OpcuaServer</base>
-    <member kind="function">
-      <type></type>
-      <name>OpcuaSubscriber</name>
-      <anchorfile>d1/d04/classrm_1_1OpcuaSubscriber.html</anchorfile>
-      <anchor>adc94138e0d29ce12decd674822b28faa</anchor>
-      <arglist>(std::string_view sub_name, const std::string &amp;addr, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; NodeId &gt;</type>
-      <name>subscribe</name>
-      <anchorfile>d1/d04/classrm_1_1OpcuaSubscriber.html</anchorfile>
-      <anchor>ae2a6a38453bb391ef7dee59efe0ae826</anchor>
-      <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9261,20 +8857,20 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::PublishedDataSet</name>
-    <filename>d6/d4a/structrm_1_1PublishedDataSet.html</filename>
+    <name>rm::ua::PublishedDataSet</name>
+    <filename>d5/da9/structrm_1_1ua_1_1PublishedDataSet.html</filename>
     <member kind="variable">
       <type>std::string</type>
       <name>name</name>
-      <anchorfile>d6/d4a/structrm_1_1PublishedDataSet.html</anchorfile>
-      <anchor>a1391031ecb970e141ef6b11ea3e399e4</anchor>
+      <anchorfile>d5/da9/structrm_1_1ua_1_1PublishedDataSet.html</anchorfile>
+      <anchor>aab03419eaf0e61fabbfbdbd77a25a47b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>NodeId</type>
       <name>node_id</name>
-      <anchorfile>d6/d4a/structrm_1_1PublishedDataSet.html</anchorfile>
-      <anchor>ad58c956b9694d028edadec45201a6e62</anchor>
+      <anchorfile>d5/da9/structrm_1_1ua_1_1PublishedDataSet.html</anchorfile>
+      <anchor>a44089041e3b383a31651f02c31da1934</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -9335,6 +8931,25 @@
       <anchorfile>d8/dff/classrm_1_1lpss_1_1Publisher.html</anchorfile>
       <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::Publisher</name>
+    <filename>d9/d4d/classrm_1_1ua_1_1Publisher.html</filename>
+    <base>rm::ua::Server</base>
+    <member kind="function">
+      <type></type>
+      <name>Publisher</name>
+      <anchorfile>d9/d4d/classrm_1_1ua_1_1Publisher.html</anchorfile>
+      <anchor>a1c0d34c3addd51ac487a3238507d77b4</anchor>
+      <arglist>(std::string_view pub_name, const std::string &amp;addr, uint16_t port=4840U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>publish</name>
+      <anchorfile>d9/d4d/classrm_1_1ua_1_1Publisher.html</anchorfile>
+      <anchor>a5dc3d1308276813034602d421aa7c113</anchor>
+      <arglist>(const std::vector&lt; PublishedDataSet &gt; &amp;datas, double duration)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11494,6 +11109,284 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::ua::Server</name>
+    <filename>dc/d95/classrm_1_1ua_1_1Server.html</filename>
+    <member kind="typedef">
+      <type>std::pair&lt; ValueCallbackBeforeRead, ValueCallbackAfterWrite &gt;</type>
+      <name>ValueCallbackWrapper</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a378f66e6696f21e06b46acb6e5f1eb63</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::pair&lt; DataSourceRead, DataSourceWrite &gt;</type>
+      <name>DataSourceCallbackWrapper</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>af63904af9e5e627041a58b0dedb27e01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ae726911452a6e7f7b72a063d0fd330fc</anchor>
+      <arglist>(uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Server</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ae6dc80399c42a9ee4e4a7c79e9f52b2e</anchor>
+      <arglist>(UA_StatusCode(*on_config)(UA_Server *), uint16_t port, std::string_view name={}, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator ServerView</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>abe5360eec3155bab387b252f7aefd07d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spin</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a79134875155dbda117509465384b1204</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>spinOnce</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a20d62bdd180b795dc038c6d482148787</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>shutdown</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>aa02c5db5fdd508c3e58448836a665785</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Server</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>aeb3b860bb5fd52be1bc977a9fabbc135</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInServer</type>
+      <name>node</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a341221d344021237c671ed7f2438eb9b</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a0f2dd77fe73fd3cd38cfef9ea92cba92</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addVariableTypeNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ac7aec2ac1df29e6abb6dfab0ee426927</anchor>
+      <arglist>(const VariableType &amp;vtype)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addVariableNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ac05d96692676ced14415c7c4f7a05281</anchor>
+      <arglist>(const Variable &amp;val, const NodeId &amp;parent_nd=nodeObjectsFolder) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>addVariableNodeValueCallback</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ac45f63a67825454e9935cc05f8fe4f30</anchor>
+      <arglist>(NodeId nd, ValueCallbackBeforeRead before_read, ValueCallbackAfterWrite after_write) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addDataSourceVariableNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a73b378ad8001a77cbc633962d39c5225</anchor>
+      <arglist>(const DataSourceVariable &amp;val, NodeId parent_nd=nodeObjectsFolder) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a9ea843005c45352e9f33212e262b559a</anchor>
+      <arglist>(const NodeId &amp;node) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a5007fef6141fba27cf1268d632a595d9</anchor>
+      <arglist>(const NodeId &amp;node, const Variable &amp;val)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addMethodNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>acf017d7a2b0763fe243f80dc71b5f17d</anchor>
+      <arglist>(const Method &amp;method, const NodeId &amp;parent_nd=nodeObjectsFolder)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>setMethodNodeCallBack</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ad0133cf51e303bfbb07b8a715bc7a2ea</anchor>
+      <arglist>(const NodeId &amp;nd, MethodCallback on_method)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addObjectTypeNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a2d0fc7e3fbd1873d31eb6d6d8cb2f3e0</anchor>
+      <arglist>(const ObjectType &amp;otype)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addObjectNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a652dbaa633ae8d73092007f6f344ec9f</anchor>
+      <arglist>(const Object &amp;obj, NodeId parent_nd=nodeObjectsFolder)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addViewNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a960510f1b614701e35dc8279eb507d9a</anchor>
+      <arglist>(const View &amp;view)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>addEventTypeNode</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>ab51a892b5131a612c144d6cfcf331d89</anchor>
+      <arglist>(const EventType &amp;etype)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>triggerEvent</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a380af1cef95e108a3e4eb208d34014a9</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>UA_Server *</type>
+      <name>_server</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>a71b2ed6df0fd29613451a2e11eee0c80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::atomic_bool</type>
+      <name>_running</name>
+      <anchorfile>dc/d95/classrm_1_1ua_1_1Server.html</anchorfile>
+      <anchor>aa522cda96a78fc5be156fcb63849cd89</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::ServerTimer</name>
+    <filename>d2/d29/classrm_1_1ua_1_1ServerTimer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ServerTimer</name>
+      <anchorfile>d2/d29/classrm_1_1ua_1_1ServerTimer.html</anchorfile>
+      <anchor>a1f977c0cdf4978e865585c12e5018ed7</anchor>
+      <arglist>(ServerView sv, double period, std::function&lt; void(ServerView)&gt; callback)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ServerTimer</name>
+      <anchorfile>d2/d29/classrm_1_1ua_1_1ServerTimer.html</anchorfile>
+      <anchor>ac28831d1e685e1292e64a1331e651ba8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d2/d29/classrm_1_1ua_1_1ServerTimer.html</anchorfile>
+      <anchor>a936dc9503c82895c25455abecf80ac55</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::ServerView</name>
+    <filename>dd/d11/classrm_1_1ua_1_1ServerView.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ServerView</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a983802e59c5db667456531795796150a</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ServerView</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>ac93a2c504279958ce55110542ff46eb8</anchor>
+      <arglist>(UA_Server *server)</arglist>
+    </member>
+    <member kind="function">
+      <type>ServerView &amp;</type>
+      <name>operator=</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>af212ada777965003837d35d7243eb3ba</anchor>
+      <arglist>(UA_Server *const server)</arglist>
+    </member>
+    <member kind="function">
+      <type>UA_Server *</type>
+      <name>get</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a18685a147ed9dc0d879ee5d46e41d282</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>FindNodeInServer</type>
+      <name>node</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a85652121920fa282160ef293ab17f376</anchor>
+      <arglist>(std::string_view browse_name, uint16_t ns=1U) const</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>find</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a8f14a2287ce54b59069359fd073e80d4</anchor>
+      <arglist>(std::string_view browse_path, const NodeId &amp;src_nd=nodeObjectsFolder) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Variable</type>
+      <name>read</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a7e3f219d57ae67da75ded2da56b00da1</anchor>
+      <arglist>(const NodeId &amp;nd) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>aaf396420c93410887677e5f486138491</anchor>
+      <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>triggerEvent</name>
+      <anchorfile>dd/d11/classrm_1_1ua_1_1ServerView.html</anchorfile>
+      <anchor>a816b1d6939866036d54f30b29d9f3b05</anchor>
+      <arglist>(const Event &amp;event) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::SHMBase</name>
     <filename>d5/d8b/classrm_1_1SHMBase.html</filename>
     <member kind="function">
@@ -12003,6 +11896,25 @@
       <anchorfile>dd/db5/classrm_1_1lpss_1_1Subscriber.html</anchorfile>
       <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ua::Subscriber</name>
+    <filename>d8/d2f/classrm_1_1ua_1_1Subscriber.html</filename>
+    <base>rm::ua::Server</base>
+    <member kind="function">
+      <type></type>
+      <name>Subscriber</name>
+      <anchorfile>d8/d2f/classrm_1_1ua_1_1Subscriber.html</anchorfile>
+      <anchor>a5ecf94cf820434d2cdc47f2fc1750b1b</anchor>
+      <arglist>(std::string_view sub_name, const std::string &amp;addr, uint16_t port=4850U, const std::vector&lt; UserConfig &gt; &amp;users={})</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; NodeId &gt;</type>
+      <name>subscribe</name>
+      <anchorfile>d8/d2f/classrm_1_1ua_1_1Subscriber.html</anchorfile>
+      <anchor>a1159518029687068359fae865abdb552</anchor>
+      <arglist>(const std::string &amp;pub_name, const std::vector&lt; FieldMetaData &gt; &amp;fields)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13372,308 +13284,308 @@
     </member>
   </compound>
   <compound kind="struct">
-    <name>rm::UserConfig</name>
-    <filename>d4/d09/structrm_1_1UserConfig.html</filename>
+    <name>rm::ua::UserConfig</name>
+    <filename>d4/da9/structrm_1_1ua_1_1UserConfig.html</filename>
     <member kind="variable">
       <type>std::string</type>
       <name>id</name>
-      <anchorfile>d4/d09/structrm_1_1UserConfig.html</anchorfile>
-      <anchor>a5774f898dc76a675cbe3c735b0c0ba41</anchor>
+      <anchorfile>d4/da9/structrm_1_1ua_1_1UserConfig.html</anchorfile>
+      <anchor>af6340a4b52cc03ea781fa1c564a98616</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>passwd</name>
-      <anchorfile>d4/d09/structrm_1_1UserConfig.html</anchorfile>
-      <anchor>a02d615417c5e961f20eff4b3e75f14d7</anchor>
+      <anchorfile>d4/da9/structrm_1_1ua_1_1UserConfig.html</anchorfile>
+      <anchor>a84bf915066f8070649b9cb49d6200f45</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::Variable</name>
-    <filename>df/db8/classrm_1_1Variable.html</filename>
+    <name>rm::ua::Variable</name>
+    <filename>dd/db6/classrm_1_1ua_1_1Variable.html</filename>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a9b60646a74babdf3b8a9799644e1aee2</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a728d6665a93c0b8e7c486bcc9fa4af71</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>af4dfb3b9f12c5126df2395b6bee8131b</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a732d76cf511a071717e4405aa01e4726</anchor>
       <arglist>(Tp val)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a1724336df06870d6f6279e7e78ef6d4b</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a7a2a8031be01803b21d818adbf5fedd6</anchor>
       <arglist>(const std::string &amp;str)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>acbab2de16839b2ae68133882182281b3</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a46ff133df382f23c6989787f224ea6e1</anchor>
       <arglist>(const char(&amp;str)[N])</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a1f68758fe25bbb53701374c2d8b936bb</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a6062129a1b6205c26e98eaa2a3e6885d</anchor>
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Variable</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>af5d12d868b321cf4cfa6241ad6c190ec</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>ac3b1119cfffad08b36471a3d3c356dd8</anchor>
       <arglist>(std::initializer_list&lt; Tp &gt; il)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator==</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>aa90cfcfc195bed939c892126c4313784</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a77d622352b82a8721c818d881df0569f</anchor>
       <arglist>(const Variable &amp;val) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>operator!=</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a06a8a118893a31ca338cab822313e702</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>ae6deae7792da7eb96009bd4f5b36804e</anchor>
       <arglist>(const Variable &amp;val) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>empty</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>aa0889ebfd1c820ee59697647e4c64dd7</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a5892edcf0b1a81257e0c0a3cdd73b60c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>const auto &amp;</type>
       <name>data</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a23d53500e1974b2df94553848310fe55</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a3a7f79df8aa9d5c05e33cc957a24d260</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Tp</type>
       <name>cast</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>ab040aacf58e371cc4ed827a1512b75c1</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a69252734d04ecdd14d132935e9f4c290</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>operator Tp</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>af3a9808b8745e66415df75fce31a6b0f</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a7e9ac866b8ca8dbfba446d1648ef4d0e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>operator std::string</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a9f13c954a01ee4e0fc21a515d17d8b58</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a8caf1acffa80b358685149b2f31bdca8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>operator std::vector&lt; Tp &gt;</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>ab9d4f597392b47351ace7ac30e6abfc0</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a0eb9a7961d831a59a02f6a56ae70ffd0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>const VariableType</type>
       <name>type</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a71844415e26655a2105444dd4edde5c8</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a6c9175b6fcd06def9db67a9446690ae5</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>DataType</type>
       <name>getDataType</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a546c2a7e0b7c09cfcc567e6446fd7731</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a65871069e922d3aaffb24dc440094393</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>size</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>af99b29ffd2e2eb45b9ec32855487dae0</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a1ba7bee50e21fbf3e47d0739c0db034f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Variable</type>
       <name>makeFrom</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a3509846d87c1fda39422d5c54bbdf182</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a9f70f6069a50414bdcc89134bbc30988</anchor>
       <arglist>(const VariableType &amp;vtype)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Tp</type>
       <name>cast</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a3c9c5cc7059a9da1067124d67c2accba</anchor>
-      <arglist>(const rm::Variable &amp;val)</arglist>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>ae3eb9951b17cd9ebc4d4fe7fac25ae21</anchor>
+      <arglist>(const Variable &amp;val)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a21d9b58c3d9f82fbc855cfcc9dbbee73</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a2444cac93e76689c092ba2d1554956c1</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>a3d20725d0f1a56474ff7bf90f57e7c8d</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a3b950480c81cdc793171fa6f1419abd9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>ad3099ea3e54575de460b272a1c496203</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a0e63f663e429ec91b1c00fdd76069c00</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>ae2192d1434ef12e7db2be77b8d616899</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>af86b2074a982b8b4b3725b759020b37a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>uint8_t</type>
       <name>access_level</name>
-      <anchorfile>df/db8/classrm_1_1Variable.html</anchorfile>
-      <anchor>acc5f4dfd374094106de59bffb51e1945</anchor>
+      <anchorfile>dd/db6/classrm_1_1ua_1_1Variable.html</anchorfile>
+      <anchor>a9b9d1974d5e94f1fa3599d87613f08ac</anchor>
       <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::VariableType</name>
-    <filename>d9/de2/classrm_1_1VariableType.html</filename>
+    <name>rm::ua::VariableType</name>
+    <filename>de/de3/classrm_1_1ua_1_1VariableType.html</filename>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a6f2685c83cc79db18577ee22dd5d2b41</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>af8ccaafb5619dddcefe8824b784c2c95</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a0b67afadfcb27542b445d890d54e59d3</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a7d18a888851c14a206022f5fe2d2fea7</anchor>
       <arglist>(Tp val)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a22aded241845705ddfc74c577ece25dc</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>ae4d956f1ae429009c82d9e313b10a7df</anchor>
       <arglist>(const std::string &amp;str)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ac00e33232d05fdbc552d3022c29430a3</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>acbba8383f9ac3f7245f3f7944c3f939d</anchor>
       <arglist>(const char(&amp;str)[N])</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a770f26b567eae38c03c059867a060571</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>af15c6ef9c1826d0a9678184fd52fe3d3</anchor>
       <arglist>(const std::vector&lt; Tp &gt; &amp;arr)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>VariableType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a7f57c4d3369e645c48e024011f20cdf2</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a7f68df6a4c8259f81c08163e9228da06</anchor>
       <arglist>(std::initializer_list&lt; Tp &gt; il)</arglist>
     </member>
     <member kind="function">
       <type>const auto &amp;</type>
       <name>data</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a1bf9e6c71e94738be743015e139c0a0a</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>ac6e189b6ffee3d735b41dd6ef4291529</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Tp</type>
       <name>cast</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a99d7d1314a397cfec592811395ad1902</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a2076a6b5fa821a4b3d6fbf5cda51e45a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>DataType</type>
       <name>getDataType</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a4e05626e9612fe964631a99b3a2121e9</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a58c3b1eb16235705274fb58c62c35e82</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>constexpr bool</type>
       <name>empty</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ad0321ce87a6fbf18b000e4112e3153a6</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a8c74e6f1d176f2e7ac6903ef0d3e356d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>size</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a1b9aa8aaf7a7c186d7a1c9bef59a241f</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>af1543a1e7ad66176372d970fd3ea6388</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Tp</type>
       <name>cast</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a8455c2717d845a717614179d82d22c3e</anchor>
-      <arglist>(const rm::VariableType &amp;val)</arglist>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>ab8ec4313c3770b9e566075634070a544</anchor>
+      <arglist>(const VariableType &amp;val)</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a618b61e5c6ca5b45110e5bc68c2a7374</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a9ac3ce8a75caf467b5d1ebfa1d9b3f77</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>a8e97102cd9b91f2b8d9aff17145d239f</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a634102e65b63a7a4ee7cdc47aab8fe71</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ae52fdb2b19222f21bd9b0fb33851fd03</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>a51e1227570bbfe777f7ea95771f726f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d9/de2/classrm_1_1VariableType.html</anchorfile>
-      <anchor>ac0deffd48f3ae92d9dd2d25f51ec0749</anchor>
+      <anchorfile>de/de3/classrm_1_1ua_1_1VariableType.html</anchorfile>
+      <anchor>aa28c8f2fdbc26bce2bc6c49c83166fcf</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -13738,55 +13650,55 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>rm::View</name>
-    <filename>d2/de9/classrm_1_1View.html</filename>
+    <name>rm::ua::View</name>
+    <filename>d9/dbb/classrm_1_1ua_1_1View.html</filename>
     <member kind="function">
       <type></type>
       <name>View</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>ac31b479a1ec0f908b7cb52a8b6f3da66</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>ac199ec096f0d4e93ed56cb2822b8e9f6</anchor>
       <arglist>()=default</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>add</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a10be1bf90dbbb8747ee8dd8fe60bc66c</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>ab387eb42513459cc83a8ed5cb732fc15</anchor>
       <arglist>(NodeId_ &amp;&amp;...nds)</arglist>
     </member>
     <member kind="function">
       <type>const std::vector&lt; NodeId &gt; &amp;</type>
       <name>data</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>aa722e98ca82adf9ba970868a77e123d2</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>a3fdfcb86f9c8e6758483b8113c2882ab</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="variable">
       <type>uint16_t</type>
       <name>ns</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a7fe9f4ba1c9ae866b36910aba2568f7a</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>a6b20336f0ddaf358323d9d4bf779a5a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>browse_name</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a9862d42229f1aa3012e38dd5123bbfa7</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>aa67954dd374415e698881e3f19497e84</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>display_name</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a1bd7b506132e74762d9b7f30e12a87bb</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>a96af52dfaf315c864c8a91a8ded7f97e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>std::string</type>
       <name>description</name>
-      <anchorfile>d2/de9/classrm_1_1View.html</anchorfile>
-      <anchor>a4dc6a4eef690e304f864b3485e502cb9</anchor>
+      <anchorfile>d9/dbb/classrm_1_1ua_1_1View.html</anchorfile>
+      <anchor>a13108878de73ca2d2c252ec68e4dd87b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -14079,7 +13991,7 @@
     <namespace>rm::lpss</namespace>
     <namespace>rm::cvmsg</namespace>
     <namespace>rm::msg</namespace>
-    <namespace>rm::helper</namespace>
+    <namespace>rm::ua</namespace>
     <class kind="class">rm::RaHeap</class>
     <class kind="class">rm::UnionFind</class>
     <class kind="class">rm::KalmanFilterStaticDatas</class>
@@ -14139,29 +14051,6 @@
     <class kind="struct">rm::PostprocessOptions</class>
     <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::ClassificationNet</class>
-    <class kind="class">rm::OpcuaClientView</class>
-    <class kind="class">rm::OpcuaClient</class>
-    <class kind="class">rm::OpcuaClientTimer</class>
-    <class kind="class">rm::EventType</class>
-    <class kind="class">rm::Event</class>
-    <class kind="struct">rm::Argument</class>
-    <class kind="class">rm::Method</class>
-    <class kind="class">rm::ObjectType</class>
-    <class kind="class">rm::Object</class>
-    <class kind="struct">rm::PublishedDataSet</class>
-    <class kind="class">rm::OpcuaPublisher</class>
-    <class kind="class">rm::OpcuaServerView</class>
-    <class kind="class">rm::OpcuaServer</class>
-    <class kind="class">rm::OpcuaServerTimer</class>
-    <class kind="struct">rm::FieldMetaData</class>
-    <class kind="class">rm::OpcuaSubscriber</class>
-    <class kind="class">rm::NodeId</class>
-    <class kind="class">rm::DataType</class>
-    <class kind="struct">rm::UserConfig</class>
-    <class kind="class">rm::VariableType</class>
-    <class kind="class">rm::Variable</class>
-    <class kind="struct">rm::DataSourceVariable</class>
-    <class kind="class">rm::View</class>
     <class kind="class">rm::StateInfo</class>
     <class kind="class">rm::Anchor</class>
     <class kind="class">rm::feature</class>
@@ -14592,76 +14481,6 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(OpcuaClientView, const Variable &amp;)&gt;</type>
-      <name>DataChangeNotificationCallback</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0b1b85ed940dc23f2d05a6e0ee16a669</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(OpcuaClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
-      <name>EventNotificationCallback</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga94446d35d4b86d5e8dfe1aaf1c940f3f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(const NodeId &amp;, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
-      <name>MethodCallback</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1cd26e7eae712946697a4524dd2a243a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>ValueCallbackBeforeRead</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga20f474d3b49008847c901c4a87a35653</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>ValueCallbackAfterWrite</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab27db81896788eb00792aa9eb57fb716</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
-      <name>FindNodeInServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
-      <name>FindNodeInClient</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::vector&lt; Variable &gt;</type>
-      <name>Variables</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga76910ab7d5d3a5e2f75d0593a97bf61d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; Variable(const NodeId &amp;)&gt;</type>
-      <name>DataSourceRead</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga54e4a1eb9a1457b075f3b03b60e4e8f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>std::function&lt; void(const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>DataSourceWrite</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>std::variant&lt; double, std::string &gt;</type>
       <name>StateType</name>
       <anchorfile>d6/d59/group__types.html</anchorfile>
@@ -14964,25 +14783,6 @@
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">CUDA</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">TensorRT</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">OpenVINO</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>AccessLevel</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2aed8fbfc8bf41bec5e62c139b3ce7c2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VARIABLE_READ</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>VARIABLE_WRITE</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0</anchor>
-      <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -15491,20 +15291,6 @@
       <arglist>(std::istream &amp;in, std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt; &gt; &gt; &amp;corners)</arglist>
     </member>
     <member kind="function">
-      <type>NodeId</type>
-      <name>operator|</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad4a5bb978e87fa6230034d85ff23b907</anchor>
-      <arglist>(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
-    </member>
-    <member kind="function">
-      <type>NodeId</type>
-      <name>operator|</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac9cd15abdd9c0687cee73ce332008c8d</anchor>
-      <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
-    </member>
-    <member kind="function">
       <type>const char *</type>
       <name>to_string</name>
       <anchorfile>db/d22/group__combo__armor.html</anchorfile>
@@ -15579,300 +15365,6 @@
       <name>INVALID_SOCKET_FD</name>
       <anchorfile>d6/dd4/group__io__net.html</anchorfile>
       <anchor>ga41eb5b8b262dfe2dd792a2006db325ec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0aa3dc79e21e5864e6c0c4920f2d3ac8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac4928e57bfaad7c6e61e1bd9a50c1661</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaed35362315250c872d3b20b5be2324e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf0682fe61922c30f2cd2467c1cbac5fc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpUInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga69ecf8f69563a21ae4304487b9860fd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga70f36ce12e26a1f938b1ab6cc5622b25</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpUInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0dcede428b3142d6d0ec6e6c7241c683</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga173164fdb1f30d4181b53fa5eef00967</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpUInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1711e5e2d36c8484a2f31ef9df48f4f5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga312f00fffb497fd081c6f6b5559b4dee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38791e6ffebfaf02420a994ac63d5e0d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>tpString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga687e8a0cd6863fc9dc21c1476a4e2b04</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeBoolean</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga74ff362aa8f265eb565478c8e6fce449</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaee6f5415f005c8056780dbeab9dcc685</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeByte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1ce7f455abb437218c891ae65e2c8545</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad26b685b2a4ccb93e230f29ec42bef84</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeUInt16</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga48744103f6b34e0afb4f8cf564783d81</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga508ff6f83ad7bdcf59e82c19c2bf9d83</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeUInt32</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaa3e1901c73cf5fa68fa981ec5c96a362</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9d88cd00e97465c906f59ee223fd4e3d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeUInt64</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga81d9251e980a66b5565d777ffd7a5710</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeFloat</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0a1845e212b5afd2b38e710f3f99a80c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeDouble</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga8ce89955d085b496b9ce5449b3d6cce3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeString</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0f0b5963f6852d7735ab681cf635a851</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeDatetime</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga34ee624e09f9381b3f2a75064f53b504</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeObjectsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga59abb0e45d2cc659ab5bc9ead635542f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga79addd3e3b2cd021f7b2078f43422979</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeViewsFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2bd8906836ab98507a01f5f3de6399c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeObjectTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac56e6f9a7f82eb16240fdad927cd9e00</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeVariableTypesFolder</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga87897a4849e1c6769275f1b5b0cd8108</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeServer</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaaa270e93ec9a2b5ec25b3ab74a98d917</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeFolderType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga35770258139b971658a1ed6eb8fb9949</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseObjectType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf4eb55ff544f5cabdb0c14e9da1497c4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseEventType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad2da849b97b00920b6b0ec4124a44280</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeBaseDataVariableType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0230dc0fe786dc983979d2eec0dad230</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodePropertyType</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1e0d101df3b941ff0b124c704ab061be</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeOrganizes</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga07d1fee271f3e82a686d86a72e431beb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeHasTypeDefinition</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga16859c73748bb7c4f5324aac1ff17e2b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeHasComponent</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad8fdc5679562a74e79aaf2d7df973592</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeHasProperty</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0bd0dffff460875f090da59b6ed5e2ae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeHasSubtype</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gada4d0d89390905f45dd27347443cfcae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr NodeId</type>
-      <name>nodeHasModellingRule</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaeeb7345902aae7d64f97a6dfdafc0387</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16044,31 +15536,6 @@
       <anchorfile>d7/d8c/namespacerm_1_1cvmsg.html</anchorfile>
       <anchor>aa7d005b7903c0339feec41fe8dec0df1</anchor>
       <arglist>(cv::Mat img, uint8_t encoding)</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>rm::helper</name>
-    <filename>de/d53/namespacerm_1_1helper.html</filename>
-    <member kind="function">
-      <type>constexpr char *</type>
-      <name>zh_CN</name>
-      <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>ad8717a113b0b3350ca05b5ed121ad07b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr char *</type>
-      <name>en_US</name>
-      <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>a4d4519ceccc548819ed27d34d2487684</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>char *</type>
-      <name>to_char</name>
-      <anchorfile>de/d53/namespacerm_1_1helper.html</anchorfile>
-      <anchor>ad99b14de423561318fb1871889bbb977</anchor>
-      <arglist>(std::string_view str)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -16508,7 +15975,6 @@
     <filename>d4/d15/namespacerm_1_1para.html</filename>
     <class kind="class">rm::para::AlgorithmParam</class>
     <class kind="class">rm::para::CameraParam</class>
-    <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OptCameraParam</class>
@@ -16565,13 +16031,6 @@
       <name>camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga920ea1f18537e54423f9f6c0ff586b55</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>GalaxyCameraParam</type>
-      <name>galaxy_camera_param</name>
-      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
-      <anchor>gaa46552e1dce5ace4c0d0196a5e3f8b6c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -16890,6 +16349,456 @@
       <name>upper</name>
       <anchorfile>d0/d17/group__core__str.html</anchorfile>
       <anchor>ga603f0fec4d9dc80c6be715ef36fa6a9a</anchor>
+      <arglist>(std::string_view str)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ua</name>
+    <filename>d7/d9e/namespacerm_1_1ua.html</filename>
+    <namespace>rm::ua::helper</namespace>
+    <class kind="class">rm::ua::ClientView</class>
+    <class kind="class">rm::ua::Client</class>
+    <class kind="class">rm::ua::ClientTimer</class>
+    <class kind="class">rm::ua::EventType</class>
+    <class kind="class">rm::ua::Event</class>
+    <class kind="struct">rm::ua::Argument</class>
+    <class kind="class">rm::ua::Method</class>
+    <class kind="class">rm::ua::ObjectType</class>
+    <class kind="class">rm::ua::Object</class>
+    <class kind="struct">rm::ua::PublishedDataSet</class>
+    <class kind="class">rm::ua::Publisher</class>
+    <class kind="class">rm::ua::ServerView</class>
+    <class kind="class">rm::ua::Server</class>
+    <class kind="class">rm::ua::ServerTimer</class>
+    <class kind="struct">rm::ua::FieldMetaData</class>
+    <class kind="class">rm::ua::Subscriber</class>
+    <class kind="class">rm::ua::NodeId</class>
+    <class kind="class">rm::ua::DataType</class>
+    <class kind="struct">rm::ua::UserConfig</class>
+    <class kind="class">rm::ua::VariableType</class>
+    <class kind="class">rm::ua::Variable</class>
+    <class kind="struct">rm::ua::DataSourceVariable</class>
+    <class kind="class">rm::ua::View</class>
+    <member kind="typedef">
+      <type>std::function&lt; void(ClientView, const Variable &amp;)&gt;</type>
+      <name>DataChangeNotificationCallback</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga071c1add99ff2da6b8ee10b0492b6f19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(ClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <name>EventNotificationCallback</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga9dfadd534d3ecfab0ec15f8cdc313bd1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(const NodeId &amp;, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <name>MethodCallback</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga4a65fd5dfd475e3b7da7d32b6e9c63a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>ValueCallbackBeforeRead</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga04b86768ee2987e861aefa8a6a9024eb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>ValueCallbackAfterWrite</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf6e9edc983d0fd84ab4c93c85e8edbdd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
+      <name>FindNodeInServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf0938829901bcd765297d7e657977d9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
+      <name>FindNodeInClient</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae6a03810f627bd6b4a8d79300cba7d33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; Variable &gt;</type>
+      <name>Variables</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabcdeea48799a18759cc22d1adbfb41e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; Variable(const NodeId &amp;)&gt;</type>
+      <name>DataSourceRead</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga6b4c036d0c719833d2f4172ad9ff876e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>DataSourceWrite</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf17120512986c7fc3de2104e39f8f046</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>AccessLevel</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gadf7f8344c52a34a03981540224a0ec97</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VARIABLE_READ</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ggadf7f8344c52a34a03981540224a0ec97a00b356f5e15f9984872696594d653aa5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>VARIABLE_WRITE</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ggadf7f8344c52a34a03981540224a0ec97ab8e90e7b9ac4b0363dda057ede0ddc4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga54f66b681598e2c267aafed27c6ff92a</anchor>
+      <arglist>(NodeId origin, FindNodeInServer &amp;&amp;fnis)</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeId</type>
+      <name>operator|</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga04ca77aeb4b135db4ce92effb30a9254</anchor>
+      <arglist>(NodeId origin, FindNodeInClient &amp;&amp;fnic)</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpBoolean</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga76092b9e992af01579dc0da4f38f1725</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae09f41fdda1123d5664834e5143c0d05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad9be94fae53c367af0608562aa2d1a28</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gabd9ae0823fdb372074927d7ae497ffb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga432802de2110c74bdff3273d19a2cee5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga372973a437c90ca832a733523f4aee8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5a300c41c98157837193abbe75fcceac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae951463a182e1555a60fbf8eea7edaec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpUInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf27c1469d1c1ad0d0f135c1438325e9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gafbe635425e9b546e36a40e9c69c1dbca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab7aea85818ff2081b939f40768de9bb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>tpString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5a31983f9b2d8011f83791feeced1940</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBoolean</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga27a7a7842d67a41aff092b7bb6191a3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeSbyte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab347792b9db7c07b8b0a03e66988d833</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeByte</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaab432700f78057d881ff56fc590e5a18</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gafbeef9a86225c5ad87a6201f7788e689</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUInt16</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga648e863ef9a0e166cf9b5642102d37cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaeb61abf48ca32fc62c46c57e0ebe230e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUInt32</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga4d7a41d2a7060f2da5ea9b8282542a34</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab98f6242586d9a83aa8241e4b7d46679</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeUInt64</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga201c17208a725c60061ff46af23c6bbd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeFloat</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaaabcbca2028efb8c38addc1f7bd4e1e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeDouble</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaf4fa88c5f3f42a93ef5ecbe8a62ac140</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaa5607747b1eb4673b159574bb713aa7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeDatetime</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga41c1e7526cce572acfb2efccd443961d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gae5586451b4694390f8be4a90c89c45e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1200ede0906f37e73a4a2a17d729da1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeViewsFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaffb133e4b55c699c26436ab746c0fe60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeObjectTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga34026a48608302ff785474f06de6e38a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeVariableTypesFolder</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga835e6ca3aebc15d8e9c26d15ccd00232</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeServer</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga4a1d4f0f14eaa21d9444cdf319cc3903</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeFolderType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gab162987759fc0ed71afe79aa9e1f222d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseObjectType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga6c6c89dc4776168fa27894ac989d3ffe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseEventType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga0d90854c777c0d430bf928267b81c1fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeBaseDataVariableType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga60a1ee7833c4ca37b9607ffee95d5330</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodePropertyType</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga227cf8aa317595c39d639f70168215f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeOrganizes</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga2d30c098e3030fc76bebadbf69bc7911</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasTypeDefinition</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga25839d7d2907bbf9cb50e34c8965e2e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasComponent</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gad1d3d6d897257ccd09d133962f15f6fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasProperty</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga1670e3c4fcccf173b09c1da5f807dfce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasSubtype</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>gaa6055040c504411304540865272dd1a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NodeId</type>
+      <name>nodeHasModellingRule</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga7ac4a68f7d0df99e5deaecbb43cf1c89</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::ua::helper</name>
+    <filename>d8/d79/namespacerm_1_1ua_1_1helper.html</filename>
+    <member kind="function">
+      <type>constexpr char *</type>
+      <name>zh_CN</name>
+      <anchorfile>d8/d79/namespacerm_1_1ua_1_1helper.html</anchorfile>
+      <anchor>ac46bd040a2522d14fd0aaee3d3dd1911</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr char *</type>
+      <name>en_US</name>
+      <anchorfile>d8/d79/namespacerm_1_1ua_1_1helper.html</anchorfile>
+      <anchor>a166b916c1706e971bd5ee7fc78de8b37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>to_char</name>
+      <anchorfile>d8/d79/namespacerm_1_1ua_1_1helper.html</anchorfile>
+      <anchor>a014d8e17ef60dc416e9c5ee0ac07add5</anchor>
       <arglist>(std::string_view str)</arglist>
     </member>
   </compound>
@@ -18013,7 +17922,6 @@
     <title>camera 的参数模块</title>
     <filename>d2/df4/group__para__camera.html</filename>
     <class kind="class">rm::para::CameraParam</class>
-    <class kind="class">rm::para::GalaxyCameraParam</class>
     <class kind="class">rm::para::HikCameraParam</class>
     <class kind="class">rm::para::MvCameraParam</class>
     <class kind="class">rm::para::OptCameraParam</class>
@@ -18022,13 +17930,6 @@
       <name>rm::para::camera_param</name>
       <anchorfile>d2/df4/group__para__camera.html</anchorfile>
       <anchor>ga920ea1f18537e54423f9f6c0ff586b55</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>GalaxyCameraParam</type>
-      <name>rm::para::galaxy_camera_param</name>
-      <anchorfile>d2/df4/group__para__camera.html</anchorfile>
-      <anchor>gaa46552e1dce5ace4c0d0196a5e3f8b6c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -18953,29 +18854,29 @@
     <name>opcua</name>
     <title>OPC UA 模块</title>
     <filename>d3/da8/group__opcua.html</filename>
-    <class kind="class">rm::OpcuaClientView</class>
-    <class kind="class">rm::OpcuaClient</class>
-    <class kind="class">rm::OpcuaClientTimer</class>
-    <class kind="class">rm::EventType</class>
-    <class kind="class">rm::Event</class>
-    <class kind="struct">rm::Argument</class>
-    <class kind="class">rm::Method</class>
-    <class kind="class">rm::ObjectType</class>
-    <class kind="class">rm::Object</class>
-    <class kind="struct">rm::PublishedDataSet</class>
-    <class kind="class">rm::OpcuaPublisher</class>
-    <class kind="class">rm::OpcuaServerView</class>
-    <class kind="class">rm::OpcuaServer</class>
-    <class kind="class">rm::OpcuaServerTimer</class>
-    <class kind="struct">rm::FieldMetaData</class>
-    <class kind="class">rm::OpcuaSubscriber</class>
-    <class kind="class">rm::NodeId</class>
-    <class kind="class">rm::DataType</class>
-    <class kind="struct">rm::UserConfig</class>
-    <class kind="class">rm::VariableType</class>
-    <class kind="class">rm::Variable</class>
-    <class kind="struct">rm::DataSourceVariable</class>
-    <class kind="class">rm::View</class>
+    <class kind="class">rm::ua::ClientView</class>
+    <class kind="class">rm::ua::Client</class>
+    <class kind="class">rm::ua::ClientTimer</class>
+    <class kind="class">rm::ua::EventType</class>
+    <class kind="class">rm::ua::Event</class>
+    <class kind="struct">rm::ua::Argument</class>
+    <class kind="class">rm::ua::Method</class>
+    <class kind="class">rm::ua::ObjectType</class>
+    <class kind="class">rm::ua::Object</class>
+    <class kind="struct">rm::ua::PublishedDataSet</class>
+    <class kind="class">rm::ua::Publisher</class>
+    <class kind="class">rm::ua::ServerView</class>
+    <class kind="class">rm::ua::Server</class>
+    <class kind="class">rm::ua::ServerTimer</class>
+    <class kind="struct">rm::ua::FieldMetaData</class>
+    <class kind="class">rm::ua::Subscriber</class>
+    <class kind="class">rm::ua::NodeId</class>
+    <class kind="class">rm::ua::DataType</class>
+    <class kind="struct">rm::ua::UserConfig</class>
+    <class kind="class">rm::ua::VariableType</class>
+    <class kind="class">rm::ua::Variable</class>
+    <class kind="struct">rm::ua::DataSourceVariable</class>
+    <class kind="class">rm::ua::View</class>
     <member kind="define">
       <type>#define</type>
       <name>uaCreateVariableType</name>
@@ -18991,400 +18892,400 @@
       <arglist>(val,...)</arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(OpcuaClientView, const Variable &amp;)&gt;</type>
-      <name>rm::DataChangeNotificationCallback</name>
+      <type>std::function&lt; void(ClientView, const Variable &amp;)&gt;</type>
+      <name>rm::ua::DataChangeNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0b1b85ed940dc23f2d05a6e0ee16a669</anchor>
+      <anchor>ga071c1add99ff2da6b8ee10b0492b6f19</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(OpcuaClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
-      <name>rm::EventNotificationCallback</name>
+      <type>std::function&lt; void(ClientView, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
+      <name>rm::ua::EventNotificationCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga94446d35d4b86d5e8dfe1aaf1c940f3f</anchor>
+      <anchor>ga9dfadd534d3ecfab0ec15f8cdc313bd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::function&lt; std::pair&lt; bool, std::vector&lt; Variable &gt; &gt;(const NodeId &amp;, const std::vector&lt; Variable &gt; &amp;)&gt;</type>
-      <name>rm::MethodCallback</name>
+      <name>rm::ua::MethodCallback</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1cd26e7eae712946697a4524dd2a243a</anchor>
+      <anchor>ga4a65fd5dfd475e3b7da7d32b6e9c63a4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>rm::ValueCallbackBeforeRead</name>
+      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>rm::ua::ValueCallbackBeforeRead</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga20f474d3b49008847c901c4a87a35653</anchor>
+      <anchor>ga04b86768ee2987e861aefa8a6a9024eb</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; void(OpcuaServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>rm::ValueCallbackAfterWrite</name>
+      <type>std::function&lt; void(ServerView, const NodeId &amp;, const Variable &amp;)&gt;</type>
+      <name>rm::ua::ValueCallbackAfterWrite</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gab27db81896788eb00792aa9eb57fb716</anchor>
+      <anchor>gaf6e9edc983d0fd84ab4c93c85e8edbdd</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Server *, std::string_view, uint16_t &gt;</type>
-      <name>rm::FindNodeInServer</name>
+      <name>rm::ua::FindNodeInServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac7e58481a10ce3a58ec6a78db8f39cb1</anchor>
+      <anchor>gaf0938829901bcd765297d7e657977d9d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::tuple&lt; UA_Client *, std::string_view, uint16_t &gt;</type>
-      <name>rm::FindNodeInClient</name>
+      <name>rm::ua::FindNodeInClient</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gae83f723555bd94a58063f1db1e0165ed</anchor>
+      <anchor>gae6a03810f627bd6b4a8d79300cba7d33</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::vector&lt; Variable &gt;</type>
-      <name>rm::Variables</name>
+      <name>rm::ua::Variables</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga76910ab7d5d3a5e2f75d0593a97bf61d</anchor>
+      <anchor>gabcdeea48799a18759cc22d1adbfb41e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::function&lt; Variable(const NodeId &amp;)&gt;</type>
-      <name>rm::DataSourceRead</name>
+      <name>rm::ua::DataSourceRead</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga54e4a1eb9a1457b075f3b03b60e4e8f7</anchor>
+      <anchor>ga6b4c036d0c719833d2f4172ad9ff876e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>std::function&lt; void(const NodeId &amp;, const Variable &amp;)&gt;</type>
-      <name>rm::DataSourceWrite</name>
+      <name>rm::ua::DataSourceWrite</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga5a581eca483d29be2e2894c313e7ec1f</anchor>
+      <anchor>gaf17120512986c7fc3de2104e39f8f046</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
       <type></type>
-      <name>rm::AccessLevel</name>
+      <name>rm::ua::AccessLevel</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2aed8fbfc8bf41bec5e62c139b3ce7c2</anchor>
+      <anchor>gadf7f8344c52a34a03981540224a0ec97</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>rm::VARIABLE_READ</name>
+      <name>rm::ua::VARIABLE_READ</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a5eb1aab41f5aa9cbcb55032af2a90b6d</anchor>
+      <anchor>ggadf7f8344c52a34a03981540224a0ec97a00b356f5e15f9984872696594d653aa5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>rm::VARIABLE_WRITE</name>
+      <name>rm::ua::VARIABLE_WRITE</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gga2aed8fbfc8bf41bec5e62c139b3ce7c2a209a50807da605f748ace523b795c1d0</anchor>
+      <anchor>ggadf7f8344c52a34a03981540224a0ec97ab8e90e7b9ac4b0363dda057ede0ddc4e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
-      <name>rm::operator|</name>
+      <name>rm::ua::operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad4a5bb978e87fa6230034d85ff23b907</anchor>
-      <arglist>(NodeId origin, rm::FindNodeInServer &amp;&amp;fnis)</arglist>
+      <anchor>ga54f66b681598e2c267aafed27c6ff92a</anchor>
+      <arglist>(NodeId origin, FindNodeInServer &amp;&amp;fnis)</arglist>
     </member>
     <member kind="function">
       <type>NodeId</type>
-      <name>rm::operator|</name>
+      <name>rm::ua::operator|</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac9cd15abdd9c0687cee73ce332008c8d</anchor>
-      <arglist>(NodeId origin, rm::FindNodeInClient &amp;&amp;fnic)</arglist>
+      <anchor>ga04ca77aeb4b135db4ce92effb30a9254</anchor>
+      <arglist>(NodeId origin, FindNodeInClient &amp;&amp;fnic)</arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpBoolean</name>
+      <name>rm::ua::tpBoolean</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0aa3dc79e21e5864e6c0c4920f2d3ac8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>constexpr DataType</type>
-      <name>rm::tpSbyte</name>
-      <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac4928e57bfaad7c6e61e1bd9a50c1661</anchor>
+      <anchor>ga76092b9e992af01579dc0da4f38f1725</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpByte</name>
+      <name>rm::ua::tpSbyte</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaed35362315250c872d3b20b5be2324e4</anchor>
+      <anchor>gae09f41fdda1123d5664834e5143c0d05</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpInt16</name>
+      <name>rm::ua::tpByte</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf0682fe61922c30f2cd2467c1cbac5fc</anchor>
+      <anchor>gad9be94fae53c367af0608562aa2d1a28</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpUInt16</name>
+      <name>rm::ua::tpInt16</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga69ecf8f69563a21ae4304487b9860fd1</anchor>
+      <anchor>gabd9ae0823fdb372074927d7ae497ffb8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpInt32</name>
+      <name>rm::ua::tpUInt16</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga70f36ce12e26a1f938b1ab6cc5622b25</anchor>
+      <anchor>ga432802de2110c74bdff3273d19a2cee5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpUInt32</name>
+      <name>rm::ua::tpInt32</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0dcede428b3142d6d0ec6e6c7241c683</anchor>
+      <anchor>ga372973a437c90ca832a733523f4aee8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpInt64</name>
+      <name>rm::ua::tpUInt32</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga173164fdb1f30d4181b53fa5eef00967</anchor>
+      <anchor>ga5a300c41c98157837193abbe75fcceac</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpUInt64</name>
+      <name>rm::ua::tpInt64</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1711e5e2d36c8484a2f31ef9df48f4f5</anchor>
+      <anchor>gae951463a182e1555a60fbf8eea7edaec</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpFloat</name>
+      <name>rm::ua::tpUInt64</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga312f00fffb497fd081c6f6b5559b4dee</anchor>
+      <anchor>gaf27c1469d1c1ad0d0f135c1438325e9b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpDouble</name>
+      <name>rm::ua::tpFloat</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga38791e6ffebfaf02420a994ac63d5e0d</anchor>
+      <anchor>gafbe635425e9b546e36a40e9c69c1dbca</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DataType</type>
-      <name>rm::tpString</name>
+      <name>rm::ua::tpDouble</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga687e8a0cd6863fc9dc21c1476a4e2b04</anchor>
+      <anchor>gab7aea85818ff2081b939f40768de9bb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr DataType</type>
+      <name>rm::ua::tpString</name>
+      <anchorfile>d3/da8/group__opcua.html</anchorfile>
+      <anchor>ga5a31983f9b2d8011f83791feeced1940</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeBoolean</name>
+      <name>rm::ua::nodeBoolean</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga74ff362aa8f265eb565478c8e6fce449</anchor>
+      <anchor>ga27a7a7842d67a41aff092b7bb6191a3b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeSbyte</name>
+      <name>rm::ua::nodeSbyte</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaee6f5415f005c8056780dbeab9dcc685</anchor>
+      <anchor>gab347792b9db7c07b8b0a03e66988d833</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeByte</name>
+      <name>rm::ua::nodeByte</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1ce7f455abb437218c891ae65e2c8545</anchor>
+      <anchor>gaab432700f78057d881ff56fc590e5a18</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeInt16</name>
+      <name>rm::ua::nodeInt16</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad26b685b2a4ccb93e230f29ec42bef84</anchor>
+      <anchor>gafbeef9a86225c5ad87a6201f7788e689</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeUInt16</name>
+      <name>rm::ua::nodeUInt16</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga48744103f6b34e0afb4f8cf564783d81</anchor>
+      <anchor>ga648e863ef9a0e166cf9b5642102d37cc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeInt32</name>
+      <name>rm::ua::nodeInt32</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga508ff6f83ad7bdcf59e82c19c2bf9d83</anchor>
+      <anchor>gaeb61abf48ca32fc62c46c57e0ebe230e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeUInt32</name>
+      <name>rm::ua::nodeUInt32</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaa3e1901c73cf5fa68fa981ec5c96a362</anchor>
+      <anchor>ga4d7a41d2a7060f2da5ea9b8282542a34</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeInt64</name>
+      <name>rm::ua::nodeInt64</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga9d88cd00e97465c906f59ee223fd4e3d</anchor>
+      <anchor>gab98f6242586d9a83aa8241e4b7d46679</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeUInt64</name>
+      <name>rm::ua::nodeUInt64</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga81d9251e980a66b5565d777ffd7a5710</anchor>
+      <anchor>ga201c17208a725c60061ff46af23c6bbd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeFloat</name>
+      <name>rm::ua::nodeFloat</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0a1845e212b5afd2b38e710f3f99a80c</anchor>
+      <anchor>gaaabcbca2028efb8c38addc1f7bd4e1e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeDouble</name>
+      <name>rm::ua::nodeDouble</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga8ce89955d085b496b9ce5449b3d6cce3</anchor>
+      <anchor>gaf4fa88c5f3f42a93ef5ecbe8a62ac140</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeString</name>
+      <name>rm::ua::nodeString</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0f0b5963f6852d7735ab681cf635a851</anchor>
+      <anchor>gaa5607747b1eb4673b159574bb713aa7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeDatetime</name>
+      <name>rm::ua::nodeDatetime</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga34ee624e09f9381b3f2a75064f53b504</anchor>
+      <anchor>ga41c1e7526cce572acfb2efccd443961d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeObjectsFolder</name>
+      <name>rm::ua::nodeObjectsFolder</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga59abb0e45d2cc659ab5bc9ead635542f</anchor>
+      <anchor>gae5586451b4694390f8be4a90c89c45e7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeTypesFolder</name>
+      <name>rm::ua::nodeTypesFolder</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga79addd3e3b2cd021f7b2078f43422979</anchor>
+      <anchor>ga1200ede0906f37e73a4a2a17d729da1c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeViewsFolder</name>
+      <name>rm::ua::nodeViewsFolder</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga2bd8906836ab98507a01f5f3de6399c0</anchor>
+      <anchor>gaffb133e4b55c699c26436ab746c0fe60</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeObjectTypesFolder</name>
+      <name>rm::ua::nodeObjectTypesFolder</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gac56e6f9a7f82eb16240fdad927cd9e00</anchor>
+      <anchor>ga34026a48608302ff785474f06de6e38a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeVariableTypesFolder</name>
+      <name>rm::ua::nodeVariableTypesFolder</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga87897a4849e1c6769275f1b5b0cd8108</anchor>
+      <anchor>ga835e6ca3aebc15d8e9c26d15ccd00232</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeServer</name>
+      <name>rm::ua::nodeServer</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaaa270e93ec9a2b5ec25b3ab74a98d917</anchor>
+      <anchor>ga4a1d4f0f14eaa21d9444cdf319cc3903</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeFolderType</name>
+      <name>rm::ua::nodeFolderType</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga35770258139b971658a1ed6eb8fb9949</anchor>
+      <anchor>gab162987759fc0ed71afe79aa9e1f222d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeBaseObjectType</name>
+      <name>rm::ua::nodeBaseObjectType</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaf4eb55ff544f5cabdb0c14e9da1497c4</anchor>
+      <anchor>ga6c6c89dc4776168fa27894ac989d3ffe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeBaseEventType</name>
+      <name>rm::ua::nodeBaseEventType</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad2da849b97b00920b6b0ec4124a44280</anchor>
+      <anchor>ga0d90854c777c0d430bf928267b81c1fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeBaseDataVariableType</name>
+      <name>rm::ua::nodeBaseDataVariableType</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0230dc0fe786dc983979d2eec0dad230</anchor>
+      <anchor>ga60a1ee7833c4ca37b9607ffee95d5330</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodePropertyType</name>
+      <name>rm::ua::nodePropertyType</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga1e0d101df3b941ff0b124c704ab061be</anchor>
+      <anchor>ga227cf8aa317595c39d639f70168215f6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeOrganizes</name>
+      <name>rm::ua::nodeOrganizes</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga07d1fee271f3e82a686d86a72e431beb</anchor>
+      <anchor>ga2d30c098e3030fc76bebadbf69bc7911</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeHasTypeDefinition</name>
+      <name>rm::ua::nodeHasTypeDefinition</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga16859c73748bb7c4f5324aac1ff17e2b</anchor>
+      <anchor>ga25839d7d2907bbf9cb50e34c8965e2e0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeHasComponent</name>
+      <name>rm::ua::nodeHasComponent</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gad8fdc5679562a74e79aaf2d7df973592</anchor>
+      <anchor>gad1d3d6d897257ccd09d133962f15f6fd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeHasProperty</name>
+      <name>rm::ua::nodeHasProperty</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>ga0bd0dffff460875f090da59b6ed5e2ae</anchor>
+      <anchor>ga1670e3c4fcccf173b09c1da5f807dfce</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeHasSubtype</name>
+      <name>rm::ua::nodeHasSubtype</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gada4d0d89390905f45dd27347443cfcae</anchor>
+      <anchor>gaa6055040c504411304540865272dd1a6</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NodeId</type>
-      <name>rm::nodeHasModellingRule</name>
+      <name>rm::ua::nodeHasModellingRule</name>
       <anchorfile>d3/da8/group__opcua.html</anchorfile>
-      <anchor>gaeeb7345902aae7d64f97a6dfdafc0387</anchor>
+      <anchor>ga7ac4a68f7d0df99e5deaecbb43cf1c89</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -20488,16 +20389,16 @@
     <docanchor file="dc/d52/tutorial_rdt_lpss.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt/rdt_lpss.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2rdt_2rdt__lpss</docanchor>
   </compound>
   <compound kind="page">
-    <name>tutorial_rdt_rmvl</name>
-    <title>RMVL CLI 工具</title>
-    <filename>d4/de3/tutorial_rdt_rmvl.html</filename>
-    <docanchor file="d4/de3/tutorial_rdt_rmvl.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt/rdt_rmvl.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2rdt_2rdt__rmvl</docanchor>
+    <name>tutorial_rdt_rdt</name>
+    <title>RDT CLI 工具</title>
+    <filename>d0/d7c/tutorial_rdt_rdt.html</filename>
+    <docanchor file="d0/d7c/tutorial_rdt_rdt.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt/rdt_rdt.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2rdt_2rdt__rdt</docanchor>
   </compound>
   <compound kind="page">
     <name>tutorial_rdt</name>
     <title>RMVL 快捷开发工具</title>
     <filename>dd/dbc/tutorial_rdt.html</filename>
-    <subpage>d4/de3/tutorial_rdt_rmvl.html</subpage>
+    <subpage>d0/d7c/tutorial_rdt_rdt.html</subpage>
     <subpage>dc/d52/tutorial_rdt_lpss.html</subpage>
     <docanchor file="dd/dbc/tutorial_rdt.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt/usage.md">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2rdt_2usage</docanchor>
   </compound>
@@ -20554,20 +20455,20 @@
     <docanchor file="d8/d88/tutorials_python.html" title="/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_tutorials.markdown">md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2py__tutorials_2py__tutorials</docanchor>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp</name>
-    <path>/home/zhaoxi/.rmvltmp/</path>
-    <filename>dir_1f1d0efd9512274b6da9f0fd2f0a959f.html</filename>
-    <dir>/home/zhaoxi/.rmvltmp/rmvl</dir>
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/</path>
+    <filename>dir_4652efb63654806a3f946b19e48bf6ac.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm/</path>
-    <filename>dir_e50287f1f1670e190e9bc32316e07cd0.html</filename>
+    <filename>dir_87afdb654b740152ae499aca4400ec55.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/algorithm</name>
     <path>rmvl/algorithm/</path>
-    <filename>dir_50512aa9fb4f372b00bb7d3dd7bed6da.html</filename>
+    <filename>dir_fb2099489813e98dfc0088d784a50e50.html</filename>
     <file>datastruct.hpp</file>
     <file>dsp.hpp</file>
     <file>kalman.hpp</file>
@@ -20577,14 +20478,20 @@
     <file>transform.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp/rmvl/build</name>
-    <path>/home/zhaoxi/.rmvltmp/rmvl/build/</path>
-    <filename>dir_cd8ac429d3635d4587aced71884d1809.html</filename>
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/</path>
+    <filename>dir_4fef79e7177ba769987a8da36c892c5f.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp</dir>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build/</path>
+    <filename>dir_59c58acd01e7244ebc7d3036e65beb15.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/camera</name>
     <path>rmvl/camera/</path>
-    <filename>dir_78d299521c5e5119829508c3d43929a2.html</filename>
+    <filename>dir_68b2675841333b17d262d865224a2a6d.html</filename>
     <file>camutils.hpp</file>
     <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
@@ -20594,9 +20501,8 @@
   <compound kind="dir">
     <name>rmvlpara/camera</name>
     <path>rmvlpara/camera/</path>
-    <filename>dir_ebdaf7c4480af2485cd1079a530006ed.html</filename>
+    <filename>dir_21c299e62c75071ae2ddbdcf77d332fa.html</filename>
     <file>camera.h</file>
-    <file>galaxy_camera.h</file>
     <file>hik_camera.h</file>
     <file>mv_camera.h</file>
     <file>opt_camera.h</file>
@@ -20604,12 +20510,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo/</path>
-    <filename>dir_8e89044452c59cecaf5a8786a7bc962f.html</filename>
+    <filename>dir_e47bc4c88201119324ad1742b0acdaea.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/combo</name>
     <path>rmvl/combo/</path>
-    <filename>dir_acb2f6a56ddbfb8fd0027f6092b50357.html</filename>
+    <filename>dir_51ed543484fef09623ba53bab7eaba50.html</filename>
     <file>armor.h</file>
     <file>combo.h</file>
     <file>rune.h</file>
@@ -20617,19 +20523,19 @@
   <compound kind="dir">
     <name>rmvlpara/combo</name>
     <path>rmvlpara/combo/</path>
-    <filename>dir_d0f9619331cf590bad76d8382f10d02e.html</filename>
+    <filename>dir_12f7e2719c4aef7ca971bef1458b119e.html</filename>
     <file>armor.h</file>
     <file>rune.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator/</path>
-    <filename>dir_de2cc6b631065704a5bdc8e7bb83857f.html</filename>
+    <filename>dir_b42c29baecd700a1c7b1f9e031116f59.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/compensator</name>
     <path>rmvl/compensator/</path>
-    <filename>dir_e6e26513ce4fb2be4152a4f4e3106553.html</filename>
+    <filename>dir_fc26b6c2ce0d675ae37f0ead7fead92a.html</filename>
     <dir>rmvl/compensator/details</dir>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
@@ -20637,14 +20543,14 @@
   <compound kind="dir">
     <name>rmvlpara/compensator</name>
     <path>rmvlpara/compensator/</path>
-    <filename>dir_534a86d4a8a523e40dba2f6cd1811521.html</filename>
+    <filename>dir_1ff8083e31e2849e01f39dace2d8f642.html</filename>
     <file>gravity_compensator.h</file>
     <file>gyro_compensator.h</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/core</name>
     <path>rmvl/core/</path>
-    <filename>dir_569626e2623775c4b315b058ffdf7fd1.html</filename>
+    <filename>dir_021e08c4c598f89101b0aa1de0100d4c.html</filename>
     <file>rmvldef.hpp</file>
     <file>str.hpp</file>
     <file>timer.hpp</file>
@@ -20654,7 +20560,7 @@
   <compound kind="dir">
     <name>rmvl/lpss/ctl</name>
     <path>rmvl/lpss/ctl/</path>
-    <filename>dir_9dae494ca8a1ecbffc6b3aa63ac8bb97.html</filename>
+    <filename>dir_d67a32fe985c2669ff4e8e21ccb0df80.html</filename>
     <file>base.hpp</file>
     <file>ff.hpp</file>
     <file>pid.hpp</file>
@@ -20662,12 +20568,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider/</path>
-    <filename>dir_313831fb0971a0102fc34a9f18b1b871.html</filename>
+    <filename>dir_9c77f252bc2dea7aa2340c49f3ddd30c.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/decider</name>
     <path>rmvl/decider/</path>
-    <filename>dir_99cae2823b81ddec0315950cb5bb6870.html</filename>
+    <filename>dir_88f2670466b86d71a88ebd58d97f1a71.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
@@ -20675,7 +20581,7 @@
   <compound kind="dir">
     <name>rmvlpara/decider</name>
     <path>rmvlpara/decider/</path>
-    <filename>dir_95301558a91d69b4536a2adea25af130.html</filename>
+    <filename>dir_770dfdf8e90513f6bf55f0695bfb3603.html</filename>
     <file>gyro_decider.h</file>
     <file>rune_decider.h</file>
     <file>translation_decider.h</file>
@@ -20683,37 +20589,37 @@
   <compound kind="dir">
     <name>rmvl/compensator/details</name>
     <path>rmvl/compensator/details/</path>
-    <filename>dir_9b8ccca9a3a4060ac5343280b238cc82.html</filename>
+    <filename>dir_191fb1beae228dfa71a175d5a1385626.html</filename>
     <file>common.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/predictor/details</name>
     <path>rmvl/predictor/details/</path>
-    <filename>dir_97cdcbdc95919c69bd4ed41ef4ef9d3d.html</filename>
+    <filename>dir_07a09f2198eaf12df425e2d62c3e5215.html</filename>
     <file>rune.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/io/details</name>
     <path>rmvl/io/details/</path>
-    <filename>dir_6f78c87e3e2ceb6b479ed29227597b08.html</filename>
+    <filename>dir_157202709cbc4694d5907c5a05c8e98a.html</filename>
     <file>shm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss/details</name>
     <path>rmvl/lpss/details/</path>
-    <filename>dir_ca23c258a1c76f951e9da2fe98bc44d2.html</filename>
+    <filename>dir_5007f63d103a5996924fd883732b56d6.html</filename>
     <file>node_impl.hpp</file>
     <file>node_rsd.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/detector/</path>
-    <filename>dir_d9c756e959361f33ed9638ae15658304.html</filename>
+    <filename>dir_e7c88c51ab0687dfbc5937f04baf7c42.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/detector</name>
     <path>rmvl/detector/</path>
-    <filename>dir_5583ecb43e7cf22b2bbeeae47e33aabf.html</filename>
+    <filename>dir_1b12cb4dd092e360e17e906bcf9b5c0b.html</filename>
     <file>armor_detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
@@ -20722,7 +20628,7 @@
   <compound kind="dir">
     <name>rmvlpara/detector</name>
     <path>rmvlpara/detector/</path>
-    <filename>dir_b8598dd91f2e19ccea15cd6ae3a714bc.html</filename>
+    <filename>dir_2f07ba103e00493a07ab46a502d692c8.html</filename>
     <file>armor_detector.h</file>
     <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
@@ -20730,14 +20636,14 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/</path>
-    <filename>dir_63aeb613b811ed2eb9140a1126087187.html</filename>
+    <filename>dir_e68e8157741866f444e17edd764ebbae.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/</path>
-    <filename>dir_8ce2022e601f7a489c46d4ebdc49aba7.html</filename>
+    <filename>dir_426a5ffbbb727b99f4225294c6466649.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/combo</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/compensator</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/decider</dir>
@@ -20751,12 +20657,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/feature/</path>
-    <filename>dir_281684d37e85ceee3c6d925f5cd2e690.html</filename>
+    <filename>dir_08cb09a26daf7692ff65867d96a774b2.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/feature</name>
     <path>rmvl/feature/</path>
-    <filename>dir_3ce520876fede39f67af7c3a8a3c0862.html</filename>
+    <filename>dir_ce8ca8b69315f48cd283f789aa0dd056.html</filename>
     <file>anchor.h</file>
     <file>feature.h</file>
     <file>light_blob.h</file>
@@ -20768,7 +20674,7 @@
   <compound kind="dir">
     <name>rmvlpara/feature</name>
     <path>rmvlpara/feature/</path>
-    <filename>dir_1c8a3e591ae66fc114bb81ccec1f535b.html</filename>
+    <filename>dir_3e5cdcbad10e2274392f9bbc748768cf.html</filename>
     <file>anchor.h</file>
     <file>light_blob.h</file>
     <file>pilot.h</file>
@@ -20778,7 +20684,7 @@
   <compound kind="dir">
     <name>rmvlmsg/geometry</name>
     <path>rmvlmsg/geometry/</path>
-    <filename>dir_16654e9243cb65bdf93bb5869ab9cc97.html</filename>
+    <filename>dir_24f8d8e0ab921bff01fcae06f7e49506.html</filename>
     <file>point.hpp</file>
     <file>point32.hpp</file>
     <file>polygon.hpp</file>
@@ -20793,12 +20699,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/group/</path>
-    <filename>dir_729098440371f0d4df427f6c7ff7dcf0.html</filename>
+    <filename>dir_bdac78099532942366d2fabd1b27783f.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/group</name>
     <path>rmvl/group/</path>
-    <filename>dir_3e80edd7e209d4c78df4a504a463a87b.html</filename>
+    <filename>dir_993405bde1c40a0b0112bcd0fe9f1fde.html</filename>
     <file>group.h</file>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
@@ -20806,14 +20712,14 @@
   <compound kind="dir">
     <name>rmvlpara/group</name>
     <path>rmvlpara/group/</path>
-    <filename>dir_087da8d79feadcd317f1eb22af008cfd.html</filename>
+    <filename>dir_f58d8d58cb13d39e9f4987da0b365be7.html</filename>
     <file>gyro_group.h</file>
     <file>rune_group.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/</path>
-    <filename>dir_aa22c37ac578673e90f287158c6a7019.html</filename>
+    <filename>dir_58c94e520695a9c6e49a2b567a210ce0.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</dir>
@@ -20821,7 +20727,7 @@
   <compound kind="dir">
     <name>rmvl/io</name>
     <path>rmvl/io/</path>
-    <filename>dir_66f856895de826d01e5b96701d8b13b6.html</filename>
+    <filename>dir_bc4d7e1d3f923a65e94f5ee75373b3de.html</filename>
     <dir>rmvl/io/details</dir>
     <file>async.hpp</file>
     <file>ipc.hpp</file>
@@ -20833,7 +20739,7 @@
   <compound kind="dir">
     <name>rmvl/light</name>
     <path>rmvl/light/</path>
-    <filename>dir_be15d5cdc57a7070d3ae8f434633911a.html</filename>
+    <filename>dir_fe3d19a7723048ccf658f16ac60a0a67.html</filename>
     <file>hik_light_control.h</file>
     <file>lightutils.hpp</file>
     <file>opt_light_control.h</file>
@@ -20841,23 +20747,23 @@
   <compound kind="dir">
     <name>rmvlpara/light</name>
     <path>rmvlpara/light/</path>
-    <filename>dir_c3693fdd57a10ef1bc7620e54ce9498a.html</filename>
+    <filename>dir_9d76333e2953167de3e2f20e7e642e19.html</filename>
     <file>hik_light_control.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/linux/</path>
-    <filename>dir_fa2eec13076e9f96774fe6e21fa951d4.html</filename>
+    <filename>dir_2b68a0c976a94001a3a52c1a9b6afce2.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/lpss</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/lpss/</path>
-    <filename>dir_b8289ad7859a5bd946b7d4465245eb0b.html</filename>
+    <filename>dir_fdd5ca22bb7547c7fbe61ec6be61b1e1.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss</name>
     <path>rmvl/lpss/</path>
-    <filename>dir_577d59d13decd0a00a9a3145f56c7b2f.html</filename>
+    <filename>dir_6dab983623edcfe7d7eb4c8db8a91100.html</filename>
     <dir>rmvl/lpss/ctl</dir>
     <dir>rmvl/lpss/details</dir>
     <file>cv.hpp</file>
@@ -20868,25 +20774,25 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/miscellaneous/</path>
-    <filename>dir_3a31d66722521052f8304ab21c00ca17.html</filename>
+    <filename>dir_c8c342af8d42b5d680657a324064f568.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/ml</name>
     <path>rmvl/ml/</path>
-    <filename>dir_96aeefc62acd539b27e83661f3581d52.html</filename>
+    <filename>dir_333d0aeefdeba1c53236985888de9470.html</filename>
     <file>ort.h</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/</path>
-    <filename>dir_efca97ecc042efa865eaefd41f9be988.html</filename>
+    <filename>dir_dd14b81ce98f0efb0c27d4605792b06c.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/algorithm</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</dir>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/motion</name>
     <path>rmvlmsg/motion/</path>
-    <filename>dir_59d0329fab7f711087ed1d8ef1e451e9.html</filename>
+    <filename>dir_fdf7174e1f8c212b75b1cb2855f4c11a.html</filename>
     <file>joint_trajectory.hpp</file>
     <file>joint_trajectory_point.hpp</file>
     <file>tf.hpp</file>
@@ -20895,7 +20801,7 @@
   <compound kind="dir">
     <name>rmvl/opcua</name>
     <path>rmvl/opcua/</path>
-    <filename>dir_fb7d5e5fa92dc084c164886a77a2be86.html</filename>
+    <filename>dir_6f345ac53a1eefe67f1e600f9a522fd7.html</filename>
     <file>client.hpp</file>
     <file>event.hpp</file>
     <file>method.hpp</file>
@@ -20910,17 +20816,17 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction/other/</path>
-    <filename>dir_cb4ca42878937429832ea22c8d56fec0.html</filename>
+    <filename>dir_eac206f591cba90314701160c24e8a17.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/predictor/</path>
-    <filename>dir_40b99015e00a250f3754dffac633688b.html</filename>
+    <filename>dir_2d16c776959d732bcd5241749ddcece3.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/predictor</name>
     <path>rmvl/predictor/</path>
-    <filename>dir_82d1e6ec8ec7cb629af3674341cdc95d.html</filename>
+    <filename>dir_be25d590ea0c4f598694de88b9e8de05.html</filename>
     <dir>rmvl/predictor/details</dir>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
@@ -20930,7 +20836,7 @@
   <compound kind="dir">
     <name>rmvlpara/predictor</name>
     <path>rmvlpara/predictor/</path>
-    <filename>dir_b7e07b1f242d523e7d34928268d8c8e5.html</filename>
+    <filename>dir_9cb561993a62f54b93c7cb98ed21d292.html</filename>
     <file>armor_predictor.h</file>
     <file>gyro_predictor.h</file>
     <file>rune_predictor.h</file>
@@ -20939,153 +20845,153 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings/</path>
-    <filename>dir_d0f7e421e0997c0bf11dc5a06fb3c605.html</filename>
+    <filename>dir_6c8551f4d7dc208509ae2df87f489cca.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules/</path>
-    <filename>dir_5bafbfe2a1ced00a837924a7d9c23d39.html</filename>
+    <filename>dir_e29f7b20dc4e91179ccf6c1e48f7ce8e.html</filename>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/</path>
-    <filename>dir_1c6aa230f859dc3670992dca1c451e7a.html</filename>
+    <filename>dir_1b5159d8e824ca0372c222fccb8e8031.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_bindings</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/py_tutorials/py_modules</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/rdt/</path>
-    <filename>dir_a225d3c3e2a80eb1838d56e459376ee4.html</filename>
+    <filename>dir_fd3ff6d87824fd34e7143895306cac84.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl</name>
+    <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/</path>
+    <filename>dir_157ff2a39937ca58ddeb0b9a58d5e7e7.html</filename>
+    <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/build/.rmvltmp/rmvl/build</dir>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_ff03e4bf742ea8099ec4cfcdac358710.html</filename>
+    <filename>dir_b84f0685042b53df8576d9a5df8737a7.html</filename>
     <dir>rmvl/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_bbdada461bd67ec39ad4c5a7e52c1704.html</filename>
+    <filename>dir_3cd5b91f19adc4085f4b4e39e4ff2f73.html</filename>
     <dir>rmvl/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_7674f2a10684fb8c82ccd4da2e5351d6.html</filename>
+    <filename>dir_7a867aa029234ffc6f7eed334080704b.html</filename>
     <dir>rmvl/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_f2e18b45b93189891b180df6464050f4.html</filename>
+    <filename>dir_4b04c2e007ec9137cdcc6b07f15783dd.html</filename>
     <dir>rmvl/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_f6e5f49e6ef35977bb5d7e75a68963cc.html</filename>
+    <filename>dir_5ac3da02857772deca4fc3f808edbaf5.html</filename>
     <dir>rmvl/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_774c12e4d1f477ca15af185e62a1572e.html</filename>
+    <filename>dir_3369679d0342e0144be24fe8bcb77137.html</filename>
     <dir>rmvl/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_90f3991ba10c058a285f03a6035e2a3c.html</filename>
+    <filename>dir_6eee36bbafba159c1f307a96cde9296f.html</filename>
     <dir>rmvl/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_3354db72e67a6a30846355467a09f36b.html</filename>
+    <filename>dir_05fa650a38f3f5a08a2422c6dda771be.html</filename>
     <dir>rmvl/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_71bf6823197d27734da63e942b8d187c.html</filename>
+    <filename>dir_809e963fb58aef5dff5228943502dc0e.html</filename>
     <file>types.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_0b91645aa8def3c8ac2250a6a7e35f1a.html</filename>
+    <filename>dir_143430c183a215e00fc5688a6b00f801.html</filename>
     <dir>rmvl/algorithm</dir>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_461ed81535f9510a759df52724b26998.html</filename>
+    <filename>dir_0004eea47629e797f98a68d373747388.html</filename>
     <dir>rmvl/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_efd1512632de5fdeabf2ca758db8fb4d.html</filename>
+    <filename>dir_8ce2230b18c62fc4f1b2d4c11ea01049.html</filename>
     <dir>rmvl/core</dir>
     <file>core.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_127904d2b519627d1987d4f85dc3e9ed.html</filename>
+    <filename>dir_e7d32574a6c4fcfa257018e66cd9435e.html</filename>
     <dir>rmvl/io</dir>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_5d2c5c18c4107ce6371e97cb9b4863fc.html</filename>
+    <filename>dir_4273a60eceee48416df95d84f85905d9.html</filename>
     <dir>rmvl/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_2409041128f30c7e632a1d2686a5a378.html</filename>
+    <filename>dir_056965ee29af610b58b6eed68da89d07.html</filename>
     <dir>rmvl/lpss</dir>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_87735ccda0193a5376fd86df094b9d06.html</filename>
+    <filename>dir_b5c1b52e49bdab802b985f422853f0cc.html</filename>
     <dir>rmvl/ml</dir>
     <file>ml.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
-    <filename>dir_99c4a071f9876207aeb2ccd26e68c4dd.html</filename>
+    <filename>dir_d1896504bf09fddf262d44ed95e52f7a.html</filename>
     <dir>rmvl/opcua</dir>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
-    <name>/home/zhaoxi/.rmvltmp/rmvl</name>
-    <path>/home/zhaoxi/.rmvltmp/rmvl/</path>
-    <filename>dir_d892ad31c88a7738f8012346252ba931.html</filename>
-    <dir>/home/zhaoxi/.rmvltmp/rmvl/build</dir>
-  </compound>
-  <compound kind="dir">
     <name>rmvlmsg</name>
     <path>rmvlmsg/</path>
-    <filename>dir_584b56ed427fc12411d4172925c74074.html</filename>
+    <filename>dir_4d50aa784517d57a06ecfff1c8a1efd8.html</filename>
     <dir>rmvlmsg/geometry</dir>
     <dir>rmvlmsg/motion</dir>
     <dir>rmvlmsg/sensor</dir>
@@ -21095,101 +21001,101 @@
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_bd0853e39d9979da024d4a6722daad0b.html</filename>
+    <filename>dir_58222088a8cee0a471f253eac143ba17.html</filename>
     <dir>rmvlpara/combo</dir>
     <file>combo.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_71f52d487cf2933c7e27d03587dcdf91.html</filename>
+    <filename>dir_f0e88a7a5cb5aab28614e8930b567bd3.html</filename>
     <dir>rmvlpara/compensator</dir>
     <file>compensator.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_4486d76bf6cc85e9bb825e727d134df0.html</filename>
+    <filename>dir_4d60ae5981f7ce87b742481e65bfd802.html</filename>
     <dir>rmvlpara/decider</dir>
     <file>decider.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_68f8e3f54c502890141b94aecfd7f2ec.html</filename>
+    <filename>dir_45e97b84317156a5954d30eced95ddb6.html</filename>
     <dir>rmvlpara/detector</dir>
     <file>detector.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_d0e91ac94a1f2c6911aff14c70246c72.html</filename>
+    <filename>dir_36b455a1b0f3273f108b36652d153a8a.html</filename>
     <dir>rmvlpara/feature</dir>
     <file>feature.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_b5dc5d48234085622b23760ad1bbf09c.html</filename>
+    <filename>dir_2ea0c873adea199cd62f1107c61b502b.html</filename>
     <dir>rmvlpara/group</dir>
     <file>group.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_78b1583f1b463aa7a8e22968a1705c35.html</filename>
+    <filename>dir_b7145cfe89c878932d64aa281be9ef49.html</filename>
     <dir>rmvlpara/predictor</dir>
     <file>predictor.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_6c997901f901bc002c0fa812b622e527.html</filename>
+    <filename>dir_56f1c6dcc74dc20460c2b77be5c46794.html</filename>
     <dir>rmvlpara/tracker</dir>
     <file>tracker.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_8a57e973e059eabb9cda737bc07949f4.html</filename>
+    <filename>dir_d0dd8f3c1ff56d88a0ca94359a28aa0a.html</filename>
     <file>algorithm.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_7df43d62cd237bbfe6c772bfcd92ab52.html</filename>
+    <filename>dir_1a6308d51d814586b9985a0758773f42.html</filename>
     <dir>rmvlpara/camera</dir>
     <file>camera.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_13bc97c3e9aa29cb4dff0af470d22055.html</filename>
+    <filename>dir_c83cd2ae801cf5a6eebca515f7297a6e.html</filename>
     <file>io.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_67d781d51c42d4a8c0b1389395433309.html</filename>
+    <filename>dir_0d09ee667c2a9666a31dfa29c1285dbd.html</filename>
     <dir>rmvlpara/light</dir>
     <file>light.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_01990b82e018726217bbdfc12151d26a.html</filename>
+    <filename>dir_54dc165de3f051bd04cea3d4dc4160e9.html</filename>
     <file>lpss.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
     <path>rmvlpara/</path>
-    <filename>dir_51d997721f514119dc3de95d480ef505.html</filename>
+    <filename>dir_0881cfd4956fe17faae321d2c65bc1f4.html</filename>
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/sensor</name>
     <path>rmvlmsg/sensor/</path>
-    <filename>dir_7d10cd3360dad54eb56db20dff9f921b.html</filename>
+    <filename>dir_f09e4dbe1c52ab070e0d16b057d7c7ea.html</filename>
     <file>camera_info.hpp</file>
     <file>image.hpp</file>
     <file>imu.hpp</file>
@@ -21199,7 +21105,7 @@
   <compound kind="dir">
     <name>rmvlmsg/std</name>
     <path>rmvlmsg/std/</path>
-    <filename>dir_355971bc52002f4e58fade7fdd0e1fd4.html</filename>
+    <filename>dir_567b0f3791db27fa1ff59d607208e840.html</filename>
     <file>bool.hpp</file>
     <file>char.hpp</file>
     <file>color_rgba.hpp</file>
@@ -21220,18 +21126,18 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/</path>
-    <filename>dir_37d8d1d8fd20c6853ee9a8117ea58f32.html</filename>
+    <filename>dir_475f633f804384ebfc31fbf8bd129454.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules/tools/lpss</dir>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/tracker/</path>
-    <filename>dir_a9f58f6f91a5dabd2195d8cc1f02f871.html</filename>
+    <filename>dir_6b8d1066f9f8a1d0ae64c8dcf96bf1e3.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvl/tracker</name>
     <path>rmvl/tracker/</path>
-    <filename>dir_4ca38ea3da80f7d4b36b0beb918106f8.html</filename>
+    <filename>dir_9c45eb0c4acec6c44430f61dff0bf5e7.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -21240,7 +21146,7 @@
   <compound kind="dir">
     <name>rmvlpara/tracker</name>
     <path>rmvlpara/tracker/</path>
-    <filename>dir_d301de7fcf533dbc68142aa95cf635fe.html</filename>
+    <filename>dir_6b0b4bc53031f88182b1020c744899c6.html</filename>
     <file>gyro_tracker.h</file>
     <file>planar_tracker.h</file>
     <file>rune_tracker.h</file>
@@ -21248,7 +21154,7 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/</path>
-    <filename>dir_26c5c64eeef8370ce1acbf07045fbc29.html</filename>
+    <filename>dir_5b0b179e83013be2ae877b5cea1eb6e2.html</filename>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/introduction</dir>
     <dir>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/modules</dir>
@@ -21257,12 +21163,12 @@
   <compound kind="dir">
     <name>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper</name>
     <path>/home/zhaoxi/桌面/Vision/cv-rmvl/rmvl/doc/tutorials/extra/upper/</path>
-    <filename>dir_a318c6cfe6210b0cec382b58a20f9e91.html</filename>
+    <filename>dir_4ef7a8655673da93818ea708ee8785e2.html</filename>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/viz</name>
     <path>rmvlmsg/viz/</path>
-    <filename>dir_f4cbc5aa62a3ae0bacaef4014a57dde8.html</filename>
+    <filename>dir_3fa674f9d830d475cfbdc78a1562fbcf.html</filename>
     <file>marker.hpp</file>
     <file>marker_array.hpp</file>
   </compound>
