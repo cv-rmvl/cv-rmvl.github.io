@@ -2,14 +2,57 @@
 
 set -eu
 
-echo -e "Welcome to use rdt/rmvl installation wizard \033[1;32mv1.0.1\033[0m"
+echo -e "Welcome to use rdt/rmvl installation wizard \033[1;32mv1.0.2\033[0m"
 
 bak_name="rmvl-dev-tools-$(date +%s)"
 
-if ! git --version &> /dev/null; then
-  echo -e "Git 未被安装，可以通过 \033[33msudo apt install git\033[0m 来安装"
-  exit 1
-fi
+command_exists() {
+  command -v "$1" &> /dev/null
+}
+
+check_and_install_dependencies() {
+  local missing_commands=()
+  local missing_packages=()
+
+  if ! command_exists git; then
+    missing_commands+=("git")
+    missing_packages+=("git")
+  fi
+  if ! command_exists g++; then
+    missing_commands+=("g++")
+    missing_packages+=("g++")
+  fi
+  if ! command_exists cmake; then
+    missing_commands+=("cmake")
+    missing_packages+=("cmake")
+  fi
+
+  if [ "${#missing_commands[@]}" -eq 0 ]; then
+    return 0
+  fi
+
+  echo -e "检测到缺少以下依赖：\033[33m${missing_commands[*]}\033[0m"
+
+  if ! command_exists apt-get; then
+    echo -e "未检测到 apt-get，请先手动安装：\033[33m${missing_packages[*]}\033[0m"
+    exit 1
+  fi
+
+  read -r -p "是否现在自动安装这些依赖？[Y/n] " answer
+  case "$answer" in
+    ""|[Yy]|[Yy][Ee][Ss])
+      echo -e "正在安装：\033[33m${missing_packages[*]}\033[0m"
+      sudo apt-get update
+      sudo apt-get install -y "${missing_packages[@]}"
+      ;;
+    *)
+      echo "已取消安装，程序退出。"
+      exit 1
+      ;;
+  esac
+}
+
+check_and_install_dependencies
 
 trap cleanup_int INT
 cleanup_int() {
