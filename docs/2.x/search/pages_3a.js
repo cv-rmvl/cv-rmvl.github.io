@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['写在前面_0',['写在前面',['../d1/dfb/intro.html#autotoc_md2',1,'写在前面'],['../d8/d29/tutorial_extra_upper_base.html#autotoc_md71',1,'写在前面']]]
+  ['内置消息类型_0',['2 内置消息类型',['../d2/d9b/tutorial_table_of_content_rmvlmsg.html#autotoc_md390',1,'']]]
 ];

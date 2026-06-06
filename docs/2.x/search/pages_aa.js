@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['编写测试文件_0',['2 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md124',1,'']]],
-  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md118',1,'']]],
-  ['编译镜像_2',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]]
+  ['组合体_0',['1.2 组合体',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md62',1,'']]]
 ];

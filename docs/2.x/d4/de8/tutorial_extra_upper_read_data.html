@@ -120,16 +120,16 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md82">1 前言 </a>
+        <a href="#autotoc_md83">1 前言 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md83">2 逻辑控制 </a>
+        <a href="#autotoc_md84">2 逻辑控制 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md84">2.1 映射配置 </a>
+            <a href="#autotoc_md85">2.1 映射配置 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md85">2.2 注意事项 </a>
+            <a href="#autotoc_md86">2.2 注意事项 </a>
             <ul>
               <li class="level4">
                 <a href="#map_tip1">要点 1 </a>
@@ -143,46 +143,46 @@ $(function() {
             </ul>
           </li>
           <li class="level3">
-            <a href="#autotoc_md86">2.3 部署使用 </a>
+            <a href="#autotoc_md87">2.3 部署使用 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md87">3 功能切换方式 </a>
+        <a href="#autotoc_md88">3 功能切换方式 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md88">3.1 轮询判断 </a>
+            <a href="#autotoc_md89">3.1 轮询判断 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md89">3.2 外部中断、回调函数 </a>
+            <a href="#autotoc_md90">3.2 外部中断、回调函数 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md90">4 合理使用默认数据 </a>
+        <a href="#autotoc_md91">4 合理使用默认数据 </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2upper_2upper__read__data"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2extra_2upper_2upper__read__data"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../d1/d67/tutorial_extra_upper_init.html" title="硬件设备与软件模块的初始化">硬件设备与软件模块的初始化</a> <br  />
  <b>下一篇教程：</b><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html" title="责任链模式下的程序处理">责任链模式下的程序处理</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md82"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md83"></a>
 1 前言</h2>
 <p>有时程序需要同时具备很多逻辑功能，这些功能需要在运行时根据用户或者其他客户端下发的指令进行切换。本教程给出了简单的逻辑控制以及功能切换的方式。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md83"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md84"></a>
 2 逻辑控制</h2>
 <p><b>switch-case</b></p>
 <p>最简单的方式是使用 <span class="tt">switch-case</span> 语句，在每一次得到与上一次不同的信号后直接选择对应的功能模块重新加载，这种清空能保证每个功能模块在每次运行的时候只有一个子模块生效。</p>
 <p><b>LUT</b></p>
 <p>如果想同时加载并使用多个子模块，最优雅的方式是使用查找表 —— LUT (Look-Up Table) ，维护一个映射表（一般是散列表）即可完成功能切换、参数加载。</p>
 <p>下文均介绍 <b>LUT</b> 法的配置。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md84"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
 2.1 映射配置</h3>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>ControlMode</div>
 <div class="line">{</div>
@@ -229,7 +229,7 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1GyroDetector_html_a4847eef03a2bad126fedfaad567f180e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a4847eef03a2bad126fedfaad567f180e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:73</div></div>
 <div class="ttc" id="aclassrm_1_1RuneDetector_html_a158fb7e5978ef93fb86741dec2fad8ff"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a158fb7e5978ef93fb86741dec2fad8ff">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:58</div></div>
 <div class="ttc" id="aclassrm_1_1TagDetector_html_a61d242bc1cec93b2ab54a64afb52ffca"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#a61d242bc1cec93b2ab54a64afb52ffca">rm::TagDetector::make_detector</a></div><div class="ttdeci">static ptr make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>定义</b> tag_detector.h:57</div></div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md86"></a>
 2.2 注意事项</h3>
 <h4 class="doxsection"><a class="anchor" id="map_tip1"></a>
 要点 1</h4>
@@ -296,7 +296,7 @@ $(function() {
 <div class="line"><span class="comment">// 识别模块映射表</span></div>
 <div class="line">std::unordered_map&lt;DetectorFlag, rm::detector::ptr&gt; detector_map;</div>
 </div><!-- fragment --><p>若在这种方法下，配合 <a class="el" href="#map_tip1" title="要点 1">要点 1</a> 的 YAML 文件使用，则无法在 YAML 文件中直观的看出对应的模式，因此要用到 YAML 文件进行模式加载的情况下，使用 <span class="tt">std::string</span> 代替枚举类型或整型是个不错的选择。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md86"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
 2.3 部署使用</h3>
 <p>获取模式字符串（若采用 <a class="el" href="#map_tip3" title="要点 3">要点 3</a> 的方式则是模式枚举）可直接使用<a href="https://zh.cppreference.com/w/cpp/language/structured_binding">结构化绑定</a>进行获取。</p>
 <div class="fragment"><div class="line"><span class="comment">/* 先前已获得（更新）的模式信息 flag */</span></div>
@@ -316,12 +316,12 @@ $(function() {
 <div class="fragment"><div class="line">rm::detector *<span class="keyword">const</span> p_detector = detector_map[detect_str].get();</div>
 <div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;detect(<span class="comment">/* code */</span>);</div>
 <div class="line"><span class="comment">/* code */</span></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md87"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md88"></a>
 3 功能切换方式</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md88"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md89"></a>
 3.1 轮询判断</h3>
 <p>这是最常用并且最方便的方法，这种做法适合于不断循环执行处理的场合下。在每一次循环的程序处理结束后，在下一次循环开始时，先接收通信传输得到的控制信号，并与上一次得到的信号做判断，若不相同，则清空所有数据组件。若在 <b>逻辑控制</b> 中选择了 <b>switch-case</b> 的方式，那么在清空数据组件后可直接为相应的功能模块重新初始化，若选择了 <b>LUT</b> 的方式，则无需重新初始化，直接根据新的控制信号指定功能模块即可。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md89"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md90"></a>
 3.2 外部中断、回调函数</h3>
 <p>还有一种做法是利用外部中断或者回调函数（软件中断）的方式完成功能的切换，以 Termios 串口通信的结构体为例，在设置 <span class="tt">c_iflag</span> 的时候，可以打开 <span class="tt">BRKINT</span> 功能，即接收到 <span class="tt">BREAK</span> 信号时产生中断信号。</p>
 <div class="fragment"><div class="line">xxx.c_iflag |= BRKINT;</div>
@@ -331,7 +331,7 @@ $(function() {
 <li>ROS / ROS2 中可注册回调函数，在 <span class="tt">ros::spin()</span> 或 <span class="tt">rclcpp::spin()</span> 调用后可阻塞当前线程，在有消息到达订阅节点时，会自动触发回调函数的执行。</li>
 <li>OPC UA 中在服务器中注册了一个 Method Node 即方法节点，在客户端中 <span class="tt">call</span> 该方法节点，则服务器会处理该方法节点的回调函数。</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md90"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md91"></a>
 4 合理使用默认数据</h2>
 <p>有时会遇到某次通信收到数据异常的情况，或根本没有通信，在这种情况下可以为收到的信息（这里以控制信息 <span class="tt">uint8_t flag;</span> 来表示）使用默认数据。</p>
 <div class="fragment"><div class="line">uint8_t read()</div>

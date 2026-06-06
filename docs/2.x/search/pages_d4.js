@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['静态构建与动态构建_0',['2.2 静态构建与动态构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md105',1,'']]]
+  ['重置控制器_0',['2.4 重置控制器',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md312',1,'']]]
 ];

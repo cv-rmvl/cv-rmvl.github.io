@@ -118,35 +118,35 @@ $(function() {
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md51">1 如何使用 </a>
+    <a href="#autotoc_md52">1 如何使用 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md52">1.1 有关构造与创建 </a>
+        <a href="#autotoc_md53">1.1 有关构造与创建 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md53">1.2 信息获取 </a>
+        <a href="#autotoc_md54">1.2 信息获取 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md54">1.2.1 数据信息 </a>
+            <a href="#autotoc_md55">1.2.1 数据信息 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md55">1.2.2 通用属性与派生类属性 </a>
+            <a href="#autotoc_md56">1.2.2 通用属性与派生类属性 </a>
           </li>
         </ul>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md56">2 如何开发 </a>
+    <a href="#autotoc_md57">2 如何开发 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md57">2.1 基本准则 </a>
+        <a href="#autotoc_md58">2.1 基本准则 </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2tracker_2how__to__use"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2extra_2tracker_2how__to__use"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/07/07</dd></dl>
 <p><b>上一篇教程：</b><a class="el" href="../../df/daa/tutorial_extra_how_to_use_tracker.html" title="如何使用/开发 tracker 模块">如何使用/开发 tracker 模块</a> <br  />
@@ -154,19 +154,19 @@ $(function() {
 </p>
 <hr  />
 <p>基类 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md51"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
 1 如何使用</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md52"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
 1.1 有关构造与创建</h2>
 <p>追踪器 <span class="tt"><a class="el" href="../../de/dca/group__tracker.html">追踪器/特征组合的时间序列（数据组件）</a></span> 对象创建方法与特征组合 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a></span> 以及图像特征 <span class="tt"><a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a></span> 基本一致，均使用静态工厂函数，这里是使用 <span class="tt">make_tracker</span> 完成构建。</p>
 <p>构造一个平面目标追踪器的代码如下</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> p_tracker = <a class="code hl_function" href="../../d1/dc8/classrm_1_1PlanarTracker.html#aa9aa4e4c4ecccb5236a7d6223bad9670">rm::PlanarTracker::make_tracker</a>(p_combo); <span class="comment">// p_combo 是已经存在的追踪器，并且不能为 nullptr</span></div>
 <div class="ttc" id="aclassrm_1_1PlanarTracker_html_aa9aa4e4c4ecccb5236a7d6223bad9670"><div class="ttname"><a href="../../d1/dc8/classrm_1_1PlanarTracker.html#aa9aa4e4c4ecccb5236a7d6223bad9670">rm::PlanarTracker::make_tracker</a></div><div class="ttdeci">static ptr make_tracker(combo::ptr p_combo)</div><div class="ttdoc">构建 PlanarTracker</div><div class="ttdef"><b>定义</b> planar_tracker.h:41</div></div>
 </div><!-- fragment --><p><a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a> 提供了 <span class="tt">clone</span> 纯虚拟函数，用于完全复制一份数据。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md53"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
 1.2 信息获取</h2>
 <p>和低层数据组件类似， <a class="el" href="../../de/dca/group__tracker.html" title="追踪器/特征组合的时间序列（数据组件）">追踪器/特征组合的时间序列（数据组件）</a> 内部维护了各时间下特征组合的相关信息，即特征组合的时间序列。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md54"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
 1.2.1 数据信息</h3>
 <p><span class="tt"><a class="el" href="../../de/dca/group__tracker.html">追踪器/特征组合的时间序列（数据组件）</a></span> 记录了时间上彼此关联的一组 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a></span>，内部使用 <span class="tt">std::deque&lt;combo::ptr&gt;</span> 表示。<span class="tt"><a class="el" href="../../de/dca/group__tracker.html">追踪器/特征组合的时间序列（数据组件）</a></span> 提供了与 <span class="tt">std::deque</span> 容器类似的访问操作，包括</p>
 <div class="full_width_table"></div><div class="full_width_table"><center></center></div><div class="full_width_table"><center>表 1: tracker 信息获取接口</center></div><div class="full_width_table"><center></center></div><div class="full_width_table"><table class="markdownTable">
@@ -185,12 +185,12 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter"><span class="tt">empty()</span>  </td><td class="markdownTableBodyCenter">判断特征组合时间序列是否为空  </td></tr>
 </table>
-</div><div class="full_width_table"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md55"></a>
+</div><div class="full_width_table"></div><h3 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
 1.2.2 通用属性与派生类属性</h3>
 <p>和低层数据组件类似一样，包含高度、宽度、角度、中心点、角点列表、类型信息、相机外参等内容，但主要表示经过修正后的数据，例如 <span class="tt">height</span> 成员方法表示追踪器在通过对时间序列中所有特征组合进行处理，得到的修正后的高度信息（譬如加权平均）。访问方式与 <span class="tt"><a class="el" href="../../dd/dd2/group__combo.html">特征组合体（数据组件）</a></span>、<span class="tt"><a class="el" href="../../db/d72/group__feature.html">图像轮廓特征（数据组件）</a></span> 完全一致，这里不再赘述。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md56"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
 2 如何开发</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md57"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md58"></a>
 2.1 基本准则</h2>
 <p>开发与使用是一脉相承的，设计一个新的 <a class="el" href="../../d6/dd2/classrm_1_1tracker.html" title="组合体时间序列">rm::tracker</a> 派生类对象也要满足使用上的条件，一个新的派生类对象（假设定义为 <span class="tt">MyTracker</span>）需要满足以下准则。</p>
 <ol type="1">

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['状态发布（可选）_0',['3 状态发布（可选）',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md312',1,'']]],
-  ['状态方程线性化_1',['1.1 状态方程线性化',['../db/d71/tutorial_modules_ekf.html#ekf_state_function_linearization',1,'']]]
+  ['熵权法介绍_0',['熵权法介绍',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md165',1,'']]],
+  ['熵权法公式_1',['熵权法公式',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md166',1,'']]]
 ];

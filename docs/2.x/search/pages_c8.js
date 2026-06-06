@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['进程间通信设施_20——_20ipc_0',['进程间通信设施 —— IPC',['../d4/d00/tutorial_modules_ipc.html',1,'tutorial_table_of_content_modules']]]
+  ['轻量发布订阅服务_20——_20lpss_0',['轻量发布订阅服务 —— LPSS',['../d3/d8e/tutorial_modules_lpss.html',1,'tutorial_table_of_content_modules']]]
 ];

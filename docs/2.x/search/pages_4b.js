@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['各模块的用法_0',['RMVL-Python 各模块的用法',['../d3/dbb/tutorial_py_table_of_contents_modules.html',1,'tutorials_python']]]
+  ['可用）_0',['2 消息队列（仅 Linux 可用）',['../d4/d00/tutorial_modules_ipc.html#autotoc_md278',1,'']]],
+  ['可视化配置_20opc_20ua_1',['4.2.2 可视化配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#autotoc_md359',1,'']]]
 ];

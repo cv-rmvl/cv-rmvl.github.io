@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['补偿模块_0',['2.2 补偿模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md66',1,'']]]
+  ['节点发现协议_0',['1.2.1 节点发现协议',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md290',1,'']]]
 ];

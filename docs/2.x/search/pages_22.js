@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['串口通信模块_0',['串口通信模块',['../d3/da4/tutorial_modules_serial.html',1,'tutorial_table_of_content_modules']]]
+  ['与_20addtogroup_0',['1.7 defgroup 与 addtogroup',['../d5/d72/tutorial_document.html#autotoc_md136',1,'']]]
 ];

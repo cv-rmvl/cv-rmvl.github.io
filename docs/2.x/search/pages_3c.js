@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['函数插值方法_0',['函数插值方法',['../d8/d57/tutorial_modules_interpolation.html',1,'tutorial_table_of_content_modules']]]
+  ['决策模块_0',['2.4 决策模块',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md69',1,'']]]
 ];

@@ -6,7 +6,6 @@ var searchData=
   ['hash_5ftraits_3c_20tp_2c_20std_3a_3aenable_5fif_5ft_3c_21std_3a_3ais_5faggregate_5fv_3c_20tp_20_3e_20_3e_20_3e_3',['hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;',['../da/d75/structrm_1_1hash__traits_3_01Tp_00_01std_1_1enable__if__t_3_9std_1_1is__aggregate__v_3_01Tp_01_4_01_4_01_4.html',1,'rm']]],
   ['header_4',['Header',['../de/de3/classrm_1_1msg_1_1Header.html',1,'rm::msg']]],
   ['hikcamera_5',['HikCamera',['../db/d9f/classrm_1_1HikCamera.html',1,'rm']]],
-  ['hikcameraparam_6',['HikCameraParam',['../de/d4f/classrm_1_1para_1_1HikCameraParam.html',1,'rm::para']]],
-  ['hiklightcontroller_7',['HikLightController',['../df/d1f/classrm_1_1HikLightController.html',1,'rm']]],
-  ['hiklightcontrolparam_8',['HikLightControlParam',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html',1,'rm::para']]]
+  ['hiklightcontroller_6',['HikLightController',['../df/d1f/classrm_1_1HikLightController.html',1,'rm']]],
+  ['hiklightcontrolparam_7',['HikLightControlParam',['../dc/db1/classrm_1_1para_1_1HikLightControlParam.html',1,'rm::para']]]
 ];

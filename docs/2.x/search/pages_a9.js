@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['绑定功能_0',['绑定功能',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md404',1,'启用 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md402',1,'如何在配置 RMVL-Python 绑定功能'],['../df/da2/tutorial_py_table_of_contents_bindings.html',1,'RMVL-Python 绑定功能']]],
-  ['绑定是如何生成的_1',['RMVL-Python 绑定是如何生成的',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md401',1,'']]]
+  ['系统手动配置交叉编译_0',['为基于 ARM 的 Linux 系统手动配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]]
 ];

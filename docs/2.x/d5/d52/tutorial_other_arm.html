@@ -120,25 +120,25 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md143">交叉编译应具备的先决条件 </a>
+        <a href="#autotoc_md144">交叉编译应具备的先决条件 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md144">使用提供的工具链构建 RMVL </a>
+        <a href="#autotoc_md145">使用提供的工具链构建 RMVL </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md145">自定义工具链构建 RMVL </a>
+        <a href="#autotoc_md146">自定义工具链构建 RMVL </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2introduction_2other_2arm"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2introduction_2other_2arm"></a></p>
 <p><b>上一篇教程：</b><a class="el" href="../../d2/d81/tutorial_run_in.html" title="Run In —— 一键进入全功能 RMVL 编译镜像">Run In —— 一键进入全功能 RMVL 编译镜像</a> <br  />
 <b>下一篇教程：</b><a class="el" href="../../d5/d72/tutorial_document.html" title="为 RMVL 撰写说明文档">为 RMVL 撰写说明文档</a> <br  />
 </p>
 <hr  />
 <dl class="section note"><dt>注解</dt><dd>建议使用基于 YAML 文件的 Docker 编译镜像构建方式，详见 <a class="el" href="../../d2/d81/tutorial_run_in.html" title="Run In —— 一键进入全功能 RMVL 编译镜像">Run In —— 一键进入全功能 RMVL 编译镜像</a> 。</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md143"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md144"></a>
 交叉编译应具备的先决条件</h2>
 <ul>
 <li>Linux 主机</li>
@@ -148,12 +148,12 @@ $(function() {
 </ul>
 <p><span class="tt">gneabi</span> 安装命令如下</p>
 <div class="fragment"> <div class="line"><span class="keyword">sudo</span> <span class="keywordflow">apt</span> install gcc-arm-linux-gneabi</div> </div><p><span class="tt">gneabihf</span> 安装命令如下</p>
-<div class="fragment"> <div class="line"><span class="keyword">sudo</span> <span class="keywordflow">apt</span> install gcc-arm-linux-gneabihf</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md144"></a>
+<div class="fragment"> <div class="line"><span class="keyword">sudo</span> <span class="keywordflow">apt</span> install gcc-arm-linux-gneabihf</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md145"></a>
 使用提供的工具链构建 RMVL</h2>
 <p>在 RMVL 目录下创建 <span class="tt">build</span> 文件夹，运行以下命令</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">mkdir</span> build</div> <div class="line"><span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">-D</span> CMAKE_TOOLCHAIN_FILE=../platforms/linux/arm-gnueabi.toolchain.cmake ..</div> </div><p>上文代码中的 CMake 配置也可使用 <span class="tt">cmake-gui</span> 或者 <span class="tt">ccmake</span> 工具，例如使用 <span class="tt">ccmake</span> 则需要改写为</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">ccmake</span> <span class="comment">-D</span> CMAKE_TOOLCHAIN_FILE=../platforms/linux/arm-gnueabi.toolchain.cmake ..</div> </div><p>运行构建命令</p>
-<div class="fragment"> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">&ndash;build</span> . <span class="comment">&ndash;parallel</span> 4</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md145"></a>
+<div class="fragment"> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">&ndash;build</span> . <span class="comment">&ndash;parallel</span> 4</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md146"></a>
 自定义工具链构建 RMVL</h2>
 <p>如果交叉编译器是通过编译内核源码获取到的，在使用这类指定的交叉编译器进行编译时，自定义工具链是个有效的方法。</p>
 <p>工具链文件的一般写法如下</p>

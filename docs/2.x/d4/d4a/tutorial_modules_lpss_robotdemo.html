@@ -118,37 +118,37 @@ $(function() {
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md316">控制层部署控制器示例 </a>
+    <a href="#autotoc_md317">控制层部署控制器示例 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md317">概述 </a>
+        <a href="#autotoc_md318">概述 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md318">控制层 </a>
+        <a href="#autotoc_md319">控制层 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md319">执行层 </a>
+        <a href="#autotoc_md320">执行层 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md320">执行端部署控制器示例 </a>
+    <a href="#autotoc_md321">执行端部署控制器示例 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md321">概述 </a>
+        <a href="#autotoc_md322">概述 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md322">控制层 </a>
+        <a href="#autotoc_md323">控制层 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md323">执行层 </a>
+        <a href="#autotoc_md324">执行层 </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
 <div class="textblock"><p>本教程提供了一个完整的 LPSS 机器人应用示例，展示了如何结合运动规划和控制功能实现简单的机器人演示程序。</p>
-<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2lpss_2robotdemo"></a></p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2lpss_2robotdemo"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2026/04/29 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
@@ -157,16 +157,16 @@ $(function() {
 </p>
 <hr  />
 <p>相关模块： <a class="el" href="../../d2/d7d/group__lpss__robot.html" title="机器人功能扩展">机器人功能扩展</a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md316"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md317"></a>
 控制层部署控制器示例</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md317"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md318"></a>
 概述</h2>
 <p>对于运算性能相对受限的执行层，一般会将 <span class="tt">RobotController</span> 部署在控制层的计算节点上，自行完成轨迹采样，并通过 LPSS 将控制指令（一般是 <span class="tt">msg::JointState</span>）发送到执行层。</p>
 <p>总的来说，遵循如下架构：</p><ul>
 <li><b>控制层</b> ：运行 <span class="tt">RobotPlanner</span> 和 <span class="tt">RobotController</span>，周期性规划轨迹、采样控制指令并通过 LPSS 发布</li>
 <li><b>执行层</b> ：订阅控制指令消息，根据命令驱动电机，并发布关节状态反馈</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md318"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md319"></a>
 控制层</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">异步模式（C++20）</b></p>
@@ -246,7 +246,7 @@ $(function() {
 <div class="line">    node-&gt;spin();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:424</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:422</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1JointState_html"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html">rm::msg::JointState</a></div><div class="ttdoc">JointState 消息类型：sensor/JointState</div><div class="ttdef"><b>定义</b> joint_state.hpp:32</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_a591220c343ee7049eaa0694ee3438584"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#a591220c343ee7049eaa0694ee3438584">rm::msg::JointState::velocity</a></div><div class="ttdeci">std::vector&lt; double &gt; velocity</div><div class="ttdef"><b>定义</b> joint_state.hpp:37</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1JointState_html_a6bd66f5f2a55aa4f31cb29e62667d6d7"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html#a6bd66f5f2a55aa4f31cb29e62667d6d7">rm::msg::JointState::name</a></div><div class="ttdeci">std::vector&lt; std::string &gt; name</div><div class="ttdef"><b>定义</b> joint_state.hpp:35</div></div>
@@ -334,12 +334,12 @@ $(function() {
 <div class="line">    </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:119</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:117</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1RobotController_html"><div class="ttname"><a href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></div><div class="ttdoc">机器人控制模块</div><div class="ttdef"><b>定义</b> robot.hpp:215</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1RobotPlanner_html"><div class="ttname"><a href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">rm::lpss::RobotPlanner</a></div><div class="ttdoc">机器人规划模块，提供 URDF 解析、正/逆运动学求解、轨迹规划等运动学功能</div><div class="ttdef"><b>定义</b> robot.hpp:94</div></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md319"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md320"></a>
 执行层</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">异步模式（C++20）</b></p>
@@ -495,16 +495,16 @@ $(function() {
 <div class="line">}</div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md320"></a>
+</div><div class="tabbed"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md321"></a>
 执行端部署控制器示例</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md321"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md322"></a>
 概述</h2>
 <p>对于执行层计算资源较为充足的场景，推荐在执行层直接部署 <span class="tt">RobotController</span>，控制层仅负责轨迹规划，将规划好的完整轨迹通过 LPSS 发送到执行层，由执行层的控制器进行采样和控制指令生成。</p>
 <p>架构如下：</p><ul>
 <li><b>控制层</b> ：运行 <span class="tt">RobotPlanner</span>，规划轨迹并通过 LPSS 发布完整轨迹消息</li>
 <li><b>执行层</b> ：订阅轨迹消息，使用 <span class="tt">RobotController</span> 采样控制指令并驱动电机，发布关节状态反馈</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md322"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md323"></a>
 控制层</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">异步模式（C++20）</b></p>
@@ -679,7 +679,7 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1msg_1_1Pose_html"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html">rm::msg::Pose</a></div><div class="ttdoc">Pose 消息类型：geometry/Pose</div><div class="ttdef"><b>定义</b> pose.hpp:33</div></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md323"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md324"></a>
 执行层</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">异步模式（C++20）</b></p>

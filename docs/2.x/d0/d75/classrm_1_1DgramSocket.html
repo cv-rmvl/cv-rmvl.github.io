@@ -127,12 +127,12 @@ $(function() {
 <div class="dynheader">
 类 rm::DgramSocket 继承关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/de3/classrm_1_1DgramSocket__inherit__graph.svg" width="184" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/de3/classrm_1_1DgramSocket__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 rm::DgramSocket 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/dee/classrm_1_1DgramSocket__coll__graph.svg" width="138" height="312"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/dee/classrm_1_1DgramSocket__coll__graph.svg" width="135" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -144,12 +144,27 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a5852362ad2fed4216525e9d9120edade"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 Socket 选项  <br /></td></tr>
 <tr class="memitem:a353ebe3282840f6775df68fc00b455f6" id="r_a353ebe3282840f6775df68fc00b455f6"><td class="memItemLeft"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>&#160;</td><td class="memItemRight"><a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a> () const</td></tr>
 <tr class="memdesc:a353ebe3282840f6775df68fc00b455f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取绑定的端点  <br /></td></tr>
-<tr class="memitem:ae5f31aa585b195a3c9733d770ebd70ff" id="r_ae5f31aa585b195a3c9733d770ebd70ff"><td class="memItemLeft">std::tuple&lt; std::string, std::string, uint16_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ae5f31aa585b195a3c9733d770ebd70ff">read</a> () noexcept</td></tr>
-<tr class="memdesc:ae5f31aa585b195a3c9733d770ebd70ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步读取 Socket 中的数据（阻塞）  <br /></td></tr>
+<tr class="memitem:a9f1c3f149eb0ad5841768f2af4d91fa9" id="r_a9f1c3f149eb0ad5841768f2af4d91fa9"><td class="memItemLeft"><a class="el" href="../../d3/d23/structrm_1_1RecvData.html">RecvData</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9f1c3f149eb0ad5841768f2af4d91fa9">read</a> () noexcept</td></tr>
+<tr class="memdesc:a9f1c3f149eb0ad5841768f2af4d91fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步读取 Socket 中的数据（阻塞）  <br /></td></tr>
 <tr class="memitem:ae94ee1720b8b7569400b190a17cac342" id="r_ae94ee1720b8b7569400b190a17cac342"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae94ee1720b8b7569400b190a17cac342">write</a> (std::string_view addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, std::string_view data) noexcept</td></tr>
 <tr class="memdesc:ae94ee1720b8b7569400b190a17cac342"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步写入数据到的 Socket 中（阻塞）  <br /></td></tr>
 <tr class="memitem:a12f5007be1ab59037dc3109d55a77ae5" id="r_a12f5007be1ab59037dc3109d55a77ae5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12f5007be1ab59037dc3109d55a77ae5">write</a> (std::array&lt; uint8_t, 4 &gt; addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, std::string_view data) noexcept</td></tr>
 <tr class="memdesc:a12f5007be1ab59037dc3109d55a77ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步写入数据到的 IPv4 的 Socket 中（阻塞）  <br /></td></tr>
+<tr class="memitem:a8e3a6f732a596923bffda381b8edb01d" id="r_a8e3a6f732a596923bffda381b8edb01d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8e3a6f732a596923bffda381b8edb01d">multiwrite</a> (std::string_view addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, const std::vector&lt; std::string_view &gt; &amp;buffers) noexcept</td></tr>
+<tr class="memdesc:a8e3a6f732a596923bffda381b8edb01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步多缓冲区写入  <br /></td></tr>
+<tr class="memitem:a4d0faa147abc66659d41d72191502e50" id="r_a4d0faa147abc66659d41d72191502e50"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4d0faa147abc66659d41d72191502e50">multiwrite</a> (std::array&lt; uint8_t, 4 &gt; addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, const std::vector&lt; std::string_view &gt; &amp;buffers) noexcept</td></tr>
+<tr class="memdesc:a4d0faa147abc66659d41d72191502e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步多缓冲区写入到 IPv4 的 Socket 中（阻塞）  <br /></td></tr>
+<tr class="memitem:ab330fb4bf51cbd857817173ca1f566ff" id="r_ab330fb4bf51cbd857817173ca1f566ff"><td class="memTemplParams" colspan="2">template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_constructible_v&lt;std::string_view, Args&gt; &amp;&amp; ...)&gt;&gt; </td></tr>
+<tr class="memitem:ab330fb4bf51cbd857817173ca1f566ff template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab330fb4bf51cbd857817173ca1f566ff">multiwrite</a> (std::string_view addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memdesc:ab330fb4bf51cbd857817173ca1f566ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步多缓冲区写入  <br /></td></tr>
+<tr class="memitem:a6380e0a6a73107432b4681a89b2ae2ca" id="r_a6380e0a6a73107432b4681a89b2ae2ca"><td class="memTemplParams" colspan="2">template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_constructible_v&lt;std::string_view, Args&gt; &amp;&amp; ...)&gt;&gt; </td></tr>
+<tr class="memitem:a6380e0a6a73107432b4681a89b2ae2ca template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6380e0a6a73107432b4681a89b2ae2ca">multiwrite</a> (std::array&lt; uint8_t, 4 &gt; addr, const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;<a class="el" href="#a353ebe3282840f6775df68fc00b455f6">endpoint</a>, Args &amp;&amp;...args) noexcept</td></tr>
+<tr class="memitem:a8c537a3b393d7212aa8e71622f89a510" id="r_a8c537a3b393d7212aa8e71622f89a510"><td class="memItemLeft"><a class="el" href="../../df/d90/structrm_1_1MultiRecvData.html">MultiRecvData</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8c537a3b393d7212aa8e71622f89a510">multiread</a> (const std::vector&lt; std::size_t &gt; &amp;sizes)</td></tr>
+<tr class="memdesc:a8c537a3b393d7212aa8e71622f89a510"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步多缓冲区读取  <br /></td></tr>
+<tr class="memitem:ac7e7446ee47cbea14f2258e99aa4f19e" id="r_ac7e7446ee47cbea14f2258e99aa4f19e"><td class="memTemplParams" colspan="2">template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_convertible_v&lt;Args, size_t&gt; &amp;&amp; ...)&gt;&gt; </td></tr>
+<tr class="memitem:ac7e7446ee47cbea14f2258e99aa4f19e template"><td class="memItemLeft"><a class="el" href="../../df/d90/structrm_1_1MultiRecvData.html">MultiRecvData</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac7e7446ee47cbea14f2258e99aa4f19e">multiread</a> (Args... sizes)</td></tr>
+<tr class="memitem:a206f229d6ae56bd81696515a8e74091f" id="r_a206f229d6ae56bd81696515a8e74091f"><td class="memItemLeft"><a class="el" href="../../d0/d73/structrm_1_1RecvtoData.html">RecvtoData</a>&#160;</td><td class="memItemRight"><a class="el" href="#a206f229d6ae56bd81696515a8e74091f">read_to</a> (char *buf, size_t size) noexcept</td></tr>
+<tr class="memdesc:a206f229d6ae56bd81696515a8e74091f"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步读取数据到预分配内存中  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -205,8 +220,107 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5f31aa585b195a3c9733d770ebd70ff" name="ae5f31aa585b195a3c9733d770ebd70ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f31aa585b195a3c9733d770ebd70ff">&#9670;&#160;</a></span>read()</h2>
+<a id="ac7e7446ee47cbea14f2258e99aa4f19e" name="ac7e7446ee47cbea14f2258e99aa4f19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e7446ee47cbea14f2258e99aa4f19e">&#9670;&#160;</a></span>multiread() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_convertible_v&lt;Args, size_t&gt; &amp;&amp; ...)&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d90/structrm_1_1MultiRecvData.html">MultiRecvData</a> rm::DgramSocket::multiread </td>
+          <td>(</td>
+          <td class="paramtype">Args...</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_ac7e7446ee47cbea14f2258e99aa4f19e_cgraph.svg" width="216" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8c537a3b393d7212aa8e71622f89a510" name="a8c537a3b393d7212aa8e71622f89a510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c537a3b393d7212aa8e71622f89a510">&#9670;&#160;</a></span>multiread() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d90/structrm_1_1MultiRecvData.html">MultiRecvData</a> rm::DgramSocket::multiread </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同步多缓冲区读取 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizes</td><td>预期读取的各分片数据大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>读取到的数据分片数组，发送方 IP，发送方端口 </dd></dl>
+
+</div>
+</div>
+<a id="a6380e0a6a73107432b4681a89b2ae2ca" name="a6380e0a6a73107432b4681a89b2ae2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6380e0a6a73107432b4681a89b2ae2ca">&#9670;&#160;</a></span>multiwrite() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_constructible_v&lt;std::string_view, Args&gt; &amp;&amp; ...)&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::DgramSocket::multiwrite </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; uint8_t, 4 &gt;</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_a6380e0a6a73107432b4681a89b2ae2ca_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a4d0faa147abc66659d41d72191502e50" name="a4d0faa147abc66659d41d72191502e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d0faa147abc66659d41d72191502e50">&#9670;&#160;</a></span>multiwrite() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +329,170 @@ Protected 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::tuple&lt; std::string, std::string, uint16_t &gt; rm::DgramSocket::read </td>
+          <td class="memname">bool rm::DgramSocket::multiwrite </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; uint8_t, 4 &gt;</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string_view &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>buffers</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>同步多缓冲区写入到 IPv4 的 Socket 中（阻塞） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>使用数组形式表示的 IPv4 目标地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a353ebe3282840f6775df68fc00b455f6" title="获取绑定的端点">endpoint</a></td><td>目标端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffers</td><td>待写入的多个数据视图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_a4d0faa147abc66659d41d72191502e50_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab330fb4bf51cbd857817173ca1f566ff" name="ab330fb4bf51cbd857817173ca1f566ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab330fb4bf51cbd857817173ca1f566ff">&#9670;&#160;</a></span>multiwrite() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args, typename Enable = std::enable_if_t&lt;(sizeof...(Args) &gt; 0) &amp;&amp; (std::is_constructible_v&lt;std::string_view, Args&gt; &amp;&amp; ...)&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::DgramSocket::multiwrite </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>同步多缓冲区写入 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keywordtype">bool</span> success = socket.multiwrite(<span class="stringliteral">&quot;192.168.1.100&quot;</span>, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a>(), 12345), <span class="stringliteral">&quot;Hello,&quot;</span>, <span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;World!&quot;</span>);</div>
+<div class="ttc" id="aclassrm_1_1Endpoint_html"><div class="ttname"><a href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></div><div class="ttdoc">端点</div><div class="ttdef"><b>定义</b> socket.hpp:276</div></div>
+<div class="ttc" id="anamespacerm_1_1ip_1_1udp_html_aa8aad4c3ffaff4a1fd14ceaf137bdde9"><div class="ttname"><a href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 UDP 协议</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包，要求每个参数都能构造为 <span class="tt">std::string_view</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>目标地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a353ebe3282840f6775df68fc00b455f6" title="获取绑定的端点">endpoint</a></td><td>目标端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>待写入的多个数据参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_ab330fb4bf51cbd857817173ca1f566ff_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a8e3a6f732a596923bffda381b8edb01d" name="a8e3a6f732a596923bffda381b8edb01d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3a6f732a596923bffda381b8edb01d">&#9670;&#160;</a></span>multiwrite() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::DgramSocket::multiwrite </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>endpoint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string_view &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>buffers</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>同步多缓冲区写入 </p>
+<div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
+<div class="line"><span class="keywordtype">bool</span> success = socket.multiwrite(<span class="stringliteral">&quot;192.168.1.100&quot;</span>, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a>(), 12345), {<span class="stringliteral">&quot;Hello,&quot;</span>, <span class="stringliteral">&quot; &quot;</span>, <span class="stringliteral">&quot;World!&quot;</span>});</div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>目标地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a353ebe3282840f6775df68fc00b455f6" title="获取绑定的端点">endpoint</a></td><td>目标端点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffers</td><td>待写入的多个数据视图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_a8e3a6f732a596923bffda381b8edb01d_cgraph.svg" width="468" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9f1c3f149eb0ad5841768f2af4d91fa9" name="a9f1c3f149eb0ad5841768f2af4d91fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1c3f149eb0ad5841768f2af4d91fa9">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d23/structrm_1_1RecvData.html">RecvData</a> rm::DgramSocket::read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -241,6 +518,45 @@ Protected 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a206f229d6ae56bd81696515a8e74091f" name="a206f229d6ae56bd81696515a8e74091f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206f229d6ae56bd81696515a8e74091f">&#9670;&#160;</a></span>read_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d73/structrm_1_1RecvtoData.html">RecvtoData</a> rm::DgramSocket::read_to </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>同步读取数据到预分配内存中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>预分配内存的首地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>预期读取的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>实际读取的字节数，发送方 IP，发送方端口 </dd></dl>
 
 </div>
 </div>
@@ -306,8 +622,6 @@ template&lt;typename SockOpt&gt; </div>
 <p>同步写入数据到的 IPv4 的 Socket 中（阻塞） </p>
 <div class="fragment"><div class="line"><span class="comment">// 使用示例</span></div>
 <div class="line"><span class="keywordtype">bool</span> success = socket.write({192, 168, 1, 100}, <a class="code hl_class" href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a>(<a class="code hl_function" href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a>(), 12345), <span class="stringliteral">&quot;Hello, World!&quot;</span>);</div>
-<div class="ttc" id="aclassrm_1_1Endpoint_html"><div class="ttname"><a href="../../dc/db5/classrm_1_1Endpoint.html">rm::Endpoint</a></div><div class="ttdoc">端点</div><div class="ttdef"><b>定义</b> socket.hpp:275</div></div>
-<div class="ttc" id="anamespacerm_1_1ip_1_1udp_html_aa8aad4c3ffaff4a1fd14ceaf137bdde9"><div class="ttname"><a href="../../d0/d7f/namespacerm_1_1ip_1_1udp.html#aa8aad4c3ffaff4a1fd14ceaf137bdde9">rm::ip::udp::v4</a></div><div class="ttdeci">Protocol v4()</div><div class="ttdoc">构造端点，以表示 IPv4 UDP 协议</div></div>
 </div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>使用数组形式表示的 IPv4 目标地址 </td></tr>
@@ -320,7 +634,7 @@ template&lt;typename SockOpt&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_a12f5007be1ab59037dc3109d55a77ae5_cgraph.svg" width="659" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_a12f5007be1ab59037dc3109d55a77ae5_cgraph.svg" width="658" height="76"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -372,7 +686,7 @@ template&lt;typename SockOpt&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_ae94ee1720b8b7569400b190a17cac342_cgraph.svg" width="435" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d75/classrm_1_1DgramSocket_ae94ee1720b8b7569400b190a17cac342_cgraph.svg" width="434" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

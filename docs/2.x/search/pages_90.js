@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['求解常微分方程的_20euler_20方法_0',['2 求解常微分方程的 Euler 方法',['../d6/d31/tutorial_modules_runge_kutta.html#autotoc_md228',1,'']]]
+  ['步前向预估能量机关预测_0',['k 步前向预估能量机关预测',['../d3/ded/tutorial_extra_spi_rune_predictor.html',1,'tutorial_table_of_content_extra']]]
 ];

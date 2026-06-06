@@ -120,19 +120,19 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md337">1 HTTP 数据结构 </a>
+        <a href="#autotoc_md338">1 HTTP 数据结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md338">2 HTTP 请求工具 </a>
+        <a href="#autotoc_md339">2 HTTP 请求工具 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md339">3 Web 后端框架 </a>
+        <a href="#autotoc_md340">3 Web 后端框架 </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2netapp"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2netapp"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2025/09/25 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0</dd></dl>
@@ -145,7 +145,7 @@ $(function() {
 <li>请求工具： <a class="el" href="../../d6/dd4/group__io__net.html#gad1972828ae5dd6f98672664365f84c0e" title="发出同步 HTTP 请求">rm::requests::request</a> 及 <a class="el" href="../../d6/dd4/group__io__net.html#ga3c46835427121ff22a497b03ae5529ac" title="发出异步 HTTP 请求">rm::async::requests::request</a></li>
 <li>后端框架： <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md337"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
 1 HTTP 数据结构</h2>
 <p>相关类： <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 及 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></p>
 <p>两个类均提供了</p>
@@ -154,7 +154,7 @@ $(function() {
 <li><span class="tt">parse</span> 静态成员函数，用于从 HTTP 格式的字符串解析出请求/响应结构，在接收到 Socket 原始数据后可调用此方法进行解析</li>
 </ul>
 <p><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a> 还提供了多种简化生成响应的成员函数，如 <span class="tt">send</span>、<span class="tt">json</span>、<span class="tt">redirect</span> 等。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
 2 HTTP 请求工具</h2>
 <p>相关函数：</p>
 <ul>
@@ -176,7 +176,7 @@ $(function() {
 <div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:280</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <span class="tt">requests</span> 替换为 <span class="tt">async::requests</span>，并在协程中使用 <span class="tt">co_await</span> 关键字等待结果，这里不再赘述。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
 3 Web 后端框架</h2>
 <p>RMVL 提供了 HTTP 的后端应用框架 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 。这是 <a class="el" href="../../d2/da3/group__io.html" title="数据 IO 与通信模块">数据 IO 与通信模块</a> 的集大成者，设计理念参考 JavaScript 的 Express 框架，这里给出一个简单的 Web 服务器示例：</p>
 <div class="fragment"><div class="line"><span class="comment">// demo.cpp</span></div>
@@ -243,12 +243,12 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1Router_html"><div class="ttname"><a href="../../d0/de4/classrm_1_1Router.html">rm::Router</a></div><div class="ttdoc">HTTP 路由器 目前支持的 HTTP 方法包括 GET、POST、HEAD 和 DELETE</div><div class="ttdef"><b>定义</b> netapp.hpp:357</div></div>
 <div class="ttc" id="aclassrm_1_1Router_html_a7f5a0ad5e54c0bb269f6a0ab07376825"><div class="ttname"><a href="../../d0/de4/classrm_1_1Router.html#a7f5a0ad5e54c0bb269f6a0ab07376825">rm::Router::get</a></div><div class="ttdeci">void get(std::string_view uri, RouteHandler callback)</div><div class="ttdoc">Get 请求路由</div><div class="ttdef"><b>定义</b> netapp.hpp:409</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:187</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:528</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Webapp_html_a9ceba340ccc104d25a1b824ac5a12ce8"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html#a9ceba340ccc104d25a1b824ac5a12ce8">rm::async::Webapp::spin</a></div><div class="ttdeci">Task spin()</div><div class="ttdoc">启动 Socket 监听任务循环</div></div>
 <div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">跨域资源共享 CORS 中间件，为响应添加 CORS 头部信息</div></div>
-<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:265</div></div>
+<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:282</div></div>
 <div class="ttc" id="astructrm_1_1Request_html"><div class="ttname"><a href="../../d6/d7c/structrm_1_1Request.html">rm::Request</a></div><div class="ttdoc">HTTP 请求结构</div><div class="ttdef"><b>定义</b> netapp.hpp:73</div></div>
 <div class="ttc" id="astructrm_1_1Request_html_a81149100be8e185c592024c4de5a620c"><div class="ttname"><a href="../../d6/d7c/structrm_1_1Request.html#a81149100be8e185c592024c4de5a620c">rm::Request::params</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; params</div><div class="ttdoc">路径参数</div><div class="ttdef"><b>定义</b> netapp.hpp:92</div></div>
 <div class="ttc" id="astructrm_1_1Response_html"><div class="ttname"><a href="../../d1/d1b/structrm_1_1Response.html">rm::Response</a></div><div class="ttdoc">HTTP 响应结构</div><div class="ttdef"><b>定义</b> netapp.hpp:107</div></div>
@@ -259,8 +259,7 @@ $(function() {
 <div class="fragment"> <div class="line"><span class="keywordflow">g++</span> demo.cpp <span class="comment">-std=c++20</span> <span class="comment">-I</span> /usr/local/include/RMVL <span class="comment">-l</span> rmvl_io <span class="comment">-l</span> rmvl_core <span class="comment">-o</span> demo</div> <div class="line"><span class="comment"># 如果使用的是 Windows 系统，可能需要额外链接 ws2_32 库</span></div> </div><p>编译后，在终端输入</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">./demo</span> 8080</div> </div><p>即可创建 Web 后端服务，并且监听 8080 端口，可以使用 <span class="tt">curl</span> 工具或浏览器访问 <span class="tt"><a href="http://localhost:8080/">http://localhost:8080/</a></span> 来测试服务器。</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-s</span> <span class="stringliteral">"http://localhost:8080"</span></div> </div><p>会得到如下输出：</p>
-<div class="fragment"><div class="line">&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello, World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</div>
-</div><!-- fragment --><p>同时，可以配合 <span class="tt">jq</span> 工具测试 JSON API：</p>
+<div class="fragment"> <div class="line"><span class="comment">&lt;</span><span class="keywordtype">html</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">h1</span><span class="comment">&gt;</span>Hello, World!<span class="comment">&lt;</span><span class="keywordtype">/h1</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/html</span><span class="comment">&gt;</span></div> </div><p>同时，可以配合 <span class="tt">jq</span> 工具测试 JSON API：</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-s</span> <span class="stringliteral">"http://localhost:8080/api"</span> | <span class="keywordflow">jq</span> </div> </div><p>会得到如下输出：</p>
 <div class="fragment"> <div class="line">{</div> <div class="line">&#160;&#160;<span class="keywordtype">"key"</span>: <span class="stringliteral">"value"</span>,</div> <div class="line">&#160;&#160;<span class="keywordtype">"message"</span>: <span class="stringliteral">"This is a test API."</span></div> <div class="line">}</div> </div> </div></div><!-- contents -->
 </div><!-- PageDoc -->

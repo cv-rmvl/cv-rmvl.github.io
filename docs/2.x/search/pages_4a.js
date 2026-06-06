@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['可用）_0',['2 消息队列（仅 Linux 可用）',['../d4/d00/tutorial_modules_ipc.html#autotoc_md277',1,'']]],
-  ['可视化配置_20opc_20ua_1',['4.2.2 可视化配置 OPC UA',['../db/dba/tutorial_modules_opcua.html#autotoc_md358',1,'']]]
+  ['变量监视_0',['2.6.1 变量监视',['../db/dba/tutorial_modules_opcua.html#autotoc_md350',1,'']]],
+  ['变量_1',['2.2 变量',['../db/dba/tutorial_modules_opcua.html#autotoc_md345',1,'']]]
 ];

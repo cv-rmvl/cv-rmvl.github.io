@@ -118,30 +118,30 @@ $(function() {
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md274">1 命名管道 </a>
+    <a href="#autotoc_md275">1 命名管道 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md275">1.1 同步阻塞 </a>
+        <a href="#autotoc_md276">1.1 同步阻塞 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md276">1.2 异步非阻塞 </a>
+        <a href="#autotoc_md277">1.2 异步非阻塞 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md277">2 消息队列（仅 Linux 可用） </a>
+    <a href="#autotoc_md278">2 消息队列（仅 Linux 可用） </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md278">3 共享内存 </a>
+    <a href="#autotoc_md279">3 共享内存 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md279">3.1 基础共享内存设施 </a>
+        <a href="#autotoc_md280">3.1 基础共享内存设施 </a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2ipc"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2ipc"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2025/09/25 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0</dd></dl>
@@ -149,7 +149,7 @@ $(function() {
  <b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html" title="串口通信模块">串口通信模块</a> <br  />
 </p>
 <hr  />
-<h1 class="doxsection"><a class="anchor" id="autotoc_md274"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md275"></a>
 1 命名管道</h1>
 <p>相关类：</p>
 <ul>
@@ -158,7 +158,7 @@ $(function() {
 </ul>
 <p>管道是一种半双工的通信方式，允许一个进程与另一个进程进行通信。命名管道（Named Pipe）是一种特殊类型的管道，它具有名称，可以在不同的进程之间进行通信。</p>
 <p>RMVL 提供了跨平台的命名管道实现，并提供了协程支持，Windows 下基于 Windows 命名管道，Linux 下基于 Unix FIFO 实现。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md275"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md276"></a>
 1.1 同步阻塞</h2>
 <p><b>服务端</b></p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -185,7 +185,7 @@ $(function() {
 <div class="line">    printf(<span class="stringliteral">&quot;Received: %s\n&quot;</span>, <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.c_str());</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1PipeServer_html"><div class="ttname"><a href="../../da/d82/classrm_1_1PipeServer.html">rm::PipeServer</a></div><div class="ttdoc">命名管道服务端</div><div class="ttdef"><b>定义</b> ipc.hpp:26</div></div>
-<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:232</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:230</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">Python</b></p>
@@ -248,7 +248,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span> -1</div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md276"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md277"></a>
 1.2 异步非阻塞</h2>
 <p><b>服务端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/ipc.hpp&gt;</span></div>
@@ -282,13 +282,13 @@ $(function() {
 <div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:177</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:187</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">rm::async::PipeServer</a></div><div class="ttdoc">异步命名管道服务端</div><div class="ttdef"><b>定义</b> ipc.hpp:405</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_a8e9561a5c4e3f2753799c33436f85ef3"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#a8e9561a5c4e3f2753799c33436f85ef3">rm::async::PipeServer::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:427</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_ac36cfeb6370eae52c7c23ab605b80e9a"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#ac36cfeb6370eae52c7c23ab605b80e9a">rm::async::PipeServer::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:441</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:146</div></div>
-<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:265</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html">rm::async::PipeServer</a></div><div class="ttdoc">异步命名管道服务端</div><div class="ttdef"><b>定义</b> ipc.hpp:448</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_a8e9561a5c4e3f2753799c33436f85ef3"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#a8e9561a5c4e3f2753799c33436f85ef3">rm::async::PipeServer::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:470</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeServer_html_ac36cfeb6370eae52c7c23ab605b80e9a"><div class="ttname"><a href="../../db/dc2/classrm_1_1async_1_1PipeServer.html#ac36cfeb6370eae52c7c23ab605b80e9a">rm::async::PipeServer::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:484</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:148</div></div>
+<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:282</div></div>
 </div><!-- fragment --><p><b>客户端</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/ipc.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -320,10 +320,10 @@ $(function() {
 <div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html">rm::async::PipeClient</a></div><div class="ttdoc">异步命名管道客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:450</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a092c354c023e37277af3b4e8fadac74c"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a092c354c023e37277af3b4e8fadac74c">rm::async::PipeClient::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:463</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a473087ec1b1f42d76c85998b7e3a5155"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a473087ec1b1f42d76c85998b7e3a5155">rm::async::PipeClient::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:477</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md277"></a>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html">rm::async::PipeClient</a></div><div class="ttdoc">异步命名管道客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:493</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a092c354c023e37277af3b4e8fadac74c"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a092c354c023e37277af3b4e8fadac74c">rm::async::PipeClient::read</a></div><div class="ttdeci">AsyncReadAwaiter read()</div><div class="ttdoc">从管道读取数据</div><div class="ttdef"><b>定义</b> ipc.hpp:506</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1PipeClient_html_a473087ec1b1f42d76c85998b7e3a5155"><div class="ttname"><a href="../../dc/dba/classrm_1_1async_1_1PipeClient.html#a473087ec1b1f42d76c85998b7e3a5155">rm::async::PipeClient::write</a></div><div class="ttdeci">AsyncWriteAwaiter write(std::string_view data)</div><div class="ttdoc">向管道写入数据</div><div class="ttdef"><b>定义</b> ipc.hpp:520</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md278"></a>
 2 消息队列（仅 Linux 可用）</h1>
 <p>相关类： <a class="el" href="../../d4/d88/classrm_1_1MqServer.html" title="消息队列服务端">rm::MqServer</a> 及 <a class="el" href="../../d4/d5a/classrm_1_1MqClient.html" title="消息队列客户端">rm::MqClient</a></p>
 <p><b>服务端</b></p>
@@ -372,11 +372,11 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1MqClient_html"><div class="ttname"><a href="../../d4/d5a/classrm_1_1MqClient.html">rm::MqClient</a></div><div class="ttdoc">消息队列客户端</div><div class="ttdef"><b>定义</b> ipc.hpp:183</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md278"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md279"></a>
 3 共享内存</h1>
 <p>相关类： <a class="el" href="../../d5/d8b/classrm_1_1SHMBase.html" title="共享内存对象基类">rm::SHMBase</a> 以及 <a class="el" href="../../d0/df0/classrm_1_1RingBufferSlotSHM.html" title="基于共享内存的无锁 MPMC（多生产者多消费者）环形缓冲区">rm::RingBufferSlotSHM</a></p>
 <p>共享内存（Shared Memory）是一种极其高效的进程间通信方式，允许多个进程访问同一块内存区域，RMVL 提供了跨平台的共享内存实现。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md279"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md280"></a>
 3.1 基础共享内存设施</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/ipc.hpp&gt;</span></div>
 <div class="line"> </div>

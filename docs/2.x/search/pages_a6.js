@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['算法原理_0',['算法原理',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md207',1,'1.1 算法原理'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md212',1,'2.1 算法原理']]],
-  ['算法类_1',['2 算法类',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md382',1,'']]],
-  ['算法_2',['算法',['../d6/d31/tutorial_modules_runge_kutta.html',1,'常微分方程（组）数值解与 Runge-Kutta 算法'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md211',1,'2 Levenberg–Marquardt 算法']]]
+  ['笛卡尔空间规划（多点）_0',['2.5 笛卡尔空间规划（多点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md333',1,'']]],
+  ['笛卡尔空间规划（点到点）_1',['2.4 笛卡尔空间规划（点到点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md332',1,'']]]
 ];

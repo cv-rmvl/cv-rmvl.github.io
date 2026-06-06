@@ -115,22 +115,326 @@ $(function() {
   <div class="headertitle"><div class="title">LPSS CLI 工具 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2rdt_2rdt__lpss"></a></p>
-<p><span class="tt">rdt</span> 提供了 LPSS 的 CLI 工具，使用时可通过输入</p>
-<div class="fragment"><div class="line">lpss help</div>
-</div><!-- fragment --><p>来查看具体帮助，简单来说包括以下子命令</p>
+<div class="toc"><h3>目录</h3>
 <ul>
-<li><span class="tt">create</span> —— 创建一个依赖 LPSS 的新项目</li>
-<li><p class="startli"><span class="tt">node</span> —— 节点工具，包括 <span class="tt">list</span>（列出当前系统中所有的 LPSS 节点）、<span class="tt">info</span>（查看指定节点的详细信息），例如计划查看 <span class="tt">lpss_node_1</span> 的信息，则可以输入</p>
-<div class="fragment"><div class="line">lpss node info lpss_node_1</div>
-</div><!-- fragment --><p class="startli">计划查看 <span class="tt">/cur/joint_states</span> 话题的信息，则可以输入</p>
-<div class="fragment"><div class="line">lpss topic info /cur/joint_states</div>
-</div><!-- fragment --></li>
-<li><span class="tt">topic</span> —— 话题工具，包括 <span class="tt">list</span>（列出当前系统中所有的 LPSS 话题）、<span class="tt">info</span>（查看指定话题的详细信息）、<span class="tt">echo</span>（订阅指定话题并打印消息内容）、<span class="tt">hz</span>（查看指定话题的发布频率）、<span class="tt">bw</span>（查看指定话题的带宽使用情况）</li>
-<li><span class="tt">interface</span> —— 内置消息接口查看工具</li>
-<li><span class="tt">graph</span> —— 前后端分离的 LPSS 节点图工具</li>
-<li><span class="tt">viz</span> —— 前后端分离的 LPSS 3D 可视化工具，也可以不加前缀的使用 <span class="tt">lviz</span> 来启动 </li>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md402">前言 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md403">create 命令 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md404">node 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md405">info 子命令 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md406">topic 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md407">info 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md408">echo 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md409">pub 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md410">type 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md411">hz 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md412">bw 子命令 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md413">interface 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md414">group 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md415">show 子命令 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md416">graph 命令 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md417">viz 命令 </a>
+      </li>
+    </ul>
+  </li>
 </ul>
+</div>
+<div class="textblock"><p>LPSS 命令行工具的使用教程</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2rdt_2rdt__lpss"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2026/06/06 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d0/d7c/tutorial_rdt_rdt.html" title="RDT CLI 工具">RDT CLI 工具</a> <br  />
+</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md402"></a>
+前言</h2>
+<p>LPSS 是一个轻量级的发布订阅通信框架，采用去中心化设计，提供 NDP、EDP 两层服务发现机制，以及 MTP 话题消息传输协议，提供类似 ROS2 的 <span class="tt">*.msg</span> 消息接口，由 RMVL 提供支持。本工具提供了 LPSS 相关的命令行工具，使用方法如下。</p>
+<p><span class="tt">rdt</span> 提供的 LPSS CLI 工具可通过输入</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> help</div> </div><p>来查看具体帮助。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> <span class="comment">&lt;command&gt;</span> [args...]</div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示详细帮助信息</td></tr>
+<tr>
+<td class="paramname">create</td><td>创建一个依赖 lpss 的新项目</td></tr>
+<tr>
+<td class="paramname">node</td><td>节点 CLI 工具</td></tr>
+<tr>
+<td class="paramname">topic</td><td>话题 CLI 工具</td></tr>
+<tr>
+<td class="paramname">interface</td><td>内置消息接口查看工具</td></tr>
+<tr>
+<td class="paramname">graph</td><td>节点图工具</td></tr>
+<tr>
+<td class="paramname">viz</td><td>3D 可视化工具 LViz</td></tr>
+</table>
+</dd>
+</dl>
+<p>更多信息请参考官方手册:</p>
+<ul>
+<li><a href="https://cv-rmvl.github.io/docs/2.x/d3/d8e/tutorial_modules_lpss.html">使用教程</a></li>
+<li><a href="https://cv-rmvl.github.io/docs/2.x/d7/de3/group__lpss.html">API 文档</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md403"></a>
+create 命令</h2>
+<p>创建一个依赖 LPSS 的新项目</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> create <span class="comment">&lt;project_name&gt;</span> [options]</div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">project_name</td><td>待创建的项目名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params">
+<dt>选项</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">--deps</td><td class="paramopts">&lt;list&gt;</td><td>指定项目依赖的 RMVL 模块，逗号或空格分隔，默认为空</td></tr>
+<tr>
+<td class="paramname">--exts</td><td class="paramopts">&lt;list&gt;</td><td>指定项目使用的非 RMVL 库，逗号或空格分隔，默认为空</td></tr>
+<tr>
+<td class="paramname">--cpp</td><td class="paramopts">&lt;version&gt;</td><td>指定项目使用的 C++ 标准版本，默认为 <span class="tt">20</span></td></tr>
+</table>
+</dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，使用 C++17 标准</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> anchor hik_camera <span class="comment">--cpp</span> 17</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，并且使用 json 和 fmt 两个第三方库</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> hik_camera <span class="comment">--exts</span> json fmt</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md404"></a>
+node 命令</h2>
+<p>节点工具</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> node <span class="comment">[help | info | list]</span></div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">info</td><td>显示节点信息</td></tr>
+<tr>
+<td class="paramname">list</td><td>列出所有节点</td></tr>
+</table>
+</dd>
+</dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md405"></a>
+info 子命令</h3>
+<p>查看指定节点的信息，输出形如以下的内容</p>
+<div class="fragment"><div class="line">Node: xxx</div>
+<div class="line"> </div>
+<div class="line">Publish Topics:</div>
+<div class="line">  xxx</div>
+<div class="line"> </div>
+<div class="line">Subscribe Topics:</div>
+<div class="line">  xxx</div>
+</div><!-- fragment --><p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> node info <span class="comment">&lt;node_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node_name</td><td>指定要查看的节点名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 查看节点 lpss_node_1 的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> node info lpss_node_1</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md406"></a>
+topic 命令</h2>
+<p>话题工具</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic <span class="comment">[help | info | list | echo | pub | type | hz | bw]</span> [args...]</div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">info</td><td>显示话题信息</td></tr>
+<tr>
+<td class="paramname">list</td><td>列出所有话题</td></tr>
+<tr>
+<td class="paramname">echo</td><td>显示话题内容</td></tr>
+<tr>
+<td class="paramname">pub</td><td>发布话题</td></tr>
+<tr>
+<td class="paramname">type</td><td>显示话题类型</td></tr>
+<tr>
+<td class="paramname">hz</td><td>测量话题发布频率，单位为 Hz</td></tr>
+<tr>
+<td class="paramname">bw</td><td>测量话题带宽，单位为 MB/s、kB/s 或 B/s</td></tr>
+</table>
+</dd>
+</dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md407"></a>
+info 子命令</h3>
+<p>查看指定话题的信息，输出形如以下的内容</p>
+<div class="fragment"><div class="line">Type: xxx</div>
+<div class="line"> </div>
+<div class="line">Publisher Node:</div>
+<div class="line">  xxx</div>
+<div class="line"> </div>
+<div class="line">Subscriber Node:</div>
+<div class="line">  xxx</div>
+</div><!-- fragment --><p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic info <span class="comment">&lt;topic_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>指定要查看的话题名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 查看 /cur/joint_states 话题的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> topic info /cur/joint_states</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md408"></a>
+echo 子命令</h3>
+<p>显示话题内容，并以 JSON 文本进行输出</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic echo <span class="comment">&lt;topic_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>指定的话题名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 以 JSON 格式打印 /point 话题的内容</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point</div> <div class="line"></div> <div class="line"><span class="comment"># 假设是 geometry/Point 的消息类型，可以配合 jq 工具进行输出，记得 apt install jq 来下载 jq</span></div> <div class="line"><span class="comment"># 打印 /point 话题的 x 坐标</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> <div class="line"></div> <div class="line"><span class="comment"># Linux 下一般是按 \n 刷新缓冲区，通过 | 运算符传给 jq 可能没法很好的实时输出内容，通常可以额外</span></div> <div class="line"><span class="comment"># 配合 stdbuf 工具自动刷新缓冲区，例如</span></div> <div class="line"><span class="keywordflow">stdbuf</span> <span class="comment">-oL</span> <span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md409"></a>
+pub 子命令</h3>
+<p>发布话题内容</p>
+<dl class="section warning"><dt>警告</dt><dd>未完成，敬请期待</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md410"></a>
+type 子命令</h3>
+<p>显示话题类型</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic type <span class="comment">&lt;topic_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>指定的话题名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /point 话题的类型</span></div> <div class="line"><span class="keywordflow">lpss</span> topic type /point</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md411"></a>
+hz 子命令</h3>
+<p>测量话题发布频率，单位为 Hz</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic hz <span class="comment">&lt;topic_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>指定的话题名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的发布频率</span></div> <div class="line"><span class="keywordflow">lpss</span> topic hz /str</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md412"></a>
+bw 子命令</h3>
+<p>测量话题带宽，单位为 MB/s、kB/s 或 B/s</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> topic bw <span class="comment">&lt;topic_name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_name</td><td>指定的话题名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的带宽使用情况</span></div> <div class="line"><span class="keywordflow">lpss</span> topic bw /str</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md413"></a>
+interface 命令</h2>
+<p>内置消息接口查看工具</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> interface <span class="comment">[help | list | group | groups | show]</span> [args...]</div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">list</td><td>列出所有内置消息接口</td></tr>
+<tr>
+<td class="paramname">group</td><td>显示指定的消息分组包含的接口</td></tr>
+<tr>
+<td class="paramname">groups</td><td>列出所有消息分组</td></tr>
+<tr>
+<td class="paramname">show</td><td>显示接口详细信息</td></tr>
+</table>
+</dd>
+</dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md414"></a>
+group 子命令</h3>
+<p>显示指定的消息分组包含的接口</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> interface group <span class="comment">&lt;name&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>消息分组名称</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 geometry 分组包含的接口</span></div> <div class="line"><span class="keywordflow">lpss</span> interface group geometry</div> </div><p>例如会显示如下内容</p>
+<div class="fragment"><div class="line">Point</div>
+<div class="line">Point32</div>
+<div class="line">Polygon</div>
+<div class="line">Pose</div>
+<div class="line">Quaternion</div>
+<div class="line">Transform</div>
+<div class="line">TransformStamped</div>
+<div class="line">Twist</div>
+<div class="line">Vector3</div>
+<div class="line">Wrench</div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md415"></a>
+show 子命令</h3>
+<p>显示接口详细信息</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> interface show <span class="comment">&lt;interface&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interface</td><td>消息接口名称，格式为 <span class="tt">&lt;group&gt;/&lt;name&gt;</span></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 geometry/Pose 接口的详细信息</span></div> <div class="line"><span class="keywordflow">lpss</span> interface show geometry/Pose</div> </div><p>例如会显示如下内容</p>
+<div class="fragment"><div class="line">geometry/Point position</div>
+<div class="line">    float64 x</div>
+<div class="line">    float64 y</div>
+<div class="line">    float64 z</div>
+<div class="line">geometry/Quaternion orientation</div>
+<div class="line">    float64 x</div>
+<div class="line">    float64 y</div>
+<div class="line">    float64 z</div>
+<div class="line">    float64 w</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md416"></a>
+graph 命令</h2>
+<p>节点图工具</p>
+<dl class="section warning"><dt>警告</dt><dd>未完成，敬请期待</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md417"></a>
+viz 命令</h2>
+<p>3D 可视化工具 LViz，也可直接使用 <span class="tt">lviz</span> 命令来启动。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->

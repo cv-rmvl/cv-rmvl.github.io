@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['重置控制器_0',['2.4 重置控制器',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md311',1,'']]]
+  ['部署使用_0',['部署使用',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md87',1,'2.3 部署使用'],['../db/da1/tutorial_modules_least_square.html#autotoc_md203',1,'5 部署使用']]]
 ];
