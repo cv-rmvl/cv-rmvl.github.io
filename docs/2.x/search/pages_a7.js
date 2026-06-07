@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['简介_0',['简介',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro',1,'1 简介'],['../d3/da4/tutorial_modules_serial.html#autotoc_md365',1,'1 简介'],['../dd/dc3/tutorial_modules_kalman.html#autotoc_md191',1,'1.1 简介'],['../d3/d8e/tutorial_modules_lpss.html#autotoc_md288',1,'1.1 简介']]]
+  ['笛卡尔空间规划（多点）_0',['2.5 笛卡尔空间规划（多点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md333',1,'']]],
+  ['笛卡尔空间规划（点到点）_1',['2.4 笛卡尔空间规划（点到点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md332',1,'']]]
 ];
