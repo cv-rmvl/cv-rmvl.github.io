@@ -34,6 +34,5 @@ var searchData=
   ['operator_5b_5d_31',['operator[]',['../dc/df5/classrm_1_1ua_1_1EventType.html#a09b9ce1e916858e2099d79f5f863c2a0',1,'rm::ua::EventType::operator[]()'],['../da/d84/classrm_1_1ua_1_1Event.html#ac3c6506c9ad4dda052324b6c3a805f1f',1,'rm::ua::Event::operator[]()'],['../d3/da8/classrm_1_1StateInfo.html#a65b6dfdf9da7d246b164103e3004d51a',1,'rm::StateInfo::operator[]()']]],
   ['operator_7c_32',['operator|',['../d3/da8/group__opcua.html#ga54f66b681598e2c267aafed27c6ff92a',1,'rm::ua::operator|(NodeId origin, FindNodeInServer &amp;&amp;fnis)'],['../d3/da8/group__opcua.html#ga04ca77aeb4b135db4ce92effb30a9254',1,'rm::ua::operator|(NodeId origin, FindNodeInClient &amp;&amp;fnic)']]],
   ['optcamera_33',['OptCamera',['../d1/d9c/classrm_1_1OptCamera.html#a148a85fc19416be18b4e394173d70e16',1,'rm::OptCamera']]],
-  ['optcameraparam_34',['OptCameraParam',['../dd/dc2/classrm_1_1para_1_1OptCameraParam.html#ad81e74009932116693c4bf6808ea7366',1,'rm::para::OptCameraParam']]],
-  ['optlightcontroller_35',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a0f4df8b14f7464fa662b1ec79ca6cf40',1,'rm::OPTLightController']]]
+  ['optlightcontroller_34',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html#a0f4df8b14f7464fa662b1ec79ca6cf40',1,'rm::OPTLightController']]]
 ];
