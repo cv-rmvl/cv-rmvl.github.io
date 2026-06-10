@@ -816,20 +816,8 @@ html.dark-mode iframe#MSearchResults {
     label.main-menu-btn ~ #searchBoxPos1 > #MSearchBox {
         margin-top: 0;
         margin-bottom: 0;
-        width: auto;
-        min-width: 0;
-        flex: 1 1 auto;
         flex-grow: 2;
         float: left;
-    }
-
-    label.main-menu-btn ~ #searchBoxPos1 > #MSearchBox #MSearchField {
-        width: calc(100% - 64px);
-    }
-
-    label.main-menu-btn ~ #searchBoxPos1 > doxygen-awesome-dark-mode-toggle,
-    label.main-menu-btn ~ #searchBoxPos1 > a.doxygen-awesome-github-link {
-        flex: 0 0 var(--searchbar-height);
     }
 }
 
@@ -2712,8 +2700,7 @@ div.contents .toc,
   Optional Dark mode toggle button
 */
 
-doxygen-awesome-dark-mode-toggle,
-a.doxygen-awesome-github-link {
+doxygen-awesome-dark-mode-toggle {
     display: inline-block;
     margin: 0 0 0 var(--spacing-small);
     padding: 0;
@@ -2733,8 +2720,7 @@ a.doxygen-awesome-github-link {
     cursor: pointer;
 }
 
-doxygen-awesome-dark-mode-toggle > svg,
-a.doxygen-awesome-github-link > svg {
+doxygen-awesome-dark-mode-toggle > svg {
     transition: transform var(--animation-duration) ease-in-out;
 }
 
@@ -2742,52 +2728,12 @@ doxygen-awesome-dark-mode-toggle:active > svg {
     transform: scale(.5);
 }
 
-a.doxygen-awesome-github-link {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    display: inline-flex !important;
-    flex: 0 0 var(--searchbar-height);
-    box-sizing: border-box;
-    border-radius: var(--searchbar-border-radius) !important;
-    padding: 0 !important;
-    color: var(--page-foreground-color) !important;
-    background: none;
-    line-height: 1;
-    text-decoration: none !important;
-    vertical-align: middle;
-}
-
-a.doxygen-awesome-github-link:active,
-a.doxygen-awesome-github-link:focus,
-.sm-dox a.doxygen-awesome-github-link:active,
-.sm-dox a.doxygen-awesome-github-link:focus {
-    background: none !important;
-    background-color: transparent !important;
-    color: var(--page-foreground-color) !important;
-    border-radius: var(--searchbar-border-radius) !important;
-    font-size: 22px !important;
-    font-weight: normal !important;
-    outline: none !important;
-    text-decoration: none !important;
-}
-
-a.doxygen-awesome-github-link > svg {
-    display: block;
-}
-
-doxygen-awesome-dark-mode-toggle:hover,
-a.doxygen-awesome-github-link:hover,
-.sm-dox a.doxygen-awesome-github-link:hover {
+doxygen-awesome-dark-mode-toggle:hover {
     background-color: rgba(0,0,0,.03) !important;
     border-radius: var(--searchbar-border-radius) !important;
 }
 
-html.dark-mode doxygen-awesome-dark-mode-toggle:hover,
-html.dark-mode a.doxygen-awesome-github-link:hover,
-html.dark-mode .sm-dox a.doxygen-awesome-github-link:hover {
+html.dark-mode doxygen-awesome-dark-mode-toggle:hover {
     background-color: rgba(0,0,0,.18) !important;
     border-radius: var(--searchbar-border-radius) !important;
 }
