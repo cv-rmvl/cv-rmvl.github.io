@@ -1,0 +1,373 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: 读取（默认）数据以控制逻辑分支</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.2</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">读取（默认）数据以控制逻辑分支</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md82">1. 前言</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md83">2. 逻辑控制</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md84">2.1 映射配置</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md85">2.2 注意事项</a>
+            <ul>
+              <li class="level4">
+                <a href="#map_tip1">要点 1</a>
+              </li>
+              <li class="level4">
+                <a href="#map_tip2">要点 2</a>
+              </li>
+              <li class="level4">
+                <a href="#map_tip3">要点 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md86">2.3 部署使用</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md87">3. 功能切换方式</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md88">3.1 轮询判断</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md89">3.2 外部中断、回调函数</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md90">4. 合理使用默认数据</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2upper_2upper__read__data"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d1/d67/tutorial_extra_upper_init.html">硬件设备与软件模块的初始化</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html">责任链模式下的程序处理</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md82"></a>
+1. 前言</h2>
+<p>有时程序需要同时具备很多逻辑功能，这些功能需要在运行时根据用户或者其他客户端下发的指令进行切换。本教程给出了简单的逻辑控制以及功能切换的方式。</p>
+<h2><a class="anchor" id="autotoc_md83"></a>
+2. 逻辑控制</h2>
+<p><b>switch-case</b></p>
+<p>最简单的方式是使用 <code>switch-case</code> 语句，在每一次得到与上一次不同的信号后直接选择对应的功能模块重新加载，这种清空能保证每个功能模块在每次运行的时候只有一个子模块生效。</p>
+<p><b>LUT</b></p>
+<p>如果想同时加载并使用多个子模块，最优雅的方式是使用查找表 —— LUT (Look-Up Table) ，维护一个映射表（一般是散列表）即可完成功能切换、参数加载。</p>
+<p>下文均介绍 <b>LUT</b> 法的配置。</p>
+<h3><a class="anchor" id="autotoc_md84"></a>
+2.1 映射配置</h3>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>ControlMode</div>
+<div class="line">{</div>
+<div class="line">    std::string detector_flag;    <span class="comment">// 识别模块模式</span></div>
+<div class="line">    std::string compensator_flag; <span class="comment">// 补偿模块模式</span></div>
+<div class="line">    std::string predictor_flag;   <span class="comment">// 预测模块模式</span></div>
+<div class="line">    std::string decider_flag;     <span class="comment">// 决策模块模式</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* code */</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 控制信号映射表</span></div>
+<div class="line">std::unordered_map&lt;uint8_t, ControlMode&gt; flag_map;</div>
+<div class="line"><span class="comment">// 识别模块映射表</span></div>
+<div class="line">std::unordered_map&lt;std::string, rm::detector::ptr&gt; detector_map;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/********** 下面的 xxxInit() 为初始化代码，均可置于构造函数中 **********/</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// flag_map 初始化</span></div>
+<div class="line"><span class="keywordtype">void</span> controlInit()</div>
+<div class="line">{</div>
+<div class="line">    flag_map[0] = {<span class="stringliteral">&quot;armor_detector&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;gravity_compensator&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;planar_predictor&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;translation_decider&quot;</span>};</div>
+<div class="line">    flag_map[1] = {<span class="stringliteral">&quot;rune_detector&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;gravity_compensator&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;spi_rune_predictor&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;rune_decider&quot;</span>};</div>
+<div class="line">    flag_map[2] = {<span class="stringliteral">&quot;gyro_detector&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;gyro_compensator&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;gyro_predictor&quot;</span>,</div>
+<div class="line">                   <span class="stringliteral">&quot;gyro_decider&quot;</span>};</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// detector_map 初始化</span></div>
+<div class="line"><span class="keywordtype">void</span> detectorInit()</div>
+<div class="line">{</div>
+<div class="line">    detector_map[<span class="stringliteral">&quot;armor_detector&quot;</span>] = <a class="code hl_function" href="../../db/d6e/classrm_1_1ArmorDetector.html#ad87c21dd955cb27a9777ad7d7f7ad7fd">rm::ArmorDetector::make_detector</a>();</div>
+<div class="line">    detector_map[<span class="stringliteral">&quot;rune_detector&quot;</span>] = <a class="code hl_function" href="../../d6/deb/classrm_1_1RuneDetector.html#a9a42ae38edd7c8440e361bc99e5b799d">rm::RuneDetector::make_detector</a>();</div>
+<div class="line">    detector_map[<span class="stringliteral">&quot;gyro_detector&quot;</span>] = <a class="code hl_function" href="../../dc/d93/classrm_1_1GyroDetector.html#a93973e15a9928082f2aa704d3700ad6e">rm::GyroDetector::make_detector</a>();</div>
+<div class="line">    detector_map[<span class="stringliteral">&quot;tag_detector&quot;</span>] = <a class="code hl_function" href="../../d8/d35/classrm_1_1TagDetector.html#a5c2d2204d25ed7697f2e64c2b28f4aba">rm::TagDetector::make_detector</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1ArmorDetector_html_ad87c21dd955cb27a9777ad7d7f7ad7fd"><div class="ttname"><a href="../../db/d6e/classrm_1_1ArmorDetector.html#ad87c21dd955cb27a9777ad7d7f7ad7fd">rm::ArmorDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; ArmorDetector &gt; make_detector()</div><div class="ttdoc">构建 ArmorDetector</div><div class="ttdef"><b>定义</b> armor_detector.h:58</div></div>
+<div class="ttc" id="aclassrm_1_1GyroDetector_html_a93973e15a9928082f2aa704d3700ad6e"><div class="ttname"><a href="../../dc/d93/classrm_1_1GyroDetector.html#a93973e15a9928082f2aa704d3700ad6e">rm::GyroDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; GyroDetector &gt; make_detector(int armor_num=0)</div><div class="ttdoc">构建 GyroDetector</div><div class="ttdef"><b>定义</b> gyro_detector.h:59</div></div>
+<div class="ttc" id="aclassrm_1_1RuneDetector_html_a9a42ae38edd7c8440e361bc99e5b799d"><div class="ttname"><a href="../../d6/deb/classrm_1_1RuneDetector.html#a9a42ae38edd7c8440e361bc99e5b799d">rm::RuneDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; RuneDetector &gt; make_detector()</div><div class="ttdoc">构建 RuneDetector</div><div class="ttdef"><b>定义</b> rune_detector.h:42</div></div>
+<div class="ttc" id="aclassrm_1_1TagDetector_html_a5c2d2204d25ed7697f2e64c2b28f4aba"><div class="ttname"><a href="../../d8/d35/classrm_1_1TagDetector.html#a5c2d2204d25ed7697f2e64c2b28f4aba">rm::TagDetector::make_detector</a></div><div class="ttdeci">static std::unique_ptr&lt; TagDetector &gt; make_detector()</div><div class="ttdoc">构造 TagDetector</div><div class="ttdef"><b>定义</b> tag_detector.h:53</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md85"></a>
+2.2 注意事项</h3>
+<h4><a class="anchor" id="map_tip1"></a>
+要点 1</h4>
+<p>上面示例中 <code>flag_map</code> 的初始化是固定的值，因此要修改信息必须修改源码，因此可以使用运行时读取 YAML 文件的方式，使用 OpenCV 的 <a href="https://docs.opencv.org/4.x/da/d56/classcv_1_1FileStorage.html">cv::FileStorage</a> 可以完成 YAML 文件的读取，例如</p>
+<div class="fragment"><div class="line"><span class="comment">/* main.cpp */</span></div>
+<div class="line"> </div>
+<div class="line">cv::FileStorage fs(<span class="stringliteral">&quot;flag_config.yml&quot;</span>, cv::FileStorage::READ);</div>
+<div class="line"><span class="keyword">auto</span> root = fs.root();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> it : root)</div>
+<div class="line">{</div>
+<div class="line">    ControlMode val;</div>
+<div class="line">    <span class="keywordtype">int</span> <span class="keywordtype">id</span>{};</div>
+<div class="line">    it[<span class="stringliteral">&quot;id&quot;</span>] &gt;&gt; id;</div>
+<div class="line">    it[<span class="stringliteral">&quot;detector_flag&quot;</span>] &gt;&gt; val.detector_flag;</div>
+<div class="line">    it[<span class="stringliteral">&quot;compensator_flag&quot;</span>] &gt;&gt; val.compensator_flag;</div>
+<div class="line">    it[<span class="stringliteral">&quot;predictor_flag&quot;</span>] &gt;&gt; val.predictor_flag;</div>
+<div class="line">    it[<span class="stringliteral">&quot;decider_flag&quot;</span>] &gt;&gt; val.decider_flag;</div>
+<div class="line">    flag_map[<span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(id)] = val;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>对应的 <code>flag_config.yml</code> 文件如下</p>
+<div class="fragment"><div class="line">%YAML:1.0</div>
+<div class="line">---</div>
+<div class="line"> </div>
+<div class="line">- id: 0</div>
+<div class="line">  detector_flag: &quot;armor_detector&quot;</div>
+<div class="line">  compensator_flag: &quot;gravity_compensator&quot;</div>
+<div class="line">  predictor_flag: &quot;planar_predictor&quot;</div>
+<div class="line">  decider_flag: &quot;translation_decider&quot;</div>
+<div class="line">- id: 1</div>
+<div class="line">  detector_flag: &quot;rune_detector&quot;</div>
+<div class="line">  compensator_flag: &quot;gravity_compensator&quot;</div>
+<div class="line">  predictor_flag: &quot;spi_rune_predictor&quot;</div>
+<div class="line">  decider_flag: &quot;rune_decider&quot;</div>
+<div class="line">- id: 2</div>
+<div class="line">  detector_flag: &quot;gyro_detector&quot;</div>
+<div class="line">  compensator_flag: &quot;gyro_compensator&quot;</div>
+<div class="line">  predictor_flag: &quot;gyro_predictor&quot;</div>
+<div class="line">  decider_flag: &quot;gyro_decider&quot;</div>
+</div><!-- fragment --><h4><a class="anchor" id="map_tip2"></a>
+要点 2</h4>
+<p>还可以在 <code>ControlMode</code> 中添加其他有用的模式信息，例如可以添加有关感知设备的信息</p>
+<div class="fragment"><div class="line">std::string camera_mode; <span class="comment">// 相机模式</span></div>
+<div class="line">std::string light_mode;  <span class="comment">// 光源模式</span></div>
+</div><!-- fragment --><p>同样，该信息也可以添加到 <a class="el" href="#map_tip1">要点 1</a> 的 YAML 文件中。</p>
+<h4><a class="anchor" id="map_tip3"></a>
+要点 3</h4>
+<p>上面的例子使用 <code>std::string</code> 作为功能模块散列表的 Key 值，在不影响可读性的情况下也可以使用 <code>uint8_t</code> 或 <code>enum (enum class)</code>，在 cppreference 的 <a href="https://zh.cppreference.com/w/cpp/utility/hash">std::hash</a> 中提到标准库对所有（有作用域或无作用域）枚举类型提供了特化，因此可以采用枚举类型作为散列表的 Key，例如</p>
+<div class="fragment"><div class="line"><span class="keyword">enum class</span> DetectorFlag</div>
+<div class="line">{</div>
+<div class="line">    ARMOR_DETECTOR,</div>
+<div class="line">    RUNE_DETECTOR,</div>
+<div class="line">    GYRO_DETECTOR</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>ControlMode</div>
+<div class="line">{</div>
+<div class="line">    DetectorFlag detector_flag; <span class="comment">// 识别模块模式</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* code */</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* code */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 识别模块映射表</span></div>
+<div class="line">std::unordered_map&lt;DetectorFlag, rm::detector::ptr&gt; detector_map;</div>
+</div><!-- fragment --><p>若在这种方法下，配合 <a class="el" href="#map_tip1">要点 1</a> 的 YAML 文件使用，则无法在 YAML 文件中直观的看出对应的模式，因此要用到 YAML 文件进行模式加载的情况下，使用 <code>std::string</code> 代替枚举类型或整型是个不错的选择。</p>
+<h3><a class="anchor" id="autotoc_md86"></a>
+2.3 部署使用</h3>
+<p>获取模式字符串（若采用 <a class="el" href="#map_tip3">要点 3</a> 的方式则是模式枚举）可直接使用<a href="https://zh.cppreference.com/w/cpp/language/structured_binding">结构化绑定</a>进行获取。</p>
+<div class="fragment"><div class="line"><span class="comment">/* 先前已获得（更新）的模式信息 flag */</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[detect_str, compensate_str, predict_str, decide_str] = flag_map[flag];</div>
+</div><!-- fragment --><p>在使用上直接访问对应的映射表即可，由于所有功能模块提供的 <code>ptr</code> 别名均代表其自身的非共享指针，若需要使用形如以下代码的表述，那么程序非良构或导致所有权转移，具体细节可参考<a href="https://zh.cppreference.com/w/cpp/memory/unique_ptr">非共享指针 std::unique_ptr</a>手册。</p>
+<div class="fragment"><div class="line"><span class="comment">/* 使用上文定义的 detect_str */</span></div>
+<div class="line"><span class="keyword">auto</span> p1 = detector_map[detect_str];            <span class="comment">// 复制构造被弃置，非良构</span></div>
+<div class="line"><span class="keyword">auto</span> p2 = std::move(detector_map[detect_str]); <span class="comment">// 语法正确，但映射表原先识别模块的指针被置空</span></div>
+</div><!-- fragment --><p>下面给出两种访问时的做法</p>
+<h4>方法 1</h4>
+<p>直接使用，但后续每次访问功能模块指针的时候都需要在散列表 <code>detector_map</code> 中寻找。</p>
+<div class="fragment"><div class="line"><span class="comment">/* 使用上文定义的 detect_str */</span></div>
+<div class="line"><span class="keyword">auto</span> detect_info = detector_map[detect_str]-&gt;detect(<span class="comment">/* code */</span>);</div>
+<div class="line"><span class="comment">/* code */</span></div>
+</div><!-- fragment --><h4>方法 2</h4>
+<p>定义指针常量，以保证指针指向不会被修改，这种做法可操作性更强。</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="../../d3/d77/classrm_1_1detector.html">rm::detector</a> *<span class="keyword">const</span> p_detector = detector_map[detect_str].get();</div>
+<div class="line"><span class="keyword">auto</span> detect_info = p_detector-&gt;<a class="code hl_function" href="../../d3/d77/classrm_1_1detector.html#ab4b571e35b29fad49386a895fbadd244">detect</a>(<span class="comment">/* code */</span>);</div>
+<div class="line"><span class="comment">/* code */</span></div>
+<div class="ttc" id="aclassrm_1_1detector_html"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html">rm::detector</a></div><div class="ttdoc">识别检测模块</div><div class="ttdef"><b>定义</b> detector.h:45</div></div>
+<div class="ttc" id="aclassrm_1_1detector_html_ab4b571e35b29fad49386a895fbadd244"><div class="ttname"><a href="../../d3/d77/classrm_1_1detector.html#ab4b571e35b29fad49386a895fbadd244">rm::detector::detect</a></div><div class="ttdeci">virtual DetectInfo detect(std::vector&lt; group::ptr &gt; &amp;groups, const cv::Mat &amp;src, PixChannel color, const ImuData &amp;imu_data, double tick)=0</div><div class="ttdoc">识别接口</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
+3. 功能切换方式</h2>
+<h3><a class="anchor" id="autotoc_md88"></a>
+3.1 轮询判断</h3>
+<p>这是最常用并且最方便的方法，这种做法适合于不断循环执行处理的场合下。在每一次循环的程序处理结束后，在下一次循环开始时，先接收通信传输得到的控制信号，并与上一次得到的信号做判断，若不相同，则清空所有数据组件。若在 <b>逻辑控制</b> 中选择了 <b>switch-case</b> 的方式，那么在清空数据组件后可直接为相应的功能模块重新初始化，若选择了 <b>LUT</b> 的方式，则无需重新初始化，直接根据新的控制信号指定功能模块即可。</p>
+<h3><a class="anchor" id="autotoc_md89"></a>
+3.2 外部中断、回调函数</h3>
+<p>还有一种做法是利用外部中断或者回调函数（软件中断）的方式完成功能的切换，以 Termios 串口通信的结构体为例，在设置 <code>c_iflag</code> 的时候，可以打开 <code>BRKINT</code> 功能，即接收到 <code>BREAK</code> 信号时产生中断信号。</p>
+<div class="fragment"><div class="line">xxx.c_iflag |= BRKINT;</div>
+</div><!-- fragment --><p>然而，RMVL 提供的串口通信库不支持此操作，因此该方法可以适用于<span style="color: red">其他通信方式</span>或者其他不同于 <a class="el" href="../../d4/d98/classrm_1_1SerialPort.html" title="串行接口通信库">rm::SerialPort</a> 的自定义协议的串口通信。</p>
+<p>这里的其他通信方式有其他类型，比如当客户端发起某个请求时，服务器会进入某个回调函数，因此可以在回调函数中完成功能模块的初始化设置或者切换。例如</p>
+<ul>
+<li>ROS / ROS2 中可注册回调函数，在 <code>ros::spin()</code> 或 <code>rclcpp::spin()</code> 调用后可阻塞当前线程，在有消息到达订阅节点时，会自动触发回调函数的执行。</li>
+<li>OPC UA 中在服务器中注册了一个 Method Node 即方法节点，在客户端中 <code>call</code> 该方法节点，则服务器会处理该方法节点的回调函数。</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md90"></a>
+4. 合理使用默认数据</h2>
+<p>有时会遇到某次通信收到数据异常的情况，或根本没有通信，在这种情况下可以为收到的信息（这里以控制信息 <code>uint8_t flag;</code> 来表示）使用默认数据。</p>
+<div class="fragment"><div class="line">uint8_t read()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (!is_init)</div>
+<div class="line">    {</div>
+<div class="line">        flag = 0; <span class="comment">// 用 0 为 flag 赋值，作为 flag 的默认值</span></div>
+<div class="line">                  <span class="comment">// 此处默认值可参考 rm::para 使用参数进行赋值</span></div>
+<div class="line">        <span class="comment">/* code */</span></div>
+<div class="line">        last_flag = flag;</div>
+<div class="line">        is_init = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">/* 读取数据 raw_datas */</span></div>
+<div class="line">    <span class="keywordtype">bool</span> read_success = <span class="comment">/* 形如 read(raw_datas) 的代码 */</span>;</div>
+<div class="line">    <span class="keywordflow">if</span> (read_success)</div>
+<div class="line">    {</div>
+<div class="line">        flag = raw_datas.flag; <span class="comment">// 从通信协议结构体中获取</span></div>
+<div class="line">        last_flag = flag;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> last_flag;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>上面代码实现了默认值的设置，在初次读取数据异常时将启用该默认值，在某次读取数据异常时将采用上次数据。</p>
+<p>此外，还可以加入</p>
+<ul>
+<li>数据校验</li>
+<li>读取失败次数过多断言失败或抛出异常（即使用 <code>assert</code> 或 <code>RMVL_Error</code> 宏）</li>
+</ul>
+<p>等功能。</p>
+<hr  />
+<p>本文主要介绍了读取传入数据或默认数据来控制逻辑分支的方法，对于具体分支中程序处理的部分请参见 <a class="el" href="../../d2/de3/tutorial_extra_upper_process.html">责任链模式下的程序处理</a> 。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

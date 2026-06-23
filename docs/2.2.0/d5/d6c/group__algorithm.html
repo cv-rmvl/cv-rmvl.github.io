@@ -1,0 +1,2031 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: 数学、算法模块</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#groups">专题</a> |
+<a href="#namespaces">命名空间</a> |
+<a href="#nested-classes">类</a> |
+<a href="#typedef-members">类型定义</a> |
+<a href="#enum-members">枚举</a> |
+<a href="#func-members">函数</a> |
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">数学、算法模块</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+数学、算法模块 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="283" scrolling="no" src="../../d5/d6c/group__algorithm.svg" width="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="groups" name="groups"></a>
+专题</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d04/group__algorithm__datastruct.html">数据结构</a></td></tr>
+<tr class="memdesc:d8/d04/group__algorithm__datastruct"><td class="mdescLeft"> </td><td class="mdescRight">包含自定义的容器适配器以及其余数据结构 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2e/group__algorithm__dsp.html">数字信号处理</a></td></tr>
+<tr class="memdesc:db/d2e/group__algorithm__dsp"><td class="mdescLeft"> </td><td class="mdescRight">包含数字信号处理的相关函数 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db3/group__algorithm__kalman.html">卡尔曼滤波模块</a></td></tr>
+<tr class="memdesc:d7/db3/group__algorithm__kalman"><td class="mdescLeft"> </td><td class="mdescRight">使用 <code>cv::Matx</code> 改写的轻量级卡尔曼滤波和扩展卡尔曼滤波模块 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dcf/group__algorithm__numcal.html">数值计算模块</a></td></tr>
+<tr class="memdesc:dd/dcf/group__algorithm__numcal"><td class="mdescLeft"> </td><td class="mdescRight">包含函数插值、曲线拟合、非线性方程（组）数值解、常微分方程数值解等数值计算算法 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d62/group__algorithm__optimal.html">最优化算法库</a></td></tr>
+<tr class="memdesc:d2/d62/group__algorithm__optimal"><td class="mdescLeft"> </td><td class="mdescRight">包含一维函数最小值搜索、无约束多维函数最小值搜索等最优化算法 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d3d/group__algorithm__pretreat.html">图像预处理模块</a></td></tr>
+<tr class="memdesc:de/d3d/group__algorithm__pretreat"><td class="mdescLeft"> </td><td class="mdescRight">提供了二值化等图像预处理功能 <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">namespace  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d43/namespacerm_1_1numeric__literals.html">rm::numeric_literals</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d84/classrm_1_1EwTopsis.html">rm::EwTopsis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">熵权 TOPSIS 算法  <a href="../../d4/d84/classrm_1_1EwTopsis.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d62/classrm_1_1Munkres.html">rm::Munkres</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">KM 算法求解器  <a href="../../dd/d62/classrm_1_1Munkres.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga776f3b69cfa1e8c4e77919d8a0231a68" id="r_ga776f3b69cfa1e8c4e77919d8a0231a68"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga776f3b69cfa1e8c4e77919d8a0231a68">cv::Matx11f</a> = Matx&lt;float, 1, 1&gt;</td></tr>
+<tr class="separator:ga776f3b69cfa1e8c4e77919d8a0231a68"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gab9d84a5a35b7177cbb2d1471680af33c" id="r_gab9d84a5a35b7177cbb2d1471680af33c"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab9d84a5a35b7177cbb2d1471680af33c">cv::Matx11d</a> = Matx&lt;double, 1, 1&gt;</td></tr>
+<tr class="separator:gab9d84a5a35b7177cbb2d1471680af33c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga541c9f30e5a0608a481c908deaa6a4ed" id="r_ga541c9f30e5a0608a481c908deaa6a4ed"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> = Matx&lt;float, 5, 1&gt;</td></tr>
+<tr class="separator:ga541c9f30e5a0608a481c908deaa6a4ed"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga0a51e6b389329cf2925e764635bb2ba7" id="r_ga0a51e6b389329cf2925e764635bb2ba7"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0a51e6b389329cf2925e764635bb2ba7">cv::Matx15f</a> = Matx&lt;float, 1, 5&gt;</td></tr>
+<tr class="separator:ga0a51e6b389329cf2925e764635bb2ba7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga544b37a37f56482fe9f9fb486abf1b57" id="r_ga544b37a37f56482fe9f9fb486abf1b57"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> = Matx&lt;double, 5, 1&gt;</td></tr>
+<tr class="separator:ga544b37a37f56482fe9f9fb486abf1b57"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga9a814ad228e3f2fa506286fbdb80c93d" id="r_ga9a814ad228e3f2fa506286fbdb80c93d"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9a814ad228e3f2fa506286fbdb80c93d">cv::Matx15d</a> = Matx&lt;double, 1, 5&gt;</td></tr>
+<tr class="separator:ga9a814ad228e3f2fa506286fbdb80c93d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gad1e50ace9e3d660f0b5ab600d51ade14" id="r_gad1e50ace9e3d660f0b5ab600d51ade14"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad1e50ace9e3d660f0b5ab600d51ade14">cv::Matx55f</a> = Matx&lt;float, 5, 5&gt;</td></tr>
+<tr class="separator:gad1e50ace9e3d660f0b5ab600d51ade14"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga629446df8c807dcc235b61c81d953934" id="r_ga629446df8c807dcc235b61c81d953934"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga629446df8c807dcc235b61c81d953934">cv::Matx55d</a> = Matx&lt;double, 5, 5&gt;</td></tr>
+<tr class="separator:ga629446df8c807dcc235b61c81d953934"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaf5bed2d75219e503cecfb0bde26b786c" id="r_gaf5bed2d75219e503cecfb0bde26b786c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">rm::AngleMode</a> : bool { <a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95">rm::RAD</a> = true
+, <a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4">rm::DEG</a> = false
+ }</td></tr>
+<tr class="memdesc:gaf5bed2d75219e503cecfb0bde26b786c"><td class="mdescLeft"> </td><td class="mdescRight">角度制式  <a href="#gaf5bed2d75219e503cecfb0bde26b786c">更多...</a><br/></td></tr>
+<tr class="separator:gaf5bed2d75219e503cecfb0bde26b786c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga1de7e89888bac78375dd440afb9a57ae" id="r_ga1de7e89888bac78375dd440afb9a57ae"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">rm::CalPlane</a> : uint8_t { <a class="el" href="#gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">rm::CalPlane::xyz</a> = 0
+, <a class="el" href="#gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6">rm::CalPlane::xOy</a> = 1
+, <a class="el" href="#gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0">rm::CalPlane::xOz</a> = 2
+, <a class="el" href="#gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15">rm::CalPlane::yOz</a> = 3
+ }</td></tr>
+<tr class="memdesc:ga1de7e89888bac78375dd440afb9a57ae"><td class="mdescLeft"> </td><td class="mdescRight">计算所在平面  <a href="#ga1de7e89888bac78375dd440afb9a57ae">更多...</a><br/></td></tr>
+<tr class="separator:ga1de7e89888bac78375dd440afb9a57ae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga9efb6b0afed03a8afe74adea283e4e20" id="r_ga9efb6b0afed03a8afe74adea283e4e20"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9efb6b0afed03a8afe74adea283e4e20">rm::EulerAxis</a> : int { <a class="el" href="#gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">rm::EulerAxis::X</a> = 0
+, <a class="el" href="#gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0">rm::EulerAxis::Y</a> = 1
+, <a class="el" href="#gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5">rm::EulerAxis::Z</a> = 2
+ }</td></tr>
+<tr class="memdesc:ga9efb6b0afed03a8afe74adea283e4e20"><td class="mdescLeft"> </td><td class="mdescRight">欧拉角转轴枚举  <a href="#ga9efb6b0afed03a8afe74adea283e4e20">更多...</a><br/></td></tr>
+<tr class="separator:ga9efb6b0afed03a8afe74adea283e4e20"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaae346087df690ca4296911daaadfbbda" id="r_gaae346087df690ca4296911daaadfbbda"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaae346087df690ca4296911daaadfbbda">rm::numeric_literals::operator""_PI</a> (long double num)</td></tr>
+<tr class="separator:gaae346087df690ca4296911daaadfbbda"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gab4884bbee674cac21e3ee00e16b315d3" id="r_gab4884bbee674cac21e3ee00e16b315d3"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gab4884bbee674cac21e3ee00e16b315d3">rm::numeric_literals::operator""_PI</a> (long long unsigned num)</td></tr>
+<tr class="separator:gab4884bbee674cac21e3ee00e16b315d3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga13b00e1ca5a58a911ac9a53862d4a090" id="r_ga13b00e1ca5a58a911ac9a53862d4a090"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga13b00e1ca5a58a911ac9a53862d4a090">rm::numeric_literals::operator""_to_rad</a> (long double num)</td></tr>
+<tr class="separator:ga13b00e1ca5a58a911ac9a53862d4a090"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga3805561febf4b3cfe827c985219fc816" id="r_ga3805561febf4b3cfe827c985219fc816"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3805561febf4b3cfe827c985219fc816">rm::numeric_literals::operator""_to_rad</a> (long long unsigned num)</td></tr>
+<tr class="separator:ga3805561febf4b3cfe827c985219fc816"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga3452f8c1e466c8c4aa422c4e1ed6486d" id="r_ga3452f8c1e466c8c4aa422c4e1ed6486d"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3452f8c1e466c8c4aa422c4e1ed6486d">rm::numeric_literals::operator""_to_deg</a> (long double num)</td></tr>
+<tr class="separator:ga3452f8c1e466c8c4aa422c4e1ed6486d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaab580e56d4f4b3e264d90bed9403204d" id="r_gaab580e56d4f4b3e264d90bed9403204d"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab580e56d4f4b3e264d90bed9403204d">rm::numeric_literals::operator""_to_deg</a> (long long unsigned num)</td></tr>
+<tr class="separator:gaab580e56d4f4b3e264d90bed9403204d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga24cdb2a95b720c25718a10f0c231beb7" id="r_ga24cdb2a95b720c25718a10f0c231beb7"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga24cdb2a95b720c25718a10f0c231beb7"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga24cdb2a95b720c25718a10f0c231beb7">rm::operator+</a> (Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</td></tr>
+<tr class="separator:ga24cdb2a95b720c25718a10f0c231beb7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaac9085ed7bb655273d94dd7a9e9bb7a5" id="r_gaac9085ed7bb655273d94dd7a9e9bb7a5"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:gaac9085ed7bb655273d94dd7a9e9bb7a5"><td align="right" class="memTemplItemLeft" valign="top">constexpr cv::Matx&lt; Tp, 1, 1 &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaac9085ed7bb655273d94dd7a9e9bb7a5">rm::operator+</a> (const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</td></tr>
+<tr class="separator:gaac9085ed7bb655273d94dd7a9e9bb7a5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gab25b059e83d92ca52c5191f32cf93b6e" id="r_gab25b059e83d92ca52c5191f32cf93b6e"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:gab25b059e83d92ca52c5191f32cf93b6e"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gab25b059e83d92ca52c5191f32cf93b6e">rm::operator-</a> (Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)</td></tr>
+<tr class="separator:gab25b059e83d92ca52c5191f32cf93b6e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga389ef0083eef431267d7c699425a7936" id="r_ga389ef0083eef431267d7c699425a7936"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga389ef0083eef431267d7c699425a7936"><td align="right" class="memTemplItemLeft" valign="top">constexpr cv::Matx&lt; Tp, 1, 1 &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga389ef0083eef431267d7c699425a7936">rm::operator-</a> (const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)</td></tr>
+<tr class="separator:ga389ef0083eef431267d7c699425a7936"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gae2276554862bce45bc46aa87ac16662b" id="r_gae2276554862bce45bc46aa87ac16662b"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:gae2276554862bce45bc46aa87ac16662b"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gae2276554862bce45bc46aa87ac16662b">rm::deg2rad</a> (Tp deg)</td></tr>
+<tr class="memdesc:gae2276554862bce45bc46aa87ac16662b"><td class="mdescLeft"> </td><td class="mdescRight">角度转换为弧度  <br/></td></tr>
+<tr class="separator:gae2276554862bce45bc46aa87ac16662b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga60d67240dab96ee04ac0daf7b3ba3900" id="r_ga60d67240dab96ee04ac0daf7b3ba3900"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga60d67240dab96ee04ac0daf7b3ba3900"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga60d67240dab96ee04ac0daf7b3ba3900">rm::rad2deg</a> (Tp rad)</td></tr>
+<tr class="memdesc:ga60d67240dab96ee04ac0daf7b3ba3900"><td class="mdescLeft"> </td><td class="mdescRight">弧度转换为角度  <br/></td></tr>
+<tr class="separator:ga60d67240dab96ee04ac0daf7b3ba3900"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga5014be0e5feea956ca0938f748da0e49" id="r_ga5014be0e5feea956ca0938f748da0e49"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:ga5014be0e5feea956ca0938f748da0e49"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga5014be0e5feea956ca0938f748da0e49">rm::getDistance</a> (const cv::Point_&lt; Tp1 &gt; &amp;pt_1, const cv::Point_&lt; Tp2 &gt; &amp;pt_2)</td></tr>
+<tr class="memdesc:ga5014be0e5feea956ca0938f748da0e49"><td class="mdescLeft"> </td><td class="mdescRight">获取距离  <br/></td></tr>
+<tr class="separator:ga5014be0e5feea956ca0938f748da0e49"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaf777281f09dd091cdf95b41ce2078fbc" id="r_gaf777281f09dd091cdf95b41ce2078fbc"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:gaf777281f09dd091cdf95b41ce2078fbc"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaf777281f09dd091cdf95b41ce2078fbc">rm::getDistance</a> (const cv::Vec&lt; Tp1, 2 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 2 &gt; &amp;vec_2)</td></tr>
+<tr class="memdesc:gaf777281f09dd091cdf95b41ce2078fbc"><td class="mdescLeft"> </td><td class="mdescRight">获取距离  <br/></td></tr>
+<tr class="separator:gaf777281f09dd091cdf95b41ce2078fbc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga1341a4b42493c1bebd817de335bff266" id="r_ga1341a4b42493c1bebd817de335bff266"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:ga1341a4b42493c1bebd817de335bff266"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1341a4b42493c1bebd817de335bff266">rm::getDistance</a> (const cv::Point3_&lt; Tp1 &gt; &amp;pt_1, const cv::Point3_&lt; Tp2 &gt; &amp;pt_2, <a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">CalPlane</a> calplane=<a class="el" href="#gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">CalPlane::xyz</a>)</td></tr>
+<tr class="memdesc:ga1341a4b42493c1bebd817de335bff266"><td class="mdescLeft"> </td><td class="mdescRight">获取距离  <br/></td></tr>
+<tr class="separator:ga1341a4b42493c1bebd817de335bff266"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga0097e1799eec67200f4a9dfa81b03fe2" id="r_ga0097e1799eec67200f4a9dfa81b03fe2"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:ga0097e1799eec67200f4a9dfa81b03fe2"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga0097e1799eec67200f4a9dfa81b03fe2">rm::getDistance</a> (const cv::Vec&lt; Tp1, 3 &gt; &amp;vec_1, const cv::Vec&lt; Tp2, 3 &gt; &amp;vec_2, <a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">CalPlane</a> calplane=<a class="el" href="#gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">CalPlane::xyz</a>)</td></tr>
+<tr class="memdesc:ga0097e1799eec67200f4a9dfa81b03fe2"><td class="mdescLeft"> </td><td class="mdescRight">获取距离  <br/></td></tr>
+<tr class="separator:ga0097e1799eec67200f4a9dfa81b03fe2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaa45e15c33236ea83c0af5876c3dfdfb5" id="r_gaa45e15c33236ea83c0af5876c3dfdfb5"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:gaa45e15c33236ea83c0af5876c3dfdfb5"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa45e15c33236ea83c0af5876c3dfdfb5">rm::getDistance</a> (const cv::Vec&lt; Tp1, 4 &gt; &amp;line, const cv::Point_&lt; Tp2 &gt; &amp;pt, bool direc=true)</td></tr>
+<tr class="memdesc:gaa45e15c33236ea83c0af5876c3dfdfb5"><td class="mdescLeft"> </td><td class="mdescRight">点到直线距离，其中 \(P=(x_0,y_0)\) 到直线 \(l:Ax+By+C=0\) 距离公式为  <br/></td></tr>
+<tr class="separator:gaa45e15c33236ea83c0af5876c3dfdfb5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga10690718e851a53f751c5fc9925ae9ea" id="r_ga10690718e851a53f751c5fc9925ae9ea"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:ga10690718e851a53f751c5fc9925ae9ea"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga10690718e851a53f751c5fc9925ae9ea">rm::getHAngle</a> (const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, <a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">AngleMode</a> mode=<a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95">RAD</a>)</td></tr>
+<tr class="memdesc:ga10690718e851a53f751c5fc9925ae9ea"><td class="mdescLeft"> </td><td class="mdescRight">获取与水平方向的夹角，以平面直角坐标系 \(x\) 轴为分界线， <b>逆时针</b> 为正方向，范围: \((-180°,180°]\) ，默认返回弧度制  <br/></td></tr>
+<tr class="separator:ga10690718e851a53f751c5fc9925ae9ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gabb356f903a2d2b2907137ba8463b13d8" id="r_gabb356f903a2d2b2907137ba8463b13d8"><td class="memTemplParams" colspan="2">template&lt;typename Tp1, typename Tp2&gt; </td></tr>
+<tr class="memitem:gabb356f903a2d2b2907137ba8463b13d8"><td align="right" class="memTemplItemLeft" valign="top">constexpr auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabb356f903a2d2b2907137ba8463b13d8">rm::getVAngle</a> (const cv::Point_&lt; Tp1 &gt; &amp;start, const cv::Point_&lt; Tp2 &gt; &amp;end, <a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">AngleMode</a> mode=<a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95">RAD</a>)</td></tr>
+<tr class="memdesc:gabb356f903a2d2b2907137ba8463b13d8"><td class="mdescLeft"> </td><td class="mdescRight">获取与垂直方向的夹角，以平面直角坐标系 \(y\) 轴为分界线， <b>顺时针</b> 为正方向，范围: \((-180°,180°]\) ，默认返回弧度制  <br/></td></tr>
+<tr class="separator:gabb356f903a2d2b2907137ba8463b13d8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga1d86bfb5c70014f9a55a499a502054ae" id="r_ga1d86bfb5c70014f9a55a499a502054ae"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga1d86bfb5c70014f9a55a499a502054ae"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1d86bfb5c70014f9a55a499a502054ae">rm::getDeltaAngle</a> (Tp angle_1, Tp angle_2)</td></tr>
+<tr class="memdesc:ga1d86bfb5c70014f9a55a499a502054ae"><td class="mdescLeft"> </td><td class="mdescRight">求两个角之间的夹角  <br/></td></tr>
+<tr class="separator:ga1d86bfb5c70014f9a55a499a502054ae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga2376ca67d6e7b3f7f560cdcb92517cee" id="r_ga2376ca67d6e7b3f7f560cdcb92517cee"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga2376ca67d6e7b3f7f560cdcb92517cee"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga2376ca67d6e7b3f7f560cdcb92517cee">rm::sec</a> (Tp x)</td></tr>
+<tr class="memdesc:ga2376ca67d6e7b3f7f560cdcb92517cee"><td class="mdescLeft"> </td><td class="mdescRight">正割 \(\sec(x)\)  <br/></td></tr>
+<tr class="separator:ga2376ca67d6e7b3f7f560cdcb92517cee"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga312dc3324c726a5cb63097132ddf1e9b" id="r_ga312dc3324c726a5cb63097132ddf1e9b"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga312dc3324c726a5cb63097132ddf1e9b"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga312dc3324c726a5cb63097132ddf1e9b">rm::csc</a> (Tp x)</td></tr>
+<tr class="memdesc:ga312dc3324c726a5cb63097132ddf1e9b"><td class="mdescLeft"> </td><td class="mdescRight">余割 \(\csc(x)\)  <br/></td></tr>
+<tr class="separator:ga312dc3324c726a5cb63097132ddf1e9b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga34f2f328f9b5eec56ee7d278703926bc" id="r_ga34f2f328f9b5eec56ee7d278703926bc"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga34f2f328f9b5eec56ee7d278703926bc"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga34f2f328f9b5eec56ee7d278703926bc">rm::cot</a> (Tp x)</td></tr>
+<tr class="memdesc:ga34f2f328f9b5eec56ee7d278703926bc"><td class="mdescLeft"> </td><td class="mdescRight">余切 \(\cot(x)\)  <br/></td></tr>
+<tr class="separator:ga34f2f328f9b5eec56ee7d278703926bc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaa63dd59871f7ac738e9d66ec4af1701e" id="r_gaa63dd59871f7ac738e9d66ec4af1701e"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:gaa63dd59871f7ac738e9d66ec4af1701e"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gaa63dd59871f7ac738e9d66ec4af1701e">rm::sgn</a> (Tp x)</td></tr>
+<tr class="memdesc:gaa63dd59871f7ac738e9d66ec4af1701e"><td class="mdescLeft"> </td><td class="mdescRight">符号函数  <br/></td></tr>
+<tr class="separator:gaa63dd59871f7ac738e9d66ec4af1701e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga1125e569bf93394a8544bffc795f5274" id="r_ga1125e569bf93394a8544bffc795f5274"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga1125e569bf93394a8544bffc795f5274"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga1125e569bf93394a8544bffc795f5274">rm::sigmoid</a> (Tp x, Tp k=1, Tp Kp=1, Tp mu=0)</td></tr>
+<tr class="memdesc:ga1125e569bf93394a8544bffc795f5274"><td class="mdescLeft"> </td><td class="mdescRight">计算 sigmoid(x) 在某一点的函数值  <br/></td></tr>
+<tr class="separator:ga1125e569bf93394a8544bffc795f5274"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga11685dd1fe47d4629bd0905b374e8570" id="r_ga11685dd1fe47d4629bd0905b374e8570"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga11685dd1fe47d4629bd0905b374e8570"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga11685dd1fe47d4629bd0905b374e8570">rm::cross2D</a> (const cv::Vec&lt; Tp, 2 &gt; &amp;a, const cv::Vec&lt; Tp, 2 &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga11685dd1fe47d4629bd0905b374e8570"><td class="mdescLeft"> </td><td class="mdescRight">平面向量外积  <br/></td></tr>
+<tr class="separator:ga11685dd1fe47d4629bd0905b374e8570"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga666e346a612561f12c110d612421fb4a" id="r_ga666e346a612561f12c110d612421fb4a"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:ga666e346a612561f12c110d612421fb4a"><td align="right" class="memTemplItemLeft" valign="top">constexpr Tp </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga666e346a612561f12c110d612421fb4a">rm::cross2D</a> (const cv::Point_&lt; Tp &gt; &amp;a, const cv::Point_&lt; Tp &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga666e346a612561f12c110d612421fb4a"><td class="mdescLeft"> </td><td class="mdescRight">平面向量外积  <br/></td></tr>
+<tr class="separator:ga666e346a612561f12c110d612421fb4a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga8041626cf548fb4b8048c70888b2283d" id="r_ga8041626cf548fb4b8048c70888b2283d"><td class="memTemplParams" colspan="2">template&lt;typename ForwardIterator&gt; </td></tr>
+<tr class="memitem:ga8041626cf548fb4b8048c70888b2283d"><td align="right" class="memTemplItemLeft" valign="top">ForwardIterator::value_type </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga8041626cf548fb4b8048c70888b2283d">rm::calculateModeNum</a> (ForwardIterator first, ForwardIterator last)</td></tr>
+<tr class="memdesc:ga8041626cf548fb4b8048c70888b2283d"><td class="mdescLeft"> </td><td class="mdescRight">在指定范围内寻找众数，时间复杂度 O(N)  <br/></td></tr>
+<tr class="separator:ga8041626cf548fb4b8048c70888b2283d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga90237f8e5effcb48062f24f167c4d726" id="r_ga90237f8e5effcb48062f24f167c4d726"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga90237f8e5effcb48062f24f167c4d726">rm::calculateRelativeAngle</a> (const cv::Matx33f &amp;cameraMatrix, cv::Point2f center)</td></tr>
+<tr class="memdesc:ga90237f8e5effcb48062f24f167c4d726"><td class="mdescLeft"> </td><td class="mdescRight">计算相机中心与目标中心之间的相对角度  <br/></td></tr>
+<tr class="separator:ga90237f8e5effcb48062f24f167c4d726"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaad38b53a7d703ef75889860795c41b94" id="r_gaad38b53a7d703ef75889860795c41b94"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaad38b53a7d703ef75889860795c41b94">rm::calculateRelativeCenter</a> (const cv::Matx33f &amp;cameraMatrix, cv::Point2f angle)</td></tr>
+<tr class="memdesc:gaad38b53a7d703ef75889860795c41b94"><td class="mdescLeft"> </td><td class="mdescRight">计算目标中心在像素坐标系下的坐标  <br/></td></tr>
+<tr class="separator:gaad38b53a7d703ef75889860795c41b94"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga017b4a4f0e4bd876c014103e15568c05" id="r_ga017b4a4f0e4bd876c014103e15568c05"><td align="right" class="memItemLeft" valign="top">cv::Vec2f </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga017b4a4f0e4bd876c014103e15568c05">rm::cameraConvertToPixel</a> (const cv::Matx33f &amp;cameraMatrix, const <a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;distCoeffs, const cv::Vec3f &amp;center3d)</td></tr>
+<tr class="memdesc:ga017b4a4f0e4bd876c014103e15568c05"><td class="mdescLeft"> </td><td class="mdescRight">计算 3D 目标点在像素坐标系下的坐标  <br/></td></tr>
+<tr class="separator:ga017b4a4f0e4bd876c014103e15568c05"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga99243f33c29a3b278e6a9246e63277f2" id="r_ga99243f33c29a3b278e6a9246e63277f2"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga99243f33c29a3b278e6a9246e63277f2">rm::cameraConvertToPixel</a> (const cv::Matx33f &amp;cameraMatrix, const <a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;distCoeffs, const cv::Point3f &amp;center3d)</td></tr>
+<tr class="memdesc:ga99243f33c29a3b278e6a9246e63277f2"><td class="mdescLeft"> </td><td class="mdescRight">计算 3D 目标点在像素坐标系下的坐标  <br/></td></tr>
+<tr class="separator:ga99243f33c29a3b278e6a9246e63277f2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gabaff301294fb35cd202fdc1f2ce6e44f" id="r_gabaff301294fb35cd202fdc1f2ce6e44f"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:gabaff301294fb35cd202fdc1f2ce6e44f"><td align="right" class="memTemplItemLeft" valign="top">cv::Matx&lt; Tp, 3, 3 &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#gabaff301294fb35cd202fdc1f2ce6e44f">rm::euler2Mat</a> (Tp val, <a class="el" href="#ga9efb6b0afed03a8afe74adea283e4e20">EulerAxis</a> axis)</td></tr>
+<tr class="memdesc:gabaff301294fb35cd202fdc1f2ce6e44f"><td class="mdescLeft"> </td><td class="mdescRight">欧拉角转换为旋转矩阵  <br/></td></tr>
+<tr class="separator:gabaff301294fb35cd202fdc1f2ce6e44f"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ga4a13736bb50157ad2bf1c980e4a9cc06" id="r_ga4a13736bb50157ad2bf1c980e4a9cc06"><td align="right" class="memItemLeft" valign="top">constexpr float </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4a13736bb50157ad2bf1c980e4a9cc06">rm::FLOAT_MAX</a> = std::numeric_limits&lt;float&gt;::max()</td></tr>
+<tr class="memdesc:ga4a13736bb50157ad2bf1c980e4a9cc06"><td class="mdescLeft"> </td><td class="mdescRight">float 最大值  <br/></td></tr>
+<tr class="separator:ga4a13736bb50157ad2bf1c980e4a9cc06"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gae447539d828046ab559762ff2f7773ac" id="r_gae447539d828046ab559762ff2f7773ac"><td align="right" class="memItemLeft" valign="top">constexpr float </td><td class="memItemRight" valign="bottom"><a class="el" href="#gae447539d828046ab559762ff2f7773ac">rm::FLOAT_MIN</a> = std::numeric_limits&lt;float&gt;::min()</td></tr>
+<tr class="memdesc:gae447539d828046ab559762ff2f7773ac"><td class="mdescLeft"> </td><td class="mdescRight">float 最小值  <br/></td></tr>
+<tr class="separator:gae447539d828046ab559762ff2f7773ac"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:gaf50b316ad04ad15688d925e9ae4730fa" id="r_gaf50b316ad04ad15688d925e9ae4730fa"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf50b316ad04ad15688d925e9ae4730fa">rm::PI</a> = 3.14159265358979323</td></tr>
+<tr class="memdesc:gaf50b316ad04ad15688d925e9ae4730fa"><td class="mdescLeft"> </td><td class="mdescRight">圆周率: \(\pi\)  <br/></td></tr>
+<tr class="separator:gaf50b316ad04ad15688d925e9ae4730fa"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga8f0640abdfeaeac18c46eac605f7f0a5" id="r_ga8f0640abdfeaeac18c46eac605f7f0a5"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8f0640abdfeaeac18c46eac605f7f0a5">rm::e</a> = 2.7182818459045</td></tr>
+<tr class="memdesc:ga8f0640abdfeaeac18c46eac605f7f0a5"><td class="mdescLeft"> </td><td class="mdescRight">自然对数底数: \(e\)  <br/></td></tr>
+<tr class="separator:ga8f0640abdfeaeac18c46eac605f7f0a5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga1979f70b9a07db4c1ee2a96808c90b1b" id="r_ga1979f70b9a07db4c1ee2a96808c90b1b"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1979f70b9a07db4c1ee2a96808c90b1b">rm::SQRT_2</a> = 1.4142135623731</td></tr>
+<tr class="memdesc:ga1979f70b9a07db4c1ee2a96808c90b1b"><td class="mdescLeft"> </td><td class="mdescRight">根号 2: \(\sqrt2\)  <br/></td></tr>
+<tr class="separator:ga1979f70b9a07db4c1ee2a96808c90b1b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga755488a1b5092db9c2d4f6fefad886b5" id="r_ga755488a1b5092db9c2d4f6fefad886b5"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga755488a1b5092db9c2d4f6fefad886b5">rm::PI_2</a> = <a class="el" href="#gaf50b316ad04ad15688d925e9ae4730fa">PI</a> / 2.</td></tr>
+<tr class="memdesc:ga755488a1b5092db9c2d4f6fefad886b5"><td class="mdescLeft"> </td><td class="mdescRight">PI / 2: \(\frac\pi2\)  <br/></td></tr>
+<tr class="separator:ga755488a1b5092db9c2d4f6fefad886b5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga5e1f535c6364c3cf970743f4216bb37b" id="r_ga5e1f535c6364c3cf970743f4216bb37b"><td align="right" class="memItemLeft" valign="top">constexpr double </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5e1f535c6364c3cf970743f4216bb37b">rm::PI_4</a> = <a class="el" href="#gaf50b316ad04ad15688d925e9ae4730fa">PI</a> / 4.</td></tr>
+<tr class="memdesc:ga5e1f535c6364c3cf970743f4216bb37b"><td class="mdescLeft"> </td><td class="mdescRight">PI / 4: \(\frac\pi4\)  <br/></td></tr>
+<tr class="separator:ga5e1f535c6364c3cf970743f4216bb37b"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gab9d84a5a35b7177cbb2d1471680af33c" name="gab9d84a5a35b7177cbb2d1471680af33c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab9d84a5a35b7177cbb2d1471680af33c">◆ </a></span>Matx11d</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gab9d84a5a35b7177cbb2d1471680af33c">cv::Matx11d</a> = Matx&lt;double, 1, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga776f3b69cfa1e8c4e77919d8a0231a68" name="ga776f3b69cfa1e8c4e77919d8a0231a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga776f3b69cfa1e8c4e77919d8a0231a68">◆ </a></span>Matx11f</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga776f3b69cfa1e8c4e77919d8a0231a68">cv::Matx11f</a> = Matx&lt;float, 1, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga9a814ad228e3f2fa506286fbdb80c93d" name="ga9a814ad228e3f2fa506286fbdb80c93d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a814ad228e3f2fa506286fbdb80c93d">◆ </a></span>Matx15d</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga9a814ad228e3f2fa506286fbdb80c93d">cv::Matx15d</a> = Matx&lt;double, 1, 5&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga0a51e6b389329cf2925e764635bb2ba7" name="ga0a51e6b389329cf2925e764635bb2ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a51e6b389329cf2925e764635bb2ba7">◆ </a></span>Matx15f</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga0a51e6b389329cf2925e764635bb2ba7">cv::Matx15f</a> = Matx&lt;float, 1, 5&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga544b37a37f56482fe9f9fb486abf1b57" name="ga544b37a37f56482fe9f9fb486abf1b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga544b37a37f56482fe9f9fb486abf1b57">◆ </a></span>Matx51d</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga544b37a37f56482fe9f9fb486abf1b57">cv::Matx51d</a> = Matx&lt;double, 5, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga541c9f30e5a0608a481c908deaa6a4ed" name="ga541c9f30e5a0608a481c908deaa6a4ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga541c9f30e5a0608a481c908deaa6a4ed">◆ </a></span>Matx51f</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> = Matx&lt;float, 5, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga629446df8c807dcc235b61c81d953934" name="ga629446df8c807dcc235b61c81d953934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga629446df8c807dcc235b61c81d953934">◆ </a></span>Matx55d</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga629446df8c807dcc235b61c81d953934">cv::Matx55d</a> = Matx&lt;double, 5, 5&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="gad1e50ace9e3d660f0b5ab600d51ade14" name="gad1e50ace9e3d660f0b5ab600d51ade14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1e50ace9e3d660f0b5ab600d51ade14">◆ </a></span>Matx55f</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gad1e50ace9e3d660f0b5ab600d51ade14">cv::Matx55f</a> = Matx&lt;float, 5, 5&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="gaf5bed2d75219e503cecfb0bde26b786c" name="gaf5bed2d75219e503cecfb0bde26b786c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5bed2d75219e503cecfb0bde26b786c">◆ </a></span>AngleMode</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">rm::AngleMode</a> : bool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>角度制式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95" name="ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95"></a>RAD </td><td class="fielddoc"><p>弧度制 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4" name="ggaf5bed2d75219e503cecfb0bde26b786ca78a0853b2727b5acc73bc4878cac60a4"></a>DEG </td><td class="fielddoc"><p>角度制 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga1de7e89888bac78375dd440afb9a57ae" name="ga1de7e89888bac78375dd440afb9a57ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1de7e89888bac78375dd440afb9a57ae">◆ </a></span>CalPlane</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">rm::CalPlane</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>计算所在平面 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e" name="gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e"></a>xyz </td><td class="fielddoc"><p>三维空间 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6" name="gga1de7e89888bac78375dd440afb9a57aea4fdf4e11d662a2fa39a87dcb39945bb6"></a>xOy </td><td class="fielddoc"><p>xOy平面 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0" name="gga1de7e89888bac78375dd440afb9a57aeaa436870c2e543126d051bb6b0947fee0"></a>xOz </td><td class="fielddoc"><p>xOz平面 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15" name="gga1de7e89888bac78375dd440afb9a57aea21771ef05821cfa50e193cb43f06ab15"></a>yOz </td><td class="fielddoc"><p>yOz平面 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="ga9efb6b0afed03a8afe74adea283e4e20" name="ga9efb6b0afed03a8afe74adea283e4e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9efb6b0afed03a8afe74adea283e4e20">◆ </a></span>EulerAxis</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga9efb6b0afed03a8afe74adea283e4e20">rm::EulerAxis</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>欧拉角转轴枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383" name="gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383"></a>X <div class="python_language"><b>Python: </b>rm.EulerAxis.X</div></td><td class="fielddoc"><p>X 轴 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0" name="gga9efb6b0afed03a8afe74adea283e4e20a57cec4137b614c87cb4e24a3d003a3e0"></a>Y <div class="python_language"><b>Python: </b>rm.EulerAxis.Y</div></td><td class="fielddoc"><p>Y 轴 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5" name="gga9efb6b0afed03a8afe74adea283e4e20a21c2e59531c8710156d34a3c30ac81d5"></a>Z <div class="python_language"><b>Python: </b>rm.EulerAxis.Z</div></td><td class="fielddoc"><p>Z 轴 </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga8041626cf548fb4b8048c70888b2283d" name="ga8041626cf548fb4b8048c70888b2283d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8041626cf548fb4b8048c70888b2283d">◆ </a></span>calculateModeNum()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ForwardIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ForwardIterator::value_type rm::calculateModeNum </td>
+          <td>(</td>
+          <td class="paramtype">ForwardIterator</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ForwardIterator</td>          <td class="paramname"><span class="paramname"><em>last</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>在指定范围内寻找众数，时间复杂度 O(N) </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ForwardIterator</td><td>前向迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>起始迭代器 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>终止迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>众数 </dd></dl>
+</div>
+</div>
+<a id="ga90237f8e5effcb48062f24f167c4d726" name="ga90237f8e5effcb48062f24f167c4d726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90237f8e5effcb48062f24f167c4d726">◆ </a></span>calculateRelativeAngle()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point2f rm::calculateRelativeAngle </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cameraMatrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point2f</td>          <td class="paramname"><span class="paramname"><em>center</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeAngle(</td><td class="paramname">m, p</td><td>) -&gt; </td><td>angle</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>计算相机中心与目标中心之间的相对角度 </p>
+<dl class="section note"><dt>注解</dt><dd>公式推导参考函数 <a class="el" href="#gaad38b53a7d703ef75889860795c41b94">calculateRelativeCenter()</a> ，现直接给出结果  <p class="formulaDsp">
+\[\begin{bmatrix}\tan{\theta_{\text{yaw}}}\\\tan{\theta_{\text{pitch}}}
+      \\1\end{bmatrix}=\begin{bmatrix}f_x&amp;0&amp;u_0\\0&amp;f_y&amp;v_0\\0&amp;0&amp;1\end{bmatrix}^{-1}\begin{bmatrix}u\\v\\1\end{bmatrix}\]
+</p>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center</td><td>像素坐标系下的目标中心 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>相对角度，目标在图像右方，point.x 为正，目标在图像下方，point.y 为正 </dd></dl>
+</div>
+</div>
+<a id="gaad38b53a7d703ef75889860795c41b94" name="gaad38b53a7d703ef75889860795c41b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad38b53a7d703ef75889860795c41b94">◆ </a></span>calculateRelativeCenter()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point2f rm::calculateRelativeCenter </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cameraMatrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point2f</td>          <td class="paramname"><span class="paramname"><em>angle</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.calculateRelativeCenter(</td><td class="paramname">m, angle</td><td>) -&gt; </td><td>center</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>计算目标中心在像素坐标系下的坐标 </p>
+<dl class="section note"><dt>注解</dt><dd>由针孔相机模型中的相似三角形关系推出下列公式，其中 \((u, v)\) 为像素坐标系下的坐标， \((X, Y, Z)\) 为相机坐标系下的坐标  <p class="formulaDsp">
+\[u=f_x\frac
+      XZ+u_0=f_x\tan{\theta_{\text{yaw}}}+u_0\]
+</p>
+ <p class="formulaDsp">
+\[v=f_y\frac YZ+v_0=f_y\tan{\theta_{\text{pitch}}}+v_0\]
+</p>
+写成矩阵相乘的方式：   <p class="formulaDsp">
+\[\begin{bmatrix}u
+      \\v\\1\end{bmatrix}=\frac1Z\begin{bmatrix}f_x&amp;0&amp;u_0\\0&amp;f_y&amp;v_0\\0&amp;0&amp;1\end{bmatrix}\begin{bmatrix}X\\Y\\Z\end{bmatrix}=\begin{bmatrix}f_x&amp;0&amp;
+      u_0\\0&amp;f_y&amp;v_0\\0&amp;0&amp;1\end{bmatrix}\begin{bmatrix}\tan{\theta_{\text{yaw}}}\\\tan{\theta_{\text{pitch}}}\\1\end{bmatrix}\]
+</p>
+一般来说，  \(\begin
+      {bmatrix}\tan{\theta_{\text{yaw}}}&amp;\tan{\theta_{\text{pitch}}}&amp;1\end{bmatrix}^T\) 被称为 <b>归一化投影</b></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle</td><td>目标中心与相机中心的相对角度，即 \(\theta_{\text{yaw}}\) 和 \(\theta_{\text{pitch}}\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>目标中心在像素坐标系下的坐标 </dd></dl>
+</div>
+</div>
+<a id="ga99243f33c29a3b278e6a9246e63277f2" name="ga99243f33c29a3b278e6a9246e63277f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99243f33c29a3b278e6a9246e63277f2">◆ </a></span>cameraConvertToPixel() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Point2f rm::cameraConvertToPixel </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cameraMatrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>distCoeffs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3f &amp;</td>          <td class="paramname"><span class="paramname"><em>center3d</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">m, coeffs, p3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>计算 3D 目标点在像素坐标系下的坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distCoeffs</td><td>相机畸变参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center3d</td><td>目标点在相机坐标系下的坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>目标点在像素坐标系下的坐标 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d5/d6c/group__algorithm_ga99243f33c29a3b278e6a9246e63277f2_cgraph.svg" width="446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ga017b4a4f0e4bd876c014103e15568c05" name="ga017b4a4f0e4bd876c014103e15568c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga017b4a4f0e4bd876c014103e15568c05">◆ </a></span>cameraConvertToPixel() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Vec2f rm::cameraConvertToPixel </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>cameraMatrix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#ga541c9f30e5a0608a481c908deaa6a4ed">cv::Matx51f</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>distCoeffs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>center3d</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.cameraConvertToPixel(</td><td class="paramname">m, coeffs, p3d</td><td>) -&gt; </td><td>pixel</td></tr></table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>计算 3D 目标点在像素坐标系下的坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraMatrix</td><td>相机内参矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distCoeffs</td><td>相机畸变参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">center3d</td><td>目标点在相机坐标系下的坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>目标点在像素坐标系下的坐标 </dd></dl>
+</div>
+</div>
+<a id="ga34f2f328f9b5eec56ee7d278703926bc" name="ga34f2f328f9b5eec56ee7d278703926bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34f2f328f9b5eec56ee7d278703926bc">◆ </a></span>cot()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::cot </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>余切 \(\cot(x)\) </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>自变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>cot(x) </dd></dl>
+</div>
+</div>
+<a id="ga666e346a612561f12c110d612421fb4a" name="ga666e346a612561f12c110d612421fb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga666e346a612561f12c110d612421fb4a">◆ </a></span>cross2D() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::cross2D </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>平面向量外积 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>Point_数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>向量 A </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>向量 B </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>外积，若 \(\texttt{res} = 0\) 则共线， \(\texttt{res} &gt; 0\) 则方向向内， \(\texttt{res} &lt; 0\) 则方向向外 </dd></dl>
+</div>
+</div>
+<a id="ga11685dd1fe47d4629bd0905b374e8570" name="ga11685dd1fe47d4629bd0905b374e8570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11685dd1fe47d4629bd0905b374e8570">◆ </a></span>cross2D() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::cross2D </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Vec&lt; Tp, 2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec&lt; Tp, 2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>平面向量外积 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>向量数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>向量 A </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>向量 B </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>外积，若 \(\texttt{res} = 0\) 则共线， \(\texttt{res} &gt; 0\) 则方向向内， \(\texttt{res} &lt; 0\) 则方向向外 </dd></dl>
+</div>
+</div>
+<a id="ga312dc3324c726a5cb63097132ddf1e9b" name="ga312dc3324c726a5cb63097132ddf1e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga312dc3324c726a5cb63097132ddf1e9b">◆ </a></span>csc()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::csc </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>余割 \(\csc(x)\) </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>自变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>csc(x) </dd></dl>
+</div>
+</div>
+<a id="gae2276554862bce45bc46aa87ac16662b" name="gae2276554862bce45bc46aa87ac16662b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2276554862bce45bc46aa87ac16662b">◆ </a></span>deg2rad()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::deg2rad </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>角度转换为弧度 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">deg</td><td>角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>弧度 </dd></dl>
+</div>
+</div>
+<a id="gabaff301294fb35cd202fdc1f2ce6e44f" name="gabaff301294fb35cd202fdc1f2ce6e44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabaff301294fb35cd202fdc1f2ce6e44f">◆ </a></span>euler2Mat()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Matx&lt; Tp, 3, 3 &gt; rm::euler2Mat </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga9efb6b0afed03a8afe74adea283e4e20">EulerAxis</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d6/deb/transform_8hpp.html">rmvl/algorithm/transform.hpp</a>&gt;</code></p>
+<p>欧拉角转换为旋转矩阵 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>角度数值（弧度制） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>转轴 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Matx 格式的旋转矩阵 </dd></dl>
+</div>
+</div>
+<a id="ga1d86bfb5c70014f9a55a499a502054ae" name="ga1d86bfb5c70014f9a55a499a502054ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d86bfb5c70014f9a55a499a502054ae">◆ </a></span>getDeltaAngle()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::getDeltaAngle </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>angle_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>angle_2</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>求两个角之间的夹角 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>角度的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle_1</td><td>第 1 个角度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle_2</td><td>第 2 个角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>夹角，角度的范围是 \((-180°,180°]\) </dd></dl>
+</div>
+</div>
+<a id="ga1341a4b42493c1bebd817de335bff266" name="ga1341a4b42493c1bebd817de335bff266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1341a4b42493c1bebd817de335bff266">◆ </a></span>getDistance() <span class="overload">[1/5]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point3_&lt; Tp1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pt_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3_&lt; Tp2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pt_2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">CalPlane</a></td>          <td class="paramname"><span class="paramname"><em>calplane</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">CalPlane::xyz</a></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取距离 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>空间点 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>空间点 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt_1</td><td>起始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt_2</td><td>终止点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">calplane</td><td>要计算的距离所在的平面 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空间欧式距离 </dd></dl>
+</div>
+</div>
+<a id="ga5014be0e5feea956ca0938f748da0e49" name="ga5014be0e5feea956ca0938f748da0e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5014be0e5feea956ca0938f748da0e49">◆ </a></span>getDistance() <span class="overload">[2/5]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point_&lt; Tp1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pt_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pt_2</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取距离 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>平面点 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>平面点 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt_1</td><td>起始点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt_2</td><td>终止点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>平面欧式距离 </dd></dl>
+</div>
+</div>
+<a id="gaf777281f09dd091cdf95b41ce2078fbc" name="gaf777281f09dd091cdf95b41ce2078fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf777281f09dd091cdf95b41ce2078fbc">◆ </a></span>getDistance() <span class="overload">[3/5]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Vec&lt; Tp1, 2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec&lt; Tp2, 2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec_2</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取距离 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>平面向量 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>平面向量 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec_1</td><td>起始向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec_2</td><td>终止向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>平面欧式距离 </dd></dl>
+</div>
+</div>
+<a id="ga0097e1799eec67200f4a9dfa81b03fe2" name="ga0097e1799eec67200f4a9dfa81b03fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0097e1799eec67200f4a9dfa81b03fe2">◆ </a></span>getDistance() <span class="overload">[4/5]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Vec&lt; Tp1, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec&lt; Tp2, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vec_2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga1de7e89888bac78375dd440afb9a57ae">CalPlane</a></td>          <td class="paramname"><span class="paramname"><em>calplane</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#gga1de7e89888bac78375dd440afb9a57aead16fb36f0911f878998c136191af705e">CalPlane::xyz</a></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取距离 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>空间向量 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>空间向量 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec_1</td><td>起始向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vec_2</td><td>终止向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">calplane</td><td>要计算的距离所在的平面 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>空间欧式距离 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d5/d6c/group__algorithm_ga0097e1799eec67200f4a9dfa81b03fe2_cgraph.svg" width="312"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="gaa45e15c33236ea83c0af5876c3dfdfb5" name="gaa45e15c33236ea83c0af5876c3dfdfb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa45e15c33236ea83c0af5876c3dfdfb5">◆ </a></span>getDistance() <span class="overload">[5/5]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Vec&lt; Tp1, 4 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>pt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>direc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>点到直线距离，其中 \(P=(x_0,y_0)\) 到直线 \(l:Ax+By+C=0\) 距离公式为 </p>
+<p class="formulaDsp">
+\[D(P,l)=\frac{Ax_0+By_0+C}{\sqrt{A^2+B^2}}\]
+</p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>直线方程数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>平面点的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>用 <code>cv::Vec4_</code> 表示的直线方程 \((v_x, v_y, x_0, y_0)\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pt</td><td>平面点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">direc</td><td>是否区分距离的方向 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>计算结果有正负，即区分点在直线分布的方向，通过修改传入参数 <code>direc = false</code> 来设置计算结果不区分正负（统一返回 \(|D(P,l)|\)）</li>
+<li><code>line</code> 需要传入元素为 \((v_x, v_y, x_0, y_0)\) 的用 <code>cv::Vec4_</code> 表示的向量，指代下列直线方程（与 <code>cv::fitLine</code> 传入的 <code>cv::Vec4_</code> 参数一致） <p class="formulaDsp">
+\[l:y-y_0=\frac{v_y}{v_x}(x-x_0)\]
+</p>
+ </li>
+</ul>
+</dd></dl>
+<dl class="section return"><dt>返回</dt><dd>平面欧式距离 </dd></dl>
+</div>
+</div>
+<a id="ga10690718e851a53f751c5fc9925ae9ea" name="ga10690718e851a53f751c5fc9925ae9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10690718e851a53f751c5fc9925ae9ea">◆ </a></span>getHAngle()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getHAngle </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point_&lt; Tp1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">AngleMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95">RAD</a></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取与水平方向的夹角，以平面直角坐标系 \(x\) 轴为分界线， <b>逆时针</b> 为正方向，范围: \((-180°,180°]\) ，默认返回弧度制 </p>
+<dl class="section note"><dt>注解</dt><dd>与像素（图像）坐标系不同，像素（图像）坐标系中 \(y\) 轴向下为正方向，而此函数将 \(y\) 轴向上设置为正方向，因此才能将逆时针表示为旋转的正方向</dd></dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>平面点 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>平面点 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>像素坐标系下的起点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>像素坐标系下的终点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>返回角度模式，默认弧度制 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回角度 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d5/d6c/group__algorithm_ga10690718e851a53f751c5fc9925ae9ea_cgraph.svg" width="276"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="gabb356f903a2d2b2907137ba8463b13d8" name="gabb356f903a2d2b2907137ba8463b13d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb356f903a2d2b2907137ba8463b13d8">◆ </a></span>getVAngle()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp1, typename Tp2&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto rm::getVAngle </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Point_&lt; Tp1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; Tp2 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gaf5bed2d75219e503cecfb0bde26b786c">AngleMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#ggaf5bed2d75219e503cecfb0bde26b786ca5ffff4395e63ae29a98ed3e713cafd95">RAD</a></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>获取与垂直方向的夹角，以平面直角坐标系 \(y\) 轴为分界线， <b>顺时针</b> 为正方向，范围: \((-180°,180°]\) ，默认返回弧度制 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp1</td><td>平面点 1 的数据类型 </td></tr>
+    <tr><td class="paramname">Tp2</td><td>平面点 2 的数据类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>起点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>终点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>返回角度模式，默认弧度制 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回角度 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../d5/d6c/group__algorithm_gabb356f903a2d2b2907137ba8463b13d8_cgraph.svg" width="275"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="gaae346087df690ca4296911daaadfbbda" name="gaae346087df690ca4296911daaadfbbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae346087df690ca4296911daaadfbbda">◆ </a></span>operator""_PI() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_PI </td>
+          <td>(</td>
+          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="gab4884bbee674cac21e3ee00e16b315d3" name="gab4884bbee674cac21e3ee00e16b315d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4884bbee674cac21e3ee00e16b315d3">◆ </a></span>operator""_PI() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_PI </td>
+          <td>(</td>
+          <td class="paramtype">long long unsigned</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga3452f8c1e466c8c4aa422c4e1ed6486d" name="ga3452f8c1e466c8c4aa422c4e1ed6486d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3452f8c1e466c8c4aa422c4e1ed6486d">◆ </a></span>operator""_to_deg() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_to_deg </td>
+          <td>(</td>
+          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="gaab580e56d4f4b3e264d90bed9403204d" name="gaab580e56d4f4b3e264d90bed9403204d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab580e56d4f4b3e264d90bed9403204d">◆ </a></span>operator""_to_deg() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_to_deg </td>
+          <td>(</td>
+          <td class="paramtype">long long unsigned</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga13b00e1ca5a58a911ac9a53862d4a090" name="ga13b00e1ca5a58a911ac9a53862d4a090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga13b00e1ca5a58a911ac9a53862d4a090">◆ </a></span>operator""_to_rad() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_to_rad </td>
+          <td>(</td>
+          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga3805561febf4b3cfe827c985219fc816" name="ga3805561febf4b3cfe827c985219fc816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3805561febf4b3cfe827c985219fc816">◆ </a></span>operator""_to_rad() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::numeric_literals::operator""_to_rad </td>
+          <td>(</td>
+          <td class="paramtype">long long unsigned</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="gaac9085ed7bb655273d94dd7a9e9bb7a5" name="gaac9085ed7bb655273d94dd7a9e9bb7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac9085ed7bb655273d94dd7a9e9bb7a5">◆ </a></span>operator+() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Matx&lt; Tp, 1, 1 &gt; rm::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx&lt; Tp, 1, 1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>val</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga24cdb2a95b720c25718a10f0c231beb7" name="ga24cdb2a95b720c25718a10f0c231beb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24cdb2a95b720c25718a10f0c231beb7">◆ </a></span>operator+() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Matx&lt; Tp, 1, 1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga389ef0083eef431267d7c699425a7936" name="ga389ef0083eef431267d7c699425a7936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga389ef0083eef431267d7c699425a7936">◆ </a></span>operator-() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Matx&lt; Tp, 1, 1 &gt; rm::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Matx&lt; Tp, 1, 1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>val</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="gab25b059e83d92ca52c5191f32cf93b6e" name="gab25b059e83d92ca52c5191f32cf93b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab25b059e83d92ca52c5191f32cf93b6e">◆ </a></span>operator-() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::operator- </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Matx&lt; Tp, 1, 1 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+</div>
+</div>
+<a id="ga60d67240dab96ee04ac0daf7b3ba3900" name="ga60d67240dab96ee04ac0daf7b3ba3900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60d67240dab96ee04ac0daf7b3ba3900">◆ </a></span>rad2deg()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::rad2deg </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>rad</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>弧度转换为角度 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rad</td><td>弧度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>角度 </dd></dl>
+</div>
+</div>
+<a id="ga2376ca67d6e7b3f7f560cdcb92517cee" name="ga2376ca67d6e7b3f7f560cdcb92517cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2376ca67d6e7b3f7f560cdcb92517cee">◆ </a></span>sec()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::sec </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>正割 \(\sec(x)\) </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>自变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>sec(x) </dd></dl>
+</div>
+</div>
+<a id="gaa63dd59871f7ac738e9d66ec4af1701e" name="gaa63dd59871f7ac738e9d66ec4af1701e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa63dd59871f7ac738e9d66ec4af1701e">◆ </a></span>sgn()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::sgn </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>符号函数 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>自变量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><p class="formulaDsp">
+\[\text{sgn}(x)=\left\{\begin{matrix}
+        1&amp;&amp;x&gt;0\\0&amp;&amp;x=0\\-1&amp;&amp;x&lt;0
+        \end{matrix}\right.\]
+</p>
+ </dd></dl>
+</div>
+</div>
+<a id="ga1125e569bf93394a8544bffc795f5274" name="ga1125e569bf93394a8544bffc795f5274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1125e569bf93394a8544bffc795f5274">◆ </a></span>sigmoid()</h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp rm::sigmoid </td>
+          <td>(</td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>k</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>Kp</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp</td>          <td class="paramname"><span class="paramname"><em>mu</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>计算 sigmoid(x) 在某一点的函数值 </p>
+<dl class="section note"><dt>注解</dt><dd>sigmoid 函数表达式为： <p class="formulaDsp">
+\[y=f_{sig}(x)=\frac{K_p}{1+e^{-kx+\mu}}\]
+</p>
+</dd></dl>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>变量类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>自变量 \(x\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">k</td><td>缩放系数 \(k\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Kp</td><td>开环增益系数 \(K_p\) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mu</td><td>偏移系数 \(\mu\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>函数值 \(f_{sig}(x)\) </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ga8f0640abdfeaeac18c46eac605f7f0a5" name="ga8f0640abdfeaeac18c46eac605f7f0a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f0640abdfeaeac18c46eac605f7f0a5">◆ </a></span>e</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::e = 2.7182818459045</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>自然对数底数: \(e\) </p>
+</div>
+</div>
+<a id="ga4a13736bb50157ad2bf1c980e4a9cc06" name="ga4a13736bb50157ad2bf1c980e4a9cc06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a13736bb50157ad2bf1c980e4a9cc06">◆ </a></span>FLOAT_MAX</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::FLOAT_MAX = std::numeric_limits&lt;float&gt;::max()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>float 最大值 </p>
+</div>
+</div>
+<a id="gae447539d828046ab559762ff2f7773ac" name="gae447539d828046ab559762ff2f7773ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae447539d828046ab559762ff2f7773ac">◆ </a></span>FLOAT_MIN</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::FLOAT_MIN = std::numeric_limits&lt;float&gt;::min()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>float 最小值 </p>
+</div>
+</div>
+<a id="gaf50b316ad04ad15688d925e9ae4730fa" name="gaf50b316ad04ad15688d925e9ae4730fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf50b316ad04ad15688d925e9ae4730fa">◆ </a></span>PI</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::PI = 3.14159265358979323</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>圆周率: \(\pi\) </p>
+</div>
+</div>
+<a id="ga755488a1b5092db9c2d4f6fefad886b5" name="ga755488a1b5092db9c2d4f6fefad886b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga755488a1b5092db9c2d4f6fefad886b5">◆ </a></span>PI_2</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::PI_2 = <a class="el" href="#gaf50b316ad04ad15688d925e9ae4730fa">PI</a> / 2.</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>PI / 2: \(\frac\pi2\) </p>
+</div>
+</div>
+<a id="ga5e1f535c6364c3cf970743f4216bb37b" name="ga5e1f535c6364c3cf970743f4216bb37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e1f535c6364c3cf970743f4216bb37b">◆ </a></span>PI_4</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::PI_4 = <a class="el" href="#gaf50b316ad04ad15688d925e9ae4730fa">PI</a> / 4.</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>PI / 4: \(\frac\pi4\) </p>
+</div>
+</div>
+<a id="ga1979f70b9a07db4c1ee2a96808c90b1b" name="ga1979f70b9a07db4c1ee2a96808c90b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1979f70b9a07db4c1ee2a96808c90b1b">◆ </a></span>SQRT_2</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rm::SQRT_2 = 1.4142135623731</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;<a class="el" href="../../d4/d78/math_8hpp.html">rmvl/algorithm/math.hpp</a>&gt;</code></p>
+<p>根号 2: \(\sqrt2\) </p>
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

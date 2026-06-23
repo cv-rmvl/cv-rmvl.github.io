@@ -1,0 +1,235 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: 主要模块使用教程</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.1.1</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">主要模块使用教程</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md279">1. 工具类</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md280">通用工具</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md281">通信</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md282">硬件设备支持库</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md283">2. 算法类</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md284">数值计算</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md285">数据与信号处理</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md286">数据结构与算法</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md287">机器学习与深度学习支持库</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tutorial__modules"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d6/d88/tutorial_table_of_content_config.html">基本介绍</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d6c/tutorial_table_of_content_rmvlpara.html">参数模块使用教程</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md279"></a>
+1. 工具类</h2>
+<h3><a class="anchor" id="autotoc_md280"></a>
+通用工具</h3>
+<ul>
+<li><a class="el" href="../../d7/de5/tutorial_modules_aggregate_reflect.html">聚合类反射及其相关 API</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md281"></a>
+通信</h3>
+<ul>
+<li><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a></li>
+<li><a class="el" href="../../db/dba/tutorial_modules_opcua.html">工业自动化通信协议 OPC UA</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md282"></a>
+硬件设备支持库</h3>
+<ul>
+<li><a class="el" href="../../df/d2c/tutorial_modules_camera.html">相机设备</a></li>
+<li><a class="el" href="../../dc/d10/tutorial_modules_light.html">光源控制器</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md283"></a>
+2. 算法类</h2>
+<h3><a class="anchor" id="autotoc_md284"></a>
+数值计算</h3>
+<ul>
+<li><a class="el" href="../../d8/d57/tutorial_modules_interpolation.html">函数插值方法</a></li>
+<li><a class="el" href="../../db/da1/tutorial_modules_least_square.html">最小二乘法</a> 和 <a class="el" href="../../d8/dd7/tutorial_modules_lsqnonlin.html">非线性最小二乘</a></li>
+<li><a class="el" href="../../d8/daf/tutorial_modules_func_iteration.html">非线性方程（组）数值解与迭代法</a></li>
+<li><a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a></li>
+<li><a class="el" href="../../da/d8f/tutorial_modules_auto_differential.html">自动求导、数值微分</a></li>
+<li><a class="el" href="../../de/d14/tutorial_modules_fminbnd.html">一维最优化方法</a></li>
+<li><a class="el" href="../../d3/d5c/tutorial_modules_fminunc.html">多维无约束最优化方法</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md285"></a>
+数据与信号处理</h3>
+<ul>
+<li><a class="el" href="../../df/d25/tutorial_modules_ew_topsis.html">基于 TOPSIS 模型的熵权法</a></li>
+<li><a class="el" href="../../dd/dc3/tutorial_modules_kalman.html">卡尔曼滤波</a> 和 <a class="el" href="../../db/d71/tutorial_modules_ekf.html">扩展卡尔曼滤波</a></li>
+<li><a class="el" href="../../d5/d1c/tutorial_modules_dft.html">离散傅里叶变换</a> 和 <a class="el" href="../../d0/d9d/tutorial_modules_fft.html">快速傅里叶变换</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md286"></a>
+数据结构与算法</h3>
+<ul>
+<li><a class="el" href="../../d4/d74/tutorial_modules_union_find.html">并查集</a></li>
+<li><a class="el" href="../../d5/db4/tutorial_modules_ra_heap.html">支持随机访问的堆</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md287"></a>
+机器学习与深度学习支持库</h3>
+<ul>
+<li><a class="el" href="../../d8/d82/tutorial_modules_ort.html">ONNX-Runtime 分类网络部署库</a> </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::lpss::RobotPlanner类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner.html">RobotPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="../../d6/d1f/classrm_1_1lpss_1_1RobotPlanner-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::RobotPlanner类 参考<div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务</a> &raquo; <a class="el" href="../../d2/d7d/group__lpss__robot.html">机器人功能扩展</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>机器人规划模块，提供 URDF 解析、正/逆运动学求解、轨迹规划等运动学功能  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/robot.hpp&gt;</code></p>
+<div class="dynheader">
+rm::lpss::RobotPlanner 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/db4/classrm_1_1lpss_1_1RobotPlanner__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab85fc4901dca7cfe36b06d39fb5dffad" id="r_ab85fc4901dca7cfe36b06d39fb5dffad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab85fc4901dca7cfe36b06d39fb5dffad">RobotPlanner</a> (std::string_view urdf_path, std::string_view mesh_path={})</td></tr>
+<tr class="memdesc:ab85fc4901dca7cfe36b06d39fb5dffad"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造机器人规划对象  <br /></td></tr>
+<tr class="memitem:acefe722a26d77aa1561bb8279adecc60" id="r_acefe722a26d77aa1561bb8279adecc60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acefe722a26d77aa1561bb8279adecc60">RobotPlanner</a> (RobotPlanner &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:a0ffc28051815ca0acd72212f9c40803c" id="r_a0ffc28051815ca0acd72212f9c40803c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab85fc4901dca7cfe36b06d39fb5dffad">RobotPlanner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ffc28051815ca0acd72212f9c40803c">operator=</a> (<a class="el" href="#ab85fc4901dca7cfe36b06d39fb5dffad">RobotPlanner</a> &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:ad9406b5e1206f2a27f90eb5ce5b50a40" id="r_ad9406b5e1206f2a27f90eb5ce5b50a40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9406b5e1206f2a27f90eb5ce5b50a40">~RobotPlanner</a> ()</td></tr>
+<tr class="memitem:ae2bbd5478ca2e7f2579f96d85cd26a6d" id="r_ae2bbd5478ca2e7f2579f96d85cd26a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2bbd5478ca2e7f2579f96d85cd26a6d">load</a> (std::string_view urdf_path, std::string_view mesh_path={})</td></tr>
+<tr class="memdesc:ae2bbd5478ca2e7f2579f96d85cd26a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">重新加载机器人模型  <br /></td></tr>
+<tr class="memitem:a9dfa52cb525a37122157877b6693d292" id="r_a9dfa52cb525a37122157877b6693d292"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dfa52cb525a37122157877b6693d292">update</a> (const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;joint_state)</td></tr>
+<tr class="memdesc:a9dfa52cb525a37122157877b6693d292"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新关节状态，并根据正运动学重新计算 TF 树  <br /></td></tr>
+<tr class="memitem:a10051738d1e8c9f6a42880df490a6c0f" id="r_a10051738d1e8c9f6a42880df490a6c0f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10051738d1e8c9f6a42880df490a6c0f">joints</a> () const noexcept</td></tr>
+<tr class="memdesc:a10051738d1e8c9f6a42880df490a6c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前关节状态  <br /></td></tr>
+<tr class="memitem:ac77fe6ae14d7cfe810ee8caf6845c176" id="r_ac77fe6ae14d7cfe810ee8caf6845c176"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d0/d8c/classrm_1_1msg_1_1URDF.html">msg::URDF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac77fe6ae14d7cfe810ee8caf6845c176">urdf</a> () const noexcept</td></tr>
+<tr class="memdesc:ac77fe6ae14d7cfe810ee8caf6845c176"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 URDF 消息  <br /></td></tr>
+<tr class="memitem:a565c725e09ec2b098e84e9a021571fb0" id="r_a565c725e09ec2b098e84e9a021571fb0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a565c725e09ec2b098e84e9a021571fb0">tf</a> () const noexcept</td></tr>
+<tr class="memdesc:a565c725e09ec2b098e84e9a021571fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 TF 消息  <br /></td></tr>
+<tr class="memitem:a7898abd061d0f1bd6f5b8e02d997ec6e" id="r_a7898abd061d0f1bd6f5b8e02d997ec6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7898abd061d0f1bd6f5b8e02d997ec6e">plan</a> (std::string_view frame, const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;target_pose) const</td></tr>
+<tr class="memdesc:a7898abd061d0f1bd6f5b8e02d997ec6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">规划从当前关节状态到目标位姿的轨迹  <br /></td></tr>
+<tr class="memitem:aa1d8c5c6f380b1430803b65ce3704f27" id="r_aa1d8c5c6f380b1430803b65ce3704f27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1d8c5c6f380b1430803b65ce3704f27">linkpose</a> (std::string_view link_name) const</td></tr>
+<tr class="memdesc:aa1d8c5c6f380b1430803b65ce3704f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定连杆相对于基坐标系的位姿（正运动学）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a1f02f502cfcbd86e28f26f847b1e90b0" id="r_a1f02f502cfcbd86e28f26f847b1e90b0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f02f502cfcbd86e28f26f847b1e90b0">_impl</a> {}</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>机器人规划模块，提供 URDF 解析、正/逆运动学求解、轨迹规划等运动学功能 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ab85fc4901dca7cfe36b06d39fb5dffad" name="ab85fc4901dca7cfe36b06d39fb5dffad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85fc4901dca7cfe36b06d39fb5dffad">&#9670;&#160;</a></span>RobotPlanner() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::RobotPlanner::RobotPlanner </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>urdf_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>mesh_path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造机器人规划对象 </p>
+<p>构造时以零位初始化所有关节状态，并生成对应的 TF 树</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">urdf_path</td><td>机器人 URDF 文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_path</td><td>机器人网格文件路径前缀（可选），一般用于解析 URDF 中的 mesh 路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acefe722a26d77aa1561bb8279adecc60" name="acefe722a26d77aa1561bb8279adecc60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefe722a26d77aa1561bb8279adecc60">&#9670;&#160;</a></span>RobotPlanner() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::RobotPlanner::RobotPlanner </td>
+          <td>(</td>
+          <td class="paramtype">RobotPlanner &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_acefe722a26d77aa1561bb8279adecc60_cgraph.svg" width="371" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad9406b5e1206f2a27f90eb5ce5b50a40" name="ad9406b5e1206f2a27f90eb5ce5b50a40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9406b5e1206f2a27f90eb5ce5b50a40">&#9670;&#160;</a></span>~RobotPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::RobotPlanner::~RobotPlanner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_ad9406b5e1206f2a27f90eb5ce5b50a40_cgraph.svg" width="371" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a10051738d1e8c9f6a42880df490a6c0f" name="a10051738d1e8c9f6a42880df490a6c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10051738d1e8c9f6a42880df490a6c0f">&#9670;&#160;</a></span>joints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp; rm::lpss::RobotPlanner::joints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前关节状态 </p>
+<dl class="section return"><dt>返回</dt><dd>当前关节状态的常引用 </dd></dl>
+
+</div>
+</div>
+<a id="aa1d8c5c6f380b1430803b65ce3704f27" name="aa1d8c5c6f380b1430803b65ce3704f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d8c5c6f380b1430803b65ce3704f27">&#9670;&#160;</a></span>linkpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> rm::lpss::RobotPlanner::linkpose </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>link_name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定连杆相对于基坐标系的位姿（正运动学） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">link_name</td><td>目标连杆名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>该连杆在基坐标系下的位姿 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_aa1d8c5c6f380b1430803b65ce3704f27_cgraph.svg" width="167" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae2bbd5478ca2e7f2579f96d85cd26a6d" name="ae2bbd5478ca2e7f2579f96d85cd26a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2bbd5478ca2e7f2579f96d85cd26a6d">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::RobotPlanner::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>urdf_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>mesh_path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重新加载机器人模型 </p>
+<p>解析新的 URDF 文件，重新构建运动学树，并以零位重新初始化所有关节状态和 TF 树</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">urdf_path</td><td>机器人 URDF 文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh_path</td><td>机器人网格文件路径前缀（可选），一般用于解析 URDF 中的 mesh 路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_ae2bbd5478ca2e7f2579f96d85cd26a6d_cgraph.svg" width="167" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0ffc28051815ca0acd72212f9c40803c" name="a0ffc28051815ca0acd72212f9c40803c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ffc28051815ca0acd72212f9c40803c">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab85fc4901dca7cfe36b06d39fb5dffad">RobotPlanner</a> &amp; rm::lpss::RobotPlanner::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ab85fc4901dca7cfe36b06d39fb5dffad">RobotPlanner</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_a0ffc28051815ca0acd72212f9c40803c_cgraph.svg" width="371" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7898abd061d0f1bd6f5b8e02d997ec6e" name="a7898abd061d0f1bd6f5b8e02d997ec6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7898abd061d0f1bd6f5b8e02d997ec6e">&#9670;&#160;</a></span>plan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> rm::lpss::RobotPlanner::plan </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>target_pose</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>规划从当前关节状态到目标位姿的轨迹 </p>
+<p>基于内部维护的 URDF 运动学模型和当前 JointState，通过逆运动学求解目标关节角，并插值生成一系列轨迹点</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame</td><td>目标末端执行器坐标系名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_pose</td><td>目标末端执行器位姿（位置 + 姿态） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>规划得到的关节轨迹，若规划失败则 <span class="tt">points</span> 为空 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_a7898abd061d0f1bd6f5b8e02d997ec6e_cgraph.svg" width="167" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a565c725e09ec2b098e84e9a021571fb0" name="a565c725e09ec2b098e84e9a021571fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565c725e09ec2b098e84e9a021571fb0">&#9670;&#160;</a></span>tf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp; rm::lpss::RobotPlanner::tf </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前 TF 消息 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_a565c725e09ec2b098e84e9a021571fb0_cgraph.svg" width="183" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9dfa52cb525a37122157877b6693d292" name="a9dfa52cb525a37122157877b6693d292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dfa52cb525a37122157877b6693d292">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::RobotPlanner::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>joint_state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新关节状态，并根据正运动学重新计算 TF 树 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">joint_state</td><td>新的关节状态（名称、位置、速度、力矩） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac77fe6ae14d7cfe810ee8caf6845c176" name="ac77fe6ae14d7cfe810ee8caf6845c176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77fe6ae14d7cfe810ee8caf6845c176">&#9670;&#160;</a></span>urdf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d0/d8c/classrm_1_1msg_1_1URDF.html">msg::URDF</a> &amp; rm::lpss::RobotPlanner::urdf </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前 URDF 消息 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/de1/classrm_1_1lpss_1_1RobotPlanner_ac77fe6ae14d7cfe810ee8caf6845c176_cgraph.svg" width="167" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a1f02f502cfcbd86e28f26f847b1e90b0" name="a1f02f502cfcbd86e28f26f847b1e90b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f02f502cfcbd86e28f26f847b1e90b0">&#9670;&#160;</a></span>_impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;Impl&gt; rm::lpss::RobotPlanner::_impl {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

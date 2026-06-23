@@ -1,0 +1,192 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: rmvl/camera/camutils.hpp 文件参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_0004eea47629e797f98a68d373747388.html">rmvl</a></li><li class="navelem"><a class="el" href="../../dir_68b2675841333b17d262d865224a2a6d.html">camera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">camutils.hpp 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Eigen/Dense&gt;</code><br />
+<code>#include &lt;opencv2/calib3d.hpp&gt;</code><br />
+<code>#include &lt;opencv2/core/eigen.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/d71/uty__math_8hpp.html">rmvl/rmath/uty_math.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/df6/camera_8h.html">rmvlpara/camera/camera.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+camutils.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d9/d86/camutils_8hpp__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../db/d84/camutils_8hpp__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbf/classrm_1_1CameraExtrinsics.html">rm::CameraExtrinsics&lt; Tp &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机外参  <a href="../../da/dbf/classrm_1_1CameraExtrinsics.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:d5/d20/namespacerm"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gadb620c07c018dd8dbe33109ed6fda71d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#gadb620c07c018dd8dbe33109ed6fda71d">rm::RetrieveMode</a> = int</td></tr>
+<tr class="memdesc:gadb620c07c018dd8dbe33109ed6fda71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理模式 Camera retrieve mode  <a href="../../dc/d90/group__camera.html#gadb620c07c018dd8dbe33109ed6fda71d">更多...</a><br /></td></tr>
+<tr class="separator:gadb620c07c018dd8dbe33109ed6fda71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gabe45f568f488e51e950b288993591ebf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#gabe45f568f488e51e950b288993591ebf">rm::GrabMode</a> : int { <a class="el" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa3e536eb26f569926b26d2943818ee59e">rm::GRAB_CONTINUOUS</a> = 0
+, <a class="el" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa7d6dd7898b259f0a82d66f1c44acf541">rm::GRAB_SOFTWARE</a> = 1
+, <a class="el" href="../../dc/d90/group__camera.html#ggabe45f568f488e51e950b288993591ebfa6d65f94f5e6c5693f8b3b1ec01186014">rm::GRAB_HARDWARE</a> = 2
+ }</td></tr>
+<tr class="memdesc:gabe45f568f488e51e950b288993591ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">采集模式 Camera grab mode  <a href="../../dc/d90/group__camera.html#gabe45f568f488e51e950b288993591ebf">更多...</a><br /></td></tr>
+<tr class="separator:gabe45f568f488e51e950b288993591ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68c858d1ecf8b5ab9d25a0d4a2acb2ca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#ga68c858d1ecf8b5ab9d25a0d4a2acb2ca">rm::_RetrieveMode</a> : RetrieveMode { <a class="el" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa86ca2b68fa5e168f10c606d6ca05737e">rm::RETRIEVE_SDK</a> = 0x01
+, <a class="el" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caa3ad9b40b26e6e5de20a8db8060cab87c">rm::RETRIEVE_CV</a> = 0x02
+, <a class="el" href="../../dc/d90/group__camera.html#gga68c858d1ecf8b5ab9d25a0d4a2acb2caaafe04f83834afa44c1f5ae947fbacebf">rm::RETRIEVE_LUT</a> = 0x10
+ }</td></tr>
+<tr class="separator:ga68c858d1ecf8b5ab9d25a0d4a2acb2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae34c165c49c1205024f12993bf060f57"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#gae34c165c49c1205024f12993bf060f57">rm::CameraActivities</a> : uint16_t { <a class="el" href="../../dc/d90/group__camera.html#ggae34c165c49c1205024f12993bf060f57aad4505f28b41f355ff821263345544aa">rm::CAMERA_ONCE_WB</a> = 0x0101
+, <a class="el" href="../../dc/d90/group__camera.html#ggae34c165c49c1205024f12993bf060f57a3857a1b7fcdddf0e793bcc6a63266475">rm::CAMERA_SOFT_TRIGGER</a> = 0x0102
+ }</td></tr>
+<tr class="memdesc:gae34c165c49c1205024f12993bf060f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机事件 Camera Activities  <a href="../../dc/d90/group__camera.html#gae34c165c49c1205024f12993bf060f57">更多...</a><br /></td></tr>
+<tr class="separator:gae34c165c49c1205024f12993bf060f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dabb1d304a05608ec415f8f6c289423"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d90/group__camera.html#ga3dabb1d304a05608ec415f8f6c289423">rm::CameraProperties</a> : uint16_t { <br />
+&#160;&#160;<a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aba38501dbc9b4a9a9f921d0a40d8c1fb">rm::CAMERA_AUTO_EXPOSURE</a> = 0x001
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a4f96a87ba77f6cfdca97b7dfcbac9972">rm::CAMERA_AUTO_WB</a> = 0x002
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a59e64c9447cf3096c426587cc1bd6e13">rm::CAMERA_MANUAL_EXPOSURE</a> = 0x003
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae64a4a686a53a8c737d1ca10af38e96c">rm::CAMERA_MANUAL_WB</a> = 0x004
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a5b0ea66f2c7029d10ea3b4505fcc784c">rm::CAMERA_EXPOSURE</a> = 0x005
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aee4e28daf641d7d80989a0240b1bad16">rm::CAMERA_GAIN</a> = 0x006
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ace4056201e197b9542f81baebe04d103">rm::CAMERA_GAMMA</a> = 0x007
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423aebabd6b90c4ce8da92954bcfdb26b801">rm::CAMERA_WB_RGAIN</a> = 0x008
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a34a84085560fe527d704d46608dddc58">rm::CAMERA_WB_GGAIN</a> = 0x009
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a07d8c840fa3c4cce61481159b7c3247e">rm::CAMERA_WB_BGAIN</a> = 0x00a
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ac1a2a996692cb0b6da234990a9f132d9">rm::CAMERA_CONTRAST</a> = 0x00c
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a4e59d0a3cc5a29a91906432a818bc1bc">rm::CAMERA_SATURATION</a> = 0x00d
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423ae4750fa886f1876d153a68c5bc3b2e2f">rm::CAMERA_SHARPNESS</a> = 0x00e
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a94adf1643237aa40526fa70a113e2634">rm::CAMERA_FRAME_HEIGHT</a> = 0x00f
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423a285d496bcbd08079b0c316b6d7e7ce22">rm::CAMERA_FRAME_WIDTH</a> = 0x010
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423af4d09eb79373a2afa208c9ffb386d898">rm::CAMERA_TRIGGER_DELAY</a> = 0x041
+, <br />
+&#160;&#160;<a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423afd014bac1dc13348619b6107d4185c71">rm::CAMERA_TRIGGER_COUNT</a> = 0x042
+, <a class="el" href="../../dc/d90/group__camera.html#gga3dabb1d304a05608ec415f8f6c289423adbef478f5e47ac1462a3abe745e8ad83">rm::CAMERA_TRIGGER_PERIOD</a> = 0x043
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3dabb1d304a05608ec415f8f6c289423"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机属性 Camera Properties  <a href="../../dc/d90/group__camera.html#ga3dabb1d304a05608ec415f8f6c289423">更多...</a><br /></td></tr>
+<tr class="separator:ga3dabb1d304a05608ec415f8f6c289423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>RoboMaster Vision Community </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2022-09-30</dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright 2023 (c), RoboMaster Vision Community </dd></dl>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:21:27 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

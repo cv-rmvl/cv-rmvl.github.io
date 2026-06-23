@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['sec_1279',['sec',['../d9/d31/group__rmath.html#ga2376ca67d6e7b3f7f560cdcb92517cee',1,'rm']]],
+  ['serialport_1280',['SerialPort',['../d4/d98/classrm_1_1SerialPort.html#af3c8690ef2eb867b6a038da5905ba294',1,'rm::SerialPort']]],
+  ['set_1281',['set',['../d8/d08/classrm_1_1HikVideoCapture.html#ad30c039f16d72a1a4e4229f2c7cc198a',1,'rm::HikVideoCapture::set()'],['../d7/d8f/classrm_1_1MvVideoCapture.html#a3a2ffdde89eb3a249540d3ee4f227cd7',1,'rm::MvVideoCapture::set()']]],
+  ['seta_1282',['setA',['../d4/d9b/classKalmanFilterX.html#ab9e9d8b97e86afc45ee5466bc5066810',1,'KalmanFilterX']]],
+  ['seth_1283',['setH',['../d4/d9b/classKalmanFilterX.html#a3f08463e67a9b56d08f8ce90f6dc3e93',1,'KalmanFilterX']]],
+  ['setmatchmessage_1284',['setMatchMessage',['../d0/df8/classrm_1_1LightBlob.html#a4e92dc957bef8e0a1ea66ae72d14a886',1,'rm::LightBlob::setMatchMessage()'],['../de/d9a/classrm_1_1Pilot.html#a459479db86a01c686601d200e6c2a2c5',1,'rm::Pilot::setMatchMessage()']]],
+  ['setp_1285',['setP',['../d4/d9b/classKalmanFilterX.html#a66103964f4e1469c5959d6780d949875',1,'KalmanFilterX']]],
+  ['setpnp_1286',['setPNP',['../df/d41/classrm_1_1Armor.html#a886261117a4fab0265aa813875cd73a9',1,'rm::Armor']]],
+  ['setq_1287',['setQ',['../d4/d9b/classKalmanFilterX.html#ab97ea69b7b20d7b84fda02caaaef52d2',1,'KalmanFilterX']]],
+  ['setr_1288',['setR',['../d4/d9b/classKalmanFilterX.html#a0dc5c1be5ab0219c8264cbf16e5248e0',1,'KalmanFilterX']]],
+  ['settype_1289',['setType',['../df/d41/classrm_1_1Armor.html#a74064d4d9afc36caddcf09155b652aa7',1,'rm::Armor']]],
+  ['sgn_1290',['sgn',['../d9/d31/group__rmath.html#gaa63dd59871f7ac738e9d66ec4af1701e',1,'rm']]],
+  ['sigmoid_1291',['sigmoid',['../d9/d31/group__rmath.html#gaac66e6ba7fca3a967df3999a23a8cf31',1,'rm']]],
+  ['size_1292',['size',['../d6/d6c/classrm_1_1group.html#ac8a015e66d39cc8d544ec8cd0552ff51',1,'rm::group::size()'],['../d6/dd2/classrm_1_1tracker.html#a7522b784f3cfb92107b7eddfd15aa163',1,'rm::tracker::size()'],['../de/dee/classrm_1_1combo.html#a88fd3024f203176dd2d6e5eb384a44c0',1,'rm::combo::size()'],['../db/d45/classrm_1_1RaHeap.html#ae9520e8a8504c97856108e028a96d25b',1,'rm::RaHeap::size()']]],
+  ['spirunepredictor_1293',['SpiRunePredictor',['../d0/d05/classrm_1_1SpiRunePredictor.html#ab5e255ffbd7d44775edc7a3ebf93984b',1,'rm::SpiRunePredictor']]],
+  ['spirunepredictorparam_1294',['SpiRunePredictorParam',['../d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html#a79133026a8e4b7902a3105daa6611b44',1,'rm::para::SpiRunePredictorParam']]],
+  ['start_1295',['start',['../d0/da3/classrm_1_1Timer.html#a3a16be63e0bf6c4a7283c81122d5c076',1,'rm::Timer']]],
+  ['stop_1296',['stop',['../d0/da3/classrm_1_1Timer.html#a774291b24d036e77b03fa6e0a0a481bc',1,'rm::Timer']]],
+  ['sync_1297',['sync',['../d6/d6c/classrm_1_1group.html#a6576e4736f41cbcd7a992d033211aa5d',1,'rm::group::sync()'],['../d0/df4/classrm_1_1DefaultGroup.html#af32b31e150fdf749c1a37e79abb3fcc4',1,'rm::DefaultGroup::sync()'],['../da/df9/classrm_1_1GyroGroup.html#aca51c1efcd6e66a053c219715c3e6e20',1,'rm::GyroGroup::sync()'],['../d2/df2/classrm_1_1RuneGroup.html#a9dddf2d5f53aa7a4f35942b83c62945b',1,'rm::RuneGroup::sync()']]],
+  ['syncwait_1298',['syncWait',['../d7/d2c/group__timer.html#ga2d8057fff0cd5dcaa91cf7587e63968c',1,'rm']]]
+];

@@ -1,0 +1,434 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: 聚合类反射及其相关 API</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.2</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">聚合类反射及其相关 API</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md228">1. 聚合类</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md229">2. 获取聚合体元素个数</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md230">3. 其余聚合体反射工具</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md231">3.1 成员遍历</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md232">3.2 相等函数</a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md233">4. 聚合类对象作为散列表的键 (Key)</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>聚合体的编译期反射，包含 C++17 和 C++20 两个版本的实现原理</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2aggregate__reflect"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/09/19 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html">串口通信模块</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md228"></a>
+1. 聚合类</h2>
+<p>有关<a href="https://zh.cppreference.com/w/cpp/language/aggregate_initialization">聚合体</a>的概念可直接参考 cppreference 手册，这里对聚合体的其中一个用法做介绍。</p>
+<p>数组类型同样属于聚合体，这里仅探究符合聚合体定义的类类型，我们称其为聚合类，聚合类允许聚合初始化，即从初始化列表初始化聚合类，例如</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Person</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> age;</div>
+<div class="line">    <span class="keywordtype">double</span> height;</div>
+<div class="line">    std::string name;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> init()</div>
+<div class="line">{</div>
+<div class="line">    Person p3{18, 1.78, <span class="stringliteral">&quot;zhaoxi&quot;</span>};</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>cppreference 给出聚合初始化的一个效果是</p>
+<p>按以下规则决定显式初始化元素:</p>
+<ul>
+<li><b>性质 1</b> : 如果初始化列表是<a href="https://zh.cppreference.com/w/cpp/language/aggregate_initialization#.E6.8C.87.E6.B4.BE.E5.88.9D.E5.A7.8B.E5.8C.96.E5.99.A8">指派初始化列表</a>（聚合体此时只能具有类类型），每个指派符中的标识符必须指名该类的一个非静态数据成员，并且聚合体中显式初始化元素是这些成员或包含这些成员的元素。 <code>(C++20 起)</code></li>
+<li><b>性质 2</b> : 否则，如果初始化列表不为空，那么显式初始化元素是聚合体中的前 n 个元素，其中 n 是初始化列表中的元素数量。</li>
+<li><b>性质 3</b> : 否则初始化列表必须为空，并且不存在显式初始化元素。</li>
+</ul>
+<p>根据 <b>性质 2</b> ，聚合初始化的代码写成如下形式</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> init()</div>
+<div class="line">{</div>
+<div class="line">    Person p1{18};                 <span class="comment">// OK</span></div>
+<div class="line">    Person p2{18, 1.78};           <span class="comment">// OK</span></div>
+<div class="line">    Person p3{18, 1.78, <span class="stringliteral">&quot;zhaoxi&quot;</span>}; <span class="comment">// OK</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>这三种都是正确的，但是初始化列表中的元素个数不能超过聚合体的元素个数。</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> init()</div>
+<div class="line">{</div>
+<div class="line">    Person p4{18, 1.78, <span class="stringliteral">&quot;zhaoxi&quot;</span>, <span class="charliteral">&#39;a&#39;</span>}; <span class="comment">// 非良构</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>根据这一特点我们可以实现</p>
+<ul>
+<li>编译期间得知任意聚合体 <code>T</code>（这里给出的是聚合体，说明数组也成立）的元素个数</li>
+<li>遍历聚合体的所有元素</li>
+</ul>
+<p>的编译期反射机制。</p>
+<h2><a class="anchor" id="autotoc_md229"></a>
+2. 获取聚合体元素个数</h2>
+<p>下文给出 C++17 和 C++20 两个版本的实现方法，点击对应按钮可查看详细内容</p>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="../../d0/d3f/util_8hpp.html">core/util.hpp</a></dd></dl>
+ <div class='newInnerHTML'>C++17 实现</div><div> <script type='text/javascript'> addToggle(); </script><p>由 <b>性质 2</b> 可以知道，对于元素个数为 \(n\) 的任意聚合体类型 <code>T</code>，在 <code>T</code> 类实例化对象的时候，初始化列表元素个数 \(m\) 需要满足 \(m\le n\) ，如果 \(m&gt;n\) 则程序非良构。</p>
+<p>我们可以有这样一个基本想法，<span style="color: red">可以给定一个比较大的 \(m\) 作为初值进行构造尝试</span>，如果构造不成功则继续构造 \(m-1\) 的，直到成功构造为止，此时就满足 \(m=n\)，因此返回此时的 \(m\) 值即可作为当前聚合体的元素个数 \(n\)。</p>
+<p>由于 C++17 缺乏概念机制，因此我们需要通过人为制造具有若干重载版本的函数，并利用模板函数返回类型、形参类型的替换失败来实现该功能，一个最经典的做法是 <a href="https://zh.cppreference.com/w/cpp/language/sfinae">SFINAE</a>。可以通过函数模板形参在发生替换时非良构，从而删除该函数的其中之一个特化版本。</p>
+<p>有了以上语言特性的支撑，我们回到问题最开始的地方 <b>给定一个比较大的 m 作为初值进行构造尝试</b> 。对于任意聚合体类型 <code>T</code>，其元素类型也是任意的，我们通过一个包含不求值表达式 <code>decltype</code> 的后置返回类型的模板函数，来实现大小为 2 的函数特化版本，下面给出一个例子。</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> size() -&gt; <span class="keyword">decltype</span>(T{<span class="comment">/* exp */</span>, <span class="comment">/* exp */</span>}, 0u) { <span class="keywordflow">return</span> 2; }</div>
+</div><!-- fragment --><p>其中 <code>/* exp */</code> 暂时理解为可转化为任意类型的表达式。当 \(m&gt;2\) 时，会发生替换失败，当 \(m=2\) 时可以正常返回 <code>2</code>，我们可以定义一个包含任意类型的<a href="https://zh.cppreference.com/w/cpp/language/cast_operator">用户定义转换函数</a>的辅助类来完成 <code>/* exp */</code> 所代表的功能。</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>init</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line">    <span class="keyword">operator</span> Tp();</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>该辅助类 <code>init</code> 提供了任意类型的用户定义转换函数，但无需实现，因为用在 <code>decltype</code> 不求值表达式中。</p>
+<p>为此，汇总所有信息，可以得到以下代码。</p>
+<div class="fragment"><div class="line"><span class="keyword">namespace </span>helper</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Constructor helper</span></div>
+<div class="line"><span class="keyword">struct </span>init</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line">    <span class="keyword">operator</span> Tp(); <span class="comment">// No need to define</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><span class="keyword">struct </span>size_tag : size_tag&lt;N - 1&gt; {};</div>
+<div class="line"><span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><span class="keyword">struct </span>size_tag&lt;0&gt; {};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* template &lt;typename Tp&gt; auto size(size_tag&lt;more than 4&gt;) ... */</span></div>
+<div class="line"><span class="comment">/* template &lt;typename Tp&gt; auto size(size_tag&lt;4&gt;) ... */</span></div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> size(size_tag&lt;3&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}, init{}, init{}}, 0u) { <span class="keywordflow">return</span> 3u; }</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;2&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}, init{}}, 0u) { <span class="keywordflow">return</span> 2u; }</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;1&gt;) -&gt; <span class="keyword">decltype</span>(Tp{init{}}, 0u) { <span class="keywordflow">return</span> 1u; }</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>(size_tag&lt;0&gt;) -&gt; <span class="keyword">decltype</span>(Tp{}, 0u) { <span class="keywordflow">return</span> 0u; }</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace helper</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">constexpr</span> std::size_t <a class="code hl_function" href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">size</a>()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">static_assert</span>(std::is_aggregate_v&lt;Tp&gt;);</div>
+<div class="line">    <span class="keywordflow">return</span> helper::size&lt;Tp&gt;(helper::size_tag&lt;3&gt;{});</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__core_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d0/de1/group__core.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:315</div></div>
+</div><!-- fragment --><p>其中涉及到了一个 <code>size_tag</code> 类，该类有一个 <code>&lt;0&gt;</code> 的全特化，<code>&lt;N&gt;</code> 继承于 <code>&lt;N - 1&gt;</code>，是为了在 <code>helper::size</code> 重载中，能够按 <code>N</code> 从大到小的顺序进行重载决议。下面给出一个简单的使用示例。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d3f/util_8hpp.html">rmvl/core/util.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>T</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> a{};</div>
+<div class="line">    std::string b{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; rm::size&lt;T&gt;() &lt;&lt; std::endl; <span class="comment">// 输出 2</span></div>
+<div class="line">}</div>
+<div class="ttc" id="autil_8hpp_html"><div class="ttname"><a href="../../d0/d3f/util_8hpp.html">util.hpp</a></div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML'>C++20 实现</div><div> <script type='text/javascript'> addToggle(); </script><p>C++20 有了概念的机制，可以不通过 SFINAE 机制完成。我们直接上代码</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keyword">consteval</span> std::size_t size(<span class="keyword">auto</span> &amp;&amp;...args)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">static_assert</span>(std::is_aggregate_v&lt;Tp&gt;);</div>
+<div class="line">    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (!<span class="keyword">requires</span> { Tp{args...}; })</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">sizeof</span>...(args) - 1;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        <span class="keywordflow">return</span> size&lt;Tp&gt;(args..., helper::init{});</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>首先描述一下 <code>size</code> 模板函数的实现，它是一个递归函数，并且是编译期的递归函数，因为使用了 <code>if constexpr</code>，并且这个函数是以 <code>consteval</code> 修饰的，是<a href="https://zh.cppreference.com/w/cpp/language/consteval">立即函数</a>，即该函数必须在编译期运行并产生编译期常量，因此没有运行时开销。</p>
+<p><code>requires</code> 语句指明，如果 <code>Tp</code> 可以按照 <code>args...</code> 的方式进行构建，那么就进入 <code>else</code> 分支，否则返回 <code>形参包长度 - 1</code>。根据上文提到的 <b>性质 2</b> 可以知道，当 <code>Tp</code> 聚合体在初始化时，初始化列表的元素个数如果符合 <code>Tp</code> 构造的要求，即能够从 <code>args...</code> 形参包完成 <code>Tp</code> 的构造，那么在 <code>else</code> 分支中，会利用 C++17 部分提到的辅助类 <code>init</code> 再额外添加一个参数，并进行递归调用。当形参包长度刚好超过了能够构造的长度时，返回值则恰好是能够参与构造的最大长度，即 <code>Tp</code> 的元素个数。</p>
+<p>我们通过一个例子来说明，并给出详细的运行步骤。</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>X</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> a{}, b{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    std::cout &lt;&lt; rm::size&lt;X&gt;() &lt;&lt; std::endl; <span class="comment">// 输出 2</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p><b>运行步骤</b></p>
+<ol type="1">
+<li>进入 <code>size</code> 函数，<code>Tp</code> 是 <code>X</code> 类型，形参包 <code>args</code> 为空；</li>
+<li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{}; }</code>，符合语法，<code>requires</code> 表达式返回 <code>true</code>，经 <code>!</code> 修饰后，则会进入 <code>else</code> 分支；</li>
+<li>进入 <code>else</code>，此时返回值相当于 <code>size&lt;Tp&gt;(init{});</code>；</li>
+<li><b>第 2 次</b> 进入 <code>size</code> 函数，此时形参包有 \(1\) 个参数 <code>init{}</code>；</li>
+<li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{init{}}; }</code>，符合语法，同步骤 2，进入 <code>else</code> 分支；</li>
+<li>进入 <code>else</code>，此时返回值相当于 <code>size&lt;Tp&gt;(init{}, init{});</code>；</li>
+<li><b>第 3 次</b> 进入 <code>size</code> 函数，此时形参包有 \(2\) 个参数 <code>init{}</code>；</li>
+<li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{init{}, init{}}; }</code>，符合语法，同步骤 2，进入 <code>else</code> 分支；</li>
+<li>进入 <code>else</code>，此时返回值相当于 <code>size&lt;Tp&gt;(init{}, init{}, init{});</code>；</li>
+<li><b>第 4 次</b> 进入 <code>size</code> 函数，此时形参包有 \(3\) 个参数 <code>init{}</code>；</li>
+<li><code>constexpr-if</code> 语句中，条件表达式等价于 <code>!requires { Tp{init{}, init{}, init{}}; }</code>，不符合语法（<code>X</code> 只有两个成员），<code>requires</code> 表达式返回 <code>false</code>，经 <code>!</code> 修饰后，则会进入 <code>true</code> 分支；</li>
+<li>此时形参包长度为 \(3\)，返回 <code>形参包长度 - 1</code>，即返回 \(2\)。</li>
+</ol>
+ </div> <h2><a class="anchor" id="autotoc_md230"></a>
+3. 其余聚合体反射工具</h2>
+<h3><a class="anchor" id="autotoc_md231"></a>
+3.1 成员遍历</h3>
+<p>函数原型如下</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp, <span class="keyword">typename</span> Callable&gt;</div>
+<div class="line"><span class="keywordtype">void</span> for_each(<span class="keyword">const</span> Tp &amp;val, Callable &amp;&amp;f);</div>
+</div><!-- fragment --><p>其中</p>
+<ul>
+<li><code>Tp</code> — 聚合类型（必须满足）</li>
+<li><code>Callable</code> — 可调用对象类型，可以是函数<span style="color: red">模板</span>，函数对象<span style="color: red">模板</span>，或者 lambda 表达式的简写模板（即 <code>auto &amp;&amp;</code> 类型）</li>
+</ul>
+<p>下面给出一个例子</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d3f/util_8hpp.html">rmvl/core/util.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>X</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> a{};</div>
+<div class="line">    <span class="keywordtype">double</span> bb{};</div>
+<div class="line">    std::string str{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">auto</span> f = [](<span class="keyword">auto</span> &amp;&amp;val) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;val = &quot;</span> &lt;&lt; val &lt;&lt; std::endl;</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    rm::for_each(x, f);</div>
+<div class="line">};</div>
+<div class="ttc" id="agroup__core_html_gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905"><div class="ttname"><a href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">rm::X</a></div><div class="ttdeci">@ X</div><div class="ttdoc">X 轴</div><div class="ttdef"><b>定义</b> transform.hpp:28</div></div>
+</div><!-- fragment --><p>编译后运行结果为</p>
+<div class="fragment"><div class="line">val = 1</div>
+<div class="line">val = 3.1</div>
+<div class="line">val = abc</div>
+</div><!-- fragment --><p>实现方法简单粗暴，通过结构化绑定与编译期的 <code>constexpr-if</code> 语句，分别调用可调用对象 <code>f</code> 即可，例如，一个 <code>size = 3</code> 的聚合体，可以使用以下语句完成成员的遍历</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[m0, m1, m2] = val;</div>
+<div class="line">f(m0), f(m1), f(m2);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md232"></a>
+3.2 相等函数</h3>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>此操作主要用于 C++20 前，自定义类的自定义 hash 函数</li>
+<li>C++20 起，可使用预置 <code>operator==</code> 函数来实现同样的功能，可参考<a href="https://zh.cppreference.com/w/cpp/language/default_comparisons">默认比较</a></li>
+</ul>
+</dd></dl>
+<p>函数原型如下</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><span class="keywordtype">bool</span> equal(<span class="keyword">const</span> Tp &amp;lhs, <span class="keyword">const</span> Tp &amp;rhs);</div>
+</div><!-- fragment --><p>其中</p>
+<ul>
+<li><code>Tp</code> — 聚合类型（必须满足）</li>
+</ul>
+<p>下面给出一个例子</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d3f/util_8hpp.html">rmvl/core/util.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">struct </span>X</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> a{};</div>
+<div class="line">    <span class="keywordtype">double</span> bb{};</div>
+<div class="line">    std::string str{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x1{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x2{2, 4.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    <a class="code hl_enumvalue" href="../../d0/de1/group__core.html#gga9efb6b0afed03a8afe74adea283e4e20a2e4a4ce14254e2f46935bf70aa707905">X</a> x3{1, 3.1, <span class="stringliteral">&quot;abc&quot;</span>};</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x2: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x2) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x3: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x3) &lt;&lt; std::endl;</div>
+<div class="line">};</div>
+<div class="ttc" id="agroup__core_html_gaca3e9de5d5043a1c038a42c9f4f0a22c"><div class="ttname"><a href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a></div><div class="ttdeci">bool equal(const Tp &amp;lhs, const Tp &amp;rhs)</div><div class="ttdoc">判断两个聚合类数据是否相同</div><div class="ttdef"><b>定义</b> util.hpp:409</div></div>
+</div><!-- fragment --><p>编译后运行结果为</p>
+<div class="fragment"><div class="line">x1 = x2: false</div>
+<div class="line">x1 = x3: true</div>
+</div><!-- fragment --><p>实现方法同样简单粗暴，核心操作与 <code>for_each</code> 的几乎一致，代码如下</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[l0, l1, l2] = lhs;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> &amp;[r0, r1, r2] = rhs;</div>
+<div class="line"><span class="keywordflow">return</span> l0 == r0 &amp;&amp; l1 == r1 &amp;&amp; l2 == r2;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md233"></a>
+4. 聚合类对象作为散列表的键 (Key)</h2>
+<p>cppreference 中给出了有关自定义散列函数的例子</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>S</div>
+<div class="line">{</div>
+<div class="line">    std::string first_name;</div>
+<div class="line">    std::string last_name;</div>
+<div class="line">    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> S&amp;) <span class="keyword">const</span> = <span class="keywordflow">default</span>; <span class="comment">// C++20 起</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// C++20 前</span></div>
+<div class="line"><span class="comment">// bool operator==(const S&amp; lhs, const S&amp; rhs)</span></div>
+<div class="line"><span class="comment">// {</span></div>
+<div class="line"><span class="comment">//     return lhs.first_name == rhs.first_name &amp;&amp; lhs.last_name == rhs.last_name;</span></div>
+<div class="line"><span class="comment">// }</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 自定义散列函数可以是独立函数对象：</span></div>
+<div class="line"><span class="keyword">struct </span>MyHash</div>
+<div class="line">{</div>
+<div class="line">    std::size_t operator()(S <span class="keyword">const</span>&amp; s)<span class="keyword"> const </span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        std::size_t h1 = std::hash&lt;std::string&gt;{}(s.first_name);</div>
+<div class="line">        std::size_t h2 = std::hash&lt;std::string&gt;{}(s.last_name);</div>
+<div class="line">        <span class="keywordflow">return</span> h1 ^ (h2 &lt;&lt; 1); <span class="comment">// 或者使用 boost::hash_combine</span></div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>RMVL 提供了聚合类一般化的接口，即任意聚合类的自定义散列函数 <code><a class="el" href="../../d9/d23/structrm_1_1hash__aggregate.html" title="专为聚合类添加的 hash 生成可调用对象">rm::hash_aggregate</a></code>，基本用法如下</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>X</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> a{};</div>
+<div class="line">    <span class="keywordtype">double</span> bb{};</div>
+<div class="line">    std::string str{};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#if __cplusplus &lt; 202002L</span></div>
+<div class="line">    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> X &amp;s)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="../../d0/de1/group__core.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(*<span class="keyword">this</span>, s); }</div>
+<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line">    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d6/d59/group__types.html#gaeef53a138c45d57e49dcc1745333156c">operator==</a>(<span class="keyword">const</span> X &amp;) <span class="keyword">const</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> f()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// 定义 Key = X，Val = int 的散列表</span></div>
+<div class="line">    std::unordered_map&lt;X, int, rm::hash_aggregate&lt;X&gt;&gt; hashmap;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__types_html_gaeef53a138c45d57e49dcc1745333156c"><div class="ttname"><a href="../../d6/d59/group__types.html#gaeef53a138c45d57e49dcc1745333156c">rm::operator==</a></div><div class="ttdeci">bool operator==(const RMStatus &amp;lhs, const RMStatus &amp;rhs)</div><div class="ttdoc">判断两个 RMStatus 是否相等</div><div class="ttdef"><b>定义</b> types.hpp:141</div></div>
+</div><!-- fragment --><p>此外，对于一般化的类型 <code>T</code>，如果要使用 <code>std::unordered_map</code>，可以使用 <a href="https://zh.cppreference.com/w/cpp/meta#.E7.B1.BB.E5.9E.8B.E7.89.B9.E6.80.A7">类型特性 type traits</a> 相关功能，RMVL 提供了用于 hash 函数选择的类型特性: <code><a class="el" href="../../d4/d45/structrm_1_1hash__traits.html" title="哈希生成函数类型 traits">rm::hash_traits</a></code>，类型名为 <code>hash_func</code>，下面给出一个简单的用法</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keywordtype">void</span> f()</div>
+<div class="line">{</div>
+<div class="line">    std::unordered_map&lt;T, int, rm::hash_traits&lt;T&gt;::hash_func&gt; hashmap;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

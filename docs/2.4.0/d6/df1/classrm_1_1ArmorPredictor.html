@@ -1,0 +1,236 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.15.0" />
+  <title>RMVL: rm::ArmorPredictor类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.4.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d6/df1/classrm_1_1ArmorPredictor.html">ArmorPredictor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d2/dde/classrm_1_1ArmorPredictor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::ArmorPredictor类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../db/d29/group__predictor.html">目标预测模块（功能模块）</a> &raquo; <a class="el" href="../../d4/dd1/group__armor__predictor.html">装甲预测模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>装甲预测模块  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/predictor/armor_predictor.h&gt;</code></p>
+<div class="dynheader">
+rm::ArmorPredictor 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d87/classrm_1_1ArmorPredictor__coll__graph.svg" width="135" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:Info" id="r_Info"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d96/structrm_1_1ArmorPredictor_1_1Info.html">Info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">预测模块信息  <a href="../../d6/d96/structrm_1_1ArmorPredictor_1_1Info.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab482c5f5697cf7994eb09e00e4ec8fa8" id="r_ab482c5f5697cf7994eb09e00e4ec8fa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d96/structrm_1_1ArmorPredictor_1_1Info.html">Info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab482c5f5697cf7994eb09e00e4ec8fa8">predict</a> (const std::vector&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> &gt; &amp;trackers, const std::unordered_map&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a>, double &gt; &amp;tof) const</td></tr>
+<tr class="memdesc:ab482c5f5697cf7994eb09e00e4ec8fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">装甲板预测核心函数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a60e21d14289fabf9990e92abb1f48aa8" id="r_a60e21d14289fabf9990e92abb1f48aa8"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="../../d6/df1/classrm_1_1ArmorPredictor.html">ArmorPredictor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60e21d14289fabf9990e92abb1f48aa8">make_predictor</a> ()</td></tr>
+<tr class="memdesc:a60e21d14289fabf9990e92abb1f48aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建 <a class="el" href="../../d6/df1/classrm_1_1ArmorPredictor.html" title="装甲预测模块">ArmorPredictor</a>  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>装甲预测模块 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a60e21d14289fabf9990e92abb1f48aa8" name="a60e21d14289fabf9990e92abb1f48aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e21d14289fabf9990e92abb1f48aa8">&#9670;&#160;</a></span>make_predictor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d6/df1/classrm_1_1ArmorPredictor.html">ArmorPredictor</a> &gt; rm::ArmorPredictor::make_predictor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建 <a class="el" href="../../d6/df1/classrm_1_1ArmorPredictor.html" title="装甲预测模块">ArmorPredictor</a> </p>
+
+</div>
+</div>
+<a id="ab482c5f5697cf7994eb09e00e4ec8fa8" name="ab482c5f5697cf7994eb09e00e4ec8fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab482c5f5697cf7994eb09e00e4ec8fa8">&#9670;&#160;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d96/structrm_1_1ArmorPredictor_1_1Info.html">Info</a> rm::ArmorPredictor::predict </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>trackers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a>, double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tof</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>装甲板预测核心函数 </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>遍历所有 tracker，采用统一的预测方案：线性预测 </li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>静态响应预测量 <span class="tt">B</span> 生效: <span class="tt">YAW</span>，<span class="tt">PITCH</span> </li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>动态响应预测量 <span class="tt">Kt</span> 生效: <span class="tt">YAW</span>，<span class="tt">PITCH</span></li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trackers</td><td>所有追踪器 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tof</td><td>每个追踪器对应的子弹飞行时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>预测模块信息 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.15.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

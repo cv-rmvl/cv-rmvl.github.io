@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['node_0',['node',['../df/d48/classrm_1_1ClientView.html#a28e0d50c91a5328aa68fb22ee58bb9ee',1,'rm::ClientView::node()'],['../da/d78/classrm_1_1Client.html#a8001ee15cbe169a72bade6b6e4c59125',1,'rm::Client::node()'],['../d0/d24/classrm_1_1ServerView.html#a0eb25168ae9e1983449c640cccca3617',1,'rm::ServerView::node()'],['../d4/d06/classrm_1_1Server.html#a7a3abff380852a83a6b6ef90652d379d',1,'rm::Server::node()']]],
+  ['nodeid_1',['NodeId',['../db/d81/classrm_1_1NodeId.html#adcc38dc62e845d97c6de1bc0c300ac5e',1,'rm::NodeId::NodeId()=default'],['../db/d81/classrm_1_1NodeId.html#a87b23935d31d55f3c7d490463ef0d4f4',1,'rm::NodeId::NodeId(uint16_t ns_, uint32_t id_)'],['../db/d81/classrm_1_1NodeId.html#a4475982c9b722a108163346cce4d3528',1,'rm::NodeId::NodeId(const UA_NodeId &amp;nd)'],['../db/d81/classrm_1_1NodeId.html#a8a7b9b1ca815a7854c700ecef83b3522',1,'rm::NodeId::NodeId(const NodeId &amp;nd)'],['../db/d81/classrm_1_1NodeId.html#ad9217f72df2a48908b551e409f297227',1,'rm::NodeId::NodeId(NodeId &amp;&amp;nd) noexcept']]],
+  ['nonlinearsolver_2',['NonlinearSolver',['../d0/d14/classrm_1_1NonlinearSolver.html#a8330e8c73b45e6d1102a89c66c0f6674',1,'rm::NonlinearSolver::NonlinearSolver()=default'],['../d0/d14/classrm_1_1NonlinearSolver.html#a4147a92c35687a6db533c3887867dccf',1,'rm::NonlinearSolver::NonlinearSolver(const std::function&lt; double(double)&gt; &amp;f)']]],
+  ['now_3',['now',['../d0/da3/classrm_1_1Timer.html#adb9e4469df8553941079196a74753f85',1,'rm::Timer']]]
+];

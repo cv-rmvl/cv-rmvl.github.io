@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['onnx_2druntime_20分类网络部署库_462',['ONNX-Runtime 分类网络部署库',['../dc/d73/group__ml__ort.html',1,'(全局命名空间)'],['../d1/d44/tutorial_common_ort.html',1,'tutorial_table_of_content_common']]],
+  ['onnxrt_463',['OnnxRT',['../d7/d1f/classrm_1_1OnnxRT.html#a713a2b80c37182f92a7276fe7e72dac1',1,'rm::OnnxRT::OnnxRT()'],['../d7/d1f/classrm_1_1OnnxRT.html',1,'rm::OnnxRT']]],
+  ['open_464',['open',['../d8/d08/classrm_1_1HikVideoCapture.html#a31629e6a984c201f472d4f7055339326',1,'rm::HikVideoCapture::open()'],['../d7/d8f/classrm_1_1MvVideoCapture.html#a4c395fbdf9fce8543daeecf2e2f1d7cb',1,'rm::MvVideoCapture::open()'],['../d4/d98/classrm_1_1SerialPort.html#a5878ae463d12958f5fbbe9da2cd5cd8e',1,'rm::SerialPort::open()']]],
+  ['operator_22_22_5fpi_465',['operator&quot;&quot;_PI',['../d9/d31/group__rmath.html#ga06504684e964e35e13160f8b61a3cc09',1,'rm::operator&quot;&quot;_PI(long long unsigned num)'],['../d9/d31/group__rmath.html#ga2e927cd02b2c9bad4967e98b48af90c3',1,'rm::operator&quot;&quot;_PI(long double num)']]],
+  ['operator_22_22_5fto_5fdeg_466',['operator&quot;&quot;_to_deg',['../d9/d31/group__rmath.html#gacce741fda964869fd0f751af68fe8d36',1,'rm::operator&quot;&quot;_to_deg(long long unsigned num)'],['../d9/d31/group__rmath.html#ga3ba3a491192fe99af2ac194e02634076',1,'rm::operator&quot;&quot;_to_deg(long double num)']]],
+  ['operator_22_22_5fto_5frad_467',['operator&quot;&quot;_to_rad',['../d9/d31/group__rmath.html#ga92b330a71638187072b8744726666141',1,'rm::operator&quot;&quot;_to_rad(long long unsigned num)'],['../d9/d31/group__rmath.html#gaf0b2fd7c35c621f929e288248cc2ce15',1,'rm::operator&quot;&quot;_to_rad(long double num)']]],
+  ['operator_2b_468',['operator+',['../d9/d31/group__rmath.html#gafb9686a5036653f977c1945db4bc262a',1,'rm::operator+(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)'],['../d9/d31/group__rmath.html#gacd95d3a66578731549301e7e5fed0932',1,'rm::operator+(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)']]],
+  ['operator_2d_469',['operator-',['../d9/d31/group__rmath.html#gaab48d17bee4ad33e84961a0af9434f7d',1,'rm::operator-(Tp val, const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat)'],['../d9/d31/group__rmath.html#gad7e0ddce9ef33cf84aa998eb69f8366f',1,'rm::operator-(const cv::Matx&lt; Tp, 1, 1 &gt; &amp;mat, Tp val)']]],
+  ['operator_3e_3e_470',['operator&gt;&gt;',['../d7/d8f/classrm_1_1MvVideoCapture.html#a8cfb91b3529c2112b81ca7449ad6d5e0',1,'rm::MvVideoCapture::operator&gt;&gt;()'],['../d8/d08/classrm_1_1HikVideoCapture.html#a4daf8728964f4794a5fe70ecb7837593',1,'rm::HikVideoCapture::operator&gt;&gt;()']]],
+  ['ort_2eh_471',['ort.h',['../d3/d29/ara_2ml_2ort_8h.html',1,'(全局命名空间)'],['../d9/d8f/ml_2ort_8h.html',1,'(全局命名空间)']]],
+  ['ort_5fparam_472',['ort_param',['../d9/d95/group__para__ml.html#ga4cfe3a84398c7b14f9b2d447ee7ecbf7',1,'rm::para']]],
+  ['ortparam_473',['OrtParam',['../da/dd2/classrm_1_1para_1_1OrtParam.html#aff93a69af113d9baab2e3c9cbd098865',1,'rm::para::OrtParam::OrtParam()'],['../da/dd2/classrm_1_1para_1_1OrtParam.html',1,'rm::para::OrtParam']]],
+  ['outpost_474',['OUTPOST',['../d6/d59/group__types.html#ggacd7f1723e9b020d34b5bbc041faaea89ad0d4f54e32e060304179f6b679b31331',1,'rm']]],
+  ['outpost_5fdecider_2eh_475',['outpost_decider.h',['../da/db2/ara_2decider_2outpost__decider_8h.html',1,'(全局命名空间)'],['../d1/da6/decider_2outpost__decider_8h.html',1,'(全局命名空间)']]],
+  ['outpost_5fdecider_5fparam_476',['outpost_decider_param',['../de/dac/group__para__decider.html#gae3c78ed39cd23df9f6ba7eb62f507af9',1,'rm::para']]],
+  ['outpost_5fdistance_477',['OUTPOST_DISTANCE',['../db/d91/classrm_1_1para_1_1OutpostDeciderParam.html#a4d096df953e5e0a0ad400725d4aa0432',1,'rm::para::OutpostDeciderParam']]],
+  ['outpostdecider_478',['OutpostDecider',['../db/de5/classrm_1_1OutpostDecider.html#a88064215e2083f1771eda8ec21dff099',1,'rm::OutpostDecider::OutpostDecider()'],['../db/de5/classrm_1_1OutpostDecider.html',1,'rm::OutpostDecider']]],
+  ['outpostdeciderparam_479',['OutpostDeciderParam',['../db/d91/classrm_1_1para_1_1OutpostDeciderParam.html#a41856f56804ee75a116984a8bb704e20',1,'rm::para::OutpostDeciderParam::OutpostDeciderParam()'],['../db/d91/classrm_1_1para_1_1OutpostDeciderParam.html',1,'rm::para::OutpostDeciderParam']]]
+];

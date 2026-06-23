@@ -1,0 +1,673 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.12.0" />
+  <title>RMVL: rm::RaHeap&lt; Tp, Sequence, Compare &gt; 模板类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.0.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html">RaHeap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../de/d76/classrm_1_1RaHeap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::RaHeap&lt; Tp, Sequence, Compare &gt; 模板类 参考<div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> &raquo; <a class="el" href="../../d8/d04/group__algorithm__datastruct.html">数据结构</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>支持随机访问的堆（与 <code>std::priority_queue</code> 具备相同的基础容器筛选条件）  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/algorithm/datastruct.hpp&gt;</code></p>
+<div class="dynheader">
+rm::RaHeap&lt; Tp, Sequence, Compare &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/dd9/classrm_1_1RaHeap__coll__graph.svg" width="208" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ae921bc6d01aacfe4120db175f3982374" id="r_ae921bc6d01aacfe4120db175f3982374"><td class="memItemLeft" align="right" valign="top">typedef Tp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae921bc6d01aacfe4120db175f3982374">value_type</a></td></tr>
+<tr class="separator:ae921bc6d01aacfe4120db175f3982374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eaea687283dab5e17e4480dcee40c9d" id="r_a7eaea687283dab5e17e4480dcee40c9d"><td class="memItemLeft" align="right" valign="top">typedef Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eaea687283dab5e17e4480dcee40c9d">reference</a></td></tr>
+<tr class="separator:a7eaea687283dab5e17e4480dcee40c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc79496f3c2ecde288092426cae7c0da" id="r_acc79496f3c2ecde288092426cae7c0da"><td class="memItemLeft" align="right" valign="top">typedef const Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc79496f3c2ecde288092426cae7c0da">const_reference</a></td></tr>
+<tr class="separator:acc79496f3c2ecde288092426cae7c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6067763ce30cffcd1afc1402585046" id="r_a0e6067763ce30cffcd1afc1402585046"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e6067763ce30cffcd1afc1402585046">size_type</a></td></tr>
+<tr class="separator:a0e6067763ce30cffcd1afc1402585046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6826a23d60db3e30d0dfd69a4635b561" id="r_a6826a23d60db3e30d0dfd69a4635b561"><td class="memItemLeft" align="right" valign="top">typedef Sequence&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6826a23d60db3e30d0dfd69a4635b561">container_type</a></td></tr>
+<tr class="separator:a6826a23d60db3e30d0dfd69a4635b561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd4f45390eb7be3287992f646f9013f" id="r_a7fd4f45390eb7be3287992f646f9013f"><td class="memItemLeft" align="right" valign="top">typedef Compare&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fd4f45390eb7be3287992f646f9013f">value_compare</a></td></tr>
+<tr class="separator:a7fd4f45390eb7be3287992f646f9013f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4ee6463a05846528bc0f61cb411bc2e4" id="r_a4ee6463a05846528bc0f61cb411bc2e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee6463a05846528bc0f61cb411bc2e4">RaHeap</a> ()=default</td></tr>
+<tr class="separator:a4ee6463a05846528bc0f61cb411bc2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15c5b60ca561b3a16c88e4cc948717b" id="r_ae15c5b60ca561b3a16c88e4cc948717b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15c5b60ca561b3a16c88e4cc948717b">push</a> (const Tp &amp;x)</td></tr>
+<tr class="memdesc:ae15c5b60ca561b3a16c88e4cc948717b"><td class="mdescLeft">&#160;</td><td class="mdescRight">在堆顶添加元素  <br /></td></tr>
+<tr class="separator:ae15c5b60ca561b3a16c88e4cc948717b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a859cc7c7af30ac73740cfd9ebc440" id="r_ab7a859cc7c7af30ac73740cfd9ebc440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7a859cc7c7af30ac73740cfd9ebc440">push</a> (Tp &amp;&amp;x)</td></tr>
+<tr class="memdesc:ab7a859cc7c7af30ac73740cfd9ebc440"><td class="mdescLeft">&#160;</td><td class="mdescRight">在堆顶添加元素  <br /></td></tr>
+<tr class="separator:ab7a859cc7c7af30ac73740cfd9ebc440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdc3844a2cb0ba43323e4254b4a51b8" id="r_a6cdc3844a2cb0ba43323e4254b4a51b8"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:a6cdc3844a2cb0ba43323e4254b4a51b8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6cdc3844a2cb0ba43323e4254b4a51b8">emplace</a> (ValueType &amp;&amp;x)</td></tr>
+<tr class="memdesc:a6cdc3844a2cb0ba43323e4254b4a51b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">在堆顶添加元素  <br /></td></tr>
+<tr class="separator:a6cdc3844a2cb0ba43323e4254b4a51b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9b82fb4fcb1a1b671855def1fc7dc2" id="r_a0b9b82fb4fcb1a1b671855def1fc7dc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b9b82fb4fcb1a1b671855def1fc7dc2">update</a> (const Tp &amp;prev, const Tp &amp;value)</td></tr>
+<tr class="memdesc:a0b9b82fb4fcb1a1b671855def1fc7dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新元素  <br /></td></tr>
+<tr class="separator:a0b9b82fb4fcb1a1b671855def1fc7dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae985322beceadf0dba5d796191cab532" id="r_ae985322beceadf0dba5d796191cab532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae985322beceadf0dba5d796191cab532">erase</a> (const Tp &amp;value)</td></tr>
+<tr class="memdesc:ae985322beceadf0dba5d796191cab532"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定元素  <br /></td></tr>
+<tr class="separator:ae985322beceadf0dba5d796191cab532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc476f3073f72e2adcdaefc38e81cd1" id="r_aadc476f3073f72e2adcdaefc38e81cd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadc476f3073f72e2adcdaefc38e81cd1">pop</a> ()</td></tr>
+<tr class="memdesc:aadc476f3073f72e2adcdaefc38e81cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出堆顶  <br /></td></tr>
+<tr class="separator:aadc476f3073f72e2adcdaefc38e81cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14454f127677c167093e86140755c953" id="r_a14454f127677c167093e86140755c953"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14454f127677c167093e86140755c953">empty</a> ()</td></tr>
+<tr class="memdesc:a14454f127677c167093e86140755c953"><td class="mdescLeft">&#160;</td><td class="mdescRight">堆是否为空  <br /></td></tr>
+<tr class="separator:a14454f127677c167093e86140755c953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745d6ff4a12059a0827742f880b4f1e0" id="r_a745d6ff4a12059a0827742f880b4f1e0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a745d6ff4a12059a0827742f880b4f1e0">size</a> ()</td></tr>
+<tr class="memdesc:a745d6ff4a12059a0827742f880b4f1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">堆的大小  <br /></td></tr>
+<tr class="separator:a745d6ff4a12059a0827742f880b4f1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa000499295c26ee6b5af3a530320338" id="r_aaa000499295c26ee6b5af3a530320338"><td class="memItemLeft" align="right" valign="top">const Tp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa000499295c26ee6b5af3a530320338">top</a> () const</td></tr>
+<tr class="memdesc:aaa000499295c26ee6b5af3a530320338"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取堆顶元素  <br /></td></tr>
+<tr class="separator:aaa000499295c26ee6b5af3a530320338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb137a1efa840af10fe2ca666b11704c" id="r_afb137a1efa840af10fe2ca666b11704c"><td class="memItemLeft" align="right" valign="top">const Sequence &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb137a1efa840af10fe2ca666b11704c">c</a> () const</td></tr>
+<tr class="memdesc:afb137a1efa840af10fe2ca666b11704c"><td class="mdescLeft">&#160;</td><td class="mdescRight">导出容器  <br /></td></tr>
+<tr class="separator:afb137a1efa840af10fe2ca666b11704c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Tp, typename Sequence = std::vector&lt;Tp&gt;, typename Compare = std::less&lt;Tp&gt;&gt;<br />
+class rm::RaHeap&lt; Tp, Sequence, Compare &gt;</div><p>支持随机访问的堆（与 <code>std::priority_queue</code> 具备相同的基础容器筛选条件） </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Tp</td><td>元素类型 </td></tr>
+    <tr><td class="paramname">Sequence</td><td>容器类型，默认为 <code>std::vector&lt;Tp&gt;</code> </td></tr>
+    <tr><td class="paramname">Compare</td><td>比较器可调用对象，默认为 <code>std::less&lt;Tp&gt;</code>，即默认为大根堆 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="acc79496f3c2ecde288092426cae7c0da" name="acc79496f3c2ecde288092426cae7c0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc79496f3c2ecde288092426cae7c0da">&#9670;&#160;</a></span>const_reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Tp&amp; <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::const_reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6826a23d60db3e30d0dfd69a4635b561" name="a6826a23d60db3e30d0dfd69a4635b561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6826a23d60db3e30d0dfd69a4635b561">&#9670;&#160;</a></span>container_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Sequence <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::container_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eaea687283dab5e17e4480dcee40c9d" name="a7eaea687283dab5e17e4480dcee40c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eaea687283dab5e17e4480dcee40c9d">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp&amp; <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e6067763ce30cffcd1afc1402585046" name="a0e6067763ce30cffcd1afc1402585046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6067763ce30cffcd1afc1402585046">&#9670;&#160;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::size_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fd4f45390eb7be3287992f646f9013f" name="a7fd4f45390eb7be3287992f646f9013f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd4f45390eb7be3287992f646f9013f">&#9670;&#160;</a></span>value_compare</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Compare <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::value_compare</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae921bc6d01aacfe4120db175f3982374" name="ae921bc6d01aacfe4120db175f3982374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae921bc6d01aacfe4120db175f3982374">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Tp <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4ee6463a05846528bc0f61cb411bc2e4" name="a4ee6463a05846528bc0f61cb411bc2e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee6463a05846528bc0f61cb411bc2e4">&#9670;&#160;</a></span>RaHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::RaHeap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="afb137a1efa840af10fe2ca666b11704c" name="afb137a1efa840af10fe2ca666b11704c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb137a1efa840af10fe2ca666b11704c">&#9670;&#160;</a></span>c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Sequence &amp; <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::c </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>导出容器 </p>
+
+</div>
+</div>
+<a id="a6cdc3844a2cb0ba43323e4254b4a51b8" name="a6cdc3844a2cb0ba43323e4254b4a51b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdc3844a2cb0ba43323e4254b4a51b8">&#9670;&#160;</a></span>emplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::emplace </td>
+          <td>(</td>
+          <td class="paramtype">ValueType &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在堆顶添加元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>待添加的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a14454f127677c167093e86140755c953" name="a14454f127677c167093e86140755c953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14454f127677c167093e86140755c953">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>堆是否为空 </p>
+
+</div>
+</div>
+<a id="ae985322beceadf0dba5d796191cab532" name="ae985322beceadf0dba5d796191cab532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae985322beceadf0dba5d796191cab532">&#9670;&#160;</a></span>erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除指定元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>待删除的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadc476f3073f72e2adcdaefc38e81cd1" name="aadc476f3073f72e2adcdaefc38e81cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc476f3073f72e2adcdaefc38e81cd1">&#9670;&#160;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::pop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>弹出堆顶 </p>
+
+</div>
+</div>
+<a id="ae15c5b60ca561b3a16c88e4cc948717b" name="ae15c5b60ca561b3a16c88e4cc948717b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15c5b60ca561b3a16c88e4cc948717b">&#9670;&#160;</a></span>push() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在堆顶添加元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>待添加的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab7a859cc7c7af30ac73740cfd9ebc440" name="ab7a859cc7c7af30ac73740cfd9ebc440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a859cc7c7af30ac73740cfd9ebc440">&#9670;&#160;</a></span>push() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::push </td>
+          <td>(</td>
+          <td class="paramtype">Tp &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在堆顶添加元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>待添加的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a745d6ff4a12059a0827742f880b4f1e0" name="a745d6ff4a12059a0827742f880b4f1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745d6ff4a12059a0827742f880b4f1e0">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>堆的大小 </p>
+
+</div>
+</div>
+<a id="aaa000499295c26ee6b5af3a530320338" name="aaa000499295c26ee6b5af3a530320338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa000499295c26ee6b5af3a530320338">&#9670;&#160;</a></span>top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Tp &amp; <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::top </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取堆顶元素 </p>
+
+</div>
+</div>
+<a id="a0b9b82fb4fcb1a1b671855def1fc7dc2" name="a0b9b82fb4fcb1a1b671855def1fc7dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9b82fb4fcb1a1b671855def1fc7dc2">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp , typename Sequence  = std::vector&lt;Tp&gt;, typename Compare  = std::less&lt;Tp&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/d45/classrm_1_1RaHeap.html">rm::RaHeap</a>&lt; Tp, Sequence, Compare &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>prev</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Tp &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prev</td><td>之前的元素 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>改动后的元素 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/algorithm/<a class="el" href="../../d4/d90/datastruct_8hpp.html">datastruct.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

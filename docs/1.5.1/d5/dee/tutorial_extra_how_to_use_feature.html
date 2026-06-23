@@ -1,0 +1,215 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: 如何使用/开发 feature 模块</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.1</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">如何使用/开发 feature 模块</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md25">1. 如何使用</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md26">1.1 有关构造与创建</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md27">1.2 信息获取</a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md28">1.2.1 通用属性</a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md29">1.2.2 派生类属性</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md30">2. 如何开发</a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md31">2.1 基本准则</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>包含 feature 模块的创建、信息获取以及开发时的注意事项</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2extra_2feature_2how__to__use"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/07/07 </dd></dl>
+<p><b>下一篇教程：</b><a class="el" href="../../d4/d03/tutorial_extra_april_tag.html">AprilTag 视觉标签</a> ↓<br  />
+</p>
+<hr  />
+<p>基类 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a></p>
+<h1><a class="anchor" id="autotoc_md25"></a>
+1. 如何使用</h1>
+<h2><a class="anchor" id="autotoc_md26"></a>
+1.1 有关构造与创建</h2>
+<p>对于对象的创建，应该使用 <code>make_feature</code> 静态工厂函数，尽量避免直接使用构造函数。<code>make_feature</code> 方法内部首先会进行能否构造的判断，而不是直接构造，如果条件满足则会创建对应的类对象，并返回其共享指针，如果条件不满足则直接返回 <code>nullptr</code>。</p>
+<p>例如，要构造一个装甲板灯条对象，可以使用以下语句。</p>
+<div class="fragment"><div class="line"><span class="comment">// 入参是用 std::vector&lt;cv::Point&gt; 所表示的轮廓</span></div>
+<div class="line"><a class="code hl_typedef" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a> p_light_blob = <a class="code hl_function" href="../../d0/df8/classrm_1_1LightBlob.html#a14fe3c8e635041bc58b3b8d77ec29c85">rm::LightBlob::make_feature</a>(contour);</div>
+<div class="ttc" id="aclassrm_1_1LightBlob_html_a14fe3c8e635041bc58b3b8d77ec29c85"><div class="ttname"><a href="../../d0/df8/classrm_1_1LightBlob.html#a14fe3c8e635041bc58b3b8d77ec29c85">rm::LightBlob::make_feature</a></div><div class="ttdeci">static std::shared_ptr&lt; LightBlob &gt; make_feature(const std::vector&lt; cv::Point &gt; &amp;contour)</div><div class="ttdoc">LightBlob 构造接口</div></div>
+<div class="ttc" id="aclassrm_1_1feature_html_aefb5a3f900441fd3a7bda03031e16b04"><div class="ttname"><a href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; feature &gt; ptr</div><div class="ttdef"><b>定义</b> feature.h:39</div></div>
+</div><!-- fragment --><p><a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 提供了 <code>clone</code> 纯虚拟函数，用于完全复制一份数据，适合于强制构造无视匹配要求的情况。</p>
+<h2><a class="anchor" id="autotoc_md27"></a>
+1.2 信息获取</h2>
+<h3><a class="anchor" id="autotoc_md28"></a>
+1.2.1 通用属性</h3>
+<p><a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 由于是扩展模块中最底层的数据组件，因此不存在数据结构类型的信息，仅有包含特征对应属性的信息。特征类中包含了众多属性，有高度、宽度、角度、中心点、角点列表等，以下是 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 对于这些方法的定义。</p>
+<div class="fragment"><div class="line"><span class="comment">// 获取特征面积</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">float</span> area()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _height * _width; }</div>
+<div class="line"><span class="comment">// 获取特征中心点</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">const</span> cv::Point2f &amp;center()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _center; }</div>
+<div class="line"><span class="comment">// 获取特征宽度</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">float</span> width()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _width; }</div>
+<div class="line"><span class="comment">// 获取特征高度</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">float</span> height()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _height; }</div>
+<div class="line"><span class="comment">// 获取特征角度</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">float</span> angle()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _angle; }</div>
+<div class="line"><span class="comment">// 获取特征角点</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">const</span> std::vector&lt;cv::Point2f&gt; &amp;corners()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _corners; }</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md29"></a>
+1.2.2 派生类属性</h3>
+<p>对于一些派生的特征特有的属性，比如装甲板灯条 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">rm::LightBlob</a> 的上顶点，使用上需要额外注意类型转换的内容。一般我们在一些功能模块中，例如 <a class="el" href="../../da/d8e/group__detector.html">检测与识别模块（功能模块）</a> 中直接操纵的都是抽象类的共享指针 <code><a class="el" href="../../df/db7/classrm_1_1feature.html#aefb5a3f900441fd3a7bda03031e16b04">rm::feature::ptr</a></code>，如果需要转换成派生类对象，可利用共享指针 <code>std::shared_ptr</code> 中对于动态类型转换的函数：<code>std::dynamic_pointer_cast</code>，比如想得到 <a class="el" href="../../d0/df8/classrm_1_1LightBlob.html" title="装甲板灯条">rm::LightBlob</a> 的共享指针，可以使用以下命令。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_light_blob = std::dynamic_pointer_cast&lt;rm::LightBlob&gt;(p_feature);</div>
+</div><!-- fragment --><p>代码比较冗长，不过好在所有的派生类都提供了一个转换接口 <code>cast</code>，为此我们可以像下面的代码一样，更方便的完成动态类型转换。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_light_blob = rm::LightBlob::cast(p_feature);</div>
+</div><!-- fragment --><p>有了动态类型转换的接口就可以继续获取派生类属性，下面的代码展示了如何获取装甲板灯条的上顶点。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> p_light_blob = rm::LightBlob::cast(p_feature);</div>
+<div class="line"><span class="keyword">auto</span> top_point = p_light_blob-&gt;getTopPoint();</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md30"></a>
+2. 如何开发</h1>
+<h2><a class="anchor" id="autotoc_md31"></a>
+2.1 基本准则</h2>
+<p>开发与使用是一脉相承的，设计一个新的 <a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a> 派生类对象也要满足使用上的条件，一个新的派生类对象（假设定义为 <code>MyFeature</code>）需要满足以下准则。</p>
+<ol type="1">
+<li>必须定义在 <code>namespace rm</code> 中；</li>
+<li>必须 public 继承于 <code><a class="el" href="../../df/db7/classrm_1_1feature.html" title="图像中的轮廓特征">rm::feature</a></code> 基类；</li>
+<li>必须定义 <code>MyFeature::ptr</code> 和 <code>MyFeature::const_ptr</code> 作为 <code>std::shared_ptr&lt;MyFeature&gt;</code> 和 <code>std::shared_ptr&lt;const MyFeature&gt;</code> 的别名；</li>
+<li>必须实现以 <code>MyFeature::ptr</code> 为返回值的 <code>MyFeature::make_feature</code> 静态工厂函数；</li>
+<li>不得在派生类中定义公开数据成员，避免对数据成员的直接操作，设置、获取操作应该使用形如 <code>setXXX</code> 或 <code>getXXX</code> 的成员方法；</li>
+<li><p class="startli">实现从基类共享指针动态转换到派生共享指针的 <code>cast</code> 静态函数，方便起见，可以使用 <code>RMVL_FEATURE_CAST</code> 宏，例如</p>
+<div class="fragment"><div class="line"><a class="code hl_define" href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a>(MyFeature);</div>
+<div class="ttc" id="agroup__feature_html_ga05cff275afa35e1f1a76a3b98af63967"><div class="ttname"><a href="../../db/d72/group__feature.html#ga05cff275afa35e1f1a76a3b98af63967">RMVL_FEATURE_CAST</a></div><div class="ttdeci">#define RMVL_FEATURE_CAST(name)</div><div class="ttdef"><b>定义</b> feature.h:65</div></div>
+</div><!-- fragment --> </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

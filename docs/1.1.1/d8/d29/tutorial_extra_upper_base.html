@@ -1,0 +1,140 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 顶层模块开发基本流程</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+   <div id="projectbrief">RoboMaster Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">视觉库使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">顶层模块开发基本流程 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md65">写在前面</a></li>
+<li class="level2"><a href="#autotoc_md66">基本流程</a></li>
+</ul>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_base"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/09/28</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d6/d94/tutorial_extra_how_to_use_decider.html">如何使用/开发 decider 模块</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d1/d67/tutorial_extra_upper_init.html">硬件设备与软件模块的初始化</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md65"></a>
+写在前面</h2>
+<p>首先要清楚顶层模块主要负责实际项目中各个功能逻辑的安排与操控，具有确定的可执行程序，一般就是 <code>main.cpp</code> 文件所产生。在 <a class="el" href="../../d1/dfb/intro.html#YAT">前世今生</a> 了解到 SRVL 2.x 系列及之前版本，顶层模块主要由视觉库本身维护，但视觉库本身不应该管理庞大的逻辑需求，应该只提供各类功能即可。因此，用户在使用 RMVL 的时候需要自行实现顶层模块。</p>
+<h2><a class="anchor" id="autotoc_md66"></a>
+基本流程</h2>
+<p>以下为 RMVL 顶层模块大致要具备的功能，以流程图形式展现</p>
+<p><img src="../../upper_base.png" alt="" class="inline" title="upper-base"/></p>
+<p><b>注意：</b></p>
+<ul>
+<li>这里下位机一般指控制端，平台不固定，可以是嵌入式设备，例如 STM32 系列单片机，也可以是基于 ROS 的 ros-control 控制层</li>
+<li>程序处理部分 <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">符号   </th><th class="markdownTableHeadCenter">含义    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>i</code>   </td><td class="markdownTableBodyCenter">传入参数    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter"><code>io</code>   </td><td class="markdownTableBodyCenter">传入兼传出参数    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code>ret</code>   </td><td class="markdownTableBodyCenter">函数返回值   </td></tr>
+</table>
+</li>
+<li>流程图中给出了 4 个程序处理的基本顺序，实际上可以根据具体的逻辑需求选择使用其中的一种或多种程序处理模块，这些程序处理模块则刚好对应于 4 个 <b>功能模块</b> 。</li>
+</ul>
+<hr  />
+<p>顶层模块将会按照顺序对其中涉及到的模块进行使用上的介绍，请继续阅读下一篇： <a class="el" href="../../d1/d67/tutorial_extra_upper_init.html">硬件设备与软件模块的初始化</a> 。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:32:07 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

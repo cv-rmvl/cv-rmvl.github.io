@@ -1,0 +1,818 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.13.2" name="generator"/>
+  <title>RMVL: rm::Client类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../da/d78/classrm_1_1Client.html">Client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="../../d3/d17/classrm_1_1Client-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Client类 参考<div class="ingroups"><a class="el" href="../../d3/da8/group__opcua.html">OPC UA 模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>OPC UA 客户端  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/opcua/client.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Client 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="276" scrolling="no" src="../../d6/d88/classrm_1_1Client__coll__graph.svg" width="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5cf51f6b4eb52e25f1cd5f88f3d0ddbc" id="r_a5cf51f6b4eb52e25f1cd5f88f3d0ddbc"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cf51f6b4eb52e25f1cd5f88f3d0ddbc">Client</a> (std::string_view address, const <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &amp;user={})</td></tr>
+<tr class="memdesc:a5cf51f6b4eb52e25f1cd5f88f3d0ddbc"><td class="mdescLeft"> </td><td class="mdescRight">创建新的客户端对象，并建立连接  <br/></td></tr>
+<tr class="separator:a5cf51f6b4eb52e25f1cd5f88f3d0ddbc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3672245fcba4f1b6d07bd5a3d960db72" id="r_a3672245fcba4f1b6d07bd5a3d960db72"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3672245fcba4f1b6d07bd5a3d960db72">~Client</a> ()</td></tr>
+<tr class="memdesc:a3672245fcba4f1b6d07bd5a3d960db72"><td class="mdescLeft"> </td><td class="mdescRight">断开与服务器的连接，并释放资源  <br/></td></tr>
+<tr class="separator:a3672245fcba4f1b6d07bd5a3d960db72"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a775e277bc3b904731bf15c635f1fdc80" id="r_a775e277bc3b904731bf15c635f1fdc80"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a775e277bc3b904731bf15c635f1fdc80">operator ClientView</a> () const</td></tr>
+<tr class="separator:a775e277bc3b904731bf15c635f1fdc80"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad6230e9e503e8214976c73a523a14cf6" id="r_ad6230e9e503e8214976c73a523a14cf6"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6230e9e503e8214976c73a523a14cf6">ok</a> () const</td></tr>
+<tr class="memdesc:ad6230e9e503e8214976c73a523a14cf6"><td class="mdescLeft"> </td><td class="mdescRight">是否成功创建客户端并成功连接到服务器  <br/></td></tr>
+<tr class="separator:ad6230e9e503e8214976c73a523a14cf6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad0e102e552d72573266114d6956f2aee" id="r_ad0e102e552d72573266114d6956f2aee"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0e102e552d72573266114d6956f2aee">spin</a> () const</td></tr>
+<tr class="memdesc:ad0e102e552d72573266114d6956f2aee"><td class="mdescLeft"> </td><td class="mdescRight">在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理  <br/></td></tr>
+<tr class="separator:ad0e102e552d72573266114d6956f2aee"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a74b40046bd18231fab4c3815c0e5b2b4" id="r_a74b40046bd18231fab4c3815c0e5b2b4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a74b40046bd18231fab4c3815c0e5b2b4">spinOnce</a> () const</td></tr>
+<tr class="memdesc:a74b40046bd18231fab4c3815c0e5b2b4"><td class="mdescLeft"> </td><td class="mdescRight">在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理  <br/></td></tr>
+<tr class="separator:a74b40046bd18231fab4c3815c0e5b2b4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1f5a7897028994c94f0f89b0cad5f521" id="r_a1f5a7897028994c94f0f89b0cad5f521"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f5a7897028994c94f0f89b0cad5f521">shutdown</a> ()</td></tr>
+<tr class="memdesc:a1f5a7897028994c94f0f89b0cad5f521"><td class="mdescLeft"> </td><td class="mdescRight">断开与服务器的连接  <br/></td></tr>
+<tr class="separator:a1f5a7897028994c94f0f89b0cad5f521"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8001ee15cbe169a72bade6b6e4c59125" id="r_a8001ee15cbe169a72bade6b6e4c59125"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d3/da8/group__opcua.html#gae83f723555bd94a58063f1db1e0165ed">FindNodeInClient</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8001ee15cbe169a72bade6b6e4c59125">node</a> (std::string_view browse_name, uint16_t ns=1U) const</td></tr>
+<tr class="memdesc:a8001ee15cbe169a72bade6b6e4c59125"><td class="mdescLeft"> </td><td class="mdescRight">获取路径搜索必要信息  <br/></td></tr>
+<tr class="separator:a8001ee15cbe169a72bade6b6e4c59125"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac3422f4af24930e8864f6acbd8b386c7" id="r_ac3422f4af24930e8864f6acbd8b386c7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3422f4af24930e8864f6acbd8b386c7">find</a> (std::string_view browse_path, const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;src_nd=<a class="el" href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">nodeObjectsFolder</a>) const noexcept</td></tr>
+<tr class="memdesc:ac3422f4af24930e8864f6acbd8b386c7"><td class="mdescLeft"> </td><td class="mdescRight">通过 BrowseName 的路径搜索命名空间 <code>ns</code> 为 <code>1</code> 的节点  <br/></td></tr>
+<tr class="separator:ac3422f4af24930e8864f6acbd8b386c7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad2243cf4ad77dbd90ef0c2d23351ed47" id="r_ad2243cf4ad77dbd90ef0c2d23351ed47"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2243cf4ad77dbd90ef0c2d23351ed47">read</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;<a class="el" href="#a8001ee15cbe169a72bade6b6e4c59125">node</a>) const</td></tr>
+<tr class="memdesc:ad2243cf4ad77dbd90ef0c2d23351ed47"><td class="mdescLeft"> </td><td class="mdescRight">从指定的变量节点读数据  <br/></td></tr>
+<tr class="separator:ad2243cf4ad77dbd90ef0c2d23351ed47"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad469a24e53925cb24aefa06aba4f46ba" id="r_ad469a24e53925cb24aefa06aba4f46ba"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad469a24e53925cb24aefa06aba4f46ba">write</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;<a class="el" href="#a8001ee15cbe169a72bade6b6e4c59125">node</a>, const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;val) const</td></tr>
+<tr class="memdesc:ad469a24e53925cb24aefa06aba4f46ba"><td class="mdescLeft"> </td><td class="mdescRight">给指定的变量节点写数据  <br/></td></tr>
+<tr class="separator:ad469a24e53925cb24aefa06aba4f46ba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac72c2b493f910205aa5aa8088f4119f3" id="r_ac72c2b493f910205aa5aa8088f4119f3"><td align="right" class="memItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac72c2b493f910205aa5aa8088f4119f3">call</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;obj_nd, std::string_view name, const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;inputs) const</td></tr>
+<tr class="memdesc:ac72c2b493f910205aa5aa8088f4119f3"><td class="mdescLeft"> </td><td class="mdescRight">在客户端调用指定对象节点中的方法  <br/></td></tr>
+<tr class="separator:ac72c2b493f910205aa5aa8088f4119f3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad5a3d5727551ba288e9d1a7da7f5bae2" id="r_ad5a3d5727551ba288e9d1a7da7f5bae2"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ad5a3d5727551ba288e9d1a7da7f5bae2"><td align="right" class="memTemplItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad5a3d5727551ba288e9d1a7da7f5bae2">callx</a> (const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;obj_nd, std::string_view name, Args &amp;&amp;...args) const</td></tr>
+<tr class="memdesc:ad5a3d5727551ba288e9d1a7da7f5bae2"><td class="mdescLeft"> </td><td class="mdescRight">直接以底层数据调用指定对象节点中的方法  <br/></td></tr>
+<tr class="separator:ad5a3d5727551ba288e9d1a7da7f5bae2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afb1489f1748be83fc75c3c10124d16ee" id="r_afb1489f1748be83fc75c3c10124d16ee"><td align="right" class="memItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#afb1489f1748be83fc75c3c10124d16ee">call</a> (std::string_view name, const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;inputs) const</td></tr>
+<tr class="memdesc:afb1489f1748be83fc75c3c10124d16ee"><td class="mdescLeft"> </td><td class="mdescRight">在客户端调用 ObjectsFolder 中的方法  <br/></td></tr>
+<tr class="separator:afb1489f1748be83fc75c3c10124d16ee"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae3edea2e6437937a31e48bccd82e7d5a" id="r_ae3edea2e6437937a31e48bccd82e7d5a"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:ae3edea2e6437937a31e48bccd82e7d5a"><td align="right" class="memTemplItemLeft" valign="top">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3edea2e6437937a31e48bccd82e7d5a">callx</a> (std::string_view name, Args &amp;&amp;...args) const</td></tr>
+<tr class="memdesc:ae3edea2e6437937a31e48bccd82e7d5a"><td class="mdescLeft"> </td><td class="mdescRight">直接以底层数据调用 ObjectsFolder 中的方法  <br/></td></tr>
+<tr class="separator:ae3edea2e6437937a31e48bccd82e7d5a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a162d041ce6ac27acd458b5cea1912f16" id="r_a162d041ce6ac27acd458b5cea1912f16"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a162d041ce6ac27acd458b5cea1912f16">addViewNode</a> (const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;view) const</td></tr>
+<tr class="memdesc:a162d041ce6ac27acd458b5cea1912f16"><td class="mdescLeft"> </td><td class="mdescRight">添加 OPC UA 视图节点 ViewNode 至 <code>ViewsFolder</code> 中  <br/></td></tr>
+<tr class="separator:a162d041ce6ac27acd458b5cea1912f16"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a66a57a298f87814dbb35dc868f25f7df" id="r_a66a57a298f87814dbb35dc868f25f7df"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a57a298f87814dbb35dc868f25f7df">monitor</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd, <a class="el" href="../../d3/da8/group__opcua.html#ga9821644743e68d3e9f666d6407613bf3">DataChangeNotificationCallback</a> on_change, uint32_t q_size=10)</td></tr>
+<tr class="memdesc:a66a57a298f87814dbb35dc868f25f7df"><td class="mdescLeft"> </td><td class="mdescRight">创建变量节点监视项，以实现订阅节点的功能  <br/></td></tr>
+<tr class="separator:a66a57a298f87814dbb35dc868f25f7df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a83a2e99021699e6d673653a527478af0" id="r_a83a2e99021699e6d673653a527478af0"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a83a2e99021699e6d673653a527478af0">monitor</a> (const std::vector&lt; std::string &gt; &amp;names, <a class="el" href="../../d3/da8/group__opcua.html#gae79d27f50272b431ff0bf0ab0ecbd858">EventNotificationCallback</a> on_event)</td></tr>
+<tr class="memdesc:a83a2e99021699e6d673653a527478af0"><td class="mdescLeft"> </td><td class="mdescRight">创建事件监视项，以实现事件的订阅功能  <br/></td></tr>
+<tr class="separator:a83a2e99021699e6d673653a527478af0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af0715f8ac620461fe22d3bb3ebb9bfd1" id="r_af0715f8ac620461fe22d3bb3ebb9bfd1"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#af0715f8ac620461fe22d3bb3ebb9bfd1">remove</a> (<a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> nd)</td></tr>
+<tr class="memdesc:af0715f8ac620461fe22d3bb3ebb9bfd1"><td class="mdescLeft"> </td><td class="mdescRight">移除监视项  <br/></td></tr>
+<tr class="separator:af0715f8ac620461fe22d3bb3ebb9bfd1"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>OPC UA 客户端 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#_a1">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5cf51f6b4eb52e25f1cd5f88f3d0ddbc" name="a5cf51f6b4eb52e25f1cd5f88f3d0ddbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf51f6b4eb52e25f1cd5f88f3d0ddbc">◆ </a></span>Client()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Client::Client </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d09/structrm_1_1UserConfig.html">UserConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>user</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client(</td><td class="paramname">address[, user]</td><td>) -&gt; </td><td>&lt;Client object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建新的客户端对象，并建立连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>连接地址，形如 <code>opc.tcp://127.0.0.1:4840</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user</td><td>用户信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="a3672245fcba4f1b6d07bd5a3d960db72" name="a3672245fcba4f1b6d07bd5a3d960db72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3672245fcba4f1b6d07bd5a3d960db72">◆ </a></span>~Client()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Client::~Client </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>断开与服务器的连接，并释放资源 </p>
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a162d041ce6ac27acd458b5cea1912f16" name="a162d041ce6ac27acd458b5cea1912f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162d041ce6ac27acd458b5cea1912f16">◆ </a></span>addViewNode()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> rm::Client::addViewNode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/de9/classrm_1_1View.html">View</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.addViewNode(</td><td class="paramname">view</td><td>) -&gt; </td><td>nd</td></tr></table>
+</div><div class="memdoc">
+<p>添加 OPC UA 视图节点 ViewNode 至 <code>ViewsFolder</code> 中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td><code><a class="el" href="../../d2/de9/classrm_1_1View.html" title="OPC UA 视图">rm::View</a></code> 表示的视图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加至服务器后，对应视图节点的唯一标识 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </dd></dl>
+</div>
+</div>
+<a id="ac72c2b493f910205aa5aa8088f4119f3" name="ac72c2b493f910205aa5aa8088f4119f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72c2b493f910205aa5aa8088f4119f3">◆ </a></span>call() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::Client::call </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>obj_nd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span> ) const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.call(</td><td class="paramname">obj_nd, name, inputs</td><td>) -&gt; </td><td>res, outputs</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.call(</td><td class="paramname">name, inputs</td><td>) -&gt; </td><td>res, outputs</td></tr></table>
+</div><div class="memdoc">
+<p>在客户端调用指定对象节点中的方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj_nd</td><td>对象节点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>输入参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res,oargs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a6">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="afb1489f1748be83fc75c3c10124d16ee" name="afb1489f1748be83fc75c3c10124d16ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1489f1748be83fc75c3c10124d16ee">◆ </a></span>call() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::Client::call </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.call(</td><td class="paramname">obj_nd, name, inputs</td><td>) -&gt; </td><td>res, outputs</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.call(</td><td class="paramname">name, inputs</td><td>) -&gt; </td><td>res, outputs</td></tr></table>
+</div><div class="memdoc">
+<p>在客户端调用 ObjectsFolder 中的方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 <code>browse_name</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>输入参数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res,oargs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="60" scrolling="no" src="../../da/d78/classrm_1_1Client_afb1489f1748be83fc75c3c10124d16ee_cgraph.svg" width="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ad5a3d5727551ba288e9d1a7da7f5bae2" name="ad5a3d5727551ba288e9d1a7da7f5bae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a3d5727551ba288e9d1a7da7f5bae2">◆ </a></span>callx() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::Client::callx </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>obj_nd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>直接以底层数据调用指定对象节点中的方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">obj_nd</td><td>对象节点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>方法的所有传入参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res,oargs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../da/d78/classrm_1_1Client_ad5a3d5727551ba288e9d1a7da7f5bae2_cgraph.svg" width="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ae3edea2e6437937a31e48bccd82e7d5a" name="ae3edea2e6437937a31e48bccd82e7d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3edea2e6437937a31e48bccd82e7d5a">◆ </a></span>callx() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; bool, <a class="el" href="../../d3/da8/group__opcua.html#ga76910ab7d5d3a5e2f75d0593a97bf61d">Variables</a> &gt; rm::Client::callx </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>直接以底层数据调用 ObjectsFolder 中的方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>方法名 <code>browse_name</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>方法的所有传入参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">res,oargs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功完成当前操作，以及输出参数列表 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../da/d78/classrm_1_1Client_ae3edea2e6437937a31e48bccd82e7d5a_cgraph.svg" width="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="ac3422f4af24930e8864f6acbd8b386c7" name="ac3422f4af24930e8864f6acbd8b386c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3422f4af24930e8864f6acbd8b386c7">◆ </a></span>find()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> rm::Client::find </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>browse_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src_nd</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f">nodeObjectsFolder</a></span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.find(</td><td class="paramname">browse_path[, src_nd]</td><td>) -&gt; </td><td>nd</td></tr></table>
+</div><div class="memdoc">
+<p>通过 BrowseName 的路径搜索命名空间 <code>ns</code> 为 <code>1</code> 的节点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">browse_path</td><td>BrowseName 路径，使用 <code>/</code> 分隔 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src_nd</td><td>源节点 ID，默认为 <code><a class="el" href="../../d3/da8/group__opcua.html#ga59abb0e45d2cc659ab5bc9ead635542f" title="对象节点：ObjectsFolder 节点 ID">rm::nodeObjectsFolder</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>节点 ID</dd></dl>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a8001ee15cbe169a72bade6b6e4c59125">node</a> = cli.find(<span class="stringliteral">"person/name"</span>, src_nd);</div>
+<div class="line"><span class="comment">// 等效于 auto node = src_nd | cli.node("person") | cli.node("name");</span></div>
+<div class="ttc" id="aclassrm_1_1Client_html_a8001ee15cbe169a72bade6b6e4c59125"><div class="ttname"><a href="#a8001ee15cbe169a72bade6b6e4c59125">rm::Client::node</a></div><div class="ttdeci">FindNodeInClient node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> client.hpp:177</div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a2">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="a83a2e99021699e6d673653a527478af0" name="a83a2e99021699e6d673653a527478af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a2e99021699e6d673653a527478af0">◆ </a></span>monitor() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::monitor </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>names</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#gae79d27f50272b431ff0bf0ab0ecbd858">EventNotificationCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_event</em></span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建事件监视项，以实现事件的订阅功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">names</td><td>关注的事件属性名列表，参考 <a class="el" href="../../da/d88/classrm_1_1Event.html#aef8d53c69b0e55cf3d4fac52a7d3baf5" title="获取 int 整型的非默认属性列表">Event::data()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_event</td><td>事件回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>事件监视创建成功？ </dd></dl>
+</div>
+</div>
+<a id="a66a57a298f87814dbb35dc868f25f7df" name="a66a57a298f87814dbb35dc868f25f7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a57a298f87814dbb35dc868f25f7df">◆ </a></span>monitor() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::monitor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>nd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d3/da8/group__opcua.html#ga9821644743e68d3e9f666d6407613bf3">DataChangeNotificationCallback</a></td>          <td class="paramname"><span class="paramname"><em>on_change</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>q_size</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span> )</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">nd, on_change[, q_size]</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr><tr><td style="width: 15px;"></td><td>rm.Client.monitor(</td><td class="paramname">names, on_event</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>创建变量节点监视项，以实现订阅节点的功能 </p>
+<ul>
+<li>服务器在设定的采样频率 <code>opcua_param.SAMPLING_INTERVAL</code> 下监视变量，若发生更改会尝试发出通知，通知的发送频率受到 <code>opcua_param.PUBLISHING_INTERVAL</code> 控制。当客户端收到通知时，执行 <code>on_change</code> 回调函数</li>
+<li>类似于 ROS 中的订阅话题，这里是订阅变量节点</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nd</td><td>待监视节点的 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">on_change</td><td>数据变更可调用对象 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">q_size</td><td>通知存放的队列大小，若队列已满，新的通知会覆盖旧的通知，默认为 <code>10</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>变量节点监视创建成功？ </dd></dl>
+</div>
+</div>
+<a id="a8001ee15cbe169a72bade6b6e4c59125" name="a8001ee15cbe169a72bade6b6e4c59125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8001ee15cbe169a72bade6b6e4c59125">◆ </a></span>node()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/da8/group__opcua.html#gae83f723555bd94a58063f1db1e0165ed">FindNodeInClient</a> rm::Client::node </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>browse_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1U</span> ) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>获取路径搜索必要信息 </p>
+<p>需要配合管道运算符 <code>|</code> 完成路径搜索 </p><div class="fragment"><div class="line"><span class="keyword">auto</span> dst_mode = src_node | cli.node(<span class="stringliteral">"person"</span>) | cli.node(<span class="stringliteral">"name"</span>);</div>
+</div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">browse_name</td><td>浏览名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ns</td><td>命名空间索引，默认为 <code>1</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>目标节点信息 </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">fnic</td><td><code>[_client, browse_name]</code> 元组 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a id="ad6230e9e503e8214976c73a523a14cf6" name="ad6230e9e503e8214976c73a523a14cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6230e9e503e8214976c73a523a14cf6">◆ </a></span>ok()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::ok </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.ok(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;Is Connected ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>是否成功创建客户端并成功连接到服务器 </p>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a3">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="a775e277bc3b904731bf15c635f1fdc80" name="a775e277bc3b904731bf15c635f1fdc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775e277bc3b904731bf15c635f1fdc80">◆ </a></span>operator ClientView()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Client::operator <a class="el" href="../../df/d48/classrm_1_1ClientView.html">ClientView</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="ad2243cf4ad77dbd90ef0c2d23351ed47" name="ad2243cf4ad77dbd90ef0c2d23351ed47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2243cf4ad77dbd90ef0c2d23351ed47">◆ </a></span>read()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> rm::Client::read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.read(</td><td class="paramname">node</td><td>) -&gt; </td><td>val</td></tr></table>
+</div><div class="memdoc">
+<p>从指定的变量节点读数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>读出的用 <code><a class="el" href="../../df/db8/classrm_1_1Variable.html" title="OPC UA 变量">rm::Variable</a></code> 表示的数据，未成功读取则返回空 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a4">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../da/d78/classrm_1_1Client_ad2243cf4ad77dbd90ef0c2d23351ed47_cgraph.svg" width="308"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="af0715f8ac620461fe22d3bb3ebb9bfd1" name="af0715f8ac620461fe22d3bb3ebb9bfd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0715f8ac620461fe22d3bb3ebb9bfd1">◆ </a></span>remove()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a></td>          <td class="paramname"><span class="paramname"><em>nd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.remove(</td><td class="paramname">nd</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>移除监视项 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nd</td><td>待移除监视项的节点号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功移除监视项 </dd></dl>
+</div>
+</div>
+<a id="a1f5a7897028994c94f0f89b0cad5f521" name="a1f5a7897028994c94f0f89b0cad5f521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5a7897028994c94f0f89b0cad5f521">◆ </a></span>shutdown()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::shutdown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.shutdown(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>断开与服务器的连接 </p>
+</div>
+</div>
+<a id="ad0e102e552d72573266114d6956f2aee" name="ad0e102e552d72573266114d6956f2aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e102e552d72573266114d6956f2aee">◆ </a></span>spin()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Client::spin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理 </p>
+<ul>
+<li>执行事件循环，等效于 ROS/ROS2 工具包中的 <code>ros::spin()</code> 以及 <code>rclcpp::spin()</code> </li>
+</ul>
+</div>
+</div>
+<a id="a74b40046bd18231fab4c3815c0e5b2b4" name="a74b40046bd18231fab4c3815c0e5b2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b40046bd18231fab4c3815c0e5b2b4">◆ </a></span>spinOnce()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Client::spinOnce </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.spinOnce(</td><td class="paramname"></td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>在网络上监听并处理到达的异步响应，同时进行内部维护、安全通道的更新和订阅管理 </p>
+<ul>
+<li>处理当前已到来的事件，等效于 ROS/ROS2 工具包中的 <code>ros::spinOnce()</code> 以及 <code>rclcpp::spin_some()</code> </li>
+</ul>
+</div>
+</div>
+<a id="ad469a24e53925cb24aefa06aba4f46ba" name="ad469a24e53925cb24aefa06aba4f46ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad469a24e53925cb24aefa06aba4f46ba">◆ </a></span>write()</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::Client::write </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d81/classrm_1_1NodeId.html">NodeId</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/db8/classrm_1_1Variable.html">Variable</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span> ) const</td>
+        </tr>
+      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.Client.write(</td><td class="paramname">node, val</td><td>) -&gt; </td><td>&lt;success ?&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>给指定的变量节点写数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <code><a class="el" href="../../db/d81/classrm_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>待写入的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否写入成功 </dd></dl>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/dff/samples_2opcua_2opcua_client_8cpp-example.html#a5">samples/opcua/opcua_client.cpp</a>.</dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="36" scrolling="no" src="../../da/d78/classrm_1_1Client_ad469a24e53925cb24aefa06aba4f46ba_cgraph.svg" width="312"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/opcua/<a class="el" href="../../d2/dfe/client_8hpp.html">client.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

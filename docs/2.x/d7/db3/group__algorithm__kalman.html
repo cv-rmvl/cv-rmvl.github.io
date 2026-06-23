@@ -1,0 +1,286 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: 卡尔曼滤波模块</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">卡尔曼滤波模块 <div class="ingroups"><a class="el" href="../../d5/d6c/group__algorithm.html">数学、算法模块</a> &raquo; <a class="el" href="../../d0/d47/group__algorithm__cal.html">数据与信号处理</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>使用 <span class="tt">cv::Matx</span> 改写的轻量级卡尔曼滤波和扩展卡尔曼滤波模块  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+卡尔曼滤波模块 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/db3/group__algorithm__kalman.svg" width="284" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3AKalmanFilterStaticDatas_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E" id="r_rm_3A_3AKalmanFilterStaticDatas_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html">rm::KalmanFilterStaticDatas&lt; FloatTp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡尔曼滤波静态数据  <a href="../../df/d1a/classrm_1_1KalmanFilterStaticDatas.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E" id="r_rm_3A_3AKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">rm::KalmanFilter&lt; FloatTp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">卡尔曼滤波器  <a href="../../d9/d1a/classrm_1_1KalmanFilter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AExtendedKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E" id="r_rm_3A_3AExtendedKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">rm::ExtendedKalmanFilter&lt; FloatTp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">扩展卡尔曼滤波器  <a href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3AIteratedExtendedKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E" id="r_rm_3A_3AIteratedExtendedKalmanFilter_3C_20FloatTp_2C_20StateDim_2C_20MeasureDim_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html">rm::IteratedExtendedKalmanFilter&lt; FloatTp, StateDim, MeasureDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">紧耦合迭代扩展卡尔曼滤波器  <a href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga4d2333248f58400fdc6e87a420b57fc9" id="r_ga4d2333248f58400fdc6e87a420b57fc9"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ga4d2333248f58400fdc6e87a420b57fc9">rm::KF21f</a> = <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a>&lt;float, 2, 1&gt;</td></tr>
+<tr class="memdesc:ga4d2333248f58400fdc6e87a420b57fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(2\times1\) 卡尔曼滤波器  <br /></td></tr>
+<tr class="memitem:ga2daa9f6cfc6ee9df09a01e1a4973a122" id="r_ga2daa9f6cfc6ee9df09a01e1a4973a122"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ga2daa9f6cfc6ee9df09a01e1a4973a122">rm::KF21d</a> = <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a>&lt;double, 2, 1&gt;</td></tr>
+<tr class="memdesc:ga2daa9f6cfc6ee9df09a01e1a4973a122"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(2\times1\) 卡尔曼滤波器  <br /></td></tr>
+<tr class="memitem:ga318054cefac4ff9720cf4100ac897ed3" id="r_ga318054cefac4ff9720cf4100ac897ed3"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ga318054cefac4ff9720cf4100ac897ed3">rm::EKF31f</a> = <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">ExtendedKalmanFilter</a>&lt;float, 3, 1&gt;</td></tr>
+<tr class="memdesc:ga318054cefac4ff9720cf4100ac897ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(3\times1\) 扩展卡尔曼滤波器  <br /></td></tr>
+<tr class="memitem:ga559ed743f07129e88bd807c8c8ec06c5" id="r_ga559ed743f07129e88bd807c8c8ec06c5"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ga559ed743f07129e88bd807c8c8ec06c5">rm::EKF31d</a> = <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">ExtendedKalmanFilter</a>&lt;double, 3, 1&gt;</td></tr>
+<tr class="memdesc:ga559ed743f07129e88bd807c8c8ec06c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(3\times1\) 扩展卡尔曼滤波器  <br /></td></tr>
+<tr class="memitem:gaf74c5a06f90f202a82f3f0a139e499d3" id="r_gaf74c5a06f90f202a82f3f0a139e499d3"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#gaf74c5a06f90f202a82f3f0a139e499d3">rm::IEKF31f</a> = <a class="el" href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html">IteratedExtendedKalmanFilter</a>&lt;float, 3, 1&gt;</td></tr>
+<tr class="memdesc:gaf74c5a06f90f202a82f3f0a139e499d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(3\times1\) 紧耦合迭代扩展卡尔曼滤波器  <br /></td></tr>
+<tr class="memitem:ga5414a30c1767a4b58f21e1ea69d31403" id="r_ga5414a30c1767a4b58f21e1ea69d31403"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#ga5414a30c1767a4b58f21e1ea69d31403">rm::IEKF31d</a> = <a class="el" href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html">IteratedExtendedKalmanFilter</a>&lt;double, 3, 1&gt;</td></tr>
+<tr class="memdesc:ga5414a30c1767a4b58f21e1ea69d31403"><td class="mdescLeft">&#160;</td><td class="mdescRight">\(3\times1\) 紧耦合迭代扩展卡尔曼滤波器  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>使用 <span class="tt">cv::Matx</span> 改写的轻量级卡尔曼滤波和扩展卡尔曼滤波模块 </p>
+<ul>
+<li>考虑到 OpenCV 中提供的 <span class="tt">cv::KalmanFilter</span> 是基于 <span class="tt">cv::Mat</span> 实现的，<span class="tt">cv::Mat</span> 的内存操作在运行时是在堆上打开的，因此会消耗大量的时间，本模块使用 <span class="tt">cv::Matx</span> 来实现 KF 和 EKF 的功能，以达到轻量化的目的。</li>
+<li>相关知识点可参考说明文档 <a class="el" href="../../dd/dc3/tutorial_modules_kalman.html" title="卡尔曼滤波">卡尔曼滤波</a> 以及 <a class="el" href="../../db/d71/tutorial_modules_ekf.html" title="扩展卡尔曼滤波">扩展卡尔曼滤波</a></li>
+</ul>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">类型定义说明</h2>
+<a id="ga559ed743f07129e88bd807c8c8ec06c5" name="ga559ed743f07129e88bd807c8c8ec06c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga559ed743f07129e88bd807c8c8ec06c5">&#9670;&#160;</a></span>EKF31d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga559ed743f07129e88bd807c8c8ec06c5">rm::EKF31d</a> = <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">ExtendedKalmanFilter</a>&lt;double, 3, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(3\times1\) 扩展卡尔曼滤波器 </p>
+
+</div>
+</div>
+<a id="ga318054cefac4ff9720cf4100ac897ed3" name="ga318054cefac4ff9720cf4100ac897ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga318054cefac4ff9720cf4100ac897ed3">&#9670;&#160;</a></span>EKF31f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga318054cefac4ff9720cf4100ac897ed3">rm::EKF31f</a> = <a class="el" href="../../d9/dd2/classrm_1_1ExtendedKalmanFilter.html">ExtendedKalmanFilter</a>&lt;float, 3, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(3\times1\) 扩展卡尔曼滤波器 </p>
+
+</div>
+</div>
+<a id="ga5414a30c1767a4b58f21e1ea69d31403" name="ga5414a30c1767a4b58f21e1ea69d31403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5414a30c1767a4b58f21e1ea69d31403">&#9670;&#160;</a></span>IEKF31d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga5414a30c1767a4b58f21e1ea69d31403">rm::IEKF31d</a> = <a class="el" href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html">IteratedExtendedKalmanFilter</a>&lt;double, 3, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(3\times1\) 紧耦合迭代扩展卡尔曼滤波器 </p>
+
+</div>
+</div>
+<a id="gaf74c5a06f90f202a82f3f0a139e499d3" name="gaf74c5a06f90f202a82f3f0a139e499d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf74c5a06f90f202a82f3f0a139e499d3">&#9670;&#160;</a></span>IEKF31f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#gaf74c5a06f90f202a82f3f0a139e499d3">rm::IEKF31f</a> = <a class="el" href="../../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html">IteratedExtendedKalmanFilter</a>&lt;float, 3, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(3\times1\) 紧耦合迭代扩展卡尔曼滤波器 </p>
+
+</div>
+</div>
+<a id="ga2daa9f6cfc6ee9df09a01e1a4973a122" name="ga2daa9f6cfc6ee9df09a01e1a4973a122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2daa9f6cfc6ee9df09a01e1a4973a122">&#9670;&#160;</a></span>KF21d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga2daa9f6cfc6ee9df09a01e1a4973a122">rm::KF21d</a> = <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a>&lt;double, 2, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(2\times1\) 卡尔曼滤波器 </p>
+
+</div>
+</div>
+<a id="ga4d2333248f58400fdc6e87a420b57fc9" name="ga4d2333248f58400fdc6e87a420b57fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d2333248f58400fdc6e87a420b57fc9">&#9670;&#160;</a></span>KF21f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ga4d2333248f58400fdc6e87a420b57fc9">rm::KF21f</a> = <a class="el" href="../../d9/d1a/classrm_1_1KalmanFilter.html">KalmanFilter</a>&lt;float, 2, 1&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/algorithm/kalman.hpp&gt;</code></p>
+
+<p>\(2\times1\) 卡尔曼滤波器 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

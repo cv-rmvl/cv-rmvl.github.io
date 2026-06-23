@@ -1,0 +1,139 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<title>RMVL: 导出数据、发出操控指令</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.2.0</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html">扩展模块教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">导出数据、发出操控指令 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul><ul><li class="level2"><a href="#autotoc_md89">1. 显示图像、打印调试信息</a></li>
+<li class="level2"><a href="#autotoc_md90">2. 角点写入文件</a></li>
+<li class="level2"><a href="#autotoc_md91">3. 发出操控指令至下位机</a></li>
+</ul>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__home_zhaoxi_桌面_Vision_cv_rmvl_rmvl_doc_tutorials_extra_upper_upper_write_data"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html">责任链模式下的程序处理</a> ↑<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md89"></a>
+1. 显示图像、打印调试信息</h2>
+<p>视觉程序日常调试必不可少的就是显示图像，例如 OpenCV 中提供了 <code>cv::imshow</code> 函数来显示图像。在执行完程序处理的全部流程后，可以对当前帧捕获到或计算出的信息进行观察， <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a> ， <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a> ， <a class="el" href="../../d7/d51/structrm_1_1PredictInfo.html" title="预测模块信息">rm::PredictInfo</a> ， <a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html" title="决策模块信息">rm::DecideInfo</a> 包含了各自模块得到的全部信息。例如 <a class="el" href="../../df/dae/structrm_1_1DetectInfo.html" title="识别信息结构体">rm::DetectInfo</a> 中提供了原图、二值图、所有 ROI、渲染图等图像信息，可以使用 <code>cv::imshow()</code> 显示到屏幕； <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a> 中提供了补偿的角度偏移信息，可以使用 <code>printf</code> 或 <code>std::cout</code> 输出到终端。</p>
+<h2><a class="anchor" id="autotoc_md90"></a>
+2. 角点写入文件</h2>
+<p><a class="el" href="../../d0/d41/group__core__dataio.html">数据读写（I/O）</a> 提供了 <a class="el" href="../../d0/d41/group__core__dataio.html#ga81cd696ddfbe64114c01bd675b4fabf5" title="导入角点数据">rm::readCorners</a> 和 <a class="el" href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628" title="导出角点数据">rm::writeCorners</a> 函数，可以从指定的 YAML 文件读取角点信息至 <code>std::vector&lt;std::vector&lt;cv::Point&gt;&gt;</code> 表示的角点集 <code>corners</code> 中，或将 <code>corners</code> 写入到指定的 YAML 文件中。</p>
+<p>参考以下将角点写入文件的示例代码</p>
+<div class="fragment"><div class="line"><span class="comment">// 获取识别模块得到的所有组合体</span></div>
+<div class="line"><span class="keyword">auto</span> combos = detect_info.combos;</div>
+<div class="line">std::vector&lt;std::vector&lt;cv::Point2f&gt;&gt; corners;</div>
+<div class="line">corners.reserve(combos.size());</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> p_combo : combos)</div>
+<div class="line">    corners.emplace_back(p_combo-&gt;getCorners());</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* 当前循环到第 idx 轮 */</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">rm::writeCorners</a>(<span class="stringliteral">&quot;corners.yml&quot;</span>, idx, corners);</div>
+<div class="ttc" id="agroup__core__dataio_html_ga27e77887e06c764a38075401808a7628"><div class="ttname"><a href="../../d0/d41/group__core__dataio.html#ga27e77887e06c764a38075401808a7628">rm::writeCorners</a></div><div class="ttdeci">void writeCorners(std::ostream &amp;out, const std::vector&lt; std::vector&lt; std::array&lt; float, 2 &gt;&gt;&gt; &amp;corners)</div><div class="ttdoc">导出角点数据</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
+3. 发出操控指令至下位机</h2>
+<p><code>XxxInfo</code> 类的数据信息不能直接发送至下位机，给下位机发送的数据一般是控制电机的若干个速度分量或偏移量，这一步可以由 <a class="el" href="../../d9/da7/structrm_1_1DecideInfo.html" title="决策模块信息">rm::DecideInfo</a> 中存储的信息导出，通信方式各异，这里不多赘述。</p>
+<hr  />
+<p>至此，顶层模块的所有内容已介绍完毕，下面开始<a href="https://github.com/new">创建</a>自己的顶层项目吧！ </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2024年 四月 21日 星期日 16:34:23 , 为 RMVL使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.9.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

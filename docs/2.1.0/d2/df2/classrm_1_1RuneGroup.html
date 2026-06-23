@@ -1,0 +1,378 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <meta content="Doxygen 1.12.0" name="generator"/>
+  <title>RMVL: rm::RuneGroup类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+  <script src="../../jquery.js" type="text/javascript"></script>
+  <script src="../../dynsections.js" type="text/javascript"></script>
+  <script src="../../tutorial-utils.js" type="text/javascript"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script src="../../resize.js" type="text/javascript"></script>
+<script src="../../cookie.js" type="text/javascript"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script src="../../search/searchdata.js" type="text/javascript"></script>
+<script src="../../search/search.js" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script src="../../doxygen-awesome-darkmode-toggle.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script src="../../doxygen-awesome-fragment-copy-button.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script src="../../doxygen-awesome-interactive-toc.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script src="../../doxygen-awesome-paragraph-link.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script src="/docs/version.js" type="text/javascript"></script>
+      <table cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                 <span id="projectnumber">2.1.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script src="../../menudata.js" type="text/javascript"></script>
+<script src="../../menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navpath" id="nav-path">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html">RuneGroup</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> |
+<a href="#pub-methods">Public 成员函数</a> |
+<a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="../../d2/da2/classrm_1_1RuneGroup-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::RuneGroup类 参考<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="../../dd/d46/group__group.html">序列组/相关追踪器的空间集合（数据组件）</a> » <a class="el" href="../../d3/d97/group__rune__group.html">神符序列组</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>神符序列组  
+ <a href="#details">更多...</a></p>
+<p><code>#include &lt;rmvl/group/rune_group.h&gt;</code></p>
+<div class="dynheader">
+类 rm::RuneGroup 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="530" scrolling="no" src="../../d1/d1d/classrm_1_1RuneGroup__inherit__graph.svg" width="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::RuneGroup 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe frameborder="0" height="600" scrolling="no" src="../../d9/d51/classrm_1_1RuneGroup__coll__graph.svg" width="100%"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ab95e3e76511862d7b6f42071f0f025fd" id="r_ab95e3e76511862d7b6f42071f0f025fd"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab95e3e76511862d7b6f42071f0f025fd">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html">RuneGroup</a>&gt;</td></tr>
+<tr class="separator:ab95e3e76511862d7b6f42071f0f025fd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7e3ada545de232a09c45b6c04023649a" id="r_a7e3ada545de232a09c45b6c04023649a"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3ada545de232a09c45b6c04023649a">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html">RuneGroup</a>&gt;</td></tr>
+<tr class="separator:a7e3ada545de232a09c45b6c04023649a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_types_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1group')"><img alt="-" src="../../closed.png"/> Public 类型 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:a6bb46a4f506a440c6afaceb755ec0a8b inherit pub_types_classrm_1_1group" id="r_a6bb46a4f506a440c6afaceb755ec0a8b"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d6/d6c/classrm_1_1group.html">group</a>&gt;</td></tr>
+<tr class="separator:a6bb46a4f506a440c6afaceb755ec0a8b inherit pub_types_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9a1fcaebd987c6a74ea38c43f4335dd6 inherit pub_types_classrm_1_1group" id="r_a9a1fcaebd987c6a74ea38c43f4335dd6"><td align="right" class="memItemLeft" valign="top">using </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a9a1fcaebd987c6a74ea38c43f4335dd6">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d6/d6c/classrm_1_1group.html">group</a>&gt;</td></tr>
+<tr class="separator:a9a1fcaebd987c6a74ea38c43f4335dd6 inherit pub_types_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a11735fe7931446640d028f65bf2d45b9" id="r_a11735fe7931446640d028f65bf2d45b9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a11735fe7931446640d028f65bf2d45b9">clone</a> () override</td></tr>
+<tr class="memdesc:a11735fe7931446640d028f65bf2d45b9"><td class="mdescLeft"> </td><td class="mdescRight">从另一个序列组进行构造  <br/></td></tr>
+<tr class="separator:a11735fe7931446640d028f65bf2d45b9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a412c58e4fba3584de30e859ecd7f1c21" id="r_a412c58e4fba3584de30e859ecd7f1c21"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a412c58e4fba3584de30e859ecd7f1c21">sync</a> (const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, double tick) override</td></tr>
+<tr class="memdesc:a412c58e4fba3584de30e859ecd7f1c21"><td class="mdescLeft"> </td><td class="mdescRight">神符序列组同步操作  <br/></td></tr>
+<tr class="separator:a412c58e4fba3584de30e859ecd7f1c21"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a170da4602756b367c1c5e6a577fd54bb" id="r_a170da4602756b367c1c5e6a577fd54bb"><td align="right" class="memItemLeft" valign="top">const std::deque&lt; double &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a170da4602756b367c1c5e6a577fd54bb">getRawDatas</a> () const</td></tr>
+<tr class="memdesc:a170da4602756b367c1c5e6a577fd54bb"><td class="mdescLeft"> </td><td class="mdescRight">获取原始数据队列  <br/></td></tr>
+<tr class="separator:a170da4602756b367c1c5e6a577fd54bb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1group')"><img alt="-" src="../../closed.png"/> Public 成员函数 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group" id="r_ae1bed244f44c03b0d77c63522ae2d8cc"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ae1bed244f44c03b0d77c63522ae2d8cc">add</a> (<a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> p_tracker)</td></tr>
+<tr class="memdesc:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">添加追踪器至序列组  <br/></td></tr>
+<tr class="separator:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a171352dae06202c79e085d238352e10d inherit pub_methods_classrm_1_1group" id="r_a171352dae06202c79e085d238352e10d"><td align="right" class="memItemLeft" valign="top">virtual bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a171352dae06202c79e085d238352e10d">invalid</a> () const</td></tr>
+<tr class="memdesc:a171352dae06202c79e085d238352e10d inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">判断是否为无效序列组  <br/></td></tr>
+<tr class="separator:a171352dae06202c79e085d238352e10d inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaba382ddc65a2911befeb6fe3f3ecc8a inherit pub_methods_classrm_1_1group" id="r_aaba382ddc65a2911befeb6fe3f3ecc8a"><td align="right" class="memItemLeft" valign="top">std::vector&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">rm::tracker::ptr</a> &gt; &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#aaba382ddc65a2911befeb6fe3f3ecc8a">data</a> ()</td></tr>
+<tr class="memdesc:aaba382ddc65a2911befeb6fe3f3ecc8a inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取同组所有的追踪器数据  <br/></td></tr>
+<tr class="separator:aaba382ddc65a2911befeb6fe3f3ecc8a inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group" id="r_ac8a015e66d39cc8d544ec8cd0552ff51"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ac8a015e66d39cc8d544ec8cd0552ff51">size</a> () const</td></tr>
+<tr class="memdesc:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取同组追踪器的数量  <br/></td></tr>
+<tr class="separator:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group" id="r_a3f5d4f7b2969c989d1e85c5c6a3c2071"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a3f5d4f7b2969c989d1e85c5c6a3c2071">empty</a> () const</td></tr>
+<tr class="memdesc:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">判断同组追踪器是否为空  <br/></td></tr>
+<tr class="separator:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group" id="r_adb8563d86f8709c3ca72b4090a652c08"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#adb8563d86f8709c3ca72b4090a652c08">at</a> (size_t idx) const</td></tr>
+<tr class="memdesc:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取指定追踪器  <br/></td></tr>
+<tr class="separator:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9297f6792990afc039d6bda9b6c0b954 inherit pub_methods_classrm_1_1group" id="r_a9297f6792990afc039d6bda9b6c0b954"><td align="right" class="memItemLeft" valign="top">const cv::Point2f &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a9297f6792990afc039d6bda9b6c0b954">center</a> () const</td></tr>
+<tr class="memdesc:a9297f6792990afc039d6bda9b6c0b954 inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取序列组中心  <br/></td></tr>
+<tr class="separator:a9297f6792990afc039d6bda9b6c0b954 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group" id="r_a7d8043c9d86d78c8e36d269e7b918a4f"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a7d8043c9d86d78c8e36d269e7b918a4f">getVanishNumber</a> () const</td></tr>
+<tr class="memdesc:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取丢帧数量  <br/></td></tr>
+<tr class="separator:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad5d29e0cc758c8c3dcb93f8493e8beeb inherit pub_methods_classrm_1_1group" id="r_ad5d29e0cc758c8c3dcb93f8493e8beeb"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ad5d29e0cc758c8c3dcb93f8493e8beeb">type</a> () const</td></tr>
+<tr class="memdesc:ad5d29e0cc758c8c3dcb93f8493e8beeb inherit pub_methods_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">获取该组类型  <br/></td></tr>
+<tr class="separator:ad5d29e0cc758c8c3dcb93f8493e8beeb inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a72f022ece62cdd063042c74f1bf97b75" id="r_a72f022ece62cdd063042c74f1bf97b75"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="#ab95e3e76511862d7b6f42071f0f025fd">ptr</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f022ece62cdd063042c74f1bf97b75">make_group</a> ()</td></tr>
+<tr class="memdesc:a72f022ece62cdd063042c74f1bf97b75"><td class="mdescLeft"> </td><td class="mdescRight">构建 <a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html" title="神符序列组">RuneGroup</a>  <br/></td></tr>
+<tr class="separator:a72f022ece62cdd063042c74f1bf97b75"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1group')"><img alt="-" src="../../closed.png"/> Protected 属性 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group" id="r_a1f424be09c574999fad180d087bdb9bf"><td align="right" class="memItemLeft" valign="top">std::vector&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a1f424be09c574999fad180d087bdb9bf">_trackers</a></td></tr>
+<tr class="memdesc:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">同组追踪器  <br/></td></tr>
+<tr class="separator:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group" id="r_a067f659ec7b5f6f50730ac0718f75ecf"><td align="right" class="memItemLeft" valign="top">cv::Point2f </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a067f659ec7b5f6f50730ac0718f75ecf">_center</a></td></tr>
+<tr class="memdesc:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">序列组中心  <br/></td></tr>
+<tr class="separator:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group" id="r_ac43f326d854cfa120f55af6aa3b64641"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ac43f326d854cfa120f55af6aa3b64641">_is_tracked</a> {}</td></tr>
+<tr class="memdesc:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">是否为目标序列组  <br/></td></tr>
+<tr class="separator:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group" id="r_a7381fffeb7ee4072e18acd36fc30f173"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a7381fffeb7ee4072e18acd36fc30f173">_vanish_num</a> {}</td></tr>
+<tr class="memdesc:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">丢帧数量  <br/></td></tr>
+<tr class="separator:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group" id="r_a890c929fe7c5b5b05e6f1a7829217f1c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a890c929fe7c5b5b05e6f1a7829217f1c">_type</a> {}</td></tr>
+<tr class="memdesc:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group"><td class="mdescLeft"> </td><td class="mdescRight">序列组各状态  <br/></td></tr>
+<tr class="separator:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>神符序列组 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a7e3ada545de232a09c45b6c04023649a" name="a7e3ada545de232a09c45b6c04023649a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3ada545de232a09c45b6c04023649a">◆ </a></span>const_ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a7e3ada545de232a09c45b6c04023649a">rm::RuneGroup::const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html">RuneGroup</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<a id="ab95e3e76511862d7b6f42071f0f025fd" name="ab95e3e76511862d7b6f42071f0f025fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab95e3e76511862d7b6f42071f0f025fd">◆ </a></span>ptr</h2>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ab95e3e76511862d7b6f42071f0f025fd">rm::RuneGroup::ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html">RuneGroup</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a11735fe7931446640d028f65bf2d45b9" name="a11735fe7931446640d028f65bf2d45b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11735fe7931446640d028f65bf2d45b9">◆ </a></span>clone()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> rm::RuneGroup::clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.RuneGroup.clone(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;rm.RuneGroup object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>从另一个序列组进行构造 </p>
+<dl class="section return"><dt>返回</dt><dd>指向新序列组的共享指针 </dd></dl>
+<p>实现了 <a class="el" href="../../d6/d6c/classrm_1_1group.html#ab793a14fda51f66bc85634335b6be41d">rm::group</a>.</p>
+</div>
+</div>
+<a id="a170da4602756b367c1c5e6a577fd54bb" name="a170da4602756b367c1c5e6a577fd54bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170da4602756b367c1c5e6a577fd54bb">◆ </a></span>getRawDatas()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::deque&lt; double &gt; &amp; rm::RuneGroup::getRawDatas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.RuneGroup.getRawDatas(</td><td class="paramname"></td><td>) -&gt; </td><td>datas</td></tr></table>
+</div><div class="memdoc">
+<p>获取原始数据队列 </p>
+<dl class="section return"><dt>返回</dt><dd>原始数据队列 </dd></dl>
+</div>
+</div>
+<a id="a72f022ece62cdd063042c74f1bf97b75" name="a72f022ece62cdd063042c74f1bf97b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f022ece62cdd063042c74f1bf97b75">◆ </a></span>make_group()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#ab95e3e76511862d7b6f42071f0f025fd">ptr</a> rm::RuneGroup::make_group </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.RuneGroup.make_group(</td><td class="paramname"></td><td>) -&gt; </td><td>&lt;rm.RuneGroup object&gt;</td></tr></table>
+</div><div class="memdoc">
+<p>构建 <a class="el" href="../../d2/df2/classrm_1_1RuneGroup.html" title="神符序列组">RuneGroup</a> </p>
+</div>
+</div>
+<a id="a412c58e4fba3584de30e859ecd7f1c21" name="a412c58e4fba3584de30e859ecd7f1c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412c58e4fba3584de30e859ecd7f1c21">◆ </a></span>sync()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::RuneGroup::sync </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.RuneGroup.sync(</td><td class="paramname">imu, t</td><td>) -&gt; </td><td>None</td></tr></table>
+</div><div class="memdoc">
+<p>神符序列组同步操作 </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>计算整个序列组当前帧的原始数据 <code>raw_data</code>，并同步至 <code>datas</code> 中</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>最新 IMU 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>最新时间点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>实现了 <a class="el" href="../../d6/d6c/classrm_1_1group.html#a2f34ce78f1d76eeb7fed9e04198bd67c">rm::group</a>.</p>
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/group/<a class="el" href="../../d8/df3/group_2rune__group_8h.html">rune_group.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者  <a href="http://www.doxygen.org/index.html">
+<img alt="doxygen" class="footer" src="../../../doxygen.png"/>
+</a> 1.12.0
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</div></body>
+</html>

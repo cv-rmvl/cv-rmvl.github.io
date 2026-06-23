@@ -1,0 +1,781 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<title>RMVL: rm::GyroGroup类 参考</title>
+<link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../tutorial-utils.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<!--#include virtual="/google-search.html"-->
+<script type="text/javascript" src="/docs/version.js"></script>
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RMVL
+   &#160;<span id="projectnumber">1.5.2</span>
+   </div>
+   <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a class="el" href="../../da/df9/classrm_1_1GyroGroup.html">GyroGroup</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../da/da6/classrm_1_1GyroGroup-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::GyroGroup类 参考<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="../../dd/d46/group__group.html">序列组/相关追踪器的空间集合（数据组件）</a> &raquo; <a class="el" href="../../d8/dbf/group__gyro__group.html">整车状态序列组</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>整车状态序列组  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/group/gyro_group.h&gt;</code></p>
+<div class="dynheader">
+类 rm::GyroGroup 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d1/d08/classrm_1_1GyroGroup__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::GyroGroup 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../df/d75/classrm_1_1GyroGroup__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a4c3c2c0f76a35a9e09b3e07c4b3ca472" id="r_a4c3c2c0f76a35a9e09b3e07c4b3ca472"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c3c2c0f76a35a9e09b3e07c4b3ca472">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../da/df9/classrm_1_1GyroGroup.html">GyroGroup</a>&gt;</td></tr>
+<tr class="separator:a4c3c2c0f76a35a9e09b3e07c4b3ca472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6d8a180c5da68003a379cf0ee1e7b7" id="r_ada6d8a180c5da68003a379cf0ee1e7b7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada6d8a180c5da68003a379cf0ee1e7b7">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../da/df9/classrm_1_1GyroGroup.html">GyroGroup</a>&gt;</td></tr>
+<tr class="separator:ada6d8a180c5da68003a379cf0ee1e7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1group')"><img src="../../closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:a6bb46a4f506a440c6afaceb755ec0a8b inherit pub_types_classrm_1_1group" id="r_a6bb46a4f506a440c6afaceb755ec0a8b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">ptr</a> = std::shared_ptr&lt;<a class="el" href="../../d6/d6c/classrm_1_1group.html">group</a>&gt;</td></tr>
+<tr class="separator:a6bb46a4f506a440c6afaceb755ec0a8b inherit pub_types_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1fcaebd987c6a74ea38c43f4335dd6 inherit pub_types_classrm_1_1group" id="r_a9a1fcaebd987c6a74ea38c43f4335dd6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a9a1fcaebd987c6a74ea38c43f4335dd6">const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../d6/d6c/classrm_1_1group.html">group</a>&gt;</td></tr>
+<tr class="separator:a9a1fcaebd987c6a74ea38c43f4335dd6 inherit pub_types_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa9b49863eb09b42fe613e5c315164697" id="r_aa9b49863eb09b42fe613e5c315164697"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9b49863eb09b42fe613e5c315164697">GyroGroup</a> (const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;combos, int armor_num)</td></tr>
+<tr class="separator:aa9b49863eb09b42fe613e5c315164697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb71f3513e6f32bcd9b4f01a41d6b31" id="r_adbb71f3513e6f32bcd9b4f01a41d6b31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbb71f3513e6f32bcd9b4f01a41d6b31">clone</a> () override</td></tr>
+<tr class="memdesc:adbb71f3513e6f32bcd9b4f01a41d6b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">从另一个序列组进行构造  <br /></td></tr>
+<tr class="separator:adbb71f3513e6f32bcd9b4f01a41d6b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89170d785d3419f5c1af60745ae9ea2d" id="r_a89170d785d3419f5c1af60745ae9ea2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89170d785d3419f5c1af60745ae9ea2d">invalid</a> () const override</td></tr>
+<tr class="memdesc:a89170d785d3419f5c1af60745ae9ea2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否为无效序列组  <br /></td></tr>
+<tr class="separator:a89170d785d3419f5c1af60745ae9ea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2cbe1a30d12f0990edf230aefaf8012" id="r_ae2cbe1a30d12f0990edf230aefaf8012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2cbe1a30d12f0990edf230aefaf8012">sync</a> (const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, double tick) override</td></tr>
+<tr class="memdesc:ae2cbe1a30d12f0990edf230aefaf8012"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/df9/classrm_1_1GyroGroup.html" title="整车状态序列组">GyroGroup</a> 同步操作  <br /></td></tr>
+<tr class="separator:ae2cbe1a30d12f0990edf230aefaf8012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f84bea204d51cc642b7431e2845889" id="r_a20f84bea204d51cc642b7431e2845889"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d08/classrm_1_1TrackerState.html">TrackerState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f84bea204d51cc642b7431e2845889">getTrackerState</a> (<a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> p_tracker)</td></tr>
+<tr class="memdesc:a20f84bea204d51cc642b7431e2845889"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取追踪器状态  <br /></td></tr>
+<tr class="separator:a20f84bea204d51cc642b7431e2845889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e3fd7ebf0a8482ec557c7be18dda76" id="r_ac3e3fd7ebf0a8482ec557c7be18dda76"><td class="memItemLeft" align="right" valign="top">cv::Vec3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3e3fd7ebf0a8482ec557c7be18dda76">getCenter3D</a> () const</td></tr>
+<tr class="memdesc:ac3e3fd7ebf0a8482ec557c7be18dda76"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最新的车组旋转中心点  <br /></td></tr>
+<tr class="separator:ac3e3fd7ebf0a8482ec557c7be18dda76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb055e1a1543b3c3ca57cdd4aafc79a" id="r_a4fb055e1a1543b3c3ca57cdd4aafc79a"><td class="memItemLeft" align="right" valign="top">cv::Vec3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fb055e1a1543b3c3ca57cdd4aafc79a">getSpeed3D</a> () const</td></tr>
+<tr class="memdesc:a4fb055e1a1543b3c3ca57cdd4aafc79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取旋转中心点移动速度  <br /></td></tr>
+<tr class="separator:a4fb055e1a1543b3c3ca57cdd4aafc79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42dc2848d65807e90ac75c71aeb4d58" id="r_ac42dc2848d65807e90ac75c71aeb4d58"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac42dc2848d65807e90ac75c71aeb4d58">getRotatedSpeed</a> () const</td></tr>
+<tr class="memdesc:ac42dc2848d65807e90ac75c71aeb4d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取相机坐标系自转角速度（俯视顺时针为正，滤波数据，弧度）  <br /></td></tr>
+<tr class="separator:ac42dc2848d65807e90ac75c71aeb4d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ae3ebe795c8a4e413681073a22b296" id="r_a36ae3ebe795c8a4e413681073a22b296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ae3ebe795c8a4e413681073a22b296">imu</a> () const</td></tr>
+<tr class="memdesc:a36ae3ebe795c8a4e413681073a22b296"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 IMU 数据  <br /></td></tr>
+<tr class="separator:a36ae3ebe795c8a4e413681073a22b296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade94ea72415b75be891721e9040f012" id="r_aade94ea72415b75be891721e9040f012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d20/namespacerm.html#ac20f060cfa58609d88a9f385a18fe461">RotStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aade94ea72415b75be891721e9040f012">getRotStatus</a> () const</td></tr>
+<tr class="memdesc:aade94ea72415b75be891721e9040f012"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取旋转状态  <br /></td></tr>
+<tr class="separator:aade94ea72415b75be891721e9040f012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1group')"><img src="../../closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group" id="r_ae1bed244f44c03b0d77c63522ae2d8cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ae1bed244f44c03b0d77c63522ae2d8cc">add</a> (<a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> p_tracker)</td></tr>
+<tr class="memdesc:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加追踪器至序列组  <br /></td></tr>
+<tr class="separator:ae1bed244f44c03b0d77c63522ae2d8cc inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e648d77783dbec9c92ccc0289e2ba90 inherit pub_methods_classrm_1_1group" id="r_a0e648d77783dbec9c92ccc0289e2ba90"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a0e648d77783dbec9c92ccc0289e2ba90">data</a> ()</td></tr>
+<tr class="memdesc:a0e648d77783dbec9c92ccc0289e2ba90 inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取同组所有的追踪器数据  <br /></td></tr>
+<tr class="separator:a0e648d77783dbec9c92ccc0289e2ba90 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group" id="r_ac8a015e66d39cc8d544ec8cd0552ff51"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ac8a015e66d39cc8d544ec8cd0552ff51">size</a> () const</td></tr>
+<tr class="memdesc:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取同组追踪器的数量  <br /></td></tr>
+<tr class="separator:ac8a015e66d39cc8d544ec8cd0552ff51 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group" id="r_a3f5d4f7b2969c989d1e85c5c6a3c2071"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a3f5d4f7b2969c989d1e85c5c6a3c2071">empty</a> () const</td></tr>
+<tr class="memdesc:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断同组追踪器是否为空  <br /></td></tr>
+<tr class="separator:a3f5d4f7b2969c989d1e85c5c6a3c2071 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group" id="r_adb8563d86f8709c3ca72b4090a652c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#adb8563d86f8709c3ca72b4090a652c08">at</a> (size_t idx) const</td></tr>
+<tr class="memdesc:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定追踪器  <br /></td></tr>
+<tr class="separator:adb8563d86f8709c3ca72b4090a652c08 inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01bca588f2184175b3a50f046e2313ae inherit pub_methods_classrm_1_1group" id="r_a01bca588f2184175b3a50f046e2313ae"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a01bca588f2184175b3a50f046e2313ae">center</a> () const</td></tr>
+<tr class="memdesc:a01bca588f2184175b3a50f046e2313ae inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取序列组中心  <br /></td></tr>
+<tr class="separator:a01bca588f2184175b3a50f046e2313ae inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group" id="r_a7d8043c9d86d78c8e36d269e7b918a4f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a7d8043c9d86d78c8e36d269e7b918a4f">getVanishNumber</a> () const</td></tr>
+<tr class="memdesc:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取丢帧数量  <br /></td></tr>
+<tr class="separator:a7d8043c9d86d78c8e36d269e7b918a4f inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b2e20c2f41007967a3411660410e2b inherit pub_methods_classrm_1_1group" id="r_af5b2e20c2f41007967a3411660410e2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#af5b2e20c2f41007967a3411660410e2b">type</a> () const</td></tr>
+<tr class="memdesc:af5b2e20c2f41007967a3411660410e2b inherit pub_methods_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取该组类型  <br /></td></tr>
+<tr class="separator:af5b2e20c2f41007967a3411660410e2b inherit pub_methods_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af8e674058db2c8f3b0419ab9bbd58401" id="r_af8e674058db2c8f3b0419ab9bbd58401"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a4c3c2c0f76a35a9e09b3e07c4b3ca472">ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8e674058db2c8f3b0419ab9bbd58401">make_group</a> (const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;first_combos, int armor_num)</td></tr>
+<tr class="memdesc:af8e674058db2c8f3b0419ab9bbd58401"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据第一帧识别到的组合体构建 <a class="el" href="../../da/df9/classrm_1_1GyroGroup.html" title="整车状态序列组">GyroGroup</a>  <br /></td></tr>
+<tr class="separator:af8e674058db2c8f3b0419ab9bbd58401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab4a61749d9a702ac578fcd378a5f81" id="r_acab4a61749d9a702ac578fcd378a5f81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acab4a61749d9a702ac578fcd378a5f81">calcGroupFrom3DMessage</a> (const std::vector&lt; cv::Vec2f &gt; &amp;gyro_poses, const std::vector&lt; cv::Vec3f &gt; &amp;gyro_ts, const std::vector&lt; float &gt; &amp;rs, cv::Vec3f &amp;gyro_center)</td></tr>
+<tr class="memdesc:acab4a61749d9a702ac578fcd378a5f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据 IMU 坐标系下装甲板外参信息和默认初始半径集合，得到修正的半径集合、序列组中心坐标、装甲板法向量集合  <br /></td></tr>
+<tr class="separator:acab4a61749d9a702ac578fcd378a5f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f214ee5c59e6b27a5a712a39f63fb5" id="r_a04f214ee5c59e6b27a5a712a39f63fb5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04f214ee5c59e6b27a5a712a39f63fb5">constructComboForced</a> (<a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> p_combo, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;imu_data, const cv::Matx33f &amp;gyro_rmat, const cv::Vec3f &amp;gyro_tvec, double tick)</td></tr>
+<tr class="memdesc:a04f214ee5c59e6b27a5a712a39f63fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制构建 combo  <br /></td></tr>
+<tr class="separator:a04f214ee5c59e6b27a5a712a39f63fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca439948c823f3c64aa03b9e6d928bb0" id="r_aca439948c823f3c64aa03b9e6d928bb0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca439948c823f3c64aa03b9e6d928bb0">calcArmorNum</a> (const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;ref_combos)</td></tr>
+<tr class="memdesc:aca439948c823f3c64aa03b9e6d928bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算装甲板数目  <br /></td></tr>
+<tr class="separator:aca439948c823f3c64aa03b9e6d928bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1group"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1group')"><img src="../../closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="../../d6/d6c/classrm_1_1group.html">rm::group</a></td></tr>
+<tr class="memitem:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group" id="r_a1f424be09c574999fad180d087bdb9bf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a1f424be09c574999fad180d087bdb9bf">_trackers</a></td></tr>
+<tr class="memdesc:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">同组追踪器  <br /></td></tr>
+<tr class="separator:a1f424be09c574999fad180d087bdb9bf inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group" id="r_a067f659ec7b5f6f50730ac0718f75ecf"><td class="memItemLeft" align="right" valign="top">cv::Point2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a067f659ec7b5f6f50730ac0718f75ecf">_center</a></td></tr>
+<tr class="memdesc:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列组中心  <br /></td></tr>
+<tr class="separator:a067f659ec7b5f6f50730ac0718f75ecf inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group" id="r_ac43f326d854cfa120f55af6aa3b64641"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#ac43f326d854cfa120f55af6aa3b64641">_is_tracked</a> {}</td></tr>
+<tr class="memdesc:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否为目标序列组  <br /></td></tr>
+<tr class="separator:ac43f326d854cfa120f55af6aa3b64641 inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group" id="r_a7381fffeb7ee4072e18acd36fc30f173"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a7381fffeb7ee4072e18acd36fc30f173">_vanish_num</a> {}</td></tr>
+<tr class="memdesc:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">丢帧数量  <br /></td></tr>
+<tr class="separator:a7381fffeb7ee4072e18acd36fc30f173 inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group" id="r_a890c929fe7c5b5b05e6f1a7829217f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d01/structrm_1_1RMStatus.html">RMStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a890c929fe7c5b5b05e6f1a7829217f1c">_type</a> {}</td></tr>
+<tr class="memdesc:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列组各状态  <br /></td></tr>
+<tr class="separator:a890c929fe7c5b5b05e6f1a7829217f1c inherit pro_attribs_classrm_1_1group"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>整车状态序列组 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="ada6d8a180c5da68003a379cf0ee1e7b7" name="ada6d8a180c5da68003a379cf0ee1e7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6d8a180c5da68003a379cf0ee1e7b7">&#9670;&#160;</a></span>const_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#ada6d8a180c5da68003a379cf0ee1e7b7">rm::GyroGroup::const_ptr</a> = std::shared_ptr&lt;const <a class="el" href="../../da/df9/classrm_1_1GyroGroup.html">GyroGroup</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c3c2c0f76a35a9e09b3e07c4b3ca472" name="a4c3c2c0f76a35a9e09b3e07c4b3ca472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3c2c0f76a35a9e09b3e07c4b3ca472">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a4c3c2c0f76a35a9e09b3e07c4b3ca472">rm::GyroGroup::ptr</a> = std::shared_ptr&lt;<a class="el" href="../../da/df9/classrm_1_1GyroGroup.html">GyroGroup</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aa9b49863eb09b42fe613e5c315164697" name="aa9b49863eb09b42fe613e5c315164697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b49863eb09b42fe613e5c315164697">&#9670;&#160;</a></span>GyroGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::GyroGroup::GyroGroup </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>combos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>armor_num</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aca439948c823f3c64aa03b9e6d928bb0" name="aca439948c823f3c64aa03b9e6d928bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca439948c823f3c64aa03b9e6d928bb0">&#9670;&#160;</a></span>calcArmorNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int rm::GyroGroup::calcArmorNum </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ref_combos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算装甲板数目 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ref_combos</td><td>指定参与计算的装甲板 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>装甲板数目 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_aca439948c823f3c64aa03b9e6d928bb0_cgraph.svg" width="214" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="acab4a61749d9a702ac578fcd378a5f81" name="acab4a61749d9a702ac578fcd378a5f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acab4a61749d9a702ac578fcd378a5f81">&#9670;&#160;</a></span>calcGroupFrom3DMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rm::GyroGroup::calcGroupFrom3DMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Vec2f &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_poses</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; cv::Vec3f &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_ts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_center</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据 IMU 坐标系下装甲板外参信息和默认初始半径集合，得到修正的半径集合、序列组中心坐标、装甲板法向量集合 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_poses</td><td>装甲板在相机坐标系下的姿态法向量集合 pose </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_ts</td><td>装甲板在相机坐标系下的平移向量集合 t </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rs</td><td>装甲板旋转半径集合 r（传入初始的旋转半径） </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">gyro_center</td><td>装甲板序列组在 IMU 坐标系下中心坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_acab4a61749d9a702ac578fcd378a5f81_cgraph.svg" width="186" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="adbb71f3513e6f32bcd9b4f01a41d6b31" name="adbb71f3513e6f32bcd9b4f01a41d6b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb71f3513e6f32bcd9b4f01a41d6b31">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d6c/classrm_1_1group.html#a6bb46a4f506a440c6afaceb755ec0a8b">group::ptr</a> rm::GyroGroup::clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从另一个序列组进行构造 </p>
+<dl class="section return"><dt>返回</dt><dd>指向新序列组的共享指针 </dd></dl>
+
+<p>实现了 <a class="el" href="../../d6/d6c/classrm_1_1group.html#ab793a14fda51f66bc85634335b6be41d">rm::group</a>.</p>
+
+</div>
+</div>
+<a id="a04f214ee5c59e6b27a5a712a39f63fb5" name="a04f214ee5c59e6b27a5a712a39f63fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f214ee5c59e6b27a5a712a39f63fb5">&#9670;&#160;</a></span>constructComboForced()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> rm::GyroGroup::constructComboForced </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_combo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Matx33f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_rmat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec3f &amp;</td>          <td class="paramname"><span class="paramname"><em>gyro_tvec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>强制构建 combo </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_combo</td><td>指定参考的组合体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>最新 IMU 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_rmat</td><td>IMU 坐标系下装甲板的旋转矩阵 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gyro_tvec</td><td>IMU 坐标系下装甲板的平移向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>强制构建的 combo </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_a04f214ee5c59e6b27a5a712a39f63fb5_cgraph.svg" width="182" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac3e3fd7ebf0a8482ec557c7be18dda76" name="ac3e3fd7ebf0a8482ec557c7be18dda76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e3fd7ebf0a8482ec557c7be18dda76">&#9670;&#160;</a></span>getCenter3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Vec3f rm::GyroGroup::getCenter3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取最新的车组旋转中心点 </p>
+
+</div>
+</div>
+<a id="ac42dc2848d65807e90ac75c71aeb4d58" name="ac42dc2848d65807e90ac75c71aeb4d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42dc2848d65807e90ac75c71aeb4d58">&#9670;&#160;</a></span>getRotatedSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float rm::GyroGroup::getRotatedSpeed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取相机坐标系自转角速度（俯视顺时针为正，滤波数据，弧度） </p>
+
+</div>
+</div>
+<a id="aade94ea72415b75be891721e9040f012" name="aade94ea72415b75be891721e9040f012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade94ea72415b75be891721e9040f012">&#9670;&#160;</a></span>getRotStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d20/namespacerm.html#ac20f060cfa58609d88a9f385a18fe461">RotStatus</a> rm::GyroGroup::getRotStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取旋转状态 </p>
+
+</div>
+</div>
+<a id="a4fb055e1a1543b3c3ca57cdd4aafc79a" name="a4fb055e1a1543b3c3ca57cdd4aafc79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb055e1a1543b3c3ca57cdd4aafc79a">&#9670;&#160;</a></span>getSpeed3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Vec3f rm::GyroGroup::getSpeed3D </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取旋转中心点移动速度 </p>
+
+</div>
+</div>
+<a id="a20f84bea204d51cc642b7431e2845889" name="a20f84bea204d51cc642b7431e2845889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f84bea204d51cc642b7431e2845889">&#9670;&#160;</a></span>getTrackerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d08/classrm_1_1TrackerState.html">TrackerState</a> rm::GyroGroup::getTrackerState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dd2/classrm_1_1tracker.html#a18e7a8f1a3ada69ee2ca9ecbf520d28f">tracker::ptr</a></td>          <td class="paramname"><span class="paramname"><em>p_tracker</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取追踪器状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_tracker</td><td>追踪器指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>追踪器信状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_a20f84bea204d51cc642b7431e2845889_cgraph.svg" width="190" height="75"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a36ae3ebe795c8a4e413681073a22b296" name="a36ae3ebe795c8a4e413681073a22b296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ae3ebe795c8a4e413681073a22b296">&#9670;&#160;</a></span>imu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> rm::GyroGroup::imu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 IMU 数据 </p>
+
+</div>
+</div>
+<a id="a89170d785d3419f5c1af60745ae9ea2d" name="a89170d785d3419f5c1af60745ae9ea2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89170d785d3419f5c1af60745ae9ea2d">&#9670;&#160;</a></span>invalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::GyroGroup::invalid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断是否为无效序列组 </p>
+
+<p>重载 <a class="el" href="../../d6/d6c/classrm_1_1group.html#a171352dae06202c79e085d238352e10d">rm::group</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_a89170d785d3419f5c1af60745ae9ea2d_cgraph.svg" width="391" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af8e674058db2c8f3b0419ab9bbd58401" name="af8e674058db2c8f3b0419ab9bbd58401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e674058db2c8f3b0419ab9bbd58401">&#9670;&#160;</a></span>make_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a4c3c2c0f76a35a9e09b3e07c4b3ca472">ptr</a> rm::GyroGroup::make_group </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../de/dee/classrm_1_1combo.html#ae108afd463d341245250b4f527961eb9">combo::ptr</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>first_combos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>armor_num</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据第一帧识别到的组合体构建 <a class="el" href="../../da/df9/classrm_1_1GyroGroup.html" title="整车状态序列组">GyroGroup</a> </p>
+<dl class="section note"><dt>注解</dt><dd>组合体列表大小仅允许 1 或 2</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first_combos</td><td>组合体列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">armor_num</td><td>强制指定装甲板个数（小于 1 表示自动判断） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2cbe1a30d12f0990edf230aefaf8012" name="ae2cbe1a30d12f0990edf230aefaf8012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cbe1a30d12f0990edf230aefaf8012">&#9670;&#160;</a></span>sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::GyroGroup::sync </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>imu_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tick</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../da/df9/classrm_1_1GyroGroup.html" title="整车状态序列组">GyroGroup</a> 同步操作 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu_data</td><td>最新 IMU 数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>最新时间点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="../../d6/d6c/classrm_1_1group.html#a2f34ce78f1d76eeb7fed9e04198bd67c">rm::group</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/df9/classrm_1_1GyroGroup_ae2cbe1a30d12f0990edf230aefaf8012_cgraph.svg" width="155" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rmvl/group/<a class="el" href="../../d3/df0/group_2gyro__group_8h.html">gyro_group.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.png" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

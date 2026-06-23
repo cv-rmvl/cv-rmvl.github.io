@@ -1,0 +1,565 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: rm::async::SSLStream类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d22/namespacerm_1_1async.html">async</a></li><li class="navelem"><a href="../../d4/d31/classrm_1_1async_1_1SSLStream.html">SSLStream</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../df/d96/classrm_1_1async_1_1SSLStream-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::async::SSLStream类 参考<div class="ingroups"><a class="el" href="../../d2/da3/group__io.html">数据 IO 与通信模块</a> &raquo; <a class="el" href="../../d6/dd4/group__io__net.html">网络通信</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步 TLS 安全流  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/io/ssl.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::async::SSLStream 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d7e/classrm_1_1async_1_1SSLStream__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+rm::async::SSLStream 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/da2/classrm_1_1async_1_1SSLStream__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae2cd8a2e2f7fc706934cd6d6e232b760" id="r_ae2cd8a2e2f7fc706934cd6d6e232b760"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> (<a class="el" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">StreamSocket</a> <a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a42a128734c286a0e78013a66f5bad60e">socket</a>, <a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:ae2cd8a2e2f7fc706934cd6d6e232b760"><td class="mdescLeft">&#160;</td><td class="mdescRight">由异步 TCP 流式 Socket 创建异步 TLS 流  <br /></td></tr>
+<tr class="memitem:a9e3a0dc8ad3609fd6290da97268b0c38" id="r_a9e3a0dc8ad3609fd6290da97268b0c38"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9e3a0dc8ad3609fd6290da97268b0c38">SSLStream</a> (const SSLStream &amp;)=delete</td></tr>
+<tr class="memitem:a30dbb8b3d615eb619d4b6495440fd3e2" id="r_a30dbb8b3d615eb619d4b6495440fd3e2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a30dbb8b3d615eb619d4b6495440fd3e2">SSLStream</a> (SSLStream &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:ad4bbaab78c7e0af1eafcefc0b4e2a556" id="r_ad4bbaab78c7e0af1eafcefc0b4e2a556"><td class="memItemLeft"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad4bbaab78c7e0af1eafcefc0b4e2a556">operator=</a> (const <a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;)=delete</td></tr>
+<tr class="memitem:ab0600ed8b7cfa741768d3a7d905f4dc7" id="r_ab0600ed8b7cfa741768d3a7d905f4dc7"><td class="memItemLeft"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ab0600ed8b7cfa741768d3a7d905f4dc7">operator=</a> (<a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:ad39906058fd9b2db1d5fc3f977025418" id="r_ad39906058fd9b2db1d5fc3f977025418"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad39906058fd9b2db1d5fc3f977025418">~SSLStream</a> ()=default</td></tr>
+<tr class="memitem:a06851bb9b9251380dc8c223cd2480aaa" id="r_a06851bb9b9251380dc8c223cd2480aaa"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a06851bb9b9251380dc8c223cd2480aaa">lasterr</a> () const</td></tr>
+<tr class="memdesc:a06851bb9b9251380dc8c223cd2480aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最近一次错误信息  <br /></td></tr>
+<tr class="memitem:a8068d080587f4fc6fd69894f447f9dc6" id="r_a8068d080587f4fc6fd69894f447f9dc6"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8068d080587f4fc6fd69894f447f9dc6">connect</a> (std::string_view server_name={})</td></tr>
+<tr class="memdesc:a8068d080587f4fc6fd69894f447f9dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行客户端 TLS 握手  <br /></td></tr>
+<tr class="memitem:a878835a88dd62aef9bf296d284834b70" id="r_a878835a88dd62aef9bf296d284834b70"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a878835a88dd62aef9bf296d284834b70">accept</a> ()</td></tr>
+<tr class="memdesc:a878835a88dd62aef9bf296d284834b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行服务端 TLS 握手  <br /></td></tr>
+<tr class="memitem:a4f6c9f507d948d1d241816617b10094b" id="r_a4f6c9f507d948d1d241816617b10094b"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4f6c9f507d948d1d241816617b10094b">handshake</a> (std::string_view server_name={})</td></tr>
+<tr class="memdesc:a4f6c9f507d948d1d241816617b10094b"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据上下文模式执行 TLS 握手  <br /></td></tr>
+<tr class="memitem:a5d14fae2085ab096ab6de676e72e1db9" id="r_a5d14fae2085ab096ab6de676e72e1db9"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5d14fae2085ab096ab6de676e72e1db9">read</a> (size_t max_size=65536)</td></tr>
+<tr class="memdesc:a5d14fae2085ab096ab6de676e72e1db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步加密读取数据  <br /></td></tr>
+<tr class="memitem:a91f8d94063565334fe65af1b96818660" id="r_a91f8d94063565334fe65af1b96818660"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; size_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a91f8d94063565334fe65af1b96818660">read_to</a> (char *buf, size_t size)</td></tr>
+<tr class="memdesc:a91f8d94063565334fe65af1b96818660"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步加密读取数据到指定内存  <br /></td></tr>
+<tr class="memitem:a8656efae6ecfaa47fc7d51f0829677f3" id="r_a8656efae6ecfaa47fc7d51f0829677f3"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8656efae6ecfaa47fc7d51f0829677f3">write</a> (std::string_view data)</td></tr>
+<tr class="memdesc:a8656efae6ecfaa47fc7d51f0829677f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步加密写入数据  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1SSLStream"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1SSLStream')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../d6/d29/classrm_1_1SSLStream.html">rm::SSLStream</a></td></tr>
+<tr class="memitem:aadbf051acf59bd34c6b04135480fe92f inherit pub_methods_classrm_1_1SSLStream" id="r_aadbf051acf59bd34c6b04135480fe92f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aadbf051acf59bd34c6b04135480fe92f">SSLStream</a> (<a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">StreamSocket</a> <a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a42a128734c286a0e78013a66f5bad60e">socket</a>, <a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:aadbf051acf59bd34c6b04135480fe92f inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">由已有 TCP 流式 Socket 创建 TLS 流  <br /></td></tr>
+<tr class="memitem:a2de4ef41000cb49c71960ad488982d8d inherit pub_methods_classrm_1_1SSLStream" id="r_a2de4ef41000cb49c71960ad488982d8d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a2de4ef41000cb49c71960ad488982d8d">SSLStream</a> (const SSLStream &amp;)=delete</td></tr>
+<tr class="memitem:aecdfce42fb277ca8ed7383b842f49e62 inherit pub_methods_classrm_1_1SSLStream" id="r_aecdfce42fb277ca8ed7383b842f49e62"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aecdfce42fb277ca8ed7383b842f49e62">SSLStream</a> (SSLStream &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:a2698818b046f1a0244a560bbeaa2cd89 inherit pub_methods_classrm_1_1SSLStream" id="r_a2698818b046f1a0244a560bbeaa2cd89"><td class="memItemLeft"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aadbf051acf59bd34c6b04135480fe92f">SSLStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a2698818b046f1a0244a560bbeaa2cd89">operator=</a> (const <a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aadbf051acf59bd34c6b04135480fe92f">SSLStream</a> &amp;)=delete</td></tr>
+<tr class="memitem:a7e29e9147dbfac8e2bfdda7701196683 inherit pub_methods_classrm_1_1SSLStream" id="r_a7e29e9147dbfac8e2bfdda7701196683"><td class="memItemLeft"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aadbf051acf59bd34c6b04135480fe92f">SSLStream</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a7e29e9147dbfac8e2bfdda7701196683">operator=</a> (<a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aadbf051acf59bd34c6b04135480fe92f">SSLStream</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="memitem:a757d62ee8713504a22453b327ae883b3 inherit pub_methods_classrm_1_1SSLStream" id="r_a757d62ee8713504a22453b327ae883b3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a757d62ee8713504a22453b327ae883b3">~SSLStream</a> ()</td></tr>
+<tr class="memitem:a84be2d3afdf3f711ec553938981c7a72 inherit pub_methods_classrm_1_1SSLStream" id="r_a84be2d3afdf3f711ec553938981c7a72"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a84be2d3afdf3f711ec553938981c7a72">invalid</a> () const noexcept</td></tr>
+<tr class="memdesc:a84be2d3afdf3f711ec553938981c7a72 inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS 流是否失效  <br /></td></tr>
+<tr class="memitem:a42a128734c286a0e78013a66f5bad60e inherit pub_methods_classrm_1_1SSLStream" id="r_a42a128734c286a0e78013a66f5bad60e"><td class="memItemLeft">const <a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">StreamSocket</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a42a128734c286a0e78013a66f5bad60e">socket</a> () const noexcept</td></tr>
+<tr class="memdesc:a42a128734c286a0e78013a66f5bad60e inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取底层 Socket  <br /></td></tr>
+<tr class="memitem:a8102cabac3533e879c7ccf4cbd7ff45a inherit pub_methods_classrm_1_1SSLStream" id="r_a8102cabac3533e879c7ccf4cbd7ff45a"><td class="memItemLeft"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">StreamSocket</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a8102cabac3533e879c7ccf4cbd7ff45a">socket</a> () noexcept</td></tr>
+<tr class="memdesc:a8102cabac3533e879c7ccf4cbd7ff45a inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取底层 Socket  <br /></td></tr>
+<tr class="memitem:a10b4c009da8483402f56924328996797 inherit pub_methods_classrm_1_1SSLStream" id="r_a10b4c009da8483402f56924328996797"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a10b4c009da8483402f56924328996797">lasterr</a> () const</td></tr>
+<tr class="memdesc:a10b4c009da8483402f56924328996797 inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最近一次错误信息  <br /></td></tr>
+<tr class="memitem:ae0bb541ced3a7b225cf85336b2ac2e76 inherit pub_methods_classrm_1_1SSLStream" id="r_ae0bb541ced3a7b225cf85336b2ac2e76"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#ae0bb541ced3a7b225cf85336b2ac2e76">connect</a> (std::string_view server_name={})</td></tr>
+<tr class="memdesc:ae0bb541ced3a7b225cf85336b2ac2e76 inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行客户端 TLS 握手  <br /></td></tr>
+<tr class="memitem:aace0aaab94bd1e0ca2ac1001413bdce6 inherit pub_methods_classrm_1_1SSLStream" id="r_aace0aaab94bd1e0ca2ac1001413bdce6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aace0aaab94bd1e0ca2ac1001413bdce6">accept</a> ()</td></tr>
+<tr class="memdesc:aace0aaab94bd1e0ca2ac1001413bdce6 inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行服务端 TLS 握手  <br /></td></tr>
+<tr class="memitem:aa958bae10cba95f7c97807b564be124d inherit pub_methods_classrm_1_1SSLStream" id="r_aa958bae10cba95f7c97807b564be124d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#aa958bae10cba95f7c97807b564be124d">handshake</a> (std::string_view server_name={})</td></tr>
+<tr class="memdesc:aa958bae10cba95f7c97807b564be124d inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据上下文模式执行 TLS 握手  <br /></td></tr>
+<tr class="memitem:a9dbeedbdb32a2de563e3048e06a706bd inherit pub_methods_classrm_1_1SSLStream" id="r_a9dbeedbdb32a2de563e3048e06a706bd"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a9dbeedbdb32a2de563e3048e06a706bd">read</a> (size_t max_size=65536) noexcept</td></tr>
+<tr class="memdesc:a9dbeedbdb32a2de563e3048e06a706bd inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">加密读取数据  <br /></td></tr>
+<tr class="memitem:adf7d685948666fe8f64cd99fb342700c inherit pub_methods_classrm_1_1SSLStream" id="r_adf7d685948666fe8f64cd99fb342700c"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#adf7d685948666fe8f64cd99fb342700c">read_to</a> (char *buf, size_t size) noexcept</td></tr>
+<tr class="memdesc:adf7d685948666fe8f64cd99fb342700c inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">加密读取数据到指定内存  <br /></td></tr>
+<tr class="memitem:ad01f0540cae0d4a42d0dd779a539c424 inherit pub_methods_classrm_1_1SSLStream" id="r_ad01f0540cae0d4a42d0dd779a539c424"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#ad01f0540cae0d4a42d0dd779a539c424">write</a> (std::string_view data) noexcept</td></tr>
+<tr class="memdesc:ad01f0540cae0d4a42d0dd779a539c424 inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">加密写入数据  <br /></td></tr>
+<tr class="memitem:a0b67cd463ca463ad76e7c903fa02d4bc inherit pub_methods_classrm_1_1SSLStream" id="r_a0b67cd463ca463ad76e7c903fa02d4bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a0b67cd463ca463ad76e7c903fa02d4bc">close</a> () noexcept</td></tr>
+<tr class="memdesc:a0b67cd463ca463ad76e7c903fa02d4bc inherit pub_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭 TLS 流与底层 Socket  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classrm_1_1SSLStream"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classrm_1_1SSLStream')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="../../d6/d29/classrm_1_1SSLStream.html">rm::SSLStream</a></td></tr>
+<tr class="memitem:a59148436f5a8cc5d638af339ec6a2eed inherit pro_methods_classrm_1_1SSLStream" id="r_a59148436f5a8cc5d638af339ec6a2eed"><td class="memItemLeft"><a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a59148436f5a8cc5d638af339ec6a2eed">context</a> () noexcept</td></tr>
+<tr class="memdesc:a59148436f5a8cc5d638af339ec6a2eed inherit pro_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 TLS 上下文  <br /></td></tr>
+<tr class="memitem:a29cc551718cc69dd8f03bcbd6f511659 inherit pro_methods_classrm_1_1SSLStream" id="r_a29cc551718cc69dd8f03bcbd6f511659"><td class="memItemLeft">const <a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="../../d6/d29/classrm_1_1SSLStream.html#a29cc551718cc69dd8f03bcbd6f511659">context</a> () const noexcept</td></tr>
+<tr class="memdesc:a29cc551718cc69dd8f03bcbd6f511659 inherit pro_methods_classrm_1_1SSLStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 TLS 上下文  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步 TLS 安全流 </p>
+<p>该类包装 rm::async::StreamSocket，并在 OpenSSL 返回 WANT_READ/WANT_WRITE 时挂起协程等待对应 I/O 事件，避免阻塞 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html" title="异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度">IOContext</a> 事件循环。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="ae2cd8a2e2f7fc706934cd6d6e232b760" name="ae2cd8a2e2f7fc706934cd6d6e232b760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2cd8a2e2f7fc706934cd6d6e232b760">&#9670;&#160;</a></span>SSLStream() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::SSLStream::SSLStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dd1/classrm_1_1async_1_1StreamSocket.html">StreamSocket</a></td>          <td class="paramname"><span class="paramname"><em>socket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>由异步 TCP 流式 Socket 创建异步 TLS 流 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_ae2cd8a2e2f7fc706934cd6d6e232b760_cgraph.svg" width="390" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9e3a0dc8ad3609fd6290da97268b0c38" name="a9e3a0dc8ad3609fd6290da97268b0c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3a0dc8ad3609fd6290da97268b0c38">&#9670;&#160;</a></span>SSLStream() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::SSLStream::SSLStream </td>
+          <td>(</td>
+          <td class="paramtype">const SSLStream &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_a9e3a0dc8ad3609fd6290da97268b0c38_cgraph.svg" width="602" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a30dbb8b3d615eb619d4b6495440fd3e2" name="a30dbb8b3d615eb619d4b6495440fd3e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dbb8b3d615eb619d4b6495440fd3e2">&#9670;&#160;</a></span>SSLStream() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::SSLStream::SSLStream </td>
+          <td>(</td>
+          <td class="paramtype">SSLStream &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_a30dbb8b3d615eb619d4b6495440fd3e2_cgraph.svg" width="602" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad39906058fd9b2db1d5fc3f977025418" name="ad39906058fd9b2db1d5fc3f977025418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39906058fd9b2db1d5fc3f977025418">&#9670;&#160;</a></span>~SSLStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::async::SSLStream::~SSLStream </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_ad39906058fd9b2db1d5fc3f977025418_cgraph.svg" width="602" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a878835a88dd62aef9bf296d284834b70" name="a878835a88dd62aef9bf296d284834b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a878835a88dd62aef9bf296d284834b70">&#9670;&#160;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt; rm::async::SSLStream::accept </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行服务端 TLS 握手 </p>
+
+</div>
+</div>
+<a id="a8068d080587f4fc6fd69894f447f9dc6" name="a8068d080587f4fc6fd69894f447f9dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8068d080587f4fc6fd69894f447f9dc6">&#9670;&#160;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt; rm::async::SSLStream::connect </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>server_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行客户端 TLS 握手 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>服务器名称，用于 SNI，可为空 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>握手是否成功 </dd></dl>
+
+</div>
+</div>
+<a id="a4f6c9f507d948d1d241816617b10094b" name="a4f6c9f507d948d1d241816617b10094b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6c9f507d948d1d241816617b10094b">&#9670;&#160;</a></span>handshake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt; rm::async::SSLStream::handshake </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>server_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据上下文模式执行 TLS 握手 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">server_name</td><td>客户端模式下的 SNI，可为空 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>握手是否成功 </dd></dl>
+
+</div>
+</div>
+<a id="a06851bb9b9251380dc8c223cd2480aaa" name="a06851bb9b9251380dc8c223cd2480aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06851bb9b9251380dc8c223cd2480aaa">&#9670;&#160;</a></span>lasterr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::async::SSLStream::lasterr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取最近一次错误信息 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_a06851bb9b9251380dc8c223cd2480aaa_cgraph.svg" width="390" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad4bbaab78c7e0af1eafcefc0b4e2a556" name="ad4bbaab78c7e0af1eafcefc0b4e2a556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4bbaab78c7e0af1eafcefc0b4e2a556">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp; rm::async::SSLStream::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_ad4bbaab78c7e0af1eafcefc0b4e2a556_cgraph.svg" width="602" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab0600ed8b7cfa741768d3a7d905f4dc7" name="ab0600ed8b7cfa741768d3a7d905f4dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0600ed8b7cfa741768d3a7d905f4dc7">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp; rm::async::SSLStream::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae2cd8a2e2f7fc706934cd6d6e232b760">SSLStream</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d4/d31/classrm_1_1async_1_1SSLStream_ab0600ed8b7cfa741768d3a7d905f4dc7_cgraph.svg" width="602" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5d14fae2085ab096ab6de676e72e1db9" name="a5d14fae2085ab096ab6de676e72e1db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d14fae2085ab096ab6de676e72e1db9">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; std::string &gt; rm::async::SSLStream::read </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>max_size</em></span><span class="paramdefsep"> = </span><span class="paramdefval">65536</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步加密读取数据 </p>
+
+</div>
+</div>
+<a id="a91f8d94063565334fe65af1b96818660" name="a91f8d94063565334fe65af1b96818660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f8d94063565334fe65af1b96818660">&#9670;&#160;</a></span>read_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; size_t &gt; rm::async::SSLStream::read_to </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步加密读取数据到指定内存 </p>
+
+</div>
+</div>
+<a id="a8656efae6ecfaa47fc7d51f0829677f3" name="a8656efae6ecfaa47fc7d51f0829677f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8656efae6ecfaa47fc7d51f0829677f3">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; bool &gt; rm::async::SSLStream::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步加密写入数据 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

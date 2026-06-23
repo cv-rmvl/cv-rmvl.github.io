@@ -1,0 +1,411 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: RDT CLI 工具</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/dbc/tutorial_rdt.html">RMVL 快捷开发工具</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">RDT CLI 工具 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md421">前言 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md422">create 命令 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md423">update 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md424">doc 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md425">lib 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md426">常用更新示例 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md427">dev 命令 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md428">git 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md429">commit 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md430">squash 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md431">reword 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md432">newbr 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md433">update 子命令 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md434">remove 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md435">tool 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md436">lib 子命令 </a>
+          </li>
+        </ul>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md437">version 命令 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>RDT 命令行工具的使用教程</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2rdt_2rdt__rdt"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2026/06/06 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>下一篇教程：</b><a class="el" href="../../dc/d52/tutorial_rdt_lpss.html" title="LPSS CLI 工具">LPSS CLI 工具</a> <br  />
+</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md421"></a>
+前言</h2>
+<p>RMVL Dev Tools（简称 <span class="tt">rdt</span>）提供了 RMVL 安装、更新、开发、提交与移除等常用工作流的命令行入口，能够减少手动输入重复命令的成本。本工具的主入口为 <span class="tt">rdt</span>，可通过输入</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> help</div> </div><p>来查看具体帮助。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> <span class="comment">&lt;command&gt;</span> [args...]</div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示详细帮助信息</td></tr>
+<tr>
+<td class="paramname">create</td><td>创建一个新的 RMVL 模块</td></tr>
+<tr>
+<td class="paramname">update</td><td>更新 RMVL 或 rdt 工具</td></tr>
+<tr>
+<td class="paramname">dev</td><td>开始开发 RMVL</td></tr>
+<tr>
+<td class="paramname">git</td><td>执行常用 Git 工作流</td></tr>
+<tr>
+<td class="paramname">remove</td><td>移除 RMVL 组件</td></tr>
+<tr>
+<td class="paramname">version</td><td>显示 rdt 工具版本</td></tr>
+</table>
+</dd>
+</dl>
+<p>此工具支持的根命令有 <span class="tt">rdt</span>、<span class="tt">lpss</span> 和 <span class="tt">lviz</span>，更多信息请参考官方手册:</p>
+<ul>
+<li><a href="https://cv-rmvl.github.io/">用户手册</a></li>
+<li><a href="https://cv-rmvl.github.io/docs/2.x/">Doxygen</a></li>
+<li><a href="https://github.com/cv-rmvl/rmvl">GitHub</a></li>
+</ul>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md422"></a>
+create 命令</h2>
+<p>创建一个新的 RMVL 模块。该命令会在当前目录下生成主模块的基本目录结构和必要文件，也可以同时创建若干依赖主模块的子模块。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> create <span class="comment">&lt;module_name&gt;</span> [sub_module_1 [sub_module_2] ...]</div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">module_name</td><td>要创建的主模块名称 </td></tr>
+    <tr><td class="paramname">sub_module_&lt;n&gt;</td><td>可选的子模块名称，可输入多个</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>主模块会作为 RMVL 中的独立模块，生成的核心 CMake 命令形如</p>
+<div class="fragment"> <div class="line"><span class="keyword">rmvl_add_module</span>(</div> <div class="line">&#160;&#160;&lt;module_name&gt;</div> <div class="line">&#160;&#160;<span class="keyword">DEPENDS</span> core</div> <div class="line">)</div> </div><p>如果指定了子模块，每个子模块也会作为独立模块，并依赖主模块，核心 CMake 命令形如</p>
+<div class="fragment"> <div class="line"><span class="keyword">rmvl_add_module</span>(</div> <div class="line">&#160;&#160;&lt;sub_module&gt;</div> <div class="line">&#160;&#160;<span class="keyword">DEPENDS</span> &lt;module_name&gt;</div> <div class="line">)</div> </div><p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 创建 my_module 主模块，并包含 sub1、sub2 和 sub3 三个子模块</span></div> <div class="line"><span class="keywordflow">rdt</span> create my_module sub1 sub2 sub3</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md423"></a>
+update 命令</h2>
+<p>更新 RMVL 代码、文档、库文件或 rdt 工具。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> update <span class="comment">[help | tool | doc | code | lib | all]</span> [args...]</div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">tool</td><td>更新 rdt 工具到最新版本，并自动更新 RMVL 代码</td></tr>
+<tr>
+<td class="paramname">doc</td><td>执行 Doxygen 文档生成，并推送到 <span class="tt">cv-rmvl.github.io</span> 仓库</td></tr>
+<tr>
+<td class="paramname">code</td><td>更新 RMVL 仓库至最新的 <span class="tt">2.x</span> 分支代码</td></tr>
+<tr>
+<td class="paramname">lib</td><td>执行完整的编译安装流程以更新 RMVL 动态/静态库</td></tr>
+<tr>
+<td class="paramname">all</td><td>依次执行 <span class="tt">code</span> 和 <span class="tt">lib</span> 两个步骤，即更新代码并以 Release 模式编译安装</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd><span class="tt">rdt update code</span> 会在 RMVL 仓库中执行 <span class="tt">git stash</span>、<span class="tt">git checkout 2.x</span> 和 <span class="tt">git reset --hard origin/2.x</span>，请在执行前确认本地更改已经妥善保存。</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md424"></a>
+doc 子命令</h3>
+<p>生成 Doxygen 文档，并将生成结果提交推送到 <span class="tt">cv-rmvl.github.io</span> 仓库的指定文档目录中。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> update doc <span class="comment">&lt;folder&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folder</td><td>文档存放的文件夹名称，例如 <span class="tt">2.x</span></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 生成当前 RMVL 的 Doxygen 文档，并发布到 docs/2.x</span></div> <div class="line"><span class="keywordflow">rdt</span> update doc 2.x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md425"></a>
+lib 子命令</h3>
+<p>编译并安装 RMVL 动态/静态库。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> update lib <span class="comment">&lt;mode&gt;</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>编译模式，包括 <span class="tt">release</span> 和 <span class="tt">debug</span></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 以 Release 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib release</div> <div class="line"><span class="comment"># 以 Debug 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib debug</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md426"></a>
+常用更新示例</h3>
+<div class="fragment"> <div class="line"><span class="comment"># 仅更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update code</div> <div class="line"><span class="comment"># 更新代码后以 Release 模式编译安装</span></div> <div class="line"><span class="keywordflow">rdt</span> update all</div> <div class="line"><span class="comment"># 更新 rdt 工具，执行时会先更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update tool</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md427"></a>
+dev 命令</h2>
+<p>使用常见开发工具打开本地 RMVL 仓库。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> dev <span class="comment">[help | code | nvim | dir]</span></div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">code</td><td>在 Visual Studio Code 中打开本地 RMVL</td></tr>
+<tr>
+<td class="paramname">nvim</td><td>在 Neovim 中打开本地 RMVL</td></tr>
+<tr>
+<td class="paramname">dir</td><td>Linux 上使用 Nautilus 打开本地 RMVL</td></tr>
+</table>
+</dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 使用 VS Code 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev code</div> <div class="line"><span class="comment"># 使用 Neovim 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev nvim</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md428"></a>
+git 命令</h2>
+<p>执行 RMVL 开发中常用的 Git 工作流。该命令提供交互式界面，会引导输入提交类型、影响范围、摘要、详细说明等内容。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git <span class="comment">[help | commit | squash | reword | newbr | update]</span></div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">commit</td><td>执行 <span class="tt">git add .</span> 和 <span class="tt">git commit</span> 提交本地更改</td></tr>
+<tr>
+<td class="paramname">squash</td><td>创建临时提交并压缩至上一个提交</td></tr>
+<tr>
+<td class="paramname">reword</td><td>修改上一个提交的消息，不修改提交内容</td></tr>
+<tr>
+<td class="paramname">newbr</td><td>创建新分支并应用提交</td></tr>
+<tr>
+<td class="paramname">update</td><td>适用于 RMVL 的更新组合拳，将从 <span class="tt">upstream</span> 更新本地仓库，并推送至 <span class="tt">origin</span></td></tr>
+</table>
+</dd>
+</dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md429"></a>
+commit 子命令</h3>
+<p>提交当前仓库中的本地更改。执行后会进入交互式流程，并生成符合约定式提交风格的 commit message。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git commit</div> </div><p>该命令最终会执行</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">&lt;commit_title&gt;</span></div> </div><p>若填写了详细说明，则会额外通过第二个 <span class="tt">-m</span> 写入 commit body。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md430"></a>
+squash 子命令</h3>
+<p>将当前本地更改压缩到上一个提交中，并保留上一个提交的消息。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git squash</div> </div><p>该命令会创建临时提交，然后执行软重置和 amend，核心流程为</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">"rdt squash temporary commit"</span></div> <div class="line"><span class="keywordflow">git</span> reset <span class="comment">--soft</span> HEAD~1</div> <div class="line"><span class="keywordflow">git</span> commit <span class="comment">--amend</span> <span class="comment">--no-edit</span></div> </div><p>执行过程中可以选择是否在压缩完成后执行 <span class="tt">git push --force-with-lease</span>。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md431"></a>
+reword 子命令</h3>
+<p>修改上一个提交的消息，但不修改提交内容。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git reword</div> </div><p>该命令会重新收集提交消息，并执行</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">git</span> commit <span class="comment">--amend</span> <span class="comment">--only</span> -m <span class="comment">&lt;commit_title&gt;</span></div> </div><p>若填写了详细说明，则会额外通过第二个 <span class="tt">-m</span> 写入 commit body。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md432"></a>
+newbr 子命令</h3>
+<p>创建新分支，并将当前本地更改提交到这个新分支。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git newbr</div> </div><p>该命令会在交互式流程中要求输入新分支名称和提交消息，并可以选择是否推送到 <span class="tt">origin</span>。核心流程为</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">git</span> switch -c <span class="comment">&lt;branch_name&gt;</span></div> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">&lt;commit_title&gt;</span></div> <div class="line"><span class="keywordflow">git</span> push -u origin <span class="comment">&lt;branch_name&gt;</span></div> </div><p>如果选择不推送到远程，则不会执行最后一步。</p>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md433"></a>
+update 子命令</h3>
+<p>执行适用于 RMVL 的分支同步流程。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git update</div> </div><p>该命令将依次执行以下操作：</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">git</span> checkout 2.x</div> <div class="line"><span class="keywordflow">git</span> pull upstream 2.x</div> <div class="line"><span class="keywordflow">git</span> push origin 2.x</div> <div class="line"><span class="keywordflow">git</span> checkout master</div> <div class="line"><span class="keywordflow">git</span> reset <span class="comment">--hard</span> 2.x</div> <div class="line"><span class="keywordflow">git</span> remote prune origin</div> <div class="line"><span class="keywordflow">git</span> push origin master</div> <div class="line"><span class="keywordflow">git</span> push upstream master</div> </div><dl class="section warning"><dt>警告</dt><dd><span class="tt">rdt git update</span> 会切换分支、重置 <span class="tt">master</span> 分支并向远程仓库推送，请仅在确认本地仓库状态、远程地址和权限都正确时使用。</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md434"></a>
+remove 命令</h2>
+<p>移除 RMVL 组件或 rdt 工具。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> remove <span class="comment">[help | tool | lib]</span></div> </div><dl class="params">
+<dt>命令</dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">help</td><td>显示此帮助信息</td></tr>
+<tr>
+<td class="paramname">tool</td><td>移除 <span class="tt">rmvl-dev-tools</span> 工具</td></tr>
+<tr>
+<td class="paramname">lib</td><td>移除 RMVL 动态/静态库</td></tr>
+</table>
+</dd>
+</dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md435"></a>
+tool 子命令</h3>
+<p>移除 <span class="tt">rmvl-dev-tools</span> 工具。执行后会进入交互式流程，可选择是否同时移除本地 RMVL 仓库和 rdt 工具仓库。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> remove tool</div> </div><dl class="section warning"><dt>警告</dt><dd>该命令可能删除本地仓库目录，请根据交互提示谨慎选择。</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md436"></a>
+lib 子命令</h3>
+<p>移除已安装到系统目录中的 RMVL 库文件、头文件、CMake 配置和文档。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> remove lib</div> </div><p>该命令会移除以下路径中的 RMVL 安装内容：</p>
+<div class="fragment"> <div class="line">/usr/local/lib/librmvl_*</div> <div class="line">/usr/local/lib/cmake/RMVL</div> <div class="line">/usr/local/include/RMVL</div> <div class="line">/usr/local/share/doc/RMVL</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md437"></a>
+version 命令</h2>
+<p>显示 rdt 工具版本。</p>
+<p><b>用法</b></p>
+<div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> version <span class="comment">[log]</span></div> </div><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">log</td><td>可选参数，指定后会显示当前版本和详细更新日志，否则仅显示版本号</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>示例</b></p>
+<div class="fragment"> <div class="line"><span class="comment"># 显示当前 rdt 版本</span></div> <div class="line"><span class="keywordflow">rdt</span> version</div> <div class="line"><span class="comment"># 显示当前版本和详细更新日志</span></div> <div class="line"><span class="keywordflow">rdt</span> version log</div> </div> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>

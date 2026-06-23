@@ -1,0 +1,248 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="generator" content="Doxygen 1.13.2" />
+  <title>RMVL: 非线性方程（组）数值解与迭代法</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../tutorial-utils.js"></script>
+  <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.2.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(1); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a class="el" href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">非线性方程（组）数值解与迭代法</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md172">1. 不动点迭代</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md173">2. Newton 迭代</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md174">3. Newton 迭代的简化</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md175">4. 使用示例</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>涉及 <b>不动点迭代</b> 与 <b>牛顿迭代</b> 两种非线性方程组数值解的求法</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_xE6_xA1_x8C_xE9_x9D_xA2_2Vision_2cv-rmvl_2rmvl_2doc_2tutorials_2modules_2algorithm_2func__iteration"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2024/01/12 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d8/dd7/tutorial_modules_lsqnonlin.html">非线性最小二乘</a> ↑<br  />
+ <b>下一篇教程：</b><a class="el" href="../../d6/d31/tutorial_modules_runge_kutta.html">常微分方程（组）数值解与 Runge-Kutta 算法</a> ↓<br  />
+</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md172"></a>
+1. 不动点迭代</h2>
+<p>对于一个函数 \(y=f(x)\)，希望求其零点，即 \(f(x)=0\)，可以将其改写成等价的</p>
+<p class="formulaDsp">
+\[x=\varphi(x)\tag{1-1}\]
+</p>
+<p>因此，选定一个初值 \(x_0\)，对 \(\text{(1-1)}\) 构建迭代公式</p>
+<p class="formulaDsp">
+\[x_{k+1}=\varphi(x_k)\quad(k=0,1,\cdots)\tag{1-2}\]
+</p>
+<p>如果该迭代最终收敛于精确解，则这种方法被称为<b>不动点迭代法</b>，需要特别注意的是，选择的迭代函数 \(\varphi(x)\)不能发散，也就是需要满足一定的收敛条件，这里给出<b>局部收敛</b>的判断方法。令 \((x)=0\)的精确解为 \(x^*\)，若满足</p>
+<p class="formulaDsp">
+\[\left|\varphi&#39;(x^*)\right|&lt;1\tag{1-3}\]
+</p>
+<p>则迭代公式 \(x=\varphi(x)\) 在 \(x^*\) 处局部收敛。</p>
+<p><span style="color: green"><b>示例</b></span></p>
+<p>用不动点迭代法求解 </p><p class="formulaDsp">
+\[x^3+4x^2-10=0\]
+</p>
+<p><b>解答</b></p>
+<p>上式可以改写为 </p><p class="formulaDsp">
+\[x=\frac12\sqrt{10-x^3}\]
+</p>
+<p>，因此可以构建如下迭代方程</p>
+<p class="formulaDsp">
+\[x_{k+1}=\frac12\sqrt{10-x_k^3}\]
+</p>
+<h2><a class="anchor" id="autotoc_md173"></a>
+2. Newton 迭代</h2>
+<p>对于方程 \(f(x)=0\)，其精确解为 \(x^*\)，对于某一次迭代结果 \(x_k\)，将 \(f(x^*)\)在 \(x_k\)处展开，有</p>
+<p class="formulaDsp">
+\[0=f(x^*)=f(x_k)+f&#39;(x_k)(x^*-x_k)+\frac12f&#39;&#39;(x_k)(x^*-x_k)^2+\cdots\tag{2-1}\]
+</p>
+<p>即</p>
+<p class="formulaDsp">
+\[\begin{align}
+x^*&amp;=x_k-\frac{f(x_k)}{f&#39;(x_k)}-\frac{f&#39;&#39;(x_k)}{2f&#39;(x_k)}(x^*-x_k)^2-\cdots\\
+&amp;\approx x_k-\frac{f(x_k)}{f&#39;(x_k)}
+\end{align}\tag{2-2}\]
+</p>
+<p>因此可以建立迭代方程</p>
+<p class="formulaDsp">
+\[f(x_{k+1})=x_k-\frac{f(x_k)}{f&#39;(x_k)}\tag{2-3}\]
+</p>
+<p>上式就是 Newton 迭代的迭代公式，对于存在连续二阶导数的函数 \(f(x)\)，Newton 迭代在用于求解单根（一重零点）的时候，至少具有 2 阶收敛性。在用于求解重根（ \(m\)重零点）的时候，Newton 迭代仅具备 1 阶收敛性，需要改写为</p>
+<p class="formulaDsp">
+\[f(x_{k+1})=x_k-m\frac{f(x_k)}{f&#39;(x_k)}\tag{2-3}\]
+</p>
+<p>方可实现 2 阶收敛。</p>
+<h2><a class="anchor" id="autotoc_md174"></a>
+3. Newton 迭代的简化</h2>
+<p>对于计算机算法而言，普通的 Newton 迭代需要求导 \(f&#39;(x_k)\)的操作，这一步可使用向后差商来代替</p>
+<p class="formulaDsp">
+\[f&#39;(x_k)\approx\frac{f(x_k-x_{k-1})}{x_k-x_{k-1}}=f\left[x_k,x_{k-1}\right]\tag{3-1}\]
+</p>
+<p>此时的 Newton 迭代被称为离散 Newton 迭代，也称为弦截法，表示为如下形式，可参考 <a class="el" href="../../d0/d14/classrm_1_1NonlinearSolver.html" title="非线性方程求解器">rm::NonlinearSolver</a></p>
+<p class="formulaDsp">
+\[f(x_{k+1})=x_k-\frac{f(x_k)}{f(x_k-x_{k-1})}(x_k-x_{k-1})\tag{3-2}\]
+</p>
+<h2><a class="anchor" id="autotoc_md175"></a>
+4. 使用示例</h2>
+ <div class='newInnerHTML' title='cpp' style='display: none;'>C++</div><div class='toggleable_div label_cpp' style='display: none;'><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="../../d1/d11/rmvl_2algorithm_8hpp.html">rmvl/algorithm.hpp</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">auto</span> foo = <a class="code hl_class" href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm::NonlinearSolver</a>([](<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> x * x - 4; });</div>
+<div class="line">    printf(<span class="stringliteral">&quot;x1 = %.2f, x2 = %.2f\n&quot;</span>, foo(-5), foo(5));</div>
+<div class="line">    <span class="comment">// x1 = -2.00, x2 = 2.00</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1NonlinearSolver_html"><div class="ttname"><a href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm::NonlinearSolver</a></div><div class="ttdoc">非线性方程求解器</div><div class="ttdef"><b>定义</b> numcal.hpp:157</div></div>
+<div class="ttc" id="armvl_2algorithm_8hpp_html"><div class="ttname"><a href="../../d1/d11/rmvl_2algorithm_8hpp.html">algorithm.hpp</a></div><div class="ttdoc">数学、算法模块头文件</div></div>
+</div><!-- fragment --> </div>  <div class='newInnerHTML' title='python' style='display: none;'>Python</div><div class='toggleable_div label_python' style='display: none;'><div class="fragment"><div class="line"><span class="keyword">import</span> rm</div>
+<div class="line"> </div>
+<div class="line">foo = <a class="code hl_class" href="../../d0/d14/classrm_1_1NonlinearSolver.html">rm.NonlinearSolver</a>(<span class="keyword">lambda</span> x: x * x - 4)</div>
+<div class="line">print(<span class="stringliteral">&quot;x1 = {:.2f}, x2 = {:.2f}&quot;</span>.format(foo(-5), foo(5)))</div>
+<div class="line"><span class="comment"># x1 = -2.00, x2 = 2.00</span></div>
+</div><!-- fragment --> </div>  </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.13.2
+</small></address>
+<script type="text/javascript">
+//<![CDATA[
+addTutorialsButtons();
+//]]>
+</script>
+</body>
+</html>
