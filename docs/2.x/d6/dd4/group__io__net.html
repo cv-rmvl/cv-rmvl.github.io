@@ -194,6 +194,7 @@ $(function() {
 <tr class="memitem:gacd1f5fbb45c26fdfe6ccdf26f49fde4e" id="r_gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="memItemLeft">using </td><td class="memItemRight"><a class="el" href="#gacd1f5fbb45c26fdfe6ccdf26f49fde4e">rm::ResponseMiddleware</a> = std::function&lt;void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:gacd1f5fbb45c26fdfe6ccdf26f49fde4e"><td class="mdescLeft"> </td><td class="mdescRight">响应中间件类型  <br/></td></tr>
 <tr class="memitem:ga8158c4bbe45484f8a0083cd2ed4dc514" id="r_ga8158c4bbe45484f8a0083cd2ed4dc514"><td class="memItemLeft">using </td><td class="memItemRight"><a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">rm::SocketFd</a> = int</td></tr>
+<tr class="memdesc:ga8158c4bbe45484f8a0083cd2ed4dc514"><td class="mdescLeft"> </td><td class="mdescRight">Socket 文件描述符类型  <br/></td></tr>
 <tr class="memitem:gad6cd220dd6cc8ee4cf0e33049785877d" id="r_gad6cd220dd6cc8ee4cf0e33049785877d"><td class="memItemLeft">using </td><td class="memItemRight"><a class="el" href="#gad6cd220dd6cc8ee4cf0e33049785877d">rm::SSLContextRef</a> = std::reference_wrapper&lt;<a class="el" href="../../de/db8/classrm_1_1SSLContext.html">SSLContext</a>&gt;</td></tr>
 <tr class="memdesc:gad6cd220dd6cc8ee4cf0e33049785877d"><td class="mdescLeft"> </td><td class="mdescRight">SSL 上下文左值引用包装器  <br/></td></tr>
 </table><table class="memberdecls">
@@ -264,10 +265,13 @@ $(function() {
 <tr class="memdesc:gab422b631d1e40f644e55cae7cdc06c17"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 POST 请求  <br/></td></tr>
 <tr class="memitem:gadb6ac2766171c3158c0d7086874ed724" id="r_gadb6ac2766171c3158c0d7086874ed724"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight"><a class="el" href="#gadb6ac2766171c3158c0d7086874ed724">rm::async::requests::del</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
 <tr class="memdesc:gadb6ac2766171c3158c0d7086874ed724"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 DELETE 请求  <br/></td></tr>
+<tr class="memitem:gaa290e52e967453f47aca4f2a7ee1a2c5" id="r_gaa290e52e967453f47aca4f2a7ee1a2c5"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; </td><td class="memItemRight"><a class="el" href="#gaa290e52e967453f47aca4f2a7ee1a2c5">rm::async::requests::options</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;io_context, std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</td></tr>
+<tr class="memdesc:gaa290e52e967453f47aca4f2a7ee1a2c5"><td class="mdescLeft"> </td><td class="mdescRight">发出异步 OPTIONS 请求  <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-var-members"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
 <tr class="memitem:ga41eb5b8b262dfe2dd792a2006db325ec" id="r_ga41eb5b8b262dfe2dd792a2006db325ec"><td class="memItemLeft">constexpr <a class="el" href="#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a> </td><td class="memItemRight"><a class="el" href="#ga41eb5b8b262dfe2dd792a2006db325ec">rm::INVALID_SOCKET_FD</a> = -1</td></tr>
+<tr class="memdesc:ga41eb5b8b262dfe2dd792a2006db325ec"><td class="mdescLeft"> </td><td class="mdescRight">无效的 Socket 文件描述符  <br/></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
 <div class="textblock"><p>提供跨平台的同步异步 Socket 通信、HTTP 请求、HTTP Web 后端框架功能 </p>
@@ -297,6 +301,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 <p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<p>Socket 文件描述符类型 </p>
 </div>
 </div>
 <a id="gad6cd220dd6cc8ee4cf0e33049785877d" name="gad6cd220dd6cc8ee4cf0e33049785877d"></a>
@@ -418,9 +423,9 @@ $(function() {
 <p>TLS 工作模式 </p>
 <dl class="section note"><dt>注解</dt><dd>TLS/SSL 位于 TCP 之上、HTTP/WebSocket 等应用层协议之下。客户端与服务端在 TCP 连接建立后完成 TLS 握手，握手成功后再通过加密流传输应用层数据。 </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga1fae898fdda37d4261e984bd1741ba9aa577d7068826de925ea2aec01dbadf5e4" name="gga1fae898fdda37d4261e984bd1741ba9aa577d7068826de925ea2aec01dbadf5e4"></a>Client <div class="python_language"><b>Python: </b>rm.SSLMode.Client</div></td><td class="fielddoc"><p>客户端模式 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga1fae898fdda37d4261e984bd1741ba9aa577d7068826de925ea2aec01dbadf5e4" name="gga1fae898fdda37d4261e984bd1741ba9aa577d7068826de925ea2aec01dbadf5e4"></a>Client </td><td class="fielddoc"><p>客户端模式 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9" name="gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9"></a>Server <div class="python_language"><b>Python: </b>rm.SSLMode.Server</div></td><td class="fielddoc"><p>服务端模式 </p>
+<tr><td class="fieldname"><a id="gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9" name="gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9"></a>Server </td><td class="fielddoc"><p>服务端模式 </p>
 </td></tr>
 </table>
 </div>
@@ -446,9 +451,9 @@ $(function() {
 <p><code>#include &lt;rmvl/io/ssl.hpp&gt;</code></p>
 <p>TLS 证书验证方式 </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga791586e8d719055691df1acb8158b4fda6adf97f83acf6453d4a6a4b1070f3754" name="gga791586e8d719055691df1acb8158b4fda6adf97f83acf6453d4a6a4b1070f3754"></a>None <div class="python_language"><b>Python: </b>rm.SSLVerifyMode.None</div></td><td class="fielddoc"><p>不验证对端证书 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga791586e8d719055691df1acb8158b4fda6adf97f83acf6453d4a6a4b1070f3754" name="gga791586e8d719055691df1acb8158b4fda6adf97f83acf6453d4a6a4b1070f3754"></a>None </td><td class="fielddoc"><p>不验证对端证书 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga791586e8d719055691df1acb8158b4fda7bef95a4257e9eca0ffabd3c726311e1" name="gga791586e8d719055691df1acb8158b4fda7bef95a4257e9eca0ffabd3c726311e1"></a>Peer <div class="python_language"><b>Python: </b>rm.SSLVerifyMode.Peer</div></td><td class="fielddoc"><p>验证对端证书链 </p>
+<tr><td class="fieldname"><a id="gga791586e8d719055691df1acb8158b4fda7bef95a4257e9eca0ffabd3c726311e1" name="gga791586e8d719055691df1acb8158b4fda7bef95a4257e9eca0ffabd3c726311e1"></a>Peer </td><td class="fielddoc"><p>验证对端证书链 </p>
 </td></tr>
 </table>
 </div>
@@ -472,7 +477,7 @@ $(function() {
 <div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
 <div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
 <div class="line">app.use(<a class="code hl_function" href="#gaa40bf87091d5012a8cf00e789cb9c26d">cors</a>());</div>
-<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:589</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:603</div></div>
 <div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">【中间件】跨域资源共享 CORS，为响应添加 CORS 头部信息</div></div>
 </div><!-- fragment --> 
 </div>
@@ -671,8 +676,62 @@ $(function() {
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a> 响应报文 </dd></dl>
 </div>
 </div>
+<a id="gaa290e52e967453f47aca4f2a7ee1a2c5" name="gaa290e52e967453f47aca4f2a7ee1a2c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa290e52e967453f47aca4f2a7ee1a2c5">◆ </a></span>options() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">Task</a>&lt; <a class="el" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &gt; rm::async::requests::options </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>io_context</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>querys</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heads</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><code>#include &lt;rmvl/io/netapp.hpp&gt;</code></p>
+<p>发出异步 OPTIONS 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">io_context</td><td>异步 I/O 执行上下文 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">querys</td><td>可选的 URL 参数列表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heads</td><td>可选的请求头列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">rm::async::Task&lt;Response&gt;</a> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="80" loading="lazy" scrolling="no" src="../../d6/dd4/group__io__net_gaa290e52e967453f47aca4f2a7ee1a2c5_cgraph.svg" width="160">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
+</div>
+</div>
 <a id="gaa77db7dcafaa8b1cb5e5d68fdb771d76" name="gaa77db7dcafaa8b1cb5e5d68fdb771d76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa77db7dcafaa8b1cb5e5d68fdb771d76">◆ </a></span>options()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa77db7dcafaa8b1cb5e5d68fdb771d76">◆ </a></span>options() <span class="overload">[2/2]</span></h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1013,15 +1072,15 @@ $(function() {
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>URL 路径前缀，例如 <span class="tt">/static</span> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>静态文件根目录，例如 <span class="tt">./public</span></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>静态文件根目录，例如 <span class="tt">./public/</span></td></tr>
   </table>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><span class="comment">// 在 Web 应用程序框架中使用</span></div>
 <div class="line"><span class="keyword">auto</span> app = <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a>(io_context);</div>
-<div class="line">app.use(<a class="code hl_function" href="#gae0c3724271bc4d19e862f3030500f60d">statics</a>(<span class="stringliteral">"/static"</span>, <span class="stringliteral">"./public"</span>));</div>
+<div class="line">app.use(<a class="code hl_function" href="#gae0c3724271bc4d19e862f3030500f60d">statics</a>(<span class="stringliteral">"/static"</span>, <span class="stringliteral">"./public/"</span>));</div>
 <div class="ttc" id="agroup__io__net_html_gae0c3724271bc4d19e862f3030500f60d"><div class="ttname"><a href="#gae0c3724271bc4d19e862f3030500f60d">rm::statics</a></div><div class="ttdeci">ResponseMiddleware statics(std::string_view url, std::string_view root)</div><div class="ttdoc">【中间件】静态路由，处理对指定 URL 路径的静态文件请求</div></div>
-</div><!-- fragment --> <dl class="section note"><dt>注解</dt><dd>静态路由仅在未处理请求时有效，若有对应的路由表达成匹配，则静态路由中间件不会被调用 </dd></dl>
+</div><!-- fragment --> <dl class="section warning"><dt>警告</dt><dd>静态路由仅在未处理请求时有效，若有对应的路由表匹配成功，则静态路由中间件不会被调用 </dd></dl>
 </div>
 </div>
 <a id="doc-var-members" name="doc-var-members"></a><h2 class="groupheader" id="header-doc-var-members">变量说明</h2>
@@ -1044,6 +1103,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 <p><code>#include &lt;rmvl/io/socket.hpp&gt;</code></p>
+<p>无效的 Socket 文件描述符 </p>
 </div>
 </div>
 </div><!-- contents -->
