@@ -2,7 +2,7 @@
 
 set -eu
 
-echo -e "Welcome to use rdt/rmvl installation wizard \033[1;32mv1.0.2\033[0m"
+echo -e "Welcome to use rdt/rmvl installation wizard \033[1;32mv1.0.3\033[0m"
 
 bak_name="rmvl-dev-tools-$(date +%s)"
 
@@ -66,7 +66,13 @@ mkdir -p "$HOME/.rmvldev" && cd "$HOME/.rmvldev"
 if [ -d "rmvl-dev-tools" ]; then
   mv "rmvl-dev-tools" "$bak_name"
 fi
-git clone --quiet --depth=1 https://github.com/cv-rmvl/rmvl-dev-tools
+if ! git clone --quiet --depth=1 https://github.com/cv-rmvl/rmvl-dev-tools; then
+  echo -e "Github 下载失败，正在切换至 \033[33mGitCode\033[0m 镜像源..."
+  if [ -d "rmvl-dev-tools" ]; then
+    rm -rf "rmvl-dev-tools"
+  fi
+  git clone --quiet --depth=1 https://gitcode.com/m0_51586788/rmvl-dev-tools.git
+fi
 bash rmvl-dev-tools/setup/install.bash
 if [ -d "$HOME/.rmvldev/$bak_name" ]; then
   rm -rf "$HOME/.rmvldev/$bak_name"
