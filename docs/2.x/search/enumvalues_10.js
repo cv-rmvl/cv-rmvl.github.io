@@ -11,5 +11,6 @@ var searchData=
   ['small_8',['SMALL',['../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7',1,'rm']]],
   ['software_9',['Software',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede',1,'rm']]],
   ['software_10',['software',['../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2',1,'rm']]],
-  ['square_11',['Square',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304',1,'rm']]]
+  ['sqp_11',['SQP',['../d2/d62/group__algorithm__optimal.html#ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e',1,'rm']]],
+  ['square_12',['Square',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304',1,'rm']]]
 ];

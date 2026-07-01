@@ -296,7 +296,7 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="agroup__algorithm__optimal_html_gaab485911ef8cdc37e5ef92b839ec107c"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gaab485911ef8cdc37e5ef92b839ec107c">rm::region</a></div><div class="ttdeci">std::pair&lt; double, double &gt; region(Func1d func, double x0, double delta=1)</div><div class="ttdoc">采用进退法确定搜索区间</div></div>
 <div class="ttc" id="agroup__algorithm__optimal_html_gae8c5462fcdf30d76ea709bbc2e08d3ee"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#gae8c5462fcdf30d76ea709bbc2e08d3ee">rm::fminbnd</a></div><div class="ttdeci">std::pair&lt; double, double &gt; fminbnd(Func1d func, double x1, double x2, const OptimalOptions &amp;options={})</div><div class="ttdoc">一维函数最小值搜索</div></div>
-<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:329</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:330</div></div>
 </div><!-- fragment --><p class="startli">添加 <span class="tt">CMakeLists.txt</span></p>
 <div class="fragment"> <div class="line"><span class="keyword">cmake_minimum_required</span>(<span class="keyword">VERSION</span> 3.10)</div> <div class="line"><span class="keyword">project</span>(FminbndDemo)</div> <div class="line"><span class="keyword">find_package</span>(RMVL <span class="keyword">COMPONENTS</span> algorithm <span class="keyword">REQUIRED</span>)</div> <div class="line"><span class="keyword">add_executable</span>(demo main.cpp)</div> <div class="line"><span class="keyword">target_link_libraries</span>(demo <span class="keyword">PRIVATE</span> ${RMVL_LIBS})</div> </div><p class="startli">在项目根目录打开终端，输入以下命令以构建、运行</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">mkdir</span> build</div> <div class="line"><span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> ..</div> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">&ndash;build</span> . <span class="comment">&ndash;parallel</span> 4</div> <div class="line"><span class="keywordflow">./demo</span></div> </div></li>
@@ -331,9 +331,6 @@ $(function() {
 </a> 1.16.1
 </small></address>
 <script type="text/javascript">
-//<![CDATA[
-addTutorialsButtons();
-//]]>
 </script>
 </body>
 </html>

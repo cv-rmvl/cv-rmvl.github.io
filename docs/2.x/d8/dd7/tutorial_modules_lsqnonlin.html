@@ -402,8 +402,8 @@ $(function() {
 <div class="line">options.lsq_mode = <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a>; <span class="comment">// 使用 LM 算法</span></div>
 <div class="line">options.max_iter = 2000;            <span class="comment">// 最大迭代次数可以设置高一点，以保证收敛</span></div>
 <div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#gab85704ec7a37e31de0644b99a6286173">rm::lsqnonlin</a>(lsq_sine, {1, 0.02, 0, 1.09}, options);</div>
-<div class="ttc" id="agroup__algorithm__optimal_html_ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a></div><div class="ttdeci">@ LM</div><div class="ttdoc">Levenberg-Marquardt 法 eade13 madsen04</div><div class="ttdef"><b>定义</b> numcal.hpp:325</div></div>
-<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:329</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605badfd5b430bc4db2c2836d0227ad9ac0c4">rm::LsqMode::LM</a></div><div class="ttdeci">@ LM</div><div class="ttdoc">Levenberg-Marquardt 法 eade13 madsen04</div><div class="ttdef"><b>定义</b> numcal.hpp:326</div></div>
+<div class="ttc" id="astructrm_1_1OptimalOptions_html"><div class="ttname"><a href="../../d3/dd3/structrm_1_1OptimalOptions.html">rm::OptimalOptions</a></div><div class="ttdoc">多维函数优化选项</div><div class="ttdef"><b>定义</b> numcal.hpp:330</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">Python</b></p>
 <div class="fragment"><div class="line"><span class="comment"># 拟合正弦函数，初始值为 (1, 0.02, 0, 1.09)</span></div>
@@ -553,7 +553,7 @@ $(function() {
 <li><p class="startli"><b class="tab-title">C++</b></p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a>(lsq_sine, {1, 0.02, 0, 1.09}, <a class="code hl_enumvalue" href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a>);</div>
 <div class="ttc" id="agroup__algorithm__optimal_html_ga5a7f8fec980372cfd29fd21d37721ef1"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm::lsqnonlinRKF</a></div><div class="ttdeci">std::valarray&lt; double &gt; lsqnonlinRKF(const FuncNds &amp;func, const std::valarray&lt; double &gt; &amp;x0, RobustMode rb, const OptimalOptions &amp;options={})</div><div class="ttdoc">带 Robust 核函数的非线性最小二乘求解</div></div>
-<div class="ttc" id="agroup__algorithm__optimal_html_ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdoc">Huber 核函数 huber64</div><div class="ttdef"><b>定义</b> numcal.hpp:419</div></div>
+<div class="ttc" id="agroup__algorithm__optimal_html_ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18"><div class="ttname"><a href="../../d2/d62/group__algorithm__optimal.html#ggafda9bd41e45a035a7b6c5e1bb740de15a71b7c7b0a11fc3ad70f3874318e99d18">rm::RobustMode::Huber</a></div><div class="ttdeci">@ Huber</div><div class="ttdoc">Huber 核函数 huber64</div><div class="ttdef"><b>定义</b> numcal.hpp:421</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">Python</b></p>
 <div class="fragment"><div class="line">x = <a class="code hl_function" href="../../d2/d62/group__algorithm__optimal.html#ga5a7f8fec980372cfd29fd21d37721ef1">rm.lsqnonlinRKF</a>(lsq_sine, [1, 0.02, 0, 1.09], rm.RobustMode.Huber)</div>
@@ -569,9 +569,6 @@ $(function() {
 </a> 1.16.1
 </small></address>
 <script type="text/javascript">
-//<![CDATA[
-addTutorialsButtons();
-//]]>
 </script>
 </body>
 </html>

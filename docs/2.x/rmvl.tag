@@ -14787,6 +14787,7 @@
       <arglist></arglist>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aad9b3dceaf520ba1fa45c371c498c6baf">Exterior</enumvalue>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4">Lagrange</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e">SQP</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -17700,6 +17701,7 @@
       <arglist></arglist>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aad9b3dceaf520ba1fa45c371c498c6baf">Exterior</enumvalue>
       <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4">Lagrange</enumvalue>
+      <enumvalue file="d2/d62/group__algorithm__optimal.html" anchor="ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e">SQP</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
