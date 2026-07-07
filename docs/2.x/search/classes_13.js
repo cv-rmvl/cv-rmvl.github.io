@@ -16,5 +16,6 @@ var searchData=
   ['translation_13',['Translation',['../d4/def/structrm_1_1Translation.html',1,'rm']]],
   ['translationdecider_14',['TranslationDecider',['../de/dfc/classrm_1_1TranslationDecider.html',1,'rm']]],
   ['translationdeciderparam_15',['TranslationDeciderParam',['../d4/dbc/classrm_1_1para_1_1TranslationDeciderParam.html',1,'rm::para']]],
-  ['twist_16',['Twist',['../d6/d47/classrm_1_1msg_1_1Twist.html',1,'rm::msg']]]
+  ['trigger_16',['Trigger',['../df/dea/structrm_1_1srv_1_1Trigger.html',1,'rm::srv']]],
+  ['twist_17',['Twist',['../d6/d47/classrm_1_1msg_1_1Twist.html',1,'rm::msg']]]
 ];

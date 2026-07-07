@@ -1100,10 +1100,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>da/dd0/classrm_1_1msg_1_1CameraInfo.html</anchorfile>
-      <anchor>abaa8e24a20581c16d4aec414e9e6ec1d</anchor>
+      <anchor>a826db01e2be7b8e982577513eeb99d0a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -1279,6 +1279,53 @@
       <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
       <anchor>a66d83371ae162712b202f11ae10da3fe</anchor>
       <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::async::Client</name>
+    <filename>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</filename>
+    <templarg>typename SrvType</templarg>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Client&lt; SrvType &gt; &gt;</type>
+      <name>ptr</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>aecbe1c54c0d1bf3d9cae24c2f2bc0729</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>typename SrvType::Request</type>
+      <name>Request</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>aa19c7850e319062e4c737992654521b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>typename SrvType::Response</type>
+      <name>Response</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>a07f5ea1e3f8ce09b95962f2c5757aa94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>af070baebcea75dc550052791c63274bd</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>rm::async::Task&lt; std::optional&lt; Response &gt; &gt;</type>
+      <name>call</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>a56feb474f50c13496954f23771103393</anchor>
+      <arglist>(const Request &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2229,6 +2276,19 @@
       <anchorfile>d0/d75/classrm_1_1DgramSocket.html</anchorfile>
       <anchor>a631cc255be7c8df01d67365f182f5b5e</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::srv::Empty</name>
+    <filename>db/d77/structrm_1_1srv_1_1Empty.html</filename>
+    <class kind="class">rm::srv::Empty::Request</class>
+    <class kind="class">rm::srv::Empty::Response</class>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>srv_type</name>
+      <anchorfile>db/d77/structrm_1_1srv_1_1Empty.html</anchorfile>
+      <anchor>a50d7384954c9736e28015a00c72fc2d9</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4146,10 +4206,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Time</type>
+      <type>rm::msg::Time</type>
       <name>stamp</name>
       <anchorfile>de/de3/classrm_1_1msg_1_1Header.html</anchorfile>
-      <anchor>a057755dcee1c5235c48e233641149d4f</anchor>
+      <anchor>a8f0a4b8bd315abedb8458813176f962e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4464,10 +4524,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>d5/d2f/classrm_1_1msg_1_1Image.html</anchorfile>
-      <anchor>a170d8954f673a2b8cbec208a65b26784</anchor>
+      <anchor>aab08eca974907c4ac801108e434f2157</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4622,17 +4682,17 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>de/d43/classrm_1_1msg_1_1Imu.html</anchorfile>
-      <anchor>a5850989bb538977c9aba6d5db31cf5a1</anchor>
+      <anchor>a06996495e4f4df573bc65ec433cd0165</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Quaternion</type>
+      <type>rm::msg::Quaternion</type>
       <name>orientation</name>
       <anchorfile>de/d43/classrm_1_1msg_1_1Imu.html</anchorfile>
-      <anchor>ade8737f3737e7fb71d662bf9cf0e7403</anchor>
+      <anchor>ae762039ccb52f30026c28fe5b9513b26</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4643,10 +4703,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>angular_velocity</name>
       <anchorfile>de/d43/classrm_1_1msg_1_1Imu.html</anchorfile>
-      <anchor>a9afb2087c2561e5e548ba793521c2245</anchor>
+      <anchor>a2299fad23d10f97453799d778ca07d7f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -4657,10 +4717,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>linear_acceleration</name>
       <anchorfile>de/d43/classrm_1_1msg_1_1Imu.html</anchorfile>
-      <anchor>a9ab85550b9f58fcf596b6e385be343c1</anchor>
+      <anchor>a85b120a9ff96205e3f0501c980e8122c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -5296,10 +5356,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>de/de3/classrm_1_1msg_1_1JointState.html</anchorfile>
-      <anchor>ac2b6d9ba82bff9fa68ca94da3e9564bf</anchor>
+      <anchor>a1e89dfe05f8a84ed6c0297adacaf2382</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -5370,10 +5430,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
-      <anchor>a63ab67b6d0964ec1afc080291916692e</anchor>
+      <anchor>a6bed5b915a3ed52f37b6c521a881e603</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -5384,10 +5444,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; JointTrajectoryPoint &gt;</type>
+      <type>std::vector&lt; rm::msg::JointTrajectoryPoint &gt;</type>
       <name>points</name>
       <anchorfile>d7/db9/classrm_1_1msg_1_1JointTrajectory.html</anchorfile>
-      <anchor>a3ead07a2531ea45ce1c42e7383da493e</anchor>
+      <anchor>a7e51f68a475b270d952f5a8bd4b492aa</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -5995,10 +6055,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a6b4afc4e0003c7bcf8017820bff0d02f</anchor>
+      <anchor>aecb418d9b7ba10e11321b8331fe4f972</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6030,38 +6090,38 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Pose</type>
+      <type>rm::msg::Pose</type>
       <name>pose</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a5a171deb990b176eebd8b2244ceba3d5</anchor>
+      <anchor>a84213493e3b0540165fcbe43ebea1e34</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>scale</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a3f8e07c5e3b4cbe788c3d4220a46a760</anchor>
+      <anchor>ad547ddd943deb98a6e11d2dcc984aa6c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>ColorRGBA</type>
+      <type>rm::msg::ColorRGBA</type>
       <name>color</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a754660a8983583b8223dc4935767d24d</anchor>
+      <anchor>a664cfbc7eb361d12446781476ec292e3</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Point &gt;</type>
+      <type>std::vector&lt; rm::msg::Point &gt;</type>
       <name>points</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a2ad6c3011d2cf75d1cf1d78057de6b3c</anchor>
+      <anchor>a84c145a2ec801ac6eb5051c328d1af9f</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; ColorRGBA &gt;</type>
+      <type>std::vector&lt; rm::msg::ColorRGBA &gt;</type>
       <name>colors</name>
       <anchorfile>d0/da6/classrm_1_1msg_1_1Marker.html</anchorfile>
-      <anchor>a5be6b781da2134e9d3aece8b68ed73bf</anchor>
+      <anchor>a75d6921e1e19ac7714efe023d01b33e0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -6188,10 +6248,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Marker &gt;</type>
+      <type>std::vector&lt; rm::msg::Marker &gt;</type>
       <name>markers</name>
       <anchorfile>d2/dde/classrm_1_1msg_1_1MarkerArray.html</anchorfile>
-      <anchor>aee21d8a7b0a31737917e1f11dc30e53e</anchor>
+      <anchor>a9f9afe9d47e9121bc0aa6b46080cd83d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -6470,10 +6530,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html</anchorfile>
-      <anchor>adce014d9980f8e2628aeef7007a9abce</anchor>
+      <anchor>a5f9fffb271d580d279b006f552ff46c7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -6484,24 +6544,24 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Transform &gt;</type>
+      <type>std::vector&lt; rm::msg::Transform &gt;</type>
       <name>transforms</name>
       <anchorfile>d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html</anchorfile>
-      <anchor>a64b4458e489e50df90e6bc36914e70e3</anchor>
+      <anchor>aa5b9e658eaf6f3d29b76fb411510564d</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Twist &gt;</type>
+      <type>std::vector&lt; rm::msg::Twist &gt;</type>
       <name>twist</name>
       <anchorfile>d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html</anchorfile>
-      <anchor>a0da2f60ea4dd24cb9ff82fc089782db5</anchor>
+      <anchor>a69f60636ebb2c581914009fdd49a8e3e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Wrench &gt;</type>
+      <type>std::vector&lt; rm::msg::Wrench &gt;</type>
       <name>wrench</name>
       <anchorfile>d1/d8e/classrm_1_1msg_1_1MultiDOFJointState.html</anchorfile>
-      <anchor>aa7c506e19cffb84ee179b910f2b1f5ff</anchor>
+      <anchor>a69c4baac7080f1109954bf553b169903</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -6913,6 +6973,20 @@
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
       <anchor>a41d46271105eb611acb38d2f171207c5</anchor>
       <arglist>(std::string_view topic, SubscribeMsgCallback callback) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Service&lt; SrvType &gt;::ptr</type>
+      <name>createService</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a22c21c16351ae83c2ef9a0c8134f1961</anchor>
+      <arglist>(std::string_view service, ServiceCallback callback) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Client&lt; SrvType &gt;::ptr</type>
+      <name>createClient</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>a98198eb692ba9c4caf7e64757f683c6c</anchor>
+      <arglist>(std::string_view service) noexcept</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -8541,10 +8615,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; Point32 &gt;</type>
+      <type>std::vector&lt; rm::msg::Point32 &gt;</type>
       <name>points</name>
       <anchorfile>dc/d40/classrm_1_1msg_1_1Polygon.html</anchorfile>
-      <anchor>ad1c50bc96659ba03a601a8596e7183c9</anchor>
+      <anchor>ab77bf281ed43aba706bb509e0f4e3c51</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -8605,17 +8679,17 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Point</type>
+      <type>rm::msg::Point</type>
       <name>position</name>
       <anchorfile>d4/d23/classrm_1_1msg_1_1Pose.html</anchorfile>
-      <anchor>a54f6b6332ad1283b82f04d90c01b0b78</anchor>
+      <anchor>ab36a3325d2426258f55dae4e99581cd8</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Quaternion</type>
+      <type>rm::msg::Quaternion</type>
       <name>orientation</name>
       <anchorfile>d4/d23/classrm_1_1msg_1_1Pose.html</anchorfile>
-      <anchor>ad3029c9a23f1fc4f2c67cd5366a82912</anchor>
+      <anchor>a88cb13082a6cb543c0ee4c0d049dc096</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -9189,6 +9263,148 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::srv::Empty::Request</name>
+    <filename>de/df1/classrm_1_1srv_1_1Empty_1_1Request.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>de/df1/classrm_1_1srv_1_1Empty_1_1Request.html</anchorfile>
+      <anchor>a7000f1ae7620685061a851c9fda47e4e</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>de/df1/classrm_1_1srv_1_1Empty_1_1Request.html</anchorfile>
+      <anchor>aa7011a7f3ef2ad7173913441dcc3ec1d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Request</type>
+      <name>deserialize</name>
+      <anchorfile>de/df1/classrm_1_1srv_1_1Empty_1_1Request.html</anchorfile>
+      <anchor>ae14f0835e711c555859d147a29386293</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>de/df1/classrm_1_1srv_1_1Empty_1_1Request.html</anchorfile>
+      <anchor>a44d959ac8ce64867f2903ddf68d55ddf</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::SetBool::Request</name>
+    <filename>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</anchorfile>
+      <anchor>ab01030865d5e052541fbeea3de148e3a</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</anchorfile>
+      <anchor>a83234e9c8675b862415f122e3679ae40</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Request</type>
+      <name>deserialize</name>
+      <anchorfile>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</anchorfile>
+      <anchor>a8e8b8e2104a6768ffdda09a5bcfc12e0</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>data</name>
+      <anchorfile>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</anchorfile>
+      <anchor>a7893f4f472709b890e0d531bc395231d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html</anchorfile>
+      <anchor>a4e0d1fcd1ca05dacbfb4671445b998de</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::SetCameraInfo::Request</name>
+    <filename>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</anchorfile>
+      <anchor>a5cb54feea447c34c2c75f325149fd6c1</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</anchorfile>
+      <anchor>a8fe7646117ae4d12eae1ed7e3da8e671</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Request</type>
+      <name>deserialize</name>
+      <anchorfile>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</anchorfile>
+      <anchor>a9d494acd0ac4ed0a9e4e1a193bb35c31</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::CameraInfo</type>
+      <name>camera_info</name>
+      <anchorfile>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</anchorfile>
+      <anchor>a3f108d5d9544f8d7ddfabaa90d1d9957</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d8/dc2/classrm_1_1srv_1_1SetCameraInfo_1_1Request.html</anchorfile>
+      <anchor>abc0fbb60a041e4c4eb353321f29c37db</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::Trigger::Request</name>
+    <filename>de/dc8/classrm_1_1srv_1_1Trigger_1_1Request.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>de/dc8/classrm_1_1srv_1_1Trigger_1_1Request.html</anchorfile>
+      <anchor>a7f8d0908e42337d97b201087ea6ae0b9</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>de/dc8/classrm_1_1srv_1_1Trigger_1_1Request.html</anchorfile>
+      <anchor>a45aa42614266604991e62f00b7f40cd0</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Request</type>
+      <name>deserialize</name>
+      <anchorfile>de/dc8/classrm_1_1srv_1_1Trigger_1_1Request.html</anchorfile>
+      <anchor>a2cf03f76129b48ed7148365303bec2b3</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>de/dc8/classrm_1_1srv_1_1Trigger_1_1Request.html</anchorfile>
+      <anchor>a55ff4d93aeb7380b22f7e8ad5b339ff5</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::Response</name>
     <filename>d1/d1b/structrm_1_1Response.html</filename>
@@ -9310,6 +9526,176 @@
       <anchorfile>d1/d1b/structrm_1_1Response.html</anchorfile>
       <anchor>ad3920f3bb2240aaedf6d084e704f3e36</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::Empty::Response</name>
+    <filename>d5/d97/classrm_1_1srv_1_1Empty_1_1Response.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d5/d97/classrm_1_1srv_1_1Empty_1_1Response.html</anchorfile>
+      <anchor>abbaaab08d7399a80ea7794bb5591db83</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d5/d97/classrm_1_1srv_1_1Empty_1_1Response.html</anchorfile>
+      <anchor>a35b801c46ec4f9b0e02fd274e7c8bdfa</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Response</type>
+      <name>deserialize</name>
+      <anchorfile>d5/d97/classrm_1_1srv_1_1Empty_1_1Response.html</anchorfile>
+      <anchor>ad9d8f073535429fdf8700a8ff17372ab</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d5/d97/classrm_1_1srv_1_1Empty_1_1Response.html</anchorfile>
+      <anchor>a354e5f56d6e985bb20efed2874904324</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::SetBool::Response</name>
+    <filename>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>a7e4470b844cd2e97cf59b512226dc1cc</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>a2277fead1a402c7da75366461dfaf822</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Response</type>
+      <name>deserialize</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>aeb99c8b4ac196914be01eb0925c91674</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>success</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>aa7e1402a11431dd7e449df034433802d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>message</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>a149611abe423e61be6d12717950cb518</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html</anchorfile>
+      <anchor>a791874daaa26d4e26eecffa7bd3efd18</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::SetCameraInfo::Response</name>
+    <filename>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>a9021e37766fafdbbef69c38e9015cabe</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>a9cc1b535615ee18a6e71c9a0c96357fd</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Response</type>
+      <name>deserialize</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>a1868c5a3b0a80f60e59829753d4c0194</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>success</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>a283e7d9bc81f36cc1cc22c1ecf1e2e94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>status_message</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>ab9cb4f4e0275c7356da6c3fcbeaed85d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d9/ddb/classrm_1_1srv_1_1SetCameraInfo_1_1Response.html</anchorfile>
+      <anchor>a1d3173e82e32793030cd3c58c4925beb</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::srv::Trigger::Response</name>
+    <filename>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>aa2113ff16c547e419714e2680eca0cd1</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>afb76d297e64ddd04058e6867c01299dc</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Response</type>
+      <name>deserialize</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>a20887b12a3e1e5def634997c286987f7</anchor>
+      <arglist>(const char *str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>success</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>a722cd35d87bf0cd75e148ac904311961</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>message</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>aa330bebab98974ef62549eb593b29f36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d3/d4d/classrm_1_1srv_1_1Trigger_1_1Response.html</anchorfile>
+      <anchor>abda284cc7ea39ac50dba531e0acae451</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11343,6 +11729,79 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::lpss::async::Service</name>
+    <filename>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</filename>
+    <templarg>typename SrvType</templarg>
+    <member kind="typedef">
+      <type>std::shared_ptr&lt; Service&lt; SrvType &gt; &gt;</type>
+      <name>ptr</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>a64aef56758b73c7df01aed23e133771a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>typename SrvType::Request</type>
+      <name>Request</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>a8b7ea0ebd019672221fe3f03b4a24a69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>typename SrvType::Response</type>
+      <name>Response</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>aa965dfd63a167dbb86a40f7c4b71c60e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; Response(const Request &amp;)&gt;</type>
+      <name>Callback</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>a43332da1ca29bc3696cacefbb7ef1411</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>abc6a23f445eaac8c1dbe1a9b15ffda60</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Node</name>
+      <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
+      <anchor>a6db9d28bd448a131448276ee03de1e6d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::srv::SetBool</name>
+    <filename>d0/d08/structrm_1_1srv_1_1SetBool.html</filename>
+    <class kind="class">rm::srv::SetBool::Request</class>
+    <class kind="class">rm::srv::SetBool::Response</class>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>srv_type</name>
+      <anchorfile>d0/d08/structrm_1_1srv_1_1SetBool.html</anchorfile>
+      <anchor>ae613bc3e080053bd922b56e35e706ead</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::srv::SetCameraInfo</name>
+    <filename>de/dc3/structrm_1_1srv_1_1SetCameraInfo.html</filename>
+    <class kind="class">rm::srv::SetCameraInfo::Request</class>
+    <class kind="class">rm::srv::SetCameraInfo::Response</class>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>srv_type</name>
+      <anchorfile>de/dc3/structrm_1_1srv_1_1SetCameraInfo.html</anchorfile>
+      <anchor>ab3c32e0f74f91c74b7d8b293a4f165d0</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::SHMBase</name>
     <filename>d5/d8b/classrm_1_1SHMBase.html</filename>
     <member kind="function">
@@ -12491,10 +12950,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>std::vector&lt; TransformStamped &gt;</type>
+      <type>std::vector&lt; rm::msg::TransformStamped &gt;</type>
       <name>transforms</name>
       <anchorfile>d7/dc5/classrm_1_1msg_1_1TF.html</anchorfile>
-      <anchor>a5b4c0475c7aec6910bc0723b82de1384</anchor>
+      <anchor>a68d3d68911f93c1da1768049d1d4583e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -12974,17 +13433,17 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>translation</name>
       <anchorfile>df/d0f/classrm_1_1msg_1_1Transform.html</anchorfile>
-      <anchor>adaf96a1a5389b1f65de3acc93b4e5b42</anchor>
+      <anchor>a135b0650d0d6fbd737253b1551a69205</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Quaternion</type>
+      <type>rm::msg::Quaternion</type>
       <name>rotation</name>
       <anchorfile>df/d0f/classrm_1_1msg_1_1Transform.html</anchorfile>
-      <anchor>af4edb3ed17d57c9fb138360b84726816</anchor>
+      <anchor>a5e94aaf8b59e3f5d585bd4fbcd0f4edc</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -13027,10 +13486,10 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Header</type>
+      <type>rm::msg::Header</type>
       <name>header</name>
       <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
-      <anchor>ac0a4d84be5f571316883b40209af84d7</anchor>
+      <anchor>a73136860568516d0f21c6d4845990e96</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -13041,10 +13500,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Transform</type>
+      <type>rm::msg::Transform</type>
       <name>transform</name>
       <anchorfile>db/d5d/classrm_1_1msg_1_1TransformStamped.html</anchorfile>
-      <anchor>aac272aa4a475a3bb2b3fd739868879d0</anchor>
+      <anchor>ab4887dd09bea12282e15e133db2e8e01</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -13159,6 +13618,19 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::srv::Trigger</name>
+    <filename>df/dea/structrm_1_1srv_1_1Trigger.html</filename>
+    <class kind="class">rm::srv::Trigger::Request</class>
+    <class kind="class">rm::srv::Trigger::Response</class>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>srv_type</name>
+      <anchorfile>df/dea/structrm_1_1srv_1_1Trigger.html</anchorfile>
+      <anchor>a4bb293d5bba59f454de8abb975b96faa</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::msg::Twist</name>
     <filename>d6/d47/classrm_1_1msg_1_1Twist.html</filename>
@@ -13191,17 +13663,17 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>linear</name>
       <anchorfile>d6/d47/classrm_1_1msg_1_1Twist.html</anchorfile>
-      <anchor>abc372670795a6e83d1b6d73b50e92dcf</anchor>
+      <anchor>af3466e8a95553d4cd9fd2b5a03cd36b4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>angular</name>
       <anchorfile>d6/d47/classrm_1_1msg_1_1Twist.html</anchorfile>
-      <anchor>af4b05475dd52631119078ec6aa2d55c8</anchor>
+      <anchor>a2bfc7e0d0769bf43fc11589e3fd65904</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -14311,17 +14783,17 @@
       <arglist>(const char *const str) noexcept</arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>force</name>
       <anchorfile>de/d96/classrm_1_1msg_1_1Wrench.html</anchorfile>
-      <anchor>a5c85775a5bdeb21a074826512f005465</anchor>
+      <anchor>a96c2a45b40a4b2637fc566d2198e647c</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Vector3</type>
+      <type>rm::msg::Vector3</type>
       <name>torque</name>
       <anchorfile>de/d96/classrm_1_1msg_1_1Wrench.html</anchorfile>
-      <anchor>aef7f062ec114f88b0c575980cd5ffd8b</anchor>
+      <anchor>aa5ea0f5b325c25c1d7120cb339cfbd80</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -14434,6 +14906,7 @@
     <namespace>rm::lpss</namespace>
     <namespace>rm::cvmsg</namespace>
     <namespace>rm::msg</namespace>
+    <namespace>rm::srv</namespace>
     <namespace>rm::ua</namespace>
     <class kind="class">rm::RaHeap</class>
     <class kind="class">rm::UnionFind</class>
@@ -15878,6 +16351,8 @@
     <filename>d4/d36/namespacerm_1_1lpss_1_1async.html</filename>
     <class kind="class">rm::lpss::async::Publisher</class>
     <class kind="class">rm::lpss::async::Subscriber</class>
+    <class kind="class">rm::lpss::async::Service</class>
+    <class kind="class">rm::lpss::async::Client</class>
     <class kind="class">rm::lpss::async::Timer</class>
     <class kind="class">rm::lpss::async::Node</class>
     <class kind="class">rm::lpss::async::RobotStatePublisher</class>
@@ -16542,6 +17017,14 @@
       <anchor>gaa77db7dcafaa8b1cb5e5d68fdb771d76</anchor>
       <arglist>(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</arglist>
     </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::srv</name>
+    <filename>d8/d2b/namespacerm_1_1srv.html</filename>
+    <class kind="struct">rm::srv::SetCameraInfo</class>
+    <class kind="struct">rm::srv::Empty</class>
+    <class kind="struct">rm::srv::SetBool</class>
+    <class kind="struct">rm::srv::Trigger</class>
   </compound>
   <compound kind="namespace">
     <name>rm::str</name>
@@ -18325,6 +18808,15 @@
     <class kind="class">rm::msg::UInt8</class>
     <class kind="class">rm::msg::Marker</class>
     <class kind="class">rm::msg::MarkerArray</class>
+  </compound>
+  <compound kind="group">
+    <name>rmvlsrv</name>
+    <title>服务模块</title>
+    <filename>d2/dd0/group__rmvlsrv.html</filename>
+    <class kind="struct">rm::srv::SetCameraInfo</class>
+    <class kind="struct">rm::srv::Empty</class>
+    <class kind="struct">rm::srv::SetBool</class>
+    <class kind="struct">rm::srv::Trigger</class>
   </compound>
   <compound kind="group">
     <name>core_timer</name>
@@ -20401,6 +20893,12 @@
     <docanchor file="df/d6c/tutorial_table_of_content_rmvlpara.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tutorial_rmvlpara.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tutorial__rmvlpara</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_table_of_content_rmvlsrv</name>
+    <title>服务模块使用教程</title>
+    <filename>d6/d0f/tutorial_table_of_content_rmvlsrv.html</filename>
+    <docanchor file="d6/d0f/tutorial_table_of_content_rmvlsrv.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tutorial_rmvlsrv.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tutorial__rmvlsrv</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_rdt_lpss</name>
     <title>LPSS CLI 工具</title>
     <filename>dc/d52/tutorial_rdt_lpss.html</filename>
@@ -20426,9 +20924,10 @@
     <filename>dd/da0/tutorials.html</filename>
     <subpage>d6/d88/tutorial_table_of_content_config.html</subpage>
     <subpage>d6/d6e/tutorial_table_of_content_modules.html</subpage>
-    <subpage>d6/d3f/tutorial_table_of_content_extra.html</subpage>
     <subpage>df/d6c/tutorial_table_of_content_rmvlpara.html</subpage>
     <subpage>d2/d9b/tutorial_table_of_content_rmvlmsg.html</subpage>
+    <subpage>d6/d0f/tutorial_table_of_content_rmvlsrv.html</subpage>
+    <subpage>d6/d3f/tutorial_table_of_content_extra.html</subpage>
     <docanchor file="dd/da0/tutorials.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/tutorials.markdown">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2tutorials</docanchor>
   </compound>
   <compound kind="page">
@@ -20620,6 +21119,7 @@
     <file>node_impl.hpp</file>
     <file>node_rmtp.hpp</file>
     <file>node_rsd.hpp</file>
+    <file>node_rstp.hpp</file>
     <file>node_util.hpp</file>
   </compound>
   <compound kind="dir">
@@ -21103,6 +21603,13 @@
     <file>opcua.hpp</file>
   </compound>
   <compound kind="dir">
+    <name>rmvlsrv</name>
+    <path>rmvlsrv/</path>
+    <filename>dir_f441d7c913338ef46372bf799b5b4481.html</filename>
+    <dir>rmvlsrv/sensor</dir>
+    <dir>rmvlsrv/std</dir>
+  </compound>
+  <compound kind="dir">
     <name>rmvlmsg/sensor</name>
     <path>rmvlmsg/sensor/</path>
     <filename>dir_65f9fcf6b56f9dd5955aa49e7a812875.html</filename>
@@ -21111,6 +21618,12 @@
     <file>imu.hpp</file>
     <file>joint_state.hpp</file>
     <file>multi_dofjoint_state.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlsrv/sensor</name>
+    <path>rmvlsrv/sensor/</path>
+    <filename>dir_c999c962a42828b41b2aba535693b60b.html</filename>
+    <file>set_camera_info.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvlmsg/std</name>
@@ -21132,6 +21645,14 @@
     <file>uint32.hpp</file>
     <file>uint64.hpp</file>
     <file>uint8.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlsrv/std</name>
+    <path>rmvlsrv/std/</path>
+    <filename>dir_59c8b65d72025178b845ba36c66a3561.html</filename>
+    <file>empty.hpp</file>
+    <file>set_bool.hpp</file>
+    <file>trigger.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tools</name>

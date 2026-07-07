@@ -125,61 +125,61 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md421">前言 </a>
+        <a href="#autotoc_md427">前言 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md422">create 命令 </a>
+        <a href="#autotoc_md428">create 命令 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md423">update 命令 </a>
+        <a href="#autotoc_md429">update 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md424">doc 子命令 </a>
+            <a href="#autotoc_md430">doc 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md425">lib 子命令 </a>
+            <a href="#autotoc_md431">lib 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md426">常用更新示例 </a>
+            <a href="#autotoc_md432">常用更新示例 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md427">dev 命令 </a>
+        <a href="#autotoc_md433">dev 命令 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md428">git 命令 </a>
+        <a href="#autotoc_md434">git 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md429">commit 子命令 </a>
+            <a href="#autotoc_md435">commit 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md430">squash 子命令 </a>
+            <a href="#autotoc_md436">squash 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md431">reword 子命令 </a>
+            <a href="#autotoc_md437">reword 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md432">newbr 子命令 </a>
+            <a href="#autotoc_md438">newbr 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md433">update 子命令 </a>
+            <a href="#autotoc_md439">update 子命令 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md434">remove 命令 </a>
+        <a href="#autotoc_md440">remove 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md435">tool 子命令 </a>
+            <a href="#autotoc_md441">tool 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md436">lib 子命令 </a>
+            <a href="#autotoc_md442">lib 子命令 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md437">version 命令 </a>
+        <a href="#autotoc_md443">version 命令 </a>
       </li>
     </ul>
   </li>
@@ -193,7 +193,7 @@ $(function() {
 <p><b>下一篇教程：</b><a class="el" href="../../dc/d52/tutorial_rdt_lpss.html" title="LPSS CLI 工具">LPSS CLI 工具</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md421"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md427"></a>
 前言</h2>
 <p>RMVL Dev Tools（简称 <span class="tt">rdt</span>）提供了 RMVL 安装、更新、开发、提交与移除等常用工作流的命令行入口，能够减少手动输入重复命令的成本。本工具的主入口为 <span class="tt">rdt</span>，可通过输入</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> help</div> </div><p>来查看具体帮助。</p>
@@ -224,7 +224,7 @@ $(function() {
 <li><a href="https://cv-rmvl.github.io/docs/2.x/">Doxygen</a></li>
 <li><a href="https://github.com/cv-rmvl/rmvl">GitHub</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md422"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md428"></a>
 create 命令</h2>
 <p>创建一个新的 RMVL 模块。该命令会在当前目录下生成主模块的基本目录结构和必要文件，也可以同时创建若干依赖主模块的子模块。</p>
 <p><b>用法</b></p>
@@ -238,7 +238,7 @@ create 命令</h2>
 <p>主模块会作为 RMVL 中的独立模块，生成的核心 CMake 命令形如</p>
 <div class="fragment"> <div class="line"><span class="keyword">rmvl_add_module</span>(</div> <div class="line">&#160;&#160;&lt;module_name&gt;</div> <div class="line">&#160;&#160;<span class="keyword">DEPENDS</span> core</div> <div class="line">)</div> </div><p>如果指定了子模块，每个子模块也会作为独立模块，并依赖主模块，核心 CMake 命令形如</p>
 <div class="fragment"> <div class="line"><span class="keyword">rmvl_add_module</span>(</div> <div class="line">&#160;&#160;&lt;sub_module&gt;</div> <div class="line">&#160;&#160;<span class="keyword">DEPENDS</span> &lt;module_name&gt;</div> <div class="line">)</div> </div><p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 创建 my_module 主模块，并包含 sub1、sub2 和 sub3 三个子模块</span></div> <div class="line"><span class="keywordflow">rdt</span> create my_module sub1 sub2 sub3</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md423"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 创建 my_module 主模块，并包含 sub1、sub2 和 sub3 三个子模块</span></div> <div class="line"><span class="keywordflow">rdt</span> create my_module sub1 sub2 sub3</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md429"></a>
 update 命令</h2>
 <p>更新 RMVL 代码、文档、库文件或 rdt 工具。</p>
 <p><b>用法</b></p>
@@ -261,7 +261,7 @@ update 命令</h2>
 </dd>
 </dl>
 <dl class="section warning"><dt>警告</dt><dd><span class="tt">rdt update code</span> 会在 RMVL 仓库中执行 <span class="tt">git stash</span>、<span class="tt">git checkout 2.x</span> 和 <span class="tt">git reset --hard origin/2.x</span>，请在执行前确认本地更改已经妥善保存。</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md424"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md430"></a>
 doc 子命令</h3>
 <p>生成 Doxygen 文档，并将生成结果提交推送到 <span class="tt">cv-rmvl.github.io</span> 仓库的指定文档目录中。</p>
 <p><b>用法</b></p>
@@ -272,7 +272,7 @@ doc 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 生成当前 RMVL 的 Doxygen 文档，并发布到 docs/2.x</span></div> <div class="line"><span class="keywordflow">rdt</span> update doc 2.x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md425"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 生成当前 RMVL 的 Doxygen 文档，并发布到 docs/2.x</span></div> <div class="line"><span class="keywordflow">rdt</span> update doc 2.x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md431"></a>
 lib 子命令</h3>
 <p>编译并安装 RMVL 动态/静态库。</p>
 <p><b>用法</b></p>
@@ -283,9 +283,9 @@ lib 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 以 Release 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib release</div> <div class="line"><span class="comment"># 以 Debug 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib debug</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md426"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 以 Release 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib release</div> <div class="line"><span class="comment"># 以 Debug 模式编译并安装 RMVL</span></div> <div class="line"><span class="keywordflow">rdt</span> update lib debug</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md432"></a>
 常用更新示例</h3>
-<div class="fragment"> <div class="line"><span class="comment"># 仅更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update code</div> <div class="line"><span class="comment"># 更新代码后以 Release 模式编译安装</span></div> <div class="line"><span class="keywordflow">rdt</span> update all</div> <div class="line"><span class="comment"># 更新 rdt 工具，执行时会先更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update tool</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md427"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 仅更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update code</div> <div class="line"><span class="comment"># 更新代码后以 Release 模式编译安装</span></div> <div class="line"><span class="keywordflow">rdt</span> update all</div> <div class="line"><span class="comment"># 更新 rdt 工具，执行时会先更新 RMVL 代码</span></div> <div class="line"><span class="keywordflow">rdt</span> update tool</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md433"></a>
 dev 命令</h2>
 <p>使用常见开发工具打开本地 RMVL 仓库。</p>
 <p><b>用法</b></p>
@@ -304,7 +304,7 @@ dev 命令</h2>
 </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 使用 VS Code 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev code</div> <div class="line"><span class="comment"># 使用 Neovim 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev nvim</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md428"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 使用 VS Code 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev code</div> <div class="line"><span class="comment"># 使用 Neovim 打开 RMVL 仓库</span></div> <div class="line"><span class="keywordflow">rdt</span> dev nvim</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md434"></a>
 git 命令</h2>
 <p>执行 RMVL 开发中常用的 Git 工作流。该命令提供交互式界面，会引导输入提交类型、影响范围、摘要、详细说明等内容。</p>
 <p><b>用法</b></p>
@@ -326,37 +326,37 @@ git 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md429"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md435"></a>
 commit 子命令</h3>
 <p>提交当前仓库中的本地更改。执行后会进入交互式流程，并生成符合约定式提交风格的 commit message。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git commit</div> </div><p>该命令最终会执行</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">&lt;commit_title&gt;</span></div> </div><p>若填写了详细说明，则会额外通过第二个 <span class="tt">-m</span> 写入 commit body。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md430"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md436"></a>
 squash 子命令</h3>
 <p>将当前本地更改压缩到上一个提交中，并保留上一个提交的消息。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git squash</div> </div><p>该命令会创建临时提交，然后执行软重置和 amend，核心流程为</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">"rdt squash temporary commit"</span></div> <div class="line"><span class="keywordflow">git</span> reset <span class="comment">--soft</span> HEAD~1</div> <div class="line"><span class="keywordflow">git</span> commit <span class="comment">--amend</span> <span class="comment">--no-edit</span></div> </div><p>执行过程中可以选择是否在压缩完成后执行 <span class="tt">git push --force-with-lease</span>。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md431"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md437"></a>
 reword 子命令</h3>
 <p>修改上一个提交的消息，但不修改提交内容。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git reword</div> </div><p>该命令会重新收集提交消息，并执行</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">git</span> commit <span class="comment">--amend</span> <span class="comment">--only</span> -m <span class="comment">&lt;commit_title&gt;</span></div> </div><p>若填写了详细说明，则会额外通过第二个 <span class="tt">-m</span> 写入 commit body。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md432"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md438"></a>
 newbr 子命令</h3>
 <p>创建新分支，并将当前本地更改提交到这个新分支。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git newbr</div> </div><p>该命令会在交互式流程中要求输入新分支名称和提交消息，并可以选择是否推送到 <span class="tt">origin</span>。核心流程为</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">git</span> switch -c <span class="comment">&lt;branch_name&gt;</span></div> <div class="line"><span class="keywordflow">git</span> add .</div> <div class="line"><span class="keywordflow">git</span> commit -m <span class="comment">&lt;commit_title&gt;</span></div> <div class="line"><span class="keywordflow">git</span> push -u origin <span class="comment">&lt;branch_name&gt;</span></div> </div><p>如果选择不推送到远程，则不会执行最后一步。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md433"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md439"></a>
 update 子命令</h3>
 <p>执行适用于 RMVL 的分支同步流程。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> git update</div> </div><p>该命令将依次执行以下操作：</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">git</span> checkout 2.x</div> <div class="line"><span class="keywordflow">git</span> pull upstream 2.x</div> <div class="line"><span class="keywordflow">git</span> push origin 2.x</div> <div class="line"><span class="keywordflow">git</span> checkout master</div> <div class="line"><span class="keywordflow">git</span> reset <span class="comment">--hard</span> 2.x</div> <div class="line"><span class="keywordflow">git</span> remote prune origin</div> <div class="line"><span class="keywordflow">git</span> push origin master</div> <div class="line"><span class="keywordflow">git</span> push upstream master</div> </div><dl class="section warning"><dt>警告</dt><dd><span class="tt">rdt git update</span> 会切换分支、重置 <span class="tt">master</span> 分支并向远程仓库推送，请仅在确认本地仓库状态、远程地址和权限都正确时使用。</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md434"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md440"></a>
 remove 命令</h2>
 <p>移除 RMVL 组件或 rdt 工具。</p>
 <p><b>用法</b></p>
@@ -372,17 +372,17 @@ remove 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md435"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md441"></a>
 tool 子命令</h3>
 <p>移除 <span class="tt">rmvl-dev-tools</span> 工具。执行后会进入交互式流程，可选择是否同时移除本地 RMVL 仓库和 rdt 工具仓库。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> remove tool</div> </div><dl class="section warning"><dt>警告</dt><dd>该命令可能删除本地仓库目录，请根据交互提示谨慎选择。</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md436"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md442"></a>
 lib 子命令</h3>
 <p>移除已安装到系统目录中的 RMVL 库文件、头文件、CMake 配置和文档。</p>
 <p><b>用法</b></p>
 <div class="fragment"> <div class="line"><span class="keywordflow">rdt</span> remove lib</div> </div><p>该命令会移除以下路径中的 RMVL 安装内容：</p>
-<div class="fragment"> <div class="line">/usr/local/lib/librmvl_*</div> <div class="line">/usr/local/lib/cmake/RMVL</div> <div class="line">/usr/local/include/RMVL</div> <div class="line">/usr/local/share/doc/RMVL</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md437"></a>
+<div class="fragment"> <div class="line">/usr/local/lib/librmvl_*</div> <div class="line">/usr/local/lib/cmake/RMVL</div> <div class="line">/usr/local/include/RMVL</div> <div class="line">/usr/local/share/doc/RMVL</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md443"></a>
 version 命令</h2>
 <p>显示 rdt 工具版本。</p>
 <p><b>用法</b></p>

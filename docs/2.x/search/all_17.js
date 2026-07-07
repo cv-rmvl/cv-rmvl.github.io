@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md267',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md370',1,'2.2 数据 I/O']]],
+  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md267',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md372',1,'2.2 数据 I/O']]],
   ['o_20的协程设施_1',['基于异步 I/O 的协程设施',['../d5/d7a/tutorial_modules_coro.html',1,'tutorial_table_of_content_modules']]],
   ['oargs_2',['oargs',['../d5/d0c/classrm_1_1ua_1_1Method.html#aded74c95e8ca7976038af622a0bc9537',1,'rm::ua::Method']]],
   ['object_3',['Object',['../d4/d1c/classrm_1_1ua_1_1Object.html',1,'rm::ua::Object'],['../d4/d1c/classrm_1_1ua_1_1Object.html#a8821623588fa40bcdafc2c3d8d664c53',1,'rm::ua::Object::Object()']]],
@@ -17,7 +17,7 @@ var searchData=
   ['onnxnet_14',['OnnxNet',['../dc/d1c/classrm_1_1OnnxNet.html',1,'rm::OnnxNet'],['../dc/d1c/classrm_1_1OnnxNet.html#a6dbd13d7a6b4a26a4296da92809dea81',1,'rm::OnnxNet::OnnxNet()']]],
   ['onnxruntime_15',['1.4 onnxruntime',['../d1/db4/tutorial_install.html#install_onnxruntime',1,'']]],
   ['onnxruntime_20多态部署库_16',['onnxruntime 多态部署库',['../dc/d73/group__ml__ort.html',1,'']]],
-  ['opc_20ua_17',['OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'工业自动化通信协议 —— OPC UA'],['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'4.2 从 XML 配置 OPC UA'],['../db/dba/tutorial_modules_opcua.html#autotoc_md361',1,'4.2.2 可视化配置 OPC UA']]],
+  ['opc_20ua_17',['OPC UA',['../db/dba/tutorial_modules_opcua.html',1,'工业自动化通信协议 —— OPC UA'],['../db/dba/tutorial_modules_opcua.html#opcua_nodeset_compiler',1,'4.2 从 XML 配置 OPC UA'],['../db/dba/tutorial_modules_opcua.html#autotoc_md363',1,'4.2.2 可视化配置 OPC UA']]],
   ['opc_20ua_20是什么_18',['1.1 OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_what',1,'']]],
   ['opc_20ua_20模块_19',['OPC UA 模块',['../d4/de5/tutorial_py_opcua.html',1,'适用于 Python 的 OPC UA 模块'],['../d3/da8/group__opcua.html',1,'OPC UA 模块']]],
   ['opcua_20的参数模块_20',['opcua 的参数模块',['../da/dd3/group__para__opcua.html',1,'']]],
@@ -61,7 +61,7 @@ var searchData=
   ['options_58',['Options',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fcadae8ace18bdcbcc6ae5aece263e14fe8',1,'rm']]],
   ['options_59',['options',['../d0/de4/classrm_1_1Router.html#a68ad10c0792898452f817e770769a420',1,'rm::Router::options()'],['../d5/d05/classrm_1_1async_1_1Webapp.html#aa598c64b76f23d9ef6a311309e7ead41',1,'rm::async::Webapp::options()'],['../d6/dd4/group__io__net.html#gaa77db7dcafaa8b1cb5e5d68fdb771d76',1,'rm::requests::options()'],['../d6/dd4/group__io__net.html#gaa290e52e967453f47aca4f2a7ee1a2c5',1,'rm::async::requests::options()']]],
   ['optlightcontroller_60',['OPTLightController',['../db/d24/classrm_1_1OPTLightController.html',1,'rm::OPTLightController'],['../db/d24/classrm_1_1OPTLightController.html#a0f4df8b14f7464fa662b1ec79ca6cf40',1,'rm::OPTLightController::OPTLightController()']]],
-  ['orientation_61',['orientation',['../d4/d23/classrm_1_1msg_1_1Pose.html#ad3029c9a23f1fc4f2c67cd5366a82912',1,'rm::msg::Pose::orientation'],['../de/d43/classrm_1_1msg_1_1Imu.html#ade8737f3737e7fb71d662bf9cf0e7403',1,'rm::msg::Imu::orientation']]],
+  ['orientation_61',['orientation',['../d4/d23/classrm_1_1msg_1_1Pose.html#a88cb13082a6cb543c0ee4c0d049dc096',1,'rm::msg::Pose::orientation'],['../de/d43/classrm_1_1msg_1_1Imu.html#ae762039ccb52f30026c28fe5b9513b26',1,'rm::msg::Imu::orientation']]],
   ['orientation_5fcovariance_62',['orientation_covariance',['../de/d43/classrm_1_1msg_1_1Imu.html#aa165725317a942303a85996e0c6605cd',1,'rm::msg::Imu']]],
   ['ortprovider_63',['OrtProvider',['../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84',1,'rm']]],
   ['other_64',['Other',['../d6/dd4/group__io__net.html#ggadb3e4d4f0720bfcbbaa3fd4cf076e69aa6311ae17c1ee52b36e68aaf4ad066387',1,'rm']]],

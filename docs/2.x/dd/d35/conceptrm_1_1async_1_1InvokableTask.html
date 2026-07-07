@@ -129,7 +129,7 @@ $(function() {
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Callable, <span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="../../dd/d35/conceptrm_1_1async_1_1InvokableTask.html">InvokableTask</a> = <span class="keyword">requires</span>(Callable &amp;&amp;c, Args &amp;&amp;...args) {</div>
 <div class="line">    <span class="keyword">typename</span> std::invoke_result_t&lt;Callable, Args...&gt;::promise_type;</div>
-<div class="line">    {std::invoke(std::forward&lt;Callable&gt;(c), std::forward&lt;Args&gt;(args)...)};</div>
+<div class="line">    { std::invoke(std::forward&lt;Callable&gt;(c), std::forward&lt;Args&gt;(args)...) };</div>
 <div class="line">}</div>
 <div class="ttc" id="aconceptrm_1_1async_1_1InvokableTask_html"><div class="ttname"><a href="../../dd/d35/conceptrm_1_1async_1_1InvokableTask.html">rm::async::InvokableTask</a></div><div class="ttdoc">可调用的协程任务概念</div><div class="ttdef"><b>定义</b> async.hpp:181</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>

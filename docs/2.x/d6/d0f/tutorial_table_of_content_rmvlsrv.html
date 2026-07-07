@@ -1,0 +1,192 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: 服务模块使用教程</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">服务模块使用教程 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md406">1 概述 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md407">2 内置服务类型 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md408">3 自动代码生成 </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tutorial__rmvlsrv"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html" title="消息模块使用教程">消息模块使用教程</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d6/d3f/tutorial_table_of_content_extra.html" title="扩展模块使用教程">扩展模块使用教程</a> <br  />
+</p>
+<hr  />
+<p>此模块主要为 <a class="el" href="../../d7/de3/group__lpss.html" title="轻量发布订阅服务及其相关组件">轻量发布订阅服务及其相关组件</a> 提供支持，详细使用说明请参考 <a class="el" href="../../d3/d8e/tutorial_modules_lpss.html" title="轻量发布订阅服务 —— LPSS">轻量发布订阅服务 —— LPSS</a> 。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md406"></a>
+1 概述</h2>
+<p>RMVL 服务描述文件 <span class="tt">*.srv</span> 用于定义一次服务调用的请求和响应类型，类似于 ROS 服务定义文件。请求和响应使用单独一行 <span class="tt">---</span> 分隔，两部分均遵循与 <a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html" title="消息模块使用教程">RMVL 消息描述文件</a> 相同的字段语法和二进制序列化规则，也都允许为空。通过服务描述文件，用户可以为 LPSS Service/Client 定义结构化的调用接口。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md407"></a>
+2 内置服务类型</h2>
+<p>以下是 RMVL 提供的内置服务类型，分为 <span class="tt">std</span> 和 <span class="tt">sensor</span> 两个主要分组。用户可以直接在 LPSS Service/Client 中使用这些类型。</p>
+<div class="tabbed"></div><div class="tabbed"><ul>
+<li><p class="startli"><b class="tab-title">std 服务分组</b></p>
+<p class="startli"><span class="tt">std</span> 服务包含无参数调用、布尔值设置以及通用触发等基础服务。</p>
+<div class="full_width_table"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">类型</th><th class="markdownTableHeadCenter">*.srv 定义</th><th class="markdownTableHeadCenter">描述</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>Empty</code></td><td class="markdownTableBodyLeft"><div class="fragment"> <div class="line"><span class="comment">---</span></div> </div></td><td class="markdownTableBodyLeft">请求和响应均为空的服务</td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>SetBool</code></td><td class="markdownTableBodyLeft"><div class="fragment"> <div class="line"><span class="keywordtype">bool</span> data</div> <div class="line"><span class="comment">---</span></div> <div class="line"><span class="keywordtype">bool</span> success</div> <div class="line"><span class="keywordtype">string</span> message</div> </div></td><td class="markdownTableBodyLeft">设置布尔状态，并返回执行结果和提示信息</td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>Trigger</code></td><td class="markdownTableBodyLeft"><div class="fragment"> <div class="line"><span class="comment">---</span></div> <div class="line"><span class="keywordtype">bool</span> success</div> <div class="line"><span class="keywordtype">string</span> message</div> </div></td><td class="markdownTableBodyLeft">触发无参数操作，并返回执行结果和提示信息</td></tr>
+</table>
+</div></li>
+<li><p class="startli"><b class="tab-title">sensor 服务分组</b></p>
+<p class="startli"><span class="tt">sensor</span> 服务用于配置传感器相关的数据和参数。</p>
+<div class="full_width_table"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">类型</th><th class="markdownTableHeadCenter">*.srv 定义</th><th class="markdownTableHeadCenter">描述</th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>SetCameraInfo</code></td><td class="markdownTableBodyLeft"><div class="fragment"> <div class="line"><span class="keyword">sensor/CameraInfo</span> camera_info</div> <div class="line"><span class="comment">---</span></div> <div class="line"><span class="keywordtype">bool</span> success</div> <div class="line"><span class="keywordtype">string</span> status_message</div> </div></td><td class="markdownTableBodyLeft">保存相机标定信息，并返回执行结果和状态信息</td></tr>
+</table>
+</div></li>
+</ul>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md408"></a>
+3 自动代码生成</h2>
+<p>RMVL 提供了 <span class="tt">rmvl_generate_srv</span> 的 CMake 函数，用于生成服务类型的 C++ 代码文件。用户只需在模块的 CMakeLists.txt 文件中调用该函数，并提供服务类型的名称和路径，RMVL 将自动生成相应的 C++ 代码文件。</p>
+<div class="fragment"> <div class="line"><span class="comment"># 根据 srv/Test.srv 文件生成服务类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(Test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/dir/Test.srv 文件生成服务类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/dir/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(dir/Test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/Test2.srv 文件生成服务类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(</div> <div class="line">&#160;&#160;Test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/dir/Test2.srv 文件生成服务类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/dir/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(</div> <div class="line">&#160;&#160;dir/Test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> </div><p>生成的服务类型位于 <span class="tt"><a class="el" href="../../d8/d2b/namespacerm_1_1srv.html">rm::srv</a></span> 命名空间。以 <span class="tt">Test</span> 为例，<span class="tt">Test::Request</span> 和 <span class="tt">Test::Response</span> 分别表示请求和响应类型，二者均提供与消息类型相同的 <span class="tt">serialize()</span>、<span class="tt">deserialize()</span> 和 <span class="tt">compact_size()</span> 接口。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

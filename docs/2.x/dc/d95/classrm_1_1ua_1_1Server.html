@@ -661,9 +661,10 @@ Protected 属性</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>节点 ID</dd></dl>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a341221d344021237c671ed7f2438eb9b">node</a> = srv.find(<span class="stringliteral">&quot;person/name&quot;</span>, src_nd);</div>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#a341221d344021237c671ed7f2438eb9b">node</a> = <a class="code hl_namespace" href="../../d8/d2b/namespacerm_1_1srv.html">srv</a>.find(<span class="stringliteral">&quot;person/name&quot;</span>, src_nd);</div>
 <div class="line"><span class="comment">// 等效于 auto node = src_nd | srv.node(&quot;person&quot;) | srv.node(&quot;name&quot;);</span></div>
 <div class="ttc" id="aclassrm_1_1ua_1_1Server_html_a341221d344021237c671ed7f2438eb9b"><div class="ttname"><a href="#a341221d344021237c671ed7f2438eb9b">rm::ua::Server::node</a></div><div class="ttdeci">FindNodeInServer node(std::string_view browse_name, uint16_t ns=1U) const</div><div class="ttdoc">获取路径搜索必要信息</div><div class="ttdef"><b>定义</b> server.hpp:200</div></div>
+<div class="ttc" id="anamespacerm_1_1srv_html"><div class="ttname"><a href="../../d8/d2b/namespacerm_1_1srv.html">rm::srv</a></div><div class="ttdef"><b>定义</b> set_camera_info.hpp:17</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -695,7 +696,7 @@ Protected 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>获取路径搜索必要信息 </p>
-<p>需要配合管道运算符 <span class="tt">|</span> 完成路径搜索 </p><div class="fragment"><div class="line"><span class="keyword">auto</span> dst_mode = src_node | srv.node(<span class="stringliteral">&quot;person&quot;</span>) | srv.node(<span class="stringliteral">&quot;name&quot;</span>);</div>
+<p>需要配合管道运算符 <span class="tt">|</span> 完成路径搜索 </p><div class="fragment"><div class="line"><span class="keyword">auto</span> dst_mode = src_node | <a class="code hl_namespace" href="../../d8/d2b/namespacerm_1_1srv.html">srv</a>.node(<span class="stringliteral">&quot;person&quot;</span>) | <a class="code hl_namespace" href="../../d8/d2b/namespacerm_1_1srv.html">srv</a>.node(<span class="stringliteral">&quot;name&quot;</span>);</div>
 </div><!-- fragment --><dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">browse_name</td><td>浏览名 </td></tr>

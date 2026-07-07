@@ -125,19 +125,19 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md338">1 HTTP 数据结构 </a>
+        <a href="#autotoc_md340">1 HTTP 数据结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md339">2 HTTP 请求工具 </a>
+        <a href="#autotoc_md341">2 HTTP 请求工具 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md340">3 Web 后端框架 </a>
+        <a href="#autotoc_md342">3 Web 后端框架 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md341">3.1 HTTP 服务器 </a>
+            <a href="#autotoc_md343">3.1 HTTP 服务器 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md342">3.2 HTTPS 服务器 </a>
+            <a href="#autotoc_md344">3.2 HTTPS 服务器 </a>
           </li>
         </ul>
       </li>
@@ -159,7 +159,7 @@ $(function() {
 <li>后端应用： <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
 <li>HTTP/HTTPS 服务器： <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 及 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md338"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
 1 HTTP 数据结构</h2>
 <p>相关类： <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 及 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></p>
 <p>两个类均提供了</p>
@@ -168,7 +168,7 @@ $(function() {
 <li><span class="tt">parse</span> 静态成员函数，用于从 HTTP 格式的字符串解析出请求/响应结构，在接收到 Socket 原始数据后可调用此方法进行解析</li>
 </ul>
 <p><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a> 还提供了多种简化生成响应的成员函数，如 <span class="tt">send</span>、<span class="tt">json</span>、<span class="tt">redirect</span> 等。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md339"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md341"></a>
 2 HTTP 请求工具</h2>
 <p>相关函数：</p>
 <ul>
@@ -190,10 +190,10 @@ $(function() {
 <div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:282</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <span class="tt">requests</span> 替换为 <span class="tt">async::requests</span>，并在协程中使用 <span class="tt">co_await</span> 关键字等待结果，这里不再赘述。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md342"></a>
 3 Web 后端框架</h2>
 <p>RMVL 提供了后端应用框架 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> ，以及负责传输层监听的 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 和 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> 。设计参考 Express JS，具体来说，Webapp 负责路由与中间件，服务器对象负责 HTTP 或 HTTPS 监听，同一个 Webapp 可以交给不同类型的服务器。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md341"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md343"></a>
 3.1 HTTP 服务器</h3>
 <p><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 和 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 提供了 GET、POST、DELETE 等相关方法用于定义路由，并且 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 可以使用 <span class="tt">use</span> 方法挂载中间件或挂载由 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 定义的子路由。</p>
 <div class="fragment"><div class="line"><span class="comment">// demo.cpp</span></div>
@@ -261,11 +261,11 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1Router_html_a7f5a0ad5e54c0bb269f6a0ab07376825"><div class="ttname"><a href="../../d0/de4/classrm_1_1Router.html#a7f5a0ad5e54c0bb269f6a0ab07376825">rm::Router::get</a></div><div class="ttdeci">void get(std::string_view uri, RouteHandler callback)</div><div class="ttdoc">Get 请求路由</div><div class="ttdef"><b>定义</b> netapp.hpp:461</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1HttpServer_html"><div class="ttname"><a href="../../d3/d83/classrm_1_1async_1_1HttpServer.html">rm::async::HttpServer</a></div><div class="ttdoc">HTTP 服务器</div><div class="ttdef"><b>定义</b> netapp.hpp:741</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1HttpServer_html_aad975395de146a6dfe606d10bae01580"><div class="ttname"><a href="../../d3/d83/classrm_1_1async_1_1HttpServer.html#aad975395de146a6dfe606d10bae01580">rm::async::HttpServer::spin</a></div><div class="ttdeci">Task spin()</div><div class="ttdoc">启动监听任务循环</div></div>
-<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:187</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:205</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1Webapp_html"><div class="ttname"><a href="../../d5/d05/classrm_1_1async_1_1Webapp.html">rm::async::Webapp</a></div><div class="ttdoc">Web 应用程序框架</div><div class="ttdef"><b>定义</b> netapp.hpp:603</div></div>
 <div class="ttc" id="agroup__io__net_html_gaa40bf87091d5012a8cf00e789cb9c26d"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#gaa40bf87091d5012a8cf00e789cb9c26d">rm::cors</a></div><div class="ttdeci">ResponseMiddleware cors()</div><div class="ttdoc">【中间件】跨域资源共享 CORS，为响应添加 CORS 头部信息</div></div>
-<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:282</div></div>
+<div class="ttc" id="agroup__io_html_ga36c93b90e1f1281cdcb39600fe8cad7d"><div class="ttname"><a href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a></div><div class="ttdeci">void co_spawn(IOContext &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">在指定的执行上下文中生成并调度一个协程任务</div><div class="ttdef"><b>定义</b> async.hpp:305</div></div>
 <div class="ttc" id="astructrm_1_1Request_html"><div class="ttname"><a href="../../d6/d7c/structrm_1_1Request.html">rm::Request</a></div><div class="ttdoc">HTTP 请求结构</div><div class="ttdef"><b>定义</b> netapp.hpp:75</div></div>
 <div class="ttc" id="astructrm_1_1Request_html_a81149100be8e185c592024c4de5a620c"><div class="ttname"><a href="../../d6/d7c/structrm_1_1Request.html#a81149100be8e185c592024c4de5a620c">rm::Request::params</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; params</div><div class="ttdoc">路径参数</div><div class="ttdef"><b>定义</b> netapp.hpp:94</div></div>
 <div class="ttc" id="astructrm_1_1Response_html"><div class="ttname"><a href="../../d1/d1b/structrm_1_1Response.html">rm::Response</a></div><div class="ttdoc">HTTP 响应结构</div><div class="ttdef"><b>定义</b> netapp.hpp:109</div></div>
@@ -278,7 +278,7 @@ $(function() {
 <div class="fragment"> <div class="line"><span class="keywordflow">./demo</span> 8080</div> </div><p>即可创建 Web 后端服务，并且监听 8080 端口，可以使用 <span class="tt">curl</span> 工具或浏览器访问 <span class="tt"><a href="http://localhost:8080/">http://localhost:8080/</a></span> 来测试服务器。</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-s</span> <span class="stringliteral">"http://localhost:8080"</span></div> </div><p>会得到如下输出：</p>
 <div class="fragment"> <div class="line"><span class="comment">&lt;</span><span class="keywordtype">html</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">h1</span><span class="comment">&gt;</span>Hello, World!<span class="comment">&lt;</span><span class="keywordtype">/h1</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/html</span><span class="comment">&gt;</span></div> </div><dl class="section note"><dt>注解</dt><dd><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 虽然也提供了 <span class="tt">listen</span> 方法，但该方法仅用于快速测试，实际生产环境推荐使用 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 或 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> 进行监听。</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md342"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md344"></a>
 3.2 HTTPS 服务器</h3>
 <p>HTTPS 与 HTTP 使用相同的 Webapp，只需要将 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 替换为 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> ，并提供服务端的 <a class="el" href="../../de/db8/classrm_1_1SSLContext.html" title="TLS 上下文">rm::SSLContext</a> 即可，示例代码如下：</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>

@@ -286,9 +286,10 @@ template&lt;typename Callable, typename... Args&gt; </div>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd><ul>
-<li>异步 I/O 执行上下文 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a800127ea9e55b4b14e36bab1aad565a8" title="生成 Task&lt;&gt; 协程任务，并添加到调度器">IOContext::spawn</a> </li>
+<li>异步 I/O 执行上下文 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a800127ea9e55b4b14e36bab1aad565a8" title="生成 Task&lt;&gt; 协程任务，并添加到调度器">IOContext::spawn</a></li>
 </ul>
 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>可调用对象和参数会复制或移动到调度任务中，需要传递引用时请使用 <span class="tt">std::ref</span> </dd></dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">

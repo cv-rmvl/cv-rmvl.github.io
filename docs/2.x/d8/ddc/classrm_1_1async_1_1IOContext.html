@@ -323,7 +323,8 @@ template&lt;typename Callable, typename... Args&gt; </div>
 </dl>
 <dl class="section note"><dt>注解</dt><dd><ul>
 <li><span class="tt">fn</span> 必须是一个返回 <span class="tt"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;Tp&gt;</span> 的协程函数</li>
-<li>带捕获列表的 lambda 也可以作为 <span class="tt">fn</span>，但极易引起悬垂引用的未定义行为 </li>
+<li>可调用对象和参数会复制或移动到调度任务中，需要传递引用时请使用 <span class="tt">std::ref</span></li>
+<li>捕获引用的 lambda 仍需保证被引用对象存活到任务结束 </li>
 </ul>
 </dd></dl>
 <div class="dynheader">

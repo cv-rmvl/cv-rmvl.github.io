@@ -10,6 +10,6 @@ var searchData=
   ['基本用法_7',['基本用法',['../d2/d81/tutorial_run_in.html#autotoc_md148',1,'基本用法'],['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md224',1,'1 基本用法']]],
   ['基础共享内存设施_8',['3.1 基础共享内存设施',['../d4/d00/tutorial_modules_ipc.html#autotoc_md280',1,'']]],
   ['基础数学库_9',['基础数学库',['../d7/da1/group__algorithm__math.html',1,'']]],
-  ['基础通信设施_10',['基础通信设施',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md382',1,'']]],
-  ['基础_11',['1 Socket 基础',['../d2/d5d/tutorial_modules_socket.html#autotoc_md374',1,'']]]
+  ['基础通信设施_10',['基础通信设施',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md384',1,'']]],
+  ['基础_11',['1 Socket 基础',['../d2/d5d/tutorial_modules_socket.html#autotoc_md376',1,'']]]
 ];

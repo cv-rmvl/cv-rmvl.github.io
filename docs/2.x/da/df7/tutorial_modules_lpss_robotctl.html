@@ -123,35 +123,35 @@ $(function() {
 <div class="toc"><h3>目录</h3>
 <ul>
   <li class="level1">
-    <a href="#autotoc_md307">1 概述 </a>
+    <a href="#autotoc_md309">1 概述 </a>
   </li>
   <li class="level1">
-    <a href="#autotoc_md308">2 快速开始 </a>
+    <a href="#autotoc_md310">2 快速开始 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md309">2.1 创建控制器 </a>
+        <a href="#autotoc_md311">2.1 创建控制器 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md310">2.2 提交轨迹 </a>
+        <a href="#autotoc_md312">2.2 提交轨迹 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md311">2.3 实时采样控制指令 </a>
+        <a href="#autotoc_md313">2.3 实时采样控制指令 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md312">2.4 重置控制器 </a>
+        <a href="#autotoc_md314">2.4 重置控制器 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md313">3 状态发布（可选） </a>
+    <a href="#autotoc_md315">3 状态发布（可选） </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md314">3.1 发布机器人状态用于可视化 </a>
+        <a href="#autotoc_md316">3.1 发布机器人状态用于可视化 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md315">4 工程部署建议 </a>
+    <a href="#autotoc_md317">4 工程部署建议 </a>
   </li>
 </ul>
 </div>
@@ -165,12 +165,12 @@ $(function() {
 </p>
 <hr  />
 <p>相关模块： <a class="el" href="../../d2/d7d/group__lpss__robot.html" title="机器人功能扩展">机器人功能扩展</a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md307"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
 1 概述</h1>
 <p><span class="tt"><a class="el" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html" title="机器人控制模块">rm::lpss::RobotController</a></span> 负责轨迹的提交、校验和采样，将规划好的轨迹转化为实时的关节控制指令。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md310"></a>
 2 快速开始</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md311"></a>
 2.1 创建控制器</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/robot.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a class="code hl_class" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">lpss::RobotController</a> controller({<span class="stringliteral">&quot;joint1&quot;</span>, <span class="stringliteral">&quot;joint2&quot;</span>, <span class="stringliteral">&quot;joint3&quot;</span>});</div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1RobotController_html"><div class="ttname"><a href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">rm::lpss::RobotController</a></div><div class="ttdoc">机器人控制模块</div><div class="ttdef"><b>定义</b> robot.hpp:215</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md310"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md312"></a>
 2.2 提交轨迹</h2>
 <div class="fragment"><div class="line"><span class="comment">// 获取规划的轨迹</span></div>
 <div class="line"><a class="code hl_class" href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">msg::JointTrajectory</a> traj = planner.plan(target);</div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1msg_1_1JointTrajectory_html"><div class="ttname"><a href="../../d7/db9/classrm_1_1msg_1_1JointTrajectory.html">rm::msg::JointTrajectory</a></div><div class="ttdoc">JointTrajectory 消息类型：motion/JointTrajectory</div><div class="ttdef"><b>定义</b> joint_trajectory.hpp:33</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md311"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md313"></a>
 2.3 实时采样控制指令</h2>
 <p>在控制循环中按实时时钟采样轨迹，下文的 <span class="tt">sendCommand</span> 函数代表将控制指令发送到电机驱动器的接口，需要根据实际硬件接口进行实现：</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -215,7 +215,7 @@ $(function() {
 <div class="line">    <a class="code hl_class" href="../../de/dcb/classrm_1_1lpss_1_1RobotController.html">lpss::RobotController</a> _controller{{<span class="stringliteral">&quot;joint1&quot;</span>, <span class="stringliteral">&quot;joint2&quot;</span>, <span class="stringliteral">&quot;joint3&quot;</span>}};</div>
 <div class="line">    msg::JointState _feedback;</div>
 <div class="line">};</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:422</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:506</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1JointState_html"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1JointState.html">rm::msg::JointState</a></div><div class="ttdoc">JointState 消息类型：sensor/JointState</div><div class="ttdef"><b>定义</b> joint_state.hpp:32</div></div>
 <div class="ttc" id="anamespacerm_1_1async_html"><div class="ttname"><a href="../../dd/d22/namespacerm_1_1async.html">rm::async</a></div><div class="ttdef"><b>定义</b> async.hpp:51</div></div>
 <div class="ttc" id="anamespacerm_1_1lpss_html"><div class="ttname"><a href="../../d0/d65/namespacerm_1_1lpss.html">rm::lpss</a></div><div class="ttdoc">轻量发布订阅服务框架命名空间，包含节点、发布者、订阅者等相关定义</div><div class="ttdef"><b>定义</b> base.hpp:20</div></div>
@@ -235,12 +235,12 @@ $(function() {
 <div class="line">}</div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md312"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md314"></a>
 2.4 重置控制器</h2>
 <div class="fragment"><div class="line">controller.reset();  <span class="comment">// 清空缓存，准备新轨迹</span></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md313"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md315"></a>
 3 状态发布（可选）</h1>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md314"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md316"></a>
 3.1 发布机器人状态用于可视化</h2>
 <div class="tabbed"></div><div class="tabbed"><ul>
 <li><p class="startli"><b class="tab-title">异步模式（C++20）</b></p>
@@ -294,7 +294,7 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1lpss_1_1RobotStatePublisher_html"><div class="ttname"><a href="../../db/d90/classrm_1_1lpss_1_1RobotStatePublisher.html">rm::lpss::RobotStatePublisher</a></div><div class="ttdoc">机器人状态发布者，周期性发布 TF 和 URDF 消息</div><div class="ttdef"><b>定义</b> robot.hpp:264</div></div>
 </div><!-- fragment --></li>
 </ul>
-</div><div class="tabbed"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md315"></a>
+</div><div class="tabbed"></div><h1 class="doxsection"><a class="anchor" id="autotoc_md317"></a>
 4 工程部署建议</h1>
 <p>与 <span class="tt">ros2_control</span> 不同，<span class="tt">RobotController</span> 不一定需要部署在硬件近端的实时系统中。根据实际应用场景，可以将 <span class="tt">RobotController</span> 部署在控制端，采样后通过 LPSS 发布订阅机制与硬件执行层设备进行通信，传输实际的关节状态和控制指令，也可以将 <span class="tt">RobotController</span> 部署在执行端，采样后直接通过本地接口控制电机驱动器。 </p>
 </div></div><!-- contents -->
