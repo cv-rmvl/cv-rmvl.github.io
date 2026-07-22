@@ -1,0 +1,22 @@
+import{A as e,K as t,P as n,c as r,d as i,h as a,m as o}from"./vendor~app~SearchBox~404.html~03~02~01~ext_idl~ext_cmake~README~win~linux~README~joinus~faq~nq2v9z1q-DmIgdF7g.js";import{t as s}from"./app-oImYERpd.js";var c=JSON.parse(`{"path":"/quickstart/","title":"快速开始 | 快速入门","lang":"zh-CN","frontmatter":{"title":"快速开始","description":"要使用 RMVL 进行开发，您需要安装能够编译 C++ 代码的编译器，如有需要，您还可以安装 Python 3.8 或以上版本的 Python 解释器 此外 RMVL 使用 CMake 构建，如果有源码编译需求的用户请确保安装了 CMake 3.16 或以上版本 提示 不了解 CMake 的用户可以参考 官方文档 现代 CMake 教程 对于 Wind...","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"快速开始\\",\\"image\\":[\\"\\"],\\"dateModified\\":\\"2025-10-05T15:53:27.000Z\\",\\"author\\":[]}"],["meta",{"property":"og:url","content":"https://cv-rmvl.github.io/quickstart/"}],["meta",{"property":"og:site_name","content":"RMVL 用户手册"}],["meta",{"property":"og:title","content":"快速开始"}],["meta",{"property":"og:description","content":"要使用 RMVL 进行开发，您需要安装能够编译 C++ 代码的编译器，如有需要，您还可以安装 Python 3.8 或以上版本的 Python 解释器 此外 RMVL 使用 CMake 构建，如果有源码编译需求的用户请确保安装了 CMake 3.16 或以上版本 提示 不了解 CMake 的用户可以参考 官方文档 现代 CMake 教程 对于 Wind..."}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2025-10-05T15:53:27.000Z"}],["meta",{"property":"article:modified_time","content":"2025-10-05T15:53:27.000Z"}]]},"readingTime":{"minutes":1.26,"words":377},"git":{"createdTime":1743256186000,"updatedTime":1759679607000,"contributors":[{"name":"zhaoxi","username":"","email":"535394140@qq.com","commits":4,"avatar":"https://gravatar.com/avatar/6d7a5af9a0b65d2e9de45d8737997644e55a55004140b744d0b129a0f1fe4fb6?d=retro"}]},"autoDesc":true,"filePathRelative":"quickstart/README.md","headers":[],"bulletin":false}`),l={name:`README.md`},u={class:`hint-container warning`};function d(s,c,l,d,f,p){let m=n(`VPLink`),h=n(`CodeEditor`);return e(),i(`div`,null,[c[11]||=r(`p`,null,`要使用 RMVL 进行开发，您需要安装能够编译 C++ 代码的编译器，如有需要，您还可以安装 Python 3.8 或以上版本的 Python 解释器`,-1),c[12]||=r(`p`,null,`此外 RMVL 使用 CMake 构建，如果有源码编译需求的用户请确保安装了 CMake 3.16 或以上版本`,-1),c[13]||=r(`div`,{class:`hint-container tip`},[r(`p`,{class:`hint-container-title`},`提示`),r(`p`,null,`不了解 CMake 的用户可以参考`),r(`ul`,null,[r(`li`,null,[r(`a`,{href:`https://cmake.org/documentation/`,target:`_blank`,rel:`noopener noreferrer`},`官方文档`)]),r(`li`,null,[r(`a`,{href:`https://www.cccolt.top/tutorial/cmake/`,target:`_blank`,rel:`noopener noreferrer`},`现代 CMake 教程`)])])],-1),c[14]||=r(`p`,null,`对于 Windows 平台，CMake 不是必需的，但在其他平台则需要使用 CMake 作为项目的构建系统，具体安装内容可参考`,-1),r(`ul`,null,[r(`li`,null,[a(m,{href:`win.md`},{default:t(()=>[...c[0]||=[o(`Windows 配置教程`,-1)]]),_:1})]),r(`li`,null,[a(m,{href:`linux.md`},{default:t(()=>[...c[1]||=[o(`Linux 配置教程`,-1)]]),_:1})])]),c[15]||=r(`h2`,{id:`在线体验-rmvl`,tabindex:`-1`},[r(`a`,{class:`header-anchor`,href:`#在线体验-rmvl`},[r(`span`,null,`在线体验 RMVL`)])],-1),c[16]||=r(`p`,null,`下面提供了两个简单的 RMVL 示例，您可以在这里编辑并运行 C++ 代码来体验 RMVL 的功能：`,-1),c[17]||=r(`ul`,null,[r(`li`,null,`示例 1：使用二阶二级中点公式 Runge-Kutta 方法求解常微分方程`),r(`li`,null,`示例 2：显示 RMVL 版本信息`)],-1),a(h,{addr:`https://occ.cccolt.top/api`,examples:[{name:`示例 1`,code:`#include <rmvl/algorithm.hpp>
+
+int main() {
+    rm::Ode dot_x1 = [](double t, const std::valarray<double> &x) {
+        return 2 - x[0] + t;
+    };
+    // 构建中点公式
+    rm::RungeKutta2 rk({dot_x1});
+    // 设置初值
+    rk.init(0, {1});
+    // 迭代求解
+    auto res = rk.solve(0.01, 100);
+    // 输出结果
+    printf("t = 1, f(t) = %.6f\\n", res.back()[0]);
+}`},{name:`示例 2`,code:`#include <iostream>
+
+#include <rmvl/core.hpp>
+
+int main() {
+    // 版本信息
+    std::cout << rm::getBuildInformation() << "\\n";
+}`}]}),r(`div`,u,[c[8]||=r(`p`,{class:`hint-container-title`},`注意`,-1),c[9]||=r(`p`,null,`目前仅允许使用`,-1),r(`ul`,null,[r(`li`,null,[c[3]||=r(`code`,null,`rmvl_core`,-1),c[4]||=o(`，文档点击`,-1),a(m,{href:`/docs/2.x/d0/de1/group__core.html`},{default:t(()=>[...c[2]||=[o(`此处`,-1)]]),_:1})]),r(`li`,null,[c[6]||=r(`code`,null,`rmvl_algorithm`,-1),c[7]||=o(`，文档点击`,-1),a(m,{href:`/docs/2.x/d5/d6c/group__algorithm.html`},{default:t(()=>[...c[5]||=[o(`此处`,-1)]]),_:1})])]),c[10]||=r(`p`,null,`模块的 API`,-1)])])}var f=s(l,[[`render`,d]]);export{c as _pageData,f as default};
