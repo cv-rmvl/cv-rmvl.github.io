@@ -125,19 +125,19 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md340">1 HTTP 数据结构 </a>
+        <a href="#autotoc_md343">1 HTTP 数据结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md341">2 HTTP 请求工具 </a>
+        <a href="#autotoc_md344">2 HTTP 请求工具 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md342">3 Web 后端框架 </a>
+        <a href="#autotoc_md345">3 Web 后端框架 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md343">3.1 HTTP 服务器 </a>
+            <a href="#autotoc_md346">3.1 HTTP 服务器 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md344">3.2 HTTPS 服务器 </a>
+            <a href="#autotoc_md347">3.2 HTTPS 服务器 </a>
           </li>
         </ul>
       </li>
@@ -159,7 +159,7 @@ $(function() {
 <li>后端应用： <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
 <li>HTTP/HTTPS 服务器： <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 及 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md340"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md343"></a>
 1 HTTP 数据结构</h2>
 <p>相关类： <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 及 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></p>
 <p>两个类均提供了</p>
@@ -168,7 +168,7 @@ $(function() {
 <li><span class="tt">parse</span> 静态成员函数，用于从 HTTP 格式的字符串解析出请求/响应结构，在接收到 Socket 原始数据后可调用此方法进行解析</li>
 </ul>
 <p><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a> 还提供了多种简化生成响应的成员函数，如 <span class="tt">send</span>、<span class="tt">json</span>、<span class="tt">redirect</span> 等。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md341"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md344"></a>
 2 HTTP 请求工具</h2>
 <p>相关函数：</p>
 <ul>
@@ -190,10 +190,10 @@ $(function() {
 <div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:282</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <span class="tt">requests</span> 替换为 <span class="tt">async::requests</span>，并在协程中使用 <span class="tt">co_await</span> 关键字等待结果，这里不再赘述。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md342"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md345"></a>
 3 Web 后端框架</h2>
 <p>RMVL 提供了后端应用框架 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> ，以及负责传输层监听的 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 和 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> 。设计参考 Express JS，具体来说，Webapp 负责路由与中间件，服务器对象负责 HTTP 或 HTTPS 监听，同一个 Webapp 可以交给不同类型的服务器。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md343"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md346"></a>
 3.1 HTTP 服务器</h3>
 <p><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 和 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 提供了 GET、POST、DELETE 等相关方法用于定义路由，并且 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 可以使用 <span class="tt">use</span> 方法挂载中间件或挂载由 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 定义的子路由。</p>
 <div class="fragment"><div class="line"><span class="comment">// demo.cpp</span></div>
@@ -278,7 +278,66 @@ $(function() {
 <div class="fragment"> <div class="line"><span class="keywordflow">./demo</span> 8080</div> </div><p>即可创建 Web 后端服务，并且监听 8080 端口，可以使用 <span class="tt">curl</span> 工具或浏览器访问 <span class="tt"><a href="http://localhost:8080/">http://localhost:8080/</a></span> 来测试服务器。</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-s</span> <span class="stringliteral">"http://localhost:8080"</span></div> </div><p>会得到如下输出：</p>
 <div class="fragment"> <div class="line"><span class="comment">&lt;</span><span class="keywordtype">html</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">h1</span><span class="comment">&gt;</span>Hello, World!<span class="comment">&lt;</span><span class="keywordtype">/h1</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/body</span><span class="comment">&gt;</span><span class="comment">&lt;</span><span class="keywordtype">/html</span><span class="comment">&gt;</span></div> </div><dl class="section note"><dt>注解</dt><dd><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 虽然也提供了 <span class="tt">listen</span> 方法，但该方法仅用于快速测试，实际生产环境推荐使用 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 或 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> 进行监听。</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md344"></a>
+<h4>WebSocket 支持</h4>
+<p><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 支持通过 <span class="tt">ws</span> 方法注册 WebSocket 路由。WebSocket 路由的回调函数是一个协程函数，在 HTTP Upgrade 握手成功后被调用，回调中可以通过 <a class="el" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html" title="WebSocket 连接对象接口">rm::async::WebSocket</a> 的 <span class="tt">recv</span> 和 <span class="tt">send</span> 方法接收、发送文本消息。</p>
+<p>下面的例子创建了一个简单的 Echo WebSocket 服务，客户端向 <span class="tt">/ws/echo</span> 发送文本消息后，服务端会原样返回。</p>
+<div class="fragment"><div class="line"><span class="comment">// ws_demo.cpp</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/io/netapp.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line">    <span class="keywordflow">if</span> (argc &lt; 2) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Usage: %s &lt;port&gt;\n&quot;</span>, argv[0]);</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    uint16_t port = <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(std::atoi(argv[1]));</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
+<div class="line">    <a class="code hl_class" href="../../d5/d05/classrm_1_1async_1_1Webapp.html">async::Webapp</a> app(io_context);</div>
+<div class="line">    <a class="code hl_class" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html">async::HttpServer</a> server(app);</div>
+<div class="line"> </div>
+<div class="line">    app.get(<span class="stringliteral">&quot;/&quot;</span>, [](<span class="keyword">const</span> <a class="code hl_struct" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;, <a class="code hl_struct" href="../../d1/d1b/structrm_1_1Response.html">Response</a> &amp;res) {</div>
+<div class="line">        res.<a class="code hl_function" href="../../d1/d1b/structrm_1_1Response.html#af7639045f9daa366a543da149f3a3da2">send</a>(<span class="stringliteral">&quot;WebSocket echo server is running.&quot;</span>);</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    app.ws(<span class="stringliteral">&quot;/ws/echo&quot;</span>, [](<a class="code hl_class" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">async::WebSocket</a> &amp;ws, <span class="keyword">const</span> <a class="code hl_struct" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;) -&gt; <a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> {</div>
+<div class="line">        <span class="keywordflow">while</span> (ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a6a6e68bf7d1edb60d1a4f51b0cd6a517">is_open</a>()) {</div>
+<div class="line">            std::string <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a> = <span class="keyword">co_await</span> ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a8ff7cafe1c4cdce5338ff4cc33cce729">recv</a>();</div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.empty())</div>
+<div class="line">                <span class="keywordflow">break</span>;</div>
+<div class="line">            <span class="keyword">co_await</span> ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a7c6c11da4509b1160f7f0b691dd3cad7">send</a>(<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">        }</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    server.listen(port, [&amp;]() {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;WebSocket server is running on port %d\n&quot;</span>, port);</div>
+<div class="line">    });</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="../../d2/da3/group__io.html#ga36c93b90e1f1281cdcb39600fe8cad7d">co_spawn</a>(io_context, &amp;<a class="code hl_function" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html#aad975395de146a6dfe606d10bae01580">async::HttpServer::spin</a>, &amp;server);</div>
+<div class="line">    io_context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:148</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">rm::async::WebSocket</a></div><div class="ttdoc">WebSocket 连接对象接口</div><div class="ttdef"><b>定义</b> netapp.hpp:376</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a6a6e68bf7d1edb60d1a4f51b0cd6a517"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a6a6e68bf7d1edb60d1a4f51b0cd6a517">rm::async::WebSocket::is_open</a></div><div class="ttdeci">bool is_open() const noexcept</div><div class="ttdoc">获取连接是否活跃</div><div class="ttdef"><b>定义</b> netapp.hpp:392</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a7c6c11da4509b1160f7f0b691dd3cad7"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a7c6c11da4509b1160f7f0b691dd3cad7">rm::async::WebSocket::send</a></div><div class="ttdeci">Task&lt; bool &gt; send(std::string_view message)</div><div class="ttdoc">异步发送文本消息</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a8ff7cafe1c4cdce5338ff4cc33cce729"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a8ff7cafe1c4cdce5338ff4cc33cce729">rm::async::WebSocket::recv</a></div><div class="ttdeci">Task&lt; std::string &gt; recv()</div><div class="ttdoc">异步接收消息，这是一个挂起点，直到收到客户端消息或连接关闭</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:253</div></div>
+</div><!-- fragment --><p>编译方式与前面的 HTTP 服务示例相同。运行后，可以使用 <span class="tt">wscat</span> 等 WebSocket 客户端进行测试：</p>
+<div class="fragment"> <div class="line"><span class="keywordflow">./ws_demo</span> 8080</div> <div class="line"><span class="keywordflow">wscat</span> <span class="comment">-c</span> <span class="stringliteral">"ws://127.0.0.1:8080/ws/echo"</span></div> </div><p>在客户端输入任意文本并回车，即可看到服务端返回相同的文本内容。</p>
+<p>WebSocket 路由同样支持路径参数，参数会写入 <span class="tt">Request::params</span>，例如：</p>
+<div class="fragment"><div class="line">app.ws(<span class="stringliteral">&quot;/ws/:room&quot;</span>, [](<a class="code hl_class" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html">async::WebSocket</a> &amp;ws, <span class="keyword">const</span> <a class="code hl_struct" href="../../d6/d7c/structrm_1_1Request.html">Request</a> &amp;req) -&gt; <a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">async::Task&lt;&gt;</a> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> room = req.<a class="code hl_variable" href="../../d6/d7c/structrm_1_1Request.html#a81149100be8e185c592024c4de5a620c">params</a>.at(<span class="stringliteral">&quot;room&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">while</span> (ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a6a6e68bf7d1edb60d1a4f51b0cd6a517">is_open</a>()) {</div>
+<div class="line">        std::string <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a> = <span class="keyword">co_await</span> ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a8ff7cafe1c4cdce5338ff4cc33cce729">recv</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>.empty())</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keyword">co_await</span> ws.<a class="code hl_function" href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a7c6c11da4509b1160f7f0b691dd3cad7">send</a>(<span class="stringliteral">&quot;[&quot;</span> + room + <span class="stringliteral">&quot;] &quot;</span> + <a class="code hl_namespace" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>);</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="section note"><dt>注解</dt><dd>当前 WebSocket 接口面向文本消息，<span class="tt">recv</span> 在连接关闭或收到关闭帧时返回空字符串；若业务需要发送空字符串，请在应用层自行约定消息格式。</dd></dl>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md347"></a>
 3.2 HTTPS 服务器</h3>
 <p>HTTPS 与 HTTP 使用相同的 Webapp，只需要将 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 替换为 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> ，并提供服务端的 <a class="el" href="../../de/db8/classrm_1_1SSLContext.html" title="TLS 上下文">rm::SSLContext</a> 即可，示例代码如下：</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>
@@ -309,7 +368,8 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1async_1_1HttpsServer_html_a12499e2fdcd8e71abddaf82a53f89192"><div class="ttname"><a href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html#a12499e2fdcd8e71abddaf82a53f89192">rm::async::HttpsServer::spin</a></div><div class="ttdeci">Task spin()</div><div class="ttdoc">启动监听任务循环</div></div>
 </div><!-- fragment --><p>SSLContext 必须比 HttpsServer 和所有活动 TLS 连接存活得更久。证书自动续期后，需要重新加载 SSLContext 或重启/重载服务进程，才能让新连接使用更新后的证书。 使用命令行直接编译 HTTPS 程序时，还需要链接 OpenSSL 的 ssl 和 crypto 库；使用 CMake 链接 rmvl_io 目标时会自动传递该依赖。</p>
 <p>测试自签名证书时可以使用：</p>
-<div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-k</span> <span class="stringliteral">"https://127.0.0.1:8443/"</span></div> </div> </div></div><!-- contents -->
+<div class="fragment"> <div class="line"><span class="keywordflow">curl</span> <span class="comment">-k</span> <span class="stringliteral">"https://127.0.0.1:8443/"</span></div> </div><p>对于 <span class="tt">wss</span>，即 TLS 加密的 WebSocket，若使用 HTTPS 服务器，WebSocket 路由的注册方式不变，只需要将服务端换成 rm::async::HttpsServer，客户端使用 <span class="tt">wss://</span> 地址连接即可。 </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->
 <!-- start footer part -->

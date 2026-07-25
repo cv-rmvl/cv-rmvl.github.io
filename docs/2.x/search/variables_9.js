@@ -8,5 +8,7 @@ var searchData=
   ['interval_5fangle_5',['INTERVAL_ANGLE',['../d3/dde/classrm_1_1para_1_1RuneGroupParam.html#ad78a94a22e5d7a89ff502a94434c7692',1,'rm::para::RuneGroupParam::INTERVAL_ANGLE'],['../d9/dbe/classrm_1_1para_1_1SpiRunePredictorParam.html#a5f708c90da781b2e324ca6f9043fd2f6',1,'rm::para::SpiRunePredictorParam::INTERVAL_ANGLE']]],
   ['invalid_5ffd_6',['INVALID_FD',['../d2/da3/group__io.html#ga172f3464b44cc7b57c11d297944c19ed',1,'rm']]],
   ['invalid_5fsocket_5ffd_7',['INVALID_SOCKET_FD',['../d6/dd4/group__io__net.html#ga41eb5b8b262dfe2dd792a2006db325ec',1,'rm']]],
-  ['io_5fparam_8',['io_param',['../de/dd9/group__para__io.html#gafb992bcbe13efba54e204eb726b15895',1,'rm::para']]]
+  ['io_5fparam_8',['io_param',['../de/dd9/group__para__io.html#gafb992bcbe13efba54e204eb726b15895',1,'rm::para']]],
+  ['is_5fmsg_5fv_9',['is_msg_v',['../d0/d65/namespacerm_1_1lpss.html#a19f5cbaeffe1a7734330b022e4b62515',1,'rm::lpss']]],
+  ['is_5fsrv_5fv_10',['is_srv_v',['../d0/d65/namespacerm_1_1lpss.html#a95f35578455457f48ba9bec427be6227',1,'rm::lpss']]]
 ];

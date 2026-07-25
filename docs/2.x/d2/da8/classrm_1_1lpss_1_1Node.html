@@ -142,10 +142,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aca6efc26b3a60e7fa84b89118fe643e7" id="r_aca6efc26b3a60e7fa84b89118fe643e7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca6efc26b3a60e7fa84b89118fe643e7">~Node</a> () noexcept</td></tr>
 <tr class="memitem:a8de1ef9537de5b914ba854f5eec46f28" id="r_a8de1ef9537de5b914ba854f5eec46f28"><td class="memItemLeft">Guid&#160;</td><td class="memItemRight"><a class="el" href="#a8de1ef9537de5b914ba854f5eec46f28">guid</a> () const noexcept</td></tr>
 <tr class="memdesc:a8de1ef9537de5b914ba854f5eec46f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取节点唯一标识符  <br /></td></tr>
-<tr class="memitem:a93c7802b1b73791aff10414c7aa97d5b" id="r_a93c7802b1b73791aff10414c7aa97d5b"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
-<tr class="memitem:a93c7802b1b73791aff10414c7aa97d5b template"><td class="memItemLeft"><a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a93c7802b1b73791aff10414c7aa97d5b">createPublisher</a> (std::string_view topic) noexcept</td></tr>
-<tr class="memdesc:a93c7802b1b73791aff10414c7aa97d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
-<tr class="memitem:a8bf16f9ee141dce717956c595df2414a" id="r_a8bf16f9ee141dce717956c595df2414a"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ad4d30f8b0a7326622f7f71ef6ac77201" id="r_ad4d30f8b0a7326622f7f71ef6ac77201"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ad4d30f8b0a7326622f7f71ef6ac77201 template"><td class="memItemLeft"><a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad4d30f8b0a7326622f7f71ef6ac77201">createPublisher</a> (std::string_view topic) noexcept</td></tr>
+<tr class="memdesc:ad4d30f8b0a7326622f7f71ef6ac77201"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
+<tr class="memitem:a8bf16f9ee141dce717956c595df2414a" id="r_a8bf16f9ee141dce717956c595df2414a"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt; &amp;&amp; std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a8bf16f9ee141dce717956c595df2414a template"><td class="memItemLeft"><a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8bf16f9ee141dce717956c595df2414a">createSubscriber</a> (std::string_view topic, SubscribeMsgCallback &amp;&amp;callback) noexcept</td></tr>
 <tr class="memdesc:a8bf16f9ee141dce717956c595df2414a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建订阅者  <br /></td></tr>
 <tr class="memitem:a6c9c108ad9df3664254ae9557806be00" id="r_a6c9c108ad9df3664254ae9557806be00"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
@@ -253,13 +253,13 @@ Protected 属性</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="a93c7802b1b73791aff10414c7aa97d5b" name="a93c7802b1b73791aff10414c7aa97d5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93c7802b1b73791aff10414c7aa97d5b">&#9670;&#160;</a></span>createPublisher()</h2>
+<a id="ad4d30f8b0a7326622f7f71ef6ac77201" name="ad4d30f8b0a7326622f7f71ef6ac77201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d30f8b0a7326622f7f71ef6ac77201">&#9670;&#160;</a></span>createPublisher()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MsgType&gt; </div>
+template&lt;typename MsgType, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -301,7 +301,7 @@ template&lt;typename MsgType&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </div>
+template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt; &amp;&amp; std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

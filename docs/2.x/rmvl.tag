@@ -1314,11 +1314,18 @@
       <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
+      <type>rm::async::Task&lt; bool &gt;</type>
+      <name>wait</name>
+      <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
+      <anchor>aff01640911b14b8bbc964bae1a3902c1</anchor>
+      <arglist>(std::chrono::duration&lt; Rep, Period &gt; timeout)</arglist>
+    </member>
+    <member kind="function">
       <type>rm::async::Task&lt; std::optional&lt; Response &gt; &gt;</type>
       <name>call</name>
       <anchorfile>d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html</anchorfile>
-      <anchor>a56feb474f50c13496954f23771103393</anchor>
-      <arglist>(const Request &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout)</arglist>
+      <anchor>a085673b146c3a3ca5165e6ad6444aa3a</anchor>
+      <arglist>(const Request &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout=std::chrono::seconds(30))</arglist>
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
@@ -5291,6 +5298,28 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::lpss::is_msg</name>
+    <filename>df/dc0/structrm_1_1lpss_1_1is__msg.html</filename>
+    <templarg>typename Tp</templarg>
+    <templarg>typename</templarg>
+  </compound>
+  <compound kind="struct">
+    <name>rm::lpss::is_msg&lt; Tp, std::void_t&lt; decltype(Tp::msg_type)&gt; &gt;</name>
+    <filename>dc/dd2/structrm_1_1lpss_1_1is__msg_3_01Tp_00_01std_1_1void__t_3_01decltype_07Tp_1_1msg__type_08_4_01_4.html</filename>
+    <templarg>typename Tp</templarg>
+  </compound>
+  <compound kind="struct">
+    <name>rm::lpss::is_srv</name>
+    <filename>df/d00/structrm_1_1lpss_1_1is__srv.html</filename>
+    <templarg>typename Tp</templarg>
+    <templarg>typename</templarg>
+  </compound>
+  <compound kind="struct">
+    <name>rm::lpss::is_srv&lt; Tp, std::enable_if_t&lt; is_msg_v&lt; typename Tp::Request &gt; &amp;&amp;is_msg_v&lt; typename Tp::Response &gt; &gt; &gt;</name>
+    <filename>df/d21/structrm_1_1lpss_1_1is__srv_3_01Tp_00_01std_1_1enable__if__t_3_01is__msg__v_3_01typename_01Tp_1_58f1a8c11bb32e424ab395314a09fd0b.html</filename>
+    <templarg>typename Tp</templarg>
+  </compound>
   <compound kind="class">
     <name>rm::IteratedExtendedKalmanFilter</name>
     <filename>d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html</filename>
@@ -6964,7 +6993,7 @@
       <type>Publisher&lt; MsgType &gt;::ptr</type>
       <name>createPublisher</name>
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
-      <anchor>afc9ef574725d49c5888d16dd12b5d032</anchor>
+      <anchor>a607aa1bc1eed74f339820cc177596693</anchor>
       <arglist>(std::string_view topic) noexcept</arglist>
     </member>
     <member kind="function">
@@ -6985,7 +7014,7 @@
       <type>Client&lt; SrvType &gt;::ptr</type>
       <name>createClient</name>
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
-      <anchor>a98198eb692ba9c4caf7e64757f683c6c</anchor>
+      <anchor>ad0f719e2e0fd6c4565a2a0b3aed5ebcf</anchor>
       <arglist>(std::string_view service) noexcept</arglist>
     </member>
     <member kind="function">
@@ -7015,6 +7044,13 @@
       <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
       <anchor>ac19d563e835538932223d6be7471816d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>create_task</name>
+      <anchorfile>d0/dea/classrm_1_1lpss_1_1async_1_1Node.html</anchorfile>
+      <anchor>ac90d2aecba5415c4cab42ad66d3c29dd</anchor>
+      <arglist>(Callable &amp;&amp;fn, Args &amp;&amp;...args)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -7094,7 +7130,7 @@
       <type>Publisher&lt; MsgType &gt;</type>
       <name>createPublisher</name>
       <anchorfile>d2/da8/classrm_1_1lpss_1_1Node.html</anchorfile>
-      <anchor>a93c7802b1b73791aff10414c7aa97d5b</anchor>
+      <anchor>ad4d30f8b0a7326622f7f71ef6ac77201</anchor>
       <arglist>(std::string_view topic) noexcept</arglist>
     </member>
     <member kind="function">
@@ -11754,10 +11790,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::function&lt; Response(const Request &amp;)&gt;</type>
+      <type>std::function&lt; void(const Request &amp;, Response &amp;)&gt;</type>
       <name>Callback</name>
       <anchorfile>d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html</anchorfile>
-      <anchor>a43332da1ca29bc3696cacefbb7ef1411</anchor>
+      <anchor>a3ba51a6fdd90e08fd210272707d1e214</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -16332,6 +16368,10 @@
     <filename>d0/d65/namespacerm_1_1lpss.html</filename>
     <namespace>rm::lpss::ctl</namespace>
     <namespace>rm::lpss::async</namespace>
+    <class kind="struct">rm::lpss::is_msg</class>
+    <class kind="struct">rm::lpss::is_msg&lt; Tp, std::void_t&lt; decltype(Tp::msg_type)&gt; &gt;</class>
+    <class kind="struct">rm::lpss::is_srv</class>
+    <class kind="struct">rm::lpss::is_srv&lt; Tp, std::enable_if_t&lt; is_msg_v&lt; typename Tp::Request &gt; &amp;&amp;is_msg_v&lt; typename Tp::Response &gt; &gt; &gt;</class>
     <class kind="class">rm::lpss::Publisher</class>
     <class kind="class">rm::lpss::Subscriber</class>
     <class kind="class">rm::lpss::Node</class>
@@ -16344,6 +16384,20 @@
       <anchorfile>d0/d65/namespacerm_1_1lpss.html</anchorfile>
       <anchor>a8db5f1efefa12c0e0ee26c8359b4178d</anchor>
       <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr bool</type>
+      <name>is_msg_v</name>
+      <anchorfile>d0/d65/namespacerm_1_1lpss.html</anchorfile>
+      <anchor>a19f5cbaeffe1a7734330b022e4b62515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr bool</type>
+      <name>is_srv_v</name>
+      <anchorfile>d0/d65/namespacerm_1_1lpss.html</anchorfile>
+      <anchor>a95f35578455457f48ba9bec427be6227</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">

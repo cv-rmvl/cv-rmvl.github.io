@@ -142,18 +142,18 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa72dd056a0678313906462d614bf4a6e" id="r_aa72dd056a0678313906462d614bf4a6e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa72dd056a0678313906462d614bf4a6e">~Node</a> () noexcept</td></tr>
 <tr class="memitem:a365a5c84001622f7e1d466c4c8a697d8" id="r_a365a5c84001622f7e1d466c4c8a697d8"><td class="memItemLeft">Guid&#160;</td><td class="memItemRight"><a class="el" href="#a365a5c84001622f7e1d466c4c8a697d8">guid</a> () const noexcept</td></tr>
 <tr class="memdesc:a365a5c84001622f7e1d466c4c8a697d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取节点唯一标识符  <br /></td></tr>
-<tr class="memitem:afc9ef574725d49c5888d16dd12b5d032" id="r_afc9ef574725d49c5888d16dd12b5d032"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
-<tr class="memitem:afc9ef574725d49c5888d16dd12b5d032 template"><td class="memItemLeft"><a class="el" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#afc9ef574725d49c5888d16dd12b5d032">createPublisher</a> (std::string_view topic) noexcept</td></tr>
-<tr class="memdesc:afc9ef574725d49c5888d16dd12b5d032"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
-<tr class="memitem:a41d46271105eb611acb38d2f171207c5" id="r_a41d46271105eb611acb38d2f171207c5"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a607aa1bc1eed74f339820cc177596693" id="r_a607aa1bc1eed74f339820cc177596693"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a607aa1bc1eed74f339820cc177596693 template"><td class="memItemLeft"><a class="el" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html">Publisher</a>&lt; MsgType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#a607aa1bc1eed74f339820cc177596693">createPublisher</a> (std::string_view topic) noexcept</td></tr>
+<tr class="memdesc:a607aa1bc1eed74f339820cc177596693"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建发布者  <br /></td></tr>
+<tr class="memitem:a41d46271105eb611acb38d2f171207c5" id="r_a41d46271105eb611acb38d2f171207c5"><td class="memTemplParams" colspan="2">template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt; &amp;&amp; std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a41d46271105eb611acb38d2f171207c5 template"><td class="memItemLeft"><a class="el" href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html">Subscriber</a>&lt; MsgType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#a41d46271105eb611acb38d2f171207c5">createSubscriber</a> (std::string_view topic, SubscribeMsgCallback callback) noexcept</td></tr>
 <tr class="memdesc:a41d46271105eb611acb38d2f171207c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建订阅者  <br /></td></tr>
-<tr class="memitem:a22c21c16351ae83c2ef9a0c8134f1961" id="r_a22c21c16351ae83c2ef9a0c8134f1961"><td class="memTemplParams" colspan="2">template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_if_t&lt;std::is_invocable_r_v&lt;typename SrvType::Response, ServiceCallback, const typename SrvType::Request &amp;&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a22c21c16351ae83c2ef9a0c8134f1961" id="r_a22c21c16351ae83c2ef9a0c8134f1961"><td class="memTemplParams" colspan="2">template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_if_t&lt;is_srv_v&lt;SrvType&gt; &amp;&amp; std::is_invocable_r_v&lt;void, ServiceCallback, const typename SrvType::Request &amp;, typename SrvType::Response &amp;&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a22c21c16351ae83c2ef9a0c8134f1961 template"><td class="memItemLeft"><a class="el" href="../../d0/d8a/classrm_1_1lpss_1_1async_1_1Service.html">Service</a>&lt; SrvType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#a22c21c16351ae83c2ef9a0c8134f1961">createService</a> (std::string_view service, ServiceCallback callback) noexcept</td></tr>
 <tr class="memdesc:a22c21c16351ae83c2ef9a0c8134f1961"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步服务端  <br /></td></tr>
-<tr class="memitem:a98198eb692ba9c4caf7e64757f683c6c" id="r_a98198eb692ba9c4caf7e64757f683c6c"><td class="memTemplParams" colspan="2">template&lt;typename SrvType&gt; </td></tr>
-<tr class="memitem:a98198eb692ba9c4caf7e64757f683c6c template"><td class="memItemLeft"><a class="el" href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html">Client</a>&lt; SrvType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#a98198eb692ba9c4caf7e64757f683c6c">createClient</a> (std::string_view service) noexcept</td></tr>
-<tr class="memdesc:a98198eb692ba9c4caf7e64757f683c6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步客户端  <br /></td></tr>
+<tr class="memitem:ad0f719e2e0fd6c4565a2a0b3aed5ebcf" id="r_ad0f719e2e0fd6c4565a2a0b3aed5ebcf"><td class="memTemplParams" colspan="2">template&lt;typename SrvType, typename = std::enable_if_t&lt;is_srv_v&lt;SrvType&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ad0f719e2e0fd6c4565a2a0b3aed5ebcf template"><td class="memItemLeft"><a class="el" href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html">Client</a>&lt; SrvType &gt;::ptr&#160;</td><td class="memItemRight"><a class="el" href="#ad0f719e2e0fd6c4565a2a0b3aed5ebcf">createClient</a> (std::string_view service) noexcept</td></tr>
+<tr class="memdesc:ad0f719e2e0fd6c4565a2a0b3aed5ebcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步客户端  <br /></td></tr>
 <tr class="memitem:acb602464b5eba1957ccf7e55b9bb21f9" id="r_acb602464b5eba1957ccf7e55b9bb21f9"><td class="memTemplParams" colspan="2">template&lt;typename MsgType&gt; </td></tr>
 <tr class="memitem:acb602464b5eba1957ccf7e55b9bb21f9 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acb602464b5eba1957ccf7e55b9bb21f9">destroyPublisher</a> (std::shared_ptr&lt; <a class="el" href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html">Publisher</a>&lt; MsgType &gt; &gt; pub)</td></tr>
 <tr class="memdesc:acb602464b5eba1957ccf7e55b9bb21f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">销毁发布者  <br /></td></tr>
@@ -165,6 +165,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ad8e1d6fdce37519bcff17a935ff3980b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步定时器  <br /></td></tr>
 <tr class="memitem:ac19d563e835538932223d6be7471816d" id="r_ac19d563e835538932223d6be7471816d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac19d563e835538932223d6be7471816d">spin</a> ()</td></tr>
 <tr class="memdesc:ac19d563e835538932223d6be7471816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行异步 IO 上下文  <br /></td></tr>
+<tr class="memitem:ac90d2aecba5415c4cab42ad66d3c29dd" id="r_ac90d2aecba5415c4cab42ad66d3c29dd"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; </td></tr>
+<tr class="memitem:ac90d2aecba5415c4cab42ad66d3c29dd template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac90d2aecba5415c4cab42ad66d3c29dd">create_task</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ac90d2aecba5415c4cab42ad66d3c29dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成异步任务，并添加到当前节点的调度器  <br /></td></tr>
 <tr class="memitem:a48f377161a570f982cf62c597f6d8d77" id="r_a48f377161a570f982cf62c597f6d8d77"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a48f377161a570f982cf62c597f6d8d77">shutdown</a> () noexcept</td></tr>
 <tr class="memdesc:a48f377161a570f982cf62c597f6d8d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">手动停止节点运行  <br /></td></tr>
 </table><table class="memberdecls">
@@ -260,13 +263,54 @@ Protected 属性</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="a98198eb692ba9c4caf7e64757f683c6c" name="a98198eb692ba9c4caf7e64757f683c6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98198eb692ba9c4caf7e64757f683c6c">&#9670;&#160;</a></span>createClient()</h2>
+<a id="ac90d2aecba5415c4cab42ad66d3c29dd" name="ac90d2aecba5415c4cab42ad66d3c29dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90d2aecba5415c4cab42ad66d3c29dd">&#9670;&#160;</a></span>create_task()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SrvType&gt; </div>
+template&lt;typename Callable, typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::async::Node::create_task </td>
+          <td>(</td>
+          <td class="paramtype">Callable &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成异步任务，并添加到当前节点的调度器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fn</td><td>协程函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>协程函数参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>备注</dt><dd><a class="el" href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#a085673b146c3a3ca5165e6ad6444aa3a" title="调用服务并异步等待响应">rm::lpss::async::Client::call</a> 等方法需要在协程中调用，可以使用此方法生成异步任务 </dd></dl>
+
+</div>
+</div>
+<a id="ad0f719e2e0fd6c4565a2a0b3aed5ebcf" name="ad0f719e2e0fd6c4565a2a0b3aed5ebcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f719e2e0fd6c4565a2a0b3aed5ebcf">&#9670;&#160;</a></span>createClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SrvType, typename = std::enable_if_t&lt;is_srv_v&lt;SrvType&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -301,13 +345,13 @@ template&lt;typename SrvType&gt; </div>
 
 </div>
 </div>
-<a id="afc9ef574725d49c5888d16dd12b5d032" name="afc9ef574725d49c5888d16dd12b5d032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9ef574725d49c5888d16dd12b5d032">&#9670;&#160;</a></span>createPublisher()</h2>
+<a id="a607aa1bc1eed74f339820cc177596693" name="a607aa1bc1eed74f339820cc177596693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a607aa1bc1eed74f339820cc177596693">&#9670;&#160;</a></span>createPublisher()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MsgType&gt; </div>
+template&lt;typename MsgType, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -349,7 +393,7 @@ template&lt;typename MsgType&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_if_t&lt;std::is_invocable_r_v&lt;typename SrvType::Response, ServiceCallback, const typename SrvType::Request &amp;&gt;&gt;&gt; </div>
+template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_if_t&lt;is_srv_v&lt;SrvType&gt; &amp;&amp; std::is_invocable_r_v&lt;void, ServiceCallback, const typename SrvType::Request &amp;, typename SrvType::Response &amp;&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -382,7 +426,7 @@ template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_i
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">service</td><td>服务名称 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>请求处理回调，返回对应响应 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>请求处理回调，形如 <span class="tt">void(const <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">Request</a> &amp;, <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a> &amp;)</span> </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,7 +439,7 @@ template&lt;typename SrvType, typename ServiceCallback, typename = std::enable_i
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </div>
+template&lt;typename MsgType, typename SubscribeMsgCallback, typename = std::enable_if_t&lt;is_msg_v&lt;MsgType&gt; &amp;&amp; std::is_invocable_v&lt;SubscribeMsgCallback, const MsgType &amp;&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

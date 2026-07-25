@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wait_0',['wait',['../d7/d53/classrm_1_1async_1_1Signal.html#a557e423873a3a0f1cad34c97b98a74d3',1,'rm::async::Signal']]],
+  ['wait_0',['wait',['../d7/d53/classrm_1_1async_1_1Signal.html#a557e423873a3a0f1cad34c97b98a74d3',1,'rm::async::Signal::wait()'],['../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#aff01640911b14b8bbc964bae1a3902c1',1,'rm::lpss::async::Client::wait()']]],
   ['webapp_1',['Webapp',['../d5/d05/classrm_1_1async_1_1Webapp.html#a858c96036ee911c9deb436834562477c',1,'rm::async::Webapp']]],
   ['websocket_2',['WebSocket',['../d3/d6f/classrm_1_1async_1_1WebSocket.html#ae5f2734d9c47b01860374f77148927cc',1,'rm::async::WebSocket']]],
   ['webstream_3',['WebStream',['../d6/dbe/classrm_1_1async_1_1WebStream.html#af68cd117bfa33913d68c6f875e124e9f',1,'rm::async::WebStream::WebStream(StreamSocket socket)'],['../d6/dbe/classrm_1_1async_1_1WebStream.html#a142abc724181f2edafe988cb8cb00507',1,'rm::async::WebStream::WebStream(SSLStream stream)'],['../d6/dbe/classrm_1_1async_1_1WebStream.html#ae0e9e6bf931cd6e15b58ee47de24f33a',1,'rm::async::WebStream::WebStream(const WebStream &amp;)=delete'],['../d6/dbe/classrm_1_1async_1_1WebStream.html#ab81a3f0da31b5a9004528f194d0847ae',1,'rm::async::WebStream::WebStream(WebStream &amp;&amp;) noexcept=default']]],

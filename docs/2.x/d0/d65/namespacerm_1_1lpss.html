@@ -120,7 +120,8 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#nested-classes">类</a> &#124;
-<a href="#func-members">函数</a>  </div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">rm::lpss 命名空间参考<div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -137,6 +138,12 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
+<tr class="memitem:is_5Fmsg" id="r_is_5Fmsg"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html">is_msg</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断类型是否为 RMVL 消息类型，要求类型中存在 <span class="tt">msg_type</span> 字符数组常量  <a href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:is_5Fmsg_3C_20Tp_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28Tp_3A_3Amsg_5Ftype_29_3E_20_3E" id="r_is_5Fmsg_3C_20Tp_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28Tp_3A_3Amsg_5Ftype_29_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dc/dd2/structrm_1_1lpss_1_1is__msg_3_01Tp_00_01std_1_1void__t_3_01decltype_07Tp_1_1msg__type_08_4_01_4.html">is_msg&lt; Tp, std::void_t&lt; decltype(Tp::msg_type)&gt; &gt;</a></td></tr>
+<tr class="memitem:is_5Fsrv" id="r_is_5Fsrv"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d00/structrm_1_1lpss_1_1is__srv.html">is_srv</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断类型是否为 RMVL 服务类型，要求类型中包含符合消息类型约束的 <span class="tt"><a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">Request</a></span> 和 <span class="tt"><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">Response</a></span>  <a href="../../df/d00/structrm_1_1lpss_1_1is__srv.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:is_5Fsrv_3C_20Tp_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20is_5Fmsg_5Fv_3C_20typename_20Tp_3A_3ARequest_20_3E_20_26_26is_5Fmsg_5Fv_3C_20typename_20Tp_3A_3AResponse_20_3E_20_3E_20_3E" id="r_is_5Fsrv_3C_20Tp_2C_20std_3A_3Aenable_5Fif_5Ft_3C_20is_5Fmsg_5Fv_3C_20typename_20Tp_3A_3ARequest_20_3E_20_26_26is_5Fmsg_5Fv_3C_20typename_20Tp_3A_3AResponse_20_3E_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d21/structrm_1_1lpss_1_1is__srv_3_01Tp_00_01std_1_1enable__if__t_3_01is__msg__v_3_01typename_01Tp_1_58f1a8c11bb32e424ab395314a09fd0b.html">is_srv&lt; Tp, std::enable_if_t&lt; is_msg_v&lt; typename Tp::Request &gt; &amp;&amp;is_msg_v&lt; typename Tp::Response &gt; &gt; &gt;</a></td></tr>
 <tr class="memitem:Publisher" id="r_Publisher"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html">Publisher</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">发布者代理  <a href="../../d8/dff/classrm_1_1lpss_1_1Publisher.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Subscriber" id="r_Subscriber"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/db5/classrm_1_1lpss_1_1Subscriber.html">Subscriber</a></td></tr>
@@ -154,6 +161,15 @@ $(function() {
 函数</h2></td></tr>
 <tr class="memitem:a8db5f1efefa12c0e0ee26c8359b4178d" id="r_a8db5f1efefa12c0e0ee26c8359b4178d"><td class="memItemLeft"><a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8db5f1efefa12c0e0ee26c8359b4178d">now</a> () noexcept</td></tr>
 <tr class="memdesc:a8db5f1efefa12c0e0ee26c8359b4178d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 LPSS 消息表示的 Epoch 时间  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a19f5cbaeffe1a7734330b022e4b62515" id="r_a19f5cbaeffe1a7734330b022e4b62515"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a19f5cbaeffe1a7734330b022e4b62515 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a19f5cbaeffe1a7734330b022e4b62515">is_msg_v</a> = <a class="el" href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html">is_msg</a>&lt;Tp&gt;::value</td></tr>
+<tr class="memdesc:a19f5cbaeffe1a7734330b022e4b62515"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html" title="判断类型是否为 RMVL 消息类型，要求类型中存在 msg_type 字符数组常量">is_msg</a></span> 的便捷变量模板  <br /></td></tr>
+<tr class="memitem:a95f35578455457f48ba9bec427be6227" id="r_a95f35578455457f48ba9bec427be6227"><td class="memTemplParams" colspan="2">template&lt;typename Tp&gt; </td></tr>
+<tr class="memitem:a95f35578455457f48ba9bec427be6227 template"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a95f35578455457f48ba9bec427be6227">is_srv_v</a> = <a class="el" href="../../df/d00/structrm_1_1lpss_1_1is__srv.html">is_srv</a>&lt;Tp&gt;::value</td></tr>
+<tr class="memdesc:a95f35578455457f48ba9bec427be6227"><td class="mdescLeft">&#160;</td><td class="mdescRight"><span class="tt"><a class="el" href="../../df/d00/structrm_1_1lpss_1_1is__srv.html" title="判断类型是否为 RMVL 服务类型，要求类型中包含符合消息类型约束的 Request 和 Response">is_srv</a></span> 的便捷变量模板  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>轻量发布订阅服务框架命名空间，包含节点、发布者、订阅者等相关定义 </p>
@@ -182,6 +198,59 @@ $(function() {
 </div><div class="memdoc">
 
 <p>获取 LPSS 消息表示的 Epoch 时间 </p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">变量说明</h2>
+<a id="a19f5cbaeffe1a7734330b022e4b62515" name="a19f5cbaeffe1a7734330b022e4b62515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f5cbaeffe1a7734330b022e4b62515">&#9670;&#160;</a></span>is_msg_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::lpss::is_msg_v = <a class="el" href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html">is_msg</a>&lt;Tp&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><span class="tt"><a class="el" href="../../df/dc0/structrm_1_1lpss_1_1is__msg.html" title="判断类型是否为 RMVL 消息类型，要求类型中存在 msg_type 字符数组常量">is_msg</a></span> 的便捷变量模板 </p>
+
+</div>
+</div>
+<a id="a95f35578455457f48ba9bec427be6227" name="a95f35578455457f48ba9bec427be6227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f35578455457f48ba9bec427be6227">&#9670;&#160;</a></span>is_srv_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tp&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::lpss::is_srv_v = <a class="el" href="../../df/d00/structrm_1_1lpss_1_1is__srv.html">is_srv</a>&lt;Tp&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><span class="tt"><a class="el" href="../../df/d00/structrm_1_1lpss_1_1is__srv.html" title="判断类型是否为 RMVL 服务类型，要求类型中包含符合消息类型约束的 Request 和 Response">is_srv</a></span> 的便捷变量模板 </p>
 
 </div>
 </div>
