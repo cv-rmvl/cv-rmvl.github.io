@@ -9,7 +9,7 @@ var searchData=
   ['networkinterfacetype_6',['NetworkInterfaceType',['../d6/dd4/group__io__net.html#gadb3e4d4f0720bfcbbaa3fd4cf076e69a',1,'rm']]],
   ['networkv4_7',['Networkv4',['../de/d28/classrm_1_1ip_1_1Networkv4.html',1,'rm::ip::Networkv4'],['../de/d28/classrm_1_1ip_1_1Networkv4.html#adbec660422ab9a66f1a0d4359d102e78',1,'rm::ip::Networkv4::Networkv4()']]],
   ['networkv6_8',['Networkv6',['../d0/d72/classrm_1_1ip_1_1Networkv6.html',1,'rm::ip::Networkv6'],['../d0/d72/classrm_1_1ip_1_1Networkv6.html#ad38191ec0f7be6d621c6c91f6cd2a5cb',1,'rm::ip::Networkv6::Networkv6()']]],
-  ['newbr_20子命令_9',['newbr 子命令',['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md441',1,'']]],
+  ['newbr_20子命令_9',['newbr 子命令',['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md450',1,'']]],
   ['newton_20插值多项式_10',['2 Newton 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md188',1,'']]],
   ['newton_20迭代的简化_11',['3 Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md184',1,'']]],
   ['newton_20迭代_12',['Newton 迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md207',1,'1 Gauss-Newton 迭代'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md183',1,'2 Newton 迭代']]],

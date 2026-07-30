@@ -154,7 +154,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aff01640911b14b8bbc964bae1a3902c1" id="r_aff01640911b14b8bbc964bae1a3902c1"><td class="memTemplParams" colspan="2">template&lt;typename Rep, typename Period&gt; </td></tr>
 <tr class="memitem:aff01640911b14b8bbc964bae1a3902c1 template"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a>&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aff01640911b14b8bbc964bae1a3902c1">wait</a> (std::chrono::duration&lt; Rep, Period &gt; timeout)</td></tr>
 <tr class="memdesc:aff01640911b14b8bbc964bae1a3902c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待服务端上线  <br /></td></tr>
-<tr class="memitem:a085673b146c3a3ca5165e6ad6444aa3a" id="r_a085673b146c3a3ca5165e6ad6444aa3a"><td class="memTemplParams" colspan="2">template&lt;typename Rep, typename Period&gt; </td></tr>
+<tr class="memitem:a085673b146c3a3ca5165e6ad6444aa3a" id="r_a085673b146c3a3ca5165e6ad6444aa3a"><td class="memTemplParams" colspan="2">template&lt;typename Rep = std::chrono::seconds::rep, typename Period = std::chrono::seconds::period&gt; </td></tr>
 <tr class="memitem:a085673b146c3a3ca5165e6ad6444aa3a template"><td class="memItemLeft"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a>&lt; std::optional&lt; <a class="el" href="#a07f5ea1e3f8ce09b95962f2c5757aa94">Response</a> &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a085673b146c3a3ca5165e6ad6444aa3a">call</a> (const <a class="el" href="#aa19c7850e319062e4c737992654521b9">Request</a> &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout=std::chrono::seconds(30))</td></tr>
 <tr class="memdesc:a085673b146c3a3ca5165e6ad6444aa3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用服务并异步等待响应  <br /></td></tr>
 </table><table class="memberdecls">
@@ -230,7 +230,7 @@ template&lt;typename SrvType&gt; </div>
 <div class="memtemplate">
 template&lt;typename SrvType&gt; </div>
 <div class="memtemplate">
-template&lt;typename Rep, typename Period&gt; </div>
+template&lt;typename Rep = std::chrono::seconds::rep, typename Period = std::chrono::seconds::period&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a>&lt; std::optional&lt; <a class="el" href="#a07f5ea1e3f8ce09b95962f2c5757aa94">Response</a> &gt; &gt; <a class="el" href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html">rm::lpss::async::Client</a>&lt; SrvType &gt;::call </td>

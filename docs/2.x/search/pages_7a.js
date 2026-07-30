@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['数值计算与最优化使用示例_0',['数值计算与最优化使用示例',['../df/dad/tutorial_py_algorithm.html#autotoc_md453',1,'']]],
+  ['数值计算与最优化使用示例_0',['数值计算与最优化使用示例',['../df/dad/tutorial_py_algorithm.html#autotoc_md462',1,'']]],
   ['数值计算_1',['数值计算',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md391',1,'']]],
   ['数据与信号处理_2',['数据与信号处理',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md392',1,'']]],
   ['数据传输_3',['1.3 数据传输',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md292',1,'']]],
