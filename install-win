@@ -1,0 +1,140 @@
+# Bootstrap installer for RMVL Development Tools on Windows.
+# Usage: irm https://cv-rmvl.github.io/install-win | iex
+
+& {
+$ErrorActionPreference = 'Stop'
+
+function Test-Command {
+    param([Parameter(Mandatory)][string] $Name)
+
+    return $null -ne (Get-Command $Name -ErrorAction SilentlyContinue)
+}
+
+function Update-ProcessPath {
+    $machinePath = [Environment]::GetEnvironmentVariable('Path', 'Machine')
+    $userPath = [Environment]::GetEnvironmentVariable('Path', 'User')
+    $env:Path = @($machinePath, $userPath) -join ';'
+}
+
+function Install-Dependency {
+    param(
+        [Parameter(Mandatory)][string] $Name,
+        [Parameter(Mandatory)][string] $PackageId
+    )
+
+    Write-Host "正在安装 $Name..." -ForegroundColor Yellow
+    & winget install --id $PackageId --exact --source winget `
+        --accept-source-agreements --accept-package-agreements
+    if ($LASTEXITCODE -ne 0) {
+        throw "$Name 安装失败，winget 退出码: $LASTEXITCODE"
+    }
+}
+
+function Confirm-Dependencies {
+    $dependencies = @(
+        @{ Command = 'git'; Name = 'Git'; PackageId = 'Git.Git' },
+        @{ Command = 'cmake'; Name = 'CMake'; PackageId = 'Kitware.CMake' }
+    )
+    $missing = @($dependencies | Where-Object { -not (Test-Command $_.Command) })
+    if ($missing.Count -eq 0) {
+        return
+    }
+
+    $missingNames = @($missing | ForEach-Object { $_.Name }) -join ', '
+    Write-Host "检测到缺少以下依赖: $missingNames" -ForegroundColor Yellow
+    if (-not (Test-Command 'winget')) {
+        throw "未检测到 winget，请先手动安装: $missingNames"
+    }
+
+    $answer = Read-Host '是否现在使用 winget 自动安装？[Y/n]'
+    if (-not ([string]::IsNullOrWhiteSpace($answer) -or $answer -match '^(?i:y|yes)$')) {
+        throw '已取消安装'
+    }
+
+    foreach ($dependency in $missing) {
+        Install-Dependency -Name $dependency.Name -PackageId $dependency.PackageId
+    }
+    Update-ProcessPath
+
+    $stillMissing = @($missing | Where-Object { -not (Test-Command $_.Command) })
+    if ($stillMissing.Count -ne 0) {
+        $names = @($stillMissing | ForEach-Object { $_.Name }) -join ', '
+        throw "依赖已经安装，但当前终端仍无法找到: $names。请重启 PowerShell 后再次运行本脚本"
+    }
+}
+
+function Invoke-GitClone {
+    param(
+        [Parameter(Mandatory)][string] $Repository,
+        [Parameter(Mandatory)][string] $Destination
+    )
+
+    & git clone --quiet --depth=1 $Repository $Destination
+    if ($LASTEXITCODE -ne 0) {
+        throw "克隆失败: $Repository"
+    }
+}
+
+if ([Environment]::OSVersion.Platform -ne [PlatformID]::Win32NT) {
+    throw '此脚本仅适用于 Windows；Linux/macOS 请使用 install 脚本'
+}
+
+Write-Host 'Welcome to use rdt/rmvl installation wizard' -ForegroundColor Green
+Confirm-Dependencies
+
+$devRoot = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.rmvldev'
+$toolsRoot = Join-Path $devRoot 'rmvl-dev-tools'
+$backupRoot = Join-Path $devRoot ('rmvl-dev-tools-' + (Get-Date -Format 'yyyyMMddHHmmssfff'))
+$hasBackup = $false
+
+try {
+    New-Item -ItemType Directory -Path $devRoot -Force | Out-Null
+    if (Test-Path -LiteralPath $toolsRoot) {
+        if (-not (Test-Path -LiteralPath $toolsRoot -PathType Container)) {
+            throw "目标路径已存在且不是目录: $toolsRoot"
+        }
+        Move-Item -LiteralPath $toolsRoot -Destination $backupRoot
+        $hasBackup = $true
+    }
+
+    try {
+        Invoke-GitClone -Repository 'https://github.com/cv-rmvl/rmvl-dev-tools.git' `
+            -Destination $toolsRoot
+    } catch {
+        Write-Host 'GitHub 下载失败，正在切换至 GitCode 镜像源...' -ForegroundColor Yellow
+        if (Test-Path -LiteralPath $toolsRoot) {
+            Remove-Item -LiteralPath $toolsRoot -Recurse -Force
+        }
+        Invoke-GitClone -Repository 'https://gitcode.com/m0_51586788/rmvl-dev-tools.git' `
+            -Destination $toolsRoot
+    }
+
+    $installer = Join-Path $toolsRoot 'setup/ps/install.ps1'
+    if (-not (Test-Path -LiteralPath $installer -PathType Leaf)) {
+        throw "安装器不存在: $installer"
+    }
+
+    $powerShell = (Get-Process -Id $PID).Path
+    & $powerShell -NoLogo -NoProfile -ExecutionPolicy Bypass -File $installer
+    if ($LASTEXITCODE -ne 0) {
+        throw "安装器执行失败，退出码: $LASTEXITCODE"
+    }
+
+    if ($hasBackup) {
+        Remove-Item -LiteralPath $backupRoot -Recurse -Force
+        $hasBackup = $false
+    }
+
+    Write-Host '以后可使用 rdt update tool 命令更新 rdt 和 rmvl 工具' -ForegroundColor Yellow
+    Write-Host '可键入 rdt help 查看详细帮助信息' -ForegroundColor Yellow
+} catch {
+    if (Test-Path -LiteralPath $toolsRoot) {
+        Remove-Item -LiteralPath $toolsRoot -Recurse -Force -ErrorAction SilentlyContinue
+    }
+    if ($hasBackup -and (Test-Path -LiteralPath $backupRoot -PathType Container)) {
+        Move-Item -LiteralPath $backupRoot -Destination $toolsRoot
+    }
+    Write-Host "安装失败: $($_.Exception.Message)" -ForegroundColor Red
+    throw
+}
+}
