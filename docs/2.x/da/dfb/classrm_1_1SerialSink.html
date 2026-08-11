@@ -1,0 +1,257 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: rm::SerialSink类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../da/dfb/classrm_1_1SerialSink.html">SerialSink</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="../../dd/d44/classrm_1_1SerialSink-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::SerialSink类 参考<div class="ingroups"><a class="el" href="../../dc/d55/group__logger.html">日志</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>串口日志后端  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/logger.hpp&gt;</code></p>
+<div class="dynheader">
+rm::SerialSink 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/d0f/classrm_1_1SerialSink__coll__graph.svg" width="114" height="83"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a35338a9e65df5dc876423702433d74bd" id="r_a35338a9e65df5dc876423702433d74bd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a35338a9e65df5dc876423702433d74bd">SerialSink</a> (std::string device, <a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a> baud_rate=<a class="el" href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BaudRate::BR_115200</a>)</td></tr>
+<tr class="memdesc:a35338a9e65df5dc876423702433d74bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建串口日志后端  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:ad0725c5a0ca892b71765d5aa2eb88762" id="r_ad0725c5a0ca892b71765d5aa2eb88762"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad0725c5a0ca892b71765d5aa2eb88762">sink_write_invoke</a> (<a class="el" href="#a35338a9e65df5dc876423702433d74bd">SerialSink</a> &amp;, <a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a>, std::string_view) noexcept</td></tr>
+<tr class="memitem:ad122f51d11024c590cb305bb691484e2" id="r_ad122f51d11024c590cb305bb691484e2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad122f51d11024c590cb305bb691484e2">sink_flush_invoke</a> (<a class="el" href="#a35338a9e65df5dc876423702433d74bd">SerialSink</a> &amp;) noexcept</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>串口日志后端 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a35338a9e65df5dc876423702433d74bd" name="a35338a9e65df5dc876423702433d74bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35338a9e65df5dc876423702433d74bd">&#9670;&#160;</a></span>SerialSink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::SerialSink::SerialSink </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d63/group__io__serial.html#ga8847230e42c9ea2972d24a8e6baf7371">BaudRate</a></td>          <td class="paramname"><span class="paramname"><em>baud_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d9/d63/group__io__serial.html#gga8847230e42c9ea2972d24a8e6baf7371a08ed252c1981fa05dc07f386598f844a">BaudRate::BR_115200</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建串口日志后端 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">device</td><td>串口设备名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baud_rate</td><td>串口波特率 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../da/dfb/classrm_1_1SerialSink_a35338a9e65df5dc876423702433d74bd_cgraph.svg" width="196" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="ad122f51d11024c590cb305bb691484e2" name="ad122f51d11024c590cb305bb691484e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad122f51d11024c590cb305bb691484e2">&#9670;&#160;</a></span>sink_flush_invoke</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sink_flush_invoke </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a35338a9e65df5dc876423702433d74bd">SerialSink</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0725c5a0ca892b71765d5aa2eb88762" name="ad0725c5a0ca892b71765d5aa2eb88762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0725c5a0ca892b71765d5aa2eb88762">&#9670;&#160;</a></span>sink_write_invoke</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sink_write_invoke </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a35338a9e65df5dc876423702433d74bd">SerialSink</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

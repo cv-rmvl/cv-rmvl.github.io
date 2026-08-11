@@ -7,7 +7,7 @@ var searchData=
   ['endpoint_4',['endpoint',['../d0/d75/classrm_1_1DgramSocket.html#a353ebe3282840f6775df68fc00b455f6',1,'rm::DgramSocket::endpoint()'],['../d8/df3/classrm_1_1StreamSocket.html#a1dd96dd150b411386b44cd583d8ea62e',1,'rm::StreamSocket::endpoint()']]],
   ['equal_5',['equal',['../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c',1,'rm::reflect']]],
   ['erase_6',['erase',['../db/d45/classrm_1_1RaHeap.html#ae985322beceadf0dba5d796191cab532',1,'rm::RaHeap']]],
-  ['error_7',['error',['../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a',1,'rm']]],
+  ['error_7',['error',['../d2/d0e/classrm_1_1Logger.html#a903fc0c4a96d0f1ce4785dd2b6e5557a',1,'rm::Logger::error(std::string_view msg)'],['../d2/d0e/classrm_1_1Logger.html#aac5aecaedeb25ff0f7a79a79f64de4cf',1,'rm::Logger::error(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)'],['../d2/d2a/classrm_1_1BasicLoggerProxy.html#adf8fb01fc2999ee4091c5aea94973b4d',1,'rm::BasicLoggerProxy::error(std::string_view msg) const'],['../d2/d2a/classrm_1_1BasicLoggerProxy.html#a60a0a521afabc3266c847145af77237d',1,'rm::BasicLoggerProxy::error(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const'],['../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a',1,'rm::error(int _code, std::string_view _err, const char *_func, const char *_file, int _line)']]],
   ['euler2mat_8',['euler2Mat',['../d7/da1/group__algorithm__math.html#gabaff301294fb35cd202fdc1f2ce6e44f',1,'rm']]],
   ['event_9',['Event',['../da/d84/classrm_1_1ua_1_1Event.html#a449f16e652edc9d15ad864e0564d8e19',1,'rm::ua::Event']]],
   ['eventtype_10',['EventType',['../dc/df5/classrm_1_1ua_1_1EventType.html#ab6c29f0615179a1fd7184b4de0c8e4e7',1,'rm::ua::EventType']]],

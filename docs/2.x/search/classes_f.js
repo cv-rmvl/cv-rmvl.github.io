@@ -12,14 +12,12 @@ var searchData=
   ['polygon_9',['Polygon',['../dc/d40/classrm_1_1msg_1_1Polygon.html',1,'rm::msg']]],
   ['polynomial_10',['Polynomial',['../db/d3e/classrm_1_1Polynomial.html',1,'rm']]],
   ['pose_11',['Pose',['../d4/d23/classrm_1_1msg_1_1Pose.html',1,'rm::msg']]],
-  ['postprocessoptions_12',['PostprocessOptions',['../d5/da4/structrm_1_1PostprocessOptions.html',1,'rm']]],
-  ['preprocessoptions_13',['PreprocessOptions',['../d2/d84/structrm_1_1PreprocessOptions.html',1,'rm']]],
-  ['promise_14',['Promise',['../dd/df2/classrm_1_1async_1_1Promise.html',1,'rm::async']]],
-  ['promise_3c_20void_20_3e_15',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
-  ['protocol_16',['Protocol',['../d9/dc1/structrm_1_1ip_1_1Protocol.html',1,'rm::ip']]],
-  ['publisheddataset_17',['PublishedDataSet',['../d5/da9/structrm_1_1ua_1_1PublishedDataSet.html',1,'rm::ua']]],
-  ['publisher_18',['Publisher',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; MsgType &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; MsgType &gt;'],['../d9/d4d/classrm_1_1ua_1_1Publisher.html',1,'rm::ua::Publisher']]],
-  ['publisher_3c_20rm_3a_3amsg_3a_3ajointtrajectory_20_3e_19',['Publisher&lt; rm::msg::JointTrajectory &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::JointTrajectory &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::JointTrajectory &gt;']]],
-  ['publisher_3c_20rm_3a_3amsg_3a_3atf_20_3e_20',['Publisher&lt; rm::msg::TF &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::TF &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::TF &gt;']]],
-  ['publisher_3c_20rm_3a_3amsg_3a_3aurdf_20_3e_21',['Publisher&lt; rm::msg::URDF &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::URDF &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::URDF &gt;']]]
+  ['promise_12',['Promise',['../dd/df2/classrm_1_1async_1_1Promise.html',1,'rm::async']]],
+  ['promise_3c_20void_20_3e_13',['Promise&lt; void &gt;',['../d3/de0/classrm_1_1async_1_1Promise_3_01void_01_4.html',1,'rm::async']]],
+  ['protocol_14',['Protocol',['../d9/dc1/structrm_1_1ip_1_1Protocol.html',1,'rm::ip']]],
+  ['publisheddataset_15',['PublishedDataSet',['../d5/da9/structrm_1_1ua_1_1PublishedDataSet.html',1,'rm::ua']]],
+  ['publisher_16',['Publisher',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; MsgType &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; MsgType &gt;'],['../d9/d4d/classrm_1_1ua_1_1Publisher.html',1,'rm::ua::Publisher']]],
+  ['publisher_3c_20rm_3a_3amsg_3a_3ajointtrajectory_20_3e_17',['Publisher&lt; rm::msg::JointTrajectory &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::JointTrajectory &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::JointTrajectory &gt;']]],
+  ['publisher_3c_20rm_3a_3amsg_3a_3atf_20_3e_18',['Publisher&lt; rm::msg::TF &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::TF &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::TF &gt;']]],
+  ['publisher_3c_20rm_3a_3amsg_3a_3aurdf_20_3e_19',['Publisher&lt; rm::msg::URDF &gt;',['../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html',1,'rm::lpss::async::Publisher&lt; rm::msg::URDF &gt;'],['../d8/dff/classrm_1_1lpss_1_1Publisher.html',1,'rm::lpss::Publisher&lt; rm::msg::URDF &gt;']]]
 ];

@@ -1,0 +1,262 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: rm::LoggerOptions结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../dd/d0b/structrm_1_1LoggerOptions.html">LoggerOptions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d4/d33/structrm_1_1LoggerOptions-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::LoggerOptions结构体 参考<div class="ingroups"><a class="el" href="../../dc/d55/group__logger.html">日志</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>日志公共配置  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/logger.hpp&gt;</code></p>
+<div class="dynheader">
+rm::LoggerOptions 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d31/structrm_1_1LoggerOptions__coll__graph.svg" width="100%" height="501"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6acde36a05ca62ffef68b48a932cd998" id="r_a6acde36a05ca62ffef68b48a932cd998"><td class="memItemLeft"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6acde36a05ca62ffef68b48a932cd998">level</a> {<a class="el" href="../../dc/d55/group__logger.html#gga26ff8001b9ec9036057d58555bbc1c0aaa603905470e2a5b8c13e96b579ef0dba">LogLevel::Debug</a>}</td></tr>
+<tr class="memdesc:a6acde36a05ca62ffef68b48a932cd998"><td class="mdescLeft">&#160;</td><td class="mdescRight">最低输出级别  <br /></td></tr>
+<tr class="memitem:a966c4b8477bca73cd99a3e6e2763fd00" id="r_a966c4b8477bca73cd99a3e6e2763fd00"><td class="memItemLeft">std::chrono::milliseconds&#160;</td><td class="memItemRight"><a class="el" href="#a966c4b8477bca73cd99a3e6e2763fd00">flush_interval</a> {10000}</td></tr>
+<tr class="memdesc:a966c4b8477bca73cd99a3e6e2763fd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">定期持久化间隔  <br /></td></tr>
+<tr class="memitem:a4c9629a0eb113debc68feea14480bb5e" id="r_a4c9629a0eb113debc68feea14480bb5e"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4c9629a0eb113debc68feea14480bb5e">queue_memory_limit</a> {1024U * 1024U}</td></tr>
+<tr class="memdesc:a4c9629a0eb113debc68feea14480bb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发持久化的缓存上限，默认 1 MiB  <br /></td></tr>
+<tr class="memitem:abdb3abff234a95f7099ec6a414cdbed0" id="r_abdb3abff234a95f7099ec6a414cdbed0"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#abdb3abff234a95f7099ec6a414cdbed0">max_queue_memory</a> {8U * 1024U * 1024U}</td></tr>
+<tr class="memdesc:abdb3abff234a95f7099ec6a414cdbed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步队列日志文本上限，默认 8 MiB，0 表示无限制  <br /></td></tr>
+<tr class="memitem:a9fc2c30352111f248556110ab70ae635" id="r_a9fc2c30352111f248556110ab70ae635"><td class="memItemLeft"><a class="el" href="../../dc/d55/group__logger.html#ga6b57007d3b1a605015205aff58d14cc2">LogOverflowPolicy</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9fc2c30352111f248556110ab70ae635">overflow_policy</a> {<a class="el" href="../../dc/d55/group__logger.html#gga6b57007d3b1a605015205aff58d14cc2ae273dab723fc345684a50d971853ccbd">LogOverflowPolicy::DropOldest</a>}</td></tr>
+<tr class="memdesc:a9fc2c30352111f248556110ab70ae635"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步队列溢出策略  <br /></td></tr>
+<tr class="memitem:ab9c175be67fd5cf77bfd4ef0da3d9b6f" id="r_ab9c175be67fd5cf77bfd4ef0da3d9b6f"><td class="memItemLeft">std::function&lt; void(std::string_view)&gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab9c175be67fd5cf77bfd4ef0da3d9b6f">error_handler</a> {}</td></tr>
+<tr class="memdesc:ab9c175be67fd5cf77bfd4ef0da3d9b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">后端错误处理器，在工作线程调用；为空时输出至 stderr  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>日志公共配置 </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="ab9c175be67fd5cf77bfd4ef0da3d9b6f" name="ab9c175be67fd5cf77bfd4ef0da3d9b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c175be67fd5cf77bfd4ef0da3d9b6f">&#9670;&#160;</a></span>error_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(std::string_view)&gt; rm::LoggerOptions::error_handler {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>后端错误处理器，在工作线程调用；为空时输出至 stderr </p>
+
+</div>
+</div>
+<a id="a966c4b8477bca73cd99a3e6e2763fd00" name="a966c4b8477bca73cd99a3e6e2763fd00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966c4b8477bca73cd99a3e6e2763fd00">&#9670;&#160;</a></span>flush_interval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::milliseconds rm::LoggerOptions::flush_interval {10000}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定期持久化间隔 </p>
+
+</div>
+</div>
+<a id="a6acde36a05ca62ffef68b48a932cd998" name="a6acde36a05ca62ffef68b48a932cd998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6acde36a05ca62ffef68b48a932cd998">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> rm::LoggerOptions::level {<a class="el" href="../../dc/d55/group__logger.html#gga26ff8001b9ec9036057d58555bbc1c0aaa603905470e2a5b8c13e96b579ef0dba">LogLevel::Debug</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最低输出级别 </p>
+
+</div>
+</div>
+<a id="abdb3abff234a95f7099ec6a414cdbed0" name="abdb3abff234a95f7099ec6a414cdbed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb3abff234a95f7099ec6a414cdbed0">&#9670;&#160;</a></span>max_queue_memory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::LoggerOptions::max_queue_memory {8U * 1024U * 1024U}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步队列日志文本上限，默认 8 MiB，0 表示无限制 </p>
+
+</div>
+</div>
+<a id="a9fc2c30352111f248556110ab70ae635" name="a9fc2c30352111f248556110ab70ae635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc2c30352111f248556110ab70ae635">&#9670;&#160;</a></span>overflow_policy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d55/group__logger.html#ga6b57007d3b1a605015205aff58d14cc2">LogOverflowPolicy</a> rm::LoggerOptions::overflow_policy {<a class="el" href="../../dc/d55/group__logger.html#gga6b57007d3b1a605015205aff58d14cc2ae273dab723fc345684a50d971853ccbd">LogOverflowPolicy::DropOldest</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>异步队列溢出策略 </p>
+
+</div>
+</div>
+<a id="a4c9629a0eb113debc68feea14480bb5e" name="a4c9629a0eb113debc68feea14480bb5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9629a0eb113debc68feea14480bb5e">&#9670;&#160;</a></span>queue_memory_limit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::LoggerOptions::queue_memory_limit {1024U * 1024U}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>触发持久化的缓存上限，默认 1 MiB </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

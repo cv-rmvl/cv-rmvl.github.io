@@ -4,11 +4,12 @@ var searchData=
   ['grab_5fmode_1',['grab_mode',['../df/dfa/structrm_1_1CameraConfig.html#a73f27421a172091e782613a48965ca5b',1,'rm::CameraConfig']]],
   ['gravity_5fcompensator_5fparam_2',['gravity_compensator_param',['../da/df1/group__para__compensator.html#gac2bd12e4390c057e8738dd589de15b1e',1,'rm::para']]],
   ['gray_3',['gray',['../d4/db4/structrm_1_1ArmorDetectorInfo.html#a0bd47c8554ff56504fd24856155b6b37',1,'rm::ArmorDetectorInfo::gray'],['../d0/d7c/structrm_1_1GyroDetectorInfo.html#a6fcc5c1e3f794605ff4a4b287c8c3d8b',1,'rm::GyroDetectorInfo::gray'],['../d5/d9c/structrm_1_1RuneDetectorInfo.html#a85c6e326d53e5ec45fe96aa2a64d12f2',1,'rm::RuneDetectorInfo::gray']]],
-  ['gray_5fthreshold_5fblue_4',['GRAY_THRESHOLD_BLUE',['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#a36e3edc8d3f58fe6c2d42fbb28f557c0',1,'rm::para::RuneDetectorParam']]],
-  ['gray_5fthreshold_5fred_5',['GRAY_THRESHOLD_RED',['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#ac8b03f2e162f0f35ce322716f3fc3bb7',1,'rm::para::RuneDetectorParam']]],
+  ['gray_5fthreshold_5fblue_4',['GRAY_THRESHOLD_BLUE',['../d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html#abdd0201e82fbd08be21441d1c763636d',1,'rm::para::ArmorDetectorParam::GRAY_THRESHOLD_BLUE'],['../d1/dec/classrm_1_1para_1_1GyroDetectorParam.html#add78d984107a223cb2d9c148a209e9f1',1,'rm::para::GyroDetectorParam::GRAY_THRESHOLD_BLUE'],['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#a36e3edc8d3f58fe6c2d42fbb28f557c0',1,'rm::para::RuneDetectorParam::GRAY_THRESHOLD_BLUE']]],
+  ['gray_5fthreshold_5fred_5',['GRAY_THRESHOLD_RED',['../d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html#a1835fe417dff1fd2993efc97204e5fb7',1,'rm::para::ArmorDetectorParam::GRAY_THRESHOLD_RED'],['../d1/dec/classrm_1_1para_1_1GyroDetectorParam.html#aea144beea82651a9a882077f9c252bf0',1,'rm::para::GyroDetectorParam::GRAY_THRESHOLD_RED'],['../db/db3/classrm_1_1para_1_1RuneDetectorParam.html#ac8b03f2e162f0f35ce322716f3fc3bb7',1,'rm::para::RuneDetectorParam::GRAY_THRESHOLD_RED']]],
   ['gyro_5fcompensator_5fparam_6',['gyro_compensator_param',['../da/df1/group__para__compensator.html#ga8d1d40751ccd15b34a624b54174eb664',1,'rm::para']]],
   ['gyro_5fdecider_5fparam_7',['gyro_decider_param',['../de/dac/group__para__decider.html#ga0b62e27f1cade024d5a3816b30e2b24a',1,'rm::para']]],
-  ['gyro_5fgroup_5fparam_8',['gyro_group_param',['../d1/da1/group__para__group.html#ga3c20106119251976be7c776dd265a5c4',1,'rm::para']]],
-  ['gyro_5fpredictor_5fparam_9',['gyro_predictor_param',['../dd/dad/group__para__predictor.html#ga66505d4accc77eb3cf01a18d64b5e44e',1,'rm::para']]],
-  ['gyro_5ftracker_5fparam_10',['gyro_tracker_param',['../db/d32/group__para__tracker.html#ga33ea70c2a31551a9fecfbc052ea4c733',1,'rm::para']]]
+  ['gyro_5fdetector_5fparam_8',['gyro_detector_param',['../d8/d46/group__para__detector.html#ga7f7476ad130bd93a484005e6338e3fee',1,'rm::para']]],
+  ['gyro_5fgroup_5fparam_9',['gyro_group_param',['../d1/da1/group__para__group.html#ga3c20106119251976be7c776dd265a5c4',1,'rm::para']]],
+  ['gyro_5fpredictor_5fparam_10',['gyro_predictor_param',['../dd/dad/group__para__predictor.html#ga66505d4accc77eb3cf01a18d64b5e44e',1,'rm::para']]],
+  ['gyro_5ftracker_5fparam_11',['gyro_tracker_param',['../db/d32/group__para__tracker.html#ga33ea70c2a31551a9fecfbc052ea4c733',1,'rm::para']]]
 ];

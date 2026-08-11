@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['黄金分割法原理_0',['2.2 黄金分割法原理',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md172',1,'']]],
-  ['黄金分割法_1',['2 黄金分割法',['../de/d14/tutorial_modules_fminbnd.html#autotoc_md170',1,'']]]
+  ['高层设施_0',['1.4 高层设施',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md295',1,'']]]
 ];

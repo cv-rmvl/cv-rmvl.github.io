@@ -10,10 +10,11 @@ var searchData=
   ['gyrodeciderparam_7',['GyroDeciderParam',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html',1,'rm::para']]],
   ['gyrodetector_8',['GyroDetector',['../dc/d93/classrm_1_1GyroDetector.html',1,'rm']]],
   ['gyrodetectorinfo_9',['GyroDetectorInfo',['../d0/d7c/structrm_1_1GyroDetectorInfo.html',1,'rm']]],
-  ['gyrogroup_10',['GyroGroup',['../da/df9/classrm_1_1GyroGroup.html',1,'rm']]],
-  ['gyrogroupparam_11',['GyroGroupParam',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html',1,'rm::para']]],
-  ['gyropredictor_12',['GyroPredictor',['../d4/d7b/classrm_1_1GyroPredictor.html',1,'rm']]],
-  ['gyropredictorparam_13',['GyroPredictorParam',['../d5/db3/classrm_1_1para_1_1GyroPredictorParam.html',1,'rm::para']]],
-  ['gyrotracker_14',['GyroTracker',['../d4/d88/classrm_1_1GyroTracker.html',1,'rm']]],
-  ['gyrotrackerparam_15',['GyroTrackerParam',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html',1,'rm::para']]]
+  ['gyrodetectorparam_10',['GyroDetectorParam',['../d1/dec/classrm_1_1para_1_1GyroDetectorParam.html',1,'rm::para']]],
+  ['gyrogroup_11',['GyroGroup',['../da/df9/classrm_1_1GyroGroup.html',1,'rm']]],
+  ['gyrogroupparam_12',['GyroGroupParam',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html',1,'rm::para']]],
+  ['gyropredictor_13',['GyroPredictor',['../d4/d7b/classrm_1_1GyroPredictor.html',1,'rm']]],
+  ['gyropredictorparam_14',['GyroPredictorParam',['../d5/db3/classrm_1_1para_1_1GyroPredictorParam.html',1,'rm::para']]],
+  ['gyrotracker_15',['GyroTracker',['../d4/d88/classrm_1_1GyroTracker.html',1,'rm']]],
+  ['gyrotrackerparam_16',['GyroTrackerParam',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html',1,'rm::para']]]
 ];

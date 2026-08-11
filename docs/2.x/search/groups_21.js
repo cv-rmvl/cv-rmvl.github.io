@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]]
+  ['日志_0',['日志',['../dc/d55/group__logger.html',1,'']]]
 ];

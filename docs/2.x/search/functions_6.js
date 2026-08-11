@@ -49,7 +49,8 @@ var searchData=
   ['gyrocompensatorparam_46',['GyroCompensatorParam',['../d6/dcf/classrm_1_1para_1_1GyroCompensatorParam.html#ab2855afbf7b39d3cf48b4346c0c8e6da',1,'rm::para::GyroCompensatorParam']]],
   ['gyrodecider_47',['GyroDecider',['../dc/d0b/classrm_1_1GyroDecider.html#a47475c03c241026561bb3be099fb486a',1,'rm::GyroDecider']]],
   ['gyrodeciderparam_48',['GyroDeciderParam',['../d7/d66/classrm_1_1para_1_1GyroDeciderParam.html#a8e0222b77c901997a7c0aa24adb00529',1,'rm::para::GyroDeciderParam']]],
-  ['gyrogroupparam_49',['GyroGroupParam',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html#a579b6ad7f973bb2a4795e410738f067c',1,'rm::para::GyroGroupParam']]],
-  ['gyropredictorparam_50',['GyroPredictorParam',['../d5/db3/classrm_1_1para_1_1GyroPredictorParam.html#a2f31821247f55f47217877d4e090045f',1,'rm::para::GyroPredictorParam']]],
-  ['gyrotrackerparam_51',['GyroTrackerParam',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html#abb70f466e8f1953163094ef86dd383d6',1,'rm::para::GyroTrackerParam']]]
+  ['gyrodetectorparam_49',['GyroDetectorParam',['../d1/dec/classrm_1_1para_1_1GyroDetectorParam.html#a81421f62d332aad104727143edbfb94c',1,'rm::para::GyroDetectorParam']]],
+  ['gyrogroupparam_50',['GyroGroupParam',['../d3/dc2/classrm_1_1para_1_1GyroGroupParam.html#a579b6ad7f973bb2a4795e410738f067c',1,'rm::para::GyroGroupParam']]],
+  ['gyropredictorparam_51',['GyroPredictorParam',['../d5/db3/classrm_1_1para_1_1GyroPredictorParam.html#a2f31821247f55f47217877d4e090045f',1,'rm::para::GyroPredictorParam']]],
+  ['gyrotrackerparam_52',['GyroTrackerParam',['../d8/db8/classrm_1_1para_1_1GyroTrackerParam.html#abb70f466e8f1953163094ef86dd383d6',1,'rm::para::GyroTrackerParam']]]
 ];

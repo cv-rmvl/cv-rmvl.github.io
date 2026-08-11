@@ -15,7 +15,7 @@ var searchData=
   ['close_5flength_12',['CLOSE_LENGTH',['../d1/d7d/classrm_1_1para_1_1LightBlobParam.html#a8997e4e875a39dfb6e7c7376db26d5bf',1,'rm::para::LightBlobParam']]],
   ['code_13',['code',['../d9/db4/classrm_1_1Exception.html#a364083e7467c049de49fc9722e62530f',1,'rm::Exception']]],
   ['coeff_5fk_14',['COEFF_K',['../d5/d17/classrm_1_1para_1_1RuneParam.html#aabc6f018f4ac9f83b8004b7b007a5823',1,'rm::para::RuneParam']]],
-  ['color_15',['color',['../d0/da6/classrm_1_1msg_1_1Marker.html#a664cfbc7eb361d12446781476ec292e3',1,'rm::msg::Marker::color'],['../d5/da4/structrm_1_1PostprocessOptions.html#a7b2e347ec471e587fecf66fd640790a9',1,'rm::PostprocessOptions::color']]],
+  ['color_15',['color',['../d0/da6/classrm_1_1msg_1_1Marker.html#a664cfbc7eb361d12446781476ec292e3',1,'rm::msg::Marker']]],
   ['colors_16',['colors',['../d0/da6/classrm_1_1msg_1_1Marker.html#a75d6921e1e19ac7714efe023d01b33e0',1,'rm::msg::Marker']]],
   ['combos_17',['combos',['../d4/db4/structrm_1_1ArmorDetectorInfo.html#a7c42d991d0c6f8e932d4a9cb108d161d',1,'rm::ArmorDetectorInfo::combos'],['../d0/d7c/structrm_1_1GyroDetectorInfo.html#afb0249b21184094d4c20c4ef6060dac7',1,'rm::GyroDetectorInfo::combos'],['../d5/d9c/structrm_1_1RuneDetectorInfo.html#ade24029c3dd0e07b5f6958262e915a4d',1,'rm::RuneDetectorInfo::combos']]],
   ['compensation_18',['compensation',['../d5/da4/structrm_1_1CompensateInfo.html#a6c9cd39856cffa38dcb1d0dd24d484ff',1,'rm::CompensateInfo']]],

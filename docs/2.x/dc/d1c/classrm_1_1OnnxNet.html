@@ -116,8 +116,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> |
 <a href="#pub-static-methods">静态 Public 成员函数</a> |
+<a href="#pro-methods">Protected 成员函数</a> |
 <a href="#pro-attribs">Protected 属性</a> |
-<a href="#pri-methods">Private 成员函数</a> |
 <a href="../../d9/d89/classrm_1_1OnnxNet-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">rm::OnnxNet类 参考<div class="ingroups"><a class="el" href="../../dd/ded/group__ml.html">机器学习与深度学习支持库</a> » <a class="el" href="../../dc/d73/group__ml__ort.html">onnxruntime 多态部署库</a></div></div></div>
 </div><!--header-->
@@ -128,7 +128,7 @@ $(function() {
 <div class="dynheader">
 类 rm::OnnxNet 继承关系图:</div>
 <div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="427" loading="lazy" scrolling="no" src="../../d2/d23/classrm_1_1OnnxNet__inherit__graph.svg" width="158">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+<div class="center"><iframe frameborder="0" height="404" loading="lazy" scrolling="no" src="../../d2/d23/classrm_1_1OnnxNet__inherit__graph.svg" width="158">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
 </div>
 <div class="dynheader">
 rm::OnnxNet 的协作图:</div>
@@ -138,18 +138,20 @@ rm::OnnxNet 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a6dbd13d7a6b4a26a4296da92809dea81" id="r_a6dbd13d7a6b4a26a4296da92809dea81"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a6dbd13d7a6b4a26a4296da92809dea81">OnnxNet</a> (std::string_view model_path, <a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> prov)</td></tr>
-<tr class="memdesc:a6dbd13d7a6b4a26a4296da92809dea81"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象  <br/></td></tr>
 <tr class="memitem:a8cf157759b92a6eed2a8675aec1aa1bd" id="r_a8cf157759b92a6eed2a8675aec1aa1bd"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a8cf157759b92a6eed2a8675aec1aa1bd">printModelInfo</a> () noexcept</td></tr>
 <tr class="memdesc:a8cf157759b92a6eed2a8675aec1aa1bd"><td class="mdescLeft"> </td><td class="mdescRight">打印模型信息  <br/></td></tr>
-<tr class="memitem:ab70aafd8b3d2bac3170fbb92cb8ba092" id="r_ab70aafd8b3d2bac3170fbb92cb8ba092"><td class="memItemLeft">std::any </td><td class="memItemRight"><a class="el" href="#ab70aafd8b3d2bac3170fbb92cb8ba092">inference</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;preop, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop)</td></tr>
-<tr class="memdesc:ab70aafd8b3d2bac3170fbb92cb8ba092"><td class="mdescLeft"> </td><td class="mdescRight">推理  <br/></td></tr>
-<tr class="memitem:adfe46ea2dfbc55b99369613a5cf9b754" id="r_adfe46ea2dfbc55b99369613a5cf9b754"><td class="memItemLeft">virtual </td><td class="memItemRight"><a class="el" href="#adfe46ea2dfbc55b99369613a5cf9b754">~OnnxNet</a> ()=default</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a599174e651ad53759b0547916f45d010" id="r_a599174e651ad53759b0547916f45d010"><td class="memItemLeft">static void </td><td class="memItemRight"><a class="el" href="#a599174e651ad53759b0547916f45d010">printEnvInfo</a> () noexcept</td></tr>
 <tr class="memdesc:a599174e651ad53759b0547916f45d010"><td class="mdescLeft"> </td><td class="mdescRight">打印环境信息  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pro-methods"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a6dbd13d7a6b4a26a4296da92809dea81" id="r_a6dbd13d7a6b4a26a4296da92809dea81"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a6dbd13d7a6b4a26a4296da92809dea81">OnnxNet</a> (std::string_view model_path, <a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a> prov)</td></tr>
+<tr class="memdesc:a6dbd13d7a6b4a26a4296da92809dea81"><td class="mdescLeft"> </td><td class="mdescRight">创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象  <br/></td></tr>
+<tr class="memitem:a9acbbba59f68881c02d09cf740aad54d" id="r_a9acbbba59f68881c02d09cf740aad54d"><td class="memItemLeft">std::vector&lt; Ort::Value &gt; </td><td class="memItemRight"><a class="el" href="#a9acbbba59f68881c02d09cf740aad54d">run</a> (const std::vector&lt; Ort::Value &gt; &amp;input_tensors)</td></tr>
+<tr class="memdesc:a9acbbba59f68881c02d09cf740aad54d"><td class="mdescLeft"> </td><td class="mdescRight">执行 ONNX Runtime 推理  <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pro-attribs"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -165,13 +167,6 @@ Protected 属性</h2></td></tr>
 <tr class="memdesc:a444b0d5f8648ec289690695e3f1894f6"><td class="mdescLeft"> </td><td class="mdescRight">输入名称  <br/></td></tr>
 <tr class="memitem:a458b3588fb2c6efc844723c5140b6938" id="r_a458b3588fb2c6efc844723c5140b6938"><td class="memItemLeft">std::vector&lt; const char * &gt; </td><td class="memItemRight"><a class="el" href="#a458b3588fb2c6efc844723c5140b6938">_onames</a></td></tr>
 <tr class="memdesc:a458b3588fb2c6efc844723c5140b6938"><td class="mdescLeft"> </td><td class="mdescRight">输出名称  <br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pri-methods"><a id="pri-methods" name="pri-methods"></a>
-Private 成员函数</h2></td></tr>
-<tr class="memitem:aab093dd8bfe38713aaca5832836a302b" id="r_aab093dd8bfe38713aaca5832836a302b"><td class="memItemLeft">virtual std::vector&lt; Ort::Value &gt; </td><td class="memItemRight"><a class="el" href="#aab093dd8bfe38713aaca5832836a302b">preProcess</a> (const std::vector&lt; cv::Mat &gt; &amp;images, const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;preop)</td></tr>
-<tr class="memdesc:aab093dd8bfe38713aaca5832836a302b"><td class="mdescLeft"> </td><td class="mdescRight">预处理  <br/></td></tr>
-<tr class="memitem:a55d4a528b133fb7b420ba29726679b4b" id="r_a55d4a528b133fb7b420ba29726679b4b"><td class="memItemLeft">virtual std::any </td><td class="memItemRight"><a class="el" href="#a55d4a528b133fb7b420ba29726679b4b">postProcess</a> (const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;postop)</td></tr>
-<tr class="memdesc:a55d4a528b133fb7b420ba29726679b4b"><td class="mdescLeft"> </td><td class="mdescRight">后处理  <br/></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">详细描述</h2>
 <div class="textblock"><p>ONNX-Runtime (Ort) 部署库基类 <a class="el" href="../../d0/de3/citelist.html#CITEREF_microsoft23ort">[15]</a> </p>
@@ -180,6 +175,9 @@ Private 成员函数</h2></td></tr>
 <h2 class="memtitle"><span class="permalink"><a href="#a6dbd13d7a6b4a26a4296da92809dea81">◆ </a></span>OnnxNet()</h2>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">rm::OnnxNet::OnnxNet </td>
@@ -191,7 +189,12 @@ Private 成员函数</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="../../dc/d73/group__ml__ort.html#gaa3efd1984486e48014bbcfc54e432e84">OrtProvider</a></td>          <td class="paramname"><span class="paramname"><em>prov</em></span> )</td>
         </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet(</td><td class="paramname">model_path, prov</td><td>) -&gt; </td><td>&lt;OnnxNet object&gt;</td></tr></table>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet(</td><td class="paramname">model_path, prov</td><td>) -&gt; </td><td>&lt;OnnxNet object&gt;</td></tr></table>
 </div><div class="memdoc">
 <p>创建 <a class="el" href="../../dc/d1c/classrm_1_1OnnxNet.html" title="ONNX-Runtime (Ort) 部署库基类 microsoft23ort">OnnxNet</a> 对象 </p>
 <dl class="params"><dt>参数</dt><dd>
@@ -201,161 +204,14 @@ Private 成员函数</h2></td></tr>
   </table>
   </dd>
 </dl>
-</div>
-</div>
-<a id="adfe46ea2dfbc55b99369613a5cf9b754" name="adfe46ea2dfbc55b99369613a5cf9b754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfe46ea2dfbc55b99369613a5cf9b754">◆ </a></span>~OnnxNet()</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual rm::OnnxNet::~OnnxNet </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="39" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_adfe46ea2dfbc55b99369613a5cf9b754_cgraph.svg" width="408">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_a6dbd13d7a6b4a26a4296da92809dea81_cgraph.svg" width="180">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
 </div>
 </div>
 </div>
 <a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">成员函数说明</h2>
-<a id="ab70aafd8b3d2bac3170fbb92cb8ba092" name="ab70aafd8b3d2bac3170fbb92cb8ba092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab70aafd8b3d2bac3170fbb92cb8ba092">◆ </a></span>inference()</h2>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::any rm::OnnxNet::inference </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>preop</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>postop</em></span> )</td>
-        </tr>
-      </table><table class="python_language"><tr><th colspan="999" style="text-align:left">Python:</th></tr><tr><td style="width: 15px;"></td><td>rm.OnnxNet.inference(</td><td class="paramname">images, preop, postop</td><td>) -&gt; </td><td>res</td></tr></table>
-</div><div class="memdoc">
-<p>推理 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>所有输入图像 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">preop</td><td>预处理选项，不同网络有不同的预处理选项 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">postop</td><td>后处理选项，不同网络有不同的后处理选项 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>使用 <span class="tt">std::any</span> 表示的所有推理结果，需要根据具体的网络进行解析 </dd></dl>
-<dl class="section note"><dt>注解</dt><dd>可使用 <span class="tt">&lt;class-type&gt;::cast</span> 函数对返回类型进行转换 </dd></dl>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_ab70aafd8b3d2bac3170fbb92cb8ba092_cgraph.svg" width="184">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
-</div>
-</div>
-</div>
-<a id="a55d4a528b133fb7b420ba29726679b4b" name="a55d4a528b133fb7b420ba29726679b4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55d4a528b133fb7b420ba29726679b4b">◆ </a></span>postProcess()</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::any rm::OnnxNet::postProcess </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Ort::Value &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output_tensors</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d5/da4/structrm_1_1PostprocessOptions.html">PostprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>postop</em></span> )</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>后处理 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">output_tensors</td><td>模型的输出 Tensors </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">postop</td><td>后处理选项，不同网络有不同的后处理选项 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>使用 <span class="tt">std::any</span> 表示的所有推理结果，需要根据具体的网络进行解析 </dd></dl>
-<p>被 <a class="el" href="../../d4/de6/classrm_1_1ClassificationNet.html#a66d83371ae162712b202f11ae10da3fe">rm::ClassificationNet</a> 重载.</p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_a55d4a528b133fb7b420ba29726679b4b_cgraph.svg" width="202">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
-</div>
-</div>
-</div>
-<a id="aab093dd8bfe38713aaca5832836a302b" name="aab093dd8bfe38713aaca5832836a302b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab093dd8bfe38713aaca5832836a302b">◆ </a></span>preProcess()</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::vector&lt; Ort::Value &gt; rm::OnnxNet::preProcess </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>images</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d2/d84/structrm_1_1PreprocessOptions.html">PreprocessOptions</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>preop</em></span> )</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel virtual">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>预处理 </p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>所有输入图像 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">preop</td><td>预处理选项，不同网络有不同的预处理选项 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>模型的输入 Tensors </dd></dl>
-<p>被 <a class="el" href="../../d4/de6/classrm_1_1ClassificationNet.html#a15ff35f5e291bdb84a61d22371a20f30">rm::ClassificationNet</a> 重载.</p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_aab093dd8bfe38713aaca5832836a302b_cgraph.svg" width="195">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
-</div>
-</div>
-</div>
 <a id="a599174e651ad53759b0547916f45d010" name="a599174e651ad53759b0547916f45d010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a599174e651ad53759b0547916f45d010">◆ </a></span>printEnvInfo()</h2>
 <div class="memitem">
@@ -405,7 +261,43 @@ Private 成员函数</h2></td></tr>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_a8cf157759b92a6eed2a8675aec1aa1bd_cgraph.svg" width="219">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_a8cf157759b92a6eed2a8675aec1aa1bd_cgraph.svg" width="436">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
+</div>
+</div>
+<a id="a9acbbba59f68881c02d09cf740aad54d" name="a9acbbba59f68881c02d09cf740aad54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acbbba59f68881c02d09cf740aad54d">◆ </a></span>run()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Ort::Value &gt; rm::OnnxNet::run </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Ort::Value &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>input_tensors</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>执行 ONNX Runtime 推理 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_tensors</td><td>模型的输入 Tensors </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>模型的输出 Tensors </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../dc/d1c/classrm_1_1OnnxNet_a9acbbba59f68881c02d09cf740aad54d_cgraph.svg" width="144">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
 </div>
 </div>
 </div>

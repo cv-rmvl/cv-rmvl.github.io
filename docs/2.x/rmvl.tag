@@ -501,6 +501,73 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::para::ArmorDetectorParam</name>
+    <filename>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ArmorDetectorParam</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>aec3e46bfb27d9495fa1f7673eecc124d</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>a1d4d896b08192826e2c2a782a984bdb5</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>ad7080fd6312cd06586e9383094227f9e</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>GRAY_THRESHOLD_RED</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>a1835fe417dff1fd2993efc97204e5fb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>GRAY_THRESHOLD_BLUE</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>abdd0201e82fbd08be21441d1c763636d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>MIN_CONTOUR_AREA</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>a2e7446e43c7a459c3fbe37ee31858aea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_TRACKER_DELTA_DIS</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>a654d188b8169195ce1b6b11302bad6c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MODEL_MEAN</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>ad8b12b32e742d124f4e6f6ff170c215e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MODEL_STD</name>
+      <anchorfile>d6/d45/classrm_1_1para_1_1ArmorDetectorParam.html</anchorfile>
+      <anchor>ad3bf4ed87a5a6bd6605d45a5ef2ed7a9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::para::ArmorParam</name>
     <filename>db/db1/classrm_1_1para_1_1ArmorParam.html</filename>
     <member kind="function">
@@ -857,6 +924,129 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::BasicLoggerProxy</name>
+    <filename>d2/d2a/classrm_1_1BasicLoggerProxy.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>debug</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a80e25e9e46339c073ab9edcb1a787f12</anchor>
+      <arglist>(std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>debug</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>ae46b0323f25693383deb0104d669b6e5</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>info</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a3da4528f303d95bfab1d53bccce933c4</anchor>
+      <arglist>(std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>info</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a4f3aab4e11b7a4d2665afbbfbaae8910</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>warn</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>ac08aef2bae9a8894f95193efbdb97c39</anchor>
+      <arglist>(std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>warn</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>ac31dc4e8db63ca08cc4df5675b98ada4</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>adf8fb01fc2999ee4091c5aea94973b4d</anchor>
+      <arglist>(std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a60a0a521afabc3266c847145af77237d</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>critical</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>abc77b696005678cb81a34c372201f9ce</anchor>
+      <arglist>(std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>critical</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>afef7ff7756db5d08f552805b261c7883</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>log</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>aa81dd6e1c7ab5727dea6a37d014a5043</anchor>
+      <arglist>(LogLevel level, std::string_view msg) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLevel</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>ac61ee2686b0dc01c7114ba66c398fa07</anchor>
+      <arglist>(LogLevel level) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>LogLevel</type>
+      <name>level</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a24139517493f283398e493462fbfc49c</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>flush</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a3dff53ac4c5e605a46b662e2e41a1cf1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pendingBytes</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a992146dc59c04ae6e3ae7f34d44960e4</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>droppedLogs</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>ada78fc4fb02e56d77e27e087ba50aa7f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>backendErrors</name>
+      <anchorfile>d2/d2a/classrm_1_1BasicLoggerProxy.html</anchorfile>
+      <anchor>a92b2161e44484faa1ca001d23bf539ff</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::BasicPromise</name>
     <filename>d2/da2/classrm_1_1async_1_1BasicPromise.html</filename>
     <member kind="function">
@@ -932,6 +1122,17 @@
       <anchorfile>db/d94/classrm_1_1msg_1_1Bool.html</anchorfile>
       <anchor>a1c91f66b709e288a630bc9fd47cfa2a0</anchor>
       <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::ip::udp::Broadcast</name>
+    <filename>d7/d6a/classrm_1_1ip_1_1udp_1_1Broadcast.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Broadcast</name>
+      <anchorfile>d7/d6a/classrm_1_1ip_1_1udp_1_1Broadcast.html</anchorfile>
+      <anchor>a8a9521a434e7a9730e6661d62919d9c1</anchor>
+      <arglist>(bool enabled=true)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -1259,26 +1460,12 @@
       <anchor>a6b4d277a98b3403bb1278378b6c09005</anchor>
       <arglist>(std::string_view model_path, OrtProvider prov=OrtProvider::CPU)</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static std::pair&lt; int, float &gt;</type>
-      <name>cast</name>
+    <member kind="function">
+      <type>std::pair&lt; int, float &gt;</type>
+      <name>inference</name>
       <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
-      <anchor>adbad1162f87690b65574acf49278166a</anchor>
-      <arglist>(const std::any &amp;result)</arglist>
-    </member>
-    <member kind="function" protection="private">
-      <type>std::vector&lt; Ort::Value &gt;</type>
-      <name>preProcess</name>
-      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
-      <anchor>a15ff35f5e291bdb84a61d22371a20f30</anchor>
-      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;options) override</arglist>
-    </member>
-    <member kind="function" protection="private">
-      <type>std::any</type>
-      <name>postProcess</name>
-      <anchorfile>d4/de6/classrm_1_1ClassificationNet.html</anchorfile>
-      <anchor>a66d83371ae162712b202f11ae10da3fe</anchor>
-      <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop) override</arglist>
+      <anchor>ab327b9fd86e42f327daa2c3ce0ad14fc</anchor>
+      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const std::vector&lt; float &gt; &amp;means, const std::vector&lt; float &gt; &amp;stds)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2931,6 +3118,31 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::FileSink</name>
+    <filename>da/d1c/classrm_1_1FileSink.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>FileSink</name>
+      <anchorfile>da/d1c/classrm_1_1FileSink.html</anchorfile>
+      <anchor>aafcdd82fbcf55d88215f9faf95dec218</anchor>
+      <arglist>(std::string path=&quot;.&quot;, std::string name=&quot;rmvl&quot;, std::size_t max_file_size=10U *1024U *1024U, std::size_t max_files=128)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_write_invoke</name>
+      <anchorfile>da/d1c/classrm_1_1FileSink.html</anchorfile>
+      <anchor>ac58acdb1574782d8f87db70195ed092e</anchor>
+      <arglist>(FileSink &amp;, LogLevel, std::string_view) noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_flush_invoke</name>
+      <anchorfile>da/d1c/classrm_1_1FileSink.html</anchorfile>
+      <anchor>a6485d8ab814bcaa75c883091b9a47a58</anchor>
+      <arglist>(FileSink &amp;) noexcept</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::async::FinalAwaiter</name>
     <filename>d0/daa/structrm_1_1async_1_1FinalAwaiter.html</filename>
@@ -3675,6 +3887,129 @@
       <name>features</name>
       <anchorfile>d0/d7c/structrm_1_1GyroDetectorInfo.html</anchorfile>
       <anchor>ad189a2a53df59f282cedf294a480c90a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::para::GyroDetectorParam</name>
+    <filename>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>GyroDetectorParam</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a81421f62d332aad104727143edbfb94c</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a96ff1a002349341e644b1a400c885ca0</anchor>
+      <arglist>(const std::string &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a1c667dfda8e0cafd093b9fe5c76b6f0e</anchor>
+      <arglist>(const std::string &amp;path) const</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>GRAY_THRESHOLD_RED</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>aea144beea82651a9a882077f9c252bf0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>GRAY_THRESHOLD_BLUE</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>add78d984107a223cb2d9c148a209e9f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>MIN_CONTOUR_AREA</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>ae19bff1b4b3c4dc18f4c68f03ab99a75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_GROUP_DELTA_DIS</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>adc4ffe4d0313fab910aab0842ab94ae1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MIN_MULTIPLE_ANGLE</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a67746a148226e62986fa24abab54cbba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_MULTIPLE_ANGLE</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a1c7a00fc991c371e3783aeb40b66113b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_HEIGHT_RATIO</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>afa9ba835c28f597f7ae8ec4f16ab0ba9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_WIDTH_RATIO</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a042ce385272c856ea0a4ec82eabe6cbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_X_DISTANCE_RATIO</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>ae318333533296a565329f25d2c1236a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MIN_X_DISTANCE_RATIO</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a6627bf394fd776f19a43e2a03b428040</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MAX_Y_DISTANCE_RATIO</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a7b12033f4de4d50f83b9c1e0d9d449a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MIN_CENTER_DIS</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>abb6cc5b101589f3ed2cdfa71f4962b73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MODEL_MEAN</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a7b868967fcbc857bddcec93f7a4832a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>MODEL_STD</name>
+      <anchorfile>d1/dec/classrm_1_1para_1_1GyroDetectorParam.html</anchorfile>
+      <anchor>a8d66c2b6ebe82705d735ef4ca014c417</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5996,6 +6331,210 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::Logger</name>
+    <filename>d2/d0e/classrm_1_1Logger.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Logger</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>af15272f7b102ba9defa7c8e54a3f32b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Logger</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a3a37d4d56b3b4f989446ff4985face34</anchor>
+      <arglist>(LoggerOptions options)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Logger</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a25fcfd5b20c7ed90833c5d49b883c030</anchor>
+      <arglist>(SinkType sink, LoggerOptions options={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Logger</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>ac98ae3c08d80dcb30dae20154c9845f0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>log</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>aab6722631565af2a87aaaaef0f966deb</anchor>
+      <arglist>(LogLevel level, std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>debug</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>aef9721268197b1ce71b2608fa83f9d7b</anchor>
+      <arglist>(std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>debug</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>abded3a1a0bc89c25265b257a1caeb97d</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>info</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a17bc1f935ed8d150d13d4094c5e76627</anchor>
+      <arglist>(std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>info</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a2f95cc957b5fedb5038e66e733fb3910</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>warn</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a230e6cb98624ab1276113b72b8314f6d</anchor>
+      <arglist>(std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>warn</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a80fbf08f1e4b6ff6dc4178613e85f621</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a903fc0c4a96d0f1ce4785dd2b6e5557a</anchor>
+      <arglist>(std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>aac5aecaedeb25ff0f7a79a79f64de4cf</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>critical</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a423d0a104b74aa33c4d5c41a86020ed8</anchor>
+      <arglist>(std::string_view msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>critical</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a2e04428c30a9888b6f19da37e4c1e7ee</anchor>
+      <arglist>(fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setLevel</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a0dd05101cb1cc69d0aeb67faadb376fc</anchor>
+      <arglist>(LogLevel level) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>LogLevel</type>
+      <name>level</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a841ff99c7aa25085acdef5d385ab388c</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>flush</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a1dcb606d91c5bb5692ec49a016f95448</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>pendingBytes</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>ae18cb6e2225f47d538c886f4b818c563</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>droppedLogs</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a80d019ca8460f15fee0270ae75981974</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>backendErrors</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>af69d9e2ddb8d9a1f9f86cf8adba2273d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Logger &amp;</type>
+      <name>basic</name>
+      <anchorfile>d2/d0e/classrm_1_1Logger.html</anchorfile>
+      <anchor>a40d6c3a895ab39e59879c14eaa55df09</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::LoggerOptions</name>
+    <filename>dd/d0b/structrm_1_1LoggerOptions.html</filename>
+    <member kind="variable">
+      <type>LogLevel</type>
+      <name>level</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>a6acde36a05ca62ffef68b48a932cd998</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::chrono::milliseconds</type>
+      <name>flush_interval</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>a966c4b8477bca73cd99a3e6e2763fd00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>queue_memory_limit</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>a4c9629a0eb113debc68feea14480bb5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>max_queue_memory</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>abdb3abff234a95f7099ec6a414cdbed0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>LogOverflowPolicy</type>
+      <name>overflow_policy</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>a9fc2c30352111f248556110ab70ae635</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::function&lt; void(std::string_view)&gt;</type>
+      <name>error_handler</name>
+      <anchorfile>dd/d0b/structrm_1_1LoggerOptions.html</anchorfile>
+      <anchor>ab9c175be67fd5cf77bfd4ef0da3d9b6f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::ip::multicast::Loopback</name>
     <filename>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</filename>
     <member kind="function">
@@ -7567,32 +8106,11 @@
     <name>rm::OnnxNet</name>
     <filename>dc/d1c/classrm_1_1OnnxNet.html</filename>
     <member kind="function">
-      <type></type>
-      <name>OnnxNet</name>
-      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
-      <anchor>a6dbd13d7a6b4a26a4296da92809dea81</anchor>
-      <arglist>(std::string_view model_path, OrtProvider prov)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>printModelInfo</name>
       <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
       <anchor>a8cf157759b92a6eed2a8675aec1aa1bd</anchor>
       <arglist>() noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>std::any</type>
-      <name>inference</name>
-      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
-      <anchor>ab70aafd8b3d2bac3170fbb92cb8ba092</anchor>
-      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;preop, const PostprocessOptions &amp;postop)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~OnnxNet</name>
-      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
-      <anchor>adfe46ea2dfbc55b99369613a5cf9b754</anchor>
-      <arglist>()=default</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
@@ -7600,6 +8118,20 @@
       <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
       <anchor>a599174e651ad53759b0547916f45d010</anchor>
       <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>OnnxNet</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a6dbd13d7a6b4a26a4296da92809dea81</anchor>
+      <arglist>(std::string_view model_path, OrtProvider prov)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>std::vector&lt; Ort::Value &gt;</type>
+      <name>run</name>
+      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
+      <anchor>a9acbbba59f68881c02d09cf740aad54d</anchor>
+      <arglist>(const std::vector&lt; Ort::Value &gt; &amp;input_tensors)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Ort::MemoryInfo</type>
@@ -7642,20 +8174,6 @@
       <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
       <anchor>a458b3588fb2c6efc844723c5140b6938</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::vector&lt; Ort::Value &gt;</type>
-      <name>preProcess</name>
-      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
-      <anchor>aab093dd8bfe38713aaca5832836a302b</anchor>
-      <arglist>(const std::vector&lt; cv::Mat &gt; &amp;images, const PreprocessOptions &amp;preop)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::any</type>
-      <name>postProcess</name>
-      <anchorfile>dc/d1c/classrm_1_1OnnxNet.html</anchorfile>
-      <anchor>a55d4a528b133fb7b420ba29726679b4b</anchor>
-      <arglist>(const std::vector&lt; Ort::Value &gt; &amp;output_tensors, const PostprocessOptions &amp;postop)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8734,42 +9252,6 @@
       <anchorfile>d4/d23/classrm_1_1msg_1_1Pose.html</anchorfile>
       <anchor>a5f6f2918ff4267c639487719d5ad623e</anchor>
       <arglist>[]</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::PostprocessOptions</name>
-    <filename>d5/da4/structrm_1_1PostprocessOptions.html</filename>
-    <member kind="variable">
-      <type>uint8_t</type>
-      <name>color</name>
-      <anchorfile>d5/da4/structrm_1_1PostprocessOptions.html</anchorfile>
-      <anchor>a7b2e347ec471e587fecf66fd640790a9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::vector&lt; float &gt;</type>
-      <name>thresh</name>
-      <anchorfile>d5/da4/structrm_1_1PostprocessOptions.html</anchorfile>
-      <anchor>a2899ebb4fdcfaada431e66faf16e1a6e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>rm::PreprocessOptions</name>
-    <filename>d2/d84/structrm_1_1PreprocessOptions.html</filename>
-    <member kind="variable">
-      <type>std::vector&lt; float &gt;</type>
-      <name>means</name>
-      <anchorfile>d2/d84/structrm_1_1PreprocessOptions.html</anchorfile>
-      <anchor>af570c58ee1b4850e6afbb549a7eb14fb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>std::vector&lt; float &gt;</type>
-      <name>stds</name>
-      <anchorfile>d2/d84/structrm_1_1PreprocessOptions.html</anchorfile>
-      <anchor>a3f998cae02faae087e0ac0d20cec63c4</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11475,6 +11957,31 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::SerialSink</name>
+    <filename>da/dfb/classrm_1_1SerialSink.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SerialSink</name>
+      <anchorfile>da/dfb/classrm_1_1SerialSink.html</anchorfile>
+      <anchor>a35338a9e65df5dc876423702433d74bd</anchor>
+      <arglist>(std::string device, BaudRate baud_rate=BaudRate::BR_115200)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_write_invoke</name>
+      <anchorfile>da/dfb/classrm_1_1SerialSink.html</anchorfile>
+      <anchor>ad0725c5a0ca892b71765d5aa2eb88762</anchor>
+      <arglist>(SerialSink &amp;, LogLevel, std::string_view) noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_flush_invoke</name>
+      <anchorfile>da/dfb/classrm_1_1SerialSink.html</anchorfile>
+      <anchor>ad122f51d11024c590cb305bb691484e2</anchor>
+      <arglist>(SerialSink &amp;) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::SerialPort::SerialWriteAwaiter</name>
     <filename>de/da3/classrm_1_1async_1_1SerialPort_1_1SerialWriteAwaiter.html</filename>
     <base>rm::async::AsyncWriteAwaiter</base>
@@ -11940,6 +12447,28 @@
       <anchorfile>de/d99/classrm_1_1async_1_1Signal_1_1SignalAwaiter.html</anchorfile>
       <anchor>a3e4763b0dcd8bd5cb1161121cdd32025</anchor>
       <arglist>(IOContext &amp;ctx, FileDescriptor fd)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::sink_flush_t</name>
+    <filename>d5/da1/structrm_1_1sink__flush__t.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator()</name>
+      <anchorfile>d5/da1/structrm_1_1sink__flush__t.html</anchorfile>
+      <anchor>a3df15c7d1b74ccd1f9828991c2c2ed69</anchor>
+      <arglist>(SinkType &amp;sink) const noexcept(noexcept(sink_flush_invoke(sink)))</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::sink_write_t</name>
+    <filename>d1/dab/structrm_1_1sink__write__t.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator()</name>
+      <anchorfile>d1/dab/structrm_1_1sink__write__t.html</anchorfile>
+      <anchor>a04547ff4f9f7f83a5d0b4108f6ab8a77</anchor>
+      <arglist>(SinkType &amp;sink, LogLevel level, std::string_view record) const noexcept(noexcept(sink_write_invoke(sink, level, record)))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12474,6 +13003,24 @@
       <anchorfile>d3/da8/classrm_1_1StateInfo.html</anchorfile>
       <anchor>a65b6dfdf9da7d246b164103e3004d51a</anchor>
       <arglist>(std::string_view key) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::StdoutSink</name>
+    <filename>da/dc5/structrm_1_1StdoutSink.html</filename>
+    <member kind="friend">
+      <type>friend bool</type>
+      <name>sink_write_invoke</name>
+      <anchorfile>da/dc5/structrm_1_1StdoutSink.html</anchorfile>
+      <anchor>a07cdfdc23d5cf90f7254b3bcbeb7c712</anchor>
+      <arglist>(StdoutSink &amp;, LogLevel, std::string_view) noexcept</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend bool</type>
+      <name>sink_flush_invoke</name>
+      <anchorfile>da/dc5/structrm_1_1StdoutSink.html</anchorfile>
+      <anchor>abe58dd2b9105a8942c8bb76fee2a42c0</anchor>
+      <arglist>(StdoutSink &amp;) noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13718,6 +14265,31 @@
       <anchorfile>d6/d47/classrm_1_1msg_1_1Twist.html</anchorfile>
       <anchor>a41d1ba3f395067fe7da84858f7aea3b7</anchor>
       <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::UDPSink</name>
+    <filename>dc/df2/classrm_1_1UDPSink.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>UDPSink</name>
+      <anchorfile>dc/df2/classrm_1_1UDPSink.html</anchorfile>
+      <anchor>afdafddbe87f376b6d29b00f10a1c576f</anchor>
+      <arglist>(std::string address, uint16_t port, std::size_t mtu=1500)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_write_invoke</name>
+      <anchorfile>dc/df2/classrm_1_1UDPSink.html</anchorfile>
+      <anchor>ab16f4c5ad1d4bcc778f44e7a68dd0148</anchor>
+      <arglist>(UDPSink &amp;, LogLevel, std::string_view) noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend bool</type>
+      <name>sink_flush_invoke</name>
+      <anchorfile>dc/df2/classrm_1_1UDPSink.html</anchorfile>
+      <anchor>ac9ed807cf3e2aeaf1745ef2b3b52d9f7</anchor>
+      <arglist>(UDPSink &amp;) noexcept</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15006,8 +15578,15 @@
     <class kind="class">rm::HikLightController</class>
     <class kind="struct">rm::LightConfig</class>
     <class kind="class">rm::OPTLightController</class>
-    <class kind="struct">rm::PreprocessOptions</class>
-    <class kind="struct">rm::PostprocessOptions</class>
+    <class kind="struct">rm::sink_write_t</class>
+    <class kind="struct">rm::sink_flush_t</class>
+    <class kind="struct">rm::StdoutSink</class>
+    <class kind="class">rm::FileSink</class>
+    <class kind="class">rm::SerialSink</class>
+    <class kind="class">rm::UDPSink</class>
+    <class kind="struct">rm::LoggerOptions</class>
+    <class kind="class">rm::Logger</class>
+    <class kind="class">rm::BasicLoggerProxy</class>
     <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::ClassificationNet</class>
     <class kind="class">rm::StateInfo</class>
@@ -15533,6 +16112,29 @@
       <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7aa12a3079e14ced46e69ba52b8a90b21a">IP</enumvalue>
       <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7a897356954c2cd3d41b221e3f24f99bba">Key</enumvalue>
       <enumvalue file="d5/d20/namespacerm.html" anchor="abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493">Serial</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LogLevel</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga26ff8001b9ec9036057d58555bbc1c0a</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aaa603905470e2a5b8c13e96b579ef0dba">Debug</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa4059b0251f66a18cb56f544728796875">Info</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa56525ae64d370c0b448ac0d60710ef17">Warn</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa902b0d55fddef6f8d651fe1035b7d4bd">Error</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa278d01e5af56273bae1bb99a98b370cd">Critical</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LogOverflowPolicy</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga6b57007d3b1a605015205aff58d14cc2</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2ae1e4c8c9ccd9fc39c391da4bcd093fb2">Block</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2aeeea1e87070782ec3cdd75c78984baaa">DropNewest</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2ae273dab723fc345684a50d971853ccbd">DropOldest</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -16128,6 +16730,27 @@
       <anchor>ga41eb5b8b262dfe2dd792a2006db325ec</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable">
+      <type>constexpr sink_write_t</type>
+      <name>sink_write</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>gab8a9e9c50ad407267815b887194fa7b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr sink_flush_t</type>
+      <name>sink_flush</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>gaf1d0a44f9f72f6eb0a8fe7efbfe9d08e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr BasicLoggerProxy</type>
+      <name>std_logger</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga0efd196f9c24af276fd173dbd400a492</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>rm::async</name>
@@ -16348,6 +16971,7 @@
   <compound kind="namespace">
     <name>rm::ip::udp</name>
     <filename>d0/d7f/namespacerm_1_1ip_1_1udp.html</filename>
+    <class kind="class">rm::ip::udp::Broadcast</class>
     <member kind="function">
       <type>Protocol</type>
       <name>v4</name>
@@ -16783,6 +17407,8 @@
     <class kind="class">rm::para::RuneTrackerParam</class>
     <class kind="class">rm::para::GyroGroupParam</class>
     <class kind="class">rm::para::RuneGroupParam</class>
+    <class kind="class">rm::para::ArmorDetectorParam</class>
+    <class kind="class">rm::para::GyroDetectorParam</class>
     <class kind="class">rm::para::RuneDetectorParam</class>
     <class kind="class">rm::para::GravityCompensatorParam</class>
     <class kind="class">rm::para::GyroCompensatorParam</class>
@@ -16930,6 +17556,20 @@
       <name>rune_group_param</name>
       <anchorfile>d1/da1/group__para__group.html</anchorfile>
       <anchor>gab907fe25b54baa621e57b599658ffd6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ArmorDetectorParam</type>
+      <name>armor_detector_param</name>
+      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
+      <anchor>gaeeff388b017ce354d9c22b1813f88eab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>GyroDetectorParam</type>
+      <name>gyro_detector_param</name>
+      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
+      <anchor>ga7f7476ad130bd93a484005e6338e3fee</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -19287,6 +19927,64 @@
     </member>
   </compound>
   <compound kind="group">
+    <name>logger</name>
+    <title>日志</title>
+    <filename>dc/d55/group__logger.html</filename>
+    <class kind="struct">rm::sink_write_t</class>
+    <class kind="struct">rm::sink_flush_t</class>
+    <class kind="struct">rm::StdoutSink</class>
+    <class kind="class">rm::FileSink</class>
+    <class kind="class">rm::SerialSink</class>
+    <class kind="class">rm::UDPSink</class>
+    <class kind="struct">rm::LoggerOptions</class>
+    <class kind="class">rm::Logger</class>
+    <class kind="class">rm::BasicLoggerProxy</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::LogLevel</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga26ff8001b9ec9036057d58555bbc1c0a</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aaa603905470e2a5b8c13e96b579ef0dba">Debug</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa4059b0251f66a18cb56f544728796875">Info</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa56525ae64d370c0b448ac0d60710ef17">Warn</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa902b0d55fddef6f8d651fe1035b7d4bd">Error</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aa278d01e5af56273bae1bb99a98b370cd">Critical</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga26ff8001b9ec9036057d58555bbc1c0aad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::LogOverflowPolicy</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga6b57007d3b1a605015205aff58d14cc2</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2ae1e4c8c9ccd9fc39c391da4bcd093fb2">Block</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2aeeea1e87070782ec3cdd75c78984baaa">DropNewest</enumvalue>
+      <enumvalue file="dc/d55/group__logger.html" anchor="gga6b57007d3b1a605015205aff58d14cc2ae273dab723fc345684a50d971853ccbd">DropOldest</enumvalue>
+    </member>
+    <member kind="variable">
+      <type>constexpr sink_write_t</type>
+      <name>rm::sink_write</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>gab8a9e9c50ad407267815b887194fa7b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr sink_flush_t</type>
+      <name>rm::sink_flush</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>gaf1d0a44f9f72f6eb0a8fe7efbfe9d08e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr BasicLoggerProxy</type>
+      <name>rm::std_logger</name>
+      <anchorfile>dc/d55/group__logger.html</anchorfile>
+      <anchor>ga0efd196f9c24af276fd173dbd400a492</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>lpss</name>
     <title>轻量发布订阅服务及其相关组件</title>
     <filename>d7/de3/group__lpss.html</filename>
@@ -19413,8 +20111,6 @@
     <name>ml_ort</name>
     <title>onnxruntime 多态部署库</title>
     <filename>dc/d73/group__ml__ort.html</filename>
-    <class kind="struct">rm::PreprocessOptions</class>
-    <class kind="struct">rm::PostprocessOptions</class>
     <class kind="class">rm::OnnxNet</class>
     <class kind="class">rm::ClassificationNet</class>
     <member kind="enumeration">
@@ -20246,7 +20942,23 @@
     <name>para_detector</name>
     <title>detector 的参数模块</title>
     <filename>d8/d46/group__para__detector.html</filename>
+    <class kind="class">rm::para::ArmorDetectorParam</class>
+    <class kind="class">rm::para::GyroDetectorParam</class>
     <class kind="class">rm::para::RuneDetectorParam</class>
+    <member kind="variable">
+      <type>ArmorDetectorParam</type>
+      <name>rm::para::armor_detector_param</name>
+      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
+      <anchor>gaeeff388b017ce354d9c22b1813f88eab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>GyroDetectorParam</type>
+      <name>rm::para::gyro_detector_param</name>
+      <anchorfile>d8/d46/group__para__detector.html</anchorfile>
+      <anchor>ga7f7476ad130bd93a484005e6338e3fee</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable">
       <type>RuneDetectorParam</type>
       <name>rm::para::rune_detector_param</name>
@@ -21194,6 +21906,8 @@
     <name>rmvlpara/detector</name>
     <path>rmvlpara/detector/</path>
     <filename>dir_c5bb269c174eb5b0b241055e839abcff.html</filename>
+    <file>armor_detector.h</file>
+    <file>gyro_detector.h</file>
     <file>rune_detector.h</file>
   </compound>
   <compound kind="dir">
@@ -21524,6 +22238,12 @@
     <filename>dir_1bc74a64704ba02db2fd0d73dac69199.html</filename>
     <dir>rmvl/light</dir>
     <file>light.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
+    <filename>dir_3a7abf552c835cd9a5292e408e98ef5a.html</filename>
+    <file>logger.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl</name>

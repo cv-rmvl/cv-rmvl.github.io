@@ -17,6 +17,7 @@ var searchData=
   ['angular_5fvelocity_14',['angular_velocity',['../de/d43/classrm_1_1msg_1_1Imu.html#a2299fad23d10f97453799d778ca07d7f',1,'rm::msg::Imu']]],
   ['angular_5fvelocity_5fcovariance_15',['angular_velocity_covariance',['../de/d43/classrm_1_1msg_1_1Imu.html#ab59af5eb4013f4a04422b340cd9de892',1,'rm::msg::Imu']]],
   ['any_5fport_16',['ANY_PORT',['../dc/db5/classrm_1_1Endpoint.html#a2fd5dcde65450d0ffa53e01e0e297076',1,'rm::Endpoint']]],
-  ['armor_5fparam_17',['armor_param',['../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785',1,'rm::para']]],
-  ['armor_5fpredictor_5fparam_18',['armor_predictor_param',['../dd/dad/group__para__predictor.html#ga4945cce0f7901dfbd9be6526c2137659',1,'rm::para']]]
+  ['armor_5fdetector_5fparam_17',['armor_detector_param',['../d8/d46/group__para__detector.html#gaeeff388b017ce354d9c22b1813f88eab',1,'rm::para']]],
+  ['armor_5fparam_18',['armor_param',['../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785',1,'rm::para']]],
+  ['armor_5fpredictor_5fparam_19',['armor_predictor_param',['../dd/dad/group__para__predictor.html#ga4945cce0f7901dfbd9be6526c2137659',1,'rm::para']]]
 ];
