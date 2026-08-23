@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['识别模块_0',['AprilTag(Tag25h9) 识别模块',['../d6/d8c/group__tag__detector.html',1,'']]]
+  ['能量机关特征组合_0',['能量机关特征组合',['../d8/d7f/group__combo__rune.html',1,'']]]
 ];

@@ -156,59 +156,62 @@ $(function() {
           <li class="level3">
             <a href="#autotoc_md296">1.4.1 Service/Client 模型 </a>
           </li>
+          <li class="level3">
+            <a href="#autotoc_md297">1.4.2 坐标变换系统 </a>
+          </li>
         </ul>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md297">2 发布订阅模型使用方法 </a>
+    <a href="#autotoc_md298">2 发布订阅模型使用方法 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md298">2.1 同步模式使用示例 </a>
+        <a href="#autotoc_md299">2.1 同步模式使用示例 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md299">2.1.1 发布者示例 </a>
+            <a href="#autotoc_md300">2.1.1 发布者示例 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md300">2.1.2 订阅者示例 </a>
+            <a href="#autotoc_md301">2.1.2 订阅者示例 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md301">2.2 异步模式使用示例 </a>
+        <a href="#autotoc_md302">2.2 异步模式使用示例 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md302">2.2.1 异步发布者示例 </a>
+            <a href="#autotoc_md303">2.2.1 异步发布者示例 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md303">2.2.2 异步订阅者示例 </a>
+            <a href="#autotoc_md304">2.2.2 异步订阅者示例 </a>
           </li>
         </ul>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md304">3 服务/客户端模型使用方法 </a>
+    <a href="#autotoc_md305">3 服务/客户端模型使用方法 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md305">3.1 服务端示例 </a>
+        <a href="#autotoc_md306">3.1 服务端示例 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md306">3.2 客户端示例 </a>
+        <a href="#autotoc_md307">3.2 客户端示例 </a>
       </li>
     </ul>
   </li>
   <li class="level1">
-    <a href="#autotoc_md307">4 创建自定义消息类型 </a>
+    <a href="#autotoc_md308">4 创建自定义消息类型 </a>
     <ul>
       <li class="level2">
-        <a href="#autotoc_md308">4.1 创建项目结构 </a>
+        <a href="#autotoc_md309">4.1 创建项目结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md309">4.2 文件内容 </a>
+        <a href="#autotoc_md310">4.2 文件内容 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md310">4.3 构建与运行 </a>
+        <a href="#autotoc_md311">4.3 构建与运行 </a>
       </li>
     </ul>
   </li>
@@ -342,13 +345,60 @@ $(function() {
 <p>Service/Client 是架设在既有发布订阅框架之上的高层服务模型，用于表达“一次请求对应一次响应”的远程调用关系。它并不绕过前文介绍的节点发现、端点发现和 MTP 数据传输，而是复用这些底层能力：创建 Service 时会在内部创建请求订阅端和响应发布端，创建 Client 时会在内部创建请求发布端和响应订阅端。</p>
 <p>异步 Service/Client 使用两个保留话题承载服务请求和响应：<span class="tt">lq/&amp;lt;service&amp;gt;</span> 传输请求，<span class="tt">lr/&amp;lt;service&amp;gt;</span> 传输响应。STP（Service Transport Protocol）在业务消息前添加客户端端点 GUID 和调用序列号；该整体作为 MTP Payload 发送，因此 MTP 仍统一负责 UDP 分片重组以及 SHM/UDP 通道选择。</p>
 <p>Service/Client 仅在 C++20 异步接口中提供。每个 Client 同时只允许一个未完成调用；服务回调用于短时操作并按请求顺序执行。服务类型由 <span class="tt">*.srv</span> 文件定义，定义及代码生成方式参见 <a class="el" href="../../d6/d0f/tutorial_table_of_content_rmvlsrv.html" title="服务模块使用教程">服务模块使用教程</a> 。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md297"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md297"></a>
+1.4.2 坐标变换系统</h3>
+<p><span class="tt">lpss::tf</span> 提供与 ROS 2 TF2 职责相近的四个组件：<span class="tt">Broadcaster</span> 发布随时间变化的坐标关系，<span class="tt">StaticBroadcaster</span> 发布固定坐标关系，<span class="tt">Listener</span> 订阅两类 TF 并持续写入线程安全的 <span class="tt">Buffer</span>，<span class="tt">Buffer</span> 则负责坐标树校验、动态历史缓存、插值和跨坐标系查询。机器人名称同时作为话题隔离前缀，例如名称为 <span class="tt">robot</span> 时使用 <span class="tt">robot/tf</span> 和 <span class="tt">robot/tf_static</span>。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/transform.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">lpss::Node</a> node(<span class="stringliteral">&quot;tf_node&quot;</span>);</div>
+<div class="line">    <a class="code hl_class" href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html">lpss::tf::Buffer</a> buffer;</div>
+<div class="line">    <a class="code hl_class" href="../../de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html">lpss::tf::Listener</a> listener(<span class="stringliteral">&quot;robot&quot;</span>, node, buffer);</div>
+<div class="line">    <a class="code hl_class" href="../../dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html">lpss::tf::Broadcaster</a> broadcaster(<span class="stringliteral">&quot;robot&quot;</span>, node);</div>
+<div class="line">    <a class="code hl_class" href="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html">lpss::tf::StaticBroadcaster</a> static_broadcaster(<span class="stringliteral">&quot;robot&quot;</span>, node);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> transform;</div>
+<div class="line">    transform.<a class="code hl_variable" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#a73136860568516d0f21c6d4845990e96">header</a>.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1Header.html#a8f0a4b8bd315abedb8458813176f962e">stamp</a> = <a class="code hl_function" href="../../d0/d65/namespacerm_1_1lpss.html#a8db5f1efefa12c0e0ee26c8359b4178d">lpss::now</a>();</div>
+<div class="line">    transform.<a class="code hl_variable" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#a73136860568516d0f21c6d4845990e96">header</a>.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1Header.html#a50850475e67f7d11d36ea3aa77e27a35">frame_id</a> = <span class="stringliteral">&quot;base_link&quot;</span>;</div>
+<div class="line">    transform.<a class="code hl_variable" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#aa0410c71c5cfa6ce986b83f21507cb6b">child_frame_id</a> = <span class="stringliteral">&quot;sensor_link&quot;</span>;</div>
+<div class="line">    transform.<a class="code hl_variable" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#ab4887dd09bea12282e15e133db2e8e01">transform</a>.<a class="code hl_variable" href="../../df/d0f/classrm_1_1msg_1_1Transform.html#a5e94aaf8b59e3f5d585bd4fbcd0f4edc">rotation</a>.<a class="code hl_variable" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">w</a> = 1.0;</div>
+<div class="line">    broadcaster.send(transform);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 查询传感器数据采样时刻的变换；传入零时间 {} 表示路径上的最新公共时间</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> sensor_stamp = transform.<a class="code hl_variable" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#a73136860568516d0f21c6d4845990e96">header</a>.<a class="code hl_variable" href="../../de/de3/classrm_1_1msg_1_1Header.html#a8f0a4b8bd315abedb8458813176f962e">stamp</a>;</div>
+<div class="line">    <span class="keyword">auto</span> result = buffer.<a class="code hl_function" href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html#a79b05f9fc70b3d1641c602faf496efe7">lookup</a>(<span class="stringliteral">&quot;base_link&quot;</span>, <span class="stringliteral">&quot;sensor_link&quot;</span>, sensor_stamp);</div>
+<div class="line">    <span class="keywordflow">if</span> (!result)</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(result.status);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:141</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1tf_1_1Broadcaster_html"><div class="ttname"><a href="../../dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html">rm::lpss::tf::Broadcaster</a></div><div class="ttdoc">动态坐标变换发布器</div><div class="ttdef"><b>定义</b> transform.hpp:179</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1tf_1_1Buffer_html"><div class="ttname"><a href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html">rm::lpss::tf::Buffer</a></div><div class="ttdoc">线程安全的坐标变换缓存</div><div class="ttdef"><b>定义</b> transform.hpp:110</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1tf_1_1Buffer_html_a79b05f9fc70b3d1641c602faf496efe7"><div class="ttname"><a href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html#a79b05f9fc70b3d1641c602faf496efe7">rm::lpss::tf::Buffer::lookup</a></div><div class="ttdeci">LookupResult lookup(std::string_view target_frame, std::string_view source_frame, const msg::Time &amp;time={}) const</div><div class="ttdoc">查询 source 坐标系到 target 坐标系的变换</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1tf_1_1Listener_html"><div class="ttname"><a href="../../de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html">rm::lpss::tf::Listener</a></div><div class="ttdoc">坐标变换监听器</div><div class="ttdef"><b>定义</b> transform.hpp:257</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1tf_1_1StaticBroadcaster_html"><div class="ttname"><a href="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html">rm::lpss::tf::StaticBroadcaster</a></div><div class="ttdoc">静态坐标变换发布器</div><div class="ttdef"><b>定义</b> transform.hpp:218</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Header_html_a50850475e67f7d11d36ea3aa77e27a35"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1Header.html#a50850475e67f7d11d36ea3aa77e27a35">rm::msg::Header::frame_id</a></div><div class="ttdeci">std::string frame_id</div><div class="ttdef"><b>定义</b> header.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Header_html_a8f0a4b8bd315abedb8458813176f962e"><div class="ttname"><a href="../../de/de3/classrm_1_1msg_1_1Header.html#a8f0a4b8bd315abedb8458813176f962e">rm::msg::Header::stamp</a></div><div class="ttdeci">rm::msg::Time stamp</div><div class="ttdef"><b>定义</b> header.hpp:34</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Quaternion_html_aaee87641b557311753b74a62c1397939"><div class="ttname"><a href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html#aaee87641b557311753b74a62c1397939">rm::msg::Quaternion::w</a></div><div class="ttdeci">double w</div><div class="ttdef"><b>定义</b> quaternion.hpp:36</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Time_html"><div class="ttname"><a href="../../d2/d47/classrm_1_1msg_1_1Time.html">rm::msg::Time</a></div><div class="ttdoc">Time 消息类型：std/Time</div><div class="ttdef"><b>定义</b> time.hpp:31</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1TransformStamped_html"><div class="ttname"><a href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">rm::msg::TransformStamped</a></div><div class="ttdoc">TransformStamped 消息类型：geometry/TransformStamped</div><div class="ttdef"><b>定义</b> transform_stamped.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1TransformStamped_html_a73136860568516d0f21c6d4845990e96"><div class="ttname"><a href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#a73136860568516d0f21c6d4845990e96">rm::msg::TransformStamped::header</a></div><div class="ttdeci">rm::msg::Header header</div><div class="ttdef"><b>定义</b> transform_stamped.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1TransformStamped_html_aa0410c71c5cfa6ce986b83f21507cb6b"><div class="ttname"><a href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#aa0410c71c5cfa6ce986b83f21507cb6b">rm::msg::TransformStamped::child_frame_id</a></div><div class="ttdeci">std::string child_frame_id</div><div class="ttdef"><b>定义</b> transform_stamped.hpp:36</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1TransformStamped_html_ab4887dd09bea12282e15e133db2e8e01"><div class="ttname"><a href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html#ab4887dd09bea12282e15e133db2e8e01">rm::msg::TransformStamped::transform</a></div><div class="ttdeci">rm::msg::Transform transform</div><div class="ttdef"><b>定义</b> transform_stamped.hpp:37</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Transform_html_a5e94aaf8b59e3f5d585bd4fbcd0f4edc"><div class="ttname"><a href="../../df/d0f/classrm_1_1msg_1_1Transform.html#a5e94aaf8b59e3f5d585bd4fbcd0f4edc">rm::msg::Transform::rotation</a></div><div class="ttdeci">rm::msg::Quaternion rotation</div><div class="ttdef"><b>定义</b> transform.hpp:36</div></div>
+<div class="ttc" id="anamespacerm_1_1lpss_html_a8db5f1efefa12c0e0ee26c8359b4178d"><div class="ttname"><a href="../../d0/d65/namespacerm_1_1lpss.html#a8db5f1efefa12c0e0ee26c8359b4178d">rm::lpss::now</a></div><div class="ttdeci">msg::Time now() noexcept</div><div class="ttdoc">获取 LPSS 消息表示的 Epoch 时间</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+</div><!-- fragment --><p><span class="tt">Listener</span>、<span class="tt">Broadcaster</span> 和 <span class="tt">StaticBroadcaster</span> 均由传入的 <span class="tt">Node</span> 提供通信资源，因此 Node 必须比这些对象存活更久；<span class="tt">Buffer</span> 也必须比 Listener 存活更久。LPSS 当前没有持久化 QoS，后启动的监听器无法收到此前仅发布一次的静态 TF，因此通用 <span class="tt">StaticBroadcaster</span> 只负责发布，是否重发由业务层决定；<span class="tt">RobotStatePublisher</span> 默认每 1 s 重发一次静态 TF。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md298"></a>
 2 发布订阅模型使用方法</h1>
 <p>LPSS 提供了简单易用的发布者与订阅者接口，用户可以方便地创建发布者与订阅者，实现节点间的数据通信。本节分别展示同步模式和异步模式下的发布订阅用法。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md298"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md299"></a>
 2.1 同步模式使用示例</h2>
 <p>同步模式下，每个节点内部维护了必要的工作线程。以下示例展示了如何使用 LPSS 创建发布者与订阅者。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md299"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
 2.1.1 发布者示例</h3>
 <p>下面的示例展示了如何创建一个发布者，该发布者每隔 100 毫秒发布一次包含递增计数值的字符串消息。</p>
 <div class="fragment"><div class="line"><span class="comment">// RMVL 内置的第三方 fmt 库，用于格式化字符串，不需要 fmt 库的不用包含该头文件</span></div>
@@ -382,11 +432,9 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1Node_html"><div class="ttname"><a href="../../d2/da8/classrm_1_1lpss_1_1Node.html">rm::lpss::Node</a></div><div class="ttdoc">轻量级发布订阅服务节点</div><div class="ttdef"><b>定义</b> node.hpp:140</div></div>
 <div class="ttc" id="aclassrm_1_1msg_1_1String_html"><div class="ttname"><a href="../../d3/db4/classrm_1_1msg_1_1String.html">rm::msg::String</a></div><div class="ttdoc">String 消息类型：std/String</div><div class="ttdef"><b>定义</b> string.hpp:31</div></div>
-<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:253</div></div>
-<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md300"></a>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:254</div></div>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
 2.1.2 订阅者示例</h3>
 <p>下面展示了如何创建一个订阅者，该订阅者订阅 <span class="tt">/topic</span> 话题的字符串消息，并在收到消息时打印消息内容。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
@@ -412,10 +460,10 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section warning"><dt>警告</dt><dd>订阅者的回调函数是在 LPSS 内部的线程中执行的，如果用户定义了多个订阅者，这些订阅者的回调函数可能会在不同的线程中并发执行。因此，用户在编写回调函数时<u><em><b>需要注意线程安全问题</b></em></u>，避免在回调函数中使用非线程安全的资源，或者使用适当的同步机制来保护共享资源，如果想避免这一问题，可以考虑使用下文异步模式的发布订阅服务。</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md301"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md302"></a>
 2.2 异步模式使用示例</h2>
 <p>LPSS 同样支持异步模式的发布订阅服务，均定义在 <span class="tt"><a class="el" href="../../d4/d36/namespacerm_1_1lpss_1_1async.html" title="基于 C++20 协程的异步操作">rm::lpss::async</a></span> 命名空间中。内部使用 coroutine + epoll/IOCP 的方式创建发布者与订阅者，实现更加灵活的数据通信，但需要 C++20 的支持，详情请参见 <a class="el" href="../../d5/d7a/tutorial_modules_coro.html" title="基于异步 I/O 的协程设施">基于异步 I/O 的协程设施</a> 。下面的示例展示了如何使用异步模式创建发布者与订阅者。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md302"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md303"></a>
 2.2.1 异步发布者示例</h3>
 <p>异步模式的 LPSS 节点增加了定时器功能，可以方便地实现周期性任务。下面的示例展示了如何创建一个异步发布者，该发布者每隔 20 毫秒发布一次包含递增计数值的字符串消息。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
@@ -448,10 +496,10 @@ $(function() {
 <div class="line">    node.spin();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:538</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">rm::lpss::async::Node</a></div><div class="ttdoc">轻量级发布订阅服务异步节点</div><div class="ttdef"><b>定义</b> node.hpp:569</div></div>
 <div class="ttc" id="anamespacerm_1_1async_html"><div class="ttname"><a href="../../dd/d22/namespacerm_1_1async.html">rm::async</a></div><div class="ttdef"><b>定义</b> async.hpp:51</div></div>
 <div class="ttc" id="anamespacerm_1_1lpss_html"><div class="ttname"><a href="../../d0/d65/namespacerm_1_1lpss.html">rm::lpss</a></div><div class="ttdoc">轻量发布订阅服务框架命名空间，包含节点、发布者、订阅者等相关定义</div><div class="ttdef"><b>定义</b> base.hpp:20</div></div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md303"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md304"></a>
 2.2.2 异步订阅者示例</h3>
 <p>下面展示了如何创建一个异步订阅者，该订阅者订阅 <span class="tt">/topic</span> 话题的字符串消息，并在收到消息时打印消息内容。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
@@ -478,11 +526,11 @@ $(function() {
 <div class="line">    node.spin();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Subscriber_html_af000f93621cca361ae7919be33812530"><div class="ttname"><a href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html#af000f93621cca361ae7919be33812530">rm::lpss::async::Subscriber::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Subscriber&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:399</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md304"></a>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Subscriber_html_af000f93621cca361ae7919be33812530"><div class="ttname"><a href="../../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html#af000f93621cca361ae7919be33812530">rm::lpss::async::Subscriber::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Subscriber&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:400</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md305"></a>
 3 服务/客户端模型使用方法</h1>
 <p>Service/Client 模型用于表达带响应的服务调用关系，均定义在 <span class="tt"><a class="el" href="../../d4/d36/namespacerm_1_1lpss_1_1async.html" title="基于 C++20 协程的异步操作">rm::lpss::async</a></span> 命名空间中。以下示例使用内置的 <span class="tt">std/SetBool</span> 服务，服务端和客户端分别放在两个源文件中运行。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md305"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md306"></a>
 3.1 服务端示例</h2>
 <p>在 <span class="tt">server.cpp</span> 中创建服务端节点。服务端收到请求后返回是否成功以及提示信息。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/lpss/node.hpp&gt;</span></div>
@@ -503,7 +551,7 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1srv_1_1SetBool_1_1Request_html"><div class="ttname"><a href="../../db/dbf/classrm_1_1srv_1_1SetBool_1_1Request.html">rm::srv::SetBool::Request</a></div><div class="ttdoc">SetBool 服务请求</div><div class="ttdef"><b>定义</b> set_bool.hpp:24</div></div>
 <div class="ttc" id="aclassrm_1_1srv_1_1SetBool_1_1Response_html"><div class="ttname"><a href="../../da/dd8/classrm_1_1srv_1_1SetBool_1_1Response.html">rm::srv::SetBool::Response</a></div><div class="ttdoc">SetBool 服务响应</div><div class="ttdef"><b>定义</b> set_bool.hpp:37</div></div>
 <div class="ttc" id="astructrm_1_1srv_1_1SetBool_html"><div class="ttname"><a href="../../d0/d08/structrm_1_1srv_1_1SetBool.html">rm::srv::SetBool</a></div><div class="ttdoc">SetBool 服务类型</div><div class="ttdef"><b>定义</b> set_bool.hpp:22</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md306"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md307"></a>
 3.2 客户端示例</h2>
 <p>在 <span class="tt">client.cpp</span> 中创建客户端节点。<span class="tt">call()</span> 返回可等待的异步任务，超时或同一 Client 上发生并发调用时返回 <span class="tt">std::nullopt</span>。下面的示例不额外派生节点类，而是像 ROS 2 minimal client 一样在 <span class="tt">main()</span> 中创建节点、客户端和请求任务。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
@@ -535,16 +583,16 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:148</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Client_html_a085673b146c3a3ca5165e6ad6444aa3a"><div class="ttname"><a href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#a085673b146c3a3ca5165e6ad6444aa3a">rm::lpss::async::Client::call</a></div><div class="ttdeci">rm::async::Task&lt; std::optional&lt; Response &gt; &gt; call(const Request &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout=std::chrono::seconds(30))</div><div class="ttdoc">调用服务并异步等待响应</div></div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Client_html_aecbe1c54c0d1bf3d9cae24c2f2bc0729"><div class="ttname"><a href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#aecbe1c54c0d1bf3d9cae24c2f2bc0729">rm::lpss::async::Client::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Client&lt; SrvType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:470</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Client_html_aecbe1c54c0d1bf3d9cae24c2f2bc0729"><div class="ttname"><a href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#aecbe1c54c0d1bf3d9cae24c2f2bc0729">rm::lpss::async::Client::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Client&lt; SrvType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:471</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_a48f377161a570f982cf62c597f6d8d77"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#a48f377161a570f982cf62c597f6d8d77">rm::lpss::async::Node::shutdown</a></div><div class="ttdeci">void shutdown() noexcept</div><div class="ttdoc">手动停止节点运行</div></div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac19d563e835538932223d6be7471816d"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac19d563e835538932223d6be7471816d">rm::lpss::async::Node::spin</a></div><div class="ttdeci">void spin()</div><div class="ttdoc">运行异步 IO 上下文</div><div class="ttdef"><b>定义</b> node.hpp:627</div></div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac90d2aecba5415c4cab42ad66d3c29dd"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac90d2aecba5415c4cab42ad66d3c29dd">rm::lpss::async::Node::create_task</a></div><div class="ttdeci">void create_task(Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">生成异步任务，并添加到当前节点的调度器</div><div class="ttdef"><b>定义</b> node.hpp:638</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac19d563e835538932223d6be7471816d"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac19d563e835538932223d6be7471816d">rm::lpss::async::Node::spin</a></div><div class="ttdeci">void spin()</div><div class="ttdoc">运行异步 IO 上下文</div><div class="ttdef"><b>定义</b> node.hpp:658</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac90d2aecba5415c4cab42ad66d3c29dd"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac90d2aecba5415c4cab42ad66d3c29dd">rm::lpss::async::Node::create_task</a></div><div class="ttdeci">void create_task(Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">生成异步任务，并添加到当前节点的调度器</div><div class="ttdef"><b>定义</b> node.hpp:669</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ad0f719e2e0fd6c4565a2a0b3aed5ebcf"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ad0f719e2e0fd6c4565a2a0b3aed5ebcf">rm::lpss::async::Node::createClient</a></div><div class="ttdeci">Client&lt; SrvType &gt;::ptr createClient(std::string_view service) noexcept</div><div class="ttdoc">创建异步客户端</div></div>
 </div><!-- fragment --><p>运行时，先启动 <span class="tt">server.cpp</span> 对应的服务端程序，再启动 <span class="tt">client.cpp</span> 对应的客户端程序即可。</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md307"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
 4 创建自定义消息类型</h1>
 <p>除了使用 RMVL 内置的消息类型外，用户还可以自定义消息类型，并使用这些自定义的消息类型创建发布者与订阅者。下面的示例展示了如何定义一个自定义的消息类型，并使用该消息类型创建异步的发布者与订阅者。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
 4.1 创建项目结构</h2>
 <p>首先可以创建一个项目，假设项目名称为 <span class="tt">demo</span>，并在其中创建</p>
 <ul>
@@ -552,7 +600,7 @@ $(function() {
 <li><span class="tt">src</span> 目录，用于存放发布者与订阅者的源代码文件；</li>
 <li><span class="tt">CMakeLists.txt</span> 文件，用于配置项目的构建过程。</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md309"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md310"></a>
 4.2 文件内容</h2>
 <p>基本内容：</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -590,7 +638,7 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> nd = CustomMsgPublisher(<span class="stringliteral">&quot;custom_msg_pub_node&quot;</span>);</div>
 <div class="line">    nd.spin();</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Publisher_html_a2e0305f507e9683a44478fcf7d1ecc36"><div class="ttname"><a href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html#a2e0305f507e9683a44478fcf7d1ecc36">rm::lpss::async::Publisher::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Publisher&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:355</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Publisher_html_a2e0305f507e9683a44478fcf7d1ecc36"><div class="ttname"><a href="../../d1/d56/classrm_1_1lpss_1_1async_1_1Publisher.html#a2e0305f507e9683a44478fcf7d1ecc36">rm::lpss::async::Publisher::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Publisher&lt; MsgType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:356</div></div>
 </div><!-- fragment --></li>
 <li><p class="startli"><b class="tab-title">src/sub.cpp</b></p>
 <p class="startli">在 <span class="tt">src</span> 目录下创建 <span class="tt">sub.cpp</span> 文件，实现异步订阅者：</p>
@@ -633,7 +681,7 @@ $(function() {
 <li><p class="startli"><b class="tab-title">CMakeLists.txt</b></p>
 <div class="fragment"> <div class="line"><span class="comment"># 生成自定义消息类型的代码</span></div> <div class="line"><span class="keyword">rmvl_generate_msg</span>(MyCustomMsg)</div> <div class="line"><span class="comment"># 添加模块</span></div> <div class="line"><span class="keyword">rmvl_add_module</span>(custom_msg)</div> </div></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md310"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md311"></a>
 4.3 构建与运行</h2>
 <p>在项目根目录下运行以下命令进行构建，并运行发布者：</p>
 <div class="fragment"> <div class="line"><span class="comment"># Build</span></div> <div class="line"><span class="keywordflow">mkdir</span> build &amp;&amp; <span class="keywordflow">cd</span> build</div> <div class="line"><span class="keywordflow">cmake</span> ..</div> <div class="line"><span class="keywordflow">cmake</span> <span class="comment">--build</span> .</div> <div class="line"></div> <div class="line"><span class="comment"># Run</span></div> <div class="line">./pub</div> </div><p>然后在另一个终端中运行订阅者，记得进入 build 目录：</p>

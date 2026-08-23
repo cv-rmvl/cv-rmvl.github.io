@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['高层设施_0',['1.4 高层设施',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md295',1,'']]]
+  ['静态构建与动态构建_0',['2.2 静态构建与动态构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md106',1,'']]]
 ];

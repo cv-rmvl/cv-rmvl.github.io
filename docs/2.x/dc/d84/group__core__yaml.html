@@ -1,0 +1,1307 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: YAML 解析模块</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">YAML 解析模块 <div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供基于 rapidyaml 的高性能 YAML 解析、树访问、类型转换和文件读写功能  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+YAML 解析模块 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml.svg" width="286" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:rm_3A_3Ayaml_3A_3Aopencv_5Fdetail" id="r_rm_3A_3Ayaml_3A_3Aopencv_5Fdetail"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html">rm::yaml::opencv_detail</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Ayaml_3A_3AError" id="r_rm_3A_3Ayaml_3A_3AError"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d16/structrm_1_1yaml_1_1Error.html">rm::yaml::Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">YAML 操作错误  <a href="../../d6/d16/structrm_1_1yaml_1_1Error.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Ayaml_3A_3ANode" id="r_rm_3A_3Ayaml_3A_3ANode"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">rm::yaml::Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">YAML 树节点句柄  <a href="../../d0/db8/classrm_1_1yaml_1_1Node.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Ayaml_3A_3AResult" id="r_rm_3A_3Ayaml_3A_3AResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html">rm::yaml::Result</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">YAML 解析或加载结果  <a href="../../df/d30/structrm_1_1yaml_1_1Result.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga3b9fa77c5b89b3449b2bbc7b8c8dc85a" id="r_ga3b9fa77c5b89b3449b2bbc7b8c8dc85a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga3b9fa77c5b89b3449b2bbc7b8c8dc85a">rm::yaml::NodeType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaec0fc0100c4fc1ce4eea230c3dc10360">rm::yaml::NodeType::Undefined</a>
+, <a class="el" href="#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aabbb93ef26e3c101ff11cdd21cab08a94">rm::yaml::NodeType::Null</a>
+, <a class="el" href="#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74">rm::yaml::NodeType::Scalar</a>
+, <a class="el" href="#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5">rm::yaml::NodeType::Sequence</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa46f3ea056caa3126b91f3f70beea068c">rm::yaml::NodeType::Map</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3b9fa77c5b89b3449b2bbc7b8c8dc85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">YAML 节点类型  <a href="#ga3b9fa77c5b89b3449b2bbc7b8c8dc85a">更多...</a><br /></td></tr>
+<tr class="memitem:gaa41933113f3957f789fe3d8f42065a85" id="r_gaa41933113f3957f789fe3d8f42065a85"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaa41933113f3957f789fe3d8f42065a85">rm::yaml::ErrorCode</a> : uint8_t { <a class="el" href="#ggaa41933113f3957f789fe3d8f42065a85a6adf97f83acf6453d4a6a4b1070f3754">rm::yaml::ErrorCode::None</a>
+, <a class="el" href="#ggaa41933113f3957f789fe3d8f42065a85ac9ad95228aa735bdda1aebf38da022af">rm::yaml::ErrorCode::Parse</a>
+, <a class="el" href="#ggaa41933113f3957f789fe3d8f42065a85a42a02b42ec22cfcbd78aaf7a66a5ee09">rm::yaml::ErrorCode::Io</a>
+ }</td></tr>
+<tr class="memdesc:gaa41933113f3957f789fe3d8f42065a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">YAML 操作错误类型  <a href="#gaa41933113f3957f789fe3d8f42065a85">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga78ecd61a2a40f72bd53adeabe8022e00" id="r_ga78ecd61a2a40f72bd53adeabe8022e00"><td class="memItemLeft"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga78ecd61a2a40f72bd53adeabe8022e00">rm::yaml::parse</a> (std::string_view source)</td></tr>
+<tr class="memdesc:ga78ecd61a2a40f72bd53adeabe8022e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">从内存解析 YAML  <br /></td></tr>
+<tr class="memitem:gae18b5dcd37e82395bb7071d987b0ea3a" id="r_gae18b5dcd37e82395bb7071d987b0ea3a"><td class="memItemLeft"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html">Result</a>&#160;</td><td class="memItemRight"><a class="el" href="#gae18b5dcd37e82395bb7071d987b0ea3a">rm::yaml::load</a> (std::string_view path)</td></tr>
+<tr class="memdesc:gae18b5dcd37e82395bb7071d987b0ea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载 YAML  <br /></td></tr>
+<tr class="memitem:ga63d43f3b161f15c55ab374c8cb23268b" id="r_ga63d43f3b161f15c55ab374c8cb23268b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ga63d43f3b161f15c55ab374c8cb23268b">rm::yaml::dump</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:ga63d43f3b161f15c55ab374c8cb23268b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将节点及其后代序列化为 YAML  <br /></td></tr>
+<tr class="memitem:gad982a38b55aaf5d15a82c8a139c48ef4" id="r_gad982a38b55aaf5d15a82c8a139c48ef4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gad982a38b55aaf5d15a82c8a139c48ef4">rm::yaml::save</a> (std::string_view path, const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, <a class="el" href="../../d6/d16/structrm_1_1yaml_1_1Error.html">Error</a> &amp;err)</td></tr>
+<tr class="memdesc:gad982a38b55aaf5d15a82c8a139c48ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">将节点保存为 YAML 文件并返回错误信息  <br /></td></tr>
+<tr class="memitem:ga4edc97bf470b469768393f861afe6e73" id="r_ga4edc97bf470b469768393f861afe6e73"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4edc97bf470b469768393f861afe6e73">rm::yaml::save</a> (std::string_view path, const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:ga4edc97bf470b469768393f861afe6e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">将节点保存为 YAML 文件  <br /></td></tr>
+<tr class="memitem:ga6f0b5c5c8ec82b34a302375b8b6a4c32" id="r_ga6f0b5c5c8ec82b34a302375b8b6a4c32"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ga6f0b5c5c8ec82b34a302375b8b6a4c32">rm::yaml::dumpOpenCv</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:ga6f0b5c5c8ec82b34a302375b8b6a4c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">序列化为 OpenCV FileStorage 兼容的 YAML 文本  <br /></td></tr>
+<tr class="memitem:gacee20db700c1fe393aeca7583ea7929e" id="r_gacee20db700c1fe393aeca7583ea7929e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gacee20db700c1fe393aeca7583ea7929e">rm::yaml::saveOpenCv</a> (std::string_view path, const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:gacee20db700c1fe393aeca7583ea7929e"><td class="mdescLeft">&#160;</td><td class="mdescRight">保存为 OpenCV FileStorage 兼容的 YAML 文件  <br /></td></tr>
+<tr class="memitem:ga6513071123b676405a24d5f4df68e24a" id="r_ga6513071123b676405a24d5f4df68e24a"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga6513071123b676405a24d5f4df68e24a template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga6513071123b676405a24d5f4df68e24a">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Point_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga4cd3850bfe54424444ea01d39f7685e8" id="r_ga4cd3850bfe54424444ea01d39f7685e8"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga4cd3850bfe54424444ea01d39f7685e8 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4cd3850bfe54424444ea01d39f7685e8">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Point_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga6195745b1b90938e30f5fa0b6dcdb311" id="r_ga6195745b1b90938e30f5fa0b6dcdb311"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga6195745b1b90938e30f5fa0b6dcdb311 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga6195745b1b90938e30f5fa0b6dcdb311">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Point3_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:gae095d28d11f4395aecc0b8ee02d7327b" id="r_gae095d28d11f4395aecc0b8ee02d7327b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gae095d28d11f4395aecc0b8ee02d7327b template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gae095d28d11f4395aecc0b8ee02d7327b">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Point3_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga5bdd96b8604eddbabc8569bbba713b57" id="r_ga5bdd96b8604eddbabc8569bbba713b57"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga5bdd96b8604eddbabc8569bbba713b57 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga5bdd96b8604eddbabc8569bbba713b57">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Size_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga55d99194b0939064bf11a60aeef8970f" id="r_ga55d99194b0939064bf11a60aeef8970f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga55d99194b0939064bf11a60aeef8970f template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga55d99194b0939064bf11a60aeef8970f">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Size_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga0d04445c8c1b34699e5eeccd48b1b655" id="r_ga0d04445c8c1b34699e5eeccd48b1b655"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga0d04445c8c1b34699e5eeccd48b1b655 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga0d04445c8c1b34699e5eeccd48b1b655">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Complex&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga326751f4195075451a545ff34174f638" id="r_ga326751f4195075451a545ff34174f638"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga326751f4195075451a545ff34174f638 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga326751f4195075451a545ff34174f638">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Complex&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga4ce89180310a97d7e2a097353cd27677" id="r_ga4ce89180310a97d7e2a097353cd27677"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga4ce89180310a97d7e2a097353cd27677 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4ce89180310a97d7e2a097353cd27677">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Rect_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga49f0f99b2d984c167f7ec0df74aae13a" id="r_ga49f0f99b2d984c167f7ec0df74aae13a"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga49f0f99b2d984c167f7ec0df74aae13a template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga49f0f99b2d984c167f7ec0df74aae13a">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Rect_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga6bf757b8f2285d57b3e40c7a38592716" id="r_ga6bf757b8f2285d57b3e40c7a38592716"><td class="memTemplParams" colspan="2">template&lt;typename T, int N&gt; </td></tr>
+<tr class="memitem:ga6bf757b8f2285d57b3e40c7a38592716 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga6bf757b8f2285d57b3e40c7a38592716">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Vec&lt; T, N &gt; &amp;value)</td></tr>
+<tr class="memitem:gacdd42c41e68f8883a85296fe8d756219" id="r_gacdd42c41e68f8883a85296fe8d756219"><td class="memTemplParams" colspan="2">template&lt;typename T, int N&gt; </td></tr>
+<tr class="memitem:gacdd42c41e68f8883a85296fe8d756219 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gacdd42c41e68f8883a85296fe8d756219">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Vec&lt; T, N &gt; &amp;value)</td></tr>
+<tr class="memitem:gab336619bcb40dbbdd100c1a4dda3ba56" id="r_gab336619bcb40dbbdd100c1a4dda3ba56"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:gab336619bcb40dbbdd100c1a4dda3ba56 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gab336619bcb40dbbdd100c1a4dda3ba56">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Scalar_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga9fffcbdd9abced00eb7c9df2a6eefdd1" id="r_ga9fffcbdd9abced00eb7c9df2a6eefdd1"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga9fffcbdd9abced00eb7c9df2a6eefdd1 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga9fffcbdd9abced00eb7c9df2a6eefdd1">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Scalar_&lt; T &gt; &amp;value)</td></tr>
+<tr class="memitem:ga377307bce4cd1e13b1c77f445ea857b6" id="r_ga377307bce4cd1e13b1c77f445ea857b6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga377307bce4cd1e13b1c77f445ea857b6">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Range &amp;value)</td></tr>
+<tr class="memitem:ga5e3276e69f16d5d5e9892a7be9814f04" id="r_ga5e3276e69f16d5d5e9892a7be9814f04"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga5e3276e69f16d5d5e9892a7be9814f04">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Range &amp;value)</td></tr>
+<tr class="memitem:gaa2fefc206854000ff39550c75a08eff6" id="r_gaa2fefc206854000ff39550c75a08eff6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gaa2fefc206854000ff39550c75a08eff6">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::KeyPoint &amp;value)</td></tr>
+<tr class="memitem:ga3aa5b67508823139088d34514579a116" id="r_ga3aa5b67508823139088d34514579a116"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga3aa5b67508823139088d34514579a116">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::KeyPoint &amp;value)</td></tr>
+<tr class="memitem:gae080004a01015144ce407e32ceedb9f5" id="r_gae080004a01015144ce407e32ceedb9f5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gae080004a01015144ce407e32ceedb9f5">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::DMatch &amp;value)</td></tr>
+<tr class="memitem:ga8473a75fed3201146aa7cba734b3d138" id="r_ga8473a75fed3201146aa7cba734b3d138"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga8473a75fed3201146aa7cba734b3d138">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::DMatch &amp;value)</td></tr>
+<tr class="memitem:gac46510de396848a8ede2ad3235382d8a" id="r_gac46510de396848a8ede2ad3235382d8a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gac46510de396848a8ede2ad3235382d8a">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Mat &amp;value)</td></tr>
+<tr class="memitem:gab803071f25c9ef81e8ebb486dbae3bcb" id="r_gab803071f25c9ef81e8ebb486dbae3bcb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gab803071f25c9ef81e8ebb486dbae3bcb">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Mat &amp;value)</td></tr>
+<tr class="memitem:ga4dc838bf8209080f7b7fad749b2e4e7d" id="r_ga4dc838bf8209080f7b7fad749b2e4e7d"><td class="memTemplParams" colspan="2">template&lt;typename T, int M, int N&gt; </td></tr>
+<tr class="memitem:ga4dc838bf8209080f7b7fad749b2e4e7d template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga4dc838bf8209080f7b7fad749b2e4e7d">rm::yaml::yaml_decode</a> (const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, cv::Matx&lt; T, M, N &gt; &amp;value)</td></tr>
+<tr class="memitem:ga99bd6e693ac8be036f328ee694138f74" id="r_ga99bd6e693ac8be036f328ee694138f74"><td class="memTemplParams" colspan="2">template&lt;typename T, int M, int N&gt; </td></tr>
+<tr class="memitem:ga99bd6e693ac8be036f328ee694138f74 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga99bd6e693ac8be036f328ee694138f74">rm::yaml::yaml_encode</a> (<a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;node, const cv::Matx&lt; T, M, N &gt; &amp;value)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供基于 rapidyaml 的高性能 YAML 解析、树访问、类型转换和文件读写功能 </p>
+<p><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html" title="YAML 树节点句柄">Node</a> 是共享底层 YAML 树所有权的轻量句柄。子节点可安全脱离根节点保存，但同一棵树不提供内部线程同步。</p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="gaa41933113f3957f789fe3d8f42065a85" name="gaa41933113f3957f789fe3d8f42065a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa41933113f3957f789fe3d8f42065a85">&#9670;&#160;</a></span>ErrorCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaa41933113f3957f789fe3d8f42065a85">rm::yaml::ErrorCode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>YAML 操作错误类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaa41933113f3957f789fe3d8f42065a85a6adf97f83acf6453d4a6a4b1070f3754" name="ggaa41933113f3957f789fe3d8f42065a85a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>无错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa41933113f3957f789fe3d8f42065a85ac9ad95228aa735bdda1aebf38da022af" name="ggaa41933113f3957f789fe3d8f42065a85ac9ad95228aa735bdda1aebf38da022af"></a>Parse&#160;</td><td class="fielddoc"><p>YAML 语法错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaa41933113f3957f789fe3d8f42065a85a42a02b42ec22cfcbd78aaf7a66a5ee09" name="ggaa41933113f3957f789fe3d8f42065a85a42a02b42ec22cfcbd78aaf7a66a5ee09"></a>Io&#160;</td><td class="fielddoc"><p>文件读写错误 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga3b9fa77c5b89b3449b2bbc7b8c8dc85a" name="ga3b9fa77c5b89b3449b2bbc7b8c8dc85a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b9fa77c5b89b3449b2bbc7b8c8dc85a">&#9670;&#160;</a></span>NodeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga3b9fa77c5b89b3449b2bbc7b8c8dc85a">rm::yaml::NodeType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>YAML 节点类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaec0fc0100c4fc1ce4eea230c3dc10360" name="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"><p>无效或不存在的节点 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aabbb93ef26e3c101ff11cdd21cab08a94" name="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aabbb93ef26e3c101ff11cdd21cab08a94"></a>Null&#160;</td><td class="fielddoc"><p>空值 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74" name="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74"></a>Scalar&#160;</td><td class="fielddoc"><p>标量 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5" name="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5"></a>Sequence&#160;</td><td class="fielddoc"><p>序列 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa46f3ea056caa3126b91f3f70beea068c" name="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa46f3ea056caa3126b91f3f70beea068c"></a>Map&#160;</td><td class="fielddoc"><p>映射 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ga63d43f3b161f15c55ab374c8cb23268b" name="ga63d43f3b161f15c55ab374c8cb23268b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63d43f3b161f15c55ab374c8cb23268b">&#9670;&#160;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::yaml::dump </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>将节点及其后代序列化为 YAML </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待序列化节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>YAML 文本，节点无效时返回空字符串 </dd></dl>
+
+</div>
+</div>
+<a id="ga6f0b5c5c8ec82b34a302375b8b6a4c32" name="ga6f0b5c5c8ec82b34a302375b8b6a4c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f0b5c5c8ec82b34a302375b8b6a4c32">&#9670;&#160;</a></span>dumpOpenCv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::yaml::dumpOpenCv </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>序列化为 OpenCV FileStorage 兼容的 YAML 文本 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待序列化节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>带 OpenCV YAML 版本头的文本，节点无效时返回空字符串 </dd></dl>
+
+</div>
+</div>
+<a id="gae18b5dcd37e82395bb7071d987b0ea3a" name="gae18b5dcd37e82395bb7071d987b0ea3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae18b5dcd37e82395bb7071d987b0ea3a">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html">Result</a> rm::yaml::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>从文件加载 YAML </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>加载与解析结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga78ecd61a2a40f72bd53adeabe8022e00" name="ga78ecd61a2a40f72bd53adeabe8022e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78ecd61a2a40f72bd53adeabe8022e00">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html">Result</a> rm::yaml::parse </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>从内存解析 YAML </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>YAML 文本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>解析结果 </dd></dl>
+
+</div>
+</div>
+<a id="ga4edc97bf470b469768393f861afe6e73" name="ga4edc97bf470b469768393f861afe6e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4edc97bf470b469768393f861afe6e73">&#9670;&#160;</a></span>save() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>将节点保存为 YAML 文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待保存节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否保存成功 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga4edc97bf470b469768393f861afe6e73_cgraph.svg" width="298" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gad982a38b55aaf5d15a82c8a139c48ef4" name="gad982a38b55aaf5d15a82c8a139c48ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad982a38b55aaf5d15a82c8a139c48ef4">&#9670;&#160;</a></span>save() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d16/structrm_1_1yaml_1_1Error.html">Error</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>将节点保存为 YAML 文件并返回错误信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待保存节点 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">err</td><td>错误信息，保存成功时重置为空错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否保存成功 </dd></dl>
+
+</div>
+</div>
+<a id="gacee20db700c1fe393aeca7583ea7929e" name="gacee20db700c1fe393aeca7583ea7929e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacee20db700c1fe393aeca7583ea7929e">&#9670;&#160;</a></span>saveOpenCv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::saveOpenCv </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+
+<p>保存为 OpenCV FileStorage 兼容的 YAML 文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>待保存节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否保存成功 </dd></dl>
+
+</div>
+</div>
+<a id="ga0d04445c8c1b34699e5eeccd48b1b655" name="ga0d04445c8c1b34699e5eeccd48b1b655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0d04445c8c1b34699e5eeccd48b1b655">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[1/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Complex&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga0d04445c8c1b34699e5eeccd48b1b655_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="gae080004a01015144ce407e32ceedb9f5" name="gae080004a01015144ce407e32ceedb9f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae080004a01015144ce407e32ceedb9f5">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::DMatch &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gae080004a01015144ce407e32ceedb9f5_cgraph.svg" width="646" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gaa2fefc206854000ff39550c75a08eff6" name="gaa2fefc206854000ff39550c75a08eff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2fefc206854000ff39550c75a08eff6">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[3/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::KeyPoint &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gaa2fefc206854000ff39550c75a08eff6_cgraph.svg" width="646" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gac46510de396848a8ede2ad3235382d8a" name="gac46510de396848a8ede2ad3235382d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac46510de396848a8ede2ad3235382d8a">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[4/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gac46510de396848a8ede2ad3235382d8a_cgraph.svg" width="100%" height="540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga4dc838bf8209080f7b7fad749b2e4e7d" name="ga4dc838bf8209080f7b7fad749b2e4e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4dc838bf8209080f7b7fad749b2e4e7d">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[5/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, int M, int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Matx&lt; T, M, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga4dc838bf8209080f7b7fad749b2e4e7d_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga6195745b1b90938e30f5fa0b6dcdb311" name="ga6195745b1b90938e30f5fa0b6dcdb311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6195745b1b90938e30f5fa0b6dcdb311">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[6/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point3_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga6195745b1b90938e30f5fa0b6dcdb311_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga6513071123b676405a24d5f4df68e24a" name="ga6513071123b676405a24d5f4df68e24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6513071123b676405a24d5f4df68e24a">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[7/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Point_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga6513071123b676405a24d5f4df68e24a_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga377307bce4cd1e13b1c77f445ea857b6" name="ga377307bce4cd1e13b1c77f445ea857b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga377307bce4cd1e13b1c77f445ea857b6">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[8/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Range &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga377307bce4cd1e13b1c77f445ea857b6_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga4ce89180310a97d7e2a097353cd27677" name="ga4ce89180310a97d7e2a097353cd27677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ce89180310a97d7e2a097353cd27677">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[9/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Rect_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga4ce89180310a97d7e2a097353cd27677_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="gab336619bcb40dbbdd100c1a4dda3ba56" name="gab336619bcb40dbbdd100c1a4dda3ba56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab336619bcb40dbbdd100c1a4dda3ba56">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Scalar_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gab336619bcb40dbbdd100c1a4dda3ba56_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga5bdd96b8604eddbabc8569bbba713b57" name="ga5bdd96b8604eddbabc8569bbba713b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bdd96b8604eddbabc8569bbba713b57">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[11/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Size_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga5bdd96b8604eddbabc8569bbba713b57_cgraph.svg" width="100%" height="386"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga6bf757b8f2285d57b3e40c7a38592716" name="ga6bf757b8f2285d57b3e40c7a38592716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bf757b8f2285d57b3e40c7a38592716">&#9670;&#160;</a></span>yaml_decode() <span class="overload">[12/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_decode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Vec&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga6bf757b8f2285d57b3e40c7a38592716_cgraph.svg" width="646" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga326751f4195075451a545ff34174f638" name="ga326751f4195075451a545ff34174f638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga326751f4195075451a545ff34174f638">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[1/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Complex&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga326751f4195075451a545ff34174f638_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga8473a75fed3201146aa7cba734b3d138" name="ga8473a75fed3201146aa7cba734b3d138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8473a75fed3201146aa7cba734b3d138">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[2/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::DMatch &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga8473a75fed3201146aa7cba734b3d138_cgraph.svg" width="464" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga3aa5b67508823139088d34514579a116" name="ga3aa5b67508823139088d34514579a116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3aa5b67508823139088d34514579a116">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[3/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::KeyPoint &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga3aa5b67508823139088d34514579a116_cgraph.svg" width="464" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gab803071f25c9ef81e8ebb486dbae3bcb" name="gab803071f25c9ef81e8ebb486dbae3bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab803071f25c9ef81e8ebb486dbae3bcb">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[4/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gab803071f25c9ef81e8ebb486dbae3bcb_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga99bd6e693ac8be036f328ee694138f74" name="ga99bd6e693ac8be036f328ee694138f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99bd6e693ac8be036f328ee694138f74">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[5/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, int M, int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Matx&lt; T, M, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga99bd6e693ac8be036f328ee694138f74_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="gae095d28d11f4395aecc0b8ee02d7327b" name="gae095d28d11f4395aecc0b8ee02d7327b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae095d28d11f4395aecc0b8ee02d7327b">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[6/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gae095d28d11f4395aecc0b8ee02d7327b_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga4cd3850bfe54424444ea01d39f7685e8" name="ga4cd3850bfe54424444ea01d39f7685e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4cd3850bfe54424444ea01d39f7685e8">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[7/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga4cd3850bfe54424444ea01d39f7685e8_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga5e3276e69f16d5d5e9892a7be9814f04" name="ga5e3276e69f16d5d5e9892a7be9814f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e3276e69f16d5d5e9892a7be9814f04">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[8/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Range &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga5e3276e69f16d5d5e9892a7be9814f04_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga49f0f99b2d984c167f7ec0df74aae13a" name="ga49f0f99b2d984c167f7ec0df74aae13a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49f0f99b2d984c167f7ec0df74aae13a">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[9/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Rect_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga49f0f99b2d984c167f7ec0df74aae13a_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga9fffcbdd9abced00eb7c9df2a6eefdd1" name="ga9fffcbdd9abced00eb7c9df2a6eefdd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fffcbdd9abced00eb7c9df2a6eefdd1">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Scalar_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga9fffcbdd9abced00eb7c9df2a6eefdd1_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ga55d99194b0939064bf11a60aeef8970f" name="ga55d99194b0939064bf11a60aeef8970f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55d99194b0939064bf11a60aeef8970f">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[11/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Size_&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_ga55d99194b0939064bf11a60aeef8970f_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="gacdd42c41e68f8883a85296fe8d756219" name="gacdd42c41e68f8883a85296fe8d756219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdd42c41e68f8883a85296fe8d756219">&#9670;&#160;</a></span>yaml_encode() <span class="overload">[12/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::yaml::yaml_encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Vec&lt; T, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/yaml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d84/group__core__yaml_gacdd42c41e68f8883a85296fe8d756219_cgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

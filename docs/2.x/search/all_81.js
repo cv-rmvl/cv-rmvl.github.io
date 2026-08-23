@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['撰写说明文档_0',['为 RMVL 撰写说明文档',['../d5/d72/tutorial_document.html',1,'tutorial_table_of_content_config']]]
+  ['提交轨迹_0',['2.2 提交轨迹',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md316',1,'']]]
 ];

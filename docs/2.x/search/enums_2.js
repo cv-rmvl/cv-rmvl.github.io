@@ -5,5 +5,6 @@ var searchData=
   ['cameraproperties_2',['CameraProperties',['../dc/d90/group__camera.html#ga99adb67cebfd7d04dd4ca9bdd4960377',1,'rm']]],
   ['compensatetype_3',['CompensateType',['../d5/d20/namespacerm.html#a6eb0c54354d1de382a6d3735da2c005c',1,'rm']]],
   ['consmode_4',['ConsMode',['../d2/d62/group__algorithm__optimal.html#gaa71c82823a41ad85c8de9d9db8653b4a',1,'rm']]],
-  ['controlstatus_5',['ControlStatus',['../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b',1,'rm::lpss::ctl']]]
+  ['controlstatus_5',['ControlStatus',['../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b',1,'rm::lpss::ctl']]],
+  ['cost_6',['Cost',['../d9/df0/group__nav__map.html#gade968908e1044904cbfdc91062954a00',1,'rm::nav']]]
 ];

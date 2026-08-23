@@ -1,0 +1,650 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: rm::lpss::tf::Buffer类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d7/d6f/namespacerm_1_1lpss_1_1tf.html">tf</a></li><li class="navelem"><a href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html">Buffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d6/d9f/classrm_1_1lpss_1_1tf_1_1Buffer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::tf::Buffer类 参考<div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a> &raquo; <a class="el" href="../../d6/d48/group__lpss__transform__buffer.html">坐标变换缓存</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程安全的坐标变换缓存  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+<div class="dynheader">
+rm::lpss::tf::Buffer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/d1a/classrm_1_1lpss_1_1tf_1_1Buffer__coll__graph.svg" width="138" height="310"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af76013d1d59b63007045ef7f207a59cb" id="r_af76013d1d59b63007045ef7f207a59cb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> (std::chrono::nanoseconds cache_duration=std::chrono::seconds(10))</td></tr>
+<tr class="memdesc:af76013d1d59b63007045ef7f207a59cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造坐标变换缓存，默认保留最近 10 秒的动态历史  <br /></td></tr>
+<tr class="memitem:aa95c6e53700854740e5b3de582a42e50" id="r_aa95c6e53700854740e5b3de582a42e50"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa95c6e53700854740e5b3de582a42e50">Buffer</a> (Buffer &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:aa1b96df7f14b2b5a33902e11f5ef6c21" id="r_aa1b96df7f14b2b5a33902e11f5ef6c21"><td class="memItemLeft"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aa1b96df7f14b2b5a33902e11f5ef6c21">operator=</a> (<a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;&amp;) noexcept</td></tr>
+<tr class="memitem:a6abe8d7e8f15c2e2079a63bada3bcbb2" id="r_a6abe8d7e8f15c2e2079a63bada3bcbb2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6abe8d7e8f15c2e2079a63bada3bcbb2">~Buffer</a> ()</td></tr>
+<tr class="memitem:a16f318301b6c021ffd0e3bbccc70aaf0" id="r_a16f318301b6c021ffd0e3bbccc70aaf0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a16f318301b6c021ffd0e3bbccc70aaf0">Buffer</a> (const Buffer &amp;)=delete</td></tr>
+<tr class="memitem:ad9ee541f93fef748664f0fd2ce514226" id="r_ad9ee541f93fef748664f0fd2ce514226"><td class="memItemLeft"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad9ee541f93fef748664f0fd2ce514226">operator=</a> (const <a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;)=delete</td></tr>
+<tr class="memitem:a6c371fb33ba5477692cfacbb1d2d4078" id="r_a6c371fb33ba5477692cfacbb1d2d4078"><td class="memItemLeft"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6c371fb33ba5477692cfacbb1d2d4078">set</a> (const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;transform)</td></tr>
+<tr class="memdesc:a6c371fb33ba5477692cfacbb1d2d4078"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入一条坐标变换  <br /></td></tr>
+<tr class="memitem:ac77e2bc1fe6e875dbc805779e7ed5b1d" id="r_ac77e2bc1fe6e875dbc805779e7ed5b1d"><td class="memItemLeft"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac77e2bc1fe6e875dbc805779e7ed5b1d">set</a> (const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;transforms)</td></tr>
+<tr class="memdesc:ac77e2bc1fe6e875dbc805779e7ed5b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量插入动态坐标变换  <br /></td></tr>
+<tr class="memitem:a127a1ad6cfea1fd034383fe5f35f6024" id="r_a127a1ad6cfea1fd034383fe5f35f6024"><td class="memItemLeft"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a>&#160;</td><td class="memItemRight"><a class="el" href="#a127a1ad6cfea1fd034383fe5f35f6024">setStatic</a> (const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;transform)</td></tr>
+<tr class="memdesc:a127a1ad6cfea1fd034383fe5f35f6024"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入静态坐标变换  <br /></td></tr>
+<tr class="memitem:af8599c8edcaae82a7513609aedc6d35f" id="r_af8599c8edcaae82a7513609aedc6d35f"><td class="memItemLeft"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a>&#160;</td><td class="memItemRight"><a class="el" href="#af8599c8edcaae82a7513609aedc6d35f">setStatic</a> (const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;transforms)</td></tr>
+<tr class="memdesc:af8599c8edcaae82a7513609aedc6d35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量插入静态坐标变换  <br /></td></tr>
+<tr class="memitem:a79b05f9fc70b3d1641c602faf496efe7" id="r_a79b05f9fc70b3d1641c602faf496efe7"><td class="memItemLeft"><a class="el" href="../../d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html">LookupResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a79b05f9fc70b3d1641c602faf496efe7">lookup</a> (std::string_view target_frame, std::string_view source_frame, const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp;time={}) const</td></tr>
+<tr class="memdesc:a79b05f9fc70b3d1641c602faf496efe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询 source 坐标系到 target 坐标系的变换  <br /></td></tr>
+<tr class="memitem:a0518625990e6de4e6945b98b8a5c8114" id="r_a0518625990e6de4e6945b98b8a5c8114"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0518625990e6de4e6945b98b8a5c8114">can</a> (std::string_view target_frame, std::string_view source_frame, const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp;time={}) const</td></tr>
+<tr class="memdesc:a0518625990e6de4e6945b98b8a5c8114"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断指定时间是否可完成坐标变换  <br /></td></tr>
+<tr class="memitem:a4aded71390a80ca7b804862d8943c282" id="r_a4aded71390a80ca7b804862d8943c282"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4aded71390a80ca7b804862d8943c282">setCacheDuration</a> (std::chrono::nanoseconds cache_duration) noexcept</td></tr>
+<tr class="memdesc:a4aded71390a80ca7b804862d8943c282"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置动态历史缓存时长；负值按零处理，并立即裁剪现有历史  <br /></td></tr>
+<tr class="memitem:a245a66f64bf2225dd0d030d21466df50" id="r_a245a66f64bf2225dd0d030d21466df50"><td class="memItemLeft">std::chrono::nanoseconds&#160;</td><td class="memItemRight"><a class="el" href="#a245a66f64bf2225dd0d030d21466df50">cacheDuration</a> () const noexcept</td></tr>
+<tr class="memdesc:a245a66f64bf2225dd0d030d21466df50"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取动态历史缓存时长  <br /></td></tr>
+<tr class="memitem:a8a745cef3478d3b7049d3498b307b1b3" id="r_a8a745cef3478d3b7049d3498b307b1b3"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a8a745cef3478d3b7049d3498b307b1b3">size</a> () const noexcept</td></tr>
+<tr class="memdesc:a8a745cef3478d3b7049d3498b307b1b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前坐标树边数  <br /></td></tr>
+<tr class="memitem:a6b8c2e334df3bb2092bba8854429de90" id="r_a6b8c2e334df3bb2092bba8854429de90"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6b8c2e334df3bb2092bba8854429de90">clear</a> () noexcept</td></tr>
+<tr class="memdesc:a6b8c2e334df3bb2092bba8854429de90"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空全部静态和动态变换  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程安全的坐标变换缓存 </p>
+<ul>
+<li>坐标关系组成单父节点、无环的森林，其中，互不连通的树允许分别维护；</li>
+<li>静态边保存单个变换，查询时不受时间限制，动态边按时间保存历史；</li>
+<li>查询时间为零时使用整条路径上所有动态边的最新公共时间，全静态路径返回零时间；</li>
+<li>动态变换使用平移线性插值和单位四元数 SLERP，不允许向缓存区间外外推。 </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="af76013d1d59b63007045ef7f207a59cb" name="af76013d1d59b63007045ef7f207a59cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76013d1d59b63007045ef7f207a59cb">&#9670;&#160;</a></span>Buffer() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::nanoseconds</td>          <td class="paramname"><span class="paramname"><em>cache_duration</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::chrono::seconds(10)</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造坐标变换缓存，默认保留最近 10 秒的动态历史 </p>
+
+</div>
+</div>
+<a id="aa95c6e53700854740e5b3de582a42e50" name="aa95c6e53700854740e5b3de582a42e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95c6e53700854740e5b3de582a42e50">&#9670;&#160;</a></span>Buffer() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramtype">Buffer &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_aa95c6e53700854740e5b3de582a42e50_cgraph.svg" width="334" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6abe8d7e8f15c2e2079a63bada3bcbb2" name="a6abe8d7e8f15c2e2079a63bada3bcbb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6abe8d7e8f15c2e2079a63bada3bcbb2">&#9670;&#160;</a></span>~Buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::Buffer::~Buffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a6abe8d7e8f15c2e2079a63bada3bcbb2_cgraph.svg" width="334" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a16f318301b6c021ffd0e3bbccc70aaf0" name="a16f318301b6c021ffd0e3bbccc70aaf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f318301b6c021ffd0e3bbccc70aaf0">&#9670;&#160;</a></span>Buffer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::Buffer::Buffer </td>
+          <td>(</td>
+          <td class="paramtype">const Buffer &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a16f318301b6c021ffd0e3bbccc70aaf0_cgraph.svg" width="334" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a245a66f64bf2225dd0d030d21466df50" name="a245a66f64bf2225dd0d030d21466df50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245a66f64bf2225dd0d030d21466df50">&#9670;&#160;</a></span>cacheDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::nanoseconds rm::lpss::tf::Buffer::cacheDuration </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取动态历史缓存时长 </p>
+
+</div>
+</div>
+<a id="a0518625990e6de4e6945b98b8a5c8114" name="a0518625990e6de4e6945b98b8a5c8114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0518625990e6de4e6945b98b8a5c8114">&#9670;&#160;</a></span>can()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::lpss::tf::Buffer::can </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>target_frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source_frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>time</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>判断指定时间是否可完成坐标变换 </p>
+
+</div>
+</div>
+<a id="a6b8c2e334df3bb2092bba8854429de90" name="a6b8c2e334df3bb2092bba8854429de90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8c2e334df3bb2092bba8854429de90">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::tf::Buffer::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空全部静态和动态变换 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a6b8c2e334df3bb2092bba8854429de90_cgraph.svg" width="148" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a79b05f9fc70b3d1641c602faf496efe7" name="a79b05f9fc70b3d1641c602faf496efe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b05f9fc70b3d1641c602faf496efe7">&#9670;&#160;</a></span>lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html">LookupResult</a> rm::lpss::tf::Buffer::lookup </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>target_frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source_frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>time</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询 source 坐标系到 target 坐标系的变换 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_frame</td><td>目标坐标系 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_frame</td><td>源坐标系 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>查询时间；零时间表示最新公共时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>查询结果，成功时得到 \(T_{target,source}\) </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a79b05f9fc70b3d1641c602faf496efe7_cgraph.svg" width="148" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa1b96df7f14b2b5a33902e11f5ef6c21" name="aa1b96df7f14b2b5a33902e11f5ef6c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b96df7f14b2b5a33902e11f5ef6c21">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp; rm::lpss::tf::Buffer::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_aa1b96df7f14b2b5a33902e11f5ef6c21_cgraph.svg" width="334" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ad9ee541f93fef748664f0fd2ce514226" name="ad9ee541f93fef748664f0fd2ce514226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ee541f93fef748664f0fd2ce514226">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp; rm::lpss::tf::Buffer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#af76013d1d59b63007045ef7f207a59cb">Buffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_ad9ee541f93fef748664f0fd2ce514226_cgraph.svg" width="334" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac77e2bc1fe6e875dbc805779e7ed5b1d" name="ac77e2bc1fe6e875dbc805779e7ed5b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac77e2bc1fe6e875dbc805779e7ed5b1d">&#9670;&#160;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a> rm::lpss::tf::Buffer::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transforms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>批量插入动态坐标变换 </p>
+<dl class="section return"><dt>返回</dt><dd>首个失败状态；所有变换都会尝试插入 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_ac77e2bc1fe6e875dbc805779e7ed5b1d_cgraph.svg" width="390" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6c371fb33ba5477692cfacbb1d2d4078" name="a6c371fb33ba5477692cfacbb1d2d4078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c371fb33ba5477692cfacbb1d2d4078">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a> rm::lpss::tf::Buffer::set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插入一条坐标变换 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>父子坐标变换，方向为 \(T_{parent,child}\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>插入状态；同一时间的动态样本会被新值替换 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a6c371fb33ba5477692cfacbb1d2d4078_cgraph.svg" width="176" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4aded71390a80ca7b804862d8943c282" name="a4aded71390a80ca7b804862d8943c282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aded71390a80ca7b804862d8943c282">&#9670;&#160;</a></span>setCacheDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::tf::Buffer::setCacheDuration </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::nanoseconds</td>          <td class="paramname"><span class="paramname"><em>cache_duration</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置动态历史缓存时长；负值按零处理，并立即裁剪现有历史 </p>
+
+</div>
+</div>
+<a id="af8599c8edcaae82a7513609aedc6d35f" name="af8599c8edcaae82a7513609aedc6d35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8599c8edcaae82a7513609aedc6d35f">&#9670;&#160;</a></span>setStatic() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a> rm::lpss::tf::Buffer::setStatic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transforms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>批量插入静态坐标变换 </p>
+<dl class="section return"><dt>返回</dt><dd>首个失败状态；所有变换都会尝试插入 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_af8599c8edcaae82a7513609aedc6d35f_cgraph.svg" width="334" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a127a1ad6cfea1fd034383fe5f35f6024" name="a127a1ad6cfea1fd034383fe5f35f6024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127a1ad6cfea1fd034383fe5f35f6024">&#9670;&#160;</a></span>setStatic() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d48/group__lpss__transform__buffer.html#ga23bec70cd7f6679db019bdcf7be39944">Status</a> rm::lpss::tf::Buffer::setStatic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插入静态坐标变换 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a127a1ad6cfea1fd034383fe5f35f6024_cgraph.svg" width="148" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8a745cef3478d3b7049d3498b307b1b3" name="a8a745cef3478d3b7049d3498b307b1b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a745cef3478d3b7049d3498b307b1b3">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::lpss::tf::Buffer::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前坐标树边数 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer_a8a745cef3478d3b7049d3498b307b1b3_cgraph.svg" width="148" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

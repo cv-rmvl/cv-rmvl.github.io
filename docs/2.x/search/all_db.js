@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['轻量发布订阅服务及其相关组件_0',['轻量发布订阅服务及其相关组件',['../d7/de3/group__lpss.html',1,'']]],
-  ['轻量发布订阅服务_20——_20lpss_1',['轻量发布订阅服务 —— LPSS',['../d3/d8e/tutorial_modules_lpss.html',1,'tutorial_table_of_content_modules']]]
+  ['责任链模式下的程序处理_0',['责任链模式下的程序处理',['../d2/de3/tutorial_extra_upper_process.html',1,'tutorial_table_of_content_extra']]]
 ];

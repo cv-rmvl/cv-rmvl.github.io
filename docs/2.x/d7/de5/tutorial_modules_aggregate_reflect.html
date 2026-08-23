@@ -153,7 +153,7 @@ $(function() {
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/09/19 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
-<p><b>下一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html" title="串口通信模块">串口通信模块</a> <br  />
+<p><b>下一篇教程：</b><a class="el" href="../../d5/d6c/tutorial_modules_yaml.html" title="YAML 数据读写">YAML 数据读写</a> <br  />
 </p>
 <hr  />
 <h2 class="doxsection"><a class="anchor" id="autotoc_md243"></a>
@@ -240,7 +240,7 @@ $(function() {
 <div class="line">    <span class="keyword">static_assert</span>(std::is_aggregate_v&lt;Tp&gt;);</div>
 <div class="line">    <span class="keywordflow">return</span> helper::size&lt;Tp&gt;(helper::size_tag&lt;3&gt;{});</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:304</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gadc3b4f53ef6981ca8c58abd401a506b9"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gadc3b4f53ef6981ca8c58abd401a506b9">rm::reflect::size</a></div><div class="ttdeci">consteval std::size_t size(auto &amp;&amp;...args)</div><div class="ttdoc">获取指定类型的成员个数</div><div class="ttdef"><b>定义</b> util.hpp:311</div></div>
 </div><!-- fragment --><p class="startli">其中涉及到了一个 <span class="tt">size_tag</span> 类，该类有一个 <span class="tt">&lt;0&gt;</span> 的全特化，<span class="tt">&lt;N&gt;</span> 继承于 <span class="tt">&lt;N - 1&gt;</span>，是为了在 <span class="tt">helper::size</span> 重载中，能够按 <span class="tt">N</span> 从大到小的顺序进行重载决议。下面给出一个简单的使用示例。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/core/util.hpp&gt;</span></div>
 <div class="line"> </div>
@@ -324,7 +324,7 @@ $(function() {
 <div class="line">    <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290">rm::reflect::for_each</a>(x, f);</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__algorithm__math_html_gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383"><div class="ttname"><a href="../../d7/da1/group__algorithm__math.html#gga9efb6b0afed03a8afe74adea283e4e20a02129bb861061d1a052c592e2dc6b383">rm::EulerAxis::X</a></div><div class="ttdeci">@ X</div><div class="ttdoc">X 轴</div><div class="ttdef"><b>定义</b> transform.hpp:29</div></div>
-<div class="ttc" id="agroup__core__reflect_html_ga9863cff22a9ace50a697915560ee8290"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290">rm::reflect::for_each</a></div><div class="ttdeci">void for_each(Tp &amp;&amp;val, Callable &amp;&amp;f)</div><div class="ttdoc">遍历聚合类的每一个数据成员</div><div class="ttdef"><b>定义</b> util.hpp:323</div></div>
+<div class="ttc" id="agroup__core__reflect_html_ga9863cff22a9ace50a697915560ee8290"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#ga9863cff22a9ace50a697915560ee8290">rm::reflect::for_each</a></div><div class="ttdeci">void for_each(Tp &amp;&amp;val, Callable &amp;&amp;f)</div><div class="ttdoc">遍历聚合类的每一个数据成员</div><div class="ttdef"><b>定义</b> util.hpp:330</div></div>
 </div><!-- fragment --><p>编译后运行结果为</p>
 <div class="fragment"><div class="line">val = 1</div>
 <div class="line">val = 3.1</div>
@@ -363,7 +363,7 @@ $(function() {
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x2: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x2) &lt;&lt; std::endl;</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;x1 = x3: &quot;</span> &lt;&lt; std::boolalpha &lt;&lt; <a class="code hl_function" href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a>(x1, x3) &lt;&lt; std::endl;</div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__core__reflect_html_gaca3e9de5d5043a1c038a42c9f4f0a22c"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a></div><div class="ttdeci">bool equal(const Tp &amp;lhs, const Tp &amp;rhs)</div><div class="ttdoc">判断两个聚合类数据是否相同</div><div class="ttdef"><b>定义</b> util.hpp:373</div></div>
+<div class="ttc" id="agroup__core__reflect_html_gaca3e9de5d5043a1c038a42c9f4f0a22c"><div class="ttname"><a href="../../d5/d3e/group__core__reflect.html#gaca3e9de5d5043a1c038a42c9f4f0a22c">rm::reflect::equal</a></div><div class="ttdeci">bool equal(const Tp &amp;lhs, const Tp &amp;rhs)</div><div class="ttdoc">判断两个聚合类数据是否相同</div><div class="ttdef"><b>定义</b> util.hpp:380</div></div>
 </div><!-- fragment --><p>编译后运行结果为</p>
 <div class="fragment"><div class="line">x1 = x2: false</div>
 <div class="line">x1 = x3: true</div>
@@ -410,7 +410,7 @@ $(function() {
 <div class="line">    <span class="comment">// 定义 Key = X，Val = int 的散列表</span></div>
 <div class="line">    std::unordered_map&lt;X, int, rm::hash_aggregate&lt;X&gt;&gt; hashmap;</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacerm_1_1msg_html_acbef3fa22e0e1b4464e81f20da632242"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html#acbef3fa22e0e1b4464e81f20da632242">rm::msg::operator==</a></div><div class="ttdeci">bool operator==(Time t1, Time t2) noexcept</div><div class="ttdef"><b>定义</b> node.hpp:289</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html_acbef3fa22e0e1b4464e81f20da632242"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html#acbef3fa22e0e1b4464e81f20da632242">rm::msg::operator==</a></div><div class="ttdeci">bool operator==(Time t1, Time t2) noexcept</div><div class="ttdef"><b>定义</b> node.hpp:290</div></div>
 </div><!-- fragment --><p>此外，对于一般化的类型 <span class="tt">T</span>，如果要使用 <span class="tt">std::unordered_map</span>，可以使用 <a href="https://zh.cppreference.com/w/cpp/meta#.E7.B1.BB.E5.9E.8B.E7.89.B9.E6.80.A7">类型特性 type traits</a> 相关功能，RMVL 提供了用于 hash 函数选择的类型特性: <span class="tt"><a class="el" href="../../d4/d45/structrm_1_1hash__traits.html" title="哈希生成函数类型 traits">rm::hash_traits</a></span>，类型名为 <span class="tt">hash_func</span>，下面给出一个简单的用法</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keywordtype">void</span> f() {</div>

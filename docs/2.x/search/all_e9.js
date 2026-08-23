@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['链路层协议_0',['2.3 链路层协议',['../d3/da4/tutorial_modules_serial.html#serial_protocol',1,'']]]
+  ['递推公式_0',['2 递推公式',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md49',1,'']]]
 ];

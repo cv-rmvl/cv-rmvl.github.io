@@ -125,23 +125,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>涵盖了有关异常处理、定时器、编程工具等相关内容  
+<p>提供异常处理、定时器、编程工具和 YAML 数据读写等基础功能  
 <a href="#details">更多...</a></p>
 <div class="dynheader">
 RMVL 核心模块 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core.svg" width="348" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core.svg" width="348" height="260"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-groups" class="groupheader"><a id="groups" name="groups"></a>
 专题</h2></td></tr>
-<tr class="memitem:core_5Freflect" id="r_core_5Freflect"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d5/d3e/group__core__reflect.html">聚合体编译期反射</a></td></tr>
-<tr class="memdesc:d5/d3e/group__core__reflect"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供了 C++17 和 C++20 两种实现的聚合体编译期反射功能 <br /></td></tr>
-<tr class="memitem:core_5Fmeta" id="r_core_5Fmeta"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/df6/group__core__meta.html">元编程</a></td></tr>
-<tr class="memdesc:de/df6/group__core__meta"><td class="mdescLeft">&#160;</td><td class="mdescRight">目前提供了 hash 生成相关的 Type Traits <br /></td></tr>
 <tr class="memitem:core_5Fstr" id="r_core_5Fstr"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d0/d17/group__core__str.html">Python 风格的字符串处理</a></td></tr>
-<tr class="memdesc:d0/d17/group__core__str"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供了 Python 风格的字符串处理函数，例如 split、strip 等 <br /></td></tr>
+<tr class="memdesc:d0/d17/group__core__str"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供 split、strip、join 等字符串处理函数 <br /></td></tr>
 <tr class="memitem:core_5Ftimer" id="r_core_5Ftimer"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../db/d06/group__core__timer.html">定时、计时模块</a></td></tr>
+<tr class="memdesc:db/d06/group__core__timer"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供 Epoch 时间获取和代码执行时间测量功能 <br /></td></tr>
+<tr class="memitem:core_5Freflect" id="r_core_5Freflect"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../d5/d3e/group__core__reflect.html">聚合体编译期反射</a></td></tr>
+<tr class="memdesc:d5/d3e/group__core__reflect"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供聚合体成员数量获取、遍历和比较功能 <br /></td></tr>
+<tr class="memitem:core_5Fmeta" id="r_core_5Fmeta"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/df6/group__core__meta.html">元编程</a></td></tr>
+<tr class="memdesc:de/df6/group__core__meta"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供哈希生成相关的 Type Traits <br /></td></tr>
+<tr class="memitem:core_5Fyaml" id="r_core_5Fyaml"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../dc/d84/group__core__yaml.html">YAML 解析模块</a></td></tr>
+<tr class="memdesc:dc/d84/group__core__yaml"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供基于 rapidyaml 的高性能 YAML 解析、树访问、类型转换和文件读写功能 <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
@@ -220,12 +223,8 @@ RMVL 核心模块 的协作图:</div>
 <tr class="memdesc:gafbe1fc1291dcca5f41435f775d12e320"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前进程的 ID  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>涵盖了有关异常处理、定时器、编程工具等相关内容 </p>
-<ul>
-<li>异常处理可参考 <a class="el" href="../../d9/db4/classrm_1_1Exception.html" title="该类封装了有关程序中发生的错误的所有或几乎所有必要信息。异常通常是通过 RMVL_Error 和 RMVL_Error_ 宏隐式构造和抛出的">rm::Exception</a> 类，提供了异常处理的相关函数</li>
-<li>定时器可参考 rm::Timer 类</li>
-<li>编程工具包括了 <a class="el" href="../../d5/d3e/group__core__reflect.html" title="聚合体编译期反射">聚合体编译期反射</a> 、 <a class="el" href="../../de/df6/group__core__meta.html" title="元编程">元编程</a> 、<a class="el" href="../../d0/d17/group__core__str.html" title="Python 风格的字符串处理">Python 风格的字符串处理</a> 等</li>
-</ul>
+<div class="textblock"><p>提供异常处理、定时器、编程工具和 YAML 数据读写等基础功能 </p>
+<dl class="section see"><dt>参见</dt><dd>core_reflect、core_meta、core_str、core_timer、core_yaml</dd></dl>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">宏定义说明</h2>
 <a id="ga09d07224c75e71706e88adc741cc2736" name="ga09d07224c75e71706e88adc741cc2736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga09d07224c75e71706e88adc741cc2736">&#9670;&#160;</a></span>DEBUG_ERROR_</h2>

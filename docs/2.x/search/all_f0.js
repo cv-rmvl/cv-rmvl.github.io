@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['风格的字符串处理_0',['Python 风格的字符串处理',['../d0/d17/group__core__str.html',1,'']]]
+  ['静态构建与动态构建_0',['2.2 静态构建与动态构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md106',1,'']]]
 ];

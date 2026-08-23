@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['提交轨迹_0',['2.2 提交轨迹',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md315',1,'']]]
+  ['按钮_0',['4 按钮',['../d5/d72/tutorial_document.html#autotoc_md142',1,'']]]
 ];

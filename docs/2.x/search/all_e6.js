@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['部署使用_0',['部署使用',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md87',1,'2.3 部署使用'],['../db/da1/tutorial_modules_least_square.html#autotoc_md203',1,'5 部署使用']]]
+  ['迭代步骤_0',['迭代步骤',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md209',1,'1.2 迭代步骤'],['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md214',1,'2.2 迭代步骤'],['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md179',1,'2.3 迭代步骤']]],
+  ['迭代的简化_1',['3 Newton 迭代的简化',['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md184',1,'']]],
+  ['迭代_2',['迭代',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md207',1,'1 Gauss-Newton 迭代'],['../d8/daf/tutorial_modules_func_iteration.html#autotoc_md183',1,'2 Newton 迭代']]]
 ];

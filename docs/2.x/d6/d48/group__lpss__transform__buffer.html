@@ -1,0 +1,268 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: 坐标变换缓存</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">坐标变换缓存 <div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供坐标树维护、变换历史缓存和按时间查询能力  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+坐标变换缓存 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/d48/group__lpss__transform__buffer.svg" width="362" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Alpss_3A_3Atf_3A_3ALookupResult" id="r_rm_3A_3Alpss_3A_3Atf_3A_3ALookupResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html">rm::lpss::tf::LookupResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">坐标变换查询结果  <a href="../../d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Alpss_3A_3Atf_3A_3ABuffer" id="r_rm_3A_3Alpss_3A_3Atf_3A_3ABuffer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html">rm::lpss::tf::Buffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程安全的坐标变换缓存  <a href="../../d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Alpss_3A_3Atf_3A_3ABroadcaster" id="r_rm_3A_3Alpss_3A_3Atf_3A_3ABroadcaster"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html">rm::lpss::tf::Broadcaster</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态坐标变换发布器  <a href="../../dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Alpss_3A_3Atf_3A_3AStaticBroadcaster" id="r_rm_3A_3Alpss_3A_3Atf_3A_3AStaticBroadcaster"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html">rm::lpss::tf::StaticBroadcaster</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">静态坐标变换发布器  <a href="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Alpss_3A_3Atf_3A_3AListener" id="r_rm_3A_3Alpss_3A_3Atf_3A_3AListener"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html">rm::lpss::tf::Listener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">坐标变换监听器  <a href="../../de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga23bec70cd7f6679db019bdcf7be39944" id="r_ga23bec70cd7f6679db019bdcf7be39944"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga23bec70cd7f6679db019bdcf7be39944">rm::lpss::tf::Status</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944aa60852f204ed8028c1c58808b746d115">rm::lpss::tf::Status::Ok</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a253ca7dd096ee0956cccee4d376cab8b">rm::lpss::tf::Status::InvalidArgument</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a116951ddc58ed29c099a562a4d802e59">rm::lpss::tf::Status::InvalidTransform</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944acd9bc4b5e0cc88294db85310763e80ba">rm::lpss::tf::Status::MultipleParents</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea">rm::lpss::tf::Status::CycleDetected</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546">rm::lpss::tf::Status::StaticDynamicConflict</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944ac5bf383e7c18c52c051ed952797bad09">rm::lpss::tf::Status::FrameNotFound</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25">rm::lpss::tf::Status::ConnectivityError</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a1c3b83c295a991c701023abe36534c47">rm::lpss::tf::Status::ExtrapolationPast</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944acb2d141e46e1c3e61bc2b84bc0e5674c">rm::lpss::tf::Status::ExtrapolationFuture</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a779b940e79152dc2a8aa073adabe2313">rm::lpss::tf::Status::NoCommonTime</a>
+, <a class="el" href="#gga23bec70cd7f6679db019bdcf7be39944a4ea48d07de9dacb0048c66b6be50ef5d">rm::lpss::tf::Status::TimestampOutOfRange</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga23bec70cd7f6679db019bdcf7be39944"><td class="mdescLeft">&#160;</td><td class="mdescRight">坐标变换操作状态  <a href="#ga23bec70cd7f6679db019bdcf7be39944">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gabc90f2c19dfc9202153e0d4ec5461dc5" id="r_gabc90f2c19dfc9202153e0d4ec5461dc5"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#gabc90f2c19dfc9202153e0d4ec5461dc5">rm::lpss::tf::to_string</a> (<a class="el" href="#ga23bec70cd7f6679db019bdcf7be39944">Status</a> status) noexcept</td></tr>
+<tr class="memdesc:gabc90f2c19dfc9202153e0d4ec5461dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取坐标变换状态的稳定文本描述  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供坐标树维护、变换历史缓存和按时间查询能力 </p>
+<p><span class="tt">TransformStamped</span> 统一表示 \(T_{parent,child}\)：<span class="tt">child_frame_id</span> 在 <span class="tt">header.frame_id</span> 中的位姿，同时也将 child 中的坐标映射到 parent。 <span class="tt">Buffer::lookup(target, source)</span> 返回 \(T_{target,source}\)。 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="ga23bec70cd7f6679db019bdcf7be39944" name="ga23bec70cd7f6679db019bdcf7be39944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23bec70cd7f6679db019bdcf7be39944">&#9670;&#160;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga23bec70cd7f6679db019bdcf7be39944">rm::lpss::tf::Status</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>坐标变换操作状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944aa60852f204ed8028c1c58808b746d115" name="gga23bec70cd7f6679db019bdcf7be39944aa60852f204ed8028c1c58808b746d115"></a>Ok&#160;</td><td class="fielddoc"><p>操作成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a253ca7dd096ee0956cccee4d376cab8b" name="gga23bec70cd7f6679db019bdcf7be39944a253ca7dd096ee0956cccee4d376cab8b"></a>InvalidArgument&#160;</td><td class="fielddoc"><p>坐标系为空、父子同名或时间格式非法 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a116951ddc58ed29c099a562a4d802e59" name="gga23bec70cd7f6679db019bdcf7be39944a116951ddc58ed29c099a562a4d802e59"></a>InvalidTransform&#160;</td><td class="fielddoc"><p>变换包含非有限值或零范数四元数 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944acd9bc4b5e0cc88294db85310763e80ba" name="gga23bec70cd7f6679db019bdcf7be39944acd9bc4b5e0cc88294db85310763e80ba"></a>MultipleParents&#160;</td><td class="fielddoc"><p>子坐标系已属于另一个父坐标系 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea" name="gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea"></a>CycleDetected&#160;</td><td class="fielddoc"><p>新变换会在坐标树中形成环 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546" name="gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546"></a>StaticDynamicConflict&#160;</td><td class="fielddoc"><p>同一条边被同时用作静态和动态变换 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944ac5bf383e7c18c52c051ed952797bad09" name="gga23bec70cd7f6679db019bdcf7be39944ac5bf383e7c18c52c051ed952797bad09"></a>FrameNotFound&#160;</td><td class="fielddoc"><p>坐标系不存在 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25" name="gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25"></a>ConnectivityError&#160;</td><td class="fielddoc"><p>两个坐标系不在同一棵树中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a1c3b83c295a991c701023abe36534c47" name="gga23bec70cd7f6679db019bdcf7be39944a1c3b83c295a991c701023abe36534c47"></a>ExtrapolationPast&#160;</td><td class="fielddoc"><p>查询时间早于缓存最早时间 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944acb2d141e46e1c3e61bc2b84bc0e5674c" name="gga23bec70cd7f6679db019bdcf7be39944acb2d141e46e1c3e61bc2b84bc0e5674c"></a>ExtrapolationFuture&#160;</td><td class="fielddoc"><p>查询时间晚于缓存最新时间 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a779b940e79152dc2a8aa073adabe2313" name="gga23bec70cd7f6679db019bdcf7be39944a779b940e79152dc2a8aa073adabe2313"></a>NoCommonTime&#160;</td><td class="fielddoc"><p>路径上的动态边没有公共时间区间 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga23bec70cd7f6679db019bdcf7be39944a4ea48d07de9dacb0048c66b6be50ef5d" name="gga23bec70cd7f6679db019bdcf7be39944a4ea48d07de9dacb0048c66b6be50ef5d"></a>TimestampOutOfRange&#160;</td><td class="fielddoc"><p>插入时间已超出当前历史缓存窗口 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="gabc90f2c19dfc9202153e0d4ec5461dc5" name="gabc90f2c19dfc9202153e0d4ec5461dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc90f2c19dfc9202153e0d4ec5461dc5">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * rm::lpss::tf::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga23bec70cd7f6679db019bdcf7be39944">Status</a></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>获取坐标变换状态的稳定文本描述 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

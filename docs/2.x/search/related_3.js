@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sink_5fflush_5finvoke_0',['sink_flush_invoke',['../da/dc5/structrm_1_1StdoutSink.html#abe58dd2b9105a8942c8bb76fee2a42c0',1,'rm::StdoutSink::sink_flush_invoke()'],['../da/d1c/classrm_1_1FileSink.html#a6485d8ab814bcaa75c883091b9a47a58',1,'rm::FileSink::sink_flush_invoke()'],['../da/dfb/classrm_1_1SerialSink.html#ad122f51d11024c590cb305bb691484e2',1,'rm::SerialSink::sink_flush_invoke()'],['../dc/df2/classrm_1_1UDPSink.html#ac9ed807cf3e2aeaf1745ef2b3b52d9f7',1,'rm::UDPSink::sink_flush_invoke()']]],
-  ['sink_5fwrite_5finvoke_1',['sink_write_invoke',['../da/dc5/structrm_1_1StdoutSink.html#a07cdfdc23d5cf90f7254b3bcbeb7c712',1,'rm::StdoutSink::sink_write_invoke()'],['../da/d1c/classrm_1_1FileSink.html#ac58acdb1574782d8f87db70195ed092e',1,'rm::FileSink::sink_write_invoke()'],['../da/dfb/classrm_1_1SerialSink.html#ad0725c5a0ca892b71765d5aa2eb88762',1,'rm::SerialSink::sink_write_invoke()'],['../dc/df2/classrm_1_1UDPSink.html#ab16f4c5ad1d4bcc778f44e7a68dd0148',1,'rm::UDPSink::sink_write_invoke()']]]
+  ['httpserver_0',['HttpServer',['../d5/d05/classrm_1_1async_1_1Webapp.html#a7ef68af4cc3915e661d6bb0255d265d2',1,'rm::async::Webapp']]],
+  ['httpsserver_1',['HttpsServer',['../d5/d05/classrm_1_1async_1_1Webapp.html#af485314fe910f24b46d4b49bda9eadcd',1,'rm::async::Webapp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['连续采样_0',['4.1 连续采样',['../df/d2c/tutorial_modules_camera.html#autotoc_md264',1,'']]]
+  ['轮询判断_0',['3.1 轮询判断',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md89',1,'']]]
 ];

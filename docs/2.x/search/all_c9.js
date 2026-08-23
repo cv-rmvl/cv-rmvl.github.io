@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['视图_0',['视图',['../db/dba/tutorial_modules_opcua.html#autotoc_md355',1,'2.5 视图'],['../db/dba/tutorial_modules_opcua.html#autotoc_md368',1,'4.3 不占有所有权的 C/S 视图']]],
-  ['视觉标签_1',['视觉标签',['../d4/d03/tutorial_extra_april_tag.html',1,'AprilTag 视觉标签'],['../da/daa/group__tag.html',1,'AprilTag(Tag25h9) 视觉标签']]]
+  ['装甲板识别模块_0',['装甲板识别模块',['../d4/d47/group__armor__detector.html',1,'']]],
+  ['装甲模块灯条_1',['装甲模块灯条',['../d5/d68/group__light__blob.html',1,'']]],
+  ['装甲模块特征组合_2',['装甲模块特征组合',['../db/d22/group__combo__armor.html',1,'']]],
+  ['装甲预测模块_3',['装甲预测模块',['../d4/dd1/group__armor__predictor.html',1,'']]]
 ];

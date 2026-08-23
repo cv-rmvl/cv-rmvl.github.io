@@ -13,8 +13,10 @@ var searchData=
   ['armorparam_10',['ArmorParam',['../db/db1/classrm_1_1para_1_1ArmorParam.html',1,'rm::para']]],
   ['armorpredictor_11',['ArmorPredictor',['../d6/df1/classrm_1_1ArmorPredictor.html',1,'rm']]],
   ['armorpredictorparam_12',['ArmorPredictorParam',['../dc/d2f/classrm_1_1para_1_1ArmorPredictorParam.html',1,'rm::para']]],
-  ['asyncioawaiter_13',['AsyncIOAwaiter',['../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html',1,'rm::async']]],
-  ['asyncreadawaiter_14',['AsyncReadAwaiter',['../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html',1,'rm::async']]],
-  ['asyncwriteawaiter_15',['AsyncWriteAwaiter',['../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html',1,'rm::async']]],
-  ['atomicshm_16',['AtomicSHM',['../da/dd5/classrm_1_1AtomicSHM.html',1,'rm']]]
+  ['astaroptions_13',['AStarOptions',['../de/d4b/structrm_1_1nav_1_1AStarOptions.html',1,'rm::nav']]],
+  ['astarplanner_14',['AStarPlanner',['../d5/d14/classrm_1_1nav_1_1AStarPlanner.html',1,'rm::nav']]],
+  ['asyncioawaiter_15',['AsyncIOAwaiter',['../d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html',1,'rm::async']]],
+  ['asyncreadawaiter_16',['AsyncReadAwaiter',['../df/df7/classrm_1_1async_1_1AsyncReadAwaiter.html',1,'rm::async']]],
+  ['asyncwriteawaiter_17',['AsyncWriteAwaiter',['../db/d38/classrm_1_1async_1_1AsyncWriteAwaiter.html',1,'rm::async']]],
+  ['atomicshm_18',['AtomicSHM',['../da/dd5/classrm_1_1AtomicSHM.html',1,'rm']]]
 ];

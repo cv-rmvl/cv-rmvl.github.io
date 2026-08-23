@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['卡尔曼滤波模块_0',['卡尔曼滤波模块',['../d7/db3/group__algorithm__kalman.html',1,'']]]
+  ['决策模块（功能模块）_0',['决策模块（功能模块）',['../d9/dbe/group__decider.html',1,'']]]
 ];

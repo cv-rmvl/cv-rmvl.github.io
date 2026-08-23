@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['是什么_0',['1.1 OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_what',1,'']]]
+  ['日志_0',['日志',['../dc/d55/group__logger.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['特征_0',['1.1 特征',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md61',1,'']]]
+  ['源码安装_0',['源码安装',['../d2/d60/tutorial_install_overview.html#autotoc_md111',1,'']]]
 ];

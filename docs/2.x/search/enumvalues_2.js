@@ -10,10 +10,12 @@ var searchData=
   ['client_7',['Client',['../d6/dd4/group__io__net.html#gga1fae898fdda37d4261e984bd1741ba9aa577d7068826de925ea2aec01dbadf5e4',1,'rm']]],
   ['conjgrad_8',['ConjGrad',['../d2/d62/group__algorithm__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca4665d7d50e9615f1531abbdcc001e0ce',1,'rm']]],
   ['connect_9',['Connect',['../d6/dd4/group__io__net.html#ggae6fd8f56e227d1b8dd738a46939dd2fca49ab28040dfa07f53544970c6d147e1e',1,'rm']]],
-  ['continuous_10',['Continuous',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7',1,'rm']]],
-  ['contrast_11',['contrast',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db',1,'rm']]],
-  ['cpu_12',['CPU',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d',1,'rm']]],
-  ['critical_13',['Critical',['../dc/d55/group__logger.html#gga26ff8001b9ec9036057d58555bbc1c0aa278d01e5af56273bae1bb99a98b370cd',1,'rm']]],
-  ['cross_14',['Cross',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7ae76b449b9fc8536af7557ffa6321d269',1,'rm']]],
-  ['cuda_15',['CUDA',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d',1,'rm']]]
+  ['connectivityerror_10',['ConnectivityError',['../d6/d48/group__lpss__transform__buffer.html#gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25',1,'rm::lpss::tf']]],
+  ['continuous_11',['Continuous',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da535863a82f163709557e59e2eb8139a7',1,'rm']]],
+  ['contrast_12',['contrast',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377ac8fd07f040a8f2dc85f5b2d3804ea3db',1,'rm']]],
+  ['cpu_13',['CPU',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a2b55387dd066c5bac646ac61543d152d',1,'rm']]],
+  ['critical_14',['Critical',['../dc/d55/group__logger.html#gga26ff8001b9ec9036057d58555bbc1c0aa278d01e5af56273bae1bb99a98b370cd',1,'rm']]],
+  ['cross_15',['Cross',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7ae76b449b9fc8536af7557ffa6321d269',1,'rm']]],
+  ['cuda_16',['CUDA',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d',1,'rm']]],
+  ['cycledetected_17',['CycleDetected',['../d6/d48/group__lpss__transform__buffer.html#gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea',1,'rm::lpss::tf']]]
 ];

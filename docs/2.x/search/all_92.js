@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['服务发现_0',['1.2 服务发现',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md289',1,'']]],
-  ['服务器定时_1',['2.7.1 服务器定时',['../db/dba/tutorial_modules_opcua.html#autotoc_md360',1,'']]],
-  ['服务器_2',['服务器',['../db/dba/tutorial_modules_opcua.html#autotoc_md350',1,'2.1.1 服务器'],['../d4/d7a/tutorial_modules_netapp.html#autotoc_md346',1,'3.1 HTTP 服务器'],['../d4/d7a/tutorial_modules_netapp.html#autotoc_md347',1,'3.2 HTTPS 服务器']]],
-  ['服务器_20客户端_3',['2 服务器/客户端',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_server_client',1,'']]],
-  ['服务模块使用教程_4',['服务模块使用教程',['../d6/d0f/tutorial_table_of_content_rmvlsrv.html',1,'tutorials']]],
-  ['服务模块_5',['服务模块',['../d2/dd0/group__rmvlsrv.html',1,'']]],
-  ['服务端示例_6',['3.1 服务端示例',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md305',1,'']]],
-  ['服务_20客户端模型使用方法_7',['3 服务/客户端模型使用方法',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md304',1,'']]]
+  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]],
+  ['最小二乘法_1',['最小二乘法',['../db/da1/tutorial_modules_least_square.html',1,'tutorial_table_of_content_modules']]],
+  ['最小二乘递推算法_2',['最小二乘递推算法',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md47',1,'']]],
+  ['最小二乘_3',['1 最小二乘',['../d3/ded/tutorial_extra_spi_rune_predictor.html#autotoc_md48',1,'']]],
+  ['最速下降法_4',['1 最速下降法',['../d3/d5c/tutorial_modules_fminunc.html#autotoc_md175',1,'']]]
 ];

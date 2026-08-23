@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['能量机关特征组合_0',['能量机关特征组合',['../d8/d7f/group__combo__rune.html',1,'']]]
+  ['编写测试文件_0',['2 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md125',1,'']]],
+  ['编译安装_1',['3.1 编译安装',['../d1/db4/tutorial_install.html#autotoc_md119',1,'']]],
+  ['编译镜像_2',['Run In —— 一键进入全功能 RMVL 编译镜像',['../d2/d81/tutorial_run_in.html',1,'tutorial_table_of_content_config']]]
 ];

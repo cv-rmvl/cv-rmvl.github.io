@@ -125,19 +125,19 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md343">1 HTTP 数据结构 </a>
+        <a href="#autotoc_md352">1 HTTP 数据结构 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md344">2 HTTP 请求工具 </a>
+        <a href="#autotoc_md353">2 HTTP 请求工具 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md345">3 Web 后端框架 </a>
+        <a href="#autotoc_md354">3 Web 后端框架 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md346">3.1 HTTP 服务器 </a>
+            <a href="#autotoc_md355">3.1 HTTP 服务器 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md347">3.2 HTTPS 服务器 </a>
+            <a href="#autotoc_md356">3.2 HTTPS 服务器 </a>
           </li>
         </ul>
       </li>
@@ -159,7 +159,7 @@ $(function() {
 <li>后端应用： <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a></li>
 <li>HTTP/HTTPS 服务器： <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 及 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md343"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md352"></a>
 1 HTTP 数据结构</h2>
 <p>相关类： <a class="el" href="../../d6/d7c/structrm_1_1Request.html" title="HTTP 请求结构">rm::Request</a> 及 <a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a></p>
 <p>两个类均提供了</p>
@@ -168,7 +168,7 @@ $(function() {
 <li><span class="tt">parse</span> 静态成员函数，用于从 HTTP 格式的字符串解析出请求/响应结构，在接收到 Socket 原始数据后可调用此方法进行解析</li>
 </ul>
 <p><a class="el" href="../../d1/d1b/structrm_1_1Response.html" title="HTTP 响应结构">rm::Response</a> 还提供了多种简化生成响应的成员函数，如 <span class="tt">send</span>、<span class="tt">json</span>、<span class="tt">redirect</span> 等。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md344"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md353"></a>
 2 HTTP 请求工具</h2>
 <p>相关函数：</p>
 <ul>
@@ -190,10 +190,10 @@ $(function() {
 <div class="ttc" id="agroup__io__net_html_ga6193a01ed7a33f9af6d287b67b7ff906"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#ga6193a01ed7a33f9af6d287b67b7ff906">rm::requests::get</a></div><div class="ttdeci">Response get(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 GET 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:282</div></div>
 <div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
 </div><!-- fragment --><p>异步请求的使用方法类似，只需将 <span class="tt">requests</span> 替换为 <span class="tt">async::requests</span>，并在协程中使用 <span class="tt">co_await</span> 关键字等待结果，这里不再赘述。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md345"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md354"></a>
 3 Web 后端框架</h2>
 <p>RMVL 提供了后端应用框架 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> ，以及负责传输层监听的 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 和 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> 。设计参考 Express JS，具体来说，Webapp 负责路由与中间件，服务器对象负责 HTTP 或 HTTPS 监听，同一个 Webapp 可以交给不同类型的服务器。</p>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md346"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md355"></a>
 3.1 HTTP 服务器</h3>
 <p><a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 和 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 提供了 GET、POST、DELETE 等相关方法用于定义路由，并且 <a class="el" href="../../d5/d05/classrm_1_1async_1_1Webapp.html" title="Web 应用程序框架">rm::async::Webapp</a> 可以使用 <span class="tt">use</span> 方法挂载中间件或挂载由 <a class="el" href="../../d0/de4/classrm_1_1Router.html" title="HTTP 与 WebSocket 请求路由">rm::Router</a> 定义的子路由。</p>
 <div class="fragment"><div class="line"><span class="comment">// demo.cpp</span></div>
@@ -323,7 +323,7 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a6a6e68bf7d1edb60d1a4f51b0cd6a517"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a6a6e68bf7d1edb60d1a4f51b0cd6a517">rm::async::WebSocket::is_open</a></div><div class="ttdeci">bool is_open() const noexcept</div><div class="ttdoc">获取连接是否活跃</div><div class="ttdef"><b>定义</b> netapp.hpp:392</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a7c6c11da4509b1160f7f0b691dd3cad7"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a7c6c11da4509b1160f7f0b691dd3cad7">rm::async::WebSocket::send</a></div><div class="ttdeci">Task&lt; bool &gt; send(std::string_view message)</div><div class="ttdoc">异步发送文本消息</div></div>
 <div class="ttc" id="aclassrm_1_1async_1_1WebSocket_html_a8ff7cafe1c4cdce5338ff4cc33cce729"><div class="ttname"><a href="../../d3/d6f/classrm_1_1async_1_1WebSocket.html#a8ff7cafe1c4cdce5338ff4cc33cce729">rm::async::WebSocket::recv</a></div><div class="ttdeci">Task&lt; std::string &gt; recv()</div><div class="ttdoc">异步接收消息，这是一个挂起点，直到收到客户端消息或连接关闭</div></div>
-<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:253</div></div>
+<div class="ttc" id="anamespacerm_1_1msg_html"><div class="ttname"><a href="../../de/dd0/namespacerm_1_1msg.html">rm::msg</a></div><div class="ttdoc">LPSS 消息类型命名空间</div><div class="ttdef"><b>定义</b> node.hpp:254</div></div>
 </div><!-- fragment --><p>编译方式与前面的 HTTP 服务示例相同。运行后，可以使用 <span class="tt">wscat</span> 等 WebSocket 客户端进行测试：</p>
 <div class="fragment"> <div class="line"><span class="keywordflow">./ws_demo</span> 8080</div> <div class="line"><span class="keywordflow">wscat</span> <span class="comment">-c</span> <span class="stringliteral">"ws://127.0.0.1:8080/ws/echo"</span></div> </div><p>在客户端输入任意文本并回车，即可看到服务端返回相同的文本内容。</p>
 <p>WebSocket 路由同样支持路径参数，参数会写入 <span class="tt">Request::params</span>，例如：</p>
@@ -337,7 +337,7 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">});</div>
 </div><!-- fragment --><dl class="section note"><dt>注解</dt><dd>当前 WebSocket 接口面向文本消息，<span class="tt">recv</span> 在连接关闭或收到关闭帧时返回空字符串；若业务需要发送空字符串，请在应用层自行约定消息格式。</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md347"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md356"></a>
 3.2 HTTPS 服务器</h3>
 <p>HTTPS 与 HTTP 使用相同的 Webapp，只需要将 <a class="el" href="../../d3/d83/classrm_1_1async_1_1HttpServer.html" title="HTTP 服务器">rm::async::HttpServer</a> 替换为 <a class="el" href="../../d4/da4/classrm_1_1async_1_1HttpsServer.html" title="HTTPS 服务器">rm::async::HttpsServer</a> ，并提供服务端的 <a class="el" href="../../de/db8/classrm_1_1SSLContext.html" title="TLS 上下文">rm::SSLContext</a> 即可，示例代码如下：</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">async::IOContext</a> io_context{};</div>

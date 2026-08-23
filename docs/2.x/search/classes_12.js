@@ -25,8 +25,9 @@ var searchData=
   ['sslcontext_22',['SSLContext',['../de/db8/classrm_1_1SSLContext.html',1,'rm']]],
   ['sslstream_23',['SSLStream',['../d4/d31/classrm_1_1async_1_1SSLStream.html',1,'rm::async::SSLStream'],['../d6/d29/classrm_1_1SSLStream.html',1,'rm::SSLStream']]],
   ['stateinfo_24',['StateInfo',['../d3/da8/classrm_1_1StateInfo.html',1,'rm']]],
-  ['stdoutsink_25',['StdoutSink',['../da/dc5/structrm_1_1StdoutSink.html',1,'rm']]],
-  ['streamsocket_26',['StreamSocket',['../d0/dd1/classrm_1_1async_1_1StreamSocket.html',1,'rm::async::StreamSocket'],['../d8/df3/classrm_1_1StreamSocket.html',1,'rm::StreamSocket']]],
-  ['string_27',['String',['../d3/db4/classrm_1_1msg_1_1String.html',1,'rm::msg']]],
-  ['subscriber_28',['Subscriber',['../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html',1,'rm::lpss::async::Subscriber&lt; MsgType &gt;'],['../dd/db5/classrm_1_1lpss_1_1Subscriber.html',1,'rm::lpss::Subscriber&lt; MsgType &gt;'],['../d8/d2f/classrm_1_1ua_1_1Subscriber.html',1,'rm::ua::Subscriber']]]
+  ['staticbroadcaster_25',['StaticBroadcaster',['../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html',1,'rm::lpss::tf']]],
+  ['stdoutsink_26',['StdoutSink',['../da/dc5/structrm_1_1StdoutSink.html',1,'rm']]],
+  ['streamsocket_27',['StreamSocket',['../d0/dd1/classrm_1_1async_1_1StreamSocket.html',1,'rm::async::StreamSocket'],['../d8/df3/classrm_1_1StreamSocket.html',1,'rm::StreamSocket']]],
+  ['string_28',['String',['../d3/db4/classrm_1_1msg_1_1String.html',1,'rm::msg']]],
+  ['subscriber_29',['Subscriber',['../d4/d05/classrm_1_1lpss_1_1async_1_1Subscriber.html',1,'rm::lpss::async::Subscriber&lt; MsgType &gt;'],['../dd/db5/classrm_1_1lpss_1_1Subscriber.html',1,'rm::lpss::Subscriber&lt; MsgType &gt;'],['../d8/d2f/classrm_1_1ua_1_1Subscriber.html',1,'rm::ua::Subscriber']]]
 ];

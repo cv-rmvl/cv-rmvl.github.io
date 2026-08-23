@@ -804,6 +804,91 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::nav::AStarOptions</name>
+    <filename>de/d4b/structrm_1_1nav_1_1AStarOptions.html</filename>
+    <member kind="variable">
+      <type>bool</type>
+      <name>allow_diagonal</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>a97db7af8e8e6c117da52f0000232b567</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>allow_corner_cutting</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>a8b431d49a80b82a8e2f2fbd9ecb2d95c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>traverse_unknown</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>abd10e066f6c88f57c1727cd762ae697c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint8_t</type>
+      <name>max_cost</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>a6621daf63bd345177eb276f809e1bf8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>cost_weight</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>ab4ba6fe11db8fda3edc177fc28d491b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>simplify</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>a40956f2435414f63c8ea99cfe4e9fd45</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>smoothing_iterations</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>ab63686a621bafbe1a05e086cbe8243be</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>smoothing_weight</name>
+      <anchorfile>de/d4b/structrm_1_1nav_1_1AStarOptions.html</anchorfile>
+      <anchor>a5e4cfc85204aeae8abd75c09cb9f3998</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::nav::AStarPlanner</name>
+    <filename>d5/d14/classrm_1_1nav_1_1AStarPlanner.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>AStarPlanner</name>
+      <anchorfile>d5/d14/classrm_1_1nav_1_1AStarPlanner.html</anchorfile>
+      <anchor>a01535ede151371a4cfcc8495885994dc</anchor>
+      <arglist>(AStarOptions options={}) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const AStarOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>d5/d14/classrm_1_1nav_1_1AStarPlanner.html</anchorfile>
+      <anchor>adcaaf19963e033b2fa18c08613722caa</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>PlanningResult</type>
+      <name>plan</name>
+      <anchorfile>d5/d14/classrm_1_1nav_1_1AStarPlanner.html</anchorfile>
+      <anchor>a4a44467d1b7ccc562fd5dcd9515b8def</anchor>
+      <arglist>(const Costmap &amp;costmap, const msg::Pose &amp;start, const msg::Pose &amp;goal) const</arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::async::AsyncIOAwaiter</name>
     <filename>d6/d17/classrm_1_1async_1_1AsyncIOAwaiter.html</filename>
@@ -1135,6 +1220,182 @@
       <arglist>(bool enabled=true)</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::lpss::tf::Broadcaster</name>
+    <filename>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Broadcaster</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a2f3df01728d131b715a17f47b65c0585</anchor>
+      <arglist>(std::string_view name, Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Broadcaster</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a489ad90471393d3c4df678cdcca0224b</anchor>
+      <arglist>(std::string_view name, async::Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Broadcaster</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>ad22c08078729a2188b868d93694430d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Broadcaster</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a52d6af77db9784c21f5001152d74802b</anchor>
+      <arglist>(const Broadcaster &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Broadcaster &amp;</type>
+      <name>operator=</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a285a11f4bbdaf2ea15d255db831808aa</anchor>
+      <arglist>(const Broadcaster &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a36ff8a157b2081b3a406a6bd6cd7cc9c</anchor>
+      <arglist>(const msg::TransformStamped &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>aae7cddcc2fcbdf0510457cadf73031fc</anchor>
+      <arglist>(const msg::TF &amp;transforms)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>dc/d08/classrm_1_1lpss_1_1tf_1_1Broadcaster.html</anchorfile>
+      <anchor>a6270122452f5f2955e90fadb99c6faea</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::lpss::tf::Buffer</name>
+    <filename>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>af76013d1d59b63007045ef7f207a59cb</anchor>
+      <arglist>(std::chrono::nanoseconds cache_duration=std::chrono::seconds(10))</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>aa95c6e53700854740e5b3de582a42e50</anchor>
+      <arglist>(Buffer &amp;&amp;) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Buffer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>aa1b96df7f14b2b5a33902e11f5ef6c21</anchor>
+      <arglist>(Buffer &amp;&amp;) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Buffer</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a6abe8d7e8f15c2e2079a63bada3bcbb2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a16f318301b6c021ffd0e3bbccc70aaf0</anchor>
+      <arglist>(const Buffer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Buffer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>ad9ee541f93fef748664f0fd2ce514226</anchor>
+      <arglist>(const Buffer &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Status</type>
+      <name>set</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a6c371fb33ba5477692cfacbb1d2d4078</anchor>
+      <arglist>(const msg::TransformStamped &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>Status</type>
+      <name>set</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>ac77e2bc1fe6e875dbc805779e7ed5b1d</anchor>
+      <arglist>(const msg::TF &amp;transforms)</arglist>
+    </member>
+    <member kind="function">
+      <type>Status</type>
+      <name>setStatic</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a127a1ad6cfea1fd034383fe5f35f6024</anchor>
+      <arglist>(const msg::TransformStamped &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>Status</type>
+      <name>setStatic</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>af8599c8edcaae82a7513609aedc6d35f</anchor>
+      <arglist>(const msg::TF &amp;transforms)</arglist>
+    </member>
+    <member kind="function">
+      <type>LookupResult</type>
+      <name>lookup</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a79b05f9fc70b3d1641c602faf496efe7</anchor>
+      <arglist>(std::string_view target_frame, std::string_view source_frame, const msg::Time &amp;time={}) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>can</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a0518625990e6de4e6945b98b8a5c8114</anchor>
+      <arglist>(std::string_view target_frame, std::string_view source_frame, const msg::Time &amp;time={}) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setCacheDuration</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a4aded71390a80ca7b804862d8943c282</anchor>
+      <arglist>(std::chrono::nanoseconds cache_duration) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::chrono::nanoseconds</type>
+      <name>cacheDuration</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a245a66f64bf2225dd0d030d21466df50</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>size</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a8a745cef3478d3b7049d3498b307b1b3</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear</name>
+      <anchorfile>d6/d5c/classrm_1_1lpss_1_1tf_1_1Buffer.html</anchorfile>
+      <anchor>a6b8c2e334df3bb2092bba8854429de90</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::CameraConfig</name>
     <filename>df/dfa/structrm_1_1CameraConfig.html</filename>
@@ -1400,6 +1661,24 @@
       <name>distCoeffs</name>
       <anchorfile>d4/dc5/classrm_1_1para_1_1CameraParam.html</anchorfile>
       <anchor>a743d97b84b0203eeaa451bff66400089</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::nav::Cell</name>
+    <filename>d6/dff/structrm_1_1nav_1_1Cell.html</filename>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>x</name>
+      <anchorfile>d6/dff/structrm_1_1nav_1_1Cell.html</anchorfile>
+      <anchor>a93b1ec72b6cae0ef56c84648a903fed3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>y</name>
+      <anchorfile>d6/dff/structrm_1_1nav_1_1Cell.html</anchorfile>
+      <anchor>abdcbbb2bf0132b5656485d1fc381f420</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1756,6 +2035,74 @@
       <anchorfile>df/d78/classrm_1_1ua_1_1ClientView.html</anchorfile>
       <anchor>a0930e46458d06a8e1eefcee6575ffe6d</anchor>
       <arglist>(const NodeId &amp;nd, const Variable &amp;val) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::nav::CollisionStop</name>
+    <filename>dd/d51/classrm_1_1nav_1_1CollisionStop.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CollisionStop</name>
+      <anchorfile>dd/d51/classrm_1_1nav_1_1CollisionStop.html</anchorfile>
+      <anchor>a368299fc01a2fcfe137c963c396b21ce</anchor>
+      <arglist>(CollisionStopOptions options={}) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const CollisionStopOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>dd/d51/classrm_1_1nav_1_1CollisionStop.html</anchorfile>
+      <anchor>a0d8a8e8abf21d36cb7668acf4c974b5e</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>CollisionStopResult</type>
+      <name>filter</name>
+      <anchorfile>dd/d51/classrm_1_1nav_1_1CollisionStop.html</anchorfile>
+      <anchor>ab3254214ebc6962e4044a94eef40bf88</anchor>
+      <arglist>(const Costmap &amp;costmap, const std::vector&lt; msg::Point &gt; &amp;footprint, const msg::Pose &amp;pose, const msg::Twist &amp;command) const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::nav::CollisionStopOptions</name>
+    <filename>df/d20/structrm_1_1nav_1_1CollisionStopOptions.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>prediction_horizon</name>
+      <anchorfile>df/d20/structrm_1_1nav_1_1CollisionStopOptions.html</anchorfile>
+      <anchor>a28e3a93d12fa8c2642adcca587227afc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>linear_step</name>
+      <anchorfile>df/d20/structrm_1_1nav_1_1CollisionStopOptions.html</anchorfile>
+      <anchor>a8e5743f12b5dc19ed25c95756310f6d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>angular_step</name>
+      <anchorfile>df/d20/structrm_1_1nav_1_1CollisionStopOptions.html</anchorfile>
+      <anchor>ae60925de12baf50a9cbb455a1a53f397</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::nav::CollisionStopResult</name>
+    <filename>dd/d7b/structrm_1_1nav_1_1CollisionStopResult.html</filename>
+    <member kind="variable">
+      <type>msg::Twist</type>
+      <name>command</name>
+      <anchorfile>dd/d7b/structrm_1_1nav_1_1CollisionStopResult.html</anchorfile>
+      <anchor>a5b631ec1f565bc6a83cd92b1564f2660</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>stopped</name>
+      <anchorfile>dd/d7b/structrm_1_1nav_1_1CollisionStopResult.html</anchorfile>
+      <anchor>af7febeaa887651cc81193cba9ea93242</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2189,6 +2536,196 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::nav::Costmap</name>
+    <filename>d9/d27/classrm_1_1nav_1_1Costmap.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Costmap</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>afe9d9c6a1a94db4b5f97a1986b3dbd81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Costmap</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>ac017ddf4178da617ee1772b9f23728a6</anchor>
+      <arglist>(const GridMap &amp;static_map, CostmapOptions options={})</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>reset</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a0e96f1ce4cccaec17eb8bf99aebbc41b</anchor>
+      <arglist>(const GridMap &amp;static_map, CostmapOptions options={})</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>setStaticMap</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a3ab11124bf57e4d52eeecbfb2d0a356c</anchor>
+      <arglist>(const GridMap &amp;static_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>valid</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>af3e46e68cf20fd7ebfd919bde4d86481</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const CostmapOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>af0de6f9882412aa9ba76235660a5f885</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>width</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a8353a1f527089e1b68c3df4c993f4931</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>height</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>aaf26b8d79a52ef1a0a3828d505576f66</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>frameId</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a7db98dacaf79fe81eaf463d03b61ea65</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; Cell &gt;</type>
+      <name>worldToMap</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a6676c6bf3997b352bbeed60e378b967e</anchor>
+      <arglist>(double world_x, double world_y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; msg::Point &gt;</type>
+      <name>mapToWorld</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a4c7019176491a75cb822d1a7d1716823</anchor>
+      <arglist>(uint32_t x, uint32_t y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>markObstacle</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>aa597a261cc970d0e96919341f7c4e01c</anchor>
+      <arglist>(Cell cell) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>markObstacle</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>aaafdfdf3f2ba2971caef5321dedfb4b8</anchor>
+      <arglist>(double world_x, double world_y) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>clearObstacles</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>adadb3867aa6cc98156143e5c9d91771d</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>clearRay</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>ae275e7f6775544e9f60c3da46f14d933</anchor>
+      <arglist>(double start_x, double start_y, double end_x, double end_y)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>updateCosts</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a8d5d4f213e511dfbd2b9573222f1b709</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; uint8_t &gt;</type>
+      <name>at</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a845364dbbb5ee4c668df6c3776192c3a</anchor>
+      <arglist>(uint32_t x, uint32_t y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>collides</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a02e7457124f9365b23a88c27ba4378ea</anchor>
+      <arglist>(const std::vector&lt; msg::Point &gt; &amp;footprint, const msg::Pose &amp;pose) const</arglist>
+    </member>
+    <member kind="function">
+      <type>msg::OccupancyGrid</type>
+      <name>message</name>
+      <anchorfile>d9/d27/classrm_1_1nav_1_1Costmap.html</anchorfile>
+      <anchor>a6e963ec39ad46970de55b476f5e8ec74</anchor>
+      <arglist>() const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::nav::CostmapOptions</name>
+    <filename>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</filename>
+    <member kind="variable">
+      <type>int8_t</type>
+      <name>lethal_threshold</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>ad76a8540514b1b8cbd315d7ff76ef6a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>track_unknown</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>a02e1f330ee484eaeaafd4c9ae91b8819</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>unknown_is_lethal</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>a180fb349bb3bcbedcdf197a40fbe69ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>inflate_unknown</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>ac635d19089efa29c02323061e29c5b0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>inflation_radius</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>a518473fe82387dad824862d95b90130b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>inscribed_radius</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>a933c6e4d199b45108ad0798261f49d1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>cost_scaling_factor</name>
+      <anchorfile>d4/d22/structrm_1_1nav_1_1CostmapOptions.html</anchorfile>
+      <anchor>a6b5af17c60424de6dcacee4d6a203621</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::CurveFitter</name>
     <filename>d0/d80/classrm_1_1CurveFitter.html</filename>
     <member kind="function">
@@ -2472,6 +3009,52 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::msg::Duration</name>
+    <filename>d5/dd1/classrm_1_1msg_1_1Duration.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>a3daad57d1023818adfcaf07eba831278</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>a314efefd435673bf74fe2df5f003fa88</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>a2aa277d45c71b65c1ef77b710c205411</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Duration</type>
+      <name>deserialize</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>abb58b1b29e4a2f6078aeb6ddada01557</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>int64_t</type>
+      <name>nanoseconds</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>ae347719e91c13e850f66f974df952173</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d5/dd1/classrm_1_1msg_1_1Duration.html</anchorfile>
+      <anchor>af04921a92fa7bc136b41f990e0161f5f</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::srv::Empty</name>
     <filename>db/d77/structrm_1_1srv_1_1Empty.html</filename>
@@ -2521,6 +3104,45 @@
       <name>ANY_PORT</name>
       <anchorfile>dc/db5/classrm_1_1Endpoint.html</anchorfile>
       <anchor>a2fd5dcde65450d0ffa53e01e0e297076</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::yaml::Error</name>
+    <filename>d6/d16/structrm_1_1yaml_1_1Error.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>d6/d16/structrm_1_1yaml_1_1Error.html</anchorfile>
+      <anchor>ac936f120bb5cd99d8534261168ca0561</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>ErrorCode</type>
+      <name>code</name>
+      <anchorfile>d6/d16/structrm_1_1yaml_1_1Error.html</anchorfile>
+      <anchor>a8747b3388d18fa971e45f929e546d83e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>message</name>
+      <anchorfile>d6/d16/structrm_1_1yaml_1_1Error.html</anchorfile>
+      <anchor>ac56f27f984d154f15b4d384ca5ff27f0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>line</name>
+      <anchorfile>d6/d16/structrm_1_1yaml_1_1Error.html</anchorfile>
+      <anchor>a21ab4b18040ba7e898eb1e0d9ece034e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>column</name>
+      <anchorfile>d6/d16/structrm_1_1yaml_1_1Error.html</anchorfile>
+      <anchor>a560a17e19754472fa2cf632bb618d5db</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -3501,6 +4123,171 @@
       <name>MINIMUM_COM</name>
       <anchorfile>df/d85/classrm_1_1para_1_1GravityCompensatorParam.html</anchorfile>
       <anchor>ad7ea38b2f9e9a6fca9e67eb2e65da520</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::nav::GridMap</name>
+    <filename>df/db1/classrm_1_1nav_1_1GridMap.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>GridMap</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>aab3ff5c42866ed358e482e26e55be7fc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GridMap</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a580908cab5d06f7fd9011b4068fee157</anchor>
+      <arglist>(const msg::OccupancyGrid &amp;grid)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>GridMap</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a4313f75dc8f42f78b9ac331d3a46e148</anchor>
+      <arglist>(msg::OccupancyGrid &amp;&amp;grid)</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>reset</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a62ce2e2d9c539dcd4a1990a2e8d53e70</anchor>
+      <arglist>(const msg::OccupancyGrid &amp;grid)</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>reset</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a9df3781969631c9f2a92d115c06145f4</anchor>
+      <arglist>(msg::OccupancyGrid &amp;&amp;grid)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>valid</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a986eb187558a43757d7082eb8e896651</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const msg::OccupancyGrid &amp;</type>
+      <name>message</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>aeec32460837675d2ddc8ac352ab13598</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>width</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a10a16a3e8cfdc57ec00ceeffba0bbf07</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint32_t</type>
+      <name>height</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a9f891ad183ab0daa39f4447912b00f86</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>frameId</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a38dff1c98b54ba49a74f86a0818c80ef</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>resolution</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a5abe4af4d70ad455797d951a45ff3dea</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>uint64_t</type>
+      <name>revision</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a07bd479e9ddf8493eed74c0a840ef696</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a0009a695f0366d0a8a4b9423069b9a9a</anchor>
+      <arglist>(uint32_t x, uint32_t y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; Cell &gt;</type>
+      <name>worldToMap</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>afa3bf8d446f94af3f7b0841fc191171c</anchor>
+      <arglist>(double world_x, double world_y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; msg::Point &gt;</type>
+      <name>mapToWorld</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a90247ee42d3261ea8f8b7134cf0c1d19</anchor>
+      <arglist>(uint32_t x, uint32_t y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; int8_t &gt;</type>
+      <name>at</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a340c6329579247be04c418a0a49f96eb</anchor>
+      <arglist>(uint32_t x, uint32_t y) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>set</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a4c8e14ee25a6b764aaf9a4d2010989b0</anchor>
+      <arglist>(uint32_t x, uint32_t y, int8_t value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>updateProbability</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a9937a001ba2bce4d7e81f1281406b776</anchor>
+      <arglist>(uint32_t x, uint32_t y, double probability) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>integrateRay</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>ae9514e3e205bf279954b9776d9c856be</anchor>
+      <arglist>(double start_x, double start_y, double end_x, double end_y, bool hit=true, double free_probability=0.3, double occupied_probability=0.7)</arglist>
+    </member>
+    <member kind="function">
+      <type>MapStatus</type>
+      <name>apply</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>aab843afd2a9218d4fb1d6dd166808875</anchor>
+      <arglist>(const msg::OccupancyGridUpdate &amp;update)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; msg::OccupancyGridUpdate &gt;</type>
+      <name>pendingUpdate</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a8a9026a55006f0dfcec2717e76f65bce</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clearPendingUpdate</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>af48bb7a208ea2f497836a05cac814f62</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend class</type>
+      <name>Costmap</name>
+      <anchorfile>df/db1/classrm_1_1nav_1_1GridMap.html</anchorfile>
+      <anchor>a2d4a2d95f127b70f9d34311ad6784f98</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -5882,10 +6669,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>int64_t</type>
+      <type>rm::msg::Duration</type>
       <name>time_from_start</name>
       <anchorfile>d0/dfb/classrm_1_1msg_1_1JointTrajectoryPoint.html</anchorfile>
-      <anchor>a9761684ea9ab83e3e8ac78383c5a00ad</anchor>
+      <anchor>a865ab179965e8b360e3cb2db69c1caa9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" static="yes">
@@ -6331,6 +7118,59 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::lpss::tf::Listener</name>
+    <filename>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>a414c3ceddb3b8fc13b7bf3df808ecf9d</anchor>
+      <arglist>(std::string_view name, Node &amp;node, Buffer &amp;buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>aa3d05dd6a4135f28ac75610ab030058a</anchor>
+      <arglist>(std::string_view name, async::Node &amp;node, Buffer &amp;buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Listener</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>a1df61a3fd1664ad8763454019cd5cb8e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Listener</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>ae0375c5f1c49594d370e91f9bbff67ff</anchor>
+      <arglist>(const Listener &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Listener &amp;</type>
+      <name>operator=</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>a0d070c9f32ba97384c89925bd4bb0e1f</anchor>
+      <arglist>(const Listener &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>a40f9ee41c0f24460b54f0484ef3faeea</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Status</type>
+      <name>status</name>
+      <anchorfile>de/d3e/classrm_1_1lpss_1_1tf_1_1Listener.html</anchorfile>
+      <anchor>a461303d343fcc1e7b2a73da992ab4638</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::Logger</name>
     <filename>d2/d0e/classrm_1_1Logger.html</filename>
     <member kind="function">
@@ -6534,6 +7374,31 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::lpss::tf::LookupResult</name>
+    <filename>d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html</anchorfile>
+      <anchor>a6102e16cf3c62e4dd1781c733ef0ae4e</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>Status</type>
+      <name>status</name>
+      <anchorfile>d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html</anchorfile>
+      <anchor>a29af4bea1652711a785616143d191031</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>msg::TransformStamped</type>
+      <name>transform</name>
+      <anchorfile>d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html</anchorfile>
+      <anchor>a39e056478531fdefeec28a1540c0b53f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::ip::multicast::Loopback</name>
     <filename>d5/dba/classrm_1_1ip_1_1multicast_1_1Loopback.html</filename>
@@ -6589,6 +7454,80 @@
       <anchorfile>d4/d95/classrm_1_1para_1_1LpssParam.html</anchorfile>
       <anchor>aa570367a00e1864de753aae93848d99e</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::MapMetaData</name>
+    <filename>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a9dc975814412b475416a7412d0066616</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a2473903a0e7f5cc68b66d458a7b66c92</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>ad8a0e39ba3ae3597bdcb5bf4ddf93da9</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static MapMetaData</type>
+      <name>deserialize</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a5cb63f60cc895489618aae68f76eff62</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Time</type>
+      <name>map_load_time</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a5421310311ae4a276698b2332d87c670</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>float</type>
+      <name>resolution</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a223d252591af2e73c2ed5cf9779f953f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>width</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a2a27a7ebb5b5e2ecf5863e5fb0a84da5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>height</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a3e57f3a1304dc61bd37314132a81fb4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Pose</type>
+      <name>origin</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>ae0e1e0eaddff4b83284bf6e2ae88acfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>dd/d0a/classrm_1_1msg_1_1MapMetaData.html</anchorfile>
+      <anchor>a801da59f520715e963eaab0e69576f8b</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7758,6 +8697,269 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::yaml::Node</name>
+    <filename>d0/db8/classrm_1_1yaml_1_1Node.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Node</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a8318c33c1973aaff0aa7ae41e15165c8</anchor>
+      <arglist>() noexcept=default</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>valid</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a2bd813f27db776d39023ab2616197f58</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>NodeType</type>
+      <name>type</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a06f2869965791daffc339bca25bedb62</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isNull</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>ad36d833ddd0387df09ca269514c7ce72</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isScalar</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>aed8d1102ea925d36da5f04d29654be2d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isSequence</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a45f9886d0555098fe14e74d63cbc0b52</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isMap</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a60172780e6798d2cb30af2476cc7a0c5</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>size</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>ad97fda4f31f670e8841b572eefb4fb86</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>key</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a82570adac85139db428f7a973c1311df</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>scalar</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a52e828e7b21cb54a6e1427ee49f3cb87</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string_view</type>
+      <name>tag</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>af0aef8a4042956772ccecddbabdc0064</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>contains</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>af405213e8e9d8de08e503e02c0079ca0</anchor>
+      <arglist>(std::string_view name) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Node</type>
+      <name>operator[]</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a0bffa4d5d1395935565ba161406c96c4</anchor>
+      <arglist>(std::string_view name) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Node</type>
+      <name>operator[]</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>ac3445e39f84ae3b7317f64388658d68c</anchor>
+      <arglist>(std::size_t index) const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::string_view &gt;</type>
+      <name>keys</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a17a73554e98cae3bc4d47d1da2304647</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Node</type>
+      <name>ensure</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a2fe77ae189c8d1e0093a041028f424de</anchor>
+      <arglist>(std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type>Node</type>
+      <name>append</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>ae80276f38515726a380a57eba0e45452</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>erase</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>aa9ec2b454359f9764e746a3a2b7364e7</anchor>
+      <arglist>(std::string_view name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>erase</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a8b874404b2933187cd047218933a30e4</anchor>
+      <arglist>(std::size_t index)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setNull</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a99d36a4b9399ccba6c6267a290ce3bd4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>makeMap</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a337acfa239c3f09cddaedab58d38cbc8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>makeSequence</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>aa82341fc883ccce60df22e3a8ece61f2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setScalar</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a7d2ff63ad7554504e8e070fef0b40bd6</anchor>
+      <arglist>(std::string_view value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTag</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a3962fedbab0c32d88cef7155b28e2f2f</anchor>
+      <arglist>(std::string_view value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>read</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a00d795bdf96b8c22b94757c72d83f2c8</anchor>
+      <arglist>(T &amp;value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::optional&lt; T &gt;</type>
+      <name>as</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>ada7a80b3e5e7410e209f93e58ddcbf6c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>valueOr</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a99567d4f34286b00d9fe4e2f36b482b8</anchor>
+      <arglist>(T fallback) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>write</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a7792edb9654c7f4158605a7e36063d1f</anchor>
+      <arglist>(const T &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>set</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a7021836661e5b5d4291c43be9914dbed</anchor>
+      <arglist>(std::string_view name, const T &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>push</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>afbae53e2fc10a3ab71836ea2a7cb5f8a</anchor>
+      <arglist>(const T &amp;value)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Node</type>
+      <name>createMap</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a4c179fe4873fa0c4457ec0523a365892</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Node</type>
+      <name>createSequence</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a4ab71be9da5a8b15e1c1239c1b1bea22</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Node</type>
+      <name>createScalar</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a0a87f41173486368b49f74cbcf14899b</anchor>
+      <arglist>(std::string_view value)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend struct</type>
+      <name>Result</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a86fc268a45138f5b652373ae714e5335</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend Result</type>
+      <name>parse</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>af0c43c8ecfbf049240b1ed0650358e7b</anchor>
+      <arglist>(std::string_view source)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend Result</type>
+      <name>load</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a2c9ee205ac4261de34534bb97423dd11</anchor>
+      <arglist>(std::string_view path)</arglist>
+    </member>
+    <member kind="friend" protection="private">
+      <type>friend std::string</type>
+      <name>dump</name>
+      <anchorfile>d0/db8/classrm_1_1yaml_1_1Node.html</anchorfile>
+      <anchor>a07ea7e8fbf8fb11d27c6f5f6515b054a</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::ua::NodeId</name>
     <filename>da/d81/classrm_1_1ua_1_1NodeId.html</filename>
     <member kind="function">
@@ -8100,6 +9302,235 @@
       <anchorfile>d2/d36/classrm_1_1ua_1_1ObjectType.html</anchorfile>
       <anchor>ad8b2bccd26cbbe8a91c2a1dff3dae01d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::OccupancyGrid</name>
+    <filename>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>adcc8e76979e4d8a2ecd700ed6042823f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>ac70f0dc3cad057cb8cdc37977c4886b7</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>a08d77aade2f80d42c1920b2850f860b2</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static OccupancyGrid</type>
+      <name>deserialize</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>ad753df944cf81c939c28153a2c23518e</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Header</type>
+      <name>header</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>a6e10e0f30db3089feee5bb18b70c18ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::MapMetaData</type>
+      <name>info</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>a003c24c9af1d65a521ee438e065a3918</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>revision</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>a83f5da087cb94aadcd7fb05946176fc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; int8_t &gt;</type>
+      <name>data</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>a8a5aff13d1065b42d9c0e52260af8ab3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html</anchorfile>
+      <anchor>ab03270e579a0478ccb44632a104955a1</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::OccupancyGridUpdate</name>
+    <filename>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>ae8146a7ec31d42896d045c0b092a7600</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a7b853d96791e83f8d939848727430a94</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>ade0ac5e4f2d9c8a7d4b02f4580f118a1</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static OccupancyGridUpdate</type>
+      <name>deserialize</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>ad25186d56d6ead9bdd81efe8a980fc8d</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Header</type>
+      <name>header</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a283719d36036651e9450819104d70ff2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>base_revision</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a0f105c50620458a3b397686b662c9279</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>revision</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a9fd8876ad1618ca341f186fceae90646</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>x</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>ad282943de65ef26cc51751d93d093a4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>y</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a5a1e7f7f173fdce5bd69ae894d62c6e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>width</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a3b9ffc4d90e9245091b152d210951b19</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>height</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a8c9737c8736d6ef12fe2abfb24544ffc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; int8_t &gt;</type>
+      <name>data</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>afd903f65f5fef73f53595e78bce488d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html</anchorfile>
+      <anchor>a824d98db6585ca353bdb8d260e8d9ee3</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::Odometry</name>
+    <filename>dc/db8/classrm_1_1msg_1_1Odometry.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a2e2aa45950af73e5edeb247348e34c2a</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a847bc63f77dc1f352f2c2b2477e07589</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>aedf5324abe9c63d9a1d2dfe14eb5d37f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Odometry</type>
+      <name>deserialize</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a228ef1f01e57741bca6e1a7411dbd86b</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Header</type>
+      <name>header</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a81486876cf85aa0340e984f391865fab</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>child_frame_id</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a2c58d99d001dc71d65fc365d77d85b2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::PoseWithCovariance</type>
+      <name>pose</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>abff2d201db6776f7a3c62791a9b82dd7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::TwistWithCovariance</type>
+      <name>twist</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a9920e8fe93f22699ee0f23b82c51195e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>dc/db8/classrm_1_1msg_1_1Odometry.html</anchorfile>
+      <anchor>a6799368b8694d19c76edc9aa13b97633</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8484,6 +9915,59 @@
       <anchorfile>db/d24/classrm_1_1OPTLightController.html</anchorfile>
       <anchor>ace49b596f62d176595798273bc1fa7f9</anchor>
       <arglist>(int channel, int time) const noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::Path</name>
+    <filename>d8/d7a/classrm_1_1msg_1_1Path.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>ac5d20d45d0e35482b05a49217182a51d</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>a670f128a778c7840e696dc3f33d20397</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>aa1f3069a2a49980458c62f97b91d7334</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Path</type>
+      <name>deserialize</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>a789e0430a5d79240fbc9ad531f96dd98</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Header</type>
+      <name>header</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>a443894a1923a216d955555f093183f7b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; rm::msg::PoseStamped &gt;</type>
+      <name>poses</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>a5c8266e9e5c512dd26e121d7c4280657</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d8/d7a/classrm_1_1msg_1_1Path.html</anchorfile>
+      <anchor>a2e2cf9456a448ba350087621a3320d77</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9017,6 +10501,45 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::nav::PlanningResult</name>
+    <filename>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</anchorfile>
+      <anchor>ae4fe2ba072e12171536ad51187d66993</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>PlanningStatus</type>
+      <name>status</name>
+      <anchorfile>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</anchorfile>
+      <anchor>a464a677c2062fc3b8d0493a24dbf1a98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>msg::Path</type>
+      <name>path</name>
+      <anchorfile>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</anchorfile>
+      <anchor>ac62bcee5af44ee4fa37f118b927c3a78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>cost</name>
+      <anchorfile>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</anchorfile>
+      <anchor>a560bd40efe34489ecb06376b54d90f9c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>expanded</name>
+      <anchorfile>d4/d2e/structrm_1_1nav_1_1PlanningResult.html</anchorfile>
+      <anchor>a077309e83b46f3ac168dcf886d96a028</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::msg::Point</name>
     <filename>d0/deb/classrm_1_1msg_1_1Point.html</filename>
@@ -9255,6 +10778,112 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>rm::msg::PoseStamped</name>
+    <filename>d5/d52/classrm_1_1msg_1_1PoseStamped.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>afea87943adb980563ceb07f4058fd8d3</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>ab28c7484f484e262a47660d6a5dfd945</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>a5179d098303de8359aa9fd22034f58a7</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static PoseStamped</type>
+      <name>deserialize</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>a36a63f2c21b025c2e52ef77e89396018</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Header</type>
+      <name>header</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>ace64c78b501963faff748609f8494936</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Pose</type>
+      <name>pose</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>a6d266908c51fa411b68c2fe0116f203a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d5/d52/classrm_1_1msg_1_1PoseStamped.html</anchorfile>
+      <anchor>ae8bb092f006a30c02635fbed840d7fb5</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::PoseWithCovariance</name>
+    <filename>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>a4cdfaff6f8fdbfe541ccbfdb090566cb</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>a8b1dc01a3f37b9ffe3192108dbc4e2cc</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>acf0774e08c9c9847294a14f7cbaaa812</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static PoseWithCovariance</type>
+      <name>deserialize</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>a4800c7a8e8ca5fb5d39600b7b15ac74d</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Pose</type>
+      <name>pose</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>ab94832dc00241e2904acf8952fb380fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::array&lt; double, 36 &gt;</type>
+      <name>covariance</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>aece446540b87b32d59960067a31b37bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>df/db0/classrm_1_1msg_1_1PoseWithCovariance.html</anchorfile>
+      <anchor>abc5dc002a02ddfd740c5d80cd494d939</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>rm::async::Promise</name>
     <filename>dd/df2/classrm_1_1async_1_1Promise.html</filename>
     <templarg>typename Tp</templarg>
@@ -9441,6 +11070,84 @@
       <anchorfile>d9/d4d/classrm_1_1ua_1_1Publisher.html</anchorfile>
       <anchor>a5dc3d1308276813034602d421aa7c113</anchor>
       <arglist>(const std::vector&lt; PublishedDataSet &gt; &amp;datas, double duration)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::nav::PurePursuit</name>
+    <filename>d4/d32/classrm_1_1nav_1_1PurePursuit.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PurePursuit</name>
+      <anchorfile>d4/d32/classrm_1_1nav_1_1PurePursuit.html</anchorfile>
+      <anchor>a6469f35ff6e91cf0a7e3af06aa907599</anchor>
+      <arglist>(PurePursuitOptions options={}) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const PurePursuitOptions &amp;</type>
+      <name>options</name>
+      <anchorfile>d4/d32/classrm_1_1nav_1_1PurePursuit.html</anchorfile>
+      <anchor>a760758dcc8c4277126feaa126aa0192f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>TrackingResult</type>
+      <name>compute</name>
+      <anchorfile>d4/d32/classrm_1_1nav_1_1PurePursuit.html</anchorfile>
+      <anchor>a17378ddedd0d22ca54fddae2beec51a8</anchor>
+      <arglist>(const msg::Pose &amp;pose, const msg::Path &amp;path) const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>rm::nav::PurePursuitOptions</name>
+    <filename>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>lookahead_distance</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>a05ac0d5c8925ffa5789e43ee630b4bd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>target_speed</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>abf08c271687633ffee856d292ee8ea8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>max_angular_speed</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>af4cf7ef9a35da14d80d44fe04bbc5cb9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>goal_tolerance</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>a7678d0e420474805f9c572f60ccd87bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>slowdown_distance</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>aff0a78cc345fa17084fcf07283ffe4a7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>rotate_to_path_threshold</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>aef136f9bd7257342735f4ff1f573cbc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>heading_gain</name>
+      <anchorfile>d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html</anchorfile>
+      <anchor>acae1b356e04cb00f6c1d337ed0bfc093</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10216,6 +11923,59 @@
       <arglist>[]</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::yaml::Result</name>
+    <filename>df/d30/structrm_1_1yaml_1_1Result.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>a8fe9bb8d4dd48ba6c1174d8064402a07</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const Node *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>a78da152878f4cc294047884b22840210</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Node *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>abab4c85a26cc698cdeb3d8b9c5ee8365</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const Node &amp;</type>
+      <name>operator*</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>afdc3abe7bbfeb56a3e44343018ebd442</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Node &amp;</type>
+      <name>operator*</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>a0cfdf07b46066755cdecb3a792fe3b6a</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>Node</type>
+      <name>root</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>a4601407e3c3d7e20ff81b08a987f5b7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Error</type>
+      <name>error</name>
+      <anchorfile>df/d30/structrm_1_1yaml_1_1Result.html</anchorfile>
+      <anchor>a963a15ec581c29c92b41d99bba646dff</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::RingBufferSlotSHM</name>
     <filename>d0/df0/classrm_1_1RingBufferSlotSHM.html</filename>
@@ -10344,6 +12104,13 @@
       <arglist>() const noexcept</arglist>
     </member>
     <member kind="function">
+      <type>const msg::TF &amp;</type>
+      <name>tf_static</name>
+      <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
+      <anchor>a3c1d1b182afbe9ef1d5bd4beff9ae81c</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
       <type>msg::JointTrajectory</type>
       <name>plan</name>
       <anchorfile>d7/de1/classrm_1_1lpss_1_1RobotPlanner.html</anchorfile>
@@ -10458,6 +12225,13 @@
       <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
       <anchor>a21438a5bed0eaa554f898122945a2929</anchor>
       <arglist>(const msg::JointTrajectory &amp;traj) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::mutex &amp;</type>
+      <name>mutex</name>
+      <anchorfile>d0/db5/classrm_1_1lpss_1_1async_1_1RobotStatePublisher.html</anchorfile>
+      <anchor>ac569a264dca66462f5cc0e90ccbb501b</anchor>
+      <arglist>() noexcept</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ptr</type>
@@ -13005,6 +14779,66 @@
       <arglist>(std::string_view key) noexcept</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>rm::lpss::tf::StaticBroadcaster</name>
+    <filename>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>StaticBroadcaster</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>aa65dd129469f362dc0db6a0f50930442</anchor>
+      <arglist>(std::string_view name, Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>StaticBroadcaster</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>abfbde960c73ed3ed692d7368d331f4f0</anchor>
+      <arglist>(std::string_view name, async::Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~StaticBroadcaster</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>a89a3f19770fcba43cfb98526cdb63204</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>StaticBroadcaster</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>a2817913be47962454ef60fff12d8f799</anchor>
+      <arglist>(const StaticBroadcaster &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>StaticBroadcaster &amp;</type>
+      <name>operator=</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>ac0a18562862e7d1cadb280d5c237fbce</anchor>
+      <arglist>(const StaticBroadcaster &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>ab6081bbf3439cec28e2519ab4b6a8019</anchor>
+      <arglist>(const msg::TransformStamped &amp;transform)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>send</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>a58c9b7dd36c11b7f1d94ea395bfa82be</anchor>
+      <arglist>(const msg::TF &amp;transforms)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>invalid</name>
+      <anchorfile>d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html</anchorfile>
+      <anchor>a25d7087c61338bb7d29b71a31fcc2132</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>rm::StdoutSink</name>
     <filename>da/dc5/structrm_1_1StdoutSink.html</filename>
@@ -13669,6 +15503,20 @@
       <anchor>a9aaf5fff6fc83a195defefd8d59a1bde</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cancel</name>
+      <anchorfile>d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html</anchorfile>
+      <anchor>a01c3f6cbe983f99c7e84e732a3b882c2</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>cancelled</name>
+      <anchorfile>d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html</anchorfile>
+      <anchor>a784a607fa717553de5d66a48e084afec</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>rm::async::Timer::TimerAwaiter</name>
@@ -13984,6 +15832,45 @@
       <arglist>(float dy)</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>rm::nav::TrackingResult</name>
+    <filename>d4/d13/structrm_1_1nav_1_1TrackingResult.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>d4/d13/structrm_1_1nav_1_1TrackingResult.html</anchorfile>
+      <anchor>a47d9f34accf2b10b91a0a6f700da67e6</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>TrackingStatus</type>
+      <name>status</name>
+      <anchorfile>d4/d13/structrm_1_1nav_1_1TrackingResult.html</anchorfile>
+      <anchor>a913cf949b00a49eef6834ef6bf38558b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>msg::Twist</type>
+      <name>command</name>
+      <anchorfile>d4/d13/structrm_1_1nav_1_1TrackingResult.html</anchorfile>
+      <anchor>af79dbd68d0da81de5e26a3a67025aa6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>msg::Point</type>
+      <name>lookahead</name>
+      <anchorfile>d4/d13/structrm_1_1nav_1_1TrackingResult.html</anchorfile>
+      <anchor>a891062441a007b669eb4492afa022bbd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::size_t</type>
+      <name>lookahead_index</name>
+      <anchorfile>d4/d13/structrm_1_1nav_1_1TrackingResult.html</anchorfile>
+      <anchor>aa7a8b270477f4bab5e90b3548c8fdfec</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>rm::msg::Transform</name>
     <filename>df/d0f/classrm_1_1msg_1_1Transform.html</filename>
@@ -14264,6 +16151,59 @@
       <name>msg_type</name>
       <anchorfile>d6/d47/classrm_1_1msg_1_1Twist.html</anchorfile>
       <anchor>a41d1ba3f395067fe7da84858f7aea3b7</anchor>
+      <arglist>[]</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>rm::msg::TwistWithCovariance</name>
+    <filename>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>serialize</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a18ee12aa802844362d972eef3004b301</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>json</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a8f5147bb6e7c8874b2a8ff221d764ad7</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>compact_size</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>abf10d560cf371692f845e06254c5f926</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static TwistWithCovariance</type>
+      <name>deserialize</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a81b5659e8ad29dbaa8ef16158ffe5c61</anchor>
+      <arglist>(const char *const str) noexcept</arglist>
+    </member>
+    <member kind="variable">
+      <type>rm::msg::Twist</type>
+      <name>twist</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a78d8c72676a92c8b0fe97df6a2b122ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::array&lt; double, 36 &gt;</type>
+      <name>covariance</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a84086f9ceac49c971f96626fb773a127</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char</type>
+      <name>msg_type</name>
+      <anchorfile>d3/dc1/classrm_1_1msg_1_1TwistWithCovariance.html</anchorfile>
+      <anchor>a1369d34efaace111b028d85137451068</anchor>
       <arglist>[]</arglist>
     </member>
   </compound>
@@ -15508,6 +17448,7 @@
     <namespace>rm::para</namespace>
     <namespace>rm::str</namespace>
     <namespace>rm::reflect</namespace>
+    <namespace>rm::yaml</namespace>
     <namespace>rm::async</namespace>
     <namespace>rm::requests</namespace>
     <namespace>rm::ip</namespace>
@@ -15515,6 +17456,7 @@
     <namespace>rm::cvmsg</namespace>
     <namespace>rm::msg</namespace>
     <namespace>rm::srv</namespace>
+    <namespace>rm::nav</namespace>
     <namespace>rm::ua</namespace>
     <class kind="class">rm::RaHeap</class>
     <class kind="class">rm::UnionFind</class>
@@ -16992,6 +18934,7 @@
     <filename>d0/d65/namespacerm_1_1lpss.html</filename>
     <namespace>rm::lpss::ctl</namespace>
     <namespace>rm::lpss::async</namespace>
+    <namespace>rm::lpss::tf</namespace>
     <class kind="struct">rm::lpss::is_msg</class>
     <class kind="struct">rm::lpss::is_msg&lt; Tp, std::void_t&lt; decltype(Tp::msg_type)&gt; &gt;</class>
     <class kind="struct">rm::lpss::is_srv</class>
@@ -17111,16 +19054,54 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>rm::lpss::tf</name>
+    <filename>d7/d6f/namespacerm_1_1lpss_1_1tf.html</filename>
+    <class kind="struct">rm::lpss::tf::LookupResult</class>
+    <class kind="class">rm::lpss::tf::Buffer</class>
+    <class kind="class">rm::lpss::tf::Broadcaster</class>
+    <class kind="class">rm::lpss::tf::StaticBroadcaster</class>
+    <class kind="class">rm::lpss::tf::Listener</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>Status</name>
+      <anchorfile>d6/d48/group__lpss__transform__buffer.html</anchorfile>
+      <anchor>ga23bec70cd7f6679db019bdcf7be39944</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944aa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a253ca7dd096ee0956cccee4d376cab8b">InvalidArgument</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a116951ddc58ed29c099a562a4d802e59">InvalidTransform</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944acd9bc4b5e0cc88294db85310763e80ba">MultipleParents</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea">CycleDetected</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546">StaticDynamicConflict</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac5bf383e7c18c52c051ed952797bad09">FrameNotFound</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25">ConnectivityError</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a1c3b83c295a991c701023abe36534c47">ExtrapolationPast</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944acb2d141e46e1c3e61bc2b84bc0e5674c">ExtrapolationFuture</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a779b940e79152dc2a8aa073adabe2313">NoCommonTime</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a4ea48d07de9dacb0048c66b6be50ef5d">TimestampOutOfRange</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>d6/d48/group__lpss__transform__buffer.html</anchorfile>
+      <anchor>gabc90f2c19dfc9202153e0d4ec5461dc5</anchor>
+      <arglist>(Status status) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>rm::msg</name>
     <filename>de/dd0/namespacerm_1_1msg.html</filename>
     <class kind="class">rm::msg::Point</class>
     <class kind="class">rm::msg::Point32</class>
     <class kind="class">rm::msg::Polygon</class>
     <class kind="class">rm::msg::Pose</class>
+    <class kind="class">rm::msg::PoseStamped</class>
+    <class kind="class">rm::msg::PoseWithCovariance</class>
     <class kind="class">rm::msg::Quaternion</class>
     <class kind="class">rm::msg::Transform</class>
     <class kind="class">rm::msg::TransformStamped</class>
     <class kind="class">rm::msg::Twist</class>
+    <class kind="class">rm::msg::TwistWithCovariance</class>
     <class kind="class">rm::msg::Vector3</class>
     <class kind="class">rm::msg::Wrench</class>
     <class kind="class">rm::msg::JointTrajectory</class>
@@ -17135,6 +19116,7 @@
     <class kind="class">rm::msg::Bool</class>
     <class kind="class">rm::msg::Char</class>
     <class kind="class">rm::msg::ColorRGBA</class>
+    <class kind="class">rm::msg::Duration</class>
     <class kind="class">rm::msg::Float32</class>
     <class kind="class">rm::msg::Float64</class>
     <class kind="class">rm::msg::Header</class>
@@ -17150,6 +19132,11 @@
     <class kind="class">rm::msg::UInt8</class>
     <class kind="class">rm::msg::Marker</class>
     <class kind="class">rm::msg::MarkerArray</class>
+    <class kind="class">rm::msg::MapMetaData</class>
+    <class kind="class">rm::msg::OccupancyGrid</class>
+    <class kind="class">rm::msg::OccupancyGridUpdate</class>
+    <class kind="class">rm::msg::Odometry</class>
+    <class kind="class">rm::msg::Path</class>
     <member kind="function">
       <type>Time</type>
       <name>operator+</name>
@@ -17312,32 +19299,162 @@
       <arglist>(Time t, std::chrono::duration&lt; Rep, Period &gt; d) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Quaternion</type>
+      <type>Quaternion</type>
       <name>operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga4551442fac5fd98d00948eb7d6790871</anchor>
-      <arglist>(const msg::Quaternion &amp;q1, const msg::Quaternion &amp;q2) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga4c8c083673da27a50d1290db49a68388</anchor>
+      <arglist>(const Quaternion &amp;lhs, const Quaternion &amp;rhs) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Vector3</type>
+      <type>Vector3</type>
       <name>rotate</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga33938959ee4f022a6c2fcfee403c6870</anchor>
-      <arglist>(const msg::Quaternion &amp;q, const msg::Vector3 &amp;v) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga3f6ed3efaef68f5a35b046211f83b5da</anchor>
+      <arglist>(const Quaternion &amp;rotation, const Vector3 &amp;vector) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Pose</type>
+      <type>Point</type>
       <name>operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>gab059e8db6e7ca4a2f52d718de4226c5b</anchor>
-      <arglist>(const msg::Transform &amp;t, const msg::Pose &amp;p) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga9ef2acc724d8a2cf0506adbd5370ecd7</anchor>
+      <arglist>(const Transform &amp;transform, const Point &amp;point) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Transform</type>
+      <type>Pose</type>
       <name>operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga7bab2a3bd103faf3b5c382c187535d2e</anchor>
-      <arglist>(const msg::Transform &amp;t1, const msg::Transform &amp;t2) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga7ef245f2fdcb6b3cb8da317394c8247c</anchor>
+      <arglist>(const Transform &amp;transform, const Pose &amp;pose) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform</type>
+      <name>operator*</name>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga59270d6f643c1369d253dc743ef7362f</anchor>
+      <arglist>(const Transform &amp;lhs, const Transform &amp;rhs) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform</type>
+      <name>inverse</name>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga76d6017ea3650a4ca829c331423372a5</anchor>
+      <arglist>(const Transform &amp;transform) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::nav</name>
+    <filename>df/dca/namespacerm_1_1nav.html</filename>
+    <class kind="struct">rm::nav::PurePursuitOptions</class>
+    <class kind="struct">rm::nav::TrackingResult</class>
+    <class kind="class">rm::nav::PurePursuit</class>
+    <class kind="struct">rm::nav::CollisionStopOptions</class>
+    <class kind="struct">rm::nav::CollisionStopResult</class>
+    <class kind="class">rm::nav::CollisionStop</class>
+    <class kind="struct">rm::nav::Cell</class>
+    <class kind="class">rm::nav::GridMap</class>
+    <class kind="struct">rm::nav::CostmapOptions</class>
+    <class kind="class">rm::nav::Costmap</class>
+    <class kind="struct">rm::nav::AStarOptions</class>
+    <class kind="struct">rm::nav::PlanningResult</class>
+    <class kind="class">rm::nav::AStarPlanner</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>TrackingStatus</name>
+      <anchorfile>df/dd2/group__nav__controller.html</anchorfile>
+      <anchor>gad4f6cc00296f86bcb095a9883f3fc87a</anchor>
+      <arglist></arglist>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aaa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa3445abe58059264b3c95a6818988986f">GoalReached</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aaf7928154734956392080623f8386a12f">InvalidPose</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa5d0744802b24f44a161d350c25d76c7b">InvalidPath</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MapStatus</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>gafbae1bb6162cde6d174c0fe3096a29be</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea504eaf7257a7d7092f59a7c7227f1db0">InvalidResolution</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea38bf09f11b695b2c3ae5b36c4feeaba7">InvalidDimensions</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea1fe38849a83d213a4abe42bd422d2f70">InvalidOrigin</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea223e81e8afa42c41346a6696560ecc7b">InvalidValue</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaacd06a23e18a4ddb4cda7de5cb9fabdb">InvalidProbability</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaf9c38ec813dca08be21718504adb1233">InvalidRevision</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea55e3a9ebc1a7a7d05b7da580014ff86d">RevisionMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaf47847e1a691e4e868f618ffe1a5e57b">FrameMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea2a165ece85c67f09041f0d58bcbbdd16">GeometryMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea46dc1018ac1d8fca7c2752a61ce2fd0f">OutOfBounds</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea7ad5c1451c63c74cfabeff23fa888f9b">InvalidFootprint</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Cost</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>gade968908e1044904cbfdc91062954a00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Free</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a6e96f91d1ec02b8235f5c48231d01ab1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Inscribed</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00ad04123b8dda5b9af82e54904043a8614</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Lethal</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a747dc18c290c14bcd84a691e25705e69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>Unknown</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a1ef1911d367514174505392a255a7efe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PlanningStatus</name>
+      <anchorfile>d9/d8f/group__nav__planner.html</anchorfile>
+      <anchor>gabc79736e0b69f24072413dc14cc6ee89</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89aa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a8cb22e26f2ffe739b708d5693ce4ddda">InvalidMap</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a7e98cfdabe3f00ed92c76a82d244fcec">InvalidStart</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a758021bffff0da35728c319591bbce28">InvalidGoal</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580">StartBlocked</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a3f3b8e0eda1edee456ada58c224bbf11">GoalBlocked</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89ad1d2245c4d9d60b8da25dda25d2af489">NoPath</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>df/dd2/group__nav__controller.html</anchorfile>
+      <anchor>ga55fa5a187dbb0d0df3baa40d8b7df16f</anchor>
+      <arglist>(TrackingStatus status) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ga6fb313ef8e6b659a0814deedd5c1d9f1</anchor>
+      <arglist>(MapStatus status) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>to_string</name>
+      <anchorfile>d9/d8f/group__nav__planner.html</anchorfile>
+      <anchor>gadef4cbb98bb719e261cb56ff64536fca</anchor>
+      <arglist>(PlanningStatus status) noexcept</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -18208,6 +20325,334 @@
       <anchorfile>d8/d79/namespacerm_1_1ua_1_1helper.html</anchorfile>
       <anchor>a014d8e17ef60dc416e9c5ee0ac07add5</anchor>
       <arglist>(std::string_view str)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::yaml</name>
+    <filename>d5/d90/namespacerm_1_1yaml.html</filename>
+    <namespace>rm::yaml::opencv_detail</namespace>
+    <class kind="struct">rm::yaml::Error</class>
+    <class kind="class">rm::yaml::Node</class>
+    <class kind="struct">rm::yaml::Result</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>NodeType</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga3b9fa77c5b89b3449b2bbc7b8c8dc85a</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaec0fc0100c4fc1ce4eea230c3dc10360">Undefined</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aabbb93ef26e3c101ff11cdd21cab08a94">Null</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74">Scalar</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5">Sequence</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa46f3ea056caa3126b91f3f70beea068c">Map</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorCode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gaa41933113f3957f789fe3d8f42065a85</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85a6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85ac9ad95228aa735bdda1aebf38da022af">Parse</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85a42a02b42ec22cfcbd78aaf7a66a5ee09">Io</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>parse</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga78ecd61a2a40f72bd53adeabe8022e00</anchor>
+      <arglist>(std::string_view source)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>load</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae18b5dcd37e82395bb7071d987b0ea3a</anchor>
+      <arglist>(std::string_view path)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>dump</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga63d43f3b161f15c55ab374c8cb23268b</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>save</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gad982a38b55aaf5d15a82c8a139c48ef4</anchor>
+      <arglist>(std::string_view path, const Node &amp;node, Error &amp;err)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>save</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4edc97bf470b469768393f861afe6e73</anchor>
+      <arglist>(std::string_view path, const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>dumpOpenCv</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6f0b5c5c8ec82b34a302375b8b6a4c32</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>saveOpenCv</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gacee20db700c1fe393aeca7583ea7929e</anchor>
+      <arglist>(std::string_view path, const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6513071123b676405a24d5f4df68e24a</anchor>
+      <arglist>(const Node &amp;node, cv::Point_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4cd3850bfe54424444ea01d39f7685e8</anchor>
+      <arglist>(Node &amp;node, const cv::Point_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6195745b1b90938e30f5fa0b6dcdb311</anchor>
+      <arglist>(const Node &amp;node, cv::Point3_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae095d28d11f4395aecc0b8ee02d7327b</anchor>
+      <arglist>(Node &amp;node, const cv::Point3_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga5bdd96b8604eddbabc8569bbba713b57</anchor>
+      <arglist>(const Node &amp;node, cv::Size_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga55d99194b0939064bf11a60aeef8970f</anchor>
+      <arglist>(Node &amp;node, const cv::Size_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga0d04445c8c1b34699e5eeccd48b1b655</anchor>
+      <arglist>(const Node &amp;node, cv::Complex&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga326751f4195075451a545ff34174f638</anchor>
+      <arglist>(Node &amp;node, const cv::Complex&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4ce89180310a97d7e2a097353cd27677</anchor>
+      <arglist>(const Node &amp;node, cv::Rect_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga49f0f99b2d984c167f7ec0df74aae13a</anchor>
+      <arglist>(Node &amp;node, const cv::Rect_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6bf757b8f2285d57b3e40c7a38592716</anchor>
+      <arglist>(const Node &amp;node, cv::Vec&lt; T, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gacdd42c41e68f8883a85296fe8d756219</anchor>
+      <arglist>(Node &amp;node, const cv::Vec&lt; T, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gab336619bcb40dbbdd100c1a4dda3ba56</anchor>
+      <arglist>(const Node &amp;node, cv::Scalar_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga9fffcbdd9abced00eb7c9df2a6eefdd1</anchor>
+      <arglist>(Node &amp;node, const cv::Scalar_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga377307bce4cd1e13b1c77f445ea857b6</anchor>
+      <arglist>(const Node &amp;node, cv::Range &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga5e3276e69f16d5d5e9892a7be9814f04</anchor>
+      <arglist>(Node &amp;node, const cv::Range &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gaa2fefc206854000ff39550c75a08eff6</anchor>
+      <arglist>(const Node &amp;node, cv::KeyPoint &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga3aa5b67508823139088d34514579a116</anchor>
+      <arglist>(Node &amp;node, const cv::KeyPoint &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae080004a01015144ce407e32ceedb9f5</anchor>
+      <arglist>(const Node &amp;node, cv::DMatch &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga8473a75fed3201146aa7cba734b3d138</anchor>
+      <arglist>(Node &amp;node, const cv::DMatch &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gac46510de396848a8ede2ad3235382d8a</anchor>
+      <arglist>(const Node &amp;node, cv::Mat &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gab803071f25c9ef81e8ebb486dbae3bcb</anchor>
+      <arglist>(Node &amp;node, const cv::Mat &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4dc838bf8209080f7b7fad749b2e4e7d</anchor>
+      <arglist>(const Node &amp;node, cv::Matx&lt; T, M, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga99bd6e693ac8be036f328ee694138f74</anchor>
+      <arglist>(Node &amp;node, const cv::Matx&lt; T, M, N &gt; &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>rm::yaml::opencv_detail</name>
+    <filename>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>decodeSequence</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a7b3638012dff7c9500c6f41477d22db9</anchor>
+      <arglist>(const Node &amp;node, T(&amp;values)[N])</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>encodeSequence</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>ae4bd5dc2362670b6b79701ffeb1b2f59</anchor>
+      <arglist>(Node &amp;node, const T *values, std::size_t size)</arglist>
+    </member>
+    <member kind="function">
+      <type>char</type>
+      <name>depthCode</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>ad539b661ae745afa1fcf13f984768f71</anchor>
+      <arglist>(int depth) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>codeDepth</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a0de1b8a8f21efc8bf14026d58b399694</anchor>
+      <arglist>(char code) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>dataType</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a394776526270b8b76b2d00bdb169b227</anchor>
+      <arglist>(int type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>parseDataType</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a7bc004b3244baef3c06245c047735d9b</anchor>
+      <arglist>(std::string_view value, int &amp;type) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>matrixTag</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a4bc138258db26b4bf00bf307390dfb5b</anchor>
+      <arglist>(const Node &amp;node, bool nd) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>encodeMatrixData</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a26b30b3bbe60b39fa24facbf18399c84</anchor>
+      <arglist>(Node &amp;data, const cv::Mat &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>encodeMatrixData</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>ab7db7ab5d7e7d27cc4122c83dc4a28bd</anchor>
+      <arglist>(Node &amp;data, const cv::Mat &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>decodeMatrixData</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>a3f17ce70df007676a6fa4a074c06dd34</anchor>
+      <arglist>(const Node &amp;data, cv::Mat &amp;matrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>decodeMatrixData</name>
+      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
+      <anchor>aac7bfa59a71b788942e74ca56059c3b1</anchor>
+      <arglist>(const Node &amp;data, cv::Mat &amp;matrix)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -19120,10 +21565,11 @@
     <name>core</name>
     <title>RMVL 核心模块</title>
     <filename>d0/de1/group__core.html</filename>
-    <subgroup>core_reflect</subgroup>
-    <subgroup>core_meta</subgroup>
     <subgroup>core_str</subgroup>
     <subgroup>core_timer</subgroup>
+    <subgroup>core_reflect</subgroup>
+    <subgroup>core_meta</subgroup>
+    <subgroup>core_yaml</subgroup>
     <namespace>rm::reflect::helper</namespace>
     <class kind="class">rm::Exception</class>
     <member kind="define">
@@ -19387,39 +21833,64 @@
     </member>
   </compound>
   <compound kind="group">
-    <name>core_reflect</name>
-    <title>聚合体编译期反射</title>
-    <filename>d5/d3e/group__core__reflect.html</filename>
-    <member kind="function">
-      <type>consteval std::size_t</type>
-      <name>rm::reflect::size</name>
-      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
-      <anchor>gadc3b4f53ef6981ca8c58abd401a506b9</anchor>
-      <arglist>(auto &amp;&amp;...args)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>rm::reflect::for_each</name>
-      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
-      <anchor>ga9863cff22a9ace50a697915560ee8290</anchor>
-      <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>rm::reflect::equal</name>
-      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
-      <anchor>gaca3e9de5d5043a1c038a42c9f4f0a22c</anchor>
-      <arglist>(const Tp &amp;lhs, const Tp &amp;rhs)</arglist>
-    </member>
+    <name>rmvlmsg</name>
+    <title>消息模块</title>
+    <filename>da/d12/group__rmvlmsg.html</filename>
+    <class kind="class">rm::msg::Point</class>
+    <class kind="class">rm::msg::Point32</class>
+    <class kind="class">rm::msg::Polygon</class>
+    <class kind="class">rm::msg::Pose</class>
+    <class kind="class">rm::msg::PoseStamped</class>
+    <class kind="class">rm::msg::PoseWithCovariance</class>
+    <class kind="class">rm::msg::Quaternion</class>
+    <class kind="class">rm::msg::Transform</class>
+    <class kind="class">rm::msg::TransformStamped</class>
+    <class kind="class">rm::msg::Twist</class>
+    <class kind="class">rm::msg::TwistWithCovariance</class>
+    <class kind="class">rm::msg::Vector3</class>
+    <class kind="class">rm::msg::Wrench</class>
+    <class kind="class">rm::msg::JointTrajectory</class>
+    <class kind="class">rm::msg::JointTrajectoryPoint</class>
+    <class kind="class">rm::msg::TF</class>
+    <class kind="class">rm::msg::URDF</class>
+    <class kind="class">rm::msg::CameraInfo</class>
+    <class kind="class">rm::msg::Image</class>
+    <class kind="class">rm::msg::Imu</class>
+    <class kind="class">rm::msg::JointState</class>
+    <class kind="class">rm::msg::MultiDOFJointState</class>
+    <class kind="class">rm::msg::Bool</class>
+    <class kind="class">rm::msg::Char</class>
+    <class kind="class">rm::msg::ColorRGBA</class>
+    <class kind="class">rm::msg::Duration</class>
+    <class kind="class">rm::msg::Float32</class>
+    <class kind="class">rm::msg::Float64</class>
+    <class kind="class">rm::msg::Header</class>
+    <class kind="class">rm::msg::Int16</class>
+    <class kind="class">rm::msg::Int32</class>
+    <class kind="class">rm::msg::Int64</class>
+    <class kind="class">rm::msg::Int8</class>
+    <class kind="class">rm::msg::String</class>
+    <class kind="class">rm::msg::Time</class>
+    <class kind="class">rm::msg::UInt16</class>
+    <class kind="class">rm::msg::UInt32</class>
+    <class kind="class">rm::msg::UInt64</class>
+    <class kind="class">rm::msg::UInt8</class>
+    <class kind="class">rm::msg::Marker</class>
+    <class kind="class">rm::msg::MarkerArray</class>
+    <class kind="class">rm::msg::MapMetaData</class>
+    <class kind="class">rm::msg::OccupancyGrid</class>
+    <class kind="class">rm::msg::OccupancyGridUpdate</class>
+    <class kind="class">rm::msg::Odometry</class>
+    <class kind="class">rm::msg::Path</class>
   </compound>
   <compound kind="group">
-    <name>core_meta</name>
-    <title>元编程</title>
-    <filename>de/df6/group__core__meta.html</filename>
-    <class kind="struct">rm::hash_aggregate</class>
-    <class kind="struct">rm::hash_traits</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
-    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+    <name>rmvlsrv</name>
+    <title>服务模块</title>
+    <filename>d2/dd0/group__rmvlsrv.html</filename>
+    <class kind="struct">rm::srv::SetCameraInfo</class>
+    <class kind="struct">rm::srv::Empty</class>
+    <class kind="struct">rm::srv::SetBool</class>
+    <class kind="struct">rm::srv::Trigger</class>
   </compound>
   <compound kind="group">
     <name>core_str</name>
@@ -19462,61 +21933,293 @@
     </member>
   </compound>
   <compound kind="group">
-    <name>rmvlmsg</name>
-    <title>消息模块</title>
-    <filename>da/d12/group__rmvlmsg.html</filename>
-    <class kind="class">rm::msg::Point</class>
-    <class kind="class">rm::msg::Point32</class>
-    <class kind="class">rm::msg::Polygon</class>
-    <class kind="class">rm::msg::Pose</class>
-    <class kind="class">rm::msg::Quaternion</class>
-    <class kind="class">rm::msg::Transform</class>
-    <class kind="class">rm::msg::TransformStamped</class>
-    <class kind="class">rm::msg::Twist</class>
-    <class kind="class">rm::msg::Vector3</class>
-    <class kind="class">rm::msg::Wrench</class>
-    <class kind="class">rm::msg::JointTrajectory</class>
-    <class kind="class">rm::msg::JointTrajectoryPoint</class>
-    <class kind="class">rm::msg::TF</class>
-    <class kind="class">rm::msg::URDF</class>
-    <class kind="class">rm::msg::CameraInfo</class>
-    <class kind="class">rm::msg::Image</class>
-    <class kind="class">rm::msg::Imu</class>
-    <class kind="class">rm::msg::JointState</class>
-    <class kind="class">rm::msg::MultiDOFJointState</class>
-    <class kind="class">rm::msg::Bool</class>
-    <class kind="class">rm::msg::Char</class>
-    <class kind="class">rm::msg::ColorRGBA</class>
-    <class kind="class">rm::msg::Float32</class>
-    <class kind="class">rm::msg::Float64</class>
-    <class kind="class">rm::msg::Header</class>
-    <class kind="class">rm::msg::Int16</class>
-    <class kind="class">rm::msg::Int32</class>
-    <class kind="class">rm::msg::Int64</class>
-    <class kind="class">rm::msg::Int8</class>
-    <class kind="class">rm::msg::String</class>
-    <class kind="class">rm::msg::Time</class>
-    <class kind="class">rm::msg::UInt16</class>
-    <class kind="class">rm::msg::UInt32</class>
-    <class kind="class">rm::msg::UInt64</class>
-    <class kind="class">rm::msg::UInt8</class>
-    <class kind="class">rm::msg::Marker</class>
-    <class kind="class">rm::msg::MarkerArray</class>
-  </compound>
-  <compound kind="group">
-    <name>rmvlsrv</name>
-    <title>服务模块</title>
-    <filename>d2/dd0/group__rmvlsrv.html</filename>
-    <class kind="struct">rm::srv::SetCameraInfo</class>
-    <class kind="struct">rm::srv::Empty</class>
-    <class kind="struct">rm::srv::SetBool</class>
-    <class kind="struct">rm::srv::Trigger</class>
-  </compound>
-  <compound kind="group">
     <name>core_timer</name>
     <title>定时、计时模块</title>
     <filename>db/d06/group__core__timer.html</filename>
     <class kind="class">rm::Time</class>
+  </compound>
+  <compound kind="group">
+    <name>core_reflect</name>
+    <title>聚合体编译期反射</title>
+    <filename>d5/d3e/group__core__reflect.html</filename>
+    <member kind="function">
+      <type>consteval std::size_t</type>
+      <name>rm::reflect::size</name>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
+      <anchor>gadc3b4f53ef6981ca8c58abd401a506b9</anchor>
+      <arglist>(auto &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rm::reflect::for_each</name>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
+      <anchor>ga9863cff22a9ace50a697915560ee8290</anchor>
+      <arglist>(Tp &amp;&amp;val, Callable &amp;&amp;f)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::reflect::equal</name>
+      <anchorfile>d5/d3e/group__core__reflect.html</anchorfile>
+      <anchor>gaca3e9de5d5043a1c038a42c9f4f0a22c</anchor>
+      <arglist>(const Tp &amp;lhs, const Tp &amp;rhs)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>core_meta</name>
+    <title>元编程</title>
+    <filename>de/df6/group__core__meta.html</filename>
+    <class kind="struct">rm::hash_aggregate</class>
+    <class kind="struct">rm::hash_traits</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+    <class kind="struct">rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;</class>
+  </compound>
+  <compound kind="group">
+    <name>core_yaml</name>
+    <title>YAML 解析模块</title>
+    <filename>dc/d84/group__core__yaml.html</filename>
+    <namespace>rm::yaml::opencv_detail</namespace>
+    <class kind="struct">rm::yaml::Error</class>
+    <class kind="class">rm::yaml::Node</class>
+    <class kind="struct">rm::yaml::Result</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::yaml::NodeType</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga3b9fa77c5b89b3449b2bbc7b8c8dc85a</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaec0fc0100c4fc1ce4eea230c3dc10360">Undefined</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aabbb93ef26e3c101ff11cdd21cab08a94">Null</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74">Scalar</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5">Sequence</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa46f3ea056caa3126b91f3f70beea068c">Map</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::yaml::ErrorCode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gaa41933113f3957f789fe3d8f42065a85</anchor>
+      <arglist></arglist>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85a6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85ac9ad95228aa735bdda1aebf38da022af">Parse</enumvalue>
+      <enumvalue file="dc/d84/group__core__yaml.html" anchor="ggaa41933113f3957f789fe3d8f42065a85a42a02b42ec22cfcbd78aaf7a66a5ee09">Io</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>rm::yaml::parse</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga78ecd61a2a40f72bd53adeabe8022e00</anchor>
+      <arglist>(std::string_view source)</arglist>
+    </member>
+    <member kind="function">
+      <type>Result</type>
+      <name>rm::yaml::load</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae18b5dcd37e82395bb7071d987b0ea3a</anchor>
+      <arglist>(std::string_view path)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>rm::yaml::dump</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga63d43f3b161f15c55ab374c8cb23268b</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::save</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gad982a38b55aaf5d15a82c8a139c48ef4</anchor>
+      <arglist>(std::string_view path, const Node &amp;node, Error &amp;err)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::save</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4edc97bf470b469768393f861afe6e73</anchor>
+      <arglist>(std::string_view path, const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>rm::yaml::dumpOpenCv</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6f0b5c5c8ec82b34a302375b8b6a4c32</anchor>
+      <arglist>(const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::saveOpenCv</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gacee20db700c1fe393aeca7583ea7929e</anchor>
+      <arglist>(std::string_view path, const Node &amp;node)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6513071123b676405a24d5f4df68e24a</anchor>
+      <arglist>(const Node &amp;node, cv::Point_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4cd3850bfe54424444ea01d39f7685e8</anchor>
+      <arglist>(Node &amp;node, const cv::Point_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6195745b1b90938e30f5fa0b6dcdb311</anchor>
+      <arglist>(const Node &amp;node, cv::Point3_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae095d28d11f4395aecc0b8ee02d7327b</anchor>
+      <arglist>(Node &amp;node, const cv::Point3_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga5bdd96b8604eddbabc8569bbba713b57</anchor>
+      <arglist>(const Node &amp;node, cv::Size_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga55d99194b0939064bf11a60aeef8970f</anchor>
+      <arglist>(Node &amp;node, const cv::Size_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga0d04445c8c1b34699e5eeccd48b1b655</anchor>
+      <arglist>(const Node &amp;node, cv::Complex&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga326751f4195075451a545ff34174f638</anchor>
+      <arglist>(Node &amp;node, const cv::Complex&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4ce89180310a97d7e2a097353cd27677</anchor>
+      <arglist>(const Node &amp;node, cv::Rect_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga49f0f99b2d984c167f7ec0df74aae13a</anchor>
+      <arglist>(Node &amp;node, const cv::Rect_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga6bf757b8f2285d57b3e40c7a38592716</anchor>
+      <arglist>(const Node &amp;node, cv::Vec&lt; T, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gacdd42c41e68f8883a85296fe8d756219</anchor>
+      <arglist>(Node &amp;node, const cv::Vec&lt; T, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gab336619bcb40dbbdd100c1a4dda3ba56</anchor>
+      <arglist>(const Node &amp;node, cv::Scalar_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga9fffcbdd9abced00eb7c9df2a6eefdd1</anchor>
+      <arglist>(Node &amp;node, const cv::Scalar_&lt; T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga377307bce4cd1e13b1c77f445ea857b6</anchor>
+      <arglist>(const Node &amp;node, cv::Range &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga5e3276e69f16d5d5e9892a7be9814f04</anchor>
+      <arglist>(Node &amp;node, const cv::Range &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gaa2fefc206854000ff39550c75a08eff6</anchor>
+      <arglist>(const Node &amp;node, cv::KeyPoint &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga3aa5b67508823139088d34514579a116</anchor>
+      <arglist>(Node &amp;node, const cv::KeyPoint &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gae080004a01015144ce407e32ceedb9f5</anchor>
+      <arglist>(const Node &amp;node, cv::DMatch &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga8473a75fed3201146aa7cba734b3d138</anchor>
+      <arglist>(Node &amp;node, const cv::DMatch &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gac46510de396848a8ede2ad3235382d8a</anchor>
+      <arglist>(const Node &amp;node, cv::Mat &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>gab803071f25c9ef81e8ebb486dbae3bcb</anchor>
+      <arglist>(Node &amp;node, const cv::Mat &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_decode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga4dc838bf8209080f7b7fad749b2e4e7d</anchor>
+      <arglist>(const Node &amp;node, cv::Matx&lt; T, M, N &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>rm::yaml::yaml_encode</name>
+      <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
+      <anchor>ga99bd6e693ac8be036f328ee694138f74</anchor>
+      <arglist>(Node &amp;node, const cv::Matx&lt; T, M, N &gt; &amp;value)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>io</name>
@@ -19989,6 +22692,8 @@
     <title>轻量发布订阅服务及其相关组件</title>
     <filename>d7/de3/group__lpss.html</filename>
     <subgroup>lpss_robot</subgroup>
+    <subgroup>lpss_transform</subgroup>
+    <subgroup>lpss_transform_buffer</subgroup>
     <namespace>rm::cvmsg</namespace>
     <namespace>rm::lpss</namespace>
     <namespace>rm::msg</namespace>
@@ -20072,33 +22777,88 @@
       <anchor>ga6a587aab5f50249b0ebe3c0beb2f197f</anchor>
       <arglist>(std::vector&lt; double &gt; cmd_in, msg::JointState &amp;cmd_out) noexcept</arglist>
     </member>
+  </compound>
+  <compound kind="group">
+    <name>lpss_transform</name>
+    <title>坐标变换数学</title>
+    <filename>de/d87/group__lpss__transform.html</filename>
     <member kind="function">
-      <type>msg::Quaternion</type>
+      <type>Quaternion</type>
       <name>rm::msg::operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga4551442fac5fd98d00948eb7d6790871</anchor>
-      <arglist>(const msg::Quaternion &amp;q1, const msg::Quaternion &amp;q2) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga4c8c083673da27a50d1290db49a68388</anchor>
+      <arglist>(const Quaternion &amp;lhs, const Quaternion &amp;rhs) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Vector3</type>
+      <type>Vector3</type>
       <name>rm::msg::rotate</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga33938959ee4f022a6c2fcfee403c6870</anchor>
-      <arglist>(const msg::Quaternion &amp;q, const msg::Vector3 &amp;v) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga3f6ed3efaef68f5a35b046211f83b5da</anchor>
+      <arglist>(const Quaternion &amp;rotation, const Vector3 &amp;vector) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Pose</type>
+      <type>Point</type>
       <name>rm::msg::operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>gab059e8db6e7ca4a2f52d718de4226c5b</anchor>
-      <arglist>(const msg::Transform &amp;t, const msg::Pose &amp;p) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga9ef2acc724d8a2cf0506adbd5370ecd7</anchor>
+      <arglist>(const Transform &amp;transform, const Point &amp;point) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>msg::Transform</type>
+      <type>Pose</type>
       <name>rm::msg::operator*</name>
-      <anchorfile>d2/d7d/group__lpss__robot.html</anchorfile>
-      <anchor>ga7bab2a3bd103faf3b5c382c187535d2e</anchor>
-      <arglist>(const msg::Transform &amp;t1, const msg::Transform &amp;t2) noexcept</arglist>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga7ef245f2fdcb6b3cb8da317394c8247c</anchor>
+      <arglist>(const Transform &amp;transform, const Pose &amp;pose) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform</type>
+      <name>rm::msg::operator*</name>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga59270d6f643c1369d253dc743ef7362f</anchor>
+      <arglist>(const Transform &amp;lhs, const Transform &amp;rhs) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>Transform</type>
+      <name>rm::msg::inverse</name>
+      <anchorfile>de/d87/group__lpss__transform.html</anchorfile>
+      <anchor>ga76d6017ea3650a4ca829c331423372a5</anchor>
+      <arglist>(const Transform &amp;transform) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>lpss_transform_buffer</name>
+    <title>坐标变换缓存</title>
+    <filename>d6/d48/group__lpss__transform__buffer.html</filename>
+    <class kind="struct">rm::lpss::tf::LookupResult</class>
+    <class kind="class">rm::lpss::tf::Buffer</class>
+    <class kind="class">rm::lpss::tf::Broadcaster</class>
+    <class kind="class">rm::lpss::tf::StaticBroadcaster</class>
+    <class kind="class">rm::lpss::tf::Listener</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::lpss::tf::Status</name>
+      <anchorfile>d6/d48/group__lpss__transform__buffer.html</anchorfile>
+      <anchor>ga23bec70cd7f6679db019bdcf7be39944</anchor>
+      <arglist></arglist>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944aa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a253ca7dd096ee0956cccee4d376cab8b">InvalidArgument</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a116951ddc58ed29c099a562a4d802e59">InvalidTransform</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944acd9bc4b5e0cc88294db85310763e80ba">MultipleParents</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac91a69a04d70ad44abb1c8a9ded816ea">CycleDetected</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546">StaticDynamicConflict</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944ac5bf383e7c18c52c051ed952797bad09">FrameNotFound</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a403dd4d81c9ca5610588f74727193c25">ConnectivityError</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a1c3b83c295a991c701023abe36534c47">ExtrapolationPast</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944acb2d141e46e1c3e61bc2b84bc0e5674c">ExtrapolationFuture</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a779b940e79152dc2a8aa073adabe2313">NoCommonTime</enumvalue>
+      <enumvalue file="d6/d48/group__lpss__transform__buffer.html" anchor="gga23bec70cd7f6679db019bdcf7be39944a4ea48d07de9dacb0048c66b6be50ef5d">TimestampOutOfRange</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::lpss::tf::to_string</name>
+      <anchorfile>d6/d48/group__lpss__transform__buffer.html</anchorfile>
+      <anchor>gabc90f2c19dfc9202153e0d4ec5461dc5</anchor>
+      <arglist>(Status status) noexcept</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -20123,6 +22883,141 @@
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84aa33b7755e5f9b504d2d038eaca4ff28d">CUDA</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a61918500e2bc645b2aea3f447086a8a5">TensorRT</enumvalue>
       <enumvalue file="dc/d73/group__ml__ort.html" anchor="ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f">OpenVINO</enumvalue>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>nav</name>
+    <title>导航框架与系统</title>
+    <filename>db/d22/group__nav.html</filename>
+    <subgroup>nav_controller</subgroup>
+    <subgroup>nav_map</subgroup>
+    <subgroup>nav_planner</subgroup>
+  </compound>
+  <compound kind="group">
+    <name>nav_controller</name>
+    <title>二维路径跟踪与安全控制</title>
+    <filename>df/dd2/group__nav__controller.html</filename>
+    <class kind="struct">rm::nav::PurePursuitOptions</class>
+    <class kind="struct">rm::nav::TrackingResult</class>
+    <class kind="class">rm::nav::PurePursuit</class>
+    <class kind="struct">rm::nav::CollisionStopOptions</class>
+    <class kind="struct">rm::nav::CollisionStopResult</class>
+    <class kind="class">rm::nav::CollisionStop</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::nav::TrackingStatus</name>
+      <anchorfile>df/dd2/group__nav__controller.html</anchorfile>
+      <anchor>gad4f6cc00296f86bcb095a9883f3fc87a</anchor>
+      <arglist></arglist>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aaa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa3445abe58059264b3c95a6818988986f">GoalReached</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aaf7928154734956392080623f8386a12f">InvalidPose</enumvalue>
+      <enumvalue file="df/dd2/group__nav__controller.html" anchor="ggad4f6cc00296f86bcb095a9883f3fc87aa5d0744802b24f44a161d350c25d76c7b">InvalidPath</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::nav::to_string</name>
+      <anchorfile>df/dd2/group__nav__controller.html</anchorfile>
+      <anchor>ga55fa5a187dbb0d0df3baa40d8b7df16f</anchor>
+      <arglist>(TrackingStatus status) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>nav_map</name>
+    <title>二维栅格地图与代价地图</title>
+    <filename>d9/df0/group__nav__map.html</filename>
+    <class kind="struct">rm::nav::Cell</class>
+    <class kind="class">rm::nav::GridMap</class>
+    <class kind="struct">rm::nav::CostmapOptions</class>
+    <class kind="class">rm::nav::Costmap</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::nav::MapStatus</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>gafbae1bb6162cde6d174c0fe3096a29be</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea504eaf7257a7d7092f59a7c7227f1db0">InvalidResolution</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea38bf09f11b695b2c3ae5b36c4feeaba7">InvalidDimensions</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea1fe38849a83d213a4abe42bd422d2f70">InvalidOrigin</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea223e81e8afa42c41346a6696560ecc7b">InvalidValue</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaacd06a23e18a4ddb4cda7de5cb9fabdb">InvalidProbability</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaf9c38ec813dca08be21718504adb1233">InvalidRevision</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea55e3a9ebc1a7a7d05b7da580014ff86d">RevisionMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29beaf47847e1a691e4e868f618ffe1a5e57b">FrameMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea2a165ece85c67f09041f0d58bcbbdd16">GeometryMismatch</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea46dc1018ac1d8fca7c2752a61ce2fd0f">OutOfBounds</enumvalue>
+      <enumvalue file="d9/df0/group__nav__map.html" anchor="ggafbae1bb6162cde6d174c0fe3096a29bea7ad5c1451c63c74cfabeff23fa888f9b">InvalidFootprint</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::nav::Cost</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>gade968908e1044904cbfdc91062954a00</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::nav::Free</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a6e96f91d1ec02b8235f5c48231d01ab1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::nav::Inscribed</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00ad04123b8dda5b9af82e54904043a8614</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::nav::Lethal</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a747dc18c290c14bcd84a691e25705e69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>rm::nav::Unknown</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ggade968908e1044904cbfdc91062954a00a1ef1911d367514174505392a255a7efe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::nav::to_string</name>
+      <anchorfile>d9/df0/group__nav__map.html</anchorfile>
+      <anchor>ga6fb313ef8e6b659a0814deedd5c1d9f1</anchor>
+      <arglist>(MapStatus status) noexcept</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>nav_planner</name>
+    <title>二维路径规划</title>
+    <filename>d9/d8f/group__nav__planner.html</filename>
+    <class kind="struct">rm::nav::AStarOptions</class>
+    <class kind="struct">rm::nav::PlanningResult</class>
+    <class kind="class">rm::nav::AStarPlanner</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>rm::nav::PlanningStatus</name>
+      <anchorfile>d9/d8f/group__nav__planner.html</anchorfile>
+      <anchor>gabc79736e0b69f24072413dc14cc6ee89</anchor>
+      <arglist></arglist>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89aa60852f204ed8028c1c58808b746d115">Ok</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a4eb9f6b8ee5e828c8061153588d4f25c">InvalidOptions</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a8cb22e26f2ffe739b708d5693ce4ddda">InvalidMap</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a7e98cfdabe3f00ed92c76a82d244fcec">InvalidStart</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a758021bffff0da35728c319591bbce28">InvalidGoal</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580">StartBlocked</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89a3f3b8e0eda1edee456ada58c224bbf11">GoalBlocked</enumvalue>
+      <enumvalue file="d9/d8f/group__nav__planner.html" anchor="ggabc79736e0b69f24072413dc14cc6ee89ad1d2245c4d9d60b8da25dda25d2af489">NoPath</enumvalue>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>rm::nav::to_string</name>
+      <anchorfile>d9/d8f/group__nav__planner.html</anchorfile>
+      <anchor>gadef4cbb98bb719e261cb56ff64536fca</anchor>
+      <arglist>(PlanningStatus status) noexcept</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -21578,6 +24473,12 @@
     <docanchor file="da/ddb/tutorial_modules_mqtt.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tools/mqtt.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2mqtt</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_modules_nav</name>
+    <title>路径规划与导航</title>
+    <filename>dd/ddd/tutorial_modules_nav.html</filename>
+    <docanchor file="dd/ddd/tutorial_modules_nav.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tools/nav.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2nav</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_modules_netapp</name>
     <title>网络、应用层设施</title>
     <filename>d4/d7a/tutorial_modules_netapp.html</filename>
@@ -21611,10 +24512,17 @@
     <docanchor file="d2/d5d/tutorial_modules_socket.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tools/socket.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2socket</docanchor>
   </compound>
   <compound kind="page">
+    <name>tutorial_modules_yaml</name>
+    <title>YAML 数据读写</title>
+    <filename>d5/d6c/tutorial_modules_yaml.html</filename>
+    <docanchor file="d5/d6c/tutorial_modules_yaml.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tools/yaml.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2yaml</docanchor>
+  </compound>
+  <compound kind="page">
     <name>tutorial_table_of_content_modules</name>
     <title>主要模块使用教程</title>
     <filename>d6/d6e/tutorial_table_of_content_modules.html</filename>
     <subpage>d7/de5/tutorial_modules_aggregate_reflect.html</subpage>
+    <subpage>d5/d6c/tutorial_modules_yaml.html</subpage>
     <subpage>d5/d7a/tutorial_modules_coro.html</subpage>
     <subpage>d4/d00/tutorial_modules_ipc.html</subpage>
     <subpage>d3/da4/tutorial_modules_serial.html</subpage>
@@ -21626,6 +24534,7 @@
     <subpage>d1/d0b/tutorial_modules_lpss_robotpln.html</subpage>
     <subpage>da/df7/tutorial_modules_lpss_robotctl.html</subpage>
     <subpage>d4/d4a/tutorial_modules_lpss_robotdemo.html</subpage>
+    <subpage>dd/ddd/tutorial_modules_nav.html</subpage>
     <subpage>df/d2c/tutorial_modules_camera.html</subpage>
     <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>
@@ -21830,6 +24739,7 @@
     <file>timer.hpp</file>
     <file>util.hpp</file>
     <file>version.hpp</file>
+    <file>yaml.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/lpss/ctl</name>
@@ -21966,10 +24876,13 @@
     <file>point32.hpp</file>
     <file>polygon.hpp</file>
     <file>pose.hpp</file>
+    <file>pose_stamped.hpp</file>
+    <file>pose_with_covariance.hpp</file>
     <file>quaternion.hpp</file>
     <file>transform.hpp</file>
     <file>transform_stamped.hpp</file>
     <file>twist.hpp</file>
+    <file>twist_with_covariance.hpp</file>
     <file>vector3.hpp</file>
     <file>wrench.hpp</file>
   </compound>
@@ -22048,6 +24961,7 @@
     <file>msgio.hpp</file>
     <file>node.hpp</file>
     <file>robot.hpp</file>
+    <file>transform.hpp</file>
   </compound>
   <compound kind="dir">
     <name>/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/introduction/miscellaneous</name>
@@ -22075,6 +24989,24 @@
     <file>joint_trajectory_point.hpp</file>
     <file>tf.hpp</file>
     <file>urdf.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl/nav</name>
+    <path>rmvl/nav/</path>
+    <filename>dir_82c3f257c48778243456bbde0d3a4496.html</filename>
+    <file>controller.hpp</file>
+    <file>map.hpp</file>
+    <file>planner.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlmsg/nav</name>
+    <path>rmvlmsg/nav/</path>
+    <filename>dir_5fde27ffc6afbbeef9e65a9e246cfa2c.html</filename>
+    <file>map_meta_data.hpp</file>
+    <file>occupancy_grid.hpp</file>
+    <file>occupancy_grid_update.hpp</file>
+    <file>odometry.hpp</file>
+    <file>path.hpp</file>
   </compound>
   <compound kind="dir">
     <name>rmvl/opcua</name>
@@ -22262,6 +25194,13 @@
   <compound kind="dir">
     <name>rmvl</name>
     <path>rmvl/</path>
+    <filename>dir_93495bb5a759728c8e715a23853d0a2e.html</filename>
+    <dir>rmvl/nav</dir>
+    <file>nav.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>rmvl</name>
+    <path>rmvl/</path>
     <filename>dir_6e3c1e5a538963d5136b66866b9c6977.html</filename>
     <dir>rmvl/opcua</dir>
     <file>opcua.hpp</file>
@@ -22281,6 +25220,12 @@
     <dir>rmvlmsg/sensor</dir>
     <dir>rmvlmsg/std</dir>
     <dir>rmvlmsg/viz</dir>
+  </compound>
+  <compound kind="dir">
+    <name>rmvlmsg</name>
+    <path>rmvlmsg/</path>
+    <filename>dir_c5dc8e61bbe895b540882ad1bc1f6888.html</filename>
+    <dir>rmvlmsg/nav</dir>
   </compound>
   <compound kind="dir">
     <name>rmvlpara</name>
@@ -22406,6 +25351,7 @@
     <file>bool.hpp</file>
     <file>char.hpp</file>
     <file>color_rgba.hpp</file>
+    <file>duration.hpp</file>
     <file>float32.hpp</file>
     <file>float64.hpp</file>
     <file>header.hpp</file>

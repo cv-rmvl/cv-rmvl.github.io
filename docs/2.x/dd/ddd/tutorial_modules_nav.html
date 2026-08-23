@@ -1,0 +1,278 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.16.1" />
+  <title>RMVL: 路径规划与导航</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">路径规划与导航 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1">
+    <a href="#autotoc_md344">1 地图 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md345">1.1 二维栅格地图 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md346">1.2 代价地图 </a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md347">2 规划 </a>
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md348">2.1 A* 路径规划 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md349">2.2 路径跟踪与安全刹停 </a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#autotoc_md350">3 性能基准 </a>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>二维地图、路径规划、路径跟踪与安全控制</p>
+<p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2nav"></a></p>
+<dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2026/08/17 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
+<p><b>上一篇教程：</b><a class="el" href="../../d4/d4a/tutorial_modules_lpss_robotdemo.html" title="机器人扩展完整示例">机器人扩展完整示例</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../df/d2c/tutorial_modules_camera.html" title="相机设备">相机设备</a> <br  />
+</p>
+<hr  />
+<p>相关模块： <a class="el" href="../../db/d22/group__nav.html" title="导航框架与系统">导航框架与系统</a> 及 <a class="el" href="../../da/d12/group__rmvlmsg.html" title="消息模块">消息模块</a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md344"></a>
+1 地图</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md345"></a>
+1.1 二维栅格地图</h2>
+<p><span class="tt"><a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html" title="二维占据栅格内存模型">rm::nav::GridMap</a></span> 是 <span class="tt">msg::OccupancyGrid</span> 的可校验内存模型，负责带偏航角原点的世界/栅格坐标转换、贝叶斯占据概率更新、越界射线裁剪和 <span class="tt">OccupancyGridUpdate</span> 版本合并。本地修改会自动累计最小脏矩形；全量地图适合低频或按需发布，局部观测则可通过 <span class="tt">pendingUpdate()</span> 只发布变化区域。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md346"></a>
+1.2 代价地图</h2>
+<p><span class="tt"><a class="el" href="../../d9/d27/classrm_1_1nav_1_1Costmap.html" title="二维分层代价地图">rm::nav::Costmap</a></span> 在相同几何信息上维护静态层和局部障碍层。传感器一帧内可以连续标记障碍、执行射线清除，最后统一调用 <span class="tt">updateCosts()</span> 合成图层并计算膨胀，避免每个观测点都重算整张地图。代价值 <span class="tt">0</span>、<span class="tt">253</span>、<span class="tt">254</span>、<span class="tt">255</span> 分别表示自由、内切区域、致命障碍和未知空间。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/nav/map.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d5/d20/namespacerm.html">rm</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> updateMap(<a class="code hl_class" href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">msg::OccupancyGrid</a> full_map,</div>
+<div class="line">               <span class="keyword">const</span> std::vector&lt;msg::Point&gt; &amp;footprint,</div>
+<div class="line">               <span class="keyword">const</span> <a class="code hl_class" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;robot_pose) {</div>
+<div class="line">    <a class="code hl_class" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">nav::GridMap</a> grid(std::move(full_map));</div>
+<div class="line">    <span class="keywordflow">if</span> (!grid.valid())</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 从地图外进入的射线也会自动裁剪；沿途更新为空闲，地图内终点更新为占据</span></div>
+<div class="line">    grid.integrateRay(-1.0, 0.5, 3.2, 0.5, <span class="keyword">true</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> update = grid.pendingUpdate()) {</div>
+<div class="line">        <span class="comment">// 通过 lpss::Publisher&lt;msg::OccupancyGridUpdate&gt; 发布 *update</span></div>
+<div class="line">        grid.clearPendingUpdate();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_struct" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">nav::CostmapOptions</a> options;</div>
+<div class="line">    options.inflation_radius = 0.55;</div>
+<div class="line">    options.inscribed_radius = 0.20;</div>
+<div class="line">    <a class="code hl_class" href="../../d9/d27/classrm_1_1nav_1_1Costmap.html">nav::Costmap</a> costmap(grid, options);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 融合一帧局部障碍观测；射线清除只影响局部障碍层，不会清除静态墙体</span></div>
+<div class="line">    costmap.markObstacle(2.0, 1.0);</div>
+<div class="line">    costmap.clearRay(robot_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ab36a3325d2426258f55dae4e99581cd8">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">x</a>, robot_pose.<a class="code hl_variable" href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ab36a3325d2426258f55dae4e99581cd8">position</a>.<a class="code hl_variable" href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">y</a>, 4.0, 1.0);</div>
+<div class="line">    costmap.updateCosts();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (costmap.collides(footprint, robot_pose)) {</div>
+<div class="line">        <span class="comment">// 触发刹停或拒绝该位姿</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1msg_1_1OccupancyGrid_html"><div class="ttname"><a href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">rm::msg::OccupancyGrid</a></div><div class="ttdoc">OccupancyGrid 消息类型：nav/OccupancyGrid</div><div class="ttdef"><b>定义</b> occupancy_grid.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Point_html_adbe0da3d26e20d43d8bea2994969abe2"><div class="ttname"><a href="../../d0/deb/classrm_1_1msg_1_1Point.html#adbe0da3d26e20d43d8bea2994969abe2">rm::msg::Point::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>定义</b> point.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Point_html_af2f5eba8f97d7f0dbdead5528140d9ec"><div class="ttname"><a href="../../d0/deb/classrm_1_1msg_1_1Point.html#af2f5eba8f97d7f0dbdead5528140d9ec">rm::msg::Point::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>定义</b> point.hpp:34</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Pose_html"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html">rm::msg::Pose</a></div><div class="ttdoc">Pose 消息类型：geometry/Pose</div><div class="ttdef"><b>定义</b> pose.hpp:33</div></div>
+<div class="ttc" id="aclassrm_1_1msg_1_1Pose_html_ab36a3325d2426258f55dae4e99581cd8"><div class="ttname"><a href="../../d4/d23/classrm_1_1msg_1_1Pose.html#ab36a3325d2426258f55dae4e99581cd8">rm::msg::Pose::position</a></div><div class="ttdeci">rm::msg::Point position</div><div class="ttdef"><b>定义</b> pose.hpp:35</div></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1Costmap_html"><div class="ttname"><a href="../../d9/d27/classrm_1_1nav_1_1Costmap.html">rm::nav::Costmap</a></div><div class="ttdoc">二维分层代价地图</div><div class="ttdef"><b>定义</b> map.hpp:270</div></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1GridMap_html"><div class="ttname"><a href="../../df/db1/classrm_1_1nav_1_1GridMap.html">rm::nav::GridMap</a></div><div class="ttdoc">二维占据栅格内存模型</div><div class="ttdef"><b>定义</b> map.hpp:73</div></div>
+<div class="ttc" id="anamespacerm_html"><div class="ttname"><a href="../../d5/d20/namespacerm.html">rm</a></div><div class="ttdef"><b>定义</b> datastruct.hpp:24</div></div>
+<div class="ttc" id="astructrm_1_1nav_1_1CostmapOptions_html"><div class="ttname"><a href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">rm::nav::CostmapOptions</a></div><div class="ttdoc">分层代价地图配置</div><div class="ttdef"><b>定义</b> map.hpp:254</div></div>
+</div><!-- fragment --><p><span class="tt">GridMap::apply()</span> 仅接受 <span class="tt">base_revision</span> 等于本地当前版本、<span class="tt">revision</span> 严格递增、坐标系一致且矩形完全位于地图内的增量；任何校验失败都不会产生部分写入。<span class="tt">Costmap</span> 的局部障碍修改采用批处理语义，在读取主代价或执行碰撞检测前应调用 <span class="tt">updateCosts()</span>。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md347"></a>
+2 规划</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md348"></a>
+2.1 A* 路径规划</h2>
+<p><span class="tt"><a class="el" href="../../d5/d14/classrm_1_1nav_1_1AStarPlanner.html" title="基于二维代价地图的 A* 路径规划器">rm::nav::AStarPlanner</a></span> 在 <span class="tt">Costmap</span> 上搜索 <span class="tt">msg::Path</span>。默认启用八邻域移动、禁止从障碍夹角穿过，并拒绝未知、内切和致命栅格。移动代价同时考虑几何距离和膨胀代价，因此在存在空间时会倾向远离障碍。</p>
+<p>搜索完成后，规划器先使用栅格可见性删除冗余折点，再执行受碰撞约束的迭代平滑。可以通过 <span class="tt">AStarOptions::simplify</span> 和 <span class="tt">smoothing_iterations</span> 分别关闭这两个步骤。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/nav/planner.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">nav::AStarOptions</a> planner_options;</div>
+<div class="line">planner_options.<a class="code hl_variable" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a97db7af8e8e6c117da52f0000232b567">allow_diagonal</a> = <span class="keyword">true</span>;</div>
+<div class="line">planner_options.<a class="code hl_variable" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a8b431d49a80b82a8e2f2fbd9ecb2d95c">allow_corner_cutting</a> = <span class="keyword">false</span>;</div>
+<div class="line">planner_options.<a class="code hl_variable" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#abd10e066f6c88f57c1727cd762ae697c">traverse_unknown</a> = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d14/classrm_1_1nav_1_1AStarPlanner.html">nav::AStarPlanner</a> planner(planner_options);</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> plan = planner.plan(costmap, robot_pose, goal_pose);</div>
+<div class="line"><span class="keywordflow">if</span> (!plan) {</div>
+<div class="line">    <span class="comment">// nav::to_string(plan.status) 可用于日志或状态上报</span></div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// plan.path 可通过 lpss::Publisher&lt;msg::Path&gt; 发布给控制节点和 LViz</span></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1AStarPlanner_html"><div class="ttname"><a href="../../d5/d14/classrm_1_1nav_1_1AStarPlanner.html">rm::nav::AStarPlanner</a></div><div class="ttdoc">基于二维代价地图的 A* 路径规划器</div><div class="ttdef"><b>定义</b> planner.hpp:78</div></div>
+<div class="ttc" id="astructrm_1_1nav_1_1AStarOptions_html"><div class="ttname"><a href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">rm::nav::AStarOptions</a></div><div class="ttdoc">A* 规划配置</div><div class="ttdef"><b>定义</b> planner.hpp:48</div></div>
+<div class="ttc" id="astructrm_1_1nav_1_1AStarOptions_html_a8b431d49a80b82a8e2f2fbd9ecb2d95c"><div class="ttname"><a href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a8b431d49a80b82a8e2f2fbd9ecb2d95c">rm::nav::AStarOptions::allow_corner_cutting</a></div><div class="ttdeci">bool allow_corner_cutting</div><div class="ttdoc">对角移动时是否允许穿过两个障碍栅格的夹角</div><div class="ttdef"><b>定义</b> planner.hpp:50</div></div>
+<div class="ttc" id="astructrm_1_1nav_1_1AStarOptions_html_a97db7af8e8e6c117da52f0000232b567"><div class="ttname"><a href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a97db7af8e8e6c117da52f0000232b567">rm::nav::AStarOptions::allow_diagonal</a></div><div class="ttdeci">bool allow_diagonal</div><div class="ttdoc">是否允许八邻域对角移动</div><div class="ttdef"><b>定义</b> planner.hpp:49</div></div>
+<div class="ttc" id="astructrm_1_1nav_1_1AStarOptions_html_abd10e066f6c88f57c1727cd762ae697c"><div class="ttname"><a href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#abd10e066f6c88f57c1727cd762ae697c">rm::nav::AStarOptions::traverse_unknown</a></div><div class="ttdeci">bool traverse_unknown</div><div class="ttdoc">是否允许经过未知栅格</div><div class="ttdef"><b>定义</b> planner.hpp:51</div></div>
+</div><!-- fragment --><p>规划前必须完成 <span class="tt">Costmap::updateCosts()</span>。起点、终点和输出路径都位于 <span class="tt">costmap.frameId()</span> 指定的坐标系中，调用方应先通过 TF 将机器人和目标位姿转换到该坐标系。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md349"></a>
+2.2 路径跟踪与安全刹停</h2>
+<p><span class="tt"><a class="el" href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html" title="Pure Pursuit 二维路径跟踪器">rm::nav::PurePursuit</a></span> 根据当前机器人位姿和 <span class="tt">msg::Path</span> 计算平面 <span class="tt">msg::Twist</span>。机器人偏离路径方向较大或前视点位于后方时，控制器会先原地转向；接近终点时按照 <span class="tt">slowdown_distance</span> 线性降速，进入 <span class="tt">goal_tolerance</span> 后返回 <span class="tt">TrackingStatus::GoalReached</span> 和零指令。</p>
+<p><span class="tt"><a class="el" href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html" title="独立的短时预测碰撞刹停过滤器">rm::nav::CollisionStop</a></span> 是独立于跟踪算法的末级安全过滤器。它按照待发送速度在短时间内积分机器人轨迹，并在每个采样位姿调用 <span class="tt">Costmap::collides()</span>。预测到 footprint 碰撞，或者输入、配置无效时，均采用故障安全策略返回零指令。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/nav/controller.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html">nav::PurePursuit</a> follower;</div>
+<div class="line"><a class="code hl_class" href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html">nav::CollisionStop</a> safety;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> tracking = follower.<a class="code hl_function" href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html#a17378ddedd0d22ca54fddae2beec51a8">compute</a>(robot_pose, plan.path);</div>
+<div class="line"><span class="keywordflow">if</span> (!tracking)</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> safe_command = safety.<a class="code hl_function" href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html#ab3254214ebc6962e4044a94eef40bf88">filter</a>(costmap, footprint, robot_pose, tracking.command);</div>
+<div class="line">sendToBase(safe_command.command);</div>
+<div class="ttc" id="aclassrm_1_1nav_1_1CollisionStop_html"><div class="ttname"><a href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html">rm::nav::CollisionStop</a></div><div class="ttdoc">独立的短时预测碰撞刹停过滤器</div><div class="ttdef"><b>定义</b> controller.hpp:117</div></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1CollisionStop_html_ab3254214ebc6962e4044a94eef40bf88"><div class="ttname"><a href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html#ab3254214ebc6962e4044a94eef40bf88">rm::nav::CollisionStop::filter</a></div><div class="ttdeci">CollisionStopResult filter(const Costmap &amp;costmap, const std::vector&lt; msg::Point &gt; &amp;footprint, const msg::Pose &amp;pose, const msg::Twist &amp;command) const</div><div class="ttdoc">对速度指令执行预测碰撞过滤</div></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1PurePursuit_html"><div class="ttname"><a href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html">rm::nav::PurePursuit</a></div><div class="ttdoc">Pure Pursuit 二维路径跟踪器</div><div class="ttdef"><b>定义</b> controller.hpp:74</div></div>
+<div class="ttc" id="aclassrm_1_1nav_1_1PurePursuit_html_a17378ddedd0d22ca54fddae2beec51a8"><div class="ttname"><a href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html#a17378ddedd0d22ca54fddae2beec51a8">rm::nav::PurePursuit::compute</a></div><div class="ttdeci">TrackingResult compute(const msg::Pose &amp;pose, const msg::Path &amp;path) const</div><div class="ttdoc">根据当前位置和全局路径计算速度指令</div></div>
+</div><!-- fragment --><p>安全过滤器只是一条无状态的最后防线，不能替代局部规划、动态障碍预测、制动距离建模和路径重规划。实际系统应根据底盘速度与制动能力调整 <span class="tt">prediction_horizon</span>，并确保局部代价地图在每个控制周期之前完成更新。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md350"></a>
+3 性能基准</h1>
+<p>安装 Google Benchmark 后，可以单独构建并运行 Nav 性能测试：</p>
+<div class="fragment"><div class="line">cmake -S . -B build -DBUILD_PERF_TESTS=ON</div>
+<div class="line">cmake --build build --target rmvl_nav_perf_test</div>
+<div class="line">./build/bin/rmvl_nav_perf_test</div>
+</div><!-- fragment --><p>基准覆盖矩形地图增量、代价地图合成与膨胀、开放及障碍地图 A*、不同路径长度的 Pure Pursuit，以及不同预测采样数的碰撞刹停。夹具初始化位于计时循环之外，报告时间只包含对应算法调用。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.16.1
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

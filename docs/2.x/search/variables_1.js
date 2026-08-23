@@ -12,12 +12,15 @@ var searchData=
   ['action_5fdeleteall_9',['ACTION_DELETEALL',['../d0/da6/classrm_1_1msg_1_1Marker.html#ad497d5f2f62c55b48dddb25d92d0111a',1,'rm::msg::Marker']]],
   ['addr_10',['addr',['../d3/d23/structrm_1_1RecvData.html#ad27a75d0fc884dcc3aa00974e7cd4216',1,'rm::RecvData::addr'],['../d0/d73/structrm_1_1RecvtoData.html#a7985919c90dcb2db4b3b26b688bcc54b',1,'rm::RecvtoData::addr'],['../df/d90/structrm_1_1MultiRecvData.html#a99358260f701c3d9ee622fe7dfa32827',1,'rm::MultiRecvData::addr']]],
   ['algorithm_5fparam_11',['algorithm_param',['../d9/d6f/group__para__algorithm.html#ga53c0a2fe632cf1f3bb67aff47b8873b6',1,'rm::para']]],
-  ['anchor_5fparam_12',['anchor_param',['../d8/d55/group__para__feature.html#ga96c6bfcee48441081038a5ab10725df3',1,'rm::para']]],
-  ['angular_13',['angular',['../d6/d47/classrm_1_1msg_1_1Twist.html#a2bfc7e0d0769bf43fc11589e3fd65904',1,'rm::msg::Twist']]],
-  ['angular_5fvelocity_14',['angular_velocity',['../de/d43/classrm_1_1msg_1_1Imu.html#a2299fad23d10f97453799d778ca07d7f',1,'rm::msg::Imu']]],
-  ['angular_5fvelocity_5fcovariance_15',['angular_velocity_covariance',['../de/d43/classrm_1_1msg_1_1Imu.html#ab59af5eb4013f4a04422b340cd9de892',1,'rm::msg::Imu']]],
-  ['any_5fport_16',['ANY_PORT',['../dc/db5/classrm_1_1Endpoint.html#a2fd5dcde65450d0ffa53e01e0e297076',1,'rm::Endpoint']]],
-  ['armor_5fdetector_5fparam_17',['armor_detector_param',['../d8/d46/group__para__detector.html#gaeeff388b017ce354d9c22b1813f88eab',1,'rm::para']]],
-  ['armor_5fparam_18',['armor_param',['../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785',1,'rm::para']]],
-  ['armor_5fpredictor_5fparam_19',['armor_predictor_param',['../dd/dad/group__para__predictor.html#ga4945cce0f7901dfbd9be6526c2137659',1,'rm::para']]]
+  ['allow_5fcorner_5fcutting_12',['allow_corner_cutting',['../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a8b431d49a80b82a8e2f2fbd9ecb2d95c',1,'rm::nav::AStarOptions']]],
+  ['allow_5fdiagonal_13',['allow_diagonal',['../de/d4b/structrm_1_1nav_1_1AStarOptions.html#a97db7af8e8e6c117da52f0000232b567',1,'rm::nav::AStarOptions']]],
+  ['anchor_5fparam_14',['anchor_param',['../d8/d55/group__para__feature.html#ga96c6bfcee48441081038a5ab10725df3',1,'rm::para']]],
+  ['angular_15',['angular',['../d6/d47/classrm_1_1msg_1_1Twist.html#a2bfc7e0d0769bf43fc11589e3fd65904',1,'rm::msg::Twist']]],
+  ['angular_5fstep_16',['angular_step',['../df/d20/structrm_1_1nav_1_1CollisionStopOptions.html#ae60925de12baf50a9cbb455a1a53f397',1,'rm::nav::CollisionStopOptions']]],
+  ['angular_5fvelocity_17',['angular_velocity',['../de/d43/classrm_1_1msg_1_1Imu.html#a2299fad23d10f97453799d778ca07d7f',1,'rm::msg::Imu']]],
+  ['angular_5fvelocity_5fcovariance_18',['angular_velocity_covariance',['../de/d43/classrm_1_1msg_1_1Imu.html#ab59af5eb4013f4a04422b340cd9de892',1,'rm::msg::Imu']]],
+  ['any_5fport_19',['ANY_PORT',['../dc/db5/classrm_1_1Endpoint.html#a2fd5dcde65450d0ffa53e01e0e297076',1,'rm::Endpoint']]],
+  ['armor_5fdetector_5fparam_20',['armor_detector_param',['../d8/d46/group__para__detector.html#gaeeff388b017ce354d9c22b1813f88eab',1,'rm::para']]],
+  ['armor_5fparam_21',['armor_param',['../d4/d8a/group__para__combo.html#ga82ec73a503c266c1d909e8b133490785',1,'rm::para']]],
+  ['armor_5fpredictor_5fparam_22',['armor_predictor_param',['../dd/dad/group__para__predictor.html#ga4945cce0f7901dfbd9be6526c2137659',1,'rm::para']]]
 ];

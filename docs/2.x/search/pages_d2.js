@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['逻辑控制_0',['2 逻辑控制',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md84',1,'']]]
+  ['连续采样_0',['4.1 连续采样',['../df/d2c/tutorial_modules_camera.html#autotoc_md264',1,'']]]
 ];

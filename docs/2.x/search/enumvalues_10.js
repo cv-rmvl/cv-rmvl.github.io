@@ -1,16 +1,20 @@
 var searchData=
 [
   ['saturation_0',['saturation',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377afd71ed58ae07cc75900a5169e6f9c287',1,'rm']]],
-  ['sdk_1',['SDK',['../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffaf20e3c5e54c0ab3d375d660b3f896f6a',1,'rm']]],
-  ['sentry_2',['SENTRY',['../db/d22/group__combo__armor.html#ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea',1,'rm']]],
-  ['serial_3',['Serial',['../d5/d20/namespacerm.html#abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493',1,'rm']]],
-  ['server_4',['Server',['../d6/dd4/group__io__net.html#gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9',1,'rm']]],
-  ['sgn_5',['SGN',['../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605ba0c06907d970859d829df948d962ffdd0',1,'rm']]],
-  ['sharpness_6',['sharpness',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5',1,'rm']]],
-  ['simplex_7',['Simplex',['../d2/d62/group__algorithm__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789',1,'rm']]],
-  ['small_8',['SMALL',['../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7',1,'rm']]],
-  ['software_9',['Software',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede',1,'rm']]],
-  ['software_10',['software',['../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2',1,'rm']]],
-  ['sqp_11',['SQP',['../d2/d62/group__algorithm__optimal.html#ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e',1,'rm']]],
-  ['square_12',['Square',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304',1,'rm']]]
+  ['scalar_1',['Scalar',['../dc/d84/group__core__yaml.html#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aaf60357a8d17e45793298323f1b372a74',1,'rm::yaml']]],
+  ['sdk_2',['SDK',['../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffaf20e3c5e54c0ab3d375d660b3f896f6a',1,'rm']]],
+  ['sentry_3',['SENTRY',['../db/d22/group__combo__armor.html#ggacd7f1723e9b020d34b5bbc041faaea89a62a4fa13c7f507063e89857c9f8e64ea',1,'rm']]],
+  ['sequence_4',['Sequence',['../dc/d84/group__core__yaml.html#gga3b9fa77c5b89b3449b2bbc7b8c8dc85aa3ff39d3acb327553070a64ef0cb321d5',1,'rm::yaml']]],
+  ['serial_5',['Serial',['../d5/d20/namespacerm.html#abff8db767f7699d9019525304fd568d7a5255d3daaa0a6276b844d61401e6f493',1,'rm']]],
+  ['server_6',['Server',['../d6/dd4/group__io__net.html#gga1fae898fdda37d4261e984bd1741ba9aa9aa1b03934893d7134a660af4204f2a9',1,'rm']]],
+  ['sgn_7',['SGN',['../d2/d62/group__algorithm__optimal.html#ggae144aacda45d4d8ed719eb1f5a37605ba0c06907d970859d829df948d962ffdd0',1,'rm']]],
+  ['sharpness_8',['sharpness',['../dc/d90/group__camera.html#gga99adb67cebfd7d04dd4ca9bdd4960377a3b2d7435a9d67b3630988c398af85da5',1,'rm']]],
+  ['simplex_9',['Simplex',['../d2/d62/group__algorithm__optimal.html#ggaf5b1502951081346a5bc6f03694fe73ca02a335cb56996b16f7bece70be215789',1,'rm']]],
+  ['small_10',['SMALL',['../db/d22/group__combo__armor.html#gga4c8a071e633e74da2404d335e8e62bb7a9b9c17e13f0e3dc9860a26e08b59b2a7',1,'rm']]],
+  ['software_11',['Software',['../dc/d90/group__camera.html#gga90ca2fddbb5f19ea4dc6f862157be49da719d067b229178f03bcfa1da4ac4dede',1,'rm']]],
+  ['software_12',['software',['../dc/d90/group__camera.html#gga7187e1219e13ae6a717cce746e4c9136acd3419bad74278b9b6096836fbc6bec2',1,'rm']]],
+  ['sqp_13',['SQP',['../d2/d62/group__algorithm__optimal.html#ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e',1,'rm']]],
+  ['square_14',['Square',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304',1,'rm']]],
+  ['startblocked_15',['StartBlocked',['../d9/d8f/group__nav__planner.html#ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580',1,'rm::nav']]],
+  ['staticdynamicconflict_16',['StaticDynamicConflict',['../d6/d48/group__lpss__transform__buffer.html#gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546',1,'rm::lpss::tf']]]
 ];

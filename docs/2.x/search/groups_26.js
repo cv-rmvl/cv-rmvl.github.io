@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['检测与识别模块（功能模块）_0',['检测与识别模块（功能模块）',['../da/d8e/group__detector.html',1,'']]]
+  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]]
 ];

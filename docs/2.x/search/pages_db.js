@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['项目_0',['2 配置 RMVL 项目',['../d1/db4/tutorial_install.html#autotoc_md117',1,'']]]
+  ['重置控制器_0',['2.4 重置控制器',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md318',1,'']]]
 ];

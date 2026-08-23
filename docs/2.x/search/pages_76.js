@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['插值多项式_0',['插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md187',1,'1 Lagrange 插值多项式'],['../d8/d57/tutorial_modules_interpolation.html#autotoc_md188',1,'2 Newton 插值多项式']]]
+  ['控制层部署控制器示例_0',['控制层部署控制器示例',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md323',1,'']]],
+  ['控制层_1',['控制层',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md325',1,'控制层'],['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md329',1,'控制层']]],
+  ['控制选项_2',['2.3 Socket 控制选项',['../d2/d5d/tutorial_modules_socket.html#autotoc_md392',1,'']]]
 ];

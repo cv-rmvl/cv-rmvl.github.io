@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['平移目标决策模块_0',['平移目标决策模块',['../dd/dd3/group__translation__decider.html',1,'']]],
-  ['平面目标时间序列_1',['平面目标时间序列',['../d0/d75/group__planar__tracker.html',1,'']]]
+  ['大恒图像_20galaxy_20usb3_200_20gige_20系列工业相机库_0',['大恒图像 Galaxy USB3.0/GigE 系列工业相机库',['../d4/d59/group__galaxy__camera.html',1,'']]]
 ];

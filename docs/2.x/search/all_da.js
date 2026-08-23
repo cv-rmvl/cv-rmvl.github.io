@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['软件模块_0',['软件模块',['../d1/d67/tutorial_extra_upper_init.html#init_software',1,'']]],
-  ['软触发_1',['软触发',['../df/d2c/tutorial_modules_camera.html#autotoc_md265',1,'4.2 软触发'],['../dd/da0/todo.html#_todo000002',1,'4.2 软触发']]]
+  ['调参策略_0',['调参策略',['../d0/da1/tutorial_extra_gyro_predictor.html#autotoc_md40',1,'']]],
+  ['调整执行速度_1',['2.7 调整执行速度',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md341',1,'']]],
+  ['调试与开发_2',['2 调试与开发',['../dc/d10/tutorial_modules_light.html#autotoc_md283',1,'']]],
+  ['调试构建_3',['2.1 调试构建',['../d1/d0a/tutorial_configuration_options.html#autotoc_md105',1,'']]]
 ];
