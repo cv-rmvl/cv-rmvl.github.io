@@ -20330,7 +20330,6 @@
   <compound kind="namespace">
     <name>rm::yaml</name>
     <filename>d5/d90/namespacerm_1_1yaml.html</filename>
-    <namespace>rm::yaml::opencv_detail</namespace>
     <class kind="struct">rm::yaml::Error</class>
     <class kind="class">rm::yaml::Node</class>
     <class kind="struct">rm::yaml::Result</class>
@@ -20572,87 +20571,6 @@
       <anchorfile>dc/d84/group__core__yaml.html</anchorfile>
       <anchor>ga99bd6e693ac8be036f328ee694138f74</anchor>
       <arglist>(Node &amp;node, const cv::Matx&lt; T, M, N &gt; &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>rm::yaml::opencv_detail</name>
-    <filename>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</filename>
-    <member kind="function">
-      <type>bool</type>
-      <name>decodeSequence</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a7b3638012dff7c9500c6f41477d22db9</anchor>
-      <arglist>(const Node &amp;node, T(&amp;values)[N])</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>encodeSequence</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>ae4bd5dc2362670b6b79701ffeb1b2f59</anchor>
-      <arglist>(Node &amp;node, const T *values, std::size_t size)</arglist>
-    </member>
-    <member kind="function">
-      <type>char</type>
-      <name>depthCode</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>ad539b661ae745afa1fcf13f984768f71</anchor>
-      <arglist>(int depth) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>codeDepth</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a0de1b8a8f21efc8bf14026d58b399694</anchor>
-      <arglist>(char code) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>dataType</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a394776526270b8b76b2d00bdb169b227</anchor>
-      <arglist>(int type)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>parseDataType</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a7bc004b3244baef3c06245c047735d9b</anchor>
-      <arglist>(std::string_view value, int &amp;type) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>matrixTag</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a4bc138258db26b4bf00bf307390dfb5b</anchor>
-      <arglist>(const Node &amp;node, bool nd) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>encodeMatrixData</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a26b30b3bbe60b39fa24facbf18399c84</anchor>
-      <arglist>(Node &amp;data, const cv::Mat &amp;matrix)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>encodeMatrixData</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>ab7db7ab5d7e7d27cc4122c83dc4a28bd</anchor>
-      <arglist>(Node &amp;data, const cv::Mat &amp;matrix)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>decodeMatrixData</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>a3f17ce70df007676a6fa4a074c06dd34</anchor>
-      <arglist>(const Node &amp;data, cv::Mat &amp;matrix)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>decodeMatrixData</name>
-      <anchorfile>dc/d80/namespacerm_1_1yaml_1_1opencv__detail.html</anchorfile>
-      <anchor>aac7bfa59a71b788942e74ca56059c3b1</anchor>
-      <arglist>(const Node &amp;data, cv::Mat &amp;matrix)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -21977,7 +21895,6 @@
     <name>core_yaml</name>
     <title>YAML 解析模块</title>
     <filename>dc/d84/group__core__yaml.html</filename>
-    <namespace>rm::yaml::opencv_detail</namespace>
     <class kind="struct">rm::yaml::Error</class>
     <class kind="class">rm::yaml::Node</class>
     <class kind="struct">rm::yaml::Result</class>
