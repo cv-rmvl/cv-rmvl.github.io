@@ -24531,10 +24531,6 @@
     <subpage>db/dba/tutorial_modules_opcua.html</subpage>
     <subpage>da/ddb/tutorial_modules_mqtt.html</subpage>
     <subpage>d3/d8e/tutorial_modules_lpss.html</subpage>
-    <subpage>d1/d0b/tutorial_modules_lpss_robotpln.html</subpage>
-    <subpage>da/df7/tutorial_modules_lpss_robotctl.html</subpage>
-    <subpage>d4/d4a/tutorial_modules_lpss_robotdemo.html</subpage>
-    <subpage>dd/ddd/tutorial_modules_nav.html</subpage>
     <subpage>df/d2c/tutorial_modules_camera.html</subpage>
     <subpage>dc/d10/tutorial_modules_light.html</subpage>
     <subpage>d8/d57/tutorial_modules_interpolation.html</subpage>
@@ -24552,6 +24548,10 @@
     <subpage>d0/d9d/tutorial_modules_fft.html</subpage>
     <subpage>d4/d74/tutorial_modules_union_find.html</subpage>
     <subpage>d5/db4/tutorial_modules_ra_heap.html</subpage>
+    <subpage>d1/d0b/tutorial_modules_lpss_robotpln.html</subpage>
+    <subpage>da/df7/tutorial_modules_lpss_robotctl.html</subpage>
+    <subpage>d4/d4a/tutorial_modules_lpss_robotdemo.html</subpage>
+    <subpage>dd/ddd/tutorial_modules_nav.html</subpage>
     <subpage>d8/d82/tutorial_modules_ort.html</subpage>
     <docanchor file="d6/d6e/tutorial_table_of_content_modules.html" title="/home/zhaoxi/.rmvldev/rmvl/doc/tutorials/modules/tutorial_modules.md">md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tutorial__modules</docanchor>
   </compound>

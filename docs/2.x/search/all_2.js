@@ -55,7 +55,7 @@ var searchData=
   ['2_20用法_52',['2 用法',['../d5/d7a/tutorial_modules_coro.html#autotoc_md270',1,'2 用法'],['../d2/d5d/tutorial_modules_socket.html#autotoc_md389',1,'2 用法']]],
   ['2_20白平衡设置_53',['1.2.2 白平衡设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md254',1,'']]],
   ['2_20相等函数_54',['3.2 相等函数',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md247',1,'']]],
-  ['2_20算法类_55',['2 算法类',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md406',1,'']]],
+  ['2_20算法类_55',['2 算法类',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md405',1,'']]],
   ['2_20组合体_56',['1.2 组合体',['../d6/d3f/tutorial_table_of_content_extra.html#autotoc_md62',1,'']]],
   ['2_20编写测试文件_57',['2 编写测试文件',['../da/d80/tutorial_use.html#autotoc_md125',1,'']]],
   ['2_20获取聚合体元素个数_58',['2 获取聚合体元素个数',['../d7/de5/tutorial_modules_aggregate_reflect.html#autotoc_md244',1,'']]],
