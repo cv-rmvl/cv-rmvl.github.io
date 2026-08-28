@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['类型兼容_0',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md397',1,'']]]
+  ['笛卡尔空间规划（多点）_0',['2.5 笛卡尔空间规划（多点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md339',1,'']]],
+  ['笛卡尔空间规划（点到点）_1',['2.4 笛卡尔空间规划（点到点）',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md338',1,'']]]
 ];

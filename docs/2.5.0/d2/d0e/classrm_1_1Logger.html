@@ -1,0 +1,1051 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::Logger类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d2/d0e/classrm_1_1Logger.html">Logger</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="../../d7/dc5/classrm_1_1Logger-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::Logger类 参考<div class="ingroups"><a class="el" href="../../dc/d55/group__logger.html">日志</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>异步线程安全日志器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/logger.hpp&gt;</code></p>
+<div class="dynheader">
+rm::Logger 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/dcd/classrm_1_1Logger__coll__graph.svg" width="114" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af15272f7b102ba9defa7c8e54a3f32b0" id="r_af15272f7b102ba9defa7c8e54a3f32b0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af15272f7b102ba9defa7c8e54a3f32b0">Logger</a> ()</td></tr>
+<tr class="memdesc:af15272f7b102ba9defa7c8e54a3f32b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 stdout 日志器  <br /></td></tr>
+<tr class="memitem:a3a37d4d56b3b4f989446ff4985face34" id="r_a3a37d4d56b3b4f989446ff4985face34"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3a37d4d56b3b4f989446ff4985face34">Logger</a> (<a class="el" href="../../dd/d0b/structrm_1_1LoggerOptions.html">LoggerOptions</a> options)</td></tr>
+<tr class="memdesc:a3a37d4d56b3b4f989446ff4985face34"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用指定公共配置创建 stdout 日志器  <br /></td></tr>
+<tr class="memitem:a25fcfd5b20c7ed90833c5d49b883c030" id="r_a25fcfd5b20c7ed90833c5d49b883c030"><td class="memTemplParams" colspan="2">template&lt;typename SinkType&gt; </td></tr>
+<tr class="memitem:a25fcfd5b20c7ed90833c5d49b883c030 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a25fcfd5b20c7ed90833c5d49b883c030">Logger</a> (SinkType sink, <a class="el" href="../../dd/d0b/structrm_1_1LoggerOptions.html">LoggerOptions</a> options={})</td></tr>
+<tr class="memdesc:a25fcfd5b20c7ed90833c5d49b883c030"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用指定日志后端和公共配置创建日志器  <br /></td></tr>
+<tr class="memitem:ac98ae3c08d80dcb30dae20154c9845f0" id="r_ac98ae3c08d80dcb30dae20154c9845f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac98ae3c08d80dcb30dae20154c9845f0">~Logger</a> ()</td></tr>
+<tr class="memdesc:ac98ae3c08d80dcb30dae20154c9845f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待工作线程退出，并持久化队列中剩余的日志  <br /></td></tr>
+<tr class="memitem:aab6722631565af2a87aaaaef0f966deb" id="r_aab6722631565af2a87aaaaef0f966deb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab6722631565af2a87aaaaef0f966deb">log</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> level, std::string_view msg)</td></tr>
+<tr class="memdesc:aab6722631565af2a87aaaaef0f966deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录指定级别的日志  <br /></td></tr>
+<tr class="memitem:aef9721268197b1ce71b2608fa83f9d7b" id="r_aef9721268197b1ce71b2608fa83f9d7b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aef9721268197b1ce71b2608fa83f9d7b">debug</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:aef9721268197b1ce71b2608fa83f9d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 DEBUG 级别日志  <br /></td></tr>
+<tr class="memitem:abded3a1a0bc89c25265b257a1caeb97d" id="r_abded3a1a0bc89c25265b257a1caeb97d"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:abded3a1a0bc89c25265b257a1caeb97d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abded3a1a0bc89c25265b257a1caeb97d">debug</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:abded3a1a0bc89c25265b257a1caeb97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 DEBUG 级别日志  <br /></td></tr>
+<tr class="memitem:a17bc1f935ed8d150d13d4094c5e76627" id="r_a17bc1f935ed8d150d13d4094c5e76627"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17bc1f935ed8d150d13d4094c5e76627">info</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:a17bc1f935ed8d150d13d4094c5e76627"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 INFO 级别日志  <br /></td></tr>
+<tr class="memitem:a2f95cc957b5fedb5038e66e733fb3910" id="r_a2f95cc957b5fedb5038e66e733fb3910"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a2f95cc957b5fedb5038e66e733fb3910 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2f95cc957b5fedb5038e66e733fb3910">info</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a2f95cc957b5fedb5038e66e733fb3910"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 INFO 级别日志  <br /></td></tr>
+<tr class="memitem:a230e6cb98624ab1276113b72b8314f6d" id="r_a230e6cb98624ab1276113b72b8314f6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a230e6cb98624ab1276113b72b8314f6d">warn</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:a230e6cb98624ab1276113b72b8314f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 WARN 级别日志  <br /></td></tr>
+<tr class="memitem:a80fbf08f1e4b6ff6dc4178613e85f621" id="r_a80fbf08f1e4b6ff6dc4178613e85f621"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a80fbf08f1e4b6ff6dc4178613e85f621 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a80fbf08f1e4b6ff6dc4178613e85f621">warn</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a80fbf08f1e4b6ff6dc4178613e85f621"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 WARN 级别日志  <br /></td></tr>
+<tr class="memitem:a903fc0c4a96d0f1ce4785dd2b6e5557a" id="r_a903fc0c4a96d0f1ce4785dd2b6e5557a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a903fc0c4a96d0f1ce4785dd2b6e5557a">error</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:a903fc0c4a96d0f1ce4785dd2b6e5557a"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 ERROR 级别日志  <br /></td></tr>
+<tr class="memitem:aac5aecaedeb25ff0f7a79a79f64de4cf" id="r_aac5aecaedeb25ff0f7a79a79f64de4cf"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aac5aecaedeb25ff0f7a79a79f64de4cf template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac5aecaedeb25ff0f7a79a79f64de4cf">error</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:aac5aecaedeb25ff0f7a79a79f64de4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 ERROR 级别日志  <br /></td></tr>
+<tr class="memitem:a423d0a104b74aa33c4d5c41a86020ed8" id="r_a423d0a104b74aa33c4d5c41a86020ed8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a423d0a104b74aa33c4d5c41a86020ed8">critical</a> (std::string_view msg)</td></tr>
+<tr class="memdesc:a423d0a104b74aa33c4d5c41a86020ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 CRITICAL 级别日志  <br /></td></tr>
+<tr class="memitem:a2e04428c30a9888b6f19da37e4c1e7ee" id="r_a2e04428c30a9888b6f19da37e4c1e7ee"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a2e04428c30a9888b6f19da37e4c1e7ee template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e04428c30a9888b6f19da37e4c1e7ee">critical</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a2e04428c30a9888b6f19da37e4c1e7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 CRITICAL 级别日志  <br /></td></tr>
+<tr class="memitem:a0dd05101cb1cc69d0aeb67faadb376fc" id="r_a0dd05101cb1cc69d0aeb67faadb376fc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0dd05101cb1cc69d0aeb67faadb376fc">setLevel</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> level) noexcept</td></tr>
+<tr class="memdesc:a0dd05101cb1cc69d0aeb67faadb376fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置最低输出级别  <br /></td></tr>
+<tr class="memitem:a841ff99c7aa25085acdef5d385ab388c" id="r_a841ff99c7aa25085acdef5d385ab388c"><td class="memItemLeft"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a841ff99c7aa25085acdef5d385ab388c">level</a> () const noexcept</td></tr>
+<tr class="memdesc:a841ff99c7aa25085acdef5d385ab388c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最低输出级别  <br /></td></tr>
+<tr class="memitem:a1dcb606d91c5bb5692ec49a016f95448" id="r_a1dcb606d91c5bb5692ec49a016f95448"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1dcb606d91c5bb5692ec49a016f95448">flush</a> ()</td></tr>
+<tr class="memdesc:a1dcb606d91c5bb5692ec49a016f95448"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞等待队列中的日志全部持久化  <br /></td></tr>
+<tr class="memitem:ae18cb6e2225f47d538c886f4b818c563" id="r_ae18cb6e2225f47d538c886f4b818c563"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ae18cb6e2225f47d538c886f4b818c563">pendingBytes</a> () const noexcept</td></tr>
+<tr class="memdesc:ae18cb6e2225f47d538c886f4b818c563"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前尚未持久化的日志字节数  <br /></td></tr>
+<tr class="memitem:a80d019ca8460f15fee0270ae75981974" id="r_a80d019ca8460f15fee0270ae75981974"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a80d019ca8460f15fee0270ae75981974">droppedLogs</a> () const noexcept</td></tr>
+<tr class="memdesc:a80d019ca8460f15fee0270ae75981974"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取因异步队列溢出而丢弃的日志数  <br /></td></tr>
+<tr class="memitem:af69d9e2ddb8d9a1f9f86cf8adba2273d" id="r_af69d9e2ddb8d9a1f9f86cf8adba2273d"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#af69d9e2ddb8d9a1f9f86cf8adba2273d">backendErrors</a> () const noexcept</td></tr>
+<tr class="memdesc:af69d9e2ddb8d9a1f9f86cf8adba2273d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志后端累计发生的错误数  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a40d6c3a895ab39e59879c14eaa55df09" id="r_a40d6c3a895ab39e59879c14eaa55df09"><td class="memItemLeft">static <a class="el" href="#af15272f7b102ba9defa7c8e54a3f32b0">Logger</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a40d6c3a895ab39e59879c14eaa55df09">basic</a> ()</td></tr>
+<tr class="memdesc:a40d6c3a895ab39e59879c14eaa55df09"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取进程内默认 stdout 日志器  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>异步线程安全日志器 </p>
+<p>日志先进入内存队列，再由内部工作线程写入指定后端。文件、串口和 UDP 后端会在达到缓存阈值、定时器到期或调用 <a class="el" href="#a1dcb606d91c5bb5692ec49a016f95448" title="阻塞等待队列中的日志全部持久化">flush()</a> 时持久化。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="af15272f7b102ba9defa7c8e54a3f32b0" name="af15272f7b102ba9defa7c8e54a3f32b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15272f7b102ba9defa7c8e54a3f32b0">&#9670;&#160;</a></span>Logger() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Logger::Logger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建 stdout 日志器 </p>
+
+</div>
+</div>
+<a id="a3a37d4d56b3b4f989446ff4985face34" name="a3a37d4d56b3b4f989446ff4985face34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a37d4d56b3b4f989446ff4985face34">&#9670;&#160;</a></span>Logger() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Logger::Logger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d0b/structrm_1_1LoggerOptions.html">LoggerOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用指定公共配置创建 stdout 日志器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>日志器公共配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a25fcfd5b20c7ed90833c5d49b883c030" name="a25fcfd5b20c7ed90833c5d49b883c030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fcfd5b20c7ed90833c5d49b883c030">&#9670;&#160;</a></span>Logger() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SinkType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Logger::Logger </td>
+          <td>(</td>
+          <td class="paramtype">SinkType</td>          <td class="paramname"><span class="paramname"><em>sink</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/d0b/structrm_1_1LoggerOptions.html">LoggerOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用指定日志后端和公共配置创建日志器 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">SinkType</td><td>满足 sink_write 和 sink_flush 定制点的后端类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sink</td><td>日志后端 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>日志器公共配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac98ae3c08d80dcb30dae20154c9845f0" name="ac98ae3c08d80dcb30dae20154c9845f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98ae3c08d80dcb30dae20154c9845f0">&#9670;&#160;</a></span>~Logger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::Logger::~Logger </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待工作线程退出，并持久化队列中剩余的日志 </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="af69d9e2ddb8d9a1f9f86cf8adba2273d" name="af69d9e2ddb8d9a1f9f86cf8adba2273d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af69d9e2ddb8d9a1f9f86cf8adba2273d">&#9670;&#160;</a></span>backendErrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::Logger::backendErrors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取日志后端累计发生的错误数 </p>
+<dl class="section return"><dt>返回</dt><dd>后端错误数 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_af69d9e2ddb8d9a1f9f86cf8adba2273d_cgraph.svg" width="394" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a40d6c3a895ab39e59879c14eaa55df09" name="a40d6c3a895ab39e59879c14eaa55df09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d6c3a895ab39e59879c14eaa55df09">&#9670;&#160;</a></span>basic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af15272f7b102ba9defa7c8e54a3f32b0">Logger</a> &amp; rm::Logger::basic </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取进程内默认 stdout 日志器 </p>
+<dl class="section return"><dt>返回</dt><dd>默认 stdout 日志器 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a40d6c3a895ab39e59879c14eaa55df09_cgraph.svg" width="336" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2e04428c30a9888b6f19da37e4c1e7ee" name="a2e04428c30a9888b6f19da37e4c1e7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e04428c30a9888b6f19da37e4c1e7ee">&#9670;&#160;</a></span>critical() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::critical </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 CRITICAL 级别日志 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a2e04428c30a9888b6f19da37e4c1e7ee_cgraph.svg" width="502" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a423d0a104b74aa33c4d5c41a86020ed8" name="a423d0a104b74aa33c4d5c41a86020ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423d0a104b74aa33c4d5c41a86020ed8">&#9670;&#160;</a></span>critical() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::critical </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 CRITICAL 级别日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a423d0a104b74aa33c4d5c41a86020ed8_cgraph.svg" width="502" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abded3a1a0bc89c25265b257a1caeb97d" name="abded3a1a0bc89c25265b257a1caeb97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abded3a1a0bc89c25265b257a1caeb97d">&#9670;&#160;</a></span>debug() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::debug </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 DEBUG 级别日志 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_abded3a1a0bc89c25265b257a1caeb97d_cgraph.svg" width="498" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aef9721268197b1ce71b2608fa83f9d7b" name="aef9721268197b1ce71b2608fa83f9d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef9721268197b1ce71b2608fa83f9d7b">&#9670;&#160;</a></span>debug() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::debug </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 DEBUG 级别日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_aef9721268197b1ce71b2608fa83f9d7b_cgraph.svg" width="498" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a80d019ca8460f15fee0270ae75981974" name="a80d019ca8460f15fee0270ae75981974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d019ca8460f15fee0270ae75981974">&#9670;&#160;</a></span>droppedLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::Logger::droppedLogs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取因异步队列溢出而丢弃的日志数 </p>
+<dl class="section return"><dt>返回</dt><dd>丢弃的日志数 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a80d019ca8460f15fee0270ae75981974_cgraph.svg" width="194" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aac5aecaedeb25ff0f7a79a79f64de4cf" name="aac5aecaedeb25ff0f7a79a79f64de4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5aecaedeb25ff0f7a79a79f64de4cf">&#9670;&#160;</a></span>error() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::error </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 ERROR 级别日志 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_aac5aecaedeb25ff0f7a79a79f64de4cf_cgraph.svg" width="488" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a903fc0c4a96d0f1ce4785dd2b6e5557a" name="a903fc0c4a96d0f1ce4785dd2b6e5557a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a903fc0c4a96d0f1ce4785dd2b6e5557a">&#9670;&#160;</a></span>error() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::error </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 ERROR 级别日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a903fc0c4a96d0f1ce4785dd2b6e5557a_cgraph.svg" width="488" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1dcb606d91c5bb5692ec49a016f95448" name="a1dcb606d91c5bb5692ec49a016f95448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcb606d91c5bb5692ec49a016f95448">&#9670;&#160;</a></span>flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::flush </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>阻塞等待队列中的日志全部持久化 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a1dcb606d91c5bb5692ec49a016f95448_cgraph.svg" width="142" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2f95cc957b5fedb5038e66e733fb3910" name="a2f95cc957b5fedb5038e66e733fb3910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f95cc957b5fedb5038e66e733fb3910">&#9670;&#160;</a></span>info() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::info </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 INFO 级别日志 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a2f95cc957b5fedb5038e66e733fb3910_cgraph.svg" width="482" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a17bc1f935ed8d150d13d4094c5e76627" name="a17bc1f935ed8d150d13d4094c5e76627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17bc1f935ed8d150d13d4094c5e76627">&#9670;&#160;</a></span>info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::info </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 INFO 级别日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a17bc1f935ed8d150d13d4094c5e76627_cgraph.svg" width="482" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a841ff99c7aa25085acdef5d385ab388c" name="a841ff99c7aa25085acdef5d385ab388c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841ff99c7aa25085acdef5d385ab388c">&#9670;&#160;</a></span>level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> rm::Logger::level </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取最低输出级别 </p>
+<dl class="section return"><dt>返回</dt><dd>最低输出级别 </dd></dl>
+
+</div>
+</div>
+<a id="aab6722631565af2a87aaaaef0f966deb" name="aab6722631565af2a87aaaaef0f966deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab6722631565af2a87aaaaef0f966deb">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::log </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>记录指定级别的日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>日志级别 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_aab6722631565af2a87aaaaef0f966deb_cgraph.svg" width="310" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae18cb6e2225f47d538c886f4b818c563" name="ae18cb6e2225f47d538c886f4b818c563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18cb6e2225f47d538c886f4b818c563">&#9670;&#160;</a></span>pendingBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::Logger::pendingBytes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前尚未持久化的日志字节数 </p>
+<dl class="section return"><dt>返回</dt><dd>尚未持久化的日志字节数 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_ae18cb6e2225f47d538c886f4b818c563_cgraph.svg" width="199" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0dd05101cb1cc69d0aeb67faadb376fc" name="a0dd05101cb1cc69d0aeb67faadb376fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd05101cb1cc69d0aeb67faadb376fc">&#9670;&#160;</a></span>setLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::setLevel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置最低输出级别 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>最低输出级别 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a0dd05101cb1cc69d0aeb67faadb376fc_cgraph.svg" width="344" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a80fbf08f1e4b6ff6dc4178613e85f621" name="a80fbf08f1e4b6ff6dc4178613e85f621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fbf08f1e4b6ff6dc4178613e85f621">&#9670;&#160;</a></span>warn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::warn </td>
+          <td>(</td>
+          <td class="paramtype">fmt::format_string&lt; Args... &gt;</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 WARN 级别日志 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a80fbf08f1e4b6ff6dc4178613e85f621_cgraph.svg" width="490" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a230e6cb98624ab1276113b72b8314f6d" name="a230e6cb98624ab1276113b72b8314f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230e6cb98624ab1276113b72b8314f6d">&#9670;&#160;</a></span>warn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::Logger::warn </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录 WARN 级别日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d0e/classrm_1_1Logger_a230e6cb98624ab1276113b72b8314f6d_cgraph.svg" width="490" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

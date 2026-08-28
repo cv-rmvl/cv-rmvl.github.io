@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::ua::Server类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -172,9 +194,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ac45f63a67825454e9935cc05f8fe4f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">为既有的变量节点 VariableNode 添加值回调  <br /></td></tr>
 <tr class="memitem:a73b378ad8001a77cbc633962d39c5225" id="r_a73b378ad8001a77cbc633962d39c5225"><td class="memItemLeft"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73b378ad8001a77cbc633962d39c5225">addDataSourceVariableNode</a> (const <a class="el" href="../../d8/df0/structrm_1_1ua_1_1DataSourceVariable.html">DataSourceVariable</a> &amp;val, <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> parent_nd=<a class="el" href="../../d3/da8/group__opcua.html#gae5586451b4694390f8be4a90c89c45e7">nodeObjectsFolder</a>) noexcept</td></tr>
 <tr class="memdesc:a73b378ad8001a77cbc633962d39c5225"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加数据源变量节点 VariableNode 至指定父节点中  <br /></td></tr>
-<tr class="memitem:a9ea843005c45352e9f33212e262b559a" id="r_a9ea843005c45352e9f33212e262b559a"><td class="memItemLeft"><a class="el" href="../../dd/db6/classrm_1_1ua_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9ea843005c45352e9f33212e262b559a">read</a> (const <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> &amp;<a class="el" href="#a341221d344021237c671ed7f2438eb9b">node</a>) const</td></tr>
+<tr class="memitem:a9ea843005c45352e9f33212e262b559a" id="r_a9ea843005c45352e9f33212e262b559a"><td class="memItemLeft"><a class="el" href="../../dd/db6/classrm_1_1ua_1_1Variable.html">Variable</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9ea843005c45352e9f33212e262b559a">read</a> (const <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> &amp;node) const</td></tr>
 <tr class="memdesc:a9ea843005c45352e9f33212e262b559a"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定的变量节点读数据  <br /></td></tr>
-<tr class="memitem:a5007fef6141fba27cf1268d632a595d9" id="r_a5007fef6141fba27cf1268d632a595d9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5007fef6141fba27cf1268d632a595d9">write</a> (const <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> &amp;<a class="el" href="#a341221d344021237c671ed7f2438eb9b">node</a>, const <a class="el" href="../../dd/db6/classrm_1_1ua_1_1Variable.html">Variable</a> &amp;val)</td></tr>
+<tr class="memitem:a5007fef6141fba27cf1268d632a595d9" id="r_a5007fef6141fba27cf1268d632a595d9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5007fef6141fba27cf1268d632a595d9">write</a> (const <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> &amp;node, const <a class="el" href="../../dd/db6/classrm_1_1ua_1_1Variable.html">Variable</a> &amp;val)</td></tr>
 <tr class="memdesc:a5007fef6141fba27cf1268d632a595d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">给指定的变量节点写数据  <br /></td></tr>
 <tr class="memitem:acf017d7a2b0763fe243f80dc71b5f17d" id="r_acf017d7a2b0763fe243f80dc71b5f17d"><td class="memItemLeft"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a>&#160;</td><td class="memItemRight"><a class="el" href="#acf017d7a2b0763fe243f80dc71b5f17d">addMethodNode</a> (const <a class="el" href="../../d5/d0c/classrm_1_1ua_1_1Method.html">Method</a> &amp;method, const <a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html">NodeId</a> &amp;parent_nd=<a class="el" href="../../d3/da8/group__opcua.html#gae5586451b4694390f8be4a90c89c45e7">nodeObjectsFolder</a>)</td></tr>
 <tr class="memdesc:acf017d7a2b0763fe243f80dc71b5f17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加方法节点 MethodNode 至指定父节点中  <br /></td></tr>
@@ -757,7 +779,7 @@ Protected 属性</h2></td></tr>
 <p>从指定的变量节点读数据 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a341221d344021237c671ed7f2438eb9b" title="获取路径搜索必要信息">node</a></td><td>既存的变量节点的 <span class="tt"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <span class="tt"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></span> </td></tr>
   </table>
   </dd>
 </dl>
@@ -932,7 +954,7 @@ Protected 属性</h2></td></tr>
 <p>给指定的变量节点写数据 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a341221d344021237c671ed7f2438eb9b" title="获取路径搜索必要信息">node</a></td><td>既存的变量节点的 <span class="tt"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>既存的变量节点的 <span class="tt"><a class="el" href="../../da/d81/classrm_1_1ua_1_1NodeId.html" title="OPC UA 节点 ID">NodeId</a></span> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>待写入的数据 </td></tr>
   </table>
   </dd>
@@ -1001,7 +1023,7 @@ Protected 属性</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

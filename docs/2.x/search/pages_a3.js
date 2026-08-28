@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['监视_0',['2.6 监视',['../db/dba/tutorial_modules_opcua.html#autotoc_md365',1,'']]]
+  ['用法_0',['用法',['../d5/d7a/tutorial_modules_coro.html#autotoc_md270',1,'2 用法'],['../d2/d5d/tutorial_modules_socket.html#autotoc_md397',1,'2 用法'],['../d3/da4/tutorial_modules_serial.html#autotoc_md393',1,'2.4 用法']]]
 ];

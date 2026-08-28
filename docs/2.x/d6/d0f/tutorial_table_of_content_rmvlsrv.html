@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: 服务模块使用教程</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -125,13 +147,13 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md425">1 概述 </a>
+        <a href="#autotoc_md433">1 概述 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md426">2 内置服务类型 </a>
+        <a href="#autotoc_md434">2 内置服务类型 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md427">3 自动代码生成 </a>
+        <a href="#autotoc_md435">3 自动代码生成 </a>
       </li>
     </ul>
   </li>
@@ -143,10 +165,10 @@ $(function() {
 </p>
 <hr  />
 <p>此模块主要为 <a class="el" href="../../d7/de3/group__lpss.html" title="轻量发布订阅服务及其相关组件">轻量发布订阅服务及其相关组件</a> 提供支持，详细使用说明请参考 <a class="el" href="../../d3/d8e/tutorial_modules_lpss.html" title="轻量发布订阅服务 —— LPSS">轻量发布订阅服务 —— LPSS</a> 。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md425"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md433"></a>
 1 概述</h2>
 <p>RMVL 服务描述文件 <span class="tt">*.srv</span> 用于定义一次服务调用的请求和响应类型，类似于 ROS 服务定义文件。请求和响应使用单独一行 <span class="tt">---</span> 分隔，两部分均遵循与 <a class="el" href="../../d2/d9b/tutorial_table_of_content_rmvlmsg.html" title="消息模块使用教程">RMVL 消息描述文件</a> 相同的字段语法和二进制序列化规则，也都允许为空。通过服务描述文件，用户可以为 LPSS Service/Client 定义结构化的调用接口。</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md426"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md434"></a>
 2 内置服务类型</h2>
 <p>以下是 RMVL 提供的内置服务类型，分为 <span class="tt">std</span> 和 <span class="tt">sensor</span> 两个主要分组。用户可以直接在 LPSS Service/Client 中使用这些类型。</p>
 <div class="tabbed"></div><div class="tabbed"><ul>
@@ -173,7 +195,7 @@ $(function() {
 </table>
 </div></li>
 </ul>
-</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md427"></a>
+</div><div class="tabbed"></div><h2 class="doxsection"><a class="anchor" id="autotoc_md435"></a>
 3 自动代码生成</h2>
 <p>RMVL 提供了 <span class="tt">rmvl_generate_srv</span> 的 CMake 函数，用于生成服务类型的 C++ 代码文件。用户只需在模块的 CMakeLists.txt 文件中调用该函数，并提供服务类型的名称和路径，RMVL 将自动生成相应的 C++ 代码文件。</p>
 <div class="fragment"> <div class="line"><span class="comment"># 根据 srv/Test.srv 文件生成服务类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(Test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/dir/Test.srv 文件生成服务类型代码</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/dir/test.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(dir/Test)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/Test2.srv 文件生成服务类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(</div> <div class="line">&#160;&#160;Test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> <div class="line"></div> <div class="line"><span class="comment"># 根据 srv/dir/Test2.srv 文件生成服务类型代码，并指定其绑定的子模块 sub</span></div> <div class="line"><span class="comment"># 将生成 rmvlsrv/dir/test2.hpp 头文件</span></div> <div class="line"><span class="keyword">rmvl_generate_srv</span>(</div> <div class="line">&#160;&#160;dir/Test2</div> <div class="line">&#160;&#160;<span class="keyword">MODULE</span> sub</div> <div class="line">)</div> </div><p>生成的服务类型位于 <span class="tt"><a class="el" href="../../d8/d2b/namespacerm_1_1srv.html">rm::srv</a></span> 命名空间。以 <span class="tt">Test</span> 为例，<span class="tt">Test::Request</span> 和 <span class="tt">Test::Response</span> 分别表示请求和响应类型，二者均提供与消息类型相同的 <span class="tt">serialize()</span>、<span class="tt">deserialize()</span> 和 <span class="tt">compact_size()</span> 接口。 </p>
@@ -184,7 +206,7 @@ $(function() {
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['超定线性方程组_0',['2 超定线性方程组',['../db/da1/tutorial_modules_least_square.html#autotoc_md199',1,'']]]
+  ['读取（默认）数据以控制逻辑分支_0',['读取（默认）数据以控制逻辑分支',['../d4/de8/tutorial_extra_upper_read_data.html',1,'tutorial_table_of_content_extra']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['生成文档_0',['生成文档',['../d5/d72/tutorial_document.html#tutorial_documentation_generate',1,'']]],
-  ['生成_20c_20h_20文件_1',['4.2.3 生成 *.c/*.h 文件',['../db/dba/tutorial_modules_opcua.html#autotoc_md376',1,'']]]
+  ['熵权法介绍_0',['熵权法介绍',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md165',1,'']]],
+  ['熵权法公式_1',['熵权法公式',['../df/d25/tutorial_modules_ew_topsis.html#autotoc_md166',1,'']]]
 ];

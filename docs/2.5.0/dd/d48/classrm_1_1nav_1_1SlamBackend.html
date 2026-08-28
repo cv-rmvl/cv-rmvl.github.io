@@ -1,0 +1,229 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::SlamBackend类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../dd/d48/classrm_1_1nav_1_1SlamBackend.html">SlamBackend</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d8/d62/classrm_1_1nav_1_1SlamBackend-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::SlamBackend类 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../db/d06/group__nav__localization.html">视觉里程计与 SLAM 接入</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>可重定位的 SLAM 后端  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+<div class="dynheader">
+类 rm::nav::SlamBackend 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d3/de3/classrm_1_1nav_1_1SlamBackend__inherit__graph.svg" width="199" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+rm::nav::SlamBackend 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/dd2/classrm_1_1nav_1_1SlamBackend__coll__graph.svg" width="199" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1ebb75048491bedfd047d69e52ea23cc" id="r_a1ebb75048491bedfd047d69e52ea23cc"><td class="memItemLeft">virtual <a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1ebb75048491bedfd047d69e52ea23cc">relocalize</a> (const <a class="el" href="../../df/db0/classrm_1_1msg_1_1PoseWithCovariance.html">msg::PoseWithCovariance</a> &amp;pose, std::string_view frame_id)</td></tr>
+<tr class="memdesc:a1ebb75048491bedfd047d69e52ea23cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求在全局坐标系中重定位  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1nav_1_1OdometryBackend"><td colspan="2">Public 成员函数 继承自 <a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html">rm::nav::OdometryBackend</a></td></tr>
+<tr class="memitem:a8fe7bd5a2dfdfb0cb205ebf16d22e23f pub_methods_classrm_1_1nav_1_1OdometryBackend" id="r_a8fe7bd5a2dfdfb0cb205ebf16d22e23f"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html#a8fe7bd5a2dfdfb0cb205ebf16d22e23f">~OdometryBackend</a> ()=default</td></tr>
+<tr class="memitem:ae131eb8e5c6ff5d534d38c406897f4b4 pub_methods_classrm_1_1nav_1_1OdometryBackend" id="r_ae131eb8e5c6ff5d534d38c406897f4b4"><td class="memItemLeft">virtual <a class="el" href="../../d3/da0/structrm_1_1nav_1_1BackendEstimate.html">BackendEstimate</a>&#160;</td><td class="memItemRight"><a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html#ae131eb8e5c6ff5d534d38c406897f4b4">track</a> (const <a class="el" href="../../d3/df3/structrm_1_1nav_1_1SensorFrame.html">SensorFrame</a> &amp;frame)=0</td></tr>
+<tr class="memdesc:ae131eb8e5c6ff5d534d38c406897f4b4 pub_methods_classrm_1_1nav_1_1OdometryBackend"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理一帧已同步传感器输入  <br /></td></tr>
+<tr class="memitem:a10de384aa3a7d87b0b08c43b2cc08db1 pub_methods_classrm_1_1nav_1_1OdometryBackend" id="r_a10de384aa3a7d87b0b08c43b2cc08db1"><td class="memItemLeft">virtual void&#160;</td><td class="memItemRight"><a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html#a10de384aa3a7d87b0b08c43b2cc08db1">reset</a> ()=0</td></tr>
+<tr class="memdesc:a10de384aa3a7d87b0b08c43b2cc08db1 pub_methods_classrm_1_1nav_1_1OdometryBackend"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除后端内部轨迹、关键帧和融合状态  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>可重定位的 SLAM 后端 </p>
+<p>SLAM 后端仍通过 <a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html#ae131eb8e5c6ff5d534d38c406897f4b4" title="处理一帧已同步传感器输入">track()</a> 输出连续局部位姿，可额外在 <a class="el" href="../../d3/da0/structrm_1_1nav_1_1BackendEstimate.html#a81cd2e2964950dde59a691db26e17f02" title="SLAM 回环或重定位产生的可选 map -&gt; odom 修正">BackendEstimate::map_to_odom</a> 中提供全局修正。 </p><dl class="section note"><dt>注解</dt><dd><a class="el" href="#a1ebb75048491bedfd047d69e52ea23cc" title="请求在全局坐标系中重定位">relocalize()</a> 的默认实现返回 <a class="el" href="../../db/d06/group__nav__localization.html#gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f" title="后端不支持请求的可选操作">LocalizationStatus::Unsupported</a> 。当前 <a class="el" href="../../d5/d31/classrm_1_1nav_1_1LocalizationPipeline.html" title="将第三方定位结果转换为 RMVL 导航消息">LocalizationPipeline</a> 不转发重定位请求，应用层应通过具体后端对象或独立服务完成该调用。 </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a1ebb75048491bedfd047d69e52ea23cc" name="a1ebb75048491bedfd047d69e52ea23cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebb75048491bedfd047d69e52ea23cc">&#9670;&#160;</a></span>relocalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::SlamBackend::relocalize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db0/classrm_1_1msg_1_1PoseWithCovariance.html">msg::PoseWithCovariance</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pose</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>frame_id</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求在全局坐标系中重定位 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>初始位姿及其协方差 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_id</td><td>初始位姿参考坐标系，通常为 map </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>请求状态，不支持时返回 <a class="el" href="../../db/d06/group__nav__localization.html#gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f" title="后端不支持请求的可选操作">LocalizationStatus::Unsupported</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

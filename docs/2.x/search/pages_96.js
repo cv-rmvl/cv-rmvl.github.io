@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['法方程求解最小二乘法_0',['4 法方程求解最小二乘法',['../db/da1/tutorial_modules_least_square.html#autotoc_md202',1,'']]]
+  ['步前向预估能量机关预测_0',['k 步前向预估能量机关预测',['../d3/ded/tutorial_extra_spi_rune_predictor.html',1,'tutorial_table_of_content_extra']]]
 ];

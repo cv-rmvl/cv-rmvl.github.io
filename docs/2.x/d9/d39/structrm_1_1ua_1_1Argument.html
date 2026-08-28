@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::ua::Argument结构体 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -137,7 +159,7 @@ rm::ua::Argument 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3c95ce37ddc4c4bbbeef6cbd31b6aa9a" id="r_a3c95ce37ddc4c4bbbeef6cbd31b6aa9a"><td class="memItemLeft">static <a class="el" href="../../d9/d39/structrm_1_1ua_1_1Argument.html">Argument</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c95ce37ddc4c4bbbeef6cbd31b6aa9a">create</a> (const std::string &amp;<a class="el" href="#a28813ff3a7acb8186ef6b293e72295b5">name</a>, <a class="el" href="../../d9/d0f/classrm_1_1ua_1_1DataType.html">DataType</a> <a class="el" href="#a2187b36941284f8fdda83335a9ec5498">type</a>, uint32_t <a class="el" href="#a8a39e074a4995503eb91ce6349df1559">dims</a>=1, const std::string &amp;desc=&quot;&quot;)</td></tr>
+<tr class="memitem:a3c95ce37ddc4c4bbbeef6cbd31b6aa9a" id="r_a3c95ce37ddc4c4bbbeef6cbd31b6aa9a"><td class="memItemLeft">static <a class="el" href="../../d9/d39/structrm_1_1ua_1_1Argument.html">Argument</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c95ce37ddc4c4bbbeef6cbd31b6aa9a">create</a> (const std::string &amp;name, <a class="el" href="../../d9/d0f/classrm_1_1ua_1_1DataType.html">DataType</a> type, uint32_t dims=1, const std::string &amp;desc=&quot;&quot;)</td></tr>
 <tr class="memdesc:a3c95ce37ddc4c4bbbeef6cbd31b6aa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建方法参数信息  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -195,15 +217,15 @@ Public 属性</h2></td></tr>
 <p>创建方法参数信息 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a28813ff3a7acb8186ef6b293e72295b5" title="参数名称">name</a></td><td>参数名称 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a2187b36941284f8fdda83335a9ec5498" title="参数数据类型">type</a></td><td>参数数据类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>参数名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>参数数据类型 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd>rm::DataType </dd></dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a8a39e074a4995503eb91ce6349df1559" title="参数维数，单数据则是 1，数组则是数组长度">dims</a></td><td>参数维数，单数据则是 <span class="tt">1</span>，数组则是数组长度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dims</td><td>参数维数，单数据则是 <span class="tt">1</span>，数组则是数组长度 </td></tr>
   </table>
   </dd>
 </dl>
@@ -291,7 +313,7 @@ Public 属性</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

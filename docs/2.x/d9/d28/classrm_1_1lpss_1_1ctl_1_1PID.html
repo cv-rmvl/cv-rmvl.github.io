@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::lpss::ctl::PID类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -146,9 +168,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ae07de5ec2bb4597b969b01abf34a6d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置状态  <br /></td></tr>
 <tr class="memitem:a3372d42e9dc2ac3ddbcbe8d2daf35c09" id="r_a3372d42e9dc2ac3ddbcbe8d2daf35c09"><td class="memItemLeft"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3372d42e9dc2ac3ddbcbe8d2daf35c09">do_compute</a> (const std::vector&lt; double &gt; &amp;desired, const std::vector&lt; double &gt; &amp;fb, int32_t period, std::vector&lt; double &gt; &amp;command) noexcept override</td></tr>
 <tr class="memdesc:a3372d42e9dc2ac3ddbcbe8d2daf35c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次控制计算  <br /></td></tr>
-<tr class="inherit_header pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
-<tr class="memitem:a7ae3e53e0f6eeeb9695155c580efa0a8 inherit pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a7ae3e53e0f6eeeb9695155c580efa0a8"><td class="memItemLeft"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a7ae3e53e0f6eeeb9695155c580efa0a8">compute</a> (const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;desired, const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;fb, int32_t period, <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;command) noexcept</td></tr>
-<tr class="memdesc:a7ae3e53e0f6eeeb9695155c580efa0a8 inherit pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次控制计算  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2">Public 成员函数 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
+<tr class="memitem:a7ae3e53e0f6eeeb9695155c580efa0a8 pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a7ae3e53e0f6eeeb9695155c580efa0a8"><td class="memItemLeft"><a class="el" href="../../d2/d7d/group__lpss__robot.html#ga888881c02db04b7390401590cfe5737b">ControlStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a7ae3e53e0f6eeeb9695155c580efa0a8">compute</a> (const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;desired, const <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;fb, int32_t period, <a class="el" href="../../de/de3/classrm_1_1msg_1_1JointState.html">msg::JointState</a> &amp;command) noexcept</td></tr>
+<tr class="memdesc:a7ae3e53e0f6eeeb9695155c580efa0a8 pub_methods_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一次控制计算  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -157,8 +179,8 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 类型 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
-<tr class="memitem:a0101494791cdef83b11e481cb18aacfe inherit pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a0101494791cdef83b11e481cb18aacfe"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">ControlLawBase</a>&gt;</td></tr>
+<tr class="inherit_header pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase"><td colspan="2">Public 类型 继承自 <a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">rm::lpss::ctl::ControlLawBase</a></td></tr>
+<tr class="memitem:a0101494791cdef83b11e481cb18aacfe pub_types_classrm_1_1lpss_1_1ctl_1_1ControlLawBase" id="r_a0101494791cdef83b11e481cb18aacfe"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html#a0101494791cdef83b11e481cb18aacfe">ptr</a> = std::unique_ptr&lt;<a class="el" href="../../da/df7/classrm_1_1lpss_1_1ctl_1_1ControlLawBase.html">ControlLawBase</a>&gt;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>【控制律组件】单环离散比例-积分-微分控制器 </p>
@@ -231,7 +253,7 @@ Public 成员函数</h2></td></tr>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID_a90de855a608910976ab22739f5b117e5_cgraph.svg" width="326" height="126"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d28/classrm_1_1lpss_1_1ctl_1_1PID_a90de855a608910976ab22739f5b117e5_cgraph.svg" width="326" height="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -329,7 +351,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

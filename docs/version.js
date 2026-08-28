@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const versions = [
-    ["2.5.0-dev", "/docs/2.x"],
+    ["2.6.0-dev", "/docs/2.x"],
+    ["2.5.0", "/docs/2.5.0"],
     ["2.4.0", "/docs/2.4.0"],
     ["2.3.0", "/docs/2.3.0"],
     ["2.2.0", "/docs/2.2.0"],
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["2.1.0", "/docs/2.1.0"],
     ["2.0.0", "/docs/2.0.0"],
     ["1.5.0-dev", "/docs/1.x"],
+    ["1.5.3", "/docs/1.5.3"],
     ["1.5.2", "/docs/1.5.2"],
     ["1.5.1", "/docs/1.5.1"],
     ["1.5.0", "/docs/1.5.0"],

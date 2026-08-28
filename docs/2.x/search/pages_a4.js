@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['目标_0',['目标',['../df/da2/tutorial_py_table_of_contents_bindings.html#autotoc_md472',1,'']]]
+  ['白平衡设置_0',['1.2.2 白平衡设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md254',1,'']]]
 ];

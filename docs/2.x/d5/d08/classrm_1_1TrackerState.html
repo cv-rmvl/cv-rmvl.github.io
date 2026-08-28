@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::TrackerState类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -137,7 +159,7 @@ rm::TrackerState 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a78c38967b6f1f36b3959e811aefb72ff" id="r_a78c38967b6f1f36b3959e811aefb72ff"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78c38967b6f1f36b3959e811aefb72ff">TrackerState</a> ()=default</td></tr>
-<tr class="memitem:af8f1f9f60e743e17942784780fcffacd" id="r_af8f1f9f60e743e17942784780fcffacd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af8f1f9f60e743e17942784780fcffacd">TrackerState</a> (int <a class="el" href="#ad83f60e4696937884316e96b31a00a48">index</a>, float <a class="el" href="#a902cdf7ed003119a402e0edb464f637c">radius</a>, float <a class="el" href="#a42b1a610feeff38cd3fdf48475038d5b">delta_y</a>)</td></tr>
+<tr class="memitem:af8f1f9f60e743e17942784780fcffacd" id="r_af8f1f9f60e743e17942784780fcffacd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af8f1f9f60e743e17942784780fcffacd">TrackerState</a> (int index, float radius, float delta_y)</td></tr>
 <tr class="memdesc:af8f1f9f60e743e17942784780fcffacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">追踪器信息结构体直接初始化  <br /></td></tr>
 <tr class="memitem:ad83f60e4696937884316e96b31a00a48" id="r_ad83f60e4696937884316e96b31a00a48"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#ad83f60e4696937884316e96b31a00a48">index</a> () const</td></tr>
 <tr class="memdesc:ad83f60e4696937884316e96b31a00a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在车组中追踪器的序号  <br /></td></tr>
@@ -215,9 +237,9 @@ Public 成员函数</h2></td></tr>
 <p>追踪器信息结构体直接初始化 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#ad83f60e4696937884316e96b31a00a48" title="获取在车组中追踪器的序号">index</a></td><td>在车组中追踪器的序号 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a902cdf7ed003119a402e0edb464f637c" title="获取旋转半径">radius</a></td><td>旋转半径 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a42b1a610feeff38cd3fdf48475038d5b" title="与旋转中心的高度差（向下为正）">delta_y</a></td><td>与旋转中心的高度差（向下为正） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>在车组中追踪器的序号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>旋转半径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta_y</td><td>与旋转中心的高度差（向下为正） </td></tr>
   </table>
   </dd>
 </dl>
@@ -398,7 +420,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

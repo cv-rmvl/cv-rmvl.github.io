@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::async::IOContext类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -140,9 +162,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a046bffc2202b9892a12d13a53d9cf2fd" id="r_a046bffc2202b9892a12d13a53d9cf2fd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a046bffc2202b9892a12d13a53d9cf2fd">IOContext</a> ()</td></tr>
 <tr class="memdesc:a046bffc2202b9892a12d13a53d9cf2fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步 I/O 执行上下文，初始化以异步 I/O 为核心的调度器  <br /></td></tr>
 <tr class="memitem:a07d1751e448da4b0a9d7cf5151fc64f4" id="r_a07d1751e448da4b0a9d7cf5151fc64f4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a07d1751e448da4b0a9d7cf5151fc64f4">~IOContext</a> ()</td></tr>
-<tr class="memitem:a800127ea9e55b4b14e36bab1aad565a8" id="r_a800127ea9e55b4b14e36bab1aad565a8"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; </td></tr>
-<tr class="memitem:a800127ea9e55b4b14e36bab1aad565a8 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a800127ea9e55b4b14e36bab1aad565a8">spawn</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:a800127ea9e55b4b14e36bab1aad565a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 <span class="tt"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;&gt;</span> 协程任务，并添加到调度器  <br /></td></tr>
+<tr class="memitem:a7f20c8db49341cfe0f21e70b643ed771" id="r_a7f20c8db49341cfe0f21e70b643ed771"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</td></tr>
+<tr class="memitem:a7f20c8db49341cfe0f21e70b643ed771 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7f20c8db49341cfe0f21e70b643ed771">spawn</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a7f20c8db49341cfe0f21e70b643ed771"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 <span class="tt"><a class="el" href="../../d5/d31/classrm_1_1async_1_1Task.html" title="保有 rm::async::Promise 的异步协程任务">Task</a>&lt;&gt;</span> 协程任务，并添加到调度器  <br /></td></tr>
 <tr class="memitem:a4ffe4e2a61a23fb0a2bd15b72d0216de" id="r_a4ffe4e2a61a23fb0a2bd15b72d0216de"><td class="memItemLeft"><a class="el" href="../../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96">FileDescriptor</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ffe4e2a61a23fb0a2bd15b72d0216de">handle</a> () const noexcept</td></tr>
 <tr class="memdesc:a4ffe4e2a61a23fb0a2bd15b72d0216de"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取异步 I/O 句柄  <br /></td></tr>
 <tr class="memitem:ab6381750261e8ba71ee0a8fd0f0a21dd" id="r_ab6381750261e8ba71ee0a8fd0f0a21dd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a> ()</td></tr>
@@ -284,13 +307,14 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a800127ea9e55b4b14e36bab1aad565a8" name="a800127ea9e55b4b14e36bab1aad565a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a800127ea9e55b4b14e36bab1aad565a8">&#9670;&#160;</a></span>spawn()</h2>
+<a id="a7f20c8db49341cfe0f21e70b643ed771" name="a7f20c8db49341cfe0f21e70b643ed771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f20c8db49341cfe0f21e70b643ed771">&#9670;&#160;</a></span>spawn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Callable, typename... Args&gt; </div>
+template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -330,7 +354,7 @@ template&lt;typename Callable, typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a800127ea9e55b4b14e36bab1aad565a8_cgraph.svg" width="170" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d8/ddc/classrm_1_1async_1_1IOContext_a7f20c8db49341cfe0f21e70b643ed771_cgraph.svg" width="170" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -391,7 +415,7 @@ template&lt;typename Callable, typename... Args&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

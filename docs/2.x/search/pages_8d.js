@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['标题_20id_0',['2.2 标题 ID',['../d5/d72/tutorial_document.html#autotoc_md139',1,'']]]
+  ['权值的计算_0',['3.2 权值的计算',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md218',1,'']]]
 ];

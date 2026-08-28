@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: 轻量发布订阅服务 —— LPSS</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -577,7 +599,7 @@ $(function() {
 <div class="line">    <a class="code hl_class" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">lpss::async::Node</a> node(<span class="stringliteral">&quot;set_bool_client&quot;</span>);</div>
 <div class="line">    <span class="keyword">auto</span> client = node.<a class="code hl_function" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ad0f719e2e0fd6c4565a2a0b3aed5ebcf">createClient</a>&lt;<a class="code hl_struct" href="../../d0/d08/structrm_1_1srv_1_1SetBool.html">srv::SetBool</a>&gt;(<span class="stringliteral">&quot;/set_enabled&quot;</span>);</div>
 <div class="line">    <span class="comment">// 生成异步请求任务</span></div>
-<div class="line">    node.<a class="code hl_function" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac90d2aecba5415c4cab42ad66d3c29dd">create_task</a>(request, std::ref(node), client);</div>
+<div class="line">    node.<a class="code hl_function" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#aa56e7e14fbcab764fe902089e714aba9">create_task</a>(request, std::ref(node), client);</div>
 <div class="line"> </div>
 <div class="line">    node.<a class="code hl_function" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac19d563e835538932223d6be7471816d">spin</a>();</div>
 <div class="line">}</div>
@@ -585,8 +607,8 @@ $(function() {
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Client_html_a085673b146c3a3ca5165e6ad6444aa3a"><div class="ttname"><a href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#a085673b146c3a3ca5165e6ad6444aa3a">rm::lpss::async::Client::call</a></div><div class="ttdeci">rm::async::Task&lt; std::optional&lt; Response &gt; &gt; call(const Request &amp;request, std::chrono::duration&lt; Rep, Period &gt; timeout=std::chrono::seconds(30))</div><div class="ttdoc">调用服务并异步等待响应</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Client_html_aecbe1c54c0d1bf3d9cae24c2f2bc0729"><div class="ttname"><a href="../../d3/d9d/classrm_1_1lpss_1_1async_1_1Client.html#aecbe1c54c0d1bf3d9cae24c2f2bc0729">rm::lpss::async::Client::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Client&lt; SrvType &gt; &gt; ptr</div><div class="ttdef"><b>定义</b> node.hpp:471</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_a48f377161a570f982cf62c597f6d8d77"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#a48f377161a570f982cf62c597f6d8d77">rm::lpss::async::Node::shutdown</a></div><div class="ttdeci">void shutdown() noexcept</div><div class="ttdoc">手动停止节点运行</div></div>
+<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_aa56e7e14fbcab764fe902089e714aba9"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#aa56e7e14fbcab764fe902089e714aba9">rm::lpss::async::Node::create_task</a></div><div class="ttdeci">void create_task(Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">生成异步任务，并添加到当前节点的调度器</div><div class="ttdef"><b>定义</b> node.hpp:669</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac19d563e835538932223d6be7471816d"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac19d563e835538932223d6be7471816d">rm::lpss::async::Node::spin</a></div><div class="ttdeci">void spin()</div><div class="ttdoc">运行异步 IO 上下文</div><div class="ttdef"><b>定义</b> node.hpp:658</div></div>
-<div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ac90d2aecba5415c4cab42ad66d3c29dd"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ac90d2aecba5415c4cab42ad66d3c29dd">rm::lpss::async::Node::create_task</a></div><div class="ttdeci">void create_task(Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">生成异步任务，并添加到当前节点的调度器</div><div class="ttdef"><b>定义</b> node.hpp:669</div></div>
 <div class="ttc" id="aclassrm_1_1lpss_1_1async_1_1Node_html_ad0f719e2e0fd6c4565a2a0b3aed5ebcf"><div class="ttname"><a href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html#ad0f719e2e0fd6c4565a2a0b3aed5ebcf">rm::lpss::async::Node::createClient</a></div><div class="ttdeci">Client&lt; SrvType &gt;::ptr createClient(std::string_view service) noexcept</div><div class="ttdoc">创建异步客户端</div></div>
 </div><!-- fragment --><p>运行时，先启动 <span class="tt">server.cpp</span> 对应的服务端程序，再启动 <span class="tt">client.cpp</span> 对应的客户端程序即可。</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md308"></a>
@@ -692,7 +714,7 @@ $(function() {
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::lpss::async::Node类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -165,9 +187,10 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:ad8e1d6fdce37519bcff17a935ff3980b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步定时器  <br /></td></tr>
 <tr class="memitem:ac19d563e835538932223d6be7471816d" id="r_ac19d563e835538932223d6be7471816d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac19d563e835538932223d6be7471816d">spin</a> ()</td></tr>
 <tr class="memdesc:ac19d563e835538932223d6be7471816d"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行异步 IO 上下文  <br /></td></tr>
-<tr class="memitem:ac90d2aecba5415c4cab42ad66d3c29dd" id="r_ac90d2aecba5415c4cab42ad66d3c29dd"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; </td></tr>
-<tr class="memitem:ac90d2aecba5415c4cab42ad66d3c29dd template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac90d2aecba5415c4cab42ad66d3c29dd">create_task</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:ac90d2aecba5415c4cab42ad66d3c29dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成异步任务，并添加到当前节点的调度器  <br /></td></tr>
+<tr class="memitem:aa56e7e14fbcab764fe902089e714aba9" id="r_aa56e7e14fbcab764fe902089e714aba9"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; <br />
+requires <a class="el" href="../../dd/d35/conceptrm_1_1async_1_1InvokableTask.html">rm::async::InvokableTask</a>&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</td></tr>
+<tr class="memitem:aa56e7e14fbcab764fe902089e714aba9 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa56e7e14fbcab764fe902089e714aba9">create_task</a> (Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:aa56e7e14fbcab764fe902089e714aba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成异步任务，并添加到当前节点的调度器  <br /></td></tr>
 <tr class="memitem:a48f377161a570f982cf62c597f6d8d77" id="r_a48f377161a570f982cf62c597f6d8d77"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a48f377161a570f982cf62c597f6d8d77">shutdown</a> () noexcept</td></tr>
 <tr class="memdesc:a48f377161a570f982cf62c597f6d8d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">手动停止节点运行  <br /></td></tr>
 </table><table class="memberdecls">
@@ -263,13 +286,14 @@ Protected 属性</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="ac90d2aecba5415c4cab42ad66d3c29dd" name="ac90d2aecba5415c4cab42ad66d3c29dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac90d2aecba5415c4cab42ad66d3c29dd">&#9670;&#160;</a></span>create_task()</h2>
+<a id="aa56e7e14fbcab764fe902089e714aba9" name="aa56e7e14fbcab764fe902089e714aba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56e7e14fbcab764fe902089e714aba9">&#9670;&#160;</a></span>create_task()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Callable, typename... Args&gt; </div>
+template&lt;typename Callable, typename... Args&gt; <br />
+requires <a class="el" href="../../dd/d35/conceptrm_1_1async_1_1InvokableTask.html">rm::async::InvokableTask</a>&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -829,7 +853,7 @@ template&lt;typename MsgType&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

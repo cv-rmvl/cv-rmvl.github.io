@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: Python 风格的字符串处理</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,29 +73,51 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="doc-content">
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -129,15 +151,15 @@ Python 风格的字符串处理 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:gadf0b167884deb47575179962b66c4341" id="r_gadf0b167884deb47575179962b66c4341"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#gadf0b167884deb47575179962b66c4341">rm::str::split</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>, std::string_view delim)</td></tr>
+<tr class="memitem:gadf0b167884deb47575179962b66c4341" id="r_gadf0b167884deb47575179962b66c4341"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#gadf0b167884deb47575179962b66c4341">rm::str::split</a> (std::string_view str, std::string_view delim)</td></tr>
 <tr class="memdesc:gadf0b167884deb47575179962b66c4341"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串分割  <br /></td></tr>
 <tr class="memitem:ga6dbfb3a75e7aa6352b02002438c5918c" id="r_ga6dbfb3a75e7aa6352b02002438c5918c"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ga6dbfb3a75e7aa6352b02002438c5918c">rm::str::join</a> (const std::vector&lt; std::string &gt; &amp;strs, std::string_view delim)</td></tr>
 <tr class="memdesc:ga6dbfb3a75e7aa6352b02002438c5918c"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串连接  <br /></td></tr>
-<tr class="memitem:gabecfe8c875f8bb2a439b66acbdef9ab3" id="r_gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#gabecfe8c875f8bb2a439b66acbdef9ab3">rm::str::strip</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
+<tr class="memitem:gabecfe8c875f8bb2a439b66acbdef9ab3" id="r_gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#gabecfe8c875f8bb2a439b66acbdef9ab3">rm::str::strip</a> (std::string_view str)</td></tr>
 <tr class="memdesc:gabecfe8c875f8bb2a439b66acbdef9ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">去除字符串两端的空白字符  <br /></td></tr>
-<tr class="memitem:gae46127fdf7d9a6deca77b3aee4445166" id="r_gae46127fdf7d9a6deca77b3aee4445166"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#gae46127fdf7d9a6deca77b3aee4445166">rm::str::lower</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
+<tr class="memitem:gae46127fdf7d9a6deca77b3aee4445166" id="r_gae46127fdf7d9a6deca77b3aee4445166"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#gae46127fdf7d9a6deca77b3aee4445166">rm::str::lower</a> (std::string_view str)</td></tr>
 <tr class="memdesc:gae46127fdf7d9a6deca77b3aee4445166"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为小写  <br /></td></tr>
-<tr class="memitem:ga603f0fec4d9dc80c6be715ef36fa6a9a" id="r_ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">rm::str::upper</a> (std::string_view <a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a>)</td></tr>
+<tr class="memitem:ga603f0fec4d9dc80c6be715ef36fa6a9a" id="r_ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ga603f0fec4d9dc80c6be715ef36fa6a9a">rm::str::upper</a> (std::string_view str)</td></tr>
 <tr class="memdesc:ga603f0fec4d9dc80c6be715ef36fa6a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为大写  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
@@ -173,6 +195,11 @@ Python 风格的字符串处理 的协作图:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>连接后的字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d17/group__core__str_ga6dbfb3a75e7aa6352b02002438c5918c_cgraph.svg" width="107" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -196,11 +223,16 @@ Python 风格的字符串处理 的协作图:</div>
 <p>将字符串转换为小写 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a></td><td>待处理的字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d17/group__core__str_gae46127fdf7d9a6deca77b3aee4445166_cgraph.svg" width="119" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -228,12 +260,17 @@ Python 风格的字符串处理 的协作图:</div>
 <p>字符串分割 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a></td><td>待分割的字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待分割的字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">delim</td><td>分割符 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>分割后的字符串数组 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d17/group__core__str_gadf0b167884deb47575179962b66c4341_cgraph.svg" width="111" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -257,11 +294,16 @@ Python 风格的字符串处理 的协作图:</div>
 <p>去除字符串两端的空白字符 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a></td><td>待处理的字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d17/group__core__str_gabecfe8c875f8bb2a439b66acbdef9ab3_cgraph.svg" width="112" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -285,11 +327,16 @@ Python 风格的字符串处理 的协作图:</div>
 <p>将字符串转换为大写 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d4/dfc/namespacerm_1_1str.html">str</a></td><td>待处理的字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>待处理的字符串 </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>处理后的字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/d17/group__core__str_ga603f0fec4d9dc80c6be715ef36fa6a9a_cgraph.svg" width="120" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -299,7 +346,7 @@ Python 风格的字符串处理 的协作图:</div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

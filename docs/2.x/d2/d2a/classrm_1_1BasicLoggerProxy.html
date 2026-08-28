@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::BasicLoggerProxy类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -136,34 +158,34 @@ rm::BasicLoggerProxy 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a80e25e9e46339c073ab9edcb1a787f12" id="r_a80e25e9e46339c073ab9edcb1a787f12"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a80e25e9e46339c073ab9edcb1a787f12">debug</a> (std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:a80e25e9e46339c073ab9edcb1a787f12" id="r_a80e25e9e46339c073ab9edcb1a787f12"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a80e25e9e46339c073ab9edcb1a787f12">debug</a> (std::string_view msg) const</td></tr>
 <tr class="memdesc:a80e25e9e46339c073ab9edcb1a787f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 DEBUG 级别日志  <br /></td></tr>
 <tr class="memitem:ae46b0323f25693383deb0104d669b6e5" id="r_ae46b0323f25693383deb0104d669b6e5"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ae46b0323f25693383deb0104d669b6e5 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae46b0323f25693383deb0104d669b6e5">debug</a> (fmt::format_string&lt; Args... &gt; <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">format</a>, Args &amp;&amp;...args) const</td></tr>
+<tr class="memitem:ae46b0323f25693383deb0104d669b6e5 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae46b0323f25693383deb0104d669b6e5">debug</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:ae46b0323f25693383deb0104d669b6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 DEBUG 级别日志  <br /></td></tr>
-<tr class="memitem:a3da4528f303d95bfab1d53bccce933c4" id="r_a3da4528f303d95bfab1d53bccce933c4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3da4528f303d95bfab1d53bccce933c4">info</a> (std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:a3da4528f303d95bfab1d53bccce933c4" id="r_a3da4528f303d95bfab1d53bccce933c4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3da4528f303d95bfab1d53bccce933c4">info</a> (std::string_view msg) const</td></tr>
 <tr class="memdesc:a3da4528f303d95bfab1d53bccce933c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 INFO 级别日志  <br /></td></tr>
 <tr class="memitem:a4f3aab4e11b7a4d2665afbbfbaae8910" id="r_a4f3aab4e11b7a4d2665afbbfbaae8910"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a4f3aab4e11b7a4d2665afbbfbaae8910 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4f3aab4e11b7a4d2665afbbfbaae8910">info</a> (fmt::format_string&lt; Args... &gt; <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">format</a>, Args &amp;&amp;...args) const</td></tr>
+<tr class="memitem:a4f3aab4e11b7a4d2665afbbfbaae8910 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4f3aab4e11b7a4d2665afbbfbaae8910">info</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:a4f3aab4e11b7a4d2665afbbfbaae8910"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 INFO 级别日志  <br /></td></tr>
-<tr class="memitem:ac08aef2bae9a8894f95193efbdb97c39" id="r_ac08aef2bae9a8894f95193efbdb97c39"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac08aef2bae9a8894f95193efbdb97c39">warn</a> (std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:ac08aef2bae9a8894f95193efbdb97c39" id="r_ac08aef2bae9a8894f95193efbdb97c39"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac08aef2bae9a8894f95193efbdb97c39">warn</a> (std::string_view msg) const</td></tr>
 <tr class="memdesc:ac08aef2bae9a8894f95193efbdb97c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 WARN 级别日志  <br /></td></tr>
 <tr class="memitem:ac31dc4e8db63ca08cc4df5675b98ada4" id="r_ac31dc4e8db63ca08cc4df5675b98ada4"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ac31dc4e8db63ca08cc4df5675b98ada4 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac31dc4e8db63ca08cc4df5675b98ada4">warn</a> (fmt::format_string&lt; Args... &gt; <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">format</a>, Args &amp;&amp;...args) const</td></tr>
+<tr class="memitem:ac31dc4e8db63ca08cc4df5675b98ada4 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac31dc4e8db63ca08cc4df5675b98ada4">warn</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:ac31dc4e8db63ca08cc4df5675b98ada4"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 WARN 级别日志  <br /></td></tr>
-<tr class="memitem:adf8fb01fc2999ee4091c5aea94973b4d" id="r_adf8fb01fc2999ee4091c5aea94973b4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf8fb01fc2999ee4091c5aea94973b4d">error</a> (std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:adf8fb01fc2999ee4091c5aea94973b4d" id="r_adf8fb01fc2999ee4091c5aea94973b4d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf8fb01fc2999ee4091c5aea94973b4d">error</a> (std::string_view msg) const</td></tr>
 <tr class="memdesc:adf8fb01fc2999ee4091c5aea94973b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 ERROR 级别日志  <br /></td></tr>
 <tr class="memitem:a60a0a521afabc3266c847145af77237d" id="r_a60a0a521afabc3266c847145af77237d"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a60a0a521afabc3266c847145af77237d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a60a0a521afabc3266c847145af77237d">error</a> (fmt::format_string&lt; Args... &gt; <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">format</a>, Args &amp;&amp;...args) const</td></tr>
+<tr class="memitem:a60a0a521afabc3266c847145af77237d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a60a0a521afabc3266c847145af77237d">error</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:a60a0a521afabc3266c847145af77237d"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 ERROR 级别日志  <br /></td></tr>
-<tr class="memitem:abc77b696005678cb81a34c372201f9ce" id="r_abc77b696005678cb81a34c372201f9ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc77b696005678cb81a34c372201f9ce">critical</a> (std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:abc77b696005678cb81a34c372201f9ce" id="r_abc77b696005678cb81a34c372201f9ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc77b696005678cb81a34c372201f9ce">critical</a> (std::string_view msg) const</td></tr>
 <tr class="memdesc:abc77b696005678cb81a34c372201f9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 CRITICAL 级别日志  <br /></td></tr>
 <tr class="memitem:afef7ff7756db5d08f552805b261c7883" id="r_afef7ff7756db5d08f552805b261c7883"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:afef7ff7756db5d08f552805b261c7883 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afef7ff7756db5d08f552805b261c7883">critical</a> (fmt::format_string&lt; Args... &gt; <a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc">format</a>, Args &amp;&amp;...args) const</td></tr>
+<tr class="memitem:afef7ff7756db5d08f552805b261c7883 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afef7ff7756db5d08f552805b261c7883">critical</a> (fmt::format_string&lt; Args... &gt; format, Args &amp;&amp;...args) const</td></tr>
 <tr class="memdesc:afef7ff7756db5d08f552805b261c7883"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录 CRITICAL 级别日志  <br /></td></tr>
-<tr class="memitem:aa81dd6e1c7ab5727dea6a37d014a5043" id="r_aa81dd6e1c7ab5727dea6a37d014a5043"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa81dd6e1c7ab5727dea6a37d014a5043">log</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> <a class="el" href="#a24139517493f283398e493462fbfc49c">level</a>, std::string_view <a class="el" href="../../de/dd0/namespacerm_1_1msg.html">msg</a>) const</td></tr>
+<tr class="memitem:aa81dd6e1c7ab5727dea6a37d014a5043" id="r_aa81dd6e1c7ab5727dea6a37d014a5043"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa81dd6e1c7ab5727dea6a37d014a5043">log</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> level, std::string_view msg) const</td></tr>
 <tr class="memdesc:aa81dd6e1c7ab5727dea6a37d014a5043"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录指定级别的日志  <br /></td></tr>
-<tr class="memitem:ac61ee2686b0dc01c7114ba66c398fa07" id="r_ac61ee2686b0dc01c7114ba66c398fa07"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac61ee2686b0dc01c7114ba66c398fa07">setLevel</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> <a class="el" href="#a24139517493f283398e493462fbfc49c">level</a>) const noexcept</td></tr>
+<tr class="memitem:ac61ee2686b0dc01c7114ba66c398fa07" id="r_ac61ee2686b0dc01c7114ba66c398fa07"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac61ee2686b0dc01c7114ba66c398fa07">setLevel</a> (<a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a> level) const noexcept</td></tr>
 <tr class="memdesc:ac61ee2686b0dc01c7114ba66c398fa07"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置最低输出级别  <br /></td></tr>
 <tr class="memitem:a24139517493f283398e493462fbfc49c" id="r_a24139517493f283398e493462fbfc49c"><td class="memItemLeft"><a class="el" href="../../dc/d55/group__logger.html#ga26ff8001b9ec9036057d58555bbc1c0a">LogLevel</a>&#160;</td><td class="memItemRight"><a class="el" href="#a24139517493f283398e493462fbfc49c">level</a> () const noexcept</td></tr>
 <tr class="memdesc:a24139517493f283398e493462fbfc49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最低输出级别  <br /></td></tr>
@@ -251,7 +273,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc" title="返回使用类 printf 表达式格式化的文本字符串。">format</a></td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
   </table>
   </dd>
@@ -259,7 +281,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_afef7ff7756db5d08f552805b261c7883_cgraph.svg" width="547" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_afef7ff7756db5d08f552805b261c7883_cgraph.svg" width="547" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -290,7 +312,7 @@ template&lt;typename... Args&gt; </div>
 <p>记录 CRITICAL 级别日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -340,7 +362,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc" title="返回使用类 printf 表达式格式化的文本字符串。">format</a></td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
   </table>
   </dd>
@@ -348,7 +370,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_ae46b0323f25693383deb0104d669b6e5_cgraph.svg" width="547" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_ae46b0323f25693383deb0104d669b6e5_cgraph.svg" width="547" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -379,7 +401,7 @@ template&lt;typename... Args&gt; </div>
 <p>记录 DEBUG 级别日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -462,7 +484,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc" title="返回使用类 printf 表达式格式化的文本字符串。">format</a></td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
   </table>
   </dd>
@@ -470,7 +492,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_a60a0a521afabc3266c847145af77237d_cgraph.svg" width="547" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_a60a0a521afabc3266c847145af77237d_cgraph.svg" width="547" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -501,7 +523,7 @@ template&lt;typename... Args&gt; </div>
 <p>记录 ERROR 级别日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -583,7 +605,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc" title="返回使用类 printf 表达式格式化的文本字符串。">format</a></td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
   </table>
   </dd>
@@ -591,7 +613,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_a4f3aab4e11b7a4d2665afbbfbaae8910_cgraph.svg" width="547" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_a4f3aab4e11b7a4d2665afbbfbaae8910_cgraph.svg" width="547" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -622,7 +644,7 @@ template&lt;typename... Args&gt; </div>
 <p>记录 INFO 级别日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -697,8 +719,8 @@ template&lt;typename... Args&gt; </div>
 <p>记录指定级别的日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a24139517493f283398e493462fbfc49c" title="获取最低输出级别">level</a></td><td>日志级别 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>日志级别 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -769,7 +791,7 @@ template&lt;typename... Args&gt; </div>
 <p>设置最低输出级别 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a24139517493f283398e493462fbfc49c" title="获取最低输出级别">level</a></td><td>最低输出级别 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>最低输出级别 </td></tr>
   </table>
   </dd>
 </dl>
@@ -819,7 +841,7 @@ template&lt;typename... Args&gt; </div>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#ga9d783cbcd4b7f38b293c4a666c2f89fc" title="返回使用类 printf 表达式格式化的文本字符串。">format</a></td><td>格式化字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>格式化字符串 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>可变参数包 </td></tr>
   </table>
   </dd>
@@ -827,7 +849,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_ac31dc4e8db63ca08cc4df5675b98ada4_cgraph.svg" width="547" height="91"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/d2a/classrm_1_1BasicLoggerProxy_ac31dc4e8db63ca08cc4df5675b98ada4_cgraph.svg" width="547" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -858,7 +880,7 @@ template&lt;typename... Args&gt; </div>
 <p>记录 WARN 级别日志 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../de/dd0/namespacerm_1_1msg.html" title="LPSS 消息类型命名空间">msg</a></td><td>日志消息 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>日志消息 </td></tr>
   </table>
   </dd>
 </dl>
@@ -876,7 +898,7 @@ template&lt;typename... Args&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

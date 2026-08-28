@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['服务模块_0',['服务模块',['../d2/dd0/group__rmvlsrv.html',1,'']]]
+  ['日志_0',['日志',['../dc/d55/group__logger.html',1,'']]]
 ];

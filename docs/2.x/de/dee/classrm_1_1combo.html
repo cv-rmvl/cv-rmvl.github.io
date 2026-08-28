@@ -7,7 +7,7 @@
   <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
   <meta content="IE=9" http-equiv="X-UA-Compatible"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="Doxygen 1.16.1" name="generator"/>
+  <meta content="Doxygen 1.18.0" name="generator"/>
   <title>RMVL: rm::combo类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -65,7 +65,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                 <span id="projectnumber">2.5.0-dev</span>
+                 <span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -74,24 +74,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script src="../../menudata.js" type="text/javascript"></script>
 <script src="../../menu.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="搜索" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<div id="MSearchSelectWindow">
 </div>
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -142,7 +167,7 @@ Public 类型</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a95e6f0835b708c706c61c4af096e2b9f" id="r_a95e6f0835b708c706c61c4af096e2b9f"><td class="memItemLeft">virtual <a class="el" href="#ae108afd463d341245250b4f527961eb9">ptr</a> </td><td class="memItemRight"><a class="el" href="#a95e6f0835b708c706c61c4af096e2b9f">clone</a> (int64_t <a class="el" href="#a04fa8b099f47a3c28967dfa5f8f4246a">tick</a>)=0</td></tr>
+<tr class="memitem:a95e6f0835b708c706c61c4af096e2b9f" id="r_a95e6f0835b708c706c61c4af096e2b9f"><td class="memItemLeft">virtual <a class="el" href="#ae108afd463d341245250b4f527961eb9">ptr</a> </td><td class="memItemRight"><a class="el" href="#a95e6f0835b708c706c61c4af096e2b9f">clone</a> (int64_t tick)=0</td></tr>
 <tr class="memdesc:a95e6f0835b708c706c61c4af096e2b9f"><td class="mdescLeft"> </td><td class="mdescRight">从另一个组合体进行构造  <br/></td></tr>
 <tr class="memitem:a711954174ea89dcf81d20ce34f342b6f" id="r_a711954174ea89dcf81d20ce34f342b6f"><td class="memItemLeft">float </td><td class="memItemRight"><a class="el" href="#a711954174ea89dcf81d20ce34f342b6f">height</a> () const</td></tr>
 <tr class="memdesc:a711954174ea89dcf81d20ce34f342b6f"><td class="mdescLeft"> </td><td class="mdescRight">获取组合体高度  <br/></td></tr>
@@ -368,7 +393,7 @@ Protected 属性</h2></td></tr>
 <p>从另一个组合体进行构造 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#a04fa8b099f47a3c28967dfa5f8f4246a" title="获取捕获该组合体的时间点">tick</a></td><td>当前时间点，可用 <span class="tt"><a class="el" href="../../d8/d74/classrm_1_1Time.html#a89f133f8d517b90b207ca4a84f6c0c5e" title="返回 Epoch 时间（单位：毫秒）">rm::Time::now()</a></span> 获取 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tick</td><td>当前时间点，可用 <span class="tt"><a class="el" href="../../d8/d74/classrm_1_1Time.html#a89f133f8d517b90b207ca4a84f6c0c5e" title="返回 Epoch 时间（单位：毫秒）">rm::Time::now()</a></span> 获取 </td></tr>
   </table>
   </dd>
 </dl>
@@ -938,7 +963,7 @@ Protected 属性</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者  <a href="http://www.doxygen.org/index.html">
 <img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

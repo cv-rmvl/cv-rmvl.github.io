@@ -1,0 +1,281 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: 二维路径跟踪与安全控制</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">二维路径跟踪与安全控制 <div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供 Pure Pursuit 路径跟踪和独立的预测碰撞刹停过滤器  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+二维路径跟踪与安全控制 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dd2/group__nav__controller.svg" width="336" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3APurePursuitOptions" id="r_rm_3A_3Anav_3A_3APurePursuitOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html">rm::nav::PurePursuitOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure Pursuit 配置  <a href="../../d9/ddc/structrm_1_1nav_1_1PurePursuitOptions.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ATrackingResult" id="r_rm_3A_3Anav_3A_3ATrackingResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d13/structrm_1_1nav_1_1TrackingResult.html">rm::nav::TrackingResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure Pursuit 计算结果  <a href="../../d4/d13/structrm_1_1nav_1_1TrackingResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3APurePursuit" id="r_rm_3A_3Anav_3A_3APurePursuit"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html">rm::nav::PurePursuit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure Pursuit 二维路径跟踪器  <a href="../../d4/d32/classrm_1_1nav_1_1PurePursuit.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ACollisionStopOptions" id="r_rm_3A_3Anav_3A_3ACollisionStopOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/d20/structrm_1_1nav_1_1CollisionStopOptions.html">rm::nav::CollisionStopOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">预测碰撞刹停配置  <a href="../../df/d20/structrm_1_1nav_1_1CollisionStopOptions.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ACollisionStopResult" id="r_rm_3A_3Anav_3A_3ACollisionStopResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d7b/structrm_1_1nav_1_1CollisionStopResult.html">rm::nav::CollisionStopResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">碰撞刹停过滤结果  <a href="../../dd/d7b/structrm_1_1nav_1_1CollisionStopResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ACollisionStop" id="r_rm_3A_3Anav_3A_3ACollisionStop"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html">rm::nav::CollisionStop</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">独立的短时预测碰撞刹停过滤器  <a href="../../dd/d51/classrm_1_1nav_1_1CollisionStop.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gad4f6cc00296f86bcb095a9883f3fc87a" id="r_gad4f6cc00296f86bcb095a9883f3fc87a"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gad4f6cc00296f86bcb095a9883f3fc87a">rm::nav::TrackingStatus</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#ggad4f6cc00296f86bcb095a9883f3fc87aaa60852f204ed8028c1c58808b746d115">rm::nav::TrackingStatus::Ok</a>
+, <a class="el" href="#ggad4f6cc00296f86bcb095a9883f3fc87aa3445abe58059264b3c95a6818988986f">rm::nav::TrackingStatus::GoalReached</a>
+, <a class="el" href="#ggad4f6cc00296f86bcb095a9883f3fc87aa4eb9f6b8ee5e828c8061153588d4f25c">rm::nav::TrackingStatus::InvalidOptions</a>
+, <a class="el" href="#ggad4f6cc00296f86bcb095a9883f3fc87aaf7928154734956392080623f8386a12f">rm::nav::TrackingStatus::InvalidPose</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggad4f6cc00296f86bcb095a9883f3fc87aa5d0744802b24f44a161d350c25d76c7b">rm::nav::TrackingStatus::InvalidPath</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gad4f6cc00296f86bcb095a9883f3fc87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">路径跟踪状态  <a href="#gad4f6cc00296f86bcb095a9883f3fc87a">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga55fa5a187dbb0d0df3baa40d8b7df16f" id="r_ga55fa5a187dbb0d0df3baa40d8b7df16f"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga55fa5a187dbb0d0df3baa40d8b7df16f">rm::nav::to_string</a> (<a class="el" href="#gad4f6cc00296f86bcb095a9883f3fc87a">TrackingStatus</a> status) noexcept</td></tr>
+<tr class="memdesc:ga55fa5a187dbb0d0df3baa40d8b7df16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径跟踪状态的稳定文本描述  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供 Pure Pursuit 路径跟踪和独立的预测碰撞刹停过滤器 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="gad4f6cc00296f86bcb095a9883f3fc87a" name="gad4f6cc00296f86bcb095a9883f3fc87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4f6cc00296f86bcb095a9883f3fc87a">&#9670;&#160;</a></span>TrackingStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gad4f6cc00296f86bcb095a9883f3fc87a">rm::nav::TrackingStatus</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/controller.hpp&gt;</code></p>
+
+<p>路径跟踪状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggad4f6cc00296f86bcb095a9883f3fc87aaa60852f204ed8028c1c58808b746d115" name="ggad4f6cc00296f86bcb095a9883f3fc87aaa60852f204ed8028c1c58808b746d115"></a>Ok&#160;</td><td class="fielddoc"><p>已生成有效控制指令 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4f6cc00296f86bcb095a9883f3fc87aa3445abe58059264b3c95a6818988986f" name="ggad4f6cc00296f86bcb095a9883f3fc87aa3445abe58059264b3c95a6818988986f"></a>GoalReached&#160;</td><td class="fielddoc"><p>已进入目标容差，控制指令为零 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4f6cc00296f86bcb095a9883f3fc87aa4eb9f6b8ee5e828c8061153588d4f25c" name="ggad4f6cc00296f86bcb095a9883f3fc87aa4eb9f6b8ee5e828c8061153588d4f25c"></a>InvalidOptions&#160;</td><td class="fielddoc"><p>控制器配置无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4f6cc00296f86bcb095a9883f3fc87aaf7928154734956392080623f8386a12f" name="ggad4f6cc00296f86bcb095a9883f3fc87aaf7928154734956392080623f8386a12f"></a>InvalidPose&#160;</td><td class="fielddoc"><p>当前位姿无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggad4f6cc00296f86bcb095a9883f3fc87aa5d0744802b24f44a161d350c25d76c7b" name="ggad4f6cc00296f86bcb095a9883f3fc87aa5d0744802b24f44a161d350c25d76c7b"></a>InvalidPath&#160;</td><td class="fielddoc"><p>路径为空、坐标无效或坐标系不一致 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ga55fa5a187dbb0d0df3baa40d8b7df16f" name="ga55fa5a187dbb0d0df3baa40d8b7df16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55fa5a187dbb0d0df3baa40d8b7df16f">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * rm::nav::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gad4f6cc00296f86bcb095a9883f3fc87a">TrackingStatus</a></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/controller.hpp&gt;</code></p>
+
+<p>获取路径跟踪状态的稳定文本描述 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>路径跟踪状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向静态文本的字符串指针 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/dd2/group__nav__controller_ga55fa5a187dbb0d0df3baa40d8b7df16f_cgraph.svg" width="147" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

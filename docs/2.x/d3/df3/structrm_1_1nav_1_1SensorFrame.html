@@ -1,0 +1,340 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::SensorFrame结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../d3/df3/structrm_1_1nav_1_1SensorFrame.html">SensorFrame</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d6/d1d/structrm_1_1nav_1_1SensorFrame-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::SensorFrame结构体 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../db/d06/group__nav__localization.html">视觉里程计与 SLAM 接入</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>已同步的一帧视觉定位输入  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+<div class="dynheader">
+rm::nav::SensorFrame 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d88/structrm_1_1nav_1_1SensorFrame__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae3b9d3a2a2cc254675eef2a7ebbc8d40" id="r_ae3b9d3a2a2cc254675eef2a7ebbc8d40"><td class="memItemLeft">const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ae3b9d3a2a2cc254675eef2a7ebbc8d40">stamp</a> () const noexcept</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a29053a1cf2f4d5d438784c0d8c78586d" id="r_a29053a1cf2f4d5d438784c0d8c78586d"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga4414d0de10104a167521f59e48c4f877">CameraMode</a>&#160;</td><td class="memItemRight"><a class="el" href="#a29053a1cf2f4d5d438784c0d8c78586d">mode</a> {<a class="el" href="../../db/d06/group__nav__localization.html#gga4414d0de10104a167521f59e48c4f877a5faceedd0d3dabe003bd7a8baf14ce0d">CameraMode::Rgbd</a>}</td></tr>
+<tr class="memdesc:a29053a1cf2f4d5d438784c0d8c78586d"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机输入组合  <br /></td></tr>
+<tr class="memitem:a91a7aaf63824161fe963d9f0bb73f51e" id="r_a91a7aaf63824161fe963d9f0bb73f51e"><td class="memItemLeft">std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a91a7aaf63824161fe963d9f0bb73f51e">primary</a> {}</td></tr>
+<tr class="memdesc:a91a7aaf63824161fe963d9f0bb73f51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">主图像，单目和 RGB-D 通常为彩色或灰度图  <br /></td></tr>
+<tr class="memitem:a2a4cab2b0231ee12f22683474db64f0a" id="r_a2a4cab2b0231ee12f22683474db64f0a"><td class="memItemLeft">std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2a4cab2b0231ee12f22683474db64f0a">secondary</a> {}</td></tr>
+<tr class="memdesc:a2a4cab2b0231ee12f22683474db64f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stereo 为右目图，RGB-D 为深度图  <br /></td></tr>
+<tr class="memitem:af640631c72362450cbe951f05a4ed953" id="r_af640631c72362450cbe951f05a4ed953"><td class="memItemLeft"><a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a>&#160;</td><td class="memItemRight"><a class="el" href="#af640631c72362450cbe951f05a4ed953">primary_info</a> {}</td></tr>
+<tr class="memdesc:af640631c72362450cbe951f05a4ed953"><td class="mdescLeft">&#160;</td><td class="mdescRight">主相机标定信息  <br /></td></tr>
+<tr class="memitem:a5b1cf08dfc1d6a034159aa5df728e746" id="r_a5b1cf08dfc1d6a034159aa5df728e746"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5b1cf08dfc1d6a034159aa5df728e746">secondary_info</a> {}</td></tr>
+<tr class="memdesc:a5b1cf08dfc1d6a034159aa5df728e746"><td class="mdescLeft">&#160;</td><td class="mdescRight">右目或深度相机标定信息  <br /></td></tr>
+<tr class="memitem:a1ebd70207551415c8a941ad2d1e23df6" id="r_a1ebd70207551415c8a941ad2d1e23df6"><td class="memItemLeft">std::vector&lt; <a class="el" href="../../de/d43/classrm_1_1msg_1_1Imu.html">msg::Imu</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1ebd70207551415c8a941ad2d1e23df6">imu</a> {}</td></tr>
+<tr class="memdesc:a1ebd70207551415c8a941ad2d1e23df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">上一视觉帧之后且不晚于本帧的 IMU 样本  <br /></td></tr>
+<tr class="memitem:a08a00ffd1d478e22ce1169baf127104c" id="r_a08a00ffd1d478e22ce1169baf127104c"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../dc/db8/classrm_1_1msg_1_1Odometry.html">msg::Odometry</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a08a00ffd1d478e22ce1169baf127104c">auxiliary_odometry</a> {}</td></tr>
+<tr class="memdesc:a08a00ffd1d478e22ce1169baf127104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">与本帧最接近的轮速计或其他外部里程计  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>已同步的一帧视觉定位输入 </p>
+<ul>
+<li>单目模式只填写 <code class="param">primary</code> 和 <code class="param">primary_info</code> </li>
+<li>双目和 RGB-D 模式同时填写 <code class="param">secondary</code> 和 <code class="param">secondary_info</code> </li>
+<li><code class="param">imu</code> 覆盖上一成功视觉帧之后且不晚于当前主图像的样本</li>
+<li><code class="param">auxiliary_odometry</code> 为同步容差内与主图像采集时间最接近的外部里程计 </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="ae3b9d3a2a2cc254675eef2a7ebbc8d40" name="ae3b9d3a2a2cc254675eef2a7ebbc8d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b9d3a2a2cc254675eef2a7ebbc8d40">&#9670;&#160;</a></span>stamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d2/d47/classrm_1_1msg_1_1Time.html">msg::Time</a> &amp; rm::nav::SensorFrame::stamp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>本帧采集时间，以主图像时间戳为准，无主图像时返回零时间 </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a08a00ffd1d478e22ce1169baf127104c" name="a08a00ffd1d478e22ce1169baf127104c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a00ffd1d478e22ce1169baf127104c">&#9670;&#160;</a></span>auxiliary_odometry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="../../dc/db8/classrm_1_1msg_1_1Odometry.html">msg::Odometry</a>&gt; rm::nav::SensorFrame::auxiliary_odometry {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>与本帧最接近的轮速计或其他外部里程计 </p>
+
+</div>
+</div>
+<a id="a1ebd70207551415c8a941ad2d1e23df6" name="a1ebd70207551415c8a941ad2d1e23df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebd70207551415c8a941ad2d1e23df6">&#9670;&#160;</a></span>imu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../de/d43/classrm_1_1msg_1_1Imu.html">msg::Imu</a>&gt; rm::nav::SensorFrame::imu {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上一视觉帧之后且不晚于本帧的 IMU 样本 </p>
+
+</div>
+</div>
+<a id="a29053a1cf2f4d5d438784c0d8c78586d" name="a29053a1cf2f4d5d438784c0d8c78586d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29053a1cf2f4d5d438784c0d8c78586d">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga4414d0de10104a167521f59e48c4f877">CameraMode</a> rm::nav::SensorFrame::mode {<a class="el" href="../../db/d06/group__nav__localization.html#gga4414d0de10104a167521f59e48c4f877a5faceedd0d3dabe003bd7a8baf14ce0d">CameraMode::Rgbd</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>相机输入组合 </p>
+
+</div>
+</div>
+<a id="a91a7aaf63824161fe963d9f0bb73f51e" name="a91a7aaf63824161fe963d9f0bb73f51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a7aaf63824161fe963d9f0bb73f51e">&#9670;&#160;</a></span>primary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a>&gt; rm::nav::SensorFrame::primary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主图像，单目和 RGB-D 通常为彩色或灰度图 </p>
+
+</div>
+</div>
+<a id="af640631c72362450cbe951f05a4ed953" name="af640631c72362450cbe951f05a4ed953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af640631c72362450cbe951f05a4ed953">&#9670;&#160;</a></span>primary_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> rm::nav::SensorFrame::primary_info {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主相机标定信息 </p>
+
+</div>
+</div>
+<a id="a2a4cab2b0231ee12f22683474db64f0a" name="a2a4cab2b0231ee12f22683474db64f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4cab2b0231ee12f22683474db64f0a">&#9670;&#160;</a></span>secondary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a>&gt; rm::nav::SensorFrame::secondary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stereo 为右目图，RGB-D 为深度图 </p>
+
+</div>
+</div>
+<a id="a5b1cf08dfc1d6a034159aa5df728e746" name="a5b1cf08dfc1d6a034159aa5df728e746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1cf08dfc1d6a034159aa5df728e746">&#9670;&#160;</a></span>secondary_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a>&gt; rm::nav::SensorFrame::secondary_info {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右目或深度相机标定信息 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

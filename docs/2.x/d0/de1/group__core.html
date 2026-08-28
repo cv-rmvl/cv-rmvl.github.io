@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: RMVL 核心模块</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,29 +73,51 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="doc-content">
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -351,7 +373,7 @@ RMVL 核心模块 的协作图:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\033[31m err - \033[0m&quot;</span> __VA_ARGS__); \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);                                 \</div>
 <div class="line">} <span class="keywordflow">while</span> (<span class="keyword">false</span>)</div>
-</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d3/d3f/samples_2camera_2hik_2sample_hik_writer_8cpp-example.html#a5">samples/camera/hik/sample_hik_writer.cpp</a>, <a class="el" href="../../df/d77/samples_2camera_2mv_2sample_mv_writer_8cpp-example.html#a5">samples/camera/mv/sample_mv_writer.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a22">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a22">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d3/d3f/samples_2camera_2hik_2sample_hik_writer_8cpp-example.html#_a5">samples/camera/hik/sample_hik_writer.cpp</a>, <a class="el" href="../../df/d77/samples_2camera_2mv_2sample_mv_writer_8cpp-example.html#_a5">samples/camera/mv/sample_mv_writer.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a22">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a22">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -399,7 +421,7 @@ RMVL 核心模块 的协作图:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;info - &quot;</span> __VA_ARGS__); \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);                  \</div>
 <div class="line">} <span class="keywordflow">while</span> (<span class="keyword">false</span>)</div>
-</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d5/d29/samples_2camera_2hik_2sample_hik_multi_8cpp-example.html#a0">samples/camera/hik/sample_hik_multi.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a21">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a21">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d5/d29/samples_2camera_2hik_2sample_hik_multi_8cpp-example.html#_a0">samples/camera/hik/sample_hik_multi.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a21">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a21">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -424,7 +446,7 @@ RMVL 核心模块 的协作图:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\033[32minfo - \033[0m&quot;</span> __VA_ARGS__); \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);                                 \</div>
 <div class="line">} <span class="keywordflow">while</span> (<span class="keyword">false</span>)</div>
-</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a23">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a23">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a23">samples/detector/hik/sample_hik_armor_collection.cpp</a> , 以及 <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a23">samples/detector/mv/sample_mv_armor_collection.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -452,7 +474,7 @@ RMVL 核心模块 的协作图:</div>
 <p>在运行时检查条件，如果失败则抛出异常 </p>
 <dl class="section note"><dt>注解</dt><dd>宏 RMVL_Assert (以及 RMVL_DbgAssert) 对指定的表达式求值。如果它是0，宏抛出一个错误。宏 RMVL_Assert 将会在 Debug 和 Release 的配置下检查条件，而 RMVL_DbgAssert 只会在 Debug 的配置下生效。 </dd></dl>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="#gaf7cd096c36c198de2a85d0719fb92b4b" title="RMVL 错误码">RMVLErrorCode</a> </dd></dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d9/de7/samples_2tutorial_code_2io_2sample_write_corners_8cpp-example.html#a0">samples/tutorial_code/io/sample_write_corners.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d9/de7/samples_2tutorial_code_2io_2sample_write_corners_8cpp-example.html#_a0">samples/tutorial_code/io/sample_write_corners.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -531,7 +553,7 @@ RMVL 核心模块 的协作图:</div>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../de/de0/samples_2camera_2mv_2sample_mv_auto_calib_8cpp-example.html#a0">samples/camera/mv/sample_mv_auto_calib.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a14">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#a4">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a14">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#a4">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+<dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../de/de0/samples_2camera_2mv_2sample_mv_auto_calib_8cpp-example.html#_a0">samples/camera/mv/sample_mv_auto_calib.cpp</a>, <a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a14">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#_a4">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a14">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#_a4">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -601,7 +623,7 @@ RMVL 核心模块 的协作图:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\033[33mwarn - \033[0m&quot;</span> __VA_ARGS__); \</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);                                 \</div>
 <div class="line">} <span class="keywordflow">while</span> (<span class="keyword">false</span>)</div>
-</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#a18">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#a8">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#a18">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#a8">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../da/da8/samples_2detector_2hik_2sample_hik_armor_collection_8cpp-example.html#_a18">samples/detector/hik/sample_hik_armor_collection.cpp</a>, <a class="el" href="../../d5/d46/samples_2detector_2hik_2sample_hik_armor_size_classify_8cpp-example.html#_a8">samples/detector/hik/sample_hik_armor_size_classify.cpp</a>, <a class="el" href="../../d6/d49/samples_2detector_2mv_2sample_mv_armor_collection_8cpp-example.html#_a18">samples/detector/mv/sample_mv_armor_collection.cpp</a> , 以及 <a class="el" href="../../da/d27/samples_2detector_2mv_2sample_mv_armor_size_classify_8cpp-example.html#_a8">samples/detector/mv/sample_mv_armor_size_classify.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -716,6 +738,11 @@ template&lt;typename Tp&gt; </div>
 
 <p>触发非法内存操作 </p>
 <dl class="section note"><dt>注解</dt><dd>当调用该函数时，默认错误处理程序会发出一个硬件异常，这可以使调试更加方便 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_gabd73800a8a628c56c9d308c22fc719cb_cgraph.svg" width="144" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -768,6 +795,11 @@ template&lt;typename Tp&gt; </div>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd><a class="el" href="#gaf280cef1ac39cc635210419c6aa9e8dd" title="调用错误处理程序">RMVL_Error</a>, <a class="el" href="#ga6ceb64e0c1708b39fed13fc311c3cdfc" title="调用错误处理程序">RMVL_Error_</a>, <a class="el" href="#gac56d8385bc039215b7c14f05210dab1c" title="在运行时检查条件，如果失败则抛出异常">RMVL_Assert</a> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_gabe1da7007de9e49ed54906db46b2635a_cgraph.svg" width="90" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -818,6 +850,11 @@ template&lt;typename Tp&gt; </div>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><span class="tt">size_t</span>  </td><td class="markdownTableBodyNone"><span class="tt">zu</span>  </td></tr>
 </table>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_ga9d783cbcd4b7f38b293c4a666c2f89fc_cgraph.svg" width="103" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -846,6 +883,11 @@ template&lt;typename Tp&gt; </div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_gaf02e400b3f459cb836ee81ee05e71ed8_cgraph.svg" width="188" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -901,6 +943,11 @@ template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate
 <p><code>#include &lt;rmvl/core/util.hpp&gt;</code></p>
 
 <p>获取当前进程的 ID </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_gafbe1fc1291dcca5f41435f775d12e320_cgraph.svg" width="120" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -930,6 +977,11 @@ template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate
 <p><code>#include &lt;rmvl/core/util.hpp&gt;</code></p>
 
 <p>抛出异常 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d0/de1/group__core_ga9b257f4387ea37392a61bd7f1f254aee_cgraph.svg" width="127" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -939,7 +991,7 @@ template&lt;typename Tp, typename Enable = std::enable_if_t&lt;std::is_aggregate
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

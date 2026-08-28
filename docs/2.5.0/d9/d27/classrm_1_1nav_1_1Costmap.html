@@ -1,0 +1,869 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::Costmap类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../d9/d27/classrm_1_1nav_1_1Costmap.html">Costmap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d9/dd2/classrm_1_1nav_1_1Costmap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::Costmap类 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../d9/df0/group__nav__map.html">二维栅格地图与代价地图</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>二维分层代价地图  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/map.hpp&gt;</code></p>
+<div class="dynheader">
+rm::nav::Costmap 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/da0/classrm_1_1nav_1_1Costmap__coll__graph.svg" width="136" height="310"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afe9d9c6a1a94db4b5f97a1986b3dbd81" id="r_afe9d9c6a1a94db4b5f97a1986b3dbd81"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afe9d9c6a1a94db4b5f97a1986b3dbd81">Costmap</a> ()</td></tr>
+<tr class="memdesc:afe9d9c6a1a94db4b5f97a1986b3dbd81"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造空代价地图  <br /></td></tr>
+<tr class="memitem:ac017ddf4178da617ee1772b9f23728a6" id="r_ac017ddf4178da617ee1772b9f23728a6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac017ddf4178da617ee1772b9f23728a6">Costmap</a> (const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;static_map, <a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a> options={})</td></tr>
+<tr class="memdesc:ac017ddf4178da617ee1772b9f23728a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用静态占据栅格构造代价地图  <br /></td></tr>
+<tr class="memitem:a0e96f1ce4cccaec17eb8bf99aebbc41b" id="r_a0e96f1ce4cccaec17eb8bf99aebbc41b"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0e96f1ce4cccaec17eb8bf99aebbc41b">reset</a> (const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;static_map, <a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a> options={})</td></tr>
+<tr class="memdesc:a0e96f1ce4cccaec17eb8bf99aebbc41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建几何信息、静态层和空白局部障碍层  <br /></td></tr>
+<tr class="memitem:a3ab11124bf57e4d52eeecbfb2d0a356c" id="r_a3ab11124bf57e4d52eeecbfb2d0a356c"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3ab11124bf57e4d52eeecbfb2d0a356c">setStaticMap</a> (const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;static_map)</td></tr>
+<tr class="memdesc:a3ab11124bf57e4d52eeecbfb2d0a356c"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用几何信息一致的新地图更新静态层  <br /></td></tr>
+<tr class="memitem:af3e46e68cf20fd7ebfd919bde4d86481" id="r_af3e46e68cf20fd7ebfd919bde4d86481"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af3e46e68cf20fd7ebfd919bde4d86481">valid</a> () const noexcept</td></tr>
+<tr class="memitem:af0de6f9882412aa9ba76235660a5f885" id="r_af0de6f9882412aa9ba76235660a5f885"><td class="memItemLeft">const <a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af0de6f9882412aa9ba76235660a5f885">options</a> () const noexcept</td></tr>
+<tr class="memitem:a8353a1f527089e1b68c3df4c993f4931" id="r_a8353a1f527089e1b68c3df4c993f4931"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a8353a1f527089e1b68c3df4c993f4931">width</a> () const noexcept</td></tr>
+<tr class="memitem:aaf26b8d79a52ef1a0a3828d505576f66" id="r_aaf26b8d79a52ef1a0a3828d505576f66"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aaf26b8d79a52ef1a0a3828d505576f66">height</a> () const noexcept</td></tr>
+<tr class="memitem:a7db98dacaf79fe81eaf463d03b61ea65" id="r_a7db98dacaf79fe81eaf463d03b61ea65"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a7db98dacaf79fe81eaf463d03b61ea65">frameId</a> () const noexcept</td></tr>
+<tr class="memitem:a6676c6bf3997b352bbeed60e378b967e" id="r_a6676c6bf3997b352bbeed60e378b967e"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../d6/dff/structrm_1_1nav_1_1Cell.html">Cell</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6676c6bf3997b352bbeed60e378b967e">worldToMap</a> (double world_x, double world_y) const noexcept</td></tr>
+<tr class="memdesc:a6676c6bf3997b352bbeed60e378b967e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将世界坐标转换为栅格坐标  <br /></td></tr>
+<tr class="memitem:a4c7019176491a75cb822d1a7d1716823" id="r_a4c7019176491a75cb822d1a7d1716823"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">msg::Point</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4c7019176491a75cb822d1a7d1716823">mapToWorld</a> (uint32_t x, uint32_t y) const noexcept</td></tr>
+<tr class="memdesc:a4c7019176491a75cb822d1a7d1716823"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取栅格中心的世界坐标  <br /></td></tr>
+<tr class="memitem:aa597a261cc970d0e96919341f7c4e01c" id="r_aa597a261cc970d0e96919341f7c4e01c"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa597a261cc970d0e96919341f7c4e01c">markObstacle</a> (<a class="el" href="../../d6/dff/structrm_1_1nav_1_1Cell.html">Cell</a> cell) noexcept</td></tr>
+<tr class="memdesc:aa597a261cc970d0e96919341f7c4e01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在局部障碍层标记一个栅格障碍  <br /></td></tr>
+<tr class="memitem:aaafdfdf3f2ba2971caef5321dedfb4b8" id="r_aaafdfdf3f2ba2971caef5321dedfb4b8"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#aaafdfdf3f2ba2971caef5321dedfb4b8">markObstacle</a> (double world_x, double world_y) noexcept</td></tr>
+<tr class="memdesc:aaafdfdf3f2ba2971caef5321dedfb4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">在局部障碍层标记一个世界坐标障碍  <br /></td></tr>
+<tr class="memitem:adadb3867aa6cc98156143e5c9d91771d" id="r_adadb3867aa6cc98156143e5c9d91771d"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#adadb3867aa6cc98156143e5c9d91771d">clearObstacles</a> () noexcept</td></tr>
+<tr class="memitem:ae275e7f6775544e9f60c3da46f14d933" id="r_ae275e7f6775544e9f60c3da46f14d933"><td class="memItemLeft"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae275e7f6775544e9f60c3da46f14d933">clearRay</a> (double start_x, double start_y, double end_x, double end_y)</td></tr>
+<tr class="memdesc:ae275e7f6775544e9f60c3da46f14d933"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除局部障碍层中的一条世界坐标射线  <br /></td></tr>
+<tr class="memitem:a8d5d4f213e511dfbd2b9573222f1b709" id="r_a8d5d4f213e511dfbd2b9573222f1b709"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d5d4f213e511dfbd2b9573222f1b709">updateCosts</a> ()</td></tr>
+<tr class="memdesc:a8d5d4f213e511dfbd2b9573222f1b709"><td class="mdescLeft">&#160;</td><td class="mdescRight">合并静态层和局部障碍层，并根据配置重新计算膨胀代价  <br /></td></tr>
+<tr class="memitem:a845364dbbb5ee4c668df6c3776192c3a" id="r_a845364dbbb5ee4c668df6c3776192c3a"><td class="memItemLeft">std::optional&lt; uint8_t &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a845364dbbb5ee4c668df6c3776192c3a">at</a> (uint32_t x, uint32_t y) const noexcept</td></tr>
+<tr class="memdesc:a845364dbbb5ee4c668df6c3776192c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取主代价地图栅格值  <br /></td></tr>
+<tr class="memitem:a02e7457124f9365b23a88c27ba4378ea" id="r_a02e7457124f9365b23a88c27ba4378ea"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a02e7457124f9365b23a88c27ba4378ea">collides</a> (const std::vector&lt; <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">msg::Point</a> &gt; &amp;footprint, const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;pose) const</td></tr>
+<tr class="memdesc:a02e7457124f9365b23a88c27ba4378ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测机器人 footprint 是否发生碰撞  <br /></td></tr>
+<tr class="memitem:a6e963ec39ad46970de55b476f5e8ec74" id="r_a6e963ec39ad46970de55b476f5e8ec74"><td class="memItemLeft"><a class="el" href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">msg::OccupancyGrid</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6e963ec39ad46970de55b476f5e8ec74">message</a> () const</td></tr>
+<tr class="memdesc:a6e963ec39ad46970de55b476f5e8ec74"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前主代价地图导出为 OccupancyGrid  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>二维分层代价地图 </p>
+<p>内部维护静态层和局部障碍层，<span class="tt"><a class="el" href="#a8d5d4f213e511dfbd2b9573222f1b709" title="合并静态层和局部障碍层，并根据配置重新计算膨胀代价">updateCosts()</a></span> 将两层合并后执行障碍膨胀。 局部障碍支持单点标记和射线清除，适合批量接收传感器观测后统一更新主代价地图。 </p><dl class="section note"><dt>注解</dt><dd>该类不提供内部同步。跨线程访问时由调用方加锁。 </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="afe9d9c6a1a94db4b5f97a1986b3dbd81" name="afe9d9c6a1a94db4b5f97a1986b3dbd81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9d9c6a1a94db4b5f97a1986b3dbd81">&#9670;&#160;</a></span>Costmap() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::nav::Costmap::Costmap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造空代价地图 </p>
+
+</div>
+</div>
+<a id="ac017ddf4178da617ee1772b9f23728a6" name="ac017ddf4178da617ee1772b9f23728a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac017ddf4178da617ee1772b9f23728a6">&#9670;&#160;</a></span>Costmap() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::nav::Costmap::Costmap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>static_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用静态占据栅格构造代价地图 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">static_map</td><td>静态占据栅格 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>代价地图配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>备注</dt><dd>输入无效时构造为空代价地图，可使用 <a class="el" href="#af3e46e68cf20fd7ebfd919bde4d86481">valid()</a> 检查。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_ac017ddf4178da617ee1772b9f23728a6_cgraph.svg" width="454" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a845364dbbb5ee4c668df6c3776192c3a" name="a845364dbbb5ee4c668df6c3776192c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845364dbbb5ee4c668df6c3776192c3a">&#9670;&#160;</a></span>at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; uint8_t &gt; rm::nav::Costmap::at </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取主代价地图栅格值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>栅格横向索引 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>栅格纵向索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>栅格有效时返回代价值，否则返回 <span class="tt">std::nullopt</span> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a845364dbbb5ee4c668df6c3776192c3a_cgraph.svg" width="168" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="adadb3867aa6cc98156143e5c9d91771d" name="adadb3867aa6cc98156143e5c9d91771d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadb3867aa6cc98156143e5c9d91771d">&#9670;&#160;</a></span>clearObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::clearObstacles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>清空局部障碍层的操作状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_adadb3867aa6cc98156143e5c9d91771d_cgraph.svg" width="251" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae275e7f6775544e9f60c3da46f14d933" name="ae275e7f6775544e9f60c3da46f14d933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae275e7f6775544e9f60c3da46f14d933">&#9670;&#160;</a></span>clearRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::clearRay </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>start_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>start_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>end_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>end_y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除局部障碍层中的一条世界坐标射线 </p>
+<p>射线会裁剪到地图边界，且不修改静态层。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_x</td><td>射线起点的世界坐标 X，单位为米 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_y</td><td>射线起点的世界坐标 Y，单位为米 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_x</td><td>射线终点的世界坐标 X，单位为米 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_y</td><td>射线终点的世界坐标 Y，单位为米 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>地图操作状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_ae275e7f6775544e9f60c3da46f14d933_cgraph.svg" width="212" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a02e7457124f9365b23a88c27ba4378ea" name="a02e7457124f9365b23a88c27ba4378ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e7457124f9365b23a88c27ba4378ea">&#9670;&#160;</a></span>collides()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::nav::Costmap::collides </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">msg::Point</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>footprint</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pose</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检测机器人 footprint 是否发生碰撞 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">footprint</td><td>机器人局部坐标系中的闭合多边形顶点，无需重复首顶点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>机器人在地图坐标系中的平面位姿 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>footprint 无效、超出地图，或覆盖致命/内切/按配置判定的未知栅格时返回 <span class="tt">true</span> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a02e7457124f9365b23a88c27ba4378ea_cgraph.svg" width="206" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7db98dacaf79fe81eaf463d03b61ea65" name="a7db98dacaf79fe81eaf463d03b61ea65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db98dacaf79fe81eaf463d03b61ea65">&#9670;&#160;</a></span>frameId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view rm::nav::Costmap::frameId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>代价地图所属坐标系，无效地图返回空字符串 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a7db98dacaf79fe81eaf463d03b61ea65_cgraph.svg" width="207" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaf26b8d79a52ef1a0a3828d505576f66" name="aaf26b8d79a52ef1a0a3828d505576f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf26b8d79a52ef1a0a3828d505576f66">&#9670;&#160;</a></span>height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t rm::nav::Costmap::height </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>地图高度，单位为格 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_aaf26b8d79a52ef1a0a3828d505576f66_cgraph.svg" width="196" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4c7019176491a75cb822d1a7d1716823" name="a4c7019176491a75cb822d1a7d1716823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7019176491a75cb822d1a7d1716823">&#9670;&#160;</a></span>mapToWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">msg::Point</a> &gt; rm::nav::Costmap::mapToWorld </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取栅格中心的世界坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>栅格横向索引 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>栅格纵向索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>栅格有效时返回世界坐标，否则返回 <span class="tt">std::nullopt</span> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a4c7019176491a75cb822d1a7d1716823_cgraph.svg" width="235" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa597a261cc970d0e96919341f7c4e01c" name="aa597a261cc970d0e96919341f7c4e01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa597a261cc970d0e96919341f7c4e01c">&#9670;&#160;</a></span>markObstacle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::markObstacle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dff/structrm_1_1nav_1_1Cell.html">Cell</a></td>          <td class="paramname"><span class="paramname"><em>cell</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在局部障碍层标记一个栅格障碍 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>障碍所在的离散栅格 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>地图操作状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_aa597a261cc970d0e96919341f7c4e01c_cgraph.svg" width="247" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaafdfdf3f2ba2971caef5321dedfb4b8" name="aaafdfdf3f2ba2971caef5321dedfb4b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaafdfdf3f2ba2971caef5321dedfb4b8">&#9670;&#160;</a></span>markObstacle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::markObstacle </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在局部障碍层标记一个世界坐标障碍 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">world_x</td><td>障碍的世界坐标 X，单位为米 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">world_y</td><td>障碍的世界坐标 Y，单位为米 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>地图操作状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_aaafdfdf3f2ba2971caef5321dedfb4b8_cgraph.svg" width="530" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6e963ec39ad46970de55b476f5e8ec74" name="a6e963ec39ad46970de55b476f5e8ec74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e963ec39ad46970de55b476f5e8ec74">&#9670;&#160;</a></span>message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">msg::OccupancyGrid</a> rm::nav::Costmap::message </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将当前主代价地图导出为 OccupancyGrid </p>
+<dl class="section return"><dt>返回</dt><dd>有效时返回转换后的全量占据栅格，否则返回空消息 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>中间代价值会缩放至 [1, 99]。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a6e963ec39ad46970de55b476f5e8ec74_cgraph.svg" width="215" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af0de6f9882412aa9ba76235660a5f885" name="af0de6f9882412aa9ba76235660a5f885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0de6f9882412aa9ba76235660a5f885">&#9670;&#160;</a></span>options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a> &amp; rm::nav::Costmap::options </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>当前代价地图配置的常引用 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_af0de6f9882412aa9ba76235660a5f885_cgraph.svg" width="203" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0e96f1ce4cccaec17eb8bf99aebbc41b" name="a0e96f1ce4cccaec17eb8bf99aebbc41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e96f1ce4cccaec17eb8bf99aebbc41b">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::reset </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>static_map</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d22/structrm_1_1nav_1_1CostmapOptions.html">CostmapOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重建几何信息、静态层和空白局部障碍层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">static_map</td><td>静态占据栅格 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>代价地图配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>地图操作状态 </dd></dl>
+<dl class="section remark"><dt>备注</dt><dd>操作失败时保持原代价地图不变。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a0e96f1ce4cccaec17eb8bf99aebbc41b_cgraph.svg" width="428" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3ab11124bf57e4d52eeecbfb2d0a356c" name="a3ab11124bf57e4d52eeecbfb2d0a356c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab11124bf57e4d52eeecbfb2d0a356c">&#9670;&#160;</a></span>setStaticMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/df0/group__nav__map.html#gafbae1bb6162cde6d174c0fe3096a29be">MapStatus</a> rm::nav::Costmap::setStaticMap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html">GridMap</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>static_map</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用几何信息一致的新地图更新静态层 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">static_map</td><td>新的静态占据栅格 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>地图操作状态 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>新地图的坐标系、尺寸、分辨率和原点必须与当前地图一致。 </dd></dl>
+
+</div>
+</div>
+<a id="a8d5d4f213e511dfbd2b9573222f1b709" name="a8d5d4f213e511dfbd2b9573222f1b709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5d4f213e511dfbd2b9573222f1b709">&#9670;&#160;</a></span>updateCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::nav::Costmap::updateCosts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>合并静态层和局部障碍层，并根据配置重新计算膨胀代价 </p>
+<dl class="section note"><dt>注解</dt><dd><a class="el" href="#aa597a261cc970d0e96919341f7c4e01c" title="在局部障碍层标记一个栅格障碍">markObstacle()</a>、clearObstacles() 和 <a class="el" href="#ae275e7f6775544e9f60c3da46f14d933" title="清除局部障碍层中的一条世界坐标射线">clearRay()</a> 只修改局部障碍层。调用本函数前， <a class="el" href="#a845364dbbb5ee4c668df6c3776192c3a" title="获取主代价地图栅格值">at()</a>、collides() 和 <a class="el" href="#a6e963ec39ad46970de55b476f5e8ec74" title="将当前主代价地图导出为 OccupancyGrid">message()</a> 仍读取上一次合成的主代价地图。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a8d5d4f213e511dfbd2b9573222f1b709_cgraph.svg" width="200" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af3e46e68cf20fd7ebfd919bde4d86481" name="af3e46e68cf20fd7ebfd919bde4d86481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e46e68cf20fd7ebfd919bde4d86481">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::nav::Costmap::valid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>代价地图是否有效 </dd></dl>
+
+</div>
+</div>
+<a id="a8353a1f527089e1b68c3df4c993f4931" name="a8353a1f527089e1b68c3df4c993f4931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8353a1f527089e1b68c3df4c993f4931">&#9670;&#160;</a></span>width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t rm::nav::Costmap::width </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>地图宽度，单位为格 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a8353a1f527089e1b68c3df4c993f4931_cgraph.svg" width="191" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6676c6bf3997b352bbeed60e378b967e" name="a6676c6bf3997b352bbeed60e378b967e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6676c6bf3997b352bbeed60e378b967e">&#9670;&#160;</a></span>worldToMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="../../d6/dff/structrm_1_1nav_1_1Cell.html">Cell</a> &gt; rm::nav::Costmap::worldToMap </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>world_y</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将世界坐标转换为栅格坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">world_x</td><td>世界坐标 X，单位为米 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">world_y</td><td>世界坐标 Y，单位为米 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>坐标位于地图内时返回离散栅格，否则返回 <span class="tt">std::nullopt</span> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d27/classrm_1_1nav_1_1Costmap_a6676c6bf3997b352bbeed60e378b967e_cgraph.svg" width="234" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['更新关节状态_0',['2.2 更新关节状态',['../d1/d0b/tutorial_modules_lpss_robotpln.html#autotoc_md336',1,'']]]
+  ['是什么_0',['1.1 OPC UA 是什么',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_what',1,'']]]
 ];

@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: LPSS CLI 工具</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -125,87 +147,87 @@ $(function() {
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md429">前言 </a>
+        <a href="#autotoc_md437">前言 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md430">create 命令 </a>
+        <a href="#autotoc_md438">create 命令 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md431">node 命令 </a>
+        <a href="#autotoc_md439">node 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md432">list 子命令 </a>
+            <a href="#autotoc_md440">list 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md433">info 子命令 </a>
+            <a href="#autotoc_md441">info 子命令 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md434">topic 命令 </a>
+        <a href="#autotoc_md442">topic 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md435">list 子命令 </a>
+            <a href="#autotoc_md443">list 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md436">find 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md437">info 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md438">echo 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md439">pub 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md440">type 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md441">hz 子命令 </a>
-          </li>
-          <li class="level3">
-            <a href="#autotoc_md442">bw 子命令 </a>
-          </li>
-        </ul>
-      </li>
-      <li class="level2">
-        <a href="#autotoc_md443">service 命令 </a>
-        <ul>
-          <li class="level3">
-            <a href="#autotoc_md444">list 子命令 </a>
+            <a href="#autotoc_md444">find 子命令 </a>
           </li>
           <li class="level3">
             <a href="#autotoc_md445">info 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md446">type 子命令 </a>
+            <a href="#autotoc_md446">echo 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md447">find 子命令 </a>
+            <a href="#autotoc_md447">pub 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md448">call 子命令 </a>
+            <a href="#autotoc_md448">type 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md449">hz 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md450">bw 子命令 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md449">interface 命令 </a>
+        <a href="#autotoc_md451">service 命令 </a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md450">group 子命令 </a>
+            <a href="#autotoc_md452">list 子命令 </a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md451">show 子命令 </a>
+            <a href="#autotoc_md453">info 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md454">type 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md455">find 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md456">call 子命令 </a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md452">graph 命令 </a>
+        <a href="#autotoc_md457">interface 命令 </a>
+        <ul>
+          <li class="level3">
+            <a href="#autotoc_md458">group 子命令 </a>
+          </li>
+          <li class="level3">
+            <a href="#autotoc_md459">show 子命令 </a>
+          </li>
+        </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md453">viz 命令 </a>
+        <a href="#autotoc_md460">graph 命令 </a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md461">viz 命令 </a>
       </li>
     </ul>
   </li>
@@ -219,7 +241,7 @@ $(function() {
 <p><b>上一篇教程：</b><a class="el" href="../../d0/d7c/tutorial_rdt_rdt.html" title="RDT CLI 工具">RDT CLI 工具</a> <br  />
 </p>
 <hr  />
-<h2 class="doxsection"><a class="anchor" id="autotoc_md429"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md437"></a>
 前言</h2>
 <p>LPSS 是一个轻量级的发布订阅通信框架，采用去中心化设计，提供 NDP、EDP 两层服务发现机制，以及 MTP 话题消息传输协议，提供类似 ROS2 的 <span class="tt">*.msg</span> 消息接口，由 RMVL 提供支持。本工具提供了 LPSS 相关的命令行工具，使用方法如下。</p>
 <p><span class="tt">rdt</span> 提供的 LPSS CLI 工具可通过输入</p>
@@ -252,7 +274,7 @@ $(function() {
 <li><a href="https://cv-rmvl.github.io/docs/2.x/d3/d8e/tutorial_modules_lpss.html">使用教程</a></li>
 <li><a href="https://cv-rmvl.github.io/docs/2.x/d7/de3/group__lpss.html">API 文档</a></li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md430"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md438"></a>
 create 命令</h2>
 <p>创建一个依赖 LPSS 的新项目</p>
 <p><b>用法</b></p>
@@ -275,7 +297,7 @@ create 命令</h2>
 </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，使用 C++17 标准</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> anchor hik_camera <span class="comment">--cpp</span> 17</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，并且使用 json 和 fmt 两个第三方库</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> hik_camera <span class="comment">--exts</span> json fmt</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md431"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，使用 C++17 标准</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> anchor hik_camera <span class="comment">--cpp</span> 17</div> <div class="line"><span class="comment"># 创建一个名为 demo_node 的新项目，依赖 anchor 和 hik_camera 模块，并且使用 json 和 fmt 两个第三方库</span></div> <div class="line"><span class="keywordflow">lpss</span> create demo_node <span class="comment">--deps</span> hik_camera <span class="comment">--exts</span> json fmt</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md439"></a>
 node 命令</h2>
 <p>节点工具</p>
 <p><b>用法</b></p>
@@ -291,7 +313,7 @@ node 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md432"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md440"></a>
 list 子命令</h3>
 <p>列出当前发现的所有 LPSS 节点。</p>
 <p><b>用法</b></p>
@@ -304,7 +326,7 @@ list 子命令</h3>
 </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 列出节点名称</span></div> <div class="line"><span class="keywordflow">lpss</span> node list</div> <div class="line"><span class="comment"># 仅输出节点数量</span></div> <div class="line"><span class="keywordflow">lpss</span> node list <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md433"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 列出节点名称</span></div> <div class="line"><span class="keywordflow">lpss</span> node list</div> <div class="line"><span class="comment"># 仅输出节点数量</span></div> <div class="line"><span class="keywordflow">lpss</span> node list <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md441"></a>
 info 子命令</h3>
 <p>查看指定节点的信息，输出形如以下的内容</p>
 <div class="fragment"><div class="line">Node: xxx</div>
@@ -328,7 +350,7 @@ info 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 查看节点 lpss_node_1 的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> node info lpss_node_1</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md434"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 查看节点 lpss_node_1 的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> node info lpss_node_1</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md442"></a>
 topic 命令</h2>
 <p>话题工具</p>
 <p><b>用法</b></p>
@@ -356,7 +378,7 @@ topic 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md435"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md443"></a>
 list 子命令</h3>
 <p>列出当前发现的所有话题，话题名称按字典序输出。</p>
 <p><b>用法</b></p>
@@ -368,7 +390,7 @@ list 子命令</h3>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md436"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md444"></a>
 find 子命令</h3>
 <p>按完整消息类型查找话题，查询结果按话题名称的字典序输出。</p>
 <p><b>用法</b></p>
@@ -387,7 +409,7 @@ find 子命令</h3>
 </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 查找所有使用 std/String 消息类型的话题</span></div> <div class="line"><span class="keywordflow">lpss</span> topic find std/String</div> <div class="line"><span class="comment"># 仅输出匹配话题的数量</span></div> <div class="line"><span class="keywordflow">lpss</span> topic find std/String <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md437"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 查找所有使用 std/String 消息类型的话题</span></div> <div class="line"><span class="keywordflow">lpss</span> topic find std/String</div> <div class="line"><span class="comment"># 仅输出匹配话题的数量</span></div> <div class="line"><span class="keywordflow">lpss</span> topic find std/String <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md445"></a>
 info 子命令</h3>
 <p>查看指定话题的信息，输出形如以下的内容</p>
 <div class="fragment"><div class="line">Type: xxx</div>
@@ -405,7 +427,7 @@ info 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 查看 /cur/joint_states 话题的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> topic info /cur/joint_states</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md438"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 查看 /cur/joint_states 话题的信息</span></div> <div class="line"><span class="keywordflow">lpss</span> topic info /cur/joint_states</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md446"></a>
 echo 子命令</h3>
 <p>显示话题内容，并以 JSON 文本进行输出</p>
 <p><b>用法</b></p>
@@ -416,11 +438,11 @@ echo 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 以 JSON 格式打印 /point 话题的内容</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point</div> <div class="line"></div> <div class="line"><span class="comment"># 假设是 geometry/Point 的消息类型，可以配合 jq 工具进行输出，记得 apt install jq 来下载 jq</span></div> <div class="line"><span class="comment"># 打印 /point 话题的 x 坐标</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> <div class="line"></div> <div class="line"><span class="comment"># Linux 下一般是按 \n 刷新缓冲区，通过 | 运算符传给 jq 可能没法很好的实时输出内容，通常可以额外</span></div> <div class="line"><span class="comment"># 配合 stdbuf 工具自动刷新缓冲区，例如</span></div> <div class="line"><span class="keywordflow">stdbuf</span> <span class="comment">-oL</span> <span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md439"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 以 JSON 格式打印 /point 话题的内容</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point</div> <div class="line"></div> <div class="line"><span class="comment"># 假设是 geometry/Point 的消息类型，可以配合 jq 工具进行输出，记得 apt install jq 来下载 jq</span></div> <div class="line"><span class="comment"># 打印 /point 话题的 x 坐标</span></div> <div class="line"><span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> <div class="line"></div> <div class="line"><span class="comment"># Linux 下一般是按 \n 刷新缓冲区，通过 | 运算符传给 jq 可能没法很好的实时输出内容，通常可以额外</span></div> <div class="line"><span class="comment"># 配合 stdbuf 工具自动刷新缓冲区，例如</span></div> <div class="line"><span class="keywordflow">stdbuf</span> <span class="comment">-oL</span> <span class="keywordflow">lpss</span> topic echo /point | <span class="keywordflow">jq</span> .x</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md447"></a>
 pub 子命令</h3>
 <p>发布话题内容</p>
 <dl class="section warning"><dt>警告</dt><dd>未完成，敬请期待</dd></dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md440"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md448"></a>
 type 子命令</h3>
 <p>显示话题类型</p>
 <p><b>用法</b></p>
@@ -431,7 +453,7 @@ type 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 显示 /point 话题的类型</span></div> <div class="line"><span class="keywordflow">lpss</span> topic type /point</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md441"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /point 话题的类型</span></div> <div class="line"><span class="keywordflow">lpss</span> topic type /point</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md449"></a>
 hz 子命令</h3>
 <p>测量话题发布频率，单位为 Hz</p>
 <p><b>用法</b></p>
@@ -442,7 +464,7 @@ hz 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的发布频率</span></div> <div class="line"><span class="keywordflow">lpss</span> topic hz /str</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md442"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的发布频率</span></div> <div class="line"><span class="keywordflow">lpss</span> topic hz /str</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md450"></a>
 bw 子命令</h3>
 <p>测量话题带宽，单位为 MB/s、kB/s 或 B/s</p>
 <p><b>用法</b></p>
@@ -453,7 +475,7 @@ bw 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的带宽使用情况</span></div> <div class="line"><span class="keywordflow">lpss</span> topic bw /str</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md443"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 显示 /str 话题的带宽使用情况</span></div> <div class="line"><span class="keywordflow">lpss</span> topic bw /str</div> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md451"></a>
 service 命令</h2>
 <p>服务工具，用于查看已发现的 LPSS 服务，并使用 JSON 请求调用内置服务。</p>
 <p><b>用法</b></p>
@@ -475,7 +497,7 @@ service 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md444"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md452"></a>
 list 子命令</h3>
 <p>列出当前发现的所有服务，服务名称按字典序输出。</p>
 <p><b>用法</b></p>
@@ -487,7 +509,7 @@ list 子命令</h3>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md445"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md453"></a>
 info 子命令</h3>
 <p>查看指定服务的类型、服务端节点和客户端节点，输出形如以下内容。</p>
 <div class="fragment"><div class="line">Type: std/SetBool</div>
@@ -505,7 +527,7 @@ info 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> service info /set_enabled</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md446"></a>
+<div class="fragment"> <div class="line"><span class="keywordflow">lpss</span> service info /set_enabled</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md454"></a>
 type 子命令</h3>
 <p>显示指定服务的服务类型。</p>
 <p><b>用法</b></p>
@@ -516,7 +538,7 @@ type 子命令</h3>
   </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 输出 std/SetBool</span></div> <div class="line"><span class="keywordflow">lpss</span> service type /set_enabled</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md447"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 输出 std/SetBool</span></div> <div class="line"><span class="keywordflow">lpss</span> service type /set_enabled</div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md455"></a>
 find 子命令</h3>
 <p>按类型精确匹配服务。<span class="tt">service_type</span> 可以是完整服务类型，也可以是对应的请求或响应消息类型。查询结果按服务名称的字典序输出。</p>
 <p><b>用法</b></p>
@@ -535,7 +557,7 @@ find 子命令</h3>
 </dd>
 </dl>
 <p><b>示例</b></p>
-<div class="fragment"> <div class="line"><span class="comment"># 列出所有 std/SetBool 服务</span></div> <div class="line"><span class="keywordflow">lpss</span> service find std/SetBool</div> <div class="line"><span class="comment"># 仅输出匹配服务的数量</span></div> <div class="line"><span class="keywordflow">lpss</span> service find std/SetBool <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md448"></a>
+<div class="fragment"> <div class="line"><span class="comment"># 列出所有 std/SetBool 服务</span></div> <div class="line"><span class="keywordflow">lpss</span> service find std/SetBool</div> <div class="line"><span class="comment"># 仅输出匹配服务的数量</span></div> <div class="line"><span class="keywordflow">lpss</span> service find std/SetBool <span class="comment">-c</span></div> </div><h3 class="doxsection"><a class="anchor" id="autotoc_md456"></a>
 call 子命令</h3>
 <p>使用 JSON 对象作为请求调用指定服务，并将响应输出为 JSON。<span class="tt">json_request</span> 省略或为空时按 <span class="tt">{}</span> 处理，命令等待响应的超时时间为 3 秒。</p>
 <p><b>用法</b></p>
@@ -561,7 +583,7 @@ call 子命令</h3>
 </table>
 <p><b>示例</b></p>
 <div class="fragment"> <div class="line"><span class="comment"># 调用无请求字段的 Trigger 服务</span></div> <div class="line"><span class="keywordflow">lpss</span> service call /trigger</div> <div class="line"><span class="comment"># 使用 JSON 请求调用 SetBool 服务</span></div> <div class="line"><span class="keywordflow">lpss</span> service call /set_enabled <span class="stringliteral">'{"data":true}'</span></div> <div class="line"><span class="comment"># 调用 SetCameraInfo 服务，未填写的 CameraInfo 字段使用默认值</span></div> <div class="line"><span class="keywordflow">lpss</span> service call /set_camera_info <span class="stringliteral">'{"camera_info":{"height":1080,"width":1920}}'</span></div> </div><dl class="section note"><dt>注解</dt><dd><span class="tt">call</span> 暂不支持自定义服务类型；发现到不支持的类型时会输出 <span class="tt">unsupported service type</span>。</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md449"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md457"></a>
 interface 命令</h2>
 <p>内置消息接口查看工具</p>
 <p><b>用法</b></p>
@@ -581,7 +603,7 @@ interface 命令</h2>
 </table>
 </dd>
 </dl>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md450"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md458"></a>
 group 子命令</h3>
 <p>显示指定的消息分组包含的接口</p>
 <p><b>用法</b></p>
@@ -603,7 +625,7 @@ group 子命令</h3>
 <div class="line">Twist</div>
 <div class="line">Vector3</div>
 <div class="line">Wrench</div>
-</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md451"></a>
+</div><!-- fragment --><h3 class="doxsection"><a class="anchor" id="autotoc_md459"></a>
 show 子命令</h3>
 <p>显示接口详细信息</p>
 <p><b>用法</b></p>
@@ -624,7 +646,7 @@ show 子命令</h3>
 <div class="line">    float64 y</div>
 <div class="line">    float64 z</div>
 <div class="line">    float64 w</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md452"></a>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md460"></a>
 graph 命令</h2>
 <p>节点图工具 LGraph，用于在浏览器中查看 LPSS 通信拓扑，包括节点、话题、服务及其发布/订阅、服务端/客户端关系。也可直接使用 <span class="tt">lgraph</span> 命令启动。</p>
 <p><b>用法</b></p>
@@ -639,7 +661,7 @@ graph 命令</h2>
 <div class="fragment"> <div class="line"><span class="comment"># 使用自动生成的实例名启动</span></div> <div class="line"><span class="keywordflow">lpss</span> graph</div> <div class="line"><span class="comment"># LPSS 节点名为 lgraph_debug</span></div> <div class="line"><span class="keywordflow">lgraph</span> debug</div> </div><dl class="section note"><dt>注解</dt><dd>Web 服务使用固定端口 <span class="tt">17493</span>，同一主机上不能同时启动多个 LGraph 实例。按 <span class="tt">Ctrl+C</span> 可停止工具。</dd>
 <dd>
 如果提示 <span class="tt">lpss graph 工具尚未安装</span>，请在 <span class="tt">rmvl-dev-tools</span> 中重新运行 <span class="tt">install.bash</span>。</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md453"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md461"></a>
 viz 命令</h2>
 <p>3D 可视化工具 LViz，也可直接使用 <span class="tt">lviz</span> 命令启动。</p>
 <p><b>用法</b></p>
@@ -657,7 +679,7 @@ viz 命令</h2>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

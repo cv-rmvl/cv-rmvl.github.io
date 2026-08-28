@@ -1,0 +1,287 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: YAML 数据读写</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">YAML 数据读写 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>目录</h3>
+<ul>
+  <li class="level1 empty">
+    <ul>
+      <li class="level2">
+        <a href="#autotoc_md402"><ol type="1">
+<li>概述 </li>
+</ol>
+</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md403"><ol type="1">
+<li>解析与读取 </li>
+</ol>
+</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md404"><ol type="1">
+<li>构建与保存 </li>
+</ol>
+</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md405"><ol type="1">
+<li>OpenCV 类型兼容 </li>
+</ol>
+</a>
+      </li>
+      <li class="level2">
+        <a href="#autotoc_md406"><ol type="1">
+<li>自定义类型 </li>
+</ol>
+</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2yaml"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d7/de5/tutorial_modules_aggregate_reflect.html" title="聚合类反射及其相关 API">聚合类反射及其相关 API</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d5/d7a/tutorial_modules_coro.html" title="基于异步 I/O 的协程设施">基于异步 I/O 的协程设施</a> <br  />
+</p>
+<hr  />
+<h2 class="doxsection"><a class="anchor" id="autotoc_md402"></a>
+1. 概述</h2>
+<p>core 模块提供了基于 rapidyaml 的 YAML 树模型，接口位于 <span class="tt"><a class="el" href="../../d5/d90/namespacerm_1_1yaml.html">rm::yaml</a></span> 命名空间中。它适合读取配置、机器人描述和其他结构化数据，不会向用户暴露 rapidyaml 的节点或字符串视图类型。</p>
+<p><span class="tt"><a class="el" href="../../d0/db8/classrm_1_1yaml_1_1Node.html" title="YAML 树节点句柄">rm::yaml::Node</a></span> 是共享底层 YAML 树所有权的轻量句柄。保存子节点时无需同时保存根节点，但同一棵树上的并发写入或读写并发需要由调用方同步。</p>
+<p>直接包含对应头文件即可使用：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/core/yaml.hpp&gt;</span></div>
+</div><!-- fragment --><p>也可以包含 core 模块汇总头文件：</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/core.hpp&gt;</span></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md403"></a>
+2. 解析与读取</h2>
+<p><span class="tt"><a class="el" href="../../dc/d84/group__core__yaml.html#ga78ecd61a2a40f72bd53adeabe8022e00" title="从内存解析 YAML">rm::yaml::parse()</a></span> 从内存文本解析 YAML，<span class="tt"><a class="el" href="../../dc/d84/group__core__yaml.html#gae18b5dcd37e82395bb7071d987b0ea3a" title="从文件加载 YAML">rm::yaml::load()</a></span> 从文件加载。两者都返回 <span class="tt"><a class="el" href="../../df/d30/structrm_1_1yaml_1_1Result.html" title="YAML 解析或加载结果">rm::yaml::Result</a></span>，解析或文件错误不会导致进程终止。</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> result = <a class="code hl_function" href="../../dc/d84/group__core__yaml.html#ga78ecd61a2a40f72bd53adeabe8022e00">rm::yaml::parse</a>(R<span class="stringliteral">&quot;(</span></div>
+<div class="line"><span class="stringliteral">camera:</span></div>
+<div class="line"><span class="stringliteral">  name: front</span></div>
+<div class="line"><span class="stringliteral">  width: 1280</span></div>
+<div class="line"><span class="stringliteral">  enabled: true</span></div>
+<div class="line"><span class="stringliteral">labels: [robot, armor]</span></div>
+<div class="line"><span class="stringliteral">)&quot;);</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral"></span><span class="keywordflow">if</span> (!result) {</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;YAML error at {}:{}: {}\n&quot;</span>,</div>
+<div class="line">               result.error.line,</div>
+<div class="line">               result.error.column,</div>
+<div class="line">               result.error.message);</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> name = (*result)[<span class="stringliteral">&quot;camera&quot;</span>][<span class="stringliteral">&quot;name&quot;</span>].as&lt;std::string&gt;();</div>
+<div class="line"><span class="keyword">auto</span> width = (*result)[<span class="stringliteral">&quot;camera&quot;</span>][<span class="stringliteral">&quot;width&quot;</span>].valueOr(640);</div>
+<div class="line"><span class="keyword">auto</span> labels = (*result)[<span class="stringliteral">&quot;labels&quot;</span>].as&lt;std::vector&lt;std::string&gt;&gt;();</div>
+<div class="ttc" id="agroup__core__yaml_html_ga78ecd61a2a40f72bd53adeabe8022e00"><div class="ttname"><a href="../../dc/d84/group__core__yaml.html#ga78ecd61a2a40f72bd53adeabe8022e00">rm::yaml::parse</a></div><div class="ttdeci">Result parse(std::string_view source)</div><div class="ttdoc">从内存解析 YAML</div></div>
+</div><!-- fragment --><p><span class="tt">operator[]</span> 查找失败时返回无效节点。<span class="tt">as&lt;T&gt;()</span> 转换失败时返回 <span class="tt">std::nullopt</span>，<span class="tt">valueOr()</span> 可直接提供默认值。整数转换会检查格式和目标类型的取值范围。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md404"></a>
+3. 构建与保存</h2>
+<p>可以从映射、序列或标量根节点开始构建 YAML：</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> root = <a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a4c179fe4873fa0c4457ec0523a365892">rm::yaml::Node::createMap</a>();</div>
+<div class="line">root.set(<span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;demo&quot;</span>);</div>
+<div class="line">root.set(<span class="stringliteral">&quot;ports&quot;</span>, std::vector&lt;int&gt;{8000, 8001});</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> network = root.ensure(<span class="stringliteral">&quot;network&quot;</span>);</div>
+<div class="line">network.set(<span class="stringliteral">&quot;host&quot;</span>, <span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
+<div class="line">network.set(<span class="stringliteral">&quot;enabled&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> text = <a class="code hl_function" href="../../dc/d84/group__core__yaml.html#ga63d43f3b161f15c55ab374c8cb23268b">rm::yaml::dump</a>(root);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_struct" href="../../d6/d16/structrm_1_1yaml_1_1Error.html">rm::yaml::Error</a> error;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="../../dc/d84/group__core__yaml.html#gad982a38b55aaf5d15a82c8a139c48ef4">rm::yaml::save</a>(<span class="stringliteral">&quot;config.yml&quot;</span>, root, error))</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;failed to save YAML: {}\n&quot;</span>, error.message);</div>
+<div class="ttc" id="aclassrm_1_1yaml_1_1Node_html_a4c179fe4873fa0c4457ec0523a365892"><div class="ttname"><a href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a4c179fe4873fa0c4457ec0523a365892">rm::yaml::Node::createMap</a></div><div class="ttdeci">static Node createMap()</div><div class="ttdoc">创建空映射根节点</div></div>
+<div class="ttc" id="agroup__core__yaml_html_ga63d43f3b161f15c55ab374c8cb23268b"><div class="ttname"><a href="../../dc/d84/group__core__yaml.html#ga63d43f3b161f15c55ab374c8cb23268b">rm::yaml::dump</a></div><div class="ttdeci">std::string dump(const Node &amp;node)</div><div class="ttdoc">将节点及其后代序列化为 YAML</div></div>
+<div class="ttc" id="agroup__core__yaml_html_gad982a38b55aaf5d15a82c8a139c48ef4"><div class="ttname"><a href="../../dc/d84/group__core__yaml.html#gad982a38b55aaf5d15a82c8a139c48ef4">rm::yaml::save</a></div><div class="ttdeci">bool save(std::string_view path, const Node &amp;node, Error &amp;err)</div><div class="ttdoc">将节点保存为 YAML 文件并返回错误信息</div></div>
+<div class="ttc" id="astructrm_1_1yaml_1_1Error_html"><div class="ttname"><a href="../../d6/d16/structrm_1_1yaml_1_1Error.html">rm::yaml::Error</a></div><div class="ttdoc">YAML 操作错误</div><div class="ttdef"><b>定义</b> yaml.hpp:60</div></div>
+</div><!-- fragment --><p>映射节点保持 YAML 树中的展示顺序。类型转换同时支持以 <span class="tt">std::string</span> 为键的 <span class="tt">std::map</span> 和 <span class="tt">std::unordered_map</span>：前者适合需要稳定排序输出的配置，后者适合不关心顺序的运行时查找。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md405"></a>
+4. OpenCV 类型兼容</h2>
+<p>启用 OpenCV 后，<span class="tt"><a class="el" href="../../d5/d90/namespacerm_1_1yaml.html">rm::yaml</a></span> 可直接转换 OpenCV <span class="tt">FileStorage</span> 使用的类型，包括 <span class="tt">cv::Point</span>、<span class="tt">cv::Point3</span>、<span class="tt">cv::Size</span>、<span class="tt">cv::Rect</span>、<span class="tt">cv::Vec</span>、<span class="tt">cv::Scalar</span>、<span class="tt">cv::Range</span>、<span class="tt">cv::KeyPoint</span>、<span class="tt">cv::DMatch</span>、<span class="tt">cv::Matx</span> 和 <span class="tt">cv::Mat</span>，上述类型组成的 <span class="tt">std::vector</span> 同样受支持。</p>
+<p>解析器兼容 OpenCV 使用的 <span class="tt">YAML:1.0</span> 文件头以及 <span class="tt">!!opencv-matrix</span>、<span class="tt">!!opencv-nd-matrix</span> 标签。矩阵中的 <span class="tt">rows</span>、<span class="tt">cols</span>、<span class="tt">sizes</span>、<span class="tt">dt</span> 和 <span class="tt">data</span> 字段会自动转换为对应深度与通道数的矩阵：</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> result = <a class="code hl_function" href="../../dc/d84/group__core__yaml.html#gae18b5dcd37e82395bb7071d987b0ea3a">rm::yaml::load</a>(<span class="stringliteral">&quot;camera.yml&quot;</span>);</div>
+<div class="line"><span class="keyword">auto</span> camera_matrix = (*result)[<span class="stringliteral">&quot;camera_matrix&quot;</span>].as&lt;cv::Matx33d&gt;();</div>
+<div class="line"><span class="keyword">auto</span> points = (*result)[<span class="stringliteral">&quot;points&quot;</span>].as&lt;std::vector&lt;cv::Point2f&gt;&gt;();</div>
+<div class="ttc" id="agroup__core__yaml_html_gae18b5dcd37e82395bb7071d987b0ea3a"><div class="ttname"><a href="../../dc/d84/group__core__yaml.html#gae18b5dcd37e82395bb7071d987b0ea3a">rm::yaml::load</a></div><div class="ttdeci">Result load(std::string_view path)</div><div class="ttdoc">从文件加载 YAML</div></div>
+</div><!-- fragment --><p>普通 <span class="tt">dump()</span> 和 <span class="tt">save()</span> 输出标准 YAML。需要让 OpenCV <span class="tt">FileStorage</span> 继续读取输出文件时，使用 <span class="tt">dumpOpenCv()</span> 或 <span class="tt">saveOpenCv()</span> 生成带 OpenCV 文件头和矩阵标签的兼容格式。</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md406"></a>
+5. 自定义类型</h2>
+<p>为用户类型提供 <span class="tt">yaml_encode()</span> 和 <span class="tt">yaml_decode()</span> 即可通过 ADL 接入，无需继承基类或注册运行时类型：</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>Point {</div>
+<div class="line">    <span class="keywordtype">double</span> x{};</div>
+<div class="line">    <span class="keywordtype">double</span> y{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> yaml_encode(<a class="code hl_class" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">rm::yaml::Node</a> &amp;node, <span class="keyword">const</span> Point &amp;point) {</div>
+<div class="line">    node.<a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a337acfa239c3f09cddaedab58d38cbc8">makeMap</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> node.<a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a7021836661e5b5d4291c43be9914dbed">set</a>(<span class="stringliteral">&quot;x&quot;</span>, point.x) &amp;&amp; node.<a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a7021836661e5b5d4291c43be9914dbed">set</a>(<span class="stringliteral">&quot;y&quot;</span>, point.y);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d84/group__core__yaml.html#ga6513071123b676405a24d5f4df68e24a">yaml_decode</a>(<span class="keyword">const</span> <a class="code hl_class" href="../../d0/db8/classrm_1_1yaml_1_1Node.html">rm::yaml::Node</a> &amp;node, Point &amp;point) {</div>
+<div class="line">    <span class="keywordflow">return</span> node[<span class="stringliteral">&quot;x&quot;</span>].<a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a00d795bdf96b8c22b94757c72d83f2c8">read</a>(point.x) &amp;&amp; node[<span class="stringliteral">&quot;y&quot;</span>].<a class="code hl_function" href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a00d795bdf96b8c22b94757c72d83f2c8">read</a>(point.y);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1yaml_1_1Node_html"><div class="ttname"><a href="../../d0/db8/classrm_1_1yaml_1_1Node.html">rm::yaml::Node</a></div><div class="ttdoc">YAML 树节点句柄</div><div class="ttdef"><b>定义</b> yaml.hpp:80</div></div>
+<div class="ttc" id="aclassrm_1_1yaml_1_1Node_html_a00d795bdf96b8c22b94757c72d83f2c8"><div class="ttname"><a href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a00d795bdf96b8c22b94757c72d83f2c8">rm::yaml::Node::read</a></div><div class="ttdeci">bool read(T &amp;value) const</div><div class="ttdoc">读取并转换节点值</div></div>
+<div class="ttc" id="aclassrm_1_1yaml_1_1Node_html_a337acfa239c3f09cddaedab58d38cbc8"><div class="ttname"><a href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a337acfa239c3f09cddaedab58d38cbc8">rm::yaml::Node::makeMap</a></div><div class="ttdeci">void makeMap()</div><div class="ttdoc">将节点替换为空映射</div></div>
+<div class="ttc" id="aclassrm_1_1yaml_1_1Node_html_a7021836661e5b5d4291c43be9914dbed"><div class="ttname"><a href="../../d0/db8/classrm_1_1yaml_1_1Node.html#a7021836661e5b5d4291c43be9914dbed">rm::yaml::Node::set</a></div><div class="ttdeci">bool set(std::string_view name, const T &amp;value)</div><div class="ttdoc">设置映射字段</div></div>
+<div class="ttc" id="agroup__core__yaml_html_ga6513071123b676405a24d5f4df68e24a"><div class="ttname"><a href="../../dc/d84/group__core__yaml.html#ga6513071123b676405a24d5f4df68e24a">rm::yaml::yaml_decode</a></div><div class="ttdeci">bool yaml_decode(const Node &amp;node, cv::Point_&lt; T &gt; &amp;value)</div><div class="ttdef"><b>定义</b> yaml.hpp:434</div></div>
+</div><!-- fragment --><p>之后自定义类型可以与内置类型一样使用：</p>
+<div class="fragment"><div class="line">root.set(<span class="stringliteral">&quot;origin&quot;</span>, Point{1.5, 2.0});</div>
+<div class="line"><span class="keyword">auto</span> origin = root[<span class="stringliteral">&quot;origin&quot;</span>].as&lt;Point&gt;();</div>
+</div><!-- fragment --><p>当前支持字符串、布尔值、整数、浮点数、枚举、<span class="tt">std::optional</span>、<span class="tt">std::vector</span>、<span class="tt">std::array</span> 以及字符串键映射。<span class="tt">Node::tag()</span> 和 <span class="tt">Node::setTag()</span> 可用于访问 YAML 标签；需要 anchor 或样式等其他 rapidyaml 底层特性时，应直接使用 rapidyaml。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

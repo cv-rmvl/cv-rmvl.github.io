@@ -1,0 +1,360 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: 视觉里程计与 SLAM 接入</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">视觉里程计与 SLAM 接入 <div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供通用传感器帧同步、可替换定位后端和标准导航输出  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+视觉里程计与 SLAM 接入 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d06/group__nav__localization.svg" width="271" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AFrameSyncOptions" id="r_rm_3A_3Anav_3A_3AFrameSyncOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html">rm::nav::FrameSyncOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">传感器帧同步配置  <a href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ASensorFrame" id="r_rm_3A_3Anav_3A_3ASensorFrame"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/df3/structrm_1_1nav_1_1SensorFrame.html">rm::nav::SensorFrame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">已同步的一帧视觉定位输入  <a href="../../d3/df3/structrm_1_1nav_1_1SensorFrame.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AFrameSyncResult" id="r_rm_3A_3Anav_3A_3AFrameSyncResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/dd4/structrm_1_1nav_1_1FrameSyncResult.html">rm::nav::FrameSyncResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧同步结果  <a href="../../db/dd4/structrm_1_1nav_1_1FrameSyncResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AFrameSyncStatistics" id="r_rm_3A_3Anav_3A_3AFrameSyncStatistics"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d2b/structrm_1_1nav_1_1FrameSyncStatistics.html">rm::nav::FrameSyncStatistics</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">帧同步统计  <a href="../../d5/d2b/structrm_1_1nav_1_1FrameSyncStatistics.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AFrameSynchronizer" id="r_rm_3A_3Anav_3A_3AFrameSynchronizer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer.html">rm::nav::FrameSynchronizer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">多传感器采集时间同步器  <a href="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ABackendEstimate" id="r_rm_3A_3Anav_3A_3ABackendEstimate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d3/da0/structrm_1_1nav_1_1BackendEstimate.html">rm::nav::BackendEstimate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">第三方定位后端返回的统一估计  <a href="../../d3/da0/structrm_1_1nav_1_1BackendEstimate.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AOdometryBackend" id="r_rm_3A_3Anav_3A_3AOdometryBackend"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html">rm::nav::OdometryBackend</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">可替换的视觉里程计后端  <a href="../../dd/d94/classrm_1_1nav_1_1OdometryBackend.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ASlamBackend" id="r_rm_3A_3Anav_3A_3ASlamBackend"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d48/classrm_1_1nav_1_1SlamBackend.html">rm::nav::SlamBackend</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">可重定位的 SLAM 后端  <a href="../../dd/d48/classrm_1_1nav_1_1SlamBackend.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AMappingResult" id="r_rm_3A_3Anav_3A_3AMappingResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../dd/d76/structrm_1_1nav_1_1MappingResult.html">rm::nav::MappingResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapper 后端返回的二维导航地图更新  <a href="../../dd/d76/structrm_1_1nav_1_1MappingResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AMapperBackend" id="r_rm_3A_3Anav_3A_3AMapperBackend"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/dff/classrm_1_1nav_1_1MapperBackend.html">rm::nav::MapperBackend</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">可替换的深度地图后端  <a href="../../dc/dff/classrm_1_1nav_1_1MapperBackend.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ALocalizationOptions" id="r_rm_3A_3Anav_3A_3ALocalizationOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../db/dee/structrm_1_1nav_1_1LocalizationOptions.html">rm::nav::LocalizationOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">定位输出整理配置  <a href="../../db/dee/structrm_1_1nav_1_1LocalizationOptions.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ALocalizationResult" id="r_rm_3A_3Anav_3A_3ALocalizationResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/df1/structrm_1_1nav_1_1LocalizationResult.html">rm::nav::LocalizationResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">一帧视觉里程计或 SLAM 的标准导航输出  <a href="../../d0/df1/structrm_1_1nav_1_1LocalizationResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3ALocalizationPipeline" id="r_rm_3A_3Anav_3A_3ALocalizationPipeline"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d31/classrm_1_1nav_1_1LocalizationPipeline.html">rm::nav::LocalizationPipeline</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">将第三方定位结果转换为 RMVL 导航消息  <a href="../../d5/d31/classrm_1_1nav_1_1LocalizationPipeline.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga4414d0de10104a167521f59e48c4f877" id="r_ga4414d0de10104a167521f59e48c4f877"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga4414d0de10104a167521f59e48c4f877">rm::nav::CameraMode</a> : uint8_t { <a class="el" href="#gga4414d0de10104a167521f59e48c4f877a68c9f6485e9c006d06b70e34bd181268">rm::nav::CameraMode::Monocular</a>
+, <a class="el" href="#gga4414d0de10104a167521f59e48c4f877abbc45d9b35436f5f0ed9e33499efcea9">rm::nav::CameraMode::Stereo</a>
+, <a class="el" href="#gga4414d0de10104a167521f59e48c4f877a5faceedd0d3dabe003bd7a8baf14ce0d">rm::nav::CameraMode::Rgbd</a>
+ }</td></tr>
+<tr class="memdesc:ga4414d0de10104a167521f59e48c4f877"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机输入组合  <a href="#ga4414d0de10104a167521f59e48c4f877">更多...</a><br /></td></tr>
+<tr class="memitem:ga2db554e861ffa2fd2b4fb74c0998f831" id="r_ga2db554e861ffa2fd2b4fb74c0998f831"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga2db554e861ffa2fd2b4fb74c0998f831">rm::nav::LocalizationStatus</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831aa60852f204ed8028c1c58808b746d115">rm::nav::LocalizationStatus::Ok</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831afe0552ed0f5214cc3d45002f74afb87f">rm::nav::LocalizationStatus::WaitingForPrimary</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a6a34c448668f0a3901a1833905d657c9">rm::nav::LocalizationStatus::WaitingForSecondary</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831abcfb3ab3e213517c95edc2381da17573">rm::nav::LocalizationStatus::MissingCalibration</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a4eb9f6b8ee5e828c8061153588d4f25c">rm::nav::LocalizationStatus::InvalidOptions</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a97c2f50ce33f394d3f5ce6866026605c">rm::nav::LocalizationStatus::InvalidSensorData</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831af47847e1a691e4e868f618ffe1a5e57b">rm::nav::LocalizationStatus::FrameMismatch</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a99307905d0ab7319274e6a030eee3301">rm::nav::LocalizationStatus::TimestampMismatch</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a32b169f72b293ef80d35435e9894f8e2">rm::nav::LocalizationStatus::Initializing</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a2d7aacebca2a222443b1d65be6317f69">rm::nav::LocalizationStatus::TrackingLost</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a6005b8268334563b2246f41788e28ff5">rm::nav::LocalizationStatus::BackendError</a>
+, <a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831a5d3e19bb3d1214b6461407c239a7887e">rm::nav::LocalizationStatus::InvalidEstimate</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f">rm::nav::LocalizationStatus::Unsupported</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga2db554e861ffa2fd2b4fb74c0998f831"><td class="mdescLeft">&#160;</td><td class="mdescRight">视觉定位数据流状态  <a href="#ga2db554e861ffa2fd2b4fb74c0998f831">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga9125396ab4ab4d6e316b39ab406d1903" id="r_ga9125396ab4ab4d6e316b39ab406d1903"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ga9125396ab4ab4d6e316b39ab406d1903">rm::nav::to_string</a> (<a class="el" href="#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> status) noexcept</td></tr>
+<tr class="memdesc:ga9125396ab4ab4d6e316b39ab406d1903"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取视觉定位状态的稳定文本描述  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供通用传感器帧同步、可替换定位后端和标准导航输出 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="ga4414d0de10104a167521f59e48c4f877" name="ga4414d0de10104a167521f59e48c4f877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4414d0de10104a167521f59e48c4f877">&#9670;&#160;</a></span>CameraMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga4414d0de10104a167521f59e48c4f877">rm::nav::CameraMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+
+<p>相机输入组合 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga4414d0de10104a167521f59e48c4f877a68c9f6485e9c006d06b70e34bd181268" name="gga4414d0de10104a167521f59e48c4f877a68c9f6485e9c006d06b70e34bd181268"></a>Monocular&#160;</td><td class="fielddoc"><p>单目图像，只保证相对尺度或依赖其他米制观测 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4414d0de10104a167521f59e48c4f877abbc45d9b35436f5f0ed9e33499efcea9" name="gga4414d0de10104a167521f59e48c4f877abbc45d9b35436f5f0ed9e33499efcea9"></a>Stereo&#160;</td><td class="fielddoc"><p>左右目图像 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4414d0de10104a167521f59e48c4f877a5faceedd0d3dabe003bd7a8baf14ce0d" name="gga4414d0de10104a167521f59e48c4f877a5faceedd0d3dabe003bd7a8baf14ce0d"></a>Rgbd&#160;</td><td class="fielddoc"><p>彩色或灰度主图像与深度图像 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga2db554e861ffa2fd2b4fb74c0998f831" name="ga2db554e861ffa2fd2b4fb74c0998f831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2db554e861ffa2fd2b4fb74c0998f831">&#9670;&#160;</a></span>LocalizationStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga2db554e861ffa2fd2b4fb74c0998f831">rm::nav::LocalizationStatus</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+
+<p>视觉定位数据流状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831aa60852f204ed8028c1c58808b746d115" name="gga2db554e861ffa2fd2b4fb74c0998f831aa60852f204ed8028c1c58808b746d115"></a>Ok&#160;</td><td class="fielddoc"><p>已生成有效定位结果 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831afe0552ed0f5214cc3d45002f74afb87f" name="gga2db554e861ffa2fd2b4fb74c0998f831afe0552ed0f5214cc3d45002f74afb87f"></a>WaitingForPrimary&#160;</td><td class="fielddoc"><p>正在等待主图像 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a6a34c448668f0a3901a1833905d657c9" name="gga2db554e861ffa2fd2b4fb74c0998f831a6a34c448668f0a3901a1833905d657c9"></a>WaitingForSecondary&#160;</td><td class="fielddoc"><p>正在等待右目或深度图像 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831abcfb3ab3e213517c95edc2381da17573" name="gga2db554e861ffa2fd2b4fb74c0998f831abcfb3ab3e213517c95edc2381da17573"></a>MissingCalibration&#160;</td><td class="fielddoc"><p>缺少相机标定信息 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a4eb9f6b8ee5e828c8061153588d4f25c" name="gga2db554e861ffa2fd2b4fb74c0998f831a4eb9f6b8ee5e828c8061153588d4f25c"></a>InvalidOptions&#160;</td><td class="fielddoc"><p>同步或定位配置无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a97c2f50ce33f394d3f5ce6866026605c" name="gga2db554e861ffa2fd2b4fb74c0998f831a97c2f50ce33f394d3f5ce6866026605c"></a>InvalidSensorData&#160;</td><td class="fielddoc"><p>图像、标定、IMU 或外部里程计数据无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831af47847e1a691e4e868f618ffe1a5e57b" name="gga2db554e861ffa2fd2b4fb74c0998f831af47847e1a691e4e868f618ffe1a5e57b"></a>FrameMismatch&#160;</td><td class="fielddoc"><p>图像与标定信息的坐标系或尺寸不一致 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a99307905d0ab7319274e6a030eee3301" name="gga2db554e861ffa2fd2b4fb74c0998f831a99307905d0ab7319274e6a030eee3301"></a>TimestampMismatch&#160;</td><td class="fielddoc"><p>输入时间戳乱序或无法在容差内组成一帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a32b169f72b293ef80d35435e9894f8e2" name="gga2db554e861ffa2fd2b4fb74c0998f831a32b169f72b293ef80d35435e9894f8e2"></a>Initializing&#160;</td><td class="fielddoc"><p>后端正在初始化 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a2d7aacebca2a222443b1d65be6317f69" name="gga2db554e861ffa2fd2b4fb74c0998f831a2d7aacebca2a222443b1d65be6317f69"></a>TrackingLost&#160;</td><td class="fielddoc"><p>后端暂时丢失跟踪 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a6005b8268334563b2246f41788e28ff5" name="gga2db554e861ffa2fd2b4fb74c0998f831a6005b8268334563b2246f41788e28ff5"></a>BackendError&#160;</td><td class="fielddoc"><p>第三方后端处理失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831a5d3e19bb3d1214b6461407c239a7887e" name="gga2db554e861ffa2fd2b4fb74c0998f831a5d3e19bb3d1214b6461407c239a7887e"></a>InvalidEstimate&#160;</td><td class="fielddoc"><p>后端返回的位姿、速度或坐标系无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f" name="gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f"></a>Unsupported&#160;</td><td class="fielddoc"><p>后端不支持请求的可选操作 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ga9125396ab4ab4d6e316b39ab406d1903" name="ga9125396ab4ab4d6e316b39ab406d1903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9125396ab4ab4d6e316b39ab406d1903">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * rm::nav::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+
+<p>获取视觉定位状态的稳定文本描述 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>视觉定位状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向静态文本的字符串指针 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../db/d06/group__nav__localization_ga9125396ab4ab4d6e316b39ab406d1903_cgraph.svg" width="330" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

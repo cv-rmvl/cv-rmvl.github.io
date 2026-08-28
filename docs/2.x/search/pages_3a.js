@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['内置服务类型_0',['2 内置服务类型',['../d6/d0f/tutorial_table_of_content_rmvlsrv.html#autotoc_md426',1,'']]],
-  ['内置消息类型_1',['2 内置消息类型',['../d2/d9b/tutorial_table_of_content_rmvlmsg.html#autotoc_md413',1,'']]]
+  ['典型部署方式_0',['4.4 典型部署方式',['../dd/ddd/tutorial_modules_nav.html#autotoc_md356',1,'']]]
 ];

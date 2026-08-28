@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['架构_0',['CMake 架构',['../d2/d60/tutorial_install_overview.html#autotoc_md112',1,'']]]
+  ['杂项_0',['杂项',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md101',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['执行层_0',['执行层',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md326',1,'执行层'],['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md330',1,'执行层']]],
-  ['执行端部署控制器示例_1',['执行端部署控制器示例',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md327',1,'']]]
+  ['感知设备_0',['感知设备',['../d1/d67/tutorial_extra_upper_init.html#init_perception',1,'']]]
 ];

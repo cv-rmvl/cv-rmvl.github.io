@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['曝光设置_0',['1.2.1 曝光设置',['../df/d2c/tutorial_modules_camera.html#autotoc_md253',1,'']]]
+  ['映射配置_0',['2.1 映射配置',['../d4/de8/tutorial_extra_upper_read_data.html#autotoc_md85',1,'']]]
 ];

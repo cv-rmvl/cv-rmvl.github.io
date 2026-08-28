@@ -1,0 +1,620 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::FrameSynchronizer类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer.html">FrameSynchronizer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d9/d57/classrm_1_1nav_1_1FrameSynchronizer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::FrameSynchronizer类 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../db/d06/group__nav__localization.html">视觉里程计与 SLAM 接入</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>多传感器采集时间同步器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+<div class="dynheader">
+rm::nav::FrameSynchronizer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d6/dd3/classrm_1_1nav_1_1FrameSynchronizer__coll__graph.svg" width="204" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aee5f96ff3bd86b1cd83c70520fe570ef" id="r_aee5f96ff3bd86b1cd83c70520fe570ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aee5f96ff3bd86b1cd83c70520fe570ef">FrameSynchronizer</a> (<a class="el" href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html">FrameSyncOptions</a> options={})</td></tr>
+<tr class="memdesc:aee5f96ff3bd86b1cd83c70520fe570ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建传感器帧同步器  <br /></td></tr>
+<tr class="memitem:a3638162c438fc75865421d93b59b6d0b" id="r_a3638162c438fc75865421d93b59b6d0b"><td class="memItemLeft">const <a class="el" href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html">FrameSyncOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a3638162c438fc75865421d93b59b6d0b">options</a> () const noexcept</td></tr>
+<tr class="memitem:ab0ec85a72efcb5fee4833a8d75088b35" id="r_ab0ec85a72efcb5fee4833a8d75088b35"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab0ec85a72efcb5fee4833a8d75088b35">setPrimaryInfo</a> (const <a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> &amp;info)</td></tr>
+<tr class="memdesc:ab0ec85a72efcb5fee4833a8d75088b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新主相机标定信息  <br /></td></tr>
+<tr class="memitem:a24bf6463bbf99ba9f299e63c45cfddc9" id="r_a24bf6463bbf99ba9f299e63c45cfddc9"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a24bf6463bbf99ba9f299e63c45cfddc9">setSecondaryInfo</a> (const <a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> &amp;info)</td></tr>
+<tr class="memdesc:a24bf6463bbf99ba9f299e63c45cfddc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新右目或深度相机标定信息  <br /></td></tr>
+<tr class="memitem:aeef52c294df44076ae79e273aad8a1ff" id="r_aeef52c294df44076ae79e273aad8a1ff"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeef52c294df44076ae79e273aad8a1ff">pushPrimary</a> (<a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> image)</td></tr>
+<tr class="memdesc:aeef52c294df44076ae79e273aad8a1ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入主图像  <br /></td></tr>
+<tr class="memitem:a88b76ed2c472d9b62445e6851fa0f116" id="r_a88b76ed2c472d9b62445e6851fa0f116"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a88b76ed2c472d9b62445e6851fa0f116">pushPrimary</a> (std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt; image)</td></tr>
+<tr class="memdesc:a88b76ed2c472d9b62445e6851fa0f116"><td class="mdescLeft">&#160;</td><td class="mdescRight">零拷贝写入由调用方共享所有权的主图像  <br /></td></tr>
+<tr class="memitem:a9f044cd67846010b30a2f05ae358cac5" id="r_a9f044cd67846010b30a2f05ae358cac5"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9f044cd67846010b30a2f05ae358cac5">pushSecondary</a> (<a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> image)</td></tr>
+<tr class="memdesc:a9f044cd67846010b30a2f05ae358cac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入右目或深度图像  <br /></td></tr>
+<tr class="memitem:aedcd68df257c44cbe2e300d938d3c6d5" id="r_aedcd68df257c44cbe2e300d938d3c6d5"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#aedcd68df257c44cbe2e300d938d3c6d5">pushSecondary</a> (std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt; image)</td></tr>
+<tr class="memdesc:aedcd68df257c44cbe2e300d938d3c6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">零拷贝写入由调用方共享所有权的右目或深度图像  <br /></td></tr>
+<tr class="memitem:a1e3517cb049564ea41e7b97e0c3ee710" id="r_a1e3517cb049564ea41e7b97e0c3ee710"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1e3517cb049564ea41e7b97e0c3ee710">pushImu</a> (<a class="el" href="../../de/d43/classrm_1_1msg_1_1Imu.html">msg::Imu</a> imu)</td></tr>
+<tr class="memdesc:a1e3517cb049564ea41e7b97e0c3ee710"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入一个可选 IMU 样本  <br /></td></tr>
+<tr class="memitem:a6a89bd758325e9dc63841ad836cfda71" id="r_a6a89bd758325e9dc63841ad836cfda71"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6a89bd758325e9dc63841ad836cfda71">pushOdometry</a> (<a class="el" href="../../dc/db8/classrm_1_1msg_1_1Odometry.html">msg::Odometry</a> odometry)</td></tr>
+<tr class="memdesc:a6a89bd758325e9dc63841ad836cfda71"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入一个可选外部里程计样本  <br /></td></tr>
+<tr class="memitem:ae69ff79b03148c99277c55c9aee92848" id="r_ae69ff79b03148c99277c55c9aee92848"><td class="memItemLeft"><a class="el" href="../../db/dd4/structrm_1_1nav_1_1FrameSyncResult.html">FrameSyncResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae69ff79b03148c99277c55c9aee92848">next</a> ()</td></tr>
+<tr class="memdesc:ae69ff79b03148c99277c55c9aee92848"><td class="mdescLeft">&#160;</td><td class="mdescRight">尝试获取下一帧已同步输入  <br /></td></tr>
+<tr class="memitem:a996d4c45eec58991bde616503bd3631d" id="r_a996d4c45eec58991bde616503bd3631d"><td class="memItemLeft"><a class="el" href="../../d5/d2b/structrm_1_1nav_1_1FrameSyncStatistics.html">FrameSyncStatistics</a>&#160;</td><td class="memItemRight"><a class="el" href="#a996d4c45eec58991bde616503bd3631d">statistics</a> () const noexcept</td></tr>
+<tr class="memitem:a9ef5012579bae59f354b389270f87b84" id="r_a9ef5012579bae59f354b389270f87b84"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9ef5012579bae59f354b389270f87b84">clear</a> () noexcept</td></tr>
+<tr class="memdesc:a9ef5012579bae59f354b389270f87b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空消息队列与上一帧时间，保留标定信息和统计  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>多传感器采集时间同步器 </p>
+<ul>
+<li>使用消息的 <span class="tt">header.stamp</span> 同步，不使用不可预测的到达时间</li>
+<li>单目只等待主图像，双目和 RGB-D 在容差内选择时间最接近的辅助图像</li>
+<li>CameraInfo 作为低频标定状态缓存，IMU 按相邻视觉帧时间区间批量交给后端</li>
+<li>外部 Odometry 为可选输入，可承载轮速计、机械里程计或融合结果</li>
+<li>图像必须紧密排列，尺寸和坐标系必须与对应 CameraInfo 一致</li>
+<li>队列溢出、时间戳乱序和已经无法匹配的图像会被丢弃并计入统计 <dl class="section note"><dt>注解</dt><dd>本类线程安全，可直接在不同 LPSS 订阅回调中写入各路消息。 </dd>
+<dd>
+CameraInfo 的时间戳不参与逐帧同步，更新后持续用于后续图像，直至被下一份有效标定替换。 </dd></dl>
+</li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="aee5f96ff3bd86b1cd83c70520fe570ef" name="aee5f96ff3bd86b1cd83c70520fe570ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5f96ff3bd86b1cd83c70520fe570ef">&#9670;&#160;</a></span>FrameSynchronizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::nav::FrameSynchronizer::FrameSynchronizer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html">FrameSyncOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建传感器帧同步器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>同步配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_aee5f96ff3bd86b1cd83c70520fe570ef_cgraph.svg" width="466" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a9ef5012579bae59f354b389270f87b84" name="a9ef5012579bae59f354b389270f87b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef5012579bae59f354b389270f87b84">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::nav::FrameSynchronizer::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空消息队列与上一帧时间，保留标定信息和统计 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a9ef5012579bae59f354b389270f87b84_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae69ff79b03148c99277c55c9aee92848" name="ae69ff79b03148c99277c55c9aee92848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69ff79b03148c99277c55c9aee92848">&#9670;&#160;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dd4/structrm_1_1nav_1_1FrameSyncResult.html">FrameSyncResult</a> rm::nav::FrameSynchronizer::next </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>尝试获取下一帧已同步输入 </p>
+<dl class="section return"><dt>返回</dt><dd>同步结果，尚未收齐输入时返回对应等待状态 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>返回 TimestampMismatch 或 FrameMismatch 时可能已经丢弃一张无法组成有效帧的图像， 调用方可继续调用本函数处理后续数据。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_ae69ff79b03148c99277c55c9aee92848_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3638162c438fc75865421d93b59b6d0b" name="a3638162c438fc75865421d93b59b6d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3638162c438fc75865421d93b59b6d0b">&#9670;&#160;</a></span>options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../da/d2e/structrm_1_1nav_1_1FrameSyncOptions.html">FrameSyncOptions</a> &amp; rm::nav::FrameSynchronizer::options </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>创建同步器时传入且不会再修改的同步配置 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a3638162c438fc75865421d93b59b6d0b_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1e3517cb049564ea41e7b97e0c3ee710" name="a1e3517cb049564ea41e7b97e0c3ee710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e3517cb049564ea41e7b97e0c3ee710">&#9670;&#160;</a></span>pushImu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushImu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d43/classrm_1_1msg_1_1Imu.html">msg::Imu</a></td>          <td class="paramname"><span class="paramname"><em>imu</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写入一个可选 IMU 样本 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imu</td><td>IMU 消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a1e3517cb049564ea41e7b97e0c3ee710_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6a89bd758325e9dc63841ad836cfda71" name="a6a89bd758325e9dc63841ad836cfda71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a89bd758325e9dc63841ad836cfda71">&#9670;&#160;</a></span>pushOdometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushOdometry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/db8/classrm_1_1msg_1_1Odometry.html">msg::Odometry</a></td>          <td class="paramname"><span class="paramname"><em>odometry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写入一个可选外部里程计样本 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">odometry</td><td>轮速计或其他外部 Odometry 消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a6a89bd758325e9dc63841ad836cfda71_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aeef52c294df44076ae79e273aad8a1ff" name="aeef52c294df44076ae79e273aad8a1ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef52c294df44076ae79e273aad8a1ff">&#9670;&#160;</a></span>pushPrimary() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushPrimary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a></td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写入主图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>主图像消息，可使用移动语义避免复制像素数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，无效图像或无效同步配置会被拒绝并计入统计 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_aeef52c294df44076ae79e273aad8a1ff_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a88b76ed2c472d9b62445e6851fa0f116" name="a88b76ed2c472d9b62445e6851fa0f116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b76ed2c472d9b62445e6851fa0f116">&#9670;&#160;</a></span>pushPrimary() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushPrimary </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>零拷贝写入由调用方共享所有权的主图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>主图像共享指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，空指针、无效图像或无效同步配置会被拒绝并计入统计 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>本函数只复制共享指针，不复制图像数据，调用方不得在写入后修改消息内容。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a88b76ed2c472d9b62445e6851fa0f116_cgraph.svg" width="466" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9f044cd67846010b30a2f05ae358cac5" name="a9f044cd67846010b30a2f05ae358cac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f044cd67846010b30a2f05ae358cac5">&#9670;&#160;</a></span>pushSecondary() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushSecondary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a></td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写入右目或深度图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>辅助图像消息，可使用移动语义避免复制像素数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，无效图像或无效同步配置会被拒绝并计入统计 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a9f044cd67846010b30a2f05ae358cac5_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aedcd68df257c44cbe2e300d938d3c6d5" name="aedcd68df257c44cbe2e300d938d3c6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedcd68df257c44cbe2e300d938d3c6d5">&#9670;&#160;</a></span>pushSecondary() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::pushSecondary </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="../../d5/d2f/classrm_1_1msg_1_1Image.html">msg::Image</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>image</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>零拷贝写入由调用方共享所有权的右目或深度图像 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>辅助图像共享指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，空指针、无效图像或无效同步配置会被拒绝并计入统计 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>本函数只复制共享指针，不复制图像数据，调用方不得在写入后修改消息内容。 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_aedcd68df257c44cbe2e300d938d3c6d5_cgraph.svg" width="466" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab0ec85a72efcb5fee4833a8d75088b35" name="ab0ec85a72efcb5fee4833a8d75088b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ec85a72efcb5fee4833a8d75088b35">&#9670;&#160;</a></span>setPrimaryInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::setPrimaryInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新主相机标定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>主相机 CameraInfo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，失败时保留原标定信息 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_ab0ec85a72efcb5fee4833a8d75088b35_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a24bf6463bbf99ba9f299e63c45cfddc9" name="a24bf6463bbf99ba9f299e63c45cfddc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24bf6463bbf99ba9f299e63c45cfddc9">&#9670;&#160;</a></span>setSecondaryInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::FrameSynchronizer::setSecondaryInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/dd0/classrm_1_1msg_1_1CameraInfo.html">msg::CameraInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新右目或深度相机标定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>辅助相机 CameraInfo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输入状态，失败时保留原标定信息 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a24bf6463bbf99ba9f299e63c45cfddc9_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a996d4c45eec58991bde616503bd3631d" name="a996d4c45eec58991bde616503bd3631d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996d4c45eec58991bde616503bd3631d">&#9670;&#160;</a></span>statistics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d2b/structrm_1_1nav_1_1FrameSyncStatistics.html">FrameSyncStatistics</a> rm::nav::FrameSynchronizer::statistics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>返回</dt><dd>当前累计统计的线程安全快照 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dd/d89/classrm_1_1nav_1_1FrameSynchronizer_a996d4c45eec58991bde616503bd3631d_cgraph.svg" width="215" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

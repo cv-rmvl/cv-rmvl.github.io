@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: 数据 IO 与通信模块</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,29 +73,51 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="doc-content">
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -185,9 +207,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:ga36c93b90e1f1281cdcb39600fe8cad7d" id="r_ga36c93b90e1f1281cdcb39600fe8cad7d"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; </td></tr>
-<tr class="memitem:ga36c93b90e1f1281cdcb39600fe8cad7d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga36c93b90e1f1281cdcb39600fe8cad7d">rm::async::co_spawn</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:ga36c93b90e1f1281cdcb39600fe8cad7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定的执行上下文中生成并调度一个协程任务  <br /></td></tr>
+<tr class="memitem:ga09af072841f8b40d9a5fdb04ca6c000d" id="r_ga09af072841f8b40d9a5fdb04ca6c000d"><td class="memTemplParams" colspan="2">template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</td></tr>
+<tr class="memitem:ga09af072841f8b40d9a5fdb04ca6c000d template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga09af072841f8b40d9a5fdb04ca6c000d">rm::async::co_spawn</a> (<a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">IOContext</a> &amp;ctx, Callable &amp;&amp;fn, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:ga09af072841f8b40d9a5fdb04ca6c000d"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定的执行上下文中生成并调度一个协程任务  <br /></td></tr>
 <tr class="memitem:ga1833a8ef4cc320b8ae6bbfc806cf9c2a" id="r_ga1833a8ef4cc320b8ae6bbfc806cf9c2a"><td class="memItemLeft">std::ostream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ga1833a8ef4cc320b8ae6bbfc806cf9c2a">rm::operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;data)</td></tr>
 <tr class="memdesc:ga1833a8ef4cc320b8ae6bbfc806cf9c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载 IMU 数据的输入输出流操作符  <br /></td></tr>
 <tr class="memitem:ga3b95c5e224b21cf2aeb4011fa70df9d3" id="r_ga3b95c5e224b21cf2aeb4011fa70df9d3"><td class="memItemLeft">std::istream &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ga3b95c5e224b21cf2aeb4011fa70df9d3">rm::operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="../../db/def/structrm_1_1ImuData.html">ImuData</a> &amp;data)</td></tr>
@@ -240,13 +263,14 @@ $(function() {
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
-<a id="ga36c93b90e1f1281cdcb39600fe8cad7d" name="ga36c93b90e1f1281cdcb39600fe8cad7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga36c93b90e1f1281cdcb39600fe8cad7d">&#9670;&#160;</a></span>co_spawn()</h2>
+<a id="ga09af072841f8b40d9a5fdb04ca6c000d" name="ga09af072841f8b40d9a5fdb04ca6c000d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga09af072841f8b40d9a5fdb04ca6c000d">&#9670;&#160;</a></span>co_spawn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Callable, typename... Args&gt; </div>
+template&lt;typename Callable, typename... Args&gt; <br />
+requires InvokableTask&lt;std::decay_t&lt;Callable&gt;, std::decay_t&lt;Args&gt;...&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -286,14 +310,14 @@ template&lt;typename Callable, typename... Args&gt; </div>
   </dd>
 </dl>
 <dl class="section see"><dt>参见</dt><dd><ul>
-<li>异步 I/O 执行上下文 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a800127ea9e55b4b14e36bab1aad565a8" title="生成 Task&lt;&gt; 协程任务，并添加到调度器">IOContext::spawn</a></li>
+<li>异步 I/O 执行上下文 <a class="el" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a7f20c8db49341cfe0f21e70b643ed771" title="生成 Task&lt;&gt; 协程任务，并添加到调度器">IOContext::spawn</a></li>
 </ul>
 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>可调用对象和参数会复制或移动到调度任务中，需要传递引用时请使用 <span class="tt">std::ref</span> </dd></dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga36c93b90e1f1281cdcb39600fe8cad7d_cgraph.svg" width="375" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga09af072841f8b40d9a5fdb04ca6c000d_cgraph.svg" width="375" height="80"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -343,7 +367,7 @@ template&lt;typename Callable, typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga1833a8ef4cc320b8ae6bbfc806cf9c2a_cgraph.svg" width="328" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga1833a8ef4cc320b8ae6bbfc806cf9c2a_cgraph.svg" width="328" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -389,7 +413,7 @@ template&lt;typename Callable, typename... Args&gt; </div>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga3b95c5e224b21cf2aeb4011fa70df9d3_cgraph.svg" width="324" height="39"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga3b95c5e224b21cf2aeb4011fa70df9d3_cgraph.svg" width="324" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -434,6 +458,11 @@ template&lt;typename Callable, typename... Args&gt; </div>
 </dl>
 <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d7/de2/samples_2tutorial_code_2io_2sample_read_corners_8cpp-example.html#_a0">samples/tutorial_code/io/sample_read_corners.cpp</a>.</dd>
 </dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga9aa99cd3878794115ac58d55320e7238_cgraph.svg" width="138" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -472,6 +501,11 @@ template&lt;typename Callable, typename... Args&gt; </div>
 </dl>
 <dl class="section examples"><dt>示例</dt><dd><a class="el" href="../../d9/de7/samples_2tutorial_code_2io_2sample_write_corners_8cpp-example.html#_a1">samples/tutorial_code/io/sample_write_corners.cpp</a>.</dd>
 </dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d2/da3/group__io_ga232b63e9e1364254d512e66377be7af4_cgraph.svg" width="142" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -506,7 +540,7 @@ template&lt;typename Callable, typename... Args&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

@@ -1,0 +1,393 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::lpss::tf::StaticBroadcaster类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d0/d65/namespacerm_1_1lpss.html">lpss</a></li><li class="navelem"><a href="../../d7/d6f/namespacerm_1_1lpss_1_1tf.html">tf</a></li><li class="navelem"><a href="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster.html">StaticBroadcaster</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../dd/db6/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::lpss::tf::StaticBroadcaster类 参考<div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a> &raquo; <a class="el" href="../../d6/d48/group__lpss__transform__buffer.html">坐标变换缓存</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>静态坐标变换发布器  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+<div class="dynheader">
+rm::lpss::tf::StaticBroadcaster 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d09/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster__coll__graph.svg" width="214" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa65dd129469f362dc0db6a0f50930442" id="r_aa65dd129469f362dc0db6a0f50930442"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa65dd129469f362dc0db6a0f50930442">StaticBroadcaster</a> (std::string_view name, <a class="el" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">Node</a> &amp;node)</td></tr>
+<tr class="memdesc:aa65dd129469f362dc0db6a0f50930442"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建同步静态坐标变换发布器  <br /></td></tr>
+<tr class="memitem:abfbde960c73ed3ed692d7368d331f4f0" id="r_abfbde960c73ed3ed692d7368d331f4f0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#abfbde960c73ed3ed692d7368d331f4f0">StaticBroadcaster</a> (std::string_view name, <a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">async::Node</a> &amp;node)</td></tr>
+<tr class="memdesc:abfbde960c73ed3ed692d7368d331f4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建异步静态坐标变换发布器  <br /></td></tr>
+<tr class="memitem:a89a3f19770fcba43cfb98526cdb63204" id="r_a89a3f19770fcba43cfb98526cdb63204"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a89a3f19770fcba43cfb98526cdb63204">~StaticBroadcaster</a> ()</td></tr>
+<tr class="memitem:a2817913be47962454ef60fff12d8f799" id="r_a2817913be47962454ef60fff12d8f799"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2817913be47962454ef60fff12d8f799">StaticBroadcaster</a> (const StaticBroadcaster &amp;)=delete</td></tr>
+<tr class="memitem:ac0a18562862e7d1cadb280d5c237fbce" id="r_ac0a18562862e7d1cadb280d5c237fbce"><td class="memItemLeft"><a class="el" href="#aa65dd129469f362dc0db6a0f50930442">StaticBroadcaster</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac0a18562862e7d1cadb280d5c237fbce">operator=</a> (const <a class="el" href="#aa65dd129469f362dc0db6a0f50930442">StaticBroadcaster</a> &amp;)=delete</td></tr>
+<tr class="memitem:ab6081bbf3439cec28e2519ab4b6a8019" id="r_ab6081bbf3439cec28e2519ab4b6a8019"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab6081bbf3439cec28e2519ab4b6a8019">send</a> (const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;transform)</td></tr>
+<tr class="memdesc:ab6081bbf3439cec28e2519ab4b6a8019"><td class="mdescLeft">&#160;</td><td class="mdescRight">发布单条静态坐标变换  <br /></td></tr>
+<tr class="memitem:a58c9b7dd36c11b7f1d94ea395bfa82be" id="r_a58c9b7dd36c11b7f1d94ea395bfa82be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a58c9b7dd36c11b7f1d94ea395bfa82be">send</a> (const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;transforms)</td></tr>
+<tr class="memdesc:a58c9b7dd36c11b7f1d94ea395bfa82be"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量发布静态坐标变换  <br /></td></tr>
+<tr class="memitem:a25d7087c61338bb7d29b71a31fcc2132" id="r_a25d7087c61338bb7d29b71a31fcc2132"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a25d7087c61338bb7d29b71a31fcc2132">invalid</a> () const noexcept</td></tr>
+<tr class="memdesc:a25d7087c61338bb7d29b71a31fcc2132"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断底层发布器是否无效  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>静态坐标变换发布器 </p>
+<p>发布到 <span class="tt">&lt;name&gt;/tf_static</span>，Node 的生命周期必须长于发布器。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="aa65dd129469f362dc0db6a0f50930442" name="aa65dd129469f362dc0db6a0f50930442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65dd129469f362dc0db6a0f50930442">&#9670;&#160;</a></span>StaticBroadcaster() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::StaticBroadcaster::StaticBroadcaster </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/da8/classrm_1_1lpss_1_1Node.html">Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建同步静态坐标变换发布器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>话题隔离名称，发布话题为 <span class="tt">&lt;name&gt;/tf_static</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>同步 LPSS 节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abfbde960c73ed3ed692d7368d331f4f0" name="abfbde960c73ed3ed692d7368d331f4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbde960c73ed3ed692d7368d331f4f0">&#9670;&#160;</a></span>StaticBroadcaster() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::StaticBroadcaster::StaticBroadcaster </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html">async::Node</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建异步静态坐标变换发布器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>话题隔离名称，发布话题为 <span class="tt">&lt;name&gt;/tf_static</span> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>异步 LPSS 节点 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a89a3f19770fcba43cfb98526cdb63204" name="a89a3f19770fcba43cfb98526cdb63204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a3f19770fcba43cfb98526cdb63204">&#9670;&#160;</a></span>~StaticBroadcaster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::StaticBroadcaster::~StaticBroadcaster </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2817913be47962454ef60fff12d8f799" name="a2817913be47962454ef60fff12d8f799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2817913be47962454ef60fff12d8f799">&#9670;&#160;</a></span>StaticBroadcaster() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::lpss::tf::StaticBroadcaster::StaticBroadcaster </td>
+          <td>(</td>
+          <td class="paramtype">const StaticBroadcaster &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster_a2817913be47962454ef60fff12d8f799_cgraph.svg" width="486" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a25d7087c61338bb7d29b71a31fcc2132" name="a25d7087c61338bb7d29b71a31fcc2132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d7087c61338bb7d29b71a31fcc2132">&#9670;&#160;</a></span>invalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::lpss::tf::StaticBroadcaster::invalid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断底层发布器是否无效 </p>
+
+</div>
+</div>
+<a id="ac0a18562862e7d1cadb280d5c237fbce" name="ac0a18562862e7d1cadb280d5c237fbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a18562862e7d1cadb280d5c237fbce">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa65dd129469f362dc0db6a0f50930442">StaticBroadcaster</a> &amp; rm::lpss::tf::StaticBroadcaster::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aa65dd129469f362dc0db6a0f50930442">StaticBroadcaster</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/dda/classrm_1_1lpss_1_1tf_1_1StaticBroadcaster_ac0a18562862e7d1cadb280d5c237fbce_cgraph.svg" width="486" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a58c9b7dd36c11b7f1d94ea395bfa82be" name="a58c9b7dd36c11b7f1d94ea395bfa82be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c9b7dd36c11b7f1d94ea395bfa82be">&#9670;&#160;</a></span>send() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::tf::StaticBroadcaster::send </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/dc5/classrm_1_1msg_1_1TF.html">msg::TF</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transforms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>批量发布静态坐标变换 </p>
+
+</div>
+</div>
+<a id="ab6081bbf3439cec28e2519ab4b6a8019" name="ab6081bbf3439cec28e2519ab4b6a8019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6081bbf3439cec28e2519ab4b6a8019">&#9670;&#160;</a></span>send() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rm::lpss::tf::StaticBroadcaster::send </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d5d/classrm_1_1msg_1_1TransformStamped.html">msg::TransformStamped</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发布单条静态坐标变换 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['检查安装结果_0',['3.2 检查安装结果',['../d1/db4/tutorial_install.html#autotoc_md120',1,'']]]
+  ['架构与能力边界_0',['1 架构与能力边界',['../dd/ddd/tutorial_modules_nav.html#autotoc_md344',1,'']]],
+  ['架构_1',['CMake 架构',['../d2/d60/tutorial_install_overview.html#autotoc_md112',1,'']]]
 ];

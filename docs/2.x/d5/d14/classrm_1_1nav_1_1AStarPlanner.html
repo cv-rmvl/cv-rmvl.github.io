@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::nav::AStarPlanner类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -136,7 +158,7 @@ rm::nav::AStarPlanner 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a01535ede151371a4cfcc8495885994dc" id="r_a01535ede151371a4cfcc8495885994dc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a01535ede151371a4cfcc8495885994dc">AStarPlanner</a> (<a class="el" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">AStarOptions</a> <a class="el" href="#adcaaf19963e033b2fa18c08613722caa">options</a>={}) noexcept</td></tr>
+<tr class="memitem:a01535ede151371a4cfcc8495885994dc" id="r_a01535ede151371a4cfcc8495885994dc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a01535ede151371a4cfcc8495885994dc">AStarPlanner</a> (<a class="el" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">AStarOptions</a> options={}) noexcept</td></tr>
 <tr class="memdesc:a01535ede151371a4cfcc8495885994dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 A* 路径规划器  <br /></td></tr>
 <tr class="memitem:adcaaf19963e033b2fa18c08613722caa" id="r_adcaaf19963e033b2fa18c08613722caa"><td class="memItemLeft">const <a class="el" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">AStarOptions</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adcaaf19963e033b2fa18c08613722caa">options</a> () const noexcept</td></tr>
 <tr class="memitem:a4a44467d1b7ccc562fd5dcd9515b8def" id="r_a4a44467d1b7ccc562fd5dcd9515b8def"><td class="memItemLeft"><a class="el" href="../../d4/d2e/structrm_1_1nav_1_1PlanningResult.html">PlanningResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4a44467d1b7ccc562fd5dcd9515b8def">plan</a> (const <a class="el" href="../../d9/d27/classrm_1_1nav_1_1Costmap.html">Costmap</a> &amp;costmap, const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;start, const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">msg::Pose</a> &amp;goal) const</td></tr>
@@ -147,7 +169,8 @@ Public 成员函数</h2></td></tr>
 <ul>
 <li>默认使用八邻域搜索并禁止夹角穿越</li>
 <li>将代价地图中的膨胀代价加入移动代价</li>
-<li>搜索完成后可执行视线简化和受碰撞约束的迭代平滑 <dl class="section note"><dt>注解</dt><dd>起点、终点和返回路径均使用代价地图的坐标系。 </dd></dl>
+<li>搜索完成后可执行视线简化和受碰撞约束的迭代平滑</li>
+<li>输出路径点位于栅格中心，首尾保留输入位置，并根据相邻点重新生成平面朝向 <dl class="section note"><dt>注解</dt><dd>起点、终点和返回路径均使用代价地图的坐标系。 </dd></dl>
 </li>
 </ul>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
@@ -177,7 +200,7 @@ Public 成员函数</h2></td></tr>
 <p>创建 A* 路径规划器 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="#adcaaf19963e033b2fa18c08613722caa">options</a></td><td>规划配置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>规划配置 </td></tr>
   </table>
   </dd>
 </dl>
@@ -244,8 +267,8 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">costmap</td><td>已完成图层合成和膨胀的代价地图 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>起点位姿，仅使用位置分量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">goal</td><td>终点位姿，仅使用位置分量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>起点位姿，仅使用有限的位置分量，输入朝向不参与搜索 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">goal</td><td>终点位姿，仅使用有限的位置分量，输入朝向不参与搜索 </td></tr>
   </table>
   </dd>
 </dl>
@@ -264,7 +287,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

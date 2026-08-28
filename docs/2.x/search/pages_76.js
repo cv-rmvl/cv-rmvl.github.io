@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['控制与规划_0',['控制与规划',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md409',1,'']]],
-  ['控制层部署控制器示例_1',['控制层部署控制器示例',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md323',1,'']]],
-  ['控制层_2',['控制层',['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md325',1,'控制层'],['../d4/d4a/tutorial_modules_lpss_robotdemo.html#autotoc_md329',1,'控制层']]],
-  ['控制选项_3',['2.3 Socket 控制选项',['../d2/d5d/tutorial_modules_socket.html#autotoc_md392',1,'']]]
+  ['扩展卡尔曼滤波_0',['扩展卡尔曼滤波',['../db/d71/tutorial_modules_ekf.html',1,'扩展卡尔曼滤波'],['../db/d71/tutorial_modules_ekf.html#autotoc_md161',1,'2 扩展卡尔曼滤波']]],
+  ['扩展模块使用教程_1',['扩展模块使用教程',['../d6/d3f/tutorial_table_of_content_extra.html',1,'tutorials']]],
+  ['扩展模块_2',['扩展模块',['../d1/dfb/intro.html#extra_modules',1,'']]],
+  ['扩展用法_3',['2 扩展用法',['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md225',1,'']]]
 ];

@@ -7,7 +7,7 @@
   <meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
   <meta content="IE=9" http-equiv="X-UA-Compatible"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="Doxygen 1.16.1" name="generator"/>
+  <meta content="Doxygen 1.18.0" name="generator"/>
   <title>RMVL: 最优化算法库</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
@@ -65,7 +65,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png"/></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                 <span id="projectnumber">2.5.0-dev</span>
+                 <span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -74,26 +74,51 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script src="../../menudata.js" type="text/javascript"></script>
 <script src="../../menu.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="搜索" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 </div><!-- top -->
 <div id="doc-content">
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<div id="MSearchSelectWindow">
 </div>
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -441,6 +466,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>函数在指定点的导数 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_gad269c00a143e239e4c56922766bb2a2e_cgraph.svg" width="124">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="gae8c5462fcdf30d76ea709bbc2e08d3ee" name="gae8c5462fcdf30d76ea709bbc2e08d3ee"></a>
@@ -482,6 +512,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><span class="tt">[x, fval]</span> 最小值点和最小值 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_gae8c5462fcdf30d76ea709bbc2e08d3ee_cgraph.svg" width="112">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="ga59ea1658679b6b7067111f3aee854f59" name="ga59ea1658679b6b7067111f3aee854f59"></a>
@@ -532,6 +567,11 @@ $(function() {
 <dd>
 <span class="tt"><a class="el" href="#ggaa71c82823a41ad85c8de9d9db8653b4aa317cfd168980daa27b6705ea43dd93b4" title="拉格朗日乘子法（仅支持等式约束）">ConsMode::Lagrange</a></span> 和 <span class="tt"><a class="el" href="#ggaa71c82823a41ad85c8de9d9db8653b4aa107871e4708db3178d378c11dfdae39e" title="序列二次规划法 sqpnp_terzakis20 sqp_nocedal99">ConsMode::SQP</a></span> 需要 OpenCV 和 Eigen3 </dd></dl>
 <dl class="section return"><dt>返回</dt><dd><span class="tt">[x, fval]</span> 最小值点和最小值 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_ga59ea1658679b6b7067111f3aee854f59_cgraph.svg" width="111">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="ga4a7d105f2c4e5236f0ab9963d7e0cfef" name="ga4a7d105f2c4e5236f0ab9963d7e0cfef"></a>
@@ -567,6 +607,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd><span class="tt">[x, fval]</span> 最小值点和最小值 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_ga4a7d105f2c4e5236f0ab9963d7e0cfef_cgraph.svg" width="111">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="gaa93c2a0dd4c42255cd83a086ced9e9df" name="gaa93c2a0dd4c42255cd83a086ced9e9df"></a>
@@ -608,6 +653,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>函数在指定点的梯度向量 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_gaa93c2a0dd4c42255cd83a086ced9e9df_cgraph.svg" width="87">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="gab85704ec7a37e31de0644b99a6286173" name="gab85704ec7a37e31de0644b99a6286173"></a>
@@ -647,6 +697,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_gab85704ec7a37e31de0644b99a6286173_cgraph.svg" width="118">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="ga5a7f8fec980372cfd29fd21d37721ef1" name="ga5a7f8fec980372cfd29fd21d37721ef1"></a>
@@ -688,6 +743,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>最小二乘解 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_ga5a7f8fec980372cfd29fd21d37721ef1_cgraph.svg" width="143">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 <a id="gaab485911ef8cdc37e5ef92b839ec107c" name="gaab485911ef8cdc37e5ef92b839ec107c"></a>
@@ -723,6 +783,11 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>搜索区间 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="63" loading="lazy" scrolling="no" src="../../d2/d62/group__algorithm__optimal_gaab485911ef8cdc37e5ef92b839ec107c_cgraph.svg" width="99">&lt;p&gt;&lt;b&gt;This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.&lt;/b&gt;&lt;/p&gt;</iframe></div>
+</div>
 </div>
 </div>
 </div><!-- contents -->
@@ -731,7 +796,7 @@ $(function() {
 <hr class="footer"/><address class="footer"><small>
 制作者  <a href="http://www.doxygen.org/index.html">
 <img alt="doxygen" class="footer" src="../../../doxygen.svg"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

@@ -1,0 +1,284 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: 二维路径规划</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">二维路径规划 <div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供基于代价地图的 A* 搜索、路径简化和平滑  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+二维路径规划 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d8f/group__nav__planner.svg" width="271" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AAStarOptions" id="r_rm_3A_3Anav_3A_3AAStarOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html">rm::nav::AStarOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A* 规划配置  <a href="../../de/d4b/structrm_1_1nav_1_1AStarOptions.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3APlanningResult" id="r_rm_3A_3Anav_3A_3APlanningResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d4/d2e/structrm_1_1nav_1_1PlanningResult.html">rm::nav::PlanningResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">路径规划结果  <a href="../../d4/d2e/structrm_1_1nav_1_1PlanningResult.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Anav_3A_3AAStarPlanner" id="r_rm_3A_3Anav_3A_3AAStarPlanner"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d5/d14/classrm_1_1nav_1_1AStarPlanner.html">rm::nav::AStarPlanner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于二维代价地图的 A* 路径规划器  <a href="../../d5/d14/classrm_1_1nav_1_1AStarPlanner.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gabc79736e0b69f24072413dc14cc6ee89" id="r_gabc79736e0b69f24072413dc14cc6ee89"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gabc79736e0b69f24072413dc14cc6ee89">rm::nav::PlanningStatus</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89aa60852f204ed8028c1c58808b746d115">rm::nav::PlanningStatus::Ok</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89a4eb9f6b8ee5e828c8061153588d4f25c">rm::nav::PlanningStatus::InvalidOptions</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89a8cb22e26f2ffe739b708d5693ce4ddda">rm::nav::PlanningStatus::InvalidMap</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89a7e98cfdabe3f00ed92c76a82d244fcec">rm::nav::PlanningStatus::InvalidStart</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89a758021bffff0da35728c319591bbce28">rm::nav::PlanningStatus::InvalidGoal</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580">rm::nav::PlanningStatus::StartBlocked</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89a3f3b8e0eda1edee456ada58c224bbf11">rm::nav::PlanningStatus::GoalBlocked</a>
+, <a class="el" href="#ggabc79736e0b69f24072413dc14cc6ee89ad1d2245c4d9d60b8da25dda25d2af489">rm::nav::PlanningStatus::NoPath</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gabc79736e0b69f24072413dc14cc6ee89"><td class="mdescLeft">&#160;</td><td class="mdescRight">路径规划状态  <a href="#gabc79736e0b69f24072413dc14cc6ee89">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gadef4cbb98bb719e261cb56ff64536fca" id="r_gadef4cbb98bb719e261cb56ff64536fca"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#gadef4cbb98bb719e261cb56ff64536fca">rm::nav::to_string</a> (<a class="el" href="#gabc79736e0b69f24072413dc14cc6ee89">PlanningStatus</a> status) noexcept</td></tr>
+<tr class="memdesc:gadef4cbb98bb719e261cb56ff64536fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取路径规划状态的稳定文本描述  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供基于代价地图的 A* 搜索、路径简化和平滑 </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="gabc79736e0b69f24072413dc14cc6ee89" name="gabc79736e0b69f24072413dc14cc6ee89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc79736e0b69f24072413dc14cc6ee89">&#9670;&#160;</a></span>PlanningStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gabc79736e0b69f24072413dc14cc6ee89">rm::nav::PlanningStatus</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/planner.hpp&gt;</code></p>
+
+<p>路径规划状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89aa60852f204ed8028c1c58808b746d115" name="ggabc79736e0b69f24072413dc14cc6ee89aa60852f204ed8028c1c58808b746d115"></a>Ok&#160;</td><td class="fielddoc"><p>规划成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89a4eb9f6b8ee5e828c8061153588d4f25c" name="ggabc79736e0b69f24072413dc14cc6ee89a4eb9f6b8ee5e828c8061153588d4f25c"></a>InvalidOptions&#160;</td><td class="fielddoc"><p>规划参数无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89a8cb22e26f2ffe739b708d5693ce4ddda" name="ggabc79736e0b69f24072413dc14cc6ee89a8cb22e26f2ffe739b708d5693ce4ddda"></a>InvalidMap&#160;</td><td class="fielddoc"><p>代价地图无效 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89a7e98cfdabe3f00ed92c76a82d244fcec" name="ggabc79736e0b69f24072413dc14cc6ee89a7e98cfdabe3f00ed92c76a82d244fcec"></a>InvalidStart&#160;</td><td class="fielddoc"><p>起点不是有限坐标或位于地图外 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89a758021bffff0da35728c319591bbce28" name="ggabc79736e0b69f24072413dc14cc6ee89a758021bffff0da35728c319591bbce28"></a>InvalidGoal&#160;</td><td class="fielddoc"><p>终点不是有限坐标或位于地图外 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580" name="ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580"></a>StartBlocked&#160;</td><td class="fielddoc"><p>起点不可通行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89a3f3b8e0eda1edee456ada58c224bbf11" name="ggabc79736e0b69f24072413dc14cc6ee89a3f3b8e0eda1edee456ada58c224bbf11"></a>GoalBlocked&#160;</td><td class="fielddoc"><p>终点不可通行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggabc79736e0b69f24072413dc14cc6ee89ad1d2245c4d9d60b8da25dda25d2af489" name="ggabc79736e0b69f24072413dc14cc6ee89ad1d2245c4d9d60b8da25dda25d2af489"></a>NoPath&#160;</td><td class="fielddoc"><p>起点与终点之间不存在可通行路径 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="gadef4cbb98bb719e261cb56ff64536fca" name="gadef4cbb98bb719e261cb56ff64536fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadef4cbb98bb719e261cb56ff64536fca">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * rm::nav::to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gabc79736e0b69f24072413dc14cc6ee89">PlanningStatus</a></td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/nav/planner.hpp&gt;</code></p>
+
+<p>获取路径规划状态的稳定文本描述 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>路径规划状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>指向静态文本的字符串指针 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d8f/group__nav__planner_gadef4cbb98bb719e261cb56ff64536fca_cgraph.svg" width="330" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

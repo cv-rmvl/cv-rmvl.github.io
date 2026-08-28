@@ -1,0 +1,405 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: 坐标变换数学</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">坐标变换数学 <div class="ingroups"><a class="el" href="../../d7/de3/group__lpss.html">轻量发布订阅服务及其相关组件</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供四元数旋转、点和位姿转换、SE(3) 复合与求逆操作  
+<a href="#details">更多...</a></p>
+<div class="dynheader">
+坐标变换数学 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform.svg" width="362" height="42"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga4c8c083673da27a50d1290db49a68388" id="r_ga4c8c083673da27a50d1290db49a68388"><td class="memItemLeft"><a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga4c8c083673da27a50d1290db49a68388">rm::msg::operator*</a> (const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;lhs, const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ga4c8c083673da27a50d1290db49a68388"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数乘法  <br /></td></tr>
+<tr class="memitem:ga3f6ed3efaef68f5a35b046211f83b5da" id="r_ga3f6ed3efaef68f5a35b046211f83b5da"><td class="memItemLeft"><a class="el" href="../../d3/d5d/classrm_1_1msg_1_1Vector3.html">Vector3</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga3f6ed3efaef68f5a35b046211f83b5da">rm::msg::rotate</a> (const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="../../d3/d5d/classrm_1_1msg_1_1Vector3.html">Vector3</a> &amp;vector) noexcept</td></tr>
+<tr class="memdesc:ga3f6ed3efaef68f5a35b046211f83b5da"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用四元数旋转向量  <br /></td></tr>
+<tr class="memitem:ga9ef2acc724d8a2cf0506adbd5370ecd7" id="r_ga9ef2acc724d8a2cf0506adbd5370ecd7"><td class="memItemLeft"><a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">Point</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga9ef2acc724d8a2cf0506adbd5370ecd7">rm::msg::operator*</a> (const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;transform, const <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">Point</a> &amp;point) noexcept</td></tr>
+<tr class="memdesc:ga9ef2acc724d8a2cf0506adbd5370ecd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用变换转换点坐标  <br /></td></tr>
+<tr class="memitem:ga7ef245f2fdcb6b3cb8da317394c8247c" id="r_ga7ef245f2fdcb6b3cb8da317394c8247c"><td class="memItemLeft"><a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">Pose</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7ef245f2fdcb6b3cb8da317394c8247c">rm::msg::operator*</a> (const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;transform, const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">Pose</a> &amp;pose) noexcept</td></tr>
+<tr class="memdesc:ga7ef245f2fdcb6b3cb8da317394c8247c"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用变换转换位姿  <br /></td></tr>
+<tr class="memitem:ga59270d6f643c1369d253dc743ef7362f" id="r_ga59270d6f643c1369d253dc743ef7362f"><td class="memItemLeft"><a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga59270d6f643c1369d253dc743ef7362f">rm::msg::operator*</a> (const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;lhs, const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ga59270d6f643c1369d253dc743ef7362f"><td class="mdescLeft">&#160;</td><td class="mdescRight">复合两个变换，结果等价于先应用 <code class="param">rhs</code> 再应用 <code class="param">lhs</code>  <br /></td></tr>
+<tr class="memitem:ga76d6017ea3650a4ca829c331423372a5" id="r_ga76d6017ea3650a4ca829c331423372a5"><td class="memItemLeft"><a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga76d6017ea3650a4ca829c331423372a5">rm::msg::inverse</a> (const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;transform) noexcept</td></tr>
+<tr class="memdesc:ga76d6017ea3650a4ca829c331423372a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算变换的逆  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>提供四元数旋转、点和位姿转换、SE(3) 复合与求逆操作 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ga76d6017ea3650a4ca829c331423372a5" name="ga76d6017ea3650a4ca829c331423372a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga76d6017ea3650a4ca829c331423372a5">&#9670;&#160;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> rm::msg::inverse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>计算变换的逆 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga76d6017ea3650a4ca829c331423372a5_cgraph.svg" width="143" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga4c8c083673da27a50d1290db49a68388" name="ga4c8c083673da27a50d1290db49a68388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c8c083673da27a50d1290db49a68388">&#9670;&#160;</a></span>operator*() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> rm::msg::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>四元数乘法 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga4c8c083673da27a50d1290db49a68388_cgraph.svg" width="156" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga59270d6f643c1369d253dc743ef7362f" name="ga59270d6f643c1369d253dc743ef7362f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59270d6f643c1369d253dc743ef7362f">&#9670;&#160;</a></span>operator*() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> rm::msg::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>复合两个变换，结果等价于先应用 <code class="param">rhs</code> 再应用 <code class="param">lhs</code> </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga59270d6f643c1369d253dc743ef7362f_cgraph.svg" width="350" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga9ef2acc724d8a2cf0506adbd5370ecd7" name="ga9ef2acc724d8a2cf0506adbd5370ecd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ef2acc724d8a2cf0506adbd5370ecd7">&#9670;&#160;</a></span>operator*() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">Point</a> rm::msg::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d0/deb/classrm_1_1msg_1_1Point.html">Point</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>使用变换转换点坐标 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga9ef2acc724d8a2cf0506adbd5370ecd7_cgraph.svg" width="350" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga7ef245f2fdcb6b3cb8da317394c8247c" name="ga7ef245f2fdcb6b3cb8da317394c8247c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ef245f2fdcb6b3cb8da317394c8247c">&#9670;&#160;</a></span>operator*() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">Pose</a> rm::msg::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d0f/classrm_1_1msg_1_1Transform.html">Transform</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>transform</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d23/classrm_1_1msg_1_1Pose.html">Pose</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pose</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>使用变换转换位姿 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga7ef245f2fdcb6b3cb8da317394c8247c_cgraph.svg" width="350" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga3f6ed3efaef68f5a35b046211f83b5da" name="ga3f6ed3efaef68f5a35b046211f83b5da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f6ed3efaef68f5a35b046211f83b5da">&#9670;&#160;</a></span>rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d5d/classrm_1_1msg_1_1Vector3.html">Vector3</a> rm::msg::rotate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/dbe/classrm_1_1msg_1_1Quaternion.html">Quaternion</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d5d/classrm_1_1msg_1_1Vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/lpss/transform.hpp&gt;</code></p>
+
+<p>使用四元数旋转向量 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../de/d87/group__lpss__transform_ga3f6ed3efaef68f5a35b046211f83b5da_cgraph.svg" width="134" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

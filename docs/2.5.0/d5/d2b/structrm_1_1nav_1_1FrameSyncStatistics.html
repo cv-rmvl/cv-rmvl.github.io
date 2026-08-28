@@ -1,0 +1,284 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::FrameSyncStatistics结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.5.0</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../d5/d2b/structrm_1_1nav_1_1FrameSyncStatistics.html">FrameSyncStatistics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../df/d3f/structrm_1_1nav_1_1FrameSyncStatistics-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::FrameSyncStatistics结构体 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../db/d06/group__nav__localization.html">视觉里程计与 SLAM 接入</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>帧同步统计  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+<div class="dynheader">
+rm::nav::FrameSyncStatistics 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d7/d9f/structrm_1_1nav_1_1FrameSyncStatistics__coll__graph.svg" width="260" height="340"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a8b715805c96e8ccc1bc96b2c4ba99d9a" id="r_a8b715805c96e8ccc1bc96b2c4ba99d9a"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a8b715805c96e8ccc1bc96b2c4ba99d9a">received_primary</a> {}</td></tr>
+<tr class="memdesc:a8b715805c96e8ccc1bc96b2c4ba99d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">收到的有效主图像数  <br /></td></tr>
+<tr class="memitem:a9ece49a44a9f7f49ff4ddddd52a237a8" id="r_a9ece49a44a9f7f49ff4ddddd52a237a8"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9ece49a44a9f7f49ff4ddddd52a237a8">received_secondary</a> {}</td></tr>
+<tr class="memdesc:a9ece49a44a9f7f49ff4ddddd52a237a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">收到的有效辅助图像数  <br /></td></tr>
+<tr class="memitem:ac8694260ba76cb2c8e73584403b32cb5" id="r_ac8694260ba76cb2c8e73584403b32cb5"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ac8694260ba76cb2c8e73584403b32cb5">matched</a> {}</td></tr>
+<tr class="memdesc:ac8694260ba76cb2c8e73584403b32cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">成功组成的传感器帧数  <br /></td></tr>
+<tr class="memitem:a3e3792367e597d93af1bb4e7ab5d5a03" id="r_a3e3792367e597d93af1bb4e7ab5d5a03"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3e3792367e597d93af1bb4e7ab5d5a03">dropped_primary</a> {}</td></tr>
+<tr class="memdesc:a3e3792367e597d93af1bb4e7ab5d5a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">因过期、乱序或队列溢出丢弃的主图像数  <br /></td></tr>
+<tr class="memitem:a7ee6645b831eb3bf52a1af95866836d4" id="r_a7ee6645b831eb3bf52a1af95866836d4"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a7ee6645b831eb3bf52a1af95866836d4">dropped_secondary</a> {}</td></tr>
+<tr class="memdesc:a7ee6645b831eb3bf52a1af95866836d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">因过期或队列溢出丢弃的辅助图像数  <br /></td></tr>
+<tr class="memitem:a1edaa87b45caef192afaccf65ceb2628" id="r_a1edaa87b45caef192afaccf65ceb2628"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a1edaa87b45caef192afaccf65ceb2628">rejected</a> {}</td></tr>
+<tr class="memdesc:a1edaa87b45caef192afaccf65ceb2628"><td class="mdescLeft">&#160;</td><td class="mdescRight">因消息或同步配置无效而拒绝的输入数  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>帧同步统计 </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="a3e3792367e597d93af1bb4e7ab5d5a03" name="a3e3792367e597d93af1bb4e7ab5d5a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e3792367e597d93af1bb4e7ab5d5a03">&#9670;&#160;</a></span>dropped_primary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::dropped_primary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>因过期、乱序或队列溢出丢弃的主图像数 </p>
+
+</div>
+</div>
+<a id="a7ee6645b831eb3bf52a1af95866836d4" name="a7ee6645b831eb3bf52a1af95866836d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ee6645b831eb3bf52a1af95866836d4">&#9670;&#160;</a></span>dropped_secondary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::dropped_secondary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>因过期或队列溢出丢弃的辅助图像数 </p>
+
+</div>
+</div>
+<a id="ac8694260ba76cb2c8e73584403b32cb5" name="ac8694260ba76cb2c8e73584403b32cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8694260ba76cb2c8e73584403b32cb5">&#9670;&#160;</a></span>matched</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::matched {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>成功组成的传感器帧数 </p>
+
+</div>
+</div>
+<a id="a8b715805c96e8ccc1bc96b2c4ba99d9a" name="a8b715805c96e8ccc1bc96b2c4ba99d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b715805c96e8ccc1bc96b2c4ba99d9a">&#9670;&#160;</a></span>received_primary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::received_primary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>收到的有效主图像数 </p>
+
+</div>
+</div>
+<a id="a9ece49a44a9f7f49ff4ddddd52a237a8" name="a9ece49a44a9f7f49ff4ddddd52a237a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ece49a44a9f7f49ff4ddddd52a237a8">&#9670;&#160;</a></span>received_secondary</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::received_secondary {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>收到的有效辅助图像数 </p>
+
+</div>
+</div>
+<a id="a1edaa87b45caef192afaccf65ceb2628" name="a1edaa87b45caef192afaccf65ceb2628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edaa87b45caef192afaccf65ceb2628">&#9670;&#160;</a></span>rejected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::nav::FrameSyncStatistics::rejected {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>因消息或同步配置无效而拒绝的输入数 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

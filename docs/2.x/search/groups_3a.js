@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['装甲板识别模块_0',['装甲板识别模块',['../d4/d47/group__armor__detector.html',1,'']]],
-  ['装甲模块灯条_1',['装甲模块灯条',['../d5/d68/group__light__blob.html',1,'']]],
-  ['装甲模块特征组合_2',['装甲模块特征组合',['../db/d22/group__combo__armor.html',1,'']]],
-  ['装甲预测模块_3',['装甲预测模块',['../d4/dd1/group__armor__predictor.html',1,'']]]
+  ['能量机关特征组合_0',['能量机关特征组合',['../d8/d7f/group__combo__rune.html',1,'']]]
 ];

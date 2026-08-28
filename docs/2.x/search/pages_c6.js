@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['请求工具_0',['2 HTTP 请求工具',['../d4/d7a/tutorial_modules_netapp.html#autotoc_md353',1,'']]]
+  ['详细内容_0',['详细内容',['../d5/d72/tutorial_document.html#tutorial_documentation_content',1,'']]],
+  ['详细步骤_1',['详细步骤',['../da/d80/tutorial_use.html#autotoc_md123',1,'']]]
 ];

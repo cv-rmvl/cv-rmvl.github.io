@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::async::Connector类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -152,24 +174,24 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a0ff227adee509bd9136f4cc8ff0bc6ef" id="r_a0ff227adee509bd9136f4cc8ff0bc6ef"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0ff227adee509bd9136f4cc8ff0bc6ef">~Connector</a> ()=default</td></tr>
 <tr class="memitem:a42ba64c0e88a51dd14dc0ed32c0022fa" id="r_a42ba64c0e88a51dd14dc0ed32c0022fa"><td class="memItemLeft"><a class="el" href="../../dd/db2/classrm_1_1async_1_1Connector_1_1ConnectAwaiter.html">ConnectAwaiter</a>&#160;</td><td class="memItemRight"><a class="el" href="#a42ba64c0e88a51dd14dc0ed32c0022fa">connect</a> ()</td></tr>
 <tr class="memdesc:a42ba64c0e88a51dd14dc0ed32c0022fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步连接  <br /></td></tr>
-<tr class="inherit_header pub_methods_classrm_1_1Connector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classrm_1_1Connector')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
-<tr class="memitem:aecdfa46b8aef28817bea9245a1435935 inherit pub_methods_classrm_1_1Connector" id="r_aecdfa46b8aef28817bea9245a1435935"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#aecdfa46b8aef28817bea9245a1435935">Connector</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, std::string_view url=&quot;127.0.0.1&quot;, bool blocking=true)</td></tr>
-<tr class="memdesc:aecdfa46b8aef28817bea9245a1435935 inherit pub_methods_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 Socket 连接器  <br /></td></tr>
-<tr class="memitem:a4113807a35fa208d437a3b34d380dc39 inherit pub_methods_classrm_1_1Connector" id="r_a4113807a35fa208d437a3b34d380dc39"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a4113807a35fa208d437a3b34d380dc39">~Connector</a> ()</td></tr>
-<tr class="memitem:aeaf87676fd293ab6c900b23889e5ee3b inherit pub_methods_classrm_1_1Connector" id="r_aeaf87676fd293ab6c900b23889e5ee3b"><td class="memItemLeft"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">StreamSocket</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#aeaf87676fd293ab6c900b23889e5ee3b">connect</a> ()</td></tr>
-<tr class="memdesc:aeaf87676fd293ab6c900b23889e5ee3b inherit pub_methods_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步连接（阻塞）  <br /></td></tr>
+<tr class="inherit_header pub_methods_classrm_1_1Connector"><td colspan="2">Public 成员函数 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
+<tr class="memitem:aecdfa46b8aef28817bea9245a1435935 pub_methods_classrm_1_1Connector" id="r_aecdfa46b8aef28817bea9245a1435935"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#aecdfa46b8aef28817bea9245a1435935">Connector</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, std::string_view url=&quot;127.0.0.1&quot;, bool blocking=true)</td></tr>
+<tr class="memdesc:aecdfa46b8aef28817bea9245a1435935 pub_methods_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 Socket 连接器  <br /></td></tr>
+<tr class="memitem:a4113807a35fa208d437a3b34d380dc39 pub_methods_classrm_1_1Connector" id="r_a4113807a35fa208d437a3b34d380dc39"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a4113807a35fa208d437a3b34d380dc39">~Connector</a> ()</td></tr>
+<tr class="memitem:aeaf87676fd293ab6c900b23889e5ee3b pub_methods_classrm_1_1Connector" id="r_aeaf87676fd293ab6c900b23889e5ee3b"><td class="memItemLeft"><a class="el" href="../../d8/df3/classrm_1_1StreamSocket.html">StreamSocket</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#aeaf87676fd293ab6c900b23889e5ee3b">connect</a> ()</td></tr>
+<tr class="memdesc:aeaf87676fd293ab6c900b23889e5ee3b pub_methods_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">同步连接（阻塞）  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
-<tr class="inherit_header pro_methods_classrm_1_1Connector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classrm_1_1Connector')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 成员函数 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
-<tr class="memitem:ad41b18ee02a7237478a12ed8fff29bf6 inherit pro_methods_classrm_1_1Connector" id="r_ad41b18ee02a7237478a12ed8fff29bf6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#ad41b18ee02a7237478a12ed8fff29bf6">Connector</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, std::string_view url, bool blocking, bool ov)</td></tr>
-<tr class="inherit_header pro_attribs_classrm_1_1Connector"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classrm_1_1Connector')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected 属性 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
-<tr class="memitem:ae85184592f560d8c5182c3782a2b431b inherit pro_attribs_classrm_1_1Connector" id="r_ae85184592f560d8c5182c3782a2b431b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#ae85184592f560d8c5182c3782a2b431b">_url</a></td></tr>
-<tr class="memdesc:ae85184592f560d8c5182c3782a2b431b inherit pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标地址  <br /></td></tr>
-<tr class="memitem:a3ea0b4c72cf41acb79c724a571e37aad inherit pro_attribs_classrm_1_1Connector" id="r_a3ea0b4c72cf41acb79c724a571e37aad"><td class="memItemLeft"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a3ea0b4c72cf41acb79c724a571e37aad">_endpoint</a></td></tr>
-<tr class="memdesc:a3ea0b4c72cf41acb79c724a571e37aad inherit pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点  <br /></td></tr>
-<tr class="memitem:a8ad5cd1639aa3bc4f452240a935f6565 inherit pro_attribs_classrm_1_1Connector" id="r_a8ad5cd1639aa3bc4f452240a935f6565"><td class="memItemLeft"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a8ad5cd1639aa3bc4f452240a935f6565">_fd</a> {<a class="el" href="../../d6/dd4/group__io__net.html#ga41eb5b8b262dfe2dd792a2006db325ec">INVALID_SOCKET_FD</a>}</td></tr>
-<tr class="memdesc:a8ad5cd1639aa3bc4f452240a935f6565 inherit pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">未建立会话的 Socket 描述符  <br /></td></tr>
+<tr class="inherit_header pro_methods_classrm_1_1Connector"><td colspan="2">Protected 成员函数 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
+<tr class="memitem:ad41b18ee02a7237478a12ed8fff29bf6 pro_methods_classrm_1_1Connector" id="r_ad41b18ee02a7237478a12ed8fff29bf6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#ad41b18ee02a7237478a12ed8fff29bf6">Connector</a> (const <a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a> &amp;endpoint, std::string_view url, bool blocking, bool ov)</td></tr>
+<tr class="inherit_header pro_attribs_classrm_1_1Connector"><td colspan="2">Protected 属性 继承自 <a class="el" href="../../de/ddb/classrm_1_1Connector.html">rm::Connector</a></td></tr>
+<tr class="memitem:ae85184592f560d8c5182c3782a2b431b pro_attribs_classrm_1_1Connector" id="r_ae85184592f560d8c5182c3782a2b431b"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#ae85184592f560d8c5182c3782a2b431b">_url</a></td></tr>
+<tr class="memdesc:ae85184592f560d8c5182c3782a2b431b pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">目标地址  <br /></td></tr>
+<tr class="memitem:a3ea0b4c72cf41acb79c724a571e37aad pro_attribs_classrm_1_1Connector" id="r_a3ea0b4c72cf41acb79c724a571e37aad"><td class="memItemLeft"><a class="el" href="../../dc/db5/classrm_1_1Endpoint.html">Endpoint</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a3ea0b4c72cf41acb79c724a571e37aad">_endpoint</a></td></tr>
+<tr class="memdesc:a3ea0b4c72cf41acb79c724a571e37aad pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">端点  <br /></td></tr>
+<tr class="memitem:a8ad5cd1639aa3bc4f452240a935f6565 pro_attribs_classrm_1_1Connector" id="r_a8ad5cd1639aa3bc4f452240a935f6565"><td class="memItemLeft"><a class="el" href="../../d6/dd4/group__io__net.html#ga8158c4bbe45484f8a0083cd2ed4dc514">SocketFd</a>&#160;</td><td class="memItemRight"><a class="el" href="../../de/ddb/classrm_1_1Connector.html#a8ad5cd1639aa3bc4f452240a935f6565">_fd</a> {<a class="el" href="../../d6/dd4/group__io__net.html#ga41eb5b8b262dfe2dd792a2006db325ec">INVALID_SOCKET_FD</a>}</td></tr>
+<tr class="memdesc:a8ad5cd1639aa3bc4f452240a935f6565 pro_attribs_classrm_1_1Connector"><td class="mdescLeft">&#160;</td><td class="mdescRight">未建立会话的 Socket 描述符  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>异步流式 Socket 连接器 </p>
@@ -282,7 +304,7 @@ Public 成员函数</h2></td></tr>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

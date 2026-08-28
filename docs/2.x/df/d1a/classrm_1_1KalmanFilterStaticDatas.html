@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Doxygen 1.16.1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
   <title>RMVL: rm::KalmanFilterStaticDatas&lt; FloatTp, StateDim, MeasureDim &gt; 模板类 参考</title>
   <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
   <link href="../../tabs.css" rel="stylesheet" type="text/css" />
@@ -64,7 +64,7 @@ window.MathJax = {
             <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
             <td style="padding-left: 0.5em;">
               <div id="projectname">RMVL
-                &#160;<span id="projectnumber">2.5.0-dev</span>
+                &#160;<span id="projectnumber">2.6.0-dev</span>
               </div>
               <div id="projectbrief">Robotic Manipulation and Vision Library</div>
             </td>
@@ -73,27 +73,49 @@ window.MathJax = {
       </table>
     </div>
     <!-- end header part -->
-<!-- 制作者 Doxygen 1.16.1 -->
+<!-- 制作者 Doxygen 1.18.0 -->
 <script type="text/javascript">
-var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
 </script>
 <script type="text/javascript">
-$(function() { codefold.init(); });
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
 </script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('../../',true,false,'search.php','搜索',false);
-  $(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
 <!-- window showing the filter options -->
-<div id="MSearchSelectWindow"
-     onmouseover="return searchBox.OnSearchSelectShow()"
-     onmouseout="return searchBox.OnSearchSelectHide()"
-     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<div id="MSearchSelectWindow">
 </div>
 
 <!-- iframe showing the search results (closed by default) -->
@@ -144,9 +166,9 @@ rm::KalmanFilterStaticDatas&lt; FloatTp, StateDim, MeasureDim &gt; 的协作图:
 Public 成员函数</h2></td></tr>
 <tr class="memitem:ac0111c9450abb86df2e8b4b372d8cbd8" id="r_ac0111c9450abb86df2e8b4b372d8cbd8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac0111c9450abb86df2e8b4b372d8cbd8">KalmanFilterStaticDatas</a> ()</td></tr>
 <tr class="memdesc:ac0111c9450abb86df2e8b4b372d8cbd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造新的卡尔曼滤波静态数据  <br /></td></tr>
-<tr class="memitem:a5913504f668274ae403bedb6a9c76382" id="r_a5913504f668274ae403bedb6a9c76382"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5913504f668274ae403bedb6a9c76382">init</a> (const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;x0, FloatTp <a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">error</a>)</td></tr>
+<tr class="memitem:a5913504f668274ae403bedb6a9c76382" id="r_a5913504f668274ae403bedb6a9c76382"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5913504f668274ae403bedb6a9c76382">init</a> (const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;x0, FloatTp error)</td></tr>
 <tr class="memdesc:a5913504f668274ae403bedb6a9c76382"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化状态以及对应的误差协方差矩阵（常数对角矩阵）  <br /></td></tr>
-<tr class="memitem:a6f1dc253f8056b1d56b7c284439865bf" id="r_a6f1dc253f8056b1d56b7c284439865bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f1dc253f8056b1d56b7c284439865bf">init</a> (const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;x0, const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;<a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a">error</a>)</td></tr>
+<tr class="memitem:a6f1dc253f8056b1d56b7c284439865bf" id="r_a6f1dc253f8056b1d56b7c284439865bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f1dc253f8056b1d56b7c284439865bf">init</a> (const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;x0, const cv::Matx&lt; FloatTp, StateDim, 1 &gt; &amp;error)</td></tr>
 <tr class="memdesc:a6f1dc253f8056b1d56b7c284439865bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化状态以及对应的误差协方差矩阵（对角矩阵）  <br /></td></tr>
 <tr class="memitem:abade65a21dfc32726444ce2d52c85ba9" id="r_abade65a21dfc32726444ce2d52c85ba9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abade65a21dfc32726444ce2d52c85ba9">setR</a> (const cv::Matx&lt; FloatTp, MeasureDim, MeasureDim &gt; &amp;measure_err)</td></tr>
 <tr class="memdesc:abade65a21dfc32726444ce2d52c85ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置测量噪声协方差矩阵 \(R\)  <br /></td></tr>
@@ -251,14 +273,14 @@ template&lt;typename FloatTp, int StateDim, int MeasureDim&gt; </div>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始化的状态向量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a" title="发出错误信号并引发异常">error</a></td><td>状态误差矩阵的对角线元素 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>状态误差矩阵的对角线元素 </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d1a/classrm_1_1KalmanFilterStaticDatas_a6f1dc253f8056b1d56b7c284439865bf_cgraph.svg" width="343" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d1a/classrm_1_1KalmanFilterStaticDatas_a6f1dc253f8056b1d56b7c284439865bf_cgraph.svg" width="343" height="71"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -296,14 +318,14 @@ template&lt;typename FloatTp, int StateDim, int MeasureDim&gt; </div>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>初始化的状态向量 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="../../d0/de1/group__core.html#gabe1da7007de9e49ed54906db46b2635a" title="发出错误信号并引发异常">error</a></td><td>状态误差系数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>状态误差系数 </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d1a/classrm_1_1KalmanFilterStaticDatas_a5913504f668274ae403bedb6a9c76382_cgraph.svg" width="343" height="56"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d1a/classrm_1_1KalmanFilterStaticDatas_a5913504f668274ae403bedb6a9c76382_cgraph.svg" width="343" height="71"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -654,7 +676,7 @@ template&lt;typename FloatTp, int StateDim, int MeasureDim&gt; </div>
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
-</a> 1.16.1
+</a> 1.18.0
 </small></address>
 <script type="text/javascript">
 </script>

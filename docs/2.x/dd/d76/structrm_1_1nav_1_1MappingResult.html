@@ -1,0 +1,249 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::nav::MappingResult结构体 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../df/dca/namespacerm_1_1nav.html">nav</a></li><li class="navelem"><a href="../../dd/d76/structrm_1_1nav_1_1MappingResult.html">MappingResult</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../d1/d19/structrm_1_1nav_1_1MappingResult-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::nav::MappingResult结构体 参考<div class="ingroups"><a class="el" href="../../db/d22/group__nav.html">导航框架与系统</a> &raquo; <a class="el" href="../../db/d06/group__nav__localization.html">视觉里程计与 SLAM 接入</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Mapper 后端返回的二维导航地图更新  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/nav/localization.hpp&gt;</code></p>
+<div class="dynheader">
+rm::nav::MappingResult 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d1/d7e/structrm_1_1nav_1_1MappingResult__coll__graph.svg" width="600" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a3735d98f274d08dacba6994e84e817df" id="r_a3735d98f274d08dacba6994e84e817df"><td class="memItemLeft"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3735d98f274d08dacba6994e84e817df">status</a> {<a class="el" href="../../db/d06/group__nav__localization.html#gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f">LocalizationStatus::Unsupported</a>}</td></tr>
+<tr class="memdesc:a3735d98f274d08dacba6994e84e817df"><td class="mdescLeft">&#160;</td><td class="mdescRight">建图状态  <br /></td></tr>
+<tr class="memitem:aba6de90381fe88ea8cbac502245135dd" id="r_aba6de90381fe88ea8cbac502245135dd"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#aba6de90381fe88ea8cbac502245135dd">detail</a> {}</td></tr>
+<tr class="memdesc:aba6de90381fe88ea8cbac502245135dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">可选诊断说明  <br /></td></tr>
+<tr class="memitem:ade60948a32095f461fa620026589c79e" id="r_ade60948a32095f461fa620026589c79e"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">msg::OccupancyGrid</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ade60948a32095f461fa620026589c79e">map</a> {}</td></tr>
+<tr class="memdesc:ade60948a32095f461fa620026589c79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">可选全量占据栅格  <br /></td></tr>
+<tr class="memitem:a9621e7e275e51bd20b6b75e82b8140f0" id="r_a9621e7e275e51bd20b6b75e82b8140f0"><td class="memItemLeft">std::optional&lt; <a class="el" href="../../d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html">msg::OccupancyGridUpdate</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a9621e7e275e51bd20b6b75e82b8140f0">update</a> {}</td></tr>
+<tr class="memdesc:a9621e7e275e51bd20b6b75e82b8140f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">可选矩形增量  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>Mapper 后端返回的二维导航地图更新 </p>
+<p><code class="param">map</code> 和 <code class="param">update</code> 可以分别表示全量地图与其后的矩形增量。若同一结果同时包含二者， 消费方应先装载全量地图，再按版本顺序应用增量。 </p><dl class="section note"><dt>注解</dt><dd><a class="el" href="../../d5/d31/classrm_1_1nav_1_1LocalizationPipeline.html" title="将第三方定位结果转换为 RMVL 导航消息">LocalizationPipeline</a> 不校验地图尺寸、坐标系和版本，消费方应使用 <a class="el" href="../../df/db1/classrm_1_1nav_1_1GridMap.html" title="二维占据栅格内存模型">GridMap</a> 完成校验。 </dd></dl>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
+<a id="aba6de90381fe88ea8cbac502245135dd" name="aba6de90381fe88ea8cbac502245135dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6de90381fe88ea8cbac502245135dd">&#9670;&#160;</a></span>detail</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string rm::nav::MappingResult::detail {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>可选诊断说明 </p>
+
+</div>
+</div>
+<a id="ade60948a32095f461fa620026589c79e" name="ade60948a32095f461fa620026589c79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade60948a32095f461fa620026589c79e">&#9670;&#160;</a></span>map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="../../dc/dbd/classrm_1_1msg_1_1OccupancyGrid.html">msg::OccupancyGrid</a>&gt; rm::nav::MappingResult::map {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>可选全量占据栅格 </p>
+
+</div>
+</div>
+<a id="a3735d98f274d08dacba6994e84e817df" name="a3735d98f274d08dacba6994e84e817df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3735d98f274d08dacba6994e84e817df">&#9670;&#160;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d06/group__nav__localization.html#ga2db554e861ffa2fd2b4fb74c0998f831">LocalizationStatus</a> rm::nav::MappingResult::status {<a class="el" href="../../db/d06/group__nav__localization.html#gga2db554e861ffa2fd2b4fb74c0998f831ab4080bdf74febf04d578ff105cce9d3f">LocalizationStatus::Unsupported</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>建图状态 </p>
+
+</div>
+</div>
+<a id="a9621e7e275e51bd20b6b75e82b8140f0" name="a9621e7e275e51bd20b6b75e82b8140f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9621e7e275e51bd20b6b75e82b8140f0">&#9670;&#160;</a></span>update</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="../../d9/d51/classrm_1_1msg_1_1OccupancyGridUpdate.html">msg::OccupancyGridUpdate</a>&gt; rm::nav::MappingResult::update {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>可选矩形增量 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>
