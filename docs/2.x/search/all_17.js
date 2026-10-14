@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md267',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md392',1,'2.2 数据 I/O']]],
+  ['o_0',['O',['../d5/d7a/tutorial_modules_coro.html#autotoc_md267',1,'1 异步 I/O'],['../d3/da4/tutorial_modules_serial.html#autotoc_md397',1,'2.2 数据 I/O']]],
   ['o_20的协程设施_1',['基于异步 I/O 的协程设施',['../d5/d7a/tutorial_modules_coro.html',1,'tutorial_table_of_content_modules']]],
   ['oargs_2',['oargs',['../d5/d0c/classrm_1_1ua_1_1Method.html#aded74c95e8ca7976038af622a0bc9537',1,'rm::ua::Method']]],
   ['object_3',['Object',['../d4/d1c/classrm_1_1ua_1_1Object.html',1,'rm::ua::Object'],['../d4/d1c/classrm_1_1ua_1_1Object.html#a8821623588fa40bcdafc2c3d8d664c53',1,'rm::ua::Object::Object()']]],
@@ -33,7 +33,7 @@ var searchData=
   ['open_30',['open',['../df/d1f/classrm_1_1HikLightController.html#af54e9a54006f8a2ef87edcbf91418c14',1,'rm::HikLightController::open()'],['../db/d24/classrm_1_1OPTLightController.html#a8d83b62e33ce8f5a79499c950b9bc25c',1,'rm::OPTLightController::open(const std::vector&lt; int &gt; &amp;channels) noexcept'],['../db/d24/classrm_1_1OPTLightController.html#ad04a4c75b1cc0a45802d5096788bbf48',1,'rm::OPTLightController::open() noexcept']]],
   ['open62541_20库_31',['1.2 open62541 库',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_open62541',1,'']]],
   ['opencv_32',['OpenCV',['../d1/db4/tutorial_install.html#autotoc_md115',1,'1.1 OpenCV'],['../dc/d90/group__camera.html#gga034d81b381d7c04ba4549cf3533750ffa5bd4c87976f48e6a53919d53e14025e9',1,'rm::OpenCV']]],
-  ['opencv_20类型兼容_33',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md405',1,'']]],
+  ['opencv_20类型兼容_33',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md410',1,'']]],
   ['openvino_34',['OpenVINO',['../dc/d73/group__ml__ort.html#ggaa3efd1984486e48014bbcfc54e432e84a7109a5940b811c36ea2e9aa2cee0527f',1,'rm']]],
   ['operator_20bool_35',['operator bool',['../d6/d16/structrm_1_1yaml_1_1Error.html#ac936f120bb5cd99d8534261168ca0561',1,'rm::yaml::Error::operator bool()'],['../df/d30/structrm_1_1yaml_1_1Result.html#a8fe9bb8d4dd48ba6c1174d8064402a07',1,'rm::yaml::Result::operator bool()'],['../d1/d1b/structrm_1_1Response.html#a533809d2fbd2f3b4a6d28f02c2c54700',1,'rm::Response::operator bool()'],['../d4/db5/structrm_1_1lpss_1_1tf_1_1LookupResult.html#a6102e16cf3c62e4dd1781c733ef0ae4e',1,'rm::lpss::tf::LookupResult::operator bool()'],['../d4/d13/structrm_1_1nav_1_1TrackingResult.html#a47d9f34accf2b10b91a0a6f700da67e6',1,'rm::nav::TrackingResult::operator bool()'],['../db/dd4/structrm_1_1nav_1_1FrameSyncResult.html#ae76b90589b0c476406ce88d09ae98cd3',1,'rm::nav::FrameSyncResult::operator bool()'],['../d0/df1/structrm_1_1nav_1_1LocalizationResult.html#af7c0b8ced918a41d5f1d4aaa252f4eec',1,'rm::nav::LocalizationResult::operator bool()'],['../d4/d2e/structrm_1_1nav_1_1PlanningResult.html#ae4fe2ba072e12171536ad51187d66993',1,'rm::nav::PlanningResult::operator bool()']]],
   ['operator_20clientview_36',['operator ClientView',['../d6/df1/classrm_1_1ua_1_1Client.html#af3b3e61962e477cf0d225065e6026e1b',1,'rm::ua::Client']]],

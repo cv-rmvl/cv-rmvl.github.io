@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['构建与保存_0',['3. 构建与保存',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md404',1,'']]],
+  ['构建与保存_0',['3. 构建与保存',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md409',1,'']]],
   ['构建与运行_1',['4.3 构建与运行',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md311',1,'']]],
   ['构建并安装_20rmvl_2',['构建并安装 RMVL',['../d1/db4/tutorial_install.html',1,'tutorial_table_of_content_config']]],
   ['构建有限的模块集_3',['2.4 构建有限的模块集',['../d1/d0a/tutorial_configuration_options.html#autotoc_md108',1,'']]],

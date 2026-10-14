@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['服务模块_0',['服务模块',['../d2/dd0/group__rmvlsrv.html',1,'']]]
+  ['最优化算法库_0',['最优化算法库',['../d2/d62/group__algorithm__optimal.html',1,'']]]
 ];

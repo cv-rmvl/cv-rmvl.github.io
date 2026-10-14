@@ -9,8 +9,8 @@ var searchData=
   ['基本流程_6',['基本流程',['../d8/d29/tutorial_extra_upper_base.html#autotoc_md73',1,'']]],
   ['基本用法_7',['基本用法',['../d2/d81/tutorial_run_in.html#autotoc_md148',1,'基本用法'],['../d5/db4/tutorial_modules_ra_heap.html#autotoc_md224',1,'1 基本用法']]],
   ['基础共享内存设施_8',['3.1 基础共享内存设施',['../d4/d00/tutorial_modules_ipc.html#autotoc_md280',1,'']]],
-  ['基础开发工具_9',['基础开发工具',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md409',1,'']]],
+  ['基础开发工具_9',['基础开发工具',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md414',1,'']]],
   ['基础数学库_10',['基础数学库',['../d7/da1/group__algorithm__math.html',1,'']]],
-  ['基础通信设施_11',['基础通信设施',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md410',1,'']]],
-  ['基础_12',['1 Socket 基础',['../d2/d5d/tutorial_modules_socket.html#autotoc_md396',1,'']]]
+  ['基础通信设施_11',['基础通信设施',['../d6/d6e/tutorial_table_of_content_modules.html#autotoc_md415',1,'']]],
+  ['基础_12',['1 Socket 基础',['../d2/d5d/tutorial_modules_socket.html#autotoc_md401',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['日志_0',['日志',['../dc/d55/group__logger.html',1,'']]]
+  ['旋转装甲时间序列_0',['旋转装甲时间序列',['../db/dc9/group__gyro__tracker.html',1,'']]]
 ];

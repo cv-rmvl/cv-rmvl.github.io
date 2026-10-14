@@ -2,11 +2,12 @@ var searchData=
 [
   ['lagrange_20插值多项式_0',['1 Lagrange 插值多项式',['../d8/d57/tutorial_modules_interpolation.html#autotoc_md187',1,'']]],
   ['levenberg–marquardt_20算法_1',['2 Levenberg–Marquardt 算法',['../d8/dd7/tutorial_modules_lsqnonlin.html#autotoc_md212',1,'']]],
-  ['lib_20子命令_2',['lib 子命令',['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md467',1,'lib 子命令'],['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md478',1,'lib 子命令']]],
+  ['lib_20子命令_2',['lib 子命令',['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md472',1,'lib 子命令'],['../d0/d7c/tutorial_rdt_rdt.html#autotoc_md483',1,'lib 子命令']]],
   ['linux_20可用）_3',['2 消息队列（仅 Linux 可用）',['../d4/d00/tutorial_modules_ipc.html#autotoc_md278',1,'']]],
-  ['linux_20平台_4',['Linux 平台',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md99',1,'']]],
-  ['linux_20系统手动配置交叉编译_5',['为基于 ARM 的 Linux 系统手动配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]],
-  ['list_20子命令_6',['list 子命令',['../dc/d52/tutorial_rdt_lpss.html#autotoc_md440',1,'list 子命令'],['../dc/d52/tutorial_rdt_lpss.html#autotoc_md443',1,'list 子命令'],['../dc/d52/tutorial_rdt_lpss.html#autotoc_md452',1,'list 子命令']]],
-  ['lpss_7',['轻量发布订阅服务 —— LPSS',['../d3/d8e/tutorial_modules_lpss.html',1,'tutorial_table_of_content_modules']]],
-  ['lpss_20cli_20工具_8',['LPSS CLI 工具',['../dc/d52/tutorial_rdt_lpss.html',1,'tutorial_rdt']]]
+  ['linux_20外设_20io_4',['Linux 外设 IO',['../d0/dc2/tutorial_modules_peripheral.html',1,'tutorial_table_of_content_modules']]],
+  ['linux_20平台_5',['Linux 平台',['../d6/d88/tutorial_table_of_content_config.html#autotoc_md99',1,'']]],
+  ['linux_20系统手动配置交叉编译_6',['为基于 ARM 的 Linux 系统手动配置交叉编译',['../d5/d52/tutorial_other_arm.html',1,'tutorial_table_of_content_config']]],
+  ['list_20子命令_7',['list 子命令',['../dc/d52/tutorial_rdt_lpss.html#autotoc_md445',1,'list 子命令'],['../dc/d52/tutorial_rdt_lpss.html#autotoc_md448',1,'list 子命令'],['../dc/d52/tutorial_rdt_lpss.html#autotoc_md457',1,'list 子命令']]],
+  ['lpss_8',['轻量发布订阅服务 —— LPSS',['../d3/d8e/tutorial_modules_lpss.html',1,'tutorial_table_of_content_modules']]],
+  ['lpss_20cli_20工具_9',['LPSS CLI 工具',['../dc/d52/tutorial_rdt_lpss.html',1,'tutorial_rdt']]]
 ];

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['整车状态估计补偿模块_0',['整车状态估计补偿模块',['../d3/d06/group__gyro__compensator.html',1,'']]],
-  ['整车状态决策模块_1',['整车状态决策模块',['../d3/dae/group__gyro__decider.html',1,'']]],
-  ['整车状态序列组_2',['整车状态序列组',['../d8/dbf/group__gyro__group.html',1,'']]],
-  ['整车状态识别模块_3',['整车状态识别模块',['../de/dee/group__gyro__detector.html',1,'']]],
-  ['整车状态预测模块_4',['整车状态预测模块',['../db/d1b/group__gyro__predictor.html',1,'']]]
+  ['数值计算模块_0',['数值计算模块',['../dd/dcf/group__algorithm__numcal.html',1,'']]],
+  ['数字信号处理_1',['数字信号处理',['../db/d2e/group__algorithm__dsp.html',1,'']]],
+  ['数学、算法模块_2',['数学、算法模块',['../d5/d6c/group__algorithm.html',1,'']]],
+  ['数据与信号处理_3',['数据与信号处理',['../d0/d47/group__algorithm__cal.html',1,'']]],
+  ['数据结构_4',['数据结构',['../d6/dcf/group__algorithm__data.html',1,'']]],
+  ['数据_20io_20与通信模块_5',['数据 IO 与通信模块',['../d2/da3/group__io.html',1,'']]]
 ];

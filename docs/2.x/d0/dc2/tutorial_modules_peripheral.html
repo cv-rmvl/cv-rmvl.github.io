@@ -1,0 +1,263 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: Linux 外设 IO</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dd/da0/tutorials.html">RMVL 使用教程</a></li><li class="navelem"><a href="../../d6/d6e/tutorial_table_of_content_modules.html">主要模块使用教程</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Linux 外设 IO </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2modules_2tools_2peripheral"></a></p>
+<p><b>上一篇教程：</b><a class="el" href="../../d3/da4/tutorial_modules_serial.html" title="串口通信模块">串口通信模块</a> <br  />
+ <b>下一篇教程：</b><a class="el" href="../../d2/d5d/tutorial_modules_socket.html" title="传输层设施 —— Socket">传输层设施 —— Socket</a> <br  />
+ RMVL 的 <a class="el" href="../../d5/d35/group__io__peripheral.html" title="Linux 外设 IO">Linux 外设 IO</a> 提供 Linux 应用层 GPIO、I²C 和 SocketCAN 接口，不包含内核驱动、设备树配置或外设寄存器协议。接口仅在 Linux 可用，同步接口要求 C++17，<span class="tt"><a class="el" href="../../dd/d22/namespacerm_1_1async.html">rm::async</a></span> 协程接口要求 C++20。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md388"></a>
+1 执行模式与错误处理</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">操作  </th><th class="markdownTableHeadNone">同步阻塞  </th><th class="markdownTableHeadNone">同步非阻塞  </th><th class="markdownTableHeadNone">IOContext 协程  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GPIO 电平 <span class="tt">read()/write()</span>  </td><td class="markdownTableBodyNone">ioctl  </td><td class="markdownTableBodyNone">不提供  </td><td class="markdownTableBodyNone">不提供  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GPIO 边沿 <span class="tt">wait()</span>  </td><td class="markdownTableBodyNone">等待事件  </td><td class="markdownTableBodyNone">无事件返回 <span class="tt">std::nullopt</span>  </td><td class="markdownTableBodyNone">epoll 等待事件  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">I²C <span class="tt">transfer()</span>  </td><td class="markdownTableBodyNone">I2C_RDWR 组合事务  </td><td class="markdownTableBodyNone">不提供  </td><td class="markdownTableBodyNone">不提供  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CAN <span class="tt">read()/write()</span>  </td><td class="markdownTableBodyNone">等待可读或可写  </td><td class="markdownTableBodyNone">无数据返回 <span class="tt">std::nullopt</span>，暂不可写返回 <span class="tt">false</span>  </td><td class="markdownTableBodyNone">epoll 等待可读或可写  </td></tr>
+</table>
+<p><span class="tt">rm::GpioReadMode</span> 控制 GPIO 边沿等待，<span class="tt">rm::CanReadMode</span> 控制 CAN 收发，均提供 <span class="tt">BLOCK</span> 和 <span class="tt">NONBLOCK</span> 两种模式。GPIO 电平 ioctl 和 I²C 事务可能在驱动中阻塞，不提供对应的非阻塞模式。</p>
+<p>参数错误抛出 <span class="tt">std::invalid_argument</span>，系统调用错误抛出 <span class="tt">std::system_error</span>。移动后的对象不再持有设备。设备打开、线路申请和配置仍然是同步操作，建议在进入事件循环前完成。</p>
+<p>异步接口只使用设备原生的非阻塞 IO 与 epoll 就绪通知，不使用工作线程调度。GPIO 电平 ioctl 和 I²C 事务仅提供同步阻塞接口，请勿在需要保持响应的 <span class="tt">IOContext</span> 事件循环中调用。同一 I²C 对象的事务串行执行，多个调用的先后顺序不保证，驱动超时由内核/适配器决定。</p>
+<p>异步对象及其 <span class="tt">IOContext</span> 必须存活到任务结束，同一 GPIO 请求只能有一个边沿读取者，同一 CAN socket 不应有多个并发读任务或多个并发写任务。CAN 可以同时等待读和写。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md389"></a>
+2 GPIO</h1>
+<p>rm::Gpio 使用 GPIO 字符设备 v2 ABI，要求运行内核支持该 ABI（Linux 5.10 起）。构建环境的 Linux 头文件过旧时，构造请求会报 <span class="tt">EOPNOTSUPP</span>。<span class="tt">offsets</span> 是 <span class="tt">/dev/gpiochipN</span> 内的线路偏移，不是板上排针编号。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/gpio.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line">rm::GpioOptions output;</div>
+<div class="line">output.direction = rm::GpioDirection::Output;</div>
+<div class="line">output.initial_values = 1;</div>
+<div class="line">rm::Gpio led(<span class="stringliteral">&quot;/dev/gpiochip0&quot;</span>, {17}, output);</div>
+<div class="line">led.write(0);</div>
+</div><!-- fragment --><p>同一请求可申请 1 至 64 条线路，电平位图的 bit i 对应 <span class="tt">offsets[i]</span>，不是 GPIO 的偏移值。线路是独占申请的，已被内核驱动或其他进程使用的线路不能再次申请。上下拉、消抖等能力取决于驱动，不支持时保留内核错误。</p>
+<div class="fragment"><div class="line">rm::GpioOptions input;</div>
+<div class="line">input.edge = rm::GpioEdge::Both;</div>
+<div class="line">rm::Gpio button(<span class="stringliteral">&quot;/dev/gpiochip0&quot;</span>, {18}, input, rm::GpioReadMode::NONBLOCK);</div>
+<div class="line"><span class="keywordflow">if</span> (<span class="keyword">auto</span> event = button.wait()) {</div>
+<div class="line">    <span class="comment">// event-&gt;offset 为 18，timestamp_ns 使用 CLOCK_MONOTONIC</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p><span class="tt">read()</span> 是即时取样，不等待电平变化。<span class="tt">wait()</span> 才是边沿事件等待，必须在构造时启用边沿检测。启用 <span class="tt">active_low</span> 后，电平和边沿均为逻辑值，例如逻辑上升沿对应物理下降沿。事件序号可用于识别事件丢失，时间戳不能直接当作系统日历时间。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md390"></a>
+3 I²C</h1>
+<p>rm::I2c 使用 <span class="tt">/dev/i2c-N</span> 和 <span class="tt">I2C_RDWR</span>，适配器须支持 <span class="tt">I2C_FUNC_I2C</span>。每个 rm::I2cMessage 指定不含读写位的从机地址、方向、地址宽度和数据，读消息需要预先确定缓冲区长度。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/i2c.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line">rm::I2c bus(<span class="stringliteral">&quot;/dev/i2c-1&quot;</span>);</div>
+<div class="line"><span class="comment">// 下面的寄存器编号、地址与返回长度只是示意，应按外设手册调整。</span></div>
+<div class="line"><span class="keyword">auto</span> messages = bus.transfer({</div>
+<div class="line">    {0x48, <span class="keyword">false</span>, <span class="keyword">false</span>, {0x10}}, <span class="comment">// 写寄存器地址</span></div>
+<div class="line">    {0x48, <span class="keyword">true</span>,  <span class="keyword">false</span>, {0, 0}} <span class="comment">// repeated START 后读取 2 字节</span></div>
+<div class="line">});</div>
+<div class="line"><span class="keyword">auto</span> value = messages[1].data;</div>
+</div><!-- fragment --><p>一次 <span class="tt">transfer()</span> 是一笔组合事务，各段通过 repeated START 连接，末尾发送 STOP。调用失败时不会自动重试，避免重复写入产生外设副作用。一次可提交 1 至 42 段消息，每段最多 8192 字节，适配器还可能有更严格的限制。</p>
+<p>寄存器地址的宽度、字节序、读写顺序和转换等待时间属于设备协议，需要调用方实现。被内核驱动管理的设备应优先使用该驱动暴露的应用层接口，不要通过 i2c-dev 并行操作同一外设。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md391"></a>
+4 CAN 与 CAN FD</h1>
+<p>rm::Can 使用已配置的 <span class="tt">can0</span>、<span class="tt">vcan0</span> 等网络接口。接口启动、仲裁速率、CAN FD 数据速率由系统配置，RMVL 不修改这些配置。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/can.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line">rm::Can can(<span class="stringliteral">&quot;can0&quot;</span>, rm::CanReadMode::NONBLOCK, <span class="keyword">true</span>);</div>
+<div class="line">rm::CanFrame frame;</div>
+<div class="line">frame.id = 0x123;</div>
+<div class="line">frame.size = 2;</div>
+<div class="line">frame.data[0] = 0x10;</div>
+<div class="line">frame.data[1] = 0x20;</div>
+<div class="line"><span class="keywordtype">bool</span> submitted = can.write(frame);</div>
+<div class="line"><span class="keywordflow">if</span> (<span class="keyword">auto</span> received = can.read()) {</div>
+<div class="line">    <span class="comment">// 处理 received-&gt;id 和 received-&gt;data</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p><span class="tt">id</span> 不含 SocketCAN 标志位，标准帧最大 11 位，扩展帧最大 29 位。经典 CAN 数据最长 8 字节，CAN FD 最长 64 字节。发送 CAN FD 时必须先启用 FD 接收/发送能力并设置 <span class="tt">frame.fd = true</span>，CAN FD 不支持远程请求帧。CAN FD 大于 8 字节时，长度必须为 12、16、20、24、32、48 或 64 字节。</p>
+<p><span class="tt">write()</span> 成功只表示帧已经提交给内核，不代表对端收到或确认。错误帧默认不接收，可通过 <span class="tt">setErrorMask()</span> 配置，接收到的错误帧不能发送。<span class="tt">setFilters()</span> 使用 SocketCAN 原始 ID 和掩码格式，可包含 EFF/RTR 标志位，空过滤列表关闭普通数据帧接收。保留 SocketCAN 默认本地回环行为，不接收同一 socket 自己发送的帧。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md392"></a>
+5 协程示例</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;rmvl/io/can.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;rmvl/io/gpio.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task&lt;&gt;</a> receive(rm::async::Can &amp;can) {</div>
+<div class="line">    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line">        <span class="keyword">auto</span> frame = <span class="keyword">co_await</span> can.read();</div>
+<div class="line">        <span class="comment">// 处理收到的帧</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task&lt;&gt;</a> watch(rm::async::Gpio &amp;gpio) {</div>
+<div class="line">    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line">        <span class="keyword">auto</span> <span class="keyword">event</span> = <span class="keyword">co_await</span> gpio.wait();</div>
+<div class="line">        <span class="comment">// 处理边沿事件</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_class" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a> context;</div>
+<div class="line">    rm::async::Can can(context, <span class="stringliteral">&quot;can0&quot;</span>);</div>
+<div class="line">    rm::GpioOptions <a class="code hl_function" href="../../d6/dd4/group__io__net.html#gaa77db7dcafaa8b1cb5e5d68fdb771d76">options</a>;</div>
+<div class="line">    <a class="code hl_function" href="../../d6/dd4/group__io__net.html#gaa77db7dcafaa8b1cb5e5d68fdb771d76">options</a>.edge = rm::GpioEdge::Both;</div>
+<div class="line">    rm::async::Gpio gpio(context, <span class="stringliteral">&quot;/dev/gpiochip0&quot;</span>, {18}, <a class="code hl_function" href="../../d6/dd4/group__io__net.html#gaa77db7dcafaa8b1cb5e5d68fdb771d76">options</a>);</div>
+<div class="line">    context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a7f20c8db49341cfe0f21e70b643ed771">spawn</a>(receive, std::ref(can));</div>
+<div class="line">    context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a7f20c8db49341cfe0f21e70b643ed771">spawn</a>(watch, std::ref(gpio));</div>
+<div class="line">    context.<a class="code hl_function" href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">run</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html">rm::async::IOContext</a></div><div class="ttdoc">异步 I/O 执行上下文，负责管理 IO 事件循环和协程任务的调度</div><div class="ttdef"><b>定义</b> async.hpp:205</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_a7f20c8db49341cfe0f21e70b643ed771"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#a7f20c8db49341cfe0f21e70b643ed771">rm::async::IOContext::spawn</a></div><div class="ttdeci">void spawn(Callable &amp;&amp;fn, Args &amp;&amp;...args)</div><div class="ttdoc">生成 Task&lt;&gt; 协程任务，并添加到调度器</div><div class="ttdef"><b>定义</b> async.hpp:234</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1IOContext_html_ab6381750261e8ba71ee0a8fd0f0a21dd"><div class="ttname"><a href="../../d8/ddc/classrm_1_1async_1_1IOContext.html#ab6381750261e8ba71ee0a8fd0f0a21dd">rm::async::IOContext::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">启用事件循环</div></div>
+<div class="ttc" id="aclassrm_1_1async_1_1Task_html"><div class="ttname"><a href="../../d5/d31/classrm_1_1async_1_1Task.html">rm::async::Task</a></div><div class="ttdoc">保有 rm::async::Promise 的异步协程任务</div><div class="ttdef"><b>定义</b> async.hpp:148</div></div>
+<div class="ttc" id="agroup__io__net_html_gaa77db7dcafaa8b1cb5e5d68fdb771d76"><div class="ttname"><a href="../../d6/dd4/group__io__net.html#gaa77db7dcafaa8b1cb5e5d68fdb771d76">rm::requests::options</a></div><div class="ttdeci">Response options(std::string_view url, const std::vector&lt; std::string &gt; &amp;querys={}, const std::unordered_map&lt; std::string, std::string &gt; &amp;heads={})</div><div class="ttdoc">发出同步 OPTIONS 请求</div><div class="ttdef"><b>定义</b> netapp.hpp:322</div></div>
+</div><!-- fragment --><p>部署时需要设备节点权限或相应网络接口权限。普通 PC 是否可用取决于硬件、内核驱动和接线，设备节点存在不表示板上有可访问的物理引脚。 </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 var searchData=
 [
   ['light_20的参数模块_0',['light 的参数模块',['../d5/de1/group__para__light.html',1,'']]],
-  ['lpss_20的参数模块_1',['lpss 的参数模块',['../d9/dab/group__para__lpss.html',1,'']]]
+  ['linux_20外设_20io_1',['Linux 外设 IO',['../d5/d35/group__io__peripheral.html',1,'']]],
+  ['lpss_20的参数模块_2',['lpss 的参数模块',['../d9/dab/group__para__lpss.html',1,'']]]
 ];
