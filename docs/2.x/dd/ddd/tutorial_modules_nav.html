@@ -27,6 +27,7 @@ window.MathJax = {
 <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
   <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../rmvl-custom-docstyle.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
   <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
   <script type="text/javascript">
@@ -204,10 +205,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2026/08/17 </dd></dl>
 <dl class="section version"><dt>版本</dt><dd>1.0 </dd></dl>
-<p><b>上一篇教程：</b><a class="el" href="../../d4/d4a/tutorial_modules_lpss_robotdemo.html" title="机器人扩展完整示例">机器人扩展完整示例</a> <br  />
- <b>下一篇教程：</b><a class="el" href="../../d8/d82/tutorial_modules_ort.html" title="ONNX-Runtime 分类网络部署库">ONNX-Runtime 分类网络部署库</a> <br  />
-</p>
-<hr  />
+<div class="rmvl-tutorial-shortcut rmvl-tutorial-prev"><span>上一篇教程：</span><a class="el" href="../../d4/d4a/tutorial_modules_lpss_robotdemo.html" title="机器人扩展完整示例">机器人扩展完整示例</a></div><div class="rmvl-tutorial-shortcut rmvl-tutorial-next"><span>下一篇教程：</span><a class="el" href="../../d8/d82/tutorial_modules_ort.html" title="ONNX-Runtime 分类网络部署库">ONNX-Runtime 分类网络部署库</a></div><hr  />
 <p>相关模块： <a class="el" href="../../db/d22/group__nav.html" title="导航框架与系统">导航框架与系统</a> 及 <a class="el" href="../../da/d12/group__rmvlmsg.html" title="消息模块">消息模块</a></p>
 <dl class="section remark"><dt>备注</dt><dd>本教程中的 LPSS 通信示例统一使用 C++20 <a class="el" href="../../d0/dea/classrm_1_1lpss_1_1async_1_1Node.html" title="rm::lpss::async::Node">rm::lpss::async::Node</a> 。地图、规划和控制算法本身是同步计算，消息输入输出通过异步节点创建的 Publisher、Subscriber 和 TF Broadcaster 完成。异步 Publisher 的 <span class="tt">publish()</span> 会将发送任务交给节点的 IOContext 调度，因此调用处不需要 <span class="tt">co_await</span>。</dd></dl>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md344"></a>

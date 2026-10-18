@@ -27,6 +27,7 @@ window.MathJax = {
 <script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
   <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../rmvl-custom-docstyle.css" rel="stylesheet" type="text/css"/>
   <!-- ... other metadata & script includes ... -->
   <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
   <script type="text/javascript">
@@ -162,9 +163,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="textblock"><p><a class="anchor" id="md__2home_2zhaoxi_2_8rmvldev_2rmvl_2doc_2tutorials_2extra_2upper_2upper__write__data"></a></p>
 <dl class="section author"><dt>作者</dt><dd>赵曦 </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2023/10/04</dd></dl>
-<p><b>上一篇教程：</b><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html" title="责任链模式下的程序处理">责任链模式下的程序处理</a> <br  />
-</p>
-<hr  />
+<div class="rmvl-tutorial-shortcut rmvl-tutorial-prev"><span>上一篇教程：</span><a class="el" href="../../d2/de3/tutorial_extra_upper_process.html" title="责任链模式下的程序处理">责任链模式下的程序处理</a></div><hr  />
 <h2 class="doxsection"><a class="anchor" id="autotoc_md94"></a>
 1 显示图像、打印调试信息</h2>
 <p>视觉程序日常调试必不可少的就是显示图像，例如 OpenCV 中提供了 <span class="tt">cv::imshow</span> 函数来显示图像。在执行完程序处理的全部流程后，可以对当前帧捕获到或计算出的信息进行观察， rm::DetectInfo ， <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a> ， rm::PredictInfo ， rm::DecideInfo 包含了各自模块得到的全部信息。例如 rm::DetectInfo 中提供了原图、二值图、所有 ROI、渲染图等图像信息，可以使用 <span class="tt">cv::imshow()</span> 显示到屏幕； <a class="el" href="../../d5/da4/structrm_1_1CompensateInfo.html" title="补偿模块信息">rm::CompensateInfo</a> 中提供了补偿的角度偏移信息，可以使用 <span class="tt">printf</span> 或 <span class="tt">std::cout</span> 输出到终端。</p>
