@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['filedescriptor_0',['FileDescriptor',['../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96',1,'rm']]],
-  ['findnodeinclient_1',['FindNodeInClient',['../d3/da8/group__opcua.html#gae6a03810f627bd6b4a8d79300cba7d33',1,'rm::ua']]],
-  ['findnodeinserver_2',['FindNodeInServer',['../d3/da8/group__opcua.html#gaf0938829901bcd765297d7e657977d9d',1,'rm::ua']]],
-  ['func1d_3',['Func1d',['../d2/d62/group__algorithm__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
-  ['func1ds_4',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
-  ['funcnd_5',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
-  ['funcnds_6',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee',1,'rm']]]
+  ['handle_5ft_0',['handle_t',['../d0/daa/structrm_1_1async_1_1FinalAwaiter.html#a7dd05ffa1428bb33e9842b56460c4d59',1,'rm::async::FinalAwaiter::handle_t'],['../dd/df8/structrm_1_1async_1_1TaskAwaiter.html#a7dc5490f0bc4f3ca141dfe6a6bb56e1e',1,'rm::async::TaskAwaiter::handle_t'],['../d5/d31/classrm_1_1async_1_1Task.html#a8e5275e5b739e104cc377fc4ea5f8b4c',1,'rm::async::Task::handle_t']]],
+  ['hash_5ffunc_1',['hash_func',['../d0/de1/group__core.html#ga64b5c09cc70dbdaba2bebd58ebd287be',1,'rm::hash_traits&lt; Tp, std::enable_if_t&lt;!std::is_aggregate_v&lt; Tp &gt; &gt; &gt;::hash_func'],['../d0/de1/group__core.html#ga17ead482bdcd67b2690cb4318ad22a5b',1,'rm::hash_traits&lt; Tp, std::enable_if_t&lt; std::is_aggregate_v&lt; Tp &gt; &gt; &gt;::hash_func']]]
 ];

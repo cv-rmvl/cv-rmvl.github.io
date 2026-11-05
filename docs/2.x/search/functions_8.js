@@ -19,12 +19,14 @@ var searchData=
   ['ipv6_16',['ipv6',['../db/d69/classrm_1_1NetworkInterface.html#afaf90f47d6baa9ea149b4811ad47310f',1,'rm::NetworkInterface']]],
   ['is_5fopen_17',['is_open',['../d3/d6f/classrm_1_1async_1_1WebSocket.html#a6a6e68bf7d1edb60d1a4f51b0cd6a517',1,'rm::async::WebSocket']]],
   ['isactive_18',['isActive',['../db/d77/classrm_1_1RuneTarget.html#a474788c10deee38c0c14f5c7ac277b02',1,'rm::RuneTarget::isActive()'],['../d1/dfe/classrm_1_1Rune.html#a64af58971748ce9dc909c6a16c6dc692',1,'rm::Rune::isActive()']]],
-  ['iscontainblob_19',['isContainBlob',['../df/d41/classrm_1_1Armor.html#a5afe2c2cfe6fe816e5afdebe36965824',1,'rm::Armor']]],
-  ['iscreator_20',['isCreator',['../d5/d8b/classrm_1_1SHMBase.html#a1450c37790924495b06552c2ab2a7f8c',1,'rm::SHMBase']]],
-  ['ismap_21',['isMap',['../d0/db8/classrm_1_1yaml_1_1Node.html#a60172780e6798d2cb30af2476cc7a0c5',1,'rm::yaml::Node']]],
-  ['isnull_22',['isNull',['../d0/db8/classrm_1_1yaml_1_1Node.html#ad36d833ddd0387df09ca269514c7ce72',1,'rm::yaml::Node']]],
-  ['isopened_23',['isOpened',['../da/d1d/classrm_1_1GalaxyCamera.html#a80956f29b4811cdb7225483bdd36c0a2',1,'rm::GalaxyCamera::isOpened()'],['../db/d9f/classrm_1_1HikCamera.html#a4cfe9174ef7e29689cf622647acf591f',1,'rm::HikCamera::isOpened()'],['../de/de8/classrm_1_1MvCamera.html#acfa4721253130631715d6fb56f79199b',1,'rm::MvCamera::isOpened()'],['../d1/d9c/classrm_1_1OptCamera.html#a6dbb59ff53d47682d2412bfeb1b55d61',1,'rm::OptCamera::isOpened()'],['../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444',1,'rm::SerialPort::isOpened()'],['../df/d1f/classrm_1_1HikLightController.html#a82f4e66364648c614e597cbf6f73cc75',1,'rm::HikLightController::isOpened()'],['../db/d24/classrm_1_1OPTLightController.html#aef70f058f8067e7ca4083235b5a743d6',1,'rm::OPTLightController::isOpened()']]],
-  ['isscalar_24',['isScalar',['../d0/db8/classrm_1_1yaml_1_1Node.html#aed8d1102ea925d36da5f04d29654be2d',1,'rm::yaml::Node']]],
-  ['issequence_25',['isSequence',['../d0/db8/classrm_1_1yaml_1_1Node.html#a45f9886d0555098fe14e74d63cbc0b52',1,'rm::yaml::Node']]],
-  ['iteratedextendedkalmanfilter_26',['IteratedExtendedKalmanFilter',['../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html#a57dbf860481d8827d981ecb95b05a333',1,'rm::IteratedExtendedKalmanFilter']]]
+  ['isarray_19',['isArray',['../dc/da7/classrm_1_1toml_1_1Node.html#ac65aec9e4fa1d5f06cbf8ba22a4d4110',1,'rm::toml::Node']]],
+  ['iscontainblob_20',['isContainBlob',['../df/d41/classrm_1_1Armor.html#a5afe2c2cfe6fe816e5afdebe36965824',1,'rm::Armor']]],
+  ['iscreator_21',['isCreator',['../d5/d8b/classrm_1_1SHMBase.html#a1450c37790924495b06552c2ab2a7f8c',1,'rm::SHMBase']]],
+  ['ismap_22',['isMap',['../d0/db8/classrm_1_1yaml_1_1Node.html#a60172780e6798d2cb30af2476cc7a0c5',1,'rm::yaml::Node']]],
+  ['isnull_23',['isNull',['../d0/db8/classrm_1_1yaml_1_1Node.html#ad36d833ddd0387df09ca269514c7ce72',1,'rm::yaml::Node']]],
+  ['isopened_24',['isOpened',['../da/d1d/classrm_1_1GalaxyCamera.html#a80956f29b4811cdb7225483bdd36c0a2',1,'rm::GalaxyCamera::isOpened()'],['../db/d9f/classrm_1_1HikCamera.html#a4cfe9174ef7e29689cf622647acf591f',1,'rm::HikCamera::isOpened()'],['../de/de8/classrm_1_1MvCamera.html#acfa4721253130631715d6fb56f79199b',1,'rm::MvCamera::isOpened()'],['../d1/d9c/classrm_1_1OptCamera.html#a6dbb59ff53d47682d2412bfeb1b55d61',1,'rm::OptCamera::isOpened()'],['../d4/d98/classrm_1_1SerialPort.html#aaadfdd019cb71aaf6f52bad22feb8444',1,'rm::SerialPort::isOpened()'],['../df/d1f/classrm_1_1HikLightController.html#a82f4e66364648c614e597cbf6f73cc75',1,'rm::HikLightController::isOpened()'],['../db/d24/classrm_1_1OPTLightController.html#aef70f058f8067e7ca4083235b5a743d6',1,'rm::OPTLightController::isOpened()']]],
+  ['isscalar_25',['isScalar',['../d0/db8/classrm_1_1yaml_1_1Node.html#aed8d1102ea925d36da5f04d29654be2d',1,'rm::yaml::Node']]],
+  ['issequence_26',['isSequence',['../d0/db8/classrm_1_1yaml_1_1Node.html#a45f9886d0555098fe14e74d63cbc0b52',1,'rm::yaml::Node']]],
+  ['istable_27',['isTable',['../dc/da7/classrm_1_1toml_1_1Node.html#ac1db3409c0e88d63ba6778264f05cc11',1,'rm::toml::Node']]],
+  ['iteratedextendedkalmanfilter_28',['IteratedExtendedKalmanFilter',['../d3/d69/classrm_1_1IteratedExtendedKalmanFilter.html#a57dbf860481d8827d981ecb95b05a333',1,'rm::IteratedExtendedKalmanFilter']]]
 ];

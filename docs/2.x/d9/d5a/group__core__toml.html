@@ -1,0 +1,385 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: TOML 解析模块</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../rmvl-custom-docstyle.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">TOML 解析模块 <div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+TOML 解析模块 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml.svg" width="288" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3ADate" id="r_rm_3A_3Atoml_3A_3ADate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html">rm::toml::Date</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期  <a href="../../df/db5/structrm_1_1toml_1_1Date.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3ATime" id="r_rm_3A_3Atoml_3A_3ATime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dbe/structrm_1_1toml_1_1Time.html">rm::toml::Time</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地时间，小数秒保留至纳秒，超出部分截断。  <a href="../../d2/dbe/structrm_1_1toml_1_1Time.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3ADateTime" id="r_rm_3A_3Atoml_3A_3ADateTime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dba/structrm_1_1toml_1_1DateTime.html">rm::toml::DateTime</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期时间，无偏移表示本地日期时间，偏移 0 表示 UTC。  <a href="../../d0/dba/structrm_1_1toml_1_1DateTime.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3AParseError" id="r_rm_3A_3Atoml_3A_3AParseError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d80/classrm_1_1toml_1_1ParseError.html">rm::toml::ParseError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 语法或定义冲突，行列号从 1 开始。  <a href="../../d6/d80/classrm_1_1toml_1_1ParseError.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3AIoError" id="r_rm_3A_3Atoml_3A_3AIoError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html">rm::toml::IoError</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件打开或读取失败。  <a href="../../dc/d74/classrm_1_1toml_1_1IoError.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3ANode" id="r_rm_3A_3Atoml_3A_3ANode"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">rm::toml::Node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享底层文档所有权的只读节点句柄  <a href="../../dc/da7/classrm_1_1toml_1_1Node.html#details">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaf5eb0701f547b3819fc4ef363d0812be" id="r_gaf5eb0701f547b3819fc4ef363d0812be"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#gaf5eb0701f547b3819fc4ef363d0812be">rm::toml::NodeType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360">rm::toml::NodeType::Undefined</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141">rm::toml::NodeType::Table</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17">rm::toml::NodeType::Array</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98">rm::toml::NodeType::String</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044">rm::toml::NodeType::Integer</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c">rm::toml::NodeType::Floating</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b">rm::toml::NodeType::Boolean</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41">rm::toml::NodeType::Date</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530">rm::toml::NodeType::Time</a>
+, <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e">rm::toml::NodeType::DateTime</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gaf5eb0701f547b3819fc4ef363d0812be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 节点类型，Undefined 仅表示无效句柄，不是 TOML 值。  <a href="#gaf5eb0701f547b3819fc4ef363d0812be">更多...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gab59453ed53c852b17406d04242d13ec0" id="r_gab59453ed53c852b17406d04242d13ec0"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab59453ed53c852b17406d04242d13ec0">rm::toml::load</a> (std::string_view path)</td></tr>
+<tr class="memdesc:gab59453ed53c852b17406d04242d13ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载，成功时返回 Table 根节点。失败抛 <a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">IoError</a> 或 ParseError。  <br /></td></tr>
+<tr class="memitem:gac2955f7f334eb6014e8069505dbddd1f" id="r_gac2955f7f334eb6014e8069505dbddd1f"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac2955f7f334eb6014e8069505dbddd1f">rm::toml::loads</a> (std::string_view source)</td></tr>
+<tr class="memdesc:gac2955f7f334eb6014e8069505dbddd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。  <br /></td></tr>
+<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42" id="r_ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga12530a03b05f5875ae8e2d56b1c0ba42">rm::toml::Node::read</a> (T &amp;value) const</td></tr>
+<tr class="memdesc:ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="mdescLeft">&#160;</td><td class="mdescRight">严格类型转换并检查数值范围，失败时保持输出对象不变。  <br /></td></tr>
+<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd" id="r_ga523bbd010c9461f81183bb35307a2ddd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd template"><td class="memItemLeft">std::optional&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ga523bbd010c9461f81183bb35307a2ddd">rm::toml::Node::as</a> () const</td></tr>
+<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209" id="r_ga2e202b9f042db00dc460a5681b79a209"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ga2e202b9f042db00dc460a5681b79a209">rm::toml::Node::valueOr</a> (T fallback) const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"></div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="gaf5eb0701f547b3819fc4ef363d0812be" name="gaf5eb0701f547b3819fc4ef363d0812be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5eb0701f547b3819fc4ef363d0812be">&#9670;&#160;</a></span>NodeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#gaf5eb0701f547b3819fc4ef363d0812be">rm::toml::NodeType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+
+<p>TOML 节点类型，Undefined 仅表示无效句柄，不是 TOML 值。 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360" name="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"><p>未定义 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141" name="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141"></a>Table&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17" name="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17"></a>Array&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98" name="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98"></a>String&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044" name="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044"></a>Integer&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c" name="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c"></a>Floating&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b" name="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b"></a>Boolean&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41" name="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41"></a>Date&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530" name="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530"></a>Time&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e" name="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e"></a>DateTime&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
+<a id="ga523bbd010c9461f81183bb35307a2ddd" name="ga523bbd010c9461f81183bb35307a2ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga523bbd010c9461f81183bb35307a2ddd">&#9670;&#160;</a></span>as()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; T &gt; rm::toml::Node::as </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga523bbd010c9461f81183bb35307a2ddd_cgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="gab59453ed53c852b17406d04242d13ec0" name="gab59453ed53c852b17406d04242d13ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab59453ed53c852b17406d04242d13ec0">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a> rm::toml::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+
+<p>从文件加载，成功时返回 Table 根节点。失败抛 <a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">IoError</a> 或 ParseError。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_gab59453ed53c852b17406d04242d13ec0_cgraph.svg" width="126" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="gac2955f7f334eb6014e8069505dbddd1f" name="gac2955f7f334eb6014e8069505dbddd1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2955f7f334eb6014e8069505dbddd1f">&#9670;&#160;</a></span>loads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a> rm::toml::loads </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+
+<p>从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_gac2955f7f334eb6014e8069505dbddd1f_cgraph.svg" width="132" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga12530a03b05f5875ae8e2d56b1c0ba42" name="ga12530a03b05f5875ae8e2d56b1c0ba42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12530a03b05f5875ae8e2d56b1c0ba42">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::toml::Node::read </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+
+<p>严格类型转换并检查数值范围，失败时保持输出对象不变。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga12530a03b05f5875ae8e2d56b1c0ba42_cgraph.svg" width="618" height="395"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ga2e202b9f042db00dc460a5681b79a209" name="ga2e202b9f042db00dc460a5681b79a209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e202b9f042db00dc460a5681b79a209">&#9670;&#160;</a></span>valueOr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T rm::toml::Node::valueOr </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>fallback</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga2e202b9f042db00dc460a5681b79a209_cgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

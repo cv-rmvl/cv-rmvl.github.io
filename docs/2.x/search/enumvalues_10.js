@@ -17,5 +17,6 @@ var searchData=
   ['square_14',['Square',['../db/dc8/group__anchor.html#gga8fef01d184cf75eca3985168901fd5b7aceb46ca115d05c51aa5a16a8867c3304',1,'rm']]],
   ['startblocked_15',['StartBlocked',['../d9/d8f/group__nav__planner.html#ggabc79736e0b69f24072413dc14cc6ee89ac79ed416baeb77dd4aae17727e4dc580',1,'rm::nav']]],
   ['staticdynamicconflict_16',['StaticDynamicConflict',['../d6/d48/group__lpss__transform__buffer.html#gga23bec70cd7f6679db019bdcf7be39944ac1f55507166964a0245f801ae3ae3546',1,'rm::lpss::tf']]],
-  ['stereo_17',['Stereo',['../db/d06/group__nav__localization.html#gga4414d0de10104a167521f59e48c4f877abbc45d9b35436f5f0ed9e33499efcea9',1,'rm::nav']]]
+  ['stereo_17',['Stereo',['../db/d06/group__nav__localization.html#gga4414d0de10104a167521f59e48c4f877abbc45d9b35436f5f0ed9e33499efcea9',1,'rm::nav']]],
+  ['string_18',['String',['../d9/d5a/group__core__toml.html#ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98',1,'rm::toml']]]
 ];

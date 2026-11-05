@@ -21,7 +21,6 @@ var searchData=
   ['rm_3a_3arequests_18',['requests',['../d2/d45/namespacerm_1_1requests.html',1,'rm']]],
   ['rm_3a_3asrv_19',['srv',['../d8/d2b/namespacerm_1_1srv.html',1,'rm']]],
   ['rm_3a_3astr_20',['str',['../d4/dfc/namespacerm_1_1str.html',1,'rm']]],
-  ['rm_3a_3aua_21',['ua',['../d7/d9e/namespacerm_1_1ua.html',1,'rm']]],
-  ['rm_3a_3aua_3a_3ahelper_22',['helper',['../d8/d79/namespacerm_1_1ua_1_1helper.html',1,'rm::ua']]],
-  ['rm_3a_3ayaml_23',['yaml',['../d5/d90/namespacerm_1_1yaml.html',1,'rm']]]
+  ['rm_3a_3atoml_21',['toml',['../d6/d56/namespacerm_1_1toml.html',1,'rm']]],
+  ['rm_3a_3ayaml_22',['yaml',['../d5/d90/namespacerm_1_1yaml.html',1,'rm']]]
 ];

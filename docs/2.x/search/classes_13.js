@@ -6,7 +6,7 @@ var searchData=
   ['task_3c_20tp_20_3e_3',['Task&lt; Tp &gt;',['../d5/d31/classrm_1_1async_1_1Task.html',1,'rm::async']]],
   ['taskawaiter_4',['TaskAwaiter',['../dd/df8/structrm_1_1async_1_1TaskAwaiter.html',1,'rm::async']]],
   ['tf_5',['TF',['../d7/dc5/classrm_1_1msg_1_1TF.html',1,'rm::msg']]],
-  ['time_6',['Time',['../d2/d47/classrm_1_1msg_1_1Time.html',1,'rm::msg::Time'],['../d8/d74/classrm_1_1Time.html',1,'rm::Time']]],
+  ['time_6',['Time',['../d2/d47/classrm_1_1msg_1_1Time.html',1,'rm::msg::Time'],['../d8/d74/classrm_1_1Time.html',1,'rm::Time'],['../d2/dbe/structrm_1_1toml_1_1Time.html',1,'rm::toml::Time']]],
   ['timer_7',['Timer',['../db/dce/classrm_1_1async_1_1Timer.html',1,'rm::async::Timer'],['../d2/dd6/classrm_1_1lpss_1_1async_1_1Timer.html',1,'rm::lpss::async::Timer']]],
   ['timerawaiter_8',['TimerAwaiter',['../da/d52/classrm_1_1async_1_1Timer_1_1TimerAwaiter.html',1,'rm::async::Timer']]],
   ['tracker_9',['tracker',['../d6/dd2/classrm_1_1tracker.html',1,'rm']]],

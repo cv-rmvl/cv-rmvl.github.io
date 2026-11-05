@@ -1,0 +1,550 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="generator" content="Doxygen 1.18.0" />
+  <title>RMVL: rm::toml::Node类 参考</title>
+  <link href="../../rmvl-logo-small.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="../../tabs.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery.js"></script>
+  <script type="text/javascript" src="../../dynsections.js"></script>
+  <script type="text/javascript" src="../../cookie.js"></script>
+  <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+  <script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="../../rmvl-custom-docstyle.css" rel="stylesheet" type="text/css"/>
+  <!-- ... other metadata & script includes ... -->
+  <script type="text/javascript" src="../../doxygen-awesome-darkmode-toggle.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-github-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeGithubLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-fragment-copy-button.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-interactive-toc.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeInteractiveToc.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-paragraph-link.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeParagraphLink.init()
+  </script>
+  <script type="text/javascript" src="../../doxygen-awesome-tabs.js"></script>
+  <script type="text/javascript">
+    DoxygenAwesomeTabs.init()
+  </script>
+</head>
+<body>
+  <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+    <div id="titlearea">
+      <!--#include virtual="/google-search.html"-->
+      <script type="text/javascript" src="/docs/version.js"></script>
+      <table cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr style="height: 56px;">
+            <td id="projectlogo"><img alt="Logo" src="../../rmvl-logo.png" /></td>
+            <td style="padding-left: 0.5em;">
+              <div id="projectname">RMVL
+                &#160;<span id="projectnumber">2.6.0-dev</span>
+              </div>
+              <div id="projectbrief">Robotic Manipulation and Vision Library</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end header part -->
+<!-- 制作者 Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "../../",
+  "generateTreeView": false,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../d5/d20/namespacerm.html">rm</a></li><li class="navelem"><a href="../../d6/d56/namespacerm_1_1toml.html">toml</a></li><li class="navelem"><a href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="../../d8/dc7/classrm_1_1toml_1_1Node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rm::toml::Node类 参考<div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a> &raquo; <a class="el" href="../../d9/d5a/group__core__toml.html">TOML 解析模块</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>共享底层文档所有权的只读节点句柄  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+<div class="dynheader">
+rm::toml::Node 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../df/d93/classrm_1_1toml_1_1Node__coll__graph.svg" width="136" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a99ba92fef63aa642b58fb4cd0414c9a7" id="r_a99ba92fef63aa642b58fb4cd0414c9a7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a> () noexcept=default</td></tr>
+<tr class="memitem:a9a3ae3719fdd91037836002d505403b8" id="r_a9a3ae3719fdd91037836002d505403b8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9a3ae3719fdd91037836002d505403b8">valid</a> () const noexcept</td></tr>
+<tr class="memitem:aab3314b5ef30b6da736e890024a60e12" id="r_aab3314b5ef30b6da736e890024a60e12"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aab3314b5ef30b6da736e890024a60e12">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:aab3314b5ef30b6da736e890024a60e12"><td class="mdescLeft">&#160;</td><td class="mdescRight">只判断句柄有效性，与节点保存的布尔值无关。  <br /></td></tr>
+<tr class="memitem:a0bc2b189559745c210eddd67ffdc4d30" id="r_a0bc2b189559745c210eddd67ffdc4d30"><td class="memItemLeft"><a class="el" href="../../d9/d5a/group__core__toml.html#gaf5eb0701f547b3819fc4ef363d0812be">NodeType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0bc2b189559745c210eddd67ffdc4d30">type</a> () const noexcept</td></tr>
+<tr class="memitem:ac1db3409c0e88d63ba6778264f05cc11" id="r_ac1db3409c0e88d63ba6778264f05cc11"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac1db3409c0e88d63ba6778264f05cc11">isTable</a> () const noexcept</td></tr>
+<tr class="memitem:ac65aec9e4fa1d5f06cbf8ba22a4d4110" id="r_ac65aec9e4fa1d5f06cbf8ba22a4d4110"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac65aec9e4fa1d5f06cbf8ba22a4d4110">isArray</a> () const noexcept</td></tr>
+<tr class="memitem:ade986bd7b66c5e5cb82d49c168b94780" id="r_ade986bd7b66c5e5cb82d49c168b94780"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#ade986bd7b66c5e5cb82d49c168b94780">size</a> () const noexcept</td></tr>
+<tr class="memdesc:ade986bd7b66c5e5cb82d49c168b94780"><td class="mdescLeft">&#160;</td><td class="mdescRight">非容器节点返回 0。  <br /></td></tr>
+<tr class="memitem:a6707d0602d80264e422aaff6c2d233cf" id="r_a6707d0602d80264e422aaff6c2d233cf"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6707d0602d80264e422aaff6c2d233cf">contains</a> (std::string_view key) const noexcept</td></tr>
+<tr class="memitem:ab17191f41a7e96f5dffa55b24f605186" id="r_ab17191f41a7e96f5dffa55b24f605186"><td class="memItemLeft"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab17191f41a7e96f5dffa55b24f605186">operator[]</a> (std::string_view key) const noexcept</td></tr>
+<tr class="memdesc:ab17191f41a7e96f5dffa55b24f605186"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询字面键，不解释点分路径，不插入节点。  <br /></td></tr>
+<tr class="memitem:a2b2b2c0ef08cae0c248b4a92273f227e" id="r_a2b2b2c0ef08cae0c248b4a92273f227e"><td class="memItemLeft"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2b2b2c0ef08cae0c248b4a92273f227e">operator[]</a> (std::size_t index) const noexcept</td></tr>
+<tr class="memdesc:a2b2b2c0ef08cae0c248b4a92273f227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">仅适用于数组，越界或类型不符返回无效节点。  <br /></td></tr>
+<tr class="memitem:a4fb36ab615945c7927c21a8b58dc4544" id="r_a4fb36ab615945c7927c21a8b58dc4544"><td class="memItemLeft">std::vector&lt; std::string_view &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4fb36ab615945c7927c21a8b58dc4544">keys</a> () const</td></tr>
+<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42" id="r_ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga12530a03b05f5875ae8e2d56b1c0ba42">read</a> (T &amp;value) const</td></tr>
+<tr class="memdesc:ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="mdescLeft">&#160;</td><td class="mdescRight">严格类型转换并检查数值范围，失败时保持输出对象不变。  <br /></td></tr>
+<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd" id="r_ga523bbd010c9461f81183bb35307a2ddd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd template"><td class="memItemLeft">std::optional&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga523bbd010c9461f81183bb35307a2ddd">as</a> () const</td></tr>
+<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209" id="r_ga2e202b9f042db00dc460a5681b79a209"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga2e202b9f042db00dc460a5681b79a209">valueOr</a> (T fallback) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a3e546faa2e83035f1d14b35a35215c91" id="r_a3e546faa2e83035f1d14b35a35215c91"><td class="memItemLeft"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3e546faa2e83035f1d14b35a35215c91">loads</a> (std::string_view source)</td></tr>
+<tr class="memdesc:a3e546faa2e83035f1d14b35a35215c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
+<div class="textblock"><p>共享底层文档所有权的只读节点句柄 </p>
+<p>拷贝不复制树。子节点可独立于根句柄存活，同一文档支持并发只读访问。 返回的键名视图在底层文档最后一个句柄销毁前有效。 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">构造及析构函数说明</h2>
+<a id="a99ba92fef63aa642b58fb4cd0414c9a7" name="a99ba92fef63aa642b58fb4cd0414c9a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ba92fef63aa642b58fb4cd0414c9a7">&#9670;&#160;</a></span>Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::toml::Node::Node </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
+<a id="a6707d0602d80264e422aaff6c2d233cf" name="a6707d0602d80264e422aaff6c2d233cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6707d0602d80264e422aaff6c2d233cf">&#9670;&#160;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::toml::Node::contains </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_a6707d0602d80264e422aaff6c2d233cf_cgraph.svg" width="194" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac65aec9e4fa1d5f06cbf8ba22a4d4110" name="ac65aec9e4fa1d5f06cbf8ba22a4d4110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65aec9e4fa1d5f06cbf8ba22a4d4110">&#9670;&#160;</a></span>isArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::toml::Node::isArray </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_ac65aec9e4fa1d5f06cbf8ba22a4d4110_cgraph.svg" width="391" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac1db3409c0e88d63ba6778264f05cc11" name="ac1db3409c0e88d63ba6778264f05cc11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1db3409c0e88d63ba6778264f05cc11">&#9670;&#160;</a></span>isTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::toml::Node::isTable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_ac1db3409c0e88d63ba6778264f05cc11_cgraph.svg" width="390" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4fb36ab615945c7927c21a8b58dc4544" name="a4fb36ab615945c7927c21a8b58dc4544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb36ab615945c7927c21a8b58dc4544">&#9670;&#160;</a></span>keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string_view &gt; rm::toml::Node::keys </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_a4fb36ab615945c7927c21a8b58dc4544_cgraph.svg" width="100%" height="474"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="aab3314b5ef30b6da736e890024a60e12" name="aab3314b5ef30b6da736e890024a60e12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3314b5ef30b6da736e890024a60e12">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rm::toml::Node::operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>只判断句柄有效性，与节点保存的布尔值无关。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_aab3314b5ef30b6da736e890024a60e12_cgraph.svg" width="434" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2b2b2c0ef08cae0c248b4a92273f227e" name="a2b2b2c0ef08cae0c248b4a92273f227e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2b2c0ef08cae0c248b4a92273f227e">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a> rm::toml::Node::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>仅适用于数组，越界或类型不符返回无效节点。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_a2b2b2c0ef08cae0c248b4a92273f227e_cgraph.svg" width="415" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab17191f41a7e96f5dffa55b24f605186" name="ab17191f41a7e96f5dffa55b24f605186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17191f41a7e96f5dffa55b24f605186">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a> rm::toml::Node::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查询字面键，不解释点分路径，不插入节点。 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_ab17191f41a7e96f5dffa55b24f605186_cgraph.svg" width="415" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ade986bd7b66c5e5cb82d49c168b94780" name="ade986bd7b66c5e5cb82d49c168b94780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade986bd7b66c5e5cb82d49c168b94780">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t rm::toml::Node::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>非容器节点返回 0。 </p>
+
+</div>
+</div>
+<a id="a0bc2b189559745c210eddd67ffdc4d30" name="a0bc2b189559745c210eddd67ffdc4d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc2b189559745c210eddd67ffdc4d30">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d5a/group__core__toml.html#gaf5eb0701f547b3819fc4ef363d0812be">NodeType</a> rm::toml::Node::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a3ae3719fdd91037836002d505403b8" name="a9a3ae3719fdd91037836002d505403b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3ae3719fdd91037836002d505403b8">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rm::toml::Node::valid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../dc/da7/classrm_1_1toml_1_1Node_a9a3ae3719fdd91037836002d505403b8_cgraph.svg" width="171" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">友元及相关符号说明</h2>
+<a id="a3e546faa2e83035f1d14b35a35215c91" name="a3e546faa2e83035f1d14b35a35215c91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e546faa2e83035f1d14b35a35215c91">&#9670;&#160;</a></span>loads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a99ba92fef63aa642b58fb4cd0414c9a7">Node</a> loads </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.6-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../../doxygen.svg" alt="doxygen"/>
+</a> 1.18.0
+</small></address>
+<script type="text/javascript">
+</script>
+</body>
+</html>

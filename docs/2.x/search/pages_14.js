@@ -9,6 +9,6 @@ var searchData=
   ['opc_20ua_20模块_6',['适用于 Python 的 OPC UA 模块',['../d4/de5/tutorial_py_opcua.html',1,'tutorial_py_table_of_contents_modules']]],
   ['open62541_20库_7',['1.2 open62541 库',['../db/dba/tutorial_modules_opcua.html#tutorial_opcua_intro_open62541',1,'']]],
   ['opencv_8',['1.1 OpenCV',['../d1/db4/tutorial_install.html#autotoc_md115',1,'']]],
-  ['opencv_20类型兼容_9',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md410',1,'']]],
+  ['opencv_20类型兼容_9',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md415',1,'']]],
   ['opt_20光源控制器示例代码_10',['OPT 光源控制器示例代码',['../dc/d10/tutorial_modules_light.html#autotoc_md285',1,'']]]
 ];
