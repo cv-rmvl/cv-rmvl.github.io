@@ -52,7 +52,8 @@ var menudata={children:[
 {text:"u",url:"namespacemembers_u.html#index_u"},
 {text:"v",url:"namespacemembers_v.html#index_v"},
 {text:"w",url:"namespacemembers_w.html#index_w"},
-{text:"y",url:"namespacemembers_y.html#index_y"}]},
+{text:"y",url:"namespacemembers_y.html#index_y"},
+{text:"z",url:"namespacemembers_z.html#index_z"}]},
 {text:"函数",url:"namespacemembers_func.html",children:[
 {text:"b",url:"namespacemembers_func.html#index_b"},
 {text:"c",url:"namespacemembers_func.html#index_c"},
@@ -73,7 +74,8 @@ var menudata={children:[
 {text:"u",url:"namespacemembers_func.html#index_u"},
 {text:"v",url:"namespacemembers_func.html#index_v"},
 {text:"w",url:"namespacemembers_func.html#index_w"},
-{text:"y",url:"namespacemembers_func.html#index_y"}]},
+{text:"y",url:"namespacemembers_func.html#index_y"},
+{text:"z",url:"namespacemembers_func.html#index_z"}]},
 {text:"变量",url:"namespacemembers_vars.html",children:[
 {text:"a",url:"namespacemembers_vars.html#index_a"},
 {text:"c",url:"namespacemembers_vars.html#index_c"},
@@ -83,12 +85,15 @@ var menudata={children:[
 {text:"h",url:"namespacemembers_vars.html#index_h"},
 {text:"i",url:"namespacemembers_vars.html#index_i"},
 {text:"l",url:"namespacemembers_vars.html#index_l"},
+{text:"n",url:"namespacemembers_vars.html#index_n"},
+{text:"o",url:"namespacemembers_vars.html#index_o"},
 {text:"p",url:"namespacemembers_vars.html#index_p"},
 {text:"r",url:"namespacemembers_vars.html#index_r"},
 {text:"s",url:"namespacemembers_vars.html#index_s"},
 {text:"t",url:"namespacemembers_vars.html#index_t"}]},
 {text:"类型定义",url:"namespacemembers_type.html",children:[
 {text:"c",url:"namespacemembers_type.html#index_c"},
+{text:"d",url:"namespacemembers_type.html#index_d"},
 {text:"e",url:"namespacemembers_type.html#index_e"},
 {text:"f",url:"namespacemembers_type.html#index_f"},
 {text:"i",url:"namespacemembers_type.html#index_i"},
@@ -97,6 +102,7 @@ var menudata={children:[
 {text:"o",url:"namespacemembers_type.html#index_o"},
 {text:"r",url:"namespacemembers_type.html#index_r"},
 {text:"s",url:"namespacemembers_type.html#index_s"},
+{text:"v",url:"namespacemembers_type.html#index_v"},
 {text:"w",url:"namespacemembers_type.html#index_w"}]},
 {text:"枚举",url:"namespacemembers_enum.html",children:[
 {text:"a",url:"namespacemembers_enum.html#index_a"},
@@ -206,6 +212,7 @@ var menudata={children:[
 {text:"z",url:"functions_vars_z.html#index_z"}]},
 {text:"类型定义",url:"functions_type.html",children:[
 {text:"c",url:"functions_type.html#index_c"},
+{text:"d",url:"functions_type.html#index_d"},
 {text:"h",url:"functions_type.html#index_h"},
 {text:"p",url:"functions_type.html#index_p"},
 {text:"r",url:"functions_type.html#index_r"},

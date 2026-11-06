@@ -151,17 +151,15 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:Date" id="r_Date"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html">Date</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期  <a href="../../df/db5/structrm_1_1toml_1_1Date.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期，对应 TOML 的 local date  <a href="../../df/db5/structrm_1_1toml_1_1Date.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Time" id="r_Time"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dbe/structrm_1_1toml_1_1Time.html">Time</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地时间，小数秒保留至纳秒，超出部分截断。  <a href="../../d2/dbe/structrm_1_1toml_1_1Time.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地时间，对应 TOML 的 local time  <a href="../../d2/dbe/structrm_1_1toml_1_1Time.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:DateTime" id="r_DateTime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dba/structrm_1_1toml_1_1DateTime.html">DateTime</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期时间，无偏移表示本地日期时间，偏移 0 表示 UTC。  <a href="../../d0/dba/structrm_1_1toml_1_1DateTime.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:ParseError" id="r_ParseError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d80/classrm_1_1toml_1_1ParseError.html">ParseError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 语法或定义冲突，行列号从 1 开始。  <a href="../../d6/d80/classrm_1_1toml_1_1ParseError.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:IoError" id="r_IoError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html">IoError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件打开或读取失败。  <a href="../../dc/d74/classrm_1_1toml_1_1IoError.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期时间或带 UTC 偏移的日期时间  <a href="../../d0/dba/structrm_1_1toml_1_1DateTime.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:Error" id="r_Error"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 加载错误信息  <a href="../../da/dbe/structrm_1_1toml_1_1Error.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:Node" id="r_Node"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享底层文档所有权的只读节点句柄  <a href="../../dc/da7/classrm_1_1toml_1_1Node.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享底层节点树所有权的只读节点句柄  <a href="../../dc/da7/classrm_1_1toml_1_1Node.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -180,14 +178,19 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 , <a class="el" href="../../d9/d5a/group__core__toml.html#ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e">NodeType::DateTime</a>
 <br />
  }</td></tr>
-<tr class="memdesc:gaf5eb0701f547b3819fc4ef363d0812be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 节点类型，Undefined 仅表示无效句柄，不是 TOML 值。  <a href="../../d9/d5a/group__core__toml.html#gaf5eb0701f547b3819fc4ef363d0812be">更多...</a><br /></td></tr>
+<tr class="memdesc:gaf5eb0701f547b3819fc4ef363d0812be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 节点类型  <a href="../../d9/d5a/group__core__toml.html#gaf5eb0701f547b3819fc4ef363d0812be">更多...</a><br /></td></tr>
+<tr class="memitem:ga5a53bc84efcf12958668a909abef0165" id="r_ga5a53bc84efcf12958668a909abef0165"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga5a53bc84efcf12958668a909abef0165">ErrorCode</a> : uint8_t { <a class="el" href="../../d9/d5a/group__core__toml.html#gga5a53bc84efcf12958668a909abef0165a6adf97f83acf6453d4a6a4b1070f3754">ErrorCode::None</a>
+, <a class="el" href="../../d9/d5a/group__core__toml.html#gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af">ErrorCode::Parse</a>
+, <a class="el" href="../../d9/d5a/group__core__toml.html#gga5a53bc84efcf12958668a909abef0165a42a02b42ec22cfcbd78aaf7a66a5ee09">ErrorCode::Io</a>
+ }</td></tr>
+<tr class="memdesc:ga5a53bc84efcf12958668a909abef0165"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 加载错误类型  <a href="../../d9/d5a/group__core__toml.html#ga5a53bc84efcf12958668a909abef0165">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:gab59453ed53c852b17406d04242d13ec0" id="r_gab59453ed53c852b17406d04242d13ec0"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#gab59453ed53c852b17406d04242d13ec0">load</a> (std::string_view path)</td></tr>
-<tr class="memdesc:gab59453ed53c852b17406d04242d13ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载，成功时返回 Table 根节点。失败抛 <a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">IoError</a> 或 ParseError。  <br /></td></tr>
-<tr class="memitem:gac2955f7f334eb6014e8069505dbddd1f" id="r_gac2955f7f334eb6014e8069505dbddd1f"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#gac2955f7f334eb6014e8069505dbddd1f">loads</a> (std::string_view source)</td></tr>
-<tr class="memdesc:gac2955f7f334eb6014e8069505dbddd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。  <br /></td></tr>
+<tr class="memitem:ga56670cd8f9d025a4fbc726539cc240e0" id="r_ga56670cd8f9d025a4fbc726539cc240e0"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga56670cd8f9d025a4fbc726539cc240e0">load</a> (std::string_view path, <a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *error=nullptr)</td></tr>
+<tr class="memdesc:ga56670cd8f9d025a4fbc726539cc240e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载并解析 TOML 1.0 配置  <br /></td></tr>
+<tr class="memitem:ga99811f9e2d33d361e5a3e6e50b5eba98" id="r_ga99811f9e2d33d361e5a3e6e50b5eba98"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="../../d9/d5a/group__core__toml.html#ga99811f9e2d33d361e5a3e6e50b5eba98">loads</a> (std::string_view source, <a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *error=nullptr)</td></tr>
+<tr class="memdesc:ga99811f9e2d33d361e5a3e6e50b5eba98"><td class="mdescLeft">&#160;</td><td class="mdescRight">从内存中的 UTF-8 文本解析 TOML 1.0 配置  <br /></td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.6-->

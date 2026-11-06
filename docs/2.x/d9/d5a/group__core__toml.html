@@ -143,6 +143,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <div class="headertitle"><div class="title">TOML 解析模块 <div class="ingroups"><a class="el" href="../../d0/de1/group__core.html">RMVL 核心模块</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>提供 TOML 1.0 配置加载、只读节点访问和 C++ 类型转换功能  
+<a href="#details">更多...</a></p>
 <div class="dynheader">
 TOML 解析模块 的协作图:</div>
 <div class="dyncontent">
@@ -152,17 +155,15 @@ TOML 解析模块 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
 <tr class="memitem:rm_3A_3Atoml_3A_3ADate" id="r_rm_3A_3Atoml_3A_3ADate"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html">rm::toml::Date</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期  <a href="../../df/db5/structrm_1_1toml_1_1Date.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期，对应 TOML 的 local date  <a href="../../df/db5/structrm_1_1toml_1_1Date.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Atoml_3A_3ATime" id="r_rm_3A_3Atoml_3A_3ATime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d2/dbe/structrm_1_1toml_1_1Time.html">rm::toml::Time</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地时间，小数秒保留至纳秒，超出部分截断。  <a href="../../d2/dbe/structrm_1_1toml_1_1Time.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地时间，对应 TOML 的 local time  <a href="../../d2/dbe/structrm_1_1toml_1_1Time.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Atoml_3A_3ADateTime" id="r_rm_3A_3Atoml_3A_3ADateTime"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../d0/dba/structrm_1_1toml_1_1DateTime.html">rm::toml::DateTime</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期时间，无偏移表示本地日期时间，偏移 0 表示 UTC。  <a href="../../d0/dba/structrm_1_1toml_1_1DateTime.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Atoml_3A_3AParseError" id="r_rm_3A_3Atoml_3A_3AParseError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../d6/d80/classrm_1_1toml_1_1ParseError.html">rm::toml::ParseError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 语法或定义冲突，行列号从 1 开始。  <a href="../../d6/d80/classrm_1_1toml_1_1ParseError.html#details">更多...</a><br /></td></tr>
-<tr class="memitem:rm_3A_3Atoml_3A_3AIoError" id="r_rm_3A_3Atoml_3A_3AIoError"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html">rm::toml::IoError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件打开或读取失败。  <a href="../../dc/d74/classrm_1_1toml_1_1IoError.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地日期时间或带 UTC 偏移的日期时间  <a href="../../d0/dba/structrm_1_1toml_1_1DateTime.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:rm_3A_3Atoml_3A_3AError" id="r_rm_3A_3Atoml_3A_3AError"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">rm::toml::Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 加载错误信息  <a href="../../da/dbe/structrm_1_1toml_1_1Error.html#details">更多...</a><br /></td></tr>
 <tr class="memitem:rm_3A_3Atoml_3A_3ANode" id="r_rm_3A_3Atoml_3A_3ANode"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">rm::toml::Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享底层文档所有权的只读节点句柄  <a href="../../dc/da7/classrm_1_1toml_1_1Node.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享底层节点树所有权的只读节点句柄  <a href="../../dc/da7/classrm_1_1toml_1_1Node.html#details">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -181,24 +182,62 @@ TOML 解析模块 的协作图:</div>
 , <a class="el" href="#ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e">rm::toml::NodeType::DateTime</a>
 <br />
  }</td></tr>
-<tr class="memdesc:gaf5eb0701f547b3819fc4ef363d0812be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 节点类型，Undefined 仅表示无效句柄，不是 TOML 值。  <a href="#gaf5eb0701f547b3819fc4ef363d0812be">更多...</a><br /></td></tr>
+<tr class="memdesc:gaf5eb0701f547b3819fc4ef363d0812be"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 节点类型  <a href="#gaf5eb0701f547b3819fc4ef363d0812be">更多...</a><br /></td></tr>
+<tr class="memitem:ga5a53bc84efcf12958668a909abef0165" id="r_ga5a53bc84efcf12958668a909abef0165"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ga5a53bc84efcf12958668a909abef0165">rm::toml::ErrorCode</a> : uint8_t { <a class="el" href="#gga5a53bc84efcf12958668a909abef0165a6adf97f83acf6453d4a6a4b1070f3754">rm::toml::ErrorCode::None</a>
+, <a class="el" href="#gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af">rm::toml::ErrorCode::Parse</a>
+, <a class="el" href="#gga5a53bc84efcf12958668a909abef0165a42a02b42ec22cfcbd78aaf7a66a5ee09">rm::toml::ErrorCode::Io</a>
+ }</td></tr>
+<tr class="memdesc:ga5a53bc84efcf12958668a909abef0165"><td class="mdescLeft">&#160;</td><td class="mdescRight">TOML 加载错误类型  <a href="#ga5a53bc84efcf12958668a909abef0165">更多...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:gab59453ed53c852b17406d04242d13ec0" id="r_gab59453ed53c852b17406d04242d13ec0"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab59453ed53c852b17406d04242d13ec0">rm::toml::load</a> (std::string_view path)</td></tr>
-<tr class="memdesc:gab59453ed53c852b17406d04242d13ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载，成功时返回 Table 根节点。失败抛 <a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">IoError</a> 或 ParseError。  <br /></td></tr>
-<tr class="memitem:gac2955f7f334eb6014e8069505dbddd1f" id="r_gac2955f7f334eb6014e8069505dbddd1f"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac2955f7f334eb6014e8069505dbddd1f">rm::toml::loads</a> (std::string_view source)</td></tr>
-<tr class="memdesc:gac2955f7f334eb6014e8069505dbddd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。  <br /></td></tr>
-<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42" id="r_ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ga12530a03b05f5875ae8e2d56b1c0ba42 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga12530a03b05f5875ae8e2d56b1c0ba42">rm::toml::Node::read</a> (T &amp;value) const</td></tr>
-<tr class="memdesc:ga12530a03b05f5875ae8e2d56b1c0ba42"><td class="mdescLeft">&#160;</td><td class="mdescRight">严格类型转换并检查数值范围，失败时保持输出对象不变。  <br /></td></tr>
-<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd" id="r_ga523bbd010c9461f81183bb35307a2ddd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ga523bbd010c9461f81183bb35307a2ddd template"><td class="memItemLeft">std::optional&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ga523bbd010c9461f81183bb35307a2ddd">rm::toml::Node::as</a> () const</td></tr>
-<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209" id="r_ga2e202b9f042db00dc460a5681b79a209"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ga2e202b9f042db00dc460a5681b79a209 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#ga2e202b9f042db00dc460a5681b79a209">rm::toml::Node::valueOr</a> (T fallback) const</td></tr>
+<tr class="memitem:ga56670cd8f9d025a4fbc726539cc240e0" id="r_ga56670cd8f9d025a4fbc726539cc240e0"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga56670cd8f9d025a4fbc726539cc240e0">rm::toml::load</a> (std::string_view path, <a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *error=nullptr)</td></tr>
+<tr class="memdesc:ga56670cd8f9d025a4fbc726539cc240e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件加载并解析 TOML 1.0 配置  <br /></td></tr>
+<tr class="memitem:ga99811f9e2d33d361e5a3e6e50b5eba98" id="r_ga99811f9e2d33d361e5a3e6e50b5eba98"><td class="memItemLeft">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga99811f9e2d33d361e5a3e6e50b5eba98">rm::toml::loads</a> (std::string_view source, <a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *error=nullptr)</td></tr>
+<tr class="memdesc:ga99811f9e2d33d361e5a3e6e50b5eba98"><td class="mdescLeft">&#160;</td><td class="mdescRight">从内存中的 UTF-8 文本解析 TOML 1.0 配置  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"></div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<div class="textblock"><p>提供 TOML 1.0 配置加载、只读节点访问和 C++ 类型转换功能 </p>
+<ul>
+<li><a class="el" href="#ga56670cd8f9d025a4fbc726539cc240e0" title="从文件加载并解析 TOML 1.0 配置">load()</a> 从文件加载，loads() 从 UTF-8 文本加载，成功时均返回 Table 类型的根节点，失败返回无效节点</li>
+<li>TOML 不包含 null 类型，Undefined 仅用于表示无效节点句柄 <dl class="section see"><dt>参见</dt><dd>tutorial_modules_toml</dd></dl>
+</li>
+</ul>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">枚举类型说明</h2>
+<a id="ga5a53bc84efcf12958668a909abef0165" name="ga5a53bc84efcf12958668a909abef0165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a53bc84efcf12958668a909abef0165">&#9670;&#160;</a></span>ErrorCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ga5a53bc84efcf12958668a909abef0165">rm::toml::ErrorCode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
+
+<p>TOML 加载错误类型 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga5a53bc84efcf12958668a909abef0165a6adf97f83acf6453d4a6a4b1070f3754" name="gga5a53bc84efcf12958668a909abef0165a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>无错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af" name="gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af"></a>Parse&#160;</td><td class="fielddoc"><p>UTF-8 编码、语法或定义冲突错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga5a53bc84efcf12958668a909abef0165a42a02b42ec22cfcbd78aaf7a66a5ee09" name="gga5a53bc84efcf12958668a909abef0165a42a02b42ec22cfcbd78aaf7a66a5ee09"></a>Io&#160;</td><td class="fielddoc"><p>文件路径无效或文件打开、读取失败 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="gaf5eb0701f547b3819fc4ef363d0812be" name="gaf5eb0701f547b3819fc4ef363d0812be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaf5eb0701f547b3819fc4ef363d0812be">&#9670;&#160;</a></span>NodeType</h2>
 
@@ -221,52 +260,35 @@ TOML 解析模块 的协作图:</div>
 
 <p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
 
-<p>TOML 节点类型，Undefined 仅表示无效句柄，不是 TOML 值。 </p>
+<p>TOML 节点类型 </p>
 <table class="fieldtable">
-<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360" name="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"><p>未定义 </p>
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360" name="ggaf5eb0701f547b3819fc4ef363d0812beaec0fc0100c4fc1ce4eea230c3dc10360"></a>Undefined&#160;</td><td class="fielddoc"><p>无效或不存在的节点，不是 TOML 值 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141" name="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141"></a>Table&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17" name="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17"></a>Array&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98" name="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98"></a>String&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044" name="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044"></a>Integer&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c" name="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c"></a>Floating&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b" name="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b"></a>Boolean&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41" name="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41"></a>Date&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530" name="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530"></a>Time&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e" name="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e"></a>DateTime&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141" name="ggaf5eb0701f547b3819fc4ef363d0812bea51c45b795d5d18a3e4e0c37e8b20a141"></a>Table&#160;</td><td class="fielddoc"><p>表，包含以字符串为键的子节点，也用于表示内联表 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17" name="ggaf5eb0701f547b3819fc4ef363d0812bea4410ec34d9e6c1a68100ca0ce033fb17"></a>Array&#160;</td><td class="fielddoc"><p>数组，元素可以具有不同类型，表数组同样使用此类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98" name="ggaf5eb0701f547b3819fc4ef363d0812bea27118326006d3829667a400ad23d5d98"></a>String&#160;</td><td class="fielddoc"><p>UTF-8 字符串，读取时已完成转义处理 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044" name="ggaf5eb0701f547b3819fc4ef363d0812beaa0faef0851b4294c06f2b94bb1cb2044"></a>Integer&#160;</td><td class="fielddoc"><p>有符号 64 位整数 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c" name="ggaf5eb0701f547b3819fc4ef363d0812beac8df43648942ec3a9aec140f07f47b7c"></a>Floating&#160;</td><td class="fielddoc"><p>双精度浮点数，支持正负无穷和 NaN </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b" name="ggaf5eb0701f547b3819fc4ef363d0812bea27226c864bac7454a8504f8edb15d95b"></a>Boolean&#160;</td><td class="fielddoc"><p>布尔值 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41" name="ggaf5eb0701f547b3819fc4ef363d0812bea44749712dbec183e983dcd78a7736c41"></a>Date&#160;</td><td class="fielddoc"><p>本地日期，不包含时间和 UTC 偏移 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530" name="ggaf5eb0701f547b3819fc4ef363d0812beaa76d4ef5f3f6a672bbfab2865563e530"></a>Time&#160;</td><td class="fielddoc"><p>本地时间，不包含日期和 UTC 偏移 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e" name="ggaf5eb0701f547b3819fc4ef363d0812bea8cf10d2341ed01492506085688270c1e"></a>DateTime&#160;</td><td class="fielddoc"><p>日期时间，可包含 UTC 偏移 </p>
+</td></tr>
 </table>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">函数说明</h2>
-<a id="ga523bbd010c9461f81183bb35307a2ddd" name="ga523bbd010c9461f81183bb35307a2ddd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga523bbd010c9461f81183bb35307a2ddd">&#9670;&#160;</a></span>as()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt; T &gt; rm::toml::Node::as </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga523bbd010c9461f81183bb35307a2ddd_cgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-<a id="gab59453ed53c852b17406d04242d13ec0" name="gab59453ed53c852b17406d04242d13ec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab59453ed53c852b17406d04242d13ec0">&#9670;&#160;</a></span>load()</h2>
+<a id="ga56670cd8f9d025a4fbc726539cc240e0" name="ga56670cd8f9d025a4fbc726539cc240e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56670cd8f9d025a4fbc726539cc240e0">&#9670;&#160;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,25 +296,45 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a> rm::toml::load </td>
           <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
 
-<p>从文件加载，成功时返回 Table 根节点。失败抛 <a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">IoError</a> 或 ParseError。 </p>
+<p>从文件加载并解析 TOML 1.0 配置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>文件路径，相对路径以进程当前工作目录为基准，不允许包含空字符 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>可选的错误输出，默认为 nullptr，成功时清空已有错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功时返回共享节点树所有权的 Table 根节点，空文件返回空 Table，失败返回无效节点</dd></dl>
+<ul>
+<li>路径或文件读写问题对应 ErrorCode::Io，编码、语法或定义冲突对应 <a class="el" href="#gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af" title="UTF-8 编码、语法或定义冲突错误">ErrorCode::Parse</a></li>
+<li>这些加载错误通过返回值和 error 报告，不抛出异常 <dl class="section note"><dt>注解</dt><dd></dd></dl>
+</li>
+<li>返回的节点不引用 path 的内存，底层节点树由节点句柄共享持有</li>
+<li>内存分配失败等标准库异常不在此错误协议内，本函数不保证 noexcept <dl class="section see"><dt>参见</dt><dd><a class="el" href="#ga99811f9e2d33d361e5a3e6e50b5eba98" title="从内存中的 UTF-8 文本解析 TOML 1.0 配置">loads()</a> </dd></dl>
+</li>
+</ul>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_gab59453ed53c852b17406d04242d13ec0_cgraph.svg" width="126" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga56670cd8f9d025a4fbc726539cc240e0_cgraph.svg" width="252" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="gac2955f7f334eb6014e8069505dbddd1f" name="gac2955f7f334eb6014e8069505dbddd1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac2955f7f334eb6014e8069505dbddd1f">&#9670;&#160;</a></span>loads()</h2>
+<a id="ga99811f9e2d33d361e5a3e6e50b5eba98" name="ga99811f9e2d33d361e5a3e6e50b5eba98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99811f9e2d33d361e5a3e6e50b5eba98">&#9670;&#160;</a></span>loads()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,73 +342,37 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">RMVL_EXPORTS <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html">Node</a> rm::toml::loads </td>
           <td>(</td>
-          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html">Error</a> *</td>          <td class="paramname"><span class="paramname"><em>error</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
 
-<p>从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。 </p>
+<p>从内存中的 UTF-8 文本解析 TOML 1.0 配置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>TOML 文本，不要求以空字符结尾 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>可选的错误输出，默认为 nullptr，成功时清空已有错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功时返回共享节点树所有权的 Table 根节点，空文本返回空 Table，失败返回无效节点</dd></dl>
+<p>编码或语法错误、重复键和非法表定义等问题通过返回值和 <a class="el" href="#gga5a53bc84efcf12958668a909abef0165ac9ad95228aa735bdda1aebf38da022af" title="UTF-8 编码、语法或定义冲突错误">ErrorCode::Parse</a> 报告，不抛出异常 </p><dl class="section note"><dt>注解</dt><dd><ul>
+<li>解析完成后不依赖 source 的内存，调用方可以释放或修改原始文本</li>
+<li>内存分配失败等标准库异常不在此错误协议内，本函数不保证 noexcept </li>
+</ul>
+</dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="#ga56670cd8f9d025a4fbc726539cc240e0" title="从文件加载并解析 TOML 1.0 配置">load()</a> </dd></dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_gac2955f7f334eb6014e8069505dbddd1f_cgraph.svg" width="132" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="ga12530a03b05f5875ae8e2d56b1c0ba42" name="ga12530a03b05f5875ae8e2d56b1c0ba42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga12530a03b05f5875ae8e2d56b1c0ba42">&#9670;&#160;</a></span>read()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rm::toml::Node::read </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
-
-<p>严格类型转换并检查数值范围，失败时保持输出对象不变。 </p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga12530a03b05f5875ae8e2d56b1c0ba42_cgraph.svg" width="618" height="395"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="ga2e202b9f042db00dc460a5681b79a209" name="ga2e202b9f042db00dc460a5681b79a209"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2e202b9f042db00dc460a5681b79a209">&#9670;&#160;</a></span>valueOr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T rm::toml::Node::valueOr </td>
-          <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>fallback</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
-<div class="dynheader">
-函数调用图:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga2e202b9f042db00dc460a5681b79a209_cgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="../../d9/d5a/group__core__toml_ga99811f9e2d33d361e5a3e6e50b5eba98_cgraph.svg" width="259" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

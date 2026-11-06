@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div><!--header-->
 <div class="contents">
 
-<p>本地时间，小数秒保留至纳秒，超出部分截断。  
+<p>本地时间，对应 TOML 的 local time  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
@@ -160,12 +160,17 @@ rm::toml::Time 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:a5a81c07d595cb17118e14366b07af1d3" id="r_a5a81c07d595cb17118e14366b07af1d3"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a5a81c07d595cb17118e14366b07af1d3">hour</a> {}</td></tr>
+<tr class="memdesc:a5a81c07d595cb17118e14366b07af1d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">时，范围为 \(0\sim23\)  <br /></td></tr>
 <tr class="memitem:a16da5546bd3824ed242fbb0c3e2fb591" id="r_a16da5546bd3824ed242fbb0c3e2fb591"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a16da5546bd3824ed242fbb0c3e2fb591">minute</a> {}</td></tr>
+<tr class="memdesc:a16da5546bd3824ed242fbb0c3e2fb591"><td class="mdescLeft">&#160;</td><td class="mdescRight">分，范围为 \(0\sim59\)  <br /></td></tr>
 <tr class="memitem:ac70f0772c48566fcfed6120691d761c1" id="r_ac70f0772c48566fcfed6120691d761c1"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#ac70f0772c48566fcfed6120691d761c1">second</a> {}</td></tr>
+<tr class="memdesc:ac70f0772c48566fcfed6120691d761c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">秒，范围为 \(0\sim59\)  <br /></td></tr>
 <tr class="memitem:afb652d367074a338533b4bc2a679b4ad" id="r_afb652d367074a338533b4bc2a679b4ad"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#afb652d367074a338533b4bc2a679b4ad">nanosecond</a> {}</td></tr>
+<tr class="memdesc:afb652d367074a338533b4bc2a679b4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">纳秒，范围为 \(0\sim999999999\)  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>本地时间，小数秒保留至纳秒，超出部分截断。 </p>
+<div class="textblock"><p>本地时间，对应 TOML 的 local time </p>
+<p>小数秒保留至纳秒，源文本中超出纳秒精度的部分截断 </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
 <a id="a5a81c07d595cb17118e14366b07af1d3" name="a5a81c07d595cb17118e14366b07af1d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a81c07d595cb17118e14366b07af1d3">&#9670;&#160;</a></span>hour</h2>
@@ -178,6 +183,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>时，范围为 \(0\sim23\) </p>
 
 </div>
 </div>
@@ -193,6 +200,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>分，范围为 \(0\sim59\) </p>
+
 </div>
 </div>
 <a id="afb652d367074a338533b4bc2a679b4ad" name="afb652d367074a338533b4bc2a679b4ad"></a>
@@ -207,6 +216,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>纳秒，范围为 \(0\sim999999999\) </p>
+
 </div>
 </div>
 <a id="ac70f0772c48566fcfed6120691d761c1" name="ac70f0772c48566fcfed6120691d761c1"></a>
@@ -220,6 +231,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>秒，范围为 \(0\sim59\) </p>
 
 </div>
 </div>

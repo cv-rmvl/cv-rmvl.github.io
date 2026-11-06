@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['filedescriptor_0',['FileDescriptor',['../d2/da3/group__io.html#ga99ec8bc7726fc0a48a1915ec7ab0ba96',1,'rm']]],
-  ['func1d_1',['Func1d',['../d2/d62/group__algorithm__optimal.html#gaf3a8138ec0b4be5f94c9c73605cccff3',1,'rm']]],
-  ['func1ds_2',['Func1ds',['../d2/d62/group__algorithm__optimal.html#ga99790ebfd178fe9c6833af8946d68ac3',1,'rm']]],
-  ['funcnd_3',['FuncNd',['../d2/d62/group__algorithm__optimal.html#ga4d22cf26297b02fb82b6abf116d49934',1,'rm']]],
-  ['funcnds_4',['FuncNds',['../d2/d62/group__algorithm__optimal.html#ga35c0b85496608bc60a43229ab4835aee',1,'rm']]]
+  ['ekf31d_0',['EKF31d',['../d7/db3/group__algorithm__kalman.html#ga559ed743f07129e88bd807c8c8ec06c5',1,'rm']]],
+  ['ekf31f_1',['EKF31f',['../d7/db3/group__algorithm__kalman.html#ga318054cefac4ff9720cf4100ac897ed3',1,'rm']]],
+  ['eventnotificationcallback_2',['EventNotificationCallback',['../d3/da8/group__opcua.html#ga9dfadd534d3ecfab0ec15f8cdc313bd1',1,'rm::ua']]]
 ];

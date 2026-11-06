@@ -26,7 +26,7 @@ var searchData=
   ['4_20运行时加载_23',['4 运行时加载',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md439',1,'']]],
   ['4_20运行_24',['4 运行',['../da/d80/tutorial_use.html#autotoc_md127',1,'']]],
   ['4_20重置控制器_25',['2.4 重置控制器',['../da/df7/tutorial_modules_lpss_robotctl.html#autotoc_md318',1,'']]],
-  ['4_20错误处理_26',['4. 错误处理',['../dd/d2f/tutorial_modules_toml.html#autotoc_md410',1,'']]],
+  ['4_20错误处理_26',['4 错误处理',['../dd/d2f/tutorial_modules_toml.html#autotoc_md410',1,'']]],
   ['4_20高层设施_27',['1.4 高层设施',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md295',1,'']]],
   ['4_201_20创建项目结构_28',['4.1 创建项目结构',['../d3/d8e/tutorial_modules_lpss.html#autotoc_md309',1,'']]],
   ['4_201_20加载方式_29',['4.1 加载方式',['../df/d6c/tutorial_table_of_content_rmvlpara.html#autotoc_md440',1,'']]],
@@ -51,6 +51,6 @@ var searchData=
   ['4_205_20当前能力边界_48',['4.5 当前能力边界',['../dd/ddd/tutorial_modules_nav.html#autotoc_md357',1,'']]],
   ['4_20can_20与_20can_20fd_49',['4 CAN 与 CAN FD',['../d0/dc2/tutorial_modules_peripheral.html#autotoc_md391',1,'']]],
   ['4_20onnxruntime_50',['1.4 onnxruntime',['../d1/db4/tutorial_install.html#install_onnxruntime',1,'']]],
-  ['4_20opencv_20类型兼容_51',['4. OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md415',1,'']]],
+  ['4_20opencv_20类型兼容_51',['4 OpenCV 类型兼容',['../d5/d6c/tutorial_modules_yaml.html#autotoc_md415',1,'']]],
   ['4_20warning_52',['1.4 warning',['../d5/d72/tutorial_document.html#autotoc_md133',1,'']]]
 ];

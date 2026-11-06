@@ -148,28 +148,16 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md407"><ol type="1">
-<li>概述 </li>
-</ol>
-</a>
+        <a href="#autotoc_md407">1 概述 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md408"><ol type="1">
-<li>节点访问与类型转换 </li>
-</ol>
-</a>
+        <a href="#autotoc_md408">2 节点访问与类型转换 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md409"><ol type="1">
-<li>日期时间与所有权 </li>
-</ol>
-</a>
+        <a href="#autotoc_md409">3 日期时间与所有权 </a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md410"><ol type="1">
-<li>错误处理 </li>
-</ol>
-</a>
+        <a href="#autotoc_md410">4 错误处理 </a>
       </li>
     </ul>
   </li>
@@ -178,13 +166,13 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2rmvl_2rmvl_2doc_2tutorials_2modules_2tools_2toml"></a></p>
 <div class="rmvl-tutorial-shortcut rmvl-tutorial-prev"><span>上一篇教程：</span><a class="el" href="../../d5/d6c/tutorial_modules_yaml.html" title="YAML 数据读写">YAML 数据读写</a></div><div class="rmvl-tutorial-shortcut rmvl-tutorial-next"><span>下一篇教程：</span><a class="el" href="../../d5/d7a/tutorial_modules_coro.html" title="基于异步 I/O 的协程设施">基于异步 I/O 的协程设施</a></div><hr  />
 <h2 class="doxsection"><a class="anchor" id="autotoc_md407"></a>
-1. 概述</h2>
+1 概述</h2>
 <p>core 模块提供 TOML 1.0 配置解析，包含 <span class="tt">&lt;rmvl/core/toml.hpp&gt;</span> 或 <span class="tt">&lt;rmvl/core.hpp&gt;</span> 即可使用。</p>
-<p><span class="tt"><a class="el" href="../../d9/d5a/group__core__toml.html#gab59453ed53c852b17406d04242d13ec0" title="从文件加载，成功时返回 Table 根节点。失败抛 IoError 或 ParseError。">rm::toml::load()</a></span> 从文件加载，<span class="tt"><a class="el" href="../../d9/d5a/group__core__toml.html#gac2955f7f334eb6014e8069505dbddd1f" title="从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。">rm::toml::loads()</a></span> 从 UTF-8 内存文本加载，两者直接返回只读的 <span class="tt"><a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html" title="共享底层文档所有权的只读节点句柄">rm::toml::Node</a></span>。成功时根节点始终为 Table，空文档得到空 Table。</p>
+<p><span class="tt"><a class="el" href="../../d9/d5a/group__core__toml.html#ga56670cd8f9d025a4fbc726539cc240e0" title="从文件加载并解析 TOML 1.0 配置">rm::toml::load()</a></span> 从文件加载，<span class="tt"><a class="el" href="../../d9/d5a/group__core__toml.html#ga99811f9e2d33d361e5a3e6e50b5eba98" title="从内存中的 UTF-8 文本解析 TOML 1.0 配置">rm::toml::loads()</a></span> 从 UTF-8 内存文本加载，两者直接返回只读的 <span class="tt"><a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html" title="共享底层节点树所有权的只读节点句柄">rm::toml::Node</a></span>。成功时根节点始终为 Table，空输入得到空 Table，加载失败返回无效节点。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;rmvl/core/toml.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">auto</span> config = <a class="code hl_function" href="../../d9/d5a/group__core__toml.html#gac2955f7f334eb6014e8069505dbddd1f">rm::toml::loads</a>(R<span class="stringliteral">&quot;(</span></div>
+<div class="line"><span class="keyword">auto</span> config = <a class="code hl_function" href="../../d9/d5a/group__core__toml.html#ga99811f9e2d33d361e5a3e6e50b5eba98">rm::toml::loads</a>(R<span class="stringliteral">&quot;(</span></div>
 <div class="line"><span class="stringliteral">[server]</span></div>
 <div class="line"><span class="stringliteral">host = &quot;127.0.0.1&quot;</span></div>
 <div class="line"><span class="stringliteral">port = 8080</span></div>
@@ -196,9 +184,9 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line">    <span class="keyword">auto</span> port = server[<span class="stringliteral">&quot;port&quot;</span>].valueOr&lt;uint16_t&gt;(8080);</div>
 <div class="line">    fmt::print(<span class="stringliteral">&quot;{}:{}\n&quot;</span>, host, port);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__core__toml_html_gac2955f7f334eb6014e8069505dbddd1f"><div class="ttname"><a href="../../d9/d5a/group__core__toml.html#gac2955f7f334eb6014e8069505dbddd1f">rm::toml::loads</a></div><div class="ttdeci">RMVL_EXPORTS Node loads(std::string_view source)</div><div class="ttdoc">从 UTF-8 文本加载，成功时返回 Table 根节点，语法错误抛 ParseError。</div></div>
+<div class="ttc" id="agroup__core__toml_html_ga99811f9e2d33d361e5a3e6e50b5eba98"><div class="ttname"><a href="../../d9/d5a/group__core__toml.html#ga99811f9e2d33d361e5a3e6e50b5eba98">rm::toml::loads</a></div><div class="ttdeci">RMVL_EXPORTS Node loads(std::string_view source, Error *error=nullptr)</div><div class="ttdoc">从内存中的 UTF-8 文本解析 TOML 1.0 配置</div></div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md408"></a>
-2. 节点访问与类型转换</h2>
+2 节点访问与类型转换</h2>
 <p><span class="tt">valid()</span> 和显式布尔转换只判断节点是否有效。因此 <span class="tt">enabled = false</span> 对应的节点仍然满足 <span class="tt">if (node)</span>，实际的布尔值通过 <span class="tt">as&lt;bool&gt;()</span> 读取。</p>
 <ul>
 <li><span class="tt">node["name"]</span> 查询表的字面键，<span class="tt">node[index]</span> 查询数组元素，类型不符或查询失败返回无效节点。</li>
@@ -208,28 +196,33 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <li><span class="tt">as&lt;T&gt;()</span> 转换失败返回 <span class="tt">std::nullopt</span>，<span class="tt">valueOr&lt;T&gt;()</span> 返回指定的默认值。</li>
 </ul>
 <p>转换支持字符串、布尔、整数、浮点、枚举、日期时间，以及 <span class="tt">optional</span>、<span class="tt">vector</span>、<span class="tt">array</span> 和以 <span class="tt">std::string</span> 为键的 <span class="tt">map/unordered_map</span>。严格区分整数、浮点和字符串，整数转换检查目标类型范围。缺失节点可读取为空 <span class="tt">optional</span>，TOML 自身没有 null 值。</p>
-<p>自定义类型在其命名空间提供 <span class="tt">bool toml_decode(const <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html" title="共享底层文档所有权的只读节点句柄">rm::toml::Node</a> &amp;, T &amp;)</span>，即可使用上述读取接口。转换在临时对象上完成，失败不会改写调用方原有对象。</p>
+<p>自定义类型在其命名空间提供 <span class="tt">bool toml_decode(const <a class="el" href="../../dc/da7/classrm_1_1toml_1_1Node.html" title="共享底层节点树所有权的只读节点句柄">rm::toml::Node</a> &amp;, T &amp;)</span>，即可使用上述读取接口。转换在临时对象上完成，失败不会改写调用方原有对象。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md409"></a>
-3. 日期时间与所有权</h2>
-<p>日期、时间和日期时间分别对应 <span class="tt"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html" title="本地日期">rm::toml::Date</a></span>、<span class="tt">Time</span>、<span class="tt">DateTime</span>。<span class="tt">Time</span> 的小数秒保留至纳秒，超出部分截断。<span class="tt">DateTime::offsetMinutes</span> 无值表示本地日期时间，0 表示 UTC，其他值表示以分钟为单位的 UTC 偏移。</p>
-<p><span class="tt">Node</span> 拷贝共享底层文档，不复制节点树。子节点可以脱离根句柄保存，键名视图在底层文档最后一个句柄销毁前有效。节点树只读，可以在多个线程中并发读取。</p>
+3 日期时间与所有权</h2>
+<p>日期、时间和日期时间分别对应 <span class="tt"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html" title="本地日期，对应 TOML 的 local date">rm::toml::Date</a></span>、<span class="tt">Time</span>、<span class="tt">DateTime</span>。<span class="tt">Time</span> 的小数秒保留至纳秒，超出部分截断。<span class="tt">DateTime::offsetMinutes</span> 无值表示本地日期时间，0 表示 UTC，其他值表示以分钟为单位的 UTC 偏移。</p>
+<p><span class="tt">Node</span> 拷贝共享底层节点树，不复制节点树。子节点可以脱离根句柄保存，键名视图在底层节点树最后一个句柄销毁前有效。节点树只读，可以在多个线程中并发读取。</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md410"></a>
-4. 错误处理</h2>
-<p>文件打开或读取失败抛出 <span class="tt"><a class="el" href="../../dc/d74/classrm_1_1toml_1_1IoError.html" title="文件打开或读取失败。">rm::toml::IoError</a></span>，语法错误、重复键或表定义冲突抛出 <span class="tt"><a class="el" href="../../d6/d80/classrm_1_1toml_1_1ParseError.html" title="TOML 语法或定义冲突，行列号从 1 开始。">rm::toml::ParseError</a></span>。行列号从 1 开始。</p>
-<div class="fragment"><div class="line"><span class="keywordflow">try</span> {</div>
-<div class="line">    <span class="keyword">auto</span> config = <a class="code hl_function" href="../../d9/d5a/group__core__toml.html#gab59453ed53c852b17406d04242d13ec0">rm::toml::load</a>(<span class="stringliteral">&quot;config.toml&quot;</span>);</div>
-<div class="line">    <span class="keyword">auto</span> port = config[<span class="stringliteral">&quot;server&quot;</span>][<span class="stringliteral">&quot;port&quot;</span>].valueOr&lt;uint16_t&gt;(8080);</div>
-<div class="line">    fmt::print(<span class="stringliteral">&quot;port: {}\n&quot;</span>, port);</div>
-<div class="line">} <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d6/d80/classrm_1_1toml_1_1ParseError.html">rm::toml::ParseError</a> &amp;error) {</div>
+4 错误处理</h2>
+<p>加载失败时返回无效节点，可通过 <span class="tt">valid()</span> 或显式布尔转换判断。需要错误详情时传入可选的 <span class="tt"><a class="el" href="../../da/dbe/structrm_1_1toml_1_1Error.html" title="TOML 加载错误信息">rm::toml::Error</a> *</span> 输出参数，成功时会清空已有错误。</p>
+<p><span class="tt">ErrorCode::Io</span> 表示文件路径无效或文件打开、读取失败，<span class="tt">ErrorCode::Parse</span> 表示编码、语法或定义冲突错误。解析错误的行列号从 1 开始，文件错误的行列号为 0。</p>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="../../da/dbe/structrm_1_1toml_1_1Error.html">rm::toml::Error</a> error;</div>
+<div class="line"><span class="keyword">auto</span> config = <a class="code hl_function" href="../../d9/d5a/group__core__toml.html#ga56670cd8f9d025a4fbc726539cc240e0">rm::toml::load</a>(<span class="stringliteral">&quot;config.toml&quot;</span>, &amp;error);</div>
+<div class="line"><span class="keywordflow">if</span> (!config) {</div>
 <div class="line">    fmt::print(stderr, <span class="stringliteral">&quot;TOML error at {}:{}: {}\n&quot;</span>,</div>
-<div class="line">               error.line, error.column, error.what());</div>
-<div class="line">} <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d74/classrm_1_1toml_1_1IoError.html">rm::toml::IoError</a> &amp;error) {</div>
-<div class="line">    fmt::print(stderr, <span class="stringliteral">&quot;{}\n&quot;</span>, error.what());</div>
+<div class="line">               error.line, error.column, error.message);</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassrm_1_1toml_1_1IoError_html"><div class="ttname"><a href="../../dc/d74/classrm_1_1toml_1_1IoError.html">rm::toml::IoError</a></div><div class="ttdoc">文件打开或读取失败。</div><div class="ttdef"><b>定义</b> toml.hpp:73</div></div>
-<div class="ttc" id="aclassrm_1_1toml_1_1ParseError_html"><div class="ttname"><a href="../../d6/d80/classrm_1_1toml_1_1ParseError.html">rm::toml::ParseError</a></div><div class="ttdoc">TOML 语法或定义冲突，行列号从 1 开始。</div><div class="ttdef"><b>定义</b> toml.hpp:64</div></div>
-<div class="ttc" id="agroup__core__toml_html_gab59453ed53c852b17406d04242d13ec0"><div class="ttname"><a href="../../d9/d5a/group__core__toml.html#gab59453ed53c852b17406d04242d13ec0">rm::toml::load</a></div><div class="ttdeci">RMVL_EXPORTS Node load(std::string_view path)</div><div class="ttdoc">从文件加载，成功时返回 Table 根节点。失败抛 IoError 或 ParseError。</div></div>
-</div><!-- fragment --><p>当前接口用于配置加载，不提供修改、序列化或保留原始注释的接口。解析后端是内置的 toml++ v3.4.0，以必选的 tomlplusplus 接口库接入 CMake，并随 RMVL 安装和导出。下游项目只需链接 RMVL core，依赖自动传递。 </p>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> port = config[<span class="stringliteral">&quot;server&quot;</span>][<span class="stringliteral">&quot;port&quot;</span>].valueOr&lt;uint16_t&gt;(8080);</div>
+<div class="line">fmt::print(<span class="stringliteral">&quot;port: {}\n&quot;</span>, port);</div>
+<div class="ttc" id="agroup__core__toml_html_ga56670cd8f9d025a4fbc726539cc240e0"><div class="ttname"><a href="../../d9/d5a/group__core__toml.html#ga56670cd8f9d025a4fbc726539cc240e0">rm::toml::load</a></div><div class="ttdeci">RMVL_EXPORTS Node load(std::string_view path, Error *error=nullptr)</div><div class="ttdoc">从文件加载并解析 TOML 1.0 配置</div></div>
+<div class="ttc" id="astructrm_1_1toml_1_1Error_html"><div class="ttname"><a href="../../da/dbe/structrm_1_1toml_1_1Error.html">rm::toml::Error</a></div><div class="ttdoc">TOML 加载错误信息</div><div class="ttdef"><b>定义</b> toml.hpp:94</div></div>
+</div><!-- fragment --><p>只关心是否成功时，可以省略错误输出参数：</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<span class="keyword">auto</span> config = <a class="code hl_function" href="../../d9/d5a/group__core__toml.html#ga99811f9e2d33d361e5a3e6e50b5eba98">rm::toml::loads</a>(<span class="stringliteral">&quot;port = 8080&quot;</span>)) {</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;port: {}\n&quot;</span>, config[<span class="stringliteral">&quot;port&quot;</span>].valueOr(8080));</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>后端使用不抛解析异常的模式，文件和语法错误通过返回值处理。接口仍会使用标准容器和动态内存，不承诺 <span class="tt">noexcept</span>，不拦截内存分配失败等标准库异常。</p>
+<p>当前接口用于配置加载，不提供修改、序列化或保留原始注释的接口。解析后端是内置的 toml++ v3.4.0，以必选的 tomlplusplus 接口库接入 CMake，并随 RMVL 安装和导出。下游项目只需链接 RMVL core，依赖自动传递。 </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.6-->

@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div><!--header-->
 <div class="contents">
 
-<p>日期时间，无偏移表示本地日期时间，偏移 0 表示 UTC。  
+<p>本地日期时间或带 UTC 偏移的日期时间  
  <a href="#details">更多...</a></p>
 
 <p><code>#include &lt;rmvl/core/toml.hpp&gt;</code></p>
@@ -160,11 +160,18 @@ rm::toml::DateTime 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
 <tr class="memitem:a1456b71c0b531350f3910c98fa559014" id="r_a1456b71c0b531350f3910c98fa559014"><td class="memItemLeft"><a class="el" href="../../df/db5/structrm_1_1toml_1_1Date.html">Date</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1456b71c0b531350f3910c98fa559014">date</a></td></tr>
+<tr class="memdesc:a1456b71c0b531350f3910c98fa559014"><td class="mdescLeft">&#160;</td><td class="mdescRight">日期部分  <br /></td></tr>
 <tr class="memitem:a6a3619afe8ddd5d3251eadb0374e99da" id="r_a6a3619afe8ddd5d3251eadb0374e99da"><td class="memItemLeft"><a class="el" href="../../d2/dbe/structrm_1_1toml_1_1Time.html">Time</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6a3619afe8ddd5d3251eadb0374e99da">time</a></td></tr>
+<tr class="memdesc:a6a3619afe8ddd5d3251eadb0374e99da"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间部分  <br /></td></tr>
 <tr class="memitem:abf434f3d8f3834b0a3be3cbb3987088a" id="r_abf434f3d8f3834b0a3be3cbb3987088a"><td class="memItemLeft">std::optional&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#abf434f3d8f3834b0a3be3cbb3987088a">offsetMinutes</a></td></tr>
+<tr class="memdesc:abf434f3d8f3834b0a3be3cbb3987088a"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTC 偏移分钟数，无值表示本地日期时间，0 表示 UTC，正值表示领先 UTC  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
-<div class="textblock"><p>日期时间，无偏移表示本地日期时间，偏移 0 表示 UTC。 </p>
+<div class="textblock"><p>本地日期时间或带 UTC 偏移的日期时间 </p>
+<ul>
+<li>不将本地日期时间自动换算为系统时区或时间戳</li>
+<li><a class="el" href="../../d2/dbe/structrm_1_1toml_1_1Time.html" title="本地时间，对应 TOML 的 local time">Time</a> 的小数秒保留至纳秒，源文本中超出纳秒精度的部分截断 </li>
+</ul>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">类成员变量说明</h2>
 <a id="a1456b71c0b531350f3910c98fa559014" name="a1456b71c0b531350f3910c98fa559014"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1456b71c0b531350f3910c98fa559014">&#9670;&#160;</a></span>date</h2>
@@ -177,6 +184,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>日期部分 </p>
 
 </div>
 </div>
@@ -192,6 +201,8 @@ Public 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>UTC 偏移分钟数，无值表示本地日期时间，0 表示 UTC，正值表示领先 UTC </p>
+
 </div>
 </div>
 <a id="a6a3619afe8ddd5d3251eadb0374e99da" name="a6a3619afe8ddd5d3251eadb0374e99da"></a>
@@ -205,6 +216,8 @@ Public 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>时间部分 </p>
 
 </div>
 </div>
